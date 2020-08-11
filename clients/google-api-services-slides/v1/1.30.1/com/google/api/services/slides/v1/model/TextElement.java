@@ -46,12 +46,10 @@ public final class TextElement extends com.google.api.client.json.GenericJson {
   private java.lang.Integer endIndex;
 
   /**
-   * A marker representing the beginning of a new paragraph.
-   *
-   * The `start_index` and `end_index` of this TextElement represent the range of the paragraph.
-   * Other TextElements with an index range contained inside this paragraph's range are considered
-   * to be part of this paragraph. The range of indices of two separate paragraphs will never
-   * overlap.
+   * A marker representing the beginning of a new paragraph. The `start_index` and `end_index` of
+   * this TextElement represent the range of the paragraph. Other TextElements with an index range
+   * contained inside this paragraph's range are considered to be part of this paragraph. The range
+   * of indices of two separate paragraphs will never overlap.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,11 +64,9 @@ public final class TextElement extends com.google.api.client.json.GenericJson {
 
   /**
    * A TextElement representing a run of text where all of the characters in the run have the same
-   * TextStyle.
-   *
-   * The `start_index` and `end_index` of TextRuns will always be fully contained in the index range
-   * of a single `paragraph_marker` TextElement. In other words, a TextRun will never span multiple
-   * paragraphs.
+   * TextStyle. The `start_index` and `end_index` of TextRuns will always be fully contained in the
+   * index range of a single `paragraph_marker` TextElement. In other words, a TextRun will never
+   * span multiple paragraphs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,12 +109,10 @@ public final class TextElement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A marker representing the beginning of a new paragraph.
-   *
-   * The `start_index` and `end_index` of this TextElement represent the range of the paragraph.
-   * Other TextElements with an index range contained inside this paragraph's range are considered
-   * to be part of this paragraph. The range of indices of two separate paragraphs will never
-   * overlap.
+   * A marker representing the beginning of a new paragraph. The `start_index` and `end_index` of
+   * this TextElement represent the range of the paragraph. Other TextElements with an index range
+   * contained inside this paragraph's range are considered to be part of this paragraph. The range
+   * of indices of two separate paragraphs will never overlap.
    * @return value or {@code null} for none
    */
   public ParagraphMarker getParagraphMarker() {
@@ -126,12 +120,10 @@ public final class TextElement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A marker representing the beginning of a new paragraph.
-   *
-   * The `start_index` and `end_index` of this TextElement represent the range of the paragraph.
-   * Other TextElements with an index range contained inside this paragraph's range are considered
-   * to be part of this paragraph. The range of indices of two separate paragraphs will never
-   * overlap.
+   * A marker representing the beginning of a new paragraph. The `start_index` and `end_index` of
+   * this TextElement represent the range of the paragraph. Other TextElements with an index range
+   * contained inside this paragraph's range are considered to be part of this paragraph. The range
+   * of indices of two separate paragraphs will never overlap.
    * @param paragraphMarker paragraphMarker or {@code null} for none
    */
   public TextElement setParagraphMarker(ParagraphMarker paragraphMarker) {
@@ -158,11 +150,9 @@ public final class TextElement extends com.google.api.client.json.GenericJson {
 
   /**
    * A TextElement representing a run of text where all of the characters in the run have the same
-   * TextStyle.
-   *
-   * The `start_index` and `end_index` of TextRuns will always be fully contained in the index range
-   * of a single `paragraph_marker` TextElement. In other words, a TextRun will never span multiple
-   * paragraphs.
+   * TextStyle. The `start_index` and `end_index` of TextRuns will always be fully contained in the
+   * index range of a single `paragraph_marker` TextElement. In other words, a TextRun will never
+   * span multiple paragraphs.
    * @return value or {@code null} for none
    */
   public TextRun getTextRun() {
@@ -171,11 +161,9 @@ public final class TextElement extends com.google.api.client.json.GenericJson {
 
   /**
    * A TextElement representing a run of text where all of the characters in the run have the same
-   * TextStyle.
-   *
-   * The `start_index` and `end_index` of TextRuns will always be fully contained in the index range
-   * of a single `paragraph_marker` TextElement. In other words, a TextRun will never span multiple
-   * paragraphs.
+   * TextStyle. The `start_index` and `end_index` of TextRuns will always be fully contained in the
+   * index range of a single `paragraph_marker` TextElement. In other words, a TextRun will never
+   * span multiple paragraphs.
    * @param textRun textRun or {@code null} for none
    */
   public TextElement setTextRun(TextRun textRun) {

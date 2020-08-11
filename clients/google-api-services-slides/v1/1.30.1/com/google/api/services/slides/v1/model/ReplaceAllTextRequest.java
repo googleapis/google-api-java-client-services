@@ -37,10 +37,9 @@ public final class ReplaceAllTextRequest extends com.google.api.client.json.Gene
   private SubstringMatchCriteria containsText;
 
   /**
-   * If non-empty, limits the matches to page elements only on the given pages.
-   *
-   * Returns a 400 bad request error if given the page object ID of a notes master, or if a page
-   * with that object ID doesn't exist in the presentation.
+   * If non-empty, limits the matches to page elements only on the given pages. Returns a 400 bad
+   * request error if given the page object ID of a notes master, or if a page with that object ID
+   * doesn't exist in the presentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,10 +70,9 @@ public final class ReplaceAllTextRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * If non-empty, limits the matches to page elements only on the given pages.
-   *
-   * Returns a 400 bad request error if given the page object ID of a notes master, or if a page
-   * with that object ID doesn't exist in the presentation.
+   * If non-empty, limits the matches to page elements only on the given pages. Returns a 400 bad
+   * request error if given the page object ID of a notes master, or if a page with that object ID
+   * doesn't exist in the presentation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPageObjectIds() {
@@ -82,10 +80,9 @@ public final class ReplaceAllTextRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * If non-empty, limits the matches to page elements only on the given pages.
-   *
-   * Returns a 400 bad request error if given the page object ID of a notes master, or if a page
-   * with that object ID doesn't exist in the presentation.
+   * If non-empty, limits the matches to page elements only on the given pages. Returns a 400 bad
+   * request error if given the page object ID of a notes master, or if a page with that object ID
+   * doesn't exist in the presentation.
    * @param pageObjectIds pageObjectIds or {@code null} for none
    */
   public ReplaceAllTextRequest setPageObjectIds(java.util.List<java.lang.String> pageObjectIds) {

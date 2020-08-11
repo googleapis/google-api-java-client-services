@@ -45,19 +45,14 @@ public final class DeleteTextRequest extends com.google.api.client.json.GenericJ
   private java.lang.String objectId;
 
   /**
-   * The range of text to delete, based on TextElement indexes.
-   *
-   * There is always an implicit newline character at the end of a shape's or table cell's text that
-   * cannot be deleted. `Range.Type.ALL` will use the correct bounds, but care must be taken when
-   * specifying explicit bounds for range types `FROM_START_INDEX` and `FIXED_RANGE`. For example,
-   * if the text is "ABC", followed by an implicit newline, then the maximum value is 2 for
-   * `text_range.start_index` and 3 for `text_range.end_index`.
-   *
-   * Deleting text that crosses a paragraph boundary may result in changes to paragraph styles and
-   * lists as the two paragraphs are merged.
-   *
-   * Ranges that include only one code unit of a surrogate pair are expanded to include both code
-   * units.
+   * The range of text to delete, based on TextElement indexes. There is always an implicit newline
+   * character at the end of a shape's or table cell's text that cannot be deleted. `Range.Type.ALL`
+   * will use the correct bounds, but care must be taken when specifying explicit bounds for range
+   * types `FROM_START_INDEX` and `FIXED_RANGE`. For example, if the text is "ABC", followed by an
+   * implicit newline, then the maximum value is 2 for `text_range.start_index` and 3 for
+   * `text_range.end_index`. Deleting text that crosses a paragraph boundary may result in changes
+   * to paragraph styles and lists as the two paragraphs are merged. Ranges that include only one
+   * code unit of a surrogate pair are expanded to include both code units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,19 +95,14 @@ public final class DeleteTextRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The range of text to delete, based on TextElement indexes.
-   *
-   * There is always an implicit newline character at the end of a shape's or table cell's text that
-   * cannot be deleted. `Range.Type.ALL` will use the correct bounds, but care must be taken when
-   * specifying explicit bounds for range types `FROM_START_INDEX` and `FIXED_RANGE`. For example,
-   * if the text is "ABC", followed by an implicit newline, then the maximum value is 2 for
-   * `text_range.start_index` and 3 for `text_range.end_index`.
-   *
-   * Deleting text that crosses a paragraph boundary may result in changes to paragraph styles and
-   * lists as the two paragraphs are merged.
-   *
-   * Ranges that include only one code unit of a surrogate pair are expanded to include both code
-   * units.
+   * The range of text to delete, based on TextElement indexes. There is always an implicit newline
+   * character at the end of a shape's or table cell's text that cannot be deleted. `Range.Type.ALL`
+   * will use the correct bounds, but care must be taken when specifying explicit bounds for range
+   * types `FROM_START_INDEX` and `FIXED_RANGE`. For example, if the text is "ABC", followed by an
+   * implicit newline, then the maximum value is 2 for `text_range.start_index` and 3 for
+   * `text_range.end_index`. Deleting text that crosses a paragraph boundary may result in changes
+   * to paragraph styles and lists as the two paragraphs are merged. Ranges that include only one
+   * code unit of a surrogate pair are expanded to include both code units.
    * @return value or {@code null} for none
    */
   public Range getTextRange() {
@@ -120,19 +110,14 @@ public final class DeleteTextRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The range of text to delete, based on TextElement indexes.
-   *
-   * There is always an implicit newline character at the end of a shape's or table cell's text that
-   * cannot be deleted. `Range.Type.ALL` will use the correct bounds, but care must be taken when
-   * specifying explicit bounds for range types `FROM_START_INDEX` and `FIXED_RANGE`. For example,
-   * if the text is "ABC", followed by an implicit newline, then the maximum value is 2 for
-   * `text_range.start_index` and 3 for `text_range.end_index`.
-   *
-   * Deleting text that crosses a paragraph boundary may result in changes to paragraph styles and
-   * lists as the two paragraphs are merged.
-   *
-   * Ranges that include only one code unit of a surrogate pair are expanded to include both code
-   * units.
+   * The range of text to delete, based on TextElement indexes. There is always an implicit newline
+   * character at the end of a shape's or table cell's text that cannot be deleted. `Range.Type.ALL`
+   * will use the correct bounds, but care must be taken when specifying explicit bounds for range
+   * types `FROM_START_INDEX` and `FIXED_RANGE`. For example, if the text is "ABC", followed by an
+   * implicit newline, then the maximum value is 2 for `text_range.start_index` and 3 for
+   * `text_range.end_index`. Deleting text that crosses a paragraph boundary may result in changes
+   * to paragraph styles and lists as the two paragraphs are merged. Ranges that include only one
+   * code unit of a surrogate pair are expanded to include both code units.
    * @param textRange textRange or {@code null} for none
    */
   public DeleteTextRequest setTextRange(Range textRange) {

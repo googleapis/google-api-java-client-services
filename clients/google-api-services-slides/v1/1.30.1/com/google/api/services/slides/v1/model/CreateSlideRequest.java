@@ -30,23 +30,19 @@ package com.google.api.services.slides.v1.model;
 public final class CreateSlideRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The optional zero-based index indicating where to insert the slides.
-   *
-   * If you don't specify an index, the new slide is created at the end.
+   * The optional zero-based index indicating where to insert the slides. If you don't specify an
+   * index, the new slide is created at the end.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer insertionIndex;
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If you don't specify an ID, a unique one is generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,14 +59,10 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
 
   /**
    * Layout reference of the slide to be inserted, based on the *current master*, which is one of
-   * the following:
-   *
-   * - The master of the previous slide index. - The master of the first slide, if the
-   * insertion_index is zero. - The first master in the presentation, if there are no slides.
-   *
-   * If the LayoutReference is not found in the current master, a 400 bad request error is returned.
-   *
-   * If you don't specify a layout reference, then the new slide will use the predefined layout
+   * the following: - The master of the previous slide index. - The master of the first slide, if
+   * the insertion_index is zero. - The first master in the presentation, if there are no slides. If
+   * the LayoutReference is not found in the current master, a 400 bad request error is returned. If
+   * you don't specify a layout reference, then the new slide will use the predefined layout
    * `BLANK`.
    * The value may be {@code null}.
    */
@@ -78,9 +70,8 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
   private LayoutReference slideLayoutReference;
 
   /**
-   * The optional zero-based index indicating where to insert the slides.
-   *
-   * If you don't specify an index, the new slide is created at the end.
+   * The optional zero-based index indicating where to insert the slides. If you don't specify an
+   * index, the new slide is created at the end.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInsertionIndex() {
@@ -88,9 +79,8 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The optional zero-based index indicating where to insert the slides.
-   *
-   * If you don't specify an index, the new slide is created at the end.
+   * The optional zero-based index indicating where to insert the slides. If you don't specify an
+   * index, the new slide is created at the end.
    * @param insertionIndex insertionIndex or {@code null} for none
    */
   public CreateSlideRequest setInsertionIndex(java.lang.Integer insertionIndex) {
@@ -99,14 +89,11 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If you don't specify an ID, a unique one is generated.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectId() {
@@ -114,14 +101,11 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If you don't specify an ID, a unique one is generated.
    * @param objectId objectId or {@code null} for none
    */
   public CreateSlideRequest setObjectId(java.lang.String objectId) {
@@ -152,14 +136,10 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
 
   /**
    * Layout reference of the slide to be inserted, based on the *current master*, which is one of
-   * the following:
-   *
-   * - The master of the previous slide index. - The master of the first slide, if the
-   * insertion_index is zero. - The first master in the presentation, if there are no slides.
-   *
-   * If the LayoutReference is not found in the current master, a 400 bad request error is returned.
-   *
-   * If you don't specify a layout reference, then the new slide will use the predefined layout
+   * the following: - The master of the previous slide index. - The master of the first slide, if
+   * the insertion_index is zero. - The first master in the presentation, if there are no slides. If
+   * the LayoutReference is not found in the current master, a 400 bad request error is returned. If
+   * you don't specify a layout reference, then the new slide will use the predefined layout
    * `BLANK`.
    * @return value or {@code null} for none
    */
@@ -169,14 +149,10 @@ public final class CreateSlideRequest extends com.google.api.client.json.Generic
 
   /**
    * Layout reference of the slide to be inserted, based on the *current master*, which is one of
-   * the following:
-   *
-   * - The master of the previous slide index. - The master of the first slide, if the
-   * insertion_index is zero. - The first master in the presentation, if there are no slides.
-   *
-   * If the LayoutReference is not found in the current master, a 400 bad request error is returned.
-   *
-   * If you don't specify a layout reference, then the new slide will use the predefined layout
+   * the following: - The master of the previous slide index. - The master of the first slide, if
+   * the insertion_index is zero. - The first master in the presentation, if there are no slides. If
+   * the LayoutReference is not found in the current master, a 400 bad request error is returned. If
+   * you don't specify a layout reference, then the new slide will use the predefined layout
    * `BLANK`.
    * @param slideLayoutReference slideLayoutReference or {@code null} for none
    */

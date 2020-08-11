@@ -38,15 +38,11 @@ public final class UpdateTableColumnPropertiesRequest extends com.google.api.cli
   private java.util.List<java.lang.Integer> columnIndices;
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableColumnProperties` is implied and should
-   * not be specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the column width, set `fields` to `"column_width"`.
-   *
-   * If '"column_width"' is included in the field mask but the property is left unset, the column
-   * width will default to 406,400 EMU (32 points).
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableColumnProperties` is implied and should not be specified. A single `"*"` can be used as
+   * short-hand for listing every field. For example to update the column width, set `fields` to
+   * `"column_width"`. If '"column_width"' is included in the field mask but the property is left
+   * unset, the column width will default to 406,400 EMU (32 points).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,10 +56,8 @@ public final class UpdateTableColumnPropertiesRequest extends com.google.api.cli
   private java.lang.String objectId;
 
   /**
-   * The table column properties to update.
-   *
-   * If the value of `table_column_properties#column_width` in the request is less than 406,400 EMU
-   * (32 points), a 400 bad request error is returned.
+   * The table column properties to update. If the value of `table_column_properties#column_width`
+   * in the request is less than 406,400 EMU (32 points), a 400 bad request error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,15 +83,11 @@ public final class UpdateTableColumnPropertiesRequest extends com.google.api.cli
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableColumnProperties` is implied and should
-   * not be specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the column width, set `fields` to `"column_width"`.
-   *
-   * If '"column_width"' is included in the field mask but the property is left unset, the column
-   * width will default to 406,400 EMU (32 points).
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableColumnProperties` is implied and should not be specified. A single `"*"` can be used as
+   * short-hand for listing every field. For example to update the column width, set `fields` to
+   * `"column_width"`. If '"column_width"' is included in the field mask but the property is left
+   * unset, the column width will default to 406,400 EMU (32 points).
    * @return value or {@code null} for none
    */
   public String getFields() {
@@ -105,15 +95,11 @@ public final class UpdateTableColumnPropertiesRequest extends com.google.api.cli
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableColumnProperties` is implied and should
-   * not be specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the column width, set `fields` to `"column_width"`.
-   *
-   * If '"column_width"' is included in the field mask but the property is left unset, the column
-   * width will default to 406,400 EMU (32 points).
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableColumnProperties` is implied and should not be specified. A single `"*"` can be used as
+   * short-hand for listing every field. For example to update the column width, set `fields` to
+   * `"column_width"`. If '"column_width"' is included in the field mask but the property is left
+   * unset, the column width will default to 406,400 EMU (32 points).
    * @param fields fields or {@code null} for none
    */
   public UpdateTableColumnPropertiesRequest setFields(String fields) {
@@ -139,10 +125,8 @@ public final class UpdateTableColumnPropertiesRequest extends com.google.api.cli
   }
 
   /**
-   * The table column properties to update.
-   *
-   * If the value of `table_column_properties#column_width` in the request is less than 406,400 EMU
-   * (32 points), a 400 bad request error is returned.
+   * The table column properties to update. If the value of `table_column_properties#column_width`
+   * in the request is less than 406,400 EMU (32 points), a 400 bad request error is returned.
    * @return value or {@code null} for none
    */
   public TableColumnProperties getTableColumnProperties() {
@@ -150,10 +134,8 @@ public final class UpdateTableColumnPropertiesRequest extends com.google.api.cli
   }
 
   /**
-   * The table column properties to update.
-   *
-   * If the value of `table_column_properties#column_width` in the request is less than 406,400 EMU
-   * (32 points), a 400 bad request error is returned.
+   * The table column properties to update. If the value of `table_column_properties#column_width`
+   * in the request is less than 406,400 EMU (32 points), a 400 bad request error is returned.
    * @param tableColumnProperties tableColumnProperties or {@code null} for none
    */
   public UpdateTableColumnPropertiesRequest setTableColumnProperties(TableColumnProperties tableColumnProperties) {

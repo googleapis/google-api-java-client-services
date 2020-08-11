@@ -30,9 +30,8 @@ package com.google.api.services.slides.v1.model;
 public final class SubstringMatchCriteria extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether the search should respect case:
-   *
-   * - `True`: the search is case sensitive. - `False`: the search is case insensitive.
+   * Indicates whether the search should respect case: - `True`: the search is case sensitive. -
+   * `False`: the search is case insensitive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +45,8 @@ public final class SubstringMatchCriteria extends com.google.api.client.json.Gen
   private java.lang.String text;
 
   /**
-   * Indicates whether the search should respect case:
-   *
-   * - `True`: the search is case sensitive. - `False`: the search is case insensitive.
+   * Indicates whether the search should respect case: - `True`: the search is case sensitive. -
+   * `False`: the search is case insensitive.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMatchCase() {
@@ -56,9 +54,8 @@ public final class SubstringMatchCriteria extends com.google.api.client.json.Gen
   }
 
   /**
-   * Indicates whether the search should respect case:
-   *
-   * - `True`: the search is case sensitive. - `False`: the search is case insensitive.
+   * Indicates whether the search should respect case: - `True`: the search is case sensitive. -
+   * `False`: the search is case insensitive.
    * @param matchCase matchCase or {@code null} for none
    */
   public SubstringMatchCriteria setMatchCase(java.lang.Boolean matchCase) {

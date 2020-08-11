@@ -30,15 +30,11 @@ package com.google.api.services.slides.v1.model;
 public final class UpdateTableRowPropertiesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableRowProperties` is implied and should not
-   * be specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the minimum row height, set `fields` to `"min_row_height"`.
-   *
-   * If '"min_row_height"' is included in the field mask but the property is left unset, the minimum
-   * row height will default to 0.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableRowProperties` is implied and should not be specified. A single `"*"` can be used as
+   * short-hand for listing every field. For example to update the minimum row height, set `fields`
+   * to `"min_row_height"`. If '"min_row_height"' is included in the field mask but the property is
+   * left unset, the minimum row height will default to 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,15 +63,11 @@ public final class UpdateTableRowPropertiesRequest extends com.google.api.client
   private TableRowProperties tableRowProperties;
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableRowProperties` is implied and should not
-   * be specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the minimum row height, set `fields` to `"min_row_height"`.
-   *
-   * If '"min_row_height"' is included in the field mask but the property is left unset, the minimum
-   * row height will default to 0.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableRowProperties` is implied and should not be specified. A single `"*"` can be used as
+   * short-hand for listing every field. For example to update the minimum row height, set `fields`
+   * to `"min_row_height"`. If '"min_row_height"' is included in the field mask but the property is
+   * left unset, the minimum row height will default to 0.
    * @return value or {@code null} for none
    */
   public String getFields() {
@@ -83,15 +75,11 @@ public final class UpdateTableRowPropertiesRequest extends com.google.api.client
   }
 
   /**
-   * The fields that should be updated.
-   *
-   * At least one field must be specified. The root `tableRowProperties` is implied and should not
-   * be specified. A single `"*"` can be used as short-hand for listing every field.
-   *
-   * For example to update the minimum row height, set `fields` to `"min_row_height"`.
-   *
-   * If '"min_row_height"' is included in the field mask but the property is left unset, the minimum
-   * row height will default to 0.
+   * The fields that should be updated. At least one field must be specified. The root
+   * `tableRowProperties` is implied and should not be specified. A single `"*"` can be used as
+   * short-hand for listing every field. For example to update the minimum row height, set `fields`
+   * to `"min_row_height"`. If '"min_row_height"' is included in the field mask but the property is
+   * left unset, the minimum row height will default to 0.
    * @param fields fields or {@code null} for none
    */
   public UpdateTableRowPropertiesRequest setFields(String fields) {

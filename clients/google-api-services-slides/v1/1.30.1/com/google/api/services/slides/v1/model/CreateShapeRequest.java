@@ -37,13 +37,11 @@ public final class CreateShapeRequest extends com.google.api.client.json.Generic
   private PageElementProperties elementProperties;
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50. If
-   * empty, a unique identifier will be generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If empty, a unique identifier will be generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,13 +72,11 @@ public final class CreateShapeRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50. If
-   * empty, a unique identifier will be generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If empty, a unique identifier will be generated.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectId() {
@@ -88,13 +84,11 @@ public final class CreateShapeRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * A user-supplied object ID.
-   *
-   * If you specify an ID, it must be unique among all pages and page elements in the presentation.
-   * The ID must start with an alphanumeric character or an underscore (matches regex
-   * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50. If
-   * empty, a unique identifier will be generated.
+   * A user-supplied object ID. If you specify an ID, it must be unique among all pages and page
+   * elements in the presentation. The ID must start with an alphanumeric character or an underscore
+   * (matches regex `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or
+   * colon (matches regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater
+   * than 50. If empty, a unique identifier will be generated.
    * @param objectId objectId or {@code null} for none
    */
   public CreateShapeRequest setObjectId(java.lang.String objectId) {

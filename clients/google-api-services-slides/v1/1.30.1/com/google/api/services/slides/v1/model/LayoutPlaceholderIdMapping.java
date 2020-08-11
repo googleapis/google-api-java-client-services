@@ -48,13 +48,11 @@ public final class LayoutPlaceholderIdMapping extends com.google.api.client.json
 
   /**
    * A user-supplied object ID for the placeholder identified above that to be created onto a slide.
-   *
    * If you specify an ID, it must be unique among all pages and page elements in the presentation.
    * The ID must start with an alphanumeric character or an underscore (matches regex
    * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50. If
+   * you don't specify an ID, a unique one is generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,13 +98,11 @@ public final class LayoutPlaceholderIdMapping extends com.google.api.client.json
 
   /**
    * A user-supplied object ID for the placeholder identified above that to be created onto a slide.
-   *
    * If you specify an ID, it must be unique among all pages and page elements in the presentation.
    * The ID must start with an alphanumeric character or an underscore (matches regex
    * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50. If
+   * you don't specify an ID, a unique one is generated.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectId() {
@@ -115,13 +111,11 @@ public final class LayoutPlaceholderIdMapping extends com.google.api.client.json
 
   /**
    * A user-supplied object ID for the placeholder identified above that to be created onto a slide.
-   *
    * If you specify an ID, it must be unique among all pages and page elements in the presentation.
    * The ID must start with an alphanumeric character or an underscore (matches regex
    * `[a-zA-Z0-9_]`); remaining characters may include those as well as a hyphen or colon (matches
-   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50.
-   *
-   * If you don't specify an ID, a unique one is generated.
+   * regex `[a-zA-Z0-9_-:]`). The length of the ID must not be less than 5 or greater than 50. If
+   * you don't specify an ID, a unique one is generated.
    * @param objectId objectId or {@code null} for none
    */
   public LayoutPlaceholderIdMapping setObjectId(java.lang.String objectId) {

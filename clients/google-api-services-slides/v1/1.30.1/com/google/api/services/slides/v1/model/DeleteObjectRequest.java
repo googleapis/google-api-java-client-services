@@ -30,24 +30,18 @@ package com.google.api.services.slides.v1.model;
 public final class DeleteObjectRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The object ID of the page or page element to delete.
-   *
-   * If after a delete operation a group contains only 1 or no page elements, the group is also
-   * deleted.
-   *
-   * If a placeholder is deleted on a layout, any empty inheriting shapes are also deleted.
+   * The object ID of the page or page element to delete. If after a delete operation a group
+   * contains only 1 or no page elements, the group is also deleted. If a placeholder is deleted on
+   * a layout, any empty inheriting shapes are also deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String objectId;
 
   /**
-   * The object ID of the page or page element to delete.
-   *
-   * If after a delete operation a group contains only 1 or no page elements, the group is also
-   * deleted.
-   *
-   * If a placeholder is deleted on a layout, any empty inheriting shapes are also deleted.
+   * The object ID of the page or page element to delete. If after a delete operation a group
+   * contains only 1 or no page elements, the group is also deleted. If a placeholder is deleted on
+   * a layout, any empty inheriting shapes are also deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getObjectId() {
@@ -55,12 +49,9 @@ public final class DeleteObjectRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The object ID of the page or page element to delete.
-   *
-   * If after a delete operation a group contains only 1 or no page elements, the group is also
-   * deleted.
-   *
-   * If a placeholder is deleted on a layout, any empty inheriting shapes are also deleted.
+   * The object ID of the page or page element to delete. If after a delete operation a group
+   * contains only 1 or no page elements, the group is also deleted. If a placeholder is deleted on
+   * a layout, any empty inheriting shapes are also deleted.
    * @param objectId objectId or {@code null} for none
    */
   public DeleteObjectRequest setObjectId(java.lang.String objectId) {

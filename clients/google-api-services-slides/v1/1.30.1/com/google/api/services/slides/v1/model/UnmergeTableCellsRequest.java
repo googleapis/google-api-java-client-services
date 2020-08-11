@@ -37,12 +37,10 @@ public final class UnmergeTableCellsRequest extends com.google.api.client.json.G
   private java.lang.String objectId;
 
   /**
-   * The table range specifying which cells of the table to unmerge.
-   *
-   * All merged cells in this range will be unmerged, and cells that are already unmerged will not
-   * be affected. If the range has no merged cells, the request will do nothing. If there is text in
-   * any of the merged cells, the text will remain in the upper-left ("head") cell of the resulting
-   * block of unmerged cells.
+   * The table range specifying which cells of the table to unmerge. All merged cells in this range
+   * will be unmerged, and cells that are already unmerged will not be affected. If the range has no
+   * merged cells, the request will do nothing. If there is text in any of the merged cells, the
+   * text will remain in the upper-left ("head") cell of the resulting block of unmerged cells.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,12 +64,10 @@ public final class UnmergeTableCellsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The table range specifying which cells of the table to unmerge.
-   *
-   * All merged cells in this range will be unmerged, and cells that are already unmerged will not
-   * be affected. If the range has no merged cells, the request will do nothing. If there is text in
-   * any of the merged cells, the text will remain in the upper-left ("head") cell of the resulting
-   * block of unmerged cells.
+   * The table range specifying which cells of the table to unmerge. All merged cells in this range
+   * will be unmerged, and cells that are already unmerged will not be affected. If the range has no
+   * merged cells, the request will do nothing. If there is text in any of the merged cells, the
+   * text will remain in the upper-left ("head") cell of the resulting block of unmerged cells.
    * @return value or {@code null} for none
    */
   public TableRange getTableRange() {
@@ -79,12 +75,10 @@ public final class UnmergeTableCellsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The table range specifying which cells of the table to unmerge.
-   *
-   * All merged cells in this range will be unmerged, and cells that are already unmerged will not
-   * be affected. If the range has no merged cells, the request will do nothing. If there is text in
-   * any of the merged cells, the text will remain in the upper-left ("head") cell of the resulting
-   * block of unmerged cells.
+   * The table range specifying which cells of the table to unmerge. All merged cells in this range
+   * will be unmerged, and cells that are already unmerged will not be affected. If the range has no
+   * merged cells, the request will do nothing. If there is text in any of the merged cells, the
+   * text will remain in the upper-left ("head") cell of the resulting block of unmerged cells.
    * @param tableRange tableRange or {@code null} for none
    */
   public UnmergeTableCellsRequest setTableRange(TableRange tableRange) {

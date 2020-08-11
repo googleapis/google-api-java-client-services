@@ -30,11 +30,10 @@ package com.google.api.services.slides.v1.model;
 public final class TableCellBackgroundFill extends com.google.api.client.json.GenericJson {
 
   /**
-   * The background fill property state.
-   *
-   * Updating the fill on a table cell will implicitly update this field to `RENDERED`, unless
-   * another value is specified in the same request. To have no fill on a table cell, set this field
-   * to `NOT_RENDERED`. In this case, any other fill fields set in the same request will be ignored.
+   * The background fill property state. Updating the fill on a table cell will implicitly update
+   * this field to `RENDERED`, unless another value is specified in the same request. To have no
+   * fill on a table cell, set this field to `NOT_RENDERED`. In this case, any other fill fields set
+   * in the same request will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,11 +47,10 @@ public final class TableCellBackgroundFill extends com.google.api.client.json.Ge
   private SolidFill solidFill;
 
   /**
-   * The background fill property state.
-   *
-   * Updating the fill on a table cell will implicitly update this field to `RENDERED`, unless
-   * another value is specified in the same request. To have no fill on a table cell, set this field
-   * to `NOT_RENDERED`. In this case, any other fill fields set in the same request will be ignored.
+   * The background fill property state. Updating the fill on a table cell will implicitly update
+   * this field to `RENDERED`, unless another value is specified in the same request. To have no
+   * fill on a table cell, set this field to `NOT_RENDERED`. In this case, any other fill fields set
+   * in the same request will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getPropertyState() {
@@ -60,11 +58,10 @@ public final class TableCellBackgroundFill extends com.google.api.client.json.Ge
   }
 
   /**
-   * The background fill property state.
-   *
-   * Updating the fill on a table cell will implicitly update this field to `RENDERED`, unless
-   * another value is specified in the same request. To have no fill on a table cell, set this field
-   * to `NOT_RENDERED`. In this case, any other fill fields set in the same request will be ignored.
+   * The background fill property state. Updating the fill on a table cell will implicitly update
+   * this field to `RENDERED`, unless another value is specified in the same request. To have no
+   * fill on a table cell, set this field to `NOT_RENDERED`. In this case, any other fill fields set
+   * in the same request will be ignored.
    * @param propertyState propertyState or {@code null} for none
    */
   public TableCellBackgroundFill setPropertyState(java.lang.String propertyState) {

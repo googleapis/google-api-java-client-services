@@ -31,29 +31,26 @@ package com.google.api.services.slides.v1.model;
 public final class UpdatePageElementsZOrderRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Z-order operation to apply on the page elements.
-   *
-   * When applying the operation on multiple page elements, the relative Z-orders within these page
-   * elements before the operation is maintained.
+   * The Z-order operation to apply on the page elements. When applying the operation on multiple
+   * page elements, the relative Z-orders within these page elements before the operation is
+   * maintained.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String operation;
 
   /**
-   * The object IDs of the page elements to update.
-   *
-   * All the page elements must be on the same page and must not be grouped.
+   * The object IDs of the page elements to update. All the page elements must be on the same page
+   * and must not be grouped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> pageElementObjectIds;
 
   /**
-   * The Z-order operation to apply on the page elements.
-   *
-   * When applying the operation on multiple page elements, the relative Z-orders within these page
-   * elements before the operation is maintained.
+   * The Z-order operation to apply on the page elements. When applying the operation on multiple
+   * page elements, the relative Z-orders within these page elements before the operation is
+   * maintained.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperation() {
@@ -61,10 +58,9 @@ public final class UpdatePageElementsZOrderRequest extends com.google.api.client
   }
 
   /**
-   * The Z-order operation to apply on the page elements.
-   *
-   * When applying the operation on multiple page elements, the relative Z-orders within these page
-   * elements before the operation is maintained.
+   * The Z-order operation to apply on the page elements. When applying the operation on multiple
+   * page elements, the relative Z-orders within these page elements before the operation is
+   * maintained.
    * @param operation operation or {@code null} for none
    */
   public UpdatePageElementsZOrderRequest setOperation(java.lang.String operation) {
@@ -73,9 +69,8 @@ public final class UpdatePageElementsZOrderRequest extends com.google.api.client
   }
 
   /**
-   * The object IDs of the page elements to update.
-   *
-   * All the page elements must be on the same page and must not be grouped.
+   * The object IDs of the page elements to update. All the page elements must be on the same page
+   * and must not be grouped.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPageElementObjectIds() {
@@ -83,9 +78,8 @@ public final class UpdatePageElementsZOrderRequest extends com.google.api.client
   }
 
   /**
-   * The object IDs of the page elements to update.
-   *
-   * All the page elements must be on the same page and must not be grouped.
+   * The object IDs of the page elements to update. All the page elements must be on the same page
+   * and must not be grouped.
    * @param pageElementObjectIds pageElementObjectIds or {@code null} for none
    */
   public UpdatePageElementsZOrderRequest setPageElementObjectIds(java.util.List<java.lang.String> pageElementObjectIds) {

@@ -30,10 +30,9 @@ package com.google.api.services.slides.v1.model;
 public final class WeightedFontFamily extends com.google.api.client.json.GenericJson {
 
   /**
-   * The font family of the text.
-   *
-   * The font family can be any font from the Font menu in Slides or from [Google Fonts]
-   * (https://fonts.google.com/). If the font name is unrecognized, the text is rendered in `Arial`.
+   * The font family of the text. The font family can be any font from the Font menu in Slides or
+   * from [Google Fonts] (https://fonts.google.com/). If the font name is unrecognized, the text is
+   * rendered in `Arial`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,10 +51,9 @@ public final class WeightedFontFamily extends com.google.api.client.json.Generic
   private java.lang.Integer weight;
 
   /**
-   * The font family of the text.
-   *
-   * The font family can be any font from the Font menu in Slides or from [Google Fonts]
-   * (https://fonts.google.com/). If the font name is unrecognized, the text is rendered in `Arial`.
+   * The font family of the text. The font family can be any font from the Font menu in Slides or
+   * from [Google Fonts] (https://fonts.google.com/). If the font name is unrecognized, the text is
+   * rendered in `Arial`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFontFamily() {
@@ -63,10 +61,9 @@ public final class WeightedFontFamily extends com.google.api.client.json.Generic
   }
 
   /**
-   * The font family of the text.
-   *
-   * The font family can be any font from the Font menu in Slides or from [Google Fonts]
-   * (https://fonts.google.com/). If the font name is unrecognized, the text is rendered in `Arial`.
+   * The font family of the text. The font family can be any font from the Font menu in Slides or
+   * from [Google Fonts] (https://fonts.google.com/). If the font name is unrecognized, the text is
+   * rendered in `Arial`.
    * @param fontFamily fontFamily or {@code null} for none
    */
   public WeightedFontFamily setFontFamily(java.lang.String fontFamily) {

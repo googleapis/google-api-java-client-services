@@ -30,11 +30,10 @@ package com.google.api.services.slides.v1.model;
 public final class PageBackgroundFill extends com.google.api.client.json.GenericJson {
 
   /**
-   * The background fill property state.
-   *
-   * Updating the fill on a page will implicitly update this field to `RENDERED`, unless another
-   * value is specified in the same request. To have no fill on a page, set this field to
-   * `NOT_RENDERED`. In this case, any other fill fields set in the same request will be ignored.
+   * The background fill property state. Updating the fill on a page will implicitly update this
+   * field to `RENDERED`, unless another value is specified in the same request. To have no fill on
+   * a page, set this field to `NOT_RENDERED`. In this case, any other fill fields set in the same
+   * request will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,11 +54,10 @@ public final class PageBackgroundFill extends com.google.api.client.json.Generic
   private StretchedPictureFill stretchedPictureFill;
 
   /**
-   * The background fill property state.
-   *
-   * Updating the fill on a page will implicitly update this field to `RENDERED`, unless another
-   * value is specified in the same request. To have no fill on a page, set this field to
-   * `NOT_RENDERED`. In this case, any other fill fields set in the same request will be ignored.
+   * The background fill property state. Updating the fill on a page will implicitly update this
+   * field to `RENDERED`, unless another value is specified in the same request. To have no fill on
+   * a page, set this field to `NOT_RENDERED`. In this case, any other fill fields set in the same
+   * request will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getPropertyState() {
@@ -67,11 +65,10 @@ public final class PageBackgroundFill extends com.google.api.client.json.Generic
   }
 
   /**
-   * The background fill property state.
-   *
-   * Updating the fill on a page will implicitly update this field to `RENDERED`, unless another
-   * value is specified in the same request. To have no fill on a page, set this field to
-   * `NOT_RENDERED`. In this case, any other fill fields set in the same request will be ignored.
+   * The background fill property state. Updating the fill on a page will implicitly update this
+   * field to `RENDERED`, unless another value is specified in the same request. To have no fill on
+   * a page, set this field to `NOT_RENDERED`. In this case, any other fill fields set in the same
+   * request will be ignored.
    * @param propertyState propertyState or {@code null} for none
    */
   public PageBackgroundFill setPropertyState(java.lang.String propertyState) {

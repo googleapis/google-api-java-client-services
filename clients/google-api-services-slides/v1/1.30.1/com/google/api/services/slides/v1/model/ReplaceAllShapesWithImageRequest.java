@@ -17,10 +17,9 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * Replaces all shapes that match the given criteria with the provided image.
- *
- * The images replacing the shapes are rectangular after being inserted into the presentation and do
- * not take on the forms of the shapes.
+ * Replaces all shapes that match the given criteria with the provided image. The images replacing
+ * the shapes are rectangular after being inserted into the presentation and do not take on the
+ * forms of the shapes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:
@@ -40,51 +39,37 @@ public final class ReplaceAllShapesWithImageRequest extends com.google.api.clien
   private SubstringMatchCriteria containsText;
 
   /**
-   * The image replace method.
-   *
-   * If you specify both a `replace_method` and an `image_replace_method`, the
-   * `image_replace_method` takes precedence.
-   *
-   * If you do not specify a value for `image_replace_method`, but specify a value for
-   * `replace_method`, then the specified `replace_method` value is used.
-   *
-   * If you do not specify either, then CENTER_INSIDE is used.
+   * The image replace method. If you specify both a `replace_method` and an `image_replace_method`,
+   * the `image_replace_method` takes precedence. If you do not specify a value for
+   * `image_replace_method`, but specify a value for `replace_method`, then the specified
+   * `replace_method` value is used. If you do not specify either, then CENTER_INSIDE is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageReplaceMethod;
 
   /**
-   * The image URL.
-   *
-   * The image is fetched once at insertion time and a copy is stored for display inside the
-   * presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be
-   * in one of PNG, JPEG, or GIF format.
-   *
-   * The provided URL can be at most 2 kB in length. The URL itself is saved with the image, and
-   * exposed via the Image.source_url field.
+   * The image URL. The image is fetched once at insertion time and a copy is stored for display
+   * inside the presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels,
+   * and must be in one of PNG, JPEG, or GIF format. The provided URL can be at most 2 kB in length.
+   * The URL itself is saved with the image, and exposed via the Image.source_url field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUrl;
 
   /**
-   * If non-empty, limits the matches to page elements only on the given pages.
-   *
-   * Returns a 400 bad request error if given the page object ID of a notes page or a notes master,
-   * or if a page with that object ID doesn't exist in the presentation.
+   * If non-empty, limits the matches to page elements only on the given pages. Returns a 400 bad
+   * request error if given the page object ID of a notes page or a notes master, or if a page with
+   * that object ID doesn't exist in the presentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> pageObjectIds;
 
   /**
-   * The replace method.
-   *
-   * Deprecated: use `image_replace_method` instead.
-   *
-   * If you specify both a `replace_method` and an `image_replace_method`, the
-   * `image_replace_method` takes precedence.
+   * The replace method. *Deprecated*: use `image_replace_method` instead. If you specify both a
+   * `replace_method` and an `image_replace_method`, the `image_replace_method` takes precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,15 +93,10 @@ public final class ReplaceAllShapesWithImageRequest extends com.google.api.clien
   }
 
   /**
-   * The image replace method.
-   *
-   * If you specify both a `replace_method` and an `image_replace_method`, the
-   * `image_replace_method` takes precedence.
-   *
-   * If you do not specify a value for `image_replace_method`, but specify a value for
-   * `replace_method`, then the specified `replace_method` value is used.
-   *
-   * If you do not specify either, then CENTER_INSIDE is used.
+   * The image replace method. If you specify both a `replace_method` and an `image_replace_method`,
+   * the `image_replace_method` takes precedence. If you do not specify a value for
+   * `image_replace_method`, but specify a value for `replace_method`, then the specified
+   * `replace_method` value is used. If you do not specify either, then CENTER_INSIDE is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageReplaceMethod() {
@@ -124,15 +104,10 @@ public final class ReplaceAllShapesWithImageRequest extends com.google.api.clien
   }
 
   /**
-   * The image replace method.
-   *
-   * If you specify both a `replace_method` and an `image_replace_method`, the
-   * `image_replace_method` takes precedence.
-   *
-   * If you do not specify a value for `image_replace_method`, but specify a value for
-   * `replace_method`, then the specified `replace_method` value is used.
-   *
-   * If you do not specify either, then CENTER_INSIDE is used.
+   * The image replace method. If you specify both a `replace_method` and an `image_replace_method`,
+   * the `image_replace_method` takes precedence. If you do not specify a value for
+   * `image_replace_method`, but specify a value for `replace_method`, then the specified
+   * `replace_method` value is used. If you do not specify either, then CENTER_INSIDE is used.
    * @param imageReplaceMethod imageReplaceMethod or {@code null} for none
    */
   public ReplaceAllShapesWithImageRequest setImageReplaceMethod(java.lang.String imageReplaceMethod) {
@@ -141,14 +116,10 @@ public final class ReplaceAllShapesWithImageRequest extends com.google.api.clien
   }
 
   /**
-   * The image URL.
-   *
-   * The image is fetched once at insertion time and a copy is stored for display inside the
-   * presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be
-   * in one of PNG, JPEG, or GIF format.
-   *
-   * The provided URL can be at most 2 kB in length. The URL itself is saved with the image, and
-   * exposed via the Image.source_url field.
+   * The image URL. The image is fetched once at insertion time and a copy is stored for display
+   * inside the presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels,
+   * and must be in one of PNG, JPEG, or GIF format. The provided URL can be at most 2 kB in length.
+   * The URL itself is saved with the image, and exposed via the Image.source_url field.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUrl() {
@@ -156,14 +127,10 @@ public final class ReplaceAllShapesWithImageRequest extends com.google.api.clien
   }
 
   /**
-   * The image URL.
-   *
-   * The image is fetched once at insertion time and a copy is stored for display inside the
-   * presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels, and must be
-   * in one of PNG, JPEG, or GIF format.
-   *
-   * The provided URL can be at most 2 kB in length. The URL itself is saved with the image, and
-   * exposed via the Image.source_url field.
+   * The image URL. The image is fetched once at insertion time and a copy is stored for display
+   * inside the presentation. Images must be less than 50MB in size, cannot exceed 25 megapixels,
+   * and must be in one of PNG, JPEG, or GIF format. The provided URL can be at most 2 kB in length.
+   * The URL itself is saved with the image, and exposed via the Image.source_url field.
    * @param imageUrl imageUrl or {@code null} for none
    */
   public ReplaceAllShapesWithImageRequest setImageUrl(java.lang.String imageUrl) {
@@ -172,10 +139,9 @@ public final class ReplaceAllShapesWithImageRequest extends com.google.api.clien
   }
 
   /**
-   * If non-empty, limits the matches to page elements only on the given pages.
-   *
-   * Returns a 400 bad request error if given the page object ID of a notes page or a notes master,
-   * or if a page with that object ID doesn't exist in the presentation.
+   * If non-empty, limits the matches to page elements only on the given pages. Returns a 400 bad
+   * request error if given the page object ID of a notes page or a notes master, or if a page with
+   * that object ID doesn't exist in the presentation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPageObjectIds() {
@@ -183,10 +149,9 @@ public final class ReplaceAllShapesWithImageRequest extends com.google.api.clien
   }
 
   /**
-   * If non-empty, limits the matches to page elements only on the given pages.
-   *
-   * Returns a 400 bad request error if given the page object ID of a notes page or a notes master,
-   * or if a page with that object ID doesn't exist in the presentation.
+   * If non-empty, limits the matches to page elements only on the given pages. Returns a 400 bad
+   * request error if given the page object ID of a notes page or a notes master, or if a page with
+   * that object ID doesn't exist in the presentation.
    * @param pageObjectIds pageObjectIds or {@code null} for none
    */
   public ReplaceAllShapesWithImageRequest setPageObjectIds(java.util.List<java.lang.String> pageObjectIds) {
@@ -195,12 +160,8 @@ public final class ReplaceAllShapesWithImageRequest extends com.google.api.clien
   }
 
   /**
-   * The replace method.
-   *
-   * Deprecated: use `image_replace_method` instead.
-   *
-   * If you specify both a `replace_method` and an `image_replace_method`, the
-   * `image_replace_method` takes precedence.
+   * The replace method. *Deprecated*: use `image_replace_method` instead. If you specify both a
+   * `replace_method` and an `image_replace_method`, the `image_replace_method` takes precedence.
    * @return value or {@code null} for none
    */
   public java.lang.String getReplaceMethod() {
@@ -208,12 +169,8 @@ public final class ReplaceAllShapesWithImageRequest extends com.google.api.clien
   }
 
   /**
-   * The replace method.
-   *
-   * Deprecated: use `image_replace_method` instead.
-   *
-   * If you specify both a `replace_method` and an `image_replace_method`, the
-   * `image_replace_method` takes precedence.
+   * The replace method. *Deprecated*: use `image_replace_method` instead. If you specify both a
+   * `replace_method` and an `image_replace_method`, the `image_replace_method` takes precedence.
    * @param replaceMethod replaceMethod or {@code null} for none
    */
   public ReplaceAllShapesWithImageRequest setReplaceMethod(java.lang.String replaceMethod) {

@@ -17,11 +17,9 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * The shadow properties of a page element.
- *
- * If these fields are unset, they may be inherited from a parent placeholder if it exists. If there
- * is no parent, the fields will default to the value used for new page elements created in the
- * Slides editor, which may depend on the page element kind.
+ * The shadow properties of a page element. If these fields are unset, they may be inherited from a
+ * parent placeholder if it exists. If there is no parent, the fields will default to the value used
+ * for new page elements created in the Slides editor, which may depend on the page element kind.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:
@@ -63,12 +61,10 @@ public final class Shadow extends com.google.api.client.json.GenericJson {
   private OpaqueColor color;
 
   /**
-   * The shadow property state.
-   *
-   * Updating the shadow on a page element will implicitly update this field to `RENDERED`, unless
-   * another value is specified in the same request. To have no shadow on a page element, set this
-   * field to `NOT_RENDERED`. In this case, any other shadow fields set in the same request will be
-   * ignored.
+   * The shadow property state. Updating the shadow on a page element will implicitly update this
+   * field to `RENDERED`, unless another value is specified in the same request. To have no shadow
+   * on a page element, set this field to `NOT_RENDERED`. In this case, any other shadow fields set
+   * in the same request will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,12 +163,10 @@ public final class Shadow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The shadow property state.
-   *
-   * Updating the shadow on a page element will implicitly update this field to `RENDERED`, unless
-   * another value is specified in the same request. To have no shadow on a page element, set this
-   * field to `NOT_RENDERED`. In this case, any other shadow fields set in the same request will be
-   * ignored.
+   * The shadow property state. Updating the shadow on a page element will implicitly update this
+   * field to `RENDERED`, unless another value is specified in the same request. To have no shadow
+   * on a page element, set this field to `NOT_RENDERED`. In this case, any other shadow fields set
+   * in the same request will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getPropertyState() {
@@ -180,12 +174,10 @@ public final class Shadow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The shadow property state.
-   *
-   * Updating the shadow on a page element will implicitly update this field to `RENDERED`, unless
-   * another value is specified in the same request. To have no shadow on a page element, set this
-   * field to `NOT_RENDERED`. In this case, any other shadow fields set in the same request will be
-   * ignored.
+   * The shadow property state. Updating the shadow on a page element will implicitly update this
+   * field to `RENDERED`, unless another value is specified in the same request. To have no shadow
+   * on a page element, set this field to `NOT_RENDERED`. In this case, any other shadow fields set
+   * in the same request will be ignored.
    * @param propertyState propertyState or {@code null} for none
    */
   public Shadow setPropertyState(java.lang.String propertyState) {

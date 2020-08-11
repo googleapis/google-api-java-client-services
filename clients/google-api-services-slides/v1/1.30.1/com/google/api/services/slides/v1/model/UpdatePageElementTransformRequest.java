@@ -17,11 +17,9 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * Updates the transform of a page element.
- *
- * Updating the transform of a group will change the absolute transform of the page elements in that
- * group, which can change their visual appearance. See the documentation for PageElement.transform
- * for more details.
+ * Updates the transform of a page element. Updating the transform of a group will change the
+ * absolute transform of the page elements in that group, which can change their visual appearance.
+ * See the documentation for PageElement.transform for more details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

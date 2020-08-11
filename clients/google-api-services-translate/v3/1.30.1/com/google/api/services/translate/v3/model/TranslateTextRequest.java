@@ -47,42 +47,32 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
   private TranslateTextGlossaryConfig glossaryConfig;
 
   /**
-   * Optional. The labels with user-defined metadata for the request.
-   *
-   * Label keys and values can be no longer than 63 characters (Unicode codepoints), can only
-   * contain lowercase letters, numeric characters, underscores and dashes. International characters
-   * are allowed. Label values are optional. Label keys must start with a letter.
-   *
-   * See https://cloud.google.com/translate/docs/advanced/labels for more information.
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter. See
+   * https://cloud.google.com/translate/docs/advanced/labels for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. The format of the source text, for example, "text/html",  "text/plain". If left
-   * blank, the MIME type defaults to "text/html".
+   * Optional. The format of the source text, for example, "text/html", "text/plain". If left blank,
+   * the MIME type defaults to "text/html".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
-   * Optional. The `model` type requested for this translation.
-   *
-   * The format depends on model type:
-   *
-   * - AutoML Translation models:   `projects/{project-number-or-id}/locations/{location-id}/models
-   * /{model-id}`
-   *
-   * - General (built-in) models:   `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/nmt`,   `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/base`
-   *
-   * For global (non-regionalized) requests, use `location-id` `global`. For example, `projects
-   * /{project-number-or-id}/locations/global/models/general/nmt`.
-   *
-   * If missing, the system decides which google base model to use.
+   * Optional. The `model` type requested for this translation. The format depends on model type: -
+   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-id}/models
+   * /{model-id}` - General (built-in) models: `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/nmt`, `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/base` For global (non-regionalized) requests, use `location-id` `global`.
+   * For example, `projects/{project-number-or-id}/locations/global/models/general/nmt`. If missing,
+   * the system decides which google base model to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,13 +135,11 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The labels with user-defined metadata for the request.
-   *
-   * Label keys and values can be no longer than 63 characters (Unicode codepoints), can only
-   * contain lowercase letters, numeric characters, underscores and dashes. International characters
-   * are allowed. Label values are optional. Label keys must start with a letter.
-   *
-   * See https://cloud.google.com/translate/docs/advanced/labels for more information.
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter. See
+   * https://cloud.google.com/translate/docs/advanced/labels for more information.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -159,13 +147,11 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The labels with user-defined metadata for the request.
-   *
-   * Label keys and values can be no longer than 63 characters (Unicode codepoints), can only
-   * contain lowercase letters, numeric characters, underscores and dashes. International characters
-   * are allowed. Label values are optional. Label keys must start with a letter.
-   *
-   * See https://cloud.google.com/translate/docs/advanced/labels for more information.
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter. See
+   * https://cloud.google.com/translate/docs/advanced/labels for more information.
    * @param labels labels or {@code null} for none
    */
   public TranslateTextRequest setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -174,8 +160,8 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The format of the source text, for example, "text/html",  "text/plain". If left
-   * blank, the MIME type defaults to "text/html".
+   * Optional. The format of the source text, for example, "text/html", "text/plain". If left blank,
+   * the MIME type defaults to "text/html".
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -183,8 +169,8 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The format of the source text, for example, "text/html",  "text/plain". If left
-   * blank, the MIME type defaults to "text/html".
+   * Optional. The format of the source text, for example, "text/html", "text/plain". If left blank,
+   * the MIME type defaults to "text/html".
    * @param mimeType mimeType or {@code null} for none
    */
   public TranslateTextRequest setMimeType(java.lang.String mimeType) {
@@ -193,21 +179,13 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The `model` type requested for this translation.
-   *
-   * The format depends on model type:
-   *
-   * - AutoML Translation models:   `projects/{project-number-or-id}/locations/{location-id}/models
-   * /{model-id}`
-   *
-   * - General (built-in) models:   `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/nmt`,   `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/base`
-   *
-   * For global (non-regionalized) requests, use `location-id` `global`. For example, `projects
-   * /{project-number-or-id}/locations/global/models/general/nmt`.
-   *
-   * If missing, the system decides which google base model to use.
+   * Optional. The `model` type requested for this translation. The format depends on model type: -
+   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-id}/models
+   * /{model-id}` - General (built-in) models: `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/nmt`, `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/base` For global (non-regionalized) requests, use `location-id` `global`.
+   * For example, `projects/{project-number-or-id}/locations/global/models/general/nmt`. If missing,
+   * the system decides which google base model to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -215,21 +193,13 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The `model` type requested for this translation.
-   *
-   * The format depends on model type:
-   *
-   * - AutoML Translation models:   `projects/{project-number-or-id}/locations/{location-id}/models
-   * /{model-id}`
-   *
-   * - General (built-in) models:   `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/nmt`,   `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/base`
-   *
-   * For global (non-regionalized) requests, use `location-id` `global`. For example, `projects
-   * /{project-number-or-id}/locations/global/models/general/nmt`.
-   *
-   * If missing, the system decides which google base model to use.
+   * Optional. The `model` type requested for this translation. The format depends on model type: -
+   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-id}/models
+   * /{model-id}` - General (built-in) models: `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/nmt`, `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/base` For global (non-regionalized) requests, use `location-id` `global`.
+   * For example, `projects/{project-number-or-id}/locations/global/models/general/nmt`. If missing,
+   * the system decides which google base model to use.
    * @param model model or {@code null} for none
    */
   public TranslateTextRequest setModel(java.lang.String model) {

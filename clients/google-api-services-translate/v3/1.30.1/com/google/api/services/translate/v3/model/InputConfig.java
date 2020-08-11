@@ -36,14 +36,11 @@ public final class InputConfig extends com.google.api.client.json.GenericJson {
    * test`). If a file extension is `.tsv`, it can contain either one or two columns. The first
    * column (optional) is the id of the text request. If the first column is missing, we use the row
    * number (0-based) from the input file as the ID in the output file. The second column is the
-   * actual text to be  translated. We recommend each row be <= 10K Unicode codepoints, otherwise an
-   * error might be returned. Note that the input tsv must be RFC 4180 compliant.
-   *
-   * You could use https://github.com/Clever/csvlint to check potential formatting errors in your
-   * tsv file. csvlint --delimiter='\t' your_input_file.tsv
-   *
-   * The other supported file extensions are `.txt` or `.html`, which is treated as a single large
-   * chunk of text.
+   * actual text to be translated. We recommend each row be <= 10K Unicode codepoints, otherwise an
+   * error might be returned. Note that the input tsv must be RFC 4180 compliant. You could use
+   * https://github.com/Clever/csvlint to check potential formatting errors in your tsv file.
+   * csvlint --delimiter='\t' your_input_file.tsv The other supported file extensions are `.txt` or
+   * `.html`, which is treated as a single large chunk of text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,14 +61,11 @@ public final class InputConfig extends com.google.api.client.json.GenericJson {
    * test`). If a file extension is `.tsv`, it can contain either one or two columns. The first
    * column (optional) is the id of the text request. If the first column is missing, we use the row
    * number (0-based) from the input file as the ID in the output file. The second column is the
-   * actual text to be  translated. We recommend each row be <= 10K Unicode codepoints, otherwise an
-   * error might be returned. Note that the input tsv must be RFC 4180 compliant.
-   *
-   * You could use https://github.com/Clever/csvlint to check potential formatting errors in your
-   * tsv file. csvlint --delimiter='\t' your_input_file.tsv
-   *
-   * The other supported file extensions are `.txt` or `.html`, which is treated as a single large
-   * chunk of text.
+   * actual text to be translated. We recommend each row be <= 10K Unicode codepoints, otherwise an
+   * error might be returned. Note that the input tsv must be RFC 4180 compliant. You could use
+   * https://github.com/Clever/csvlint to check potential formatting errors in your tsv file.
+   * csvlint --delimiter='\t' your_input_file.tsv The other supported file extensions are `.txt` or
+   * `.html`, which is treated as a single large chunk of text.
    * @return value or {@code null} for none
    */
   public GcsSource getGcsSource() {
@@ -84,14 +78,11 @@ public final class InputConfig extends com.google.api.client.json.GenericJson {
    * test`). If a file extension is `.tsv`, it can contain either one or two columns. The first
    * column (optional) is the id of the text request. If the first column is missing, we use the row
    * number (0-based) from the input file as the ID in the output file. The second column is the
-   * actual text to be  translated. We recommend each row be <= 10K Unicode codepoints, otherwise an
-   * error might be returned. Note that the input tsv must be RFC 4180 compliant.
-   *
-   * You could use https://github.com/Clever/csvlint to check potential formatting errors in your
-   * tsv file. csvlint --delimiter='\t' your_input_file.tsv
-   *
-   * The other supported file extensions are `.txt` or `.html`, which is treated as a single large
-   * chunk of text.
+   * actual text to be translated. We recommend each row be <= 10K Unicode codepoints, otherwise an
+   * error might be returned. Note that the input tsv must be RFC 4180 compliant. You could use
+   * https://github.com/Clever/csvlint to check potential formatting errors in your tsv file.
+   * csvlint --delimiter='\t' your_input_file.tsv The other supported file extensions are `.txt` or
+   * `.html`, which is treated as a single large chunk of text.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public InputConfig setGcsSource(GcsSource gcsSource) {

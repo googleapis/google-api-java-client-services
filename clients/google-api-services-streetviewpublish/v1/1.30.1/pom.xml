@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-streetviewpublish</artifactId>
-  <version>v1-rev20200224-1.30.10</version>
-  <name>Street View Publish API v1-rev20200224-1.30.10</name>
+  <version>v1-rev20200809-1.30.10</version>
+  <name>Street View Publish API v1-rev20200809-1.30.10</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

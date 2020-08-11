@@ -101,9 +101,7 @@ public final class ErrorGroupStats extends com.google.api.client.json.GenericJso
 
   /**
    * Approximate number of occurrences over time. Timed counts returned by ListGroups are guaranteed
-   * to be:
-   *
-   * - Inside the requested time interval - Non-overlapping, and - Ordered by ascending time.
+   * to be: - Inside the requested time interval - Non-overlapping, and - Ordered by ascending time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -273,9 +271,7 @@ public final class ErrorGroupStats extends com.google.api.client.json.GenericJso
 
   /**
    * Approximate number of occurrences over time. Timed counts returned by ListGroups are guaranteed
-   * to be:
-   *
-   * - Inside the requested time interval - Non-overlapping, and - Ordered by ascending time.
+   * to be: - Inside the requested time interval - Non-overlapping, and - Ordered by ascending time.
    * @return value or {@code null} for none
    */
   public java.util.List<TimedCount> getTimedCounts() {
@@ -284,9 +280,7 @@ public final class ErrorGroupStats extends com.google.api.client.json.GenericJso
 
   /**
    * Approximate number of occurrences over time. Timed counts returned by ListGroups are guaranteed
-   * to be:
-   *
-   * - Inside the requested time interval - Non-overlapping, and - Ordered by ascending time.
+   * to be: - Inside the requested time interval - Non-overlapping, and - Ordered by ascending time.
    * @param timedCounts timedCounts or {@code null} for none
    */
   public ErrorGroupStats setTimedCounts(java.util.List<TimedCount> timedCounts) {

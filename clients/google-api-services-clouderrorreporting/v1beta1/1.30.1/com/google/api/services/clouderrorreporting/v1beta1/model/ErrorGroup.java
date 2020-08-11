@@ -45,9 +45,7 @@ public final class ErrorGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Error group's resolution status.
-   *
-   * An unspecified resolution status will be interpreted as OPEN
+   * Error group's resolution status. An unspecified resolution status will be interpreted as OPEN
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,9 +95,7 @@ public final class ErrorGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Error group's resolution status.
-   *
-   * An unspecified resolution status will be interpreted as OPEN
+   * Error group's resolution status. An unspecified resolution status will be interpreted as OPEN
    * @return value or {@code null} for none
    */
   public java.lang.String getResolutionStatus() {
@@ -107,9 +103,7 @@ public final class ErrorGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Error group's resolution status.
-   *
-   * An unspecified resolution status will be interpreted as OPEN
+   * Error group's resolution status. An unspecified resolution status will be interpreted as OPEN
    * @param resolutionStatus resolutionStatus or {@code null} for none
    */
   public ErrorGroup setResolutionStatus(java.lang.String resolutionStatus) {

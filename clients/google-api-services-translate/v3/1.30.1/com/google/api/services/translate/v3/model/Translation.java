@@ -48,9 +48,7 @@ public final class Translation extends com.google.api.client.json.GenericJson {
 
   /**
    * Only present when `model` is present in the request. `model` here is normalized to have project
-   * number.
-   *
-   * For example: If the `model` requested in TranslationTextRequest is `projects/{project-
+   * number. For example: If the `model` requested in TranslationTextRequest is `projects/{project-
    * id}/locations/{location-id}/models/general/nmt` then `model` here would be normalized to
    * `projects/{project-number}/locations/{location-id}/models/general/nmt`.
    * The value may be {@code null}.
@@ -105,9 +103,7 @@ public final class Translation extends com.google.api.client.json.GenericJson {
 
   /**
    * Only present when `model` is present in the request. `model` here is normalized to have project
-   * number.
-   *
-   * For example: If the `model` requested in TranslationTextRequest is `projects/{project-
+   * number. For example: If the `model` requested in TranslationTextRequest is `projects/{project-
    * id}/locations/{location-id}/models/general/nmt` then `model` here would be normalized to
    * `projects/{project-number}/locations/{location-id}/models/general/nmt`.
    * @return value or {@code null} for none
@@ -118,9 +114,7 @@ public final class Translation extends com.google.api.client.json.GenericJson {
 
   /**
    * Only present when `model` is present in the request. `model` here is normalized to have project
-   * number.
-   *
-   * For example: If the `model` requested in TranslationTextRequest is `projects/{project-
+   * number. For example: If the `model` requested in TranslationTextRequest is `projects/{project-
    * id}/locations/{location-id}/models/general/nmt` then `model` here would be normalized to
    * `projects/{project-number}/locations/{location-id}/models/general/nmt`.
    * @param model model or {@code null} for none

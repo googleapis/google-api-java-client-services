@@ -38,13 +38,11 @@ public final class DetectLanguageRequest extends com.google.api.client.json.Gene
   private java.lang.String content;
 
   /**
-   * Optional. The labels with user-defined metadata for the request.
-   *
-   * Label keys and values can be no longer than 63 characters (Unicode codepoints), can only
-   * contain lowercase letters, numeric characters, underscores and dashes. International characters
-   * are allowed. Label values are optional. Label keys must start with a letter.
-   *
-   * See https://cloud.google.com/translate/docs/labels for more information.
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter. See
+   * https://cloud.google.com/translate/docs/labels for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,15 +57,10 @@ public final class DetectLanguageRequest extends com.google.api.client.json.Gene
   private java.lang.String mimeType;
 
   /**
-   * Optional. The language detection model to be used.
-   *
-   * Format: `projects/{project-number-or-id}/locations/{location-id}/models/language-detection
-   * /{model-id}`
-   *
-   * Only one language detection model is currently supported: `projects/{project-number-or-
-   * id}/locations/{location-id}/models/language-detection/default`.
-   *
-   * If not specified, the default model is used.
+   * Optional. The language detection model to be used. Format: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/language-detection/{model-id}` Only one language detection
+   * model is currently supported: `projects/{project-number-or-id}/locations/{location-id}/models
+   * /language-detection/default`. If not specified, the default model is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,13 +84,11 @@ public final class DetectLanguageRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. The labels with user-defined metadata for the request.
-   *
-   * Label keys and values can be no longer than 63 characters (Unicode codepoints), can only
-   * contain lowercase letters, numeric characters, underscores and dashes. International characters
-   * are allowed. Label values are optional. Label keys must start with a letter.
-   *
-   * See https://cloud.google.com/translate/docs/labels for more information.
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter. See
+   * https://cloud.google.com/translate/docs/labels for more information.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -105,13 +96,11 @@ public final class DetectLanguageRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. The labels with user-defined metadata for the request.
-   *
-   * Label keys and values can be no longer than 63 characters (Unicode codepoints), can only
-   * contain lowercase letters, numeric characters, underscores and dashes. International characters
-   * are allowed. Label values are optional. Label keys must start with a letter.
-   *
-   * See https://cloud.google.com/translate/docs/labels for more information.
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter. See
+   * https://cloud.google.com/translate/docs/labels for more information.
    * @param labels labels or {@code null} for none
    */
   public DetectLanguageRequest setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -139,15 +128,10 @@ public final class DetectLanguageRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. The language detection model to be used.
-   *
-   * Format: `projects/{project-number-or-id}/locations/{location-id}/models/language-detection
-   * /{model-id}`
-   *
-   * Only one language detection model is currently supported: `projects/{project-number-or-
-   * id}/locations/{location-id}/models/language-detection/default`.
-   *
-   * If not specified, the default model is used.
+   * Optional. The language detection model to be used. Format: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/language-detection/{model-id}` Only one language detection
+   * model is currently supported: `projects/{project-number-or-id}/locations/{location-id}/models
+   * /language-detection/default`. If not specified, the default model is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -155,15 +139,10 @@ public final class DetectLanguageRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. The language detection model to be used.
-   *
-   * Format: `projects/{project-number-or-id}/locations/{location-id}/models/language-detection
-   * /{model-id}`
-   *
-   * Only one language detection model is currently supported: `projects/{project-number-or-
-   * id}/locations/{location-id}/models/language-detection/default`.
-   *
-   * If not specified, the default model is used.
+   * Optional. The language detection model to be used. Format: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/language-detection/{model-id}` Only one language detection
+   * model is currently supported: `projects/{project-number-or-id}/locations/{location-id}/models
+   * /language-detection/default`. If not specified, the default model is used.
    * @param model model or {@code null} for none
    */
   public DetectLanguageRequest setModel(java.lang.String model) {

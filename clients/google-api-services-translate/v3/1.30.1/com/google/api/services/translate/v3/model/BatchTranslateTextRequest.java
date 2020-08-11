@@ -46,13 +46,11 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
   private java.util.List<InputConfig> inputConfigs;
 
   /**
-   * Optional. The labels with user-defined metadata for the request.
-   *
-   * Label keys and values can be no longer than 63 characters (Unicode codepoints), can only
-   * contain lowercase letters, numeric characters, underscores and dashes. International characters
-   * are allowed. Label values are optional. Label keys must start with a letter.
-   *
-   * See https://cloud.google.com/translate/docs/advanced/labels for more information.
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter. See
+   * https://cloud.google.com/translate/docs/advanced/labels for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,19 +58,12 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
 
   /**
    * Optional. The models to use for translation. Map's key is target language code. Map's value is
-   * model name. Value can be a built-in general model, or an AutoML Translation model.
-   *
-   * The value format depends on model type:
-   *
-   * - AutoML Translation models:   `projects/{project-number-or-id}/locations/{location-id}/models
-   * /{model-id}`
-   *
-   * - General (built-in) models:   `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/nmt`,   `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/base`
-   *
-   * If the map is empty or a specific model is not requested for a language pair, then default
-   * google model (nmt) is used.
+   * model name. Value can be a built-in general model, or an AutoML Translation model. The value
+   * format depends on model type: - AutoML Translation models: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/{model-id}` - General (built-in) models: `projects/{project-
+   * number-or-id}/locations/{location-id}/models/general/nmt`, `projects/{project-number-or-
+   * id}/locations/{location-id}/models/general/base` If the map is empty or a specific model is not
+   * requested for a language pair, then default google model (nmt) is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,13 +128,11 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
   }
 
   /**
-   * Optional. The labels with user-defined metadata for the request.
-   *
-   * Label keys and values can be no longer than 63 characters (Unicode codepoints), can only
-   * contain lowercase letters, numeric characters, underscores and dashes. International characters
-   * are allowed. Label values are optional. Label keys must start with a letter.
-   *
-   * See https://cloud.google.com/translate/docs/advanced/labels for more information.
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter. See
+   * https://cloud.google.com/translate/docs/advanced/labels for more information.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -151,13 +140,11 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
   }
 
   /**
-   * Optional. The labels with user-defined metadata for the request.
-   *
-   * Label keys and values can be no longer than 63 characters (Unicode codepoints), can only
-   * contain lowercase letters, numeric characters, underscores and dashes. International characters
-   * are allowed. Label values are optional. Label keys must start with a letter.
-   *
-   * See https://cloud.google.com/translate/docs/advanced/labels for more information.
+   * Optional. The labels with user-defined metadata for the request. Label keys and values can be
+   * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter. See
+   * https://cloud.google.com/translate/docs/advanced/labels for more information.
    * @param labels labels or {@code null} for none
    */
   public BatchTranslateTextRequest setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -167,19 +154,12 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
 
   /**
    * Optional. The models to use for translation. Map's key is target language code. Map's value is
-   * model name. Value can be a built-in general model, or an AutoML Translation model.
-   *
-   * The value format depends on model type:
-   *
-   * - AutoML Translation models:   `projects/{project-number-or-id}/locations/{location-id}/models
-   * /{model-id}`
-   *
-   * - General (built-in) models:   `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/nmt`,   `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/base`
-   *
-   * If the map is empty or a specific model is not requested for a language pair, then default
-   * google model (nmt) is used.
+   * model name. Value can be a built-in general model, or an AutoML Translation model. The value
+   * format depends on model type: - AutoML Translation models: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/{model-id}` - General (built-in) models: `projects/{project-
+   * number-or-id}/locations/{location-id}/models/general/nmt`, `projects/{project-number-or-
+   * id}/locations/{location-id}/models/general/base` If the map is empty or a specific model is not
+   * requested for a language pair, then default google model (nmt) is used.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getModels() {
@@ -188,19 +168,12 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
 
   /**
    * Optional. The models to use for translation. Map's key is target language code. Map's value is
-   * model name. Value can be a built-in general model, or an AutoML Translation model.
-   *
-   * The value format depends on model type:
-   *
-   * - AutoML Translation models:   `projects/{project-number-or-id}/locations/{location-id}/models
-   * /{model-id}`
-   *
-   * - General (built-in) models:   `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/nmt`,   `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/base`
-   *
-   * If the map is empty or a specific model is not requested for a language pair, then default
-   * google model (nmt) is used.
+   * model name. Value can be a built-in general model, or an AutoML Translation model. The value
+   * format depends on model type: - AutoML Translation models: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/{model-id}` - General (built-in) models: `projects/{project-
+   * number-or-id}/locations/{location-id}/models/general/nmt`, `projects/{project-number-or-
+   * id}/locations/{location-id}/models/general/base` If the map is empty or a specific model is not
+   * requested for a language pair, then default google model (nmt) is used.
    * @param models models or {@code null} for none
    */
   public BatchTranslateTextRequest setModels(java.util.Map<String, java.lang.String> models) {

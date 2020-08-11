@@ -72,15 +72,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name in the format `{target_country}:{content_language}:{product_id}`.
-   *
-   * `target_country`   - The target country of the product as a CLDR territory
-   * code (for example, US).
-   *
-   * `content_language` - The content language of the product as a two-letter
-   * ISO 639-1 language code (for example, en).
-   *
-   * `product_id`     -   The ID of the product. For more information, see
+   * Name in the format `{target_country}:{content_language}:{product_id}`. `target_country` - The
+   * target country of the product as a CLDR territory code (for example, US). `content_language` -
+   * The content language of the product as a two-letter ISO 639-1 language code (for example, en).
+   * `product_id` - The ID of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#id.
    * The value may be {@code null}.
    */
@@ -88,9 +83,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Parent ID in the format `accounts/{account_id}`.
-   *
-   * `account_id` - The ID of the Manufacturer Center account.
+   * Parent ID in the format `accounts/{account_id}`. `account_id` - The ID of the Manufacturer
+   * Center account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,15 +176,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name in the format `{target_country}:{content_language}:{product_id}`.
-   *
-   * `target_country`   - The target country of the product as a CLDR territory
-   * code (for example, US).
-   *
-   * `content_language` - The content language of the product as a two-letter
-   * ISO 639-1 language code (for example, en).
-   *
-   * `product_id`     -   The ID of the product. For more information, see
+   * Name in the format `{target_country}:{content_language}:{product_id}`. `target_country` - The
+   * target country of the product as a CLDR territory code (for example, US). `content_language` -
+   * The content language of the product as a two-letter ISO 639-1 language code (for example, en).
+   * `product_id` - The ID of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#id.
    * @return value or {@code null} for none
    */
@@ -199,15 +188,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name in the format `{target_country}:{content_language}:{product_id}`.
-   *
-   * `target_country`   - The target country of the product as a CLDR territory
-   * code (for example, US).
-   *
-   * `content_language` - The content language of the product as a two-letter
-   * ISO 639-1 language code (for example, en).
-   *
-   * `product_id`     -   The ID of the product. For more information, see
+   * Name in the format `{target_country}:{content_language}:{product_id}`. `target_country` - The
+   * target country of the product as a CLDR territory code (for example, US). `content_language` -
+   * The content language of the product as a two-letter ISO 639-1 language code (for example, en).
+   * `product_id` - The ID of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#id.
    * @param name name or {@code null} for none
    */
@@ -217,9 +201,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Parent ID in the format `accounts/{account_id}`.
-   *
-   * `account_id` - The ID of the Manufacturer Center account.
+   * Parent ID in the format `accounts/{account_id}`. `account_id` - The ID of the Manufacturer
+   * Center account.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -227,9 +210,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Parent ID in the format `accounts/{account_id}`.
-   *
-   * `account_id` - The ID of the Manufacturer Center account.
+   * Parent ID in the format `accounts/{account_id}`. `account_id` - The ID of the Manufacturer
+   * Center account.
    * @param parent parent or {@code null} for none
    */
   public Product setParent(java.lang.String parent) {

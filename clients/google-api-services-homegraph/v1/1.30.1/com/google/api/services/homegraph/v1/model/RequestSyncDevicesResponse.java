@@ -19,7 +19,6 @@ package com.google.api.services.homegraph.v1.model;
 /**
  * Response type for the
  * [`RequestSyncDevices`](#google.home.graph.v1.HomeGraphApiService.RequestSyncDevices) call.
- *
  * Intentionally empty upon success. An HTTP response code is returned with more details upon
  * failure.
  *

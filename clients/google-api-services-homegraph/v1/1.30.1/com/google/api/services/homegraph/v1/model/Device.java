@@ -68,10 +68,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates whether your smart home Action will report notifications to Google for this device
-   * via ReportStateAndNotification.
-   *
-   * If your smart home Action enables users to control device notifications, you should update this
-   * field and call RequestSyncDevices.
+   * via ReportStateAndNotification. If your smart home Action enables users to control device
+   * notifications, you should update this field and call RequestSyncDevices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,10 +221,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates whether your smart home Action will report notifications to Google for this device
-   * via ReportStateAndNotification.
-   *
-   * If your smart home Action enables users to control device notifications, you should update this
-   * field and call RequestSyncDevices.
+   * via ReportStateAndNotification. If your smart home Action enables users to control device
+   * notifications, you should update this field and call RequestSyncDevices.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNotificationSupportedByAgent() {
@@ -235,10 +231,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates whether your smart home Action will report notifications to Google for this device
-   * via ReportStateAndNotification.
-   *
-   * If your smart home Action enables users to control device notifications, you should update this
-   * field and call RequestSyncDevices.
+   * via ReportStateAndNotification. If your smart home Action enables users to control device
+   * notifications, you should update this field and call RequestSyncDevices.
    * @param notificationSupportedByAgent notificationSupportedByAgent or {@code null} for none
    */
   public Device setNotificationSupportedByAgent(java.lang.Boolean notificationSupportedByAgent) {

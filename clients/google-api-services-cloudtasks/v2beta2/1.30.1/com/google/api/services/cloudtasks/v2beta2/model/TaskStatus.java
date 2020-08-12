@@ -30,48 +30,41 @@ package com.google.api.services.cloudtasks.v2beta2.model;
 public final class TaskStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The number of attempts dispatched.
-   *
-   * This count includes attempts which have been dispatched but haven't received a response.
+   * Output only. The number of attempts dispatched. This count includes attempts which have been
+   * dispatched but haven't received a response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer attemptDispatchCount;
 
   /**
-   * Output only. The number of attempts which have received a response.
-   *
-   * This field is not calculated for pull tasks.
+   * Output only. The number of attempts which have received a response. This field is not
+   * calculated for pull tasks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer attemptResponseCount;
 
   /**
-   * Output only. The status of the task's first attempt.
-   *
-   * Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud
-   * Tasks.
-   *
-   * This field is not calculated for pull tasks.
+   * Output only. The status of the task's first attempt. Only dispatch_time will be set. The other
+   * AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull
+   * tasks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AttemptStatus firstAttemptStatus;
 
   /**
-   * Output only. The status of the task's last attempt.
-   *
-   * This field is not calculated for pull tasks.
+   * Output only. The status of the task's last attempt. This field is not calculated for pull
+   * tasks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AttemptStatus lastAttemptStatus;
 
   /**
-   * Output only. The number of attempts dispatched.
-   *
-   * This count includes attempts which have been dispatched but haven't received a response.
+   * Output only. The number of attempts dispatched. This count includes attempts which have been
+   * dispatched but haven't received a response.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAttemptDispatchCount() {
@@ -79,9 +72,8 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The number of attempts dispatched.
-   *
-   * This count includes attempts which have been dispatched but haven't received a response.
+   * Output only. The number of attempts dispatched. This count includes attempts which have been
+   * dispatched but haven't received a response.
    * @param attemptDispatchCount attemptDispatchCount or {@code null} for none
    */
   public TaskStatus setAttemptDispatchCount(java.lang.Integer attemptDispatchCount) {
@@ -90,9 +82,8 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The number of attempts which have received a response.
-   *
-   * This field is not calculated for pull tasks.
+   * Output only. The number of attempts which have received a response. This field is not
+   * calculated for pull tasks.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAttemptResponseCount() {
@@ -100,9 +91,8 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The number of attempts which have received a response.
-   *
-   * This field is not calculated for pull tasks.
+   * Output only. The number of attempts which have received a response. This field is not
+   * calculated for pull tasks.
    * @param attemptResponseCount attemptResponseCount or {@code null} for none
    */
   public TaskStatus setAttemptResponseCount(java.lang.Integer attemptResponseCount) {
@@ -111,12 +101,9 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The status of the task's first attempt.
-   *
-   * Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud
-   * Tasks.
-   *
-   * This field is not calculated for pull tasks.
+   * Output only. The status of the task's first attempt. Only dispatch_time will be set. The other
+   * AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull
+   * tasks.
    * @return value or {@code null} for none
    */
   public AttemptStatus getFirstAttemptStatus() {
@@ -124,12 +111,9 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The status of the task's first attempt.
-   *
-   * Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud
-   * Tasks.
-   *
-   * This field is not calculated for pull tasks.
+   * Output only. The status of the task's first attempt. Only dispatch_time will be set. The other
+   * AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull
+   * tasks.
    * @param firstAttemptStatus firstAttemptStatus or {@code null} for none
    */
   public TaskStatus setFirstAttemptStatus(AttemptStatus firstAttemptStatus) {
@@ -138,9 +122,8 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The status of the task's last attempt.
-   *
-   * This field is not calculated for pull tasks.
+   * Output only. The status of the task's last attempt. This field is not calculated for pull
+   * tasks.
    * @return value or {@code null} for none
    */
   public AttemptStatus getLastAttemptStatus() {
@@ -148,9 +131,8 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The status of the task's last attempt.
-   *
-   * This field is not calculated for pull tasks.
+   * Output only. The status of the task's last attempt. This field is not calculated for pull
+   * tasks.
    * @param lastAttemptStatus lastAttemptStatus or {@code null} for none
    */
   public TaskStatus setLastAttemptStatus(AttemptStatus lastAttemptStatus) {

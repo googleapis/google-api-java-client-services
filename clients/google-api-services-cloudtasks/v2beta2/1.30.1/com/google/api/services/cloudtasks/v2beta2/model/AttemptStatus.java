@@ -30,46 +30,40 @@ package com.google.api.services.cloudtasks.v2beta2.model;
 public final class AttemptStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time that this attempt was dispatched.
-   *
-   * `dispatch_time` will be truncated to the nearest microsecond.
+   * Output only. The time that this attempt was dispatched. `dispatch_time` will be truncated to
+   * the nearest microsecond.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String dispatchTime;
 
   /**
-   * Output only. The response from the target for this attempt.
-   *
-   * If the task has not been attempted or the task is currently running then the response status is
-   * unset.
+   * Output only. The response from the target for this attempt. If the task has not been attempted
+   * or the task is currently running then the response status is unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Status responseStatus;
 
   /**
-   * Output only. The time that this attempt response was received.
-   *
-   * `response_time` will be truncated to the nearest microsecond.
+   * Output only. The time that this attempt response was received. `response_time` will be
+   * truncated to the nearest microsecond.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String responseTime;
 
   /**
-   * Output only. The time that this attempt was scheduled.
-   *
-   * `schedule_time` will be truncated to the nearest microsecond.
+   * Output only. The time that this attempt was scheduled. `schedule_time` will be truncated to the
+   * nearest microsecond.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String scheduleTime;
 
   /**
-   * Output only. The time that this attempt was dispatched.
-   *
-   * `dispatch_time` will be truncated to the nearest microsecond.
+   * Output only. The time that this attempt was dispatched. `dispatch_time` will be truncated to
+   * the nearest microsecond.
    * @return value or {@code null} for none
    */
   public String getDispatchTime() {
@@ -77,9 +71,8 @@ public final class AttemptStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The time that this attempt was dispatched.
-   *
-   * `dispatch_time` will be truncated to the nearest microsecond.
+   * Output only. The time that this attempt was dispatched. `dispatch_time` will be truncated to
+   * the nearest microsecond.
    * @param dispatchTime dispatchTime or {@code null} for none
    */
   public AttemptStatus setDispatchTime(String dispatchTime) {
@@ -88,10 +81,8 @@ public final class AttemptStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The response from the target for this attempt.
-   *
-   * If the task has not been attempted or the task is currently running then the response status is
-   * unset.
+   * Output only. The response from the target for this attempt. If the task has not been attempted
+   * or the task is currently running then the response status is unset.
    * @return value or {@code null} for none
    */
   public Status getResponseStatus() {
@@ -99,10 +90,8 @@ public final class AttemptStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The response from the target for this attempt.
-   *
-   * If the task has not been attempted or the task is currently running then the response status is
-   * unset.
+   * Output only. The response from the target for this attempt. If the task has not been attempted
+   * or the task is currently running then the response status is unset.
    * @param responseStatus responseStatus or {@code null} for none
    */
   public AttemptStatus setResponseStatus(Status responseStatus) {
@@ -111,9 +100,8 @@ public final class AttemptStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The time that this attempt response was received.
-   *
-   * `response_time` will be truncated to the nearest microsecond.
+   * Output only. The time that this attempt response was received. `response_time` will be
+   * truncated to the nearest microsecond.
    * @return value or {@code null} for none
    */
   public String getResponseTime() {
@@ -121,9 +109,8 @@ public final class AttemptStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The time that this attempt response was received.
-   *
-   * `response_time` will be truncated to the nearest microsecond.
+   * Output only. The time that this attempt response was received. `response_time` will be
+   * truncated to the nearest microsecond.
    * @param responseTime responseTime or {@code null} for none
    */
   public AttemptStatus setResponseTime(String responseTime) {
@@ -132,9 +119,8 @@ public final class AttemptStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The time that this attempt was scheduled.
-   *
-   * `schedule_time` will be truncated to the nearest microsecond.
+   * Output only. The time that this attempt was scheduled. `schedule_time` will be truncated to the
+   * nearest microsecond.
    * @return value or {@code null} for none
    */
   public String getScheduleTime() {
@@ -142,9 +128,8 @@ public final class AttemptStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The time that this attempt was scheduled.
-   *
-   * `schedule_time` will be truncated to the nearest microsecond.
+   * Output only. The time that this attempt was scheduled. `schedule_time` will be truncated to the
+   * nearest microsecond.
    * @param scheduleTime scheduleTime or {@code null} for none
    */
   public AttemptStatus setScheduleTime(String scheduleTime) {

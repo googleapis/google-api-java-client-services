@@ -17,9 +17,8 @@
 package com.google.api.services.secretmanager.v1beta1.model;
 
 /**
- * A Secret is a logical secret whose value and versions can be accessed.
- *
- * A Secret is made up of zero or more SecretVersions that represent the secret data.
+ * A Secret is a logical secret whose value and versions can be accessed. A Secret is made up of
+ * zero or more SecretVersions that represent the secret data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Secret Manager API. For a detailed explanation see:
@@ -39,15 +38,11 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * The labels assigned to this Secret.
-   *
-   * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
-   * bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}`
-   *
-   * Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128
-   * bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`
-   *
-   * No more than 64 labels can be assigned to a given resource.
+   * The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a
+   * UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+   * `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8
+   * encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+   * `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,9 +56,8 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. Immutable. The replication policy of the secret data attached to the Secret.
-   *
-   * The replication policy cannot be changed after the Secret has been created.
+   * Required. Immutable. The replication policy of the secret data attached to the Secret. The
+   * replication policy cannot be changed after the Secret has been created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,15 +81,11 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The labels assigned to this Secret.
-   *
-   * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
-   * bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}`
-   *
-   * Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128
-   * bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`
-   *
-   * No more than 64 labels can be assigned to a given resource.
+   * The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a
+   * UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+   * `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8
+   * encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+   * `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -103,15 +93,11 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The labels assigned to this Secret.
-   *
-   * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
-   * bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}`
-   *
-   * Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128
-   * bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`
-   *
-   * No more than 64 labels can be assigned to a given resource.
+   * The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a
+   * UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+   * `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8
+   * encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
+   * `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
    * @param labels labels or {@code null} for none
    */
   public Secret setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -137,9 +123,8 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The replication policy of the secret data attached to the Secret.
-   *
-   * The replication policy cannot be changed after the Secret has been created.
+   * Required. Immutable. The replication policy of the secret data attached to the Secret. The
+   * replication policy cannot be changed after the Secret has been created.
    * @return value or {@code null} for none
    */
   public Replication getReplication() {
@@ -147,9 +132,8 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The replication policy of the secret data attached to the Secret.
-   *
-   * The replication policy cannot be changed after the Secret has been created.
+   * Required. Immutable. The replication policy of the secret data attached to the Secret. The
+   * replication policy cannot be changed after the Secret has been created.
    * @param replication replication or {@code null} for none
    */
   public Secret setReplication(Replication replication) {

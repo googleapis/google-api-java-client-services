@@ -31,25 +31,19 @@ package com.google.api.services.firebaserules.v1.model;
 public final class TestResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Debug messages related to test execution issues encountered during evaluation.
-   *
-   * Debug messages may be related to too many or too few invocations of function mocks or to
-   * runtime errors that occur during evaluation.
-   *
-   * For example: ```Unable to read variable [name: "resource"]```
+   * Debug messages related to test execution issues encountered during evaluation. Debug messages
+   * may be related to too many or too few invocations of function mocks or to runtime errors that
+   * occur during evaluation. For example: ```Unable to read variable [name: "resource"]```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> debugMessages;
 
   /**
-   * Position in the `Source` or `Ruleset` where the principle runtime error occurs.
-   *
-   * Evaluation of an expression may result in an error. Rules are deny by default, so a `DENY`
-   * expectation when an error is generated is valid. When there is a `DENY` with an error, the
-   * `SourcePosition` is returned.
-   *
-   * E.g. `error_position { line: 19 column: 37 }`
+   * Position in the `Source` or `Ruleset` where the principle runtime error occurs. Evaluation of
+   * an expression may result in an error. Rules are deny by default, so a `DENY` expectation when
+   * an error is generated is valid. When there is a `DENY` with an error, the `SourcePosition` is
+   * returned. E.g. `error_position { line: 19 column: 37 }`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,11 +66,9 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The set of function calls made to service-defined methods.
-   *
-   * Function calls are included in the order in which they are encountered during evaluation, are
-   * provided for both mocked and unmocked functions, and included on the response regardless of the
-   * test `state`.
+   * The set of function calls made to service-defined methods. Function calls are included in the
+   * order in which they are encountered during evaluation, are provided for both mocked and
+   * unmocked functions, and included on the response regardless of the test `state`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +90,7 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   /**
    * The set of visited permission expressions for a given test. This returns the positions and
    * evaluation results of all visited permission expressions which were relevant to the test case,
-   * e.g. ``` match /path {   allow read if:  } ``` For a detailed report of the intermediate
+   * e.g. ``` match /path { allow read if: } ``` For a detailed report of the intermediate
    * evaluation states, see the `expression_reports` field
    * The value may be {@code null}.
    */
@@ -106,12 +98,9 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   private java.util.List<VisitedExpression> visitedExpressions;
 
   /**
-   * Debug messages related to test execution issues encountered during evaluation.
-   *
-   * Debug messages may be related to too many or too few invocations of function mocks or to
-   * runtime errors that occur during evaluation.
-   *
-   * For example: ```Unable to read variable [name: "resource"]```
+   * Debug messages related to test execution issues encountered during evaluation. Debug messages
+   * may be related to too many or too few invocations of function mocks or to runtime errors that
+   * occur during evaluation. For example: ```Unable to read variable [name: "resource"]```
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDebugMessages() {
@@ -119,12 +108,9 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Debug messages related to test execution issues encountered during evaluation.
-   *
-   * Debug messages may be related to too many or too few invocations of function mocks or to
-   * runtime errors that occur during evaluation.
-   *
-   * For example: ```Unable to read variable [name: "resource"]```
+   * Debug messages related to test execution issues encountered during evaluation. Debug messages
+   * may be related to too many or too few invocations of function mocks or to runtime errors that
+   * occur during evaluation. For example: ```Unable to read variable [name: "resource"]```
    * @param debugMessages debugMessages or {@code null} for none
    */
   public TestResult setDebugMessages(java.util.List<java.lang.String> debugMessages) {
@@ -133,13 +119,10 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Position in the `Source` or `Ruleset` where the principle runtime error occurs.
-   *
-   * Evaluation of an expression may result in an error. Rules are deny by default, so a `DENY`
-   * expectation when an error is generated is valid. When there is a `DENY` with an error, the
-   * `SourcePosition` is returned.
-   *
-   * E.g. `error_position { line: 19 column: 37 }`
+   * Position in the `Source` or `Ruleset` where the principle runtime error occurs. Evaluation of
+   * an expression may result in an error. Rules are deny by default, so a `DENY` expectation when
+   * an error is generated is valid. When there is a `DENY` with an error, the `SourcePosition` is
+   * returned. E.g. `error_position { line: 19 column: 37 }`
    * @return value or {@code null} for none
    */
   public SourcePosition getErrorPosition() {
@@ -147,13 +130,10 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Position in the `Source` or `Ruleset` where the principle runtime error occurs.
-   *
-   * Evaluation of an expression may result in an error. Rules are deny by default, so a `DENY`
-   * expectation when an error is generated is valid. When there is a `DENY` with an error, the
-   * `SourcePosition` is returned.
-   *
-   * E.g. `error_position { line: 19 column: 37 }`
+   * Position in the `Source` or `Ruleset` where the principle runtime error occurs. Evaluation of
+   * an expression may result in an error. Rules are deny by default, so a `DENY` expectation when
+   * an error is generated is valid. When there is a `DENY` with an error, the `SourcePosition` is
+   * returned. E.g. `error_position { line: 19 column: 37 }`
    * @param errorPosition errorPosition or {@code null} for none
    */
   public TestResult setErrorPosition(SourcePosition errorPosition) {
@@ -185,11 +165,9 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The set of function calls made to service-defined methods.
-   *
-   * Function calls are included in the order in which they are encountered during evaluation, are
-   * provided for both mocked and unmocked functions, and included on the response regardless of the
-   * test `state`.
+   * The set of function calls made to service-defined methods. Function calls are included in the
+   * order in which they are encountered during evaluation, are provided for both mocked and
+   * unmocked functions, and included on the response regardless of the test `state`.
    * @return value or {@code null} for none
    */
   public java.util.List<FunctionCall> getFunctionCalls() {
@@ -197,11 +175,9 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The set of function calls made to service-defined methods.
-   *
-   * Function calls are included in the order in which they are encountered during evaluation, are
-   * provided for both mocked and unmocked functions, and included on the response regardless of the
-   * test `state`.
+   * The set of function calls made to service-defined methods. Function calls are included in the
+   * order in which they are encountered during evaluation, are provided for both mocked and
+   * unmocked functions, and included on the response regardless of the test `state`.
    * @param functionCalls functionCalls or {@code null} for none
    */
   public TestResult setFunctionCalls(java.util.List<FunctionCall> functionCalls) {
@@ -229,7 +205,7 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   /**
    * The set of visited permission expressions for a given test. This returns the positions and
    * evaluation results of all visited permission expressions which were relevant to the test case,
-   * e.g. ``` match /path {   allow read if:  } ``` For a detailed report of the intermediate
+   * e.g. ``` match /path { allow read if: } ``` For a detailed report of the intermediate
    * evaluation states, see the `expression_reports` field
    * @return value or {@code null} for none
    */
@@ -240,7 +216,7 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   /**
    * The set of visited permission expressions for a given test. This returns the positions and
    * evaluation results of all visited permission expressions which were relevant to the test case,
-   * e.g. ``` match /path {   allow read if:  } ``` For a detailed report of the intermediate
+   * e.g. ``` match /path { allow read if: } ``` For a detailed report of the intermediate
    * evaluation states, see the `expression_reports` field
    * @param visitedExpressions visitedExpressions or {@code null} for none
    */

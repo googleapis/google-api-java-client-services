@@ -63,10 +63,8 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
 
   /**
    * Google Cloud services that are not subject to the Service Perimeter restrictions. Deprecated.
-   * Must be set to a single wildcard "*".
-   *
-   * The wildcard means that unless explicitly specified by "restricted_services" list, any service
-   * is treated as unrestricted.
+   * Must be set to a single wildcard "*". The wildcard means that unless explicitly specified by
+   * "restricted_services" list, any service is treated as unrestricted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,10 +148,8 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
 
   /**
    * Google Cloud services that are not subject to the Service Perimeter restrictions. Deprecated.
-   * Must be set to a single wildcard "*".
-   *
-   * The wildcard means that unless explicitly specified by "restricted_services" list, any service
-   * is treated as unrestricted.
+   * Must be set to a single wildcard "*". The wildcard means that unless explicitly specified by
+   * "restricted_services" list, any service is treated as unrestricted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnrestrictedServices() {
@@ -162,10 +158,8 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
 
   /**
    * Google Cloud services that are not subject to the Service Perimeter restrictions. Deprecated.
-   * Must be set to a single wildcard "*".
-   *
-   * The wildcard means that unless explicitly specified by "restricted_services" list, any service
-   * is treated as unrestricted.
+   * Must be set to a single wildcard "*". The wildcard means that unless explicitly specified by
+   * "restricted_services" list, any service is treated as unrestricted.
    * @param unrestrictedServices unrestrictedServices or {@code null} for none
    */
   public ServicePerimeterConfig setUnrestrictedServices(java.util.List<java.lang.String> unrestrictedServices) {

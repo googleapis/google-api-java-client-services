@@ -55,7 +55,7 @@ public final class AccessLevel extends com.google.api.client.json.GenericJson {
   /**
    * Required. Resource name for the Access Level. The `short_name` component must begin with a
    * letter and only include alphanumeric and '_'. Format:
-   * `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length  // of the
+   * `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the
    * `short_name` component is 50 characters.
    * The value may be {@code null}.
    */
@@ -123,7 +123,7 @@ public final class AccessLevel extends com.google.api.client.json.GenericJson {
   /**
    * Required. Resource name for the Access Level. The `short_name` component must begin with a
    * letter and only include alphanumeric and '_'. Format:
-   * `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length  // of the
+   * `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the
    * `short_name` component is 50 characters.
    * @return value or {@code null} for none
    */
@@ -134,7 +134,7 @@ public final class AccessLevel extends com.google.api.client.json.GenericJson {
   /**
    * Required. Resource name for the Access Level. The `short_name` component must begin with a
    * letter and only include alphanumeric and '_'. Format:
-   * `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length  // of the
+   * `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the
    * `short_name` component is 50 characters.
    * @param name name or {@code null} for none
    */

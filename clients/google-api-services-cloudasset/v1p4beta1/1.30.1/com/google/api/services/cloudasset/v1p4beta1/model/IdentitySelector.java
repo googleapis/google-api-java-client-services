@@ -32,13 +32,10 @@ public final class IdentitySelector extends com.google.api.client.json.GenericJs
 
   /**
    * Required. The identity appear in the form of members in [IAM policy
-   * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
-   *
-   * The examples of supported forms are: "user:mike@example.com", "group:admins@example.com",
-   * "domain:google.com", "serviceAccount:my-project-id@appspot.gserviceaccount.com".
-   *
-   * Notice that wildcard characters (such as * and ?) are not supported. You must give a specific
-   * identity.
+   * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
+   * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",
+   * "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters
+   * (such as * and ?) are not supported. You must give a specific identity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,13 +43,10 @@ public final class IdentitySelector extends com.google.api.client.json.GenericJs
 
   /**
    * Required. The identity appear in the form of members in [IAM policy
-   * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
-   *
-   * The examples of supported forms are: "user:mike@example.com", "group:admins@example.com",
-   * "domain:google.com", "serviceAccount:my-project-id@appspot.gserviceaccount.com".
-   *
-   * Notice that wildcard characters (such as * and ?) are not supported. You must give a specific
-   * identity.
+   * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
+   * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",
+   * "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters
+   * (such as * and ?) are not supported. You must give a specific identity.
    * @return value or {@code null} for none
    */
   public java.lang.String getIdentity() {
@@ -61,13 +55,10 @@ public final class IdentitySelector extends com.google.api.client.json.GenericJs
 
   /**
    * Required. The identity appear in the form of members in [IAM policy
-   * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
-   *
-   * The examples of supported forms are: "user:mike@example.com", "group:admins@example.com",
-   * "domain:google.com", "serviceAccount:my-project-id@appspot.gserviceaccount.com".
-   *
-   * Notice that wildcard characters (such as * and ?) are not supported. You must give a specific
-   * identity.
+   * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
+   * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",
+   * "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters
+   * (such as * and ?) are not supported. You must give a specific identity.
    * @param identity identity or {@code null} for none
    */
   public IdentitySelector setIdentity(java.lang.String identity) {

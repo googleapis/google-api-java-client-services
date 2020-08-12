@@ -32,22 +32,17 @@ public final class Options extends com.google.api.client.json.GenericJson {
   /**
    * Optional. If true, the response will include access analysis from identities to resources via
    * service account impersonation. This is a very expensive operation, because many derived queries
-   * will be executed.
-   *
-   * For example, if the request analyzes for which resources user A has permission P, and there's
-   * an IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a service
-   * account SA, and there's another IAM policy states service account SA has permission P to a GCP
-   * folder F, then user A potentially has access to the GCP folder F. And those advanced analysis
-   * results will be included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
-   *
-   * Another example, if the request analyzes for who has permission P to a GCP folder F, and
-   * there's an IAM policy states user A has iam.serviceAccounts.actAs permission to a service
-   * account SA, and there's another IAM policy states service account SA has permission P to the
-   * GCP folder F, then user A potentially has access to the GCP folder F. And those advanced
-   * analysis results will be included in
-   * AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
-   *
-   * Default is false.
+   * will be executed. For example, if the request analyzes for which resources user A has
+   * permission P, and there's an IAM policy states user A has iam.serviceAccounts.getAccessToken
+   * permission to a service account SA, and there's another IAM policy states service account SA
+   * has permission P to a GCP folder F, then user A potentially has access to the GCP folder F. And
+   * those advanced analysis results will be included in
+   * AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another example, if the
+   * request analyzes for who has permission P to a GCP folder F, and there's an IAM policy states
+   * user A has iam.serviceAccounts.actAs permission to a service account SA, and there's another
+   * IAM policy states service account SA has permission P to the GCP folder F, then user A
+   * potentially has access to the GCP folder F. And those advanced analysis results will be
+   * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,12 +50,8 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If true, the identities section of the result will expand any Google groups appearing
-   * in an IAM policy binding.
-   *
-   * If identity_selector is specified, the identity in the result will be determined by the
-   * selector, and this flag will have no effect.
-   *
-   * Default is false.
+   * in an IAM policy binding. If identity_selector is specified, the identity in the result will be
+   * determined by the selector, and this flag will have no effect. Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,14 +59,11 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If true, the resource section of the result will expand any resource attached to an
-   * IAM policy to include resources lower in the resource hierarchy.
-   *
-   * For example, if the request analyzes for which resources user A has permission P, and the
-   * results include an IAM policy with P on a GCP folder, the results will also include resources
-   * in that folder with permission P.
-   *
-   * If resource_selector is specified, the resource section of the result will be determined by the
-   * selector, and this flag will have no effect. Default is false.
+   * IAM policy to include resources lower in the resource hierarchy. For example, if the request
+   * analyzes for which resources user A has permission P, and the results include an IAM policy
+   * with P on a GCP folder, the results will also include resources in that folder with permission
+   * P. If resource_selector is specified, the resource section of the result will be determined by
+   * the selector, and this flag will have no effect. Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,12 +71,9 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If true, the access section of result will expand any roles appearing in IAM policy
-   * bindings to include their permissions.
-   *
-   * If access_selector is specified, the access section of the result will be determined by the
-   * selector, and this flag will have no effect.
-   *
-   * Default is false.
+   * bindings to include their permissions. If access_selector is specified, the access section of
+   * the result will be determined by the selector, and this flag will have no effect. Default is
+   * false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,22 +98,17 @@ public final class Options extends com.google.api.client.json.GenericJson {
   /**
    * Optional. If true, the response will include access analysis from identities to resources via
    * service account impersonation. This is a very expensive operation, because many derived queries
-   * will be executed.
-   *
-   * For example, if the request analyzes for which resources user A has permission P, and there's
-   * an IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a service
-   * account SA, and there's another IAM policy states service account SA has permission P to a GCP
-   * folder F, then user A potentially has access to the GCP folder F. And those advanced analysis
-   * results will be included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
-   *
-   * Another example, if the request analyzes for who has permission P to a GCP folder F, and
-   * there's an IAM policy states user A has iam.serviceAccounts.actAs permission to a service
-   * account SA, and there's another IAM policy states service account SA has permission P to the
-   * GCP folder F, then user A potentially has access to the GCP folder F. And those advanced
-   * analysis results will be included in
-   * AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
-   *
-   * Default is false.
+   * will be executed. For example, if the request analyzes for which resources user A has
+   * permission P, and there's an IAM policy states user A has iam.serviceAccounts.getAccessToken
+   * permission to a service account SA, and there's another IAM policy states service account SA
+   * has permission P to a GCP folder F, then user A potentially has access to the GCP folder F. And
+   * those advanced analysis results will be included in
+   * AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another example, if the
+   * request analyzes for who has permission P to a GCP folder F, and there's an IAM policy states
+   * user A has iam.serviceAccounts.actAs permission to a service account SA, and there's another
+   * IAM policy states service account SA has permission P to the GCP folder F, then user A
+   * potentially has access to the GCP folder F. And those advanced analysis results will be
+   * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAnalyzeServiceAccountImpersonation() {
@@ -138,22 +118,17 @@ public final class Options extends com.google.api.client.json.GenericJson {
   /**
    * Optional. If true, the response will include access analysis from identities to resources via
    * service account impersonation. This is a very expensive operation, because many derived queries
-   * will be executed.
-   *
-   * For example, if the request analyzes for which resources user A has permission P, and there's
-   * an IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a service
-   * account SA, and there's another IAM policy states service account SA has permission P to a GCP
-   * folder F, then user A potentially has access to the GCP folder F. And those advanced analysis
-   * results will be included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
-   *
-   * Another example, if the request analyzes for who has permission P to a GCP folder F, and
-   * there's an IAM policy states user A has iam.serviceAccounts.actAs permission to a service
-   * account SA, and there's another IAM policy states service account SA has permission P to the
-   * GCP folder F, then user A potentially has access to the GCP folder F. And those advanced
-   * analysis results will be included in
-   * AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
-   *
-   * Default is false.
+   * will be executed. For example, if the request analyzes for which resources user A has
+   * permission P, and there's an IAM policy states user A has iam.serviceAccounts.getAccessToken
+   * permission to a service account SA, and there's another IAM policy states service account SA
+   * has permission P to a GCP folder F, then user A potentially has access to the GCP folder F. And
+   * those advanced analysis results will be included in
+   * AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another example, if the
+   * request analyzes for who has permission P to a GCP folder F, and there's an IAM policy states
+   * user A has iam.serviceAccounts.actAs permission to a service account SA, and there's another
+   * IAM policy states service account SA has permission P to the GCP folder F, then user A
+   * potentially has access to the GCP folder F. And those advanced analysis results will be
+   * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is false.
    * @param analyzeServiceAccountImpersonation analyzeServiceAccountImpersonation or {@code null} for none
    */
   public Options setAnalyzeServiceAccountImpersonation(java.lang.Boolean analyzeServiceAccountImpersonation) {
@@ -163,12 +138,8 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If true, the identities section of the result will expand any Google groups appearing
-   * in an IAM policy binding.
-   *
-   * If identity_selector is specified, the identity in the result will be determined by the
-   * selector, and this flag will have no effect.
-   *
-   * Default is false.
+   * in an IAM policy binding. If identity_selector is specified, the identity in the result will be
+   * determined by the selector, and this flag will have no effect. Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExpandGroups() {
@@ -177,12 +148,8 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If true, the identities section of the result will expand any Google groups appearing
-   * in an IAM policy binding.
-   *
-   * If identity_selector is specified, the identity in the result will be determined by the
-   * selector, and this flag will have no effect.
-   *
-   * Default is false.
+   * in an IAM policy binding. If identity_selector is specified, the identity in the result will be
+   * determined by the selector, and this flag will have no effect. Default is false.
    * @param expandGroups expandGroups or {@code null} for none
    */
   public Options setExpandGroups(java.lang.Boolean expandGroups) {
@@ -192,14 +159,11 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If true, the resource section of the result will expand any resource attached to an
-   * IAM policy to include resources lower in the resource hierarchy.
-   *
-   * For example, if the request analyzes for which resources user A has permission P, and the
-   * results include an IAM policy with P on a GCP folder, the results will also include resources
-   * in that folder with permission P.
-   *
-   * If resource_selector is specified, the resource section of the result will be determined by the
-   * selector, and this flag will have no effect. Default is false.
+   * IAM policy to include resources lower in the resource hierarchy. For example, if the request
+   * analyzes for which resources user A has permission P, and the results include an IAM policy
+   * with P on a GCP folder, the results will also include resources in that folder with permission
+   * P. If resource_selector is specified, the resource section of the result will be determined by
+   * the selector, and this flag will have no effect. Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExpandResources() {
@@ -208,14 +172,11 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If true, the resource section of the result will expand any resource attached to an
-   * IAM policy to include resources lower in the resource hierarchy.
-   *
-   * For example, if the request analyzes for which resources user A has permission P, and the
-   * results include an IAM policy with P on a GCP folder, the results will also include resources
-   * in that folder with permission P.
-   *
-   * If resource_selector is specified, the resource section of the result will be determined by the
-   * selector, and this flag will have no effect. Default is false.
+   * IAM policy to include resources lower in the resource hierarchy. For example, if the request
+   * analyzes for which resources user A has permission P, and the results include an IAM policy
+   * with P on a GCP folder, the results will also include resources in that folder with permission
+   * P. If resource_selector is specified, the resource section of the result will be determined by
+   * the selector, and this flag will have no effect. Default is false.
    * @param expandResources expandResources or {@code null} for none
    */
   public Options setExpandResources(java.lang.Boolean expandResources) {
@@ -225,12 +186,9 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If true, the access section of result will expand any roles appearing in IAM policy
-   * bindings to include their permissions.
-   *
-   * If access_selector is specified, the access section of the result will be determined by the
-   * selector, and this flag will have no effect.
-   *
-   * Default is false.
+   * bindings to include their permissions. If access_selector is specified, the access section of
+   * the result will be determined by the selector, and this flag will have no effect. Default is
+   * false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExpandRoles() {
@@ -239,12 +197,9 @@ public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If true, the access section of result will expand any roles appearing in IAM policy
-   * bindings to include their permissions.
-   *
-   * If access_selector is specified, the access section of the result will be determined by the
-   * selector, and this flag will have no effect.
-   *
-   * Default is false.
+   * bindings to include their permissions. If access_selector is specified, the access section of
+   * the result will be determined by the selector, and this flag will have no effect. Default is
+   * false.
    * @param expandRoles expandRoles or {@code null} for none
    */
   public Options setExpandRoles(java.lang.Boolean expandRoles) {

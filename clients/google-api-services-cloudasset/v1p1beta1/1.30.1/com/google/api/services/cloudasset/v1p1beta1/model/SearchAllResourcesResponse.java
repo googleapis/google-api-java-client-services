@@ -31,7 +31,7 @@ public final class SearchAllResourcesResponse extends com.google.api.client.json
 
   /**
    * If there are more results than those appearing in this response, then `next_page_token` is
-   * included.  To get the next set of results, call this method again using the value of
+   * included. To get the next set of results, call this method again using the value of
    * `next_page_token` as `page_token`.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class SearchAllResourcesResponse extends com.google.api.client.json
 
   /**
    * If there are more results than those appearing in this response, then `next_page_token` is
-   * included.  To get the next set of results, call this method again using the value of
+   * included. To get the next set of results, call this method again using the value of
    * `next_page_token` as `page_token`.
    * @return value or {@code null} for none
    */
@@ -57,7 +57,7 @@ public final class SearchAllResourcesResponse extends com.google.api.client.json
 
   /**
    * If there are more results than those appearing in this response, then `next_page_token` is
-   * included.  To get the next set of results, call this method again using the value of
+   * included. To get the next set of results, call this method again using the value of
    * `next_page_token` as `page_token`.
    * @param nextPageToken nextPageToken or {@code null} for none
    */

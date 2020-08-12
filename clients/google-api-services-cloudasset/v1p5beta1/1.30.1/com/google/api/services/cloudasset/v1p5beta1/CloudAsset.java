@@ -150,12 +150,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Name of the organization or project the assets belong to. Format:
-    "organizations
-     *        /[organization-number]" (such as "organizations/123"),
-    "projects/[project-number]" (such
-     *        as "projects/my-project-id"), or
-    "projects/[project-id]" (such as "projects/12345").
+     * @param parent Required. Name of the organization or project the assets belong to. Format: "organizations
+     *        /[organization-number]" (such as "organizations/123"), "projects/[project-number]" (such
+     *        as "projects/my-project-id"), or "projects/[project-id]" (such as "projects/12345").
      * @return the request
      */
     public List list(java.lang.String parent) throws java.io.IOException {
@@ -181,12 +178,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Name of the organization or project the assets belong to. Format:
-    "organizations
-     *        /[organization-number]" (such as "organizations/123"),
-    "projects/[project-number]" (such
-     *        as "projects/my-project-id"), or
-    "projects/[project-id]" (such as "projects/12345").
+       * @param parent Required. Name of the organization or project the assets belong to. Format: "organizations
+     *        /[organization-number]" (such as "organizations/123"), "projects/[project-number]" (such
+     *        as "projects/my-project-id"), or "projects/[project-id]" (such as "projects/12345").
        * @since 1.13
        */
       protected List(java.lang.String parent) {
@@ -297,39 +291,28 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * A list of asset types to take a snapshot for. For example: "compute.googleapis.com/Disk".
-       *
-       * Regular expression is also supported. For example:
-       *
-       * * "compute.googleapis.com.*" snapshots resources whose asset type starts with
-       * "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with
-       * "Instance". * ".*Instance.*" snapshots resources whose asset type contains "Instance".
-       *
-       * See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
-       * syntax. If the regular expression does not match any supported asset type, an
-       * INVALID_ARGUMENT error will be returned.
-       *
-       * If specified, only matching assets will be returned, otherwise, it will snapshot all asset
-       * types. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-
+       * Regular expression is also supported. For example: * "compute.googleapis.com.*" snapshots
+       * resources whose asset type starts with "compute.googleapis.com". * ".*Instance" snapshots
+       * resources whose asset type ends with "Instance". * ".*Instance.*" snapshots resources whose
+       * asset type contains "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for
+       * all supported regular expression syntax. If the regular expression does not match any
+       * supported asset type, an INVALID_ARGUMENT error will be returned. If specified, only
+       * matching assets will be returned, otherwise, it will snapshot all asset types. See
+       * [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-
        * inventory/docs/overview) for all supported asset types.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> assetTypes;
 
-      /** A list of asset types to take a snapshot for. For example: "compute.googleapis.com/Disk".
-
-     Regular expression is also supported. For example:
-
-     * "compute.googleapis.com.*" snapshots resources whose asset type starts with
-     "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with "Instance".
-     * ".*Instance.*" snapshots resources whose asset type contains "Instance".
-
-     See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression syntax.
-     If the regular expression does not match any supported asset type, an INVALID_ARGUMENT error will
-     be returned.
-
-     If specified, only matching assets will be returned, otherwise, it will snapshot all asset types.
-     See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview)
-     for all supported asset types.
+      /** A list of asset types to take a snapshot for. For example: "compute.googleapis.com/Disk". Regular
+     expression is also supported. For example: * "compute.googleapis.com.*" snapshots resources whose
+     asset type starts with "compute.googleapis.com". * ".*Instance" snapshots resources whose asset
+     type ends with "Instance". * ".*Instance.*" snapshots resources whose asset type contains
+     "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular
+     expression syntax. If the regular expression does not match any supported asset type, an
+     INVALID_ARGUMENT error will be returned. If specified, only matching assets will be returned,
+     otherwise, it will snapshot all asset types. See [Introduction to Cloud Asset
+     Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types.
        */
       public java.util.List<java.lang.String> getAssetTypes() {
         return assetTypes;
@@ -337,19 +320,14 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * A list of asset types to take a snapshot for. For example: "compute.googleapis.com/Disk".
-       *
-       * Regular expression is also supported. For example:
-       *
-       * * "compute.googleapis.com.*" snapshots resources whose asset type starts with
-       * "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with
-       * "Instance". * ".*Instance.*" snapshots resources whose asset type contains "Instance".
-       *
-       * See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
-       * syntax. If the regular expression does not match any supported asset type, an
-       * INVALID_ARGUMENT error will be returned.
-       *
-       * If specified, only matching assets will be returned, otherwise, it will snapshot all asset
-       * types. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-
+       * Regular expression is also supported. For example: * "compute.googleapis.com.*" snapshots
+       * resources whose asset type starts with "compute.googleapis.com". * ".*Instance" snapshots
+       * resources whose asset type ends with "Instance". * ".*Instance.*" snapshots resources whose
+       * asset type contains "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for
+       * all supported regular expression syntax. If the regular expression does not match any
+       * supported asset type, an INVALID_ARGUMENT error will be returned. If specified, only
+       * matching assets will be returned, otherwise, it will snapshot all asset types. See
+       * [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-
        * inventory/docs/overview) for all supported asset types.
        */
       public List setAssetTypes(java.util.List<java.lang.String> assetTypes) {
@@ -357,9 +335,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
         return this;
       }
 
-      /**
-       * Asset content type. If not specified, no content but the asset name will be returned.
-       */
+      /** Asset content type. If not specified, no content but the asset name will be returned. */
       @com.google.api.client.util.Key
       private java.lang.String contentType;
 
@@ -369,9 +345,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
         return contentType;
       }
 
-      /**
-       * Asset content type. If not specified, no content but the asset name will be returned.
-       */
+      /** Asset content type. If not specified, no content but the asset name will be returned. */
       public List setContentType(java.lang.String contentType) {
         this.contentType = contentType;
         return this;

@@ -31,20 +31,15 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
 
   /**
    * A list of asset types to take a snapshot for. For example: "compute.googleapis.com/Disk".
-   *
-   * Regular expressions are also supported. For example:
-   *
-   * * "compute.googleapis.com.*" snapshots resources whose asset type starts with
-   * "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with
-   * "Instance". * ".*Instance.*" snapshots resources whose asset type contains "Instance".
-   *
-   * See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
-   * syntax. If the regular expression does not match any supported asset type, an INVALID_ARGUMENT
-   * error will be returned.
-   *
-   * If specified, only matching assets will be returned, otherwise, it will snapshot all asset
-   * types. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-
-   * inventory/docs/overview) for all supported asset types.
+   * Regular expressions are also supported. For example: * "compute.googleapis.com.*" snapshots
+   * resources whose asset type starts with "compute.googleapis.com". * ".*Instance" snapshots
+   * resources whose asset type ends with "Instance". * ".*Instance.*" snapshots resources whose
+   * asset type contains "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for all
+   * supported regular expression syntax. If the regular expression does not match any supported
+   * asset type, an INVALID_ARGUMENT error will be returned. If specified, only matching assets will
+   * be returned, otherwise, it will snapshot all asset types. See [Introduction to Cloud Asset
+   * Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset
+   * types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,20 +71,15 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
 
   /**
    * A list of asset types to take a snapshot for. For example: "compute.googleapis.com/Disk".
-   *
-   * Regular expressions are also supported. For example:
-   *
-   * * "compute.googleapis.com.*" snapshots resources whose asset type starts with
-   * "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with
-   * "Instance". * ".*Instance.*" snapshots resources whose asset type contains "Instance".
-   *
-   * See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
-   * syntax. If the regular expression does not match any supported asset type, an INVALID_ARGUMENT
-   * error will be returned.
-   *
-   * If specified, only matching assets will be returned, otherwise, it will snapshot all asset
-   * types. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-
-   * inventory/docs/overview) for all supported asset types.
+   * Regular expressions are also supported. For example: * "compute.googleapis.com.*" snapshots
+   * resources whose asset type starts with "compute.googleapis.com". * ".*Instance" snapshots
+   * resources whose asset type ends with "Instance". * ".*Instance.*" snapshots resources whose
+   * asset type contains "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for all
+   * supported regular expression syntax. If the regular expression does not match any supported
+   * asset type, an INVALID_ARGUMENT error will be returned. If specified, only matching assets will
+   * be returned, otherwise, it will snapshot all asset types. See [Introduction to Cloud Asset
+   * Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset
+   * types.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAssetTypes() {
@@ -98,20 +88,15 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
 
   /**
    * A list of asset types to take a snapshot for. For example: "compute.googleapis.com/Disk".
-   *
-   * Regular expressions are also supported. For example:
-   *
-   * * "compute.googleapis.com.*" snapshots resources whose asset type starts with
-   * "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with
-   * "Instance". * ".*Instance.*" snapshots resources whose asset type contains "Instance".
-   *
-   * See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
-   * syntax. If the regular expression does not match any supported asset type, an INVALID_ARGUMENT
-   * error will be returned.
-   *
-   * If specified, only matching assets will be returned, otherwise, it will snapshot all asset
-   * types. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-
-   * inventory/docs/overview) for all supported asset types.
+   * Regular expressions are also supported. For example: * "compute.googleapis.com.*" snapshots
+   * resources whose asset type starts with "compute.googleapis.com". * ".*Instance" snapshots
+   * resources whose asset type ends with "Instance". * ".*Instance.*" snapshots resources whose
+   * asset type contains "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for all
+   * supported regular expression syntax. If the regular expression does not match any supported
+   * asset type, an INVALID_ARGUMENT error will be returned. If specified, only matching assets will
+   * be returned, otherwise, it will snapshot all asset types. See [Introduction to Cloud Asset
+   * Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset
+   * types.
    * @param assetTypes assetTypes or {@code null} for none
    */
   public ExportAssetsRequest setAssetTypes(java.util.List<java.lang.String> assetTypes) {

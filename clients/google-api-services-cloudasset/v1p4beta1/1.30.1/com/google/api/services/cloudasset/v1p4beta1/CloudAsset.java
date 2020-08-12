@@ -150,15 +150,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link AnalyzeIamPolicy#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The relative name of the root asset. Only resources and IAM policies within
-    the parent
-     *        will be analyzed. This can only be an organization number (such
-    as "organizations/123") or
-     *        a folder number (such as "folders/123").
-    To know how to get organization id, visit [here
+     * @param parent Required. The relative name of the root asset. Only resources and IAM policies within the parent
+     *        will be analyzed. This can only be an organization number (such as "organizations/123") or
+     *        a folder number (such as "folders/123"). To know how to get organization id, visit [here
      *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
-     *        organization#retrieving_your_organization_id).
-    To know how to get folder id, visit [here
+     *        organization#retrieving_your_organization_id). To know how to get folder id, visit [here
      *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
      *        folders#viewing_or_listing_folders_and_projects).
      * @return the request
@@ -187,15 +183,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * tractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param parent Required. The relative name of the root asset. Only resources and IAM policies within
-    the parent
-     *        will be analyzed. This can only be an organization number (such
-    as "organizations/123") or
-     *        a folder number (such as "folders/123").
-    To know how to get organization id, visit [here
+       * @param parent Required. The relative name of the root asset. Only resources and IAM policies within the parent
+     *        will be analyzed. This can only be an organization number (such as "organizations/123") or
+     *        a folder number (such as "folders/123"). To know how to get organization id, visit [here
      *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
-     *        organization#retrieving_your_organization_id).
-    To know how to get folder id, visit [here
+     *        organization#retrieving_your_organization_id). To know how to get folder id, visit [here
      *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
      *        folders#viewing_or_listing_folders_and_projects).
        * @since 1.13
@@ -278,26 +270,22 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of the root asset. Only resources and IAM policies within the
        * parent will be analyzed. This can only be an organization number (such as
-       * "organizations/123") or a folder number (such as "folders/123").
-       *
-       * To know how to get organization id, visit [here ](https://cloud.google.com/resource-
-       * manager/docs/creating-managing-organization#retrieving_your_organization_id).
-       *
-       * To know how to get folder id, visit [here ](https://cloud.google.com/resource-manager/docs
-       * /creating-managing-folders#viewing_or_listing_folders_and_projects).
+       * "organizations/123") or a folder number (such as "folders/123"). To know how to get
+       * organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
+       * managing-organization#retrieving_your_organization_id). To know how to get folder id, visit
+       * [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * folders#viewing_or_listing_folders_and_projects).
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** Required. The relative name of the root asset. Only resources and IAM policies within the parent
      will be analyzed. This can only be an organization number (such as "organizations/123") or a folder
-     number (such as "folders/123").
-
-     To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs
-     /creating-managing-organization#retrieving_your_organization_id).
-
-     To know how to get folder id, visit [here ](https://cloud.google.com/resource-manager/docs
-     /creating-managing-folders#viewing_or_listing_folders_and_projects).
+     number (such as "folders/123"). To know how to get organization id, visit [here
+     ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     organization#retrieving_your_organization_id). To know how to get folder id, visit [here
+     ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     folders#viewing_or_listing_folders_and_projects).
        */
       public java.lang.String getParent() {
         return parent;
@@ -306,13 +294,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of the root asset. Only resources and IAM policies within the
        * parent will be analyzed. This can only be an organization number (such as
-       * "organizations/123") or a folder number (such as "folders/123").
-       *
-       * To know how to get organization id, visit [here ](https://cloud.google.com/resource-
-       * manager/docs/creating-managing-organization#retrieving_your_organization_id).
-       *
-       * To know how to get folder id, visit [here ](https://cloud.google.com/resource-manager/docs
-       * /creating-managing-folders#viewing_or_listing_folders_and_projects).
+       * "organizations/123") or a folder number (such as "folders/123"). To know how to get
+       * organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
+       * managing-organization#retrieving_your_organization_id). To know how to get folder id, visit
+       * [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * folders#viewing_or_listing_folders_and_projects).
        */
       public AnalyzeIamPolicy setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -358,25 +344,19 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Required. The identity appear in the form of members in [IAM policy
-       * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
-       *
-       * The examples of supported forms are: "user:mike@example.com", "group:admins@example.com",
-       * "domain:google.com", "serviceAccount:my-project-id@appspot.gserviceaccount.com".
-       *
-       * Notice that wildcard characters (such as * and ?) are not supported. You must give a
-       * specific identity.
+       * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
+       * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",
+       * "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters
+       * (such as * and ?) are not supported. You must give a specific identity.
        */
       @com.google.api.client.util.Key("analysisQuery.identitySelector.identity")
       private java.lang.String analysisQueryIdentitySelectorIdentity;
 
       /** Required. The identity appear in the form of members in [IAM policy
-     binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
-
-     The examples of supported forms are: "user:mike@example.com", "group:admins@example.com",
-     "domain:google.com", "serviceAccount:my-project-id@appspot.gserviceaccount.com".
-
-     Notice that wildcard characters (such as * and ?) are not supported. You must give a specific
-     identity.
+     binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported forms
+     are: "user:mike@example.com", "group:admins@example.com", "domain:google.com", "serviceAccount:my-
+     project-id@appspot.gserviceaccount.com". Notice that wildcard characters (such as * and ?) are not
+     supported. You must give a specific identity.
        */
       public java.lang.String getAnalysisQueryIdentitySelectorIdentity() {
         return analysisQueryIdentitySelectorIdentity;
@@ -384,13 +364,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Required. The identity appear in the form of members in [IAM policy
-       * binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
-       *
-       * The examples of supported forms are: "user:mike@example.com", "group:admins@example.com",
-       * "domain:google.com", "serviceAccount:my-project-id@appspot.gserviceaccount.com".
-       *
-       * Notice that wildcard characters (such as * and ?) are not supported. You must give a
-       * specific identity.
+       * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
+       * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",
+       * "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters
+       * (such as * and ?) are not supported. You must give a specific identity.
        */
       public AnalyzeIamPolicy setAnalysisQueryIdentitySelectorIdentity(java.lang.String analysisQueryIdentitySelectorIdentity) {
         this.analysisQueryIdentitySelectorIdentity = analysisQueryIdentitySelectorIdentity;
@@ -427,44 +404,35 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Optional. If true, the response will include access analysis from identities to resources
        * via service account impersonation. This is a very expensive operation, because many derived
        * queries will be executed. We highly recommend you use AssetService.ExportIamPolicyAnalysis
-       * rpc instead.
-       *
-       * For example, if the request analyzes for which resources user A has permission P, and
-       * there's an IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a
-       * service account SA, and there's another IAM policy states service account SA has permission
-       * P to a GCP folder F, then user A potentially has access to the GCP folder F. And those
-       * advanced analysis results will be included in
-       * AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
-       *
-       * Another example, if the request analyzes for who has permission P to a GCP folder F, and
-       * there's an IAM policy states user A has iam.serviceAccounts.actAs permission to a service
-       * account SA, and there's another IAM policy states service account SA has permission P to
-       * the GCP folder F, then user A potentially has access to the GCP folder F. And those
-       * advanced analysis results will be included in
-       * AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
-       *
-       * Default is false.
+       * rpc instead. For example, if the request analyzes for which resources user A has permission
+       * P, and there's an IAM policy states user A has iam.serviceAccounts.getAccessToken
+       * permission to a service account SA, and there's another IAM policy states service account
+       * SA has permission P to a GCP folder F, then user A potentially has access to the GCP folder
+       * F. And those advanced analysis results will be included in
+       * AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another example, if the
+       * request analyzes for who has permission P to a GCP folder F, and there's an IAM policy
+       * states user A has iam.serviceAccounts.actAs permission to a service account SA, and there's
+       * another IAM policy states service account SA has permission P to the GCP folder F, then
+       * user A potentially has access to the GCP folder F. And those advanced analysis results will
+       * be included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is
+       * false.
        */
       @com.google.api.client.util.Key("options.analyzeServiceAccountImpersonation")
       private java.lang.Boolean optionsAnalyzeServiceAccountImpersonation;
 
       /** Optional. If true, the response will include access analysis from identities to resources via
      service account impersonation. This is a very expensive operation, because many derived queries
-     will be executed. We highly recommend you use AssetService.ExportIamPolicyAnalysis rpc instead.
-
-     For example, if the request analyzes for which resources user A has permission P, and there's an
-     IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a service account SA,
-     and there's another IAM policy states service account SA has permission P to a GCP folder F, then
-     user A potentially has access to the GCP folder F. And those advanced analysis results will be
-     included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
-
-     Another example, if the request analyzes for who has permission P to a GCP folder F, and there's an
-     IAM policy states user A has iam.serviceAccounts.actAs permission to a service account SA, and
-     there's another IAM policy states service account SA has permission P to the GCP folder F, then
-     user A potentially has access to the GCP folder F. And those advanced analysis results will be
-     included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
-
-     Default is false.
+     will be executed. We highly recommend you use AssetService.ExportIamPolicyAnalysis rpc instead. For
+     example, if the request analyzes for which resources user A has permission P, and there's an IAM
+     policy states user A has iam.serviceAccounts.getAccessToken permission to a service account SA, and
+     there's another IAM policy states service account SA has permission P to a GCP folder F, then user
+     A potentially has access to the GCP folder F. And those advanced analysis results will be included
+     in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another example, if the request
+     analyzes for who has permission P to a GCP folder F, and there's an IAM policy states user A has
+     iam.serviceAccounts.actAs permission to a service account SA, and there's another IAM policy states
+     service account SA has permission P to the GCP folder F, then user A potentially has access to the
+     GCP folder F. And those advanced analysis results will be included in
+     AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is false.
        */
       public java.lang.Boolean getOptionsAnalyzeServiceAccountImpersonation() {
         return optionsAnalyzeServiceAccountImpersonation;
@@ -474,23 +442,18 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Optional. If true, the response will include access analysis from identities to resources
        * via service account impersonation. This is a very expensive operation, because many derived
        * queries will be executed. We highly recommend you use AssetService.ExportIamPolicyAnalysis
-       * rpc instead.
-       *
-       * For example, if the request analyzes for which resources user A has permission P, and
-       * there's an IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a
-       * service account SA, and there's another IAM policy states service account SA has permission
-       * P to a GCP folder F, then user A potentially has access to the GCP folder F. And those
-       * advanced analysis results will be included in
-       * AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
-       *
-       * Another example, if the request analyzes for who has permission P to a GCP folder F, and
-       * there's an IAM policy states user A has iam.serviceAccounts.actAs permission to a service
-       * account SA, and there's another IAM policy states service account SA has permission P to
-       * the GCP folder F, then user A potentially has access to the GCP folder F. And those
-       * advanced analysis results will be included in
-       * AnalyzeIamPolicyResponse.service_account_impersonation_analysis.
-       *
-       * Default is false.
+       * rpc instead. For example, if the request analyzes for which resources user A has permission
+       * P, and there's an IAM policy states user A has iam.serviceAccounts.getAccessToken
+       * permission to a service account SA, and there's another IAM policy states service account
+       * SA has permission P to a GCP folder F, then user A potentially has access to the GCP folder
+       * F. And those advanced analysis results will be included in
+       * AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another example, if the
+       * request analyzes for who has permission P to a GCP folder F, and there's an IAM policy
+       * states user A has iam.serviceAccounts.actAs permission to a service account SA, and there's
+       * another IAM policy states service account SA has permission P to the GCP folder F, then
+       * user A potentially has access to the GCP folder F. And those advanced analysis results will
+       * be included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is
+       * false.
        */
       public AnalyzeIamPolicy setOptionsAnalyzeServiceAccountImpersonation(java.lang.Boolean optionsAnalyzeServiceAccountImpersonation) {
         this.optionsAnalyzeServiceAccountImpersonation = optionsAnalyzeServiceAccountImpersonation;
@@ -498,43 +461,34 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional. Amount of time executable has to complete.  See JSON representation of
-       * [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json).
-       *
-       * If this field is set with a value less than the RPC deadline, and the execution of your
-       * query hasn't finished in the specified execution timeout,  you will get a response with
-       * partial result. Otherwise, your query's execution will continue until the RPC deadline. If
-       * it's not finished until then, you will get a  DEADLINE_EXCEEDED error.
-       *
-       * Default is empty.
+       * Optional. Amount of time executable has to complete. See JSON representation of
+       * [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json). If this field
+       * is set with a value less than the RPC deadline, and the execution of your query hasn't
+       * finished in the specified execution timeout, you will get a response with partial result.
+       * Otherwise, your query's execution will continue until the RPC deadline. If it's not
+       * finished until then, you will get a DEADLINE_EXCEEDED error. Default is empty.
        */
       @com.google.api.client.util.Key("options.executionTimeout")
       private String optionsExecutionTimeout;
 
-      /** Optional. Amount of time executable has to complete.  See JSON representation of
-     [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json).
-
-     If this field is set with a value less than the RPC deadline, and the execution of your query
-     hasn't finished in the specified execution timeout,  you will get a response with partial result.
-     Otherwise, your query's execution will continue until the RPC deadline. If it's not finished until
-     then, you will get a  DEADLINE_EXCEEDED error.
-
-     Default is empty.
+      /** Optional. Amount of time executable has to complete. See JSON representation of
+     [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json). If this field is set
+     with a value less than the RPC deadline, and the execution of your query hasn't finished in the
+     specified execution timeout, you will get a response with partial result. Otherwise, your query's
+     execution will continue until the RPC deadline. If it's not finished until then, you will get a
+     DEADLINE_EXCEEDED error. Default is empty.
        */
       public String getOptionsExecutionTimeout() {
         return optionsExecutionTimeout;
       }
 
       /**
-       * Optional. Amount of time executable has to complete.  See JSON representation of
-       * [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json).
-       *
-       * If this field is set with a value less than the RPC deadline, and the execution of your
-       * query hasn't finished in the specified execution timeout,  you will get a response with
-       * partial result. Otherwise, your query's execution will continue until the RPC deadline. If
-       * it's not finished until then, you will get a  DEADLINE_EXCEEDED error.
-       *
-       * Default is empty.
+       * Optional. Amount of time executable has to complete. See JSON representation of
+       * [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json). If this field
+       * is set with a value less than the RPC deadline, and the execution of your query hasn't
+       * finished in the specified execution timeout, you will get a response with partial result.
+       * Otherwise, your query's execution will continue until the RPC deadline. If it's not
+       * finished until then, you will get a DEADLINE_EXCEEDED error. Default is empty.
        */
       public AnalyzeIamPolicy setOptionsExecutionTimeout(String optionsExecutionTimeout) {
         this.optionsExecutionTimeout = optionsExecutionTimeout;
@@ -543,23 +497,16 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. If true, the identities section of the result will expand any Google groups
-       * appearing in an IAM policy binding.
-       *
-       * If identity_selector is specified, the identity in the result will be determined by the
-       * selector, and this flag will have no effect.
-       *
-       * Default is false.
+       * appearing in an IAM policy binding. If identity_selector is specified, the identity in the
+       * result will be determined by the selector, and this flag will have no effect. Default is
+       * false.
        */
       @com.google.api.client.util.Key("options.expandGroups")
       private java.lang.Boolean optionsExpandGroups;
 
       /** Optional. If true, the identities section of the result will expand any Google groups appearing in
-     an IAM policy binding.
-
-     If identity_selector is specified, the identity in the result will be determined by the selector,
-     and this flag will have no effect.
-
-     Default is false.
+     an IAM policy binding. If identity_selector is specified, the identity in the result will be
+     determined by the selector, and this flag will have no effect. Default is false.
        */
       public java.lang.Boolean getOptionsExpandGroups() {
         return optionsExpandGroups;
@@ -567,12 +514,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. If true, the identities section of the result will expand any Google groups
-       * appearing in an IAM policy binding.
-       *
-       * If identity_selector is specified, the identity in the result will be determined by the
-       * selector, and this flag will have no effect.
-       *
-       * Default is false.
+       * appearing in an IAM policy binding. If identity_selector is specified, the identity in the
+       * result will be determined by the selector, and this flag will have no effect. Default is
+       * false.
        */
       public AnalyzeIamPolicy setOptionsExpandGroups(java.lang.Boolean optionsExpandGroups) {
         this.optionsExpandGroups = optionsExpandGroups;
@@ -581,26 +525,20 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. If true, the resource section of the result will expand any resource attached to
-       * an IAM policy to include resources lower in the resource hierarchy.
-       *
-       * For example, if the request analyzes for which resources user A has permission P, and the
-       * results include an IAM policy with P on a GCP folder, the results will also include
-       * resources in that folder with permission P.
-       *
-       * If resource_selector is specified, the resource section of the result will be determined by
-       * the selector, and this flag will have no effect. Default is false.
+       * an IAM policy to include resources lower in the resource hierarchy. For example, if the
+       * request analyzes for which resources user A has permission P, and the results include an
+       * IAM policy with P on a GCP folder, the results will also include resources in that folder
+       * with permission P. If resource_selector is specified, the resource section of the result
+       * will be determined by the selector, and this flag will have no effect. Default is false.
        */
       @com.google.api.client.util.Key("options.expandResources")
       private java.lang.Boolean optionsExpandResources;
 
       /** Optional. If true, the resource section of the result will expand any resource attached to an IAM
-     policy to include resources lower in the resource hierarchy.
-
-     For example, if the request analyzes for which resources user A has permission P, and the results
-     include an IAM policy with P on a GCP folder, the results will also include resources in that
-     folder with permission P.
-
-     If resource_selector is specified, the resource section of the result will be determined by the
+     policy to include resources lower in the resource hierarchy. For example, if the request analyzes
+     for which resources user A has permission P, and the results include an IAM policy with P on a GCP
+     folder, the results will also include resources in that folder with permission P. If
+     resource_selector is specified, the resource section of the result will be determined by the
      selector, and this flag will have no effect. Default is false.
        */
       public java.lang.Boolean getOptionsExpandResources() {
@@ -609,14 +547,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. If true, the resource section of the result will expand any resource attached to
-       * an IAM policy to include resources lower in the resource hierarchy.
-       *
-       * For example, if the request analyzes for which resources user A has permission P, and the
-       * results include an IAM policy with P on a GCP folder, the results will also include
-       * resources in that folder with permission P.
-       *
-       * If resource_selector is specified, the resource section of the result will be determined by
-       * the selector, and this flag will have no effect. Default is false.
+       * an IAM policy to include resources lower in the resource hierarchy. For example, if the
+       * request analyzes for which resources user A has permission P, and the results include an
+       * IAM policy with P on a GCP folder, the results will also include resources in that folder
+       * with permission P. If resource_selector is specified, the resource section of the result
+       * will be determined by the selector, and this flag will have no effect. Default is false.
        */
       public AnalyzeIamPolicy setOptionsExpandResources(java.lang.Boolean optionsExpandResources) {
         this.optionsExpandResources = optionsExpandResources;
@@ -625,23 +560,16 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. If true, the access section of result will expand any roles appearing in IAM
-       * policy bindings to include their permissions.
-       *
-       * If access_selector is specified, the access section of the result will be determined by the
-       * selector, and this flag will have no effect.
-       *
-       * Default is false.
+       * policy bindings to include their permissions. If access_selector is specified, the access
+       * section of the result will be determined by the selector, and this flag will have no
+       * effect. Default is false.
        */
       @com.google.api.client.util.Key("options.expandRoles")
       private java.lang.Boolean optionsExpandRoles;
 
       /** Optional. If true, the access section of result will expand any roles appearing in IAM policy
-     bindings to include their permissions.
-
-     If access_selector is specified, the access section of the result will be determined by the
-     selector, and this flag will have no effect.
-
-     Default is false.
+     bindings to include their permissions. If access_selector is specified, the access section of the
+     result will be determined by the selector, and this flag will have no effect. Default is false.
        */
       public java.lang.Boolean getOptionsExpandRoles() {
         return optionsExpandRoles;
@@ -649,12 +577,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. If true, the access section of result will expand any roles appearing in IAM
-       * policy bindings to include their permissions.
-       *
-       * If access_selector is specified, the access section of the result will be determined by the
-       * selector, and this flag will have no effect.
-       *
-       * Default is false.
+       * policy bindings to include their permissions. If access_selector is specified, the access
+       * section of the result will be determined by the selector, and this flag will have no
+       * effect. Default is false.
        */
       public AnalyzeIamPolicy setOptionsExpandRoles(java.lang.Boolean optionsExpandRoles) {
         this.optionsExpandRoles = optionsExpandRoles;
@@ -726,15 +651,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link ExportIamPolicyAnalysis#execute()} method to invoke the remote
      * operation.
      *
-     * @param parent Required. The relative name of the root asset. Only resources and IAM policies within
-    the parent
-     *        will be analyzed. This can only be an organization number (such
-    as "organizations/123") or
-     *        a folder number (such as "folders/123").
-    To know how to get organization id, visit [here
+     * @param parent Required. The relative name of the root asset. Only resources and IAM policies within the parent
+     *        will be analyzed. This can only be an organization number (such as "organizations/123") or
+     *        a folder number (such as "folders/123"). To know how to get organization id, visit [here
      *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
-     *        organization#retrieving_your_organization_id).
-    To know how to get folder id, visit [here
+     *        organization#retrieving_your_organization_id). To know how to get folder id, visit [here
      *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
      *        folders#viewing_or_listing_folders_and_projects).
      * @param content the {@link com.google.api.services.cloudasset.v1p4beta1.model.ExportIamPolicyAnalysisRequest}
@@ -769,15 +690,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param parent Required. The relative name of the root asset. Only resources and IAM policies within
-    the parent
-     *        will be analyzed. This can only be an organization number (such
-    as "organizations/123") or
-     *        a folder number (such as "folders/123").
-    To know how to get organization id, visit [here
+       * @param parent Required. The relative name of the root asset. Only resources and IAM policies within the parent
+     *        will be analyzed. This can only be an organization number (such as "organizations/123") or
+     *        a folder number (such as "folders/123"). To know how to get organization id, visit [here
      *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
-     *        organization#retrieving_your_organization_id).
-    To know how to get folder id, visit [here
+     *        organization#retrieving_your_organization_id). To know how to get folder id, visit [here
      *        ](https://cloud.google.com/resource-manager/docs/creating-managing-
      *        folders#viewing_or_listing_folders_and_projects).
        * @param content the {@link com.google.api.services.cloudasset.v1p4beta1.model.ExportIamPolicyAnalysisRequest}
@@ -851,26 +768,22 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of the root asset. Only resources and IAM policies within the
        * parent will be analyzed. This can only be an organization number (such as
-       * "organizations/123") or a folder number (such as "folders/123").
-       *
-       * To know how to get organization id, visit [here ](https://cloud.google.com/resource-
-       * manager/docs/creating-managing-organization#retrieving_your_organization_id).
-       *
-       * To know how to get folder id, visit [here ](https://cloud.google.com/resource-manager/docs
-       * /creating-managing-folders#viewing_or_listing_folders_and_projects).
+       * "organizations/123") or a folder number (such as "folders/123"). To know how to get
+       * organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
+       * managing-organization#retrieving_your_organization_id). To know how to get folder id, visit
+       * [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * folders#viewing_or_listing_folders_and_projects).
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** Required. The relative name of the root asset. Only resources and IAM policies within the parent
      will be analyzed. This can only be an organization number (such as "organizations/123") or a folder
-     number (such as "folders/123").
-
-     To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs
-     /creating-managing-organization#retrieving_your_organization_id).
-
-     To know how to get folder id, visit [here ](https://cloud.google.com/resource-manager/docs
-     /creating-managing-folders#viewing_or_listing_folders_and_projects).
+     number (such as "folders/123"). To know how to get organization id, visit [here
+     ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     organization#retrieving_your_organization_id). To know how to get folder id, visit [here
+     ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     folders#viewing_or_listing_folders_and_projects).
        */
       public java.lang.String getParent() {
         return parent;
@@ -879,13 +792,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of the root asset. Only resources and IAM policies within the
        * parent will be analyzed. This can only be an organization number (such as
-       * "organizations/123") or a folder number (such as "folders/123").
-       *
-       * To know how to get organization id, visit [here ](https://cloud.google.com/resource-
-       * manager/docs/creating-managing-organization#retrieving_your_organization_id).
-       *
-       * To know how to get folder id, visit [here ](https://cloud.google.com/resource-manager/docs
-       * /creating-managing-folders#viewing_or_listing_folders_and_projects).
+       * "organizations/123") or a folder number (such as "folders/123"). To know how to get
+       * organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
+       * managing-organization#retrieving_your_organization_id). To know how to get folder id, visit
+       * [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * folders#viewing_or_listing_folders_and_projects).
        */
       public ExportIamPolicyAnalysis setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {

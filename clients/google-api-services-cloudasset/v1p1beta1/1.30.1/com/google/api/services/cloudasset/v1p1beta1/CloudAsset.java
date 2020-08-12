@@ -154,14 +154,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link SearchAll#execute()} method to invoke the remote operation.
      *
-     * @param scope Required. The relative name of an asset. The search is limited to the resources
-    within the `scope`.
-     *        The allowed value must be:
-    * Organization number (such as "organizations/123")
-    * Folder
-     *        number(such as "folders/1234")
-    * Project number (such as "projects/12345")
-    * Project id
+     * @param scope Required. The relative name of an asset. The search is limited to the resources within the `scope`.
+     *        The allowed value must be: * Organization number (such as "organizations/123") * Folder
+     *        number(such as "folders/1234") * Project number (such as "projects/12345") * Project id
      *        (such as "projects/abc")
      * @return the request
      */
@@ -193,14 +188,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * SearchAll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param scope Required. The relative name of an asset. The search is limited to the resources
-    within the `scope`.
-     *        The allowed value must be:
-    * Organization number (such as "organizations/123")
-    * Folder
-     *        number(such as "folders/1234")
-    * Project number (such as "projects/12345")
-    * Project id
+       * @param scope Required. The relative name of an asset. The search is limited to the resources within the `scope`.
+     *        The allowed value must be: * Organization number (such as "organizations/123") * Folder
+     *        number(such as "folders/1234") * Project number (such as "projects/12345") * Project id
      *        (such as "projects/abc")
        * @since 1.13
        */
@@ -281,19 +271,17 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
-       * `scope`. The allowed value must be:
-       *
-       * * Organization number (such as "organizations/123") * Folder number(such as "folders/1234")
-       * * Project number (such as "projects/12345") * Project id (such as "projects/abc")
+       * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
+       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
+       * id (such as "projects/abc")
        */
       @com.google.api.client.util.Key
       private java.lang.String scope;
 
       /** Required. The relative name of an asset. The search is limited to the resources within the `scope`.
-     The allowed value must be:
-
-     * Organization number (such as "organizations/123") * Folder number(such as "folders/1234") *
-     Project number (such as "projects/12345") * Project id (such as "projects/abc")
+     The allowed value must be: * Organization number (such as "organizations/123") * Folder number(such
+     as "folders/1234") * Project number (such as "projects/12345") * Project id (such as
+     "projects/abc")
        */
       public java.lang.String getScope() {
         return scope;
@@ -301,10 +289,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
-       * `scope`. The allowed value must be:
-       *
-       * * Organization number (such as "organizations/123") * Folder number(such as "folders/1234")
-       * * Project number (such as "projects/12345") * Project id (such as "projects/abc")
+       * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
+       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
+       * id (such as "projects/abc")
        */
       public SearchAll setScope(java.lang.String scope) {
         if (!getSuppressPatternChecks()) {
@@ -372,25 +359,22 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional. The query statement. Examples:
-       *
-       * * "policy:myuser@mydomain.com" * "policy:(myuser@mydomain.com viewer)"
+       * Optional. The query statement. Examples: * "policy:myuser@mydomain.com" *
+       * "policy:(myuser@mydomain.com viewer)"
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Optional. The query statement. Examples:
-
-     * "policy:myuser@mydomain.com" * "policy:(myuser@mydomain.com viewer)"
+      /** Optional. The query statement. Examples: * "policy:myuser@mydomain.com" *
+     "policy:(myuser@mydomain.com viewer)"
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Optional. The query statement. Examples:
-       *
-       * * "policy:myuser@mydomain.com" * "policy:(myuser@mydomain.com viewer)"
+       * Optional. The query statement. Examples: * "policy:myuser@mydomain.com" *
+       * "policy:(myuser@mydomain.com viewer)"
        */
       public SearchAll setQuery(java.lang.String query) {
         this.query = query;
@@ -437,14 +421,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link SearchAll#execute()} method to invoke the remote operation.
      *
-     * @param scope Required. The relative name of an asset. The search is limited to the resources
-    within the `scope`.
-     *        The allowed value must be:
-    * Organization number (such as "organizations/123")
-    * Folder
-     *        number(such as "folders/1234")
-    * Project number (such as "projects/12345")
-    * Project id
+     * @param scope Required. The relative name of an asset. The search is limited to the resources within the `scope`.
+     *        The allowed value must be: * Organization number (such as "organizations/123") * Folder
+     *        number(such as "folders/1234") * Project number (such as "projects/12345") * Project id
      *        (such as "projects/abc")
      * @return the request
      */
@@ -476,14 +455,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * SearchAll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param scope Required. The relative name of an asset. The search is limited to the resources
-    within the `scope`.
-     *        The allowed value must be:
-    * Organization number (such as "organizations/123")
-    * Folder
-     *        number(such as "folders/1234")
-    * Project number (such as "projects/12345")
-    * Project id
+       * @param scope Required. The relative name of an asset. The search is limited to the resources within the `scope`.
+     *        The allowed value must be: * Organization number (such as "organizations/123") * Folder
+     *        number(such as "folders/1234") * Project number (such as "projects/12345") * Project id
      *        (such as "projects/abc")
        * @since 1.13
        */
@@ -564,19 +538,17 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
-       * `scope`. The allowed value must be:
-       *
-       * * Organization number (such as "organizations/123") * Folder number(such as "folders/1234")
-       * * Project number (such as "projects/12345") * Project id (such as "projects/abc")
+       * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
+       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
+       * id (such as "projects/abc")
        */
       @com.google.api.client.util.Key
       private java.lang.String scope;
 
       /** Required. The relative name of an asset. The search is limited to the resources within the `scope`.
-     The allowed value must be:
-
-     * Organization number (such as "organizations/123") * Folder number(such as "folders/1234") *
-     Project number (such as "projects/12345") * Project id (such as "projects/abc")
+     The allowed value must be: * Organization number (such as "organizations/123") * Folder number(such
+     as "folders/1234") * Project number (such as "projects/12345") * Project id (such as
+     "projects/abc")
        */
       public java.lang.String getScope() {
         return scope;
@@ -584,10 +556,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
-       * `scope`. The allowed value must be:
-       *
-       * * Organization number (such as "organizations/123") * Folder number(such as "folders/1234")
-       * * Project number (such as "projects/12345") * Project id (such as "projects/abc")
+       * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
+       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
+       * id (such as "projects/abc")
        */
       public SearchAll setScope(java.lang.String scope) {
         if (!getSuppressPatternChecks()) {
@@ -625,14 +596,14 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Optional. A comma separated list of fields specifying the sorting order of the results. The
        * default order is ascending. Add ` DESC` after the field name to indicate descending order.
-       * Redundant space characters are ignored. For example, `  location DESC ,  name  `.
+       * Redundant space characters are ignored. For example, ` location DESC , name `.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
       /** Optional. A comma separated list of fields specifying the sorting order of the results. The default
      order is ascending. Add ` DESC` after the field name to indicate descending order. Redundant space
-     characters are ignored. For example, `  location DESC ,  name  `.
+     characters are ignored. For example, ` location DESC , name `.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
@@ -641,7 +612,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Optional. A comma separated list of fields specifying the sorting order of the results. The
        * default order is ascending. Add ` DESC` after the field name to indicate descending order.
-       * Redundant space characters are ignored. For example, `  location DESC ,  name  `.
+       * Redundant space characters are ignored. For example, ` location DESC , name `.
        */
       public SearchAll setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -679,7 +650,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. If present, then retrieve the next batch of results from the preceding call to
-       * this method.  `page_token` must be the value of `next_page_token` from the previous
+       * this method. `page_token` must be the value of `next_page_token` from the previous
        * response. The values of all other method parameters, must be identical to those in the
        * previous call.
        */
@@ -687,7 +658,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       private java.lang.String pageToken;
 
       /** Optional. If present, then retrieve the next batch of results from the preceding call to this
-     method.  `page_token` must be the value of `next_page_token` from the previous response. The values
+     method. `page_token` must be the value of `next_page_token` from the previous response. The values
      of all other method parameters, must be identical to those in the previous call.
        */
       public java.lang.String getPageToken() {
@@ -696,7 +667,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. If present, then retrieve the next batch of results from the preceding call to
-       * this method.  `page_token` must be the value of `next_page_token` from the previous
+       * this method. `page_token` must be the value of `next_page_token` from the previous
        * response. The values of all other method parameters, must be identical to those in the
        * previous call.
        */

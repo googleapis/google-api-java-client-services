@@ -39,12 +39,8 @@ public final class GoogleCloudOrgpolicyV1Policy extends com.google.api.client.js
 
   /**
    * The name of the `Constraint` the `Policy` is configuring, for example,
-   * `constraints/serviceuser.services`.
-   *
-   * A [list of available constraints](/resource-manager/docs/organization-policy/org-policy-
-   * constraints) is available.
-   *
-   * Immutable after creation.
+   * `constraints/serviceuser.services`. A [list of available constraints](/resource-manager/docs
+   * /organization-policy/org-policy-constraints) is available. Immutable after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,17 +48,13 @@ public final class GoogleCloudOrgpolicyV1Policy extends com.google.api.client.js
 
   /**
    * An opaque tag indicating the current version of the `Policy`, used for concurrency control.
-   *
    * When the `Policy` is returned from either a `GetPolicy` or a `ListOrgPolicy` request, this
    * `etag` indicates the version of the current `Policy` to use when executing a read-modify-write
-   * loop.
-   *
-   * When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.
-   *
-   * When the `Policy` is used in a `SetOrgPolicy` method, use the `etag` value that was returned
-   * from a `GetOrgPolicy` request as part of a read-modify-write loop for concurrency control. Not
-   * setting the `etag`in a `SetOrgPolicy` request will result in an unconditional write of the
-   * `Policy`.
+   * loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be
+   * unset. When the `Policy` is used in a `SetOrgPolicy` method, use the `etag` value that was
+   * returned from a `GetOrgPolicy` request as part of a read-modify-write loop for concurrency
+   * control. Not setting the `etag`in a `SetOrgPolicy` request will result in an unconditional
+   * write of the `Policy`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,12 +109,8 @@ public final class GoogleCloudOrgpolicyV1Policy extends com.google.api.client.js
 
   /**
    * The name of the `Constraint` the `Policy` is configuring, for example,
-   * `constraints/serviceuser.services`.
-   *
-   * A [list of available constraints](/resource-manager/docs/organization-policy/org-policy-
-   * constraints) is available.
-   *
-   * Immutable after creation.
+   * `constraints/serviceuser.services`. A [list of available constraints](/resource-manager/docs
+   * /organization-policy/org-policy-constraints) is available. Immutable after creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getConstraint() {
@@ -131,12 +119,8 @@ public final class GoogleCloudOrgpolicyV1Policy extends com.google.api.client.js
 
   /**
    * The name of the `Constraint` the `Policy` is configuring, for example,
-   * `constraints/serviceuser.services`.
-   *
-   * A [list of available constraints](/resource-manager/docs/organization-policy/org-policy-
-   * constraints) is available.
-   *
-   * Immutable after creation.
+   * `constraints/serviceuser.services`. A [list of available constraints](/resource-manager/docs
+   * /organization-policy/org-policy-constraints) is available. Immutable after creation.
    * @param constraint constraint or {@code null} for none
    */
   public GoogleCloudOrgpolicyV1Policy setConstraint(java.lang.String constraint) {
@@ -146,17 +130,13 @@ public final class GoogleCloudOrgpolicyV1Policy extends com.google.api.client.js
 
   /**
    * An opaque tag indicating the current version of the `Policy`, used for concurrency control.
-   *
    * When the `Policy` is returned from either a `GetPolicy` or a `ListOrgPolicy` request, this
    * `etag` indicates the version of the current `Policy` to use when executing a read-modify-write
-   * loop.
-   *
-   * When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.
-   *
-   * When the `Policy` is used in a `SetOrgPolicy` method, use the `etag` value that was returned
-   * from a `GetOrgPolicy` request as part of a read-modify-write loop for concurrency control. Not
-   * setting the `etag`in a `SetOrgPolicy` request will result in an unconditional write of the
-   * `Policy`.
+   * loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be
+   * unset. When the `Policy` is used in a `SetOrgPolicy` method, use the `etag` value that was
+   * returned from a `GetOrgPolicy` request as part of a read-modify-write loop for concurrency
+   * control. Not setting the `etag`in a `SetOrgPolicy` request will result in an unconditional
+   * write of the `Policy`.
    * @see #decodeEtag()
    * @return value or {@code null} for none
    */
@@ -166,17 +146,13 @@ public final class GoogleCloudOrgpolicyV1Policy extends com.google.api.client.js
 
   /**
    * An opaque tag indicating the current version of the `Policy`, used for concurrency control.
-   *
    * When the `Policy` is returned from either a `GetPolicy` or a `ListOrgPolicy` request, this
    * `etag` indicates the version of the current `Policy` to use when executing a read-modify-write
-   * loop.
-   *
-   * When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.
-   *
-   * When the `Policy` is used in a `SetOrgPolicy` method, use the `etag` value that was returned
-   * from a `GetOrgPolicy` request as part of a read-modify-write loop for concurrency control. Not
-   * setting the `etag`in a `SetOrgPolicy` request will result in an unconditional write of the
-   * `Policy`.
+   * loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be
+   * unset. When the `Policy` is used in a `SetOrgPolicy` method, use the `etag` value that was
+   * returned from a `GetOrgPolicy` request as part of a read-modify-write loop for concurrency
+   * control. Not setting the `etag`in a `SetOrgPolicy` request will result in an unconditional
+   * write of the `Policy`.
    * @see #getEtag()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -188,17 +164,13 @@ public final class GoogleCloudOrgpolicyV1Policy extends com.google.api.client.js
 
   /**
    * An opaque tag indicating the current version of the `Policy`, used for concurrency control.
-   *
    * When the `Policy` is returned from either a `GetPolicy` or a `ListOrgPolicy` request, this
    * `etag` indicates the version of the current `Policy` to use when executing a read-modify-write
-   * loop.
-   *
-   * When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.
-   *
-   * When the `Policy` is used in a `SetOrgPolicy` method, use the `etag` value that was returned
-   * from a `GetOrgPolicy` request as part of a read-modify-write loop for concurrency control. Not
-   * setting the `etag`in a `SetOrgPolicy` request will result in an unconditional write of the
-   * `Policy`.
+   * loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be
+   * unset. When the `Policy` is used in a `SetOrgPolicy` method, use the `etag` value that was
+   * returned from a `GetOrgPolicy` request as part of a read-modify-write loop for concurrency
+   * control. Not setting the `etag`in a `SetOrgPolicy` request will result in an unconditional
+   * write of the `Policy`.
    * @see #encodeEtag()
    * @param etag etag or {@code null} for none
    */
@@ -209,17 +181,13 @@ public final class GoogleCloudOrgpolicyV1Policy extends com.google.api.client.js
 
   /**
    * An opaque tag indicating the current version of the `Policy`, used for concurrency control.
-   *
    * When the `Policy` is returned from either a `GetPolicy` or a `ListOrgPolicy` request, this
    * `etag` indicates the version of the current `Policy` to use when executing a read-modify-write
-   * loop.
-   *
-   * When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.
-   *
-   * When the `Policy` is used in a `SetOrgPolicy` method, use the `etag` value that was returned
-   * from a `GetOrgPolicy` request as part of a read-modify-write loop for concurrency control. Not
-   * setting the `etag`in a `SetOrgPolicy` request will result in an unconditional write of the
-   * `Policy`.
+   * loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be
+   * unset. When the `Policy` is used in a `SetOrgPolicy` method, use the `etag` value that was
+   * returned from a `GetOrgPolicy` request as part of a read-modify-write loop for concurrency
+   * control. Not setting the `etag`in a `SetOrgPolicy` request will result in an unconditional
+   * write of the `Policy`.
    * @see #setEtag()
    *
    * <p>

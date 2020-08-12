@@ -50,10 +50,9 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy;
 
   /**
-   * The type of the asset. Example: `compute.googleapis.com/Disk`
-   *
-   * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types) for more information.
+   * The type of the asset. Example: `compute.googleapis.com/Disk` See [Supported asset
+   * types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for more
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,10 +72,9 @@ public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
    * The full name of the asset. Example:
-   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`
-   *
-   * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-   * for more information.
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1` See
+   * [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
+   * more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,10 +143,9 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the asset. Example: `compute.googleapis.com/Disk`
-   *
-   * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types) for more information.
+   * The type of the asset. Example: `compute.googleapis.com/Disk` See [Supported asset
+   * types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for more
+   * information.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssetType() {
@@ -156,10 +153,9 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the asset. Example: `compute.googleapis.com/Disk`
-   *
-   * See [Supported asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types) for more information.
+   * The type of the asset. Example: `compute.googleapis.com/Disk` See [Supported asset
+   * types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for more
+   * information.
    * @param assetType assetType or {@code null} for none
    */
   public Asset setAssetType(java.lang.String assetType) {
@@ -196,10 +192,9 @@ public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
    * The full name of the asset. Example:
-   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`
-   *
-   * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-   * for more information.
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1` See
+   * [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
+   * more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -208,10 +203,9 @@ public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
    * The full name of the asset. Example:
-   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`
-   *
-   * See [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-   * for more information.
+   * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1` See
+   * [Resource names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for
+   * more information.
    * @param name name or {@code null} for none
    */
   public Asset setName(java.lang.String name) {

@@ -32,15 +32,15 @@ package com.google.api.services.servicedirectory.v1beta1.model;
 public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. An IPv4 or IPv6 address. Service Directory will reject bad addresses like:   "8.8.8"
-   * "8.8.8.8:53"   "test:bad:address"   "[::1]"   "[::1]:8080" Limited to 45 characters.
+   * Optional. An IPv4 or IPv6 address. Service Directory will reject bad addresses like: "8.8.8"
+   * "8.8.8.8:53" "test:bad:address" "[::1]" "[::1]:8080" Limited to 45 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String address;
 
   /**
-   * Optional. Metadata for the endpoint. This data can be consumed by service clients.  The entire
+   * Optional. Metadata for the endpoint. This data can be consumed by service clients. The entire
    * metadata dictionary may contain up to 512 characters, spread accoss all key-value pairs.
    * Metadata that goes beyond any these limits will be rejected.
    * The value may be {@code null}.
@@ -64,8 +64,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.Integer port;
 
   /**
-   * Optional. An IPv4 or IPv6 address. Service Directory will reject bad addresses like:   "8.8.8"
-   * "8.8.8.8:53"   "test:bad:address"   "[::1]"   "[::1]:8080" Limited to 45 characters.
+   * Optional. An IPv4 or IPv6 address. Service Directory will reject bad addresses like: "8.8.8"
+   * "8.8.8.8:53" "test:bad:address" "[::1]" "[::1]:8080" Limited to 45 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getAddress() {
@@ -73,8 +73,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. An IPv4 or IPv6 address. Service Directory will reject bad addresses like:   "8.8.8"
-   * "8.8.8.8:53"   "test:bad:address"   "[::1]"   "[::1]:8080" Limited to 45 characters.
+   * Optional. An IPv4 or IPv6 address. Service Directory will reject bad addresses like: "8.8.8"
+   * "8.8.8.8:53" "test:bad:address" "[::1]" "[::1]:8080" Limited to 45 characters.
    * @param address address or {@code null} for none
    */
   public Endpoint setAddress(java.lang.String address) {
@@ -83,7 +83,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Metadata for the endpoint. This data can be consumed by service clients.  The entire
+   * Optional. Metadata for the endpoint. This data can be consumed by service clients. The entire
    * metadata dictionary may contain up to 512 characters, spread accoss all key-value pairs.
    * Metadata that goes beyond any these limits will be rejected.
    * @return value or {@code null} for none
@@ -93,7 +93,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Metadata for the endpoint. This data can be consumed by service clients.  The entire
+   * Optional. Metadata for the endpoint. This data can be consumed by service clients. The entire
    * metadata dictionary may contain up to 512 characters, spread accoss all key-value pairs.
    * Metadata that goes beyond any these limits will be rejected.
    * @param metadata metadata or {@code null} for none

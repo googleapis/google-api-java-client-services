@@ -33,7 +33,7 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Resource labels associated with this Namespace. No more than 64 user labels can be
-   * associated with a given resource.  Label keys and values can be no longer than 63 characters.
+   * associated with a given resource. Label keys and values can be no longer than 63 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Resource labels associated with this Namespace. No more than 64 user labels can be
-   * associated with a given resource.  Label keys and values can be no longer than 63 characters.
+   * associated with a given resource. Label keys and values can be no longer than 63 characters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -57,7 +57,7 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Resource labels associated with this Namespace. No more than 64 user labels can be
-   * associated with a given resource.  Label keys and values can be no longer than 63 characters.
+   * associated with a given resource. Label keys and values can be no longer than 63 characters.
    * @param labels labels or {@code null} for none
    */
   public Namespace setLabels(java.util.Map<String, java.lang.String> labels) {

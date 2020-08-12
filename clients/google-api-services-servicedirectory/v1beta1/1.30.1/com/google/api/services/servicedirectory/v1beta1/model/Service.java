@@ -46,7 +46,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Metadata for the service. This data can be consumed by service clients.  The entire
+   * Optional. Metadata for the service. This data can be consumed by service clients. The entire
    * metadata dictionary may contain up to 2000 characters, spread across all key-value pairs.
    * Metadata that goes beyond any these limits will be rejected.
    * The value may be {@code null}.
@@ -82,7 +82,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Metadata for the service. This data can be consumed by service clients.  The entire
+   * Optional. Metadata for the service. This data can be consumed by service clients. The entire
    * metadata dictionary may contain up to 2000 characters, spread across all key-value pairs.
    * Metadata that goes beyond any these limits will be rejected.
    * @return value or {@code null} for none
@@ -92,7 +92,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Metadata for the service. This data can be consumed by service clients.  The entire
+   * Optional. Metadata for the service. This data can be consumed by service clients. The entire
    * metadata dictionary may contain up to 2000 characters, spread across all key-value pairs.
    * Metadata that goes beyond any these limits will be rejected.
    * @param metadata metadata or {@code null} for none

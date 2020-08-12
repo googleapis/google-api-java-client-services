@@ -18,18 +18,11 @@ package com.google.api.services.osconfig.v1beta.model;
 
 /**
  * Package is a reference to the software package to be installed or removed. The agent on the VM
- * instance uses the system package manager to apply the config.
- *
- * These are the commands that the agent uses to install or remove packages.
- *
- * Apt install: `apt-get update && apt-get -y install package1 package2 package3` remove: `apt-get
- * -y remove package1 package2 package3`
- *
- * Yum install: `yum -y install package1 package2 package3` remove: `yum -y remove package1 package2
- * package3`
- *
+ * instance uses the system package manager to apply the config. These are the commands that the
+ * agent uses to install or remove packages. Apt install: `apt-get update && apt-get -y install
+ * package1 package2 package3` remove: `apt-get -y remove package1 package2 package3` Yum install:
+ * `yum -y install package1 package2 package3` remove: `yum -y remove package1 package2 package3`
  * Zypper install: `zypper install package1 package2 package3` remove: `zypper rm package1 package2`
- *
  * Googet install: `googet -noconfirm install package1 package2 package3` remove: `googet -noconfirm
  * remove package1 package2 package3`
  *
@@ -56,9 +49,7 @@ public final class SystemsManagementPackage extends com.google.api.client.json.G
    * package manager, the package is not installed or removed no error message is returned. By
    * default, or if you specify `ANY`, the agent attempts to install and remove this package using
    * the default package manager. This is useful when creating a policy that applies to different
-   * types of systems.
-   *
-   * The default behavior is ANY.
+   * types of systems. The default behavior is ANY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,9 +87,7 @@ public final class SystemsManagementPackage extends com.google.api.client.json.G
    * package manager, the package is not installed or removed no error message is returned. By
    * default, or if you specify `ANY`, the agent attempts to install and remove this package using
    * the default package manager. This is useful when creating a policy that applies to different
-   * types of systems.
-   *
-   * The default behavior is ANY.
+   * types of systems. The default behavior is ANY.
    * @return value or {@code null} for none
    */
   public java.lang.String getManager() {
@@ -110,9 +99,7 @@ public final class SystemsManagementPackage extends com.google.api.client.json.G
    * package manager, the package is not installed or removed no error message is returned. By
    * default, or if you specify `ANY`, the agent attempts to install and remove this package using
    * the default package manager. This is useful when creating a policy that applies to different
-   * types of systems.
-   *
-   * The default behavior is ANY.
+   * types of systems. The default behavior is ANY.
    * @param manager manager or {@code null} for none
    */
   public SystemsManagementPackage setManager(java.lang.String manager) {

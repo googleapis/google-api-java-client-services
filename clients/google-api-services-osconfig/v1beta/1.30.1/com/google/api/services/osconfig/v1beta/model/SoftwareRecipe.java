@@ -19,24 +19,14 @@ package com.google.api.services.osconfig.v1beta.model;
 /**
  * A software recipe is a set of instructions for installing and configuring a piece of software. It
  * consists of a set of artifacts that are downloaded, and a set of steps that install, configure,
- * and/or update the software.
- *
- * Recipes support installing and updating software from artifacts in the following formats: Zip
- * archive, Tar archive, Windows MSI, Debian package, and RPM package.
- *
+ * and/or update the software. Recipes support installing and updating software from artifacts in
+ * the following formats: Zip archive, Tar archive, Windows MSI, Debian package, and RPM package.
  * Additionally, recipes support executing a script (either defined in a file or directly in this
- * api) in bash, sh, cmd, and powershell.
- *
- * Updating a software recipe
- *
- * If a recipe is assigned to an instance and there is a recipe with the same name but a lower
- * version already installed and the assigned state of the recipe is `UPDATED`, then the recipe is
- * updated to the new version.
- *
- * Script Working Directories
- *
- * Each script or execution step is run in its own temporary directory which is deleted after
- * completing the step.
+ * api) in bash, sh, cmd, and powershell. Updating a software recipe If a recipe is assigned to an
+ * instance and there is a recipe with the same name but a lower version already installed and the
+ * assigned state of the recipe is `UPDATED`, then the recipe is updated to the new version. Script
+ * Working Directories Each script or execution step is run in its own temporary directory which is
+ * deleted after completing the step.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud OS Config API. For a detailed explanation see:
@@ -56,13 +46,11 @@ public final class SoftwareRecipe extends com.google.api.client.json.GenericJson
   private java.util.List<SoftwareRecipeArtifact> artifacts;
 
   /**
-   * Default is INSTALLED. The desired state the agent should maintain for this recipe.
-   *
-   * INSTALLED: The software recipe is installed on the instance but            won't be updated to
-   * new versions. UPDATED: The software recipe is installed on the instance. The recipe is
-   * updated to a higher version, if a higher version of the recipe is          assigned to this
-   * instance. REMOVE: Remove is unsupported for software recipes and attempts to         create or
-   * update a recipe to the REMOVE state is rejected.
+   * Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED:
+   * The software recipe is installed on the instance but won't be updated to new versions. UPDATED:
+   * The software recipe is installed on the instance. The recipe is updated to a higher version, if
+   * a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for
+   * software recipes and attempts to create or update a recipe to the REMOVE state is rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,18 +67,16 @@ public final class SoftwareRecipe extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Unique identifier for the recipe. Only one recipe with a given name is installed on
-   * an instance.
-   *
-   * Names are also used to identify resources which helps to determine whether guest policies have
-   * conflicts. This means that requests to create multiple recipes with the same name and version
-   * are rejected since they could potentially have conflicting assignments.
+   * an instance. Names are also used to identify resources which helps to determine whether guest
+   * policies have conflicts. This means that requests to create multiple recipes with the same name
+   * and version are rejected since they could potentially have conflicting assignments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Actions to be taken for updating this recipe. On failure it stops executing steps and  does not
+   * Actions to be taken for updating this recipe. On failure it stops executing steps and does not
    * attempt another update for this recipe. Any steps taken (including partially completed steps)
    * are not rolled back.
    * The value may be {@code null}.
@@ -124,13 +110,11 @@ public final class SoftwareRecipe extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Default is INSTALLED. The desired state the agent should maintain for this recipe.
-   *
-   * INSTALLED: The software recipe is installed on the instance but            won't be updated to
-   * new versions. UPDATED: The software recipe is installed on the instance. The recipe is
-   * updated to a higher version, if a higher version of the recipe is          assigned to this
-   * instance. REMOVE: Remove is unsupported for software recipes and attempts to         create or
-   * update a recipe to the REMOVE state is rejected.
+   * Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED:
+   * The software recipe is installed on the instance but won't be updated to new versions. UPDATED:
+   * The software recipe is installed on the instance. The recipe is updated to a higher version, if
+   * a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for
+   * software recipes and attempts to create or update a recipe to the REMOVE state is rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getDesiredState() {
@@ -138,13 +122,11 @@ public final class SoftwareRecipe extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Default is INSTALLED. The desired state the agent should maintain for this recipe.
-   *
-   * INSTALLED: The software recipe is installed on the instance but            won't be updated to
-   * new versions. UPDATED: The software recipe is installed on the instance. The recipe is
-   * updated to a higher version, if a higher version of the recipe is          assigned to this
-   * instance. REMOVE: Remove is unsupported for software recipes and attempts to         create or
-   * update a recipe to the REMOVE state is rejected.
+   * Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED:
+   * The software recipe is installed on the instance but won't be updated to new versions. UPDATED:
+   * The software recipe is installed on the instance. The recipe is updated to a higher version, if
+   * a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for
+   * software recipes and attempts to create or update a recipe to the REMOVE state is rejected.
    * @param desiredState desiredState or {@code null} for none
    */
   public SoftwareRecipe setDesiredState(java.lang.String desiredState) {
@@ -175,11 +157,9 @@ public final class SoftwareRecipe extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Unique identifier for the recipe. Only one recipe with a given name is installed on
-   * an instance.
-   *
-   * Names are also used to identify resources which helps to determine whether guest policies have
-   * conflicts. This means that requests to create multiple recipes with the same name and version
-   * are rejected since they could potentially have conflicting assignments.
+   * an instance. Names are also used to identify resources which helps to determine whether guest
+   * policies have conflicts. This means that requests to create multiple recipes with the same name
+   * and version are rejected since they could potentially have conflicting assignments.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -188,11 +168,9 @@ public final class SoftwareRecipe extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Unique identifier for the recipe. Only one recipe with a given name is installed on
-   * an instance.
-   *
-   * Names are also used to identify resources which helps to determine whether guest policies have
-   * conflicts. This means that requests to create multiple recipes with the same name and version
-   * are rejected since they could potentially have conflicting assignments.
+   * an instance. Names are also used to identify resources which helps to determine whether guest
+   * policies have conflicts. This means that requests to create multiple recipes with the same name
+   * and version are rejected since they could potentially have conflicting assignments.
    * @param name name or {@code null} for none
    */
   public SoftwareRecipe setName(java.lang.String name) {
@@ -201,7 +179,7 @@ public final class SoftwareRecipe extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Actions to be taken for updating this recipe. On failure it stops executing steps and  does not
+   * Actions to be taken for updating this recipe. On failure it stops executing steps and does not
    * attempt another update for this recipe. Any steps taken (including partially completed steps)
    * are not rolled back.
    * @return value or {@code null} for none
@@ -211,7 +189,7 @@ public final class SoftwareRecipe extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Actions to be taken for updating this recipe. On failure it stops executing steps and  does not
+   * Actions to be taken for updating this recipe. On failure it stops executing steps and does not
    * attempt another update for this recipe. Any steps taken (including partially completed steps)
    * are not rolled back.
    * @param updateSteps updateSteps or {@code null} for none

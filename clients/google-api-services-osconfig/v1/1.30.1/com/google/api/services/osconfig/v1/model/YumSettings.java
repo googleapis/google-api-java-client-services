@@ -18,9 +18,7 @@ package com.google.api.services.osconfig.v1.model;
 
 /**
  * Yum patching is performed by executing `yum update`. Additional options can be set to control how
- * this is executed.
- *
- * Note that not all settings are supported on all platforms.
+ * this is executed. Note that not all settings are supported on all platforms.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud OS Config API. For a detailed explanation see:

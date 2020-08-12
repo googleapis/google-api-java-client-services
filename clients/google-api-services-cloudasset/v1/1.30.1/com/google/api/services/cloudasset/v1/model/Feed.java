@@ -46,10 +46,9 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   /**
    * A list of types of the assets to receive updates. You must specify either or both of
    * asset_names and asset_types. Only asset updates matching specified asset_names or asset_types
-   * are exported to the feed. Example: `"compute.googleapis.com/Disk"`
-   *
-   * See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a
-   * list of all supported asset types.
+   * are exported to the feed. Example: `"compute.googleapis.com/Disk"` See [this
+   * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all
+   * supported asset types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,10 +60,8 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    * in the `Expr` must be a valid [CEL expression] (https://github.com/google/cel-spec) on a
    * TemporalAsset with name `temporal_asset`. Example: a Feed with expression
    * ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr`
-   * are optional.
-   *
-   * See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-
-   * changes#feed_with_condition) for detailed instructions.
+   * are optional. See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-
+   * asset-changes#feed_with_condition) for detailed instructions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,10 +84,8 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   /**
    * Required. The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier}
    * or folders/{folder_number}/feeds/{client-assigned_feed_identifier} or
-   * organizations/{organization_number}/feeds/{client-assigned_feed_identifier}
-   *
-   * The client-assigned feed identifier must be unique within the parent
-   * project/folder/organization.
+   * organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-assigned
+   * feed identifier must be unique within the parent project/folder/organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,10 +121,9 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   /**
    * A list of types of the assets to receive updates. You must specify either or both of
    * asset_names and asset_types. Only asset updates matching specified asset_names or asset_types
-   * are exported to the feed. Example: `"compute.googleapis.com/Disk"`
-   *
-   * See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a
-   * list of all supported asset types.
+   * are exported to the feed. Example: `"compute.googleapis.com/Disk"` See [this
+   * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all
+   * supported asset types.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAssetTypes() {
@@ -139,10 +133,9 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   /**
    * A list of types of the assets to receive updates. You must specify either or both of
    * asset_names and asset_types. Only asset updates matching specified asset_names or asset_types
-   * are exported to the feed. Example: `"compute.googleapis.com/Disk"`
-   *
-   * See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a
-   * list of all supported asset types.
+   * are exported to the feed. Example: `"compute.googleapis.com/Disk"` See [this
+   * topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all
+   * supported asset types.
    * @param assetTypes assetTypes or {@code null} for none
    */
   public Feed setAssetTypes(java.util.List<java.lang.String> assetTypes) {
@@ -156,10 +149,8 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    * in the `Expr` must be a valid [CEL expression] (https://github.com/google/cel-spec) on a
    * TemporalAsset with name `temporal_asset`. Example: a Feed with expression
    * ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr`
-   * are optional.
-   *
-   * See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-
-   * changes#feed_with_condition) for detailed instructions.
+   * are optional. See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-
+   * asset-changes#feed_with_condition) for detailed instructions.
    * @return value or {@code null} for none
    */
   public Expr getCondition() {
@@ -172,10 +163,8 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    * in the `Expr` must be a valid [CEL expression] (https://github.com/google/cel-spec) on a
    * TemporalAsset with name `temporal_asset`. Example: a Feed with expression
    * ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr`
-   * are optional.
-   *
-   * See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-
-   * changes#feed_with_condition) for detailed instructions.
+   * are optional. See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-
+   * asset-changes#feed_with_condition) for detailed instructions.
    * @param condition condition or {@code null} for none
    */
   public Feed setCondition(Expr condition) {
@@ -220,10 +209,8 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   /**
    * Required. The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier}
    * or folders/{folder_number}/feeds/{client-assigned_feed_identifier} or
-   * organizations/{organization_number}/feeds/{client-assigned_feed_identifier}
-   *
-   * The client-assigned feed identifier must be unique within the parent
-   * project/folder/organization.
+   * organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-assigned
+   * feed identifier must be unique within the parent project/folder/organization.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -233,10 +220,8 @@ public final class Feed extends com.google.api.client.json.GenericJson {
   /**
    * Required. The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier}
    * or folders/{folder_number}/feeds/{client-assigned_feed_identifier} or
-   * organizations/{organization_number}/feeds/{client-assigned_feed_identifier}
-   *
-   * The client-assigned feed identifier must be unique within the parent
-   * project/folder/organization.
+   * organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-assigned
+   * feed identifier must be unique within the parent project/folder/organization.
    * @param name name or {@code null} for none
    */
   public Feed setName(java.lang.String name) {

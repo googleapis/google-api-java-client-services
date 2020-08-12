@@ -44,7 +44,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   private java.lang.String description;
 
   /**
-   * Required. Resource name for the ServicePerimeter.  The `short_name` component must begin with a
+   * Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
    * letter and only include alphanumeric and '_'. Format:
    * `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
    * The value may be {@code null}.
@@ -87,7 +87,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   private java.lang.String title;
 
   /**
-   * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists  for all Service
+   * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service
    * Perimeters, and that spec is identical to the status for those Service Perimeters. When this
    * flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to
    * explicitly provide a configuration ("spec") to use in a dry-run version of the Service
@@ -118,7 +118,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Required. Resource name for the ServicePerimeter.  The `short_name` component must begin with a
+   * Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
    * letter and only include alphanumeric and '_'. Format:
    * `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
    * @return value or {@code null} for none
@@ -128,7 +128,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Required. Resource name for the ServicePerimeter.  The `short_name` component must begin with a
+   * Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
    * letter and only include alphanumeric and '_'. Format:
    * `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
    * @param name name or {@code null} for none
@@ -219,7 +219,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists  for all Service
+   * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service
    * Perimeters, and that spec is identical to the status for those Service Perimeters. When this
    * flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to
    * explicitly provide a configuration ("spec") to use in a dry-run version of the Service
@@ -234,7 +234,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists  for all Service
+   * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service
    * Perimeters, and that spec is identical to the status for those Service Perimeters. When this
    * flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to
    * explicitly provide a configuration ("spec") to use in a dry-run version of the Service

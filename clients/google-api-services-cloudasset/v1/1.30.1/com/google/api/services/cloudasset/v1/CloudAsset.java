@@ -150,14 +150,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The name of the project/folder/organization where this feed
-    should be created in. It can
-     *        only be an organization number (such as
-    "organizations/123"), a folder number (such as
-     *        "folders/123"), a project ID
-    (such as "projects/my-project-id")", or a project number
-     *        (such as
-    "projects/12345").
+     * @param parent Required. The name of the project/folder/organization where this feed should be created in. It can
+     *        only be an organization number (such as "organizations/123"), a folder number (such as
+     *        "folders/123"), a project ID (such as "projects/my-project-id")", or a project number
+     *        (such as "projects/12345").
      * @param content the {@link com.google.api.services.cloudasset.v1.model.CreateFeedRequest}
      * @return the request
      */
@@ -185,14 +181,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The name of the project/folder/organization where this feed
-    should be created in. It can
-     *        only be an organization number (such as
-    "organizations/123"), a folder number (such as
-     *        "folders/123"), a project ID
-    (such as "projects/my-project-id")", or a project number
-     *        (such as
-    "projects/12345").
+       * @param parent Required. The name of the project/folder/organization where this feed should be created in. It can
+     *        only be an organization number (such as "organizations/123"), a folder number (such as
+     *        "folders/123"), a project ID (such as "projects/my-project-id")", or a project number
+     *        (such as "projects/12345").
        * @param content the {@link com.google.api.services.cloudasset.v1.model.CreateFeedRequest}
        * @since 1.13
        */
@@ -309,8 +301,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
      * @param name Required. The name of the feed and it must be in the format of:
-     *        projects/project_number/feeds/feed_id
-    folders/folder_number/feeds/feed_id
+     *        projects/project_number/feeds/feed_id folders/folder_number/feeds/feed_id
      *        organizations/organization_number/feeds/feed_id
      * @return the request
      */
@@ -339,8 +330,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. The name of the feed and it must be in the format of:
-     *        projects/project_number/feeds/feed_id
-    folders/folder_number/feeds/feed_id
+     *        projects/project_number/feeds/feed_id folders/folder_number/feeds/feed_id
      *        organizations/organization_number/feeds/feed_id
        * @since 1.13
        */
@@ -454,8 +444,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param name Required. The name of the Feed and it must be in the format of:
-     *        projects/project_number/feeds/feed_id
-    folders/folder_number/feeds/feed_id
+     *        projects/project_number/feeds/feed_id folders/folder_number/feeds/feed_id
      *        organizations/organization_number/feeds/feed_id
      * @return the request
      */
@@ -483,8 +472,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. The name of the Feed and it must be in the format of:
-     *        projects/project_number/feeds/feed_id
-    folders/folder_number/feeds/feed_id
+     *        projects/project_number/feeds/feed_id folders/folder_number/feeds/feed_id
      *        organizations/organization_number/feeds/feed_id
        * @since 1.13
        */
@@ -607,10 +595,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The parent project/folder/organization whose feeds are to be
-    listed. It can only be using
-     *        project/folder/organization number (such as
-    "folders/12345")", or a project ID (such as
+     * @param parent Required. The parent project/folder/organization whose feeds are to be listed. It can only be using
+     *        project/folder/organization number (such as "folders/12345")", or a project ID (such as
      *        "projects/my-project-id").
      * @return the request
      */
@@ -637,10 +623,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The parent project/folder/organization whose feeds are to be
-    listed. It can only be using
-     *        project/folder/organization number (such as
-    "folders/12345")", or a project ID (such as
+       * @param parent Required. The parent project/folder/organization whose feeds are to be listed. It can only be using
+     *        project/folder/organization number (such as "folders/12345")", or a project ID (such as
      *        "projects/my-project-id").
        * @since 1.13
        */
@@ -763,13 +747,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The format will be
-    projects/{project_number}/feeds/{client-assigned_feed_identifier} or
+     * @param name Required. The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier} or
      *        folders/{folder_number}/feeds/{client-assigned_feed_identifier} or
-     *        organizations/{organization_number}/feeds/{client-assigned_feed_identifier}
-    The client-
-     *        assigned feed identifier must be unique within the parent
-    project/folder/organization.
+     *        organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-
+     *        assigned feed identifier must be unique within the parent project/folder/organization.
      * @param content the {@link com.google.api.services.cloudasset.v1.model.UpdateFeedRequest}
      * @return the request
      */
@@ -797,13 +778,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The format will be
-    projects/{project_number}/feeds/{client-assigned_feed_identifier} or
+       * @param name Required. The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier} or
      *        folders/{folder_number}/feeds/{client-assigned_feed_identifier} or
-     *        organizations/{organization_number}/feeds/{client-assigned_feed_identifier}
-    The client-
-     *        assigned feed identifier must be unique within the parent
-    project/folder/organization.
+     *        organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-
+     *        assigned feed identifier must be unique within the parent project/folder/organization.
        * @param content the {@link com.google.api.services.cloudasset.v1.model.UpdateFeedRequest}
        * @since 1.13
        */
@@ -876,19 +854,16 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. The format will be projects/{project_number}/feeds/{client-
        * assigned_feed_identifier} or folders/{folder_number}/feeds/{client-
        * assigned_feed_identifier} or organizations/{organization_number}/feeds/{client-
-       * assigned_feed_identifier}
-       *
-       * The client-assigned feed identifier must be unique within the parent
-       * project/folder/organization.
+       * assigned_feed_identifier} The client-assigned feed identifier must be unique within the
+       * parent project/folder/organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier} or
      folders/{folder_number}/feeds/{client-assigned_feed_identifier} or
-     organizations/{organization_number}/feeds/{client-assigned_feed_identifier}
-
-     The client-assigned feed identifier must be unique within the parent project/folder/organization.
+     organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-assigned
+     feed identifier must be unique within the parent project/folder/organization.
        */
       public java.lang.String getName() {
         return name;
@@ -898,10 +873,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. The format will be projects/{project_number}/feeds/{client-
        * assigned_feed_identifier} or folders/{folder_number}/feeds/{client-
        * assigned_feed_identifier} or organizations/{organization_number}/feeds/{client-
-       * assigned_feed_identifier}
-       *
-       * The client-assigned feed identifier must be unique within the parent
-       * project/folder/organization.
+       * assigned_feed_identifier} The client-assigned feed identifier must be unique within the
+       * parent project/folder/organization.
        */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -942,7 +915,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
   public class Operations {
 
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -967,7 +940,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/operations/[^/]+/.*$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -1116,10 +1089,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link BatchGetAssetsHistory#execute()} method to invoke the remote
      * operation.
      *
-     * @param parent Required. The relative name of the root asset. It can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id")", or a project
+     * @param parent Required. The relative name of the root asset. It can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id")", or a project
      *        number (such as "projects/12345").
      * @return the request
      */
@@ -1151,10 +1122,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param parent Required. The relative name of the root asset. It can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id")", or a project
+       * @param parent Required. The relative name of the root asset. It can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id")", or a project
      *        number (such as "projects/12345").
        * @since 1.13
        */
@@ -1267,22 +1236,18 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * A list of the full names of the assets. See: https://cloud.google.com/asset-inventory/docs
        * /resource-name-format Example:
-       *
-       * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-       *
-       * The request becomes a no-op if the asset name list is empty, and the max size of the asset
-       * name list is 100 in one request.
+       * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. The
+       * request becomes a no-op if the asset name list is empty, and the max size of the asset name
+       * list is 100 in one request.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> assetNames;
 
       /** A list of the full names of the assets. See: https://cloud.google.com/asset-inventory/docs
      /resource-name-format Example:
-
-     `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-
-     The request becomes a no-op if the asset name list is empty, and the max size of the asset name
-     list is 100 in one request.
+     `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. The request
+     becomes a no-op if the asset name list is empty, and the max size of the asset name list is 100 in
+     one request.
        */
       public java.util.List<java.lang.String> getAssetNames() {
         return assetNames;
@@ -1291,11 +1256,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * A list of the full names of the assets. See: https://cloud.google.com/asset-inventory/docs
        * /resource-name-format Example:
-       *
-       * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-       *
-       * The request becomes a no-op if the asset name list is empty, and the max size of the asset
-       * name list is 100 in one request.
+       * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. The
+       * request becomes a no-op if the asset name list is empty, and the max size of the asset name
+       * list is 100 in one request.
        */
       public BatchGetAssetsHistory setAssetNames(java.util.List<java.lang.String> assetNames) {
         this.assetNames = assetNames;
@@ -1375,12 +1338,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link ExportAssets#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The relative name of the root asset. This can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id"), or a project number
-     *        (such as "projects/12345"),
-    or a folder number (such as "folders/123").
+     * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id"), or a project number
+     *        (such as "projects/12345"), or a folder number (such as "folders/123").
      * @param content the {@link com.google.api.services.cloudasset.v1.model.ExportAssetsRequest}
      * @return the request
      */
@@ -1414,12 +1374,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * ExportAssets#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The relative name of the root asset. This can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id"), or a project number
-     *        (such as "projects/12345"),
-    or a folder number (such as "folders/123").
+       * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id"), or a project number
+     *        (such as "projects/12345"), or a folder number (such as "folders/123").
        * @param content the {@link com.google.api.services.cloudasset.v1.model.ExportAssetsRequest}
        * @since 1.13
        */
@@ -1535,20 +1492,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link SearchAllIamPolicies#execute()} method to invoke the remote
      * operation.
      *
-     * @param scope Required. A scope can be a project, a folder, or an organization. The search is
-    limited to the IAM
-     *        policies within the `scope`. The caller must be granted
-    the
+     * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the IAM
+     *        policies within the `scope`. The caller must be granted the
      *        [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs
-     *        /access-control#required_permissions)
-    permission on the desired scope.
-    The allowed values
-     *        are:
-    * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
-    * projects/{PROJECT_NUMBER} (e.g.,
-     *        "projects/12345678")
-    * folders/{FOLDER_NUMBER} (e.g., "folders/1234567")
-    *
+     *        /access-control#required_permissions) permission on the desired scope. The allowed values
+     *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
      *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
      * @return the request
      */
@@ -1578,20 +1527,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param scope Required. A scope can be a project, a folder, or an organization. The search is
-    limited to the IAM
-     *        policies within the `scope`. The caller must be granted
-    the
+       * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the IAM
+     *        policies within the `scope`. The caller must be granted the
      *        [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs
-     *        /access-control#required_permissions)
-    permission on the desired scope.
-    The allowed values
-     *        are:
-    * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
-    * projects/{PROJECT_NUMBER} (e.g.,
-     *        "projects/12345678")
-    * folders/{FOLDER_NUMBER} (e.g., "folders/1234567")
-    *
+     *        /access-control#required_permissions) permission on the desired scope. The allowed values
+     *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
      *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        * @since 1.13
        */
@@ -1674,11 +1615,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. A scope can be a project, a folder, or an organization. The search is limited to
        * the IAM policies within the `scope`. The caller must be granted the
        * [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs
-       * /access-control#required_permissions) permission on the desired scope.
-       *
-       * The allowed values are:
-       *
-       * * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       * /access-control#required_permissions) permission on the desired scope. The allowed values
+       * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
        * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
        * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        */
@@ -1688,11 +1626,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Required. A scope can be a project, a folder, or an organization. The search is limited to the IAM
      policies within the `scope`. The caller must be granted the
      [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs/access-
-     control#required_permissions) permission on the desired scope.
-
-     The allowed values are:
-
-     * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     control#required_permissions) permission on the desired scope. The allowed values are: *
+     projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
      "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
      organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        */
@@ -1704,11 +1639,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. A scope can be a project, a folder, or an organization. The search is limited to
        * the IAM policies within the `scope`. The caller must be granted the
        * [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs
-       * /access-control#required_permissions) permission on the desired scope.
-       *
-       * The allowed values are:
-       *
-       * * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       * /access-control#required_permissions) permission on the desired scope. The allowed values
+       * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
        * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
        * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        */
@@ -1781,45 +1713,37 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Optional. The query statement. See [how to construct a query](https://cloud.google.com
        * /asset-inventory/docs/searching-iam-policies#how_to_construct_a_query) for more
        * information. If not specified or empty, it will search all the IAM policies within the
-       * specified `scope`.
-       *
-       * Examples:
-       *
-       * * `policy : "amy@gmail.com"` to find IAM policy bindings that specify user "amy@gmail.com".
-       * * `policy : "roles/compute.admin"` to find IAM policy bindings that specify the Compute
-       * Admin role. * `policy.role.permissions : "storage.buckets.update"` to find IAM policy
-       * bindings that specify a role containing "storage.buckets.update" permission. Note that if
-       * callers don't have `iam.roles.get` access to a role's included permissions, policy bindings
-       * that specify this role will be dropped from the search results. * `resource :
-       * "organizations/123456"` to find IAM policy bindings that are set on "organizations/123456".
-       * * `"Important"` to find IAM policy bindings that contain "Important" as a word in any of
-       * the searchable fields (except for the included permissions). * `"*por*"` to find IAM policy
-       * bindings which contain "por" as a substring in any of the searchable fields (except for the
-       * included permissions). * `(resource : ("instance1" OR "instance2") AND policy : "amy")` to
-       * find IAM policy bindings that are set on resources "instance1" or "instance2" and also
-       * specify user "amy".
+       * specified `scope`. Examples: * `policy:amy@gmail.com` to find IAM policy bindings that
+       * specify user "amy@gmail.com". * `policy:roles/compute.admin` to find IAM policy bindings
+       * that specify the Compute Admin role. * `policy.role.permissions:storage.buckets.update` to
+       * find IAM policy bindings that specify a role containing "storage.buckets.update"
+       * permission. Note that if callers don't have `iam.roles.get` access to a role's included
+       * permissions, policy bindings that specify this role will be dropped from the search
+       * results. * `resource:organizations/123456` to find IAM policy bindings that are set on
+       * "organizations/123456". * `Important` to find IAM policy bindings that contain "Important"
+       * as a word in any of the searchable fields (except for the included permissions). * `*por*`
+       * to find IAM policy bindings that contain "por" as a substring in any of the searchable
+       * fields (except for the included permissions). * `resource:(instance1 OR instance2)
+       * policy:amy` to find IAM policy bindings that are set on resources "instance1" or
+       * "instance2" and also specify user "amy".
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
       /** Optional. The query statement. See [how to construct a query](https://cloud.google.com/asset-
      inventory/docs/searching-iam-policies#how_to_construct_a_query) for more information. If not
-     specified or empty, it will search all the IAM policies within the specified `scope`.
-
-     Examples:
-
-     * `policy : "amy@gmail.com"` to find IAM policy bindings that specify user "amy@gmail.com". *
-     `policy : "roles/compute.admin"` to find IAM policy bindings that specify the Compute Admin role. *
-     `policy.role.permissions : "storage.buckets.update"` to find IAM policy bindings that specify a
-     role containing "storage.buckets.update" permission. Note that if callers don't have
-     `iam.roles.get` access to a role's included permissions, policy bindings that specify this role
-     will be dropped from the search results. * `resource : "organizations/123456"` to find IAM policy
-     bindings that are set on "organizations/123456". * `"Important"` to find IAM policy bindings that
-     contain "Important" as a word in any of the searchable fields (except for the included
-     permissions). * `"*por*"` to find IAM policy bindings which contain "por" as a substring in any of
-     the searchable fields (except for the included permissions). * `(resource : ("instance1" OR
-     "instance2") AND policy : "amy")` to find IAM policy bindings that are set on resources "instance1"
-     or "instance2" and also specify user "amy".
+     specified or empty, it will search all the IAM policies within the specified `scope`. Examples: *
+     `policy:amy@gmail.com` to find IAM policy bindings that specify user "amy@gmail.com". *
+     `policy:roles/compute.admin` to find IAM policy bindings that specify the Compute Admin role. *
+     `policy.role.permissions:storage.buckets.update` to find IAM policy bindings that specify a role
+     containing "storage.buckets.update" permission. Note that if callers don't have `iam.roles.get`
+     access to a role's included permissions, policy bindings that specify this role will be dropped
+     from the search results. * `resource:organizations/123456` to find IAM policy bindings that are set
+     on "organizations/123456". * `Important` to find IAM policy bindings that contain "Important" as a
+     word in any of the searchable fields (except for the included permissions). * `*por*` to find IAM
+     policy bindings that contain "por" as a substring in any of the searchable fields (except for the
+     included permissions). * `resource:(instance1 OR instance2) policy:amy` to find IAM policy bindings
+     that are set on resources "instance1" or "instance2" and also specify user "amy".
        */
       public java.lang.String getQuery() {
         return query;
@@ -1829,23 +1753,19 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Optional. The query statement. See [how to construct a query](https://cloud.google.com
        * /asset-inventory/docs/searching-iam-policies#how_to_construct_a_query) for more
        * information. If not specified or empty, it will search all the IAM policies within the
-       * specified `scope`.
-       *
-       * Examples:
-       *
-       * * `policy : "amy@gmail.com"` to find IAM policy bindings that specify user "amy@gmail.com".
-       * * `policy : "roles/compute.admin"` to find IAM policy bindings that specify the Compute
-       * Admin role. * `policy.role.permissions : "storage.buckets.update"` to find IAM policy
-       * bindings that specify a role containing "storage.buckets.update" permission. Note that if
-       * callers don't have `iam.roles.get` access to a role's included permissions, policy bindings
-       * that specify this role will be dropped from the search results. * `resource :
-       * "organizations/123456"` to find IAM policy bindings that are set on "organizations/123456".
-       * * `"Important"` to find IAM policy bindings that contain "Important" as a word in any of
-       * the searchable fields (except for the included permissions). * `"*por*"` to find IAM policy
-       * bindings which contain "por" as a substring in any of the searchable fields (except for the
-       * included permissions). * `(resource : ("instance1" OR "instance2") AND policy : "amy")` to
-       * find IAM policy bindings that are set on resources "instance1" or "instance2" and also
-       * specify user "amy".
+       * specified `scope`. Examples: * `policy:amy@gmail.com` to find IAM policy bindings that
+       * specify user "amy@gmail.com". * `policy:roles/compute.admin` to find IAM policy bindings
+       * that specify the Compute Admin role. * `policy.role.permissions:storage.buckets.update` to
+       * find IAM policy bindings that specify a role containing "storage.buckets.update"
+       * permission. Note that if callers don't have `iam.roles.get` access to a role's included
+       * permissions, policy bindings that specify this role will be dropped from the search
+       * results. * `resource:organizations/123456` to find IAM policy bindings that are set on
+       * "organizations/123456". * `Important` to find IAM policy bindings that contain "Important"
+       * as a word in any of the searchable fields (except for the included permissions). * `*por*`
+       * to find IAM policy bindings that contain "por" as a substring in any of the searchable
+       * fields (except for the included permissions). * `resource:(instance1 OR instance2)
+       * policy:amy` to find IAM policy bindings that are set on resources "instance1" or
+       * "instance2" and also specify user "amy".
        */
       public SearchAllIamPolicies setQuery(java.lang.String query) {
         this.query = query;
@@ -1867,19 +1787,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link SearchAllResources#execute()} method to invoke the remote operation.
      *
-     * @param scope Required. A scope can be a project, a folder, or an organization. The search is
-    limited to the
+     * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the
      *        resources within the `scope`. The caller must be granted the
      *        [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs
-     *        /access-control#required_permissions)
-    permission on the desired scope.
-    The allowed values
-     *        are:
-    * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
-    * projects/{PROJECT_NUMBER} (e.g.,
-     *        "projects/12345678")
-    * folders/{FOLDER_NUMBER} (e.g., "folders/1234567")
-    *
+     *        /access-control#required_permissions) permission on the desired scope. The allowed values
+     *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
      *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
      * @return the request
      */
@@ -1909,19 +1822,12 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param scope Required. A scope can be a project, a folder, or an organization. The search is
-    limited to the
+       * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the
      *        resources within the `scope`. The caller must be granted the
      *        [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs
-     *        /access-control#required_permissions)
-    permission on the desired scope.
-    The allowed values
-     *        are:
-    * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
-    * projects/{PROJECT_NUMBER} (e.g.,
-     *        "projects/12345678")
-    * folders/{FOLDER_NUMBER} (e.g., "folders/1234567")
-    *
+     *        /access-control#required_permissions) permission on the desired scope. The allowed values
+     *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
      *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        * @since 1.13
        */
@@ -2004,11 +1910,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. A scope can be a project, a folder, or an organization. The search is limited to
        * the resources within the `scope`. The caller must be granted the
        * [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs
-       * /access-control#required_permissions) permission on the desired scope.
-       *
-       * The allowed values are:
-       *
-       * * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       * /access-control#required_permissions) permission on the desired scope. The allowed values
+       * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
        * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
        * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        */
@@ -2018,11 +1921,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Required. A scope can be a project, a folder, or an organization. The search is limited to the
      resources within the `scope`. The caller must be granted the
      [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs/access-
-     control#required_permissions) permission on the desired scope.
-
-     The allowed values are:
-
-     * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     control#required_permissions) permission on the desired scope. The allowed values are: *
+     projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
      "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
      organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        */
@@ -2034,11 +1934,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. A scope can be a project, a folder, or an organization. The search is limited to
        * the resources within the `scope`. The caller must be granted the
        * [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs
-       * /access-control#required_permissions) permission on the desired scope.
-       *
-       * The allowed values are:
-       *
-       * * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       * /access-control#required_permissions) permission on the desired scope. The allowed values
+       * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
        * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
        * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        */
@@ -2177,24 +2074,20 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Note that the query string is compared against each Cloud IAM policy binding, including its
        * members, roles, and Cloud IAM conditions. The returned Cloud IAM policies will only contain
        * the bindings that match your query. To learn more about the IAM policy structure, see [IAM
-       * policy doc](https://cloud.google.com/iam/docs/policies#structure).
-       *
-       * Examples:
-       *
-       * * `name : "Important"` to find Cloud resources whose name contains "Important" as a word. *
-       * `displayName : "Impor*"` to find Cloud resources whose display name contains "Impor" as a
-       * prefix. * `description : "*por*"` to find Cloud resources whose description contains "por"
-       * as a substring. * `location : "us-west*"` to find Cloud resources whose location is
-       * prefixed with "us-west". * `labels : "prod"` to find Cloud resources whose labels contain
-       * "prod" as a key or value. * `labels.env : "prod"` to find Cloud resources which have a
-       * label "env" and its value is "prod". * `labels.env : *` to find Cloud resources which have
-       * a label "env". * `"Important"` to find Cloud resources which contain "Important" as a word
-       * in any of the searchable fields. * `"Impor*"` to find Cloud resources which contain "Impor"
-       * as a prefix in any of the searchable fields. * `"*por*"` to find Cloud resources which
-       * contain "por" as a substring in any of the searchable fields. * `("Important" AND location
-       * : ("us-west1" OR "global"))` to find Cloud resources which contain "Important" as a word in
-       * any of the searchable fields and are also located in the "us-west1" region or the "global"
-       * location.
+       * policy doc](https://cloud.google.com/iam/docs/policies#structure). Examples: *
+       * `name:Important` to find Cloud resources whose name contains "Important" as a word. *
+       * `displayName:Impor*` to find Cloud resources whose display name contains "Impor" as a
+       * prefix. * `description:*por*` to find Cloud resources whose description contains "por" as a
+       * substring. * `location:us-west*` to find Cloud resources whose location is prefixed with
+       * "us-west". * `labels:prod` to find Cloud resources whose labels contain "prod" as a key or
+       * value. * `labels.env:prod` to find Cloud resources that have a label "env" and its value is
+       * "prod". * `labels.env:*` to find Cloud resources that have a label "env". * `Important` to
+       * find Cloud resources that contain "Important" as a word in any of the searchable fields. *
+       * `Impor*` to find Cloud resources that contain "Impor" as a prefix in any of the searchable
+       * fields. * `*por*` to find Cloud resources that contain "por" as a substring in any of the
+       * searchable fields. * `Important location:(us-west1 OR global)` to find Cloud resources that
+       * contain "Important" as a word in any of the searchable fields and are also located in the
+       * "us-west1" region or the "global" location.
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -2205,23 +2098,19 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      is compared against each Cloud IAM policy binding, including its members, roles, and Cloud IAM
      conditions. The returned Cloud IAM policies will only contain the bindings that match your query.
      To learn more about the IAM policy structure, see [IAM policy
-     doc](https://cloud.google.com/iam/docs/policies#structure).
-
-     Examples:
-
-     * `name : "Important"` to find Cloud resources whose name contains "Important" as a word. *
-     `displayName : "Impor*"` to find Cloud resources whose display name contains "Impor" as a prefix. *
-     `description : "*por*"` to find Cloud resources whose description contains "por" as a substring. *
-     `location : "us-west*"` to find Cloud resources whose location is prefixed with "us-west". *
-     `labels : "prod"` to find Cloud resources whose labels contain "prod" as a key or value. *
-     `labels.env : "prod"` to find Cloud resources which have a label "env" and its value is "prod". *
-     `labels.env : *` to find Cloud resources which have a label "env". * `"Important"` to find Cloud
-     resources which contain "Important" as a word in any of the searchable fields. * `"Impor*"` to find
-     Cloud resources which contain "Impor" as a prefix in any of the searchable fields. * `"*por*"` to
-     find Cloud resources which contain "por" as a substring in any of the searchable fields. *
-     `("Important" AND location : ("us-west1" OR "global"))` to find Cloud resources which contain
-     "Important" as a word in any of the searchable fields and are also located in the "us-west1" region
-     or the "global" location.
+     doc](https://cloud.google.com/iam/docs/policies#structure). Examples: * `name:Important` to find
+     Cloud resources whose name contains "Important" as a word. * `displayName:Impor*` to find Cloud
+     resources whose display name contains "Impor" as a prefix. * `description:*por*` to find Cloud
+     resources whose description contains "por" as a substring. * `location:us-west*` to find Cloud
+     resources whose location is prefixed with "us-west". * `labels:prod` to find Cloud resources whose
+     labels contain "prod" as a key or value. * `labels.env:prod` to find Cloud resources that have a
+     label "env" and its value is "prod". * `labels.env:*` to find Cloud resources that have a label
+     "env". * `Important` to find Cloud resources that contain "Important" as a word in any of the
+     searchable fields. * `Impor*` to find Cloud resources that contain "Impor" as a prefix in any of
+     the searchable fields. * `*por*` to find Cloud resources that contain "por" as a substring in any
+     of the searchable fields. * `Important location:(us-west1 OR global)` to find Cloud resources that
+     contain "Important" as a word in any of the searchable fields and are also located in the "us-
+     west1" region or the "global" location.
        */
       public java.lang.String getQuery() {
         return query;
@@ -2234,24 +2123,20 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Note that the query string is compared against each Cloud IAM policy binding, including its
        * members, roles, and Cloud IAM conditions. The returned Cloud IAM policies will only contain
        * the bindings that match your query. To learn more about the IAM policy structure, see [IAM
-       * policy doc](https://cloud.google.com/iam/docs/policies#structure).
-       *
-       * Examples:
-       *
-       * * `name : "Important"` to find Cloud resources whose name contains "Important" as a word. *
-       * `displayName : "Impor*"` to find Cloud resources whose display name contains "Impor" as a
-       * prefix. * `description : "*por*"` to find Cloud resources whose description contains "por"
-       * as a substring. * `location : "us-west*"` to find Cloud resources whose location is
-       * prefixed with "us-west". * `labels : "prod"` to find Cloud resources whose labels contain
-       * "prod" as a key or value. * `labels.env : "prod"` to find Cloud resources which have a
-       * label "env" and its value is "prod". * `labels.env : *` to find Cloud resources which have
-       * a label "env". * `"Important"` to find Cloud resources which contain "Important" as a word
-       * in any of the searchable fields. * `"Impor*"` to find Cloud resources which contain "Impor"
-       * as a prefix in any of the searchable fields. * `"*por*"` to find Cloud resources which
-       * contain "por" as a substring in any of the searchable fields. * `("Important" AND location
-       * : ("us-west1" OR "global"))` to find Cloud resources which contain "Important" as a word in
-       * any of the searchable fields and are also located in the "us-west1" region or the "global"
-       * location.
+       * policy doc](https://cloud.google.com/iam/docs/policies#structure). Examples: *
+       * `name:Important` to find Cloud resources whose name contains "Important" as a word. *
+       * `displayName:Impor*` to find Cloud resources whose display name contains "Impor" as a
+       * prefix. * `description:*por*` to find Cloud resources whose description contains "por" as a
+       * substring. * `location:us-west*` to find Cloud resources whose location is prefixed with
+       * "us-west". * `labels:prod` to find Cloud resources whose labels contain "prod" as a key or
+       * value. * `labels.env:prod` to find Cloud resources that have a label "env" and its value is
+       * "prod". * `labels.env:*` to find Cloud resources that have a label "env". * `Important` to
+       * find Cloud resources that contain "Important" as a word in any of the searchable fields. *
+       * `Impor*` to find Cloud resources that contain "Impor" as a prefix in any of the searchable
+       * fields. * `*por*` to find Cloud resources that contain "por" as a substring in any of the
+       * searchable fields. * `Important location:(us-west1 OR global)` to find Cloud resources that
+       * contain "Important" as a word in any of the searchable fields and are also located in the
+       * "us-west1" region or the "global" location.
        */
       public SearchAllResources setQuery(java.lang.String query) {
         this.query = query;

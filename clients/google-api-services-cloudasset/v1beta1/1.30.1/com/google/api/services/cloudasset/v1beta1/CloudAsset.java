@@ -154,12 +154,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link ExportAssets#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The relative name of the root asset. This can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id"), a project number
-     *        (such as "projects/12345"), or
-    a folder number (such as "folders/123").
+     * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id"), a project number
+     *        (such as "projects/12345"), or a folder number (such as "folders/123").
      * @param content the {@link com.google.api.services.cloudasset.v1beta1.model.ExportAssetsRequest}
      * @return the request
      */
@@ -191,12 +188,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * ExportAssets#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The relative name of the root asset. This can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id"), a project number
-     *        (such as "projects/12345"), or
-    a folder number (such as "folders/123").
+       * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id"), a project number
+     *        (such as "projects/12345"), or a folder number (such as "folders/123").
        * @param content the {@link com.google.api.services.cloudasset.v1beta1.model.ExportAssetsRequest}
        * @since 1.13
        */
@@ -323,7 +317,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
     public class Operations {
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -348,7 +342,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^folders/[^/]+/operations/[^/]+/.*$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -498,10 +492,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link BatchGetAssetsHistory#execute()} method to invoke the remote
      * operation.
      *
-     * @param parent Required. The relative name of the root asset. It can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id")", or a project
+     * @param parent Required. The relative name of the root asset. It can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id")", or a project
      *        number (such as "projects/12345").
      * @return the request
      */
@@ -533,10 +525,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param parent Required. The relative name of the root asset. It can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id")", or a project
+       * @param parent Required. The relative name of the root asset. It can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id")", or a project
      *        number (such as "projects/12345").
        * @since 1.13
        */
@@ -650,20 +640,17 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * A list of the full names of the assets. For example:
        * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
        * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-       * for more info.
-       *
-       * The request becomes a no-op if the asset name list is empty, and the max size of the asset
-       * name list is 100 in one request.
+       * for more info. The request becomes a no-op if the asset name list is empty, and the max
+       * size of the asset name list is 100 in one request.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> assetNames;
 
       /** A list of the full names of the assets. For example:
      `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource
-     Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.
-
-     The request becomes a no-op if the asset name list is empty, and the max size of the asset name
-     list is 100 in one request.
+     Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info. The
+     request becomes a no-op if the asset name list is empty, and the max size of the asset name list is
+     100 in one request.
        */
       public java.util.List<java.lang.String> getAssetNames() {
         return assetNames;
@@ -673,10 +660,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * A list of the full names of the assets. For example:
        * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
        * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-       * for more info.
-       *
-       * The request becomes a no-op if the asset name list is empty, and the max size of the asset
-       * name list is 100 in one request.
+       * for more info. The request becomes a no-op if the asset name list is empty, and the max
+       * size of the asset name list is 100 in one request.
        */
       public BatchGetAssetsHistory setAssetNames(java.util.List<java.lang.String> assetNames) {
         this.assetNames = assetNames;
@@ -754,12 +739,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link ExportAssets#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The relative name of the root asset. This can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id"), a project number
-     *        (such as "projects/12345"), or
-    a folder number (such as "folders/123").
+     * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id"), a project number
+     *        (such as "projects/12345"), or a folder number (such as "folders/123").
      * @param content the {@link com.google.api.services.cloudasset.v1beta1.model.ExportAssetsRequest}
      * @return the request
      */
@@ -791,12 +773,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * ExportAssets#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The relative name of the root asset. This can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id"), a project number
-     *        (such as "projects/12345"), or
-    a folder number (such as "folders/123").
+       * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id"), a project number
+     *        (such as "projects/12345"), or a folder number (such as "folders/123").
        * @param content the {@link com.google.api.services.cloudasset.v1beta1.model.ExportAssetsRequest}
        * @since 1.13
        */
@@ -923,7 +902,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
     public class Operations {
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -948,7 +927,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^organizations/[^/]+/operations/[^/]+/.*$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -1098,10 +1077,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link BatchGetAssetsHistory#execute()} method to invoke the remote
      * operation.
      *
-     * @param parent Required. The relative name of the root asset. It can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id")", or a project
+     * @param parent Required. The relative name of the root asset. It can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id")", or a project
      *        number (such as "projects/12345").
      * @return the request
      */
@@ -1133,10 +1110,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param parent Required. The relative name of the root asset. It can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id")", or a project
+       * @param parent Required. The relative name of the root asset. It can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id")", or a project
      *        number (such as "projects/12345").
        * @since 1.13
        */
@@ -1250,20 +1225,17 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * A list of the full names of the assets. For example:
        * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
        * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-       * for more info.
-       *
-       * The request becomes a no-op if the asset name list is empty, and the max size of the asset
-       * name list is 100 in one request.
+       * for more info. The request becomes a no-op if the asset name list is empty, and the max
+       * size of the asset name list is 100 in one request.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> assetNames;
 
       /** A list of the full names of the assets. For example:
      `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource
-     Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.
-
-     The request becomes a no-op if the asset name list is empty, and the max size of the asset name
-     list is 100 in one request.
+     Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info. The
+     request becomes a no-op if the asset name list is empty, and the max size of the asset name list is
+     100 in one request.
        */
       public java.util.List<java.lang.String> getAssetNames() {
         return assetNames;
@@ -1273,10 +1245,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * A list of the full names of the assets. For example:
        * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
        * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-       * for more info.
-       *
-       * The request becomes a no-op if the asset name list is empty, and the max size of the asset
-       * name list is 100 in one request.
+       * for more info. The request becomes a no-op if the asset name list is empty, and the max
+       * size of the asset name list is 100 in one request.
        */
       public BatchGetAssetsHistory setAssetNames(java.util.List<java.lang.String> assetNames) {
         this.assetNames = assetNames;
@@ -1354,12 +1324,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link ExportAssets#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The relative name of the root asset. This can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id"), a project number
-     *        (such as "projects/12345"), or
-    a folder number (such as "folders/123").
+     * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id"), a project number
+     *        (such as "projects/12345"), or a folder number (such as "folders/123").
      * @param content the {@link com.google.api.services.cloudasset.v1beta1.model.ExportAssetsRequest}
      * @return the request
      */
@@ -1391,12 +1358,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * ExportAssets#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The relative name of the root asset. This can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id"), a project number
-     *        (such as "projects/12345"), or
-    a folder number (such as "folders/123").
+       * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id"), a project number
+     *        (such as "projects/12345"), or a folder number (such as "folders/123").
        * @param content the {@link com.google.api.services.cloudasset.v1beta1.model.ExportAssetsRequest}
        * @since 1.13
        */
@@ -1523,7 +1487,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
     public class Operations {
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -1548,7 +1512,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+/.*$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".

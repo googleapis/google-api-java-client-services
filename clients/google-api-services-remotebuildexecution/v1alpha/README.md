@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-remotebuildexecution</artifactId>
-      <version>v1alpha-rev20200721-1.30.10</version>
+      <version>v1alpha-rev20200810-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-remotebuildexecution:v1alpha-rev20200721-1.30.10'
+  compile 'com.google.apis:google-api-services-remotebuildexecution:v1alpha-rev20200810-1.30.10'
 }
 ```
 

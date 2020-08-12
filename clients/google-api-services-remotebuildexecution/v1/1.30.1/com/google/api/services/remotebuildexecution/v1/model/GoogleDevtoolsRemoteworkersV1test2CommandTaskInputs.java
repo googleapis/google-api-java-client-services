@@ -31,14 +31,11 @@ package com.google.api.services.remotebuildexecution.v1.model;
 public final class GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs extends com.google.api.client.json.GenericJson {
 
   /**
-   * The command itself to run (e.g., argv).
-   *
-   * This field should be passed directly to the underlying operating system, and so it must be
-   * sensible to that operating system. For example, on Windows, the first argument might be
-   * "C:\Windows\System32\ping.exe" - that is, using drive letters and backslashes. A command for a
-   * *nix system, on the other hand, would use forward slashes.
-   *
-   * All other fields in the RWAPI must consistently use forward slashes, since those fields may be
+   * The command itself to run (e.g., argv). This field should be passed directly to the underlying
+   * operating system, and so it must be sensible to that operating system. For example, on Windows,
+   * the first argument might be "C:\Windows\System32\ping.exe" - that is, using drive letters and
+   * backslashes. A command for a *nix system, on the other hand, would use forward slashes. All
+   * other fields in the RWAPI must consistently use forward slashes, since those fields may be
    * interpretted by both the service and the bot.
    * The value may be {@code null}.
    */
@@ -55,11 +52,10 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs extends c
   /**
    * The input filesystem to be set up prior to the task beginning. The contents should be a
    * repeated set of FileMetadata messages though other formats are allowed if better for the
-   * implementation (eg, a LUCI-style .isolated file).
-   *
-   * This field is repeated since implementations might want to cache the metadata, in which case it
-   * may be useful to break up portions of the filesystem that change frequently (eg, specific input
-   * files) from those that don't (eg, standard header files).
+   * implementation (eg, a LUCI-style .isolated file). This field is repeated since implementations
+   * might want to cache the metadata, in which case it may be useful to break up portions of the
+   * filesystem that change frequently (eg, specific input files) from those that don't (eg,
+   * standard header files).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,10 +63,9 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs extends c
 
   /**
    * Inline contents for blobs expected to be needed by the bot to execute the task. For example,
-   * contents of entries in `files` or blobs that are indirectly referenced by an entry there.
-   *
-   * The bot should check against this list before downloading required task inputs to reduce the
-   * number of communications between itself and the remote CAS server.
+   * contents of entries in `files` or blobs that are indirectly referenced by an entry there. The
+   * bot should check against this list before downloading required task inputs to reduce the number
+   * of communications between itself and the remote CAS server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,14 +87,11 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs extends c
   private java.lang.String workingDirectory;
 
   /**
-   * The command itself to run (e.g., argv).
-   *
-   * This field should be passed directly to the underlying operating system, and so it must be
-   * sensible to that operating system. For example, on Windows, the first argument might be
-   * "C:\Windows\System32\ping.exe" - that is, using drive letters and backslashes. A command for a
-   * *nix system, on the other hand, would use forward slashes.
-   *
-   * All other fields in the RWAPI must consistently use forward slashes, since those fields may be
+   * The command itself to run (e.g., argv). This field should be passed directly to the underlying
+   * operating system, and so it must be sensible to that operating system. For example, on Windows,
+   * the first argument might be "C:\Windows\System32\ping.exe" - that is, using drive letters and
+   * backslashes. A command for a *nix system, on the other hand, would use forward slashes. All
+   * other fields in the RWAPI must consistently use forward slashes, since those fields may be
    * interpretted by both the service and the bot.
    * @return value or {@code null} for none
    */
@@ -108,14 +100,11 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs extends c
   }
 
   /**
-   * The command itself to run (e.g., argv).
-   *
-   * This field should be passed directly to the underlying operating system, and so it must be
-   * sensible to that operating system. For example, on Windows, the first argument might be
-   * "C:\Windows\System32\ping.exe" - that is, using drive letters and backslashes. A command for a
-   * *nix system, on the other hand, would use forward slashes.
-   *
-   * All other fields in the RWAPI must consistently use forward slashes, since those fields may be
+   * The command itself to run (e.g., argv). This field should be passed directly to the underlying
+   * operating system, and so it must be sensible to that operating system. For example, on Windows,
+   * the first argument might be "C:\Windows\System32\ping.exe" - that is, using drive letters and
+   * backslashes. A command for a *nix system, on the other hand, would use forward slashes. All
+   * other fields in the RWAPI must consistently use forward slashes, since those fields may be
    * interpretted by both the service and the bot.
    * @param arguments arguments or {@code null} for none
    */
@@ -144,11 +133,10 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs extends c
   /**
    * The input filesystem to be set up prior to the task beginning. The contents should be a
    * repeated set of FileMetadata messages though other formats are allowed if better for the
-   * implementation (eg, a LUCI-style .isolated file).
-   *
-   * This field is repeated since implementations might want to cache the metadata, in which case it
-   * may be useful to break up portions of the filesystem that change frequently (eg, specific input
-   * files) from those that don't (eg, standard header files).
+   * implementation (eg, a LUCI-style .isolated file). This field is repeated since implementations
+   * might want to cache the metadata, in which case it may be useful to break up portions of the
+   * filesystem that change frequently (eg, specific input files) from those that don't (eg,
+   * standard header files).
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleDevtoolsRemoteworkersV1test2Digest> getFiles() {
@@ -158,11 +146,10 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs extends c
   /**
    * The input filesystem to be set up prior to the task beginning. The contents should be a
    * repeated set of FileMetadata messages though other formats are allowed if better for the
-   * implementation (eg, a LUCI-style .isolated file).
-   *
-   * This field is repeated since implementations might want to cache the metadata, in which case it
-   * may be useful to break up portions of the filesystem that change frequently (eg, specific input
-   * files) from those that don't (eg, standard header files).
+   * implementation (eg, a LUCI-style .isolated file). This field is repeated since implementations
+   * might want to cache the metadata, in which case it may be useful to break up portions of the
+   * filesystem that change frequently (eg, specific input files) from those that don't (eg,
+   * standard header files).
    * @param files files or {@code null} for none
    */
   public GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs setFiles(java.util.List<GoogleDevtoolsRemoteworkersV1test2Digest> files) {
@@ -172,10 +159,9 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs extends c
 
   /**
    * Inline contents for blobs expected to be needed by the bot to execute the task. For example,
-   * contents of entries in `files` or blobs that are indirectly referenced by an entry there.
-   *
-   * The bot should check against this list before downloading required task inputs to reduce the
-   * number of communications between itself and the remote CAS server.
+   * contents of entries in `files` or blobs that are indirectly referenced by an entry there. The
+   * bot should check against this list before downloading required task inputs to reduce the number
+   * of communications between itself and the remote CAS server.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleDevtoolsRemoteworkersV1test2Blob> getInlineBlobs() {
@@ -184,10 +170,9 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs extends c
 
   /**
    * Inline contents for blobs expected to be needed by the bot to execute the task. For example,
-   * contents of entries in `files` or blobs that are indirectly referenced by an entry there.
-   *
-   * The bot should check against this list before downloading required task inputs to reduce the
-   * number of communications between itself and the remote CAS server.
+   * contents of entries in `files` or blobs that are indirectly referenced by an entry there. The
+   * bot should check against this list before downloading required task inputs to reduce the number
+   * of communications between itself and the remote CAS server.
    * @param inlineBlobs inlineBlobs or {@code null} for none
    */
   public GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs setInlineBlobs(java.util.List<GoogleDevtoolsRemoteworkersV1test2Blob> inlineBlobs) {

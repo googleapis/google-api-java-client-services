@@ -41,8 +41,8 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandOutputs extends com.
 
   /**
    * The output files. The blob referenced by the digest should contain one of the following
-   * (implementation-dependent): A marshalled DirectoryMetadata of the returned filesystem A LUCI-
-   * style .isolated file
+   * (implementation-dependent): * A marshalled DirectoryMetadata of the returned filesystem * A
+   * LUCI-style .isolated file
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandOutputs extends com.
 
   /**
    * The output files. The blob referenced by the digest should contain one of the following
-   * (implementation-dependent): A marshalled DirectoryMetadata of the returned filesystem A LUCI-
-   * style .isolated file
+   * (implementation-dependent): * A marshalled DirectoryMetadata of the returned filesystem * A
+   * LUCI-style .isolated file
    * @return value or {@code null} for none
    */
   public GoogleDevtoolsRemoteworkersV1test2Digest getOutputs() {
@@ -81,8 +81,8 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandOutputs extends com.
 
   /**
    * The output files. The blob referenced by the digest should contain one of the following
-   * (implementation-dependent): A marshalled DirectoryMetadata of the returned filesystem A LUCI-
-   * style .isolated file
+   * (implementation-dependent): * A marshalled DirectoryMetadata of the returned filesystem * A
+   * LUCI-style .isolated file
    * @param outputs outputs or {@code null} for none
    */
   public GoogleDevtoolsRemoteworkersV1test2CommandOutputs setOutputs(GoogleDevtoolsRemoteworkersV1test2Digest outputs) {

@@ -68,12 +68,10 @@ public final class BuildBazelRemoteExecutionV2ExecuteResponse extends com.google
    * If the status has a code other than `OK`, it indicates that the action did not finish
    * execution. For example, if the operation times out during execution, the status will have a
    * `DEADLINE_EXCEEDED` code. Servers MUST use this field for errors in execution, rather than the
-   * error field on the `Operation` object.
-   *
-   * If the status code is other than `OK`, then the result MUST NOT be cached. For an error status,
-   * the `result` field is optional; the server may populate the output-, stdout-, and stderr-
-   * related fields if it has any information available, such as the stdout and stderr of a timed-
-   * out action.
+   * error field on the `Operation` object. If the status code is other than `OK`, then the result
+   * MUST NOT be cached. For an error status, the `result` field is optional; the server may
+   * populate the output-, stdout-, and stderr-related fields if it has any information available,
+   * such as the stdout and stderr of a timed-out action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,12 +159,10 @@ public final class BuildBazelRemoteExecutionV2ExecuteResponse extends com.google
    * If the status has a code other than `OK`, it indicates that the action did not finish
    * execution. For example, if the operation times out during execution, the status will have a
    * `DEADLINE_EXCEEDED` code. Servers MUST use this field for errors in execution, rather than the
-   * error field on the `Operation` object.
-   *
-   * If the status code is other than `OK`, then the result MUST NOT be cached. For an error status,
-   * the `result` field is optional; the server may populate the output-, stdout-, and stderr-
-   * related fields if it has any information available, such as the stdout and stderr of a timed-
-   * out action.
+   * error field on the `Operation` object. If the status code is other than `OK`, then the result
+   * MUST NOT be cached. For an error status, the `result` field is optional; the server may
+   * populate the output-, stdout-, and stderr-related fields if it has any information available,
+   * such as the stdout and stderr of a timed-out action.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getStatus() {
@@ -177,12 +173,10 @@ public final class BuildBazelRemoteExecutionV2ExecuteResponse extends com.google
    * If the status has a code other than `OK`, it indicates that the action did not finish
    * execution. For example, if the operation times out during execution, the status will have a
    * `DEADLINE_EXCEEDED` code. Servers MUST use this field for errors in execution, rather than the
-   * error field on the `Operation` object.
-   *
-   * If the status code is other than `OK`, then the result MUST NOT be cached. For an error status,
-   * the `result` field is optional; the server may populate the output-, stdout-, and stderr-
-   * related fields if it has any information available, such as the stdout and stderr of a timed-
-   * out action.
+   * error field on the `Operation` object. If the status code is other than `OK`, then the result
+   * MUST NOT be cached. For an error status, the `result` field is optional; the server may
+   * populate the output-, stdout-, and stderr-related fields if it has any information available,
+   * such as the stdout and stderr of a timed-out action.
    * @param status status or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ExecuteResponse setStatus(GoogleRpcStatus status) {

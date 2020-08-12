@@ -89,11 +89,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   private java.lang.String minCpuPlatform;
 
   /**
-   * Determines the type of network access granted to workers. Possible values:
-   *
-   * - "public": Workers can connect to the public internet. - "private": Workers can only connect
-   * to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs
-   * that are   reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+   * Determines the type of network access granted to workers. Possible values: - "public": Workers
+   * can connect to the public internet. - "private": Workers can only connect to Google APIs and
+   * services. - "restricted-private": Workers can only connect to Google APIs that are reachable
+   * through `restricted.googleapis.com` (`199.36.153.4/30`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,11 +252,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   }
 
   /**
-   * Determines the type of network access granted to workers. Possible values:
-   *
-   * - "public": Workers can connect to the public internet. - "private": Workers can only connect
-   * to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs
-   * that are   reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+   * Determines the type of network access granted to workers. Possible values: - "public": Workers
+   * can connect to the public internet. - "private": Workers can only connect to Google APIs and
+   * services. - "restricted-private": Workers can only connect to Google APIs that are reachable
+   * through `restricted.googleapis.com` (`199.36.153.4/30`).
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkAccess() {
@@ -265,11 +263,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   }
 
   /**
-   * Determines the type of network access granted to workers. Possible values:
-   *
-   * - "public": Workers can connect to the public internet. - "private": Workers can only connect
-   * to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs
-   * that are   reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+   * Determines the type of network access granted to workers. Possible values: - "public": Workers
+   * can connect to the public internet. - "private": Workers can only connect to Google APIs and
+   * services. - "restricted-private": Workers can only connect to Google APIs that are reachable
+   * through `restricted.googleapis.com` (`199.36.153.4/30`).
    * @param networkAccess networkAccess or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setNetworkAccess(java.lang.String networkAccess) {

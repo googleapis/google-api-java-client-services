@@ -30,7 +30,8 @@ package com.google.api.services.gmail.model;
 public final class ListDelegatesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of the user's delegates (with any verification status).
+   * List of the user's delegates (with any verification status). If an account doesn't have
+   * delegates, this field doesn't appear.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +44,8 @@ public final class ListDelegatesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of the user's delegates (with any verification status).
+   * List of the user's delegates (with any verification status). If an account doesn't have
+   * delegates, this field doesn't appear.
    * @return value or {@code null} for none
    */
   public java.util.List<Delegate> getDelegates() {
@@ -51,7 +53,8 @@ public final class ListDelegatesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of the user's delegates (with any verification status).
+   * List of the user's delegates (with any verification status). If an account doesn't have
+   * delegates, this field doesn't appear.
    * @param delegates delegates or {@code null} for none
    */
   public ListDelegatesResponse setDelegates(java.util.List<Delegate> delegates) {

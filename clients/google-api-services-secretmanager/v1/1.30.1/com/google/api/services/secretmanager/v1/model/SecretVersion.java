@@ -45,7 +45,6 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The resource name of the SecretVersion in the format `projects/secrets/versions`.
-   *
    * SecretVersion IDs in a Secret start at 1 and are incremented for each subsequent version of the
    * secret.
    * The value may be {@code null}.
@@ -96,7 +95,6 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The resource name of the SecretVersion in the format `projects/secrets/versions`.
-   *
    * SecretVersion IDs in a Secret start at 1 and are incremented for each subsequent version of the
    * secret.
    * @return value or {@code null} for none
@@ -107,7 +105,6 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The resource name of the SecretVersion in the format `projects/secrets/versions`.
-   *
    * SecretVersion IDs in a Secret start at 1 and are incremented for each subsequent version of the
    * secret.
    * @param name name or {@code null} for none

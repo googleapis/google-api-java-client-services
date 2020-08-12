@@ -1,7 +1,6 @@
 # Secret Manager API Client Library for Java
 
-Stores sensitive data such as API keys, passwords, and certificates. Provides convenience while improving security.
-
+Stores sensitive data such as API keys, passwords, and certificates. Provides convenience while improving security. 
 
 This page contains information about getting started with the Secret Manager API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-secretmanager</artifactId>
-      <version>v1beta1-rev20200619-1.30.10</version>
+      <version>v1beta1-rev20200807-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-secretmanager:v1beta1-rev20200619-1.30.10'
+  compile 'com.google.apis:google-api-services-secretmanager:v1beta1-rev20200807-1.30.10'
 }
 ```
 

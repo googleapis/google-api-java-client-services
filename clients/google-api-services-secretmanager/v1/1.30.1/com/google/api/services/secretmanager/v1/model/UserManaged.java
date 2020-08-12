@@ -31,9 +31,7 @@ package com.google.api.services.secretmanager.v1.model;
 public final class UserManaged extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of Replicas for this Secret.
-   *
-   * Cannot be empty.
+   * Required. The list of Replicas for this Secret. Cannot be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +44,7 @@ public final class UserManaged extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of Replicas for this Secret.
-   *
-   * Cannot be empty.
+   * Required. The list of Replicas for this Secret. Cannot be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<Replica> getReplicas() {
@@ -56,9 +52,7 @@ public final class UserManaged extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of Replicas for this Secret.
-   *
-   * Cannot be empty.
+   * Required. The list of Replicas for this Secret. Cannot be empty.
    * @param replicas replicas or {@code null} for none
    */
   public UserManaged setReplicas(java.util.List<Replica> replicas) {

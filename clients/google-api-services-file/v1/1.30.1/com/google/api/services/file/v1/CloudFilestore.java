@@ -449,9 +449,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           return this;
         }
 
-        /**
-         * If true, the returned list will include locations which are not yet revealed.
-         */
+        /** If true, the returned list will include locations which are not yet revealed. */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeUnrevealedLocations;
 
@@ -461,9 +459,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           return includeUnrevealedLocations;
         }
 
-        /**
-         * If true, the returned list will include locations which are not yet revealed.
-         */
+        /** If true, the returned list will include locations which are not yet revealed. */
         public List setIncludeUnrevealedLocations(java.lang.Boolean includeUnrevealedLocations) {
           this.includeUnrevealedLocations = includeUnrevealedLocations;
           return this;
@@ -536,8 +532,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The instance's project and location, in the format
-         *        projects/{project_id}/locations/{location}. In Cloud Filestore,
-        locations map to GCP
+         *        projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to GCP
          *        zones, for example **us-west1-b**.
          * @param content the {@link com.google.api.services.file.v1.model.Instance}
          * @return the request
@@ -566,8 +561,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The instance's project and location, in the format
-         *        projects/{project_id}/locations/{location}. In Cloud Filestore,
-        locations map to GCP
+         *        projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to GCP
          *        zones, for example **us-west1-b**.
            * @param content the {@link com.google.api.services.file.v1.model.Instance}
            * @since 1.13
@@ -988,14 +982,10 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the file server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project and location for which to retrieve instance information,
-        in the format
-         *        projects/{project_id}/locations/{location}. In Cloud
-        Filestore, locations map to GCP
-         *        zones, for example **us-west1-b**. To
-        retrieve instance information for all locations, use
-         *        "-" for the {location}
-        value.
+         * @param parent Required. The project and location for which to retrieve instance information, in the format
+         *        projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to GCP
+         *        zones, for example **us-west1-b**. To retrieve instance information for all locations, use
+         *        "-" for the {location} value.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1021,14 +1011,10 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project and location for which to retrieve instance information,
-        in the format
-         *        projects/{project_id}/locations/{location}. In Cloud
-        Filestore, locations map to GCP
-         *        zones, for example **us-west1-b**. To
-        retrieve instance information for all locations, use
-         *        "-" for the {location}
-        value.
+           * @param parent Required. The project and location for which to retrieve instance information, in the format
+         *        projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to GCP
+         *        zones, for example **us-west1-b**. To retrieve instance information for all locations, use
+         *        "-" for the {location} value.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1350,28 +1336,24 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Mask of fields to update.  At least one path must be supplied in this field.  The
-           * elements of the repeated paths field may only include these fields:
-           *
-           * * "description" * "file_shares" * "labels"
+           * Mask of fields to update. At least one path must be supplied in this field. The
+           * elements of the repeated paths field may only include these fields: * "description" *
+           * "file_shares" * "labels"
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Mask of fields to update.  At least one path must be supplied in this field.  The elements of the
-         repeated paths field may only include these fields:
-
-         * "description" * "file_shares" * "labels"
+          /** Mask of fields to update. At least one path must be supplied in this field. The elements of the
+         repeated paths field may only include these fields: * "description" * "file_shares" * "labels"
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Mask of fields to update.  At least one path must be supplied in this field.  The
-           * elements of the repeated paths field may only include these fields:
-           *
-           * * "description" * "file_shares" * "labels"
+           * Mask of fields to update. At least one path must be supplied in this field. The
+           * elements of the repeated paths field may only include these fields: * "description" *
+           * "file_shares" * "labels"
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -1406,9 +1388,9 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -1437,13 +1419,13 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -1680,7 +1662,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -1705,7 +1687,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -1821,13 +1803,12 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-         * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
          *
          * Create a request for the method "operations.list".
          *
@@ -1852,13 +1833,12 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a
-           * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
            *
            * Create a request for the method "operations.list".
            *

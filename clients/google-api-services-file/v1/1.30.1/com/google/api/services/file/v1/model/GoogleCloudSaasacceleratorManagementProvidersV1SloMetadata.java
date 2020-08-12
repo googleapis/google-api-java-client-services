@@ -39,16 +39,12 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   /**
    * List of SLO exclusion windows. When multiple entries in the list match (matching the exclusion
    * time-window against current time point) the exclusion reason used in the first matching entry
-   * will be published.
-   *
-   * It is not needed to include expired exclusion in this list, as only the currently applicable
-   * exclusions are taken into account by the eligibility exporting subsystem (the historical state
-   * of exclusions will be reflected in the historically produced timeseries regardless of the
-   * current state).
-   *
-   * This field can be used to mark the instance as temporary ineligible for the purpose of SLO
-   * calculation. For permanent instance SLO exclusion, use of custom instance eligibility is
-   * recommended. See 'eligibility' field below.
+   * will be published. It is not needed to include expired exclusion in this list, as only the
+   * currently applicable exclusions are taken into account by the eligibility exporting subsystem
+   * (the historical state of exclusions will be reflected in the historically produced timeseries
+   * regardless of the current state). This field can be used to mark the instance as temporary
+   * ineligible for the purpose of SLO calculation. For permanent instance SLO exclusion, use of
+   * custom instance eligibility is recommended. See 'eligibility' field below.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,9 +73,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
 
   /**
    * Name of the SLO tier the Instance belongs to. This name will be expected to match the tiers
-   * specified in the service SLO configuration.
-   *
-   * Field is mandatory and must not be empty.
+   * specified in the service SLO configuration. Field is mandatory and must not be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,16 +99,12 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   /**
    * List of SLO exclusion windows. When multiple entries in the list match (matching the exclusion
    * time-window against current time point) the exclusion reason used in the first matching entry
-   * will be published.
-   *
-   * It is not needed to include expired exclusion in this list, as only the currently applicable
-   * exclusions are taken into account by the eligibility exporting subsystem (the historical state
-   * of exclusions will be reflected in the historically produced timeseries regardless of the
-   * current state).
-   *
-   * This field can be used to mark the instance as temporary ineligible for the purpose of SLO
-   * calculation. For permanent instance SLO exclusion, use of custom instance eligibility is
-   * recommended. See 'eligibility' field below.
+   * will be published. It is not needed to include expired exclusion in this list, as only the
+   * currently applicable exclusions are taken into account by the eligibility exporting subsystem
+   * (the historical state of exclusions will be reflected in the historically produced timeseries
+   * regardless of the current state). This field can be used to mark the instance as temporary
+   * ineligible for the purpose of SLO calculation. For permanent instance SLO exclusion, use of
+   * custom instance eligibility is recommended. See 'eligibility' field below.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion> getExclusions() {
@@ -124,16 +114,12 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   /**
    * List of SLO exclusion windows. When multiple entries in the list match (matching the exclusion
    * time-window against current time point) the exclusion reason used in the first matching entry
-   * will be published.
-   *
-   * It is not needed to include expired exclusion in this list, as only the currently applicable
-   * exclusions are taken into account by the eligibility exporting subsystem (the historical state
-   * of exclusions will be reflected in the historically produced timeseries regardless of the
-   * current state).
-   *
-   * This field can be used to mark the instance as temporary ineligible for the purpose of SLO
-   * calculation. For permanent instance SLO exclusion, use of custom instance eligibility is
-   * recommended. See 'eligibility' field below.
+   * will be published. It is not needed to include expired exclusion in this list, as only the
+   * currently applicable exclusions are taken into account by the eligibility exporting subsystem
+   * (the historical state of exclusions will be reflected in the historically produced timeseries
+   * regardless of the current state). This field can be used to mark the instance as temporary
+   * ineligible for the purpose of SLO calculation. For permanent instance SLO exclusion, use of
+   * custom instance eligibility is recommended. See 'eligibility' field below.
    * @param exclusions exclusions or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata setExclusions(java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion> exclusions) {
@@ -164,9 +150,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
 
   /**
    * Name of the SLO tier the Instance belongs to. This name will be expected to match the tiers
-   * specified in the service SLO configuration.
-   *
-   * Field is mandatory and must not be empty.
+   * specified in the service SLO configuration. Field is mandatory and must not be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getTier() {
@@ -175,9 +159,7 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
 
   /**
    * Name of the SLO tier the Instance belongs to. This name will be expected to match the tiers
-   * specified in the service SLO configuration.
-   *
-   * Field is mandatory and must not be empty.
+   * specified in the service SLO configuration. Field is mandatory and must not be empty.
    * @param tier tier or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata setTier(java.lang.String tier) {

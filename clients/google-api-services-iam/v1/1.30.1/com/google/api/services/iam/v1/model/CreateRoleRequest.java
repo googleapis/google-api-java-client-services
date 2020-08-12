@@ -38,10 +38,9 @@ public final class CreateRoleRequest extends com.google.api.client.json.GenericJ
   private Role role;
 
   /**
-   * The role ID to use for this role.
-   *
-   * A role ID may contain alphanumeric characters, underscores (`_`), and periods (`.`). It must
-   * contain a minimum of 3 characters and a maximum of 64 characters.
+   * The role ID to use for this role. A role ID may contain alphanumeric characters, underscores
+   * (`_`), and periods (`.`). It must contain a minimum of 3 characters and a maximum of 64
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,10 +64,9 @@ public final class CreateRoleRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The role ID to use for this role.
-   *
-   * A role ID may contain alphanumeric characters, underscores (`_`), and periods (`.`). It must
-   * contain a minimum of 3 characters and a maximum of 64 characters.
+   * The role ID to use for this role. A role ID may contain alphanumeric characters, underscores
+   * (`_`), and periods (`.`). It must contain a minimum of 3 characters and a maximum of 64
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getRoleId() {
@@ -76,10 +74,9 @@ public final class CreateRoleRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The role ID to use for this role.
-   *
-   * A role ID may contain alphanumeric characters, underscores (`_`), and periods (`.`). It must
-   * contain a minimum of 3 characters and a maximum of 64 characters.
+   * The role ID to use for this role. A role ID may contain alphanumeric characters, underscores
+   * (`_`), and periods (`.`). It must contain a minimum of 3 characters and a maximum of 64
+   * characters.
    * @param roleId roleId or {@code null} for none
    */
   public CreateRoleRequest setRoleId(java.lang.String roleId) {

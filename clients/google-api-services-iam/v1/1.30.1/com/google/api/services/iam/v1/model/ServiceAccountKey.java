@@ -17,20 +17,15 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Represents a service account key.
- *
- * A service account has two sets of key-pairs: user-managed, and system-managed.
- *
- * User-managed key-pairs can be created and deleted by users.  Users are responsible for rotating
- * these keys periodically to ensure security of their service accounts.  Users retain the private
- * key of these key-pairs, and Google retains ONLY the public key.
- *
- * System-managed keys are automatically rotated by Google, and are used for signing for a maximum
- * of two weeks. The rotation process is probabilistic, and usage of the new key will gradually ramp
- * up and down over the key's lifetime. We recommend caching the public key set for a service
- * account for no more than 24 hours to ensure you have access to the latest keys.
- *
- * Public keys for all service accounts are also published at the OAuth2 Service Account API.
+ * Represents a service account key. A service account has two sets of key-pairs: user-managed, and
+ * system-managed. User-managed key-pairs can be created and deleted by users. Users are responsible
+ * for rotating these keys periodically to ensure security of their service accounts. Users retain
+ * the private key of these key-pairs, and Google retains ONLY the public key. System-managed keys
+ * are automatically rotated by Google, and are used for signing for a maximum of two weeks. The
+ * rotation process is probabilistic, and usage of the new key will gradually ramp up and down over
+ * the key's lifetime. We recommend caching the public key set for a service account for no more
+ * than 24 hours to ensure you have access to the latest keys. Public keys for all service accounts
+ * are also published at the OAuth2 Service Account API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -84,9 +79,8 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
 
   /**
    * The output format for the private key. Only provided in `CreateServiceAccountKey` responses,
-   * not in `GetServiceAccountKey` or `ListServiceAccountKey` responses.
-   *
-   * Google never exposes system-managed private keys, and never retains user-managed private keys.
+   * not in `GetServiceAccountKey` or `ListServiceAccountKey` responses. Google never exposes
+   * system-managed private keys, and never retains user-managed private keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,9 +238,8 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
 
   /**
    * The output format for the private key. Only provided in `CreateServiceAccountKey` responses,
-   * not in `GetServiceAccountKey` or `ListServiceAccountKey` responses.
-   *
-   * Google never exposes system-managed private keys, and never retains user-managed private keys.
+   * not in `GetServiceAccountKey` or `ListServiceAccountKey` responses. Google never exposes
+   * system-managed private keys, and never retains user-managed private keys.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateKeyType() {
@@ -255,9 +248,8 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
 
   /**
    * The output format for the private key. Only provided in `CreateServiceAccountKey` responses,
-   * not in `GetServiceAccountKey` or `ListServiceAccountKey` responses.
-   *
-   * Google never exposes system-managed private keys, and never retains user-managed private keys.
+   * not in `GetServiceAccountKey` or `ListServiceAccountKey` responses. Google never exposes
+   * system-managed private keys, and never retains user-managed private keys.
    * @param privateKeyType privateKeyType or {@code null} for none
    */
   public ServiceAccountKey setPrivateKeyType(java.lang.String privateKeyType) {

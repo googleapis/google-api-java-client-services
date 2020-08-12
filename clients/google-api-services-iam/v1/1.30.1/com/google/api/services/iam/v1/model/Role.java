@@ -60,12 +60,9 @@ public final class Role extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> includedPermissions;
 
   /**
-   * The name of the role.
-   *
-   * When Role is used in CreateRole, the role name must not be set.
-   *
-   * When Role is used in output and other input such as UpdateRole, the role name is the complete
-   * path, e.g., roles/logging.viewer for predefined roles and
+   * The name of the role. When Role is used in CreateRole, the role name must not be set. When Role
+   * is used in output and other input such as UpdateRole, the role name is the complete path, e.g.,
+   * roles/logging.viewer for predefined roles and
    * organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
    * The value may be {@code null}.
    */
@@ -81,7 +78,7 @@ public final class Role extends com.google.api.client.json.GenericJson {
   private java.lang.String stage;
 
   /**
-   * Optional. A human-readable title for the role.  Typically this is limited to 100 UTF-8 bytes.
+   * Optional. A human-readable title for the role. Typically this is limited to 100 UTF-8 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,12 +183,9 @@ public final class Role extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the role.
-   *
-   * When Role is used in CreateRole, the role name must not be set.
-   *
-   * When Role is used in output and other input such as UpdateRole, the role name is the complete
-   * path, e.g., roles/logging.viewer for predefined roles and
+   * The name of the role. When Role is used in CreateRole, the role name must not be set. When Role
+   * is used in output and other input such as UpdateRole, the role name is the complete path, e.g.,
+   * roles/logging.viewer for predefined roles and
    * organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
    * @return value or {@code null} for none
    */
@@ -200,12 +194,9 @@ public final class Role extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the role.
-   *
-   * When Role is used in CreateRole, the role name must not be set.
-   *
-   * When Role is used in output and other input such as UpdateRole, the role name is the complete
-   * path, e.g., roles/logging.viewer for predefined roles and
+   * The name of the role. When Role is used in CreateRole, the role name must not be set. When Role
+   * is used in output and other input such as UpdateRole, the role name is the complete path, e.g.,
+   * roles/logging.viewer for predefined roles and
    * organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
    * @param name name or {@code null} for none
    */
@@ -234,7 +225,7 @@ public final class Role extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A human-readable title for the role.  Typically this is limited to 100 UTF-8 bytes.
+   * Optional. A human-readable title for the role. Typically this is limited to 100 UTF-8 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -242,7 +233,7 @@ public final class Role extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A human-readable title for the role.  Typically this is limited to 100 UTF-8 bytes.
+   * Optional. A human-readable title for the role. Typically this is limited to 100 UTF-8 bytes.
    * @param title title or {@code null} for none
    */
   public Role setTitle(java.lang.String title) {

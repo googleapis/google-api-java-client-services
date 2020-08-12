@@ -17,15 +17,12 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * An IAM service account.
- *
- * A service account is an account for an application or a virtual machine (VM) instance, not a
- * person. You can use a service account to call Google APIs. To learn more, read the [overview of
- * service accounts](https://cloud.google.com/iam/help/service-accounts/overview).
- *
- * When you create a service account, you specify the project ID that owns the service account, as
- * well as a name that must be unique within the project. IAM uses these values to create an email
- * address that identifies the service account.
+ * An IAM service account. A service account is an account for an application or a virtual machine
+ * (VM) instance, not a person. You can use a service account to call Google APIs. To learn more,
+ * read the [overview of service accounts](https://cloud.google.com/iam/help/service-
+ * accounts/overview). When you create a service account, you specify the project ID that owns the
+ * service account, as well as a name that must be unique within the project. IAM uses these values
+ * to create an email address that identifies the service account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -76,21 +73,14 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   private java.lang.String etag;
 
   /**
-   * The resource name of the service account.
-   *
-   * Use one of the following formats:
-   *
-   * * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
-   * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}`
-   *
-   * As an alternative, you can use the `-` wildcard character instead of the project ID:
-   *
-   * * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
-   *
-   * When possible, avoid using the `-` wildcard character, because it can cause response messages
-   * to contain misleading error codes. For example, if you try to get the service account
-   * `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response contains an
-   * HTTP `403 Forbidden` error instead of a `404 Not Found` error.
+   * The resource name of the service account. Use one of the following formats: *
+   * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+   * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+   * wildcard character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+   * `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+   * because it can cause response messages to contain misleading error codes. For example, if you
+   * try to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not
+   * exist, the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,11 +101,10 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   private java.lang.String projectId;
 
   /**
-   * Output only. The unique, stable numeric ID for the service account.
-   *
-   * Each service account retains its unique ID even if you delete the service account. For example,
-   * if you delete a service account, then create a new service account with the same name, the new
-   * service account has a different unique ID than the deleted service account.
+   * Output only. The unique, stable numeric ID for the service account. Each service account
+   * retains its unique ID even if you delete the service account. For example, if you delete a
+   * service account, then create a new service account with the same name, the new service account
+   * has a different unique ID than the deleted service account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -239,21 +228,14 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The resource name of the service account.
-   *
-   * Use one of the following formats:
-   *
-   * * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
-   * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}`
-   *
-   * As an alternative, you can use the `-` wildcard character instead of the project ID:
-   *
-   * * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
-   *
-   * When possible, avoid using the `-` wildcard character, because it can cause response messages
-   * to contain misleading error codes. For example, if you try to get the service account
-   * `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response contains an
-   * HTTP `403 Forbidden` error instead of a `404 Not Found` error.
+   * The resource name of the service account. Use one of the following formats: *
+   * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+   * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+   * wildcard character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+   * `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+   * because it can cause response messages to contain misleading error codes. For example, if you
+   * try to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not
+   * exist, the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -261,21 +243,14 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The resource name of the service account.
-   *
-   * Use one of the following formats:
-   *
-   * * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
-   * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}`
-   *
-   * As an alternative, you can use the `-` wildcard character instead of the project ID:
-   *
-   * * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}`
-   *
-   * When possible, avoid using the `-` wildcard character, because it can cause response messages
-   * to contain misleading error codes. For example, if you try to get the service account
-   * `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response contains an
-   * HTTP `403 Forbidden` error instead of a `404 Not Found` error.
+   * The resource name of the service account. Use one of the following formats: *
+   * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` *
+   * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-`
+   * wildcard character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` *
+   * `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character,
+   * because it can cause response messages to contain misleading error codes. For example, if you
+   * try to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not
+   * exist, the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
    * @param name name or {@code null} for none
    */
   public ServiceAccount setName(java.lang.String name) {
@@ -318,11 +293,10 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The unique, stable numeric ID for the service account.
-   *
-   * Each service account retains its unique ID even if you delete the service account. For example,
-   * if you delete a service account, then create a new service account with the same name, the new
-   * service account has a different unique ID than the deleted service account.
+   * Output only. The unique, stable numeric ID for the service account. Each service account
+   * retains its unique ID even if you delete the service account. For example, if you delete a
+   * service account, then create a new service account with the same name, the new service account
+   * has a different unique ID than the deleted service account.
    * @return value or {@code null} for none
    */
   public java.lang.String getUniqueId() {
@@ -330,11 +304,10 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The unique, stable numeric ID for the service account.
-   *
-   * Each service account retains its unique ID even if you delete the service account. For example,
-   * if you delete a service account, then create a new service account with the same name, the new
-   * service account has a different unique ID than the deleted service account.
+   * Output only. The unique, stable numeric ID for the service account. Each service account
+   * retains its unique ID even if you delete the service account. For example, if you delete a
+   * service account, then create a new service account with the same name, the new service account
+   * has a different unique ID than the deleted service account.
    * @param uniqueId uniqueId or {@code null} for none
    */
   public ServiceAccount setUniqueId(java.lang.String uniqueId) {

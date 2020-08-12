@@ -18,9 +18,8 @@ package com.google.api.services.iam.v1.model;
 
 /**
  * Deprecated. [Migrate to Service Account Credentials
- * API](https://cloud.google.com/iam/help/credentials/migrate-api).
- *
- * The service account sign blob response.
+ * API](https://cloud.google.com/iam/help/credentials/migrate-api). The service account sign blob
+ * response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -35,9 +34,8 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The id of the key used to sign the blob.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The id of the key used to sign
+   * the blob.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,9 +43,7 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The signed blob.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The signed blob.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +51,8 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The id of the key used to sign the blob.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The id of the key used to sign
+   * the blob.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyId() {
@@ -66,9 +61,8 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The id of the key used to sign the blob.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The id of the key used to sign
+   * the blob.
    * @param keyId keyId or {@code null} for none
    */
   public SignBlobResponse setKeyId(java.lang.String keyId) {
@@ -78,9 +72,7 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The signed blob.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The signed blob.
    * @see #decodeSignature()
    * @return value or {@code null} for none
    */
@@ -90,9 +82,7 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The signed blob.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The signed blob.
    * @see #getSignature()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -104,9 +94,7 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The signed blob.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The signed blob.
    * @see #encodeSignature()
    * @param signature signature or {@code null} for none
    */
@@ -117,9 +105,7 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The signed blob.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The signed blob.
    * @see #setSignature()
    *
    * <p>

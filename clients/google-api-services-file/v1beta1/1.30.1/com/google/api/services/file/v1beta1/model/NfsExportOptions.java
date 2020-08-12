@@ -39,7 +39,7 @@ public final class NfsExportOptions extends com.google.api.client.json.GenericJs
 
   /**
    * An integer representing the anonymous group id with a default value of 65534. Anon_gid may only
-   * be set with squash_mode of ROOT_SQUASH.  An error will be returned if this field is specified
+   * be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified
    * for other squash_mode settings.
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class NfsExportOptions extends com.google.api.client.json.GenericJs
 
   /**
    * An integer representing the anonymous user id with a default value of 65534. Anon_uid may only
-   * be set with squash_mode of ROOT_SQUASH.  An error will be returned if this field is specified
+   * be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified
    * for other squash_mode settings.
    * The value may be {@code null}.
    */
@@ -95,7 +95,7 @@ public final class NfsExportOptions extends com.google.api.client.json.GenericJs
 
   /**
    * An integer representing the anonymous group id with a default value of 65534. Anon_gid may only
-   * be set with squash_mode of ROOT_SQUASH.  An error will be returned if this field is specified
+   * be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified
    * for other squash_mode settings.
    * @return value or {@code null} for none
    */
@@ -105,7 +105,7 @@ public final class NfsExportOptions extends com.google.api.client.json.GenericJs
 
   /**
    * An integer representing the anonymous group id with a default value of 65534. Anon_gid may only
-   * be set with squash_mode of ROOT_SQUASH.  An error will be returned if this field is specified
+   * be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified
    * for other squash_mode settings.
    * @param anonGid anonGid or {@code null} for none
    */
@@ -116,7 +116,7 @@ public final class NfsExportOptions extends com.google.api.client.json.GenericJs
 
   /**
    * An integer representing the anonymous user id with a default value of 65534. Anon_uid may only
-   * be set with squash_mode of ROOT_SQUASH.  An error will be returned if this field is specified
+   * be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified
    * for other squash_mode settings.
    * @return value or {@code null} for none
    */
@@ -126,7 +126,7 @@ public final class NfsExportOptions extends com.google.api.client.json.GenericJs
 
   /**
    * An integer representing the anonymous user id with a default value of 65534. Anon_uid may only
-   * be set with squash_mode of ROOT_SQUASH.  An error will be returned if this field is specified
+   * be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified
    * for other squash_mode settings.
    * @param anonUid anonUid or {@code null} for none
    */

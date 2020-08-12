@@ -1,752 +1,573 @@
 {
-  "mtlsRootUrl": "https://file.mtls.googleapis.com/",
+  "basePath": "",
   "parameters": {
-    "uploadType": {
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
+    "prettyPrint": {
+      "type": "boolean",
+      "description": "Returns response with indentations and line breaks.",
       "location": "query",
-      "type": "string"
+      "default": "true"
     },
-    "key": {
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+    "access_token": {
+      "type": "string",
       "location": "query",
-      "type": "string"
+      "description": "OAuth access token."
+    },
+    "quotaUser": {
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "type": "string",
+      "location": "query"
     },
     "upload_protocol": {
       "type": "string",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "location": "query",
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
+    },
+    "callback": {
+      "description": "JSONP",
+      "type": "string",
       "location": "query"
+    },
+    "$.xgafv": {
+      "type": "string",
+      "location": "query",
+      "enum": [
+        "1",
+        "2"
+      ],
+      "description": "V1 error format.",
+      "enumDescriptions": [
+        "v1 error format",
+        "v2 error format"
+      ]
+    },
+    "fields": {
+      "location": "query",
+      "description": "Selector specifying which fields to include in a partial response.",
+      "type": "string"
     },
     "oauth_token": {
-      "type": "string",
       "description": "OAuth 2.0 token for the current user.",
+      "type": "string",
       "location": "query"
     },
-    "alt": {
-      "location": "query",
-      "default": "json",
+    "key": {
       "type": "string",
-      "enum": [
-        "json",
-        "media",
-        "proto"
-      ],
+      "location": "query",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
+    },
+    "alt": {
+      "type": "string",
+      "description": "Data format for response.",
+      "default": "json",
       "enumDescriptions": [
         "Responses with Content-Type of application/json",
         "Media download with context-dependent Content-Type",
         "Responses with Content-Type of application/x-protobuf"
       ],
-      "description": "Data format for response."
-    },
-    "$.xgafv": {
-      "type": "string",
-      "description": "V1 error format.",
       "enum": [
-        "1",
-        "2"
-      ],
-      "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
+        "json",
+        "media",
+        "proto"
       ],
       "location": "query"
     },
-    "access_token": {
+    "uploadType": {
       "type": "string",
-      "description": "OAuth access token.",
-      "location": "query"
-    },
-    "fields": {
-      "description": "Selector specifying which fields to include in a partial response.",
-      "type": "string",
-      "location": "query"
-    },
-    "callback": {
       "location": "query",
-      "description": "JSONP",
-      "type": "string"
-    },
-    "prettyPrint": {
-      "default": "true",
-      "description": "Returns response with indentations and line breaks.",
-      "type": "boolean",
-      "location": "query"
-    },
-    "quotaUser": {
-      "location": "query",
-      "type": "string",
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
     }
   },
-  "documentationLink": "https://cloud.google.com/filestore/",
-  "name": "file",
   "fullyEncodeReservedExpansion": true,
+  "rootUrl": "https://file.googleapis.com/",
+  "canonicalName": "Cloud Filestore",
+  "discoveryVersion": "v1",
+  "name": "file",
   "ownerDomain": "google.com",
-  "protocol": "rest",
   "version_module": true,
-  "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
-  },
+  "ownerName": "Google",
   "resources": {
     "projects": {
       "resources": {
         "locations": {
-          "resources": {
-            "instances": {
-              "methods": {
-                "patch": {
-                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/instances/{instancesId}",
-                  "response": {
-                    "$ref": "Operation"
-                  },
-                  "httpMethod": "PATCH",
-                  "path": "v1/{+name}",
-                  "request": {
-                    "$ref": "Instance"
-                  },
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "parameters": {
-                    "updateMask": {
-                      "type": "string",
-                      "format": "google-fieldmask",
-                      "location": "query",
-                      "description": "Mask of fields to update.  At least one path must be supplied in this\nfield.  The elements of the repeated paths field may only include these\nfields:\n\n* \"description\"\n* \"file_shares\"\n* \"labels\""
-                    },
-                    "name": {
-                      "description": "Output only. The resource name of the instance, in the format\nprojects/{project}/locations/{location}/instances/{instance}.",
-                      "type": "string",
-                      "required": true,
-                      "location": "path",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/instances/[^/]+$"
-                    }
-                  },
-                  "description": "Updates the settings of a specific instance.",
-                  "id": "file.projects.locations.instances.patch",
-                  "parameterOrder": [
-                    "name"
-                  ]
-                },
-                "list": {
-                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/instances",
-                  "path": "v1/{+parent}/instances",
-                  "parameters": {
-                    "parent": {
-                      "type": "string",
-                      "pattern": "^projects/[^/]+/locations/[^/]+$",
-                      "description": "Required. The project and location for which to retrieve instance information,\nin the format projects/{project_id}/locations/{location}. In Cloud\nFilestore, locations map to GCP zones, for example **us-west1-b**. To\nretrieve instance information for all locations, use \"-\" for the {location}\nvalue.",
-                      "location": "path",
-                      "required": true
-                    },
-                    "filter": {
-                      "description": "List filter.",
-                      "location": "query",
-                      "type": "string"
-                    },
-                    "pageToken": {
-                      "location": "query",
-                      "type": "string",
-                      "description": "The next_page_token value to use if there are additional\nresults to retrieve for this list request."
-                    },
-                    "pageSize": {
-                      "description": "The maximum number of items to return.",
-                      "location": "query",
-                      "type": "integer",
-                      "format": "int32"
-                    },
-                    "orderBy": {
-                      "description": "Sort results. Supported values are \"name\", \"name desc\" or \"\" (unsorted).",
-                      "type": "string",
-                      "location": "query"
-                    }
-                  },
-                  "description": "Lists all instances in a project for either a specified location\nor for all locations.",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "id": "file.projects.locations.instances.list",
-                  "parameterOrder": [
-                    "parent"
-                  ],
-                  "response": {
-                    "$ref": "ListInstancesResponse"
-                  },
-                  "httpMethod": "GET"
-                },
-                "create": {
-                  "path": "v1/{+parent}/instances",
-                  "parameterOrder": [
-                    "parent"
-                  ],
-                  "response": {
-                    "$ref": "Operation"
-                  },
-                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/instances",
-                  "parameters": {
-                    "parent": {
-                      "location": "path",
-                      "pattern": "^projects/[^/]+/locations/[^/]+$",
-                      "type": "string",
-                      "required": true,
-                      "description": "Required. The instance's project and location, in the format\nprojects/{project_id}/locations/{location}. In Cloud Filestore,\nlocations map to GCP zones, for example **us-west1-b**."
-                    },
-                    "instanceId": {
-                      "description": "Required. The name of the instance to create.\nThe name must be unique for the specified project and location.",
-                      "location": "query",
-                      "type": "string"
-                    }
-                  },
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "request": {
-                    "$ref": "Instance"
-                  },
-                  "id": "file.projects.locations.instances.create",
-                  "httpMethod": "POST",
-                  "description": "Creates an instance."
-                },
-                "get": {
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "id": "file.projects.locations.instances.get",
-                  "description": "Gets the details of a specific instance.",
-                  "response": {
-                    "$ref": "Instance"
-                  },
-                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/instances/{instancesId}",
-                  "httpMethod": "GET",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "parameters": {
-                    "name": {
-                      "pattern": "^projects/[^/]+/locations/[^/]+/instances/[^/]+$",
-                      "type": "string",
-                      "location": "path",
-                      "required": true,
-                      "description": "Required. The instance resource name, in the format\nprojects/{project_id}/locations/{location}/instances/{instance_id}."
-                    }
-                  },
-                  "path": "v1/{+name}"
-                },
-                "delete": {
-                  "path": "v1/{+name}",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/instances/{instancesId}",
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "description": "Deletes an instance.",
-                  "id": "file.projects.locations.instances.delete",
-                  "response": {
-                    "$ref": "Operation"
-                  },
-                  "parameters": {
-                    "name": {
-                      "pattern": "^projects/[^/]+/locations/[^/]+/instances/[^/]+$",
-                      "location": "path",
-                      "required": true,
-                      "description": "Required. The instance resource name, in the format\nprojects/{project_id}/locations/{location}/instances/{instance_id}",
-                      "type": "string"
-                    }
-                  },
-                  "httpMethod": "DELETE"
-                }
-              }
-            },
-            "operations": {
-              "methods": {
-                "list": {
-                  "httpMethod": "GET",
-                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/operations",
-                  "description": "Lists operations that match the specified filter in the request. If the\nserver doesn't support this method, it returns `UNIMPLEMENTED`.\n\nNOTE: the `name` binding allows API services to override the binding\nto use different resource name schemes, such as `users/*/operations`. To\noverride the binding, API services can add a binding such as\n`\"/v1/{name=users/*}/operations\"` to their service configuration.\nFor backwards compatibility, the default name includes the operations\ncollection id, however overriding users must ensure the name binding\nis the parent resource, without the operations collection id.",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "response": {
-                    "$ref": "ListOperationsResponse"
-                  },
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "id": "file.projects.locations.operations.list",
-                  "path": "v1/{+name}/operations",
-                  "parameters": {
-                    "name": {
-                      "description": "The name of the operation's parent resource.",
-                      "required": true,
-                      "type": "string",
-                      "location": "path",
-                      "pattern": "^projects/[^/]+/locations/[^/]+$"
-                    },
-                    "filter": {
-                      "type": "string",
-                      "location": "query",
-                      "description": "The standard list filter."
-                    },
-                    "pageSize": {
-                      "location": "query",
-                      "description": "The standard list page size.",
-                      "format": "int32",
-                      "type": "integer"
-                    },
-                    "pageToken": {
-                      "description": "The standard list page token.",
-                      "location": "query",
-                      "type": "string"
-                    }
-                  }
-                },
-                "get": {
-                  "httpMethod": "GET",
-                  "response": {
-                    "$ref": "Operation"
-                  },
-                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}",
-                  "parameters": {
-                    "name": {
-                      "required": true,
-                      "location": "path",
-                      "description": "The name of the operation resource.",
-                      "type": "string",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$"
-                    }
-                  },
-                  "description": "Gets the latest state of a long-running operation.  Clients can use this\nmethod to poll the operation result at intervals as recommended by the API\nservice.",
-                  "path": "v1/{+name}",
-                  "id": "file.projects.locations.operations.get",
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ]
-                },
-                "delete": {
-                  "description": "Deletes a long-running operation. This method indicates that the client is\nno longer interested in the operation result. It does not cancel the\noperation. If the server doesn't support this method, it returns\n`google.rpc.Code.UNIMPLEMENTED`.",
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "httpMethod": "DELETE",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "response": {
-                    "$ref": "Empty"
-                  },
-                  "id": "file.projects.locations.operations.delete",
-                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}",
-                  "path": "v1/{+name}",
-                  "parameters": {
-                    "name": {
-                      "location": "path",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
-                      "type": "string",
-                      "description": "The name of the operation resource to be deleted.",
-                      "required": true
-                    }
-                  }
-                },
-                "cancel": {
-                  "response": {
-                    "$ref": "Empty"
-                  },
-                  "httpMethod": "POST",
-                  "description": "Starts asynchronous cancellation on a long-running operation.  The server\nmakes a best effort to cancel the operation, but success is not\nguaranteed.  If the server doesn't support this method, it returns\n`google.rpc.Code.UNIMPLEMENTED`.  Clients can use\nOperations.GetOperation or\nother methods to check whether the cancellation succeeded or whether the\noperation completed despite cancellation. On successful cancellation,\nthe operation is not deleted; instead, it becomes an operation with\nan Operation.error value with a google.rpc.Status.code of 1,\ncorresponding to `Code.CANCELLED`.",
-                  "id": "file.projects.locations.operations.cancel",
-                  "path": "v1/{+name}:cancel",
-                  "request": {
-                    "$ref": "CancelOperationRequest"
-                  },
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "parameters": {
-                    "name": {
-                      "required": true,
-                      "type": "string",
-                      "location": "path",
-                      "description": "The name of the operation resource to be cancelled.",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$"
-                    }
-                  },
-                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}:cancel",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ]
-                }
-              }
-            }
-          },
           "methods": {
-            "get": {
-              "parameterOrder": [
-                "name"
-              ],
-              "response": {
-                "$ref": "Location"
-              },
-              "parameters": {
-                "name": {
-                  "location": "path",
-                  "pattern": "^projects/[^/]+/locations/[^/]+$",
-                  "type": "string",
-                  "required": true,
-                  "description": "Resource name for the location."
-                }
-              },
-              "description": "Gets information about a location.",
+            "list": {
+              "flatPath": "v1/projects/{projectsId}/locations",
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
-              "path": "v1/{+name}",
+              "id": "file.projects.locations.list",
               "httpMethod": "GET",
-              "id": "file.projects.locations.get",
-              "flatPath": "v1/projects/{projectsId}/locations/{locationsId}"
-            },
-            "list": {
-              "response": {
-                "$ref": "ListLocationsResponse"
-              },
               "parameters": {
                 "pageSize": {
                   "format": "int32",
-                  "location": "query",
                   "type": "integer",
-                  "description": "The standard list page size."
-                },
-                "name": {
-                  "description": "The resource that owns the locations collection, if applicable.",
-                  "required": true,
-                  "pattern": "^projects/[^/]+$",
-                  "type": "string",
-                  "location": "path"
-                },
-                "filter": {
-                  "type": "string",
-                  "description": "The standard list filter.",
-                  "location": "query"
-                },
-                "pageToken": {
                   "location": "query",
-                  "type": "string",
-                  "description": "The standard list page token."
+                  "description": "The standard list page size."
                 },
                 "includeUnrevealedLocations": {
                   "location": "query",
                   "type": "boolean",
-                  "description": "If true, the returned list will include locations which are not yet\nrevealed."
+                  "description": "If true, the returned list will include locations which are not yet revealed."
+                },
+                "pageToken": {
+                  "location": "query",
+                  "description": "The standard list page token.",
+                  "type": "string"
+                },
+                "filter": {
+                  "description": "The standard list filter.",
+                  "location": "query",
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string",
+                  "location": "path",
+                  "required": true,
+                  "pattern": "^projects/[^/]+$",
+                  "description": "The resource that owns the locations collection, if applicable."
                 }
               },
-              "path": "v1/{+name}/locations",
-              "id": "file.projects.locations.list",
+              "parameterOrder": [
+                "name"
+              ],
               "description": "Lists information about the supported locations for this service.",
+              "response": {
+                "$ref": "ListLocationsResponse"
+              },
+              "path": "v1/{+name}/locations"
+            },
+            "get": {
+              "response": {
+                "$ref": "Location"
+              },
+              "description": "Gets information about a location.",
+              "flatPath": "v1/projects/{projectsId}/locations/{locationsId}",
+              "parameters": {
+                "name": {
+                  "location": "path",
+                  "required": true,
+                  "description": "Resource name for the location.",
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/locations/[^/]+$"
+                }
+              },
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
-              "flatPath": "v1/projects/{projectsId}/locations",
+              "path": "v1/{+name}",
+              "id": "file.projects.locations.get",
               "httpMethod": "GET",
               "parameterOrder": [
                 "name"
               ]
             }
+          },
+          "resources": {
+            "operations": {
+              "methods": {
+                "get": {
+                  "response": {
+                    "$ref": "Operation"
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "path": "v1/{+name}",
+                  "parameters": {
+                    "name": {
+                      "type": "string",
+                      "description": "The name of the operation resource.",
+                      "required": true,
+                      "location": "path",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$"
+                    }
+                  },
+                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}",
+                  "id": "file.projects.locations.operations.get",
+                  "description": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.",
+                  "httpMethod": "GET",
+                  "parameterOrder": [
+                    "name"
+                  ]
+                },
+                "list": {
+                  "httpMethod": "GET",
+                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/operations",
+                  "id": "file.projects.locations.operations.list",
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "response": {
+                    "$ref": "ListOperationsResponse"
+                  },
+                  "parameters": {
+                    "pageToken": {
+                      "location": "query",
+                      "type": "string",
+                      "description": "The standard list page token."
+                    },
+                    "pageSize": {
+                      "location": "query",
+                      "format": "int32",
+                      "type": "integer",
+                      "description": "The standard list page size."
+                    },
+                    "filter": {
+                      "location": "query",
+                      "description": "The standard list filter.",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "The name of the operation's parent resource.",
+                      "type": "string",
+                      "location": "path",
+                      "required": true,
+                      "pattern": "^projects/[^/]+/locations/[^/]+$"
+                    }
+                  },
+                  "description": "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `\"/v1/{name=users/*}/operations\"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.",
+                  "path": "v1/{+name}/operations",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ]
+                },
+                "delete": {
+                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}",
+                  "httpMethod": "DELETE",
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "id": "file.projects.locations.operations.delete",
+                  "parameters": {
+                    "name": {
+                      "location": "path",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
+                      "required": true,
+                      "description": "The name of the operation resource to be deleted.",
+                      "type": "string"
+                    }
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "path": "v1/{+name}",
+                  "description": "Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.",
+                  "response": {
+                    "$ref": "Empty"
+                  }
+                },
+                "cancel": {
+                  "description": "Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
+                  "path": "v1/{+name}:cancel",
+                  "id": "file.projects.locations.operations.cancel",
+                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}:cancel",
+                  "httpMethod": "POST",
+                  "request": {
+                    "$ref": "CancelOperationRequest"
+                  },
+                  "parameters": {
+                    "name": {
+                      "location": "path",
+                      "type": "string",
+                      "required": true,
+                      "pattern": "^projects/[^/]+/locations/[^/]+/operations/[^/]+$",
+                      "description": "The name of the operation resource to be cancelled."
+                    }
+                  },
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "response": {
+                    "$ref": "Empty"
+                  }
+                }
+              }
+            },
+            "instances": {
+              "methods": {
+                "create": {
+                  "parameterOrder": [
+                    "parent"
+                  ],
+                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/instances",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "description": "Creates an instance.",
+                  "path": "v1/{+parent}/instances",
+                  "httpMethod": "POST",
+                  "response": {
+                    "$ref": "Operation"
+                  },
+                  "request": {
+                    "$ref": "Instance"
+                  },
+                  "parameters": {
+                    "parent": {
+                      "pattern": "^projects/[^/]+/locations/[^/]+$",
+                      "description": "Required. The instance's project and location, in the format projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to GCP zones, for example **us-west1-b**.",
+                      "type": "string",
+                      "required": true,
+                      "location": "path"
+                    },
+                    "instanceId": {
+                      "type": "string",
+                      "location": "query",
+                      "description": "Required. The name of the instance to create. The name must be unique for the specified project and location."
+                    }
+                  },
+                  "id": "file.projects.locations.instances.create"
+                },
+                "patch": {
+                  "description": "Updates the settings of a specific instance.",
+                  "httpMethod": "PATCH",
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "parameters": {
+                    "updateMask": {
+                      "type": "string",
+                      "location": "query",
+                      "description": "Mask of fields to update. At least one path must be supplied in this field. The elements of the repeated paths field may only include these fields: * \"description\" * \"file_shares\" * \"labels\"",
+                      "format": "google-fieldmask"
+                    },
+                    "name": {
+                      "location": "path",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/instances/[^/]+$",
+                      "description": "Output only. The resource name of the instance, in the format projects/{project}/locations/{location}/instances/{instance}.",
+                      "required": true,
+                      "type": "string"
+                    }
+                  },
+                  "request": {
+                    "$ref": "Instance"
+                  },
+                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/instances/{instancesId}",
+                  "path": "v1/{+name}",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "id": "file.projects.locations.instances.patch",
+                  "response": {
+                    "$ref": "Operation"
+                  }
+                },
+                "get": {
+                  "httpMethod": "GET",
+                  "id": "file.projects.locations.instances.get",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "parameters": {
+                    "name": {
+                      "location": "path",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/instances/[^/]+$",
+                      "required": true,
+                      "description": "Required. The instance resource name, in the format projects/{project_id}/locations/{location}/instances/{instance_id}.",
+                      "type": "string"
+                    }
+                  },
+                  "path": "v1/{+name}",
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "description": "Gets the details of a specific instance.",
+                  "response": {
+                    "$ref": "Instance"
+                  },
+                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/instances/{instancesId}"
+                },
+                "list": {
+                  "httpMethod": "GET",
+                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/instances",
+                  "parameters": {
+                    "orderBy": {
+                      "description": "Sort results. Supported values are \"name\", \"name desc\" or \"\" (unsorted).",
+                      "type": "string",
+                      "location": "query"
+                    },
+                    "pageToken": {
+                      "location": "query",
+                      "description": "The next_page_token value to use if there are additional results to retrieve for this list request.",
+                      "type": "string"
+                    },
+                    "filter": {
+                      "description": "List filter.",
+                      "type": "string",
+                      "location": "query"
+                    },
+                    "parent": {
+                      "type": "string",
+                      "location": "path",
+                      "required": true,
+                      "description": "Required. The project and location for which to retrieve instance information, in the format projects/{project_id}/locations/{location}. In Cloud Filestore, locations map to GCP zones, for example **us-west1-b**. To retrieve instance information for all locations, use \"-\" for the {location} value.",
+                      "pattern": "^projects/[^/]+/locations/[^/]+$"
+                    },
+                    "pageSize": {
+                      "type": "integer",
+                      "format": "int32",
+                      "location": "query",
+                      "description": "The maximum number of items to return."
+                    }
+                  },
+                  "parameterOrder": [
+                    "parent"
+                  ],
+                  "description": "Lists all instances in a project for either a specified location or for all locations.",
+                  "path": "v1/{+parent}/instances",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "response": {
+                    "$ref": "ListInstancesResponse"
+                  },
+                  "id": "file.projects.locations.instances.list"
+                },
+                "delete": {
+                  "path": "v1/{+name}",
+                  "id": "file.projects.locations.instances.delete",
+                  "httpMethod": "DELETE",
+                  "parameters": {
+                    "name": {
+                      "pattern": "^projects/[^/]+/locations/[^/]+/instances/[^/]+$",
+                      "required": true,
+                      "description": "Required. The instance resource name, in the format projects/{project_id}/locations/{location}/instances/{instance_id}",
+                      "type": "string",
+                      "location": "path"
+                    }
+                  },
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "response": {
+                    "$ref": "Operation"
+                  },
+                  "flatPath": "v1/projects/{projectsId}/locations/{locationsId}/instances/{instancesId}",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "description": "Deletes an instance."
+                }
+              }
+            }
           }
         }
       }
     }
   },
-  "servicePath": "",
-  "ownerName": "Google",
-  "version": "v1",
-  "title": "Cloud Filestore API",
-  "baseUrl": "https://file.googleapis.com/",
-  "schemas": {
-    "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion": {
-      "type": "object",
-      "properties": {
-        "reason": {
-          "type": "string",
-          "description": "Human-readable reason for the exclusion.\nThis should be a static string (e.g. \"Disruptive update in progress\")\nand should not contain dynamically generated data (e.g. instance name).\nCan be left empty."
-        },
-        "startTime": {
-          "format": "google-datetime",
-          "description": "Start time of the exclusion. No alignment (e.g. to a full minute) needed.",
-          "type": "string"
-        },
-        "sliName": {
-          "description": "Name of an SLI that this exclusion applies to. Can be left empty,\nsignaling that the instance should be excluded from all SLIs defined\nin the service SLO configuration.",
-          "type": "string"
-        },
-        "duration": {
-          "format": "google-duration",
-          "description": "Exclusion duration. No restrictions on the possible values.\n\nWhen an ongoing operation is taking longer than initially expected,\nan existing entry in the exclusion list can be updated by extending the\nduration. This is supported by the subsystem exporting eligibility data\nas long as such extension is committed at least 10 minutes before the\noriginal exclusion expiration - otherwise it is possible that there will\nbe \"gaps\" in the exclusion application in the exported timeseries.",
-          "type": "string"
+  "kind": "discovery#restDescription",
+  "auth": {
+    "oauth2": {
+      "scopes": {
+        "https://www.googleapis.com/auth/cloud-platform": {
+          "description": "View and manage your data across Google Cloud Platform services"
         }
-      },
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion",
-      "description": "SloExclusion represents an exclusion in SLI calculation applies to all SLOs."
+      }
+    }
+  },
+  "schemas": {
+    "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings": {
+      "type": "object",
+      "description": "Maintenance settings associated with instance. Allows service producers and end users to assign settings that controls maintenance on this instance.",
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings",
+      "properties": {
+        "exclude": {
+          "type": "boolean",
+          "description": "Optional. Exclude instance from maintenance. When true, rollout service will not attempt maintenance on the instance. Rollout service will include the instance in reported rollout progress as not attempted."
+        }
+      }
     },
     "OperationMetadata": {
-      "type": "object",
-      "id": "OperationMetadata",
       "description": "Represents the metadata of the long-running operation.",
+      "type": "object",
       "properties": {
-        "endTime": {
-          "type": "string",
-          "description": "[Output only] The time the operation finished running.",
-          "format": "google-datetime"
-        },
-        "verb": {
-          "type": "string",
-          "description": "[Output only] Name of the verb executed by the operation."
-        },
         "cancelRequested": {
-          "description": "[Output only] Identifies whether the user has requested cancellation\nof the operation. Operations that have successfully been cancelled\nhave Operation.error value with a google.rpc.Status.code of 1,\ncorresponding to `Code.CANCELLED`.",
-          "type": "boolean"
+          "type": "boolean",
+          "description": "[Output only] Identifies whether the user has requested cancellation of the operation. Operations that have successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`."
+        },
+        "apiVersion": {
+          "type": "string",
+          "description": "[Output only] API version used to start the operation."
         },
         "statusDetail": {
           "description": "[Output only] Human-readable status of the operation, if any.",
           "type": "string"
         },
-        "apiVersion": {
-          "description": "[Output only] API version used to start the operation.",
-          "type": "string"
+        "verb": {
+          "type": "string",
+          "description": "[Output only] Name of the verb executed by the operation."
         },
-        "createTime": {
-          "format": "google-datetime",
-          "description": "[Output only] The time the operation was created.",
-          "type": "string"
+        "endTime": {
+          "type": "string",
+          "description": "[Output only] The time the operation finished running.",
+          "format": "google-datetime"
         },
         "target": {
-          "description": "[Output only] Server-defined resource path for the target of the operation.",
-          "type": "string"
-        }
-      }
-    },
-    "FileShareConfig": {
-      "description": "File share configuration for the instance.",
-      "properties": {
-        "capacityGb": {
-          "format": "int64",
           "type": "string",
-          "description": "File share capacity in gigabytes (GB).\nCloud Filestore defines 1 GB as 1024^3 bytes."
-        },
-        "name": {
-          "description": "The name of the file share (must be 16 characters or less).",
-          "type": "string"
-        }
-      },
-      "id": "FileShareConfig",
-      "type": "object"
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility": {
-      "properties": {
-        "reason": {
-          "description": "User-defined reason for the current value of instance eligibility. Usually,\nthis can be directly mapped to the internal state. An empty reason is\nallowed.",
-          "type": "string"
-        },
-        "eligible": {
-          "description": "Whether an instance is eligible or ineligible.",
-          "type": "boolean"
-        }
-      },
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility",
-      "description": "SloEligibility is a tuple containing eligibility value: true if an instance\nis eligible for SLO calculation or false if it should be excluded from all\nSLO-related calculations along with a user-defined reason.",
-      "type": "object"
-    },
-    "Empty": {
-      "type": "object",
-      "properties": {},
-      "id": "Empty",
-      "description": "A generic empty message that you can re-use to avoid defining duplicated\nempty messages in your APIs. A typical example is to use it as the request\nor the response type of an API method. For instance:\n\n    service Foo {\n      rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n    }\n\nThe JSON representation for `Empty` is empty JSON object `{}`."
-    },
-    "Location": {
-      "id": "Location",
-      "type": "object",
-      "properties": {
-        "name": {
-          "description": "Resource name for the location, which may vary between implementations.\nFor example: `\"projects/example-project/locations/us-east1\"`",
-          "type": "string"
-        },
-        "labels": {
-          "type": "object",
-          "description": "Cross-service attributes for the location. For example\n\n    {\"cloud.googleapis.com/region\": \"us-east1\"}",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "displayName": {
-          "type": "string",
-          "description": "The friendly name for this location, typically a nearby city name.\nFor example, \"Tokyo\"."
-        },
-        "metadata": {
-          "type": "object",
-          "additionalProperties": {
-            "description": "Properties of the object. Contains field @type with type URL.",
-            "type": "any"
-          },
-          "description": "Service-specific metadata. For example the available capacity at the given\nlocation."
-        },
-        "locationId": {
-          "description": "The canonical id for this location. For example: `\"us-east1\"`.",
-          "type": "string"
-        }
-      },
-      "description": "A resource that represents Google Cloud Platform location."
-    },
-    "ListInstancesResponse": {
-      "properties": {
-        "unreachable": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Locations that could not be reached."
-        },
-        "instances": {
-          "items": {
-            "$ref": "Instance"
-          },
-          "type": "array",
-          "description": "A list of instances in the project for the specified location.\n\nIf the {location} value in the request is \"-\", the response contains a list\nof instances from all locations. If any location is unreachable, the\nresponse will only return instances in reachable locations and the\n\"unreachable\" field will be populated with a list of unreachable locations."
-        },
-        "nextPageToken": {
-          "type": "string",
-          "description": "The token you can use to retrieve the next page of results. Not returned\nif there are no more results in the list."
-        }
-      },
-      "id": "ListInstancesResponse",
-      "description": "ListInstancesResponse is the result of ListInstancesRequest.",
-      "type": "object"
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata": {
-      "type": "object",
-      "properties": {
-        "nodeId": {
-          "type": "string",
-          "description": "The id of the node.\nThis should be equal to SaasInstanceNode.node_id."
-        },
-        "exclusions": {
-          "type": "array",
-          "items": {
-            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion"
-          },
-          "description": "By default node is eligible if instance is eligible.\nBut individual node might be excluded from SLO by adding entry here.\nFor semantic see SloMetadata.exclusions.\nIf both instance and node level exclusions are present for time period,\nthe node level's reason will be reported by Eligibility Exporter."
-        },
-        "location": {
-          "description": "The location of the node, if different from instance location.",
-          "type": "string"
-        }
-      },
-      "description": "Node information for custom per-node SLO implementations.\nSSA does not support per-node SLO, but producers can populate per-node\ninformation in SloMetadata for custom precomputations.\nSSA Eligibility Exporter will emit per-node metric based on this information.",
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata"
-    },
-    "NetworkConfig": {
-      "description": "Network configuration for the instance.",
-      "type": "object",
-      "id": "NetworkConfig",
-      "properties": {
-        "ipAddresses": {
-          "description": "Output only. IPv4 addresses in the format\n{octet 1}.{octet 2}.{octet 3}.{octet 4} or IPv6 addresses in the format\n{block 1}:{block 2}:{block 3}:{block 4}:{block 5}:{block 6}:{block\n7}:{block 8}.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "modes": {
-          "description": "Internet protocol versions for which the instance has IP addresses\nassigned. For this version, only MODE_IPV4 is supported.",
-          "items": {
-            "type": "string",
-            "enum": [
-              "ADDRESS_MODE_UNSPECIFIED",
-              "MODE_IPV4"
-            ]
-          },
-          "enumDescriptions": [
-            "Internet protocol not set.",
-            "Use the IPv4 internet protocol."
-          ],
-          "type": "array"
-        },
-        "network": {
-          "type": "string",
-          "description": "The name of the Google Compute Engine\n[VPC network](/compute/docs/networks-and-firewalls#networks) to which the\ninstance is connected."
-        },
-        "reservedIpRange": {
-          "type": "string",
-          "description": "A /29 CIDR block in one of the\n[internal IP address\nranges](https://www.arin.net/knowledge/address_filters.html) that\nidentifies the range of IP addresses reserved for this instance. For\nexample, 10.0.0.0/29 or 192.168.0.0/29. The range you specify can't overlap\nwith either existing subnets or assigned IP address ranges for other Cloud\nFilestore instances in the selected VPC network."
-        }
-      }
-    },
-    "ListLocationsResponse": {
-      "id": "ListLocationsResponse",
-      "properties": {
-        "locations": {
-          "items": {
-            "$ref": "Location"
-          },
-          "type": "array",
-          "description": "A list of locations that matches the specified filter in the request."
-        },
-        "nextPageToken": {
-          "description": "The standard List next-page token.",
-          "type": "string"
-        }
-      },
-      "type": "object",
-      "description": "The response message for Locations.ListLocations."
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1Instance": {
-      "properties": {
-        "maintenancePolicyNames": {
-          "description": "The MaintenancePolicies that have been attached to the instance.\nThe key must be of the type name of the oneof policy name defined in\nMaintenancePolicy, and the referenced policy must define the same policy\ntype. For complete details of MaintenancePolicy, please refer to\ngo/cloud-saas-mw-ug.",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "type": "object"
-        },
-        "maintenanceSettings": {
-          "description": "Optional. The MaintenanceSettings associated with instance.",
-          "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings"
+          "description": "[Output only] Server-defined resource path for the target of the operation."
         },
         "createTime": {
-          "format": "google-datetime",
+          "description": "[Output only] The time the operation was created.",
           "type": "string",
-          "description": "Output only. Timestamp when the resource was created."
-        },
-        "name": {
-          "type": "string",
-          "description": "Unique name of the resource. It uses the form:\n `projects/{project_id}/locations/{location_id}/instances/{instance_id}`"
-        },
-        "maintenanceSchedules": {
+          "format": "google-datetime"
+        }
+      },
+      "id": "OperationMetadata"
+    },
+    "CancelOperationRequest": {
+      "type": "object",
+      "description": "The request message for Operations.CancelOperation.",
+      "properties": {},
+      "id": "CancelOperationRequest"
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1Instance": {
+      "type": "object",
+      "properties": {
+        "maintenancePolicyNames": {
           "type": "object",
           "additionalProperties": {
-            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule"
+            "type": "string"
           },
-          "description": "The MaintenanceSchedule contains the scheduling information of published\nmaintenance schedule."
+          "description": "The MaintenancePolicies that have been attached to the instance. The key must be of the type name of the oneof policy name defined in MaintenancePolicy, and the referenced policy must define the same policy type. For complete details of MaintenancePolicy, please refer to go/cloud-saas-mw-ug."
         },
         "tenantProjectId": {
           "type": "string",
-          "description": "Output only. ID of the associated GCP tenant project.\nSee go/get-instance-metadata."
+          "description": "Output only. ID of the associated GCP tenant project. See go/get-instance-metadata.",
+          "readOnly": true
         },
-        "softwareVersions": {
-          "description": "Software versions that are used to deploy this instance. This can be\nmutated by rollout services.",
+        "maintenanceSchedules": {
           "type": "object",
+          "description": "The MaintenanceSchedule contains the scheduling information of published maintenance schedule.",
           "additionalProperties": {
-            "type": "string"
+            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule"
           }
         },
-        "producerMetadata": {
-          "type": "object",
+        "labels": {
           "additionalProperties": {
             "type": "string"
           },
-          "description": "Output only. Custom string attributes used primarily to expose\nproducer-specific information in monitoring dashboards.\nSee go/get-instance-metadata."
+          "type": "object",
+          "description": "Optional. Resource labels to represent user provided metadata. Each label is a key-value pair, where both the key and the value are arbitrary strings provided by the user."
+        },
+        "updateTime": {
+          "format": "google-datetime",
+          "type": "string",
+          "description": "Output only. Timestamp when the resource was last modified.",
+          "readOnly": true
+        },
+        "createTime": {
+          "format": "google-datetime",
+          "description": "Output only. Timestamp when the resource was created.",
+          "type": "string",
+          "readOnly": true
+        },
+        "sloMetadata": {
+          "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata",
+          "readOnly": true,
+          "description": "Output only. SLO metadata for instance classification in the Standardized dataplane SLO platform. See go/cloud-ssa-standard-slo for feature description."
         },
         "state": {
           "enumDescriptions": [
@@ -758,7 +579,9 @@
             "Instance is being deleted.",
             "Instance encountered an error and is in indeterministic state."
           ],
+          "readOnly": true,
           "type": "string",
+          "description": "Output only. Current lifecycle state of the resource (e.g. if it's being created or ready to use).",
           "enum": [
             "STATE_UNSPECIFIED",
             "CREATING",
@@ -767,118 +590,378 @@
             "REPAIRING",
             "DELETING",
             "ERROR"
-          ],
-          "description": "Output only. Current lifecycle state of the resource (e.g. if it's being\ncreated or ready to use)."
+          ]
         },
-        "slmInstanceTemplate": {
-          "type": "string",
-          "description": "Link to the SLM instance template. Only populated when updating SLM\ninstances via SSA's Actuation service adaptor.\nService producers with custom control plane (e.g. Cloud SQL) doesn't\nneed to populate this field. Instead they should use software_versions."
-        },
-        "updateTime": {
-          "description": "Output only. Timestamp when the resource was last modified.",
-          "type": "string",
-          "format": "google-datetime"
-        },
-        "consumerDefinedName": {
-          "description": "consumer_defined_name is the name that is set by the consumer. On the other\nhand Name field represents system-assigned id of an instance so consumers\nare not necessarily aware of it.\nconsumer_defined_name is used for notification/UI purposes for consumer to\nrecognize their instances.",
-          "type": "string"
-        },
-        "labels": {
+        "softwareVersions": {
           "additionalProperties": {
             "type": "string"
           },
-          "description": "Optional. Resource labels to represent user provided metadata. Each label\nis a key-value pair, where both the key and the value are arbitrary strings\nprovided by the user.",
+          "description": "Software versions that are used to deploy this instance. This can be mutated by rollout services.",
           "type": "object"
         },
+        "name": {
+          "type": "string",
+          "description": "Unique name of the resource. It uses the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}`"
+        },
+        "slmInstanceTemplate": {
+          "type": "string",
+          "description": "Link to the SLM instance template. Only populated when updating SLM instances via SSA's Actuation service adaptor. Service producers with custom control plane (e.g. Cloud SQL) doesn't need to populate this field. Instead they should use software_versions."
+        },
+        "producerMetadata": {
+          "description": "Output only. Custom string attributes used primarily to expose producer-specific information in monitoring dashboards. See go/get-instance-metadata.",
+          "readOnly": true,
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "maintenanceSettings": {
+          "description": "Optional. The MaintenanceSettings associated with instance.",
+          "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings"
+        },
         "provisionedResources": {
-          "type": "array",
-          "description": "Output only. The list of data plane resources provisioned for this\ninstance, e.g. compute VMs. See go/get-instance-metadata.",
+          "readOnly": true,
+          "description": "Output only. The list of data plane resources provisioned for this instance, e.g. compute VMs. See go/get-instance-metadata.",
           "items": {
             "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource"
-          }
+          },
+          "type": "array"
         },
-        "sloMetadata": {
-          "description": "Output only. SLO metadata for instance classification in the\nStandardized dataplane SLO platform.\nSee go/cloud-ssa-standard-slo for feature description.",
-          "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata"
+        "consumerDefinedName": {
+          "type": "string",
+          "description": "consumer_defined_name is the name that is set by the consumer. On the other hand Name field represents system-assigned id of an instance so consumers are not necessarily aware of it. consumer_defined_name is used for notification/UI purposes for consumer to recognize their instances."
+        }
+      },
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1Instance"
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata": {
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata",
+      "description": "Node information for custom per-node SLO implementations. SSA does not support per-node SLO, but producers can populate per-node information in SloMetadata for custom precomputations. SSA Eligibility Exporter will emit per-node metric based on this information.",
+      "properties": {
+        "location": {
+          "description": "The location of the node, if different from instance location.",
+          "type": "string"
+        },
+        "exclusions": {
+          "description": "By default node is eligible if instance is eligible. But individual node might be excluded from SLO by adding entry here. For semantic see SloMetadata.exclusions. If both instance and node level exclusions are present for time period, the node level's reason will be reported by Eligibility Exporter.",
+          "items": {
+            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion"
+          },
+          "type": "array"
+        },
+        "nodeId": {
+          "type": "string",
+          "description": "The id of the node. This should be equal to SaasInstanceNode.node_id."
+        }
+      },
+      "type": "object"
+    },
+    "ListLocationsResponse": {
+      "description": "The response message for Locations.ListLocations.",
+      "properties": {
+        "nextPageToken": {
+          "description": "The standard List next-page token.",
+          "type": "string"
+        },
+        "locations": {
+          "items": {
+            "$ref": "Location"
+          },
+          "type": "array",
+          "description": "A list of locations that matches the specified filter in the request."
         }
       },
       "type": "object",
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1Instance"
+      "id": "ListLocationsResponse"
+    },
+    "Empty": {
+      "type": "object",
+      "id": "Empty",
+      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`.",
+      "properties": {}
     },
     "Operation": {
-      "id": "Operation",
       "type": "object",
-      "description": "This resource represents a long-running operation that is the result of a\nnetwork API call.",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "The server-assigned name, which is only unique within the same service that\noriginally returns it. If you use the default HTTP mapping, the\n`name` should be a resource name ending with `operations/{unique_id}`."
-        },
-        "error": {
-          "$ref": "Status",
-          "description": "The error result of the operation in case of failure or cancellation."
-        },
-        "done": {
-          "type": "boolean",
-          "description": "If the value is `false`, it means the operation is still in progress.\nIf `true`, the operation is completed, and either `error` or `response` is\navailable."
-        },
-        "metadata": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "any",
-            "description": "Properties of the object. Contains field @type with type URL."
-          },
-          "description": "Service-specific metadata associated with the operation.  It typically\ncontains progress information and common metadata such as create time.\nSome services might not provide such metadata.  Any method that returns a\nlong-running operation should document the metadata type, if any."
-        },
         "response": {
-          "type": "object",
           "additionalProperties": {
             "description": "Properties of the object. Contains field @type with type URL.",
             "type": "any"
           },
-          "description": "The normal response of the operation in case of success.  If the original\nmethod returns no data on success, such as `Delete`, the response is\n`google.protobuf.Empty`.  If the original method is standard\n`Get`/`Create`/`Update`, the response should be the resource.  For other\nmethods, the response should have the type `XxxResponse`, where `Xxx`\nis the original method name.  For example, if the original method name\nis `TakeSnapshot()`, the inferred response type is\n`TakeSnapshotResponse`."
+          "type": "object",
+          "description": "The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`."
+        },
+        "done": {
+          "description": "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.",
+          "type": "boolean"
+        },
+        "error": {
+          "description": "The error result of the operation in case of failure or cancellation.",
+          "$ref": "Status"
+        },
+        "metadata": {
+          "additionalProperties": {
+            "type": "any",
+            "description": "Properties of the object. Contains field @type with type URL."
+          },
+          "type": "object",
+          "description": "Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any."
+        },
+        "name": {
+          "description": "The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.",
+          "type": "string"
         }
-      }
+      },
+      "description": "This resource represents a long-running operation that is the result of a network API call.",
+      "id": "Operation"
     },
     "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata": {
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata",
       "properties": {
-        "nodes": {
-          "description": "Optional. List of nodes.\nSome producers need to use per-node metadata to calculate SLO.\nThis field allows such producers to publish per-node SLO meta data,\nwhich will be consumed by SSA Eligibility Exporter and published in the\nform of per node metric to Monarch.",
-          "items": {
-            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata"
-          },
-          "type": "array"
+        "tier": {
+          "type": "string",
+          "description": "Name of the SLO tier the Instance belongs to. This name will be expected to match the tiers specified in the service SLO configuration. Field is mandatory and must not be empty."
         },
         "eligibility": {
           "description": "Optional. User-defined instance eligibility.",
           "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility"
         },
-        "tier": {
-          "type": "string",
-          "description": "Name of the SLO tier the Instance belongs to. This name will be expected to\nmatch the tiers specified in the service SLO configuration.\n\nField is mandatory and must not be empty."
+        "nodes": {
+          "description": "Optional. List of nodes. Some producers need to use per-node metadata to calculate SLO. This field allows such producers to publish per-node SLO meta data, which will be consumed by SSA Eligibility Exporter and published in the form of per node metric to Monarch.",
+          "type": "array",
+          "items": {
+            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata"
+          }
         },
         "exclusions": {
+          "description": "List of SLO exclusion windows. When multiple entries in the list match (matching the exclusion time-window against current time point) the exclusion reason used in the first matching entry will be published. It is not needed to include expired exclusion in this list, as only the currently applicable exclusions are taken into account by the eligibility exporting subsystem (the historical state of exclusions will be reflected in the historically produced timeseries regardless of the current state). This field can be used to mark the instance as temporary ineligible for the purpose of SLO calculation. For permanent instance SLO exclusion, use of custom instance eligibility is recommended. See 'eligibility' field below.",
           "items": {
             "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion"
           },
-          "description": "List of SLO exclusion windows. When multiple entries in the list match\n(matching the exclusion time-window against current time point)\nthe exclusion reason used in the first matching entry will be published.\n\nIt is not needed to include expired exclusion in this list, as only the\ncurrently applicable exclusions are taken into account by the eligibility\nexporting subsystem (the historical state of exclusions will be reflected\nin the historically produced timeseries regardless of the current state).\n\nThis field can be used to mark the instance as temporary ineligible\nfor the purpose of SLO calculation. For permanent instance SLO exclusion,\nuse of custom instance eligibility is recommended. See 'eligibility' field\nbelow.",
           "type": "array"
         }
       },
-      "description": "SloMetadata contains resources required for proper SLO classification of the\ninstance.",
+      "type": "object",
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata",
+      "description": "SloMetadata contains resources required for proper SLO classification of the instance."
+    },
+    "Instance": {
+      "description": "A Cloud Filestore instance.",
+      "properties": {
+        "name": {
+          "description": "Output only. The resource name of the instance, in the format projects/{project}/locations/{location}/instances/{instance}.",
+          "type": "string",
+          "readOnly": true
+        },
+        "fileShares": {
+          "type": "array",
+          "description": "File system shares on the instance. For this version, only a single file share is supported.",
+          "items": {
+            "$ref": "FileShareConfig"
+          }
+        },
+        "createTime": {
+          "format": "google-datetime",
+          "type": "string",
+          "description": "Output only. The time when the instance was created.",
+          "readOnly": true
+        },
+        "networks": {
+          "items": {
+            "$ref": "NetworkConfig"
+          },
+          "type": "array",
+          "description": "VPC networks to which the instance is connected. For this version, only a single network is supported."
+        },
+        "statusMessage": {
+          "type": "string",
+          "readOnly": true,
+          "description": "Output only. Additional information about the instance state, if available."
+        },
+        "description": {
+          "description": "The description of the instance (2048 characters or less).",
+          "type": "string"
+        },
+        "labels": {
+          "description": "Resource labels to represent user provided metadata.",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        },
+        "tier": {
+          "enum": [
+            "TIER_UNSPECIFIED",
+            "STANDARD",
+            "PREMIUM",
+            "BASIC_HDD",
+            "BASIC_SSD",
+            "HIGH_SCALE_SSD"
+          ],
+          "type": "string",
+          "enumDescriptions": [
+            "Not set.",
+            "STANDARD tier.",
+            "PREMIUM tier.",
+            "BASIC instances offer a maximum capacity of 63.9 TB. BASIC_HDD is an alias for STANDARD Tier, offering economical performance backed by HDD.",
+            "BASIC instances offer a maximum capacity of 63.9 TB. BASIC_SSD is an alias for PREMIUM Tier, and offers improved performance backed by SSD.",
+            "HIGH_SCALE instances offer expanded capacity and performance scaling capabilities."
+          ],
+          "description": "The service tier of the instance."
+        },
+        "state": {
+          "type": "string",
+          "enumDescriptions": [
+            "State not set.",
+            "The instance is being created.",
+            "The instance is available for use.",
+            "Work is being done on the instance. You can get further details from the `statusMessage` field of the `Instance` resource.",
+            "The instance is shutting down.",
+            "The instance is experiencing an issue and might be unusable. You can get further details from the `statusMessage` field of the `Instance` resource."
+          ],
+          "readOnly": true,
+          "description": "Output only. The instance state.",
+          "enum": [
+            "STATE_UNSPECIFIED",
+            "CREATING",
+            "READY",
+            "REPAIRING",
+            "DELETING",
+            "ERROR"
+          ]
+        },
+        "etag": {
+          "type": "string",
+          "description": "Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other."
+        }
+      },
+      "id": "Instance",
+      "type": "object"
+    },
+    "ListInstancesResponse": {
+      "properties": {
+        "unreachable": {
+          "items": {
+            "type": "string"
+          },
+          "description": "Locations that could not be reached.",
+          "type": "array"
+        },
+        "instances": {
+          "description": "A list of instances in the project for the specified location. If the {location} value in the request is \"-\", the response contains a list of instances from all locations. If any location is unreachable, the response will only return instances in reachable locations and the \"unreachable\" field will be populated with a list of unreachable locations.",
+          "type": "array",
+          "items": {
+            "$ref": "Instance"
+          }
+        },
+        "nextPageToken": {
+          "description": "The token you can use to retrieve the next page of results. Not returned if there are no more results in the list.",
+          "type": "string"
+        }
+      },
+      "description": "ListInstancesResponse is the result of ListInstancesRequest.",
+      "id": "ListInstancesResponse",
+      "type": "object"
+    },
+    "Location": {
+      "description": "A resource that represents Google Cloud Platform location.",
+      "type": "object",
+      "id": "Location",
+      "properties": {
+        "locationId": {
+          "description": "The canonical id for this location. For example: `\"us-east1\"`.",
+          "type": "string"
+        },
+        "labels": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Cross-service attributes for the location. For example {\"cloud.googleapis.com/region\": \"us-east1\"}"
+        },
+        "name": {
+          "type": "string",
+          "description": "Resource name for the location, which may vary between implementations. For example: `\"projects/example-project/locations/us-east1\"`"
+        },
+        "displayName": {
+          "description": "The friendly name for this location, typically a nearby city name. For example, \"Tokyo\".",
+          "type": "string"
+        },
+        "metadata": {
+          "description": "Service-specific metadata. For example the available capacity at the given location.",
+          "additionalProperties": {
+            "type": "any",
+            "description": "Properties of the object. Contains field @type with type URL."
+          },
+          "type": "object"
+        }
+      }
+    },
+    "FileShareConfig": {
+      "description": "File share configuration for the instance.",
+      "type": "object",
+      "properties": {
+        "capacityGb": {
+          "format": "int64",
+          "type": "string",
+          "description": "File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the file share (must be 16 characters or less)."
+        }
+      },
+      "id": "FileShareConfig"
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility": {
+      "description": "SloEligibility is a tuple containing eligibility value: true if an instance is eligible for SLO calculation or false if it should be excluded from all SLO-related calculations along with a user-defined reason.",
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility",
+      "type": "object",
+      "properties": {
+        "reason": {
+          "type": "string",
+          "description": "User-defined reason for the current value of instance eligibility. Usually, this can be directly mapped to the internal state. An empty reason is allowed."
+        },
+        "eligible": {
+          "type": "boolean",
+          "description": "Whether an instance is eligible or ineligible."
+        }
+      }
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule": {
+      "properties": {
+        "endTime": {
+          "description": "The scheduled end time for the maintenance.",
+          "type": "string",
+          "format": "google-datetime"
+        },
+        "canReschedule": {
+          "description": "Can this scheduled update be rescheduled? By default, it's true and API needs to do explicitly check whether it's set, if it's set as false explicitly, it's false",
+          "type": "boolean"
+        },
+        "startTime": {
+          "format": "google-datetime",
+          "type": "string",
+          "description": "The scheduled start time for the maintenance."
+        },
+        "rolloutManagementPolicy": {
+          "description": "The rollout management policy this maintenance schedule is associated with. When doing reschedule update request, the reschedule should be against this given policy.",
+          "type": "string"
+        }
+      },
+      "description": "Maintenance schedule which is exposed to customer and potentially end user, indicating published upcoming future maintenance schedule",
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule",
       "type": "object"
     },
     "ListOperationsResponse": {
-      "id": "ListOperationsResponse",
       "type": "object",
+      "id": "ListOperationsResponse",
       "properties": {
         "operations": {
+          "type": "array",
+          "description": "A list of operations that matches the specified filter in the request.",
           "items": {
             "$ref": "Operation"
-          },
-          "description": "A list of operations that matches the specified filter in the request.",
-          "type": "array"
+          }
         },
         "nextPageToken": {
           "description": "The standard List next-page token.",
@@ -887,196 +970,129 @@
       },
       "description": "The response message for Operations.ListOperations."
     },
-    "Instance": {
-      "properties": {
-        "state": {
-          "enum": [
-            "STATE_UNSPECIFIED",
-            "CREATING",
-            "READY",
-            "REPAIRING",
-            "DELETING",
-            "ERROR"
-          ],
-          "enumDescriptions": [
-            "State not set.",
-            "The instance is being created.",
-            "The instance is available for use.",
-            "Work is being done on the instance. You can get further details from the\n`statusMessage` field of the `Instance` resource.",
-            "The instance is shutting down.",
-            "The instance is experiencing an issue and might be unusable. You can get\nfurther details from the `statusMessage` field of the `Instance`\nresource."
-          ],
-          "type": "string",
-          "description": "Output only. The instance state."
-        },
-        "description": {
-          "description": "The description of the instance (2048 characters or less).",
-          "type": "string"
-        },
-        "createTime": {
-          "description": "Output only. The time when the instance was created.",
-          "type": "string",
-          "format": "google-datetime"
-        },
-        "etag": {
-          "description": "Server-specified ETag for the instance resource to prevent simultaneous\nupdates from overwriting each other.",
-          "type": "string"
-        },
-        "networks": {
-          "type": "array",
-          "items": {
-            "$ref": "NetworkConfig"
-          },
-          "description": "VPC networks to which the instance is connected.\nFor this version, only a single network is supported."
-        },
-        "statusMessage": {
-          "type": "string",
-          "description": "Output only. Additional information about the instance state, if available."
-        },
-        "labels": {
-          "type": "object",
-          "description": "Resource labels to represent user provided metadata.",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "name": {
-          "description": "Output only. The resource name of the instance, in the format\nprojects/{project}/locations/{location}/instances/{instance}.",
-          "type": "string"
-        },
-        "fileShares": {
-          "description": "File system shares on the instance.\nFor this version, only a single file share is supported.",
-          "items": {
-            "$ref": "FileShareConfig"
-          },
-          "type": "array"
-        },
-        "tier": {
-          "description": "The service tier of the instance.",
-          "enumDescriptions": [
-            "Not set.",
-            "STANDARD tier.",
-            "PREMIUM tier.",
-            "BASIC instances offer a maximum capacity of 63.9 TB.\nBASIC_HDD is an alias for STANDARD Tier, offering economical\nperformance backed by HDD.",
-            "BASIC instances offer a maximum capacity of 63.9 TB.\nBASIC_SSD is an alias for PREMIUM Tier, and offers improved\nperformance backed by SSD.",
-            "HIGH_SCALE instances offer expanded capacity and performance scaling\ncapabilities."
-          ],
-          "type": "string",
-          "enum": [
-            "TIER_UNSPECIFIED",
-            "STANDARD",
-            "PREMIUM",
-            "BASIC_HDD",
-            "BASIC_SSD",
-            "HIGH_SCALE_SSD"
-          ]
-        }
-      },
-      "type": "object",
-      "id": "Instance",
-      "description": "A Cloud Filestore instance."
-    },
-    "CancelOperationRequest": {
-      "type": "object",
-      "id": "CancelOperationRequest",
-      "description": "The request message for Operations.CancelOperation.",
-      "properties": {}
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule": {
-      "description": "Maintenance schedule which is exposed to customer and potentially end user,\nindicating published upcoming future maintenance schedule",
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule",
-      "properties": {
-        "startTime": {
-          "type": "string",
-          "description": "The scheduled start time for the maintenance.",
-          "format": "google-datetime"
-        },
-        "rolloutManagementPolicy": {
-          "description": "The rollout management policy this maintenance schedule is associated\nwith. When doing reschedule update request, the reschedule should be\nagainst this given policy.",
-          "type": "string"
-        },
-        "canReschedule": {
-          "type": "boolean",
-          "description": "Can this scheduled update be rescheduled?\nBy default, it's true and API needs to do explicitly check whether it's\nset, if it's set as false explicitly, it's false"
-        },
-        "endTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "The scheduled end time for the maintenance."
-        }
-      },
-      "type": "object"
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource": {
-      "type": "object",
-      "description": "Describes provisioned dataplane resources.",
-      "properties": {
-        "resourceType": {
-          "description": "Type of the resource. This can be either a GCP resource or a custom one\n(e.g. another cloud provider's VM). For GCP compute resources use singular\nform of the names listed in GCP compute API documentation\n(https://cloud.google.com/compute/docs/reference/rest/v1/), prefixed with\n'compute-', for example: 'compute-instance', 'compute-disk',\n'compute-autoscaler'.",
-          "type": "string"
-        },
-        "resourceUrl": {
-          "description": "URL identifying the resource, e.g.\n\"https://www.googleapis.com/compute/v1/projects/...)\".",
-          "type": "string"
-        }
-      },
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource"
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings": {
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings",
-      "type": "object",
-      "properties": {
-        "exclude": {
-          "description": "Optional. Exclude instance from maintenance. When true, rollout service will not\nattempt maintenance on the instance. Rollout service will include the\ninstance in reported rollout progress as not attempted.",
-          "type": "boolean"
-        }
-      },
-      "description": "Maintenance settings associated with instance. Allows service producers and\nend users to assign settings that controls maintenance on this instance."
-    },
     "Status": {
-      "description": "The `Status` type defines a logical error model that is suitable for\ndifferent programming environments, including REST APIs and RPC APIs. It is\nused by [gRPC](https://github.com/grpc). Each `Status` message contains\nthree pieces of data: error code, error message, and error details.\n\nYou can find out more about this error model and how to work with it in the\n[API Design Guide](https://cloud.google.com/apis/design/errors).",
+      "description": "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).",
       "properties": {
-        "message": {
-          "type": "string",
-          "description": "A developer-facing error message, which should be in English. Any\nuser-facing error message should be localized and sent in the\ngoogle.rpc.Status.details field, or localized by the client."
-        },
         "details": {
-          "description": "A list of messages that carry the error details.  There is a common set of\nmessage types for APIs to use.",
           "items": {
             "additionalProperties": {
-              "type": "any",
-              "description": "Properties of the object. Contains field @type with type URL."
+              "description": "Properties of the object. Contains field @type with type URL.",
+              "type": "any"
             },
             "type": "object"
           },
+          "description": "A list of messages that carry the error details. There is a common set of message types for APIs to use.",
           "type": "array"
         },
         "code": {
           "format": "int32",
-          "description": "The status code, which should be an enum value of google.rpc.Code.",
-          "type": "integer"
+          "type": "integer",
+          "description": "The status code, which should be an enum value of google.rpc.Code."
+        },
+        "message": {
+          "type": "string",
+          "description": "A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client."
         }
       },
-      "id": "Status",
+      "type": "object",
+      "id": "Status"
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion": {
+      "description": "SloExclusion represents an exclusion in SLI calculation applies to all SLOs.",
+      "type": "object",
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion",
+      "properties": {
+        "sliName": {
+          "description": "Name of an SLI that this exclusion applies to. Can be left empty, signaling that the instance should be excluded from all SLIs defined in the service SLO configuration.",
+          "type": "string"
+        },
+        "startTime": {
+          "description": "Start time of the exclusion. No alignment (e.g. to a full minute) needed.",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "reason": {
+          "type": "string",
+          "description": "Human-readable reason for the exclusion. This should be a static string (e.g. \"Disruptive update in progress\") and should not contain dynamically generated data (e.g. instance name). Can be left empty."
+        },
+        "duration": {
+          "format": "google-duration",
+          "type": "string",
+          "description": "Exclusion duration. No restrictions on the possible values. When an ongoing operation is taking longer than initially expected, an existing entry in the exclusion list can be updated by extending the duration. This is supported by the subsystem exporting eligibility data as long as such extension is committed at least 10 minutes before the original exclusion expiration - otherwise it is possible that there will be \"gaps\" in the exclusion application in the exported timeseries."
+        }
+      }
+    },
+    "NetworkConfig": {
+      "type": "object",
+      "description": "Network configuration for the instance.",
+      "id": "NetworkConfig",
+      "properties": {
+        "ipAddresses": {
+          "items": {
+            "type": "string"
+          },
+          "readOnly": true,
+          "description": "Output only. IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or IPv6 addresses in the format {block 1}:{block 2}:{block 3}:{block 4}:{block 5}:{block 6}:{block 7}:{block 8}.",
+          "type": "array"
+        },
+        "network": {
+          "description": "The name of the Google Compute Engine [VPC network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected.",
+          "type": "string"
+        },
+        "reservedIpRange": {
+          "type": "string",
+          "description": "A /29 CIDR block in one of the [internal IP address ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range of IP addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/29. The range you specify can't overlap with either existing subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC network."
+        },
+        "modes": {
+          "items": {
+            "enum": [
+              "ADDRESS_MODE_UNSPECIFIED",
+              "MODE_IPV4"
+            ],
+            "enumDescriptions": [
+              "Internet protocol not set.",
+              "Use the IPv4 internet protocol."
+            ],
+            "type": "string"
+          },
+          "type": "array",
+          "enumDescriptions": [
+            "Internet protocol not set.",
+            "Use the IPv4 internet protocol."
+          ],
+          "description": "Internet protocol versions for which the instance has IP addresses assigned. For this version, only MODE_IPV4 is supported."
+        }
+      }
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource": {
+      "description": "Describes provisioned dataplane resources.",
+      "properties": {
+        "resourceType": {
+          "description": "Type of the resource. This can be either a GCP resource or a custom one (e.g. another cloud provider's VM). For GCP compute resources use singular form of the names listed in GCP compute API documentation (https://cloud.google.com/compute/docs/reference/rest/v1/), prefixed with 'compute-', for example: 'compute-instance', 'compute-disk', 'compute-autoscaler'.",
+          "type": "string"
+        },
+        "resourceUrl": {
+          "type": "string",
+          "description": "URL identifying the resource, e.g. \"https://www.googleapis.com/compute/v1/projects/...)\"."
+        }
+      },
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource",
       "type": "object"
     }
   },
-  "canonicalName": "Cloud Filestore",
-  "auth": {
-    "oauth2": {
-      "scopes": {
-        "https://www.googleapis.com/auth/cloud-platform": {
-          "description": "View and manage your data across Google Cloud Platform services"
-        }
-      }
-    }
+  "protocol": "rest",
+  "version": "v1",
+  "revision": "20200806",
+  "title": "Cloud Filestore API",
+  "icons": {
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
   },
-  "kind": "discovery#restDescription",
-  "basePath": "",
-  "revision": "20200707",
+  "documentationLink": "https://cloud.google.com/filestore/",
   "id": "file:v1",
-  "rootUrl": "https://file.googleapis.com/",
   "description": "The Cloud Filestore API is used for creating and managing cloud file servers.",
+  "servicePath": "",
+  "baseUrl": "https://file.googleapis.com/",
   "batchPath": "batch",
-  "discoveryVersion": "v1"
+  "mtlsRootUrl": "https://file.mtls.googleapis.com/"
 }

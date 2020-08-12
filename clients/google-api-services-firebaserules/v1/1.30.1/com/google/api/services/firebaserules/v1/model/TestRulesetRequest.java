@@ -30,9 +30,8 @@ package com.google.api.services.firebaserules.v1.model;
 public final class TestRulesetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional `Source` to be checked for correctness.
-   *
-   * This field must not be set when the resource name refers to a `Ruleset`.
+   * Optional `Source` to be checked for correctness. This field must not be set when the resource
+   * name refers to a `Ruleset`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +45,8 @@ public final class TestRulesetRequest extends com.google.api.client.json.Generic
   private TestSuite testSuite;
 
   /**
-   * Optional `Source` to be checked for correctness.
-   *
-   * This field must not be set when the resource name refers to a `Ruleset`.
+   * Optional `Source` to be checked for correctness. This field must not be set when the resource
+   * name refers to a `Ruleset`.
    * @return value or {@code null} for none
    */
   public Source getSource() {
@@ -56,9 +54,8 @@ public final class TestRulesetRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional `Source` to be checked for correctness.
-   *
-   * This field must not be set when the resource name refers to a `Ruleset`.
+   * Optional `Source` to be checked for correctness. This field must not be set when the resource
+   * name refers to a `Ruleset`.
    * @param source source or {@code null} for none
    */
   public TestRulesetRequest setSource(Source source) {

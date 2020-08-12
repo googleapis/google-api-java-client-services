@@ -17,15 +17,12 @@
 package com.google.api.services.firebaserules.v1.model;
 
 /**
- * Mock function definition.
- *
- * Mocks must refer to a function declared by the target service. The type of the function args and
- * result will be inferred at test time. If either the arg or result values are not compatible with
- * function type declaration, the request will be considered invalid.
- *
- * More than one `FunctionMock` may be provided for a given function name so long as the `Arg`
- * matchers are distinct. There may be only one function for a given overload where all `Arg` values
- * are `Arg.any_value`.
+ * Mock function definition. Mocks must refer to a function declared by the target service. The type
+ * of the function args and result will be inferred at test time. If either the arg or result values
+ * are not compatible with function type declaration, the request will be considered invalid. More
+ * than one `FunctionMock` may be provided for a given function name so long as the `Arg` matchers
+ * are distinct. There may be only one function for a given overload where all `Arg` values are
+ * `Arg.any_value`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Rules API. For a detailed explanation see:
@@ -52,9 +49,7 @@ public final class FunctionMock extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the function.
-   *
-   * The function name must match one provided by a service declaration.
+   * The name of the function. The function name must match one provided by a service declaration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +82,7 @@ public final class FunctionMock extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the function.
-   *
-   * The function name must match one provided by a service declaration.
+   * The name of the function. The function name must match one provided by a service declaration.
    * @return value or {@code null} for none
    */
   public java.lang.String getFunction() {
@@ -97,9 +90,7 @@ public final class FunctionMock extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the function.
-   *
-   * The function name must match one provided by a service declaration.
+   * The name of the function. The function name must match one provided by a service declaration.
    * @param function function or {@code null} for none
    */
   public FunctionMock setFunction(java.lang.String function) {

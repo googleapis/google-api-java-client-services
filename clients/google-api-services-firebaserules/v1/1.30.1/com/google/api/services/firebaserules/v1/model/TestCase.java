@@ -19,12 +19,9 @@ package com.google.api.services.firebaserules.v1.model;
 /**
  * `TestCase` messages provide the request context and an expectation as to whether the given
  * context will be allowed or denied. Test cases may specify the `request`, `resource`, and
- * `function_mocks` to mock a function call to a service-provided function.
- *
- * The `request` object represents context present at request-time.
- *
- * The `resource` is the value of the target resource as it appears in persistent storage before the
- * request is executed.
+ * `function_mocks` to mock a function call to a service-provided function. The `request` object
+ * represents context present at request-time. The `resource` is the value of the target resource as
+ * it appears in persistent storage before the request is executed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Rules API. For a detailed explanation see:
@@ -72,18 +69,12 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   private java.lang.String pathEncoding;
 
   /**
-   * Request context.
-   *
-   * The exact format of the request context is service-dependent. See the appropriate service
-   * documentation for information about the supported fields and types on the request. Minimally,
-   * all services support the following fields and types:
-   *
-   * Request field  | Type ---------------|----------------- auth.uid       | `string` auth.token
-   * | `map` headers        | `map` method         | `string` params         | `map` path
-   * | `string` time           | `google.protobuf.Timestamp`
-   *
-   * If the request value is not well-formed for the service, the request will be rejected as an
-   * invalid argument.
+   * Request context. The exact format of the request context is service-dependent. See the
+   * appropriate service documentation for information about the supported fields and types on the
+   * request. Minimally, all services support the following fields and types: Request field | Type
+   * ---------------|----------------- auth.uid | `string` auth.token | `map` headers | `map` method
+   * | `string` params | `map` path | `string` time | `google.protobuf.Timestamp` If the request
+   * value is not well-formed for the service, the request will be rejected as an invalid argument.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +82,6 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional resource value as it appears in persistent storage before the request is fulfilled.
-   *
    * The resource type depends on the `request.path` value.
    * The value may be {@code null}.
    */
@@ -169,18 +159,12 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Request context.
-   *
-   * The exact format of the request context is service-dependent. See the appropriate service
-   * documentation for information about the supported fields and types on the request. Minimally,
-   * all services support the following fields and types:
-   *
-   * Request field  | Type ---------------|----------------- auth.uid       | `string` auth.token
-   * | `map` headers        | `map` method         | `string` params         | `map` path
-   * | `string` time           | `google.protobuf.Timestamp`
-   *
-   * If the request value is not well-formed for the service, the request will be rejected as an
-   * invalid argument.
+   * Request context. The exact format of the request context is service-dependent. See the
+   * appropriate service documentation for information about the supported fields and types on the
+   * request. Minimally, all services support the following fields and types: Request field | Type
+   * ---------------|----------------- auth.uid | `string` auth.token | `map` headers | `map` method
+   * | `string` params | `map` path | `string` time | `google.protobuf.Timestamp` If the request
+   * value is not well-formed for the service, the request will be rejected as an invalid argument.
    * @return value or {@code null} for none
    */
   public java.lang.Object getRequest() {
@@ -188,18 +172,12 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Request context.
-   *
-   * The exact format of the request context is service-dependent. See the appropriate service
-   * documentation for information about the supported fields and types on the request. Minimally,
-   * all services support the following fields and types:
-   *
-   * Request field  | Type ---------------|----------------- auth.uid       | `string` auth.token
-   * | `map` headers        | `map` method         | `string` params         | `map` path
-   * | `string` time           | `google.protobuf.Timestamp`
-   *
-   * If the request value is not well-formed for the service, the request will be rejected as an
-   * invalid argument.
+   * Request context. The exact format of the request context is service-dependent. See the
+   * appropriate service documentation for information about the supported fields and types on the
+   * request. Minimally, all services support the following fields and types: Request field | Type
+   * ---------------|----------------- auth.uid | `string` auth.token | `map` headers | `map` method
+   * | `string` params | `map` path | `string` time | `google.protobuf.Timestamp` If the request
+   * value is not well-formed for the service, the request will be rejected as an invalid argument.
    * @param request request or {@code null} for none
    */
   public TestCase setRequest(java.lang.Object request) {
@@ -209,7 +187,6 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional resource value as it appears in persistent storage before the request is fulfilled.
-   *
    * The resource type depends on the `request.path` value.
    * @return value or {@code null} for none
    */
@@ -219,7 +196,6 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional resource value as it appears in persistent storage before the request is fulfilled.
-   *
    * The resource type depends on the `request.path` value.
    * @param resource resource or {@code null} for none
    */

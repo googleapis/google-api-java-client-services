@@ -18,7 +18,6 @@ package com.google.api.services.remotebuildexecution.v2.model;
 
 /**
  * An `OutputSymlink` is similar to a Symlink, but it is used as an output in an `ActionResult`.
- *
  * `OutputSymlink` is binary-compatible with `SymlinkNode`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

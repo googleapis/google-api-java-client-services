@@ -20,10 +20,9 @@ package com.google.api.services.remotebuildexecution.v2.model;
  * The CommandTask and CommandResult messages assume the existence of a service that can serve blobs
  * of content, identified by a hash and size known as a "digest." The method by which these blobs
  * may be retrieved is not specified here, but a model implementation is in the Remote Execution
- * API's "ContentAddressibleStorage" interface.
- *
- * In the context of the RWAPI, a Digest will virtually always refer to the contents of a file or a
- * directory. The latter is represented by the byte-encoded Directory message.
+ * API's "ContentAddressibleStorage" interface. In the context of the RWAPI, a Digest will virtually
+ * always refer to the contents of a file or a directory. The latter is represented by the byte-
+ * encoded Directory message.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Remote Build Execution API. For a detailed

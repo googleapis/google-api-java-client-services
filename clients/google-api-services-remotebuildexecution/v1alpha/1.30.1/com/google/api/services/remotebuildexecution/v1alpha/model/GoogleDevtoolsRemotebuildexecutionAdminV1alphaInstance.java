@@ -34,6 +34,13 @@ package com.google.api.services.remotebuildexecution.v1alpha.model;
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance extends com.google.api.client.json.GenericJson {
 
   /**
+   * The policy to define whether or not RBE features can be used or how they can be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy featurePolicy;
+
+  /**
    * The location is a GCP region. Currently only `us-central1` is supported.
    * The value may be {@code null}.
    */
@@ -62,6 +69,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance extend
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * The policy to define whether or not RBE features can be used or how they can be used.
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy getFeaturePolicy() {
+    return featurePolicy;
+  }
+
+  /**
+   * The policy to define whether or not RBE features can be used or how they can be used.
+   * @param featurePolicy featurePolicy or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance setFeaturePolicy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy featurePolicy) {
+    this.featurePolicy = featurePolicy;
+    return this;
+  }
 
   /**
    * The location is a GCP region. Currently only `us-central1` is supported.

@@ -18,10 +18,8 @@ package com.google.api.services.remotebuildexecution.v1.model;
 
 /**
  * A `Command` is the actual command executed by a worker running an Action and specifications of
- * its environment.
- *
- * Except as otherwise required, the environment (such as which system libraries or binaries are
- * available, and what filesystems are mounted where) is defined by and specific to the
+ * its environment. Except as otherwise required, the environment (such as which system libraries or
+ * binaries are available, and what filesystems are mounted where) is defined by and specific to the
  * implementation of the remote execution API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -47,11 +45,9 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
   /**
    * The environment variables to set when running the program. The worker may provide its own
    * default environment variables; these defaults can be overridden using this field. Additional
-   * variables can also be specified.
-   *
-   * In order to ensure that equivalent Commands always hash to the same value, the environment
-   * variables MUST be lexicographically sorted by name. Sorting of strings is done by code point,
-   * equivalently, by the UTF-8 bytes.
+   * variables can also be specified. In order to ensure that equivalent Commands always hash to the
+   * same value, the environment variables MUST be lexicographically sorted by name. Sorting of
+   * strings is done by code point, equivalently, by the UTF-8 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,26 +57,18 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * A list of the output directories that the client expects to retrieve from the action. Only the
    * listed directories will be returned (an entire directory structure will be returned as a Tree
    * message digest, see OutputDirectory), as well as files listed in `output_files`. Other files or
-   * directories that may be created during command execution are discarded.
-   *
-   * The paths are relative to the working directory of the action execution. The paths are
-   * specified using a single forward slash (`/`) as a path separator, even if the execution
-   * platform natively uses a different separator. The path MUST NOT include a trailing slash, nor a
-   * leading slash, being a relative path. The special value of empty string is allowed, although
-   * not recommended, and can be used to capture the entire working directory tree, including
-   * inputs.
-   *
-   * In order to ensure consistent hashing of the same Action, the output paths MUST be sorted
-   * lexicographically by code point (or, equivalently, by UTF-8 bytes).
-   *
-   * An output directory cannot be duplicated or have the same path as any of the listed output
-   * files. An output directory is allowed to be a parent of another output directory.
-   *
-   * Directories leading up to the output directories (but not the output directories themselves)
-   * are created by the worker prior to execution, even if they are not explicitly part of the input
-   * root.
-   *
-   * DEPRECATED since 2.1: Use `output_paths` instead.
+   * directories that may be created during command execution are discarded. The paths are relative
+   * to the working directory of the action execution. The paths are specified using a single
+   * forward slash (`/`) as a path separator, even if the execution platform natively uses a
+   * different separator. The path MUST NOT include a trailing slash, nor a leading slash, being a
+   * relative path. The special value of empty string is allowed, although not recommended, and can
+   * be used to capture the entire working directory tree, including inputs. In order to ensure
+   * consistent hashing of the same Action, the output paths MUST be sorted lexicographically by
+   * code point (or, equivalently, by UTF-8 bytes). An output directory cannot be duplicated or have
+   * the same path as any of the listed output files. An output directory is allowed to be a parent
+   * of another output directory. Directories leading up to the output directories (but not the
+   * output directories themselves) are created by the worker prior to execution, even if they are
+   * not explicitly part of the input root. DEPRECATED since 2.1: Use `output_paths` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,22 +78,15 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * A list of the output files that the client expects to retrieve from the action. Only the listed
    * files, as well as directories listed in `output_directories`, will be returned to the client as
    * output. Other files or directories that may be created during command execution are discarded.
-   *
    * The paths are relative to the working directory of the action execution. The paths are
    * specified using a single forward slash (`/`) as a path separator, even if the execution
    * platform natively uses a different separator. The path MUST NOT include a trailing slash, nor a
-   * leading slash, being a relative path.
-   *
-   * In order to ensure consistent hashing of the same Action, the output paths MUST be sorted
-   * lexicographically by code point (or, equivalently, by UTF-8 bytes).
-   *
-   * An output file cannot be duplicated, be a parent of another output file, or have the same path
-   * as any of the listed output directories.
-   *
-   * Directories leading up to the output files are created by the worker prior to execution, even
-   * if they are not explicitly part of the input root.
-   *
-   * DEPRECATED since v2.1: Use `output_paths` instead.
+   * leading slash, being a relative path. In order to ensure consistent hashing of the same Action,
+   * the output paths MUST be sorted lexicographically by code point (or, equivalently, by UTF-8
+   * bytes). An output file cannot be duplicated, be a parent of another output file, or have the
+   * same path as any of the listed output directories. Directories leading up to the output files
+   * are created by the worker prior to execution, even if they are not explicitly part of the input
+   * root. DEPRECATED since v2.1: Use `output_paths` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,21 +98,16 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * not specified, and will be determined by the server after action execution. If the resulting
    * path is a file, it will be returned in an OutputFile) typed field. If the path is a directory,
    * the entire directory structure will be returned as a Tree message digest, see OutputDirectory)
-   * Other files or directories that may be created during command execution are discarded.
-   *
-   * The paths are relative to the working directory of the action execution. The paths are
-   * specified using a single forward slash (`/`) as a path separator, even if the execution
-   * platform natively uses a different separator. The path MUST NOT include a trailing slash, nor a
-   * leading slash, being a relative path.
-   *
-   * In order to ensure consistent hashing of the same Action, the output paths MUST be deduplicated
-   * and sorted lexicographically by code point (or, equivalently, by UTF-8 bytes).
-   *
-   * Directories leading up to the output paths are created by the worker prior to execution, even
-   * if they are not explicitly part of the input root.
-   *
-   * New in v2.1: this field supersedes the DEPRECATED `output_files` and `output_directories`
-   * fields. If `output_paths` is used, `output_files` and `output_directories` will be ignored!
+   * Other files or directories that may be created during command execution are discarded. The
+   * paths are relative to the working directory of the action execution. The paths are specified
+   * using a single forward slash (`/`) as a path separator, even if the execution platform natively
+   * uses a different separator. The path MUST NOT include a trailing slash, nor a leading slash,
+   * being a relative path. In order to ensure consistent hashing of the same Action, the output
+   * paths MUST be deduplicated and sorted lexicographically by code point (or, equivalently, by
+   * UTF-8 bytes). Directories leading up to the output paths are created by the worker prior to
+   * execution, even if they are not explicitly part of the input root. New in v2.1: this field
+   * supersedes the DEPRECATED `output_files` and `output_directories` fields. If `output_paths` is
+   * used, `output_files` and `output_directories` will be ignored!
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,11 +156,9 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
   /**
    * The environment variables to set when running the program. The worker may provide its own
    * default environment variables; these defaults can be overridden using this field. Additional
-   * variables can also be specified.
-   *
-   * In order to ensure that equivalent Commands always hash to the same value, the environment
-   * variables MUST be lexicographically sorted by name. Sorting of strings is done by code point,
-   * equivalently, by the UTF-8 bytes.
+   * variables can also be specified. In order to ensure that equivalent Commands always hash to the
+   * same value, the environment variables MUST be lexicographically sorted by name. Sorting of
+   * strings is done by code point, equivalently, by the UTF-8 bytes.
    * @return value or {@code null} for none
    */
   public java.util.List<BuildBazelRemoteExecutionV2CommandEnvironmentVariable> getEnvironmentVariables() {
@@ -194,11 +168,9 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
   /**
    * The environment variables to set when running the program. The worker may provide its own
    * default environment variables; these defaults can be overridden using this field. Additional
-   * variables can also be specified.
-   *
-   * In order to ensure that equivalent Commands always hash to the same value, the environment
-   * variables MUST be lexicographically sorted by name. Sorting of strings is done by code point,
-   * equivalently, by the UTF-8 bytes.
+   * variables can also be specified. In order to ensure that equivalent Commands always hash to the
+   * same value, the environment variables MUST be lexicographically sorted by name. Sorting of
+   * strings is done by code point, equivalently, by the UTF-8 bytes.
    * @param environmentVariables environmentVariables or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Command setEnvironmentVariables(java.util.List<BuildBazelRemoteExecutionV2CommandEnvironmentVariable> environmentVariables) {
@@ -210,26 +182,18 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * A list of the output directories that the client expects to retrieve from the action. Only the
    * listed directories will be returned (an entire directory structure will be returned as a Tree
    * message digest, see OutputDirectory), as well as files listed in `output_files`. Other files or
-   * directories that may be created during command execution are discarded.
-   *
-   * The paths are relative to the working directory of the action execution. The paths are
-   * specified using a single forward slash (`/`) as a path separator, even if the execution
-   * platform natively uses a different separator. The path MUST NOT include a trailing slash, nor a
-   * leading slash, being a relative path. The special value of empty string is allowed, although
-   * not recommended, and can be used to capture the entire working directory tree, including
-   * inputs.
-   *
-   * In order to ensure consistent hashing of the same Action, the output paths MUST be sorted
-   * lexicographically by code point (or, equivalently, by UTF-8 bytes).
-   *
-   * An output directory cannot be duplicated or have the same path as any of the listed output
-   * files. An output directory is allowed to be a parent of another output directory.
-   *
-   * Directories leading up to the output directories (but not the output directories themselves)
-   * are created by the worker prior to execution, even if they are not explicitly part of the input
-   * root.
-   *
-   * DEPRECATED since 2.1: Use `output_paths` instead.
+   * directories that may be created during command execution are discarded. The paths are relative
+   * to the working directory of the action execution. The paths are specified using a single
+   * forward slash (`/`) as a path separator, even if the execution platform natively uses a
+   * different separator. The path MUST NOT include a trailing slash, nor a leading slash, being a
+   * relative path. The special value of empty string is allowed, although not recommended, and can
+   * be used to capture the entire working directory tree, including inputs. In order to ensure
+   * consistent hashing of the same Action, the output paths MUST be sorted lexicographically by
+   * code point (or, equivalently, by UTF-8 bytes). An output directory cannot be duplicated or have
+   * the same path as any of the listed output files. An output directory is allowed to be a parent
+   * of another output directory. Directories leading up to the output directories (but not the
+   * output directories themselves) are created by the worker prior to execution, even if they are
+   * not explicitly part of the input root. DEPRECATED since 2.1: Use `output_paths` instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOutputDirectories() {
@@ -240,26 +204,18 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * A list of the output directories that the client expects to retrieve from the action. Only the
    * listed directories will be returned (an entire directory structure will be returned as a Tree
    * message digest, see OutputDirectory), as well as files listed in `output_files`. Other files or
-   * directories that may be created during command execution are discarded.
-   *
-   * The paths are relative to the working directory of the action execution. The paths are
-   * specified using a single forward slash (`/`) as a path separator, even if the execution
-   * platform natively uses a different separator. The path MUST NOT include a trailing slash, nor a
-   * leading slash, being a relative path. The special value of empty string is allowed, although
-   * not recommended, and can be used to capture the entire working directory tree, including
-   * inputs.
-   *
-   * In order to ensure consistent hashing of the same Action, the output paths MUST be sorted
-   * lexicographically by code point (or, equivalently, by UTF-8 bytes).
-   *
-   * An output directory cannot be duplicated or have the same path as any of the listed output
-   * files. An output directory is allowed to be a parent of another output directory.
-   *
-   * Directories leading up to the output directories (but not the output directories themselves)
-   * are created by the worker prior to execution, even if they are not explicitly part of the input
-   * root.
-   *
-   * DEPRECATED since 2.1: Use `output_paths` instead.
+   * directories that may be created during command execution are discarded. The paths are relative
+   * to the working directory of the action execution. The paths are specified using a single
+   * forward slash (`/`) as a path separator, even if the execution platform natively uses a
+   * different separator. The path MUST NOT include a trailing slash, nor a leading slash, being a
+   * relative path. The special value of empty string is allowed, although not recommended, and can
+   * be used to capture the entire working directory tree, including inputs. In order to ensure
+   * consistent hashing of the same Action, the output paths MUST be sorted lexicographically by
+   * code point (or, equivalently, by UTF-8 bytes). An output directory cannot be duplicated or have
+   * the same path as any of the listed output files. An output directory is allowed to be a parent
+   * of another output directory. Directories leading up to the output directories (but not the
+   * output directories themselves) are created by the worker prior to execution, even if they are
+   * not explicitly part of the input root. DEPRECATED since 2.1: Use `output_paths` instead.
    * @param outputDirectories outputDirectories or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Command setOutputDirectories(java.util.List<java.lang.String> outputDirectories) {
@@ -271,22 +227,15 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * A list of the output files that the client expects to retrieve from the action. Only the listed
    * files, as well as directories listed in `output_directories`, will be returned to the client as
    * output. Other files or directories that may be created during command execution are discarded.
-   *
    * The paths are relative to the working directory of the action execution. The paths are
    * specified using a single forward slash (`/`) as a path separator, even if the execution
    * platform natively uses a different separator. The path MUST NOT include a trailing slash, nor a
-   * leading slash, being a relative path.
-   *
-   * In order to ensure consistent hashing of the same Action, the output paths MUST be sorted
-   * lexicographically by code point (or, equivalently, by UTF-8 bytes).
-   *
-   * An output file cannot be duplicated, be a parent of another output file, or have the same path
-   * as any of the listed output directories.
-   *
-   * Directories leading up to the output files are created by the worker prior to execution, even
-   * if they are not explicitly part of the input root.
-   *
-   * DEPRECATED since v2.1: Use `output_paths` instead.
+   * leading slash, being a relative path. In order to ensure consistent hashing of the same Action,
+   * the output paths MUST be sorted lexicographically by code point (or, equivalently, by UTF-8
+   * bytes). An output file cannot be duplicated, be a parent of another output file, or have the
+   * same path as any of the listed output directories. Directories leading up to the output files
+   * are created by the worker prior to execution, even if they are not explicitly part of the input
+   * root. DEPRECATED since v2.1: Use `output_paths` instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOutputFiles() {
@@ -297,22 +246,15 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * A list of the output files that the client expects to retrieve from the action. Only the listed
    * files, as well as directories listed in `output_directories`, will be returned to the client as
    * output. Other files or directories that may be created during command execution are discarded.
-   *
    * The paths are relative to the working directory of the action execution. The paths are
    * specified using a single forward slash (`/`) as a path separator, even if the execution
    * platform natively uses a different separator. The path MUST NOT include a trailing slash, nor a
-   * leading slash, being a relative path.
-   *
-   * In order to ensure consistent hashing of the same Action, the output paths MUST be sorted
-   * lexicographically by code point (or, equivalently, by UTF-8 bytes).
-   *
-   * An output file cannot be duplicated, be a parent of another output file, or have the same path
-   * as any of the listed output directories.
-   *
-   * Directories leading up to the output files are created by the worker prior to execution, even
-   * if they are not explicitly part of the input root.
-   *
-   * DEPRECATED since v2.1: Use `output_paths` instead.
+   * leading slash, being a relative path. In order to ensure consistent hashing of the same Action,
+   * the output paths MUST be sorted lexicographically by code point (or, equivalently, by UTF-8
+   * bytes). An output file cannot be duplicated, be a parent of another output file, or have the
+   * same path as any of the listed output directories. Directories leading up to the output files
+   * are created by the worker prior to execution, even if they are not explicitly part of the input
+   * root. DEPRECATED since v2.1: Use `output_paths` instead.
    * @param outputFiles outputFiles or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Command setOutputFiles(java.util.List<java.lang.String> outputFiles) {
@@ -326,21 +268,16 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * not specified, and will be determined by the server after action execution. If the resulting
    * path is a file, it will be returned in an OutputFile) typed field. If the path is a directory,
    * the entire directory structure will be returned as a Tree message digest, see OutputDirectory)
-   * Other files or directories that may be created during command execution are discarded.
-   *
-   * The paths are relative to the working directory of the action execution. The paths are
-   * specified using a single forward slash (`/`) as a path separator, even if the execution
-   * platform natively uses a different separator. The path MUST NOT include a trailing slash, nor a
-   * leading slash, being a relative path.
-   *
-   * In order to ensure consistent hashing of the same Action, the output paths MUST be deduplicated
-   * and sorted lexicographically by code point (or, equivalently, by UTF-8 bytes).
-   *
-   * Directories leading up to the output paths are created by the worker prior to execution, even
-   * if they are not explicitly part of the input root.
-   *
-   * New in v2.1: this field supersedes the DEPRECATED `output_files` and `output_directories`
-   * fields. If `output_paths` is used, `output_files` and `output_directories` will be ignored!
+   * Other files or directories that may be created during command execution are discarded. The
+   * paths are relative to the working directory of the action execution. The paths are specified
+   * using a single forward slash (`/`) as a path separator, even if the execution platform natively
+   * uses a different separator. The path MUST NOT include a trailing slash, nor a leading slash,
+   * being a relative path. In order to ensure consistent hashing of the same Action, the output
+   * paths MUST be deduplicated and sorted lexicographically by code point (or, equivalently, by
+   * UTF-8 bytes). Directories leading up to the output paths are created by the worker prior to
+   * execution, even if they are not explicitly part of the input root. New in v2.1: this field
+   * supersedes the DEPRECATED `output_files` and `output_directories` fields. If `output_paths` is
+   * used, `output_files` and `output_directories` will be ignored!
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOutputPaths() {
@@ -353,21 +290,16 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * not specified, and will be determined by the server after action execution. If the resulting
    * path is a file, it will be returned in an OutputFile) typed field. If the path is a directory,
    * the entire directory structure will be returned as a Tree message digest, see OutputDirectory)
-   * Other files or directories that may be created during command execution are discarded.
-   *
-   * The paths are relative to the working directory of the action execution. The paths are
-   * specified using a single forward slash (`/`) as a path separator, even if the execution
-   * platform natively uses a different separator. The path MUST NOT include a trailing slash, nor a
-   * leading slash, being a relative path.
-   *
-   * In order to ensure consistent hashing of the same Action, the output paths MUST be deduplicated
-   * and sorted lexicographically by code point (or, equivalently, by UTF-8 bytes).
-   *
-   * Directories leading up to the output paths are created by the worker prior to execution, even
-   * if they are not explicitly part of the input root.
-   *
-   * New in v2.1: this field supersedes the DEPRECATED `output_files` and `output_directories`
-   * fields. If `output_paths` is used, `output_files` and `output_directories` will be ignored!
+   * Other files or directories that may be created during command execution are discarded. The
+   * paths are relative to the working directory of the action execution. The paths are specified
+   * using a single forward slash (`/`) as a path separator, even if the execution platform natively
+   * uses a different separator. The path MUST NOT include a trailing slash, nor a leading slash,
+   * being a relative path. In order to ensure consistent hashing of the same Action, the output
+   * paths MUST be deduplicated and sorted lexicographically by code point (or, equivalently, by
+   * UTF-8 bytes). Directories leading up to the output paths are created by the worker prior to
+   * execution, even if they are not explicitly part of the input root. New in v2.1: this field
+   * supersedes the DEPRECATED `output_files` and `output_directories` fields. If `output_paths` is
+   * used, `output_files` and `output_directories` will be ignored!
    * @param outputPaths outputPaths or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Command setOutputPaths(java.util.List<java.lang.String> outputPaths) {

@@ -34,11 +34,10 @@ public final class BuildBazelRemoteExecutionV2ResultsCachePolicy extends com.goo
   /**
    * The priority (relative importance) of this content in the overall cache. Generally, a lower
    * value means a longer retention time or other advantage, but the interpretation of a given value
-   * is server-dependent. A priority of 0 means a *default* value, decided by the server.
-   *
-   * The particular semantics of this field is up to the server. In particular, every server will
-   * have their own supported range of priorities, and will decide how these map into
-   * retention/eviction policy.
+   * is server-dependent. A priority of 0 means a *default* value, decided by the server. The
+   * particular semantics of this field is up to the server. In particular, every server will have
+   * their own supported range of priorities, and will decide how these map into retention/eviction
+   * policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,11 +46,10 @@ public final class BuildBazelRemoteExecutionV2ResultsCachePolicy extends com.goo
   /**
    * The priority (relative importance) of this content in the overall cache. Generally, a lower
    * value means a longer retention time or other advantage, but the interpretation of a given value
-   * is server-dependent. A priority of 0 means a *default* value, decided by the server.
-   *
-   * The particular semantics of this field is up to the server. In particular, every server will
-   * have their own supported range of priorities, and will decide how these map into
-   * retention/eviction policy.
+   * is server-dependent. A priority of 0 means a *default* value, decided by the server. The
+   * particular semantics of this field is up to the server. In particular, every server will have
+   * their own supported range of priorities, and will decide how these map into retention/eviction
+   * policy.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPriority() {
@@ -61,11 +59,10 @@ public final class BuildBazelRemoteExecutionV2ResultsCachePolicy extends com.goo
   /**
    * The priority (relative importance) of this content in the overall cache. Generally, a lower
    * value means a longer retention time or other advantage, but the interpretation of a given value
-   * is server-dependent. A priority of 0 means a *default* value, decided by the server.
-   *
-   * The particular semantics of this field is up to the server. In particular, every server will
-   * have their own supported range of priorities, and will decide how these map into
-   * retention/eviction policy.
+   * is server-dependent. A priority of 0 means a *default* value, decided by the server. The
+   * particular semantics of this field is up to the server. In particular, every server will have
+   * their own supported range of priorities, and will decide how these map into retention/eviction
+   * policy.
    * @param priority priority or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ResultsCachePolicy setPriority(java.lang.Integer priority) {

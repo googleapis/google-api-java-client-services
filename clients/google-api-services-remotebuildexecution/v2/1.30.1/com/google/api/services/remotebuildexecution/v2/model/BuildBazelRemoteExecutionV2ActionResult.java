@@ -49,23 +49,18 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * `output_directories` or `output_paths` field of the Action, if the corresponding directory
    * existed after the action completed, a single entry will be present in the output list, which
    * will contain the digest of a Tree message containing the directory tree, and the path equal
-   * exactly to the corresponding Action output_directories member.
-   *
-   * As an example, suppose the Action had an output directory `a/b/dir` and the execution produced
-   * the following contents in `a/b/dir`: a file named `bar` and a directory named `foo` with an
-   * executable file named `baz`. Then, output_directory will contain (hashes shortened for
-   * readability):
-   *
-   * ```json // OutputDirectory proto: {   path: "a/b/dir"   tree_digest: {     hash:
-   * "4a73bc9d03...",     size: 55   } } // Tree proto with hash "4a73bc9d03..." and size 55: {
-   * root: {     files: [       {         name: "bar",         digest: {           hash:
-   * "4a73bc9d03...",           size: 65534         }       }     ],     directories: [       {
-   * name: "foo",         digest: {           hash: "4cf2eda940...",           size: 43         }
-   * }     ]   }   children : {     // (Directory proto with hash "4cf2eda940..." and size 43)
-   * files: [       {         name: "baz",         digest: {           hash: "b2c941073e...",
-   * size: 1294,         },         is_executable: true       }     ]   } } ``` If an output of the
-   * same name as listed in `output_files` of the Command was found in `output_directories`, but was
-   * not a directory, the server will return a FAILED_PRECONDITION.
+   * exactly to the corresponding Action output_directories member. As an example, suppose the
+   * Action had an output directory `a/b/dir` and the execution produced the following contents in
+   * `a/b/dir`: a file named `bar` and a directory named `foo` with an executable file named `baz`.
+   * Then, output_directory will contain (hashes shortened for readability): ```json //
+   * OutputDirectory proto: { path: "a/b/dir" tree_digest: { hash: "4a73bc9d03...", size: 55 } } //
+   * Tree proto with hash "4a73bc9d03..." and size 55: { root: { files: [ { name: "bar", digest: {
+   * hash: "4a73bc9d03...", size: 65534 } } ], directories: [ { name: "foo", digest: { hash:
+   * "4cf2eda940...", size: 43 } } ] } children : { // (Directory proto with hash "4cf2eda940..."
+   * and size 43) files: [ { name: "baz", digest: { hash: "b2c941073e...", size: 1294, },
+   * is_executable: true } ] } } ``` If an output of the same name as listed in `output_files` of
+   * the Command was found in `output_directories`, but was not a directory, the server will return
+   * a FAILED_PRECONDITION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,15 +72,13 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * working directory, if the server supports SymlinkAbsolutePathStrategy.ALLOWED. For each output
    * directory requested in the `output_directories` field of the Action, if the directory existed
    * after the action completed, a single entry will be present either in this field, or in the
-   * `output_directories` field, if the directory was not a symbolic link.
-   *
-   * If an output of the same name was found, but was a symbolic link to a file instead of a
-   * directory, the server will return a FAILED_PRECONDITION. If the action does not produce the
-   * requested output, then that output will be omitted from the list. The server is free to arrange
-   * the output list as desired; clients MUST NOT assume that the output list is sorted.
-   *
-   * DEPRECATED as of v2.1. Servers that wish to be compatible with v2.0 API should still populate
-   * this field in addition to `output_symlinks`.
+   * `output_directories` field, if the directory was not a symbolic link. If an output of the same
+   * name was found, but was a symbolic link to a file instead of a directory, the server will
+   * return a FAILED_PRECONDITION. If the action does not produce the requested output, then that
+   * output will be omitted from the list. The server is free to arrange the output list as desired;
+   * clients MUST NOT assume that the output list is sorted. DEPRECATED as of v2.1. Servers that
+   * wish to be compatible with v2.0 API should still populate this field in addition to
+   * `output_symlinks`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,16 +90,13 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * the server supports SymlinkAbsolutePathStrategy.ALLOWED. For each output file requested in the
    * `output_files` or `output_paths` field of the Action, if the corresponding file existed after
    * the action completed, a single entry will be present either in this field, or in the
-   * `output_files` field, if the file was not a symbolic link.
-   *
-   * If an output symbolic link of the same name as listed in `output_files` of the Command was
-   * found, but its target type was not a regular file, the server will return a
-   * FAILED_PRECONDITION. If the action does not produce the requested output, then that output will
-   * be omitted from the list. The server is free to arrange the output list as desired; clients
-   * MUST NOT assume that the output list is sorted.
-   *
-   * DEPRECATED as of v2.1. Servers that wish to be compatible with v2.0 API should still populate
-   * this field in addition to `output_symlinks`.
+   * `output_files` field, if the file was not a symbolic link. If an output symbolic link of the
+   * same name as listed in `output_files` of the Command was found, but its target type was not a
+   * regular file, the server will return a FAILED_PRECONDITION. If the action does not produce the
+   * requested output, then that output will be omitted from the list. The server is free to arrange
+   * the output list as desired; clients MUST NOT assume that the output list is sorted. DEPRECATED
+   * as of v2.1. Servers that wish to be compatible with v2.0 API should still populate this field
+   * in addition to `output_symlinks`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,12 +106,11 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * The output files of the action. For each output file requested in the `output_files` or
    * `output_paths` field of the Action, if the corresponding file existed after the action
    * completed, a single entry will be present either in this field, or the `output_file_symlinks`
-   * field if the file was a symbolic link to another file (`output_symlinks` field after v2.1).
-   *
-   * If an output listed in `output_files` was found, but was a directory rather than a regular
-   * file, the server will return a FAILED_PRECONDITION. If the action does not produce the
-   * requested output, then that output will be omitted from the list. The server is free to arrange
-   * the output list as desired; clients MUST NOT assume that the output list is sorted.
+   * field if the file was a symbolic link to another file (`output_symlinks` field after v2.1). If
+   * an output listed in `output_files` was found, but was a directory rather than a regular file,
+   * the server will return a FAILED_PRECONDITION. If the action does not produce the requested
+   * output, then that output will be omitted from the list. The server is free to arrange the
+   * output list as desired; clients MUST NOT assume that the output list is sorted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,11 +123,9 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * or even absolute paths outside of the working directory, if the server supports
    * SymlinkAbsolutePathStrategy.ALLOWED. A single entry for each output requested in `output_paths`
    * field of the Action, if the corresponding path existed after the action completed and was a
-   * symbolic link.
-   *
-   * If the action does not produce a requested output, then that output will be omitted from the
-   * list. The server is free to arrange the output list as desired; clients MUST NOT assume that
-   * the output list is sorted.
+   * symbolic link. If the action does not produce a requested output, then that output will be
+   * omitted from the list. The server is free to arrange the output list as desired; clients MUST
+   * NOT assume that the output list is sorted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,23 +204,18 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * `output_directories` or `output_paths` field of the Action, if the corresponding directory
    * existed after the action completed, a single entry will be present in the output list, which
    * will contain the digest of a Tree message containing the directory tree, and the path equal
-   * exactly to the corresponding Action output_directories member.
-   *
-   * As an example, suppose the Action had an output directory `a/b/dir` and the execution produced
-   * the following contents in `a/b/dir`: a file named `bar` and a directory named `foo` with an
-   * executable file named `baz`. Then, output_directory will contain (hashes shortened for
-   * readability):
-   *
-   * ```json // OutputDirectory proto: {   path: "a/b/dir"   tree_digest: {     hash:
-   * "4a73bc9d03...",     size: 55   } } // Tree proto with hash "4a73bc9d03..." and size 55: {
-   * root: {     files: [       {         name: "bar",         digest: {           hash:
-   * "4a73bc9d03...",           size: 65534         }       }     ],     directories: [       {
-   * name: "foo",         digest: {           hash: "4cf2eda940...",           size: 43         }
-   * }     ]   }   children : {     // (Directory proto with hash "4cf2eda940..." and size 43)
-   * files: [       {         name: "baz",         digest: {           hash: "b2c941073e...",
-   * size: 1294,         },         is_executable: true       }     ]   } } ``` If an output of the
-   * same name as listed in `output_files` of the Command was found in `output_directories`, but was
-   * not a directory, the server will return a FAILED_PRECONDITION.
+   * exactly to the corresponding Action output_directories member. As an example, suppose the
+   * Action had an output directory `a/b/dir` and the execution produced the following contents in
+   * `a/b/dir`: a file named `bar` and a directory named `foo` with an executable file named `baz`.
+   * Then, output_directory will contain (hashes shortened for readability): ```json //
+   * OutputDirectory proto: { path: "a/b/dir" tree_digest: { hash: "4a73bc9d03...", size: 55 } } //
+   * Tree proto with hash "4a73bc9d03..." and size 55: { root: { files: [ { name: "bar", digest: {
+   * hash: "4a73bc9d03...", size: 65534 } } ], directories: [ { name: "foo", digest: { hash:
+   * "4cf2eda940...", size: 43 } } ] } children : { // (Directory proto with hash "4cf2eda940..."
+   * and size 43) files: [ { name: "baz", digest: { hash: "b2c941073e...", size: 1294, },
+   * is_executable: true } ] } } ``` If an output of the same name as listed in `output_files` of
+   * the Command was found in `output_directories`, but was not a directory, the server will return
+   * a FAILED_PRECONDITION.
    * @return value or {@code null} for none
    */
   public java.util.List<BuildBazelRemoteExecutionV2OutputDirectory> getOutputDirectories() {
@@ -245,23 +227,18 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * `output_directories` or `output_paths` field of the Action, if the corresponding directory
    * existed after the action completed, a single entry will be present in the output list, which
    * will contain the digest of a Tree message containing the directory tree, and the path equal
-   * exactly to the corresponding Action output_directories member.
-   *
-   * As an example, suppose the Action had an output directory `a/b/dir` and the execution produced
-   * the following contents in `a/b/dir`: a file named `bar` and a directory named `foo` with an
-   * executable file named `baz`. Then, output_directory will contain (hashes shortened for
-   * readability):
-   *
-   * ```json // OutputDirectory proto: {   path: "a/b/dir"   tree_digest: {     hash:
-   * "4a73bc9d03...",     size: 55   } } // Tree proto with hash "4a73bc9d03..." and size 55: {
-   * root: {     files: [       {         name: "bar",         digest: {           hash:
-   * "4a73bc9d03...",           size: 65534         }       }     ],     directories: [       {
-   * name: "foo",         digest: {           hash: "4cf2eda940...",           size: 43         }
-   * }     ]   }   children : {     // (Directory proto with hash "4cf2eda940..." and size 43)
-   * files: [       {         name: "baz",         digest: {           hash: "b2c941073e...",
-   * size: 1294,         },         is_executable: true       }     ]   } } ``` If an output of the
-   * same name as listed in `output_files` of the Command was found in `output_directories`, but was
-   * not a directory, the server will return a FAILED_PRECONDITION.
+   * exactly to the corresponding Action output_directories member. As an example, suppose the
+   * Action had an output directory `a/b/dir` and the execution produced the following contents in
+   * `a/b/dir`: a file named `bar` and a directory named `foo` with an executable file named `baz`.
+   * Then, output_directory will contain (hashes shortened for readability): ```json //
+   * OutputDirectory proto: { path: "a/b/dir" tree_digest: { hash: "4a73bc9d03...", size: 55 } } //
+   * Tree proto with hash "4a73bc9d03..." and size 55: { root: { files: [ { name: "bar", digest: {
+   * hash: "4a73bc9d03...", size: 65534 } } ], directories: [ { name: "foo", digest: { hash:
+   * "4cf2eda940...", size: 43 } } ] } children : { // (Directory proto with hash "4cf2eda940..."
+   * and size 43) files: [ { name: "baz", digest: { hash: "b2c941073e...", size: 1294, },
+   * is_executable: true } ] } } ``` If an output of the same name as listed in `output_files` of
+   * the Command was found in `output_directories`, but was not a directory, the server will return
+   * a FAILED_PRECONDITION.
    * @param outputDirectories outputDirectories or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ActionResult setOutputDirectories(java.util.List<BuildBazelRemoteExecutionV2OutputDirectory> outputDirectories) {
@@ -275,15 +252,13 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * working directory, if the server supports SymlinkAbsolutePathStrategy.ALLOWED. For each output
    * directory requested in the `output_directories` field of the Action, if the directory existed
    * after the action completed, a single entry will be present either in this field, or in the
-   * `output_directories` field, if the directory was not a symbolic link.
-   *
-   * If an output of the same name was found, but was a symbolic link to a file instead of a
-   * directory, the server will return a FAILED_PRECONDITION. If the action does not produce the
-   * requested output, then that output will be omitted from the list. The server is free to arrange
-   * the output list as desired; clients MUST NOT assume that the output list is sorted.
-   *
-   * DEPRECATED as of v2.1. Servers that wish to be compatible with v2.0 API should still populate
-   * this field in addition to `output_symlinks`.
+   * `output_directories` field, if the directory was not a symbolic link. If an output of the same
+   * name was found, but was a symbolic link to a file instead of a directory, the server will
+   * return a FAILED_PRECONDITION. If the action does not produce the requested output, then that
+   * output will be omitted from the list. The server is free to arrange the output list as desired;
+   * clients MUST NOT assume that the output list is sorted. DEPRECATED as of v2.1. Servers that
+   * wish to be compatible with v2.0 API should still populate this field in addition to
+   * `output_symlinks`.
    * @return value or {@code null} for none
    */
   public java.util.List<BuildBazelRemoteExecutionV2OutputSymlink> getOutputDirectorySymlinks() {
@@ -296,15 +271,13 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * working directory, if the server supports SymlinkAbsolutePathStrategy.ALLOWED. For each output
    * directory requested in the `output_directories` field of the Action, if the directory existed
    * after the action completed, a single entry will be present either in this field, or in the
-   * `output_directories` field, if the directory was not a symbolic link.
-   *
-   * If an output of the same name was found, but was a symbolic link to a file instead of a
-   * directory, the server will return a FAILED_PRECONDITION. If the action does not produce the
-   * requested output, then that output will be omitted from the list. The server is free to arrange
-   * the output list as desired; clients MUST NOT assume that the output list is sorted.
-   *
-   * DEPRECATED as of v2.1. Servers that wish to be compatible with v2.0 API should still populate
-   * this field in addition to `output_symlinks`.
+   * `output_directories` field, if the directory was not a symbolic link. If an output of the same
+   * name was found, but was a symbolic link to a file instead of a directory, the server will
+   * return a FAILED_PRECONDITION. If the action does not produce the requested output, then that
+   * output will be omitted from the list. The server is free to arrange the output list as desired;
+   * clients MUST NOT assume that the output list is sorted. DEPRECATED as of v2.1. Servers that
+   * wish to be compatible with v2.0 API should still populate this field in addition to
+   * `output_symlinks`.
    * @param outputDirectorySymlinks outputDirectorySymlinks or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ActionResult setOutputDirectorySymlinks(java.util.List<BuildBazelRemoteExecutionV2OutputSymlink> outputDirectorySymlinks) {
@@ -318,16 +291,13 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * the server supports SymlinkAbsolutePathStrategy.ALLOWED. For each output file requested in the
    * `output_files` or `output_paths` field of the Action, if the corresponding file existed after
    * the action completed, a single entry will be present either in this field, or in the
-   * `output_files` field, if the file was not a symbolic link.
-   *
-   * If an output symbolic link of the same name as listed in `output_files` of the Command was
-   * found, but its target type was not a regular file, the server will return a
-   * FAILED_PRECONDITION. If the action does not produce the requested output, then that output will
-   * be omitted from the list. The server is free to arrange the output list as desired; clients
-   * MUST NOT assume that the output list is sorted.
-   *
-   * DEPRECATED as of v2.1. Servers that wish to be compatible with v2.0 API should still populate
-   * this field in addition to `output_symlinks`.
+   * `output_files` field, if the file was not a symbolic link. If an output symbolic link of the
+   * same name as listed in `output_files` of the Command was found, but its target type was not a
+   * regular file, the server will return a FAILED_PRECONDITION. If the action does not produce the
+   * requested output, then that output will be omitted from the list. The server is free to arrange
+   * the output list as desired; clients MUST NOT assume that the output list is sorted. DEPRECATED
+   * as of v2.1. Servers that wish to be compatible with v2.0 API should still populate this field
+   * in addition to `output_symlinks`.
    * @return value or {@code null} for none
    */
   public java.util.List<BuildBazelRemoteExecutionV2OutputSymlink> getOutputFileSymlinks() {
@@ -340,16 +310,13 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * the server supports SymlinkAbsolutePathStrategy.ALLOWED. For each output file requested in the
    * `output_files` or `output_paths` field of the Action, if the corresponding file existed after
    * the action completed, a single entry will be present either in this field, or in the
-   * `output_files` field, if the file was not a symbolic link.
-   *
-   * If an output symbolic link of the same name as listed in `output_files` of the Command was
-   * found, but its target type was not a regular file, the server will return a
-   * FAILED_PRECONDITION. If the action does not produce the requested output, then that output will
-   * be omitted from the list. The server is free to arrange the output list as desired; clients
-   * MUST NOT assume that the output list is sorted.
-   *
-   * DEPRECATED as of v2.1. Servers that wish to be compatible with v2.0 API should still populate
-   * this field in addition to `output_symlinks`.
+   * `output_files` field, if the file was not a symbolic link. If an output symbolic link of the
+   * same name as listed in `output_files` of the Command was found, but its target type was not a
+   * regular file, the server will return a FAILED_PRECONDITION. If the action does not produce the
+   * requested output, then that output will be omitted from the list. The server is free to arrange
+   * the output list as desired; clients MUST NOT assume that the output list is sorted. DEPRECATED
+   * as of v2.1. Servers that wish to be compatible with v2.0 API should still populate this field
+   * in addition to `output_symlinks`.
    * @param outputFileSymlinks outputFileSymlinks or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ActionResult setOutputFileSymlinks(java.util.List<BuildBazelRemoteExecutionV2OutputSymlink> outputFileSymlinks) {
@@ -361,12 +328,11 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * The output files of the action. For each output file requested in the `output_files` or
    * `output_paths` field of the Action, if the corresponding file existed after the action
    * completed, a single entry will be present either in this field, or the `output_file_symlinks`
-   * field if the file was a symbolic link to another file (`output_symlinks` field after v2.1).
-   *
-   * If an output listed in `output_files` was found, but was a directory rather than a regular
-   * file, the server will return a FAILED_PRECONDITION. If the action does not produce the
-   * requested output, then that output will be omitted from the list. The server is free to arrange
-   * the output list as desired; clients MUST NOT assume that the output list is sorted.
+   * field if the file was a symbolic link to another file (`output_symlinks` field after v2.1). If
+   * an output listed in `output_files` was found, but was a directory rather than a regular file,
+   * the server will return a FAILED_PRECONDITION. If the action does not produce the requested
+   * output, then that output will be omitted from the list. The server is free to arrange the
+   * output list as desired; clients MUST NOT assume that the output list is sorted.
    * @return value or {@code null} for none
    */
   public java.util.List<BuildBazelRemoteExecutionV2OutputFile> getOutputFiles() {
@@ -377,12 +343,11 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * The output files of the action. For each output file requested in the `output_files` or
    * `output_paths` field of the Action, if the corresponding file existed after the action
    * completed, a single entry will be present either in this field, or the `output_file_symlinks`
-   * field if the file was a symbolic link to another file (`output_symlinks` field after v2.1).
-   *
-   * If an output listed in `output_files` was found, but was a directory rather than a regular
-   * file, the server will return a FAILED_PRECONDITION. If the action does not produce the
-   * requested output, then that output will be omitted from the list. The server is free to arrange
-   * the output list as desired; clients MUST NOT assume that the output list is sorted.
+   * field if the file was a symbolic link to another file (`output_symlinks` field after v2.1). If
+   * an output listed in `output_files` was found, but was a directory rather than a regular file,
+   * the server will return a FAILED_PRECONDITION. If the action does not produce the requested
+   * output, then that output will be omitted from the list. The server is free to arrange the
+   * output list as desired; clients MUST NOT assume that the output list is sorted.
    * @param outputFiles outputFiles or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ActionResult setOutputFiles(java.util.List<BuildBazelRemoteExecutionV2OutputFile> outputFiles) {
@@ -397,11 +362,9 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * or even absolute paths outside of the working directory, if the server supports
    * SymlinkAbsolutePathStrategy.ALLOWED. A single entry for each output requested in `output_paths`
    * field of the Action, if the corresponding path existed after the action completed and was a
-   * symbolic link.
-   *
-   * If the action does not produce a requested output, then that output will be omitted from the
-   * list. The server is free to arrange the output list as desired; clients MUST NOT assume that
-   * the output list is sorted.
+   * symbolic link. If the action does not produce a requested output, then that output will be
+   * omitted from the list. The server is free to arrange the output list as desired; clients MUST
+   * NOT assume that the output list is sorted.
    * @return value or {@code null} for none
    */
   public java.util.List<BuildBazelRemoteExecutionV2OutputSymlink> getOutputSymlinks() {
@@ -415,11 +378,9 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * or even absolute paths outside of the working directory, if the server supports
    * SymlinkAbsolutePathStrategy.ALLOWED. A single entry for each output requested in `output_paths`
    * field of the Action, if the corresponding path existed after the action completed and was a
-   * symbolic link.
-   *
-   * If the action does not produce a requested output, then that output will be omitted from the
-   * list. The server is free to arrange the output list as desired; clients MUST NOT assume that
-   * the output list is sorted.
+   * symbolic link. If the action does not produce a requested output, then that output will be
+   * omitted from the list. The server is free to arrange the output list as desired; clients MUST
+   * NOT assume that the output list is sorted.
    * @param outputSymlinks outputSymlinks or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ActionResult setOutputSymlinks(java.util.List<BuildBazelRemoteExecutionV2OutputSymlink> outputSymlinks) {

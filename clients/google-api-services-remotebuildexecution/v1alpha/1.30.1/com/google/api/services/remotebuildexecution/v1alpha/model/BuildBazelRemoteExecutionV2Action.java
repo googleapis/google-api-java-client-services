@@ -18,17 +18,14 @@ package com.google.api.services.remotebuildexecution.v1alpha.model;
 
 /**
  * An `Action` captures all the information about an execution which is required to reproduce it.
- *
  * `Action`s are the core component of the [Execution] service. A single `Action` represents a
  * repeatable action that can be performed by the execution service. `Action`s can be succinctly
  * identified by the digest of their wire format encoding and, once an `Action` has been executed,
  * will be cached in the action cache. Future requests can then use the cached result rather than
- * needing to run afresh.
- *
- * When a server completes execution of an Action, it MAY choose to cache the result in the
- * ActionCache unless `do_not_cache` is `true`. Clients SHOULD expect the server to do so. By
- * default, future calls to Execute the same `Action` will also serve their results from the cache.
- * Clients must take care to understand the caching behaviour. Ideally, all `Action`s will be
+ * needing to run afresh. When a server completes execution of an Action, it MAY choose to cache the
+ * result in the ActionCache unless `do_not_cache` is `true`. Clients SHOULD expect the server to do
+ * so. By default, future calls to Execute the same `Action` will also serve their results from the
+ * cache. Clients must take care to understand the caching behaviour. Ideally, all `Action`s will be
  * reproducible so that serving a result from cache is always desirable and correct.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -70,10 +67,9 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
   /**
    * List of required supported NodeProperty keys. In order to ensure that equivalent `Action`s
    * always hash to the same value, the supported node properties MUST be lexicographically sorted
-   * by name. Sorting of strings is done by code point, equivalently, by the UTF-8 bytes.
-   *
-   * The interpretation of these properties is server-dependent. If a property is not recognized by
-   * the server, the server will return an `INVALID_ARGUMENT` error.
+   * by name. Sorting of strings is done by code point, equivalently, by the UTF-8 bytes. The
+   * interpretation of these properties is server-dependent. If a property is not recognized by the
+   * server, the server will return an `INVALID_ARGUMENT` error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +80,6 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
    * is specifying that the execution should continue as long as the server will let it. The server
    * SHOULD impose a timeout if the client does not specify one, however, if the client does specify
    * a timeout that is longer than the server's maximum timeout, the server MUST reject the request.
-   *
    * The timeout is a part of the Action message, and therefore two `Actions` with different
    * timeouts are different, even if they are otherwise identical. This is because, if they were
    * not, running an `Action` with a lower timeout than is required might result in a cache hit from
@@ -158,10 +153,9 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
   /**
    * List of required supported NodeProperty keys. In order to ensure that equivalent `Action`s
    * always hash to the same value, the supported node properties MUST be lexicographically sorted
-   * by name. Sorting of strings is done by code point, equivalently, by the UTF-8 bytes.
-   *
-   * The interpretation of these properties is server-dependent. If a property is not recognized by
-   * the server, the server will return an `INVALID_ARGUMENT` error.
+   * by name. Sorting of strings is done by code point, equivalently, by the UTF-8 bytes. The
+   * interpretation of these properties is server-dependent. If a property is not recognized by the
+   * server, the server will return an `INVALID_ARGUMENT` error.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOutputNodeProperties() {
@@ -171,10 +165,9 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
   /**
    * List of required supported NodeProperty keys. In order to ensure that equivalent `Action`s
    * always hash to the same value, the supported node properties MUST be lexicographically sorted
-   * by name. Sorting of strings is done by code point, equivalently, by the UTF-8 bytes.
-   *
-   * The interpretation of these properties is server-dependent. If a property is not recognized by
-   * the server, the server will return an `INVALID_ARGUMENT` error.
+   * by name. Sorting of strings is done by code point, equivalently, by the UTF-8 bytes. The
+   * interpretation of these properties is server-dependent. If a property is not recognized by the
+   * server, the server will return an `INVALID_ARGUMENT` error.
    * @param outputNodeProperties outputNodeProperties or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Action setOutputNodeProperties(java.util.List<java.lang.String> outputNodeProperties) {
@@ -187,7 +180,6 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
    * is specifying that the execution should continue as long as the server will let it. The server
    * SHOULD impose a timeout if the client does not specify one, however, if the client does specify
    * a timeout that is longer than the server's maximum timeout, the server MUST reject the request.
-   *
    * The timeout is a part of the Action message, and therefore two `Actions` with different
    * timeouts are different, even if they are otherwise identical. This is because, if they were
    * not, running an `Action` with a lower timeout than is required might result in a cache hit from
@@ -205,7 +197,6 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
    * is specifying that the execution should continue as long as the server will let it. The server
    * SHOULD impose a timeout if the client does not specify one, however, if the client does specify
    * a timeout that is longer than the server's maximum timeout, the server MUST reject the request.
-   *
    * The timeout is a part of the Action message, and therefore two `Actions` with different
    * timeouts are different, even if they are otherwise identical. This is because, if they were
    * not, running an `Action` with a lower timeout than is required might result in a cache hit from

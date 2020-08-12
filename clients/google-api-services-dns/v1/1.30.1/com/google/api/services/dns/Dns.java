@@ -151,8 +151,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @param content the {@link com.google.api.services.dns.model.Change}
      * @return the request
      */
@@ -177,8 +176,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @param content the {@link com.google.api.services.dns.model.Change}
        * @since 1.13
        */
@@ -316,10 +314,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
-     * @param changeId The identifier of the requested change, from a previous
-    ResourceRecordSetsChangeResponse.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param changeId The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.
      * @return the request
      */
     public Get get(java.lang.String project, java.lang.String managedZone, java.lang.String changeId) throws java.io.IOException {
@@ -343,10 +339,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
-       * @param changeId The identifier of the requested change, from a previous
-    ResourceRecordSetsChangeResponse.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param changeId The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.
        * @since 1.13
        */
       protected Get(java.lang.String project, java.lang.String managedZone, java.lang.String changeId) {
@@ -514,8 +508,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @return the request
      */
     public List list(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -539,8 +532,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @since 1.13
        */
       protected List(java.lang.String project, java.lang.String managedZone) {
@@ -765,8 +757,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @param dnsKeyId The identifier of the requested DnsKey.
      * @return the request
      */
@@ -791,8 +782,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @param dnsKeyId The identifier of the requested DnsKey.
        * @since 1.13
        */
@@ -980,8 +970,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @return the request
      */
     public List list(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -1005,8 +994,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @since 1.13
        */
       protected List(java.lang.String project, java.lang.String managedZone) {
@@ -1777,8 +1765,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @return the request
      */
     public Delete delete(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -1802,8 +1789,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @since 1.13
        */
       protected Delete(java.lang.String project, java.lang.String managedZone) {
@@ -1940,8 +1926,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @return the request
      */
     public Get get(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -1965,8 +1950,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @since 1.13
        */
       protected Get(java.lang.String project, java.lang.String managedZone) {
@@ -2300,8 +2284,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @param content the {@link com.google.api.services.dns.model.ManagedZone}
      * @return the request
      */
@@ -2326,8 +2309,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @param content the {@link com.google.api.services.dns.model.ManagedZone}
        * @since 1.13
        */
@@ -2465,8 +2447,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @param content the {@link com.google.api.services.dns.model.ManagedZone}
      * @return the request
      */
@@ -2491,8 +2472,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @param content the {@link com.google.api.services.dns.model.ManagedZone}
        * @since 1.13
        */
@@ -3802,8 +3782,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @return the request
      */
     public List list(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -3827,8 +3806,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed
-    zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @since 1.13
        */
       protected List(java.lang.String project, java.lang.String managedZone) {
@@ -3961,9 +3939,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return this;
       }
 
-      /**
-       * Restricts the list to return only records with this fully qualified domain name.
-       */
+      /** Restricts the list to return only records with this fully qualified domain name. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
@@ -3973,9 +3949,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return name;
       }
 
-      /**
-       * Restricts the list to return only records with this fully qualified domain name.
-       */
+      /** Restricts the list to return only records with this fully qualified domain name. */
       public List setName(java.lang.String name) {
         this.name = name;
         return this;

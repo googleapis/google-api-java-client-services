@@ -34,7 +34,6 @@ public final class GoogleCloudDocumentaiV1beta2DocumentLabel extends com.google.
 
   /**
    * Label is generated AutoML model. This field stores the full resource name of the AutoML model.
-   *
    * Format: `projects/{project-id}/locations/{location-id}/models/{model-id}`
    * The value may be {@code null}.
    */
@@ -49,10 +48,8 @@ public final class GoogleCloudDocumentaiV1beta2DocumentLabel extends com.google.
   private java.lang.Float confidence;
 
   /**
-   * Name of the label.
-   *
-   * When the label is generated from AutoML Text Classification model, this field represents the
-   * name of the category.
+   * Name of the label. When the label is generated from AutoML Text Classification model, this
+   * field represents the name of the category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +57,6 @@ public final class GoogleCloudDocumentaiV1beta2DocumentLabel extends com.google.
 
   /**
    * Label is generated AutoML model. This field stores the full resource name of the AutoML model.
-   *
    * Format: `projects/{project-id}/locations/{location-id}/models/{model-id}`
    * @return value or {@code null} for none
    */
@@ -70,7 +66,6 @@ public final class GoogleCloudDocumentaiV1beta2DocumentLabel extends com.google.
 
   /**
    * Label is generated AutoML model. This field stores the full resource name of the AutoML model.
-   *
    * Format: `projects/{project-id}/locations/{location-id}/models/{model-id}`
    * @param automlModel automlModel or {@code null} for none
    */
@@ -97,10 +92,8 @@ public final class GoogleCloudDocumentaiV1beta2DocumentLabel extends com.google.
   }
 
   /**
-   * Name of the label.
-   *
-   * When the label is generated from AutoML Text Classification model, this field represents the
-   * name of the category.
+   * Name of the label. When the label is generated from AutoML Text Classification model, this
+   * field represents the name of the category.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,10 +101,8 @@ public final class GoogleCloudDocumentaiV1beta2DocumentLabel extends com.google.
   }
 
   /**
-   * Name of the label.
-   *
-   * When the label is generated from AutoML Text Classification model, this field represents the
-   * name of the category.
+   * Name of the label. When the label is generated from AutoML Text Classification model, this
+   * field represents the name of the category.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentLabel setName(java.lang.String name) {

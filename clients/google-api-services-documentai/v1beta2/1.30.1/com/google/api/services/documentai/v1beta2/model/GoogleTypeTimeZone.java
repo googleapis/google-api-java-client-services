@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta2.model;
 
 /**
- * Parameters to control AutoML model prediction behavior.
+ * Represents a time zone from the [IANA Time Zone Database](https://www.iana.org/time-zones).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -28,43 +28,64 @@ package com.google.api.services.documentai.v1beta2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDocumentaiV1beta2AutoMlParams extends com.google.api.client.json.GenericJson {
+public final class GoogleTypeTimeZone extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the AutoML model. Format: `projects/{project-id}/locations/{location-
-   * id}/models/{model-id}`.
+   * IANA Time Zone Database time zone, e.g. "America/New_York".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String model;
+  private java.lang.String id;
 
   /**
-   * Resource name of the AutoML model. Format: `projects/{project-id}/locations/{location-
-   * id}/models/{model-id}`.
+   * Optional. IANA Time Zone Database version number, e.g. "2019a".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
+
+  /**
+   * IANA Time Zone Database time zone, e.g. "America/New_York".
    * @return value or {@code null} for none
    */
-  public java.lang.String getModel() {
-    return model;
+  public java.lang.String getId() {
+    return id;
   }
 
   /**
-   * Resource name of the AutoML model. Format: `projects/{project-id}/locations/{location-
-   * id}/models/{model-id}`.
-   * @param model model or {@code null} for none
+   * IANA Time Zone Database time zone, e.g. "America/New_York".
+   * @param id id or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta2AutoMlParams setModel(java.lang.String model) {
-    this.model = model;
+  public GoogleTypeTimeZone setId(java.lang.String id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * Optional. IANA Time Zone Database version number, e.g. "2019a".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * Optional. IANA Time Zone Database version number, e.g. "2019a".
+   * @param version version or {@code null} for none
+   */
+  public GoogleTypeTimeZone setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 
   @Override
-  public GoogleCloudDocumentaiV1beta2AutoMlParams set(String fieldName, Object value) {
-    return (GoogleCloudDocumentaiV1beta2AutoMlParams) super.set(fieldName, value);
+  public GoogleTypeTimeZone set(String fieldName, Object value) {
+    return (GoogleTypeTimeZone) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDocumentaiV1beta2AutoMlParams clone() {
-    return (GoogleCloudDocumentaiV1beta2AutoMlParams) super.clone();
+  public GoogleTypeTimeZone clone() {
+    return (GoogleTypeTimeZone) super.clone();
   }
 
 }

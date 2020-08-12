@@ -17,11 +17,8 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * The request for PatchServiceAccount.
- *
- * You can patch only the `display_name` and `description` fields. You must use the `update_mask`
- * field to specify which of these fields you want to patch.
- *
+ * The request for PatchServiceAccount. You can patch only the `display_name` and `description`
+ * fields. You must use the `update_mask` field to specify which of these fields you want to patch.
  * Only the fields specified in the request are guaranteed to be returned in the response. Other
  * fields may be empty in the response.
  *

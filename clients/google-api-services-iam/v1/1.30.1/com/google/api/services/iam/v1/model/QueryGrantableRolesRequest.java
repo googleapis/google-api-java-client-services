@@ -31,20 +31,17 @@ package com.google.api.services.iam.v1.model;
 public final class QueryGrantableRolesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The full resource name to query from the list of grantable roles.
-   *
-   * The name follows the Google Cloud Platform resource format. For example, a Cloud Platform
-   * project with id `my-project` will be named `//cloudresourcemanager.googleapis.com/projects/my-
-   * project`.
+   * Required. The full resource name to query from the list of grantable roles. The name follows
+   * the Google Cloud Platform resource format. For example, a Cloud Platform project with id `my-
+   * project` will be named `//cloudresourcemanager.googleapis.com/projects/my-project`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fullResourceName;
 
   /**
-   * Optional limit on the number of roles to include in the response.
-   *
-   * The default is 300, and the maximum is 1,000.
+   * Optional limit on the number of roles to include in the response. The default is 300, and the
+   * maximum is 1,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,11 +61,9 @@ public final class QueryGrantableRolesRequest extends com.google.api.client.json
   private java.lang.String view;
 
   /**
-   * Required. The full resource name to query from the list of grantable roles.
-   *
-   * The name follows the Google Cloud Platform resource format. For example, a Cloud Platform
-   * project with id `my-project` will be named `//cloudresourcemanager.googleapis.com/projects/my-
-   * project`.
+   * Required. The full resource name to query from the list of grantable roles. The name follows
+   * the Google Cloud Platform resource format. For example, a Cloud Platform project with id `my-
+   * project` will be named `//cloudresourcemanager.googleapis.com/projects/my-project`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullResourceName() {
@@ -76,11 +71,9 @@ public final class QueryGrantableRolesRequest extends com.google.api.client.json
   }
 
   /**
-   * Required. The full resource name to query from the list of grantable roles.
-   *
-   * The name follows the Google Cloud Platform resource format. For example, a Cloud Platform
-   * project with id `my-project` will be named `//cloudresourcemanager.googleapis.com/projects/my-
-   * project`.
+   * Required. The full resource name to query from the list of grantable roles. The name follows
+   * the Google Cloud Platform resource format. For example, a Cloud Platform project with id `my-
+   * project` will be named `//cloudresourcemanager.googleapis.com/projects/my-project`.
    * @param fullResourceName fullResourceName or {@code null} for none
    */
   public QueryGrantableRolesRequest setFullResourceName(java.lang.String fullResourceName) {
@@ -89,9 +82,8 @@ public final class QueryGrantableRolesRequest extends com.google.api.client.json
   }
 
   /**
-   * Optional limit on the number of roles to include in the response.
-   *
-   * The default is 300, and the maximum is 1,000.
+   * Optional limit on the number of roles to include in the response. The default is 300, and the
+   * maximum is 1,000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -99,9 +91,8 @@ public final class QueryGrantableRolesRequest extends com.google.api.client.json
   }
 
   /**
-   * Optional limit on the number of roles to include in the response.
-   *
-   * The default is 300, and the maximum is 1,000.
+   * Optional limit on the number of roles to include in the response. The default is 300, and the
+   * maximum is 1,000.
    * @param pageSize pageSize or {@code null} for none
    */
   public QueryGrantableRolesRequest setPageSize(java.lang.Integer pageSize) {

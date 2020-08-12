@@ -18,9 +18,8 @@ package com.google.api.services.iam.v1.model;
 
 /**
  * Deprecated. [Migrate to Service Account Credentials
- * API](https://cloud.google.com/iam/help/credentials/migrate-api).
- *
- * The service account sign JWT response.
+ * API](https://cloud.google.com/iam/help/credentials/migrate-api). The service account sign JWT
+ * response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -35,9 +34,8 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The id of the key used to sign the JWT.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The id of the key used to sign
+   * the JWT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,9 +43,7 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The signed JWT.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The signed JWT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +51,8 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The id of the key used to sign the JWT.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The id of the key used to sign
+   * the JWT.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyId() {
@@ -66,9 +61,8 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The id of the key used to sign the JWT.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The id of the key used to sign
+   * the JWT.
    * @param keyId keyId or {@code null} for none
    */
   public SignJwtResponse setKeyId(java.lang.String keyId) {
@@ -78,9 +72,7 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The signed JWT.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The signed JWT.
    * @return value or {@code null} for none
    */
   public java.lang.String getSignedJwt() {
@@ -89,9 +81,7 @@ public final class SignJwtResponse extends com.google.api.client.json.GenericJso
 
   /**
    * Deprecated. [Migrate to Service Account Credentials
-   * API](https://cloud.google.com/iam/help/credentials/migrate-api).
-   *
-   * The signed JWT.
+   * API](https://cloud.google.com/iam/help/credentials/migrate-api). The signed JWT.
    * @param signedJwt signedJwt or {@code null} for none
    */
   public SignJwtResponse setSignedJwt(java.lang.String signedJwt) {

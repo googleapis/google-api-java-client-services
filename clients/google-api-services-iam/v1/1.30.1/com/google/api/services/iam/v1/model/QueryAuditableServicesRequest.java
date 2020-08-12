@@ -31,22 +31,18 @@ package com.google.api.services.iam.v1.model;
 public final class QueryAuditableServicesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The full resource name to query from the list of auditable services.
-   *
-   * The name follows the Google Cloud Platform resource format. For example, a Cloud Platform
-   * project with id `my-project` will be named `//cloudresourcemanager.googleapis.com/projects/my-
-   * project`.
+   * Required. The full resource name to query from the list of auditable services. The name follows
+   * the Google Cloud Platform resource format. For example, a Cloud Platform project with id `my-
+   * project` will be named `//cloudresourcemanager.googleapis.com/projects/my-project`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fullResourceName;
 
   /**
-   * Required. The full resource name to query from the list of auditable services.
-   *
-   * The name follows the Google Cloud Platform resource format. For example, a Cloud Platform
-   * project with id `my-project` will be named `//cloudresourcemanager.googleapis.com/projects/my-
-   * project`.
+   * Required. The full resource name to query from the list of auditable services. The name follows
+   * the Google Cloud Platform resource format. For example, a Cloud Platform project with id `my-
+   * project` will be named `//cloudresourcemanager.googleapis.com/projects/my-project`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullResourceName() {
@@ -54,11 +50,9 @@ public final class QueryAuditableServicesRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. The full resource name to query from the list of auditable services.
-   *
-   * The name follows the Google Cloud Platform resource format. For example, a Cloud Platform
-   * project with id `my-project` will be named `//cloudresourcemanager.googleapis.com/projects/my-
-   * project`.
+   * Required. The full resource name to query from the list of auditable services. The name follows
+   * the Google Cloud Platform resource format. For example, a Cloud Platform project with id `my-
+   * project` will be named `//cloudresourcemanager.googleapis.com/projects/my-project`.
    * @param fullResourceName fullResourceName or {@code null} for none
    */
   public QueryAuditableServicesRequest setFullResourceName(java.lang.String fullResourceName) {

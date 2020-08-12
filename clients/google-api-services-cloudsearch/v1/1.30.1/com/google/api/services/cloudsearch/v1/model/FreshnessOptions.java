@@ -46,10 +46,8 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
    * This property indicates the freshness level of the object in the index. If set, this property
    * must be a top-level property within the property definitions and it must be a timestamp type or
    * date type. Otherwise, the Indexing API uses updateTime as the freshness indicator. The maximum
-   * length is 256 characters.
-   *
-   * When a property is used to calculate freshness, the value defaults to 2 years from the current
-   * time.
+   * length is 256 characters. When a property is used to calculate freshness, the value defaults to
+   * 2 years from the current time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,10 +76,8 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
    * This property indicates the freshness level of the object in the index. If set, this property
    * must be a top-level property within the property definitions and it must be a timestamp type or
    * date type. Otherwise, the Indexing API uses updateTime as the freshness indicator. The maximum
-   * length is 256 characters.
-   *
-   * When a property is used to calculate freshness, the value defaults to 2 years from the current
-   * time.
+   * length is 256 characters. When a property is used to calculate freshness, the value defaults to
+   * 2 years from the current time.
    * @return value or {@code null} for none
    */
   public java.lang.String getFreshnessProperty() {
@@ -92,10 +88,8 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
    * This property indicates the freshness level of the object in the index. If set, this property
    * must be a top-level property within the property definitions and it must be a timestamp type or
    * date type. Otherwise, the Indexing API uses updateTime as the freshness indicator. The maximum
-   * length is 256 characters.
-   *
-   * When a property is used to calculate freshness, the value defaults to 2 years from the current
-   * time.
+   * length is 256 characters. When a property is used to calculate freshness, the value defaults to
+   * 2 years from the current time.
    * @param freshnessProperty freshnessProperty or {@code null} for none
    */
   public FreshnessOptions setFreshnessProperty(java.lang.String freshnessProperty) {

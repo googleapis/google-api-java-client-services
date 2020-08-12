@@ -31,7 +31,7 @@ public final class PollItemsResponse extends com.google.api.client.json.GenericJ
 
   /**
    * Set of items from the queue available for connector to process. These items have the following
-   * subset of fields populated:  version metadata.hash structured_data.hash content.hash payload
+   * subset of fields populated: version metadata.hash structured_data.hash content.hash payload
    * status queue
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class PollItemsResponse extends com.google.api.client.json.GenericJ
 
   /**
    * Set of items from the queue available for connector to process. These items have the following
-   * subset of fields populated:  version metadata.hash structured_data.hash content.hash payload
+   * subset of fields populated: version metadata.hash structured_data.hash content.hash payload
    * status queue
    * @return value or {@code null} for none
    */
@@ -56,7 +56,7 @@ public final class PollItemsResponse extends com.google.api.client.json.GenericJ
 
   /**
    * Set of items from the queue available for connector to process. These items have the following
-   * subset of fields populated:  version metadata.hash structured_data.hash content.hash payload
+   * subset of fields populated: version metadata.hash structured_data.hash content.hash payload
    * status queue
    * @param items items or {@code null} for none
    */

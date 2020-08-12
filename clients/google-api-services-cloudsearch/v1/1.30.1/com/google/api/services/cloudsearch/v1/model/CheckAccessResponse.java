@@ -30,14 +30,14 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class CheckAccessResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Returns true if principal has access.  Returns false otherwise.
+   * Returns true if principal has access. Returns false otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hasAccess;
 
   /**
-   * Returns true if principal has access.  Returns false otherwise.
+   * Returns true if principal has access. Returns false otherwise.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHasAccess() {
@@ -45,7 +45,7 @@ public final class CheckAccessResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Returns true if principal has access.  Returns false otherwise.
+   * Returns true if principal has access. Returns false otherwise.
    * @param hasAccess hasAccess or {@code null} for none
    */
   public CheckAccessResponse setHasAccess(java.lang.Boolean hasAccess) {

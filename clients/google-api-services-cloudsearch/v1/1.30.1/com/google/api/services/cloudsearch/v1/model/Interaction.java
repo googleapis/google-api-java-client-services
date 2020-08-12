@@ -30,7 +30,7 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class Interaction extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time when the user acted on the item.  If multiple actions of the same type exist for a
+   * The time when the user acted on the item. If multiple actions of the same type exist for a
    * single user, only the most recent action is recorded.
    * The value may be {@code null}.
    */
@@ -51,7 +51,7 @@ public final class Interaction extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * The time when the user acted on the item.  If multiple actions of the same type exist for a
+   * The time when the user acted on the item. If multiple actions of the same type exist for a
    * single user, only the most recent action is recorded.
    * @return value or {@code null} for none
    */
@@ -60,7 +60,7 @@ public final class Interaction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the user acted on the item.  If multiple actions of the same type exist for a
+   * The time when the user acted on the item. If multiple actions of the same type exist for a
    * single user, only the most recent action is recorded.
    * @param interactionTime interactionTime or {@code null} for none
    */

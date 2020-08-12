@@ -31,7 +31,7 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the container for this item. Deletion of the container item leads to automatic
-   * deletion of this item.  Note: ACLs are not inherited from a container item. To provide ACL
+   * deletion of this item. Note: ACLs are not inherited from a container item. To provide ACL
    * inheritance for an item, use the inheritAclFrom field. The maximum length is 1536 characters.
    * The value may be {@code null}.
    */
@@ -63,7 +63,7 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   private java.lang.String hash;
 
   /**
-   * A list of interactions for the item.  Interactions are used to improve Search quality, but are
+   * A list of interactions for the item. Interactions are used to improve Search quality, but are
    * not exposed to end users. The maximum number of elements is 1000.
    * The value may be {@code null}.
    */
@@ -93,8 +93,8 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   private java.lang.String mimeType;
 
   /**
-   * The type of the item.  This should correspond to the name of an object definition in the schema
-   * registered for the data source.  For example, if the schema for the data source contains an
+   * The type of the item. This should correspond to the name of an object definition in the schema
+   * registered for the data source. For example, if the schema for the data source contains an
    * object definition with name 'document', then item indexing requests for objects of that type
    * should set objectType to 'document'. The maximum length is 256 characters.
    * The value may be {@code null}.
@@ -110,8 +110,8 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   private SearchQualityMetadata searchQualityMetadata;
 
   /**
-   * Link to the source repository serving the data.  earch results apply this link to the title.
-   * Whitespace or special characters may cause Cloud earch result links to trigger a redirect
+   * Link to the source repository serving the data. Search results apply this link to the title.
+   * Whitespace or special characters may cause Cloud Search result links to trigger a redirect
    * notice; to avoid this, encode the URL. The maximum length is 2048 characters.
    * The value may be {@code null}.
    */
@@ -119,7 +119,7 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceRepositoryUrl;
 
   /**
-   * The title of the item.  If given, this will be the displayed title of the Search result. The
+   * The title of the item. If given, this will be the displayed title of the Search result. The
    * maximum length is 2048 characters.
    * The value may be {@code null}.
    */
@@ -135,7 +135,7 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the container for this item. Deletion of the container item leads to automatic
-   * deletion of this item.  Note: ACLs are not inherited from a container item. To provide ACL
+   * deletion of this item. Note: ACLs are not inherited from a container item. To provide ACL
    * inheritance for an item, use the inheritAclFrom field. The maximum length is 1536 characters.
    * @return value or {@code null} for none
    */
@@ -145,7 +145,7 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the container for this item. Deletion of the container item leads to automatic
-   * deletion of this item.  Note: ACLs are not inherited from a container item. To provide ACL
+   * deletion of this item. Note: ACLs are not inherited from a container item. To provide ACL
    * inheritance for an item, use the inheritAclFrom field. The maximum length is 1536 characters.
    * @param containerName containerName or {@code null} for none
    */
@@ -212,7 +212,7 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of interactions for the item.  Interactions are used to improve Search quality, but are
+   * A list of interactions for the item. Interactions are used to improve Search quality, but are
    * not exposed to end users. The maximum number of elements is 1000.
    * @return value or {@code null} for none
    */
@@ -221,7 +221,7 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of interactions for the item.  Interactions are used to improve Search quality, but are
+   * A list of interactions for the item. Interactions are used to improve Search quality, but are
    * not exposed to end users. The maximum number of elements is 1000.
    * @param interactions interactions or {@code null} for none
    */
@@ -269,8 +269,8 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the item.  This should correspond to the name of an object definition in the schema
-   * registered for the data source.  For example, if the schema for the data source contains an
+   * The type of the item. This should correspond to the name of an object definition in the schema
+   * registered for the data source. For example, if the schema for the data source contains an
    * object definition with name 'document', then item indexing requests for objects of that type
    * should set objectType to 'document'. The maximum length is 256 characters.
    * @return value or {@code null} for none
@@ -280,8 +280,8 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the item.  This should correspond to the name of an object definition in the schema
-   * registered for the data source.  For example, if the schema for the data source contains an
+   * The type of the item. This should correspond to the name of an object definition in the schema
+   * registered for the data source. For example, if the schema for the data source contains an
    * object definition with name 'document', then item indexing requests for objects of that type
    * should set objectType to 'document'. The maximum length is 256 characters.
    * @param objectType objectType or {@code null} for none
@@ -309,8 +309,8 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link to the source repository serving the data.  earch results apply this link to the title.
-   * Whitespace or special characters may cause Cloud earch result links to trigger a redirect
+   * Link to the source repository serving the data. Search results apply this link to the title.
+   * Whitespace or special characters may cause Cloud Search result links to trigger a redirect
    * notice; to avoid this, encode the URL. The maximum length is 2048 characters.
    * @return value or {@code null} for none
    */
@@ -319,8 +319,8 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link to the source repository serving the data.  earch results apply this link to the title.
-   * Whitespace or special characters may cause Cloud earch result links to trigger a redirect
+   * Link to the source repository serving the data. Search results apply this link to the title.
+   * Whitespace or special characters may cause Cloud Search result links to trigger a redirect
    * notice; to avoid this, encode the URL. The maximum length is 2048 characters.
    * @param sourceRepositoryUrl sourceRepositoryUrl or {@code null} for none
    */
@@ -330,7 +330,7 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The title of the item.  If given, this will be the displayed title of the Search result. The
+   * The title of the item. If given, this will be the displayed title of the Search result. The
    * maximum length is 2048 characters.
    * @return value or {@code null} for none
    */
@@ -339,7 +339,7 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The title of the item.  If given, this will be the displayed title of the Search result. The
+   * The title of the item. If given, this will be the displayed title of the Search result. The
    * maximum length is 2048 characters.
    * @param title title or {@code null} for none
    */

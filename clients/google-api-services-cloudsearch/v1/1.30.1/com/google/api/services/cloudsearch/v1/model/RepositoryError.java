@@ -38,7 +38,7 @@ public final class RepositoryError extends com.google.api.client.json.GenericJso
   private java.lang.String errorMessage;
 
   /**
-   * Error codes.  Matches the definition of HTTP status codes.
+   * Error codes. Matches the definition of HTTP status codes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class RepositoryError extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Error codes.  Matches the definition of HTTP status codes.
+   * Error codes. Matches the definition of HTTP status codes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHttpStatusCode() {
@@ -79,7 +79,7 @@ public final class RepositoryError extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Error codes.  Matches the definition of HTTP status codes.
+   * Error codes. Matches the definition of HTTP status codes.
    * @param httpStatusCode httpStatusCode or {@code null} for none
    */
   public RepositoryError setHttpStatusCode(java.lang.Integer httpStatusCode) {

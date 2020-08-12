@@ -2535,9 +2535,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * Page token, returned by a previous call to request the next page of results
-       */
+      /** Page token, returned by a previous call to request the next page of results */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
@@ -2547,9 +2545,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return pageToken;
       }
 
-      /**
-       * Page token, returned by a previous call to request the next page of results
-       */
+      /** Page token, returned by a previous call to request the next page of results */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -3675,14 +3671,14 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * If set, then only the Routines matching this filter are returned. The current supported
-       * form is either "routine_type:" or "routineType:", where  is a RoutineType enum. Example:
+       * form is either "routine_type:" or "routineType:", where is a RoutineType enum. Example:
        * "routineType:SCALAR_FUNCTION".
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** If set, then only the Routines matching this filter are returned. The current supported form is
-     either "routine_type:" or "routineType:", where  is a RoutineType enum. Example:
+     either "routine_type:" or "routineType:", where is a RoutineType enum. Example:
      "routineType:SCALAR_FUNCTION".
        */
       public java.lang.String getFilter() {
@@ -3691,7 +3687,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * If set, then only the Routines matching this filter are returned. The current supported
-       * form is either "routine_type:" or "routineType:", where  is a RoutineType enum. Example:
+       * form is either "routine_type:" or "routineType:", where is a RoutineType enum. Example:
        * "routineType:SCALAR_FUNCTION".
        */
       public List setFilter(java.lang.String filter) {
@@ -3722,9 +3718,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * Page token, returned by a previous call, to request the next page of results
-       */
+      /** Page token, returned by a previous call, to request the next page of results */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
@@ -3734,9 +3728,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return pageToken;
       }
 
-      /**
-       * Page token, returned by a previous call, to request the next page of results
-       */
+      /** Page token, returned by a previous call, to request the next page of results */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -4650,8 +4642,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.bigquery.model.GetIamPolicyRequest}
      * @return the request
@@ -4681,8 +4672,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.bigquery.model.GetIamPolicyRequest}
        * @since 1.13
@@ -5179,17 +5169,15 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Sets the access control policy on the specified resource. Replaces any existing policy.
-     *
-     * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+     * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+     * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
      *
      * Create a request for the method "tables.setIamPolicy".
      *
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.bigquery.model.SetIamPolicyRequest}
      * @return the request
@@ -5208,9 +5196,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^projects/[^/]+/datasets/[^/]+/tables/[^/]+$");
 
       /**
-       * Sets the access control policy on the specified resource. Replaces any existing policy.
-       *
-       * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+       * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+       * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
        *
        * Create a request for the method "tables.setIamPolicy".
        *
@@ -5220,8 +5207,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.bigquery.model.SetIamPolicyRequest}
        * @since 1.13
@@ -5306,18 +5292,16 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-     * this will return an empty set of permissions, not a `NOT_FOUND` error.
-     *
-     * Note: This operation is designed to be used for building permission-aware UIs and command-line
-     * tools, not for authorization checking. This operation may "fail open" without warning.
+     * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+     * designed to be used for building permission-aware UIs and command-line tools, not for
+     * authorization checking. This operation may "fail open" without warning.
      *
      * Create a request for the method "tables.testIamPermissions".
      *
      * This request holds the parameters needed by the bigquery server.  After setting any optional
      * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
      *
-     * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
      * @param content the {@link com.google.api.services.bigquery.model.TestIamPermissionsRequest}
      * @return the request
@@ -5337,10 +5321,9 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Returns permissions that a caller has on the specified resource. If the resource does not
-       * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
-       *
-       * Note: This operation is designed to be used for building permission-aware UIs and command-line
-       * tools, not for authorization checking. This operation may "fail open" without warning.
+       * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+       * operation is designed to be used for building permission-aware UIs and command-line tools, not
+       * for authorization checking. This operation may "fail open" without warning.
        *
        * Create a request for the method "tables.testIamPermissions".
        *
@@ -5350,8 +5333,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.bigquery.model.TestIamPermissionsRequest}
        * @since 1.13

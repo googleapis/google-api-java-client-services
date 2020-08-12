@@ -17,11 +17,10 @@
 package com.google.api.services.osconfig.v1beta.model;
 
 /**
- * An assignment represents the group or groups of VM instances that the policy applies to.
- *
- * If an assignment is empty, it applies to all VM instances. Otherwise, the targeted VM instances
- * must meet all the criteria specified. So if both labels and zones are specified, the policy
- * applies to VM instances with those labels and in those zones.
+ * An assignment represents the group or groups of VM instances that the policy applies to. If an
+ * assignment is empty, it applies to all VM instances. Otherwise, the targeted VM instances must
+ * meet all the criteria specified. So if both labels and zones are specified, the policy applies to
+ * VM instances with those labels and in those zones.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud OS Config API. For a detailed explanation see:
@@ -42,12 +41,9 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   private java.util.List<AssignmentGroupLabel> groupLabels;
 
   /**
-   * Targets VM instances whose name starts with one of these prefixes.
-   *
-   * Like labels, this is another way to group VM instances when targeting configs, for example
-   * prefix="prod-".
-   *
-   * Only supported for project-level policies.
+   * Targets VM instances whose name starts with one of these prefixes. Like labels, this is another
+   * way to group VM instances when targeting configs, for example prefix="prod-". Only supported
+   * for project-level policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,30 +51,26 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Targets any of the instances specified. Instances are specified by their URI in the form
-   * `zones/[ZONE]/instances/[INSTANCE_NAME]`.
-   *
-   * Instance targeting is uncommon and is supported to facilitate the management of changes by the
-   * instance or to target specific VM instances for development and testing.
-   *
-   * Only supported for project-level policies and must reference instances within this project.
+   * `zones/[ZONE]/instances/[INSTANCE_NAME]`. Instance targeting is uncommon and is supported to
+   * facilitate the management of changes by the instance or to target specific VM instances for
+   * development and testing. Only supported for project-level policies and must reference instances
+   * within this project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> instances;
 
   /**
-   * Targets VM instances matching at least one of the following OS types.
-   *
-   * VM instances must match all supplied criteria for a given OsType to be included.
+   * Targets VM instances matching at least one of the following OS types. VM instances must match
+   * all supplied criteria for a given OsType to be included.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AssignmentOsType> osTypes;
 
   /**
-   * Targets instances in any of these zones. Leave empty to target instances in any zone.
-   *
-   * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+   * Targets instances in any of these zones. Leave empty to target instances in any zone. Zonal
+   * targeting is uncommon and is supported to facilitate the management of changes by zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,12 +96,9 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Targets VM instances whose name starts with one of these prefixes.
-   *
-   * Like labels, this is another way to group VM instances when targeting configs, for example
-   * prefix="prod-".
-   *
-   * Only supported for project-level policies.
+   * Targets VM instances whose name starts with one of these prefixes. Like labels, this is another
+   * way to group VM instances when targeting configs, for example prefix="prod-". Only supported
+   * for project-level policies.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInstanceNamePrefixes() {
@@ -117,12 +106,9 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Targets VM instances whose name starts with one of these prefixes.
-   *
-   * Like labels, this is another way to group VM instances when targeting configs, for example
-   * prefix="prod-".
-   *
-   * Only supported for project-level policies.
+   * Targets VM instances whose name starts with one of these prefixes. Like labels, this is another
+   * way to group VM instances when targeting configs, for example prefix="prod-". Only supported
+   * for project-level policies.
    * @param instanceNamePrefixes instanceNamePrefixes or {@code null} for none
    */
   public Assignment setInstanceNamePrefixes(java.util.List<java.lang.String> instanceNamePrefixes) {
@@ -132,12 +118,10 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Targets any of the instances specified. Instances are specified by their URI in the form
-   * `zones/[ZONE]/instances/[INSTANCE_NAME]`.
-   *
-   * Instance targeting is uncommon and is supported to facilitate the management of changes by the
-   * instance or to target specific VM instances for development and testing.
-   *
-   * Only supported for project-level policies and must reference instances within this project.
+   * `zones/[ZONE]/instances/[INSTANCE_NAME]`. Instance targeting is uncommon and is supported to
+   * facilitate the management of changes by the instance or to target specific VM instances for
+   * development and testing. Only supported for project-level policies and must reference instances
+   * within this project.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInstances() {
@@ -146,12 +130,10 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Targets any of the instances specified. Instances are specified by their URI in the form
-   * `zones/[ZONE]/instances/[INSTANCE_NAME]`.
-   *
-   * Instance targeting is uncommon and is supported to facilitate the management of changes by the
-   * instance or to target specific VM instances for development and testing.
-   *
-   * Only supported for project-level policies and must reference instances within this project.
+   * `zones/[ZONE]/instances/[INSTANCE_NAME]`. Instance targeting is uncommon and is supported to
+   * facilitate the management of changes by the instance or to target specific VM instances for
+   * development and testing. Only supported for project-level policies and must reference instances
+   * within this project.
    * @param instances instances or {@code null} for none
    */
   public Assignment setInstances(java.util.List<java.lang.String> instances) {
@@ -160,9 +142,8 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Targets VM instances matching at least one of the following OS types.
-   *
-   * VM instances must match all supplied criteria for a given OsType to be included.
+   * Targets VM instances matching at least one of the following OS types. VM instances must match
+   * all supplied criteria for a given OsType to be included.
    * @return value or {@code null} for none
    */
   public java.util.List<AssignmentOsType> getOsTypes() {
@@ -170,9 +151,8 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Targets VM instances matching at least one of the following OS types.
-   *
-   * VM instances must match all supplied criteria for a given OsType to be included.
+   * Targets VM instances matching at least one of the following OS types. VM instances must match
+   * all supplied criteria for a given OsType to be included.
    * @param osTypes osTypes or {@code null} for none
    */
   public Assignment setOsTypes(java.util.List<AssignmentOsType> osTypes) {
@@ -181,9 +161,8 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Targets instances in any of these zones. Leave empty to target instances in any zone.
-   *
-   * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+   * Targets instances in any of these zones. Leave empty to target instances in any zone. Zonal
+   * targeting is uncommon and is supported to facilitate the management of changes by zone.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getZones() {
@@ -191,9 +170,8 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Targets instances in any of these zones. Leave empty to target instances in any zone.
-   *
-   * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
+   * Targets instances in any of these zones. Leave empty to target instances in any zone. Zonal
+   * targeting is uncommon and is supported to facilitate the management of changes by zone.
    * @param zones zones or {@code null} for none
    */
   public Assignment setZones(java.util.List<java.lang.String> zones) {

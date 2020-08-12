@@ -31,8 +31,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Defaults to false. When false, files will be subject to validations based on the file type:
-   *
-   * Remote: A checksum must be specified. GCS:    An object generation number must be specified.
+   * Remote: A checksum must be specified. GCS: An object generation number must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +60,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Defaults to false. When false, files will be subject to validations based on the file type:
-   *
-   * Remote: A checksum must be specified. GCS:    An object generation number must be specified.
+   * Remote: A checksum must be specified. GCS: An object generation number must be specified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowInsecure() {
@@ -71,8 +69,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Defaults to false. When false, files will be subject to validations based on the file type:
-   *
-   * Remote: A checksum must be specified. GCS:    An object generation number must be specified.
+   * Remote: A checksum must be specified. GCS: An object generation number must be specified.
    * @param allowInsecure allowInsecure or {@code null} for none
    */
   public File setAllowInsecure(java.lang.Boolean allowInsecure) {

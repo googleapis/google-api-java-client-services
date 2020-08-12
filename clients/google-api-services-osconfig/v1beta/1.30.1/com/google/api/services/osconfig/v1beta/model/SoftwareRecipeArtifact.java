@@ -31,9 +31,8 @@ public final class SoftwareRecipeArtifact extends com.google.api.client.json.Gen
 
   /**
    * Defaults to false. When false, recipes are subject to validations based on the artifact type:
-   *
    * Remote: A checksum must be specified, and only protocols with transport-layer security are
-   * permitted. GCS:    An object generation number must be specified.
+   * permitted. GCS: An object generation number must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +62,8 @@ public final class SoftwareRecipeArtifact extends com.google.api.client.json.Gen
 
   /**
    * Defaults to false. When false, recipes are subject to validations based on the artifact type:
-   *
    * Remote: A checksum must be specified, and only protocols with transport-layer security are
-   * permitted. GCS:    An object generation number must be specified.
+   * permitted. GCS: An object generation number must be specified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowInsecure() {
@@ -74,9 +72,8 @@ public final class SoftwareRecipeArtifact extends com.google.api.client.json.Gen
 
   /**
    * Defaults to false. When false, recipes are subject to validations based on the artifact type:
-   *
    * Remote: A checksum must be specified, and only protocols with transport-layer security are
-   * permitted. GCS:    An object generation number must be specified.
+   * permitted. GCS: An object generation number must be specified.
    * @param allowInsecure allowInsecure or {@code null} for none
    */
   public SoftwareRecipeArtifact setAllowInsecure(java.lang.Boolean allowInsecure) {

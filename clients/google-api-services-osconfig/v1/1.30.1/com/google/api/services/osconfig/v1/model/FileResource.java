@@ -55,10 +55,8 @@ public final class FileResource extends com.google.api.client.json.GenericJson {
    * and other users for the file (similarly to the numeric mode used in the linux chmod utility).
    * Each digit represents a three bit number with the 4 bit corresponding to the read permissions,
    * the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission.
-   * Default behavior is 755.
-   *
-   * Below are some examples of permissions and their associated values: read, write, and execute: 7
-   * read and execute: 5 read and write: 6 read only: 4
+   * Default behavior is 755. Below are some examples of permissions and their associated values:
+   * read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,10 +125,8 @@ public final class FileResource extends com.google.api.client.json.GenericJson {
    * and other users for the file (similarly to the numeric mode used in the linux chmod utility).
    * Each digit represents a three bit number with the 4 bit corresponding to the read permissions,
    * the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission.
-   * Default behavior is 755.
-   *
-   * Below are some examples of permissions and their associated values: read, write, and execute: 7
-   * read and execute: 5 read and write: 6 read only: 4
+   * Default behavior is 755. Below are some examples of permissions and their associated values:
+   * read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
    * @return value or {@code null} for none
    */
   public java.lang.String getPermissions() {
@@ -142,10 +138,8 @@ public final class FileResource extends com.google.api.client.json.GenericJson {
    * and other users for the file (similarly to the numeric mode used in the linux chmod utility).
    * Each digit represents a three bit number with the 4 bit corresponding to the read permissions,
    * the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission.
-   * Default behavior is 755.
-   *
-   * Below are some examples of permissions and their associated values: read, write, and execute: 7
-   * read and execute: 5 read and write: 6 read only: 4
+   * Default behavior is 755. Below are some examples of permissions and their associated values:
+   * read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
    * @param permissions permissions or {@code null} for none
    */
   public FileResource setPermissions(java.lang.String permissions) {

@@ -50,7 +50,7 @@ public final class QuerySource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A short name or alias for the source.  This value can be used with the 'source' operator.
+   * A short name or alias for the source. This value can be used with the 'source' operator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class QuerySource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A short name or alias for the source.  This value can be used with the 'source' operator.
+   * A short name or alias for the source. This value can be used with the 'source' operator.
    * @return value or {@code null} for none
    */
   public java.lang.String getShortName() {
@@ -106,7 +106,7 @@ public final class QuerySource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A short name or alias for the source.  This value can be used with the 'source' operator.
+   * A short name or alias for the source. This value can be used with the 'source' operator.
    * @param shortName shortName or {@code null} for none
    */
   public QuerySource setShortName(java.lang.String shortName) {

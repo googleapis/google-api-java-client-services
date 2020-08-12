@@ -51,7 +51,7 @@ public final class PollItemsRequest extends com.google.api.client.json.GenericJs
   private java.lang.Integer limit;
 
   /**
-   * Queue name to fetch items from.  If unspecified, PollItems will fetch from 'default' queue. The
+   * Queue name to fetch items from. If unspecified, PollItems will fetch from 'default' queue. The
    * maximum length is 100 characters.
    * The value may be {@code null}.
    */
@@ -117,7 +117,7 @@ public final class PollItemsRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Queue name to fetch items from.  If unspecified, PollItems will fetch from 'default' queue. The
+   * Queue name to fetch items from. If unspecified, PollItems will fetch from 'default' queue. The
    * maximum length is 100 characters.
    * @return value or {@code null} for none
    */
@@ -126,7 +126,7 @@ public final class PollItemsRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Queue name to fetch items from.  If unspecified, PollItems will fetch from 'default' queue. The
+   * Queue name to fetch items from. If unspecified, PollItems will fetch from 'default' queue. The
    * maximum length is 100 characters.
    * @param queue queue or {@code null} for none
    */

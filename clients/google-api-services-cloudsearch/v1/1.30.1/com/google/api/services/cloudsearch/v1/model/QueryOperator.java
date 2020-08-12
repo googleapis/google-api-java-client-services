@@ -45,7 +45,7 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> enumValues;
 
   /**
-   * Indicates the operator name that can be used to  isolate the property using the greater-than
+   * Indicates the operator name that can be used to isolate the property using the greater-than
    * operator.
    * The value may be {@code null}.
    */
@@ -88,7 +88,7 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean isSuggestable;
 
   /**
-   * Indicates the operator name that can be used to  isolate the property using the less-than
+   * Indicates the operator name that can be used to isolate the property using the less-than
    * operator.
    * The value may be {@code null}.
    */
@@ -154,7 +154,7 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Indicates the operator name that can be used to  isolate the property using the greater-than
+   * Indicates the operator name that can be used to isolate the property using the greater-than
    * operator.
    * @return value or {@code null} for none
    */
@@ -163,7 +163,7 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Indicates the operator name that can be used to  isolate the property using the greater-than
+   * Indicates the operator name that can be used to isolate the property using the greater-than
    * operator.
    * @param greaterThanOperatorName greaterThanOperatorName or {@code null} for none
    */
@@ -258,7 +258,7 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Indicates the operator name that can be used to  isolate the property using the less-than
+   * Indicates the operator name that can be used to isolate the property using the less-than
    * operator.
    * @return value or {@code null} for none
    */
@@ -267,7 +267,7 @@ public final class QueryOperator extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Indicates the operator name that can be used to  isolate the property using the less-than
+   * Indicates the operator name that can be used to isolate the property using the less-than
    * operator.
    * @param lessThanOperatorName lessThanOperatorName or {@code null} for none
    */

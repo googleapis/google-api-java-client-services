@@ -33,11 +33,10 @@ public final class BooleanOperatorOptions extends com.google.api.client.json.Gen
   /**
    * Indicates the operator name required in the query in order to isolate the boolean property. For
    * example, if operatorName is *closed* and the property's name is *isClosed*, then queries like
-   * *closed:value* show results only where the value of the property named *isClosed* matches
-   * *value*. By contrast, a search that uses the same *value* without an operator returns all items
-   * where *value* matches the value of any String properties or text within the content field for
-   * the item. The operator name can only contain lowercase letters (a-z). The maximum length is 32
-   * characters.
+   * *closed:* show results only where the value of the property named *isClosed* matches **. By
+   * contrast, a search that uses the same ** without an operator returns all items where ** matches
+   * the value of any String properties or text within the content field for the item. The operator
+   * name can only contain lowercase letters (a-z). The maximum length is 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,11 +45,10 @@ public final class BooleanOperatorOptions extends com.google.api.client.json.Gen
   /**
    * Indicates the operator name required in the query in order to isolate the boolean property. For
    * example, if operatorName is *closed* and the property's name is *isClosed*, then queries like
-   * *closed:value* show results only where the value of the property named *isClosed* matches
-   * *value*. By contrast, a search that uses the same *value* without an operator returns all items
-   * where *value* matches the value of any String properties or text within the content field for
-   * the item. The operator name can only contain lowercase letters (a-z). The maximum length is 32
-   * characters.
+   * *closed:* show results only where the value of the property named *isClosed* matches **. By
+   * contrast, a search that uses the same ** without an operator returns all items where ** matches
+   * the value of any String properties or text within the content field for the item. The operator
+   * name can only contain lowercase letters (a-z). The maximum length is 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperatorName() {
@@ -60,11 +58,10 @@ public final class BooleanOperatorOptions extends com.google.api.client.json.Gen
   /**
    * Indicates the operator name required in the query in order to isolate the boolean property. For
    * example, if operatorName is *closed* and the property's name is *isClosed*, then queries like
-   * *closed:value* show results only where the value of the property named *isClosed* matches
-   * *value*. By contrast, a search that uses the same *value* without an operator returns all items
-   * where *value* matches the value of any String properties or text within the content field for
-   * the item. The operator name can only contain lowercase letters (a-z). The maximum length is 32
-   * characters.
+   * *closed:* show results only where the value of the property named *isClosed* matches **. By
+   * contrast, a search that uses the same ** without an operator returns all items where ** matches
+   * the value of any String properties or text within the content field for the item. The operator
+   * name can only contain lowercase letters (a-z). The maximum length is 32 characters.
    * @param operatorName operatorName or {@code null} for none
    */
   public BooleanOperatorOptions setOperatorName(java.lang.String operatorName) {

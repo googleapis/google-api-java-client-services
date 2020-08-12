@@ -50,7 +50,7 @@ public final class IndexItemRequest extends com.google.api.client.json.GenericJs
   private IndexItemOptions indexItemOptions;
 
   /**
-   * Name of the item.  Format: datasources/{source_id}/items/{item_id}
+   * Name of the item. Format: datasources/{source_id}/items/{item_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class IndexItemRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Name of the item.  Format: datasources/{source_id}/items/{item_id}
+   * Name of the item. Format: datasources/{source_id}/items/{item_id}
    * @return value or {@code null} for none
    */
   public Item getItem() {
@@ -121,7 +121,7 @@ public final class IndexItemRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Name of the item.  Format: datasources/{source_id}/items/{item_id}
+   * Name of the item. Format: datasources/{source_id}/items/{item_id}
    * @param item item or {@code null} for none
    */
   public IndexItemRequest setItem(Item item) {

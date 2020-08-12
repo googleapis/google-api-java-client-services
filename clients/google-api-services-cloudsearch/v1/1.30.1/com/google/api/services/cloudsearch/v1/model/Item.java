@@ -98,11 +98,9 @@ public final class Item extends com.google.api.client.json.GenericJson {
   /**
    * Required. The indexing system stores the version from the datasource as a byte string and
    * compares the Item version in the index to the version of the queued Item using lexical
-   * ordering.
-   *
-   * Cloud Search Indexing won't index or delete any queued item with a version value that is less
-   * than or equal to the version of the currently indexed item. The maximum length for this field
-   * is 1024 bytes.
+   * ordering. Cloud Search Indexing won't index or delete any queued item with a version value that
+   * is less than or equal to the version of the currently indexed item. The maximum length for this
+   * field is 1024 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -296,11 +294,9 @@ public final class Item extends com.google.api.client.json.GenericJson {
   /**
    * Required. The indexing system stores the version from the datasource as a byte string and
    * compares the Item version in the index to the version of the queued Item using lexical
-   * ordering.
-   *
-   * Cloud Search Indexing won't index or delete any queued item with a version value that is less
-   * than or equal to the version of the currently indexed item. The maximum length for this field
-   * is 1024 bytes.
+   * ordering. Cloud Search Indexing won't index or delete any queued item with a version value that
+   * is less than or equal to the version of the currently indexed item. The maximum length for this
+   * field is 1024 bytes.
    * @see #decodeVersion()
    * @return value or {@code null} for none
    */
@@ -311,11 +307,9 @@ public final class Item extends com.google.api.client.json.GenericJson {
   /**
    * Required. The indexing system stores the version from the datasource as a byte string and
    * compares the Item version in the index to the version of the queued Item using lexical
-   * ordering.
-   *
-   * Cloud Search Indexing won't index or delete any queued item with a version value that is less
-   * than or equal to the version of the currently indexed item. The maximum length for this field
-   * is 1024 bytes.
+   * ordering. Cloud Search Indexing won't index or delete any queued item with a version value that
+   * is less than or equal to the version of the currently indexed item. The maximum length for this
+   * field is 1024 bytes.
    * @see #getVersion()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -328,11 +322,9 @@ public final class Item extends com.google.api.client.json.GenericJson {
   /**
    * Required. The indexing system stores the version from the datasource as a byte string and
    * compares the Item version in the index to the version of the queued Item using lexical
-   * ordering.
-   *
-   * Cloud Search Indexing won't index or delete any queued item with a version value that is less
-   * than or equal to the version of the currently indexed item. The maximum length for this field
-   * is 1024 bytes.
+   * ordering. Cloud Search Indexing won't index or delete any queued item with a version value that
+   * is less than or equal to the version of the currently indexed item. The maximum length for this
+   * field is 1024 bytes.
    * @see #encodeVersion()
    * @param version version or {@code null} for none
    */
@@ -344,11 +336,9 @@ public final class Item extends com.google.api.client.json.GenericJson {
   /**
    * Required. The indexing system stores the version from the datasource as a byte string and
    * compares the Item version in the index to the version of the queued Item using lexical
-   * ordering.
-   *
-   * Cloud Search Indexing won't index or delete any queued item with a version value that is less
-   * than or equal to the version of the currently indexed item. The maximum length for this field
-   * is 1024 bytes.
+   * ordering. Cloud Search Indexing won't index or delete any queued item with a version value that
+   * is less than or equal to the version of the currently indexed item. The maximum length for this
+   * field is 1024 bytes.
    * @see #setVersion()
    *
    * <p>

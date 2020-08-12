@@ -31,13 +31,11 @@ public final class ValueFilter extends com.google.api.client.json.GenericJson {
 
   /**
    * The `operator_name` applied to the query, such as *price_greater_than*. The filter can work
-   * against both types of filters defined in the schema for your data source:
-   *
-   * 1. `operator_name`, where the query filters results by the property that matches the value.
-   *
-   * 2. `greater_than_operator_name` or `less_than_operator_name` in your schema. The query filters
-   * the results for the property values that are greater than or less than  the supplied value in
-   * the query.
+   * against both types of filters defined in the schema for your data source: 1. `operator_name`,
+   * where the query filters results by the property that matches the value. 2.
+   * `greater_than_operator_name` or `less_than_operator_name` in your schema. The query filters the
+   * results for the property values that are greater than or less than the supplied value in the
+   * query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,13 +50,11 @@ public final class ValueFilter extends com.google.api.client.json.GenericJson {
 
   /**
    * The `operator_name` applied to the query, such as *price_greater_than*. The filter can work
-   * against both types of filters defined in the schema for your data source:
-   *
-   * 1. `operator_name`, where the query filters results by the property that matches the value.
-   *
-   * 2. `greater_than_operator_name` or `less_than_operator_name` in your schema. The query filters
-   * the results for the property values that are greater than or less than  the supplied value in
-   * the query.
+   * against both types of filters defined in the schema for your data source: 1. `operator_name`,
+   * where the query filters results by the property that matches the value. 2.
+   * `greater_than_operator_name` or `less_than_operator_name` in your schema. The query filters the
+   * results for the property values that are greater than or less than the supplied value in the
+   * query.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperatorName() {
@@ -67,13 +63,11 @@ public final class ValueFilter extends com.google.api.client.json.GenericJson {
 
   /**
    * The `operator_name` applied to the query, such as *price_greater_than*. The filter can work
-   * against both types of filters defined in the schema for your data source:
-   *
-   * 1. `operator_name`, where the query filters results by the property that matches the value.
-   *
-   * 2. `greater_than_operator_name` or `less_than_operator_name` in your schema. The query filters
-   * the results for the property values that are greater than or less than  the supplied value in
-   * the query.
+   * against both types of filters defined in the schema for your data source: 1. `operator_name`,
+   * where the query filters results by the property that matches the value. 2.
+   * `greater_than_operator_name` or `less_than_operator_name` in your schema. The query filters the
+   * results for the property values that are greater than or less than the supplied value in the
+   * query.
    * @param operatorName operatorName or {@code null} for none
    */
   public ValueFilter setOperatorName(java.lang.String operatorName) {

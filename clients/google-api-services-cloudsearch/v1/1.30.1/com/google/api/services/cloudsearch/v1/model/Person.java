@@ -43,8 +43,8 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the person to provide information about. See  People.get from Google
-   * People API.
+   * The resource name of the person to provide information about. See People.get from Google People
+   * API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +96,8 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the person to provide information about. See  People.get from Google
-   * People API.
+   * The resource name of the person to provide information about. See People.get from Google People
+   * API.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -105,8 +105,8 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the person to provide information about. See  People.get from Google
-   * People API.
+   * The resource name of the person to provide information about. See People.get from Google People
+   * API.
    * @param name name or {@code null} for none
    */
   public Person setName(java.lang.String name) {

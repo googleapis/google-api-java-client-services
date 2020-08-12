@@ -20,7 +20,7 @@ package com.google.api.services.cloudsearch.v1;
  * Service definition for CloudSearch (v1).
  *
  * <p>
- * Cloud Search provides cloud-based search capabilities over G Suite data.  The Cloud Search API allows indexing of non-G Suite data into Cloud Search.
+ * Cloud Search provides cloud-based search capabilities over G Suite data. The Cloud Search API allows indexing of non-G Suite data into Cloud Search.
  * </p>
  *
  * <p>
@@ -183,17 +183,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       public class Items {
 
         /**
-         * Checks whether an item is accessible by specified principal.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Checks whether an item is accessible by specified principal. **Note:** This API requires an admin
+         * account to execute.
          *
          * Create a request for the method "items.checkAccess".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link CheckAccess#execute()} method to invoke the remote operation.
          *
-         * @param name Item name, format:
-        datasources/{source_id}/items/{item_id}
+         * @param name Item name, format: datasources/{source_id}/items/{item_id}
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.Principal}
          * @return the request
          */
@@ -211,9 +209,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^datasources/[^/]+/items/[^/]+$");
 
           /**
-           * Checks whether an item is accessible by specified principal.
-           *
-           * **Note:** This API requires an admin account to execute.
+           * Checks whether an item is accessible by specified principal. **Note:** This API requires an
+           * admin account to execute.
            *
            * Create a request for the method "items.checkAccess".
            *
@@ -223,8 +220,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * CheckAccess#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Item name, format:
-        datasources/{source_id}/items/{item_id}
+           * @param name Item name, format: datasources/{source_id}/items/{item_id}
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.Principal}
            * @since 1.13
            */
@@ -293,9 +289,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return (CheckAccess) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Item name, format: datasources/{source_id}/items/{item_id}
-           */
+          /** Item name, format: datasources/{source_id}/items/{item_id} */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
@@ -305,9 +299,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return name;
           }
 
-          /**
-           * Item name, format: datasources/{source_id}/items/{item_id}
-           */
+          /** Item name, format: datasources/{source_id}/items/{item_id} */
           public CheckAccess setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -346,17 +338,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Fetches the item whose viewUrl exactly matches that of the URL provided in the request.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Fetches the item whose viewUrl exactly matches that of the URL provided in the request. **Note:**
+         * This API requires an admin account to execute.
          *
          * Create a request for the method "items.searchByViewUrl".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link SearchByViewUrl#execute()} method to invoke the remote operation.
          *
-         * @param name Source name, format:
-        datasources/{source_id}
+         * @param name Source name, format: datasources/{source_id}
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchItemsByViewUrlRequest}
          * @return the request
          */
@@ -375,7 +365,6 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Fetches the item whose viewUrl exactly matches that of the URL provided in the request.
-           *
            * **Note:** This API requires an admin account to execute.
            *
            * Create a request for the method "items.searchByViewUrl".
@@ -386,8 +375,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name Source name, format:
-        datasources/{source_id}
+           * @param name Source name, format: datasources/{source_id}
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchItemsByViewUrlRequest}
            * @since 1.13
            */
@@ -456,9 +444,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return (SearchByViewUrl) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Source name, format: datasources/{source_id}
-           */
+          /** Source name, format: datasources/{source_id} */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
@@ -468,9 +454,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return name;
           }
 
-          /**
-           * Source name, format: datasources/{source_id}
-           */
+          /** Source name, format: datasources/{source_id} */
           public SearchByViewUrl setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -508,17 +492,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         public class Unmappedids {
 
           /**
-           * List all unmapped identities for a specific item.
-           *
-           * **Note:** This API requires an admin account to execute.
+           * List all unmapped identities for a specific item. **Note:** This API requires an admin account to
+           * execute.
            *
            * Create a request for the method "unmappedids.list".
            *
            * This request holds the parameters needed by the cloudsearch server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent The name of the item, in the following format:
-          datasources/{source_id}/items/{ID}
+           * @param parent The name of the item, in the following format: datasources/{source_id}/items/{ID}
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -535,9 +517,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^datasources/[^/]+/items/[^/]+$");
 
             /**
-             * List all unmapped identities for a specific item.
-             *
-             * **Note:** This API requires an admin account to execute.
+             * List all unmapped identities for a specific item. **Note:** This API requires an admin account
+             * to execute.
              *
              * Create a request for the method "unmappedids.list".
              *
@@ -546,8 +527,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The name of the item, in the following format:
-          datasources/{source_id}/items/{ID}
+             * @param parent The name of the item, in the following format: datasources/{source_id}/items/{ID}
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -672,9 +652,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               return this;
             }
 
-            /**
-             * Maximum number of items to fetch in a request. Defaults to 100.
-             */
+            /** Maximum number of items to fetch in a request. Defaults to 100. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
@@ -684,9 +662,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               return pageSize;
             }
 
-            /**
-             * Maximum number of items to fetch in a request. Defaults to 100.
-             */
+            /** Maximum number of items to fetch in a request. Defaults to 100. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
@@ -758,9 +734,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       public class Items {
 
         /**
-         * Lists names of items associated with an unmapped identity.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Lists names of items associated with an unmapped identity. **Note:** This API requires an admin
+         * account to execute.
          *
          * Create a request for the method "items.listForunmappedidentity".
          *
@@ -768,8 +743,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link ListForunmappedidentity#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent The name of the identity source, in the following format:
-        identitysources/{source_id}}
+         * @param parent The name of the identity source, in the following format: identitysources/{source_id}}
          * @return the request
          */
         public ListForunmappedidentity listForunmappedidentity(java.lang.String parent) throws java.io.IOException {
@@ -786,9 +760,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^identitysources/[^/]+$");
 
           /**
-           * Lists names of items associated with an unmapped identity.
-           *
-           * **Note:** This API requires an admin account to execute.
+           * Lists names of items associated with an unmapped identity. **Note:** This API requires an admin
+           * account to execute.
            *
            * Create a request for the method "items.listForunmappedidentity".
            *
@@ -798,8 +771,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
            * after invoking the constructor. </p>
            *
-           * @param parent The name of the identity source, in the following format:
-        identitysources/{source_id}}
+           * @param parent The name of the identity source, in the following format: identitysources/{source_id}}
            * @since 1.13
            */
           protected ListForunmappedidentity(java.lang.String parent) {
@@ -939,9 +911,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return this;
           }
 
-          /**
-           * Maximum number of items to fetch in a request. Defaults to 100.
-           */
+          /** Maximum number of items to fetch in a request. Defaults to 100. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
@@ -951,9 +921,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return pageSize;
           }
 
-          /**
-           * Maximum number of items to fetch in a request. Defaults to 100.
-           */
+          /** Maximum number of items to fetch in a request. Defaults to 100. */
           public ListForunmappedidentity setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
@@ -1018,17 +986,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       public class Unmappedids {
 
         /**
-         * Lists unmapped user identities for an identity source.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Lists unmapped user identities for an identity source. **Note:** This API requires an admin
+         * account to execute.
          *
          * Create a request for the method "unmappedids.list".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The name of the identity source, in the following format:
-        identitysources/{source_id}
+         * @param parent The name of the identity source, in the following format: identitysources/{source_id}
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1045,9 +1011,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^identitysources/[^/]+$");
 
           /**
-           * Lists unmapped user identities for an identity source.
-           *
-           * **Note:** This API requires an admin account to execute.
+           * Lists unmapped user identities for an identity source. **Note:** This API requires an admin
+           * account to execute.
            *
            * Create a request for the method "unmappedids.list".
            *
@@ -1056,8 +1021,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The name of the identity source, in the following format:
-        identitysources/{source_id}
+           * @param parent The name of the identity source, in the following format: identitysources/{source_id}
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1182,9 +1146,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return this;
           }
 
-          /**
-           * Maximum number of items to fetch in a request. Defaults to 100.
-           */
+          /** Maximum number of items to fetch in a request. Defaults to 100. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
@@ -1194,9 +1156,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return pageSize;
           }
 
-          /**
-           * Maximum number of items to fetch in a request. Defaults to 100.
-           */
+          /** Maximum number of items to fetch in a request. Defaults to 100. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
@@ -1285,17 +1245,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
     public class Datasources {
 
       /**
-       * Deletes the schema of a data source.
-       *
-       * **Note:** This API requires an admin or service account to execute.
+       * Deletes the schema of a data source. **Note:** This API requires an admin or service account to
+       * execute.
        *
        * Create a request for the method "datasources.deleteSchema".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link DeleteSchema#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the data source to delete Schema.  Format:
-      datasources/{source_id}
+       * @param name Name of the data source to delete Schema. Format: datasources/{source_id}
        * @return the request
        */
       public DeleteSchema deleteSchema(java.lang.String name) throws java.io.IOException {
@@ -1312,9 +1270,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
         /**
-         * Deletes the schema of a data source.
-         *
-         * **Note:** This API requires an admin or service account to execute.
+         * Deletes the schema of a data source. **Note:** This API requires an admin or service account to
+         * execute.
          *
          * Create a request for the method "datasources.deleteSchema".
          *
@@ -1324,8 +1281,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * DeleteSchema#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the data source to delete Schema.  Format:
-      datasources/{source_id}
+         * @param name Name of the data source to delete Schema. Format: datasources/{source_id}
          * @since 1.13
          */
         protected DeleteSchema(java.lang.String name) {
@@ -1393,21 +1349,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (DeleteSchema) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Name of the data source to delete Schema.  Format: datasources/{source_id}
-         */
+        /** Name of the data source to delete Schema. Format: datasources/{source_id} */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the data source to delete Schema.  Format: datasources/{source_id}
+        /** Name of the data source to delete Schema. Format: datasources/{source_id}
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Name of the data source to delete Schema.  Format: datasources/{source_id}
-         */
+        /** Name of the data source to delete Schema. Format: datasources/{source_id} */
         public DeleteSchema setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1446,17 +1398,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Gets the schema of a data source.
-       *
-       * **Note:** This API requires an admin or service account to execute.
+       * Gets the schema of a data source. **Note:** This API requires an admin or service account to
+       * execute.
        *
        * Create a request for the method "datasources.getSchema".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link GetSchema#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the data source to get Schema.  Format:
-      datasources/{source_id}
+       * @param name Name of the data source to get Schema. Format: datasources/{source_id}
        * @return the request
        */
       public GetSchema getSchema(java.lang.String name) throws java.io.IOException {
@@ -1473,9 +1423,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
         /**
-         * Gets the schema of a data source.
-         *
-         * **Note:** This API requires an admin or service account to execute.
+         * Gets the schema of a data source. **Note:** This API requires an admin or service account to
+         * execute.
          *
          * Create a request for the method "datasources.getSchema".
          *
@@ -1485,8 +1434,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * GetSchema#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the data source to get Schema.  Format:
-      datasources/{source_id}
+         * @param name Name of the data source to get Schema. Format: datasources/{source_id}
          * @since 1.13
          */
         protected GetSchema(java.lang.String name) {
@@ -1564,21 +1512,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (GetSchema) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Name of the data source to get Schema.  Format: datasources/{source_id}
-         */
+        /** Name of the data source to get Schema. Format: datasources/{source_id} */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the data source to get Schema.  Format: datasources/{source_id}
+        /** Name of the data source to get Schema. Format: datasources/{source_id}
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Name of the data source to get Schema.  Format: datasources/{source_id}
-         */
+        /** Name of the data source to get Schema. Format: datasources/{source_id} */
         public GetSchema setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1618,17 +1562,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       }
       /**
        * Updates the schema of a data source. This method does not perform incremental updates to the
-       * schema. Instead, this method updates the schema by overwriting the entire schema.
-       *
-       * **Note:** This API requires an admin or service account to execute.
+       * schema. Instead, this method updates the schema by overwriting the entire schema. **Note:** This
+       * API requires an admin or service account to execute.
        *
        * Create a request for the method "datasources.updateSchema".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link UpdateSchema#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the data source to update Schema.  Format:
-      datasources/{source_id}
+       * @param name Name of the data source to update Schema. Format: datasources/{source_id}
        * @param content the {@link com.google.api.services.cloudsearch.v1.model.UpdateSchemaRequest}
        * @return the request
        */
@@ -1647,9 +1589,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Updates the schema of a data source. This method does not perform incremental updates to the
-         * schema. Instead, this method updates the schema by overwriting the entire schema.
-         *
-         * **Note:** This API requires an admin or service account to execute.
+         * schema. Instead, this method updates the schema by overwriting the entire schema. **Note:**
+         * This API requires an admin or service account to execute.
          *
          * Create a request for the method "datasources.updateSchema".
          *
@@ -1659,8 +1600,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * UpdateSchema#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the data source to update Schema.  Format:
-      datasources/{source_id}
+         * @param name Name of the data source to update Schema. Format: datasources/{source_id}
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.UpdateSchemaRequest}
          * @since 1.13
          */
@@ -1729,21 +1669,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (UpdateSchema) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Name of the data source to update Schema.  Format: datasources/{source_id}
-         */
+        /** Name of the data source to update Schema. Format: datasources/{source_id} */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the data source to update Schema.  Format: datasources/{source_id}
+        /** Name of the data source to update Schema. Format: datasources/{source_id}
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Name of the data source to update Schema.  Format: datasources/{source_id}
-         */
+        /** Name of the data source to update Schema. Format: datasources/{source_id} */
         public UpdateSchema setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1790,8 +1726,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the item to delete.
-        Format: datasources/{source_id}/items/{item_id}
+         * @param name Required. Name of the item to delete. Format: datasources/{source_id}/items/{item_id}
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1820,8 +1755,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the item to delete.
-        Format: datasources/{source_id}/items/{item_id}
+           * @param name Required. Name of the item to delete. Format: datasources/{source_id}/items/{item_id}
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1975,21 +1909,19 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           /**
            * Required. The incremented version of the item to delete from the index. The indexing
            * system stores the version from the datasource as a byte string and compares the Item
-           * version in the index to the version of the queued Item using lexical ordering.
-           *
-           * Cloud Search Indexing won't delete any queued item with a version value that is less
-           * than or equal to the version of the currently indexed item. The maximum length for this
-           * field is 1024 bytes.
+           * version in the index to the version of the queued Item using lexical ordering. Cloud
+           * Search Indexing won't delete any queued item with a version value that is less than or
+           * equal to the version of the currently indexed item. The maximum length for this field
+           * is 1024 bytes.
            */
           @com.google.api.client.util.Key
           private java.lang.String version;
 
           /** Required. The incremented version of the item to delete from the index. The indexing system stores
          the version from the datasource as a byte string and compares the Item version in the index to the
-         version of the queued Item using lexical ordering.
-
-         Cloud Search Indexing won't delete any queued item with a version value that is less than or equal
-         to the version of the currently indexed item. The maximum length for this field is 1024 bytes.
+         version of the queued Item using lexical ordering. Cloud Search Indexing won't delete any queued
+         item with a version value that is less than or equal to the version of the currently indexed item.
+         The maximum length for this field is 1024 bytes.
            */
           public java.lang.String getVersion() {
             return version;
@@ -1998,11 +1930,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           /**
            * Required. The incremented version of the item to delete from the index. The indexing
            * system stores the version from the datasource as a byte string and compares the Item
-           * version in the index to the version of the queued Item using lexical ordering.
-           *
-           * Cloud Search Indexing won't delete any queued item with a version value that is less
-           * than or equal to the version of the currently indexed item. The maximum length for this
-           * field is 1024 bytes.
+           * version in the index to the version of the queued Item using lexical ordering. Cloud
+           * Search Indexing won't delete any queued item with a version value that is less than or
+           * equal to the version of the currently indexed item. The maximum length for this field
+           * is 1024 bytes.
            */
           public Delete setVersion(java.lang.String version) {
             this.version = version;
@@ -2015,18 +1946,16 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Deletes all items in a queue. This method is useful for deleting stale items.
-         *
-         * This API requires an admin or service account to execute. The service account used is the one
-         * whitelisted in the corresponding data source.
+         * Deletes all items in a queue. This method is useful for deleting stale items. This API requires
+         * an admin or service account to execute. The service account used is the one whitelisted in the
+         * corresponding data source.
          *
          * Create a request for the method "items.deleteQueueItems".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link DeleteQueueItems#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Data Source to delete items in a queue.
-        Format: datasources/{source_id}
+         * @param name Name of the Data Source to delete items in a queue. Format: datasources/{source_id}
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.DeleteQueueItemsRequest}
          * @return the request
          */
@@ -2044,10 +1973,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
           /**
-           * Deletes all items in a queue. This method is useful for deleting stale items.
-           *
-           * This API requires an admin or service account to execute. The service account used is the one
-           * whitelisted in the corresponding data source.
+           * Deletes all items in a queue. This method is useful for deleting stale items. This API requires
+           * an admin or service account to execute. The service account used is the one whitelisted in the
+           * corresponding data source.
            *
            * Create a request for the method "items.deleteQueueItems".
            *
@@ -2057,8 +1985,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * tractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Name of the Data Source to delete items in a queue.
-        Format: datasources/{source_id}
+           * @param name Name of the Data Source to delete items in a queue. Format: datasources/{source_id}
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.DeleteQueueItemsRequest}
            * @since 1.13
            */
@@ -2158,18 +2085,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Gets Item resource by item name.
-         *
-         * This API requires an admin or service account to execute.  The service account used is the one
-         * whitelisted in the corresponding data source.
+         * Gets Item resource by item name. This API requires an admin or service account to execute. The
+         * service account used is the one whitelisted in the corresponding data source.
          *
          * Create a request for the method "items.get".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the item to get info.
-        Format: datasources/{source_id}/items/{item_id}
+         * @param name Name of the item to get info. Format: datasources/{source_id}/items/{item_id}
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2186,10 +2110,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^datasources/[^/]+/items/[^/]+$");
 
           /**
-           * Gets Item resource by item name.
-           *
-           * This API requires an admin or service account to execute.  The service account used is the one
-           * whitelisted in the corresponding data source.
+           * Gets Item resource by item name. This API requires an admin or service account to execute. The
+           * service account used is the one whitelisted in the corresponding data source.
            *
            * Create a request for the method "items.get".
            *
@@ -2198,8 +2120,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the item to get info.
-        Format: datasources/{source_id}/items/{item_id}
+           * @param name Name of the item to get info. Format: datasources/{source_id}/items/{item_id}
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2277,9 +2198,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Name of the item to get info. Format: datasources/{source_id}/items/{item_id}
-           */
+          /** Name of the item to get info. Format: datasources/{source_id}/items/{item_id} */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
@@ -2289,9 +2208,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return name;
           }
 
-          /**
-           * Name of the item to get info. Format: datasources/{source_id}/items/{item_id}
-           */
+          /** Name of the item to get info. Format: datasources/{source_id}/items/{item_id} */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2351,21 +2268,16 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
         /**
          * Updates Item ACL, metadata, and content. It will insert the Item if it does not exist. This
-         * method does not support partial updates.  Fields with no provided values are cleared out in the
-         * Cloud Search index.
-         *
-         * This API requires an admin or service account to execute. The service account used is the one
-         * whitelisted in the corresponding data source.
+         * method does not support partial updates. Fields with no provided values are cleared out in the
+         * Cloud Search index. This API requires an admin or service account to execute. The service account
+         * used is the one whitelisted in the corresponding data source.
          *
          * Create a request for the method "items.index".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Index#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Item. Format:
-        datasources/{source_id}/items/{item_id}
-        This is a required field.
-        The
+         * @param name Name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field. The
          *        maximum length is 1536 characters.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.IndexItemRequest}
          * @return the request
@@ -2385,11 +2297,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Updates Item ACL, metadata, and content. It will insert the Item if it does not exist. This
-           * method does not support partial updates.  Fields with no provided values are cleared out in the
-           * Cloud Search index.
-           *
-           * This API requires an admin or service account to execute. The service account used is the one
-           * whitelisted in the corresponding data source.
+           * method does not support partial updates. Fields with no provided values are cleared out in the
+           * Cloud Search index. This API requires an admin or service account to execute. The service
+           * account used is the one whitelisted in the corresponding data source.
            *
            * Create a request for the method "items.index".
            *
@@ -2399,10 +2309,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * Index#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the Item. Format:
-        datasources/{source_id}/items/{item_id}
-        This is a required field.
-        The
+           * @param name Name of the Item. Format: datasources/{source_id}/items/{item_id} This is a required field. The
          *        maximum length is 1536 characters.
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.IndexItemRequest}
            * @since 1.13
@@ -2506,18 +2413,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Lists all or a subset of Item resources.
-         *
-         * This API requires an admin or service account to execute. The service account used is the one
-         * whitelisted in the corresponding data source.
+         * Lists all or a subset of Item resources. This API requires an admin or service account to
+         * execute. The service account used is the one whitelisted in the corresponding data source.
          *
          * Create a request for the method "items.list".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Data Source to list Items.  Format:
-        datasources/{source_id}
+         * @param name Name of the Data Source to list Items. Format: datasources/{source_id}
          * @return the request
          */
         public List list(java.lang.String name) throws java.io.IOException {
@@ -2534,10 +2438,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
           /**
-           * Lists all or a subset of Item resources.
-           *
-           * This API requires an admin or service account to execute. The service account used is the one
-           * whitelisted in the corresponding data source.
+           * Lists all or a subset of Item resources. This API requires an admin or service account to
+           * execute. The service account used is the one whitelisted in the corresponding data source.
            *
            * Create a request for the method "items.list".
            *
@@ -2546,8 +2448,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the Data Source to list Items.  Format:
-        datasources/{source_id}
+           * @param name Name of the Data Source to list Items. Format: datasources/{source_id}
            * @since 1.13
            */
           protected List(java.lang.String name) {
@@ -2625,21 +2526,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Name of the Data Source to list Items.  Format: datasources/{source_id}
-           */
+          /** Name of the Data Source to list Items. Format: datasources/{source_id} */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the Data Source to list Items.  Format: datasources/{source_id}
+          /** Name of the Data Source to list Items. Format: datasources/{source_id}
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Name of the Data Source to list Items.  Format: datasources/{source_id}
-           */
+          /** Name of the Data Source to list Items. Format: datasources/{source_id} */
           public List setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2730,12 +2627,12 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Maximum number of items to fetch in a request. The max value is 1000 when brief is
-           * true.  The max value is 10 if brief is false. The default value is 10
+           * true. The max value is 10 if brief is false. The default value is 10
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of items to fetch in a request. The max value is 1000 when brief is true.  The max
+          /** Maximum number of items to fetch in a request. The max value is 1000 when brief is true. The max
          value is 10 if brief is false. The default value is 10
            */
           public java.lang.Integer getPageSize() {
@@ -2744,7 +2641,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Maximum number of items to fetch in a request. The max value is 1000 when brief is
-           * true.  The max value is 10 if brief is false. The default value is 10
+           * true. The max value is 10 if brief is false. The default value is 10
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -2775,32 +2672,19 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * Polls for unreserved items from the indexing queue and marks a set as reserved, starting with
          * items that have the oldest timestamp from the highest priority ItemStatus. The priority order is
-         * as follows:  ERROR
-         *
-         * MODIFIED
-         *
-         * NEW_ITEM
-         *
-         * ACCEPTED
-         *
-         * Reserving items ensures that polling from other threads cannot create overlapping sets.
-         *
-         * After handling the reserved items, the client should put items back into the unreserved state,
-         * either by calling index, or by calling push with the type REQUEUE.
-         *
-         * Items automatically become available (unreserved) after 4 hours even if no update or push method
-         * is called.
-         *
-         * This API requires an admin or service account to execute. The service account used is the one
-         * whitelisted in the corresponding data source.
+         * as follows: ERROR MODIFIED NEW_ITEM ACCEPTED Reserving items ensures that polling from other
+         * threads cannot create overlapping sets. After handling the reserved items, the client should put
+         * items back into the unreserved state, either by calling index, or by calling push with the type
+         * REQUEUE. Items automatically become available (unreserved) after 4 hours even if no update or
+         * push method is called. This API requires an admin or service account to execute. The service
+         * account used is the one whitelisted in the corresponding data source.
          *
          * Create a request for the method "items.poll".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Poll#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Data Source to poll items.
-        Format: datasources/{source_id}
+         * @param name Name of the Data Source to poll items. Format: datasources/{source_id}
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.PollItemsRequest}
          * @return the request
          */
@@ -2820,24 +2704,12 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           /**
            * Polls for unreserved items from the indexing queue and marks a set as reserved, starting with
            * items that have the oldest timestamp from the highest priority ItemStatus. The priority order
-           * is as follows:  ERROR
-           *
-           * MODIFIED
-           *
-           * NEW_ITEM
-           *
-           * ACCEPTED
-           *
-           * Reserving items ensures that polling from other threads cannot create overlapping sets.
-           *
-           * After handling the reserved items, the client should put items back into the unreserved state,
-           * either by calling index, or by calling push with the type REQUEUE.
-           *
-           * Items automatically become available (unreserved) after 4 hours even if no update or push
-           * method is called.
-           *
-           * This API requires an admin or service account to execute. The service account used is the one
-           * whitelisted in the corresponding data source.
+           * is as follows: ERROR MODIFIED NEW_ITEM ACCEPTED Reserving items ensures that polling from other
+           * threads cannot create overlapping sets. After handling the reserved items, the client should
+           * put items back into the unreserved state, either by calling index, or by calling push with the
+           * type REQUEUE. Items automatically become available (unreserved) after 4 hours even if no update
+           * or push method is called. This API requires an admin or service account to execute. The service
+           * account used is the one whitelisted in the corresponding data source.
            *
            * Create a request for the method "items.poll".
            *
@@ -2846,8 +2718,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link Poll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the Data Source to poll items.
-        Format: datasources/{source_id}
+           * @param name Name of the Data Source to poll items. Format: datasources/{source_id}
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.PollItemsRequest}
            * @since 1.13
            */
@@ -2916,9 +2787,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return (Poll) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Name of the Data Source to poll items. Format: datasources/{source_id}
-           */
+          /** Name of the Data Source to poll items. Format: datasources/{source_id} */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
@@ -2928,9 +2797,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return name;
           }
 
-          /**
-           * Name of the Data Source to poll items. Format: datasources/{source_id}
-           */
+          /** Name of the Data Source to poll items. Format: datasources/{source_id} */
           public Poll setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2947,22 +2814,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Pushes an item onto a queue for later polling and updating.
-         *
-         * This API requires an admin or service account to execute. The service account used is the one
-         * whitelisted in the corresponding data source.
+         * Pushes an item onto a queue for later polling and updating. This API requires an admin or service
+         * account to execute. The service account used is the one whitelisted in the corresponding data
+         * source.
          *
          * Create a request for the method "items.push".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Push#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the item to
-        push into the indexing queue.
-        Format: datasources/{source_id}/items/{ID}
-        This is
-         *        a required field.
-        The maximum length is 1536 characters.
+         * @param name Name of the item to push into the indexing queue. Format: datasources/{source_id}/items/{ID} This is
+         *        a required field. The maximum length is 1536 characters.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.PushItemRequest}
          * @return the request
          */
@@ -2980,10 +2842,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^datasources/[^/]+/items/[^/]+$");
 
           /**
-           * Pushes an item onto a queue for later polling and updating.
-           *
-           * This API requires an admin or service account to execute. The service account used is the one
-           * whitelisted in the corresponding data source.
+           * Pushes an item onto a queue for later polling and updating. This API requires an admin or
+           * service account to execute. The service account used is the one whitelisted in the
+           * corresponding data source.
            *
            * Create a request for the method "items.push".
            *
@@ -2992,12 +2853,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link Push#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the item to
-        push into the indexing queue.
-        Format: datasources/{source_id}/items/{ID}
-        This is
-         *        a required field.
-        The maximum length is 1536 characters.
+           * @param name Name of the item to push into the indexing queue. Format: datasources/{source_id}/items/{ID} This is
+         *        a required field. The maximum length is 1536 characters.
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.PushItemRequest}
            * @since 1.13
            */
@@ -3102,19 +2959,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Unreserves all items from a queue, making them all eligible to be polled.  This method is useful
-         * for resetting the indexing queue after a connector has been restarted.
-         *
-         * This API requires an admin or service account to execute. The service account used is the one
-         * whitelisted in the corresponding data source.
+         * Unreserves all items from a queue, making them all eligible to be polled. This method is useful
+         * for resetting the indexing queue after a connector has been restarted. This API requires an admin
+         * or service account to execute. The service account used is the one whitelisted in the
+         * corresponding data source.
          *
          * Create a request for the method "items.unreserve".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Unreserve#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Data Source to unreserve all items.
-        Format: datasources/{source_id}
+         * @param name Name of the Data Source to unreserve all items. Format: datasources/{source_id}
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.UnreserveItemsRequest}
          * @return the request
          */
@@ -3132,11 +2987,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
           /**
-           * Unreserves all items from a queue, making them all eligible to be polled.  This method is
-           * useful for resetting the indexing queue after a connector has been restarted.
-           *
-           * This API requires an admin or service account to execute. The service account used is the one
-           * whitelisted in the corresponding data source.
+           * Unreserves all items from a queue, making them all eligible to be polled. This method is useful
+           * for resetting the indexing queue after a connector has been restarted. This API requires an
+           * admin or service account to execute. The service account used is the one whitelisted in the
+           * corresponding data source.
            *
            * Create a request for the method "items.unreserve".
            *
@@ -3146,8 +3000,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * Unreserve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the Data Source to unreserve all items.
-        Format: datasources/{source_id}
+           * @param name Name of the Data Source to unreserve all items. Format: datasources/{source_id}
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.UnreserveItemsRequest}
            * @since 1.13
            */
@@ -3216,9 +3069,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return (Unreserve) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Name of the Data Source to unreserve all items. Format: datasources/{source_id}
-           */
+          /** Name of the Data Source to unreserve all items. Format: datasources/{source_id} */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
@@ -3228,9 +3079,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             return name;
           }
 
-          /**
-           * Name of the Data Source to unreserve all items. Format: datasources/{source_id}
-           */
+          /** Name of the Data Source to unreserve all items. Format: datasources/{source_id} */
           public Unreserve setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3248,19 +3097,16 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
         /**
          * Creates an upload session for uploading item content. For items smaller than 100 KB, it's easier
-         * to embed the content inline within an index request.
-         *
-         * This API requires an admin or service account to execute. The service account used is the one
-         * whitelisted in the corresponding data source.
+         * to embed the content inline within an index request. This API requires an admin or service
+         * account to execute. The service account used is the one whitelisted in the corresponding data
+         * source.
          *
          * Create a request for the method "items.upload".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Item to start a resumable upload.
-        Format: datasources/{source_id}/items/{item_id}.
-        The
+         * @param name Name of the Item to start a resumable upload. Format: datasources/{source_id}/items/{item_id}. The
          *        maximum length is 1536 bytes.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.StartUploadItemRequest}
          * @return the request
@@ -3280,10 +3126,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Creates an upload session for uploading item content. For items smaller than 100 KB, it's
-           * easier to embed the content inline within an index request.
-           *
-           * This API requires an admin or service account to execute. The service account used is the one
-           * whitelisted in the corresponding data source.
+           * easier to embed the content inline within an index request. This API requires an admin or
+           * service account to execute. The service account used is the one whitelisted in the
+           * corresponding data source.
            *
            * Create a request for the method "items.upload".
            *
@@ -3293,9 +3138,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the Item to start a resumable upload.
-        Format: datasources/{source_id}/items/{item_id}.
-        The
+           * @param name Name of the Item to start a resumable upload. Format: datasources/{source_id}/items/{item_id}. The
          *        maximum length is 1536 bytes.
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.StartUploadItemRequest}
            * @since 1.13
@@ -3424,31 +3267,24 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
   public class Media {
 
     /**
-     * Uploads media for indexing.
-     *
-     * The upload endpoint supports direct and resumable upload protocols and is intended for large
-     * items that can not be [inlined during index requests](https://developers.google.com/cloud-
-     * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
-     *
-     * 1. Call    indexing.datasources.items.upload    with the resource name to begin an upload session
-     * and retrieve the    UploadItemRef. 1. Call media.upload to upload the content using the same
-     * resource name from step 1. 1. Call indexing.datasources.items.index    to index the item.
-     * Populate the    [ItemContent](/cloud-
-     * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent)    with the UploadItemRef
-     * from step 1.
-     *
-     * For additional information, see [Create a content connector using the REST
-     * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
-     *
-     *   **Note:** This API requires a service account to execute.
+     * Uploads media for indexing. The upload endpoint supports direct and resumable upload protocols
+     * and is intended for large items that can not be [inlined during index
+     * requests](https://developers.google.com/cloud-
+     * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content: 1.
+     * Call indexing.datasources.items.upload with the resource name to begin an upload session and
+     * retrieve the UploadItemRef. 1. Call media.upload to upload the content using the same resource
+     * name from step 1. 1. Call indexing.datasources.items.index to index the item. Populate the
+     * [ItemContent](/cloud-search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with
+     * the UploadItemRef from step 1. For additional information, see [Create a content connector using
+     * the REST API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
+     * **Note:** This API requires a service account to execute.
      *
      * Create a request for the method "media.upload".
      *
      * This request holds the parameters needed by the cloudsearch server.  After setting any optional
      * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
      *
-     * @param resourceName Name of the media that is being downloaded.  See
-    ReadRequest.resource_name.
+     * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
      * @param content the {@link com.google.api.services.cloudsearch.v1.model.Media}
      * @return the request
      */
@@ -3459,23 +3295,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
     }
 
     /**
-     * Uploads media for indexing.
-     *
-     * The upload endpoint supports direct and resumable upload protocols and is intended for large
-     * items that can not be [inlined during index requests](https://developers.google.com/cloud-
-     * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
-     *
-     * 1. Call    indexing.datasources.items.upload    with the resource name to begin an upload session
-     * and retrieve the    UploadItemRef. 1. Call media.upload to upload the content using the same
-     * resource name from step 1. 1. Call indexing.datasources.items.index    to index the item.
-     * Populate the    [ItemContent](/cloud-
-     * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent)    with the UploadItemRef
-     * from step 1.
-     *
-     * For additional information, see [Create a content connector using the REST
-     * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
-     *
-     *   **Note:** This API requires a service account to execute.
+     * Uploads media for indexing. The upload endpoint supports direct and resumable upload protocols
+     * and is intended for large items that can not be [inlined during index
+     * requests](https://developers.google.com/cloud-
+     * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content: 1.
+     * Call indexing.datasources.items.upload with the resource name to begin an upload session and
+     * retrieve the UploadItemRef. 1. Call media.upload to upload the content using the same resource
+     * name from step 1. 1. Call indexing.datasources.items.index to index the item. Populate the
+     * [ItemContent](/cloud-search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with
+     * the UploadItemRef from step 1. For additional information, see [Create a content connector using
+     * the REST API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
+     * **Note:** This API requires a service account to execute.
      *
      * Create a request for the method "media.upload".
      *
@@ -3486,8 +3316,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * This method should be used for uploading media content.
      * </p>
      *
-     * @param resourceName Name of the media that is being downloaded.  See
-    ReadRequest.resource_name.
+     * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
      * @param content the {@link com.google.api.services.cloudsearch.v1.model.Media} media metadata or {@code null} if none
      * @param mediaContent The media HTTP content or {@code null} if none.
      * @return the request
@@ -3507,23 +3336,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^.*$");
 
       /**
-       * Uploads media for indexing.
-       *
-       * The upload endpoint supports direct and resumable upload protocols and is intended for large
-       * items that can not be [inlined during index requests](https://developers.google.com/cloud-
+       * Uploads media for indexing. The upload endpoint supports direct and resumable upload protocols
+       * and is intended for large items that can not be [inlined during index
+       * requests](https://developers.google.com/cloud-
        * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
-       *
-       * 1. Call    indexing.datasources.items.upload    with the resource name to begin an upload
-       * session and retrieve the    UploadItemRef. 1. Call media.upload to upload the content using the
-       * same resource name from step 1. 1. Call indexing.datasources.items.index    to index the item.
-       * Populate the    [ItemContent](/cloud-
-       * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent)    with the UploadItemRef
-       * from step 1.
-       *
-       * For additional information, see [Create a content connector using the REST
-       * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
-       *
-       *   **Note:** This API requires a service account to execute.
+       * 1. Call indexing.datasources.items.upload with the resource name to begin an upload session and
+       * retrieve the UploadItemRef. 1. Call media.upload to upload the content using the same resource
+       * name from step 1. 1. Call indexing.datasources.items.index to index the item. Populate the
+       * [ItemContent](/cloud-search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with
+       * the UploadItemRef from step 1. For additional information, see [Create a content connector
+       * using the REST API](https://developers.google.com/cloud-search/docs/guides/content-
+       * connector#rest). **Note:** This API requires a service account to execute.
        *
        * Create a request for the method "media.upload".
        *
@@ -3533,8 +3356,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resourceName Name of the media that is being downloaded.  See
-    ReadRequest.resource_name.
+       * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
        * @param content the {@link com.google.api.services.cloudsearch.v1.model.Media}
        * @since 1.13
        */
@@ -3549,23 +3371,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Uploads media for indexing.
-       *
-       * The upload endpoint supports direct and resumable upload protocols and is intended for large
-       * items that can not be [inlined during index requests](https://developers.google.com/cloud-
+       * Uploads media for indexing. The upload endpoint supports direct and resumable upload protocols
+       * and is intended for large items that can not be [inlined during index
+       * requests](https://developers.google.com/cloud-
        * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
-       *
-       * 1. Call    indexing.datasources.items.upload    with the resource name to begin an upload
-       * session and retrieve the    UploadItemRef. 1. Call media.upload to upload the content using the
-       * same resource name from step 1. 1. Call indexing.datasources.items.index    to index the item.
-       * Populate the    [ItemContent](/cloud-
-       * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent)    with the UploadItemRef
-       * from step 1.
-       *
-       * For additional information, see [Create a content connector using the REST
-       * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
-       *
-       *   **Note:** This API requires a service account to execute.
+       * 1. Call indexing.datasources.items.upload with the resource name to begin an upload session and
+       * retrieve the UploadItemRef. 1. Call media.upload to upload the content using the same resource
+       * name from step 1. 1. Call indexing.datasources.items.index to index the item. Populate the
+       * [ItemContent](/cloud-search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with
+       * the UploadItemRef from step 1. For additional information, see [Create a content connector
+       * using the REST API](https://developers.google.com/cloud-search/docs/guides/content-
+       * connector#rest). **Note:** This API requires a service account to execute.
        *
        * Create a request for the method "media.upload".
        *
@@ -3579,8 +3395,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * This constructor should be used for uploading media content.
        * </p>
        *
-       * @param resourceName Name of the media that is being downloaded.  See
-    ReadRequest.resource_name.
+       * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
        * @param content the {@link com.google.api.services.cloudsearch.v1.model.Media} media metadata or {@code null} if none
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @since 1.13
@@ -3646,21 +3461,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         return (Upload) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Name of the media that is being downloaded.  See ReadRequest.resource_name.
-       */
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** Name of the media that is being downloaded.  See ReadRequest.resource_name.
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name.
        */
       public java.lang.String getResourceName() {
         return resourceName;
       }
 
-      /**
-       * Name of the media that is being downloaded.  See ReadRequest.resource_name.
-       */
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
       public Upload setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
@@ -3700,7 +3511,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
   public class Operations {
 
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -3725,7 +3536,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -3864,13 +3675,11 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
     /**
      * The Cloud Search Query API provides the search method, which returns the most relevant results
-     * from a user query.  The results can come from G Suite Apps, such as Gmail or Google Drive, or
-     * they can come from data that you have indexed from a third party.
-     *
-     * **Note:** This API requires a standard end user account to execute. A service account can't
-     * perform Query API requests directly; to use a service account to perform queries, set up [G Suite
-     * domain-wide delegation of authority](https://developers.google.com/cloud-
-     * search/docs/guides/delegation/).
+     * from a user query. The results can come from G Suite Apps, such as Gmail or Google Drive, or they
+     * can come from data that you have indexed from a third party. **Note:** This API requires a
+     * standard end user account to execute. A service account can't perform Query API requests
+     * directly; to use a service account to perform queries, set up [G Suite domain-wide delegation of
+     * authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
      *
      * Create a request for the method "query.search".
      *
@@ -3892,13 +3701,11 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
       /**
        * The Cloud Search Query API provides the search method, which returns the most relevant results
-       * from a user query.  The results can come from G Suite Apps, such as Gmail or Google Drive, or
-       * they can come from data that you have indexed from a third party.
-       *
-       * **Note:** This API requires a standard end user account to execute. A service account can't
-       * perform Query API requests directly; to use a service account to perform queries, set up [G
-       * Suite domain-wide delegation of authority](https://developers.google.com/cloud-
-       * search/docs/guides/delegation/).
+       * from a user query. The results can come from G Suite Apps, such as Gmail or Google Drive, or
+       * they can come from data that you have indexed from a third party. **Note:** This API requires a
+       * standard end user account to execute. A service account can't perform Query API requests
+       * directly; to use a service account to perform queries, set up [G Suite domain-wide delegation
+       * of authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
        *
        * Create a request for the method "query.search".
        *
@@ -3976,12 +3783,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Provides suggestions for autocompleting the query.
-     *
-     * **Note:** This API requires a standard end user account to execute. A service account can't
-     * perform Query API requests directly; to use a service account to perform queries, set up [G Suite
-     * domain-wide delegation of authority](https://developers.google.com/cloud-
-     * search/docs/guides/delegation/).
+     * Provides suggestions for autocompleting the query. **Note:** This API requires a standard end
+     * user account to execute. A service account can't perform Query API requests directly; to use a
+     * service account to perform queries, set up [G Suite domain-wide delegation of
+     * authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
      *
      * Create a request for the method "query.suggest".
      *
@@ -4002,12 +3807,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1/query/suggest";
 
       /**
-       * Provides suggestions for autocompleting the query.
-       *
-       * **Note:** This API requires a standard end user account to execute. A service account can't
-       * perform Query API requests directly; to use a service account to perform queries, set up [G
-       * Suite domain-wide delegation of authority](https://developers.google.com/cloud-
-       * search/docs/guides/delegation/).
+       * Provides suggestions for autocompleting the query. **Note:** This API requires a standard end
+       * user account to execute. A service account can't perform Query API requests directly; to use a
+       * service account to perform queries, set up [G Suite domain-wide delegation of
+       * authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
        *
        * Create a request for the method "query.suggest".
        *
@@ -4106,12 +3909,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
     public class Sources {
 
       /**
-       * Returns list of sources that user can use for Search and Suggest APIs.
-       *
-       * **Note:** This API requires a standard end user account to execute. A service account can't
-       * perform Query API requests directly; to use a service account to perform queries, set up [G Suite
-       * domain-wide delegation of authority](https://developers.google.com/cloud-
-       * search/docs/guides/delegation/).
+       * Returns list of sources that user can use for Search and Suggest APIs. **Note:** This API
+       * requires a standard end user account to execute. A service account can't perform Query API
+       * requests directly; to use a service account to perform queries, set up [G Suite domain-wide
+       * delegation of authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
        *
        * Create a request for the method "sources.list".
        *
@@ -4131,12 +3932,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "v1/query/sources";
 
         /**
-         * Returns list of sources that user can use for Search and Suggest APIs.
-         *
-         * **Note:** This API requires a standard end user account to execute. A service account can't
-         * perform Query API requests directly; to use a service account to perform queries, set up [G
-         * Suite domain-wide delegation of authority](https://developers.google.com/cloud-
-         * search/docs/guides/delegation/).
+         * Returns list of sources that user can use for Search and Suggest APIs. **Note:** This API
+         * requires a standard end user account to execute. A service account can't perform Query API
+         * requests directly; to use a service account to perform queries, set up [G Suite domain-wide
+         * delegation of authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
          *
          * Create a request for the method "sources.list".
          *
@@ -4256,30 +4055,22 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
-         * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations.
-         *
-         * Set this field using the language set in browser or for the page. In the event that the
-         * user's language preference is known, set this field to the known user language.
-         *
-         * When specified, the documents in search results are biased towards the specified
-         * language.
-         *
-         * The suggest API does not use this parameter. Instead, suggest autocompletes only based on
+         * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set
+         * this field using the language set in browser or for the page. In the event that the
+         * user's language preference is known, set this field to the known user language. When
+         * specified, the documents in search results are biased towards the specified language. The
+         * suggest API does not use this parameter. Instead, suggest autocompletes only based on
          * characters in the query.
          */
         @com.google.api.client.util.Key("requestOptions.languageCode")
         private java.lang.String requestOptionsLanguageCode;
 
         /** The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
-       http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations.
-
-       Set this field using the language set in browser or for the page. In the event that the user's
-       language preference is known, set this field to the known user language.
-
-       When specified, the documents in search results are biased towards the specified language.
-
-       The suggest API does not use this parameter. Instead, suggest autocompletes only based on
-       characters in the query.
+       http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set this field
+       using the language set in browser or for the page. In the event that the user's language preference
+       is known, set this field to the known user language. When specified, the documents in search
+       results are biased towards the specified language. The suggest API does not use this parameter.
+       Instead, suggest autocompletes only based on characters in the query.
          */
         public java.lang.String getRequestOptionsLanguageCode() {
           return requestOptionsLanguageCode;
@@ -4287,15 +4078,11 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
-         * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations.
-         *
-         * Set this field using the language set in browser or for the page. In the event that the
-         * user's language preference is known, set this field to the known user language.
-         *
-         * When specified, the documents in search results are biased towards the specified
-         * language.
-         *
-         * The suggest API does not use this parameter. Instead, suggest autocompletes only based on
+         * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set
+         * this field using the language set in browser or for the page. In the event that the
+         * user's language preference is known, set this field to the known user language. When
+         * specified, the documents in search results are biased towards the specified language. The
+         * suggest API does not use this parameter. Instead, suggest autocompletes only based on
          * characters in the query.
          */
         public List setRequestOptionsLanguageCode(java.lang.String requestOptionsLanguageCode) {
@@ -4411,9 +4198,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
     public class Datasources {
 
       /**
-       * Creates a datasource.
-       *
-       * **Note:** This API requires an admin account to execute.
+       * Creates a datasource. **Note:** This API requires an admin account to execute.
        *
        * Create a request for the method "datasources.create".
        *
@@ -4434,9 +4219,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "v1/settings/datasources";
 
         /**
-         * Creates a datasource.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Creates a datasource. **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "datasources.create".
          *
@@ -4514,17 +4297,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Deletes a datasource.
-       *
-       * **Note:** This API requires an admin account to execute.
+       * Deletes a datasource. **Note:** This API requires an admin account to execute.
        *
        * Create a request for the method "datasources.delete".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the datasource.
-      Format: datasources/{source_id}.
+       * @param name Name of the datasource. Format: datasources/{source_id}.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4541,9 +4321,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
         /**
-         * Deletes a datasource.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Deletes a datasource. **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "datasources.delete".
          *
@@ -4553,8 +4331,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the datasource.
-      Format: datasources/{source_id}.
+         * @param name Name of the datasource. Format: datasources/{source_id}.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -4622,9 +4399,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Name of the datasource. Format: datasources/{source_id}.
-         */
+        /** Name of the datasource. Format: datasources/{source_id}. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -4634,9 +4409,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return name;
         }
 
-        /**
-         * Name of the datasource. Format: datasources/{source_id}.
-         */
+        /** Name of the datasource. Format: datasources/{source_id}. */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4675,17 +4448,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Gets a datasource.
-       *
-       * **Note:** This API requires an admin account to execute.
+       * Gets a datasource. **Note:** This API requires an admin account to execute.
        *
        * Create a request for the method "datasources.get".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the datasource resource.
-      Format: datasources/{source_id}.
+       * @param name Name of the datasource resource. Format: datasources/{source_id}.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4702,9 +4472,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
         /**
-         * Gets a datasource.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Gets a datasource. **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "datasources.get".
          *
@@ -4713,8 +4481,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the datasource resource.
-      Format: datasources/{source_id}.
+         * @param name Name of the datasource resource. Format: datasources/{source_id}.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -4792,9 +4559,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Name of the datasource resource. Format: datasources/{source_id}.
-         */
+        /** Name of the datasource resource. Format: datasources/{source_id}. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -4804,9 +4569,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return name;
         }
 
-        /**
-         * Name of the datasource resource. Format: datasources/{source_id}.
-         */
+        /** Name of the datasource resource. Format: datasources/{source_id}. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4845,9 +4608,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Lists datasources.
-       *
-       * **Note:** This API requires an admin account to execute.
+       * Lists datasources. **Note:** This API requires an admin account to execute.
        *
        * Create a request for the method "datasources.list".
        *
@@ -4867,9 +4628,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "v1/settings/datasources";
 
         /**
-         * Lists datasources.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Lists datasources. **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "datasources.list".
          *
@@ -5015,18 +4774,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Updates a datasource.
-       *
-       * **Note:** This API requires an admin account to execute.
+       * Updates a datasource. **Note:** This API requires an admin account to execute.
        *
        * Create a request for the method "datasources.update".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the datasource resource.
-      Format: datasources/{source_id}.
-      The name is ignored when creating
+       * @param name Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating
        *        a datasource.
        * @param content the {@link com.google.api.services.cloudsearch.v1.model.UpdateDataSourceRequest}
        * @return the request
@@ -5045,9 +4800,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
         /**
-         * Updates a datasource.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Updates a datasource. **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "datasources.update".
          *
@@ -5057,9 +4810,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the datasource resource.
-      Format: datasources/{source_id}.
-      The name is ignored when creating
+         * @param name Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating
        *        a datasource.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.UpdateDataSourceRequest}
          * @since 1.13
@@ -5185,9 +4936,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
     public class Searchapplications {
 
       /**
-       * Creates a search application.
-       *
-       * **Note:** This API requires an admin account to execute.
+       * Creates a search application. **Note:** This API requires an admin account to execute.
        *
        * Create a request for the method "searchapplications.create".
        *
@@ -5208,9 +4957,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "v1/settings/searchapplications";
 
         /**
-         * Creates a search application.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Creates a search application. **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "searchapplications.create".
          *
@@ -5288,17 +5035,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Deletes a search application.
-       *
-       * **Note:** This API requires an admin account to execute.
+       * Deletes a search application. **Note:** This API requires an admin account to execute.
        *
        * Create a request for the method "searchapplications.delete".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the search application to be deleted.
-      Format: applications/{application_id}.
+       * @param name The name of the search application to be deleted. Format: applications/{application_id}.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5315,9 +5059,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
 
         /**
-         * Deletes a search application.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Deletes a search application. **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "searchapplications.delete".
          *
@@ -5327,8 +5069,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the search application to be deleted.
-      Format: applications/{application_id}.
+         * @param name The name of the search application to be deleted. Format: applications/{application_id}.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -5449,17 +5190,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Gets the specified search application.
-       *
-       * **Note:** This API requires an admin account to execute.
+       * Gets the specified search application. **Note:** This API requires an admin account to execute.
        *
        * Create a request for the method "searchapplications.get".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the search application.
-      Format: searchapplications/{application_id}.
+       * @param name Name of the search application. Format: searchapplications/{application_id}.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -5476,9 +5214,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
 
         /**
-         * Gets the specified search application.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Gets the specified search application. **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "searchapplications.get".
          *
@@ -5487,8 +5223,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the search application.
-      Format: searchapplications/{application_id}.
+         * @param name Name of the search application. Format: searchapplications/{application_id}.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5566,9 +5301,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Name of the search application. Format: searchapplications/{application_id}.
-         */
+        /** Name of the search application. Format: searchapplications/{application_id}. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -5578,9 +5311,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return name;
         }
 
-        /**
-         * Name of the search application. Format: searchapplications/{application_id}.
-         */
+        /** Name of the search application. Format: searchapplications/{application_id}. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5619,9 +5350,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Lists all search applications.
-       *
-       * **Note:** This API requires an admin account to execute.
+       * Lists all search applications. **Note:** This API requires an admin account to execute.
        *
        * Create a request for the method "searchapplications.list".
        *
@@ -5641,9 +5370,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "v1/settings/searchapplications";
 
         /**
-         * Lists all search applications.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Lists all search applications. **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "searchapplications.list".
          *
@@ -5789,17 +5516,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Resets a search application to default settings. This will return an empty response.
-       *
-       * **Note:** This API requires an admin account to execute.
+       * Resets a search application to default settings. This will return an empty response. **Note:**
+       * This API requires an admin account to execute.
        *
        * Create a request for the method "searchapplications.reset".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Reset#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the search application to be reset.
-      Format: applications/{application_id}.
+       * @param name The name of the search application to be reset. Format: applications/{application_id}.
        * @param content the {@link com.google.api.services.cloudsearch.v1.model.ResetSearchApplicationRequest}
        * @return the request
        */
@@ -5817,9 +5542,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
 
         /**
-         * Resets a search application to default settings. This will return an empty response.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Resets a search application to default settings. This will return an empty response. **Note:**
+         * This API requires an admin account to execute.
          *
          * Create a request for the method "searchapplications.reset".
          *
@@ -5829,8 +5553,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Reset#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the search application to be reset.
-      Format: applications/{application_id}.
+         * @param name The name of the search application to be reset. Format: applications/{application_id}.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.ResetSearchApplicationRequest}
          * @since 1.13
          */
@@ -5930,17 +5653,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Updates a search application.
-       *
-       * **Note:** This API requires an admin account to execute.
+       * Updates a search application. **Note:** This API requires an admin account to execute.
        *
        * Create a request for the method "searchapplications.update".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the Search Application.
-      Format: searchapplications/{application_id}.
+       * @param name Name of the Search Application. Format: searchapplications/{application_id}.
        * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchApplication}
        * @return the request
        */
@@ -5958,9 +5678,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
 
         /**
-         * Updates a search application.
-         *
-         * **Note:** This API requires an admin account to execute.
+         * Updates a search application. **Note:** This API requires an admin account to execute.
          *
          * Create a request for the method "searchapplications.update".
          *
@@ -5970,8 +5688,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the Search Application.
-      Format: searchapplications/{application_id}.
+         * @param name Name of the Search Application. Format: searchapplications/{application_id}.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchApplication}
          * @since 1.13
          */
@@ -6040,9 +5757,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Name of the Search Application. Format: searchapplications/{application_id}.
-         */
+        /** Name of the Search Application. Format: searchapplications/{application_id}. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -6052,9 +5767,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return name;
         }
 
-        /**
-         * Name of the Search Application. Format: searchapplications/{application_id}.
-         */
+        /** Name of the Search Application. Format: searchapplications/{application_id}. */
         public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6096,9 +5809,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
     /**
      * Gets indexed item statistics aggreggated across all data sources. This API only returns
-     * statistics for previous dates; it doesn't return statistics for the current day.
-     *
-     * **Note:** This API requires a standard end user account to execute.
+     * statistics for previous dates; it doesn't return statistics for the current day. **Note:** This
+     * API requires a standard end user account to execute.
      *
      * Create a request for the method "stats.getIndex".
      *
@@ -6119,9 +5831,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
       /**
        * Gets indexed item statistics aggreggated across all data sources. This API only returns
-       * statistics for previous dates; it doesn't return statistics for the current day.
-       *
-       * **Note:** This API requires a standard end user account to execute.
+       * statistics for previous dates; it doesn't return statistics for the current day. **Note:** This
+       * API requires a standard end user account to execute.
        *
        * Create a request for the method "stats.getIndex".
        *
@@ -6304,9 +6015,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Get the query statistics for customer.
-     *
-     * **Note:** This API requires a standard end user account to execute.
+     * Get the query statistics for customer. **Note:** This API requires a standard end user account to
+     * execute.
      *
      * Create a request for the method "stats.getQuery".
      *
@@ -6326,9 +6036,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1/stats/query";
 
       /**
-       * Get the query statistics for customer.
-       *
-       * **Note:** This API requires a standard end user account to execute.
+       * Get the query statistics for customer. **Note:** This API requires a standard end user account
+       * to execute.
        *
        * Create a request for the method "stats.getQuery".
        *
@@ -6512,9 +6221,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
     }
     /**
      * Get the # of search sessions, % of successful sessions with a click query statistics for
-     * customer.
-     *
-     * **Note:** This API requires a standard end user account to execute.
+     * customer. **Note:** This API requires a standard end user account to execute.
      *
      * Create a request for the method "stats.getSession".
      *
@@ -6535,9 +6242,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
       /**
        * Get the # of search sessions, % of successful sessions with a click query statistics for
-       * customer.
-       *
-       * **Note:** This API requires a standard end user account to execute.
+       * customer. **Note:** This API requires a standard end user account to execute.
        *
        * Create a request for the method "stats.getSession".
        *
@@ -6720,9 +6425,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Get the users statistics for customer.
-     *
-     * **Note:** This API requires a standard end user account to execute.
+     * Get the users statistics for customer. **Note:** This API requires a standard end user account to
+     * execute.
      *
      * Create a request for the method "stats.getUser".
      *
@@ -6742,9 +6446,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1/stats/user";
 
       /**
-       * Get the users statistics for customer.
-       *
-       * **Note:** This API requires a standard end user account to execute.
+       * Get the users statistics for customer. **Note:** This API requires a standard end user account
+       * to execute.
        *
        * Create a request for the method "stats.getUser".
        *
@@ -6968,17 +6671,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       public class Datasources {
 
         /**
-         * Gets indexed item statistics for a single data source.
-         *
-         * **Note:** This API requires a standard end user account to execute.
+         * Gets indexed item statistics for a single data source. **Note:** This API requires a standard end
+         * user account to execute.
          *
          * Create a request for the method "datasources.get".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The resource id of the data source to retrieve statistics for,
-        in the following format:
+         * @param name The resource id of the data source to retrieve statistics for, in the following format:
          *        "datasources/{source_id}"
          * @return the request
          */
@@ -6996,9 +6697,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
           /**
-           * Gets indexed item statistics for a single data source.
-           *
-           * **Note:** This API requires a standard end user account to execute.
+           * Gets indexed item statistics for a single data source. **Note:** This API requires a standard
+           * end user account to execute.
            *
            * Create a request for the method "datasources.get".
            *
@@ -7007,8 +6707,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource id of the data source to retrieve statistics for,
-        in the following format:
+           * @param name The resource id of the data source to retrieve statistics for, in the following format:
          *        "datasources/{source_id}"
            * @since 1.13
            */
@@ -7260,17 +6959,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       public class Searchapplications {
 
         /**
-         * Get the query statistics for search application.
-         *
-         * **Note:** This API requires a standard end user account to execute.
+         * Get the query statistics for search application. **Note:** This API requires a standard end user
+         * account to execute.
          *
          * Create a request for the method "searchapplications.get".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The resource id of the search application query stats, in the following
-        format:
+         * @param name The resource id of the search application query stats, in the following format:
          *        searchapplications/{application_id}
          * @return the request
          */
@@ -7288,9 +6985,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
 
           /**
-           * Get the query statistics for search application.
-           *
-           * **Note:** This API requires a standard end user account to execute.
+           * Get the query statistics for search application. **Note:** This API requires a standard end
+           * user account to execute.
            *
            * Create a request for the method "searchapplications.get".
            *
@@ -7299,8 +6995,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource id of the search application query stats, in the following
-        format:
+           * @param name The resource id of the search application query stats, in the following format:
          *        searchapplications/{application_id}
            * @since 1.13
            */
@@ -7553,17 +7248,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Get the # of search sessions, % of successful sessions with a click query statistics for search
-         * application.
-         *
-         * **Note:** This API requires a standard end user account to execute.
+         * application. **Note:** This API requires a standard end user account to execute.
          *
          * Create a request for the method "searchapplications.get".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The resource id of the search application session stats, in the following
-        format:
+         * @param name The resource id of the search application session stats, in the following format:
          *        searchapplications/{application_id}
          * @return the request
          */
@@ -7582,9 +7274,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
           /**
            * Get the # of search sessions, % of successful sessions with a click query statistics for search
-           * application.
-           *
-           * **Note:** This API requires a standard end user account to execute.
+           * application. **Note:** This API requires a standard end user account to execute.
            *
            * Create a request for the method "searchapplications.get".
            *
@@ -7593,8 +7283,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource id of the search application session stats, in the following
-        format:
+           * @param name The resource id of the search application session stats, in the following format:
          *        searchapplications/{application_id}
            * @since 1.13
            */
@@ -7846,17 +7535,15 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       public class Searchapplications {
 
         /**
-         * Get the users statistics for search application.
-         *
-         * **Note:** This API requires a standard end user account to execute.
+         * Get the users statistics for search application. **Note:** This API requires a standard end user
+         * account to execute.
          *
          * Create a request for the method "searchapplications.get".
          *
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The resource id of the search application session stats, in the following
-        format:
+         * @param name The resource id of the search application session stats, in the following format:
          *        searchapplications/{application_id}
          * @return the request
          */
@@ -7874,9 +7561,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
               java.util.regex.Pattern.compile("^searchapplications/[^/]+$");
 
           /**
-           * Get the users statistics for search application.
-           *
-           * **Note:** This API requires a standard end user account to execute.
+           * Get the users statistics for search application. **Note:** This API requires a standard end
+           * user account to execute.
            *
            * Create a request for the method "searchapplications.get".
            *
@@ -7885,8 +7571,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource id of the search application session stats, in the following
-        format:
+           * @param name The resource id of the search application session stats, in the following format:
          *        searchapplications/{application_id}
            * @since 1.13
            */

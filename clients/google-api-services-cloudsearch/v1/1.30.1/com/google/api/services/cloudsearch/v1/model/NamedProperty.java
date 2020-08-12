@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * A typed name-value pair for structured data.  The type of the value should be the same as the
+ * A typed name-value pair for structured data. The type of the value should be the same as the
  * registered type for the `name` property in the object definition of `objectType`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -67,7 +67,7 @@ public final class NamedProperty extends com.google.api.client.json.GenericJson 
   private IntegerValues integerValues;
 
   /**
-   * The name of the property.  This name should correspond to the name of the property that was
+   * The name of the property. This name should correspond to the name of the property that was
    * registered for object definition in the schema. The maximum allowable length for this property
    * is 256 characters.
    * The value may be {@code null}.
@@ -184,7 +184,7 @@ public final class NamedProperty extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the property.  This name should correspond to the name of the property that was
+   * The name of the property. This name should correspond to the name of the property that was
    * registered for object definition in the schema. The maximum allowable length for this property
    * is 256 characters.
    * @return value or {@code null} for none
@@ -194,7 +194,7 @@ public final class NamedProperty extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the property.  This name should correspond to the name of the property that was
+   * The name of the property. This name should correspond to the name of the property that was
    * registered for object definition in the schema. The maximum allowable length for this property
    * is 256 characters.
    * @param name name or {@code null} for none

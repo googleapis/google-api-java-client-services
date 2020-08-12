@@ -17,7 +17,8 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * A DeviceUser is a resource representing a user's use of a Device
+ * Represents a user's use of a Device in the Cloud Identity Devices API. A DeviceUser is a resource
+ * representing a user's use of a Device
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:

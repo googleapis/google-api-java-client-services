@@ -23,6 +23,9 @@ package com.google.api.services.cloudidentity.v1beta1;
  */
 public class CloudIdentityScopes {
 
+  /** See your device details. */
+  public static final String CLOUD_IDENTITY_DEVICES_LOOKUP = "https://www.googleapis.com/auth/cloud-identity.devices.lookup";
+
   /** See, change, create, and delete any of the Cloud Identity Groups that you can access, including the members of each group. */
   public static final String CLOUD_IDENTITY_GROUPS = "https://www.googleapis.com/auth/cloud-identity.groups";
 
@@ -39,6 +42,7 @@ public class CloudIdentityScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CLOUD_IDENTITY_DEVICES_LOOKUP);
     set.add(CLOUD_IDENTITY_GROUPS);
     set.add(CLOUD_IDENTITY_GROUPS_READONLY);
     set.add(CLOUD_PLATFORM);

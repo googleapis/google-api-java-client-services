@@ -31,11 +31,9 @@ public final class LookupMembershipNameResponse extends com.google.api.client.js
 
   /**
    * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership being
-   * looked up.
-   *
-   * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique ID assigned
-   * to the Group to which Membership belongs to, and `member_id` is the unique ID assigned to the
-   * member.
+   * looked up. Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique
+   * ID assigned to the Group to which Membership belongs to, and `member_id` is the unique ID
+   * assigned to the member.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,11 +41,9 @@ public final class LookupMembershipNameResponse extends com.google.api.client.js
 
   /**
    * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership being
-   * looked up.
-   *
-   * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique ID assigned
-   * to the Group to which Membership belongs to, and `member_id` is the unique ID assigned to the
-   * member.
+   * looked up. Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique
+   * ID assigned to the Group to which Membership belongs to, and `member_id` is the unique ID
+   * assigned to the member.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -56,11 +52,9 @@ public final class LookupMembershipNameResponse extends com.google.api.client.js
 
   /**
    * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership being
-   * looked up.
-   *
-   * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique ID assigned
-   * to the Group to which Membership belongs to, and `member_id` is the unique ID assigned to the
-   * member.
+   * looked up. Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique
+   * ID assigned to the Group to which Membership belongs to, and `member_id` is the unique ID
+   * assigned to the member.
    * @param name name or {@code null} for none
    */
   public LookupMembershipNameResponse setName(java.lang.String name) {

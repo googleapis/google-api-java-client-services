@@ -30,19 +30,14 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class UpdateMembershipRolesParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fully-qualified names of fields to update.
-   *
-   * May only contain the field `expiry_detail`.
+   * The fully-qualified names of fields to update. May only contain the field `expiry_detail`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String fieldMask;
 
   /**
-   * The `MembershipRole`s to be updated.
-   *
-   * Only `MEMBER` `MembershipRoles` can currently be updated.
-   *
+   * The `MembershipRole`s to be updated. Only `MEMBER` `MembershipRoles` can currently be updated.
    * May only contain a `MembershipRole` with `name` `MEMBER`.
    * The value may be {@code null}.
    */
@@ -50,9 +45,7 @@ public final class UpdateMembershipRolesParams extends com.google.api.client.jso
   private MembershipRole membershipRole;
 
   /**
-   * The fully-qualified names of fields to update.
-   *
-   * May only contain the field `expiry_detail`.
+   * The fully-qualified names of fields to update. May only contain the field `expiry_detail`.
    * @return value or {@code null} for none
    */
   public String getFieldMask() {
@@ -60,9 +53,7 @@ public final class UpdateMembershipRolesParams extends com.google.api.client.jso
   }
 
   /**
-   * The fully-qualified names of fields to update.
-   *
-   * May only contain the field `expiry_detail`.
+   * The fully-qualified names of fields to update. May only contain the field `expiry_detail`.
    * @param fieldMask fieldMask or {@code null} for none
    */
   public UpdateMembershipRolesParams setFieldMask(String fieldMask) {
@@ -71,10 +62,7 @@ public final class UpdateMembershipRolesParams extends com.google.api.client.jso
   }
 
   /**
-   * The `MembershipRole`s to be updated.
-   *
-   * Only `MEMBER` `MembershipRoles` can currently be updated.
-   *
+   * The `MembershipRole`s to be updated. Only `MEMBER` `MembershipRoles` can currently be updated.
    * May only contain a `MembershipRole` with `name` `MEMBER`.
    * @return value or {@code null} for none
    */
@@ -83,10 +71,7 @@ public final class UpdateMembershipRolesParams extends com.google.api.client.jso
   }
 
   /**
-   * The `MembershipRole`s to be updated.
-   *
-   * Only `MEMBER` `MembershipRoles` can currently be updated.
-   *
+   * The `MembershipRole`s to be updated. Only `MEMBER` `MembershipRoles` can currently be updated.
    * May only contain a `MembershipRole` with `name` `MEMBER`.
    * @param membershipRole membershipRole or {@code null} for none
    */

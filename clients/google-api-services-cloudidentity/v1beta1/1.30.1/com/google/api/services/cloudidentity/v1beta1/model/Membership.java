@@ -17,10 +17,8 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * A membership within the Cloud Identity Groups API.
- *
- * A `Membership` defines a relationship between a `Group` and an entity belonging to that `Group`,
- * referred to as a "member".
+ * A membership within the Cloud Identity Groups API. A `Membership` defines a relationship between
+ * a `Group` and an entity belonging to that `Group`, referred to as a "member".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -40,10 +38,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Immutable. The `EntityKey` of the member.
-   *
-   * Either `member_key` or `preferred_member_key` must be set when calling
-   * MembershipsService.CreateMembership but not both; both shall be set when returned.
+   * Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be
+   * set when calling MembershipsService.CreateMembership but not both; both shall be set when
+   * returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,30 +48,25 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * `Membership`.
-   *
-   * Shall be of the form `groups/{group_id}/memberships/{membership_id}`.
+   * `Membership`. Shall be of the form `groups/{group_id}/memberships/{membership_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. Immutable. The `EntityKey` of the member.
-   *
-   * Either `member_key` or `preferred_member_key` must be set when calling
-   * MembershipsService.CreateMembership but not both; both shall be set when returned.
+   * Required. Immutable. The `EntityKey` of the member. Either `member_key` or
+   * `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not
+   * both; both shall be set when returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EntityKey preferredMemberKey;
 
   /**
-   * The `MembershipRole`s that apply to the `Membership`.
-   *
-   * If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`.
-   *
-   * Must not contain duplicate `MembershipRole`s with the same `name`.
+   * The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single
+   * `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the
+   * same `name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,10 +104,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The `EntityKey` of the member.
-   *
-   * Either `member_key` or `preferred_member_key` must be set when calling
-   * MembershipsService.CreateMembership but not both; both shall be set when returned.
+   * Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be
+   * set when calling MembershipsService.CreateMembership but not both; both shall be set when
+   * returned.
    * @return value or {@code null} for none
    */
   public EntityKey getMemberKey() {
@@ -123,10 +114,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The `EntityKey` of the member.
-   *
-   * Either `member_key` or `preferred_member_key` must be set when calling
-   * MembershipsService.CreateMembership but not both; both shall be set when returned.
+   * Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be
+   * set when calling MembershipsService.CreateMembership but not both; both shall be set when
+   * returned.
    * @param memberKey memberKey or {@code null} for none
    */
   public Membership setMemberKey(EntityKey memberKey) {
@@ -136,9 +126,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * `Membership`.
-   *
-   * Shall be of the form `groups/{group_id}/memberships/{membership_id}`.
+   * `Membership`. Shall be of the form `groups/{group_id}/memberships/{membership_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -147,9 +135,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * `Membership`.
-   *
-   * Shall be of the form `groups/{group_id}/memberships/{membership_id}`.
+   * `Membership`. Shall be of the form `groups/{group_id}/memberships/{membership_id}`.
    * @param name name or {@code null} for none
    */
   public Membership setName(java.lang.String name) {
@@ -158,10 +144,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The `EntityKey` of the member.
-   *
-   * Either `member_key` or `preferred_member_key` must be set when calling
-   * MembershipsService.CreateMembership but not both; both shall be set when returned.
+   * Required. Immutable. The `EntityKey` of the member. Either `member_key` or
+   * `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not
+   * both; both shall be set when returned.
    * @return value or {@code null} for none
    */
   public EntityKey getPreferredMemberKey() {
@@ -169,10 +154,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The `EntityKey` of the member.
-   *
-   * Either `member_key` or `preferred_member_key` must be set when calling
-   * MembershipsService.CreateMembership but not both; both shall be set when returned.
+   * Required. Immutable. The `EntityKey` of the member. Either `member_key` or
+   * `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not
+   * both; both shall be set when returned.
    * @param preferredMemberKey preferredMemberKey or {@code null} for none
    */
   public Membership setPreferredMemberKey(EntityKey preferredMemberKey) {
@@ -181,11 +165,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The `MembershipRole`s that apply to the `Membership`.
-   *
-   * If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`.
-   *
-   * Must not contain duplicate `MembershipRole`s with the same `name`.
+   * The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single
+   * `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the
+   * same `name`.
    * @return value or {@code null} for none
    */
   public java.util.List<MembershipRole> getRoles() {
@@ -193,11 +175,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The `MembershipRole`s that apply to the `Membership`.
-   *
-   * If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`.
-   *
-   * Must not contain duplicate `MembershipRole`s with the same `name`.
+   * The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single
+   * `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the
+   * same `name`.
    * @param roles roles or {@code null} for none
    */
   public Membership setRoles(java.util.List<MembershipRole> roles) {

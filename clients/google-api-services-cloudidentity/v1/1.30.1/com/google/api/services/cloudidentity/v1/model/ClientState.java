@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudidentity.v1beta1.model;
+package com.google.api.services.cloudidentity.v1.model;
 
 /**
  * Represents the state associated with an API client calling the Devices API. Resource representing

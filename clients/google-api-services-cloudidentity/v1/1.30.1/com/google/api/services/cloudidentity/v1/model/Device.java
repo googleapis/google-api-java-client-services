@@ -17,8 +17,8 @@
 package com.google.api.services.cloudidentity.v1.model;
 
 /**
- * Represents a Device known to Google Cloud, independent of the device ownership, type, and whether
- * it is assigned or in use by a user.
+ * A Device within the Cloud Identity Devices API. Represents a Device known to Google Cloud,
+ * independent of the device ownership, type, and whether it is assigned or in use by a user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -45,11 +45,32 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String assetTag;
 
   /**
+   * Output only. Baseband version of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String basebandVersion;
+
+  /**
+   * Output only. Device bootloader version. Example: 0.6.7.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bootloaderVersion;
+
+  /**
    * Output only. Device brand. Example: Samsung.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String brand;
+
+  /**
+   * Output only. Build number of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String buildNumber;
 
   /**
    * Output only. Represents whether the Device is compromised.
@@ -73,11 +94,39 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String deviceType;
 
   /**
+   * Output only. Whether developer options is enabled on device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enabledDeveloperOptions;
+
+  /**
+   * Output only. Whether USB debugging is enabled on device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enabledUsbDebugging;
+
+  /**
+   * Output only. Device encryption state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String encryptionState;
+
+  /**
    * Output only. IMEI number of device if GSM device; empty otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imei;
+
+  /**
+   * Output only. Kernel version of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kernelVersion;
 
   /**
    * Most recent time when device synced with this service.
@@ -137,7 +186,17 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String osVersion;
 
   /**
-   * Whether the device is owned by the company or an individual
+   * Output only. Domain name for Google accounts on device. Type for other accounts on device. On
+   * Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|.
+   * Does not include the account signed in to the device policy app if that account's domain has
+   * only one account. Examples: "com.example", "xyz.com".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> otherAccounts;
+
+  /**
+   * Output only. Whether the device is owned by the company or an individual
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,6 +208,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String releaseVersion;
+
+  /**
+   * Output only. OS security patch update time on device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String securityPatchTime;
 
   /**
    * Serial Number of device. Example: HT82V1A01076.
@@ -199,6 +265,40 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Baseband version of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBasebandVersion() {
+    return basebandVersion;
+  }
+
+  /**
+   * Output only. Baseband version of the device.
+   * @param basebandVersion basebandVersion or {@code null} for none
+   */
+  public Device setBasebandVersion(java.lang.String basebandVersion) {
+    this.basebandVersion = basebandVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Device bootloader version. Example: 0.6.7.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBootloaderVersion() {
+    return bootloaderVersion;
+  }
+
+  /**
+   * Output only. Device bootloader version. Example: 0.6.7.
+   * @param bootloaderVersion bootloaderVersion or {@code null} for none
+   */
+  public Device setBootloaderVersion(java.lang.String bootloaderVersion) {
+    this.bootloaderVersion = bootloaderVersion;
+    return this;
+  }
+
+  /**
    * Output only. Device brand. Example: Samsung.
    * @return value or {@code null} for none
    */
@@ -212,6 +312,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setBrand(java.lang.String brand) {
     this.brand = brand;
+    return this;
+  }
+
+  /**
+   * Output only. Build number of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBuildNumber() {
+    return buildNumber;
+  }
+
+  /**
+   * Output only. Build number of the device.
+   * @param buildNumber buildNumber or {@code null} for none
+   */
+  public Device setBuildNumber(java.lang.String buildNumber) {
+    this.buildNumber = buildNumber;
     return this;
   }
 
@@ -267,6 +384,57 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Whether developer options is enabled on device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnabledDeveloperOptions() {
+    return enabledDeveloperOptions;
+  }
+
+  /**
+   * Output only. Whether developer options is enabled on device.
+   * @param enabledDeveloperOptions enabledDeveloperOptions or {@code null} for none
+   */
+  public Device setEnabledDeveloperOptions(java.lang.Boolean enabledDeveloperOptions) {
+    this.enabledDeveloperOptions = enabledDeveloperOptions;
+    return this;
+  }
+
+  /**
+   * Output only. Whether USB debugging is enabled on device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnabledUsbDebugging() {
+    return enabledUsbDebugging;
+  }
+
+  /**
+   * Output only. Whether USB debugging is enabled on device.
+   * @param enabledUsbDebugging enabledUsbDebugging or {@code null} for none
+   */
+  public Device setEnabledUsbDebugging(java.lang.Boolean enabledUsbDebugging) {
+    this.enabledUsbDebugging = enabledUsbDebugging;
+    return this;
+  }
+
+  /**
+   * Output only. Device encryption state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEncryptionState() {
+    return encryptionState;
+  }
+
+  /**
+   * Output only. Device encryption state.
+   * @param encryptionState encryptionState or {@code null} for none
+   */
+  public Device setEncryptionState(java.lang.String encryptionState) {
+    this.encryptionState = encryptionState;
+    return this;
+  }
+
+  /**
    * Output only. IMEI number of device if GSM device; empty otherwise.
    * @return value or {@code null} for none
    */
@@ -280,6 +448,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setImei(java.lang.String imei) {
     this.imei = imei;
+    return this;
+  }
+
+  /**
+   * Output only. Kernel version of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKernelVersion() {
+    return kernelVersion;
+  }
+
+  /**
+   * Output only. Kernel version of the device.
+   * @param kernelVersion kernelVersion or {@code null} for none
+   */
+  public Device setKernelVersion(java.lang.String kernelVersion) {
+    this.kernelVersion = kernelVersion;
     return this;
   }
 
@@ -422,7 +607,30 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the device is owned by the company or an individual
+   * Output only. Domain name for Google accounts on device. Type for other accounts on device. On
+   * Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|.
+   * Does not include the account signed in to the device policy app if that account's domain has
+   * only one account. Examples: "com.example", "xyz.com".
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOtherAccounts() {
+    return otherAccounts;
+  }
+
+  /**
+   * Output only. Domain name for Google accounts on device. Type for other accounts on device. On
+   * Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|.
+   * Does not include the account signed in to the device policy app if that account's domain has
+   * only one account. Examples: "com.example", "xyz.com".
+   * @param otherAccounts otherAccounts or {@code null} for none
+   */
+  public Device setOtherAccounts(java.util.List<java.lang.String> otherAccounts) {
+    this.otherAccounts = otherAccounts;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the device is owned by the company or an individual
    * @return value or {@code null} for none
    */
   public java.lang.String getOwnerType() {
@@ -430,7 +638,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the device is owned by the company or an individual
+   * Output only. Whether the device is owned by the company or an individual
    * @param ownerType ownerType or {@code null} for none
    */
   public Device setOwnerType(java.lang.String ownerType) {
@@ -452,6 +660,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setReleaseVersion(java.lang.String releaseVersion) {
     this.releaseVersion = releaseVersion;
+    return this;
+  }
+
+  /**
+   * Output only. OS security patch update time on device.
+   * @return value or {@code null} for none
+   */
+  public String getSecurityPatchTime() {
+    return securityPatchTime;
+  }
+
+  /**
+   * Output only. OS security patch update time on device.
+   * @param securityPatchTime securityPatchTime or {@code null} for none
+   */
+  public Device setSecurityPatchTime(String securityPatchTime) {
+    this.securityPatchTime = securityPatchTime;
     return this;
   }
 

@@ -53,9 +53,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Required. Immutable. EntityKey of the Group.
-   *
-   * Must be set when creating a Group, read-only afterwards.
+   * Required. Immutable. EntityKey of the Group. Must be set when creating a Group, read-only
+   * afterwards.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,9 +70,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
-   * in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
-   *
-   * Must be left blank while creating a Group.
+   * in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group. Must
+   * be left blank while creating a Group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,9 +79,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The entity under which this Group resides in Cloud Identity resource
-   * hierarchy. Must be set when creating a Group, read-only afterwards.
-   *
-   * Currently allowed types: `identitysources`.
+   * hierarchy. Must be set when creating a Group, read-only afterwards. Currently allowed types:
+   * `identitysources`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,9 +149,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. EntityKey of the Group.
-   *
-   * Must be set when creating a Group, read-only afterwards.
+   * Required. Immutable. EntityKey of the Group. Must be set when creating a Group, read-only
+   * afterwards.
    * @return value or {@code null} for none
    */
   public EntityKey getGroupKey() {
@@ -162,9 +158,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. EntityKey of the Group.
-   *
-   * Must be set when creating a Group, read-only afterwards.
+   * Required. Immutable. EntityKey of the Group. Must be set when creating a Group, read-only
+   * afterwards.
    * @param groupKey groupKey or {@code null} for none
    */
   public Group setGroupKey(EntityKey groupKey) {
@@ -193,9 +188,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
-   * in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
-   *
-   * Must be left blank while creating a Group.
+   * in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group. Must
+   * be left blank while creating a Group.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -204,9 +198,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
-   * in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
-   *
-   * Must be left blank while creating a Group.
+   * in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group. Must
+   * be left blank while creating a Group.
    * @param name name or {@code null} for none
    */
   public Group setName(java.lang.String name) {
@@ -216,9 +209,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The entity under which this Group resides in Cloud Identity resource
-   * hierarchy. Must be set when creating a Group, read-only afterwards.
-   *
-   * Currently allowed types: `identitysources`.
+   * hierarchy. Must be set when creating a Group, read-only afterwards. Currently allowed types:
+   * `identitysources`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -227,9 +219,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The entity under which this Group resides in Cloud Identity resource
-   * hierarchy. Must be set when creating a Group, read-only afterwards.
-   *
-   * Currently allowed types: `identitysources`.
+   * hierarchy. Must be set when creating a Group, read-only afterwards. Currently allowed types:
+   * `identitysources`.
    * @param parent parent or {@code null} for none
    */
   public Group setParent(java.lang.String parent) {

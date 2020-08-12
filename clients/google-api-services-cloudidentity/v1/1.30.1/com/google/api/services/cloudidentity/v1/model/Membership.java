@@ -40,9 +40,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
    * Membership in the format: `groups/{group_id}/memberships/{member_id}`, where group_id is the
    * unique ID assigned to the Group to which Membership belongs to, and member_id is the unique ID
-   * assigned to the member
-   *
-   * Must be left blank while creating a Membership.
+   * assigned to the member Must be left blank while creating a Membership.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,18 +48,14 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. EntityKey of the entity to be added as the member. Must be set while
-   * creating a Membership, read-only afterwards.
-   *
-   * Currently allowed entity types: `Users`, `Groups`.
+   * creating a Membership, read-only afterwards. Currently allowed entity types: `Users`, `Groups`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EntityKey preferredMemberKey;
 
   /**
-   * Roles for a member within the Group.
-   *
-   * Currently supported MembershipRoles: `"MEMBER"`.
+   * Roles for a member within the Group. Currently supported MembershipRoles: `"MEMBER"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,9 +89,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
    * Membership in the format: `groups/{group_id}/memberships/{member_id}`, where group_id is the
    * unique ID assigned to the Group to which Membership belongs to, and member_id is the unique ID
-   * assigned to the member
-   *
-   * Must be left blank while creating a Membership.
+   * assigned to the member Must be left blank while creating a Membership.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,9 +100,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
    * Membership in the format: `groups/{group_id}/memberships/{member_id}`, where group_id is the
    * unique ID assigned to the Group to which Membership belongs to, and member_id is the unique ID
-   * assigned to the member
-   *
-   * Must be left blank while creating a Membership.
+   * assigned to the member Must be left blank while creating a Membership.
    * @param name name or {@code null} for none
    */
   public Membership setName(java.lang.String name) {
@@ -120,9 +110,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. EntityKey of the entity to be added as the member. Must be set while
-   * creating a Membership, read-only afterwards.
-   *
-   * Currently allowed entity types: `Users`, `Groups`.
+   * creating a Membership, read-only afterwards. Currently allowed entity types: `Users`, `Groups`.
    * @return value or {@code null} for none
    */
   public EntityKey getPreferredMemberKey() {
@@ -131,9 +119,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. EntityKey of the entity to be added as the member. Must be set while
-   * creating a Membership, read-only afterwards.
-   *
-   * Currently allowed entity types: `Users`, `Groups`.
+   * creating a Membership, read-only afterwards. Currently allowed entity types: `Users`, `Groups`.
    * @param preferredMemberKey preferredMemberKey or {@code null} for none
    */
   public Membership setPreferredMemberKey(EntityKey preferredMemberKey) {
@@ -142,9 +128,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Roles for a member within the Group.
-   *
-   * Currently supported MembershipRoles: `"MEMBER"`.
+   * Roles for a member within the Group. Currently supported MembershipRoles: `"MEMBER"`.
    * @return value or {@code null} for none
    */
   public java.util.List<MembershipRole> getRoles() {
@@ -152,9 +136,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Roles for a member within the Group.
-   *
-   * Currently supported MembershipRoles: `"MEMBER"`.
+   * Roles for a member within the Group. Currently supported MembershipRoles: `"MEMBER"`.
    * @param roles roles or {@code null} for none
    */
   public Membership setRoles(java.util.List<MembershipRole> roles) {

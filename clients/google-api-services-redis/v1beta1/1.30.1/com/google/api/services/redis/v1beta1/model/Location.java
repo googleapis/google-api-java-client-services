@@ -38,9 +38,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Cross-service attributes for the location. For example
-   *
-   *     {"cloud.googleapis.com/region": "us-east1"}
+   * Cross-service attributes for the location. For example {"cloud.googleapis.com/region": "us-
+   * east1"}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +86,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cross-service attributes for the location. For example
-   *
-   *     {"cloud.googleapis.com/region": "us-east1"}
+   * Cross-service attributes for the location. For example {"cloud.googleapis.com/region": "us-
+   * east1"}
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -97,9 +95,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cross-service attributes for the location. For example
-   *
-   *     {"cloud.googleapis.com/region": "us-east1"}
+   * Cross-service attributes for the location. For example {"cloud.googleapis.com/region": "us-
+   * east1"}
    * @param labels labels or {@code null} for none
    */
   public Location setLabels(java.util.Map<String, java.lang.String> labels) {

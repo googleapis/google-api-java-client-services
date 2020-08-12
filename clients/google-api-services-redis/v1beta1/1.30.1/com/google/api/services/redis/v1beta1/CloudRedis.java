@@ -508,16 +508,12 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
       public class Instances {
 
         /**
-         * Creates a Redis instance based on the specified tier and memory size.
-         *
-         * By default, the instance is accessible from the project's [default
-         * network](https://cloud.google.com/vpc/docs/vpc).
-         *
-         * The creation is executed asynchronously and callers may check the returned operation to track its
+         * Creates a Redis instance based on the specified tier and memory size. By default, the instance is
+         * accessible from the project's [default network](https://cloud.google.com/vpc/docs/vpc). The
+         * creation is executed asynchronously and callers may check the returned operation to track its
          * progress. Once the operation is completed the Redis instance will be fully functional. Completed
-         * longrunning.Operation will contain the new instance object in the response field.
-         *
-         * The returned operation is automatically deleted after a few hours, so there is no need to call
+         * longrunning.Operation will contain the new instance object in the response field. The returned
+         * operation is automatically deleted after a few hours, so there is no need to call
          * DeleteOperation.
          *
          * Create a request for the method "instances.create".
@@ -526,8 +522,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the instance location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-        where `location_id` refers to a GCP
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
          *        region.
          * @param content the {@link com.google.api.services.redis.v1beta1.model.Instance}
          * @return the request
@@ -546,16 +541,12 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a Redis instance based on the specified tier and memory size.
-           *
-           * By default, the instance is accessible from the project's [default
-           * network](https://cloud.google.com/vpc/docs/vpc).
-           *
-           * The creation is executed asynchronously and callers may check the returned operation to track
-           * its progress. Once the operation is completed the Redis instance will be fully functional.
-           * Completed longrunning.Operation will contain the new instance object in the response field.
-           *
-           * The returned operation is automatically deleted after a few hours, so there is no need to call
+           * Creates a Redis instance based on the specified tier and memory size. By default, the instance
+           * is accessible from the project's [default network](https://cloud.google.com/vpc/docs/vpc). The
+           * creation is executed asynchronously and callers may check the returned operation to track its
+           * progress. Once the operation is completed the Redis instance will be fully functional.
+           * Completed longrunning.Operation will contain the new instance object in the response field. The
+           * returned operation is automatically deleted after a few hours, so there is no need to call
            * DeleteOperation.
            *
            * Create a request for the method "instances.create".
@@ -566,8 +557,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the instance location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-        where `location_id` refers to a GCP
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
          *        region.
            * @param content the {@link com.google.api.services.redis.v1beta1.model.Instance}
            * @since 1.13
@@ -669,21 +659,17 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The logical name of the Redis instance in the customer project with the
-           * following restrictions:
-           *
-           * * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
-           * letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must
-           * be unique within the customer project / location
+           * following restrictions: * Must contain only lowercase letters, numbers, and hyphens. *
+           * Must start with a letter. * Must be between 1-40 characters. * Must end with a number
+           * or a letter. * Must be unique within the customer project / location
            */
           @com.google.api.client.util.Key
           private java.lang.String instanceId;
 
           /** Required. The logical name of the Redis instance in the customer project with the following
-         restrictions:
-
-         * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be
-         between 1-40 characters. * Must end with a number or a letter. * Must be unique within the customer
-         project / location
+         restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
+         letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique
+         within the customer project / location
            */
           public java.lang.String getInstanceId() {
             return instanceId;
@@ -691,11 +677,9 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The logical name of the Redis instance in the customer project with the
-           * following restrictions:
-           *
-           * * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
-           * letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must
-           * be unique within the customer project / location
+           * following restrictions: * Must contain only lowercase letters, numbers, and hyphens. *
+           * Must start with a letter. * Must be between 1-40 characters. * Must end with a number
+           * or a letter. * Must be unique within the customer project / location
            */
           public Create setInstanceId(java.lang.String instanceId) {
             this.instanceId = instanceId;
@@ -708,7 +692,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Deletes a specific Redis instance.  Instance stops serving and data is deleted.
+         * Deletes a specific Redis instance. Instance stops serving and data is deleted.
          *
          * Create a request for the method "instances.delete".
          *
@@ -716,8 +700,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Redis instance resource name using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region.
          * @return the request
          */
@@ -735,7 +718,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Deletes a specific Redis instance.  Instance stops serving and data is deleted.
+           * Deletes a specific Redis instance. Instance stops serving and data is deleted.
            *
            * Create a request for the method "instances.delete".
            *
@@ -745,8 +728,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Redis instance resource name using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region.
            * @since 1.13
            */
@@ -852,12 +834,9 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Export Redis instance data into a Redis RDB format file in Cloud Storage.
-         *
-         * Redis will continue serving during this operation.
-         *
-         * The returned operation is automatically deleted after a few hours, so there is no need to call
-         * DeleteOperation.
+         * Export Redis instance data into a Redis RDB format file in Cloud Storage. Redis will continue
+         * serving during this operation. The returned operation is automatically deleted after a few hours,
+         * so there is no need to call DeleteOperation.
          *
          * Create a request for the method "instances.export".
          *
@@ -865,8 +844,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Export#execute()} method to invoke the remote operation.
          *
          * @param name Required. Redis instance resource name using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region.
          * @param content the {@link com.google.api.services.redis.v1beta1.model.ExportInstanceRequest}
          * @return the request
@@ -885,12 +863,9 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Export Redis instance data into a Redis RDB format file in Cloud Storage.
-           *
-           * Redis will continue serving during this operation.
-           *
-           * The returned operation is automatically deleted after a few hours, so there is no need to call
-           * DeleteOperation.
+           * Export Redis instance data into a Redis RDB format file in Cloud Storage. Redis will continue
+           * serving during this operation. The returned operation is automatically deleted after a few
+           * hours, so there is no need to call DeleteOperation.
            *
            * Create a request for the method "instances.export".
            *
@@ -900,8 +875,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Redis instance resource name using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region.
            * @param content the {@link com.google.api.services.redis.v1beta1.model.ExportInstanceRequest}
            * @since 1.13
@@ -1017,8 +991,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Failover#execute()} method to invoke the remote operation.
          *
          * @param name Required. Redis instance resource name using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region.
          * @param content the {@link com.google.api.services.redis.v1beta1.model.FailoverInstanceRequest}
          * @return the request
@@ -1049,8 +1022,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Redis instance resource name using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region.
            * @param content the {@link com.google.api.services.redis.v1beta1.model.FailoverInstanceRequest}
            * @since 1.13
@@ -1165,8 +1137,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Redis instance resource name using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region.
          * @return the request
          */
@@ -1194,8 +1165,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Redis instance resource name using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region.
            * @since 1.13
            */
@@ -1311,13 +1281,10 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
-         *
-         * Redis may stop serving during this operation. Instance state will be IMPORTING for entire
-         * operation. When complete, the instance will contain only data from the imported file.
-         *
-         * The returned operation is automatically deleted after a few hours, so there is no need to call
-         * DeleteOperation.
+         * Import a Redis RDB snapshot file from Cloud Storage into a Redis instance. Redis may stop serving
+         * during this operation. Instance state will be IMPORTING for entire operation. When complete, the
+         * instance will contain only data from the imported file. The returned operation is automatically
+         * deleted after a few hours, so there is no need to call DeleteOperation.
          *
          * Create a request for the method "instances.import".
          *
@@ -1325,8 +1292,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link CloudRedisImport#execute()} method to invoke the remote operation.
          *
          * @param name Required. Redis instance resource name using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region.
          * @param content the {@link com.google.api.services.redis.v1beta1.model.ImportInstanceRequest}
          * @return the request
@@ -1345,13 +1311,10 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
-           *
-           * Redis may stop serving during this operation. Instance state will be IMPORTING for entire
-           * operation. When complete, the instance will contain only data from the imported file.
-           *
-           * The returned operation is automatically deleted after a few hours, so there is no need to call
-           * DeleteOperation.
+           * Import a Redis RDB snapshot file from Cloud Storage into a Redis instance. Redis may stop
+           * serving during this operation. Instance state will be IMPORTING for entire operation. When
+           * complete, the instance will contain only data from the imported file. The returned operation is
+           * automatically deleted after a few hours, so there is no need to call DeleteOperation.
            *
            * Create a request for the method "instances.import".
            *
@@ -1362,8 +1325,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * constructor. </p>
            *
            * @param name Required. Redis instance resource name using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region.
            * @param content the {@link com.google.api.services.redis.v1beta1.model.ImportInstanceRequest}
            * @since 1.13
@@ -1471,14 +1433,9 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Lists all Redis instances owned by a project in either the specified location (region) or all
-         * locations.
-         *
-         * The location should have the following format:
-         *
-         * * `projects/{project_id}/locations/{location_id}`
-         *
-         * If `location_id` is specified as `-` (wildcard), then all regions available to the project are
-         * queried, and the results are aggregated.
+         * locations. The location should have the following format: *
+         * `projects/{project_id}/locations/{location_id}` If `location_id` is specified as `-` (wildcard),
+         * then all regions available to the project are queried, and the results are aggregated.
          *
          * Create a request for the method "instances.list".
          *
@@ -1486,8 +1443,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the instance location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-        where `location_id` refers to a GCP
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
          *        region.
          * @return the request
          */
@@ -1506,14 +1462,10 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Lists all Redis instances owned by a project in either the specified location (region) or all
-           * locations.
-           *
-           * The location should have the following format:
-           *
-           * * `projects/{project_id}/locations/{location_id}`
-           *
-           * If `location_id` is specified as `-` (wildcard), then all regions available to the project are
-           * queried, and the results are aggregated.
+           * locations. The location should have the following format: *
+           * `projects/{project_id}/locations/{location_id}` If `location_id` is specified as `-`
+           * (wildcard), then all regions available to the project are queried, and the results are
+           * aggregated.
            *
            * Create a request for the method "instances.list".
            *
@@ -1523,8 +1475,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the instance location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-        where `location_id` refers to a GCP
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
          *        region.
            * @since 1.13
            */
@@ -1634,33 +1585,28 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The maximum number of items to return.
-           *
-           * If not specified, a default value of 1000 will be used by the service. Regardless of
-           * the page_size value, the response may include a partial list and a caller should only
-           * rely on response's `next_page_token` to determine if there are more instances left to
-           * be queried.
+           * The maximum number of items to return. If not specified, a default value of 1000 will
+           * be used by the service. Regardless of the page_size value, the response may include a
+           * partial list and a caller should only rely on response's `next_page_token` to determine
+           * if there are more instances left to be queried.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of items to return.
-
-         If not specified, a default value of 1000 will be used by the service. Regardless of the page_size
-         value, the response may include a partial list and a caller should only rely on response's
-         `next_page_token` to determine if there are more instances left to be queried.
+          /** The maximum number of items to return. If not specified, a default value of 1000 will be used by
+         the service. Regardless of the page_size value, the response may include a partial list and a
+         caller should only rely on response's `next_page_token` to determine if there are more instances
+         left to be queried.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of items to return.
-           *
-           * If not specified, a default value of 1000 will be used by the service. Regardless of
-           * the page_size value, the response may include a partial list and a caller should only
-           * rely on response's `next_page_token` to determine if there are more instances left to
-           * be queried.
+           * The maximum number of items to return. If not specified, a default value of 1000 will
+           * be used by the service. Regardless of the page_size value, the response may include a
+           * partial list and a caller should only rely on response's `next_page_token` to determine
+           * if there are more instances left to be queried.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1693,10 +1639,9 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Updates the metadata and configuration of a specific Redis instance.
-         *
-         * Completed longrunning.Operation will contain the new instance object in the response field. The
-         * returned operation is automatically deleted after a few hours, so there is no need to call
+         * Updates the metadata and configuration of a specific Redis instance. Completed
+         * longrunning.Operation will contain the new instance object in the response field. The returned
+         * operation is automatically deleted after a few hours, so there is no need to call
          * DeleteOperation.
          *
          * Create a request for the method "instances.patch".
@@ -1704,16 +1649,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the redis server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Unique name of the resource in this scope including project and
-        location using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        Note: Redis
-         *        instances are managed and addressed at regional level so
-        location_id here refers to a GCP
-         *        region; however, users may choose which
-        specific zone (or collection of zones for cross-
-         *        zone instances) an instance
-        should be provisioned in. Refer to location_id and
+         * @param name Required. Unique name of the resource in this scope including project and location using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Redis
+         *        instances are managed and addressed at regional level so location_id here refers to a GCP
+         *        region; however, users may choose which specific zone (or collection of zones for cross-
+         *        zone instances) an instance should be provisioned in. Refer to location_id and
          *        alternative_location_id fields for more details.
          * @param content the {@link com.google.api.services.redis.v1beta1.model.Instance}
          * @return the request
@@ -1732,10 +1672,9 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Updates the metadata and configuration of a specific Redis instance.
-           *
-           * Completed longrunning.Operation will contain the new instance object in the response field. The
-           * returned operation is automatically deleted after a few hours, so there is no need to call
+           * Updates the metadata and configuration of a specific Redis instance. Completed
+           * longrunning.Operation will contain the new instance object in the response field. The returned
+           * operation is automatically deleted after a few hours, so there is no need to call
            * DeleteOperation.
            *
            * Create a request for the method "instances.patch".
@@ -1745,16 +1684,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Unique name of the resource in this scope including project and
-        location using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        Note: Redis
-         *        instances are managed and addressed at regional level so
-        location_id here refers to a GCP
-         *        region; however, users may choose which
-        specific zone (or collection of zones for cross-
-         *        zone instances) an instance
-        should be provisioned in. Refer to location_id and
+           * @param name Required. Unique name of the resource in this scope including project and location using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Redis
+         *        instances are managed and addressed at regional level so location_id here refers to a GCP
+         *        region; however, users may choose which specific zone (or collection of zones for cross-
+         *        zone instances) an instance should be provisioned in. Refer to location_id and
          *        alternative_location_id fields for more details.
            * @param content the {@link com.google.api.services.redis.v1beta1.model.Instance}
            * @since 1.13
@@ -1827,7 +1761,6 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Unique name of the resource in this scope including project and location
            * using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-           *
            * Note: Redis instances are managed and addressed at regional level so location_id here
            * refers to a GCP region; however, users may choose which specific zone (or collection of
            * zones for cross-zone instances) an instance should be provisioned in. Refer to
@@ -1837,12 +1770,10 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           private java.lang.String name;
 
           /** Required. Unique name of the resource in this scope including project and location using the form:
-         `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-
-         Note: Redis instances are managed and addressed at regional level so location_id here refers to a
-         GCP region; however, users may choose which specific zone (or collection of zones for cross-zone
-         instances) an instance should be provisioned in. Refer to location_id and alternative_location_id
-         fields for more details.
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Redis instances are
+         managed and addressed at regional level so location_id here refers to a GCP region; however, users
+         may choose which specific zone (or collection of zones for cross-zone instances) an instance should
+         be provisioned in. Refer to location_id and alternative_location_id fields for more details.
            */
           public java.lang.String getName() {
             return name;
@@ -1851,7 +1782,6 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Unique name of the resource in this scope including project and location
            * using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-           *
            * Note: Redis instances are managed and addressed at regional level so location_id here
            * refers to a GCP region; however, users may choose which specific zone (or collection of
            * zones for cross-zone instances) an instance should be provisioned in. Refer to
@@ -1869,17 +1799,15 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
-           * The elements of the repeated paths field may only include these fields from Instance:
-           *
-           * *   `displayName` *   `labels` *   `memorySizeGb` *   `redisConfig`
+           * The elements of the repeated paths field may only include these fields from Instance: *
+           * `displayName` * `labels` * `memorySizeGb` * `redisConfig`
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Required. Mask of fields to update. At least one path must be supplied in this field. The elements
-         of the repeated paths field may only include these fields from Instance:
-
-         *   `displayName` *   `labels` *   `memorySizeGb` *   `redisConfig`
+         of the repeated paths field may only include these fields from Instance: * `displayName` * `labels`
+         * `memorySizeGb` * `redisConfig`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1887,9 +1815,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
-           * The elements of the repeated paths field may only include these fields from Instance:
-           *
-           * *   `displayName` *   `labels` *   `memorySizeGb` *   `redisConfig`
+           * The elements of the repeated paths field may only include these fields from Instance: *
+           * `displayName` * `labels` * `memorySizeGb` * `redisConfig`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -1910,8 +1837,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Upgrade#execute()} method to invoke the remote operation.
          *
          * @param name Required. Redis instance resource name using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region.
          * @param content the {@link com.google.api.services.redis.v1beta1.model.UpgradeInstanceRequest}
          * @return the request
@@ -1941,8 +1867,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Redis instance resource name using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region.
            * @param content the {@link com.google.api.services.redis.v1beta1.model.UpgradeInstanceRequest}
            * @since 1.13
@@ -2071,9 +1996,9 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -2101,13 +2026,13 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -2343,7 +2268,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -2368,7 +2293,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -2484,13 +2409,12 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-         * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
          *
          * Create a request for the method "operations.list".
          *
@@ -2515,13 +2439,12 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a
-           * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
            *
            * Create a request for the method "operations.list".
            *

@@ -31,9 +31,8 @@ package com.google.api.services.redis.v1.model;
 public final class ListInstancesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of Redis instances in the project in the specified location, or across all locations.
-   *
-   * If the `location_id` in the parent field of the request is "-", all regions available to the
+   * A list of Redis instances in the project in the specified location, or across all locations. If
+   * the `location_id` in the parent field of the request is "-", all regions available to the
    * project are queried, and the results aggregated. If in such an aggregated query a location is
    * unavailable, a dummy Redis entry is included in the response with the `name` field set to a
    * value of the form `projects/{project_id}/locations/{location_id}/instances/`- and the `status`
@@ -65,9 +64,8 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * A list of Redis instances in the project in the specified location, or across all locations.
-   *
-   * If the `location_id` in the parent field of the request is "-", all regions available to the
+   * A list of Redis instances in the project in the specified location, or across all locations. If
+   * the `location_id` in the parent field of the request is "-", all regions available to the
    * project are queried, and the results aggregated. If in such an aggregated query a location is
    * unavailable, a dummy Redis entry is included in the response with the `name` field set to a
    * value of the form `projects/{project_id}/locations/{location_id}/instances/`- and the `status`
@@ -80,9 +78,8 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * A list of Redis instances in the project in the specified location, or across all locations.
-   *
-   * If the `location_id` in the parent field of the request is "-", all regions available to the
+   * A list of Redis instances in the project in the specified location, or across all locations. If
+   * the `location_id` in the parent field of the request is "-", all regions available to the
    * project are queried, and the results aggregated. If in such an aggregated query a location is
    * unavailable, a dummy Redis entry is included in the response with the `name` field set to a
    * value of the form `projects/{project_id}/locations/{location_id}/instances/`- and the `status`

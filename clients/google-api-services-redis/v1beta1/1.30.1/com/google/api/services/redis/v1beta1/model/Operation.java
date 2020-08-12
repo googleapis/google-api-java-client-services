@@ -46,25 +46,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private Status error;
 
   /**
-   * {
-   *
-   * `createTime`: The time the operation was created.
-   *
-   * `endTime`: The time the operation finished running.
-   *
-   * `target`: Server-defined resource path for the target of the operation.
-   *
-   * `verb`: Name of the verb executed by the operation.
-   *
-   * `statusDetail`: Human-readable status of the operation, if any.
-   *
-   * `cancelRequested`: Identifies whether the user has requested cancellation of the operation.
-   * Operations that have successfully been cancelled have Operation.error value with a
-   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-   *
-   * `apiVersion`: API version used to start the operation.
-   *
-   * }
+   * { `createTime`: The time the operation was created. `endTime`: The time the operation finished
+   * running. `target`: Server-defined resource path for the target of the operation. `verb`: Name
+   * of the verb executed by the operation. `statusDetail`: Human-readable status of the operation,
+   * if any. `cancelRequested`: Identifies whether the user has requested cancellation of the
+   * operation. Operations that have successfully been cancelled have Operation.error value with a
+   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`. `apiVersion`: API version used
+   * to start the operation. }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,12 +68,12 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The normal response of the operation in case of success.  If the original method returns no
-   * data on success, such as `Delete`, the response is `google.protobuf.Empty`.  If the original
-   * method is standard `Get`/`Create`/`Update`, the response should be the resource.  For other
-   * methods, the response should have the type `XxxResponse`, where `Xxx` is the original method
-   * name.  For example, if the original method name is `TakeSnapshot()`, the inferred response type
-   * is `TakeSnapshotResponse`.
+   * The normal response of the operation in case of success. If the original method returns no data
+   * on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method
+   * is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods,
+   * the response should have the type `XxxResponse`, where `Xxx` is the original method name. For
+   * example, if the original method name is `TakeSnapshot()`, the inferred response type is
+   * `TakeSnapshotResponse`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,25 +116,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * {
-   *
-   * `createTime`: The time the operation was created.
-   *
-   * `endTime`: The time the operation finished running.
-   *
-   * `target`: Server-defined resource path for the target of the operation.
-   *
-   * `verb`: Name of the verb executed by the operation.
-   *
-   * `statusDetail`: Human-readable status of the operation, if any.
-   *
-   * `cancelRequested`: Identifies whether the user has requested cancellation of the operation.
-   * Operations that have successfully been cancelled have Operation.error value with a
-   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-   *
-   * `apiVersion`: API version used to start the operation.
-   *
-   * }
+   * { `createTime`: The time the operation was created. `endTime`: The time the operation finished
+   * running. `target`: Server-defined resource path for the target of the operation. `verb`: Name
+   * of the verb executed by the operation. `statusDetail`: Human-readable status of the operation,
+   * if any. `cancelRequested`: Identifies whether the user has requested cancellation of the
+   * operation. Operations that have successfully been cancelled have Operation.error value with a
+   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`. `apiVersion`: API version used
+   * to start the operation. }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -154,25 +130,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * {
-   *
-   * `createTime`: The time the operation was created.
-   *
-   * `endTime`: The time the operation finished running.
-   *
-   * `target`: Server-defined resource path for the target of the operation.
-   *
-   * `verb`: Name of the verb executed by the operation.
-   *
-   * `statusDetail`: Human-readable status of the operation, if any.
-   *
-   * `cancelRequested`: Identifies whether the user has requested cancellation of the operation.
-   * Operations that have successfully been cancelled have Operation.error value with a
-   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-   *
-   * `apiVersion`: API version used to start the operation.
-   *
-   * }
+   * { `createTime`: The time the operation was created. `endTime`: The time the operation finished
+   * running. `target`: Server-defined resource path for the target of the operation. `verb`: Name
+   * of the verb executed by the operation. `statusDetail`: Human-readable status of the operation,
+   * if any. `cancelRequested`: Identifies whether the user has requested cancellation of the
+   * operation. Operations that have successfully been cancelled have Operation.error value with a
+   * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`. `apiVersion`: API version used
+   * to start the operation. }
    * @param metadata metadata or {@code null} for none
    */
   public Operation setMetadata(java.util.Map<String, java.lang.Object> metadata) {
@@ -202,12 +166,12 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The normal response of the operation in case of success.  If the original method returns no
-   * data on success, such as `Delete`, the response is `google.protobuf.Empty`.  If the original
-   * method is standard `Get`/`Create`/`Update`, the response should be the resource.  For other
-   * methods, the response should have the type `XxxResponse`, where `Xxx` is the original method
-   * name.  For example, if the original method name is `TakeSnapshot()`, the inferred response type
-   * is `TakeSnapshotResponse`.
+   * The normal response of the operation in case of success. If the original method returns no data
+   * on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method
+   * is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods,
+   * the response should have the type `XxxResponse`, where `Xxx` is the original method name. For
+   * example, if the original method name is `TakeSnapshot()`, the inferred response type is
+   * `TakeSnapshotResponse`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getResponse() {
@@ -215,12 +179,12 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The normal response of the operation in case of success.  If the original method returns no
-   * data on success, such as `Delete`, the response is `google.protobuf.Empty`.  If the original
-   * method is standard `Get`/`Create`/`Update`, the response should be the resource.  For other
-   * methods, the response should have the type `XxxResponse`, where `Xxx` is the original method
-   * name.  For example, if the original method name is `TakeSnapshot()`, the inferred response type
-   * is `TakeSnapshotResponse`.
+   * The normal response of the operation in case of success. If the original method returns no data
+   * on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method
+   * is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods,
+   * the response should have the type `XxxResponse`, where `Xxx` is the original method name. For
+   * example, if the original method name is `TakeSnapshot()`, the inferred response type is
+   * `TakeSnapshotResponse`.
    * @param response response or {@code null} for none
    */
   public Operation setResponse(java.util.Map<String, java.lang.Object> response) {

@@ -114,11 +114,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Unique name of the resource in this scope including project and location using the
-   * form:     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-   *
-   * Note: Redis instances are managed and addressed at regional level so location_id here refers to
-   * a GCP region; however, users may choose which specific zone (or collection of zones for cross-
-   * zone instances) an instance should be provisioned in. Refer to location_id and
+   * form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Redis
+   * instances are managed and addressed at regional level so location_id here refers to a GCP
+   * region; however, users may choose which specific zone (or collection of zones for cross-zone
+   * instances) an instance should be provisioned in. Refer to location_id and
    * alternative_location_id fields for more details.
    * The value may be {@code null}.
    */
@@ -143,19 +142,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Redis configuration parameters, according to http://redis.io/topics/config.
-   * Currently, the only supported parameters are:
-   *
-   *  Redis version 3.2 and newer:
-   *
-   *  *   maxmemory-policy  *   notify-keyspace-events
-   *
-   *  Redis version 4.0 and newer:
-   *
-   *  *   activedefrag  *   lfu-decay-time  *   lfu-log-factor  *   maxmemory-gb
-   *
-   *  Redis version 5.0 and newer:
-   *
-   *  *   stream-node-max-bytes  *   stream-node-max-entries
+   * Currently, the only supported parameters are: Redis version 3.2 and newer: * maxmemory-policy *
+   * notify-keyspace-events Redis version 4.0 and newer: * activedefrag * lfu-decay-time * lfu-log-
+   * factor * maxmemory-gb Redis version 5.0 and newer: * stream-node-max-bytes * stream-node-max-
+   * entries
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,10 +153,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The version of Redis software. If not provided, latest supported version will be
-   * used. Currently, the supported values are:
-   *
-   *  *   `REDIS_3_2` for Redis 3.2 compatibility  *   `REDIS_4_0` for Redis 4.0 compatibility
-   * (default)  *   `REDIS_5_0` for Redis 5.0 compatibility
+   * used. Currently, the supported values are: * `REDIS_3_2` for Redis 3.2 compatibility *
+   * `REDIS_4_0` for Redis 4.0 compatibility (default) * `REDIS_5_0` for Redis 5.0 compatibility
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -399,11 +387,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Unique name of the resource in this scope including project and location using the
-   * form:     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-   *
-   * Note: Redis instances are managed and addressed at regional level so location_id here refers to
-   * a GCP region; however, users may choose which specific zone (or collection of zones for cross-
-   * zone instances) an instance should be provisioned in. Refer to location_id and
+   * form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Redis
+   * instances are managed and addressed at regional level so location_id here refers to a GCP
+   * region; however, users may choose which specific zone (or collection of zones for cross-zone
+   * instances) an instance should be provisioned in. Refer to location_id and
    * alternative_location_id fields for more details.
    * @return value or {@code null} for none
    */
@@ -413,11 +400,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Unique name of the resource in this scope including project and location using the
-   * form:     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-   *
-   * Note: Redis instances are managed and addressed at regional level so location_id here refers to
-   * a GCP region; however, users may choose which specific zone (or collection of zones for cross-
-   * zone instances) an instance should be provisioned in. Refer to location_id and
+   * form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Redis
+   * instances are managed and addressed at regional level so location_id here refers to a GCP
+   * region; however, users may choose which specific zone (or collection of zones for cross-zone
+   * instances) an instance should be provisioned in. Refer to location_id and
    * alternative_location_id fields for more details.
    * @param name name or {@code null} for none
    */
@@ -466,19 +452,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Redis configuration parameters, according to http://redis.io/topics/config.
-   * Currently, the only supported parameters are:
-   *
-   *  Redis version 3.2 and newer:
-   *
-   *  *   maxmemory-policy  *   notify-keyspace-events
-   *
-   *  Redis version 4.0 and newer:
-   *
-   *  *   activedefrag  *   lfu-decay-time  *   lfu-log-factor  *   maxmemory-gb
-   *
-   *  Redis version 5.0 and newer:
-   *
-   *  *   stream-node-max-bytes  *   stream-node-max-entries
+   * Currently, the only supported parameters are: Redis version 3.2 and newer: * maxmemory-policy *
+   * notify-keyspace-events Redis version 4.0 and newer: * activedefrag * lfu-decay-time * lfu-log-
+   * factor * maxmemory-gb Redis version 5.0 and newer: * stream-node-max-bytes * stream-node-max-
+   * entries
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getRedisConfigs() {
@@ -487,19 +464,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Redis configuration parameters, according to http://redis.io/topics/config.
-   * Currently, the only supported parameters are:
-   *
-   *  Redis version 3.2 and newer:
-   *
-   *  *   maxmemory-policy  *   notify-keyspace-events
-   *
-   *  Redis version 4.0 and newer:
-   *
-   *  *   activedefrag  *   lfu-decay-time  *   lfu-log-factor  *   maxmemory-gb
-   *
-   *  Redis version 5.0 and newer:
-   *
-   *  *   stream-node-max-bytes  *   stream-node-max-entries
+   * Currently, the only supported parameters are: Redis version 3.2 and newer: * maxmemory-policy *
+   * notify-keyspace-events Redis version 4.0 and newer: * activedefrag * lfu-decay-time * lfu-log-
+   * factor * maxmemory-gb Redis version 5.0 and newer: * stream-node-max-bytes * stream-node-max-
+   * entries
    * @param redisConfigs redisConfigs or {@code null} for none
    */
   public Instance setRedisConfigs(java.util.Map<String, java.lang.String> redisConfigs) {
@@ -509,10 +477,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The version of Redis software. If not provided, latest supported version will be
-   * used. Currently, the supported values are:
-   *
-   *  *   `REDIS_3_2` for Redis 3.2 compatibility  *   `REDIS_4_0` for Redis 4.0 compatibility
-   * (default)  *   `REDIS_5_0` for Redis 5.0 compatibility
+   * used. Currently, the supported values are: * `REDIS_3_2` for Redis 3.2 compatibility *
+   * `REDIS_4_0` for Redis 4.0 compatibility (default) * `REDIS_5_0` for Redis 5.0 compatibility
    * @return value or {@code null} for none
    */
   public java.lang.String getRedisVersion() {
@@ -521,10 +487,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The version of Redis software. If not provided, latest supported version will be
-   * used. Currently, the supported values are:
-   *
-   *  *   `REDIS_3_2` for Redis 3.2 compatibility  *   `REDIS_4_0` for Redis 4.0 compatibility
-   * (default)  *   `REDIS_5_0` for Redis 5.0 compatibility
+   * used. Currently, the supported values are: * `REDIS_3_2` for Redis 3.2 compatibility *
+   * `REDIS_4_0` for Redis 4.0 compatibility (default) * `REDIS_5_0` for Redis 5.0 compatibility
    * @param redisVersion redisVersion or {@code null} for none
    */
   public Instance setRedisVersion(java.lang.String redisVersion) {

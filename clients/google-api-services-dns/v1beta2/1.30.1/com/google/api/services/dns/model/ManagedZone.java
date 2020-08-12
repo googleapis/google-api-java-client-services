@@ -61,7 +61,7 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   private ManagedZoneDnsSecConfig dnssecConfig;
 
   /**
-   * The presence for this field indicates that outbound forwarding is enabled for this zone.  The
+   * The presence for this field indicates that outbound forwarding is enabled for this zone. The
    * value of this field contains the set of destinations to forward to.
    * The value may be {@code null}.
    */
@@ -226,7 +226,7 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The presence for this field indicates that outbound forwarding is enabled for this zone.  The
+   * The presence for this field indicates that outbound forwarding is enabled for this zone. The
    * value of this field contains the set of destinations to forward to.
    * @return value or {@code null} for none
    */
@@ -235,7 +235,7 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The presence for this field indicates that outbound forwarding is enabled for this zone.  The
+   * The presence for this field indicates that outbound forwarding is enabled for this zone. The
    * value of this field contains the set of destinations to forward to.
    * @param forwardingConfig forwardingConfig or {@code null} for none
    */

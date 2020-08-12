@@ -67,7 +67,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentStyle extends com.google.
   private GoogleCloudDocumentaiV1beta2DocumentTextAnchor textAnchor;
 
   /**
-   * Text decoration. Follows CSS standard.    https://www.w3schools.com/cssref/pr_text_text-
+   * Text decoration. Follows CSS standard. https://www.w3schools.com/cssref/pr_text_text-
    * decoration.asp
    * The value may be {@code null}.
    */
@@ -170,7 +170,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentStyle extends com.google.
   }
 
   /**
-   * Text decoration. Follows CSS standard.    https://www.w3schools.com/cssref/pr_text_text-
+   * Text decoration. Follows CSS standard. https://www.w3schools.com/cssref/pr_text_text-
    * decoration.asp
    * @return value or {@code null} for none
    */
@@ -179,7 +179,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentStyle extends com.google.
   }
 
   /**
-   * Text decoration. Follows CSS standard.    https://www.w3schools.com/cssref/pr_text_text-
+   * Text decoration. Follows CSS standard. https://www.w3schools.com/cssref/pr_text_text-
    * decoration.asp
    * @param textDecoration textDecoration or {@code null} for none
    */

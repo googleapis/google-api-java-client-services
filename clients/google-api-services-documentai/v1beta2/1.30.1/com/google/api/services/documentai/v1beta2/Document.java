@@ -171,8 +171,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the documentai server.  After setting any optional
        * parameters, call the {@link BatchProcess#execute()} method to invoke the remote operation.
        *
-       * @param parent Target project and location to make a call.
-      Format: `projects/{project-id}/locations/{location-id}`.
+       * @param parent Target project and location to make a call. Format: `projects/{project-id}/locations/{location-id}`.
        *        If no location is specified, a region will be chosen automatically.
        * @param content the {@link com.google.api.services.documentai.v1beta2.model.GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest}
        * @return the request
@@ -202,8 +201,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
          * BatchProcess#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Target project and location to make a call.
-      Format: `projects/{project-id}/locations/{location-id}`.
+         * @param parent Target project and location to make a call. Format: `projects/{project-id}/locations/{location-id}`.
        *        If no location is specified, a region will be chosen automatically.
          * @param content the {@link com.google.api.services.documentai.v1beta2.model.GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest}
          * @since 1.13
@@ -274,31 +272,22 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Target project and location to make a call.
-         *
-         * Format: `projects/{project-id}/locations/{location-id}`.
-         *
-         * If no location is specified, a region will be chosen automatically.
+         * Target project and location to make a call. Format: `projects/{project-id}/locations
+         * /{location-id}`. If no location is specified, a region will be chosen automatically.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Target project and location to make a call.
-
-       Format: `projects/{project-id}/locations/{location-id}`.
-
-       If no location is specified, a region will be chosen automatically.
+        /** Target project and location to make a call. Format: `projects/{project-id}/locations/{location-
+       id}`. If no location is specified, a region will be chosen automatically.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Target project and location to make a call.
-         *
-         * Format: `projects/{project-id}/locations/{location-id}`.
-         *
-         * If no location is specified, a region will be chosen automatically.
+         * Target project and location to make a call. Format: `projects/{project-id}/locations
+         * /{location-id}`. If no location is specified, a region will be chosen automatically.
          */
         public BatchProcess setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -323,10 +312,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the documentai server.  After setting any optional
        * parameters, call the {@link Process#execute()} method to invoke the remote operation.
        *
-       * @param parent Target project and location to make a call.
-      Format: `projects/{project-id}/locations/{location-id}`.
-       *        If no location is specified, a region will be chosen automatically.
-      This field is only
+       * @param parent Target project and location to make a call. Format: `projects/{project-id}/locations/{location-id}`.
+       *        If no location is specified, a region will be chosen automatically. This field is only
        *        populated when used in ProcessDocument method.
        * @param content the {@link com.google.api.services.documentai.v1beta2.model.GoogleCloudDocumentaiV1beta2ProcessDocumentRequest}
        * @return the request
@@ -355,10 +342,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
          * Process#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Target project and location to make a call.
-      Format: `projects/{project-id}/locations/{location-id}`.
-       *        If no location is specified, a region will be chosen automatically.
-      This field is only
+         * @param parent Target project and location to make a call. Format: `projects/{project-id}/locations/{location-id}`.
+       *        If no location is specified, a region will be chosen automatically. This field is only
        *        populated when used in ProcessDocument method.
          * @param content the {@link com.google.api.services.documentai.v1beta2.model.GoogleCloudDocumentaiV1beta2ProcessDocumentRequest}
          * @since 1.13
@@ -429,34 +414,25 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Target project and location to make a call.
-         *
-         * Format: `projects/{project-id}/locations/{location-id}`.
-         *
-         * If no location is specified, a region will be chosen automatically. This field is only
-         * populated when used in ProcessDocument method.
+         * Target project and location to make a call. Format: `projects/{project-id}/locations
+         * /{location-id}`. If no location is specified, a region will be chosen automatically. This
+         * field is only populated when used in ProcessDocument method.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Target project and location to make a call.
-
-       Format: `projects/{project-id}/locations/{location-id}`.
-
-       If no location is specified, a region will be chosen automatically. This field is only populated
-       when used in ProcessDocument method.
+        /** Target project and location to make a call. Format: `projects/{project-id}/locations/{location-
+       id}`. If no location is specified, a region will be chosen automatically. This field is only
+       populated when used in ProcessDocument method.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Target project and location to make a call.
-         *
-         * Format: `projects/{project-id}/locations/{location-id}`.
-         *
-         * If no location is specified, a region will be chosen automatically. This field is only
-         * populated when used in ProcessDocument method.
+         * Target project and location to make a call. Format: `projects/{project-id}/locations
+         * /{location-id}`. If no location is specified, a region will be chosen automatically. This
+         * field is only populated when used in ProcessDocument method.
          */
         public Process setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -524,8 +500,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the documentai server.  After setting any optional
          * parameters, call the {@link BatchProcess#execute()} method to invoke the remote operation.
          *
-         * @param parent Target project and location to make a call.
-        Format: `projects/{project-id}/locations/{location-id}`.
+         * @param parent Target project and location to make a call. Format: `projects/{project-id}/locations/{location-id}`.
          *        If no location is specified, a region will be chosen automatically.
          * @param content the {@link com.google.api.services.documentai.v1beta2.model.GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest}
          * @return the request
@@ -555,8 +530,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            * BatchProcess#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Target project and location to make a call.
-        Format: `projects/{project-id}/locations/{location-id}`.
+           * @param parent Target project and location to make a call. Format: `projects/{project-id}/locations/{location-id}`.
          *        If no location is specified, a region will be chosen automatically.
            * @param content the {@link com.google.api.services.documentai.v1beta2.model.GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest}
            * @since 1.13
@@ -627,31 +601,22 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Target project and location to make a call.
-           *
-           * Format: `projects/{project-id}/locations/{location-id}`.
-           *
-           * If no location is specified, a region will be chosen automatically.
+           * Target project and location to make a call. Format: `projects/{project-id}/locations
+           * /{location-id}`. If no location is specified, a region will be chosen automatically.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Target project and location to make a call.
-
-         Format: `projects/{project-id}/locations/{location-id}`.
-
-         If no location is specified, a region will be chosen automatically.
+          /** Target project and location to make a call. Format: `projects/{project-id}/locations/{location-
+         id}`. If no location is specified, a region will be chosen automatically.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Target project and location to make a call.
-           *
-           * Format: `projects/{project-id}/locations/{location-id}`.
-           *
-           * If no location is specified, a region will be chosen automatically.
+           * Target project and location to make a call. Format: `projects/{project-id}/locations
+           * /{location-id}`. If no location is specified, a region will be chosen automatically.
            */
           public BatchProcess setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -676,10 +641,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the documentai server.  After setting any optional
          * parameters, call the {@link Process#execute()} method to invoke the remote operation.
          *
-         * @param parent Target project and location to make a call.
-        Format: `projects/{project-id}/locations/{location-id}`.
-         *        If no location is specified, a region will be chosen automatically.
-        This field is only
+         * @param parent Target project and location to make a call. Format: `projects/{project-id}/locations/{location-id}`.
+         *        If no location is specified, a region will be chosen automatically. This field is only
          *        populated when used in ProcessDocument method.
          * @param content the {@link com.google.api.services.documentai.v1beta2.model.GoogleCloudDocumentaiV1beta2ProcessDocumentRequest}
          * @return the request
@@ -708,10 +671,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            * Process#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Target project and location to make a call.
-        Format: `projects/{project-id}/locations/{location-id}`.
-         *        If no location is specified, a region will be chosen automatically.
-        This field is only
+           * @param parent Target project and location to make a call. Format: `projects/{project-id}/locations/{location-id}`.
+         *        If no location is specified, a region will be chosen automatically. This field is only
          *        populated when used in ProcessDocument method.
            * @param content the {@link com.google.api.services.documentai.v1beta2.model.GoogleCloudDocumentaiV1beta2ProcessDocumentRequest}
            * @since 1.13
@@ -782,34 +743,25 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Target project and location to make a call.
-           *
-           * Format: `projects/{project-id}/locations/{location-id}`.
-           *
-           * If no location is specified, a region will be chosen automatically. This field is only
-           * populated when used in ProcessDocument method.
+           * Target project and location to make a call. Format: `projects/{project-id}/locations
+           * /{location-id}`. If no location is specified, a region will be chosen automatically.
+           * This field is only populated when used in ProcessDocument method.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Target project and location to make a call.
-
-         Format: `projects/{project-id}/locations/{location-id}`.
-
-         If no location is specified, a region will be chosen automatically. This field is only populated
-         when used in ProcessDocument method.
+          /** Target project and location to make a call. Format: `projects/{project-id}/locations/{location-
+         id}`. If no location is specified, a region will be chosen automatically. This field is only
+         populated when used in ProcessDocument method.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Target project and location to make a call.
-           *
-           * Format: `projects/{project-id}/locations/{location-id}`.
-           *
-           * If no location is specified, a region will be chosen automatically. This field is only
-           * populated when used in ProcessDocument method.
+           * Target project and location to make a call. Format: `projects/{project-id}/locations
+           * /{location-id}`. If no location is specified, a region will be chosen automatically.
+           * This field is only populated when used in ProcessDocument method.
            */
           public Process setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -849,7 +801,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
       public class Operations {
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -874,7 +826,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -1012,7 +964,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
     public class Operations {
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -1037,7 +989,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".

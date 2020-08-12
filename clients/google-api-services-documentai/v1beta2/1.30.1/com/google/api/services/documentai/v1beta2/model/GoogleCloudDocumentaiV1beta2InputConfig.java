@@ -32,9 +32,8 @@ public final class GoogleCloudDocumentaiV1beta2InputConfig extends com.google.ap
 
   /**
    * Content in bytes, represented as a stream of bytes. Note: As with all `bytes` fields, proto
-   * buffer messages use a pure binary representation, whereas JSON representations use base64.
-   *
-   * This field only works for synchronous ProcessDocument method.
+   * buffer messages use a pure binary representation, whereas JSON representations use base64. This
+   * field only works for synchronous ProcessDocument method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,9 +57,8 @@ public final class GoogleCloudDocumentaiV1beta2InputConfig extends com.google.ap
 
   /**
    * Content in bytes, represented as a stream of bytes. Note: As with all `bytes` fields, proto
-   * buffer messages use a pure binary representation, whereas JSON representations use base64.
-   *
-   * This field only works for synchronous ProcessDocument method.
+   * buffer messages use a pure binary representation, whereas JSON representations use base64. This
+   * field only works for synchronous ProcessDocument method.
    * @see #decodeContents()
    * @return value or {@code null} for none
    */
@@ -70,9 +68,8 @@ public final class GoogleCloudDocumentaiV1beta2InputConfig extends com.google.ap
 
   /**
    * Content in bytes, represented as a stream of bytes. Note: As with all `bytes` fields, proto
-   * buffer messages use a pure binary representation, whereas JSON representations use base64.
-   *
-   * This field only works for synchronous ProcessDocument method.
+   * buffer messages use a pure binary representation, whereas JSON representations use base64. This
+   * field only works for synchronous ProcessDocument method.
    * @see #getContents()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -84,9 +81,8 @@ public final class GoogleCloudDocumentaiV1beta2InputConfig extends com.google.ap
 
   /**
    * Content in bytes, represented as a stream of bytes. Note: As with all `bytes` fields, proto
-   * buffer messages use a pure binary representation, whereas JSON representations use base64.
-   *
-   * This field only works for synchronous ProcessDocument method.
+   * buffer messages use a pure binary representation, whereas JSON representations use base64. This
+   * field only works for synchronous ProcessDocument method.
    * @see #encodeContents()
    * @param contents contents or {@code null} for none
    */
@@ -97,9 +93,8 @@ public final class GoogleCloudDocumentaiV1beta2InputConfig extends com.google.ap
 
   /**
    * Content in bytes, represented as a stream of bytes. Note: As with all `bytes` fields, proto
-   * buffer messages use a pure binary representation, whereas JSON representations use base64.
-   *
-   * This field only works for synchronous ProcessDocument method.
+   * buffer messages use a pure binary representation, whereas JSON representations use base64. This
+   * field only works for synchronous ProcessDocument method.
    * @see #setContents()
    *
    * <p>

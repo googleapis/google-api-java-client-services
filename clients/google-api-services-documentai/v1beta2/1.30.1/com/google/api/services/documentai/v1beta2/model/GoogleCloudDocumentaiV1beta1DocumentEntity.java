@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
   private java.lang.Float confidence;
 
   /**
-   * Deprecated.  Use `id` field instead.
+   * Deprecated. Use `id` field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,6 +50,22 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.String mentionText;
+
+  /**
+   * Optional. Normalized entity value. Absent if the extracted value could not be converted or the
+   * type (e.g. address) is not supported for certain parsers. This field is also only populated for
+   * certain supported document types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue normalizedValue;
+
+  /**
+   * Optional. Whether the entity will be redacted for de-identification purposes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean redacted;
 
   /**
    * Provenance of the entity. Text anchor indexing into the Document.text.
@@ -83,7 +99,7 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
   }
 
   /**
-   * Deprecated.  Use `id` field instead.
+   * Deprecated. Use `id` field instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getMentionId() {
@@ -91,7 +107,7 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
   }
 
   /**
-   * Deprecated.  Use `id` field instead.
+   * Deprecated. Use `id` field instead.
    * @param mentionId mentionId or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1DocumentEntity setMentionId(java.lang.String mentionId) {
@@ -113,6 +129,44 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntity extends com.google
    */
   public GoogleCloudDocumentaiV1beta1DocumentEntity setMentionText(java.lang.String mentionText) {
     this.mentionText = mentionText;
+    return this;
+  }
+
+  /**
+   * Optional. Normalized entity value. Absent if the extracted value could not be converted or the
+   * type (e.g. address) is not supported for certain parsers. This field is also only populated for
+   * certain supported document types.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue getNormalizedValue() {
+    return normalizedValue;
+  }
+
+  /**
+   * Optional. Normalized entity value. Absent if the extracted value could not be converted or the
+   * type (e.g. address) is not supported for certain parsers. This field is also only populated for
+   * certain supported document types.
+   * @param normalizedValue normalizedValue or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta1DocumentEntity setNormalizedValue(GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue normalizedValue) {
+    this.normalizedValue = normalizedValue;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the entity will be redacted for de-identification purposes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRedacted() {
+    return redacted;
+  }
+
+  /**
+   * Optional. Whether the entity will be redacted for de-identification purposes.
+   * @param redacted redacted or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta1DocumentEntity setRedacted(java.lang.Boolean redacted) {
+    this.redacted = redacted;
     return this;
   }
 

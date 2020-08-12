@@ -39,7 +39,9 @@ public final class GoogleCloudDocumentaiV1beta1DocumentTranslation extends com.g
   private java.lang.String languageCode;
 
   /**
-   * Provenance of the translation. Text anchor indexing into the Document.text.
+   * Provenance of the translation. Text anchor indexing into the Document.text. There can only be a
+   * single `TextAnchor.text_segments` element. If the start and end index of the text segment are
+   * the same, the text change is inserted before that index.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +74,9 @@ public final class GoogleCloudDocumentaiV1beta1DocumentTranslation extends com.g
   }
 
   /**
-   * Provenance of the translation. Text anchor indexing into the Document.text.
+   * Provenance of the translation. Text anchor indexing into the Document.text. There can only be a
+   * single `TextAnchor.text_segments` element. If the start and end index of the text segment are
+   * the same, the text change is inserted before that index.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1DocumentTextAnchor getTextAnchor() {
@@ -80,7 +84,9 @@ public final class GoogleCloudDocumentaiV1beta1DocumentTranslation extends com.g
   }
 
   /**
-   * Provenance of the translation. Text anchor indexing into the Document.text.
+   * Provenance of the translation. Text anchor indexing into the Document.text. There can only be a
+   * single `TextAnchor.text_segments` element. If the start and end index of the text segment are
+   * the same, the text change is inserted before that index.
    * @param textAnchor textAnchor or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1DocumentTranslation setTextAnchor(GoogleCloudDocumentaiV1beta1DocumentTextAnchor textAnchor) {

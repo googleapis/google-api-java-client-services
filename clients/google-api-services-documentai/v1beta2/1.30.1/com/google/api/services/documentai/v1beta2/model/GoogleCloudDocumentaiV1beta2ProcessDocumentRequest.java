@@ -85,11 +85,8 @@ public final class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest extends co
   private GoogleCloudDocumentaiV1beta2OutputConfig outputConfig;
 
   /**
-   * Target project and location to make a call.
-   *
-   * Format: `projects/{project-id}/locations/{location-id}`.
-   *
-   * If no location is specified, a region will be chosen automatically. This field is only
+   * Target project and location to make a call. Format: `projects/{project-id}/locations/{location-
+   * id}`. If no location is specified, a region will be chosen automatically. This field is only
    * populated when used in ProcessDocument method.
    * The value may be {@code null}.
    */
@@ -234,11 +231,8 @@ public final class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest extends co
   }
 
   /**
-   * Target project and location to make a call.
-   *
-   * Format: `projects/{project-id}/locations/{location-id}`.
-   *
-   * If no location is specified, a region will be chosen automatically. This field is only
+   * Target project and location to make a call. Format: `projects/{project-id}/locations/{location-
+   * id}`. If no location is specified, a region will be chosen automatically. This field is only
    * populated when used in ProcessDocument method.
    * @return value or {@code null} for none
    */
@@ -247,11 +241,8 @@ public final class GoogleCloudDocumentaiV1beta2ProcessDocumentRequest extends co
   }
 
   /**
-   * Target project and location to make a call.
-   *
-   * Format: `projects/{project-id}/locations/{location-id}`.
-   *
-   * If no location is specified, a region will be chosen automatically. This field is only
+   * Target project and location to make a call. Format: `projects/{project-id}/locations/{location-
+   * id}`. If no location is specified, a region will be chosen automatically. This field is only
    * populated when used in ProcessDocument method.
    * @param parent parent or {@code null} for none
    */

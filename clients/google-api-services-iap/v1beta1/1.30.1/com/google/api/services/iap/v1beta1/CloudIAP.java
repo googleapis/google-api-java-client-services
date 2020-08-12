@@ -152,8 +152,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the iap server.  After setting any optional
      * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.iap.v1beta1.model.GetIamPolicyRequest}
      * @return the request
@@ -184,8 +183,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.iap.v1beta1.model.GetIamPolicyRequest}
        * @since 1.13
@@ -298,8 +296,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the iap server.  After setting any optional
      * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.iap.v1beta1.model.SetIamPolicyRequest}
      * @return the request
@@ -330,8 +327,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.iap.v1beta1.model.SetIamPolicyRequest}
        * @since 1.13
@@ -446,8 +442,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the iap server.  After setting any optional
      * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
      *
-     * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
      * @param content the {@link com.google.api.services.iap.v1beta1.model.TestIamPermissionsRequest}
      * @return the request
@@ -480,8 +475,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.iap.v1beta1.model.TestIamPermissionsRequest}
        * @since 1.13

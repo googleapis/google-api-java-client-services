@@ -35,13 +35,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * semantics - including the key names - are vague to IAM. If the effective condition has a
    * reference to a `resource.labels[foo]` construct, IAM consults with this map to retrieve the
    * values associated with `foo` key for Conditions evaluation. If the provided key is not found in
-   * the labels map, the condition would evaluate to false.
-   *
-   * This field is in limited use. If your intended use case is not expected to express
-   * resource.labels attribute in IAM Conditions, leave this field empty. Before planning on using
-   * this attribute please: * Read go/iam-conditions-labels-comm and ensure your service can meet
-   * the   data availability and management requirements. * Talk to iam-conditions-eng@ about your
-   * use case.
+   * the labels map, the condition would evaluate to false. This field is in limited use. If your
+   * intended use case is not expected to express resource.labels attribute in IAM Conditions, leave
+   * this field empty. Before planning on using this attribute please: * Read go/iam-conditions-
+   * labels-comm and ensure your service can meet the data availability and management requirements.
+   * * Talk to iam-conditions-eng@ about your use case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,11 +49,9 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * Name of the resource on which conditions will be evaluated. Must use the Relative Resource Name
    * of the resource, which is the URI path of the resource without the leading "/". Examples are
    * "projects/_/buckets/[BUCKET-ID]" for storage buckets or "projects/[PROJECT-ID]/global/firewalls
-   * /[FIREWALL-ID]" for a firewall.
-   *
-   * This field is required for evaluating conditions with rules on resource names. For a `list`
-   * permission check, the resource.name value must be set to the parent resource. If the parent
-   * resource is a project, this field should be left unset.
+   * /[FIREWALL-ID]" for a firewall. This field is required for evaluating conditions with rules on
+   * resource names. For a `list` permission check, the resource.name value must be set to the
+   * parent resource. If the parent resource is a project, this field should be left unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,13 +85,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * semantics - including the key names - are vague to IAM. If the effective condition has a
    * reference to a `resource.labels[foo]` construct, IAM consults with this map to retrieve the
    * values associated with `foo` key for Conditions evaluation. If the provided key is not found in
-   * the labels map, the condition would evaluate to false.
-   *
-   * This field is in limited use. If your intended use case is not expected to express
-   * resource.labels attribute in IAM Conditions, leave this field empty. Before planning on using
-   * this attribute please: * Read go/iam-conditions-labels-comm and ensure your service can meet
-   * the   data availability and management requirements. * Talk to iam-conditions-eng@ about your
-   * use case.
+   * the labels map, the condition would evaluate to false. This field is in limited use. If your
+   * intended use case is not expected to express resource.labels attribute in IAM Conditions, leave
+   * this field empty. Before planning on using this attribute please: * Read go/iam-conditions-
+   * labels-comm and ensure your service can meet the data availability and management requirements.
+   * * Talk to iam-conditions-eng@ about your use case.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -107,13 +101,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * semantics - including the key names - are vague to IAM. If the effective condition has a
    * reference to a `resource.labels[foo]` construct, IAM consults with this map to retrieve the
    * values associated with `foo` key for Conditions evaluation. If the provided key is not found in
-   * the labels map, the condition would evaluate to false.
-   *
-   * This field is in limited use. If your intended use case is not expected to express
-   * resource.labels attribute in IAM Conditions, leave this field empty. Before planning on using
-   * this attribute please: * Read go/iam-conditions-labels-comm and ensure your service can meet
-   * the   data availability and management requirements. * Talk to iam-conditions-eng@ about your
-   * use case.
+   * the labels map, the condition would evaluate to false. This field is in limited use. If your
+   * intended use case is not expected to express resource.labels attribute in IAM Conditions, leave
+   * this field empty. Before planning on using this attribute please: * Read go/iam-conditions-
+   * labels-comm and ensure your service can meet the data availability and management requirements.
+   * * Talk to iam-conditions-eng@ about your use case.
    * @param labels labels or {@code null} for none
    */
   public Resource setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -125,11 +117,9 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * Name of the resource on which conditions will be evaluated. Must use the Relative Resource Name
    * of the resource, which is the URI path of the resource without the leading "/". Examples are
    * "projects/_/buckets/[BUCKET-ID]" for storage buckets or "projects/[PROJECT-ID]/global/firewalls
-   * /[FIREWALL-ID]" for a firewall.
-   *
-   * This field is required for evaluating conditions with rules on resource names. For a `list`
-   * permission check, the resource.name value must be set to the parent resource. If the parent
-   * resource is a project, this field should be left unset.
+   * /[FIREWALL-ID]" for a firewall. This field is required for evaluating conditions with rules on
+   * resource names. For a `list` permission check, the resource.name value must be set to the
+   * parent resource. If the parent resource is a project, this field should be left unset.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -140,11 +130,9 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * Name of the resource on which conditions will be evaluated. Must use the Relative Resource Name
    * of the resource, which is the URI path of the resource without the leading "/". Examples are
    * "projects/_/buckets/[BUCKET-ID]" for storage buckets or "projects/[PROJECT-ID]/global/firewalls
-   * /[FIREWALL-ID]" for a firewall.
-   *
-   * This field is required for evaluating conditions with rules on resource names. For a `list`
-   * permission check, the resource.name value must be set to the parent resource. If the parent
-   * resource is a project, this field should be left unset.
+   * /[FIREWALL-ID]" for a firewall. This field is required for evaluating conditions with rules on
+   * resource names. For a `list` permission check, the resource.name value must be set to the
+   * parent resource. If the parent resource is a project, this field should be left unset.
    * @param name name or {@code null} for none
    */
   public Resource setName(java.lang.String name) {

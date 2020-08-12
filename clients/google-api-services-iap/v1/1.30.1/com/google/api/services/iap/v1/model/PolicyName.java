@@ -38,10 +38,8 @@ public final class PolicyName extends com.google.api.client.json.GenericJson {
 
   /**
    * For Cloud IAM: The location of the Policy. Must be empty or "global" for Policies owned by
-   * global IAM.  Must name a region from prodspec/cloud-iam-cloudspec for Regional IAM Policies,
-   * see go/iam-faq#where-is-iam-currently-deployed.
-   *
-   * For Local IAM: This field should be set to "local".
+   * global IAM. Must name a region from prodspec/cloud-iam-cloudspec for Regional IAM Policies, see
+   * go/iam-faq#where-is-iam-currently-deployed. For Local IAM: This field should be set to "local".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,10 +69,8 @@ public final class PolicyName extends com.google.api.client.json.GenericJson {
 
   /**
    * For Cloud IAM: The location of the Policy. Must be empty or "global" for Policies owned by
-   * global IAM.  Must name a region from prodspec/cloud-iam-cloudspec for Regional IAM Policies,
-   * see go/iam-faq#where-is-iam-currently-deployed.
-   *
-   * For Local IAM: This field should be set to "local".
+   * global IAM. Must name a region from prodspec/cloud-iam-cloudspec for Regional IAM Policies, see
+   * go/iam-faq#where-is-iam-currently-deployed. For Local IAM: This field should be set to "local".
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -83,10 +79,8 @@ public final class PolicyName extends com.google.api.client.json.GenericJson {
 
   /**
    * For Cloud IAM: The location of the Policy. Must be empty or "global" for Policies owned by
-   * global IAM.  Must name a region from prodspec/cloud-iam-cloudspec for Regional IAM Policies,
-   * see go/iam-faq#where-is-iam-currently-deployed.
-   *
-   * For Local IAM: This field should be set to "local".
+   * global IAM. Must name a region from prodspec/cloud-iam-cloudspec for Regional IAM Policies, see
+   * go/iam-faq#where-is-iam-currently-deployed. For Local IAM: This field should be set to "local".
    * @param region region or {@code null} for none
    */
   public PolicyName setRegion(java.lang.String region) {

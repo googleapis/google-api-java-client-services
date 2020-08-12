@@ -31,64 +31,51 @@ public final class Task extends com.google.api.client.json.GenericJson {
 
   /**
    * App Engine HTTP request that is sent to the task's target. Can be set only if
-   * app_engine_http_target is set on the queue.
-   *
-   * An App Engine task is a task that has AppEngineHttpRequest set.
+   * app_engine_http_target is set on the queue. An App Engine task is a task that has
+   * AppEngineHttpRequest set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AppEngineHttpRequest appEngineHttpRequest;
 
   /**
-   * Output only. The time that the task was created.
-   *
-   * `create_time` will be truncated to the nearest second.
+   * Output only. The time that the task was created. `create_time` will be truncated to the nearest
+   * second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optionally caller-specified in CreateTask.
-   *
-   * The task name.
-   *
-   * The task name must have the following format:
-   * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
-   *
-   * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),    hyphens (-), colons (:), or
-   * periods (.).    For more information, see    [Identifying    projects](https://cloud.google.com
+   * Optionally caller-specified in CreateTask. The task name. The task name must have the following
+   * format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID` *
+   * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or
+   * periods (.). For more information, see [Identifying projects](https://cloud.google.com
    * /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
-   * canonical ID for the task's location.    The list of available locations can be obtained by
-   * calling    ListLocations.    For more information, see
-   * https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers
-   * ([0-9]), or   hyphens (-). The maximum length is 100 characters. * `TASK_ID` can contain only
-   * letters ([A-Za-z]), numbers ([0-9]),   hyphens (-), or underscores (_). The maximum length is
-   * 500 characters.
+   * canonical ID for the task's location. The list of available locations can be obtained by
+   * calling ListLocations. For more information, see https://cloud.google.com/about/locations/. *
+   * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length
+   * is 100 characters. * `TASK_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens
+   * (-), or underscores (_). The maximum length is 500 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * LeaseTasks to process the task. Can be set only if pull_target is set on the queue.
-   *
-   * A pull task is a task that has PullMessage set.
+   * LeaseTasks to process the task. Can be set only if pull_target is set on the queue. A pull task
+   * is a task that has PullMessage set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PullMessage pullMessage;
 
   /**
-   * The time when the task is scheduled to be attempted.
-   *
-   * For App Engine queues, this is when the task will be attempted or retried.
-   *
-   * For pull queues, this is the time when the task is available to be leased; if a task is
-   * currently leased, this is the time when the current lease expires, that is, the time that the
-   * task was leased plus the lease_duration.
-   *
-   * `schedule_time` will be truncated to the nearest microsecond.
+   * The time when the task is scheduled to be attempted. For App Engine queues, this is when the
+   * task will be attempted or retried. For pull queues, this is the time when the task is available
+   * to be leased; if a task is currently leased, this is the time when the current lease expires,
+   * that is, the time that the task was leased plus the lease_duration. `schedule_time` will be
+   * truncated to the nearest microsecond.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,9 +97,8 @@ public final class Task extends com.google.api.client.json.GenericJson {
 
   /**
    * App Engine HTTP request that is sent to the task's target. Can be set only if
-   * app_engine_http_target is set on the queue.
-   *
-   * An App Engine task is a task that has AppEngineHttpRequest set.
+   * app_engine_http_target is set on the queue. An App Engine task is a task that has
+   * AppEngineHttpRequest set.
    * @return value or {@code null} for none
    */
   public AppEngineHttpRequest getAppEngineHttpRequest() {
@@ -121,9 +107,8 @@ public final class Task extends com.google.api.client.json.GenericJson {
 
   /**
    * App Engine HTTP request that is sent to the task's target. Can be set only if
-   * app_engine_http_target is set on the queue.
-   *
-   * An App Engine task is a task that has AppEngineHttpRequest set.
+   * app_engine_http_target is set on the queue. An App Engine task is a task that has
+   * AppEngineHttpRequest set.
    * @param appEngineHttpRequest appEngineHttpRequest or {@code null} for none
    */
   public Task setAppEngineHttpRequest(AppEngineHttpRequest appEngineHttpRequest) {
@@ -132,9 +117,8 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time that the task was created.
-   *
-   * `create_time` will be truncated to the nearest second.
+   * Output only. The time that the task was created. `create_time` will be truncated to the nearest
+   * second.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -142,9 +126,8 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time that the task was created.
-   *
-   * `create_time` will be truncated to the nearest second.
+   * Output only. The time that the task was created. `create_time` will be truncated to the nearest
+   * second.
    * @param createTime createTime or {@code null} for none
    */
   public Task setCreateTime(String createTime) {
@@ -153,22 +136,16 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optionally caller-specified in CreateTask.
-   *
-   * The task name.
-   *
-   * The task name must have the following format:
-   * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
-   *
-   * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),    hyphens (-), colons (:), or
-   * periods (.).    For more information, see    [Identifying    projects](https://cloud.google.com
+   * Optionally caller-specified in CreateTask. The task name. The task name must have the following
+   * format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID` *
+   * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or
+   * periods (.). For more information, see [Identifying projects](https://cloud.google.com
    * /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
-   * canonical ID for the task's location.    The list of available locations can be obtained by
-   * calling    ListLocations.    For more information, see
-   * https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers
-   * ([0-9]), or   hyphens (-). The maximum length is 100 characters. * `TASK_ID` can contain only
-   * letters ([A-Za-z]), numbers ([0-9]),   hyphens (-), or underscores (_). The maximum length is
-   * 500 characters.
+   * canonical ID for the task's location. The list of available locations can be obtained by
+   * calling ListLocations. For more information, see https://cloud.google.com/about/locations/. *
+   * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length
+   * is 100 characters. * `TASK_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens
+   * (-), or underscores (_). The maximum length is 500 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -176,22 +153,16 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optionally caller-specified in CreateTask.
-   *
-   * The task name.
-   *
-   * The task name must have the following format:
-   * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
-   *
-   * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),    hyphens (-), colons (:), or
-   * periods (.).    For more information, see    [Identifying    projects](https://cloud.google.com
+   * Optionally caller-specified in CreateTask. The task name. The task name must have the following
+   * format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID` *
+   * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or
+   * periods (.). For more information, see [Identifying projects](https://cloud.google.com
    * /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
-   * canonical ID for the task's location.    The list of available locations can be obtained by
-   * calling    ListLocations.    For more information, see
-   * https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers
-   * ([0-9]), or   hyphens (-). The maximum length is 100 characters. * `TASK_ID` can contain only
-   * letters ([A-Za-z]), numbers ([0-9]),   hyphens (-), or underscores (_). The maximum length is
-   * 500 characters.
+   * canonical ID for the task's location. The list of available locations can be obtained by
+   * calling ListLocations. For more information, see https://cloud.google.com/about/locations/. *
+   * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length
+   * is 100 characters. * `TASK_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens
+   * (-), or underscores (_). The maximum length is 500 characters.
    * @param name name or {@code null} for none
    */
   public Task setName(java.lang.String name) {
@@ -200,9 +171,8 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * LeaseTasks to process the task. Can be set only if pull_target is set on the queue.
-   *
-   * A pull task is a task that has PullMessage set.
+   * LeaseTasks to process the task. Can be set only if pull_target is set on the queue. A pull task
+   * is a task that has PullMessage set.
    * @return value or {@code null} for none
    */
   public PullMessage getPullMessage() {
@@ -210,9 +180,8 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * LeaseTasks to process the task. Can be set only if pull_target is set on the queue.
-   *
-   * A pull task is a task that has PullMessage set.
+   * LeaseTasks to process the task. Can be set only if pull_target is set on the queue. A pull task
+   * is a task that has PullMessage set.
    * @param pullMessage pullMessage or {@code null} for none
    */
   public Task setPullMessage(PullMessage pullMessage) {
@@ -221,15 +190,11 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the task is scheduled to be attempted.
-   *
-   * For App Engine queues, this is when the task will be attempted or retried.
-   *
-   * For pull queues, this is the time when the task is available to be leased; if a task is
-   * currently leased, this is the time when the current lease expires, that is, the time that the
-   * task was leased plus the lease_duration.
-   *
-   * `schedule_time` will be truncated to the nearest microsecond.
+   * The time when the task is scheduled to be attempted. For App Engine queues, this is when the
+   * task will be attempted or retried. For pull queues, this is the time when the task is available
+   * to be leased; if a task is currently leased, this is the time when the current lease expires,
+   * that is, the time that the task was leased plus the lease_duration. `schedule_time` will be
+   * truncated to the nearest microsecond.
    * @return value or {@code null} for none
    */
   public String getScheduleTime() {
@@ -237,15 +202,11 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the task is scheduled to be attempted.
-   *
-   * For App Engine queues, this is when the task will be attempted or retried.
-   *
-   * For pull queues, this is the time when the task is available to be leased; if a task is
-   * currently leased, this is the time when the current lease expires, that is, the time that the
-   * task was leased plus the lease_duration.
-   *
-   * `schedule_time` will be truncated to the nearest microsecond.
+   * The time when the task is scheduled to be attempted. For App Engine queues, this is when the
+   * task will be attempted or retried. For pull queues, this is the time when the task is available
+   * to be leased; if a task is currently leased, this is the time when the current lease expires,
+   * that is, the time that the task was leased plus the lease_duration. `schedule_time` will be
+   * truncated to the nearest microsecond.
    * @param scheduleTime scheduleTime or {@code null} for none
    */
   public Task setScheduleTime(String scheduleTime) {

@@ -17,14 +17,11 @@
 package com.google.api.services.cloudtasks.v2beta2.model;
 
 /**
- * App Engine Routing.
- *
- * Defines routing characteristics specific to App Engine - service, version, and instance.
- *
- * For more information about services, versions, and instances see [An Overview of App
- * Engine](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine), [Microservices
- * Architecture on Google App Engine](https://cloud.google.com/appengine/docs/python/microservices-
- * on-app-engine), [App Engine Standard request
+ * App Engine Routing. Defines routing characteristics specific to App Engine - service, version,
+ * and instance. For more information about services, versions, and instances see [An Overview of
+ * App Engine](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine),
+ * [Microservices Architecture on Google App Engine](https://cloud.google.com/appengine/docs/python
+ * /microservices-on-app-engine), [App Engine Standard request
  * routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed), and
  * [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-
  * requests-are-routed).
@@ -40,61 +37,34 @@ package com.google.api.services.cloudtasks.v2beta2.model;
 public final class AppEngineRouting extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The host that the task is sent to.
-   *
-   * For more information, see [How Requests are
-   * Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed).
-   *
-   * The host is constructed as:
-   *
-   * * `host = [application_domain_name]`   `| [service] + '.' + [application_domain_name]`   `|
-   * [version] + '.' + [application_domain_name]`   `| [version_dot_service]+ '.' +
-   * [application_domain_name]`   `| [instance] + '.' + [application_domain_name]`   `|
-   * [instance_dot_service] + '.' + [application_domain_name]`   `| [instance_dot_version] + '.' +
-   * [application_domain_name]`   `| [instance_dot_version_dot_service] + '.' +
-   * [application_domain_name]`
-   *
-   * * `application_domain_name` = The domain name of the app, for   example .appspot.com, which is
-   * associated with the   queue's project ID. Some tasks which were created using the App Engine
-   * SDK use a custom domain name.
-   *
-   * * `service =` service
-   *
-   * * `version =` version
-   *
-   * * `version_dot_service =`   version `+ '.' +`   service
-   *
-   * * `instance =` instance
-   *
-   * * `instance_dot_service =`   instance `+ '.' +`   service
-   *
-   * * `instance_dot_version =`   instance `+ '.' +`   version
-   *
-   * * `instance_dot_version_dot_service =`   instance `+ '.' +`   version `+ '.' +`   service
-   *
-   * If service is empty, then the task will be sent to the service which is the default service
-   * when the task is attempted.
-   *
-   * If version is empty, then the task will be sent to the version which is the default version
-   * when the task is attempted.
-   *
-   * If instance is empty, then the task will be sent to an instance which is available when the
-   * task is attempted.
-   *
-   * If service, version, or instance is invalid, then the task will be sent to the default version
-   * of the default service when the task is attempted.
+   * Output only. The host that the task is sent to. For more information, see [How Requests are
+   * Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The
+   * host is constructed as: * `host = [application_domain_name]` `| [service] + '.' +
+   * [application_domain_name]` `| [version] + '.' + [application_domain_name]` `|
+   * [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' +
+   * [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `|
+   * [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service]
+   * + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app,
+   * for example .appspot.com, which is associated with the queue's project ID. Some tasks which
+   * were created using the App Engine SDK use a custom domain name. * `service =` service *
+   * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance
+   * * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+
+   * '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +`
+   * service If service is empty, then the task will be sent to the service which is the default
+   * service when the task is attempted. If version is empty, then the task will be sent to the
+   * version which is the default version when the task is attempted. If instance is empty, then the
+   * task will be sent to an instance which is available when the task is attempted. If service,
+   * version, or instance is invalid, then the task will be sent to the default version of the
+   * default service when the task is attempted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String host;
 
   /**
-   * App instance.
-   *
-   * By default, the task is sent to an instance which is available when the task is attempted.
-   *
-   * Requests can only be sent to a specific instance if [manual scaling is used in App Engine
-   * Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-
+   * App instance. By default, the task is sent to an instance which is available when the task is
+   * attempted. Requests can only be sent to a specific instance if [manual scaling is used in App
+   * Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-
    * engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support
    * instances. For more information, see [App Engine Standard request
    * routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and
@@ -106,79 +76,49 @@ public final class AppEngineRouting extends com.google.api.client.json.GenericJs
   private java.lang.String instance;
 
   /**
-   * App service.
-   *
-   * By default, the task is sent to the service which is the default service when the task is
-   * attempted.
-   *
-   * For some queues or tasks which were created using the App Engine Task Queue API, host is not
-   * parsable into service, version, and instance. For example, some tasks which were created using
-   * the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If
-   * host is not parsable, then service, version, and instance are the empty string.
+   * App service. By default, the task is sent to the service which is the default service when the
+   * task is attempted. For some queues or tasks which were created using the App Engine Task Queue
+   * API, host is not parsable into service, version, and instance. For example, some tasks which
+   * were created using the App Engine SDK use a custom domain name; custom domains are not parsed
+   * by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty
+   * string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
 
   /**
-   * App version.
-   *
-   * By default, the task is sent to the version which is the default version when the task is
-   * attempted.
-   *
-   * For some queues or tasks which were created using the App Engine Task Queue API, host is not
-   * parsable into service, version, and instance. For example, some tasks which were created using
-   * the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If
-   * host is not parsable, then service, version, and instance are the empty string.
+   * App version. By default, the task is sent to the version which is the default version when the
+   * task is attempted. For some queues or tasks which were created using the App Engine Task Queue
+   * API, host is not parsable into service, version, and instance. For example, some tasks which
+   * were created using the App Engine SDK use a custom domain name; custom domains are not parsed
+   * by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty
+   * string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Output only. The host that the task is sent to.
-   *
-   * For more information, see [How Requests are
-   * Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed).
-   *
-   * The host is constructed as:
-   *
-   * * `host = [application_domain_name]`   `| [service] + '.' + [application_domain_name]`   `|
-   * [version] + '.' + [application_domain_name]`   `| [version_dot_service]+ '.' +
-   * [application_domain_name]`   `| [instance] + '.' + [application_domain_name]`   `|
-   * [instance_dot_service] + '.' + [application_domain_name]`   `| [instance_dot_version] + '.' +
-   * [application_domain_name]`   `| [instance_dot_version_dot_service] + '.' +
-   * [application_domain_name]`
-   *
-   * * `application_domain_name` = The domain name of the app, for   example .appspot.com, which is
-   * associated with the   queue's project ID. Some tasks which were created using the App Engine
-   * SDK use a custom domain name.
-   *
-   * * `service =` service
-   *
-   * * `version =` version
-   *
-   * * `version_dot_service =`   version `+ '.' +`   service
-   *
-   * * `instance =` instance
-   *
-   * * `instance_dot_service =`   instance `+ '.' +`   service
-   *
-   * * `instance_dot_version =`   instance `+ '.' +`   version
-   *
-   * * `instance_dot_version_dot_service =`   instance `+ '.' +`   version `+ '.' +`   service
-   *
-   * If service is empty, then the task will be sent to the service which is the default service
-   * when the task is attempted.
-   *
-   * If version is empty, then the task will be sent to the version which is the default version
-   * when the task is attempted.
-   *
-   * If instance is empty, then the task will be sent to an instance which is available when the
-   * task is attempted.
-   *
-   * If service, version, or instance is invalid, then the task will be sent to the default version
-   * of the default service when the task is attempted.
+   * Output only. The host that the task is sent to. For more information, see [How Requests are
+   * Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The
+   * host is constructed as: * `host = [application_domain_name]` `| [service] + '.' +
+   * [application_domain_name]` `| [version] + '.' + [application_domain_name]` `|
+   * [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' +
+   * [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `|
+   * [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service]
+   * + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app,
+   * for example .appspot.com, which is associated with the queue's project ID. Some tasks which
+   * were created using the App Engine SDK use a custom domain name. * `service =` service *
+   * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance
+   * * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+
+   * '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +`
+   * service If service is empty, then the task will be sent to the service which is the default
+   * service when the task is attempted. If version is empty, then the task will be sent to the
+   * version which is the default version when the task is attempted. If instance is empty, then the
+   * task will be sent to an instance which is available when the task is attempted. If service,
+   * version, or instance is invalid, then the task will be sent to the default version of the
+   * default service when the task is attempted.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -186,49 +126,25 @@ public final class AppEngineRouting extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The host that the task is sent to.
-   *
-   * For more information, see [How Requests are
-   * Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed).
-   *
-   * The host is constructed as:
-   *
-   * * `host = [application_domain_name]`   `| [service] + '.' + [application_domain_name]`   `|
-   * [version] + '.' + [application_domain_name]`   `| [version_dot_service]+ '.' +
-   * [application_domain_name]`   `| [instance] + '.' + [application_domain_name]`   `|
-   * [instance_dot_service] + '.' + [application_domain_name]`   `| [instance_dot_version] + '.' +
-   * [application_domain_name]`   `| [instance_dot_version_dot_service] + '.' +
-   * [application_domain_name]`
-   *
-   * * `application_domain_name` = The domain name of the app, for   example .appspot.com, which is
-   * associated with the   queue's project ID. Some tasks which were created using the App Engine
-   * SDK use a custom domain name.
-   *
-   * * `service =` service
-   *
-   * * `version =` version
-   *
-   * * `version_dot_service =`   version `+ '.' +`   service
-   *
-   * * `instance =` instance
-   *
-   * * `instance_dot_service =`   instance `+ '.' +`   service
-   *
-   * * `instance_dot_version =`   instance `+ '.' +`   version
-   *
-   * * `instance_dot_version_dot_service =`   instance `+ '.' +`   version `+ '.' +`   service
-   *
-   * If service is empty, then the task will be sent to the service which is the default service
-   * when the task is attempted.
-   *
-   * If version is empty, then the task will be sent to the version which is the default version
-   * when the task is attempted.
-   *
-   * If instance is empty, then the task will be sent to an instance which is available when the
-   * task is attempted.
-   *
-   * If service, version, or instance is invalid, then the task will be sent to the default version
-   * of the default service when the task is attempted.
+   * Output only. The host that the task is sent to. For more information, see [How Requests are
+   * Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The
+   * host is constructed as: * `host = [application_domain_name]` `| [service] + '.' +
+   * [application_domain_name]` `| [version] + '.' + [application_domain_name]` `|
+   * [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' +
+   * [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `|
+   * [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service]
+   * + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app,
+   * for example .appspot.com, which is associated with the queue's project ID. Some tasks which
+   * were created using the App Engine SDK use a custom domain name. * `service =` service *
+   * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance
+   * * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+
+   * '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +`
+   * service If service is empty, then the task will be sent to the service which is the default
+   * service when the task is attempted. If version is empty, then the task will be sent to the
+   * version which is the default version when the task is attempted. If instance is empty, then the
+   * task will be sent to an instance which is available when the task is attempted. If service,
+   * version, or instance is invalid, then the task will be sent to the default version of the
+   * default service when the task is attempted.
    * @param host host or {@code null} for none
    */
   public AppEngineRouting setHost(java.lang.String host) {
@@ -237,12 +153,9 @@ public final class AppEngineRouting extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * App instance.
-   *
-   * By default, the task is sent to an instance which is available when the task is attempted.
-   *
-   * Requests can only be sent to a specific instance if [manual scaling is used in App Engine
-   * Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-
+   * App instance. By default, the task is sent to an instance which is available when the task is
+   * attempted. Requests can only be sent to a specific instance if [manual scaling is used in App
+   * Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-
    * engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support
    * instances. For more information, see [App Engine Standard request
    * routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and
@@ -255,12 +168,9 @@ public final class AppEngineRouting extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * App instance.
-   *
-   * By default, the task is sent to an instance which is available when the task is attempted.
-   *
-   * Requests can only be sent to a specific instance if [manual scaling is used in App Engine
-   * Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-
+   * App instance. By default, the task is sent to an instance which is available when the task is
+   * attempted. Requests can only be sent to a specific instance if [manual scaling is used in App
+   * Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-
    * engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support
    * instances. For more information, see [App Engine Standard request
    * routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and
@@ -274,15 +184,12 @@ public final class AppEngineRouting extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * App service.
-   *
-   * By default, the task is sent to the service which is the default service when the task is
-   * attempted.
-   *
-   * For some queues or tasks which were created using the App Engine Task Queue API, host is not
-   * parsable into service, version, and instance. For example, some tasks which were created using
-   * the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If
-   * host is not parsable, then service, version, and instance are the empty string.
+   * App service. By default, the task is sent to the service which is the default service when the
+   * task is attempted. For some queues or tasks which were created using the App Engine Task Queue
+   * API, host is not parsable into service, version, and instance. For example, some tasks which
+   * were created using the App Engine SDK use a custom domain name; custom domains are not parsed
+   * by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty
+   * string.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -290,15 +197,12 @@ public final class AppEngineRouting extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * App service.
-   *
-   * By default, the task is sent to the service which is the default service when the task is
-   * attempted.
-   *
-   * For some queues or tasks which were created using the App Engine Task Queue API, host is not
-   * parsable into service, version, and instance. For example, some tasks which were created using
-   * the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If
-   * host is not parsable, then service, version, and instance are the empty string.
+   * App service. By default, the task is sent to the service which is the default service when the
+   * task is attempted. For some queues or tasks which were created using the App Engine Task Queue
+   * API, host is not parsable into service, version, and instance. For example, some tasks which
+   * were created using the App Engine SDK use a custom domain name; custom domains are not parsed
+   * by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty
+   * string.
    * @param service service or {@code null} for none
    */
   public AppEngineRouting setService(java.lang.String service) {
@@ -307,15 +211,12 @@ public final class AppEngineRouting extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * App version.
-   *
-   * By default, the task is sent to the version which is the default version when the task is
-   * attempted.
-   *
-   * For some queues or tasks which were created using the App Engine Task Queue API, host is not
-   * parsable into service, version, and instance. For example, some tasks which were created using
-   * the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If
-   * host is not parsable, then service, version, and instance are the empty string.
+   * App version. By default, the task is sent to the version which is the default version when the
+   * task is attempted. For some queues or tasks which were created using the App Engine Task Queue
+   * API, host is not parsable into service, version, and instance. For example, some tasks which
+   * were created using the App Engine SDK use a custom domain name; custom domains are not parsed
+   * by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty
+   * string.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -323,15 +224,12 @@ public final class AppEngineRouting extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * App version.
-   *
-   * By default, the task is sent to the version which is the default version when the task is
-   * attempted.
-   *
-   * For some queues or tasks which were created using the App Engine Task Queue API, host is not
-   * parsable into service, version, and instance. For example, some tasks which were created using
-   * the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If
-   * host is not parsable, then service, version, and instance are the empty string.
+   * App version. By default, the task is sent to the version which is the default version when the
+   * task is attempted. For some queues or tasks which were created using the App Engine Task Queue
+   * API, host is not parsable into service, version, and instance. For example, some tasks which
+   * were created using the App Engine SDK use a custom domain name; custom domains are not parsed
+   * by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty
+   * string.
    * @param version version or {@code null} for none
    */
   public AppEngineRouting setVersion(java.lang.String version) {

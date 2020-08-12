@@ -30,23 +30,20 @@ package com.google.api.services.cloudtasks.v2beta2.model;
 public final class RenewLeaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The desired new lease duration, starting from now.
-   *
-   * The maximum lease duration is 1 week. `lease_duration` will be truncated to the nearest second.
+   * Required. The desired new lease duration, starting from now. The maximum lease duration is 1
+   * week. `lease_duration` will be truncated to the nearest second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String leaseDuration;
 
   /**
-   * The response_view specifies which subset of the Task will be returned.
-   *
-   * By default response_view is BASIC; not all information is retrieved by default because some
-   * data, such as payloads, might be desirable to return only when needed because of its large size
-   * or because of the sensitivity of data that it contains.
-   *
-   * Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
-   * IAM](https://cloud.google.com/iam/) permission on the Task resource.
+   * The response_view specifies which subset of the Task will be returned. By default response_view
+   * is BASIC; not all information is retrieved by default because some data, such as payloads,
+   * might be desirable to return only when needed because of its large size or because of the
+   * sensitivity of data that it contains. Authorization for FULL requires
+   * `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task
+   * resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,9 +59,8 @@ public final class RenewLeaseRequest extends com.google.api.client.json.GenericJ
   private String scheduleTime;
 
   /**
-   * Required. The desired new lease duration, starting from now.
-   *
-   * The maximum lease duration is 1 week. `lease_duration` will be truncated to the nearest second.
+   * Required. The desired new lease duration, starting from now. The maximum lease duration is 1
+   * week. `lease_duration` will be truncated to the nearest second.
    * @return value or {@code null} for none
    */
   public String getLeaseDuration() {
@@ -72,9 +68,8 @@ public final class RenewLeaseRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The desired new lease duration, starting from now.
-   *
-   * The maximum lease duration is 1 week. `lease_duration` will be truncated to the nearest second.
+   * Required. The desired new lease duration, starting from now. The maximum lease duration is 1
+   * week. `lease_duration` will be truncated to the nearest second.
    * @param leaseDuration leaseDuration or {@code null} for none
    */
   public RenewLeaseRequest setLeaseDuration(String leaseDuration) {
@@ -83,14 +78,12 @@ public final class RenewLeaseRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The response_view specifies which subset of the Task will be returned.
-   *
-   * By default response_view is BASIC; not all information is retrieved by default because some
-   * data, such as payloads, might be desirable to return only when needed because of its large size
-   * or because of the sensitivity of data that it contains.
-   *
-   * Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
-   * IAM](https://cloud.google.com/iam/) permission on the Task resource.
+   * The response_view specifies which subset of the Task will be returned. By default response_view
+   * is BASIC; not all information is retrieved by default because some data, such as payloads,
+   * might be desirable to return only when needed because of its large size or because of the
+   * sensitivity of data that it contains. Authorization for FULL requires
+   * `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task
+   * resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseView() {
@@ -98,14 +91,12 @@ public final class RenewLeaseRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The response_view specifies which subset of the Task will be returned.
-   *
-   * By default response_view is BASIC; not all information is retrieved by default because some
-   * data, such as payloads, might be desirable to return only when needed because of its large size
-   * or because of the sensitivity of data that it contains.
-   *
-   * Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
-   * IAM](https://cloud.google.com/iam/) permission on the Task resource.
+   * The response_view specifies which subset of the Task will be returned. By default response_view
+   * is BASIC; not all information is retrieved by default because some data, such as payloads,
+   * might be desirable to return only when needed because of its large size or because of the
+   * sensitivity of data that it contains. Authorization for FULL requires
+   * `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task
+   * resource.
    * @param responseView responseView or {@code null} for none
    */
   public RenewLeaseRequest setResponseView(java.lang.String responseView) {

@@ -18,7 +18,6 @@ package com.google.api.services.cloudtasks.v2beta2.model;
 
 /**
  * The pull message contains data that can be used by the caller of LeaseTasks to process the task.
- *
  * This proto can only be used for tasks in a queue which has pull_target set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -39,20 +38,14 @@ public final class PullMessage extends com.google.api.client.json.GenericJson {
   private java.lang.String payload;
 
   /**
-   * The task's tag.
-   *
-   * Tags allow similar tasks to be processed in a batch. If you label tasks with a tag, your worker
-   * can lease tasks with the same tag using filter. For example, if you want to aggregate the
-   * events associated with a specific user once a day, you could tag tasks with the user ID.
-   *
-   * The task's tag can only be set when the task is created.
-   *
-   * The tag must be less than 500 characters.
-   *
-   * SDK compatibility: Although the SDK allows tags to be either string or [bytes](https://cloud.go
-   * ogle.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.ht
-   * ml#tag-byte:A-), only UTF-8 encoded tags can be used in Cloud Tasks. If a tag isn't UTF-8
-   * encoded, the tag will be empty when the task is returned by Cloud Tasks.
+   * The task's tag. Tags allow similar tasks to be processed in a batch. If you label tasks with a
+   * tag, your worker can lease tasks with the same tag using filter. For example, if you want to
+   * aggregate the events associated with a specific user once a day, you could tag tasks with the
+   * user ID. The task's tag can only be set when the task is created. The tag must be less than 500
+   * characters. SDK compatibility: Although the SDK allows tags to be either string or [bytes](http
+   * s://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/Ta
+   * skOptions.html#tag-byte:A-), only UTF-8 encoded tags can be used in Cloud Tasks. If a tag isn't
+   * UTF-8 encoded, the tag will be empty when the task is returned by Cloud Tasks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,20 +97,14 @@ public final class PullMessage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The task's tag.
-   *
-   * Tags allow similar tasks to be processed in a batch. If you label tasks with a tag, your worker
-   * can lease tasks with the same tag using filter. For example, if you want to aggregate the
-   * events associated with a specific user once a day, you could tag tasks with the user ID.
-   *
-   * The task's tag can only be set when the task is created.
-   *
-   * The tag must be less than 500 characters.
-   *
-   * SDK compatibility: Although the SDK allows tags to be either string or [bytes](https://cloud.go
-   * ogle.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.ht
-   * ml#tag-byte:A-), only UTF-8 encoded tags can be used in Cloud Tasks. If a tag isn't UTF-8
-   * encoded, the tag will be empty when the task is returned by Cloud Tasks.
+   * The task's tag. Tags allow similar tasks to be processed in a batch. If you label tasks with a
+   * tag, your worker can lease tasks with the same tag using filter. For example, if you want to
+   * aggregate the events associated with a specific user once a day, you could tag tasks with the
+   * user ID. The task's tag can only be set when the task is created. The tag must be less than 500
+   * characters. SDK compatibility: Although the SDK allows tags to be either string or [bytes](http
+   * s://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/Ta
+   * skOptions.html#tag-byte:A-), only UTF-8 encoded tags can be used in Cloud Tasks. If a tag isn't
+   * UTF-8 encoded, the tag will be empty when the task is returned by Cloud Tasks.
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -125,20 +112,14 @@ public final class PullMessage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The task's tag.
-   *
-   * Tags allow similar tasks to be processed in a batch. If you label tasks with a tag, your worker
-   * can lease tasks with the same tag using filter. For example, if you want to aggregate the
-   * events associated with a specific user once a day, you could tag tasks with the user ID.
-   *
-   * The task's tag can only be set when the task is created.
-   *
-   * The tag must be less than 500 characters.
-   *
-   * SDK compatibility: Although the SDK allows tags to be either string or [bytes](https://cloud.go
-   * ogle.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.ht
-   * ml#tag-byte:A-), only UTF-8 encoded tags can be used in Cloud Tasks. If a tag isn't UTF-8
-   * encoded, the tag will be empty when the task is returned by Cloud Tasks.
+   * The task's tag. Tags allow similar tasks to be processed in a batch. If you label tasks with a
+   * tag, your worker can lease tasks with the same tag using filter. For example, if you want to
+   * aggregate the events associated with a specific user once a day, you could tag tasks with the
+   * user ID. The task's tag can only be set when the task is created. The tag must be less than 500
+   * characters. SDK compatibility: Although the SDK allows tags to be either string or [bytes](http
+   * s://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/Ta
+   * skOptions.html#tag-byte:A-), only UTF-8 encoded tags can be used in Cloud Tasks. If a tag isn't
+   * UTF-8 encoded, the tag will be empty when the task is returned by Cloud Tasks.
    * @param tag tag or {@code null} for none
    */
   public PullMessage setTag(java.lang.String tag) {

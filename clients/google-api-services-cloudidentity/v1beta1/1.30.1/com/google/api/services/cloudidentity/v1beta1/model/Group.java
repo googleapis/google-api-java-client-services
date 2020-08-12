@@ -17,10 +17,8 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * A group within the Cloud Identity Groups API.
- *
- * A `Group` is a collection of entities, where each entity is either a user, another group or a
- * service account.
+ * A group within the Cloud Identity Groups API. A `Group` is a collection of entities, where each
+ * entity is either a user, another group, or a service account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -53,9 +51,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * An extended description to help users determine the purpose of a `Group`.
-   *
-   * Must not be longer than 4,096 characters.
+   * An extended description to help users determine the purpose of a `Group`. Must not be longer
+   * than 4,096 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,11 +73,15 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private EntityKey groupKey;
 
   /**
-   * Required. The labels that apply to the `Group`.
-   *
-   * Must not contain more than one entry. Must contain the entry
-   * `'cloudidentity.googleapis.com/groups.discussion_forum': ''` if the `Group` is a Google Group
-   * or `'system/groups/external': ''` if the `Group` is an external-identity-mapped group.
+   * Required. One or more label entries that apply to the Group. Currently supported labels contain
+   * a key with an empty value. Google Groups are the default type of group and have a label with a
+   * key of 'cloudidentity.googleapis.com/groups.discussion_forum' and an empty value. Existing
+   * Google Groups can have an additional label with a key of
+   * 'cloudidentity.googleapis.com/groups.security' and an empty value added to them. **This is an
+   * immutable change and the security label cannot be removed once added.** Dynamic groups have a
+   * label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for
+   * Cloud Search have a label with a key of 'system/groups/external' and an empty value. Examples:
+   * {"cloudidentity.googleapis.com/groups.discussion_forum": ""} or {"system/groups/external": ""}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,9 +89,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * `Group`.
-   *
-   * Shall be of the form `groups/{group_id}`.
+   * `Group`. Shall be of the form `groups/{group_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,10 +97,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The resource name of the entity under which this `Group` resides in the
-   * Cloud Identity resource hierarchy.
-   *
-   * Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups
-   * or `customers/{customer_id}` for Google Groups.
+   * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}`
+   * for external- identity-mapped groups or `customers/{customer_id}` for Google Groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,9 +146,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An extended description to help users determine the purpose of a `Group`.
-   *
-   * Must not be longer than 4,096 characters.
+   * An extended description to help users determine the purpose of a `Group`. Must not be longer
+   * than 4,096 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -159,9 +155,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An extended description to help users determine the purpose of a `Group`.
-   *
-   * Must not be longer than 4,096 characters.
+   * An extended description to help users determine the purpose of a `Group`. Must not be longer
+   * than 4,096 characters.
    * @param description description or {@code null} for none
    */
   public Group setDescription(java.lang.String description) {
@@ -204,11 +199,15 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The labels that apply to the `Group`.
-   *
-   * Must not contain more than one entry. Must contain the entry
-   * `'cloudidentity.googleapis.com/groups.discussion_forum': ''` if the `Group` is a Google Group
-   * or `'system/groups/external': ''` if the `Group` is an external-identity-mapped group.
+   * Required. One or more label entries that apply to the Group. Currently supported labels contain
+   * a key with an empty value. Google Groups are the default type of group and have a label with a
+   * key of 'cloudidentity.googleapis.com/groups.discussion_forum' and an empty value. Existing
+   * Google Groups can have an additional label with a key of
+   * 'cloudidentity.googleapis.com/groups.security' and an empty value added to them. **This is an
+   * immutable change and the security label cannot be removed once added.** Dynamic groups have a
+   * label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for
+   * Cloud Search have a label with a key of 'system/groups/external' and an empty value. Examples:
+   * {"cloudidentity.googleapis.com/groups.discussion_forum": ""} or {"system/groups/external": ""}.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -216,11 +215,15 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The labels that apply to the `Group`.
-   *
-   * Must not contain more than one entry. Must contain the entry
-   * `'cloudidentity.googleapis.com/groups.discussion_forum': ''` if the `Group` is a Google Group
-   * or `'system/groups/external': ''` if the `Group` is an external-identity-mapped group.
+   * Required. One or more label entries that apply to the Group. Currently supported labels contain
+   * a key with an empty value. Google Groups are the default type of group and have a label with a
+   * key of 'cloudidentity.googleapis.com/groups.discussion_forum' and an empty value. Existing
+   * Google Groups can have an additional label with a key of
+   * 'cloudidentity.googleapis.com/groups.security' and an empty value added to them. **This is an
+   * immutable change and the security label cannot be removed once added.** Dynamic groups have a
+   * label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for
+   * Cloud Search have a label with a key of 'system/groups/external' and an empty value. Examples:
+   * {"cloudidentity.googleapis.com/groups.discussion_forum": ""} or {"system/groups/external": ""}.
    * @param labels labels or {@code null} for none
    */
   public Group setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -230,9 +233,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * `Group`.
-   *
-   * Shall be of the form `groups/{group_id}`.
+   * `Group`. Shall be of the form `groups/{group_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -241,9 +242,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
-   * `Group`.
-   *
-   * Shall be of the form `groups/{group_id}`.
+   * `Group`. Shall be of the form `groups/{group_id}`.
    * @param name name or {@code null} for none
    */
   public Group setName(java.lang.String name) {
@@ -253,10 +252,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The resource name of the entity under which this `Group` resides in the
-   * Cloud Identity resource hierarchy.
-   *
-   * Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups
-   * or `customers/{customer_id}` for Google Groups.
+   * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}`
+   * for external- identity-mapped groups or `customers/{customer_id}` for Google Groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -265,10 +262,8 @@ public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The resource name of the entity under which this `Group` resides in the
-   * Cloud Identity resource hierarchy.
-   *
-   * Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups
-   * or `customers/{customer_id}` for Google Groups.
+   * Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}`
+   * for external- identity-mapped groups or `customers/{customer_id}` for Google Groups.
    * @param parent parent or {@code null} for none
    */
   public Group setParent(java.lang.String parent) {

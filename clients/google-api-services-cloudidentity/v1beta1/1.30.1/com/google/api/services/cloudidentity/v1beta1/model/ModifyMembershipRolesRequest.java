@@ -30,11 +30,8 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class ModifyMembershipRolesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The `MembershipRole`s to be added.
-   *
-   * Adding or removing roles in the same request as updating roles is not supported.
-   *
-   * Must not be set if `update_roles_params` is set.
+   * The `MembershipRole`s to be added. Adding or removing roles in the same request as updating
+   * roles is not supported. Must not be set if `update_roles_params` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,36 +44,27 @@ public final class ModifyMembershipRolesRequest extends com.google.api.client.js
   }
 
   /**
-   * The `name`s of the `MembershipRole`s to be removed.
-   *
-   * Adding or removing roles in the same request as updating roles is not supported.
-   *
-   * It is not possible to remove the `MEMBER` `MembershipRole`. If you wish to delete a
-   * `Membership`, call MembershipsService.DeleteMembership instead.
-   *
-   * Must not contain `MEMBER`. Must not be set if `update_roles_params` is set.
+   * The `name`s of the `MembershipRole`s to be removed. Adding or removing roles in the same
+   * request as updating roles is not supported. It is not possible to remove the `MEMBER`
+   * `MembershipRole`. If you wish to delete a `Membership`, call
+   * MembershipsService.DeleteMembership instead. Must not contain `MEMBER`. Must not be set if
+   * `update_roles_params` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> removeRoles;
 
   /**
-   * The `MembershipRole`s to be updated.
-   *
-   * Updating roles in the same request as adding or removing roles is not supported.
-   *
-   * Must not be set if either `add_roles` or `remove_roles` is set.
+   * The `MembershipRole`s to be updated. Updating roles in the same request as adding or removing
+   * roles is not supported. Must not be set if either `add_roles` or `remove_roles` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<UpdateMembershipRolesParams> updateRolesParams;
 
   /**
-   * The `MembershipRole`s to be added.
-   *
-   * Adding or removing roles in the same request as updating roles is not supported.
-   *
-   * Must not be set if `update_roles_params` is set.
+   * The `MembershipRole`s to be added. Adding or removing roles in the same request as updating
+   * roles is not supported. Must not be set if `update_roles_params` is set.
    * @return value or {@code null} for none
    */
   public java.util.List<MembershipRole> getAddRoles() {
@@ -84,11 +72,8 @@ public final class ModifyMembershipRolesRequest extends com.google.api.client.js
   }
 
   /**
-   * The `MembershipRole`s to be added.
-   *
-   * Adding or removing roles in the same request as updating roles is not supported.
-   *
-   * Must not be set if `update_roles_params` is set.
+   * The `MembershipRole`s to be added. Adding or removing roles in the same request as updating
+   * roles is not supported. Must not be set if `update_roles_params` is set.
    * @param addRoles addRoles or {@code null} for none
    */
   public ModifyMembershipRolesRequest setAddRoles(java.util.List<MembershipRole> addRoles) {
@@ -97,14 +82,11 @@ public final class ModifyMembershipRolesRequest extends com.google.api.client.js
   }
 
   /**
-   * The `name`s of the `MembershipRole`s to be removed.
-   *
-   * Adding or removing roles in the same request as updating roles is not supported.
-   *
-   * It is not possible to remove the `MEMBER` `MembershipRole`. If you wish to delete a
-   * `Membership`, call MembershipsService.DeleteMembership instead.
-   *
-   * Must not contain `MEMBER`. Must not be set if `update_roles_params` is set.
+   * The `name`s of the `MembershipRole`s to be removed. Adding or removing roles in the same
+   * request as updating roles is not supported. It is not possible to remove the `MEMBER`
+   * `MembershipRole`. If you wish to delete a `Membership`, call
+   * MembershipsService.DeleteMembership instead. Must not contain `MEMBER`. Must not be set if
+   * `update_roles_params` is set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRemoveRoles() {
@@ -112,14 +94,11 @@ public final class ModifyMembershipRolesRequest extends com.google.api.client.js
   }
 
   /**
-   * The `name`s of the `MembershipRole`s to be removed.
-   *
-   * Adding or removing roles in the same request as updating roles is not supported.
-   *
-   * It is not possible to remove the `MEMBER` `MembershipRole`. If you wish to delete a
-   * `Membership`, call MembershipsService.DeleteMembership instead.
-   *
-   * Must not contain `MEMBER`. Must not be set if `update_roles_params` is set.
+   * The `name`s of the `MembershipRole`s to be removed. Adding or removing roles in the same
+   * request as updating roles is not supported. It is not possible to remove the `MEMBER`
+   * `MembershipRole`. If you wish to delete a `Membership`, call
+   * MembershipsService.DeleteMembership instead. Must not contain `MEMBER`. Must not be set if
+   * `update_roles_params` is set.
    * @param removeRoles removeRoles or {@code null} for none
    */
   public ModifyMembershipRolesRequest setRemoveRoles(java.util.List<java.lang.String> removeRoles) {
@@ -128,11 +107,8 @@ public final class ModifyMembershipRolesRequest extends com.google.api.client.js
   }
 
   /**
-   * The `MembershipRole`s to be updated.
-   *
-   * Updating roles in the same request as adding or removing roles is not supported.
-   *
-   * Must not be set if either `add_roles` or `remove_roles` is set.
+   * The `MembershipRole`s to be updated. Updating roles in the same request as adding or removing
+   * roles is not supported. Must not be set if either `add_roles` or `remove_roles` is set.
    * @return value or {@code null} for none
    */
   public java.util.List<UpdateMembershipRolesParams> getUpdateRolesParams() {
@@ -140,11 +116,8 @@ public final class ModifyMembershipRolesRequest extends com.google.api.client.js
   }
 
   /**
-   * The `MembershipRole`s to be updated.
-   *
-   * Updating roles in the same request as adding or removing roles is not supported.
-   *
-   * Must not be set if either `add_roles` or `remove_roles` is set.
+   * The `MembershipRole`s to be updated. Updating roles in the same request as adding or removing
+   * roles is not supported. Must not be set if either `add_roles` or `remove_roles` is set.
    * @param updateRolesParams updateRolesParams or {@code null} for none
    */
   public ModifyMembershipRolesRequest setUpdateRolesParams(java.util.List<UpdateMembershipRolesParams> updateRolesParams) {

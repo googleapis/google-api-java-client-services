@@ -40,7 +40,6 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
 
   /**
    * Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace.
-   *
    * Namespaces are currently only created as part of IdentitySource creation from Admin Console. A
    * namespace `"identitysources/{identity_source_id}"` is created corresponding to every Identity
    * Source `identity_source_id`.
@@ -68,7 +67,6 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
 
   /**
    * Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace.
-   *
    * Namespaces are currently only created as part of IdentitySource creation from Admin Console. A
    * namespace `"identitysources/{identity_source_id}"` is created corresponding to every Identity
    * Source `identity_source_id`.
@@ -80,7 +78,6 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
 
   /**
    * Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace.
-   *
    * Namespaces are currently only created as part of IdentitySource creation from Admin Console. A
    * namespace `"identitysources/{identity_source_id}"` is created corresponding to every Identity
    * Source `identity_source_id`.

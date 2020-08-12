@@ -37,6 +37,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean autoArima;
 
   /**
+   * The max value of non-seasonal p and q.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long autoArimaMaxOrder;
+
+  /**
    * Batch size for dnn models.
    * The value may be {@code null}.
    */
@@ -355,6 +362,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setAutoArima(java.lang.Boolean autoArima) {
     this.autoArima = autoArima;
+    return this;
+  }
+
+  /**
+   * The max value of non-seasonal p and q.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAutoArimaMaxOrder() {
+    return autoArimaMaxOrder;
+  }
+
+  /**
+   * The max value of non-seasonal p and q.
+   * @param autoArimaMaxOrder autoArimaMaxOrder or {@code null} for none
+   */
+  public TrainingOptions setAutoArimaMaxOrder(java.lang.Long autoArimaMaxOrder) {
+    this.autoArimaMaxOrder = autoArimaMaxOrder;
     return this;
   }
 

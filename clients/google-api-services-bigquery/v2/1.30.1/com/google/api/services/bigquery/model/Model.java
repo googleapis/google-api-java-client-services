@@ -62,7 +62,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The time when this model expires, in milliseconds since the epoch. If not present,
    * the model will persist indefinitely. Expired models will be deleted and their storage
-   * reclaimed.  The defaultTableExpirationMs property of the encapsulating dataset can be used to
+   * reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to
    * set a default expirationTime on newly created models.
    * The value may be {@code null}.
    */
@@ -213,7 +213,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The time when this model expires, in milliseconds since the epoch. If not present,
    * the model will persist indefinitely. Expired models will be deleted and their storage
-   * reclaimed.  The defaultTableExpirationMs property of the encapsulating dataset can be used to
+   * reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to
    * set a default expirationTime on newly created models.
    * @return value or {@code null} for none
    */
@@ -224,7 +224,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The time when this model expires, in milliseconds since the epoch. If not present,
    * the model will persist indefinitely. Expired models will be deleted and their storage
-   * reclaimed.  The defaultTableExpirationMs property of the encapsulating dataset can be used to
+   * reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to
    * set a default expirationTime on newly created models.
    * @param expirationTime expirationTime or {@code null} for none
    */

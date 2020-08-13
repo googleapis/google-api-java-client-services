@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-gmailpostmastertools</artifactId>
-  <version>v1beta1-rev20200801-1.30.10</version>
-  <name>Gmail Postmaster Tools API v1beta1-rev20200801-1.30.10</name>
+  <version>v1beta1-rev20200811-1.30.10</version>
+  <name>Postmaster Tools API v1beta1-rev20200811-1.30.10</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Gmail Postmaster Tools API ${project.version}</doctitle>
-          <windowtitle>Gmail Postmaster Tools API ${project.version}</windowtitle>
+          <doctitle>Postmaster Tools API ${project.version}</doctitle>
+          <windowtitle>Postmaster Tools API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.36.0/</link>

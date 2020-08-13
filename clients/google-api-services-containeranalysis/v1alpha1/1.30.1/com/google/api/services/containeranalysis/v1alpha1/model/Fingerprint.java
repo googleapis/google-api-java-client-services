@@ -46,7 +46,7 @@ public final class Fingerprint extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> v2Blob;
 
   /**
-   * Output only. The name of the image's v2 blobs computed via:   [bottom] := v2_blobbottom :=
+   * Output only. The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom :=
    * sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept. This field can
    * be used as a filter in list requests.
    * The value may be {@code null}.
@@ -91,7 +91,7 @@ public final class Fingerprint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of the image's v2 blobs computed via:   [bottom] := v2_blobbottom :=
+   * Output only. The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom :=
    * sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept. This field can
    * be used as a filter in list requests.
    * @return value or {@code null} for none
@@ -101,7 +101,7 @@ public final class Fingerprint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of the image's v2 blobs computed via:   [bottom] := v2_blobbottom :=
+   * Output only. The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom :=
    * sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept. This field can
    * be used as a filter in list requests.
    * @param v2Name v2Name or {@code null} for none

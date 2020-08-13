@@ -33,7 +33,7 @@ public final class Detail extends com.google.api.client.json.GenericJson {
 
   /**
    * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability
-   * manifests.  Examples include distro or storage location for vulnerable jar. This field can be
+   * manifests. Examples include distro or storage location for vulnerable jar. This field can be
    * used as a filter in list requests.
    * The value may be {@code null}.
    */
@@ -99,7 +99,7 @@ public final class Detail extends com.google.api.client.json.GenericJson {
 
   /**
    * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability
-   * manifests.  Examples include distro or storage location for vulnerable jar. This field can be
+   * manifests. Examples include distro or storage location for vulnerable jar. This field can be
    * used as a filter in list requests.
    * @return value or {@code null} for none
    */
@@ -109,7 +109,7 @@ public final class Detail extends com.google.api.client.json.GenericJson {
 
   /**
    * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability
-   * manifests.  Examples include distro or storage location for vulnerable jar. This field can be
+   * manifests. Examples include distro or storage location for vulnerable jar. This field can be
    * used as a filter in list requests.
    * @param cpeUri cpeUri or {@code null} for none
    */

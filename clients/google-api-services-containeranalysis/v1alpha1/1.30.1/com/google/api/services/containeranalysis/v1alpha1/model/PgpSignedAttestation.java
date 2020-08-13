@@ -47,8 +47,8 @@ public final class PgpSignedAttestation extends com.google.api.client.json.Gener
    * character hexadecimal string. See https://tools.ietf.org/html/rfc4880#section-12.2 for details.
    * Implementations may choose to acknowledge "LONG", "SHORT", or other abbreviated key IDs, but
    * only the full fingerprint is guaranteed to work. In gpg, the full fingerprint can be retrieved
-   * from the `fpr` field returned when calling --list-keys with --with-colons.  For example: ```
-   * gpg --with-colons --with-fingerprint --force-v4-certs \     --list-keys attester@example.com
+   * from the `fpr` field returned when calling --list-keys with --with-colons. For example: ``` gpg
+   * --with-colons --with-fingerprint --force-v4-certs \ --list-keys attester@example.com
    * tru::1:1513631572:0:3:1:5 pub:...... fpr:::::::::24FF6481B76AC91E66A00AC657A93A81EF3AE6FB: ```
    * Above, the fingerprint is `24FF6481B76AC91E66A00AC657A93A81EF3AE6FB`.
    * The value may be {@code null}.
@@ -57,7 +57,7 @@ public final class PgpSignedAttestation extends com.google.api.client.json.Gener
   private java.lang.String pgpKeyId;
 
   /**
-   * The raw content of the signature, as output by GNU Privacy Guard (GPG) or equivalent.  Since
+   * The raw content of the signature, as output by GNU Privacy Guard (GPG) or equivalent. Since
    * this message only supports attached signatures, the payload that was signed must be attached.
    * While the signature format supported is dependent on the verification implementation, currently
    * only ASCII-armored (`--armor` to gpg), non-clearsigned (`--sign` rather than `--clearsign` to
@@ -96,8 +96,8 @@ public final class PgpSignedAttestation extends com.google.api.client.json.Gener
    * character hexadecimal string. See https://tools.ietf.org/html/rfc4880#section-12.2 for details.
    * Implementations may choose to acknowledge "LONG", "SHORT", or other abbreviated key IDs, but
    * only the full fingerprint is guaranteed to work. In gpg, the full fingerprint can be retrieved
-   * from the `fpr` field returned when calling --list-keys with --with-colons.  For example: ```
-   * gpg --with-colons --with-fingerprint --force-v4-certs \     --list-keys attester@example.com
+   * from the `fpr` field returned when calling --list-keys with --with-colons. For example: ``` gpg
+   * --with-colons --with-fingerprint --force-v4-certs \ --list-keys attester@example.com
    * tru::1:1513631572:0:3:1:5 pub:...... fpr:::::::::24FF6481B76AC91E66A00AC657A93A81EF3AE6FB: ```
    * Above, the fingerprint is `24FF6481B76AC91E66A00AC657A93A81EF3AE6FB`.
    * @return value or {@code null} for none
@@ -112,8 +112,8 @@ public final class PgpSignedAttestation extends com.google.api.client.json.Gener
    * character hexadecimal string. See https://tools.ietf.org/html/rfc4880#section-12.2 for details.
    * Implementations may choose to acknowledge "LONG", "SHORT", or other abbreviated key IDs, but
    * only the full fingerprint is guaranteed to work. In gpg, the full fingerprint can be retrieved
-   * from the `fpr` field returned when calling --list-keys with --with-colons.  For example: ```
-   * gpg --with-colons --with-fingerprint --force-v4-certs \     --list-keys attester@example.com
+   * from the `fpr` field returned when calling --list-keys with --with-colons. For example: ``` gpg
+   * --with-colons --with-fingerprint --force-v4-certs \ --list-keys attester@example.com
    * tru::1:1513631572:0:3:1:5 pub:...... fpr:::::::::24FF6481B76AC91E66A00AC657A93A81EF3AE6FB: ```
    * Above, the fingerprint is `24FF6481B76AC91E66A00AC657A93A81EF3AE6FB`.
    * @param pgpKeyId pgpKeyId or {@code null} for none
@@ -124,7 +124,7 @@ public final class PgpSignedAttestation extends com.google.api.client.json.Gener
   }
 
   /**
-   * The raw content of the signature, as output by GNU Privacy Guard (GPG) or equivalent.  Since
+   * The raw content of the signature, as output by GNU Privacy Guard (GPG) or equivalent. Since
    * this message only supports attached signatures, the payload that was signed must be attached.
    * While the signature format supported is dependent on the verification implementation, currently
    * only ASCII-armored (`--armor` to gpg), non-clearsigned (`--sign` rather than `--clearsign` to
@@ -138,7 +138,7 @@ public final class PgpSignedAttestation extends com.google.api.client.json.Gener
   }
 
   /**
-   * The raw content of the signature, as output by GNU Privacy Guard (GPG) or equivalent.  Since
+   * The raw content of the signature, as output by GNU Privacy Guard (GPG) or equivalent. Since
    * this message only supports attached signatures, the payload that was signed must be attached.
    * While the signature format supported is dependent on the verification implementation, currently
    * only ASCII-armored (`--armor` to gpg), non-clearsigned (`--sign` rather than `--clearsign` to

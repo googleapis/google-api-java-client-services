@@ -42,10 +42,9 @@ public final class BuildDetails extends com.google.api.client.json.GenericJson {
    * the corresponding Result. After verifying the signature, `provenance_bytes` can be unmarshalled
    * and compared to the provenance to confirm that it is unchanged. A base64-encoded string
    * representation of the provenance bytes is used for the signature in order to interoperate with
-   * openssl which expects this format for signature verification.
-   *
-   * The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to
-   * json as well to prevent incompatibilities with future changes.
+   * openssl which expects this format for signature verification. The serialized form is captured
+   * both to avoid ambiguity in how the provenance is marshalled to json as well to prevent
+   * incompatibilities with future changes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,10 +72,9 @@ public final class BuildDetails extends com.google.api.client.json.GenericJson {
    * the corresponding Result. After verifying the signature, `provenance_bytes` can be unmarshalled
    * and compared to the provenance to confirm that it is unchanged. A base64-encoded string
    * representation of the provenance bytes is used for the signature in order to interoperate with
-   * openssl which expects this format for signature verification.
-   *
-   * The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to
-   * json as well to prevent incompatibilities with future changes.
+   * openssl which expects this format for signature verification. The serialized form is captured
+   * both to avoid ambiguity in how the provenance is marshalled to json as well to prevent
+   * incompatibilities with future changes.
    * @return value or {@code null} for none
    */
   public java.lang.String getProvenanceBytes() {
@@ -88,10 +86,9 @@ public final class BuildDetails extends com.google.api.client.json.GenericJson {
    * the corresponding Result. After verifying the signature, `provenance_bytes` can be unmarshalled
    * and compared to the provenance to confirm that it is unchanged. A base64-encoded string
    * representation of the provenance bytes is used for the signature in order to interoperate with
-   * openssl which expects this format for signature verification.
-   *
-   * The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to
-   * json as well to prevent incompatibilities with future changes.
+   * openssl which expects this format for signature verification. The serialized form is captured
+   * both to avoid ambiguity in how the provenance is marshalled to json as well to prevent
+   * incompatibilities with future changes.
    * @param provenanceBytes provenanceBytes or {@code null} for none
    */
   public BuildDetails setProvenanceBytes(java.lang.String provenanceBytes) {

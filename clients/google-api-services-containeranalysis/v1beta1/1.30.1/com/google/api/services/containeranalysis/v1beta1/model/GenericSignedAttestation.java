@@ -19,7 +19,7 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 /**
  * An attestation wrapper that uses the Grafeas `Signature` message. This attestation must define
  * the `serialized_payload` that the `signatures` verify and any metadata necessary to interpret
- * that plaintext.  The signatures should always be over the `serialized_payload` bytestring.
+ * that plaintext. The signatures should always be over the `serialized_payload` bytestring.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -50,9 +50,9 @@ public final class GenericSignedAttestation extends com.google.api.client.json.G
   private java.lang.String serializedPayload;
 
   /**
-   * One or more signatures over `serialized_payload`.  Verifier implementations should consider
-   * this attestation message verified if at least one `signature` verifies `serialized_payload`.
-   * See `Signature` in common.proto for more details on signature structure and verification.
+   * One or more signatures over `serialized_payload`. Verifier implementations should consider this
+   * attestation message verified if at least one `signature` verifies `serialized_payload`. See
+   * `Signature` in common.proto for more details on signature structure and verification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,9 +129,9 @@ public final class GenericSignedAttestation extends com.google.api.client.json.G
   }
 
   /**
-   * One or more signatures over `serialized_payload`.  Verifier implementations should consider
-   * this attestation message verified if at least one `signature` verifies `serialized_payload`.
-   * See `Signature` in common.proto for more details on signature structure and verification.
+   * One or more signatures over `serialized_payload`. Verifier implementations should consider this
+   * attestation message verified if at least one `signature` verifies `serialized_payload`. See
+   * `Signature` in common.proto for more details on signature structure and verification.
    * @return value or {@code null} for none
    */
   public java.util.List<Signature> getSignatures() {
@@ -139,9 +139,9 @@ public final class GenericSignedAttestation extends com.google.api.client.json.G
   }
 
   /**
-   * One or more signatures over `serialized_payload`.  Verifier implementations should consider
-   * this attestation message verified if at least one `signature` verifies `serialized_payload`.
-   * See `Signature` in common.proto for more details on signature structure and verification.
+   * One or more signatures over `serialized_payload`. Verifier implementations should consider this
+   * attestation message verified if at least one `signature` verifies `serialized_payload`. See
+   * `Signature` in common.proto for more details on signature structure and verification.
    * @param signatures signatures or {@code null} for none
    */
   public GenericSignedAttestation setSignatures(java.util.List<Signature> signatures) {

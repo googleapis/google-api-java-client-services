@@ -55,13 +55,9 @@ public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
    * Hash(es) of the build source, which can be used to verify that the original source integrity
-   * was maintained in the build.
-   *
-   * The keys to this map are file paths used as build source and the values contain the hash values
-   * for those files.
-   *
-   * If the build source came in a single package such as a gzipped tarfile (.tar.gz), the FileHash
-   * will be for the single path to that file.
+   * was maintained in the build. The keys to this map are file paths used as build source and the
+   * values contain the hash values for those files. If the build source came in a single package
+   * such as a gzipped tarfile (.tar.gz), the FileHash will be for the single path to that file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,13 +126,9 @@ public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
    * Hash(es) of the build source, which can be used to verify that the original source integrity
-   * was maintained in the build.
-   *
-   * The keys to this map are file paths used as build source and the values contain the hash values
-   * for those files.
-   *
-   * If the build source came in a single package such as a gzipped tarfile (.tar.gz), the FileHash
-   * will be for the single path to that file.
+   * was maintained in the build. The keys to this map are file paths used as build source and the
+   * values contain the hash values for those files. If the build source came in a single package
+   * such as a gzipped tarfile (.tar.gz), the FileHash will be for the single path to that file.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, FileHashes> getFileHashes() {
@@ -145,13 +137,9 @@ public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
    * Hash(es) of the build source, which can be used to verify that the original source integrity
-   * was maintained in the build.
-   *
-   * The keys to this map are file paths used as build source and the values contain the hash values
-   * for those files.
-   *
-   * If the build source came in a single package such as a gzipped tarfile (.tar.gz), the FileHash
-   * will be for the single path to that file.
+   * was maintained in the build. The keys to this map are file paths used as build source and the
+   * values contain the hash values for those files. If the build source came in a single package
+   * such as a gzipped tarfile (.tar.gz), the FileHash will be for the single path to that file.
    * @param fileHashes fileHashes or {@code null} for none
    */
   public Source setFileHashes(java.util.Map<String, FileHashes> fileHashes) {

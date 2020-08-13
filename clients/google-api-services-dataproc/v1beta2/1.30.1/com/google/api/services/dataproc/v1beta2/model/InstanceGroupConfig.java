@@ -74,6 +74,13 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> instanceNames;
 
   /**
+   * Output only. List of references to Compute Engine instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InstanceReference> instanceReferences;
+
+  /**
    * Output only. Specifies that this instance group contains preemptible instances.
    * The value may be {@code null}.
    */
@@ -210,6 +217,23 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    */
   public InstanceGroupConfig setInstanceNames(java.util.List<java.lang.String> instanceNames) {
     this.instanceNames = instanceNames;
+    return this;
+  }
+
+  /**
+   * Output only. List of references to Compute Engine instances.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InstanceReference> getInstanceReferences() {
+    return instanceReferences;
+  }
+
+  /**
+   * Output only. List of references to Compute Engine instances.
+   * @param instanceReferences instanceReferences or {@code null} for none
+   */
+  public InstanceGroupConfig setInstanceReferences(java.util.List<InstanceReference> instanceReferences) {
+    this.instanceReferences = instanceReferences;
     return this;
   }
 

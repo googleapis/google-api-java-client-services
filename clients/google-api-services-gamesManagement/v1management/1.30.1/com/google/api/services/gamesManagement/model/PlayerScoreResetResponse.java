@@ -46,8 +46,9 @@ public final class PlayerScoreResetResponse extends com.google.api.client.json.G
   private java.lang.String kind;
 
   /**
-   * The time spans of the updated score. Possible values are: "`ALL_TIME`" - The score is an all-
-   * time score. "`WEEKLY`" - The score is a weekly score. "`DAILY`" - The score is a daily score.
+   * The time spans of the updated score. Possible values are: - "`ALL_TIME`" - The score is an all-
+   * time score. - "`WEEKLY`" - The score is a weekly score. - "`DAILY`" - The score is a daily
+   * score.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +91,9 @@ public final class PlayerScoreResetResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The time spans of the updated score. Possible values are: "`ALL_TIME`" - The score is an all-
-   * time score. "`WEEKLY`" - The score is a weekly score. "`DAILY`" - The score is a daily score.
+   * The time spans of the updated score. Possible values are: - "`ALL_TIME`" - The score is an all-
+   * time score. - "`WEEKLY`" - The score is a weekly score. - "`DAILY`" - The score is a daily
+   * score.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResetScoreTimeSpans() {
@@ -99,8 +101,9 @@ public final class PlayerScoreResetResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The time spans of the updated score. Possible values are: "`ALL_TIME`" - The score is an all-
-   * time score. "`WEEKLY`" - The score is a weekly score. "`DAILY`" - The score is a daily score.
+   * The time spans of the updated score. Possible values are: - "`ALL_TIME`" - The score is an all-
+   * time score. - "`WEEKLY`" - The score is a weekly score. - "`DAILY`" - The score is a daily
+   * score.
    * @param resetScoreTimeSpans resetScoreTimeSpans or {@code null} for none
    */
   public PlayerScoreResetResponse setResetScoreTimeSpans(java.util.List<java.lang.String> resetScoreTimeSpans) {

@@ -20,8 +20,7 @@ package com.google.api.services.gamesManagement;
  * Service definition for GamesManagement (v1management).
  *
  * <p>
- * The Google Play Game Management API allows developers to manage resources from the Google
-     Play Game service.
+ * The Google Play Game Management API allows developers to manage resources from the Google Play Game service.
  * </p>
  *
  * <p>
@@ -1468,8 +1467,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
      * optional parameters, call the {@link Hide#execute()} method to invoke the remote operation.
      *
      * @param applicationId The application ID from the Google Play developer console.
-     * @param playerId A player ID. A value of `me` may be used in place of the
-    authenticated player's ID.
+     * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
      * @return the request
      */
     public Hide hide(java.lang.String applicationId, java.lang.String playerId) throws java.io.IOException {
@@ -1494,8 +1492,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param applicationId The application ID from the Google Play developer console.
-       * @param playerId A player ID. A value of `me` may be used in place of the
-    authenticated player's ID.
+       * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
        * @since 1.13
        */
       protected Hide(java.lang.String applicationId, java.lang.String playerId) {
@@ -1575,9 +1572,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
@@ -1587,9 +1582,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
         return playerId;
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       public Hide setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;
@@ -1610,8 +1603,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
      * optional parameters, call the {@link Unhide#execute()} method to invoke the remote operation.
      *
      * @param applicationId The application ID from the Google Play developer console.
-     * @param playerId A player ID. A value of `me` may be used in place of the
-    authenticated player's ID.
+     * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
      * @return the request
      */
     public Unhide unhide(java.lang.String applicationId, java.lang.String playerId) throws java.io.IOException {
@@ -1637,8 +1629,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param applicationId The application ID from the Google Play developer console.
-       * @param playerId A player ID. A value of `me` may be used in place of the
-    authenticated player's ID.
+       * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
        * @since 1.13
        */
       protected Unhide(java.lang.String applicationId, java.lang.String playerId) {
@@ -1718,9 +1709,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
@@ -1730,9 +1719,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
         return playerId;
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       public Unhide setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;

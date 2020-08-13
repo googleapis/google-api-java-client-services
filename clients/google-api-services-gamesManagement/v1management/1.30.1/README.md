@@ -1,7 +1,6 @@
 # Google Play Game Management Client Library for Java
 
-The Google Play Game Management API allows developers to manage resources from the Google
-     Play Game service.
+The Google Play Game Management API allows developers to manage resources from the Google Play Game service.
 
 This page contains information about getting started with the Google Play Game Management
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-gamesManagement</artifactId>
-      <version>v1management-rev20200720-1.30.10</version>
+      <version>v1management-rev20200811-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-gamesManagement:v1management-rev20200720-1.30.10'
+  compile 'com.google.apis:google-api-services-gamesManagement:v1management-rev20200811-1.30.10'
 }
 ```
 

@@ -34,11 +34,10 @@ public final class DeviceRegistry extends com.google.api.client.json.GenericJson
    * to a single registry at a time. The verification process occurs at the time of device creation
    * or update. If this field is empty, no verification is performed. Otherwise, the credentials of
    * a newly created device or added credentials of an updated device should be signed with one of
-   * these registry credentials.
-   *
-   * Note, however, that existing devices will never be affected by modifications to this list of
-   * credentials: after a device has been successfully created in a registry, it should be able to
-   * connect even if its registry credentials are revoked, deleted, or modified.
+   * these registry credentials. Note, however, that existing devices will never be affected by
+   * modifications to this list of credentials: after a device has been successfully created in a
+   * registry, it should be able to connect even if its registry credentials are revoked, deleted,
+   * or modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,10 +71,8 @@ public final class DeviceRegistry extends com.google.api.client.json.GenericJson
   private java.lang.String id;
 
   /**
-   * **Beta Feature**
-   *
-   * The default logging verbosity for activity from devices in this registry. The verbosity level
-   * can be overridden by Device.log_level.
+   * **Beta Feature** The default logging verbosity for activity from devices in this registry. The
+   * verbosity level can be overridden by Device.log_level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,11 +108,10 @@ public final class DeviceRegistry extends com.google.api.client.json.GenericJson
    * to a single registry at a time. The verification process occurs at the time of device creation
    * or update. If this field is empty, no verification is performed. Otherwise, the credentials of
    * a newly created device or added credentials of an updated device should be signed with one of
-   * these registry credentials.
-   *
-   * Note, however, that existing devices will never be affected by modifications to this list of
-   * credentials: after a device has been successfully created in a registry, it should be able to
-   * connect even if its registry credentials are revoked, deleted, or modified.
+   * these registry credentials. Note, however, that existing devices will never be affected by
+   * modifications to this list of credentials: after a device has been successfully created in a
+   * registry, it should be able to connect even if its registry credentials are revoked, deleted,
+   * or modified.
    * @return value or {@code null} for none
    */
   public java.util.List<RegistryCredential> getCredentials() {
@@ -127,11 +123,10 @@ public final class DeviceRegistry extends com.google.api.client.json.GenericJson
    * to a single registry at a time. The verification process occurs at the time of device creation
    * or update. If this field is empty, no verification is performed. Otherwise, the credentials of
    * a newly created device or added credentials of an updated device should be signed with one of
-   * these registry credentials.
-   *
-   * Note, however, that existing devices will never be affected by modifications to this list of
-   * credentials: after a device has been successfully created in a registry, it should be able to
-   * connect even if its registry credentials are revoked, deleted, or modified.
+   * these registry credentials. Note, however, that existing devices will never be affected by
+   * modifications to this list of credentials: after a device has been successfully created in a
+   * registry, it should be able to connect even if its registry credentials are revoked, deleted,
+   * or modified.
    * @param credentials credentials or {@code null} for none
    */
   public DeviceRegistry setCredentials(java.util.List<RegistryCredential> credentials) {
@@ -203,10 +198,8 @@ public final class DeviceRegistry extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * **Beta Feature**
-   *
-   * The default logging verbosity for activity from devices in this registry. The verbosity level
-   * can be overridden by Device.log_level.
+   * **Beta Feature** The default logging verbosity for activity from devices in this registry. The
+   * verbosity level can be overridden by Device.log_level.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogLevel() {
@@ -214,10 +207,8 @@ public final class DeviceRegistry extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * **Beta Feature**
-   *
-   * The default logging verbosity for activity from devices in this registry. The verbosity level
-   * can be overridden by Device.log_level.
+   * **Beta Feature** The default logging verbosity for activity from devices in this registry. The
+   * verbosity level can be overridden by Device.log_level.
    * @param logLevel logLevel or {@code null} for none
    */
   public DeviceRegistry setLogLevel(java.lang.String logLevel) {

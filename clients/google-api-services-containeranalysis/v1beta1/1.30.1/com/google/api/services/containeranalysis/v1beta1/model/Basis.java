@@ -18,8 +18,8 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 
 /**
  * Basis describes the base image portion (Note) of the DockerImage relationship. Linked occurrences
- * are derived from this or an equivalent image via:   FROM  Or an equivalent reference, e.g. a tag
- * of the resource_url.
+ * are derived from this or an equivalent image via: FROM Or an equivalent reference, e.g. a tag of
+ * the resource_url.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation

@@ -52,8 +52,8 @@ public final class Link extends com.google.api.client.json.GenericJson {
    * This is a field that can be used to capture information about the environment. It is suggested
    * for this field to contain information that details environment variables, filesystem
    * information, and the present working directory. The recommended structure of this field is:
-   * "environment": {   "custom_values": {     "variables": "",     "filesystem": "",     "workdir":
-   * "",     "": "..."   } }
+   * "environment": { "custom_values": { "variables": "", "filesystem": "", "workdir": "", "": "..."
+   * } }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class Link extends com.google.api.client.json.GenericJson {
   /**
    * Materials are the supply chain artifacts that go into the step and are used for the operation
    * performed. The key of the map is the path of the artifact and the structure contains the
-   * recorded hash information. An example is: "materials": [   {     "resource_uri": "foo/bar",
-   * "hashes": {       "sha256": "ebebf...",       :      }   } ]
+   * recorded hash information. An example is: "materials": [ { "resource_uri": "foo/bar", "hashes":
+   * { "sha256": "ebebf...", : } } ]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,8 +135,8 @@ public final class Link extends com.google.api.client.json.GenericJson {
    * This is a field that can be used to capture information about the environment. It is suggested
    * for this field to contain information that details environment variables, filesystem
    * information, and the present working directory. The recommended structure of this field is:
-   * "environment": {   "custom_values": {     "variables": "",     "filesystem": "",     "workdir":
-   * "",     "": "..."   } }
+   * "environment": { "custom_values": { "variables": "", "filesystem": "", "workdir": "", "": "..."
+   * } }
    * @return value or {@code null} for none
    */
   public Environment getEnvironment() {
@@ -147,8 +147,8 @@ public final class Link extends com.google.api.client.json.GenericJson {
    * This is a field that can be used to capture information about the environment. It is suggested
    * for this field to contain information that details environment variables, filesystem
    * information, and the present working directory. The recommended structure of this field is:
-   * "environment": {   "custom_values": {     "variables": "",     "filesystem": "",     "workdir":
-   * "",     "": "..."   } }
+   * "environment": { "custom_values": { "variables": "", "filesystem": "", "workdir": "", "": "..."
+   * } }
    * @param environment environment or {@code null} for none
    */
   public Link setEnvironment(Environment environment) {
@@ -159,8 +159,8 @@ public final class Link extends com.google.api.client.json.GenericJson {
   /**
    * Materials are the supply chain artifacts that go into the step and are used for the operation
    * performed. The key of the map is the path of the artifact and the structure contains the
-   * recorded hash information. An example is: "materials": [   {     "resource_uri": "foo/bar",
-   * "hashes": {       "sha256": "ebebf...",       :      }   } ]
+   * recorded hash information. An example is: "materials": [ { "resource_uri": "foo/bar", "hashes":
+   * { "sha256": "ebebf...", : } } ]
    * @return value or {@code null} for none
    */
   public java.util.List<GrafeasV1beta1IntotoArtifact> getMaterials() {
@@ -170,8 +170,8 @@ public final class Link extends com.google.api.client.json.GenericJson {
   /**
    * Materials are the supply chain artifacts that go into the step and are used for the operation
    * performed. The key of the map is the path of the artifact and the structure contains the
-   * recorded hash information. An example is: "materials": [   {     "resource_uri": "foo/bar",
-   * "hashes": {       "sha256": "ebebf...",       :      }   } ]
+   * recorded hash information. An example is: "materials": [ { "resource_uri": "foo/bar", "hashes":
+   * { "sha256": "ebebf...", : } } ]
    * @param materials materials or {@code null} for none
    */
   public Link setMaterials(java.util.List<GrafeasV1beta1IntotoArtifact> materials) {

@@ -17,7 +17,7 @@
 package com.google.api.services.containeranalysis.v1alpha1.model;
 
 /**
- * Derived describes the derived image portion (Occurrence) of the DockerImage relationship.  This
+ * Derived describes the derived image portion (Occurrence) of the DockerImage relationship. This
  * image would be produced from a Dockerfile with FROM .
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

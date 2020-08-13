@@ -45,7 +45,7 @@ public final class Fingerprint extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> v2Blob;
 
   /**
-   * Output only. The name of the image's v2 blobs computed via:   [bottom] := v2_blobbottom :=
+   * Output only. The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom :=
    * sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept.
    * The value may be {@code null}.
    */
@@ -87,7 +87,7 @@ public final class Fingerprint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of the image's v2 blobs computed via:   [bottom] := v2_blobbottom :=
+   * Output only. The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom :=
    * sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept.
    * @return value or {@code null} for none
    */
@@ -96,7 +96,7 @@ public final class Fingerprint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of the image's v2 blobs computed via:   [bottom] := v2_blobbottom :=
+   * Output only. The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom :=
    * sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept.
    * @param v2Name v2Name or {@code null} for none
    */

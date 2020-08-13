@@ -31,6 +31,13 @@ package com.google.api.services.bigqueryreservation.v1beta1.model;
 public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Creation time of the reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String creationTime;
+
+  /**
    * If false, any query using this reservation will use idle slots from other reservations within
    * the same admin project. If true, a query using this reservation will execute with the slot
    * capacity specified above at most.
@@ -57,6 +64,30 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long slotCapacity;
+
+  /**
+   * Output only. Last update time of the reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
+   * Output only. Creation time of the reservation.
+   * @return value or {@code null} for none
+   */
+  public String getCreationTime() {
+    return creationTime;
+  }
+
+  /**
+   * Output only. Creation time of the reservation.
+   * @param creationTime creationTime or {@code null} for none
+   */
+  public Reservation setCreationTime(String creationTime) {
+    this.creationTime = creationTime;
+    return this;
+  }
 
   /**
    * If false, any query using this reservation will use idle slots from other reservations within
@@ -120,6 +151,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setSlotCapacity(java.lang.Long slotCapacity) {
     this.slotCapacity = slotCapacity;
+    return this;
+  }
+
+  /**
+   * Output only. Last update time of the reservation.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Last update time of the reservation.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Reservation setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

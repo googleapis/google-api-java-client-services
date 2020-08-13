@@ -30,12 +30,8 @@ package com.google.api.services.cloudtasks.v2beta3.model;
 public final class ListQueuesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token to retrieve next page of results.
-   *
-   * To return the next page of results, call ListQueues with this value as the page_token.
-   *
-   * If the next_page_token is empty, there are no more results.
-   *
+   * A token to retrieve next page of results. To return the next page of results, call ListQueues
+   * with this value as the page_token. If the next_page_token is empty, there are no more results.
    * The page token is valid for only 2 hours.
    * The value may be {@code null}.
    */
@@ -50,12 +46,8 @@ public final class ListQueuesResponse extends com.google.api.client.json.Generic
   private java.util.List<Queue> queues;
 
   /**
-   * A token to retrieve next page of results.
-   *
-   * To return the next page of results, call ListQueues with this value as the page_token.
-   *
-   * If the next_page_token is empty, there are no more results.
-   *
+   * A token to retrieve next page of results. To return the next page of results, call ListQueues
+   * with this value as the page_token. If the next_page_token is empty, there are no more results.
    * The page token is valid for only 2 hours.
    * @return value or {@code null} for none
    */
@@ -64,12 +56,8 @@ public final class ListQueuesResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * A token to retrieve next page of results.
-   *
-   * To return the next page of results, call ListQueues with this value as the page_token.
-   *
-   * If the next_page_token is empty, there are no more results.
-   *
+   * A token to retrieve next page of results. To return the next page of results, call ListQueues
+   * with this value as the page_token. If the next_page_token is empty, there are no more results.
    * The page token is valid for only 2 hours.
    * @param nextPageToken nextPageToken or {@code null} for none
    */

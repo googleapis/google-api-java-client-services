@@ -88,6 +88,20 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private ManagedInstanceLastAttempt lastAttempt;
 
   /**
+   * [Output Only] Preserved state applied from per-instance config for this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PreservedState preservedStateFromConfig;
+
+  /**
+   * [Output Only] Preserved state generated based on stateful policy for this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PreservedState preservedStateFromPolicy;
+
+  /**
    * [Output Only] Intended version of this instance.
    * The value may be {@code null}.
    */
@@ -225,6 +239,40 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
    */
   public ManagedInstance setLastAttempt(ManagedInstanceLastAttempt lastAttempt) {
     this.lastAttempt = lastAttempt;
+    return this;
+  }
+
+  /**
+   * [Output Only] Preserved state applied from per-instance config for this instance.
+   * @return value or {@code null} for none
+   */
+  public PreservedState getPreservedStateFromConfig() {
+    return preservedStateFromConfig;
+  }
+
+  /**
+   * [Output Only] Preserved state applied from per-instance config for this instance.
+   * @param preservedStateFromConfig preservedStateFromConfig or {@code null} for none
+   */
+  public ManagedInstance setPreservedStateFromConfig(PreservedState preservedStateFromConfig) {
+    this.preservedStateFromConfig = preservedStateFromConfig;
+    return this;
+  }
+
+  /**
+   * [Output Only] Preserved state generated based on stateful policy for this instance.
+   * @return value or {@code null} for none
+   */
+  public PreservedState getPreservedStateFromPolicy() {
+    return preservedStateFromPolicy;
+  }
+
+  /**
+   * [Output Only] Preserved state generated based on stateful policy for this instance.
+   * @param preservedStateFromPolicy preservedStateFromPolicy or {@code null} for none
+   */
+  public ManagedInstance setPreservedStateFromPolicy(PreservedState preservedStateFromPolicy) {
+    this.preservedStateFromPolicy = preservedStateFromPolicy;
     return this;
   }
 

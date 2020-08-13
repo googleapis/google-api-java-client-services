@@ -243,13 +243,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
-   * Size of the persistent disk, specified in GB. You can specify this field when creating a
-   * persistent disk using the sourceImage or sourceSnapshot parameter, or specify it alone to
-   * create an empty persistent disk.
+   * Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk
+   * using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create
+   * an empty persistent disk.
    *
-   * If you specify this field along with sourceImage or sourceSnapshot, the value of sizeGb must
-   * not be less than the size of the sourceImage or the size of the snapshot. Acceptable values are
-   * 1 to 65536, inclusive.
+   * If you specify this field along with a source, the value of sizeGb must not be less than the
+   * size of the source. Acceptable values are 1 to 65536, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -316,8 +315,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceImageId;
 
   /**
-   * The source in-place snapshot used to create this disk. You can provide this as a partial or
-   * full URL to the resource. For example, the following are valid values: -
+   * [Deprecated] The source in-place snapshot used to create this disk. You can provide this as a
+   * partial or full URL to the resource. For example, the following are valid values: -
    * https://www.googleapis.com/compute/v1/projects/project/global/inPlaceSnapshots/inPlaceSnapshots
    * - projects/project/global/inPlaceSnapshots/inPlaceSnapshots  -
    * global/inPlaceSnapshots/inPlaceSnapshots
@@ -327,11 +326,11 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceInPlaceSnapshot;
 
   /**
-   * [Output Only] The unique ID of the in-place snapshot used to create this disk. This value
-   * identifies the exact in-place snapshot that was used to create this persistent disk. For
-   * example, if you created the persistent disk from an in-place snapshot that was later deleted
-   * and recreated under the same name, the source in-place snapshot ID would identify the exact
-   * version of the in-place snapshot that was used.
+   * [Deprecated] [Output Only] The unique ID of the in-place snapshot used to create this disk.
+   * This value identifies the exact in-place snapshot that was used to create this persistent disk.
+   * For example, if you created the persistent disk from an in-place snapshot that was later
+   * deleted and recreated under the same name, the source in-place snapshot ID would identify the
+   * exact version of the in-place snapshot that was used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -922,13 +921,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the persistent disk, specified in GB. You can specify this field when creating a
-   * persistent disk using the sourceImage or sourceSnapshot parameter, or specify it alone to
-   * create an empty persistent disk.
+   * Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk
+   * using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create
+   * an empty persistent disk.
    *
-   * If you specify this field along with sourceImage or sourceSnapshot, the value of sizeGb must
-   * not be less than the size of the sourceImage or the size of the snapshot. Acceptable values are
-   * 1 to 65536, inclusive.
+   * If you specify this field along with a source, the value of sizeGb must not be less than the
+   * size of the source. Acceptable values are 1 to 65536, inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSizeGb() {
@@ -936,13 +934,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the persistent disk, specified in GB. You can specify this field when creating a
-   * persistent disk using the sourceImage or sourceSnapshot parameter, or specify it alone to
-   * create an empty persistent disk.
+   * Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk
+   * using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create
+   * an empty persistent disk.
    *
-   * If you specify this field along with sourceImage or sourceSnapshot, the value of sizeGb must
-   * not be less than the size of the sourceImage or the size of the snapshot. Acceptable values are
-   * 1 to 65536, inclusive.
+   * If you specify this field along with a source, the value of sizeGb must not be less than the
+   * size of the source. Acceptable values are 1 to 65536, inclusive.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public Disk setSizeGb(java.lang.Long sizeGb) {
@@ -1086,8 +1083,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source in-place snapshot used to create this disk. You can provide this as a partial or
-   * full URL to the resource. For example, the following are valid values: -
+   * [Deprecated] The source in-place snapshot used to create this disk. You can provide this as a
+   * partial or full URL to the resource. For example, the following are valid values: -
    * https://www.googleapis.com/compute/v1/projects/project/global/inPlaceSnapshots/inPlaceSnapshots
    * - projects/project/global/inPlaceSnapshots/inPlaceSnapshots  -
    * global/inPlaceSnapshots/inPlaceSnapshots
@@ -1098,8 +1095,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source in-place snapshot used to create this disk. You can provide this as a partial or
-   * full URL to the resource. For example, the following are valid values: -
+   * [Deprecated] The source in-place snapshot used to create this disk. You can provide this as a
+   * partial or full URL to the resource. For example, the following are valid values: -
    * https://www.googleapis.com/compute/v1/projects/project/global/inPlaceSnapshots/inPlaceSnapshots
    * - projects/project/global/inPlaceSnapshots/inPlaceSnapshots  -
    * global/inPlaceSnapshots/inPlaceSnapshots
@@ -1111,11 +1108,11 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique ID of the in-place snapshot used to create this disk. This value
-   * identifies the exact in-place snapshot that was used to create this persistent disk. For
-   * example, if you created the persistent disk from an in-place snapshot that was later deleted
-   * and recreated under the same name, the source in-place snapshot ID would identify the exact
-   * version of the in-place snapshot that was used.
+   * [Deprecated] [Output Only] The unique ID of the in-place snapshot used to create this disk.
+   * This value identifies the exact in-place snapshot that was used to create this persistent disk.
+   * For example, if you created the persistent disk from an in-place snapshot that was later
+   * deleted and recreated under the same name, the source in-place snapshot ID would identify the
+   * exact version of the in-place snapshot that was used.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceInPlaceSnapshotId() {
@@ -1123,11 +1120,11 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique ID of the in-place snapshot used to create this disk. This value
-   * identifies the exact in-place snapshot that was used to create this persistent disk. For
-   * example, if you created the persistent disk from an in-place snapshot that was later deleted
-   * and recreated under the same name, the source in-place snapshot ID would identify the exact
-   * version of the in-place snapshot that was used.
+   * [Deprecated] [Output Only] The unique ID of the in-place snapshot used to create this disk.
+   * This value identifies the exact in-place snapshot that was used to create this persistent disk.
+   * For example, if you created the persistent disk from an in-place snapshot that was later
+   * deleted and recreated under the same name, the source in-place snapshot ID would identify the
+   * exact version of the in-place snapshot that was used.
    * @param sourceInPlaceSnapshotId sourceInPlaceSnapshotId or {@code null} for none
    */
   public Disk setSourceInPlaceSnapshotId(java.lang.String sourceInPlaceSnapshotId) {

@@ -356,12 +356,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicy;
 
   /**
+   * Deprecating, please use shielded_instance_config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ShieldedVmConfig shieldedVmConfig;
 
   /**
+   * Deprecating, please use shielded_instance_integrity_policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1239,6 +1241,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecating, please use shielded_instance_config.
    * @return value or {@code null} for none
    */
   public ShieldedVmConfig getShieldedVmConfig() {
@@ -1246,6 +1249,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecating, please use shielded_instance_config.
    * @param shieldedVmConfig shieldedVmConfig or {@code null} for none
    */
   public Instance setShieldedVmConfig(ShieldedVmConfig shieldedVmConfig) {
@@ -1254,6 +1258,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecating, please use shielded_instance_integrity_policy.
    * @return value or {@code null} for none
    */
   public ShieldedVmIntegrityPolicy getShieldedVmIntegrityPolicy() {
@@ -1261,6 +1266,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecating, please use shielded_instance_integrity_policy.
    * @param shieldedVmIntegrityPolicy shieldedVmIntegrityPolicy or {@code null} for none
    */
   public Instance setShieldedVmIntegrityPolicy(ShieldedVmIntegrityPolicy shieldedVmIntegrityPolicy) {

@@ -35,6 +35,16 @@ package com.google.api.services.compute.model;
 public final class Commitment extends com.google.api.client.json.GenericJson {
 
   /**
+   * The category of the commitment. Category MACHINE specifies commitments composed of machine
+   * resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments
+   * composed of software licenses, listed in licenseResources. Note that only MACHINE commitments
+   * should have a Type specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String category;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -68,6 +78,13 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * The license specification required as part of a license commitment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LicenseResourceCommitment licenseResource;
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
@@ -138,6 +155,29 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String statusMessage;
+
+  /**
+   * The category of the commitment. Category MACHINE specifies commitments composed of machine
+   * resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments
+   * composed of software licenses, listed in licenseResources. Note that only MACHINE commitments
+   * should have a Type specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategory() {
+    return category;
+  }
+
+  /**
+   * The category of the commitment. Category MACHINE specifies commitments composed of machine
+   * resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments
+   * composed of software licenses, listed in licenseResources. Note that only MACHINE commitments
+   * should have a Type specified.
+   * @param category category or {@code null} for none
+   */
+  public Commitment setCategory(java.lang.String category) {
+    this.category = category;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -221,6 +261,23 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   public Commitment setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The license specification required as part of a license commitment.
+   * @return value or {@code null} for none
+   */
+  public LicenseResourceCommitment getLicenseResource() {
+    return licenseResource;
+  }
+
+  /**
+   * The license specification required as part of a license commitment.
+   * @param licenseResource licenseResource or {@code null} for none
+   */
+  public Commitment setLicenseResource(LicenseResourceCommitment licenseResource) {
+    this.licenseResource = licenseResource;
     return this;
   }
 

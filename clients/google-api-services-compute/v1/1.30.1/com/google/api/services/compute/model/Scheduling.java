@@ -42,6 +42,14 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean automaticRestart;
 
   /**
+   * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant
+   * node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minNodeCpus;
+
+  /**
    * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
    * more information. Overrides reservationAffinity.
    * The value may be {@code null}.
@@ -91,6 +99,25 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setAutomaticRestart(java.lang.Boolean automaticRestart) {
     this.automaticRestart = automaticRestart;
+    return this;
+  }
+
+  /**
+   * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant
+   * node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinNodeCpus() {
+    return minNodeCpus;
+  }
+
+  /**
+   * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant
+   * node.
+   * @param minNodeCpus minNodeCpus or {@code null} for none
+   */
+  public Scheduling setMinNodeCpus(java.lang.Integer minNodeCpus) {
+    this.minNodeCpus = minNodeCpus;
     return this;
   }
 

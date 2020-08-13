@@ -59,21 +59,6 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String locationHint;
 
   /**
-   * DEPRECATED, please use maintenance_freeze_duration_hours. TODO(b/154158138): Remove this field.
-   * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
-   * release (internal: stable fleet) VMs.
-   *
-   * For all VM shapes, this should result in fewer disruptions due to software updates and greater
-   * predictability via 1 week extended notifications.
-   *
-   * For GPU VMs, this should also result in an 2 week uptime guarantee. See go/stable-fleet-gpus-
-   * design for more details.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean longTermRelease;
-
-  /**
    * Specifies the number of hours after instance creation where the instance won't be scheduled for
    * maintenance.
    * The value may be {@code null}.
@@ -179,39 +164,6 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setLocationHint(java.lang.String locationHint) {
     this.locationHint = locationHint;
-    return this;
-  }
-
-  /**
-   * DEPRECATED, please use maintenance_freeze_duration_hours. TODO(b/154158138): Remove this field.
-   * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
-   * release (internal: stable fleet) VMs.
-   *
-   * For all VM shapes, this should result in fewer disruptions due to software updates and greater
-   * predictability via 1 week extended notifications.
-   *
-   * For GPU VMs, this should also result in an 2 week uptime guarantee. See go/stable-fleet-gpus-
-   * design for more details.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getLongTermRelease() {
-    return longTermRelease;
-  }
-
-  /**
-   * DEPRECATED, please use maintenance_freeze_duration_hours. TODO(b/154158138): Remove this field.
-   * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
-   * release (internal: stable fleet) VMs.
-   *
-   * For all VM shapes, this should result in fewer disruptions due to software updates and greater
-   * predictability via 1 week extended notifications.
-   *
-   * For GPU VMs, this should also result in an 2 week uptime guarantee. See go/stable-fleet-gpus-
-   * design for more details.
-   * @param longTermRelease longTermRelease or {@code null} for none
-   */
-  public Scheduling setLongTermRelease(java.lang.Boolean longTermRelease) {
-    this.longTermRelease = longTermRelease;
     return this;
   }
 

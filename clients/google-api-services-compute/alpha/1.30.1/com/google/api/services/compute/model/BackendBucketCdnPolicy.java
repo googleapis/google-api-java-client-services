@@ -30,6 +30,72 @@ package com.google.api.services.compute.model;
 public final class BackendBucketCdnPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cacheMode;
+
+  /**
+   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN?s
+   * edge caches. Leaving this empty will use the same cache TTL for both Cloud CDN and the client-
+   * facing response. The maximum allowed value is 86400s (1 day).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer clientTtl;
+
+  /**
+   * Specifies the default TTL for cached content served by this origin for responses that do not
+   * have an existing valid TTL (max-age or s-max-age). Setting a TTL of ?0? means ?always
+   * revalidate? and a value of ?-1? disables caching for that status code. The value of defaultTTL
+   * cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is
+   * set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum
+   * allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted
+   * from the cache before the defined TTL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer defaultTtl;
+
+  /**
+   * Specifies the maximum allowed TTL for cached content served by this origin. Cache directives
+   * that attempt to set a max-age or s-maxage higher than this, or an Expires header more than
+   * maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of
+   * an s-maxage Cache-Control directive. Setting a TTL of ?0? means ?always revalidate? and a value
+   * of ?-1? disables caching for that status code. The maximum allowed value is 31,622,400s (1
+   * year), noting that infrequently accessed objects may be evicted from the cache before the
+   * defined TTL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxTtl;
+
+  /**
+   * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching
+   * for common errors or redirects. This can reduce the load on your origin and improve end-user
+   * experience by reducing response latency. By default, Cloud CDN will apply the following default
+   * TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m
+   * HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method
+   * Not Found), 414 (URI Too Long), 501 (Not Implemented): 60s These defaults can be overridden in
+   * negative_caching_policy
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean negativeCaching;
+
+  /**
+   * Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to
+   * configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled
+   * will use Cloud CDN?s default cache TTLs. Note that when specifying an explicit
+   * negative_caching_policy, you should take care to specify a cache TTL for all response codes
+   * that you wish to cache. Cloud CDN will not apply any default negative caching when a policy
+   * exists.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicys;
+
+  /**
    * If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number
    * of requests to the origin.
    * The value may be {@code null}.
@@ -55,6 +121,156 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> signedUrlKeyNames;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCacheMode() {
+    return cacheMode;
+  }
+
+  /**
+   * @param cacheMode cacheMode or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setCacheMode(java.lang.String cacheMode) {
+    this.cacheMode = cacheMode;
+    return this;
+  }
+
+  /**
+   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN?s
+   * edge caches. Leaving this empty will use the same cache TTL for both Cloud CDN and the client-
+   * facing response. The maximum allowed value is 86400s (1 day).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getClientTtl() {
+    return clientTtl;
+  }
+
+  /**
+   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN?s
+   * edge caches. Leaving this empty will use the same cache TTL for both Cloud CDN and the client-
+   * facing response. The maximum allowed value is 86400s (1 day).
+   * @param clientTtl clientTtl or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setClientTtl(java.lang.Integer clientTtl) {
+    this.clientTtl = clientTtl;
+    return this;
+  }
+
+  /**
+   * Specifies the default TTL for cached content served by this origin for responses that do not
+   * have an existing valid TTL (max-age or s-max-age). Setting a TTL of ?0? means ?always
+   * revalidate? and a value of ?-1? disables caching for that status code. The value of defaultTTL
+   * cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is
+   * set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum
+   * allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted
+   * from the cache before the defined TTL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDefaultTtl() {
+    return defaultTtl;
+  }
+
+  /**
+   * Specifies the default TTL for cached content served by this origin for responses that do not
+   * have an existing valid TTL (max-age or s-max-age). Setting a TTL of ?0? means ?always
+   * revalidate? and a value of ?-1? disables caching for that status code. The value of defaultTTL
+   * cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is
+   * set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum
+   * allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted
+   * from the cache before the defined TTL.
+   * @param defaultTtl defaultTtl or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setDefaultTtl(java.lang.Integer defaultTtl) {
+    this.defaultTtl = defaultTtl;
+    return this;
+  }
+
+  /**
+   * Specifies the maximum allowed TTL for cached content served by this origin. Cache directives
+   * that attempt to set a max-age or s-maxage higher than this, or an Expires header more than
+   * maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of
+   * an s-maxage Cache-Control directive. Setting a TTL of ?0? means ?always revalidate? and a value
+   * of ?-1? disables caching for that status code. The maximum allowed value is 31,622,400s (1
+   * year), noting that infrequently accessed objects may be evicted from the cache before the
+   * defined TTL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxTtl() {
+    return maxTtl;
+  }
+
+  /**
+   * Specifies the maximum allowed TTL for cached content served by this origin. Cache directives
+   * that attempt to set a max-age or s-maxage higher than this, or an Expires header more than
+   * maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of
+   * an s-maxage Cache-Control directive. Setting a TTL of ?0? means ?always revalidate? and a value
+   * of ?-1? disables caching for that status code. The maximum allowed value is 31,622,400s (1
+   * year), noting that infrequently accessed objects may be evicted from the cache before the
+   * defined TTL.
+   * @param maxTtl maxTtl or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setMaxTtl(java.lang.Integer maxTtl) {
+    this.maxTtl = maxTtl;
+    return this;
+  }
+
+  /**
+   * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching
+   * for common errors or redirects. This can reduce the load on your origin and improve end-user
+   * experience by reducing response latency. By default, Cloud CDN will apply the following default
+   * TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m
+   * HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method
+   * Not Found), 414 (URI Too Long), 501 (Not Implemented): 60s These defaults can be overridden in
+   * negative_caching_policy
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNegativeCaching() {
+    return negativeCaching;
+  }
+
+  /**
+   * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching
+   * for common errors or redirects. This can reduce the load on your origin and improve end-user
+   * experience by reducing response latency. By default, Cloud CDN will apply the following default
+   * TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m
+   * HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method
+   * Not Found), 414 (URI Too Long), 501 (Not Implemented): 60s These defaults can be overridden in
+   * negative_caching_policy
+   * @param negativeCaching negativeCaching or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setNegativeCaching(java.lang.Boolean negativeCaching) {
+    this.negativeCaching = negativeCaching;
+    return this;
+  }
+
+  /**
+   * Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to
+   * configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled
+   * will use Cloud CDN?s default cache TTLs. Note that when specifying an explicit
+   * negative_caching_policy, you should take care to specify a cache TTL for all response codes
+   * that you wish to cache. Cloud CDN will not apply any default negative caching when a policy
+   * exists.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BackendBucketCdnPolicyNegativeCachingPolicy> getNegativeCachingPolicys() {
+    return negativeCachingPolicys;
+  }
+
+  /**
+   * Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to
+   * configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled
+   * will use Cloud CDN?s default cache TTLs. Note that when specifying an explicit
+   * negative_caching_policy, you should take care to specify a cache TTL for all response codes
+   * that you wish to cache. Cloud CDN will not apply any default negative caching when a policy
+   * exists.
+   * @param negativeCachingPolicys negativeCachingPolicys or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setNegativeCachingPolicys(java.util.List<BackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicys) {
+    this.negativeCachingPolicys = negativeCachingPolicys;
+    return this;
+  }
 
   /**
    * If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number

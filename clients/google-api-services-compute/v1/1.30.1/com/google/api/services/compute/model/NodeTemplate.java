@@ -33,6 +33,13 @@ package com.google.api.services.compute.model;
 public final class NodeTemplate extends com.google.api.client.json.GenericJson {
 
   /**
+   * CPU overcommit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cpuOvercommitType;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -135,6 +142,23 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String statusMessage;
+
+  /**
+   * CPU overcommit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCpuOvercommitType() {
+    return cpuOvercommitType;
+  }
+
+  /**
+   * CPU overcommit.
+   * @param cpuOvercommitType cpuOvercommitType or {@code null} for none
+   */
+  public NodeTemplate setCpuOvercommitType(java.lang.String cpuOvercommitType) {
+    this.cpuOvercommitType = cpuOvercommitType;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.

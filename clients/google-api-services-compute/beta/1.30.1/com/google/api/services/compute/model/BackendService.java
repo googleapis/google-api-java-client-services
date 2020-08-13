@@ -121,6 +121,13 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> customRequestHeaders;
 
   /**
+   * Headers that the HTTP/S load balancer should add to proxied responses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> customResponseHeaders;
+
+  /**
    * An optional description of this resource. Provide this property when you create the resource.
    * The value may be {@code null}.
    */
@@ -158,9 +165,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy)
    * resource for health checking this backend service. Not all backend services support legacy
-   * health checks. See  Load balancer guide. Currently at most one health check can be specified.
-   * Backend services with instance group or zonal NEG backends must have a health check. Backend
-   * services with internet NEG backends must not have a health check. A health check must
+   * health checks. See  Load balancer guide. Currently, at most one health check can be specified
+   * for each backend service. Backend services with instance group or zonal NEG backends must have
+   * a health check. Backend services with internet or serverless NEG backends must not have a
+   * health check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -288,9 +296,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP. depending on the chosen load balancer
-   * or Traffic Director configuration. Refer to the documentation for the load balancer or for
-   * Traffic Director for more information.
+   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load
+   * balancer or Traffic Director configuration. Refer to the documentation for the load balancer or
+   * for Traffic Director for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -519,6 +527,23 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Headers that the HTTP/S load balancer should add to proxied responses.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCustomResponseHeaders() {
+    return customResponseHeaders;
+  }
+
+  /**
+   * Headers that the HTTP/S load balancer should add to proxied responses.
+   * @param customResponseHeaders customResponseHeaders or {@code null} for none
+   */
+  public BackendService setCustomResponseHeaders(java.util.List<java.lang.String> customResponseHeaders) {
+    this.customResponseHeaders = customResponseHeaders;
+    return this;
+  }
+
+  /**
    * An optional description of this resource. Provide this property when you create the resource.
    * @return value or {@code null} for none
    */
@@ -641,9 +666,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy)
    * resource for health checking this backend service. Not all backend services support legacy
-   * health checks. See  Load balancer guide. Currently at most one health check can be specified.
-   * Backend services with instance group or zonal NEG backends must have a health check. Backend
-   * services with internet NEG backends must not have a health check. A health check must
+   * health checks. See  Load balancer guide. Currently, at most one health check can be specified
+   * for each backend service. Backend services with instance group or zonal NEG backends must have
+   * a health check. Backend services with internet or serverless NEG backends must not have a
+   * health check.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHealthChecks() {
@@ -653,9 +679,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy)
    * resource for health checking this backend service. Not all backend services support legacy
-   * health checks. See  Load balancer guide. Currently at most one health check can be specified.
-   * Backend services with instance group or zonal NEG backends must have a health check. Backend
-   * services with internet NEG backends must not have a health check. A health check must
+   * health checks. See  Load balancer guide. Currently, at most one health check can be specified
+   * for each backend service. Backend services with instance group or zonal NEG backends must have
+   * a health check. Backend services with internet or serverless NEG backends must not have a
+   * health check.
    * @param healthChecks healthChecks or {@code null} for none
    */
   public BackendService setHealthChecks(java.util.List<java.lang.String> healthChecks) {
@@ -937,9 +964,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP. depending on the chosen load balancer
-   * or Traffic Director configuration. Refer to the documentation for the load balancer or for
-   * Traffic Director for more information.
+   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load
+   * balancer or Traffic Director configuration. Refer to the documentation for the load balancer or
+   * for Traffic Director for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -949,9 +976,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP. depending on the chosen load balancer
-   * or Traffic Director configuration. Refer to the documentation for the load balancer or for
-   * Traffic Director for more information.
+   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load
+   * balancer or Traffic Director configuration. Refer to the documentation for the load balancer or
+   * for Traffic Director for more information.
    * @param protocol protocol or {@code null} for none
    */
   public BackendService setProtocol(java.lang.String protocol) {

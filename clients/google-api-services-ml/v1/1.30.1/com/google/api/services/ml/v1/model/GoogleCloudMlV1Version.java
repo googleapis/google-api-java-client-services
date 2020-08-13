@@ -17,11 +17,9 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * Represents a version of the model.
- *
- * Each version is a trained model deployed in the cloud, ready to handle prediction requests. A
- * model can have multiple versions. You can get information about all of the versions of a given
- * model by calling projects.models.versions.list.
+ * Represents a version of the model. Each version is a trained model deployed in the cloud, ready
+ * to handle prediction requests. A model can have multiple versions. You can get information about
+ * all of the versions of a given model by calling projects.models.versions.list.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -47,10 +45,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   /**
    * Automatically scale the number of nodes used to serve the model in response to increases and
    * decreases in traffic. Care should be taken to ramp up traffic according to the model's ability
-   * to scale or you will start seeing increases in latency and 429 response codes.
-   *
-   * Note that you cannot use AutoScaling if your version uses
-   * [GPUs](#Version.FIELDS.accelerator_config). Instead, you must use specify `manual_scaling`.
+   * to scale or you will start seeing increases in latency and 429 response codes. Note that you
+   * cannot use AutoScaling if your version uses [GPUs](#Version.FIELDS.accelerator_config).
+   * Instead, you must use specify `manual_scaling`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +63,6 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   /**
    * Required. The Cloud Storage location of the trained model used to create the version. See the
    * [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more information.
-   *
    * When passing Version to projects.models.versions.create the model service uses the specified
    * location as the source of the model. Once deployed, the model version is hosted by the
    * prediction service, so this location is useful only as a historical record. The total number of
@@ -82,6 +78,15 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Optional. Output only. If set by server, the http(s) endpoints returned to user after the
+   * public/private deployment is successful.
+   * https://cloud.google.com/apis/design/design_patterns#output_fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1EndpointMap endpoints;
 
   /**
    * Output only. The details of a failure or a cancellation.
@@ -115,13 +120,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI
    * Platform will analyze files in the deployment_uri to determine a framework. If you choose
    * `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or
-   * greater.
-   *
-   * Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
-   * engine/docs/tensorflow/custom-prediction-routines).
-   *
-   * If you specify a [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-
-   * prediction) in the `machineType` field, you must specify `TENSORFLOW` for the framework.
+   * greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines). If you specify a [Compute Engine (N1)
+   * machine type](/ml-engine/docs/machine-types-online-prediction) in the `machineType` field, you
+   * must specify `TENSORFLOW` for the framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,9 +131,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Output only. If true, this version will be used to handle prediction requests that do not
-   * specify a version.
-   *
-   * You can change the default version by calling projects.methods.versions.setDefault.
+   * specify a version. You can change the default version by calling
+   * projects.methods.versions.setDefault.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,15 +156,11 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. The type of machine on which to serve the model. Currently only applies to online
-   * prediction service. If this field is not specified, it defaults to `mls1-c1-m2`.
-   *
-   * Online prediction supports the following machine types:
-   *
-   * * `mls1-c1-m2` * `mls1-c4-m2` * `n1-standard-2` * `n1-standard-4` * `n1-standard-8` *
-   * `n1-standard-16` * `n1-standard-32` * `n1-highmem-2` * `n1-highmem-4` * `n1-highmem-8` *
-   * `n1-highmem-16` * `n1-highmem-32` * `n1-highcpu-2` * `n1-highcpu-4` * `n1-highcpu-8` *
-   * `n1-highcpu-16` * `n1-highcpu-32`
-   *
+   * prediction service. If this field is not specified, it defaults to `mls1-c1-m2`. Online
+   * prediction supports the following machine types: * `mls1-c1-m2` * `mls1-c4-m2` *
+   * `n1-standard-2` * `n1-standard-4` * `n1-standard-8` * `n1-standard-16` * `n1-standard-32` *
+   * `n1-highmem-2` * `n1-highmem-4` * `n1-highmem-8` * `n1-highmem-16` * `n1-highmem-32` *
+   * `n1-highcpu-2` * `n1-highcpu-4` * `n1-highcpu-8` * `n1-highcpu-16` * `n1-highcpu-32`
    * `mls1-c1-m2` is generally available. All other machine types are available in beta. Learn more
    * about the [differences between machine types](/ml-engine/docs/machine-types-online-prediction).
    * The value may be {@code null}.
@@ -182,9 +179,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private GoogleCloudMlV1ManualScaling manualScaling;
 
   /**
-   * Required. The name specified for the version when it was created.
-   *
-   * The version name must be unique within the model it is created in.
+   * Required. The name specified for the version when it was created. The version name must be
+   * unique within the model it is created in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,15 +189,13 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   /**
    * Optional. Cloud Storage paths (`gs://…`) of packages for [custom prediction routines](/ml-
    * engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom code
-   * ](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code).
-   *
-   * For a custom prediction routine, one of these packages must contain your Predictor class (see
+   * ](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code). For a custom
+   * prediction routine, one of these packages must contain your Predictor class (see
    * [`predictionClass`](#Version.FIELDS.prediction_class)). Additionally, include any dependencies
    * used by your Predictor or scikit-learn pipeline uses that are not already included in your
-   * selected [runtime version](/ml-engine/docs/tensorflow/runtime-version-list).
-   *
-   * If you specify this field, you must also set
-   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.
+   * selected [runtime version](/ml-engine/docs/tensorflow/runtime-version-list). If you specify
+   * this field, you must also set [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or
+   * greater.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,58 +205,34 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Optional. The fully qualified name (module_name.class_name) of a class that implements the
    * Predictor interface described in this reference field. The module containing this class should
    * be included in a package provided to the [`packageUris` field](#Version.FIELDS.package_uris).
-   *
    * Specify this field if and only if you are deploying a [custom prediction routine (beta)](/ml-
    * engine/docs/tensorflow/custom-prediction-routines). If you specify this field, you must set
    * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater and you must set
    * `machineType` to a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-
-   * prediction).
-   *
-   * The following code sample provides the Predictor interface:
-   *
-   * class Predictor(object): Interface for constructing custom predictors.
-   *
-   * def predict(self, instances, **kwargs):     Performs custom prediction.
-   *
-   *     Instances are the decoded values from the request. They have already     been deserialized
-   * from JSON.
-   *
-   *     Args:         instances: A list of prediction input instances.         **kwargs: A
-   * dictionary of keyword args provided as additional             fields on the predict request
-   * body.
-   *
-   *     Returns:         A list of outputs containing the prediction results. This list must
-   * be JSON serializable.          raise NotImplementedError()
-   *
-   * @classmethod def from_path(cls, model_dir):     Creates an instance of Predictor using the
-   * given path.
-   *
-   *     Loading of the predictor should be done in this method.
-   *
-   *     Args:         model_dir: The local directory that contains the exported model
-   * file along with any additional files uploaded when creating the             version resource.
-   *
-   *     Returns:         An instance implementing this Predictor class.          raise
-   * NotImplementedError()
-   *
-   * Learn more about [the Predictor interface and custom prediction routines](/ml-
-   * engine/docs/tensorflow/custom-prediction-routines).
+   * prediction). The following code sample provides the Predictor interface: class
+   * Predictor(object): Interface for constructing custom predictors. def predict(self, instances,
+   * **kwargs): Performs custom prediction. Instances are the decoded values from the request. They
+   * have already been deserialized from JSON. Args: instances: A list of prediction input
+   * instances. **kwargs: A dictionary of keyword args provided as additional fields on the predict
+   * request body. Returns: A list of outputs containing the prediction results. This list must be
+   * JSON serializable.  raise NotImplementedError() @classmethod def from_path(cls, model_dir):
+   * Creates an instance of Predictor using the given path. Loading of the predictor should be done
+   * in this method. Args: model_dir: The local directory that contains the exported model file
+   * along with any additional files uploaded when creating the version resource. Returns: An
+   * instance implementing this Predictor class.  raise NotImplementedError() Learn more about [the
+   * Predictor interface and custom prediction routines](/ml-engine/docs/tensorflow/custom-
+   * prediction-routines).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String predictionClass;
 
   /**
-   * Required. The version of Python used in prediction.
-   *
-   * The following Python versions are available:
-   *
-   * * Python '3.7' is available when `runtime_version` is set to '1.15' or   later. * Python '3.5'
-   * is available when `runtime_version` is set to a version   from '1.4' to '1.14'. * Python '2.7'
-   * is available when `runtime_version` is set to '1.15' or   earlier.
-   *
-   * Read more about the Python versions available for [each runtime version](/ml-engine/docs
-   * /runtime-version-list).
+   * Required. The version of Python used in prediction. The following Python versions are
+   * available: * Python '3.7' is available when `runtime_version` is set to '1.15' or later. *
+   * Python '3.5' is available when `runtime_version` is set to a version from '1.4' to '1.14'. *
+   * Python '2.7' is available when `runtime_version` is set to '1.15' or earlier. Read more about
+   * the Python versions available for [each runtime version](/ml-engine/docs/runtime-version-list).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -270,19 +240,17 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. *Only* specify this field in a projects.models.versions.patch request. Specifying it
-   * in a projects.models.versions.create request has no effect.
-   *
-   * Configures the request-response pair logging on predictions from this Version.
+   * in a projects.models.versions.create request has no effect. Configures the request-response
+   * pair logging on predictions from this Version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudMlV1RequestLoggingConfig requestLoggingConfig;
 
   /**
-   * Required. The AI Platform runtime version to use for this deployment.
-   *
-   * For more information, see the [runtime version list](/ml-engine/docs/runtime-version-list) and
-   * [how to manage runtime versions](/ml-engine/docs/versioning).
+   * Required. The AI Platform runtime version to use for this deployment. For more information, see
+   * the [runtime version list](/ml-engine/docs/runtime-version-list) and [how to manage runtime
+   * versions](/ml-engine/docs/versioning).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -328,10 +296,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   /**
    * Automatically scale the number of nodes used to serve the model in response to increases and
    * decreases in traffic. Care should be taken to ramp up traffic according to the model's ability
-   * to scale or you will start seeing increases in latency and 429 response codes.
-   *
-   * Note that you cannot use AutoScaling if your version uses
-   * [GPUs](#Version.FIELDS.accelerator_config). Instead, you must use specify `manual_scaling`.
+   * to scale or you will start seeing increases in latency and 429 response codes. Note that you
+   * cannot use AutoScaling if your version uses [GPUs](#Version.FIELDS.accelerator_config).
+   * Instead, you must use specify `manual_scaling`.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1AutoScaling getAutoScaling() {
@@ -341,10 +308,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   /**
    * Automatically scale the number of nodes used to serve the model in response to increases and
    * decreases in traffic. Care should be taken to ramp up traffic according to the model's ability
-   * to scale or you will start seeing increases in latency and 429 response codes.
-   *
-   * Note that you cannot use AutoScaling if your version uses
-   * [GPUs](#Version.FIELDS.accelerator_config). Instead, you must use specify `manual_scaling`.
+   * to scale or you will start seeing increases in latency and 429 response codes. Note that you
+   * cannot use AutoScaling if your version uses [GPUs](#Version.FIELDS.accelerator_config).
+   * Instead, you must use specify `manual_scaling`.
    * @param autoScaling autoScaling or {@code null} for none
    */
   public GoogleCloudMlV1Version setAutoScaling(GoogleCloudMlV1AutoScaling autoScaling) {
@@ -372,7 +338,6 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   /**
    * Required. The Cloud Storage location of the trained model used to create the version. See the
    * [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more information.
-   *
    * When passing Version to projects.models.versions.create the model service uses the specified
    * location as the source of the model. Once deployed, the model version is hosted by the
    * prediction service, so this location is useful only as a historical record. The total number of
@@ -386,7 +351,6 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   /**
    * Required. The Cloud Storage location of the trained model used to create the version. See the
    * [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more information.
-   *
    * When passing Version to projects.models.versions.create the model service uses the specified
    * location as the source of the model. Once deployed, the model version is hosted by the
    * prediction service, so this location is useful only as a historical record. The total number of
@@ -412,6 +376,27 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    */
   public GoogleCloudMlV1Version setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. If set by server, the http(s) endpoints returned to user after the
+   * public/private deployment is successful.
+   * https://cloud.google.com/apis/design/design_patterns#output_fields.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1EndpointMap getEndpoints() {
+    return endpoints;
+  }
+
+  /**
+   * Optional. Output only. If set by server, the http(s) endpoints returned to user after the
+   * public/private deployment is successful.
+   * https://cloud.google.com/apis/design/design_patterns#output_fields.
+   * @param endpoints endpoints or {@code null} for none
+   */
+  public GoogleCloudMlV1Version setEndpoints(GoogleCloudMlV1EndpointMap endpoints) {
+    this.endpoints = endpoints;
     return this;
   }
 
@@ -521,13 +506,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI
    * Platform will analyze files in the deployment_uri to determine a framework. If you choose
    * `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or
-   * greater.
-   *
-   * Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
-   * engine/docs/tensorflow/custom-prediction-routines).
-   *
-   * If you specify a [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-
-   * prediction) in the `machineType` field, you must specify `TENSORFLOW` for the framework.
+   * greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines). If you specify a [Compute Engine (N1)
+   * machine type](/ml-engine/docs/machine-types-online-prediction) in the `machineType` field, you
+   * must specify `TENSORFLOW` for the framework.
    * @return value or {@code null} for none
    */
   public java.lang.String getFramework() {
@@ -539,13 +521,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI
    * Platform will analyze files in the deployment_uri to determine a framework. If you choose
    * `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or
-   * greater.
-   *
-   * Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
-   * engine/docs/tensorflow/custom-prediction-routines).
-   *
-   * If you specify a [Compute Engine (N1) machine type](/ml-engine/docs/machine-types-online-
-   * prediction) in the `machineType` field, you must specify `TENSORFLOW` for the framework.
+   * greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines). If you specify a [Compute Engine (N1)
+   * machine type](/ml-engine/docs/machine-types-online-prediction) in the `machineType` field, you
+   * must specify `TENSORFLOW` for the framework.
    * @param framework framework or {@code null} for none
    */
   public GoogleCloudMlV1Version setFramework(java.lang.String framework) {
@@ -555,9 +534,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Output only. If true, this version will be used to handle prediction requests that do not
-   * specify a version.
-   *
-   * You can change the default version by calling projects.methods.versions.setDefault.
+   * specify a version. You can change the default version by calling
+   * projects.methods.versions.setDefault.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDefault() {
@@ -566,9 +544,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Output only. If true, this version will be used to handle prediction requests that do not
-   * specify a version.
-   *
-   * You can change the default version by calling projects.methods.versions.setDefault.
+   * specify a version. You can change the default version by calling
+   * projects.methods.versions.setDefault.
    * @param isDefault isDefault or {@code null} for none
    */
   public GoogleCloudMlV1Version setIsDefault(java.lang.Boolean isDefault) {
@@ -616,15 +593,11 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. The type of machine on which to serve the model. Currently only applies to online
-   * prediction service. If this field is not specified, it defaults to `mls1-c1-m2`.
-   *
-   * Online prediction supports the following machine types:
-   *
-   * * `mls1-c1-m2` * `mls1-c4-m2` * `n1-standard-2` * `n1-standard-4` * `n1-standard-8` *
-   * `n1-standard-16` * `n1-standard-32` * `n1-highmem-2` * `n1-highmem-4` * `n1-highmem-8` *
-   * `n1-highmem-16` * `n1-highmem-32` * `n1-highcpu-2` * `n1-highcpu-4` * `n1-highcpu-8` *
-   * `n1-highcpu-16` * `n1-highcpu-32`
-   *
+   * prediction service. If this field is not specified, it defaults to `mls1-c1-m2`. Online
+   * prediction supports the following machine types: * `mls1-c1-m2` * `mls1-c4-m2` *
+   * `n1-standard-2` * `n1-standard-4` * `n1-standard-8` * `n1-standard-16` * `n1-standard-32` *
+   * `n1-highmem-2` * `n1-highmem-4` * `n1-highmem-8` * `n1-highmem-16` * `n1-highmem-32` *
+   * `n1-highcpu-2` * `n1-highcpu-4` * `n1-highcpu-8` * `n1-highcpu-16` * `n1-highcpu-32`
    * `mls1-c1-m2` is generally available. All other machine types are available in beta. Learn more
    * about the [differences between machine types](/ml-engine/docs/machine-types-online-prediction).
    * @return value or {@code null} for none
@@ -635,15 +608,11 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. The type of machine on which to serve the model. Currently only applies to online
-   * prediction service. If this field is not specified, it defaults to `mls1-c1-m2`.
-   *
-   * Online prediction supports the following machine types:
-   *
-   * * `mls1-c1-m2` * `mls1-c4-m2` * `n1-standard-2` * `n1-standard-4` * `n1-standard-8` *
-   * `n1-standard-16` * `n1-standard-32` * `n1-highmem-2` * `n1-highmem-4` * `n1-highmem-8` *
-   * `n1-highmem-16` * `n1-highmem-32` * `n1-highcpu-2` * `n1-highcpu-4` * `n1-highcpu-8` *
-   * `n1-highcpu-16` * `n1-highcpu-32`
-   *
+   * prediction service. If this field is not specified, it defaults to `mls1-c1-m2`. Online
+   * prediction supports the following machine types: * `mls1-c1-m2` * `mls1-c4-m2` *
+   * `n1-standard-2` * `n1-standard-4` * `n1-standard-8` * `n1-standard-16` * `n1-standard-32` *
+   * `n1-highmem-2` * `n1-highmem-4` * `n1-highmem-8` * `n1-highmem-16` * `n1-highmem-32` *
+   * `n1-highcpu-2` * `n1-highcpu-4` * `n1-highcpu-8` * `n1-highcpu-16` * `n1-highcpu-32`
    * `mls1-c1-m2` is generally available. All other machine types are available in beta. Learn more
    * about the [differences between machine types](/ml-engine/docs/machine-types-online-prediction).
    * @param machineType machineType or {@code null} for none
@@ -677,9 +646,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The name specified for the version when it was created.
-   *
-   * The version name must be unique within the model it is created in.
+   * Required. The name specified for the version when it was created. The version name must be
+   * unique within the model it is created in.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -687,9 +655,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The name specified for the version when it was created.
-   *
-   * The version name must be unique within the model it is created in.
+   * Required. The name specified for the version when it was created. The version name must be
+   * unique within the model it is created in.
    * @param name name or {@code null} for none
    */
   public GoogleCloudMlV1Version setName(java.lang.String name) {
@@ -700,15 +667,13 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   /**
    * Optional. Cloud Storage paths (`gs://…`) of packages for [custom prediction routines](/ml-
    * engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom code
-   * ](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code).
-   *
-   * For a custom prediction routine, one of these packages must contain your Predictor class (see
+   * ](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code). For a custom
+   * prediction routine, one of these packages must contain your Predictor class (see
    * [`predictionClass`](#Version.FIELDS.prediction_class)). Additionally, include any dependencies
    * used by your Predictor or scikit-learn pipeline uses that are not already included in your
-   * selected [runtime version](/ml-engine/docs/tensorflow/runtime-version-list).
-   *
-   * If you specify this field, you must also set
-   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.
+   * selected [runtime version](/ml-engine/docs/tensorflow/runtime-version-list). If you specify
+   * this field, you must also set [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or
+   * greater.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPackageUris() {
@@ -718,15 +683,13 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   /**
    * Optional. Cloud Storage paths (`gs://…`) of packages for [custom prediction routines](/ml-
    * engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom code
-   * ](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code).
-   *
-   * For a custom prediction routine, one of these packages must contain your Predictor class (see
+   * ](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code). For a custom
+   * prediction routine, one of these packages must contain your Predictor class (see
    * [`predictionClass`](#Version.FIELDS.prediction_class)). Additionally, include any dependencies
    * used by your Predictor or scikit-learn pipeline uses that are not already included in your
-   * selected [runtime version](/ml-engine/docs/tensorflow/runtime-version-list).
-   *
-   * If you specify this field, you must also set
-   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.
+   * selected [runtime version](/ml-engine/docs/tensorflow/runtime-version-list). If you specify
+   * this field, you must also set [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or
+   * greater.
    * @param packageUris packageUris or {@code null} for none
    */
   public GoogleCloudMlV1Version setPackageUris(java.util.List<java.lang.String> packageUris) {
@@ -738,42 +701,23 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Optional. The fully qualified name (module_name.class_name) of a class that implements the
    * Predictor interface described in this reference field. The module containing this class should
    * be included in a package provided to the [`packageUris` field](#Version.FIELDS.package_uris).
-   *
    * Specify this field if and only if you are deploying a [custom prediction routine (beta)](/ml-
    * engine/docs/tensorflow/custom-prediction-routines). If you specify this field, you must set
    * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater and you must set
    * `machineType` to a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-
-   * prediction).
-   *
-   * The following code sample provides the Predictor interface:
-   *
-   * class Predictor(object): Interface for constructing custom predictors.
-   *
-   * def predict(self, instances, **kwargs):     Performs custom prediction.
-   *
-   *     Instances are the decoded values from the request. They have already     been deserialized
-   * from JSON.
-   *
-   *     Args:         instances: A list of prediction input instances.         **kwargs: A
-   * dictionary of keyword args provided as additional             fields on the predict request
-   * body.
-   *
-   *     Returns:         A list of outputs containing the prediction results. This list must
-   * be JSON serializable.          raise NotImplementedError()
-   *
-   * @classmethod def from_path(cls, model_dir):     Creates an instance of Predictor using the
-   * given path.
-   *
-   *     Loading of the predictor should be done in this method.
-   *
-   *     Args:         model_dir: The local directory that contains the exported model
-   * file along with any additional files uploaded when creating the             version resource.
-   *
-   *     Returns:         An instance implementing this Predictor class.          raise
-   * NotImplementedError()
-   *
-   * Learn more about [the Predictor interface and custom prediction routines](/ml-
-   * engine/docs/tensorflow/custom-prediction-routines).
+   * prediction). The following code sample provides the Predictor interface: class
+   * Predictor(object): Interface for constructing custom predictors. def predict(self, instances,
+   * **kwargs): Performs custom prediction. Instances are the decoded values from the request. They
+   * have already been deserialized from JSON. Args: instances: A list of prediction input
+   * instances. **kwargs: A dictionary of keyword args provided as additional fields on the predict
+   * request body. Returns: A list of outputs containing the prediction results. This list must be
+   * JSON serializable.  raise NotImplementedError() @classmethod def from_path(cls, model_dir):
+   * Creates an instance of Predictor using the given path. Loading of the predictor should be done
+   * in this method. Args: model_dir: The local directory that contains the exported model file
+   * along with any additional files uploaded when creating the version resource. Returns: An
+   * instance implementing this Predictor class.  raise NotImplementedError() Learn more about [the
+   * Predictor interface and custom prediction routines](/ml-engine/docs/tensorflow/custom-
+   * prediction-routines).
    * @return value or {@code null} for none
    */
   public java.lang.String getPredictionClass() {
@@ -784,42 +728,23 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Optional. The fully qualified name (module_name.class_name) of a class that implements the
    * Predictor interface described in this reference field. The module containing this class should
    * be included in a package provided to the [`packageUris` field](#Version.FIELDS.package_uris).
-   *
    * Specify this field if and only if you are deploying a [custom prediction routine (beta)](/ml-
    * engine/docs/tensorflow/custom-prediction-routines). If you specify this field, you must set
    * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater and you must set
    * `machineType` to a [legacy (MLS1) machine type](/ml-engine/docs/machine-types-online-
-   * prediction).
-   *
-   * The following code sample provides the Predictor interface:
-   *
-   * class Predictor(object): Interface for constructing custom predictors.
-   *
-   * def predict(self, instances, **kwargs):     Performs custom prediction.
-   *
-   *     Instances are the decoded values from the request. They have already     been deserialized
-   * from JSON.
-   *
-   *     Args:         instances: A list of prediction input instances.         **kwargs: A
-   * dictionary of keyword args provided as additional             fields on the predict request
-   * body.
-   *
-   *     Returns:         A list of outputs containing the prediction results. This list must
-   * be JSON serializable.          raise NotImplementedError()
-   *
-   * @classmethod def from_path(cls, model_dir):     Creates an instance of Predictor using the
-   * given path.
-   *
-   *     Loading of the predictor should be done in this method.
-   *
-   *     Args:         model_dir: The local directory that contains the exported model
-   * file along with any additional files uploaded when creating the             version resource.
-   *
-   *     Returns:         An instance implementing this Predictor class.          raise
-   * NotImplementedError()
-   *
-   * Learn more about [the Predictor interface and custom prediction routines](/ml-
-   * engine/docs/tensorflow/custom-prediction-routines).
+   * prediction). The following code sample provides the Predictor interface: class
+   * Predictor(object): Interface for constructing custom predictors. def predict(self, instances,
+   * **kwargs): Performs custom prediction. Instances are the decoded values from the request. They
+   * have already been deserialized from JSON. Args: instances: A list of prediction input
+   * instances. **kwargs: A dictionary of keyword args provided as additional fields on the predict
+   * request body. Returns: A list of outputs containing the prediction results. This list must be
+   * JSON serializable.  raise NotImplementedError() @classmethod def from_path(cls, model_dir):
+   * Creates an instance of Predictor using the given path. Loading of the predictor should be done
+   * in this method. Args: model_dir: The local directory that contains the exported model file
+   * along with any additional files uploaded when creating the version resource. Returns: An
+   * instance implementing this Predictor class.  raise NotImplementedError() Learn more about [the
+   * Predictor interface and custom prediction routines](/ml-engine/docs/tensorflow/custom-
+   * prediction-routines).
    * @param predictionClass predictionClass or {@code null} for none
    */
   public GoogleCloudMlV1Version setPredictionClass(java.lang.String predictionClass) {
@@ -828,16 +753,11 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The version of Python used in prediction.
-   *
-   * The following Python versions are available:
-   *
-   * * Python '3.7' is available when `runtime_version` is set to '1.15' or   later. * Python '3.5'
-   * is available when `runtime_version` is set to a version   from '1.4' to '1.14'. * Python '2.7'
-   * is available when `runtime_version` is set to '1.15' or   earlier.
-   *
-   * Read more about the Python versions available for [each runtime version](/ml-engine/docs
-   * /runtime-version-list).
+   * Required. The version of Python used in prediction. The following Python versions are
+   * available: * Python '3.7' is available when `runtime_version` is set to '1.15' or later. *
+   * Python '3.5' is available when `runtime_version` is set to a version from '1.4' to '1.14'. *
+   * Python '2.7' is available when `runtime_version` is set to '1.15' or earlier. Read more about
+   * the Python versions available for [each runtime version](/ml-engine/docs/runtime-version-list).
    * @return value or {@code null} for none
    */
   public java.lang.String getPythonVersion() {
@@ -845,16 +765,11 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The version of Python used in prediction.
-   *
-   * The following Python versions are available:
-   *
-   * * Python '3.7' is available when `runtime_version` is set to '1.15' or   later. * Python '3.5'
-   * is available when `runtime_version` is set to a version   from '1.4' to '1.14'. * Python '2.7'
-   * is available when `runtime_version` is set to '1.15' or   earlier.
-   *
-   * Read more about the Python versions available for [each runtime version](/ml-engine/docs
-   * /runtime-version-list).
+   * Required. The version of Python used in prediction. The following Python versions are
+   * available: * Python '3.7' is available when `runtime_version` is set to '1.15' or later. *
+   * Python '3.5' is available when `runtime_version` is set to a version from '1.4' to '1.14'. *
+   * Python '2.7' is available when `runtime_version` is set to '1.15' or earlier. Read more about
+   * the Python versions available for [each runtime version](/ml-engine/docs/runtime-version-list).
    * @param pythonVersion pythonVersion or {@code null} for none
    */
   public GoogleCloudMlV1Version setPythonVersion(java.lang.String pythonVersion) {
@@ -864,9 +779,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. *Only* specify this field in a projects.models.versions.patch request. Specifying it
-   * in a projects.models.versions.create request has no effect.
-   *
-   * Configures the request-response pair logging on predictions from this Version.
+   * in a projects.models.versions.create request has no effect. Configures the request-response
+   * pair logging on predictions from this Version.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1RequestLoggingConfig getRequestLoggingConfig() {
@@ -875,9 +789,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. *Only* specify this field in a projects.models.versions.patch request. Specifying it
-   * in a projects.models.versions.create request has no effect.
-   *
-   * Configures the request-response pair logging on predictions from this Version.
+   * in a projects.models.versions.create request has no effect. Configures the request-response
+   * pair logging on predictions from this Version.
    * @param requestLoggingConfig requestLoggingConfig or {@code null} for none
    */
   public GoogleCloudMlV1Version setRequestLoggingConfig(GoogleCloudMlV1RequestLoggingConfig requestLoggingConfig) {
@@ -886,10 +799,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The AI Platform runtime version to use for this deployment.
-   *
-   * For more information, see the [runtime version list](/ml-engine/docs/runtime-version-list) and
-   * [how to manage runtime versions](/ml-engine/docs/versioning).
+   * Required. The AI Platform runtime version to use for this deployment. For more information, see
+   * the [runtime version list](/ml-engine/docs/runtime-version-list) and [how to manage runtime
+   * versions](/ml-engine/docs/versioning).
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeVersion() {
@@ -897,10 +809,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The AI Platform runtime version to use for this deployment.
-   *
-   * For more information, see the [runtime version list](/ml-engine/docs/runtime-version-list) and
-   * [how to manage runtime versions](/ml-engine/docs/versioning).
+   * Required. The AI Platform runtime version to use for this deployment. For more information, see
+   * the [runtime version list](/ml-engine/docs/runtime-version-list) and [how to manage runtime
+   * versions](/ml-engine/docs/versioning).
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */
   public GoogleCloudMlV1Version setRuntimeVersion(java.lang.String runtimeVersion) {

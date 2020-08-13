@@ -35,8 +35,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Command-line arguments passed to the training application when it starts. If your job
-   * uses a custom container, then the arguments are passed to the container's  `ENTRYPOINT`
-   * command.
+   * uses a custom container, then the arguments are passed to the container's `ENTRYPOINT` command.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,22 +45,19 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * Optional. Options for using customer-managed encryption keys (CMEK) to protect resources
    * created by a training job, instead of using Google's default encryption. If this is set, then
    * all resources created by the training job will be encrypted with the customer-managed
-   * encryption key that you specify.
-   *
-   * [Learn how and when to use CMEK with AI Platform Training](/ai-platform/training/docs/cmek).
+   * encryption key that you specify. [Learn how and when to use CMEK with AI Platform Training
+   * ](/ai-platform/training/docs/cmek).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudMlV1EncryptionConfig encryptionConfig;
 
   /**
-   * Optional. The configuration for evaluators.
-   *
-   * You should only set `evaluatorConfig.acceleratorConfig` if `evaluatorType` is set to a Compute
-   * Engine machine type. [Learn about restrictions on accelerator configurations for training
-   * .](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
-   *
-   * Set `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If
+   * Optional. The configuration for evaluators. You should only set
+   * `evaluatorConfig.acceleratorConfig` if `evaluatorType` is set to a Compute Engine machine type.
+   * [Learn about restrictions on accelerator configurations for training.](/ai-
+   * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set
+   * `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If
    * `evaluatorConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
@@ -72,12 +68,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The number of evaluator replicas to use for the training job. Each replica in the
-   * cluster will be of the type specified in `evaluator_type`.
-   *
-   * This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you
-   * must also set `evaluator_type`.
-   *
-   * The default value is zero.
+   * cluster will be of the type specified in `evaluator_type`. This value can only be used when
+   * `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `evaluator_type`. The
+   * default value is zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -85,14 +78,10 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's evaluator nodes.
-   *
-   * The supported values are the same as those described in the entry for `masterType`.
-   *
-   * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be Compute Engine machine types or both must be legacy machine types.
-   *
-   * This value must be present when `scaleTier` is set to `CUSTOM` and `evaluatorCount` is greater
-   * than zero.
+   * The supported values are the same as those described in the entry for `masterType`. This value
+   * must be consistent with the category of machine type that `masterType` uses. In other words,
+   * both must be Compute Engine machine types or both must be legacy machine types. This value must
+   * be present when `scaleTier` is set to `CUSTOM` and `evaluatorCount` is greater than zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,15 +105,13 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.lang.String jobDir;
 
   /**
-   * Optional. The configuration for your master worker.
-   *
-   * You should only set `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine
-   * machine type. Learn about [restrictions on accelerator configurations for training.](/ai-
-   * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
-   *
-   * Set `masterConfig.imageUri` only if you build a custom image. Only one of
-   * `masterConfig.imageUri` and `runtimeVersion` should be set. Learn more about [configuring
-   * custom containers](/ai-platform/training/docs/distributed-training-containers).
+   * Optional. The configuration for your master worker. You should only set
+   * `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine machine type. Learn
+   * about [restrictions on accelerator configurations for training.](/ai-platform/training/docs
+   * /using-gpus#compute-engine-machine-types-with-gpu) Set `masterConfig.imageUri` only if you
+   * build a custom image. Only one of `masterConfig.imageUri` and `runtimeVersion` should be set.
+   * Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-
+   * training-containers).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,32 +119,21 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's master worker.
-   * You must specify this field when `scaleTier` is set to `CUSTOM`.
-   *
-   * You can use certain Compute Engine machine types directly in this field. The following types
-   * are supported:
-   *
-   * - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` -
+   * You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute
+   * Engine machine types directly in this field. The following types are supported: -
+   * `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` -
    * `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` -
    * `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` -
-   * `n1-highcpu-64` - `n1-highcpu-96`
-   *
-   * Learn more about [using Compute Engine machine types](/ml-engine/docs/machine-types#compute-
-   * engine-machine-types).
-   *
-   * Alternatively, you can use the following legacy machine types:
-   *
-   * - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` -
-   * `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` -
-   * `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` -
-   * `complex_model_l_v100`
-   *
-   * Learn more about [using legacy machine types](/ml-engine/docs/machine-types#legacy-machine-
-   * types).
-   *
-   * Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more
-   * about the [special configuration options for training with TPUs](/ml-engine/docs/tensorflow
-   * /using-tpus#configuring_a_custom_tpu_machine).
+   * `n1-highcpu-64` - `n1-highcpu-96` Learn more about [using Compute Engine machine types](/ml-
+   * engine/docs/machine-types#compute-engine-machine-types). Alternatively, you can use the
+   * following legacy machine types: - `standard` - `large_model` - `complex_model_s` -
+   * `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` -
+   * `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` -
+   * `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Learn more about [using
+   * legacy machine types](/ml-engine/docs/machine-types#legacy-machine-types). Finally, if you want
+   * to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special
+   * configuration options for training with TPUs](/ml-engine/docs/tensorflow/using-
+   * tpus#configuring_a_custom_tpu_machine).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,11 +143,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * Optional. The full name of the [Compute Engine network](/vpc/docs/vpc) to which the Job is
    * peered. For example, `projects/12345/global/networks/myVPC`. The format of this field is
    * `projects/{project}/global/networks/{network}`, where {project} is a project number (like
-   * `12345`) and {network} is network name.
-   *
-   * Private services access must already be configured for the network. If left unspecified, the
-   * Job is not peered with any network. [Learn about using VPC Network Peering.](/ai-
-   * platform/training/docs/vpc-peering).
+   * `12345`) and {network} is network name. Private services access must already be configured for
+   * the network. If left unspecified, the Job is not peered with any network. [Learn about using
+   * VPC Network Peering.](/ai-platform/training/docs/vpc-peering).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,14 +160,12 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.util.List<java.lang.String> packageUris;
 
   /**
-   * Optional. The configuration for parameter servers.
-   *
-   * You should only set `parameterServerConfig.acceleratorConfig` if `parameterServerType` is set
-   * to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for
-   * training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
-   *
-   * Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter
-   * server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of
+   * Optional. The configuration for parameter servers. You should only set
+   * `parameterServerConfig.acceleratorConfig` if `parameterServerType` is set to a Compute Engine
+   * machine type. [Learn about restrictions on accelerator configurations for training.](/ai-
+   * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set
+   * `parameterServerConfig.imageUri` only if you build a custom image for your parameter server. If
+   * `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
    * The value may be {@code null}.
@@ -203,12 +175,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The number of parameter server replicas to use for the training job. Each replica in
-   * the cluster will be of the type specified in `parameter_server_type`.
-   *
-   * This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you
-   * must also set `parameter_server_type`.
-   *
-   * The default value is zero.
+   * the cluster will be of the type specified in `parameter_server_type`. This value can only be
+   * used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set
+   * `parameter_server_type`. The default value is zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -216,13 +185,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's parameter
-   * server.
-   *
-   * The supported values are the same as those described in the entry for `master_type`.
-   *
+   * server. The supported values are the same as those described in the entry for `master_type`.
    * This value must be consistent with the category of machine type that `masterType` uses. In
    * other words, both must be Compute Engine machine types or both must be legacy machine types.
-   *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is
    * greater than zero.
    * The value may be {@code null}.
@@ -239,16 +204,11 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The version of Python used in training. You must either specify this field or specify
-   * `masterConfig.imageUri`.
-   *
-   * The following Python versions are available:
-   *
-   * * Python '3.7' is available when `runtime_version` is set to '1.15' or   later. * Python '3.5'
-   * is available when `runtime_version` is set to a version   from '1.4' to '1.14'. * Python '2.7'
-   * is available when `runtime_version` is set to '1.15' or   earlier.
-   *
-   * Read more about the Python versions available for [each runtime version](/ml-engine/docs
-   * /runtime-version-list).
+   * `masterConfig.imageUri`. The following Python versions are available: * Python '3.7' is
+   * available when `runtime_version` is set to '1.15' or later. * Python '3.5' is available when
+   * `runtime_version` is set to a version from '1.4' to '1.14'. * Python '2.7' is available when
+   * `runtime_version` is set to '1.15' or earlier. Read more about the Python versions available
+   * for [each runtime version](/ml-engine/docs/runtime-version-list).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -264,11 +224,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The AI Platform runtime version to use for training. You must either specify this
-   * field or specify `masterConfig.imageUri`.
-   *
-   * For more information, see the [runtime version list](/ai-platform/training/docs/runtime-
-   * version-list) and learn [how to manage runtime versions](/ai-
-   * platform/training/docs/versioning).
+   * field or specify `masterConfig.imageUri`. For more information, see the [runtime version list
+   * ](/ai-platform/training/docs/runtime-version-list) and learn [how to manage runtime versions
+   * ](/ai-platform/training/docs/versioning).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -294,9 +252,8 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * You must have the `iam.serviceAccounts.actAs` permission for the specified service account. In
    * addition, the AI Platform Training Google-managed service account must have the
    * `roles/iam.serviceAccountAdmin` role for the specified service account. [Learn more about
-   * configuring a service account.](/ai-platform/training/docs/custom-service-account)
-   *
-   * If not specified, the AI Platform Training Google-managed service account is used by default.
+   * configuring a service account.](/ai-platform/training/docs/custom-service-account) If not
+   * specified, the AI Platform Training Google-managed service account is used by default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -305,23 +262,19 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   /**
    * Optional. Use `chief` instead of `master` in the `TF_CONFIG` environment variable when training
    * with a custom container. Defaults to `false`. [Learn more about this field.](/ai-
-   * platform/training/docs/distributed-training-details#chief-versus-master)
-   *
-   * This field has no effect for training jobs that don't use a custom container.
+   * platform/training/docs/distributed-training-details#chief-versus-master) This field has no
+   * effect for training jobs that don't use a custom container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useChiefInTfConfig;
 
   /**
-   * Optional. The configuration for workers.
-   *
-   * You should only set `workerConfig.acceleratorConfig` if `workerType` is set to a Compute Engine
-   * machine type. [Learn about restrictions on accelerator configurations for training.](/ai-
-   * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
-   *
-   * Set `workerConfig.imageUri` only if you build a custom image for your worker. If
-   * `workerConfig.imageUri` has not been set, AI Platform uses the value of
+   * Optional. The configuration for workers. You should only set `workerConfig.acceleratorConfig`
+   * if `workerType` is set to a Compute Engine machine type. [Learn about restrictions on
+   * accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-
+   * machine-types-with-gpu) Set `workerConfig.imageUri` only if you build a custom image for your
+   * worker. If `workerConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
    * The value may be {@code null}.
@@ -331,12 +284,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The number of worker replicas to use for the training job. Each replica in the
-   * cluster will be of the type specified in `worker_type`.
-   *
-   * This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you
-   * must also set `worker_type`.
-   *
-   * The default value is zero.
+   * cluster will be of the type specified in `worker_type`. This value can only be used when
+   * `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `worker_type`. The
+   * default value is zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -344,17 +294,12 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's worker nodes.
-   *
-   * The supported values are the same as those described in the entry for `masterType`.
-   *
-   * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be Compute Engine machine types or both must be legacy machine types.
-   *
-   * If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU
-   * machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine).
-   *
-   * This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater
-   * than zero.
+   * The supported values are the same as those described in the entry for `masterType`. This value
+   * must be consistent with the category of machine type that `masterType` uses. In other words,
+   * both must be Compute Engine machine types or both must be legacy machine types. If you use
+   * `cloud_tpu` for this value, see special instructions for [configuring a custom TPU machine
+   * ](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine). This value must be
+   * present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater than zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -362,8 +307,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Command-line arguments passed to the training application when it starts. If your job
-   * uses a custom container, then the arguments are passed to the container's  `ENTRYPOINT`
-   * command.
+   * uses a custom container, then the arguments are passed to the container's `ENTRYPOINT` command.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgs() {
@@ -372,8 +316,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Command-line arguments passed to the training application when it starts. If your job
-   * uses a custom container, then the arguments are passed to the container's  `ENTRYPOINT`
-   * command.
+   * uses a custom container, then the arguments are passed to the container's `ENTRYPOINT` command.
    * @param args args or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setArgs(java.util.List<java.lang.String> args) {
@@ -385,9 +328,8 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * Optional. Options for using customer-managed encryption keys (CMEK) to protect resources
    * created by a training job, instead of using Google's default encryption. If this is set, then
    * all resources created by the training job will be encrypted with the customer-managed
-   * encryption key that you specify.
-   *
-   * [Learn how and when to use CMEK with AI Platform Training](/ai-platform/training/docs/cmek).
+   * encryption key that you specify. [Learn how and when to use CMEK with AI Platform Training
+   * ](/ai-platform/training/docs/cmek).
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1EncryptionConfig getEncryptionConfig() {
@@ -398,9 +340,8 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * Optional. Options for using customer-managed encryption keys (CMEK) to protect resources
    * created by a training job, instead of using Google's default encryption. If this is set, then
    * all resources created by the training job will be encrypted with the customer-managed
-   * encryption key that you specify.
-   *
-   * [Learn how and when to use CMEK with AI Platform Training](/ai-platform/training/docs/cmek).
+   * encryption key that you specify. [Learn how and when to use CMEK with AI Platform Training
+   * ](/ai-platform/training/docs/cmek).
    * @param encryptionConfig encryptionConfig or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setEncryptionConfig(GoogleCloudMlV1EncryptionConfig encryptionConfig) {
@@ -409,13 +350,11 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The configuration for evaluators.
-   *
-   * You should only set `evaluatorConfig.acceleratorConfig` if `evaluatorType` is set to a Compute
-   * Engine machine type. [Learn about restrictions on accelerator configurations for training
-   * .](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
-   *
-   * Set `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If
+   * Optional. The configuration for evaluators. You should only set
+   * `evaluatorConfig.acceleratorConfig` if `evaluatorType` is set to a Compute Engine machine type.
+   * [Learn about restrictions on accelerator configurations for training.](/ai-
+   * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set
+   * `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If
    * `evaluatorConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
@@ -426,13 +365,11 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The configuration for evaluators.
-   *
-   * You should only set `evaluatorConfig.acceleratorConfig` if `evaluatorType` is set to a Compute
-   * Engine machine type. [Learn about restrictions on accelerator configurations for training
-   * .](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
-   *
-   * Set `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If
+   * Optional. The configuration for evaluators. You should only set
+   * `evaluatorConfig.acceleratorConfig` if `evaluatorType` is set to a Compute Engine machine type.
+   * [Learn about restrictions on accelerator configurations for training.](/ai-
+   * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set
+   * `evaluatorConfig.imageUri` only if you build a custom image for your evaluator. If
    * `evaluatorConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
@@ -445,12 +382,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The number of evaluator replicas to use for the training job. Each replica in the
-   * cluster will be of the type specified in `evaluator_type`.
-   *
-   * This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you
-   * must also set `evaluator_type`.
-   *
-   * The default value is zero.
+   * cluster will be of the type specified in `evaluator_type`. This value can only be used when
+   * `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `evaluator_type`. The
+   * default value is zero.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEvaluatorCount() {
@@ -459,12 +393,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The number of evaluator replicas to use for the training job. Each replica in the
-   * cluster will be of the type specified in `evaluator_type`.
-   *
-   * This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you
-   * must also set `evaluator_type`.
-   *
-   * The default value is zero.
+   * cluster will be of the type specified in `evaluator_type`. This value can only be used when
+   * `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `evaluator_type`. The
+   * default value is zero.
    * @param evaluatorCount evaluatorCount or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setEvaluatorCount(java.lang.Long evaluatorCount) {
@@ -474,14 +405,10 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's evaluator nodes.
-   *
-   * The supported values are the same as those described in the entry for `masterType`.
-   *
-   * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be Compute Engine machine types or both must be legacy machine types.
-   *
-   * This value must be present when `scaleTier` is set to `CUSTOM` and `evaluatorCount` is greater
-   * than zero.
+   * The supported values are the same as those described in the entry for `masterType`. This value
+   * must be consistent with the category of machine type that `masterType` uses. In other words,
+   * both must be Compute Engine machine types or both must be legacy machine types. This value must
+   * be present when `scaleTier` is set to `CUSTOM` and `evaluatorCount` is greater than zero.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvaluatorType() {
@@ -490,14 +417,10 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's evaluator nodes.
-   *
-   * The supported values are the same as those described in the entry for `masterType`.
-   *
-   * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be Compute Engine machine types or both must be legacy machine types.
-   *
-   * This value must be present when `scaleTier` is set to `CUSTOM` and `evaluatorCount` is greater
-   * than zero.
+   * The supported values are the same as those described in the entry for `masterType`. This value
+   * must be consistent with the category of machine type that `masterType` uses. In other words,
+   * both must be Compute Engine machine types or both must be legacy machine types. This value must
+   * be present when `scaleTier` is set to `CUSTOM` and `evaluatorCount` is greater than zero.
    * @param evaluatorType evaluatorType or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setEvaluatorType(java.lang.String evaluatorType) {
@@ -546,15 +469,13 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The configuration for your master worker.
-   *
-   * You should only set `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine
-   * machine type. Learn about [restrictions on accelerator configurations for training.](/ai-
-   * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
-   *
-   * Set `masterConfig.imageUri` only if you build a custom image. Only one of
-   * `masterConfig.imageUri` and `runtimeVersion` should be set. Learn more about [configuring
-   * custom containers](/ai-platform/training/docs/distributed-training-containers).
+   * Optional. The configuration for your master worker. You should only set
+   * `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine machine type. Learn
+   * about [restrictions on accelerator configurations for training.](/ai-platform/training/docs
+   * /using-gpus#compute-engine-machine-types-with-gpu) Set `masterConfig.imageUri` only if you
+   * build a custom image. Only one of `masterConfig.imageUri` and `runtimeVersion` should be set.
+   * Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-
+   * training-containers).
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1ReplicaConfig getMasterConfig() {
@@ -562,15 +483,13 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The configuration for your master worker.
-   *
-   * You should only set `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine
-   * machine type. Learn about [restrictions on accelerator configurations for training.](/ai-
-   * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
-   *
-   * Set `masterConfig.imageUri` only if you build a custom image. Only one of
-   * `masterConfig.imageUri` and `runtimeVersion` should be set. Learn more about [configuring
-   * custom containers](/ai-platform/training/docs/distributed-training-containers).
+   * Optional. The configuration for your master worker. You should only set
+   * `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine machine type. Learn
+   * about [restrictions on accelerator configurations for training.](/ai-platform/training/docs
+   * /using-gpus#compute-engine-machine-types-with-gpu) Set `masterConfig.imageUri` only if you
+   * build a custom image. Only one of `masterConfig.imageUri` and `runtimeVersion` should be set.
+   * Learn more about [configuring custom containers](/ai-platform/training/docs/distributed-
+   * training-containers).
    * @param masterConfig masterConfig or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setMasterConfig(GoogleCloudMlV1ReplicaConfig masterConfig) {
@@ -580,32 +499,21 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's master worker.
-   * You must specify this field when `scaleTier` is set to `CUSTOM`.
-   *
-   * You can use certain Compute Engine machine types directly in this field. The following types
-   * are supported:
-   *
-   * - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` -
+   * You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute
+   * Engine machine types directly in this field. The following types are supported: -
+   * `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` -
    * `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` -
    * `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` -
-   * `n1-highcpu-64` - `n1-highcpu-96`
-   *
-   * Learn more about [using Compute Engine machine types](/ml-engine/docs/machine-types#compute-
-   * engine-machine-types).
-   *
-   * Alternatively, you can use the following legacy machine types:
-   *
-   * - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` -
-   * `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` -
-   * `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` -
-   * `complex_model_l_v100`
-   *
-   * Learn more about [using legacy machine types](/ml-engine/docs/machine-types#legacy-machine-
-   * types).
-   *
-   * Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more
-   * about the [special configuration options for training with TPUs](/ml-engine/docs/tensorflow
-   * /using-tpus#configuring_a_custom_tpu_machine).
+   * `n1-highcpu-64` - `n1-highcpu-96` Learn more about [using Compute Engine machine types](/ml-
+   * engine/docs/machine-types#compute-engine-machine-types). Alternatively, you can use the
+   * following legacy machine types: - `standard` - `large_model` - `complex_model_s` -
+   * `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` -
+   * `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` -
+   * `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Learn more about [using
+   * legacy machine types](/ml-engine/docs/machine-types#legacy-machine-types). Finally, if you want
+   * to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special
+   * configuration options for training with TPUs](/ml-engine/docs/tensorflow/using-
+   * tpus#configuring_a_custom_tpu_machine).
    * @return value or {@code null} for none
    */
   public java.lang.String getMasterType() {
@@ -614,32 +522,21 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's master worker.
-   * You must specify this field when `scaleTier` is set to `CUSTOM`.
-   *
-   * You can use certain Compute Engine machine types directly in this field. The following types
-   * are supported:
-   *
-   * - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` -
+   * You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute
+   * Engine machine types directly in this field. The following types are supported: -
+   * `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` -
    * `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` -
    * `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` -
-   * `n1-highcpu-64` - `n1-highcpu-96`
-   *
-   * Learn more about [using Compute Engine machine types](/ml-engine/docs/machine-types#compute-
-   * engine-machine-types).
-   *
-   * Alternatively, you can use the following legacy machine types:
-   *
-   * - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` -
-   * `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` -
-   * `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` -
-   * `complex_model_l_v100`
-   *
-   * Learn more about [using legacy machine types](/ml-engine/docs/machine-types#legacy-machine-
-   * types).
-   *
-   * Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more
-   * about the [special configuration options for training with TPUs](/ml-engine/docs/tensorflow
-   * /using-tpus#configuring_a_custom_tpu_machine).
+   * `n1-highcpu-64` - `n1-highcpu-96` Learn more about [using Compute Engine machine types](/ml-
+   * engine/docs/machine-types#compute-engine-machine-types). Alternatively, you can use the
+   * following legacy machine types: - `standard` - `large_model` - `complex_model_s` -
+   * `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` -
+   * `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` -
+   * `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Learn more about [using
+   * legacy machine types](/ml-engine/docs/machine-types#legacy-machine-types). Finally, if you want
+   * to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special
+   * configuration options for training with TPUs](/ml-engine/docs/tensorflow/using-
+   * tpus#configuring_a_custom_tpu_machine).
    * @param masterType masterType or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setMasterType(java.lang.String masterType) {
@@ -651,11 +548,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * Optional. The full name of the [Compute Engine network](/vpc/docs/vpc) to which the Job is
    * peered. For example, `projects/12345/global/networks/myVPC`. The format of this field is
    * `projects/{project}/global/networks/{network}`, where {project} is a project number (like
-   * `12345`) and {network} is network name.
-   *
-   * Private services access must already be configured for the network. If left unspecified, the
-   * Job is not peered with any network. [Learn about using VPC Network Peering.](/ai-
-   * platform/training/docs/vpc-peering).
+   * `12345`) and {network} is network name. Private services access must already be configured for
+   * the network. If left unspecified, the Job is not peered with any network. [Learn about using
+   * VPC Network Peering.](/ai-platform/training/docs/vpc-peering).
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -666,11 +561,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * Optional. The full name of the [Compute Engine network](/vpc/docs/vpc) to which the Job is
    * peered. For example, `projects/12345/global/networks/myVPC`. The format of this field is
    * `projects/{project}/global/networks/{network}`, where {project} is a project number (like
-   * `12345`) and {network} is network name.
-   *
-   * Private services access must already be configured for the network. If left unspecified, the
-   * Job is not peered with any network. [Learn about using VPC Network Peering.](/ai-
-   * platform/training/docs/vpc-peering).
+   * `12345`) and {network} is network name. Private services access must already be configured for
+   * the network. If left unspecified, the Job is not peered with any network. [Learn about using
+   * VPC Network Peering.](/ai-platform/training/docs/vpc-peering).
    * @param network network or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setNetwork(java.lang.String network) {
@@ -698,14 +591,12 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The configuration for parameter servers.
-   *
-   * You should only set `parameterServerConfig.acceleratorConfig` if `parameterServerType` is set
-   * to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for
-   * training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
-   *
-   * Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter
-   * server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of
+   * Optional. The configuration for parameter servers. You should only set
+   * `parameterServerConfig.acceleratorConfig` if `parameterServerType` is set to a Compute Engine
+   * machine type. [Learn about restrictions on accelerator configurations for training.](/ai-
+   * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set
+   * `parameterServerConfig.imageUri` only if you build a custom image for your parameter server. If
+   * `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
    * @return value or {@code null} for none
@@ -715,14 +606,12 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The configuration for parameter servers.
-   *
-   * You should only set `parameterServerConfig.acceleratorConfig` if `parameterServerType` is set
-   * to a Compute Engine machine type. [Learn about restrictions on accelerator configurations for
-   * training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
-   *
-   * Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter
-   * server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of
+   * Optional. The configuration for parameter servers. You should only set
+   * `parameterServerConfig.acceleratorConfig` if `parameterServerType` is set to a Compute Engine
+   * machine type. [Learn about restrictions on accelerator configurations for training.](/ai-
+   * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu) Set
+   * `parameterServerConfig.imageUri` only if you build a custom image for your parameter server. If
+   * `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
    * @param parameterServerConfig parameterServerConfig or {@code null} for none
@@ -734,12 +623,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The number of parameter server replicas to use for the training job. Each replica in
-   * the cluster will be of the type specified in `parameter_server_type`.
-   *
-   * This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you
-   * must also set `parameter_server_type`.
-   *
-   * The default value is zero.
+   * the cluster will be of the type specified in `parameter_server_type`. This value can only be
+   * used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set
+   * `parameter_server_type`. The default value is zero.
    * @return value or {@code null} for none
    */
   public java.lang.Long getParameterServerCount() {
@@ -748,12 +634,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The number of parameter server replicas to use for the training job. Each replica in
-   * the cluster will be of the type specified in `parameter_server_type`.
-   *
-   * This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you
-   * must also set `parameter_server_type`.
-   *
-   * The default value is zero.
+   * the cluster will be of the type specified in `parameter_server_type`. This value can only be
+   * used when `scale_tier` is set to `CUSTOM`. If you set this value, you must also set
+   * `parameter_server_type`. The default value is zero.
    * @param parameterServerCount parameterServerCount or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setParameterServerCount(java.lang.Long parameterServerCount) {
@@ -763,13 +646,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's parameter
-   * server.
-   *
-   * The supported values are the same as those described in the entry for `master_type`.
-   *
+   * server. The supported values are the same as those described in the entry for `master_type`.
    * This value must be consistent with the category of machine type that `masterType` uses. In
    * other words, both must be Compute Engine machine types or both must be legacy machine types.
-   *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is
    * greater than zero.
    * @return value or {@code null} for none
@@ -780,13 +659,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's parameter
-   * server.
-   *
-   * The supported values are the same as those described in the entry for `master_type`.
-   *
+   * server. The supported values are the same as those described in the entry for `master_type`.
    * This value must be consistent with the category of machine type that `masterType` uses. In
    * other words, both must be Compute Engine machine types or both must be legacy machine types.
-   *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is
    * greater than zero.
    * @param parameterServerType parameterServerType or {@code null} for none
@@ -815,16 +690,11 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The version of Python used in training. You must either specify this field or specify
-   * `masterConfig.imageUri`.
-   *
-   * The following Python versions are available:
-   *
-   * * Python '3.7' is available when `runtime_version` is set to '1.15' or   later. * Python '3.5'
-   * is available when `runtime_version` is set to a version   from '1.4' to '1.14'. * Python '2.7'
-   * is available when `runtime_version` is set to '1.15' or   earlier.
-   *
-   * Read more about the Python versions available for [each runtime version](/ml-engine/docs
-   * /runtime-version-list).
+   * `masterConfig.imageUri`. The following Python versions are available: * Python '3.7' is
+   * available when `runtime_version` is set to '1.15' or later. * Python '3.5' is available when
+   * `runtime_version` is set to a version from '1.4' to '1.14'. * Python '2.7' is available when
+   * `runtime_version` is set to '1.15' or earlier. Read more about the Python versions available
+   * for [each runtime version](/ml-engine/docs/runtime-version-list).
    * @return value or {@code null} for none
    */
   public java.lang.String getPythonVersion() {
@@ -833,16 +703,11 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The version of Python used in training. You must either specify this field or specify
-   * `masterConfig.imageUri`.
-   *
-   * The following Python versions are available:
-   *
-   * * Python '3.7' is available when `runtime_version` is set to '1.15' or   later. * Python '3.5'
-   * is available when `runtime_version` is set to a version   from '1.4' to '1.14'. * Python '2.7'
-   * is available when `runtime_version` is set to '1.15' or   earlier.
-   *
-   * Read more about the Python versions available for [each runtime version](/ml-engine/docs
-   * /runtime-version-list).
+   * `masterConfig.imageUri`. The following Python versions are available: * Python '3.7' is
+   * available when `runtime_version` is set to '1.15' or later. * Python '3.5' is available when
+   * `runtime_version` is set to a version from '1.4' to '1.14'. * Python '2.7' is available when
+   * `runtime_version` is set to '1.15' or earlier. Read more about the Python versions available
+   * for [each runtime version](/ml-engine/docs/runtime-version-list).
    * @param pythonVersion pythonVersion or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setPythonVersion(java.lang.String pythonVersion) {
@@ -871,11 +736,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The AI Platform runtime version to use for training. You must either specify this
-   * field or specify `masterConfig.imageUri`.
-   *
-   * For more information, see the [runtime version list](/ai-platform/training/docs/runtime-
-   * version-list) and learn [how to manage runtime versions](/ai-
-   * platform/training/docs/versioning).
+   * field or specify `masterConfig.imageUri`. For more information, see the [runtime version list
+   * ](/ai-platform/training/docs/runtime-version-list) and learn [how to manage runtime versions
+   * ](/ai-platform/training/docs/versioning).
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeVersion() {
@@ -884,11 +747,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The AI Platform runtime version to use for training. You must either specify this
-   * field or specify `masterConfig.imageUri`.
-   *
-   * For more information, see the [runtime version list](/ai-platform/training/docs/runtime-
-   * version-list) and learn [how to manage runtime versions](/ai-
-   * platform/training/docs/versioning).
+   * field or specify `masterConfig.imageUri`. For more information, see the [runtime version list
+   * ](/ai-platform/training/docs/runtime-version-list) and learn [how to manage runtime versions
+   * ](/ai-platform/training/docs/versioning).
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setRuntimeVersion(java.lang.String runtimeVersion) {
@@ -937,9 +798,8 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * You must have the `iam.serviceAccounts.actAs` permission for the specified service account. In
    * addition, the AI Platform Training Google-managed service account must have the
    * `roles/iam.serviceAccountAdmin` role for the specified service account. [Learn more about
-   * configuring a service account.](/ai-platform/training/docs/custom-service-account)
-   *
-   * If not specified, the AI Platform Training Google-managed service account is used by default.
+   * configuring a service account.](/ai-platform/training/docs/custom-service-account) If not
+   * specified, the AI Platform Training Google-managed service account is used by default.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -951,9 +811,8 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * You must have the `iam.serviceAccounts.actAs` permission for the specified service account. In
    * addition, the AI Platform Training Google-managed service account must have the
    * `roles/iam.serviceAccountAdmin` role for the specified service account. [Learn more about
-   * configuring a service account.](/ai-platform/training/docs/custom-service-account)
-   *
-   * If not specified, the AI Platform Training Google-managed service account is used by default.
+   * configuring a service account.](/ai-platform/training/docs/custom-service-account) If not
+   * specified, the AI Platform Training Google-managed service account is used by default.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setServiceAccount(java.lang.String serviceAccount) {
@@ -964,9 +823,8 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   /**
    * Optional. Use `chief` instead of `master` in the `TF_CONFIG` environment variable when training
    * with a custom container. Defaults to `false`. [Learn more about this field.](/ai-
-   * platform/training/docs/distributed-training-details#chief-versus-master)
-   *
-   * This field has no effect for training jobs that don't use a custom container.
+   * platform/training/docs/distributed-training-details#chief-versus-master) This field has no
+   * effect for training jobs that don't use a custom container.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseChiefInTfConfig() {
@@ -976,9 +834,8 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   /**
    * Optional. Use `chief` instead of `master` in the `TF_CONFIG` environment variable when training
    * with a custom container. Defaults to `false`. [Learn more about this field.](/ai-
-   * platform/training/docs/distributed-training-details#chief-versus-master)
-   *
-   * This field has no effect for training jobs that don't use a custom container.
+   * platform/training/docs/distributed-training-details#chief-versus-master) This field has no
+   * effect for training jobs that don't use a custom container.
    * @param useChiefInTfConfig useChiefInTfConfig or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setUseChiefInTfConfig(java.lang.Boolean useChiefInTfConfig) {
@@ -987,14 +844,11 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The configuration for workers.
-   *
-   * You should only set `workerConfig.acceleratorConfig` if `workerType` is set to a Compute Engine
-   * machine type. [Learn about restrictions on accelerator configurations for training.](/ai-
-   * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
-   *
-   * Set `workerConfig.imageUri` only if you build a custom image for your worker. If
-   * `workerConfig.imageUri` has not been set, AI Platform uses the value of
+   * Optional. The configuration for workers. You should only set `workerConfig.acceleratorConfig`
+   * if `workerType` is set to a Compute Engine machine type. [Learn about restrictions on
+   * accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-
+   * machine-types-with-gpu) Set `workerConfig.imageUri` only if you build a custom image for your
+   * worker. If `workerConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
    * @return value or {@code null} for none
@@ -1004,14 +858,11 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The configuration for workers.
-   *
-   * You should only set `workerConfig.acceleratorConfig` if `workerType` is set to a Compute Engine
-   * machine type. [Learn about restrictions on accelerator configurations for training.](/ai-
-   * platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
-   *
-   * Set `workerConfig.imageUri` only if you build a custom image for your worker. If
-   * `workerConfig.imageUri` has not been set, AI Platform uses the value of
+   * Optional. The configuration for workers. You should only set `workerConfig.acceleratorConfig`
+   * if `workerType` is set to a Compute Engine machine type. [Learn about restrictions on
+   * accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-
+   * machine-types-with-gpu) Set `workerConfig.imageUri` only if you build a custom image for your
+   * worker. If `workerConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ai-
    * platform/training/docs/distributed-training-containers).
    * @param workerConfig workerConfig or {@code null} for none
@@ -1023,12 +874,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The number of worker replicas to use for the training job. Each replica in the
-   * cluster will be of the type specified in `worker_type`.
-   *
-   * This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you
-   * must also set `worker_type`.
-   *
-   * The default value is zero.
+   * cluster will be of the type specified in `worker_type`. This value can only be used when
+   * `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `worker_type`. The
+   * default value is zero.
    * @return value or {@code null} for none
    */
   public java.lang.Long getWorkerCount() {
@@ -1037,12 +885,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. The number of worker replicas to use for the training job. Each replica in the
-   * cluster will be of the type specified in `worker_type`.
-   *
-   * This value can only be used when `scale_tier` is set to `CUSTOM`. If you set this value, you
-   * must also set `worker_type`.
-   *
-   * The default value is zero.
+   * cluster will be of the type specified in `worker_type`. This value can only be used when
+   * `scale_tier` is set to `CUSTOM`. If you set this value, you must also set `worker_type`. The
+   * default value is zero.
    * @param workerCount workerCount or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setWorkerCount(java.lang.Long workerCount) {
@@ -1052,17 +897,12 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's worker nodes.
-   *
-   * The supported values are the same as those described in the entry for `masterType`.
-   *
-   * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be Compute Engine machine types or both must be legacy machine types.
-   *
-   * If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU
-   * machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine).
-   *
-   * This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater
-   * than zero.
+   * The supported values are the same as those described in the entry for `masterType`. This value
+   * must be consistent with the category of machine type that `masterType` uses. In other words,
+   * both must be Compute Engine machine types or both must be legacy machine types. If you use
+   * `cloud_tpu` for this value, see special instructions for [configuring a custom TPU machine
+   * ](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine). This value must be
+   * present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater than zero.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerType() {
@@ -1071,17 +911,12 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Optional. Specifies the type of virtual machine to use for your training job's worker nodes.
-   *
-   * The supported values are the same as those described in the entry for `masterType`.
-   *
-   * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be Compute Engine machine types or both must be legacy machine types.
-   *
-   * If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU
-   * machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine).
-   *
-   * This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater
-   * than zero.
+   * The supported values are the same as those described in the entry for `masterType`. This value
+   * must be consistent with the category of machine type that `masterType` uses. In other words,
+   * both must be Compute Engine machine types or both must be legacy machine types. If you use
+   * `cloud_tpu` for this value, see special instructions for [configuring a custom TPU machine
+   * ](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine). This value must be
+   * present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater than zero.
    * @param workerType workerType or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setWorkerType(java.lang.String workerType) {

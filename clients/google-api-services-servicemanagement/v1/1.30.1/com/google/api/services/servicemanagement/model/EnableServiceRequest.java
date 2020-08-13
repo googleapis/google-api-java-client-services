@@ -31,22 +31,18 @@ package com.google.api.services.servicemanagement.model;
 public final class EnableServiceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identity of consumer resource which service enablement will be applied to.
-   *
-   * The Google Service Management implementation accepts the following forms: - "project:"
-   *
-   * Note: this is made compatible with google.api.servicecontrol.v1.Operation.consumer_id.
+   * Required. The identity of consumer resource which service enablement will be applied to. The
+   * Google Service Management implementation accepts the following forms: - "project:" Note: this
+   * is made compatible with google.api.servicecontrol.v1.Operation.consumer_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consumerId;
 
   /**
-   * Required. The identity of consumer resource which service enablement will be applied to.
-   *
-   * The Google Service Management implementation accepts the following forms: - "project:"
-   *
-   * Note: this is made compatible with google.api.servicecontrol.v1.Operation.consumer_id.
+   * Required. The identity of consumer resource which service enablement will be applied to. The
+   * Google Service Management implementation accepts the following forms: - "project:" Note: this
+   * is made compatible with google.api.servicecontrol.v1.Operation.consumer_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerId() {
@@ -54,11 +50,9 @@ public final class EnableServiceRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The identity of consumer resource which service enablement will be applied to.
-   *
-   * The Google Service Management implementation accepts the following forms: - "project:"
-   *
-   * Note: this is made compatible with google.api.servicecontrol.v1.Operation.consumer_id.
+   * Required. The identity of consumer resource which service enablement will be applied to. The
+   * Google Service Management implementation accepts the following forms: - "project:" Note: this
+   * is made compatible with google.api.servicecontrol.v1.Operation.consumer_id.
    * @param consumerId consumerId or {@code null} for none
    */
   public EnableServiceRequest setConsumerId(java.lang.String consumerId) {

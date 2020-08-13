@@ -31,22 +31,18 @@ package com.google.api.services.servicemanagement.model;
 public final class DisableServiceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identity of consumer resource which service disablement will be applied to.
-   *
-   * The Google Service Management implementation accepts the following forms: - "project:"
-   *
-   * Note: this is made compatible with google.api.servicecontrol.v1.Operation.consumer_id.
+   * Required. The identity of consumer resource which service disablement will be applied to. The
+   * Google Service Management implementation accepts the following forms: - "project:" Note: this
+   * is made compatible with google.api.servicecontrol.v1.Operation.consumer_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consumerId;
 
   /**
-   * Required. The identity of consumer resource which service disablement will be applied to.
-   *
-   * The Google Service Management implementation accepts the following forms: - "project:"
-   *
-   * Note: this is made compatible with google.api.servicecontrol.v1.Operation.consumer_id.
+   * Required. The identity of consumer resource which service disablement will be applied to. The
+   * Google Service Management implementation accepts the following forms: - "project:" Note: this
+   * is made compatible with google.api.servicecontrol.v1.Operation.consumer_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerId() {
@@ -54,11 +50,9 @@ public final class DisableServiceRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The identity of consumer resource which service disablement will be applied to.
-   *
-   * The Google Service Management implementation accepts the following forms: - "project:"
-   *
-   * Note: this is made compatible with google.api.servicecontrol.v1.Operation.consumer_id.
+   * Required. The identity of consumer resource which service disablement will be applied to. The
+   * Google Service Management implementation accepts the following forms: - "project:" Note: this
+   * is made compatible with google.api.servicecontrol.v1.Operation.consumer_id.
    * @param consumerId consumerId or {@code null} for none
    */
   public DisableServiceRequest setConsumerId(java.lang.String consumerId) {

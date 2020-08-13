@@ -44,9 +44,8 @@ public final class CheckRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean requestProjectSettings;
 
   /**
-   * Specifies which version of service configuration should be used to process the request.
-   *
-   * If unspecified or no matching version can be found, the latest one will be used.
+   * Specifies which version of service configuration should be used to process the request. If
+   * unspecified or no matching version can be found, the latest one will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,9 +95,8 @@ public final class CheckRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies which version of service configuration should be used to process the request.
-   *
-   * If unspecified or no matching version can be found, the latest one will be used.
+   * Specifies which version of service configuration should be used to process the request. If
+   * unspecified or no matching version can be found, the latest one will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceConfigId() {
@@ -106,9 +104,8 @@ public final class CheckRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies which version of service configuration should be used to process the request.
-   *
-   * If unspecified or no matching version can be found, the latest one will be used.
+   * Specifies which version of service configuration should be used to process the request. If
+   * unspecified or no matching version can be found, the latest one will be used.
    * @param serviceConfigId serviceConfigId or {@code null} for none
    */
   public CheckRequest setServiceConfigId(java.lang.String serviceConfigId) {

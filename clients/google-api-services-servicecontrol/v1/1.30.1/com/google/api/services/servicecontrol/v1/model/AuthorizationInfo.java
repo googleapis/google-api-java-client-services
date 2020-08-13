@@ -45,8 +45,7 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
 
   /**
    * The resource being accessed, as a REST-style string. For example:
-   *
-   *     bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
+   * bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,10 +53,9 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
 
   /**
    * Resource attributes used in IAM condition evaluation. This field contains resource attributes
-   * like resource type and resource name.
-   *
-   * To get the whole view of the attributes used in IAM condition evaluation, the user must also
-   * look into `AuditLog.request_metadata.request_attributes`.
+   * like resource type and resource name. To get the whole view of the attributes used in IAM
+   * condition evaluation, the user must also look into
+   * `AuditLog.request_metadata.request_attributes`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,8 +97,7 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
 
   /**
    * The resource being accessed, as a REST-style string. For example:
-   *
-   *     bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
+   * bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -109,8 +106,7 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
 
   /**
    * The resource being accessed, as a REST-style string. For example:
-   *
-   *     bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
+   * bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
    * @param resource resource or {@code null} for none
    */
   public AuthorizationInfo setResource(java.lang.String resource) {
@@ -120,10 +116,9 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
 
   /**
    * Resource attributes used in IAM condition evaluation. This field contains resource attributes
-   * like resource type and resource name.
-   *
-   * To get the whole view of the attributes used in IAM condition evaluation, the user must also
-   * look into `AuditLog.request_metadata.request_attributes`.
+   * like resource type and resource name. To get the whole view of the attributes used in IAM
+   * condition evaluation, the user must also look into
+   * `AuditLog.request_metadata.request_attributes`.
    * @return value or {@code null} for none
    */
   public Resource getResourceAttributes() {
@@ -132,10 +127,9 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
 
   /**
    * Resource attributes used in IAM condition evaluation. This field contains resource attributes
-   * like resource type and resource name.
-   *
-   * To get the whole view of the attributes used in IAM condition evaluation, the user must also
-   * look into `AuditLog.request_metadata.request_attributes`.
+   * like resource type and resource name. To get the whole view of the attributes used in IAM
+   * condition evaluation, the user must also look into
+   * `AuditLog.request_metadata.request_attributes`.
    * @param resourceAttributes resourceAttributes or {@code null} for none
    */
   public AuthorizationInfo setResourceAttributes(Resource resourceAttributes) {

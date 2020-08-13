@@ -54,9 +54,7 @@ public final class AuditLog extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the service method or operation. For API calls, this should be the name of the API
-   * method. For example,
-   *
-   *     "google.cloud.bigquery.v2.TableService.InsertTable"
+   * method. For example, "google.cloud.bigquery.v2.TableService.InsertTable"
    * "google.logging.v2.ConfigServiceV2.CreateSink"
    * The value may be {@code null}.
    */
@@ -96,10 +94,8 @@ public final class AuditLog extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource or collection that is the target of the operation. The name is a scheme-less URI,
-   * not including the API service name. For example:
-   *
-   *     "projects/PROJECT_ID/zones/us-central1-a/instances"
-   * "projects/PROJECT_ID/datasets/DATASET_ID"
+   * not including the API service name. For example: "projects/PROJECT_ID/zones/us-
+   * central1-a/instances" "projects/PROJECT_ID/datasets/DATASET_ID"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,9 +201,7 @@ public final class AuditLog extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the service method or operation. For API calls, this should be the name of the API
-   * method. For example,
-   *
-   *     "google.cloud.bigquery.v2.TableService.InsertTable"
+   * method. For example, "google.cloud.bigquery.v2.TableService.InsertTable"
    * "google.logging.v2.ConfigServiceV2.CreateSink"
    * @return value or {@code null} for none
    */
@@ -217,9 +211,7 @@ public final class AuditLog extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the service method or operation. For API calls, this should be the name of the API
-   * method. For example,
-   *
-   *     "google.cloud.bigquery.v2.TableService.InsertTable"
+   * method. For example, "google.cloud.bigquery.v2.TableService.InsertTable"
    * "google.logging.v2.ConfigServiceV2.CreateSink"
    * @param methodName methodName or {@code null} for none
    */
@@ -304,10 +296,8 @@ public final class AuditLog extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource or collection that is the target of the operation. The name is a scheme-less URI,
-   * not including the API service name. For example:
-   *
-   *     "projects/PROJECT_ID/zones/us-central1-a/instances"
-   * "projects/PROJECT_ID/datasets/DATASET_ID"
+   * not including the API service name. For example: "projects/PROJECT_ID/zones/us-
+   * central1-a/instances" "projects/PROJECT_ID/datasets/DATASET_ID"
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -316,10 +306,8 @@ public final class AuditLog extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource or collection that is the target of the operation. The name is a scheme-less URI,
-   * not including the API service name. For example:
-   *
-   *     "projects/PROJECT_ID/zones/us-central1-a/instances"
-   * "projects/PROJECT_ID/datasets/DATASET_ID"
+   * not including the API service name. For example: "projects/PROJECT_ID/zones/us-
+   * central1-a/instances" "projects/PROJECT_ID/datasets/DATASET_ID"
    * @param resourceName resourceName or {@code null} for none
    */
   public AuditLog setResourceName(java.lang.String resourceName) {

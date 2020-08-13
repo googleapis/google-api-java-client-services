@@ -32,11 +32,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   /**
    * Identity of the consumer who is using the service. This field should be filled in for the
    * operations initiated by a consumer, but not for service-initiated operations that are not
-   * related to a specific consumer.
-   *
-   * - This can be in one of the following formats:     - project:PROJECT_ID,     -
-   * project`_`number:PROJECT_NUMBER,     - projects/PROJECT_ID or PROJECT_NUMBER,     -
-   * folders/FOLDER_NUMBER,     - organizations/ORGANIZATION_NUMBER,     - api`_`key:API_KEY.
+   * related to a specific consumer. - This can be in one of the following formats: -
+   * project:PROJECT_ID, - project`_`number:PROJECT_NUMBER, - projects/PROJECT_ID or PROJECT_NUMBER,
+   * - folders/FOLDER_NUMBER, - organizations/ORGANIZATION_NUMBER, - api`_`key:API_KEY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,17 +63,15 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String importance;
 
   /**
-   * Labels describing the operation. Only the following labels are allowed:
-   *
-   * - Labels describing monitored resources as defined in   the service configuration. - Default
-   * labels of metric values. When specified, labels defined in the   metric value override these
-   * default. - The following labels defined by Google Cloud Platform:     -
-   * `cloud.googleapis.com/location` describing the location where the        operation happened,
-   * - `servicecontrol.googleapis.com/user_agent` describing the user agent        of the API
-   * request,     - `servicecontrol.googleapis.com/service_agent` describing the service        used
-   * to handle the API request (e.g. ESP),     - `servicecontrol.googleapis.com/platform` describing
-   * the platform        where the API is served, such as App Engine, Compute Engine, or
-   * Kubernetes Engine.
+   * Labels describing the operation. Only the following labels are allowed: - Labels describing
+   * monitored resources as defined in the service configuration. - Default labels of metric values.
+   * When specified, labels defined in the metric value override these default. - The following
+   * labels defined by Google Cloud Platform: - `cloud.googleapis.com/location` describing the
+   * location where the operation happened, - `servicecontrol.googleapis.com/user_agent` describing
+   * the user agent of the API request, - `servicecontrol.googleapis.com/service_agent` describing
+   * the service used to handle the API request (e.g. ESP), -
+   * `servicecontrol.googleapis.com/platform` describing the platform where the API is served, such
+   * as App Engine, Compute Engine, or Kubernetes Engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,12 +93,10 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   /**
    * Represents information about this operation. Each MetricValueSet corresponds to a metric
    * defined in the service configuration. The data type used in the MetricValueSet must agree with
-   * the data type specified in the metric definition.
-   *
-   * Within a single operation, it is not allowed to have more than one MetricValue instances that
-   * have the same metric names and identical label value combinations. If a request has such
-   * duplicated MetricValue instances, the entire request is rejected with an invalid argument
-   * error.
+   * the data type specified in the metric definition. Within a single operation, it is not allowed
+   * to have more than one MetricValue instances that have the same metric names and identical label
+   * value combinations. If a request has such duplicated MetricValue instances, the entire request
+   * is rejected with an invalid argument error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,11 +111,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   /**
    * Identity of the operation. This must be unique within the scope of the service that generated
    * the operation. If the service calls Check() and Report() on the same operation, the two calls
-   * should carry the same id.
-   *
-   * UUID version 4 is recommended, though not required. In scenarios where an operation is computed
-   * from existing information and an idempotent id is desirable for deduplication purpose, UUID
-   * version 5 is recommended. See RFC 4122 for details.
+   * should carry the same id. UUID version 4 is recommended, though not required. In scenarios
+   * where an operation is computed from existing information and an idempotent id is desirable for
+   * deduplication purpose, UUID version 5 is recommended. See RFC 4122 for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,11 +168,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   /**
    * Identity of the consumer who is using the service. This field should be filled in for the
    * operations initiated by a consumer, but not for service-initiated operations that are not
-   * related to a specific consumer.
-   *
-   * - This can be in one of the following formats:     - project:PROJECT_ID,     -
-   * project`_`number:PROJECT_NUMBER,     - projects/PROJECT_ID or PROJECT_NUMBER,     -
-   * folders/FOLDER_NUMBER,     - organizations/ORGANIZATION_NUMBER,     - api`_`key:API_KEY.
+   * related to a specific consumer. - This can be in one of the following formats: -
+   * project:PROJECT_ID, - project`_`number:PROJECT_NUMBER, - projects/PROJECT_ID or PROJECT_NUMBER,
+   * - folders/FOLDER_NUMBER, - organizations/ORGANIZATION_NUMBER, - api`_`key:API_KEY.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerId() {
@@ -190,11 +180,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   /**
    * Identity of the consumer who is using the service. This field should be filled in for the
    * operations initiated by a consumer, but not for service-initiated operations that are not
-   * related to a specific consumer.
-   *
-   * - This can be in one of the following formats:     - project:PROJECT_ID,     -
-   * project`_`number:PROJECT_NUMBER,     - projects/PROJECT_ID or PROJECT_NUMBER,     -
-   * folders/FOLDER_NUMBER,     - organizations/ORGANIZATION_NUMBER,     - api`_`key:API_KEY.
+   * related to a specific consumer. - This can be in one of the following formats: -
+   * project:PROJECT_ID, - project`_`number:PROJECT_NUMBER, - projects/PROJECT_ID or PROJECT_NUMBER,
+   * - folders/FOLDER_NUMBER, - organizations/ORGANIZATION_NUMBER, - api`_`key:API_KEY.
    * @param consumerId consumerId or {@code null} for none
    */
   public Operation setConsumerId(java.lang.String consumerId) {
@@ -256,17 +244,15 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Labels describing the operation. Only the following labels are allowed:
-   *
-   * - Labels describing monitored resources as defined in   the service configuration. - Default
-   * labels of metric values. When specified, labels defined in the   metric value override these
-   * default. - The following labels defined by Google Cloud Platform:     -
-   * `cloud.googleapis.com/location` describing the location where the        operation happened,
-   * - `servicecontrol.googleapis.com/user_agent` describing the user agent        of the API
-   * request,     - `servicecontrol.googleapis.com/service_agent` describing the service        used
-   * to handle the API request (e.g. ESP),     - `servicecontrol.googleapis.com/platform` describing
-   * the platform        where the API is served, such as App Engine, Compute Engine, or
-   * Kubernetes Engine.
+   * Labels describing the operation. Only the following labels are allowed: - Labels describing
+   * monitored resources as defined in the service configuration. - Default labels of metric values.
+   * When specified, labels defined in the metric value override these default. - The following
+   * labels defined by Google Cloud Platform: - `cloud.googleapis.com/location` describing the
+   * location where the operation happened, - `servicecontrol.googleapis.com/user_agent` describing
+   * the user agent of the API request, - `servicecontrol.googleapis.com/service_agent` describing
+   * the service used to handle the API request (e.g. ESP), -
+   * `servicecontrol.googleapis.com/platform` describing the platform where the API is served, such
+   * as App Engine, Compute Engine, or Kubernetes Engine.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -274,17 +260,15 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Labels describing the operation. Only the following labels are allowed:
-   *
-   * - Labels describing monitored resources as defined in   the service configuration. - Default
-   * labels of metric values. When specified, labels defined in the   metric value override these
-   * default. - The following labels defined by Google Cloud Platform:     -
-   * `cloud.googleapis.com/location` describing the location where the        operation happened,
-   * - `servicecontrol.googleapis.com/user_agent` describing the user agent        of the API
-   * request,     - `servicecontrol.googleapis.com/service_agent` describing the service        used
-   * to handle the API request (e.g. ESP),     - `servicecontrol.googleapis.com/platform` describing
-   * the platform        where the API is served, such as App Engine, Compute Engine, or
-   * Kubernetes Engine.
+   * Labels describing the operation. Only the following labels are allowed: - Labels describing
+   * monitored resources as defined in the service configuration. - Default labels of metric values.
+   * When specified, labels defined in the metric value override these default. - The following
+   * labels defined by Google Cloud Platform: - `cloud.googleapis.com/location` describing the
+   * location where the operation happened, - `servicecontrol.googleapis.com/user_agent` describing
+   * the user agent of the API request, - `servicecontrol.googleapis.com/service_agent` describing
+   * the service used to handle the API request (e.g. ESP), -
+   * `servicecontrol.googleapis.com/platform` describing the platform where the API is served, such
+   * as App Engine, Compute Engine, or Kubernetes Engine.
    * @param labels labels or {@code null} for none
    */
   public Operation setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -312,12 +296,10 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   /**
    * Represents information about this operation. Each MetricValueSet corresponds to a metric
    * defined in the service configuration. The data type used in the MetricValueSet must agree with
-   * the data type specified in the metric definition.
-   *
-   * Within a single operation, it is not allowed to have more than one MetricValue instances that
-   * have the same metric names and identical label value combinations. If a request has such
-   * duplicated MetricValue instances, the entire request is rejected with an invalid argument
-   * error.
+   * the data type specified in the metric definition. Within a single operation, it is not allowed
+   * to have more than one MetricValue instances that have the same metric names and identical label
+   * value combinations. If a request has such duplicated MetricValue instances, the entire request
+   * is rejected with an invalid argument error.
    * @return value or {@code null} for none
    */
   public java.util.List<MetricValueSet> getMetricValueSets() {
@@ -327,12 +309,10 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   /**
    * Represents information about this operation. Each MetricValueSet corresponds to a metric
    * defined in the service configuration. The data type used in the MetricValueSet must agree with
-   * the data type specified in the metric definition.
-   *
-   * Within a single operation, it is not allowed to have more than one MetricValue instances that
-   * have the same metric names and identical label value combinations. If a request has such
-   * duplicated MetricValue instances, the entire request is rejected with an invalid argument
-   * error.
+   * the data type specified in the metric definition. Within a single operation, it is not allowed
+   * to have more than one MetricValue instances that have the same metric names and identical label
+   * value combinations. If a request has such duplicated MetricValue instances, the entire request
+   * is rejected with an invalid argument error.
    * @param metricValueSets metricValueSets or {@code null} for none
    */
   public Operation setMetricValueSets(java.util.List<MetricValueSet> metricValueSets) {
@@ -343,11 +323,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   /**
    * Identity of the operation. This must be unique within the scope of the service that generated
    * the operation. If the service calls Check() and Report() on the same operation, the two calls
-   * should carry the same id.
-   *
-   * UUID version 4 is recommended, though not required. In scenarios where an operation is computed
-   * from existing information and an idempotent id is desirable for deduplication purpose, UUID
-   * version 5 is recommended. See RFC 4122 for details.
+   * should carry the same id. UUID version 4 is recommended, though not required. In scenarios
+   * where an operation is computed from existing information and an idempotent id is desirable for
+   * deduplication purpose, UUID version 5 is recommended. See RFC 4122 for details.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationId() {
@@ -357,11 +335,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   /**
    * Identity of the operation. This must be unique within the scope of the service that generated
    * the operation. If the service calls Check() and Report() on the same operation, the two calls
-   * should carry the same id.
-   *
-   * UUID version 4 is recommended, though not required. In scenarios where an operation is computed
-   * from existing information and an idempotent id is desirable for deduplication purpose, UUID
-   * version 5 is recommended. See RFC 4122 for details.
+   * should carry the same id. UUID version 4 is recommended, though not required. In scenarios
+   * where an operation is computed from existing information and an idempotent id is desirable for
+   * deduplication purpose, UUID version 5 is recommended. See RFC 4122 for details.
    * @param operationId operationId or {@code null} for none
    */
   public Operation setOperationId(java.lang.String operationId) {

@@ -30,7 +30,7 @@ package com.google.api.services.servicecontrol.v1.model;
 public final class ExponentialBuckets extends com.google.api.client.json.GenericJson {
 
   /**
-   * The i'th exponential bucket covers the interval   [scale * growth_factor^(i-1), scale *
+   * The i'th exponential bucket covers the interval [scale * growth_factor^(i-1), scale *
    * growth_factor^i) where i ranges from 1 to num_finite_buckets inclusive. Must be larger than
    * 1.0.
    * The value may be {@code null}.
@@ -47,7 +47,7 @@ public final class ExponentialBuckets extends com.google.api.client.json.Generic
   private java.lang.Integer numFiniteBuckets;
 
   /**
-   * The i'th exponential bucket covers the interval   [scale * growth_factor^(i-1), scale *
+   * The i'th exponential bucket covers the interval [scale * growth_factor^(i-1), scale *
    * growth_factor^i) where i ranges from 1 to num_finite_buckets inclusive. Must be > 0.
    * The value may be {@code null}.
    */
@@ -55,7 +55,7 @@ public final class ExponentialBuckets extends com.google.api.client.json.Generic
   private java.lang.Double scale;
 
   /**
-   * The i'th exponential bucket covers the interval   [scale * growth_factor^(i-1), scale *
+   * The i'th exponential bucket covers the interval [scale * growth_factor^(i-1), scale *
    * growth_factor^i) where i ranges from 1 to num_finite_buckets inclusive. Must be larger than
    * 1.0.
    * @return value or {@code null} for none
@@ -65,7 +65,7 @@ public final class ExponentialBuckets extends com.google.api.client.json.Generic
   }
 
   /**
-   * The i'th exponential bucket covers the interval   [scale * growth_factor^(i-1), scale *
+   * The i'th exponential bucket covers the interval [scale * growth_factor^(i-1), scale *
    * growth_factor^i) where i ranges from 1 to num_finite_buckets inclusive. Must be larger than
    * 1.0.
    * @param growthFactor growthFactor or {@code null} for none
@@ -95,7 +95,7 @@ public final class ExponentialBuckets extends com.google.api.client.json.Generic
   }
 
   /**
-   * The i'th exponential bucket covers the interval   [scale * growth_factor^(i-1), scale *
+   * The i'th exponential bucket covers the interval [scale * growth_factor^(i-1), scale *
    * growth_factor^i) where i ranges from 1 to num_finite_buckets inclusive. Must be > 0.
    * @return value or {@code null} for none
    */
@@ -104,7 +104,7 @@ public final class ExponentialBuckets extends com.google.api.client.json.Generic
   }
 
   /**
-   * The i'th exponential bucket covers the interval   [scale * growth_factor^(i-1), scale *
+   * The i'th exponential bucket covers the interval [scale * growth_factor^(i-1), scale *
    * growth_factor^i) where i ranges from 1 to num_finite_buckets inclusive. Must be > 0.
    * @param scale scale or {@code null} for none
    */

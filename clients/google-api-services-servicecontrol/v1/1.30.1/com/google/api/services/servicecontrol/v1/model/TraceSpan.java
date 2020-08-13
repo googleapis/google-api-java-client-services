@@ -20,7 +20,7 @@ package com.google.api.services.servicecontrol.v1.model;
  * A span represents a single operation within a trace. Spans can be nested to form a trace tree.
  * Often, a trace contains a root span that describes the end-to-end latency, and one or more
  * subspans for its sub-operations. A trace can also contain multiple root spans, or none at all.
- * Spans do not need to be contiguousthere may be gaps or overlaps between spans in a trace.
+ * Spans do not need to be contiguous—there may be gaps or overlaps between spans in a trace.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Control API. For a detailed explanation see:
@@ -69,12 +69,10 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the span in the following format:
-   *
-   *     projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace
-   * within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
-   *
-   * [SPAN_ID] is a unique identifier for a span within a trace; it is a 16-character hexadecimal
-   * encoding of an 8-byte array.
+   * projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace within
+   * a project; it is a 32-character hexadecimal encoding of a 16-byte array. [SPAN_ID] is a unique
+   * identifier for a span within a trace; it is a 16-character hexadecimal encoding of an 8-byte
+   * array.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,12 +211,10 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the span in the following format:
-   *
-   *     projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace
-   * within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
-   *
-   * [SPAN_ID] is a unique identifier for a span within a trace; it is a 16-character hexadecimal
-   * encoding of an 8-byte array.
+   * projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace within
+   * a project; it is a 32-character hexadecimal encoding of a 16-byte array. [SPAN_ID] is a unique
+   * identifier for a span within a trace; it is a 16-character hexadecimal encoding of an 8-byte
+   * array.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -227,12 +223,10 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the span in the following format:
-   *
-   *     projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace
-   * within a project; it is a 32-character hexadecimal encoding of a 16-byte array.
-   *
-   * [SPAN_ID] is a unique identifier for a span within a trace; it is a 16-character hexadecimal
-   * encoding of an 8-byte array.
+   * projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/SPAN_ID is a unique identifier for a trace within
+   * a project; it is a 32-character hexadecimal encoding of a 16-byte array. [SPAN_ID] is a unique
+   * identifier for a span within a trace; it is a 16-character hexadecimal encoding of an 8-byte
+   * array.
    * @param name name or {@code null} for none
    */
   public TraceSpan setName(java.lang.String name) {

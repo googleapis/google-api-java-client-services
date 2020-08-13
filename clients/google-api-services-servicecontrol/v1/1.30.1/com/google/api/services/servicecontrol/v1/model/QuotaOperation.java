@@ -30,9 +30,8 @@ package com.google.api.services.servicecontrol.v1.model;
 public final class QuotaOperation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identity of the consumer for whom this quota operation is being performed.
-   *
-   * This can be in one of the following formats:   project:,   project_number:,   api_key:.
+   * Identity of the consumer for whom this quota operation is being performed. This can be in one
+   * of the following formats: project:, project_number:, api_key:.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,13 +47,10 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
   /**
    * Fully qualified name of the API method for which this quota operation is requested. This name
    * is used for matching quota rules or metric rules and billing status rules defined in service
-   * configuration.
-   *
-   * This field should not be set if any of the following is true: (1) the quota operation is
-   * performed on non-API resources. (2) quota_metrics is set because the caller is doing quota
-   * override.
-   *
-   * Example of an RPC method name:     google.example.library.v1.LibraryService.CreateShelf
+   * configuration. This field should not be set if any of the following is true: (1) the quota
+   * operation is performed on non-API resources. (2) quota_metrics is set because the caller is
+   * doing quota override. Example of an RPC method name:
+   * google.example.library.v1.LibraryService.CreateShelf
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,12 +58,11 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
 
   /**
    * Identity of the operation. This is expected to be unique within the scope of the service that
-   * generated the operation, and guarantees idempotency in case of retries.
-   *
-   * In order to ensure best performance and latency in the Quota backends, operation_ids are
-   * optimally associated with time, so that related operations can be accessed fast in storage. For
-   * this reason, the recommended token for services that intend to operate at a high QPS is Unix
-   * time in nanos + UUID
+   * generated the operation, and guarantees idempotency in case of retries. In order to ensure best
+   * performance and latency in the Quota backends, operation_ids are optimally associated with
+   * time, so that related operations can be accessed fast in storage. For this reason, the
+   * recommended token for services that intend to operate at a high QPS is Unix time in nanos +
+   * UUID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,14 +71,10 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
   /**
    * Represents information about this operation. Each MetricValueSet corresponds to a metric
    * defined in the service configuration. The data type used in the MetricValueSet must agree with
-   * the data type specified in the metric definition.
-   *
-   * Within a single operation, it is not allowed to have more than one MetricValue instances that
-   * have the same metric names and identical label value combinations. If a request has such
-   * duplicated MetricValue instances, the entire request is rejected with an invalid argument
-   * error.
-   *
-   * This field is mutually exclusive with method_name.
+   * the data type specified in the metric definition. Within a single operation, it is not allowed
+   * to have more than one MetricValue instances that have the same metric names and identical label
+   * value combinations. If a request has such duplicated MetricValue instances, the entire request
+   * is rejected with an invalid argument error. This field is mutually exclusive with method_name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,9 +94,8 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
   private java.lang.String quotaMode;
 
   /**
-   * Identity of the consumer for whom this quota operation is being performed.
-   *
-   * This can be in one of the following formats:   project:,   project_number:,   api_key:.
+   * Identity of the consumer for whom this quota operation is being performed. This can be in one
+   * of the following formats: project:, project_number:, api_key:.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerId() {
@@ -113,9 +103,8 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Identity of the consumer for whom this quota operation is being performed.
-   *
-   * This can be in one of the following formats:   project:,   project_number:,   api_key:.
+   * Identity of the consumer for whom this quota operation is being performed. This can be in one
+   * of the following formats: project:, project_number:, api_key:.
    * @param consumerId consumerId or {@code null} for none
    */
   public QuotaOperation setConsumerId(java.lang.String consumerId) {
@@ -143,13 +132,10 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
   /**
    * Fully qualified name of the API method for which this quota operation is requested. This name
    * is used for matching quota rules or metric rules and billing status rules defined in service
-   * configuration.
-   *
-   * This field should not be set if any of the following is true: (1) the quota operation is
-   * performed on non-API resources. (2) quota_metrics is set because the caller is doing quota
-   * override.
-   *
-   * Example of an RPC method name:     google.example.library.v1.LibraryService.CreateShelf
+   * configuration. This field should not be set if any of the following is true: (1) the quota
+   * operation is performed on non-API resources. (2) quota_metrics is set because the caller is
+   * doing quota override. Example of an RPC method name:
+   * google.example.library.v1.LibraryService.CreateShelf
    * @return value or {@code null} for none
    */
   public java.lang.String getMethodName() {
@@ -159,13 +145,10 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
   /**
    * Fully qualified name of the API method for which this quota operation is requested. This name
    * is used for matching quota rules or metric rules and billing status rules defined in service
-   * configuration.
-   *
-   * This field should not be set if any of the following is true: (1) the quota operation is
-   * performed on non-API resources. (2) quota_metrics is set because the caller is doing quota
-   * override.
-   *
-   * Example of an RPC method name:     google.example.library.v1.LibraryService.CreateShelf
+   * configuration. This field should not be set if any of the following is true: (1) the quota
+   * operation is performed on non-API resources. (2) quota_metrics is set because the caller is
+   * doing quota override. Example of an RPC method name:
+   * google.example.library.v1.LibraryService.CreateShelf
    * @param methodName methodName or {@code null} for none
    */
   public QuotaOperation setMethodName(java.lang.String methodName) {
@@ -175,12 +158,11 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
 
   /**
    * Identity of the operation. This is expected to be unique within the scope of the service that
-   * generated the operation, and guarantees idempotency in case of retries.
-   *
-   * In order to ensure best performance and latency in the Quota backends, operation_ids are
-   * optimally associated with time, so that related operations can be accessed fast in storage. For
-   * this reason, the recommended token for services that intend to operate at a high QPS is Unix
-   * time in nanos + UUID
+   * generated the operation, and guarantees idempotency in case of retries. In order to ensure best
+   * performance and latency in the Quota backends, operation_ids are optimally associated with
+   * time, so that related operations can be accessed fast in storage. For this reason, the
+   * recommended token for services that intend to operate at a high QPS is Unix time in nanos +
+   * UUID
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationId() {
@@ -189,12 +171,11 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
 
   /**
    * Identity of the operation. This is expected to be unique within the scope of the service that
-   * generated the operation, and guarantees idempotency in case of retries.
-   *
-   * In order to ensure best performance and latency in the Quota backends, operation_ids are
-   * optimally associated with time, so that related operations can be accessed fast in storage. For
-   * this reason, the recommended token for services that intend to operate at a high QPS is Unix
-   * time in nanos + UUID
+   * generated the operation, and guarantees idempotency in case of retries. In order to ensure best
+   * performance and latency in the Quota backends, operation_ids are optimally associated with
+   * time, so that related operations can be accessed fast in storage. For this reason, the
+   * recommended token for services that intend to operate at a high QPS is Unix time in nanos +
+   * UUID
    * @param operationId operationId or {@code null} for none
    */
   public QuotaOperation setOperationId(java.lang.String operationId) {
@@ -205,14 +186,10 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
   /**
    * Represents information about this operation. Each MetricValueSet corresponds to a metric
    * defined in the service configuration. The data type used in the MetricValueSet must agree with
-   * the data type specified in the metric definition.
-   *
-   * Within a single operation, it is not allowed to have more than one MetricValue instances that
-   * have the same metric names and identical label value combinations. If a request has such
-   * duplicated MetricValue instances, the entire request is rejected with an invalid argument
-   * error.
-   *
-   * This field is mutually exclusive with method_name.
+   * the data type specified in the metric definition. Within a single operation, it is not allowed
+   * to have more than one MetricValue instances that have the same metric names and identical label
+   * value combinations. If a request has such duplicated MetricValue instances, the entire request
+   * is rejected with an invalid argument error. This field is mutually exclusive with method_name.
    * @return value or {@code null} for none
    */
   public java.util.List<MetricValueSet> getQuotaMetrics() {
@@ -222,14 +199,10 @@ public final class QuotaOperation extends com.google.api.client.json.GenericJson
   /**
    * Represents information about this operation. Each MetricValueSet corresponds to a metric
    * defined in the service configuration. The data type used in the MetricValueSet must agree with
-   * the data type specified in the metric definition.
-   *
-   * Within a single operation, it is not allowed to have more than one MetricValue instances that
-   * have the same metric names and identical label value combinations. If a request has such
-   * duplicated MetricValue instances, the entire request is rejected with an invalid argument
-   * error.
-   *
-   * This field is mutually exclusive with method_name.
+   * the data type specified in the metric definition. Within a single operation, it is not allowed
+   * to have more than one MetricValue instances that have the same metric names and identical label
+   * value combinations. If a request has such duplicated MetricValue instances, the entire request
+   * is rejected with an invalid argument error. This field is mutually exclusive with method_name.
    * @param quotaMetrics quotaMetrics or {@code null} for none
    */
   public QuotaOperation setQuotaMetrics(java.util.List<MetricValueSet> quotaMetrics) {

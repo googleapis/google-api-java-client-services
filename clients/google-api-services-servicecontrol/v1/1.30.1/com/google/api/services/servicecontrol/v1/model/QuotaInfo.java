@@ -40,11 +40,10 @@ public final class QuotaInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Map of quota group name to the actual number of tokens consumed. If the quota check was not
-   * successful, then this will not be populated due to no quota consumption.
-   *
-   * We are not merging this field with 'quota_metrics' field because of the complexity of scaling
-   * in Chemist client code base. For simplicity, we will keep this field for Castor (that scales
-   * quota usage) and 'quota_metrics' for SuperQuota (that doesn't scale quota usage).
+   * successful, then this will not be populated due to no quota consumption. We are not merging
+   * this field with 'quota_metrics' field because of the complexity of scaling in Chemist client
+   * code base. For simplicity, we will keep this field for Castor (that scales quota usage) and
+   * 'quota_metrics' for SuperQuota (that doesn't scale quota usage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,17 +51,13 @@ public final class QuotaInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Quota metrics to indicate the usage. Depending on the check request, one or more of the
-   * following metrics will be included:
-   *
-   * 1. For rate quota, per quota group or per quota metric incremental usage will be specified
-   * using the following delta metric:
-   * "serviceruntime.googleapis.com/api/consumer/quota_used_count"
-   *
-   * 2. For allocation quota, per quota metric total usage will be specified using the following
-   * gauge metric:   "serviceruntime.googleapis.com/allocation/consumer/quota_used_count"
-   *
-   * 3. For both rate quota and allocation quota, the quota limit reached condition will be
-   * specified using the following boolean metric:   "serviceruntime.googleapis.com/quota/exceeded"
+   * following metrics will be included: 1. For rate quota, per quota group or per quota metric
+   * incremental usage will be specified using the following delta metric:
+   * "serviceruntime.googleapis.com/api/consumer/quota_used_count" 2. For allocation quota, per
+   * quota metric total usage will be specified using the following gauge metric:
+   * "serviceruntime.googleapis.com/allocation/consumer/quota_used_count" 3. For both rate quota and
+   * allocation quota, the quota limit reached condition will be specified using the following
+   * boolean metric: "serviceruntime.googleapis.com/quota/exceeded"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,11 +92,10 @@ public final class QuotaInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Map of quota group name to the actual number of tokens consumed. If the quota check was not
-   * successful, then this will not be populated due to no quota consumption.
-   *
-   * We are not merging this field with 'quota_metrics' field because of the complexity of scaling
-   * in Chemist client code base. For simplicity, we will keep this field for Castor (that scales
-   * quota usage) and 'quota_metrics' for SuperQuota (that doesn't scale quota usage).
+   * successful, then this will not be populated due to no quota consumption. We are not merging
+   * this field with 'quota_metrics' field because of the complexity of scaling in Chemist client
+   * code base. For simplicity, we will keep this field for Castor (that scales quota usage) and
+   * 'quota_metrics' for SuperQuota (that doesn't scale quota usage).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Integer> getQuotaConsumed() {
@@ -110,11 +104,10 @@ public final class QuotaInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Map of quota group name to the actual number of tokens consumed. If the quota check was not
-   * successful, then this will not be populated due to no quota consumption.
-   *
-   * We are not merging this field with 'quota_metrics' field because of the complexity of scaling
-   * in Chemist client code base. For simplicity, we will keep this field for Castor (that scales
-   * quota usage) and 'quota_metrics' for SuperQuota (that doesn't scale quota usage).
+   * successful, then this will not be populated due to no quota consumption. We are not merging
+   * this field with 'quota_metrics' field because of the complexity of scaling in Chemist client
+   * code base. For simplicity, we will keep this field for Castor (that scales quota usage) and
+   * 'quota_metrics' for SuperQuota (that doesn't scale quota usage).
    * @param quotaConsumed quotaConsumed or {@code null} for none
    */
   public QuotaInfo setQuotaConsumed(java.util.Map<String, java.lang.Integer> quotaConsumed) {
@@ -124,17 +117,13 @@ public final class QuotaInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Quota metrics to indicate the usage. Depending on the check request, one or more of the
-   * following metrics will be included:
-   *
-   * 1. For rate quota, per quota group or per quota metric incremental usage will be specified
-   * using the following delta metric:
-   * "serviceruntime.googleapis.com/api/consumer/quota_used_count"
-   *
-   * 2. For allocation quota, per quota metric total usage will be specified using the following
-   * gauge metric:   "serviceruntime.googleapis.com/allocation/consumer/quota_used_count"
-   *
-   * 3. For both rate quota and allocation quota, the quota limit reached condition will be
-   * specified using the following boolean metric:   "serviceruntime.googleapis.com/quota/exceeded"
+   * following metrics will be included: 1. For rate quota, per quota group or per quota metric
+   * incremental usage will be specified using the following delta metric:
+   * "serviceruntime.googleapis.com/api/consumer/quota_used_count" 2. For allocation quota, per
+   * quota metric total usage will be specified using the following gauge metric:
+   * "serviceruntime.googleapis.com/allocation/consumer/quota_used_count" 3. For both rate quota and
+   * allocation quota, the quota limit reached condition will be specified using the following
+   * boolean metric: "serviceruntime.googleapis.com/quota/exceeded"
    * @return value or {@code null} for none
    */
   public java.util.List<MetricValueSet> getQuotaMetrics() {
@@ -143,17 +132,13 @@ public final class QuotaInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Quota metrics to indicate the usage. Depending on the check request, one or more of the
-   * following metrics will be included:
-   *
-   * 1. For rate quota, per quota group or per quota metric incremental usage will be specified
-   * using the following delta metric:
-   * "serviceruntime.googleapis.com/api/consumer/quota_used_count"
-   *
-   * 2. For allocation quota, per quota metric total usage will be specified using the following
-   * gauge metric:   "serviceruntime.googleapis.com/allocation/consumer/quota_used_count"
-   *
-   * 3. For both rate quota and allocation quota, the quota limit reached condition will be
-   * specified using the following boolean metric:   "serviceruntime.googleapis.com/quota/exceeded"
+   * following metrics will be included: 1. For rate quota, per quota group or per quota metric
+   * incremental usage will be specified using the following delta metric:
+   * "serviceruntime.googleapis.com/api/consumer/quota_used_count" 2. For allocation quota, per
+   * quota metric total usage will be specified using the following gauge metric:
+   * "serviceruntime.googleapis.com/allocation/consumer/quota_used_count" 3. For both rate quota and
+   * allocation quota, the quota limit reached condition will be specified using the following
+   * boolean metric: "serviceruntime.googleapis.com/quota/exceeded"
    * @param quotaMetrics quotaMetrics or {@code null} for none
    */
   public QuotaInfo setQuotaMetrics(java.util.List<MetricValueSet> quotaMetrics) {

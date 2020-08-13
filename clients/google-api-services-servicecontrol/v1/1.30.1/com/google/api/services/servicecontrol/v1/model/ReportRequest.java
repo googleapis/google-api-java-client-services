@@ -30,15 +30,11 @@ package com.google.api.services.servicecontrol.v1.model;
 public final class ReportRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Operations to be reported.
-   *
-   * Typically the service should report one operation per request. Putting multiple operations into
-   * a single request is allowed, but should be used only when multiple operations are natually
-   * available at the time of the report.
-   *
-   * There is no limit on the number of operations in the same ReportRequest, however the
-   * ReportRequest size should be no larger than 1MB. See ReportResponse.report_errors for partial
-   * failure behavior.
+   * Operations to be reported. Typically the service should report one operation per request.
+   * Putting multiple operations into a single request is allowed, but should be used only when
+   * multiple operations are natually available at the time of the report. There is no limit on the
+   * number of operations in the same ReportRequest, however the ReportRequest size should be no
+   * larger than 1MB. See ReportResponse.report_errors for partial failure behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,24 +47,19 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies which version of service config should be used to process the request.
-   *
-   * If unspecified or no matching version can be found, the latest one will be used.
+   * Specifies which version of service config should be used to process the request. If unspecified
+   * or no matching version can be found, the latest one will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceConfigId;
 
   /**
-   * Operations to be reported.
-   *
-   * Typically the service should report one operation per request. Putting multiple operations into
-   * a single request is allowed, but should be used only when multiple operations are natually
-   * available at the time of the report.
-   *
-   * There is no limit on the number of operations in the same ReportRequest, however the
-   * ReportRequest size should be no larger than 1MB. See ReportResponse.report_errors for partial
-   * failure behavior.
+   * Operations to be reported. Typically the service should report one operation per request.
+   * Putting multiple operations into a single request is allowed, but should be used only when
+   * multiple operations are natually available at the time of the report. There is no limit on the
+   * number of operations in the same ReportRequest, however the ReportRequest size should be no
+   * larger than 1MB. See ReportResponse.report_errors for partial failure behavior.
    * @return value or {@code null} for none
    */
   public java.util.List<Operation> getOperations() {
@@ -76,15 +67,11 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Operations to be reported.
-   *
-   * Typically the service should report one operation per request. Putting multiple operations into
-   * a single request is allowed, but should be used only when multiple operations are natually
-   * available at the time of the report.
-   *
-   * There is no limit on the number of operations in the same ReportRequest, however the
-   * ReportRequest size should be no larger than 1MB. See ReportResponse.report_errors for partial
-   * failure behavior.
+   * Operations to be reported. Typically the service should report one operation per request.
+   * Putting multiple operations into a single request is allowed, but should be used only when
+   * multiple operations are natually available at the time of the report. There is no limit on the
+   * number of operations in the same ReportRequest, however the ReportRequest size should be no
+   * larger than 1MB. See ReportResponse.report_errors for partial failure behavior.
    * @param operations operations or {@code null} for none
    */
   public ReportRequest setOperations(java.util.List<Operation> operations) {
@@ -93,9 +80,8 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies which version of service config should be used to process the request.
-   *
-   * If unspecified or no matching version can be found, the latest one will be used.
+   * Specifies which version of service config should be used to process the request. If unspecified
+   * or no matching version can be found, the latest one will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceConfigId() {
@@ -103,9 +89,8 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies which version of service config should be used to process the request.
-   *
-   * If unspecified or no matching version can be found, the latest one will be used.
+   * Specifies which version of service config should be used to process the request. If unspecified
+   * or no matching version can be found, the latest one will be used.
    * @param serviceConfigId serviceConfigId or {@code null} for none
    */
   public ReportRequest setServiceConfigId(java.lang.String serviceConfigId) {

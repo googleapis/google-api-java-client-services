@@ -38,16 +38,16 @@ public final class LinearBuckets extends com.google.api.client.json.GenericJson 
   private java.lang.Integer numFiniteBuckets;
 
   /**
-   * The i'th linear bucket covers the interval   [offset + (i-1) * width, offset + i * width) where
-   * i ranges from 1 to num_finite_buckets, inclusive.
+   * The i'th linear bucket covers the interval [offset + (i-1) * width, offset + i * width) where i
+   * ranges from 1 to num_finite_buckets, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double offset;
 
   /**
-   * The i'th linear bucket covers the interval   [offset + (i-1) * width, offset + i * width) where
-   * i ranges from 1 to num_finite_buckets, inclusive. Must be strictly positive.
+   * The i'th linear bucket covers the interval [offset + (i-1) * width, offset + i * width) where i
+   * ranges from 1 to num_finite_buckets, inclusive. Must be strictly positive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +73,8 @@ public final class LinearBuckets extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The i'th linear bucket covers the interval   [offset + (i-1) * width, offset + i * width) where
-   * i ranges from 1 to num_finite_buckets, inclusive.
+   * The i'th linear bucket covers the interval [offset + (i-1) * width, offset + i * width) where i
+   * ranges from 1 to num_finite_buckets, inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Double getOffset() {
@@ -82,8 +82,8 @@ public final class LinearBuckets extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The i'th linear bucket covers the interval   [offset + (i-1) * width, offset + i * width) where
-   * i ranges from 1 to num_finite_buckets, inclusive.
+   * The i'th linear bucket covers the interval [offset + (i-1) * width, offset + i * width) where i
+   * ranges from 1 to num_finite_buckets, inclusive.
    * @param offset offset or {@code null} for none
    */
   public LinearBuckets setOffset(java.lang.Double offset) {
@@ -92,8 +92,8 @@ public final class LinearBuckets extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The i'th linear bucket covers the interval   [offset + (i-1) * width, offset + i * width) where
-   * i ranges from 1 to num_finite_buckets, inclusive. Must be strictly positive.
+   * The i'th linear bucket covers the interval [offset + (i-1) * width, offset + i * width) where i
+   * ranges from 1 to num_finite_buckets, inclusive. Must be strictly positive.
    * @return value or {@code null} for none
    */
   public java.lang.Double getWidth() {
@@ -101,8 +101,8 @@ public final class LinearBuckets extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The i'th linear bucket covers the interval   [offset + (i-1) * width, offset + i * width) where
-   * i ranges from 1 to num_finite_buckets, inclusive. Must be strictly positive.
+   * The i'th linear bucket covers the interval [offset + (i-1) * width, offset + i * width) where i
+   * ranges from 1 to num_finite_buckets, inclusive. Must be strictly positive.
    * @param width width or {@code null} for none
    */
   public LinearBuckets setWidth(java.lang.Double width) {

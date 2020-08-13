@@ -54,7 +54,7 @@ public final class LogEntryOperation extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. An arbitrary producer identifier. The combination of `id` and `producer` must be
-   * globally unique.  Examples for `producer`: `"MyDivision.MyBigCompany.com"`,
+   * globally unique. Examples for `producer`: `"MyDivision.MyBigCompany.com"`,
    * `"github.com/MyProject/MyApplication"`.
    * The value may be {@code null}.
    */
@@ -116,7 +116,7 @@ public final class LogEntryOperation extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. An arbitrary producer identifier. The combination of `id` and `producer` must be
-   * globally unique.  Examples for `producer`: `"MyDivision.MyBigCompany.com"`,
+   * globally unique. Examples for `producer`: `"MyDivision.MyBigCompany.com"`,
    * `"github.com/MyProject/MyApplication"`.
    * @return value or {@code null} for none
    */
@@ -126,7 +126,7 @@ public final class LogEntryOperation extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. An arbitrary producer identifier. The combination of `id` and `producer` must be
-   * globally unique.  Examples for `producer`: `"MyDivision.MyBigCompany.com"`,
+   * globally unique. Examples for `producer`: `"MyDivision.MyBigCompany.com"`,
    * `"github.com/MyProject/MyApplication"`.
    * @param producer producer or {@code null} for none
    */

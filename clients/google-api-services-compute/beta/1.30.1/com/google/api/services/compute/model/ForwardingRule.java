@@ -265,16 +265,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * specify a port_range. Use with a forwarding rule that points to a target proxy or a target
    * pool. Do not use with a forwarding rule that points to a backend service. This field is used
    * along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy,
-   * TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.
+   * TargetTcpProxy, TargetGrpcProxy, TargetVpnGateway, TargetPool, TargetInstance.
    *
    * Applicable only when IPProtocol is TCP, UDP, or SCTP, only packets addressed to ports in the
    * specified range will be forwarded to target. Forwarding rules with the same [IPAddress,
    * IPProtocol] pair must have disjoint port ranges.
    *
    * Some types of forwarding target have constraints on the acceptable ports:   - TargetHttpProxy:
-   * 80, 8080  - TargetHttpsProxy: 443  - TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700,
-   * 993, 995, 1688, 1883, 5222  - TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993,
-   * 995, 1688, 1883, 5222  - TargetVpnGateway: 500, 4500
+   * 80, 8080  - TargetHttpsProxy: 443  - TargetGrpcProxy: Any ports  - TargetTcpProxy: 25, 43, 110,
+   * 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222  - TargetSslProxy: 25, 43, 110, 143,
+   * 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222  - TargetVpnGateway: 500, 4500
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -355,7 +355,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * this target must live in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
    * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only
-   * targetHttpProxy is valid, not targetHttpsProxy.
+   * targetHttpProxy and targetGrpcProxy are valid, not targetHttpsProxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -933,16 +933,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * specify a port_range. Use with a forwarding rule that points to a target proxy or a target
    * pool. Do not use with a forwarding rule that points to a backend service. This field is used
    * along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy,
-   * TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.
+   * TargetTcpProxy, TargetGrpcProxy, TargetVpnGateway, TargetPool, TargetInstance.
    *
    * Applicable only when IPProtocol is TCP, UDP, or SCTP, only packets addressed to ports in the
    * specified range will be forwarded to target. Forwarding rules with the same [IPAddress,
    * IPProtocol] pair must have disjoint port ranges.
    *
    * Some types of forwarding target have constraints on the acceptable ports:   - TargetHttpProxy:
-   * 80, 8080  - TargetHttpsProxy: 443  - TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700,
-   * 993, 995, 1688, 1883, 5222  - TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993,
-   * 995, 1688, 1883, 5222  - TargetVpnGateway: 500, 4500
+   * 80, 8080  - TargetHttpsProxy: 443  - TargetGrpcProxy: Any ports  - TargetTcpProxy: 25, 43, 110,
+   * 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222  - TargetSslProxy: 25, 43, 110, 143,
+   * 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222  - TargetVpnGateway: 500, 4500
    * @return value or {@code null} for none
    */
   public java.lang.String getPortRange() {
@@ -954,16 +954,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * specify a port_range. Use with a forwarding rule that points to a target proxy or a target
    * pool. Do not use with a forwarding rule that points to a backend service. This field is used
    * along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy,
-   * TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance.
+   * TargetTcpProxy, TargetGrpcProxy, TargetVpnGateway, TargetPool, TargetInstance.
    *
    * Applicable only when IPProtocol is TCP, UDP, or SCTP, only packets addressed to ports in the
    * specified range will be forwarded to target. Forwarding rules with the same [IPAddress,
    * IPProtocol] pair must have disjoint port ranges.
    *
    * Some types of forwarding target have constraints on the acceptable ports:   - TargetHttpProxy:
-   * 80, 8080  - TargetHttpsProxy: 443  - TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700,
-   * 993, 995, 1688, 1883, 5222  - TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993,
-   * 995, 1688, 1883, 5222  - TargetVpnGateway: 500, 4500
+   * 80, 8080  - TargetHttpsProxy: 443  - TargetGrpcProxy: Any ports  - TargetTcpProxy: 25, 43, 110,
+   * 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222  - TargetSslProxy: 25, 43, 110, 143,
+   * 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222  - TargetVpnGateway: 500, 4500
    * @param portRange portRange or {@code null} for none
    */
   public ForwardingRule setPortRange(java.lang.String portRange) {
@@ -1134,7 +1134,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * this target must live in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
    * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only
-   * targetHttpProxy is valid, not targetHttpsProxy.
+   * targetHttpProxy and targetGrpcProxy are valid, not targetHttpsProxy.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -1146,7 +1146,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * this target must live in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
    * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only
-   * targetHttpProxy is valid, not targetHttpsProxy.
+   * targetHttpProxy and targetGrpcProxy are valid, not targetHttpsProxy.
    * @param target target or {@code null} for none
    */
   public ForwardingRule setTarget(java.lang.String target) {

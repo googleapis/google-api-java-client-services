@@ -42,7 +42,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
-   * rvice.backendServiceWeightAction[].headerAction
+   * rvice.backendServiceWeightAction[].headerAction  Note that headerAction is not supported for
+   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,6 +81,10 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The list of criteria for matching attributes of a request to this routeRule. This list has OR
+   * semantics: the request matches this routeRule when any of the matchRules are satisfied. However
+   * predicates within a given matchRule have AND semantics. All predicates within a matchRule must
+   * match for the request to match the rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +110,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * URL rewrites, header transformations, etc. prior to forwarding the request to the selected
    * backend. If  routeAction specifies any  weightedBackendServices, service must not be set.
    * Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one
-   * of urlRedirect, service or routeAction.weightedBackendService must be set.
+   * of urlRedirect, service or routeAction.weightedBackendService must be set. UrlMaps for external
+   * HTTP(S) load balancers support only the urlRewrite action within a routeRule's routeAction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +160,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
-   * rvice.backendServiceWeightAction[].headerAction
+   * rvice.backendServiceWeightAction[].headerAction  Note that headerAction is not supported for
+   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
    * @return value or {@code null} for none
    */
   public HttpHeaderAction getHeaderAction() {
@@ -165,7 +172,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
-   * rvice.backendServiceWeightAction[].headerAction
+   * rvice.backendServiceWeightAction[].headerAction  Note that headerAction is not supported for
+   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
    * @param headerAction headerAction or {@code null} for none
    */
   public HttpRouteRule setHeaderAction(HttpHeaderAction headerAction) {
@@ -218,6 +226,10 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The list of criteria for matching attributes of a request to this routeRule. This list has OR
+   * semantics: the request matches this routeRule when any of the matchRules are satisfied. However
+   * predicates within a given matchRule have AND semantics. All predicates within a matchRule must
+   * match for the request to match the rule.
    * @return value or {@code null} for none
    */
   public java.util.List<HttpRouteRuleMatch> getMatchRules() {
@@ -225,6 +237,10 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The list of criteria for matching attributes of a request to this routeRule. This list has OR
+   * semantics: the request matches this routeRule when any of the matchRules are satisfied. However
+   * predicates within a given matchRule have AND semantics. All predicates within a matchRule must
+   * match for the request to match the rule.
    * @param matchRules matchRules or {@code null} for none
    */
   public HttpRouteRule setMatchRules(java.util.List<HttpRouteRuleMatch> matchRules) {
@@ -270,7 +286,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * URL rewrites, header transformations, etc. prior to forwarding the request to the selected
    * backend. If  routeAction specifies any  weightedBackendServices, service must not be set.
    * Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one
-   * of urlRedirect, service or routeAction.weightedBackendService must be set.
+   * of urlRedirect, service or routeAction.weightedBackendService must be set. UrlMaps for external
+   * HTTP(S) load balancers support only the urlRewrite action within a routeRule's routeAction.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getRouteAction() {
@@ -282,7 +299,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * URL rewrites, header transformations, etc. prior to forwarding the request to the selected
    * backend. If  routeAction specifies any  weightedBackendServices, service must not be set.
    * Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one
-   * of urlRedirect, service or routeAction.weightedBackendService must be set.
+   * of urlRedirect, service or routeAction.weightedBackendService must be set. UrlMaps for external
+   * HTTP(S) load balancers support only the urlRewrite action within a routeRule's routeAction.
    * @param routeAction routeAction or {@code null} for none
    */
   public HttpRouteRule setRouteAction(HttpRouteAction routeAction) {

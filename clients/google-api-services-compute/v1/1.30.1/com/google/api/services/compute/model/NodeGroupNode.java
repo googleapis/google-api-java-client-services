@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class NodeGroupNode extends com.google.api.client.json.GenericJson {
 
   /**
+   * CPU overcommit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cpuOvercommitType;
+
+  /**
    * Instances scheduled on this node.
    * The value may be {@code null}.
    */
@@ -69,6 +76,23 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * CPU overcommit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCpuOvercommitType() {
+    return cpuOvercommitType;
+  }
+
+  /**
+   * CPU overcommit.
+   * @param cpuOvercommitType cpuOvercommitType or {@code null} for none
+   */
+  public NodeGroupNode setCpuOvercommitType(java.lang.String cpuOvercommitType) {
+    this.cpuOvercommitType = cpuOvercommitType;
+    return this;
+  }
 
   /**
    * Instances scheduled on this node.

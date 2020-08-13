@@ -48,6 +48,13 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   private java.lang.Boolean isStable;
 
   /**
+   * [Output Only] Stateful status of the given Instance Group Manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerStatusStateful stateful;
+
+  /**
    * [Output Only] A status of consistency of Instances' versions with their target version
    * specified by version field on Instance Group Manager.
    * The value may be {@code null}.
@@ -94,6 +101,23 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
    */
   public InstanceGroupManagerStatus setIsStable(java.lang.Boolean isStable) {
     this.isStable = isStable;
+    return this;
+  }
+
+  /**
+   * [Output Only] Stateful status of the given Instance Group Manager.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerStatusStateful getStateful() {
+    return stateful;
+  }
+
+  /**
+   * [Output Only] Stateful status of the given Instance Group Manager.
+   * @param stateful stateful or {@code null} for none
+   */
+  public InstanceGroupManagerStatus setStateful(InstanceGroupManagerStatusStateful stateful) {
+    this.stateful = stateful;
     return this;
   }
 

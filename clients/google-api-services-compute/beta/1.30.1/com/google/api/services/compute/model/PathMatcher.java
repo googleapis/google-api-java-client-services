@@ -81,7 +81,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. HeaderAction specified here are applied after the matching HttpRouteRule
-   * HeaderAction and before the HeaderAction in the UrlMap
+   * HeaderAction and before the HeaderAction in the UrlMap  Note that headerAction is not supported
+   * for Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +232,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. HeaderAction specified here are applied after the matching HttpRouteRule
-   * HeaderAction and before the HeaderAction in the UrlMap
+   * HeaderAction and before the HeaderAction in the UrlMap  Note that headerAction is not supported
+   * for Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
    * @return value or {@code null} for none
    */
   public HttpHeaderAction getHeaderAction() {
@@ -241,7 +243,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. HeaderAction specified here are applied after the matching HttpRouteRule
-   * HeaderAction and before the HeaderAction in the UrlMap
+   * HeaderAction and before the HeaderAction in the UrlMap  Note that headerAction is not supported
+   * for Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
    * @param headerAction headerAction or {@code null} for none
    */
   public PathMatcher setHeaderAction(HttpHeaderAction headerAction) {

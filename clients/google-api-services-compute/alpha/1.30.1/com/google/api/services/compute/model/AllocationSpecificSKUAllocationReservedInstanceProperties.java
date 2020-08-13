@@ -64,21 +64,6 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
   private java.lang.String locationHint;
 
   /**
-   * DEPRECATED, please use maintenance_freeze_duration_hours. TODO(b/154158138): Remove this field.
-   * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
-   * release (internal: stable fleet) VMs.
-   *
-   * For all VM shapes, this should result in fewer disruptions due to software updates and greater
-   * predictability via 1 week extended notifications.
-   *
-   * For GPU VMs, this should also result in an 2 week uptime guarantee. See go/stable-fleet-gpus-
-   * design for more details.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean longTermRelease;
-
-  /**
    * Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of
    * memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-
    * AMOUNT_OF_MEMORY pattern.
@@ -162,39 +147,6 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
    */
   public AllocationSpecificSKUAllocationReservedInstanceProperties setLocationHint(java.lang.String locationHint) {
     this.locationHint = locationHint;
-    return this;
-  }
-
-  /**
-   * DEPRECATED, please use maintenance_freeze_duration_hours. TODO(b/154158138): Remove this field.
-   * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
-   * release (internal: stable fleet) VMs.
-   *
-   * For all VM shapes, this should result in fewer disruptions due to software updates and greater
-   * predictability via 1 week extended notifications.
-   *
-   * For GPU VMs, this should also result in an 2 week uptime guarantee. See go/stable-fleet-gpus-
-   * design for more details.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getLongTermRelease() {
-    return longTermRelease;
-  }
-
-  /**
-   * DEPRECATED, please use maintenance_freeze_duration_hours. TODO(b/154158138): Remove this field.
-   * Compute Engine Long Term Release. When specified, VMs that have this policy become long term
-   * release (internal: stable fleet) VMs.
-   *
-   * For all VM shapes, this should result in fewer disruptions due to software updates and greater
-   * predictability via 1 week extended notifications.
-   *
-   * For GPU VMs, this should also result in an 2 week uptime guarantee. See go/stable-fleet-gpus-
-   * design for more details.
-   * @param longTermRelease longTermRelease or {@code null} for none
-   */
-  public AllocationSpecificSKUAllocationReservedInstanceProperties setLongTermRelease(java.lang.Boolean longTermRelease) {
-    this.longTermRelease = longTermRelease;
     return this;
   }
 

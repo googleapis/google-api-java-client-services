@@ -229,13 +229,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * Size of the persistent disk, specified in GB. You can specify this field when creating a
-   * persistent disk using the sourceImage or sourceSnapshot parameter, or specify it alone to
-   * create an empty persistent disk.
+   * Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk
+   * using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create
+   * an empty persistent disk.
    *
-   * If you specify this field along with sourceImage or sourceSnapshot, the value of sizeGb must
-   * not be less than the size of the sourceImage or the size of the snapshot. Acceptable values are
-   * 1 to 65536, inclusive.
+   * If you specify this field along with a source, the value of sizeGb must not be less than the
+   * size of the source. Acceptable values are 1 to 65536, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -843,13 +842,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the persistent disk, specified in GB. You can specify this field when creating a
-   * persistent disk using the sourceImage or sourceSnapshot parameter, or specify it alone to
-   * create an empty persistent disk.
+   * Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk
+   * using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create
+   * an empty persistent disk.
    *
-   * If you specify this field along with sourceImage or sourceSnapshot, the value of sizeGb must
-   * not be less than the size of the sourceImage or the size of the snapshot. Acceptable values are
-   * 1 to 65536, inclusive.
+   * If you specify this field along with a source, the value of sizeGb must not be less than the
+   * size of the source. Acceptable values are 1 to 65536, inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSizeGb() {
@@ -857,13 +855,12 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the persistent disk, specified in GB. You can specify this field when creating a
-   * persistent disk using the sourceImage or sourceSnapshot parameter, or specify it alone to
-   * create an empty persistent disk.
+   * Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk
+   * using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create
+   * an empty persistent disk.
    *
-   * If you specify this field along with sourceImage or sourceSnapshot, the value of sizeGb must
-   * not be less than the size of the sourceImage or the size of the snapshot. Acceptable values are
-   * 1 to 65536, inclusive.
+   * If you specify this field along with a source, the value of sizeGb must not be less than the
+   * size of the source. Acceptable values are 1 to 65536, inclusive.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public Disk setSizeGb(java.lang.Long sizeGb) {

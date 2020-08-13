@@ -48,15 +48,13 @@ public final class BuildSignature extends com.google.api.client.json.GenericJson
 
   /**
    * Public key of the builder which can be used to verify that the related findings are valid and
-   * unchanged. If `key_type` is empty, this defaults to PEM encoded public keys.
-   *
-   * This field may be empty if `key_id` references an external key.
-   *
-   * For Cloud Build based signatures, this is a PEM encoded public key. To verify the Cloud Build
-   * signature, place the contents of this field into a file (public.pem). The signature field is
-   * base64-decoded into its binary representation in signature.bin, and the provenance bytes from
-   * `BuildDetails` are base64-decoded into a binary representation in signed.bin. OpenSSL can then
-   * verify the signature: `openssl sha256 -verify public.pem -signature signature.bin signed.bin`
+   * unchanged. If `key_type` is empty, this defaults to PEM encoded public keys. This field may be
+   * empty if `key_id` references an external key. For Cloud Build based signatures, this is a PEM
+   * encoded public key. To verify the Cloud Build signature, place the contents of this field into
+   * a file (public.pem). The signature field is base64-decoded into its binary representation in
+   * signature.bin, and the provenance bytes from `BuildDetails` are base64-decoded into a binary
+   * representation in signed.bin. OpenSSL can then verify the signature: `openssl sha256 -verify
+   * public.pem -signature signature.bin signed.bin`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,15 +107,13 @@ public final class BuildSignature extends com.google.api.client.json.GenericJson
 
   /**
    * Public key of the builder which can be used to verify that the related findings are valid and
-   * unchanged. If `key_type` is empty, this defaults to PEM encoded public keys.
-   *
-   * This field may be empty if `key_id` references an external key.
-   *
-   * For Cloud Build based signatures, this is a PEM encoded public key. To verify the Cloud Build
-   * signature, place the contents of this field into a file (public.pem). The signature field is
-   * base64-decoded into its binary representation in signature.bin, and the provenance bytes from
-   * `BuildDetails` are base64-decoded into a binary representation in signed.bin. OpenSSL can then
-   * verify the signature: `openssl sha256 -verify public.pem -signature signature.bin signed.bin`
+   * unchanged. If `key_type` is empty, this defaults to PEM encoded public keys. This field may be
+   * empty if `key_id` references an external key. For Cloud Build based signatures, this is a PEM
+   * encoded public key. To verify the Cloud Build signature, place the contents of this field into
+   * a file (public.pem). The signature field is base64-decoded into its binary representation in
+   * signature.bin, and the provenance bytes from `BuildDetails` are base64-decoded into a binary
+   * representation in signed.bin. OpenSSL can then verify the signature: `openssl sha256 -verify
+   * public.pem -signature signature.bin signed.bin`
    * @return value or {@code null} for none
    */
   public java.lang.String getPublicKey() {
@@ -126,15 +122,13 @@ public final class BuildSignature extends com.google.api.client.json.GenericJson
 
   /**
    * Public key of the builder which can be used to verify that the related findings are valid and
-   * unchanged. If `key_type` is empty, this defaults to PEM encoded public keys.
-   *
-   * This field may be empty if `key_id` references an external key.
-   *
-   * For Cloud Build based signatures, this is a PEM encoded public key. To verify the Cloud Build
-   * signature, place the contents of this field into a file (public.pem). The signature field is
-   * base64-decoded into its binary representation in signature.bin, and the provenance bytes from
-   * `BuildDetails` are base64-decoded into a binary representation in signed.bin. OpenSSL can then
-   * verify the signature: `openssl sha256 -verify public.pem -signature signature.bin signed.bin`
+   * unchanged. If `key_type` is empty, this defaults to PEM encoded public keys. This field may be
+   * empty if `key_id` references an external key. For Cloud Build based signatures, this is a PEM
+   * encoded public key. To verify the Cloud Build signature, place the contents of this field into
+   * a file (public.pem). The signature field is base64-decoded into its binary representation in
+   * signature.bin, and the provenance bytes from `BuildDetails` are base64-decoded into a binary
+   * representation in signed.bin. OpenSSL can then verify the signature: `openssl sha256 -verify
+   * public.pem -signature signature.bin signed.bin`
    * @param publicKey publicKey or {@code null} for none
    */
   public BuildSignature setPublicKey(java.lang.String publicKey) {

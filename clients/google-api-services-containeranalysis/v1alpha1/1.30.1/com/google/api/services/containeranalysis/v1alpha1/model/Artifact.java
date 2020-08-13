@@ -48,10 +48,8 @@ public final class Artifact extends com.google.api.client.json.GenericJson {
   /**
    * Name of the artifact. This may be the path to a binary or jar file, or in the case of a
    * container build, the name used to push the container image to Google Container Registry, as
-   * presented to `docker push`.
-   *
-   * This field is deprecated in favor of the plural `names` field; it continues to exist here to
-   * allow existing BuildProvenance serialized to json in
+   * presented to `docker push`. This field is deprecated in favor of the plural `names` field; it
+   * continues to exist here to allow existing BuildProvenance serialized to json in
    * google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back
    * into proto.
    * The value may be {@code null}.
@@ -108,10 +106,8 @@ public final class Artifact extends com.google.api.client.json.GenericJson {
   /**
    * Name of the artifact. This may be the path to a binary or jar file, or in the case of a
    * container build, the name used to push the container image to Google Container Registry, as
-   * presented to `docker push`.
-   *
-   * This field is deprecated in favor of the plural `names` field; it continues to exist here to
-   * allow existing BuildProvenance serialized to json in
+   * presented to `docker push`. This field is deprecated in favor of the plural `names` field; it
+   * continues to exist here to allow existing BuildProvenance serialized to json in
    * google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back
    * into proto.
    * @return value or {@code null} for none
@@ -123,10 +119,8 @@ public final class Artifact extends com.google.api.client.json.GenericJson {
   /**
    * Name of the artifact. This may be the path to a binary or jar file, or in the case of a
    * container build, the name used to push the container image to Google Container Registry, as
-   * presented to `docker push`.
-   *
-   * This field is deprecated in favor of the plural `names` field; it continues to exist here to
-   * allow existing BuildProvenance serialized to json in
+   * presented to `docker push`. This field is deprecated in favor of the plural `names` field; it
+   * continues to exist here to allow existing BuildProvenance serialized to json in
    * google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back
    * into proto.
    * @param name name or {@code null} for none

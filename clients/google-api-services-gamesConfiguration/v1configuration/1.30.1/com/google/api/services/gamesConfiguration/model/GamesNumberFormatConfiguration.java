@@ -52,7 +52,7 @@ public final class GamesNumberFormatConfiguration extends com.google.api.client.
   private java.lang.String numberFormatType;
 
   /**
-   * An optional suffix for the NUMERIC format type.  These strings follow the same  plural rules as
+   * An optional suffix for the NUMERIC format type. These strings follow the same plural rules as
    * all Android string resources.
    * The value may be {@code null}.
    */
@@ -111,7 +111,7 @@ public final class GamesNumberFormatConfiguration extends com.google.api.client.
   }
 
   /**
-   * An optional suffix for the NUMERIC format type.  These strings follow the same  plural rules as
+   * An optional suffix for the NUMERIC format type. These strings follow the same plural rules as
    * all Android string resources.
    * @return value or {@code null} for none
    */
@@ -120,7 +120,7 @@ public final class GamesNumberFormatConfiguration extends com.google.api.client.
   }
 
   /**
-   * An optional suffix for the NUMERIC format type.  These strings follow the same  plural rules as
+   * An optional suffix for the NUMERIC format type. These strings follow the same plural rules as
    * all Android string resources.
    * @param suffix suffix or {@code null} for none
    */

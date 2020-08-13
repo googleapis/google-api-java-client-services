@@ -61,6 +61,13 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Defines i18n rewrite behavior.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private I18nConfig i18n;
+
+  /**
    * An array of objects (called redirect rules), where each rule specifies a URL pattern that, if
    * matched to the request URL path, triggers Hosting to respond with a redirect to the specified
    * destination path.
@@ -147,6 +154,23 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
    */
   public ServingConfig setHeaders(java.util.List<Header> headers) {
     this.headers = headers;
+    return this;
+  }
+
+  /**
+   * Optional. Defines i18n rewrite behavior.
+   * @return value or {@code null} for none
+   */
+  public I18nConfig getI18n() {
+    return i18n;
+  }
+
+  /**
+   * Optional. Defines i18n rewrite behavior.
+   * @param i18n i18n or {@code null} for none
+   */
+  public ServingConfig setI18n(I18nConfig i18n) {
+    this.i18n = i18n;
     return this;
   }
 

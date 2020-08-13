@@ -59,11 +59,11 @@ public final class ExecutionRequest extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.Object> parameters;
 
   /**
-   * Deprecated. For use with Android add-ons only. An ID that represents the user's current session
-   * in the Android app for Google Docs or Sheets, included as extra data in the
+   * *Deprecated*. For use with Android add-ons only. An ID that represents the user's current
+   * session in the Android app for Google Docs or Sheets, included as extra data in the
    * [Intent](https://developer.android.com/guide/components/intents-filters.html) that launches the
    * add-on. When an Android add-on is run with a session state, it gains the privileges of a
-   * [bound](https://developers.google.com/apps-script/guides/bound) scriptthat is, it can access
+   * [bound](https://developers.google.com/apps-script/guides/bound) script—that is, it can access
    * information like the user's current cursor position (in Docs) or selected cell (in Sheets). To
    * retrieve the state, call
    * `Intent.getStringExtra("com.google.android.apps.docs.addons.SessionState")`. Optional.
@@ -138,11 +138,11 @@ public final class ExecutionRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Deprecated. For use with Android add-ons only. An ID that represents the user's current session
-   * in the Android app for Google Docs or Sheets, included as extra data in the
+   * *Deprecated*. For use with Android add-ons only. An ID that represents the user's current
+   * session in the Android app for Google Docs or Sheets, included as extra data in the
    * [Intent](https://developer.android.com/guide/components/intents-filters.html) that launches the
    * add-on. When an Android add-on is run with a session state, it gains the privileges of a
-   * [bound](https://developers.google.com/apps-script/guides/bound) scriptthat is, it can access
+   * [bound](https://developers.google.com/apps-script/guides/bound) script—that is, it can access
    * information like the user's current cursor position (in Docs) or selected cell (in Sheets). To
    * retrieve the state, call
    * `Intent.getStringExtra("com.google.android.apps.docs.addons.SessionState")`. Optional.
@@ -153,11 +153,11 @@ public final class ExecutionRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Deprecated. For use with Android add-ons only. An ID that represents the user's current session
-   * in the Android app for Google Docs or Sheets, included as extra data in the
+   * *Deprecated*. For use with Android add-ons only. An ID that represents the user's current
+   * session in the Android app for Google Docs or Sheets, included as extra data in the
    * [Intent](https://developer.android.com/guide/components/intents-filters.html) that launches the
    * add-on. When an Android add-on is run with a session state, it gains the privileges of a
-   * [bound](https://developers.google.com/apps-script/guides/bound) scriptthat is, it can access
+   * [bound](https://developers.google.com/apps-script/guides/bound) script—that is, it can access
    * information like the user's current cursor position (in Docs) or selected cell (in Sheets). To
    * retrieve the state, call
    * `Intent.getStringExtra("com.google.android.apps.docs.addons.SessionState")`. Optional.

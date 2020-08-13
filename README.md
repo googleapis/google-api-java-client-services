@@ -23,7 +23,7 @@ packages on [Maven Central][maven-search].
 | API Discovery Service | [v1](clients/google-api-services-discovery/v1) |
 | Abusive Experience Report API | [v1](clients/google-api-services-abusiveexperiencereport/v1) |
 | Accelerated Mobile Pages (AMP) URL API | [v1](clients/google-api-services-acceleratedmobilepageurl/v1) |
-| Access Approval API | [v1](clients/google-api-services-accessapproval/v1), [v1beta1](clients/google-api-services-accessapproval/v1beta1) |
+| Access Approval API | [v1](clients/google-api-services-accessapproval/v1) |
 | Access Context Manager API | [v1](clients/google-api-services-accesscontextmanager/v1), [v1beta](clients/google-api-services-accesscontextmanager/v1beta) |
 | Ad Exchange Buyer API | [v1.2](clients/google-api-services-adexchangebuyer/v1.2), [v1.3](clients/google-api-services-adexchangebuyer/v1.3), [v1.4](clients/google-api-services-adexchangebuyer/v1.4) |
 | Ad Exchange Buyer API II | [v2beta1](clients/google-api-services-adexchangebuyer2/v2beta1) |
@@ -88,7 +88,7 @@ packages on [Maven Central][maven-search].
 | Cloud Source Repositories API | [v1](clients/google-api-services-sourcerepo/v1) |
 | Cloud Spanner API | [v1](clients/google-api-services-spanner/v1) |
 | Cloud Speech-to-Text API | [v1](clients/google-api-services-speech/v1), [v1p1beta1](clients/google-api-services-speech/v1p1beta1), [v2beta1](clients/google-api-services-speech/v2beta1) |
-| Cloud Storage JSON API | [v1](clients/google-api-services-storage/v1), [v1beta2](clients/google-api-services-storage/v1beta2) |
+| Cloud Storage JSON API | [v1](clients/google-api-services-storage/v1) |
 | Cloud TPU API | [v1](clients/google-api-services-tpu/v1), [v1alpha1](clients/google-api-services-tpu/v1alpha1) |
 | Cloud Talent Solution API | [v2](clients/google-api-services-jobs/v2), [v3](clients/google-api-services-jobs/v3), [v3p1beta1](clients/google-api-services-jobs/v3p1beta1) |
 | Cloud Tasks API | [v2](clients/google-api-services-cloudtasks/v2), [v2beta2](clients/google-api-services-cloudtasks/v2beta2), [v2beta3](clients/google-api-services-cloudtasks/v2beta3) |
@@ -125,7 +125,6 @@ packages on [Maven Central][maven-search].
 | Game Services API | [v1](clients/google-api-services-gameservices/v1), [v1beta](clients/google-api-services-gameservices/v1beta) |
 | Genomics API | [v1](clients/google-api-services-genomics/v1), [v1alpha2](clients/google-api-services-genomics/v1alpha2), [v2alpha1](clients/google-api-services-genomics/v2alpha1) |
 | Gmail API | [v1](clients/google-api-services-gmail/v1) |
-| Gmail Postmaster Tools API | [v1beta1](clients/google-api-services-gmailpostmastertools/v1beta1) |
 | Google Analytics API | [v3](clients/google-api-services-analytics/v3) |
 | Google Apps Reseller API | [v1](clients/google-api-services-reseller/v1) |
 | Google Civic Information API | [v2](clients/google-api-services-civicinfo/v2) |
@@ -138,7 +137,6 @@ packages on [Maven Central][maven-search].
 | Google Cloud Translation API | [v2](clients/google-api-services-translate/v2) |
 | Google Docs API | [v1](clients/google-api-services-docs/v1) |
 | Google Identity Toolkit API | [v3](clients/google-api-services-identitytoolkit/v3) |
-| Google OAuth2 API | [v2](clients/google-api-services-oauth2/v2) |
 | Google Play Android Developer API | [v3](clients/google-api-services-androidpublisher/v3) |
 | Google Play Custom App Publishing API | [v1](clients/google-api-services-playcustomapp/v1) |
 | Google Play EMM API | [v1](clients/google-api-services-androidenterprise/v1) |
@@ -168,6 +166,7 @@ packages on [Maven Central][maven-search].
 | Playable Locations API | [v3](clients/google-api-services-playablelocations/v3) |
 | Policy Troubleshooter API | [v1](clients/google-api-services-policytroubleshooter/v1), [v1beta](clients/google-api-services-policytroubleshooter/v1beta) |
 | Poly API | [v1](clients/google-api-services-poly/v1) |
+| Postmaster Tools API | [v1beta1](clients/google-api-services-gmailpostmastertools/v1beta1) |
 | Pub/Sub Lite API | [v1](clients/google-api-services-pubsublite/v1) |
 | Real-time Bidding API | [v1](clients/google-api-services-realtimebidding/v1) |
 | Recommendations AI | [v1beta1](clients/google-api-services-recommendationengine/v1beta1) |

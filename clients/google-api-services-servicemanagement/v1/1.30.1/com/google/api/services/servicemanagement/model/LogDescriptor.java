@@ -17,11 +17,10 @@
 package com.google.api.services.servicemanagement.model;
 
 /**
- * A description of a log type. Example in YAML format:
- *
- *     - name: library.googleapis.com/activity_history       description: The history of borrowing
- * and returning library items.       display_name: Activity       labels:       - key: /customer_id
- * description: Identifier of a library customer
+ * A description of a log type. Example in YAML format: - name:
+ * library.googleapis.com/activity_history description: The history of borrowing and returning
+ * library items. display_name: Activity labels: - key: /customer_id description: Identifier of a
+ * library customer
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Management API. For a detailed explanation

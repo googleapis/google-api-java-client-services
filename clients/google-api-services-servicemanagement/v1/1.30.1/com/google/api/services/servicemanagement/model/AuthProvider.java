@@ -34,16 +34,12 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   /**
    * The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-
    * token-32#section-4.1.3). that are allowed to access. A JWT containing any of these audiences
-   * will be accepted. When this setting is absent, JWTs with audiences:   -
-   * "https://[service.name]/[google.protobuf.Api.name]"   - "https://[service.name]/" will be
+   * will be accepted. When this setting is absent, JWTs with audiences: -
+   * "https://[service.name]/[google.protobuf.Api.name]" - "https://[service.name]/" will be
    * accepted. For example, if no audiences are in the setting, LibraryService API will accept JWTs
-   * with the following audiences:   -   https://library-
-   * example.googleapis.com/google.example.library.v1.LibraryService   - https://library-
-   * example.googleapis.com/
-   *
-   * Example:
-   *
-   *     audiences: bookstore_android.apps.googleusercontent.com,
+   * with the following audiences: - https://library-
+   * example.googleapis.com/google.example.library.v1.LibraryService - https://library-
+   * example.googleapis.com/ Example: audiences: bookstore_android.apps.googleusercontent.com,
    * bookstore_web.apps.googleusercontent.com
    * The value may be {@code null}.
    */
@@ -60,9 +56,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
 
   /**
    * The unique identifier of the auth provider. It will be referred to by
-   * `AuthRequirement.provider_id`.
-   *
-   * Example: "bookstore_auth".
+   * `AuthRequirement.provider_id`. Example: "bookstore_auth".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +64,8 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies the principal that issued the JWT. See https://tools.ietf.org/html/draft-ietf-oauth-
-   * json-web-token-32#section-4.1.1 Usually a URL or an email address.
-   *
-   * Example: https://securetoken.google.com Example: 1234567-compute@developer.gserviceaccount.com
+   * json-web-token-32#section-4.1.1 Usually a URL or an email address. Example:
+   * https://securetoken.google.com Example: 1234567-compute@developer.gserviceaccount.com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,27 +74,22 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   /**
    * URL of the provider's public key set to validate signature of the JWT. See [OpenID
    * Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata).
-   * Optional if the key set document:  - can be retrieved from    [OpenID
-   * Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html of    the issuer.  - can
-   * be inferred from the email domain of the issuer (e.g. a Google  service account).
-   *
-   * Example: https://www.googleapis.com/oauth2/v1/certs
+   * Optional if the key set document: - can be retrieved from [OpenID
+   * Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html of the issuer. - can be
+   * inferred from the email domain of the issuer (e.g. a Google service account). Example:
+   * https://www.googleapis.com/oauth2/v1/certs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String jwksUri;
 
   /**
-   * Defines the locations to extract the JWT.
-   *
-   * JWT locations can be either from HTTP headers or URL query parameters. The rule is that the
-   * first match wins. The checking order is: checking all headers first, then URL query parameters.
-   *
-   * If not specified,  default to use following 3 locations:    1) Authorization: Bearer    2) x
-   * -goog-iap-jwt-assertion    3) access_token query parameter
-   *
-   * Default locations can be specified as followings:    jwt_locations:    - header: Authorization
-   * value_prefix: "Bearer "    - header: x-goog-iap-jwt-assertion    - query: access_token
+   * Defines the locations to extract the JWT. JWT locations can be either from HTTP headers or URL
+   * query parameters. The rule is that the first match wins. The checking order is: checking all
+   * headers first, then URL query parameters. If not specified, default to use following 3
+   * locations: 1) Authorization: Bearer 2) x-goog-iap-jwt-assertion 3) access_token query parameter
+   * Default locations can be specified as followings: jwt_locations: - header: Authorization
+   * value_prefix: "Bearer " - header: x-goog-iap-jwt-assertion - query: access_token
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,16 +98,12 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   /**
    * The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-
    * token-32#section-4.1.3). that are allowed to access. A JWT containing any of these audiences
-   * will be accepted. When this setting is absent, JWTs with audiences:   -
-   * "https://[service.name]/[google.protobuf.Api.name]"   - "https://[service.name]/" will be
+   * will be accepted. When this setting is absent, JWTs with audiences: -
+   * "https://[service.name]/[google.protobuf.Api.name]" - "https://[service.name]/" will be
    * accepted. For example, if no audiences are in the setting, LibraryService API will accept JWTs
-   * with the following audiences:   -   https://library-
-   * example.googleapis.com/google.example.library.v1.LibraryService   - https://library-
-   * example.googleapis.com/
-   *
-   * Example:
-   *
-   *     audiences: bookstore_android.apps.googleusercontent.com,
+   * with the following audiences: - https://library-
+   * example.googleapis.com/google.example.library.v1.LibraryService - https://library-
+   * example.googleapis.com/ Example: audiences: bookstore_android.apps.googleusercontent.com,
    * bookstore_web.apps.googleusercontent.com
    * @return value or {@code null} for none
    */
@@ -130,16 +114,12 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   /**
    * The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-
    * token-32#section-4.1.3). that are allowed to access. A JWT containing any of these audiences
-   * will be accepted. When this setting is absent, JWTs with audiences:   -
-   * "https://[service.name]/[google.protobuf.Api.name]"   - "https://[service.name]/" will be
+   * will be accepted. When this setting is absent, JWTs with audiences: -
+   * "https://[service.name]/[google.protobuf.Api.name]" - "https://[service.name]/" will be
    * accepted. For example, if no audiences are in the setting, LibraryService API will accept JWTs
-   * with the following audiences:   -   https://library-
-   * example.googleapis.com/google.example.library.v1.LibraryService   - https://library-
-   * example.googleapis.com/
-   *
-   * Example:
-   *
-   *     audiences: bookstore_android.apps.googleusercontent.com,
+   * with the following audiences: - https://library-
+   * example.googleapis.com/google.example.library.v1.LibraryService - https://library-
+   * example.googleapis.com/ Example: audiences: bookstore_android.apps.googleusercontent.com,
    * bookstore_web.apps.googleusercontent.com
    * @param audiences audiences or {@code null} for none
    */
@@ -169,9 +149,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
 
   /**
    * The unique identifier of the auth provider. It will be referred to by
-   * `AuthRequirement.provider_id`.
-   *
-   * Example: "bookstore_auth".
+   * `AuthRequirement.provider_id`. Example: "bookstore_auth".
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -180,9 +158,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
 
   /**
    * The unique identifier of the auth provider. It will be referred to by
-   * `AuthRequirement.provider_id`.
-   *
-   * Example: "bookstore_auth".
+   * `AuthRequirement.provider_id`. Example: "bookstore_auth".
    * @param id id or {@code null} for none
    */
   public AuthProvider setId(java.lang.String id) {
@@ -192,9 +168,8 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies the principal that issued the JWT. See https://tools.ietf.org/html/draft-ietf-oauth-
-   * json-web-token-32#section-4.1.1 Usually a URL or an email address.
-   *
-   * Example: https://securetoken.google.com Example: 1234567-compute@developer.gserviceaccount.com
+   * json-web-token-32#section-4.1.1 Usually a URL or an email address. Example:
+   * https://securetoken.google.com Example: 1234567-compute@developer.gserviceaccount.com
    * @return value or {@code null} for none
    */
   public java.lang.String getIssuer() {
@@ -203,9 +178,8 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies the principal that issued the JWT. See https://tools.ietf.org/html/draft-ietf-oauth-
-   * json-web-token-32#section-4.1.1 Usually a URL or an email address.
-   *
-   * Example: https://securetoken.google.com Example: 1234567-compute@developer.gserviceaccount.com
+   * json-web-token-32#section-4.1.1 Usually a URL or an email address. Example:
+   * https://securetoken.google.com Example: 1234567-compute@developer.gserviceaccount.com
    * @param issuer issuer or {@code null} for none
    */
   public AuthProvider setIssuer(java.lang.String issuer) {
@@ -216,11 +190,10 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   /**
    * URL of the provider's public key set to validate signature of the JWT. See [OpenID
    * Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata).
-   * Optional if the key set document:  - can be retrieved from    [OpenID
-   * Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html of    the issuer.  - can
-   * be inferred from the email domain of the issuer (e.g. a Google  service account).
-   *
-   * Example: https://www.googleapis.com/oauth2/v1/certs
+   * Optional if the key set document: - can be retrieved from [OpenID
+   * Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html of the issuer. - can be
+   * inferred from the email domain of the issuer (e.g. a Google service account). Example:
+   * https://www.googleapis.com/oauth2/v1/certs
    * @return value or {@code null} for none
    */
   public java.lang.String getJwksUri() {
@@ -230,11 +203,10 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   /**
    * URL of the provider's public key set to validate signature of the JWT. See [OpenID
    * Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata).
-   * Optional if the key set document:  - can be retrieved from    [OpenID
-   * Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html of    the issuer.  - can
-   * be inferred from the email domain of the issuer (e.g. a Google  service account).
-   *
-   * Example: https://www.googleapis.com/oauth2/v1/certs
+   * Optional if the key set document: - can be retrieved from [OpenID
+   * Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html of the issuer. - can be
+   * inferred from the email domain of the issuer (e.g. a Google service account). Example:
+   * https://www.googleapis.com/oauth2/v1/certs
    * @param jwksUri jwksUri or {@code null} for none
    */
   public AuthProvider setJwksUri(java.lang.String jwksUri) {
@@ -243,16 +215,12 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines the locations to extract the JWT.
-   *
-   * JWT locations can be either from HTTP headers or URL query parameters. The rule is that the
-   * first match wins. The checking order is: checking all headers first, then URL query parameters.
-   *
-   * If not specified,  default to use following 3 locations:    1) Authorization: Bearer    2) x
-   * -goog-iap-jwt-assertion    3) access_token query parameter
-   *
-   * Default locations can be specified as followings:    jwt_locations:    - header: Authorization
-   * value_prefix: "Bearer "    - header: x-goog-iap-jwt-assertion    - query: access_token
+   * Defines the locations to extract the JWT. JWT locations can be either from HTTP headers or URL
+   * query parameters. The rule is that the first match wins. The checking order is: checking all
+   * headers first, then URL query parameters. If not specified, default to use following 3
+   * locations: 1) Authorization: Bearer 2) x-goog-iap-jwt-assertion 3) access_token query parameter
+   * Default locations can be specified as followings: jwt_locations: - header: Authorization
+   * value_prefix: "Bearer " - header: x-goog-iap-jwt-assertion - query: access_token
    * @return value or {@code null} for none
    */
   public java.util.List<JwtLocation> getJwtLocations() {
@@ -260,16 +228,12 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines the locations to extract the JWT.
-   *
-   * JWT locations can be either from HTTP headers or URL query parameters. The rule is that the
-   * first match wins. The checking order is: checking all headers first, then URL query parameters.
-   *
-   * If not specified,  default to use following 3 locations:    1) Authorization: Bearer    2) x
-   * -goog-iap-jwt-assertion    3) access_token query parameter
-   *
-   * Default locations can be specified as followings:    jwt_locations:    - header: Authorization
-   * value_prefix: "Bearer "    - header: x-goog-iap-jwt-assertion    - query: access_token
+   * Defines the locations to extract the JWT. JWT locations can be either from HTTP headers or URL
+   * query parameters. The rule is that the first match wins. The checking order is: checking all
+   * headers first, then URL query parameters. If not specified, default to use following 3
+   * locations: 1) Authorization: Bearer 2) x-goog-iap-jwt-assertion 3) access_token query parameter
+   * Default locations can be specified as followings: jwt_locations: - header: Authorization
+   * value_prefix: "Bearer " - header: x-goog-iap-jwt-assertion - query: access_token
    * @param jwtLocations jwtLocations or {@code null} for none
    */
   public AuthProvider setJwtLocations(java.util.List<JwtLocation> jwtLocations) {

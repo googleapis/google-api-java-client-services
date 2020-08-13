@@ -55,12 +55,10 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only
-   * lower case letters, digits, '.', '_' and '-' are allowed.
-   *
-   * If not specified by client, the server will generate one. The generated id will have the form
-   * of , where "date" is the create date in ISO 8601 format.  "revision number" is a monotonically
-   * increasing positive number that is reset every day for each service. An example of the
-   * generated rollout_id is '2016-02-16r1'
+   * lower case letters, digits, '.', '_' and '-' are allowed. If not specified by client, the
+   * server will generate one. The generated id will have the form of , where "date" is the create
+   * date in ISO 8601 format. "revision number" is a monotonically increasing positive number that
+   * is reset every day for each service. An example of the generated rollout_id is '2016-02-16r1'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,12 +139,10 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only
-   * lower case letters, digits, '.', '_' and '-' are allowed.
-   *
-   * If not specified by client, the server will generate one. The generated id will have the form
-   * of , where "date" is the create date in ISO 8601 format.  "revision number" is a monotonically
-   * increasing positive number that is reset every day for each service. An example of the
-   * generated rollout_id is '2016-02-16r1'
+   * lower case letters, digits, '.', '_' and '-' are allowed. If not specified by client, the
+   * server will generate one. The generated id will have the form of , where "date" is the create
+   * date in ISO 8601 format. "revision number" is a monotonically increasing positive number that
+   * is reset every day for each service. An example of the generated rollout_id is '2016-02-16r1'
    * @return value or {@code null} for none
    */
   public java.lang.String getRolloutId() {
@@ -155,12 +151,10 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only
-   * lower case letters, digits, '.', '_' and '-' are allowed.
-   *
-   * If not specified by client, the server will generate one. The generated id will have the form
-   * of , where "date" is the create date in ISO 8601 format.  "revision number" is a monotonically
-   * increasing positive number that is reset every day for each service. An example of the
-   * generated rollout_id is '2016-02-16r1'
+   * lower case letters, digits, '.', '_' and '-' are allowed. If not specified by client, the
+   * server will generate one. The generated id will have the form of , where "date" is the create
+   * date in ISO 8601 format. "revision number" is a monotonically increasing positive number that
+   * is reset every day for each service. An example of the generated rollout_id is '2016-02-16r1'
    * @param rolloutId rolloutId or {@code null} for none
    */
   public Rollout setRolloutId(java.lang.String rolloutId) {

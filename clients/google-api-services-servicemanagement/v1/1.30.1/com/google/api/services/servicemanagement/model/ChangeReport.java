@@ -17,9 +17,8 @@
 package com.google.api.services.servicemanagement.model;
 
 /**
- * Change report associated with a particular service configuration.
- *
- * It contains a list of ConfigChanges based on the comparison between two service configurations.
+ * Change report associated with a particular service configuration. It contains a list of
+ * ConfigChanges based on the comparison between two service configurations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Management API. For a detailed explanation

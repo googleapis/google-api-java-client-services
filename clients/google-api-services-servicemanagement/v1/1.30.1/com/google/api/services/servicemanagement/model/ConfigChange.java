@@ -17,10 +17,9 @@
 package com.google.api.services.servicemanagement.model;
 
 /**
- * Output generated from semantically comparing two versions of a service configuration.
- *
- * Includes detailed information about a field that have changed with applicable advice about
- * potential consequences for the change, such as backwards-incompatibility.
+ * Output generated from semantically comparing two versions of a service configuration. Includes
+ * detailed information about a field that have changed with applicable advice about potential
+ * consequences for the change, such as backwards-incompatibility.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Management API. For a detailed explanation

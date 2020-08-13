@@ -18,15 +18,12 @@ package com.google.api.services.storagetransfer.v1.model;
 
 /**
  * Specification to configure notifications published to Cloud Pub/Sub. Notifications will be
- * published to the customer-provided topic using the following `PubsubMessage.attributes`:
- *
- * * `"eventType"`: one of the EventType values * `"payloadFormat"`: one of the PayloadFormat values
- * * `"projectId"`: the project_id of the `TransferOperation` * `"transferJobName"`: the
+ * published to the customer-provided topic using the following `PubsubMessage.attributes`: *
+ * `"eventType"`: one of the EventType values * `"payloadFormat"`: one of the PayloadFormat values *
+ * `"projectId"`: the project_id of the `TransferOperation` * `"transferJobName"`: the
  * transfer_job_name of the `TransferOperation` * `"transferOperationName"`: the name of the
- * `TransferOperation`
- *
- * The `PubsubMessage.data` will contain a TransferOperation resource formatted according to the
- * specified `PayloadFormat`.
+ * `TransferOperation` The `PubsubMessage.data` will contain a TransferOperation resource formatted
+ * according to the specified `PayloadFormat`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:

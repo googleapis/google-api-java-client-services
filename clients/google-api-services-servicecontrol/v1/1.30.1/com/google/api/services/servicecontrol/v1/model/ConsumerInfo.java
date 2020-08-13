@@ -39,10 +39,8 @@ public final class ConsumerInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google cloud project number, e.g. 1234567890. A value of 0 indicates no project number is
-   * found.
-   *
-   * NOTE: This field is deprecated after Chemist support flexible consumer id. New code should not
-   * depend on this field anymore.
+   * found. NOTE: This field is deprecated after Chemist support flexible consumer id. New code
+   * should not depend on this field anymore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -77,10 +75,8 @@ public final class ConsumerInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google cloud project number, e.g. 1234567890. A value of 0 indicates no project number is
-   * found.
-   *
-   * NOTE: This field is deprecated after Chemist support flexible consumer id. New code should not
-   * depend on this field anymore.
+   * found. NOTE: This field is deprecated after Chemist support flexible consumer id. New code
+   * should not depend on this field anymore.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProjectNumber() {
@@ -89,10 +85,8 @@ public final class ConsumerInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google cloud project number, e.g. 1234567890. A value of 0 indicates no project number is
-   * found.
-   *
-   * NOTE: This field is deprecated after Chemist support flexible consumer id. New code should not
-   * depend on this field anymore.
+   * found. NOTE: This field is deprecated after Chemist support flexible consumer id. New code
+   * should not depend on this field anymore.
    * @param projectNumber projectNumber or {@code null} for none
    */
   public ConsumerInfo setProjectNumber(java.lang.Long projectNumber) {

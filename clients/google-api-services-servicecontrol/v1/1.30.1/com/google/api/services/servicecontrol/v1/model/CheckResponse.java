@@ -30,10 +30,9 @@ package com.google.api.services.servicecontrol.v1.model;
 public final class CheckResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicate the decision of the check.
-   *
-   * If no check errors are present, the service should process the operation. Otherwise the service
-   * should use the list of errors to determine the appropriate action.
+   * Indicate the decision of the check. If no check errors are present, the service should process
+   * the operation. Otherwise the service should use the list of errors to determine the appropriate
+   * action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,10 +81,9 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
   private java.lang.String serviceRolloutId;
 
   /**
-   * Indicate the decision of the check.
-   *
-   * If no check errors are present, the service should process the operation. Otherwise the service
-   * should use the list of errors to determine the appropriate action.
+   * Indicate the decision of the check. If no check errors are present, the service should process
+   * the operation. Otherwise the service should use the list of errors to determine the appropriate
+   * action.
    * @return value or {@code null} for none
    */
   public java.util.List<CheckError> getCheckErrors() {
@@ -93,10 +91,9 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Indicate the decision of the check.
-   *
-   * If no check errors are present, the service should process the operation. Otherwise the service
-   * should use the list of errors to determine the appropriate action.
+   * Indicate the decision of the check. If no check errors are present, the service should process
+   * the operation. Otherwise the service should use the list of errors to determine the appropriate
+   * action.
    * @param checkErrors checkErrors or {@code null} for none
    */
   public CheckResponse setCheckErrors(java.util.List<CheckError> checkErrors) {

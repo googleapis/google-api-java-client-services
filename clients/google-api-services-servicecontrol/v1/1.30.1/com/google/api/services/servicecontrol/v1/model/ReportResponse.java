@@ -31,15 +31,13 @@ public final class ReportResponse extends com.google.api.client.json.GenericJson
 
   /**
    * Partial failures, one for each `Operation` in the request that failed processing. There are
-   * three possible combinations of the RPC status:
-   *
-   * 1. The combination of a successful RPC status and an empty `report_errors`    list indicates a
-   * complete success where all `Operations` in the    request are processed successfully. 2. The
-   * combination of a successful RPC status and a non-empty    `report_errors` list indicates a
-   * partial success where some    `Operations` in the request succeeded. Each    `Operation` that
-   * failed processing has a corresponding item    in this list. 3. A failed RPC status indicates a
-   * general non-deterministic failure.    When this happens, it's impossible to know which of the
-   * 'Operations' in the request succeeded or failed.
+   * three possible combinations of the RPC status: 1. The combination of a successful RPC status
+   * and an empty `report_errors` list indicates a complete success where all `Operations` in the
+   * request are processed successfully. 2. The combination of a successful RPC status and a non-
+   * empty `report_errors` list indicates a partial success where some `Operations` in the request
+   * succeeded. Each `Operation` that failed processing has a corresponding item in this list. 3. A
+   * failed RPC status indicates a general non-deterministic failure. When this happens, it's
+   * impossible to know which of the 'Operations' in the request succeeded or failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,14 +50,11 @@ public final class ReportResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Quota usage for each quota release `Operation` request.
-   *
-   * Fully or partially failed quota release request may or may not be present in
-   * `report_quota_info`. For example, a failed quota release request will have the current quota
-   * usage info when precise quota library returns the info. A deadline exceeded quota request will
-   * not have quota usage info.
-   *
-   * If there is no quota release request, report_quota_info will be empty.
+   * Quota usage for each quota release `Operation` request. Fully or partially failed quota release
+   * request may or may not be present in `report_quota_info`. For example, a failed quota release
+   * request will have the current quota usage info when precise quota library returns the info. A
+   * deadline exceeded quota request will not have quota usage info. If there is no quota release
+   * request, report_quota_info will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,15 +82,13 @@ public final class ReportResponse extends com.google.api.client.json.GenericJson
 
   /**
    * Partial failures, one for each `Operation` in the request that failed processing. There are
-   * three possible combinations of the RPC status:
-   *
-   * 1. The combination of a successful RPC status and an empty `report_errors`    list indicates a
-   * complete success where all `Operations` in the    request are processed successfully. 2. The
-   * combination of a successful RPC status and a non-empty    `report_errors` list indicates a
-   * partial success where some    `Operations` in the request succeeded. Each    `Operation` that
-   * failed processing has a corresponding item    in this list. 3. A failed RPC status indicates a
-   * general non-deterministic failure.    When this happens, it's impossible to know which of the
-   * 'Operations' in the request succeeded or failed.
+   * three possible combinations of the RPC status: 1. The combination of a successful RPC status
+   * and an empty `report_errors` list indicates a complete success where all `Operations` in the
+   * request are processed successfully. 2. The combination of a successful RPC status and a non-
+   * empty `report_errors` list indicates a partial success where some `Operations` in the request
+   * succeeded. Each `Operation` that failed processing has a corresponding item in this list. 3. A
+   * failed RPC status indicates a general non-deterministic failure. When this happens, it's
+   * impossible to know which of the 'Operations' in the request succeeded or failed.
    * @return value or {@code null} for none
    */
   public java.util.List<ReportError> getReportErrors() {
@@ -104,15 +97,13 @@ public final class ReportResponse extends com.google.api.client.json.GenericJson
 
   /**
    * Partial failures, one for each `Operation` in the request that failed processing. There are
-   * three possible combinations of the RPC status:
-   *
-   * 1. The combination of a successful RPC status and an empty `report_errors`    list indicates a
-   * complete success where all `Operations` in the    request are processed successfully. 2. The
-   * combination of a successful RPC status and a non-empty    `report_errors` list indicates a
-   * partial success where some    `Operations` in the request succeeded. Each    `Operation` that
-   * failed processing has a corresponding item    in this list. 3. A failed RPC status indicates a
-   * general non-deterministic failure.    When this happens, it's impossible to know which of the
-   * 'Operations' in the request succeeded or failed.
+   * three possible combinations of the RPC status: 1. The combination of a successful RPC status
+   * and an empty `report_errors` list indicates a complete success where all `Operations` in the
+   * request are processed successfully. 2. The combination of a successful RPC status and a non-
+   * empty `report_errors` list indicates a partial success where some `Operations` in the request
+   * succeeded. Each `Operation` that failed processing has a corresponding item in this list. 3. A
+   * failed RPC status indicates a general non-deterministic failure. When this happens, it's
+   * impossible to know which of the 'Operations' in the request succeeded or failed.
    * @param reportErrors reportErrors or {@code null} for none
    */
   public ReportResponse setReportErrors(java.util.List<ReportError> reportErrors) {
@@ -121,14 +112,11 @@ public final class ReportResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Quota usage for each quota release `Operation` request.
-   *
-   * Fully or partially failed quota release request may or may not be present in
-   * `report_quota_info`. For example, a failed quota release request will have the current quota
-   * usage info when precise quota library returns the info. A deadline exceeded quota request will
-   * not have quota usage info.
-   *
-   * If there is no quota release request, report_quota_info will be empty.
+   * Quota usage for each quota release `Operation` request. Fully or partially failed quota release
+   * request may or may not be present in `report_quota_info`. For example, a failed quota release
+   * request will have the current quota usage info when precise quota library returns the info. A
+   * deadline exceeded quota request will not have quota usage info. If there is no quota release
+   * request, report_quota_info will be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<ReportInfo> getReportInfos() {
@@ -136,14 +124,11 @@ public final class ReportResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Quota usage for each quota release `Operation` request.
-   *
-   * Fully or partially failed quota release request may or may not be present in
-   * `report_quota_info`. For example, a failed quota release request will have the current quota
-   * usage info when precise quota library returns the info. A deadline exceeded quota request will
-   * not have quota usage info.
-   *
-   * If there is no quota release request, report_quota_info will be empty.
+   * Quota usage for each quota release `Operation` request. Fully or partially failed quota release
+   * request may or may not be present in `report_quota_info`. For example, a failed quota release
+   * request will have the current quota usage info when precise quota library returns the info. A
+   * deadline exceeded quota request will not have quota usage info. If there is no quota release
+   * request, report_quota_info will be empty.
    * @param reportInfos reportInfos or {@code null} for none
    */
   public ReportResponse setReportInfos(java.util.List<ReportInfo> reportInfos) {

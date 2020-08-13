@@ -33,16 +33,11 @@ package com.google.api.services.servicecontrol.v1.model;
 public final class Exemplar extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contextual information about the example value. Examples are:
-   *
-   *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
-   *
-   *   Literal string: type.googleapis.com/google.protobuf.StringValue
-   *
-   *   Labels dropped during aggregation:     type.googleapis.com/google.monitoring.v3.DroppedLabels
-   *
-   * There may be only a single attachment of any given message type in a single exemplar, and this
-   * is enforced by the system.
+   * Contextual information about the example value. Examples are: Trace:
+   * type.googleapis.com/google.monitoring.v3.SpanContext Literal string:
+   * type.googleapis.com/google.protobuf.StringValue Labels dropped during aggregation:
+   * type.googleapis.com/google.monitoring.v3.DroppedLabels There may be only a single attachment of
+   * any given message type in a single exemplar, and this is enforced by the system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,16 +58,11 @@ public final class Exemplar extends com.google.api.client.json.GenericJson {
   private java.lang.Double value;
 
   /**
-   * Contextual information about the example value. Examples are:
-   *
-   *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
-   *
-   *   Literal string: type.googleapis.com/google.protobuf.StringValue
-   *
-   *   Labels dropped during aggregation:     type.googleapis.com/google.monitoring.v3.DroppedLabels
-   *
-   * There may be only a single attachment of any given message type in a single exemplar, and this
-   * is enforced by the system.
+   * Contextual information about the example value. Examples are: Trace:
+   * type.googleapis.com/google.monitoring.v3.SpanContext Literal string:
+   * type.googleapis.com/google.protobuf.StringValue Labels dropped during aggregation:
+   * type.googleapis.com/google.monitoring.v3.DroppedLabels There may be only a single attachment of
+   * any given message type in a single exemplar, and this is enforced by the system.
    * @return value or {@code null} for none
    */
   public java.util.List<java.util.Map<String, java.lang.Object>> getAttachments() {
@@ -80,16 +70,11 @@ public final class Exemplar extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contextual information about the example value. Examples are:
-   *
-   *   Trace: type.googleapis.com/google.monitoring.v3.SpanContext
-   *
-   *   Literal string: type.googleapis.com/google.protobuf.StringValue
-   *
-   *   Labels dropped during aggregation:     type.googleapis.com/google.monitoring.v3.DroppedLabels
-   *
-   * There may be only a single attachment of any given message type in a single exemplar, and this
-   * is enforced by the system.
+   * Contextual information about the example value. Examples are: Trace:
+   * type.googleapis.com/google.monitoring.v3.SpanContext Literal string:
+   * type.googleapis.com/google.protobuf.StringValue Labels dropped during aggregation:
+   * type.googleapis.com/google.monitoring.v3.DroppedLabels There may be only a single attachment of
+   * any given message type in a single exemplar, and this is enforced by the system.
    * @param attachments attachments or {@code null} for none
    */
   public Exemplar setAttachments(java.util.List<java.util.Map<String, java.lang.Object>> attachments) {

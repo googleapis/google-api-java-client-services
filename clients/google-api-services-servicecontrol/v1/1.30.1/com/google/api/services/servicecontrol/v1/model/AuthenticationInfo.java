@@ -67,9 +67,7 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
   /**
    * The name of the service account key used to create or exchange credentials for authenticating
    * the service account making the request. This is a scheme-less URI full resource name. For
-   * example:
-   *
-   * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+   * example: "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,9 +167,7 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
   /**
    * The name of the service account key used to create or exchange credentials for authenticating
    * the service account making the request. This is a scheme-less URI full resource name. For
-   * example:
-   *
-   * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+   * example: "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountKeyName() {
@@ -181,9 +177,7 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
   /**
    * The name of the service account key used to create or exchange credentials for authenticating
    * the service account making the request. This is a scheme-less URI full resource name. For
-   * example:
-   *
-   * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+   * example: "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
    * @param serviceAccountKeyName serviceAccountKeyName or {@code null} for none
    */
   public AuthenticationInfo setServiceAccountKeyName(java.lang.String serviceAccountKeyName) {

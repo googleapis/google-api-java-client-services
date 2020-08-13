@@ -32,9 +32,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   /**
    * The set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
    * string up to 256 bytes, a signed 64-bit integer, or the Boolean values `true` and `false`. For
-   * example:
-   *
-   *     "/instance_id": "my-instance"     "/http/user_agent": ""     "/http/request_bytes": 300
+   * example: "/instance_id": "my-instance" "/http/user_agent": "" "/http/request_bytes": 300
    * "abc.com/myattribute": true
    * The value may be {@code null}.
    */
@@ -59,9 +57,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   /**
    * The set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
    * string up to 256 bytes, a signed 64-bit integer, or the Boolean values `true` and `false`. For
-   * example:
-   *
-   *     "/instance_id": "my-instance"     "/http/user_agent": ""     "/http/request_bytes": 300
+   * example: "/instance_id": "my-instance" "/http/user_agent": "" "/http/request_bytes": 300
    * "abc.com/myattribute": true
    * @return value or {@code null} for none
    */
@@ -72,9 +68,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   /**
    * The set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
    * string up to 256 bytes, a signed 64-bit integer, or the Boolean values `true` and `false`. For
-   * example:
-   *
-   *     "/instance_id": "my-instance"     "/http/user_agent": ""     "/http/request_bytes": 300
+   * example: "/instance_id": "my-instance" "/http/user_agent": "" "/http/request_bytes": 300
    * "abc.com/myattribute": true
    * @param attributeMap attributeMap or {@code null} for none
    */

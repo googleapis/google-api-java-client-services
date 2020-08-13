@@ -32,9 +32,7 @@ public final class ResourceLocation extends com.google.api.client.json.GenericJs
   /**
    * The locations of a resource after the execution of the operation. Requests to create or delete
    * a location based resource must populate the 'current_locations' field and not the
-   * 'original_locations' field. For example:
-   *
-   *     "europe-west1-a"     "us-east1"     "nam3"
+   * 'original_locations' field. For example: "europe-west1-a" "us-east1" "nam3"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,9 +41,7 @@ public final class ResourceLocation extends com.google.api.client.json.GenericJs
   /**
    * The locations of a resource prior to the execution of the operation. Requests that mutate the
    * resource's location must populate both the 'original_locations' as well as the
-   * 'current_locations' fields. For example:
-   *
-   *     "europe-west1-a"     "us-east1"     "nam3"
+   * 'current_locations' fields. For example: "europe-west1-a" "us-east1" "nam3"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +50,7 @@ public final class ResourceLocation extends com.google.api.client.json.GenericJs
   /**
    * The locations of a resource after the execution of the operation. Requests to create or delete
    * a location based resource must populate the 'current_locations' field and not the
-   * 'original_locations' field. For example:
-   *
-   *     "europe-west1-a"     "us-east1"     "nam3"
+   * 'original_locations' field. For example: "europe-west1-a" "us-east1" "nam3"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCurrentLocations() {
@@ -66,9 +60,7 @@ public final class ResourceLocation extends com.google.api.client.json.GenericJs
   /**
    * The locations of a resource after the execution of the operation. Requests to create or delete
    * a location based resource must populate the 'current_locations' field and not the
-   * 'original_locations' field. For example:
-   *
-   *     "europe-west1-a"     "us-east1"     "nam3"
+   * 'original_locations' field. For example: "europe-west1-a" "us-east1" "nam3"
    * @param currentLocations currentLocations or {@code null} for none
    */
   public ResourceLocation setCurrentLocations(java.util.List<java.lang.String> currentLocations) {
@@ -79,9 +71,7 @@ public final class ResourceLocation extends com.google.api.client.json.GenericJs
   /**
    * The locations of a resource prior to the execution of the operation. Requests that mutate the
    * resource's location must populate both the 'original_locations' as well as the
-   * 'current_locations' fields. For example:
-   *
-   *     "europe-west1-a"     "us-east1"     "nam3"
+   * 'current_locations' fields. For example: "europe-west1-a" "us-east1" "nam3"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOriginalLocations() {
@@ -91,9 +81,7 @@ public final class ResourceLocation extends com.google.api.client.json.GenericJs
   /**
    * The locations of a resource prior to the execution of the operation. Requests that mutate the
    * resource's location must populate both the 'original_locations' as well as the
-   * 'current_locations' fields. For example:
-   *
-   *     "europe-west1-a"     "us-east1"     "nam3"
+   * 'current_locations' fields. For example: "europe-west1-a" "us-east1" "nam3"
    * @param originalLocations originalLocations or {@code null} for none
    */
   public ResourceLocation setOriginalLocations(java.util.List<java.lang.String> originalLocations) {

@@ -53,12 +53,10 @@ public final class AllocateQuotaResponse extends com.google.api.client.json.Gene
 
   /**
    * Quota metrics to indicate the result of allocation. Depending on the request, one or more of
-   * the following metrics will be included:
-   *
-   * 1. Per quota group or per quota metric incremental usage will be specified using the following
-   * delta metric :   "serviceruntime.googleapis.com/api/consumer/quota_used_count"
-   *
-   * 2. The quota limit reached condition will be specified using the following boolean metric :
+   * the following metrics will be included: 1. Per quota group or per quota metric incremental
+   * usage will be specified using the following delta metric :
+   * "serviceruntime.googleapis.com/api/consumer/quota_used_count" 2. The quota limit reached
+   * condition will be specified using the following boolean metric :
    * "serviceruntime.googleapis.com/quota/exceeded"
    * The value may be {@code null}.
    */
@@ -127,12 +125,10 @@ public final class AllocateQuotaResponse extends com.google.api.client.json.Gene
 
   /**
    * Quota metrics to indicate the result of allocation. Depending on the request, one or more of
-   * the following metrics will be included:
-   *
-   * 1. Per quota group or per quota metric incremental usage will be specified using the following
-   * delta metric :   "serviceruntime.googleapis.com/api/consumer/quota_used_count"
-   *
-   * 2. The quota limit reached condition will be specified using the following boolean metric :
+   * the following metrics will be included: 1. Per quota group or per quota metric incremental
+   * usage will be specified using the following delta metric :
+   * "serviceruntime.googleapis.com/api/consumer/quota_used_count" 2. The quota limit reached
+   * condition will be specified using the following boolean metric :
    * "serviceruntime.googleapis.com/quota/exceeded"
    * @return value or {@code null} for none
    */
@@ -142,12 +138,10 @@ public final class AllocateQuotaResponse extends com.google.api.client.json.Gene
 
   /**
    * Quota metrics to indicate the result of allocation. Depending on the request, one or more of
-   * the following metrics will be included:
-   *
-   * 1. Per quota group or per quota metric incremental usage will be specified using the following
-   * delta metric :   "serviceruntime.googleapis.com/api/consumer/quota_used_count"
-   *
-   * 2. The quota limit reached condition will be specified using the following boolean metric :
+   * the following metrics will be included: 1. Per quota group or per quota metric incremental
+   * usage will be specified using the following delta metric :
+   * "serviceruntime.googleapis.com/api/consumer/quota_used_count" 2. The quota limit reached
+   * condition will be specified using the following boolean metric :
    * "serviceruntime.googleapis.com/quota/exceeded"
    * @param quotaMetrics quotaMetrics or {@code null} for none
    */

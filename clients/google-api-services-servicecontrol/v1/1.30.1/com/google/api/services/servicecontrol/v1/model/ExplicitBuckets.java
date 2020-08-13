@@ -32,15 +32,11 @@ public final class ExplicitBuckets extends com.google.api.client.json.GenericJso
   /**
    * 'bound' is a list of strictly increasing boundaries between buckets. Note that a list of length
    * N-1 defines N buckets because of fenceposting. See comments on `bucket_options` for details.
-   *
-   * The i'th finite bucket covers the interval   [bound[i-1], bound[i]) where i ranges from 1 to
+   * The i'th finite bucket covers the interval [bound[i-1], bound[i]) where i ranges from 1 to
    * bound_size() - 1. Note that there are no finite buckets at all if 'bound' only contains a
    * single element; in that special case the single bound defines the boundary between the
-   * underflow and overflow buckets.
-   *
-   * bucket number                   lower bound    upper bound  i == 0 (underflow)
-   * -inf           bound[i]  0 < i < bound_size()            bound[i-1]     bound[i]  i ==
-   * bound_size() (overflow)    bound[i-1]     +inf
+   * underflow and overflow buckets. bucket number lower bound upper bound i == 0 (underflow) -inf
+   * bound[i] 0 < i < bound_size() bound[i-1] bound[i] i == bound_size() (overflow) bound[i-1] +inf
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,15 +45,11 @@ public final class ExplicitBuckets extends com.google.api.client.json.GenericJso
   /**
    * 'bound' is a list of strictly increasing boundaries between buckets. Note that a list of length
    * N-1 defines N buckets because of fenceposting. See comments on `bucket_options` for details.
-   *
-   * The i'th finite bucket covers the interval   [bound[i-1], bound[i]) where i ranges from 1 to
+   * The i'th finite bucket covers the interval [bound[i-1], bound[i]) where i ranges from 1 to
    * bound_size() - 1. Note that there are no finite buckets at all if 'bound' only contains a
    * single element; in that special case the single bound defines the boundary between the
-   * underflow and overflow buckets.
-   *
-   * bucket number                   lower bound    upper bound  i == 0 (underflow)
-   * -inf           bound[i]  0 < i < bound_size()            bound[i-1]     bound[i]  i ==
-   * bound_size() (overflow)    bound[i-1]     +inf
+   * underflow and overflow buckets. bucket number lower bound upper bound i == 0 (underflow) -inf
+   * bound[i] 0 < i < bound_size() bound[i-1] bound[i] i == bound_size() (overflow) bound[i-1] +inf
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Double> getBounds() {
@@ -67,15 +59,11 @@ public final class ExplicitBuckets extends com.google.api.client.json.GenericJso
   /**
    * 'bound' is a list of strictly increasing boundaries between buckets. Note that a list of length
    * N-1 defines N buckets because of fenceposting. See comments on `bucket_options` for details.
-   *
-   * The i'th finite bucket covers the interval   [bound[i-1], bound[i]) where i ranges from 1 to
+   * The i'th finite bucket covers the interval [bound[i-1], bound[i]) where i ranges from 1 to
    * bound_size() - 1. Note that there are no finite buckets at all if 'bound' only contains a
    * single element; in that special case the single bound defines the boundary between the
-   * underflow and overflow buckets.
-   *
-   * bucket number                   lower bound    upper bound  i == 0 (underflow)
-   * -inf           bound[i]  0 < i < bound_size()            bound[i-1]     bound[i]  i ==
-   * bound_size() (overflow)    bound[i-1]     +inf
+   * underflow and overflow buckets. bucket number lower bound upper bound i == 0 (underflow) -inf
+   * bound[i] 0 < i < bound_size() bound[i-1] bound[i] i == bound_size() (overflow) bound[i-1] +inf
    * @param bounds bounds or {@code null} for none
    */
   public ExplicitBuckets setBounds(java.util.List<java.lang.Double> bounds) {

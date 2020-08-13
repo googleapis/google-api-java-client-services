@@ -18,11 +18,9 @@ package com.google.api.services.servicecontrol.v1.model;
 
 /**
  * Distribution represents a frequency distribution of double-valued sample points. It contains the
- * size of the population of sample points plus additional optional information:
- *
- *   - the arithmetic mean of the samples   - the minimum and maximum of the samples   - the sum-
- * squared-deviation of the samples, used to compute variance   - a histogram of the values of the
- * sample points
+ * size of the population of sample points plus additional optional information: - the arithmetic
+ * mean of the samples - the minimum and maximum of the samples - the sum-squared-deviation of the
+ * samples, used to compute variance - a histogram of the values of the sample points
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Control API. For a detailed explanation see:
@@ -36,14 +34,12 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of samples in each histogram bucket. `bucket_counts` are optional. If present, they
-   * must sum to the `count` value.
-   *
-   * The buckets are defined below in `bucket_option`. There are N buckets. `bucket_counts[0]` is
-   * the number of samples in the underflow bucket. `bucket_counts[1]` to `bucket_counts[N-1]` are
-   * the numbers of samples in each of the finite buckets. And `bucket_counts[N] is the number of
-   * samples in the overflow bucket. See the comments of `bucket_option` below for more details.
-   *
-   * Any suffix of trailing zeros may be omitted.
+   * must sum to the `count` value. The buckets are defined below in `bucket_option`. There are N
+   * buckets. `bucket_counts[0]` is the number of samples in the underflow bucket.
+   * `bucket_counts[1]` to `bucket_counts[N-1]` are the numbers of samples in each of the finite
+   * buckets. And `bucket_counts[N] is the number of samples in the overflow bucket. See the
+   * comments of `bucket_option` below for more details. Any suffix of trailing zeros may be
+   * omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -107,9 +103,9 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   private java.lang.Double minimum;
 
   /**
-   * The sum of squared deviations from the mean:   Sum[i=1..count]((x_i - mean)^2) where each x_i
-   * is a sample values. If `count` is zero then this field must be zero, otherwise validation of
-   * the request fails.
+   * The sum of squared deviations from the mean: Sum[i=1..count]((x_i - mean)^2) where each x_i is
+   * a sample values. If `count` is zero then this field must be zero, otherwise validation of the
+   * request fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,14 +113,12 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of samples in each histogram bucket. `bucket_counts` are optional. If present, they
-   * must sum to the `count` value.
-   *
-   * The buckets are defined below in `bucket_option`. There are N buckets. `bucket_counts[0]` is
-   * the number of samples in the underflow bucket. `bucket_counts[1]` to `bucket_counts[N-1]` are
-   * the numbers of samples in each of the finite buckets. And `bucket_counts[N] is the number of
-   * samples in the overflow bucket. See the comments of `bucket_option` below for more details.
-   *
-   * Any suffix of trailing zeros may be omitted.
+   * must sum to the `count` value. The buckets are defined below in `bucket_option`. There are N
+   * buckets. `bucket_counts[0]` is the number of samples in the underflow bucket.
+   * `bucket_counts[1]` to `bucket_counts[N-1]` are the numbers of samples in each of the finite
+   * buckets. And `bucket_counts[N] is the number of samples in the overflow bucket. See the
+   * comments of `bucket_option` below for more details. Any suffix of trailing zeros may be
+   * omitted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getBucketCounts() {
@@ -133,14 +127,12 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of samples in each histogram bucket. `bucket_counts` are optional. If present, they
-   * must sum to the `count` value.
-   *
-   * The buckets are defined below in `bucket_option`. There are N buckets. `bucket_counts[0]` is
-   * the number of samples in the underflow bucket. `bucket_counts[1]` to `bucket_counts[N-1]` are
-   * the numbers of samples in each of the finite buckets. And `bucket_counts[N] is the number of
-   * samples in the overflow bucket. See the comments of `bucket_option` below for more details.
-   *
-   * Any suffix of trailing zeros may be omitted.
+   * must sum to the `count` value. The buckets are defined below in `bucket_option`. There are N
+   * buckets. `bucket_counts[0]` is the number of samples in the underflow bucket.
+   * `bucket_counts[1]` to `bucket_counts[N-1]` are the numbers of samples in each of the finite
+   * buckets. And `bucket_counts[N] is the number of samples in the overflow bucket. See the
+   * comments of `bucket_option` below for more details. Any suffix of trailing zeros may be
+   * omitted.
    * @param bucketCounts bucketCounts or {@code null} for none
    */
   public Distribution setBucketCounts(java.util.List<java.lang.Long> bucketCounts) {
@@ -287,9 +279,9 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The sum of squared deviations from the mean:   Sum[i=1..count]((x_i - mean)^2) where each x_i
-   * is a sample values. If `count` is zero then this field must be zero, otherwise validation of
-   * the request fails.
+   * The sum of squared deviations from the mean: Sum[i=1..count]((x_i - mean)^2) where each x_i is
+   * a sample values. If `count` is zero then this field must be zero, otherwise validation of the
+   * request fails.
    * @return value or {@code null} for none
    */
   public java.lang.Double getSumOfSquaredDeviation() {
@@ -297,9 +289,9 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The sum of squared deviations from the mean:   Sum[i=1..count]((x_i - mean)^2) where each x_i
-   * is a sample values. If `count` is zero then this field must be zero, otherwise validation of
-   * the request fails.
+   * The sum of squared deviations from the mean: Sum[i=1..count]((x_i - mean)^2) where each x_i is
+   * a sample values. If `count` is zero then this field must be zero, otherwise validation of the
+   * request fails.
    * @param sumOfSquaredDeviation sumOfSquaredDeviation or {@code null} for none
    */
   public Distribution setSumOfSquaredDeviation(java.lang.Double sumOfSquaredDeviation) {

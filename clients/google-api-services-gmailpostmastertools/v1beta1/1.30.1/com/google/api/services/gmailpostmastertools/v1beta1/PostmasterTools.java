@@ -20,7 +20,7 @@ package com.google.api.services.gmailpostmastertools.v1beta1;
  * Service definition for PostmasterTools (v1beta1).
  *
  * <p>
- * The Gmail Postmaster API is a RESTful API that provides programmatic access to email traffic metrics (like spam reports, delivery errors etc) otherwise available through the Gmail Postmaster Tools UI currently.
+ * The Postmaster Tools API is a RESTful API that provides programmatic access to email traffic metrics (like spam reports, delivery errors etc) otherwise available through the Gmail Postmaster Tools UI currently.
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.10 of the Gmail Postmaster Tools API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Postmaster Tools API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

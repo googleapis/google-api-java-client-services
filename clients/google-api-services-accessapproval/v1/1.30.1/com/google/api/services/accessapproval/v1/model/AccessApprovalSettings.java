@@ -44,21 +44,18 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    * Access requests for the resource given by name against any of these services contained here
    * will be required to have explicit approval. If name refers to an organization, enrollment can
    * be done for individual services. If name refers to a folder or project, enrollment can only be
-   * done on an all or nothing basis.
-   *
-   * If a cloud_product is repeated in this list, the first entry will be honored and all following
-   * entries will be discarded. A maximum of 10 enrolled services will be enforced, to be expanded
-   * as the set of supported services is expanded.
+   * done on an all or nothing basis. If a cloud_product is repeated in this list, the first entry
+   * will be honored and all following entries will be discarded. A maximum of 10 enrolled services
+   * will be enforced, to be expanded as the set of supported services is expanded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<EnrolledService> enrolledServices;
 
   /**
-   * The resource name of the settings. Format is one of:
-   *
-   *   "projects/{project_id}/accessApprovalSettings"   "folders/{folder_id}/accessApprovalSettings"
-   * "organizations/{organization_id}/accessApprovalSettings"
+   * The resource name of the settings. Format is one of: 1.
+   * "projects/{project_id}/accessApprovalSettings" 2. "folders/{folder_id}/accessApprovalSettings"
+   * 3. "organizations/{organization_id}/accessApprovalSettings"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,11 +98,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    * Access requests for the resource given by name against any of these services contained here
    * will be required to have explicit approval. If name refers to an organization, enrollment can
    * be done for individual services. If name refers to a folder or project, enrollment can only be
-   * done on an all or nothing basis.
-   *
-   * If a cloud_product is repeated in this list, the first entry will be honored and all following
-   * entries will be discarded. A maximum of 10 enrolled services will be enforced, to be expanded
-   * as the set of supported services is expanded.
+   * done on an all or nothing basis. If a cloud_product is repeated in this list, the first entry
+   * will be honored and all following entries will be discarded. A maximum of 10 enrolled services
+   * will be enforced, to be expanded as the set of supported services is expanded.
    * @return value or {@code null} for none
    */
   public java.util.List<EnrolledService> getEnrolledServices() {
@@ -117,11 +112,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    * Access requests for the resource given by name against any of these services contained here
    * will be required to have explicit approval. If name refers to an organization, enrollment can
    * be done for individual services. If name refers to a folder or project, enrollment can only be
-   * done on an all or nothing basis.
-   *
-   * If a cloud_product is repeated in this list, the first entry will be honored and all following
-   * entries will be discarded. A maximum of 10 enrolled services will be enforced, to be expanded
-   * as the set of supported services is expanded.
+   * done on an all or nothing basis. If a cloud_product is repeated in this list, the first entry
+   * will be honored and all following entries will be discarded. A maximum of 10 enrolled services
+   * will be enforced, to be expanded as the set of supported services is expanded.
    * @param enrolledServices enrolledServices or {@code null} for none
    */
   public AccessApprovalSettings setEnrolledServices(java.util.List<EnrolledService> enrolledServices) {
@@ -130,10 +123,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * The resource name of the settings. Format is one of:
-   *
-   *   "projects/{project_id}/accessApprovalSettings"   "folders/{folder_id}/accessApprovalSettings"
-   * "organizations/{organization_id}/accessApprovalSettings"
+   * The resource name of the settings. Format is one of: 1.
+   * "projects/{project_id}/accessApprovalSettings" 2. "folders/{folder_id}/accessApprovalSettings"
+   * 3. "organizations/{organization_id}/accessApprovalSettings"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -141,10 +133,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * The resource name of the settings. Format is one of:
-   *
-   *   "projects/{project_id}/accessApprovalSettings"   "folders/{folder_id}/accessApprovalSettings"
-   * "organizations/{organization_id}/accessApprovalSettings"
+   * The resource name of the settings. Format is one of: 1.
+   * "projects/{project_id}/accessApprovalSettings" 2. "folders/{folder_id}/accessApprovalSettings"
+   * 3. "organizations/{organization_id}/accessApprovalSettings"
    * @param name name or {@code null} for none
    */
   public AccessApprovalSettings setName(java.lang.String name) {

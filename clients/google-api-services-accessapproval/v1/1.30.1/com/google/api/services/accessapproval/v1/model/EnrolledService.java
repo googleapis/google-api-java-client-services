@@ -31,11 +31,10 @@ public final class EnrolledService extends com.google.api.client.json.GenericJso
 
   /**
    * The product for which Access Approval will be enrolled. Allowed values are listed below (case-
-   * sensitive):
-   *
-   *   all   appengine.googleapis.com   bigquery.googleapis.com   bigtable.googleapis.com
-   * cloudkms.googleapis.com   compute.googleapis.com   dataflow.googleapis.com   iam.googleapis.com
-   * pubsub.googleapis.com   storage.googleapis.com
+   * sensitive): 1. all 2. appengine.googleapis.com 3. bigquery.googleapis.com 4.
+   * bigtable.googleapis.com 5. cloudkms.googleapis.com 6. compute.googleapis.com 7.
+   * dataflow.googleapis.com 8. iam.googleapis.com 9. pubsub.googleapis.com 10.
+   * storage.googleapis.com
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,11 +49,10 @@ public final class EnrolledService extends com.google.api.client.json.GenericJso
 
   /**
    * The product for which Access Approval will be enrolled. Allowed values are listed below (case-
-   * sensitive):
-   *
-   *   all   appengine.googleapis.com   bigquery.googleapis.com   bigtable.googleapis.com
-   * cloudkms.googleapis.com   compute.googleapis.com   dataflow.googleapis.com   iam.googleapis.com
-   * pubsub.googleapis.com   storage.googleapis.com
+   * sensitive): 1. all 2. appengine.googleapis.com 3. bigquery.googleapis.com 4.
+   * bigtable.googleapis.com 5. cloudkms.googleapis.com 6. compute.googleapis.com 7.
+   * dataflow.googleapis.com 8. iam.googleapis.com 9. pubsub.googleapis.com 10.
+   * storage.googleapis.com
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudProduct() {
@@ -63,11 +61,10 @@ public final class EnrolledService extends com.google.api.client.json.GenericJso
 
   /**
    * The product for which Access Approval will be enrolled. Allowed values are listed below (case-
-   * sensitive):
-   *
-   *   all   appengine.googleapis.com   bigquery.googleapis.com   bigtable.googleapis.com
-   * cloudkms.googleapis.com   compute.googleapis.com   dataflow.googleapis.com   iam.googleapis.com
-   * pubsub.googleapis.com   storage.googleapis.com
+   * sensitive): 1. all 2. appengine.googleapis.com 3. bigquery.googleapis.com 4.
+   * bigtable.googleapis.com 5. cloudkms.googleapis.com 6. compute.googleapis.com 7.
+   * dataflow.googleapis.com 8. iam.googleapis.com 9. pubsub.googleapis.com 10.
+   * storage.googleapis.com
    * @param cloudProduct cloudProduct or {@code null} for none
    */
   public EnrolledService setCloudProduct(java.lang.String cloudProduct) {

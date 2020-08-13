@@ -99,6 +99,13 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   private java.lang.Boolean overwrite;
 
   /**
+   * Controls which fields are visible. Only applicable if the method is 'get'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String view;
+
+  /**
    * The account to create or update. Only defined if the method is `insert` or `update`.
    * @return value or {@code null} for none
    */
@@ -258,6 +265,23 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
    */
   public AccountsCustomBatchRequestEntry setOverwrite(java.lang.Boolean overwrite) {
     this.overwrite = overwrite;
+    return this;
+  }
+
+  /**
+   * Controls which fields are visible. Only applicable if the method is 'get'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getView() {
+    return view;
+  }
+
+  /**
+   * Controls which fields are visible. Only applicable if the method is 'get'.
+   * @param view view or {@code null} for none
+   */
+  public AccountsCustomBatchRequestEntry setView(java.lang.String view) {
+    this.view = view;
     return this;
   }
 

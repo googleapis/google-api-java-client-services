@@ -56,6 +56,13 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private AccountBusinessInformation businessInformation;
 
   /**
+   * ID of CSS the account belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger cssId;
+
+  /**
    * The GMB account which is linked or in the process of being linked with the Merchant Center
    * account.
    * The value may be {@code null}.
@@ -76,6 +83,13 @@ public final class Account extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * List of label IDs that are assigned to the account by CSS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.math.BigInteger> labelIds;
 
   /**
    * Required. Display name for the account.
@@ -174,6 +188,23 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * ID of CSS the account belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getCssId() {
+    return cssId;
+  }
+
+  /**
+   * ID of CSS the account belongs to.
+   * @param cssId cssId or {@code null} for none
+   */
+  public Account setCssId(java.math.BigInteger cssId) {
+    this.cssId = cssId;
+    return this;
+  }
+
+  /**
    * The GMB account which is linked or in the process of being linked with the Merchant Center
    * account.
    * @return value or {@code null} for none
@@ -223,6 +254,23 @@ public final class Account extends com.google.api.client.json.GenericJson {
    */
   public Account setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * List of label IDs that are assigned to the account by CSS.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.math.BigInteger> getLabelIds() {
+    return labelIds;
+  }
+
+  /**
+   * List of label IDs that are assigned to the account by CSS.
+   * @param labelIds labelIds or {@code null} for none
+   */
+  public Account setLabelIds(java.util.List<java.math.BigInteger> labelIds) {
+    this.labelIds = labelIds;
     return this;
   }
 

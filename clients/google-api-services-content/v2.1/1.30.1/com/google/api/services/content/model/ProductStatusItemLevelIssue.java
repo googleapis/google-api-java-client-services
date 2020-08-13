@@ -31,6 +31,13 @@ package com.google.api.services.content.model;
 public final class ProductStatusItemLevelIssue extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of country codes (ISO 3166-1 alpha-2) where issue applies to the offer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> applicableCountrys;
+
+  /**
    * The attribute's name, if the issue is caused by a single attribute.
    * The value may be {@code null}.
    */
@@ -85,6 +92,23 @@ public final class ProductStatusItemLevelIssue extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String servability;
+
+  /**
+   * List of country codes (ISO 3166-1 alpha-2) where issue applies to the offer.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getApplicableCountrys() {
+    return applicableCountrys;
+  }
+
+  /**
+   * List of country codes (ISO 3166-1 alpha-2) where issue applies to the offer.
+   * @param applicableCountrys applicableCountrys or {@code null} for none
+   */
+  public ProductStatusItemLevelIssue setApplicableCountrys(java.util.List<java.lang.String> applicableCountrys) {
+    this.applicableCountrys = applicableCountrys;
+    return this;
+  }
 
   /**
    * The attribute's name, if the issue is caused by a single attribute.

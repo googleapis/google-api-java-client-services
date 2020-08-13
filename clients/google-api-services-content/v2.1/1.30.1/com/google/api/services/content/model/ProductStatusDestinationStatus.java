@@ -31,6 +31,13 @@ package com.google.api.services.content.model;
 public final class ProductStatusDestinationStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of country codes (ISO 3166-1 alpha-2) where the offer is approved.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> approvedCountrys;
+
+  /**
    * The name of the destination
    * The value may be {@code null}.
    */
@@ -38,11 +45,42 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
   private java.lang.String destination;
 
   /**
+   * List of country codes (ISO 3166-1 alpha-2) where the offer is disapproved.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> disapprovedCountrys;
+
+  /**
+   * List of country codes (ISO 3166-1 alpha-2) where the offer is pending approval.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> pendingCountrys;
+
+  /**
    * Destination approval status in `targetCountry` of the offer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * List of country codes (ISO 3166-1 alpha-2) where the offer is approved.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getApprovedCountrys() {
+    return approvedCountrys;
+  }
+
+  /**
+   * List of country codes (ISO 3166-1 alpha-2) where the offer is approved.
+   * @param approvedCountrys approvedCountrys or {@code null} for none
+   */
+  public ProductStatusDestinationStatus setApprovedCountrys(java.util.List<java.lang.String> approvedCountrys) {
+    this.approvedCountrys = approvedCountrys;
+    return this;
+  }
 
   /**
    * The name of the destination
@@ -58,6 +96,40 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
    */
   public ProductStatusDestinationStatus setDestination(java.lang.String destination) {
     this.destination = destination;
+    return this;
+  }
+
+  /**
+   * List of country codes (ISO 3166-1 alpha-2) where the offer is disapproved.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDisapprovedCountrys() {
+    return disapprovedCountrys;
+  }
+
+  /**
+   * List of country codes (ISO 3166-1 alpha-2) where the offer is disapproved.
+   * @param disapprovedCountrys disapprovedCountrys or {@code null} for none
+   */
+  public ProductStatusDestinationStatus setDisapprovedCountrys(java.util.List<java.lang.String> disapprovedCountrys) {
+    this.disapprovedCountrys = disapprovedCountrys;
+    return this;
+  }
+
+  /**
+   * List of country codes (ISO 3166-1 alpha-2) where the offer is pending approval.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPendingCountrys() {
+    return pendingCountrys;
+  }
+
+  /**
+   * List of country codes (ISO 3166-1 alpha-2) where the offer is pending approval.
+   * @param pendingCountrys pendingCountrys or {@code null} for none
+   */
+  public ProductStatusDestinationStatus setPendingCountrys(java.util.List<java.lang.String> pendingCountrys) {
+    this.pendingCountrys = pendingCountrys;
     return this;
   }
 

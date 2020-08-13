@@ -59,17 +59,13 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private String lastModificationTime;
 
   /**
-   * A unique name (within the transfer project) assigned when the job is created.  If this field is
+   * A unique name (within the transfer project) assigned when the job is created. If this field is
    * empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
-   * Otherwise, the specified name is used as the unique name for this job.
-   *
-   * If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS
-   * error.
-   *
-   * This name must start with `"transferJobs/"` prefix and end with a letter or a number, and
-   * should be no more than 128 characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"`
-   *
-   * Invalid job names will fail with an INVALID_ARGUMENT error.
+   * Otherwise, the specified name is used as the unique name for this job. If the specified name is
+   * in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start
+   * with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
+   * characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail
+   * with an INVALID_ARGUMENT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,11 +93,10 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private Schedule schedule;
 
   /**
-   * Status of the job. This value MUST be specified for `CreateTransferJobRequests`.
-   *
-   * **Note:** The effect of the new job status takes place during a subsequent job run. For
-   * example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the
-   * transfer is running, the status change would not affect the current operation.
+   * Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The
+   * effect of the new job status takes place during a subsequent job run. For example, if you
+   * change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is
+   * running, the status change would not affect the current operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,17 +180,13 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique name (within the transfer project) assigned when the job is created.  If this field is
+   * A unique name (within the transfer project) assigned when the job is created. If this field is
    * empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
-   * Otherwise, the specified name is used as the unique name for this job.
-   *
-   * If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS
-   * error.
-   *
-   * This name must start with `"transferJobs/"` prefix and end with a letter or a number, and
-   * should be no more than 128 characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"`
-   *
-   * Invalid job names will fail with an INVALID_ARGUMENT error.
+   * Otherwise, the specified name is used as the unique name for this job. If the specified name is
+   * in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start
+   * with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
+   * characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail
+   * with an INVALID_ARGUMENT error.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -203,17 +194,13 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique name (within the transfer project) assigned when the job is created.  If this field is
+   * A unique name (within the transfer project) assigned when the job is created. If this field is
    * empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
-   * Otherwise, the specified name is used as the unique name for this job.
-   *
-   * If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS
-   * error.
-   *
-   * This name must start with `"transferJobs/"` prefix and end with a letter or a number, and
-   * should be no more than 128 characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"`
-   *
-   * Invalid job names will fail with an INVALID_ARGUMENT error.
+   * Otherwise, the specified name is used as the unique name for this job. If the specified name is
+   * in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start
+   * with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128
+   * characters. Example: `"transferJobs/[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names will fail
+   * with an INVALID_ARGUMENT error.
    * @param name name or {@code null} for none
    */
   public TransferJob setName(java.lang.String name) {
@@ -273,11 +260,10 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the job. This value MUST be specified for `CreateTransferJobRequests`.
-   *
-   * **Note:** The effect of the new job status takes place during a subsequent job run. For
-   * example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the
-   * transfer is running, the status change would not affect the current operation.
+   * Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The
+   * effect of the new job status takes place during a subsequent job run. For example, if you
+   * change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is
+   * running, the status change would not affect the current operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -285,11 +271,10 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the job. This value MUST be specified for `CreateTransferJobRequests`.
-   *
-   * **Note:** The effect of the new job status takes place during a subsequent job run. For
-   * example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the
-   * transfer is running, the status change would not affect the current operation.
+   * Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The
+   * effect of the new job status takes place during a subsequent job run. For example, if you
+   * change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is
+   * running, the status change would not affect the current operation.
    * @param status status or {@code null} for none
    */
   public TransferJob setStatus(java.lang.String status) {

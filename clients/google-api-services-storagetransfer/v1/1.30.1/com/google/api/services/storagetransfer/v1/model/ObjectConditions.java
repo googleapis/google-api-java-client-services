@@ -18,11 +18,10 @@ package com.google.api.services.storagetransfer.v1.model;
 
 /**
  * Conditions that determine which objects will be transferred. Applies only to Cloud Data Sources
- * such as S3, Azure, and Cloud Storage.
- *
- * The "last modification time" refers to the time of the last change to the object's content or
- * metadata — specifically, this is the `updated` property of Cloud Storage objects, the
- * `LastModified` field of S3 objects, and the `Last-Modified` header of Azure blobs.
+ * such as S3, Azure, and Cloud Storage. The "last modification time" refers to the time of the last
+ * change to the object's content or metadata — specifically, this is the `updated` property of
+ * Cloud Storage objects, the `LastModified` field of S3 objects, and the `Last-Modified` header of
+ * Azure blobs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:
@@ -35,9 +34,8 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class ObjectConditions extends com.google.api.client.json.GenericJson {
 
   /**
-   * `exclude_prefixes` must follow the requirements described for include_prefixes.
-   *
-   * The max size of `exclude_prefixes` is 1000.
+   * `exclude_prefixes` must follow the requirements described for include_prefixes. The max size of
+   * `exclude_prefixes` is 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,29 +46,18 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    * that start with one of the `include_prefixes` and that do not start with any of the
    * exclude_prefixes. If `include_prefixes` is not specified, all objects except those that have
    * names starting with one of the `exclude_prefixes` must satisfy the object conditions.
-   *
-   * Requirements:
-   *
-   *   * Each include-prefix and exclude-prefix can contain any sequence of     Unicode characters,
-   * to a max length of 1024 bytes when UTF8-encoded,     and must not contain Carriage Return or
-   * Line Feed characters.  Wildcard     matching and regular expression matching are not supported.
-   *
-   *   * Each include-prefix and exclude-prefix must omit the leading slash.     For example, to
-   * include the `requests.gz` object in a transfer from     `s3://my-aws-
-   * bucket/logs/y=2015/requests.gz`, specify the include     prefix as `logs/y=2015/requests.gz`.
-   *
-   *   * None of the include-prefix or the exclude-prefix values can be empty,     if specified.
-   *
-   *   * Each include-prefix must include a distinct portion of the object     namespace. No
-   * include-prefix may be a prefix of another     include-prefix.
-   *
-   *   * Each exclude-prefix must exclude a distinct portion of the object     namespace. No
-   * exclude-prefix may be a prefix of another     exclude-prefix.
-   *
-   *   * If `include_prefixes` is specified, then each exclude-prefix must start     with the value
-   * of a path explicitly included by `include_prefixes`.
-   *
-   * The max size of `include_prefixes` is 1000.
+   * Requirements: * Each include-prefix and exclude-prefix can contain any sequence of Unicode
+   * characters, to a max length of 1024 bytes when UTF8-encoded, and must not contain Carriage
+   * Return or Line Feed characters. Wildcard matching and regular expression matching are not
+   * supported. * Each include-prefix and exclude-prefix must omit the leading slash. For example,
+   * to include the `requests.gz` object in a transfer from `s3://my-aws-
+   * bucket/logs/y=2015/requests.gz`, specify the include prefix as `logs/y=2015/requests.gz`. *
+   * None of the include-prefix or the exclude-prefix values can be empty, if specified. * Each
+   * include-prefix must include a distinct portion of the object namespace. No include-prefix may
+   * be a prefix of another include-prefix. * Each exclude-prefix must exclude a distinct portion of
+   * the object namespace. No exclude-prefix may be a prefix of another exclude-prefix. * If
+   * `include_prefixes` is specified, then each exclude-prefix must start with the value of a path
+   * explicitly included by `include_prefixes`. The max size of `include_prefixes` is 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,15 +73,11 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
 
   /**
    * If specified, only objects with a "last modification time" on or after this timestamp and
-   * objects that don't have a "last modification time" are transferred.
-   *
-   * The `last_modified_since` and `last_modified_before` fields can be used together for chunked
-   * data processing. For example, consider a script that processes each day's worth of data at a
-   * time. For that you'd set each of the fields as follows:
-   *
-   * *  `last_modified_since` to the start of the day
-   *
-   * *  `last_modified_before` to the end of the day
+   * objects that don't have a "last modification time" are transferred. The `last_modified_since`
+   * and `last_modified_before` fields can be used together for chunked data processing. For
+   * example, consider a script that processes each day's worth of data at a time. For that you'd
+   * set each of the fields as follows: * `last_modified_since` to the start of the day *
+   * `last_modified_before` to the end of the day
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,10 +86,8 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
   /**
    * If specified, only objects with a "last modification time" on or after `NOW` -
    * `max_time_elapsed_since_last_modification` and objects that don't have a "last modification
-   * time" are transferred.
-   *
-   * For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the
-   * `TransferOperation`.
+   * time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to
+   * the start_time of the `TransferOperation`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,20 +95,17 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
 
   /**
    * If specified, only objects with a "last modification time" before `NOW` -
-   * `min_time_elapsed_since_last_modification` and objects that don't  have a "last modification
-   * time" are transferred.
-   *
-   * For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the
-   * `TransferOperation`.
+   * `min_time_elapsed_since_last_modification` and objects that don't have a "last modification
+   * time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to
+   * the start_time of the `TransferOperation`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String minTimeElapsedSinceLastModification;
 
   /**
-   * `exclude_prefixes` must follow the requirements described for include_prefixes.
-   *
-   * The max size of `exclude_prefixes` is 1000.
+   * `exclude_prefixes` must follow the requirements described for include_prefixes. The max size of
+   * `exclude_prefixes` is 1000.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludePrefixes() {
@@ -135,9 +113,8 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * `exclude_prefixes` must follow the requirements described for include_prefixes.
-   *
-   * The max size of `exclude_prefixes` is 1000.
+   * `exclude_prefixes` must follow the requirements described for include_prefixes. The max size of
+   * `exclude_prefixes` is 1000.
    * @param excludePrefixes excludePrefixes or {@code null} for none
    */
   public ObjectConditions setExcludePrefixes(java.util.List<java.lang.String> excludePrefixes) {
@@ -150,29 +127,18 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    * that start with one of the `include_prefixes` and that do not start with any of the
    * exclude_prefixes. If `include_prefixes` is not specified, all objects except those that have
    * names starting with one of the `exclude_prefixes` must satisfy the object conditions.
-   *
-   * Requirements:
-   *
-   *   * Each include-prefix and exclude-prefix can contain any sequence of     Unicode characters,
-   * to a max length of 1024 bytes when UTF8-encoded,     and must not contain Carriage Return or
-   * Line Feed characters.  Wildcard     matching and regular expression matching are not supported.
-   *
-   *   * Each include-prefix and exclude-prefix must omit the leading slash.     For example, to
-   * include the `requests.gz` object in a transfer from     `s3://my-aws-
-   * bucket/logs/y=2015/requests.gz`, specify the include     prefix as `logs/y=2015/requests.gz`.
-   *
-   *   * None of the include-prefix or the exclude-prefix values can be empty,     if specified.
-   *
-   *   * Each include-prefix must include a distinct portion of the object     namespace. No
-   * include-prefix may be a prefix of another     include-prefix.
-   *
-   *   * Each exclude-prefix must exclude a distinct portion of the object     namespace. No
-   * exclude-prefix may be a prefix of another     exclude-prefix.
-   *
-   *   * If `include_prefixes` is specified, then each exclude-prefix must start     with the value
-   * of a path explicitly included by `include_prefixes`.
-   *
-   * The max size of `include_prefixes` is 1000.
+   * Requirements: * Each include-prefix and exclude-prefix can contain any sequence of Unicode
+   * characters, to a max length of 1024 bytes when UTF8-encoded, and must not contain Carriage
+   * Return or Line Feed characters. Wildcard matching and regular expression matching are not
+   * supported. * Each include-prefix and exclude-prefix must omit the leading slash. For example,
+   * to include the `requests.gz` object in a transfer from `s3://my-aws-
+   * bucket/logs/y=2015/requests.gz`, specify the include prefix as `logs/y=2015/requests.gz`. *
+   * None of the include-prefix or the exclude-prefix values can be empty, if specified. * Each
+   * include-prefix must include a distinct portion of the object namespace. No include-prefix may
+   * be a prefix of another include-prefix. * Each exclude-prefix must exclude a distinct portion of
+   * the object namespace. No exclude-prefix may be a prefix of another exclude-prefix. * If
+   * `include_prefixes` is specified, then each exclude-prefix must start with the value of a path
+   * explicitly included by `include_prefixes`. The max size of `include_prefixes` is 1000.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludePrefixes() {
@@ -184,29 +150,18 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    * that start with one of the `include_prefixes` and that do not start with any of the
    * exclude_prefixes. If `include_prefixes` is not specified, all objects except those that have
    * names starting with one of the `exclude_prefixes` must satisfy the object conditions.
-   *
-   * Requirements:
-   *
-   *   * Each include-prefix and exclude-prefix can contain any sequence of     Unicode characters,
-   * to a max length of 1024 bytes when UTF8-encoded,     and must not contain Carriage Return or
-   * Line Feed characters.  Wildcard     matching and regular expression matching are not supported.
-   *
-   *   * Each include-prefix and exclude-prefix must omit the leading slash.     For example, to
-   * include the `requests.gz` object in a transfer from     `s3://my-aws-
-   * bucket/logs/y=2015/requests.gz`, specify the include     prefix as `logs/y=2015/requests.gz`.
-   *
-   *   * None of the include-prefix or the exclude-prefix values can be empty,     if specified.
-   *
-   *   * Each include-prefix must include a distinct portion of the object     namespace. No
-   * include-prefix may be a prefix of another     include-prefix.
-   *
-   *   * Each exclude-prefix must exclude a distinct portion of the object     namespace. No
-   * exclude-prefix may be a prefix of another     exclude-prefix.
-   *
-   *   * If `include_prefixes` is specified, then each exclude-prefix must start     with the value
-   * of a path explicitly included by `include_prefixes`.
-   *
-   * The max size of `include_prefixes` is 1000.
+   * Requirements: * Each include-prefix and exclude-prefix can contain any sequence of Unicode
+   * characters, to a max length of 1024 bytes when UTF8-encoded, and must not contain Carriage
+   * Return or Line Feed characters. Wildcard matching and regular expression matching are not
+   * supported. * Each include-prefix and exclude-prefix must omit the leading slash. For example,
+   * to include the `requests.gz` object in a transfer from `s3://my-aws-
+   * bucket/logs/y=2015/requests.gz`, specify the include prefix as `logs/y=2015/requests.gz`. *
+   * None of the include-prefix or the exclude-prefix values can be empty, if specified. * Each
+   * include-prefix must include a distinct portion of the object namespace. No include-prefix may
+   * be a prefix of another include-prefix. * Each exclude-prefix must exclude a distinct portion of
+   * the object namespace. No exclude-prefix may be a prefix of another exclude-prefix. * If
+   * `include_prefixes` is specified, then each exclude-prefix must start with the value of a path
+   * explicitly included by `include_prefixes`. The max size of `include_prefixes` is 1000.
    * @param includePrefixes includePrefixes or {@code null} for none
    */
   public ObjectConditions setIncludePrefixes(java.util.List<java.lang.String> includePrefixes) {
@@ -235,15 +190,11 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
 
   /**
    * If specified, only objects with a "last modification time" on or after this timestamp and
-   * objects that don't have a "last modification time" are transferred.
-   *
-   * The `last_modified_since` and `last_modified_before` fields can be used together for chunked
-   * data processing. For example, consider a script that processes each day's worth of data at a
-   * time. For that you'd set each of the fields as follows:
-   *
-   * *  `last_modified_since` to the start of the day
-   *
-   * *  `last_modified_before` to the end of the day
+   * objects that don't have a "last modification time" are transferred. The `last_modified_since`
+   * and `last_modified_before` fields can be used together for chunked data processing. For
+   * example, consider a script that processes each day's worth of data at a time. For that you'd
+   * set each of the fields as follows: * `last_modified_since` to the start of the day *
+   * `last_modified_before` to the end of the day
    * @return value or {@code null} for none
    */
   public String getLastModifiedSince() {
@@ -252,15 +203,11 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
 
   /**
    * If specified, only objects with a "last modification time" on or after this timestamp and
-   * objects that don't have a "last modification time" are transferred.
-   *
-   * The `last_modified_since` and `last_modified_before` fields can be used together for chunked
-   * data processing. For example, consider a script that processes each day's worth of data at a
-   * time. For that you'd set each of the fields as follows:
-   *
-   * *  `last_modified_since` to the start of the day
-   *
-   * *  `last_modified_before` to the end of the day
+   * objects that don't have a "last modification time" are transferred. The `last_modified_since`
+   * and `last_modified_before` fields can be used together for chunked data processing. For
+   * example, consider a script that processes each day's worth of data at a time. For that you'd
+   * set each of the fields as follows: * `last_modified_since` to the start of the day *
+   * `last_modified_before` to the end of the day
    * @param lastModifiedSince lastModifiedSince or {@code null} for none
    */
   public ObjectConditions setLastModifiedSince(String lastModifiedSince) {
@@ -271,10 +218,8 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
   /**
    * If specified, only objects with a "last modification time" on or after `NOW` -
    * `max_time_elapsed_since_last_modification` and objects that don't have a "last modification
-   * time" are transferred.
-   *
-   * For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the
-   * `TransferOperation`.
+   * time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to
+   * the start_time of the `TransferOperation`.
    * @return value or {@code null} for none
    */
   public String getMaxTimeElapsedSinceLastModification() {
@@ -284,10 +229,8 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
   /**
    * If specified, only objects with a "last modification time" on or after `NOW` -
    * `max_time_elapsed_since_last_modification` and objects that don't have a "last modification
-   * time" are transferred.
-   *
-   * For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the
-   * `TransferOperation`.
+   * time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to
+   * the start_time of the `TransferOperation`.
    * @param maxTimeElapsedSinceLastModification maxTimeElapsedSinceLastModification or {@code null} for none
    */
   public ObjectConditions setMaxTimeElapsedSinceLastModification(String maxTimeElapsedSinceLastModification) {
@@ -297,11 +240,9 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
 
   /**
    * If specified, only objects with a "last modification time" before `NOW` -
-   * `min_time_elapsed_since_last_modification` and objects that don't  have a "last modification
-   * time" are transferred.
-   *
-   * For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the
-   * `TransferOperation`.
+   * `min_time_elapsed_since_last_modification` and objects that don't have a "last modification
+   * time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to
+   * the start_time of the `TransferOperation`.
    * @return value or {@code null} for none
    */
   public String getMinTimeElapsedSinceLastModification() {
@@ -310,11 +251,9 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
 
   /**
    * If specified, only objects with a "last modification time" before `NOW` -
-   * `min_time_elapsed_since_last_modification` and objects that don't  have a "last modification
-   * time" are transferred.
-   *
-   * For each TransferOperation started by this TransferJob, `NOW` refers to the start_time of the
-   * `TransferOperation`.
+   * `min_time_elapsed_since_last_modification` and objects that don't have a "last modification
+   * time" are transferred. For each TransferOperation started by this TransferJob, `NOW` refers to
+   * the start_time of the `TransferOperation`.
    * @param minTimeElapsedSinceLastModification minTimeElapsedSinceLastModification or {@code null} for none
    */
   public ObjectConditions setMinTimeElapsedSinceLastModification(String minTimeElapsedSinceLastModification) {

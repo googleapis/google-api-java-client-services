@@ -31,8 +31,8 @@ package com.google.api.services.script.model;
 public final class Status extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status code. For this API, this value either:   10, indicating a `SCRIPT_TIMEOUT` error,
-   * 3, indicating an `INVALID_ARGUMENT` error, or  1, indicating a `CANCELLED` execution.
+   * The status code. For this API, this value either: - 10, indicating a `SCRIPT_TIMEOUT` error, -
+   * 3, indicating an `INVALID_ARGUMENT` error, or - 1, indicating a `CANCELLED` execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +55,8 @@ public final class Status extends com.google.api.client.json.GenericJson {
   private java.lang.String message;
 
   /**
-   * The status code. For this API, this value either:   10, indicating a `SCRIPT_TIMEOUT` error,
-   * 3, indicating an `INVALID_ARGUMENT` error, or  1, indicating a `CANCELLED` execution.
+   * The status code. For this API, this value either: - 10, indicating a `SCRIPT_TIMEOUT` error, -
+   * 3, indicating an `INVALID_ARGUMENT` error, or - 1, indicating a `CANCELLED` execution.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCode() {
@@ -64,8 +64,8 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status code. For this API, this value either:   10, indicating a `SCRIPT_TIMEOUT` error,
-   * 3, indicating an `INVALID_ARGUMENT` error, or  1, indicating a `CANCELLED` execution.
+   * The status code. For this API, this value either: - 10, indicating a `SCRIPT_TIMEOUT` error, -
+   * 3, indicating an `INVALID_ARGUMENT` error, or - 1, indicating a `CANCELLED` execution.
    * @param code code or {@code null} for none
    */
   public Status setCode(java.lang.Integer code) {

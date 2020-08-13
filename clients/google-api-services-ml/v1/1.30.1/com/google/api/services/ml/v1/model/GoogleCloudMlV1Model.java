@@ -17,10 +17,9 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * Represents a machine learning solution.
- *
- * A model can have multiple versions, each of which is a deployed, trained model ready to receive
- * prediction requests. The model itself is just a container.
+ * Represents a machine learning solution. A model can have multiple versions, each of which is a
+ * deployed, trained model ready to receive prediction requests. The model itself is just a
+ * container.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -35,9 +34,8 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
 
   /**
    * Output only. The default version of the model. This version will be used to handle prediction
-   * requests that do not specify a version.
-   *
-   * You can change the default version by calling projects.models.versions.setDefault.
+   * requests that do not specify a version. You can change the default version by calling
+   * projects.models.versions.setDefault.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,9 +70,8 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. The name specified for the model when it was created.
-   *
-   * The model name must be unique within the project it is created in.
+   * Required. The name specified for the model when it was created. The model name must be unique
+   * within the project it is created in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +83,6 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
    * `onlinePredictionLogging`) and can incur higher cost. However, they are helpful for debugging.
    * Note that [Stackdriver logs may incur a cost](/stackdriver/pricing), especially if your project
    * receives prediction requests at a high QPS. Estimate your costs before enabling this option.
-   *
    * Default is false.
    * The value may be {@code null}.
    */
@@ -98,9 +94,7 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
    * are like standard server access logs, containing information like timestamp and latency for
    * each request. Note that [Stackdriver logs may incur a cost](/stackdriver/pricing), especially
    * if your project receives prediction requests at a high queries per second rate (QPS). Estimate
-   * your costs before enabling this option.
-   *
-   * Default is false.
+   * your costs before enabling this option. Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,10 +103,10 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
   /**
    * Optional. The list of regions where the model is going to be deployed. Only one region per
    * model is supported. Defaults to 'us-central1' if nothing is set. See the available regions for
-   * AI Platform services. Note: *   No matter where a model is deployed, it can always be accessed
-   * by     users from anywhere, both for online and batch prediction. *   The region for a batch
-   * prediction job is set by the region field when     submitting the batch prediction job and does
-   * not take its value from     this field.
+   * AI Platform services. Note: * No matter where a model is deployed, it can always be accessed by
+   * users from anywhere, both for online and batch prediction. * The region for a batch prediction
+   * job is set by the region field when submitting the batch prediction job and does not take its
+   * value from this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,9 +114,8 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
 
   /**
    * Output only. The default version of the model. This version will be used to handle prediction
-   * requests that do not specify a version.
-   *
-   * You can change the default version by calling projects.models.versions.setDefault.
+   * requests that do not specify a version. You can change the default version by calling
+   * projects.models.versions.setDefault.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1Version getDefaultVersion() {
@@ -131,9 +124,8 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
 
   /**
    * Output only. The default version of the model. This version will be used to handle prediction
-   * requests that do not specify a version.
-   *
-   * You can change the default version by calling projects.models.versions.setDefault.
+   * requests that do not specify a version. You can change the default version by calling
+   * projects.models.versions.setDefault.
    * @param defaultVersion defaultVersion or {@code null} for none
    */
   public GoogleCloudMlV1Model setDefaultVersion(GoogleCloudMlV1Version defaultVersion) {
@@ -245,9 +237,8 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The name specified for the model when it was created.
-   *
-   * The model name must be unique within the project it is created in.
+   * Required. The name specified for the model when it was created. The model name must be unique
+   * within the project it is created in.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -255,9 +246,8 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The name specified for the model when it was created.
-   *
-   * The model name must be unique within the project it is created in.
+   * Required. The name specified for the model when it was created. The model name must be unique
+   * within the project it is created in.
    * @param name name or {@code null} for none
    */
   public GoogleCloudMlV1Model setName(java.lang.String name) {
@@ -271,7 +261,6 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
    * `onlinePredictionLogging`) and can incur higher cost. However, they are helpful for debugging.
    * Note that [Stackdriver logs may incur a cost](/stackdriver/pricing), especially if your project
    * receives prediction requests at a high QPS. Estimate your costs before enabling this option.
-   *
    * Default is false.
    * @return value or {@code null} for none
    */
@@ -285,7 +274,6 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
    * `onlinePredictionLogging`) and can incur higher cost. However, they are helpful for debugging.
    * Note that [Stackdriver logs may incur a cost](/stackdriver/pricing), especially if your project
    * receives prediction requests at a high QPS. Estimate your costs before enabling this option.
-   *
    * Default is false.
    * @param onlinePredictionConsoleLogging onlinePredictionConsoleLogging or {@code null} for none
    */
@@ -299,9 +287,7 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
    * are like standard server access logs, containing information like timestamp and latency for
    * each request. Note that [Stackdriver logs may incur a cost](/stackdriver/pricing), especially
    * if your project receives prediction requests at a high queries per second rate (QPS). Estimate
-   * your costs before enabling this option.
-   *
-   * Default is false.
+   * your costs before enabling this option. Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOnlinePredictionLogging() {
@@ -313,9 +299,7 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
    * are like standard server access logs, containing information like timestamp and latency for
    * each request. Note that [Stackdriver logs may incur a cost](/stackdriver/pricing), especially
    * if your project receives prediction requests at a high queries per second rate (QPS). Estimate
-   * your costs before enabling this option.
-   *
-   * Default is false.
+   * your costs before enabling this option. Default is false.
    * @param onlinePredictionLogging onlinePredictionLogging or {@code null} for none
    */
   public GoogleCloudMlV1Model setOnlinePredictionLogging(java.lang.Boolean onlinePredictionLogging) {
@@ -326,10 +310,10 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
   /**
    * Optional. The list of regions where the model is going to be deployed. Only one region per
    * model is supported. Defaults to 'us-central1' if nothing is set. See the available regions for
-   * AI Platform services. Note: *   No matter where a model is deployed, it can always be accessed
-   * by     users from anywhere, both for online and batch prediction. *   The region for a batch
-   * prediction job is set by the region field when     submitting the batch prediction job and does
-   * not take its value from     this field.
+   * AI Platform services. Note: * No matter where a model is deployed, it can always be accessed by
+   * users from anywhere, both for online and batch prediction. * The region for a batch prediction
+   * job is set by the region field when submitting the batch prediction job and does not take its
+   * value from this field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegions() {
@@ -339,10 +323,10 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
   /**
    * Optional. The list of regions where the model is going to be deployed. Only one region per
    * model is supported. Defaults to 'us-central1' if nothing is set. See the available regions for
-   * AI Platform services. Note: *   No matter where a model is deployed, it can always be accessed
-   * by     users from anywhere, both for online and batch prediction. *   The region for a batch
-   * prediction job is set by the region field when     submitting the batch prediction job and does
-   * not take its value from     this field.
+   * AI Platform services. Note: * No matter where a model is deployed, it can always be accessed by
+   * users from anywhere, both for online and batch prediction. * The region for a batch prediction
+   * job is set by the region field when submitting the batch prediction job and does not take its
+   * value from this field.
    * @param regions regions or {@code null} for none
    */
   public GoogleCloudMlV1Model setRegions(java.util.List<java.lang.String> regions) {

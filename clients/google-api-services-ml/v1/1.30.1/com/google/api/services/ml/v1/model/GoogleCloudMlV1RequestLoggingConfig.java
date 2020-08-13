@@ -21,11 +21,10 @@ package com.google.api.services.ml.v1.model;
  * to a model version and the responses to these requests are converted to raw strings and saved to
  * the specified BigQuery table. Logging is constrained by [BigQuery quotas and
  * limits](/bigquery/quotas). If your project exceeds BigQuery quotas or limits, AI Platform
- * Prediction does not log request-response pairs, but it continues to serve predictions.
- *
- * If you are using [continuous evaluation](/ml-engine/docs/continuous-evaluation/), you do not need
- * to specify this configuration manually. Setting up continuous evaluation automatically enables
- * logging of request-response pairs.
+ * Prediction does not log request-response pairs, but it continues to serve predictions. If you are
+ * using [continuous evaluation](/ml-engine/docs/continuous-evaluation/), you do not need to specify
+ * this configuration manually. Setting up continuous evaluation automatically enables logging of
+ * request-response pairs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -39,16 +38,12 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Fully qualified BigQuery table name in the following format:
-   * "project_id.dataset_name.table_name"
-   *
-   * The specified table must already exist, and the "Cloud ML Service Agent" for your project must
-   * have permission to write to it. The table must have the following
-   * [schema](/bigquery/docs/schemas):
-   *
-   *   Field nameType     Mode   modelSTRINGREQUIRED   model_versionSTRINGREQUIRED
-   * timeTIMESTAMPREQUIRED   raw_dataSTRINGREQUIRED   raw_predictionSTRINGNULLABLE
-   * groundtruthSTRINGNULLABLE
+   * Required. Fully qualified BigQuery table name in the following format: "
+   * project_id.dataset_name.table_name" The specified table must already exist, and the "Cloud ML
+   * Service Agent" for your project must have permission to write to it. The table must have the
+   * following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED
+   * model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction
+   * STRING NULLABLE groundtruth STRING NULLABLE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,16 +59,12 @@ public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.cl
   private java.lang.Double samplingPercentage;
 
   /**
-   * Required. Fully qualified BigQuery table name in the following format:
-   * "project_id.dataset_name.table_name"
-   *
-   * The specified table must already exist, and the "Cloud ML Service Agent" for your project must
-   * have permission to write to it. The table must have the following
-   * [schema](/bigquery/docs/schemas):
-   *
-   *   Field nameType     Mode   modelSTRINGREQUIRED   model_versionSTRINGREQUIRED
-   * timeTIMESTAMPREQUIRED   raw_dataSTRINGREQUIRED   raw_predictionSTRINGNULLABLE
-   * groundtruthSTRINGNULLABLE
+   * Required. Fully qualified BigQuery table name in the following format: "
+   * project_id.dataset_name.table_name" The specified table must already exist, and the "Cloud ML
+   * Service Agent" for your project must have permission to write to it. The table must have the
+   * following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED
+   * model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction
+   * STRING NULLABLE groundtruth STRING NULLABLE
    * @return value or {@code null} for none
    */
   public java.lang.String getBigqueryTableName() {
@@ -81,16 +72,12 @@ public final class GoogleCloudMlV1RequestLoggingConfig extends com.google.api.cl
   }
 
   /**
-   * Required. Fully qualified BigQuery table name in the following format:
-   * "project_id.dataset_name.table_name"
-   *
-   * The specified table must already exist, and the "Cloud ML Service Agent" for your project must
-   * have permission to write to it. The table must have the following
-   * [schema](/bigquery/docs/schemas):
-   *
-   *   Field nameType     Mode   modelSTRINGREQUIRED   model_versionSTRINGREQUIRED
-   * timeTIMESTAMPREQUIRED   raw_dataSTRINGREQUIRED   raw_predictionSTRINGNULLABLE
-   * groundtruthSTRINGNULLABLE
+   * Required. Fully qualified BigQuery table name in the following format: "
+   * project_id.dataset_name.table_name" The specified table must already exist, and the "Cloud ML
+   * Service Agent" for your project must have permission to write to it. The table must have the
+   * following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED
+   * model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction
+   * STRING NULLABLE groundtruth STRING NULLABLE
    * @param bigqueryTableName bigqueryTableName or {@code null} for none
    */
   public GoogleCloudMlV1RequestLoggingConfig setBigqueryTableName(java.lang.String bigqueryTableName) {

@@ -47,7 +47,6 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
 
   /**
    * Required. The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`.
-   *
    * Defaults to `MAXIMIZE`.
    * The value may be {@code null}.
    */
@@ -57,7 +56,7 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   /**
    * Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of
    * TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all
-   * scopes.  For versions of TensorFlow prior to 0.12, this should be only the tag passed to
+   * scopes. For versions of TensorFlow prior to 0.12, this should be only the tag passed to
    * tf.Summary. By default, "training/hptuning/metric" will be used.
    * The value may be {@code null}.
    */
@@ -67,9 +66,8 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   /**
    * Optional. The number of failed trials that need to be seen before failing the hyperparameter
    * tuning job. You can specify this field to override the default failing criteria for AI Platform
-   * hyperparameter tuning jobs.
-   *
-   * Defaults to zero, which means the service decides when a hyperparameter job should fail.
+   * hyperparameter tuning jobs. Defaults to zero, which means the service decides when a
+   * hyperparameter job should fail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,11 +78,8 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
    * to perform hyperparameter tuning by adding trials in parallel. However, each trail only
    * benefits from the information gained in completed trials. That means that a trial does not get
    * access to the results of trials running at the same time, which could reduce the quality of the
-   * overall optimization.
-   *
-   * Each trial will use the same scale tier and machine types.
-   *
-   * Defaults to one.
+   * overall optimization. Each trial will use the same scale tier and machine types. Defaults to
+   * one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,9 +87,7 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
 
   /**
    * Optional. How many training trials should be attempted to optimize the specified
-   * hyperparameters.
-   *
-   * Defaults to one.
+   * hyperparameters. Defaults to one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +146,6 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
 
   /**
    * Required. The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`.
-   *
    * Defaults to `MAXIMIZE`.
    * @return value or {@code null} for none
    */
@@ -163,7 +155,6 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
 
   /**
    * Required. The type of goal to use for tuning. Available types are `MAXIMIZE` and `MINIMIZE`.
-   *
    * Defaults to `MAXIMIZE`.
    * @param goal goal or {@code null} for none
    */
@@ -175,7 +166,7 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   /**
    * Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of
    * TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all
-   * scopes.  For versions of TensorFlow prior to 0.12, this should be only the tag passed to
+   * scopes. For versions of TensorFlow prior to 0.12, this should be only the tag passed to
    * tf.Summary. By default, "training/hptuning/metric" will be used.
    * @return value or {@code null} for none
    */
@@ -186,7 +177,7 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   /**
    * Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of
    * TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all
-   * scopes.  For versions of TensorFlow prior to 0.12, this should be only the tag passed to
+   * scopes. For versions of TensorFlow prior to 0.12, this should be only the tag passed to
    * tf.Summary. By default, "training/hptuning/metric" will be used.
    * @param hyperparameterMetricTag hyperparameterMetricTag or {@code null} for none
    */
@@ -198,9 +189,8 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   /**
    * Optional. The number of failed trials that need to be seen before failing the hyperparameter
    * tuning job. You can specify this field to override the default failing criteria for AI Platform
-   * hyperparameter tuning jobs.
-   *
-   * Defaults to zero, which means the service decides when a hyperparameter job should fail.
+   * hyperparameter tuning jobs. Defaults to zero, which means the service decides when a
+   * hyperparameter job should fail.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxFailedTrials() {
@@ -210,9 +200,8 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   /**
    * Optional. The number of failed trials that need to be seen before failing the hyperparameter
    * tuning job. You can specify this field to override the default failing criteria for AI Platform
-   * hyperparameter tuning jobs.
-   *
-   * Defaults to zero, which means the service decides when a hyperparameter job should fail.
+   * hyperparameter tuning jobs. Defaults to zero, which means the service decides when a
+   * hyperparameter job should fail.
    * @param maxFailedTrials maxFailedTrials or {@code null} for none
    */
   public GoogleCloudMlV1HyperparameterSpec setMaxFailedTrials(java.lang.Integer maxFailedTrials) {
@@ -225,11 +214,8 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
    * to perform hyperparameter tuning by adding trials in parallel. However, each trail only
    * benefits from the information gained in completed trials. That means that a trial does not get
    * access to the results of trials running at the same time, which could reduce the quality of the
-   * overall optimization.
-   *
-   * Each trial will use the same scale tier and machine types.
-   *
-   * Defaults to one.
+   * overall optimization. Each trial will use the same scale tier and machine types. Defaults to
+   * one.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxParallelTrials() {
@@ -241,11 +227,8 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
    * to perform hyperparameter tuning by adding trials in parallel. However, each trail only
    * benefits from the information gained in completed trials. That means that a trial does not get
    * access to the results of trials running at the same time, which could reduce the quality of the
-   * overall optimization.
-   *
-   * Each trial will use the same scale tier and machine types.
-   *
-   * Defaults to one.
+   * overall optimization. Each trial will use the same scale tier and machine types. Defaults to
+   * one.
    * @param maxParallelTrials maxParallelTrials or {@code null} for none
    */
   public GoogleCloudMlV1HyperparameterSpec setMaxParallelTrials(java.lang.Integer maxParallelTrials) {
@@ -255,9 +238,7 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
 
   /**
    * Optional. How many training trials should be attempted to optimize the specified
-   * hyperparameters.
-   *
-   * Defaults to one.
+   * hyperparameters. Defaults to one.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxTrials() {
@@ -266,9 +247,7 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
 
   /**
    * Optional. How many training trials should be attempted to optimize the specified
-   * hyperparameters.
-   *
-   * Defaults to one.
+   * hyperparameters. Defaults to one.
    * @param maxTrials maxTrials or {@code null} for none
    */
   public GoogleCloudMlV1HyperparameterSpec setMaxTrials(java.lang.Integer maxTrials) {

@@ -31,11 +31,10 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1SuggestTrialsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identifier of the client that is requesting the suggestion.
-   *
-   * If multiple SuggestTrialsRequests have the same `client_id`, the service will return the
-   * identical suggested trial if the trial is pending, and provide a new trial if the last
-   * suggested trial was completed.
+   * Required. The identifier of the client that is requesting the suggestion. If multiple
+   * SuggestTrialsRequests have the same `client_id`, the service will return the identical
+   * suggested trial if the trial is pending, and provide a new trial if the last suggested trial
+   * was completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,11 +48,10 @@ public final class GoogleCloudMlV1SuggestTrialsRequest extends com.google.api.cl
   private java.lang.Integer suggestionCount;
 
   /**
-   * Required. The identifier of the client that is requesting the suggestion.
-   *
-   * If multiple SuggestTrialsRequests have the same `client_id`, the service will return the
-   * identical suggested trial if the trial is pending, and provide a new trial if the last
-   * suggested trial was completed.
+   * Required. The identifier of the client that is requesting the suggestion. If multiple
+   * SuggestTrialsRequests have the same `client_id`, the service will return the identical
+   * suggested trial if the trial is pending, and provide a new trial if the last suggested trial
+   * was completed.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientId() {
@@ -61,11 +59,10 @@ public final class GoogleCloudMlV1SuggestTrialsRequest extends com.google.api.cl
   }
 
   /**
-   * Required. The identifier of the client that is requesting the suggestion.
-   *
-   * If multiple SuggestTrialsRequests have the same `client_id`, the service will return the
-   * identical suggested trial if the trial is pending, and provide a new trial if the last
-   * suggested trial was completed.
+   * Required. The identifier of the client that is requesting the suggestion. If multiple
+   * SuggestTrialsRequests have the same `client_id`, the service will return the identical
+   * suggested trial if the trial is pending, and provide a new trial if the last suggested trial
+   * was completed.
    * @param clientId clientId or {@code null} for none
    */
   public GoogleCloudMlV1SuggestTrialsRequest setClientId(java.lang.String clientId) {

@@ -39,10 +39,8 @@ public final class GoogleCloudMlV1StudyConfigParameterSpec extends com.google.ap
 
   /**
    * A child node is active if the parameter's value matches the child node's
-   * matching_parent_values.
-   *
-   * If two items in child_parameter_specs have the same name, they must have disjoint
-   * matching_parent_values.
+   * matching_parent_values. If two items in child_parameter_specs have the same name, they must
+   * have disjoint matching_parent_values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,10 +125,8 @@ public final class GoogleCloudMlV1StudyConfigParameterSpec extends com.google.ap
 
   /**
    * A child node is active if the parameter's value matches the child node's
-   * matching_parent_values.
-   *
-   * If two items in child_parameter_specs have the same name, they must have disjoint
-   * matching_parent_values.
+   * matching_parent_values. If two items in child_parameter_specs have the same name, they must
+   * have disjoint matching_parent_values.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudMlV1StudyConfigParameterSpec> getChildParameterSpecs() {
@@ -139,10 +135,8 @@ public final class GoogleCloudMlV1StudyConfigParameterSpec extends com.google.ap
 
   /**
    * A child node is active if the parameter's value matches the child node's
-   * matching_parent_values.
-   *
-   * If two items in child_parameter_specs have the same name, they must have disjoint
-   * matching_parent_values.
+   * matching_parent_values. If two items in child_parameter_specs have the same name, they must
+   * have disjoint matching_parent_values.
    * @param childParameterSpecs childParameterSpecs or {@code null} for none
    */
   public GoogleCloudMlV1StudyConfigParameterSpec setChildParameterSpecs(java.util.List<GoogleCloudMlV1StudyConfigParameterSpec> childParameterSpecs) {

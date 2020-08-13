@@ -133,10 +133,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private String lastStateTime;
 
   /**
-   * **Beta Feature**
-   *
-   * The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be
-   * used.
+   * **Beta Feature** The logging verbosity for device activity. If unspecified,
+   * DeviceRegistry.log_level will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,14 +142,10 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * The metadata key-value pairs assigned to the device. This metadata is not interpreted or
-   * indexed by Cloud IoT Core. It can be used to add contextual information for the device.
-   *
-   * Keys must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length.
-   *
-   * Values are free-form strings. Each value must be less than or equal to 32 KB in size.
-   *
-   * The total size of all keys and values must be less than 256 KB, and the maximum number of key-
-   * value pairs is 500.
+   * indexed by Cloud IoT Core. It can be used to add contextual information for the device. Keys
+   * must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length. Values are
+   * free-form strings. Each value must be less than or equal to 32 KB in size. The total size of
+   * all keys and values must be less than 256 KB, and the maximum number of key-value pairs is 500.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -426,10 +420,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * **Beta Feature**
-   *
-   * The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be
-   * used.
+   * **Beta Feature** The logging verbosity for device activity. If unspecified,
+   * DeviceRegistry.log_level will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogLevel() {
@@ -437,10 +429,8 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * **Beta Feature**
-   *
-   * The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be
-   * used.
+   * **Beta Feature** The logging verbosity for device activity. If unspecified,
+   * DeviceRegistry.log_level will be used.
    * @param logLevel logLevel or {@code null} for none
    */
   public Device setLogLevel(java.lang.String logLevel) {
@@ -450,14 +440,10 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * The metadata key-value pairs assigned to the device. This metadata is not interpreted or
-   * indexed by Cloud IoT Core. It can be used to add contextual information for the device.
-   *
-   * Keys must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length.
-   *
-   * Values are free-form strings. Each value must be less than or equal to 32 KB in size.
-   *
-   * The total size of all keys and values must be less than 256 KB, and the maximum number of key-
-   * value pairs is 500.
+   * indexed by Cloud IoT Core. It can be used to add contextual information for the device. Keys
+   * must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length. Values are
+   * free-form strings. Each value must be less than or equal to 32 KB in size. The total size of
+   * all keys and values must be less than 256 KB, and the maximum number of key-value pairs is 500.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -466,14 +452,10 @@ public final class Device extends com.google.api.client.json.GenericJson {
 
   /**
    * The metadata key-value pairs assigned to the device. This metadata is not interpreted or
-   * indexed by Cloud IoT Core. It can be used to add contextual information for the device.
-   *
-   * Keys must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length.
-   *
-   * Values are free-form strings. Each value must be less than or equal to 32 KB in size.
-   *
-   * The total size of all keys and values must be less than 256 KB, and the maximum number of key-
-   * value pairs is 500.
+   * indexed by Cloud IoT Core. It can be used to add contextual information for the device. Keys
+   * must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length. Values are
+   * free-form strings. Each value must be less than or equal to 32 KB in size. The total size of
+   * all keys and values must be less than 256 KB, and the maximum number of key-value pairs is 500.
    * @param metadata metadata or {@code null} for none
    */
   public Device setMetadata(java.util.Map<String, java.lang.String> metadata) {

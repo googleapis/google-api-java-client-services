@@ -32,7 +32,7 @@ package com.google.api.services.binaryauthorization.v1.model;
 public final class Attestor extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A descriptive comment.  This field may be updated. The field may be displayed in
+   * Optional. A descriptive comment. This field may be updated. The field may be displayed in
    * chooser dialogs.
    * The value may be {@code null}.
    */
@@ -63,7 +63,7 @@ public final class Attestor extends com.google.api.client.json.GenericJson {
   private UserOwnedGrafeasNote userOwnedGrafeasNote;
 
   /**
-   * Optional. A descriptive comment.  This field may be updated. The field may be displayed in
+   * Optional. A descriptive comment. This field may be updated. The field may be displayed in
    * chooser dialogs.
    * @return value or {@code null} for none
    */
@@ -72,7 +72,7 @@ public final class Attestor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A descriptive comment.  This field may be updated. The field may be displayed in
+   * Optional. A descriptive comment. This field may be updated. The field may be displayed in
    * chooser dialogs.
    * @param description description or {@code null} for none
    */

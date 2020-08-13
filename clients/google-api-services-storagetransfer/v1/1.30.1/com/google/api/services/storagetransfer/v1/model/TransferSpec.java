@@ -66,7 +66,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Only objects that satisfy these object conditions are included in the set of data source and
-   * data sink objects.  Object conditions based on objects' "last modification time" do not exclude
+   * data sink objects. Object conditions based on objects' "last modification time" do not exclude
    * objects in a data sink.
    * The value may be {@code null}.
    */
@@ -169,7 +169,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Only objects that satisfy these object conditions are included in the set of data source and
-   * data sink objects.  Object conditions based on objects' "last modification time" do not exclude
+   * data sink objects. Object conditions based on objects' "last modification time" do not exclude
    * objects in a data sink.
    * @return value or {@code null} for none
    */
@@ -179,7 +179,7 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Only objects that satisfy these object conditions are included in the set of data source and
-   * data sink objects.  Object conditions based on objects' "last modification time" do not exclude
+   * data sink objects. Object conditions based on objects' "last modification time" do not exclude
    * objects in a data sink.
    * @param objectConditions objectConditions or {@code null} for none
    */

@@ -60,7 +60,7 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
   private java.lang.String leaderboardId;
 
   /**
-   * Additional information about this score.  Values will contain no more than 64 URI-safe
+   * Additional information about this score. Values will contain no more than 64 URI-safe
    * characters as defined by section 2.3 of RFC 3986.
    * The value may be {@code null}.
    */
@@ -68,7 +68,7 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
   private java.lang.String scoreTag;
 
   /**
-   * The scores in time spans that have not been beaten.  As an example, the submitted score may be
+   * The scores in time spans that have not been beaten. As an example, the submitted score may be
    * better than the player's `DAILY` score, but not better than the player's scores for the
    * `WEEKLY` or `ALL_TIME` time spans.
    * The value may be {@code null}.
@@ -153,7 +153,7 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Additional information about this score.  Values will contain no more than 64 URI-safe
+   * Additional information about this score. Values will contain no more than 64 URI-safe
    * characters as defined by section 2.3 of RFC 3986.
    * @return value or {@code null} for none
    */
@@ -162,7 +162,7 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Additional information about this score.  Values will contain no more than 64 URI-safe
+   * Additional information about this score. Values will contain no more than 64 URI-safe
    * characters as defined by section 2.3 of RFC 3986.
    * @param scoreTag scoreTag or {@code null} for none
    */
@@ -172,7 +172,7 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The scores in time spans that have not been beaten.  As an example, the submitted score may be
+   * The scores in time spans that have not been beaten. As an example, the submitted score may be
    * better than the player's `DAILY` score, but not better than the player's scores for the
    * `WEEKLY` or `ALL_TIME` time spans.
    * @return value or {@code null} for none
@@ -182,7 +182,7 @@ public final class PlayerScoreResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The scores in time spans that have not been beaten.  As an example, the submitted score may be
+   * The scores in time spans that have not been beaten. As an example, the submitted score may be
    * better than the player's `DAILY` score, but not better than the player's scores for the
    * `WEEKLY` or `ALL_TIME` time spans.
    * @param unbeatenScores unbeatenScores or {@code null} for none

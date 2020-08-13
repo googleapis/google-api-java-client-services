@@ -31,6 +31,13 @@ package com.google.api.services.games.model;
 public final class PlayerLeaderboardScore extends com.google.api.client.json.GenericJson {
 
   /**
+   * The rank of the score in the friends collection for this leaderboard.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LeaderboardScoreRank friendsRank;
+
+  /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
    * `games#playerLeaderboardScore`.
    * The value may be {@code null}.
@@ -61,8 +68,8 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
   private java.lang.String scoreString;
 
   /**
-   * Additional information about the score.  Values must contain no more than 64 URI-safe
-   * characters as defined by section 2.3 of RFC 3986.
+   * Additional information about the score. Values must contain no more than 64 URI-safe characters
+   * as defined by section 2.3 of RFC 3986.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,6 +102,23 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long writeTimestamp;
+
+  /**
+   * The rank of the score in the friends collection for this leaderboard.
+   * @return value or {@code null} for none
+   */
+  public LeaderboardScoreRank getFriendsRank() {
+    return friendsRank;
+  }
+
+  /**
+   * The rank of the score in the friends collection for this leaderboard.
+   * @param friendsRank friendsRank or {@code null} for none
+   */
+  public PlayerLeaderboardScore setFriendsRank(LeaderboardScoreRank friendsRank) {
+    this.friendsRank = friendsRank;
+    return this;
+  }
 
   /**
    * Uniquely identifies the type of this resource. Value is always the fixed string
@@ -169,8 +193,8 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
   }
 
   /**
-   * Additional information about the score.  Values must contain no more than 64 URI-safe
-   * characters as defined by section 2.3 of RFC 3986.
+   * Additional information about the score. Values must contain no more than 64 URI-safe characters
+   * as defined by section 2.3 of RFC 3986.
    * @return value or {@code null} for none
    */
   public java.lang.String getScoreTag() {
@@ -178,8 +202,8 @@ public final class PlayerLeaderboardScore extends com.google.api.client.json.Gen
   }
 
   /**
-   * Additional information about the score.  Values must contain no more than 64 URI-safe
-   * characters as defined by section 2.3 of RFC 3986.
+   * Additional information about the score. Values must contain no more than 64 URI-safe characters
+   * as defined by section 2.3 of RFC 3986.
    * @param scoreTag scoreTag or {@code null} for none
    */
   public PlayerLeaderboardScore setScoreTag(java.lang.String scoreTag) {

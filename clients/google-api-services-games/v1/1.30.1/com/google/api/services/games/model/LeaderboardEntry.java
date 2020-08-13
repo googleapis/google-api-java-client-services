@@ -67,8 +67,8 @@ public final class LeaderboardEntry extends com.google.api.client.json.GenericJs
   private java.lang.Long scoreRank;
 
   /**
-   * Additional information about the score.  Values must contain no more than 64 URI-safe
-   * characters as defined by section 2.3 of RFC 3986.
+   * Additional information about the score. Values must contain no more than 64 URI-safe characters
+   * as defined by section 2.3 of RFC 3986.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,8 +183,8 @@ public final class LeaderboardEntry extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Additional information about the score.  Values must contain no more than 64 URI-safe
-   * characters as defined by section 2.3 of RFC 3986.
+   * Additional information about the score. Values must contain no more than 64 URI-safe characters
+   * as defined by section 2.3 of RFC 3986.
    * @return value or {@code null} for none
    */
   public java.lang.String getScoreTag() {
@@ -192,8 +192,8 @@ public final class LeaderboardEntry extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Additional information about the score.  Values must contain no more than 64 URI-safe
-   * characters as defined by section 2.3 of RFC 3986.
+   * Additional information about the score. Values must contain no more than 64 URI-safe characters
+   * as defined by section 2.3 of RFC 3986.
    * @param scoreTag scoreTag or {@code null} for none
    */
   public LeaderboardEntry setScoreTag(java.lang.String scoreTag) {

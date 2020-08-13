@@ -20,8 +20,7 @@ package com.google.api.services.games;
  * Service definition for Games (v1).
  *
  * <p>
- * The Google Play games service allows developers to enhance games with social leaderboards,
-    achievements, game state, sign-in with Google, and more.
+ * The Google Play games service allows developers to enhance games with social leaderboards, achievements, game state, sign-in with Google, and more.
  * </p>
  *
  * <p>
@@ -498,8 +497,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the games server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param playerId A player ID. A value of `me` may be used in place of the
-    authenticated player's ID.
+     * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
      * @return the request
      */
     public List list(java.lang.String playerId) throws java.io.IOException {
@@ -523,8 +521,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param playerId A player ID. A value of `me` may be used in place of the
-    authenticated player's ID.
+       * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
        * @since 1.13
        */
       protected List(java.lang.String playerId) {
@@ -597,9 +594,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
@@ -609,9 +604,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return playerId;
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       public List setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;
@@ -676,13 +669,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Tells the server to return only achievements with the specified state.  If this parameter
+       * Tells the server to return only achievements with the specified state. If this parameter
        * isn't specified, all achievements are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String state;
 
-      /** Tells the server to return only achievements with the specified state.  If this parameter isn't
+      /** Tells the server to return only achievements with the specified state. If this parameter isn't
      specified, all achievements are returned.
        */
       public java.lang.String getState() {
@@ -690,7 +683,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Tells the server to return only achievements with the specified state.  If this parameter
+       * Tells the server to return only achievements with the specified state. If this parameter
        * isn't specified, all achievements are returned.
        */
       public List setState(java.lang.String state) {
@@ -1886,14 +1879,14 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of event definitions to return in the response, used for paging.  For
-       * any response, the actual number of event definitions to return may be less than the
-       * specified `maxResults`.
+       * The maximum number of event definitions to return in the response, used for paging. For any
+       * response, the actual number of event definitions to return may be less than the specified
+       * `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** The maximum number of event definitions to return in the response, used for paging.  For any
+      /** The maximum number of event definitions to return in the response, used for paging. For any
      response, the actual number of event definitions to return may be less than the specified
      `maxResults`.
        */
@@ -1902,9 +1895,9 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of event definitions to return in the response, used for paging.  For
-       * any response, the actual number of event definitions to return may be less than the
-       * specified `maxResults`.
+       * The maximum number of event definitions to return in the response, used for paging. For any
+       * response, the actual number of event definitions to return may be less than the specified
+       * `maxResults`.
        */
       public ListDefinitions setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -2330,13 +2323,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of leaderboards to return in the response.  For any response, the actual
+       * The maximum number of leaderboards to return in the response. For any response, the actual
        * number of leaderboards returned may be less than the specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** The maximum number of leaderboards to return in the response.  For any response, the actual number
+      /** The maximum number of leaderboards to return in the response. For any response, the actual number
      of leaderboards returned may be less than the specified `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
@@ -2344,7 +2337,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of leaderboards to return in the response.  For any response, the actual
+       * The maximum number of leaderboards to return in the response. For any response, the actual
        * number of leaderboards returned may be less than the specified `maxResults`.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
@@ -2512,8 +2505,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * parameters, call the {@link ListCategoriesByPlayer#execute()} method to invoke the remote
      * operation.
      *
-     * @param playerId A player ID. A value of `me` may be used in place of the
-    authenticated player's ID.
+     * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
      * @param collection The collection of categories for which data will be returned.
      * @return the request
      */
@@ -2538,8 +2530,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param playerId A player ID. A value of `me` may be used in place of the
-    authenticated player's ID.
+       * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
        * @param collection The collection of categories for which data will be returned.
        * @since 1.13
        */
@@ -2614,9 +2605,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return (ListCategoriesByPlayer) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
@@ -2626,9 +2615,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return playerId;
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       public ListCategoriesByPlayer setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;
@@ -2737,7 +2724,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
   public class Players {
 
     /**
-     * Retrieves the Player resource with the given ID.  To retrieve the player for the currently
+     * Retrieves the Player resource with the given ID. To retrieve the player for the currently
      * authenticated user, set `playerId` to `me`.
      *
      * Create a request for the method "players.get".
@@ -2745,8 +2732,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the games server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param playerId A player ID. A value of `me` may be used in place of the
-    authenticated player's ID.
+     * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
      * @return the request
      */
     public Get get(java.lang.String playerId) throws java.io.IOException {
@@ -2760,7 +2746,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "games/v1/players/{playerId}";
 
       /**
-       * Retrieves the Player resource with the given ID.  To retrieve the player for the currently
+       * Retrieves the Player resource with the given ID. To retrieve the player for the currently
        * authenticated user, set `playerId` to `me`.
        *
        * Create a request for the method "players.get".
@@ -2770,8 +2756,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param playerId A player ID. A value of `me` may be used in place of the
-    authenticated player's ID.
+       * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
        * @since 1.13
        */
       protected Get(java.lang.String playerId) {
@@ -2844,9 +2829,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
@@ -2856,9 +2839,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return playerId;
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       public Get setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;
@@ -3099,13 +3080,9 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the games server.  After setting any optional
      * parameters, call the {@link Check#execute()} method to invoke the remote operation.
      *
-     * @param clientRevision The revision of the client SDK used by your application. Format:
-    `[PLATFORM_TYPE]:[VERSION_NUMBER]`.
-     *        Possible values of `PLATFORM_TYPE` are:
-    * `ANDROID` - Client is running the Android SDK.
-    *
-     *        `IOS` - Client is running the iOS SDK.
-    * `WEB_APP` - Client is running as a Web App.
+     * @param clientRevision The revision of the client SDK used by your application. Format: `[PLATFORM_TYPE]:[VERSION_NUMBER]`.
+     *        Possible values of `PLATFORM_TYPE` are: * `ANDROID` - Client is running the Android SDK. *
+     *        `IOS` - Client is running the iOS SDK. * `WEB_APP` - Client is running as a Web App.
      * @return the request
      */
     public Check check(java.lang.String clientRevision) throws java.io.IOException {
@@ -3128,13 +3105,9 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * Check#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param clientRevision The revision of the client SDK used by your application. Format:
-    `[PLATFORM_TYPE]:[VERSION_NUMBER]`.
-     *        Possible values of `PLATFORM_TYPE` are:
-    * `ANDROID` - Client is running the Android SDK.
-    *
-     *        `IOS` - Client is running the iOS SDK.
-    * `WEB_APP` - Client is running as a Web App.
+       * @param clientRevision The revision of the client SDK used by your application. Format: `[PLATFORM_TYPE]:[VERSION_NUMBER]`.
+     *        Possible values of `PLATFORM_TYPE` are: * `ANDROID` - Client is running the Android SDK. *
+     *        `IOS` - Client is running the iOS SDK. * `WEB_APP` - Client is running as a Web App.
        * @since 1.13
        */
       protected Check(java.lang.String clientRevision) {
@@ -3267,7 +3240,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
     /**
      * Get high scores, and optionally ranks, in leaderboards for the currently authenticated player.
      * For a specific time span, `leaderboardId` can be set to `ALL` to retrieve data for all
-     * leaderboards in a given time span.  `NOTE: You cannot ask for 'ALL' leaderboards and 'ALL'
+     * leaderboards in a given time span. `NOTE: You cannot ask for 'ALL' leaderboards and 'ALL'
      * timeSpans in the same request; only one parameter may be set to 'ALL'.
      *
      * Create a request for the method "scores.get".
@@ -3275,10 +3248,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the games server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param playerId A player ID. A value of `me` may be used in place of the
-    authenticated player's ID.
-     * @param leaderboardId The ID of the leaderboard.  Can be set to 'ALL' to retrieve data for all
-    leaderboards for this
+     * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
+     * @param leaderboardId The ID of the leaderboard. Can be set to 'ALL' to retrieve data for all leaderboards for this
      *        application.
      * @param timeSpan The time span for the scores and ranks you're requesting.
      * @return the request
@@ -3296,7 +3267,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Get high scores, and optionally ranks, in leaderboards for the currently authenticated player.
        * For a specific time span, `leaderboardId` can be set to `ALL` to retrieve data for all
-       * leaderboards in a given time span.  `NOTE: You cannot ask for 'ALL' leaderboards and 'ALL'
+       * leaderboards in a given time span. `NOTE: You cannot ask for 'ALL' leaderboards and 'ALL'
        * timeSpans in the same request; only one parameter may be set to 'ALL'.
        *
        * Create a request for the method "scores.get".
@@ -3306,10 +3277,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param playerId A player ID. A value of `me` may be used in place of the
-    authenticated player's ID.
-       * @param leaderboardId The ID of the leaderboard.  Can be set to 'ALL' to retrieve data for all
-    leaderboards for this
+       * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
+       * @param leaderboardId The ID of the leaderboard. Can be set to 'ALL' to retrieve data for all leaderboards for this
      *        application.
        * @param timeSpan The time span for the scores and ranks you're requesting.
        * @since 1.13
@@ -3386,9 +3355,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
@@ -3398,22 +3365,20 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return playerId;
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       public Get setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;
       }
 
       /**
-       * The ID of the leaderboard.  Can be set to 'ALL' to retrieve data for all leaderboards for
+       * The ID of the leaderboard. Can be set to 'ALL' to retrieve data for all leaderboards for
        * this application.
        */
       @com.google.api.client.util.Key
       private java.lang.String leaderboardId;
 
-      /** The ID of the leaderboard.  Can be set to 'ALL' to retrieve data for all leaderboards for this
+      /** The ID of the leaderboard. Can be set to 'ALL' to retrieve data for all leaderboards for this
      application.
        */
       public java.lang.String getLeaderboardId() {
@@ -3421,7 +3386,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The ID of the leaderboard.  Can be set to 'ALL' to retrieve data for all leaderboards for
+       * The ID of the leaderboard. Can be set to 'ALL' to retrieve data for all leaderboards for
        * this application.
        */
       public Get setLeaderboardId(java.lang.String leaderboardId) {
@@ -3445,9 +3410,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /**
-       * The types of ranks to return. If the parameter is omitted, no ranks will be returned.
-       */
+      /** The types of ranks to return. If the parameter is omitted, no ranks will be returned. */
       @com.google.api.client.util.Key
       private java.lang.String includeRankType;
 
@@ -3457,9 +3420,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return includeRankType;
       }
 
-      /**
-       * The types of ranks to return. If the parameter is omitted, no ranks will be returned.
-       */
+      /** The types of ranks to return. If the parameter is omitted, no ranks will be returned. */
       public Get setIncludeRankType(java.lang.String includeRankType) {
         this.includeRankType = includeRankType;
         return this;
@@ -3482,13 +3443,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of leaderboard scores to return in the response.  For any response, the
+       * The maximum number of leaderboard scores to return in the response. For any response, the
        * actual number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** The maximum number of leaderboard scores to return in the response.  For any response, the actual
+      /** The maximum number of leaderboard scores to return in the response. For any response, the actual
      number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
@@ -3496,7 +3457,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of leaderboard scores to return in the response.  For any response, the
+       * The maximum number of leaderboard scores to return in the response. For any response, the
        * actual number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       public Get setMaxResults(java.lang.Integer maxResults) {
@@ -3700,13 +3661,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of leaderboard scores to return in the response.  For any response, the
+       * The maximum number of leaderboard scores to return in the response. For any response, the
        * actual number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** The maximum number of leaderboard scores to return in the response.  For any response, the actual
+      /** The maximum number of leaderboard scores to return in the response. For any response, the actual
      number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
@@ -3714,7 +3675,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of leaderboard scores to return in the response.  For any response, the
+       * The maximum number of leaderboard scores to return in the response. For any response, the
        * actual number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
@@ -3919,13 +3880,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of leaderboard scores to return in the response.  For any response, the
+       * The maximum number of leaderboard scores to return in the response. For any response, the
        * actual number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** The maximum number of leaderboard scores to return in the response.  For any response, the actual
+      /** The maximum number of leaderboard scores to return in the response. For any response, the actual
      number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
@@ -3933,7 +3894,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of leaderboard scores to return in the response.  For any response, the
+       * The maximum number of leaderboard scores to return in the response. For any response, the
        * actual number of leaderboard scores returned may be less than the specified `maxResults`.
        */
       public ListWindow setMaxResults(java.lang.Integer maxResults) {
@@ -4020,16 +3981,11 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * parameters, call the {@link Submit#execute()} method to invoke the remote operation.
      *
      * @param leaderboardId The ID of the leaderboard.
-     * @param score The score you're submitting. The submitted score is ignored if it is worse
-    than a previously
-     *        submitted score, where worse depends on the leaderboard
-    sort order. The meaning of the
-     *        score value depends on the leaderboard
-    format type. For fixed-point, the score represents
-     *        the raw value.  For
-    time, the score represents elapsed time in milliseconds.  For
-     *        currency, the
-    score represents a value in micro units.
+     * @param score The score you're submitting. The submitted score is ignored if it is worse than a previously
+     *        submitted score, where worse depends on the leaderboard sort order. The meaning of the
+     *        score value depends on the leaderboard format type. For fixed-point, the score represents
+     *        the raw value. For time, the score represents elapsed time in milliseconds. For currency,
+     *        the score represents a value in micro units.
      * @return the request
      */
     public Submit submit(java.lang.String leaderboardId, java.lang.Long score) throws java.io.IOException {
@@ -4056,16 +4012,11 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param leaderboardId The ID of the leaderboard.
-       * @param score The score you're submitting. The submitted score is ignored if it is worse
-    than a previously
-     *        submitted score, where worse depends on the leaderboard
-    sort order. The meaning of the
-     *        score value depends on the leaderboard
-    format type. For fixed-point, the score represents
-     *        the raw value.  For
-    time, the score represents elapsed time in milliseconds.  For
-     *        currency, the
-    score represents a value in micro units.
+       * @param score The score you're submitting. The submitted score is ignored if it is worse than a previously
+     *        submitted score, where worse depends on the leaderboard sort order. The meaning of the
+     *        score value depends on the leaderboard format type. For fixed-point, the score represents
+     *        the raw value. For time, the score represents elapsed time in milliseconds. For currency,
+     *        the score represents a value in micro units.
        * @since 1.13
        */
       protected Submit(java.lang.String leaderboardId, java.lang.Long score) {
@@ -4149,17 +4100,17 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * The score you're submitting. The submitted score is ignored if it is worse than a
        * previously submitted score, where worse depends on the leaderboard sort order. The meaning
        * of the score value depends on the leaderboard format type. For fixed-point, the score
-       * represents the raw value.  For time, the score represents elapsed time in milliseconds.
-       * For currency, the score represents a value in micro units.
+       * represents the raw value. For time, the score represents elapsed time in milliseconds. For
+       * currency, the score represents a value in micro units.
        */
       @com.google.api.client.util.Key
       private java.lang.Long score;
 
       /** The score you're submitting. The submitted score is ignored if it is worse than a previously
      submitted score, where worse depends on the leaderboard sort order. The meaning of the score value
-     depends on the leaderboard format type. For fixed-point, the score represents the raw value.  For
-     time, the score represents elapsed time in milliseconds.  For currency, the score represents a
-     value in micro units.
+     depends on the leaderboard format type. For fixed-point, the score represents the raw value. For
+     time, the score represents elapsed time in milliseconds. For currency, the score represents a value
+     in micro units.
        */
       public java.lang.Long getScore() {
         return score;
@@ -4169,8 +4120,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * The score you're submitting. The submitted score is ignored if it is worse than a
        * previously submitted score, where worse depends on the leaderboard sort order. The meaning
        * of the score value depends on the leaderboard format type. For fixed-point, the score
-       * represents the raw value.  For time, the score represents elapsed time in milliseconds.
-       * For currency, the score represents a value in micro units.
+       * represents the raw value. For time, the score represents elapsed time in milliseconds. For
+       * currency, the score represents a value in micro units.
        */
       public Submit setScore(java.lang.Long score) {
         this.score = score;
@@ -4194,13 +4145,13 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Additional information about the score you're submitting.  Values must contain no more than
+       * Additional information about the score you're submitting. Values must contain no more than
        * 64 URI-safe characters as defined by section 2.3 of RFC 3986.
        */
       @com.google.api.client.util.Key
       private java.lang.String scoreTag;
 
-      /** Additional information about the score you're submitting.  Values must contain no more than 64 URI-
+      /** Additional information about the score you're submitting. Values must contain no more than 64 URI-
      safe characters as defined by section 2.3 of RFC 3986.
        */
       public java.lang.String getScoreTag() {
@@ -4208,7 +4159,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Additional information about the score you're submitting.  Values must contain no more than
+       * Additional information about the score you're submitting. Values must contain no more than
        * 64 URI-safe characters as defined by section 2.3 of RFC 3986.
        */
       public Submit setScoreTag(java.lang.String scoreTag) {
@@ -4514,8 +4465,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the games server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param playerId A player ID. A value of `me` may be used in place of the authenticated
-    player's ID.
+     * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
      * @return the request
      */
     public List list(java.lang.String playerId) throws java.io.IOException {
@@ -4539,8 +4489,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param playerId A player ID. A value of `me` may be used in place of the authenticated
-    player's ID.
+       * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
        * @since 1.13
        */
       protected List(java.lang.String playerId) {
@@ -4613,9 +4562,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
@@ -4625,9 +4572,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return playerId;
       }
 
-      /**
-       * A player ID. A value of `me` may be used in place of the authenticated player's ID.
-       */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       public List setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;

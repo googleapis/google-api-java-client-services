@@ -31,9 +31,9 @@ package com.google.api.services.gamesManagement.model;
 public final class AchievementResetResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The current state of the achievement.  This is the same as the initial state of the
-   * achievement. Possible values are:  "`HIDDEN`"- Achievement is hidden. "`REVEALED`" -
-   * Achievement is revealed. "`UNLOCKED`" - Achievement is unlocked.
+   * The current state of the achievement. This is the same as the initial state of the achievement.
+   * Possible values are: - "`HIDDEN`"- Achievement is hidden. - "`REVEALED`" - Achievement is
+   * revealed. - "`UNLOCKED`" - Achievement is unlocked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,9 +62,9 @@ public final class AchievementResetResponse extends com.google.api.client.json.G
   private java.lang.Boolean updateOccurred;
 
   /**
-   * The current state of the achievement.  This is the same as the initial state of the
-   * achievement. Possible values are:  "`HIDDEN`"- Achievement is hidden. "`REVEALED`" -
-   * Achievement is revealed. "`UNLOCKED`" - Achievement is unlocked.
+   * The current state of the achievement. This is the same as the initial state of the achievement.
+   * Possible values are: - "`HIDDEN`"- Achievement is hidden. - "`REVEALED`" - Achievement is
+   * revealed. - "`UNLOCKED`" - Achievement is unlocked.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentState() {
@@ -72,9 +72,9 @@ public final class AchievementResetResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The current state of the achievement.  This is the same as the initial state of the
-   * achievement. Possible values are:  "`HIDDEN`"- Achievement is hidden. "`REVEALED`" -
-   * Achievement is revealed. "`UNLOCKED`" - Achievement is unlocked.
+   * The current state of the achievement. This is the same as the initial state of the achievement.
+   * Possible values are: - "`HIDDEN`"- Achievement is hidden. - "`REVEALED`" - Achievement is
+   * revealed. - "`UNLOCKED`" - Achievement is unlocked.
    * @param currentState currentState or {@code null} for none
    */
   public AchievementResetResponse setCurrentState(java.lang.String currentState) {

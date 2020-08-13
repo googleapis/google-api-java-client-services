@@ -74,7 +74,7 @@ public final class AchievementConfiguration extends com.google.api.client.json.G
   private AchievementConfigurationDetail published;
 
   /**
-   * Steps to unlock.  Only applicable to incremental achievements.
+   * Steps to unlock. Only applicable to incremental achievements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,7 +192,7 @@ public final class AchievementConfiguration extends com.google.api.client.json.G
   }
 
   /**
-   * Steps to unlock.  Only applicable to incremental achievements.
+   * Steps to unlock. Only applicable to incremental achievements.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStepsToUnlock() {
@@ -200,7 +200,7 @@ public final class AchievementConfiguration extends com.google.api.client.json.G
   }
 
   /**
-   * Steps to unlock.  Only applicable to incremental achievements.
+   * Steps to unlock. Only applicable to incremental achievements.
    * @param stepsToUnlock stepsToUnlock or {@code null} for none
    */
   public AchievementConfiguration setStepsToUnlock(java.lang.Integer stepsToUnlock) {

@@ -53,7 +53,7 @@ public final class PlayerScore extends com.google.api.client.json.GenericJson {
   private java.lang.Long score;
 
   /**
-   * Additional information about this score.  Values will contain no more than 64 URI-safe
+   * Additional information about this score. Values will contain no more than 64 URI-safe
    * characters as defined by section 2.3 of RFC 3986.
    * The value may be {@code null}.
    */
@@ -121,7 +121,7 @@ public final class PlayerScore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional information about this score.  Values will contain no more than 64 URI-safe
+   * Additional information about this score. Values will contain no more than 64 URI-safe
    * characters as defined by section 2.3 of RFC 3986.
    * @return value or {@code null} for none
    */
@@ -130,7 +130,7 @@ public final class PlayerScore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional information about this score.  Values will contain no more than 64 URI-safe
+   * Additional information about this score. Values will contain no more than 64 URI-safe
    * characters as defined by section 2.3 of RFC 3986.
    * @param scoreTag scoreTag or {@code null} for none
    */

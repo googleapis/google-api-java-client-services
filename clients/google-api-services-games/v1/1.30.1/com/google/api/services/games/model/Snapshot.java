@@ -45,8 +45,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * The ID of the file underlying this snapshot in the Drive API.  Only present if the snapshot is
-   * a view on a Drive file and the file is owned by the caller.
+   * The ID of the file underlying this snapshot in the Drive API. Only present if the snapshot is a
+   * view on a Drive file and the file is owned by the caller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,8 +144,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the file underlying this snapshot in the Drive API.  Only present if the snapshot is
-   * a view on a Drive file and the file is owned by the caller.
+   * The ID of the file underlying this snapshot in the Drive API. Only present if the snapshot is a
+   * view on a Drive file and the file is owned by the caller.
    * @return value or {@code null} for none
    */
   public java.lang.String getDriveId() {
@@ -153,8 +153,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the file underlying this snapshot in the Drive API.  Only present if the snapshot is
-   * a view on a Drive file and the file is owned by the caller.
+   * The ID of the file underlying this snapshot in the Drive API. Only present if the snapshot is a
+   * view on a Drive file and the file is owned by the caller.
    * @param driveId driveId or {@code null} for none
    */
   public Snapshot setDriveId(java.lang.String driveId) {

@@ -761,6 +761,29 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
+      /**
+       * Controls which fields will be populated. Acceptable values are: "merchant" and "css". The
+       * default value is "merchant".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** Controls which fields will be populated. Acceptable values are: "merchant" and "css". The default
+     value is "merchant".
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /**
+       * Controls which fields will be populated. Acceptable values are: "merchant" and "css". The
+       * default value is "merchant".
+       */
+      public Get setView(java.lang.String view) {
+        this.view = view;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -1096,6 +1119,22 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
+      /** If view is set to "css", only return accounts that are assigned label with given ID. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger label;
+
+      /** If view is set to "css", only return accounts that are assigned label with given ID.
+       */
+      public java.math.BigInteger getLabel() {
+        return label;
+      }
+
+      /** If view is set to "css", only return accounts that are assigned label with given ID. */
+      public List setLabel(java.math.BigInteger label) {
+        this.label = label;
+        return this;
+      }
+
       /** The maximum number of accounts to return in the response, used for paging. */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
@@ -1125,6 +1164,29 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /** The token returned by the previous request. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Controls which fields will be populated. Acceptable values are: "merchant" and "css". The
+       * default value is "merchant".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** Controls which fields will be populated. Acceptable values are: "merchant" and "css". The default
+     value is "merchant".
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /**
+       * Controls which fields will be populated. Acceptable values are: "merchant" and "css". The
+       * default value is "merchant".
+       */
+      public List setView(java.lang.String view) {
+        this.view = view;
         return this;
       }
 
@@ -1436,6 +1498,123 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       @Override
       public Update set(String parameterName, Object value) {
         return (Update) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates labels that are assigned to the Merchant Center account by CSS user.
+     *
+     * Create a request for the method "accounts.updatelabels".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Updatelabels#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the managing account.
+     * @param accountId The ID of the account whose labels are updated.
+     * @param content the {@link com.google.api.services.content.model.AccountsUpdateLabelsRequest}
+     * @return the request
+     */
+    public Updatelabels updatelabels(java.math.BigInteger merchantId, java.math.BigInteger accountId, com.google.api.services.content.model.AccountsUpdateLabelsRequest content) throws java.io.IOException {
+      Updatelabels result = new Updatelabels(merchantId, accountId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Updatelabels extends ShoppingContentRequest<com.google.api.services.content.model.AccountsUpdateLabelsResponse> {
+
+      private static final String REST_PATH = "{merchantId}/accounts/{accountId}/updatelabels";
+
+      /**
+       * Updates labels that are assigned to the Merchant Center account by CSS user.
+       *
+       * Create a request for the method "accounts.updatelabels".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Updatelabels#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Updatelabels#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the managing account.
+       * @param accountId The ID of the account whose labels are updated.
+       * @param content the {@link com.google.api.services.content.model.AccountsUpdateLabelsRequest}
+       * @since 1.13
+       */
+      protected Updatelabels(java.math.BigInteger merchantId, java.math.BigInteger accountId, com.google.api.services.content.model.AccountsUpdateLabelsRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.AccountsUpdateLabelsResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+      }
+
+      @Override
+      public Updatelabels setAlt(java.lang.String alt) {
+        return (Updatelabels) super.setAlt(alt);
+      }
+
+      @Override
+      public Updatelabels setFields(java.lang.String fields) {
+        return (Updatelabels) super.setFields(fields);
+      }
+
+      @Override
+      public Updatelabels setKey(java.lang.String key) {
+        return (Updatelabels) super.setKey(key);
+      }
+
+      @Override
+      public Updatelabels setOauthToken(java.lang.String oauthToken) {
+        return (Updatelabels) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Updatelabels setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Updatelabels) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Updatelabels setQuotaUser(java.lang.String quotaUser) {
+        return (Updatelabels) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Updatelabels setUserIp(java.lang.String userIp) {
+        return (Updatelabels) super.setUserIp(userIp);
+      }
+
+      /** The ID of the managing account. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the managing account.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /** The ID of the managing account. */
+      public Updatelabels setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** The ID of the account whose labels are updated. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger accountId;
+
+      /** The ID of the account whose labels are updated.
+       */
+      public java.math.BigInteger getAccountId() {
+        return accountId;
+      }
+
+      /** The ID of the account whose labels are updated. */
+      public Updatelabels setAccountId(java.math.BigInteger accountId) {
+        this.accountId = accountId;
+        return this;
+      }
+
+      @Override
+      public Updatelabels set(String parameterName, Object value) {
+        return (Updatelabels) super.set(parameterName, value);
       }
     }
 

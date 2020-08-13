@@ -19,10 +19,8 @@ package com.google.api.services.binaryauthorization.v1beta1.model;
 /**
  * An admission rule specifies either that all container images used in a pod creation request must
  * be attested to by one or more attestors, that all pod creations will be allowed, or that all pod
- * creations will be denied.
- *
- * Images matching an admission whitelist pattern are exempted from admission rules and will never
- * block a pod creation.
+ * creations will be denied. Images matching an admission whitelist pattern are exempted from
+ * admission rules and will never block a pod creation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Binary Authorization API. For a detailed explanation
@@ -51,12 +49,10 @@ public final class AdmissionRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The resource names of the attestors that must attest to a container image, in the
-   * format `projects/attestors`. Each attestor must exist before a policy can reference it.  To add
+   * format `projects/attestors`. Each attestor must exist before a policy can reference it. To add
    * an attestor to a policy the principal issuing the policy change request must be able to read
-   * the attestor resource.
-   *
-   * Note: this field must be non-empty when the evaluation_mode field specifies
-   * REQUIRE_ATTESTATION, otherwise it must be empty.
+   * the attestor resource. Note: this field must be non-empty when the evaluation_mode field
+   * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,12 +94,10 @@ public final class AdmissionRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The resource names of the attestors that must attest to a container image, in the
-   * format `projects/attestors`. Each attestor must exist before a policy can reference it.  To add
+   * format `projects/attestors`. Each attestor must exist before a policy can reference it. To add
    * an attestor to a policy the principal issuing the policy change request must be able to read
-   * the attestor resource.
-   *
-   * Note: this field must be non-empty when the evaluation_mode field specifies
-   * REQUIRE_ATTESTATION, otherwise it must be empty.
+   * the attestor resource. Note: this field must be non-empty when the evaluation_mode field
+   * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRequireAttestationsBy() {
@@ -112,12 +106,10 @@ public final class AdmissionRule extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The resource names of the attestors that must attest to a container image, in the
-   * format `projects/attestors`. Each attestor must exist before a policy can reference it.  To add
+   * format `projects/attestors`. Each attestor must exist before a policy can reference it. To add
    * an attestor to a policy the principal issuing the policy change request must be able to read
-   * the attestor resource.
-   *
-   * Note: this field must be non-empty when the evaluation_mode field specifies
-   * REQUIRE_ATTESTATION, otherwise it must be empty.
+   * the attestor resource. Note: this field must be non-empty when the evaluation_mode field
+   * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
    * @param requireAttestationsBy requireAttestationsBy or {@code null} for none
    */
   public AdmissionRule setRequireAttestationsBy(java.util.List<java.lang.String> requireAttestationsBy) {

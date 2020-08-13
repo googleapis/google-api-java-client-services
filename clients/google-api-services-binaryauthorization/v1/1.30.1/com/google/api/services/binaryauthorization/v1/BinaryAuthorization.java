@@ -20,8 +20,7 @@ package com.google.api.services.binaryauthorization.v1;
  * Service definition for BinaryAuthorization (v1).
  *
  * <p>
- * The management interface for Binary Authorization, a system providing policy control for images deployed to Kubernetes Engine clusters.
-
+ * The management interface for Binary Authorization, a system providing policy control for images deployed to Kubernetes Engine clusters. 
  * </p>
  *
  * <p>
@@ -146,17 +145,15 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
     /**
      * A policy specifies the attestors that must attest to a container image, before the project is
      * allowed to deploy that image. There is at most one policy per project. All image admission
-     * requests are permitted if a project has no policy.
-     *
-     * Gets the policy for this project. Returns a default policy if the project does not have one.
+     * requests are permitted if a project has no policy. Gets the policy for this project. Returns a
+     * default policy if the project does not have one.
      *
      * Create a request for the method "projects.getPolicy".
      *
      * This request holds the parameters needed by the binaryauthorization server.  After setting any
      * optional parameters, call the {@link GetPolicy#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the policy to retrieve,
-    in the format `projects/policy`.
+     * @param name Required. The resource name of the policy to retrieve, in the format `projects/policy`.
      * @return the request
      */
     public GetPolicy getPolicy(java.lang.String name) throws java.io.IOException {
@@ -175,9 +172,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
       /**
        * A policy specifies the attestors that must attest to a container image, before the project is
        * allowed to deploy that image. There is at most one policy per project. All image admission
-       * requests are permitted if a project has no policy.
-       *
-       * Gets the policy for this project. Returns a default policy if the project does not have one.
+       * requests are permitted if a project has no policy. Gets the policy for this project. Returns a
+       * default policy if the project does not have one.
        *
        * Create a request for the method "projects.getPolicy".
        *
@@ -187,8 +183,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
        * GetPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the policy to retrieve,
-    in the format `projects/policy`.
+       * @param name Required. The resource name of the policy to retrieve, in the format `projects/policy`.
        * @since 1.13
        */
       protected GetPolicy(java.lang.String name) {
@@ -308,8 +303,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
      * optional parameters, call the {@link UpdatePolicy#execute()} method to invoke the remote
      * operation.
      *
-     * @param name Output only. The resource name, in the format `projects/policy`. There is
-    at most one policy per
+     * @param name Output only. The resource name, in the format `projects/policy`. There is at most one policy per
      *        project.
      * @param content the {@link com.google.api.services.binaryauthorization.v1.model.Policy}
      * @return the request
@@ -341,8 +335,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
        * UpdatePolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Output only. The resource name, in the format `projects/policy`. There is
-    at most one policy per
+       * @param name Output only. The resource name, in the format `projects/policy`. There is at most one policy per
      *        project.
        * @param content the {@link com.google.api.services.binaryauthorization.v1.model.Policy}
        * @since 1.13
@@ -625,8 +618,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the binaryauthorization server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the attestors to delete, in the format
-      `projects/attestors`.
+       * @param name Required. The name of the attestors to delete, in the format `projects/attestors`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -653,8 +645,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the attestors to delete, in the format
-      `projects/attestors`.
+         * @param name Required. The name of the attestors to delete, in the format `projects/attestors`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -722,9 +713,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the attestors to delete, in the format `projects/attestors`.
-         */
+        /** Required. The name of the attestors to delete, in the format `projects/attestors`. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -734,9 +723,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
           return name;
         }
 
-        /**
-         * Required. The name of the attestors to delete, in the format `projects/attestors`.
-         */
+        /** Required. The name of the attestors to delete, in the format `projects/attestors`. */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -760,8 +747,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the binaryauthorization server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the attestor to retrieve, in the format
-      `projects/attestors`.
+       * @param name Required. The name of the attestor to retrieve, in the format `projects/attestors`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -788,8 +774,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the attestor to retrieve, in the format
-      `projects/attestors`.
+         * @param name Required. The name of the attestor to retrieve, in the format `projects/attestors`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -867,9 +852,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the attestor to retrieve, in the format `projects/attestors`.
-         */
+        /** Required. The name of the attestor to retrieve, in the format `projects/attestors`. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -879,9 +862,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
           return name;
         }
 
-        /**
-         * Required. The name of the attestor to retrieve, in the format `projects/attestors`.
-         */
+        /** Required. The name of the attestor to retrieve, in the format `projects/attestors`. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -907,8 +888,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @return the request
        */
@@ -937,8 +917,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @since 1.13
          */
@@ -1046,42 +1025,32 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
-         *
-         * To learn which resources support conditions in their IAM policies, see the [IAM
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
          * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         @com.google.api.client.util.Key("options.requestedPolicyVersion")
         private java.lang.Integer optionsRequestedPolicyVersion;
 
-        /** Optional. The policy format version to be returned.
-
-       Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-       Requests for policies with any conditional bindings must specify version 3. Policies without any
-       conditional bindings may specify any valid value or leave the field unset.
-
-       To learn which resources support conditions in their IAM policies, see the [IAM
-       documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+        /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+       specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+       must specify version 3. Policies without any conditional bindings may specify any valid value or
+       leave the field unset. To learn which resources support conditions in their IAM policies, see the
+       [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public java.lang.Integer getOptionsRequestedPolicyVersion() {
           return optionsRequestedPolicyVersion;
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
-         *
-         * To learn which resources support conditions in their IAM policies, see the [IAM
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
          * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -1102,8 +1071,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the binaryauthorization server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the project associated with the
-      attestors, in the format `projects`.
+       * @param parent Required. The resource name of the project associated with the attestors, in the format `projects`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1130,8 +1098,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the project associated with the
-      attestors, in the format `projects`.
+         * @param parent Required. The resource name of the project associated with the attestors, in the format `projects`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1291,9 +1258,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Sets the access control policy on the specified resource. Replaces any existing policy.
-       *
-       * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+       * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+       * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
        *
        * Create a request for the method "attestors.setIamPolicy".
        *
@@ -1301,8 +1267,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.binaryauthorization.v1.model.SetIamPolicyRequest}
        * @return the request
@@ -1321,9 +1286,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+/attestors/[^/]+$");
 
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "attestors.setIamPolicy".
          *
@@ -1333,8 +1297,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.binaryauthorization.v1.model.SetIamPolicyRequest}
          * @since 1.13
@@ -1439,10 +1402,9 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
       }
       /**
        * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-       * this will return an empty set of permissions, not a `NOT_FOUND` error.
-       *
-       * Note: This operation is designed to be used for building permission-aware UIs and command-line
-       * tools, not for authorization checking. This operation may "fail open" without warning.
+       * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+       * designed to be used for building permission-aware UIs and command-line tools, not for
+       * authorization checking. This operation may "fail open" without warning.
        *
        * Create a request for the method "attestors.testIamPermissions".
        *
@@ -1450,8 +1412,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.binaryauthorization.v1.model.TestIamPermissionsRequest}
        * @return the request
@@ -1471,10 +1432,9 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
 
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not
-         * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+         * operation is designed to be used for building permission-aware UIs and command-line tools, not
+         * for authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "attestors.testIamPermissions".
          *
@@ -1484,8 +1444,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
          * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.binaryauthorization.v1.model.TestIamPermissionsRequest}
          * @since 1.13
@@ -1596,8 +1555,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the binaryauthorization server.  After setting any
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name, in the format:
-      `projects/attestors`. This field may not be updated.
+       * @param name Required. The resource name, in the format: `projects/attestors`. This field may not be updated.
        * @param content the {@link com.google.api.services.binaryauthorization.v1.model.Attestor}
        * @return the request
        */
@@ -1625,8 +1583,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name, in the format:
-      `projects/attestors`. This field may not be updated.
+         * @param name Required. The resource name, in the format: `projects/attestors`. This field may not be updated.
          * @param content the {@link com.google.api.services.binaryauthorization.v1.model.Attestor}
          * @since 1.13
          */
@@ -1759,8 +1716,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @return the request
        */
@@ -1789,8 +1745,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @since 1.13
          */
@@ -1898,42 +1853,32 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
-         *
-         * To learn which resources support conditions in their IAM policies, see the [IAM
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
          * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         @com.google.api.client.util.Key("options.requestedPolicyVersion")
         private java.lang.Integer optionsRequestedPolicyVersion;
 
-        /** Optional. The policy format version to be returned.
-
-       Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-       Requests for policies with any conditional bindings must specify version 3. Policies without any
-       conditional bindings may specify any valid value or leave the field unset.
-
-       To learn which resources support conditions in their IAM policies, see the [IAM
-       documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+        /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+       specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+       must specify version 3. Policies without any conditional bindings may specify any valid value or
+       leave the field unset. To learn which resources support conditions in their IAM policies, see the
+       [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public java.lang.Integer getOptionsRequestedPolicyVersion() {
           return optionsRequestedPolicyVersion;
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
-         *
-         * To learn which resources support conditions in their IAM policies, see the [IAM
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
          * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -1947,9 +1892,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Sets the access control policy on the specified resource. Replaces any existing policy.
-       *
-       * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+       * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+       * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
        *
        * Create a request for the method "policy.setIamPolicy".
        *
@@ -1957,8 +1901,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.binaryauthorization.v1.model.SetIamPolicyRequest}
        * @return the request
@@ -1977,9 +1920,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+/policy$");
 
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "policy.setIamPolicy".
          *
@@ -1989,8 +1931,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.binaryauthorization.v1.model.SetIamPolicyRequest}
          * @since 1.13
@@ -2095,10 +2036,9 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
       }
       /**
        * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-       * this will return an empty set of permissions, not a `NOT_FOUND` error.
-       *
-       * Note: This operation is designed to be used for building permission-aware UIs and command-line
-       * tools, not for authorization checking. This operation may "fail open" without warning.
+       * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+       * designed to be used for building permission-aware UIs and command-line tools, not for
+       * authorization checking. This operation may "fail open" without warning.
        *
        * Create a request for the method "policy.testIamPermissions".
        *
@@ -2106,8 +2046,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.binaryauthorization.v1.model.TestIamPermissionsRequest}
        * @return the request
@@ -2127,10 +2066,9 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
 
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not
-         * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+         * operation is designed to be used for building permission-aware UIs and command-line tools, not
+         * for authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "policy.testIamPermissions".
          *
@@ -2140,8 +2078,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
          * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.binaryauthorization.v1.model.TestIamPermissionsRequest}
          * @since 1.13

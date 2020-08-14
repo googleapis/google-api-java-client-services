@@ -35,16 +35,12 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * message passes without an Ack or a Nack, the Pub/Sub system will eventually redeliver the
    * message. If a subscriber acknowledges after the deadline, the Pub/Sub system may accept the
    * Ack, but it is possible that the message has been already delivered again. Multiple Acks to the
-   * message are allowed and will succeed.
-   *
-   * For push delivery, this value is used to set the request timeout for the call to the push
-   * endpoint.
-   *
-   * For pull delivery, this value is used as the initial value for the Ack deadline. It may be
-   * overridden for each message using its corresponding ack_id with ModifyAckDeadline. While a
-   * message is outstanding (i.e. it has been delivered to a pull subscriber and the subscriber has
-   * not yet Acked or Nacked), the Pub/Sub system will not deliver that message to another pull
-   * subscriber (on a best-effort basis).
+   * message are allowed and will succeed. For push delivery, this value is used to set the request
+   * timeout for the call to the push endpoint. For pull delivery, this value is used as the initial
+   * value for the Ack deadline. It may be overridden for each message using its corresponding
+   * ack_id with ModifyAckDeadline. While a message is outstanding (i.e. it has been delivered to a
+   * pull subscriber and the subscriber has not yet Acked or Nacked), the Pub/Sub system will not
+   * deliver that message to another pull subscriber (on a best-effort basis).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,16 +73,12 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * message passes without an Ack or a Nack, the Pub/Sub system will eventually redeliver the
    * message. If a subscriber acknowledges after the deadline, the Pub/Sub system may accept the
    * Ack, but it is possible that the message has been already delivered again. Multiple Acks to the
-   * message are allowed and will succeed.
-   *
-   * For push delivery, this value is used to set the request timeout for the call to the push
-   * endpoint.
-   *
-   * For pull delivery, this value is used as the initial value for the Ack deadline. It may be
-   * overridden for each message using its corresponding ack_id with ModifyAckDeadline. While a
-   * message is outstanding (i.e. it has been delivered to a pull subscriber and the subscriber has
-   * not yet Acked or Nacked), the Pub/Sub system will not deliver that message to another pull
-   * subscriber (on a best-effort basis).
+   * message are allowed and will succeed. For push delivery, this value is used to set the request
+   * timeout for the call to the push endpoint. For pull delivery, this value is used as the initial
+   * value for the Ack deadline. It may be overridden for each message using its corresponding
+   * ack_id with ModifyAckDeadline. While a message is outstanding (i.e. it has been delivered to a
+   * pull subscriber and the subscriber has not yet Acked or Nacked), the Pub/Sub system will not
+   * deliver that message to another pull subscriber (on a best-effort basis).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAckDeadlineSeconds() {
@@ -99,16 +91,12 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * message passes without an Ack or a Nack, the Pub/Sub system will eventually redeliver the
    * message. If a subscriber acknowledges after the deadline, the Pub/Sub system may accept the
    * Ack, but it is possible that the message has been already delivered again. Multiple Acks to the
-   * message are allowed and will succeed.
-   *
-   * For push delivery, this value is used to set the request timeout for the call to the push
-   * endpoint.
-   *
-   * For pull delivery, this value is used as the initial value for the Ack deadline. It may be
-   * overridden for each message using its corresponding ack_id with ModifyAckDeadline. While a
-   * message is outstanding (i.e. it has been delivered to a pull subscriber and the subscriber has
-   * not yet Acked or Nacked), the Pub/Sub system will not deliver that message to another pull
-   * subscriber (on a best-effort basis).
+   * message are allowed and will succeed. For push delivery, this value is used to set the request
+   * timeout for the call to the push endpoint. For pull delivery, this value is used as the initial
+   * value for the Ack deadline. It may be overridden for each message using its corresponding
+   * ack_id with ModifyAckDeadline. While a message is outstanding (i.e. it has been delivered to a
+   * pull subscriber and the subscriber has not yet Acked or Nacked), the Pub/Sub system will not
+   * deliver that message to another pull subscriber (on a best-effort basis).
    * @param ackDeadlineSeconds ackDeadlineSeconds or {@code null} for none
    */
   public Subscription setAckDeadlineSeconds(java.lang.Integer ackDeadlineSeconds) {

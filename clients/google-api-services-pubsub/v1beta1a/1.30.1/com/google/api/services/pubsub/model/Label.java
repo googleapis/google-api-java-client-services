@@ -31,20 +31,13 @@ public final class Label extends com.google.api.client.json.GenericJson {
 
   /**
    * The key of a label is a syntactically valid URL (as per RFC 1738) with the "scheme" and initial
-   * slashes omitted and with the additional restrictions noted below.  Each key should be globally
-   * unique.  The "host" portion is called the "namespace" and is not necessarily resolvable to a
-   * network endpoint.  Instead, the namespace indicates what system or entity defines the semantics
-   * of the label.  Namespaces do not restrict the set of objects to which a label may be
-   * associated.
-   *
-   * Keys are defined by the following grammar:
-   *
-   *   key          = hostname "/" kpath   kpath        = ksegment *[ "/" ksegment ]   ksegment
-   * = alphadigit | *[ alphadigit | "-" | "_" | "." ]
-   *
-   * where "hostname" and "alphadigit" are defined as in RFC 1738.
-   *
-   * Example key:   spanner.google.com/universe
+   * slashes omitted and with the additional restrictions noted below. Each key should be globally
+   * unique. The "host" portion is called the "namespace" and is not necessarily resolvable to a
+   * network endpoint. Instead, the namespace indicates what system or entity defines the semantics
+   * of the label. Namespaces do not restrict the set of objects to which a label may be associated.
+   * Keys are defined by the following grammar: key = hostname "/" kpath kpath = ksegment *[ "/"
+   * ksegment ] ksegment = alphadigit | *[ alphadigit | "-" | "_" | "." ] where "hostname" and
+   * "alphadigit" are defined as in RFC 1738. Example key: spanner.google.com/universe
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,20 +59,13 @@ public final class Label extends com.google.api.client.json.GenericJson {
 
   /**
    * The key of a label is a syntactically valid URL (as per RFC 1738) with the "scheme" and initial
-   * slashes omitted and with the additional restrictions noted below.  Each key should be globally
-   * unique.  The "host" portion is called the "namespace" and is not necessarily resolvable to a
-   * network endpoint.  Instead, the namespace indicates what system or entity defines the semantics
-   * of the label.  Namespaces do not restrict the set of objects to which a label may be
-   * associated.
-   *
-   * Keys are defined by the following grammar:
-   *
-   *   key          = hostname "/" kpath   kpath        = ksegment *[ "/" ksegment ]   ksegment
-   * = alphadigit | *[ alphadigit | "-" | "_" | "." ]
-   *
-   * where "hostname" and "alphadigit" are defined as in RFC 1738.
-   *
-   * Example key:   spanner.google.com/universe
+   * slashes omitted and with the additional restrictions noted below. Each key should be globally
+   * unique. The "host" portion is called the "namespace" and is not necessarily resolvable to a
+   * network endpoint. Instead, the namespace indicates what system or entity defines the semantics
+   * of the label. Namespaces do not restrict the set of objects to which a label may be associated.
+   * Keys are defined by the following grammar: key = hostname "/" kpath kpath = ksegment *[ "/"
+   * ksegment ] ksegment = alphadigit | *[ alphadigit | "-" | "_" | "." ] where "hostname" and
+   * "alphadigit" are defined as in RFC 1738. Example key: spanner.google.com/universe
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -88,20 +74,13 @@ public final class Label extends com.google.api.client.json.GenericJson {
 
   /**
    * The key of a label is a syntactically valid URL (as per RFC 1738) with the "scheme" and initial
-   * slashes omitted and with the additional restrictions noted below.  Each key should be globally
-   * unique.  The "host" portion is called the "namespace" and is not necessarily resolvable to a
-   * network endpoint.  Instead, the namespace indicates what system or entity defines the semantics
-   * of the label.  Namespaces do not restrict the set of objects to which a label may be
-   * associated.
-   *
-   * Keys are defined by the following grammar:
-   *
-   *   key          = hostname "/" kpath   kpath        = ksegment *[ "/" ksegment ]   ksegment
-   * = alphadigit | *[ alphadigit | "-" | "_" | "." ]
-   *
-   * where "hostname" and "alphadigit" are defined as in RFC 1738.
-   *
-   * Example key:   spanner.google.com/universe
+   * slashes omitted and with the additional restrictions noted below. Each key should be globally
+   * unique. The "host" portion is called the "namespace" and is not necessarily resolvable to a
+   * network endpoint. Instead, the namespace indicates what system or entity defines the semantics
+   * of the label. Namespaces do not restrict the set of objects to which a label may be associated.
+   * Keys are defined by the following grammar: key = hostname "/" kpath kpath = ksegment *[ "/"
+   * ksegment ] ksegment = alphadigit | *[ alphadigit | "-" | "_" | "." ] where "hostname" and
+   * "alphadigit" are defined as in RFC 1738. Example key: spanner.google.com/universe
    * @param key key or {@code null} for none
    */
   public Label setKey(java.lang.String key) {

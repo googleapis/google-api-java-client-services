@@ -33,20 +33,13 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * This value is the maximum time after a subscriber receives a message before the subscriber
    * should acknowledge the message. After message delivery but before the ack deadline expires and
    * before the message is acknowledged, it is an outstanding message and will not be delivered
-   * again during that time (on a best-effort basis).
-   *
-   * For pull subscriptions, this value is used as the initial value for the ack deadline. To
-   * override this value for a given message, call `ModifyAckDeadline` with the corresponding
-   * `ack_id` if using pull. The maximum custom deadline you can specify is 600 seconds (10
-   * minutes).
-   *
-   * For push delivery, this value is also used to set the request timeout for the call to the push
-   * endpoint.
-   *
-   * If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver
-   * the message.
-   *
-   * If this parameter is 0, a default value of 10 seconds is used.
+   * again during that time (on a best-effort basis). For pull subscriptions, this value is used as
+   * the initial value for the ack deadline. To override this value for a given message, call
+   * `ModifyAckDeadline` with the corresponding `ack_id` if using pull. The maximum custom deadline
+   * you can specify is 600 seconds (10 minutes). For push delivery, this value is also used to set
+   * the request timeout for the call to the push endpoint. If the subscriber never acknowledges the
+   * message, the Pub/Sub system will eventually redeliver the message. If this parameter is 0, a
+   * default value of 10 seconds is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,20 +76,13 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * This value is the maximum time after a subscriber receives a message before the subscriber
    * should acknowledge the message. After message delivery but before the ack deadline expires and
    * before the message is acknowledged, it is an outstanding message and will not be delivered
-   * again during that time (on a best-effort basis).
-   *
-   * For pull subscriptions, this value is used as the initial value for the ack deadline. To
-   * override this value for a given message, call `ModifyAckDeadline` with the corresponding
-   * `ack_id` if using pull. The maximum custom deadline you can specify is 600 seconds (10
-   * minutes).
-   *
-   * For push delivery, this value is also used to set the request timeout for the call to the push
-   * endpoint.
-   *
-   * If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver
-   * the message.
-   *
-   * If this parameter is 0, a default value of 10 seconds is used.
+   * again during that time (on a best-effort basis). For pull subscriptions, this value is used as
+   * the initial value for the ack deadline. To override this value for a given message, call
+   * `ModifyAckDeadline` with the corresponding `ack_id` if using pull. The maximum custom deadline
+   * you can specify is 600 seconds (10 minutes). For push delivery, this value is also used to set
+   * the request timeout for the call to the push endpoint. If the subscriber never acknowledges the
+   * message, the Pub/Sub system will eventually redeliver the message. If this parameter is 0, a
+   * default value of 10 seconds is used.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAckDeadlineSeconds() {
@@ -107,20 +93,13 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * This value is the maximum time after a subscriber receives a message before the subscriber
    * should acknowledge the message. After message delivery but before the ack deadline expires and
    * before the message is acknowledged, it is an outstanding message and will not be delivered
-   * again during that time (on a best-effort basis).
-   *
-   * For pull subscriptions, this value is used as the initial value for the ack deadline. To
-   * override this value for a given message, call `ModifyAckDeadline` with the corresponding
-   * `ack_id` if using pull. The maximum custom deadline you can specify is 600 seconds (10
-   * minutes).
-   *
-   * For push delivery, this value is also used to set the request timeout for the call to the push
-   * endpoint.
-   *
-   * If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver
-   * the message.
-   *
-   * If this parameter is 0, a default value of 10 seconds is used.
+   * again during that time (on a best-effort basis). For pull subscriptions, this value is used as
+   * the initial value for the ack deadline. To override this value for a given message, call
+   * `ModifyAckDeadline` with the corresponding `ack_id` if using pull. The maximum custom deadline
+   * you can specify is 600 seconds (10 minutes). For push delivery, this value is also used to set
+   * the request timeout for the call to the push endpoint. If the subscriber never acknowledges the
+   * message, the Pub/Sub system will eventually redeliver the message. If this parameter is 0, a
+   * default value of 10 seconds is used.
    * @param ackDeadlineSeconds ackDeadlineSeconds or {@code null} for none
    */
   public Subscription setAckDeadlineSeconds(java.lang.Integer ackDeadlineSeconds) {

@@ -76,9 +76,8 @@ public final class PlanNode extends com.google.api.client.json.GenericJson {
 
   /**
    * Attributes relevant to the node contained in a group of key-value pairs. For example, a
-   * Parameter Reference node could have the following information in its metadata:
-   *
-   *     {       "parameter_reference": "param1",       "parameter_type": "array"     }
+   * Parameter Reference node could have the following information in its metadata: {
+   * "parameter_reference": "param1", "parameter_type": "array" }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,9 +185,8 @@ public final class PlanNode extends com.google.api.client.json.GenericJson {
 
   /**
    * Attributes relevant to the node contained in a group of key-value pairs. For example, a
-   * Parameter Reference node could have the following information in its metadata:
-   *
-   *     {       "parameter_reference": "param1",       "parameter_type": "array"     }
+   * Parameter Reference node could have the following information in its metadata: {
+   * "parameter_reference": "param1", "parameter_type": "array" }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -197,9 +195,8 @@ public final class PlanNode extends com.google.api.client.json.GenericJson {
 
   /**
    * Attributes relevant to the node contained in a group of key-value pairs. For example, a
-   * Parameter Reference node could have the following information in its metadata:
-   *
-   *     {       "parameter_reference": "param1",       "parameter_type": "array"     }
+   * Parameter Reference node could have the following information in its metadata: {
+   * "parameter_reference": "param1", "parameter_type": "array" }
    * @param metadata metadata or {@code null} for none
    */
   public PlanNode setMetadata(java.util.Map<String, java.lang.Object> metadata) {

@@ -39,7 +39,7 @@ public final class UpdateInstanceRequest extends com.google.api.client.json.Gene
   private String fieldMask;
 
   /**
-   * Required. The instance to update, which must always include the instance name.  Otherwise, only
+   * Required. The instance to update, which must always include the instance name. Otherwise, only
    * fields mentioned in field_mask need be included.
    * The value may be {@code null}.
    */
@@ -68,7 +68,7 @@ public final class UpdateInstanceRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The instance to update, which must always include the instance name.  Otherwise, only
+   * Required. The instance to update, which must always include the instance name. Otherwise, only
    * fields mentioned in field_mask need be included.
    * @return value or {@code null} for none
    */
@@ -77,7 +77,7 @@ public final class UpdateInstanceRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The instance to update, which must always include the instance name.  Otherwise, only
+   * Required. The instance to update, which must always include the instance name. Otherwise, only
    * fields mentioned in field_mask need be included.
    * @param instance instance or {@code null} for none
    */

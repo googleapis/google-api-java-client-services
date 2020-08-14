@@ -38,10 +38,8 @@ public final class ResultSetStats extends com.google.api.client.json.GenericJson
 
   /**
    * Aggregated statistics from the execution of the query. Only present when the query is profiled.
-   * For example, a query could return the statistics as follows:
-   *
-   *     {       "rows_returned": "3",       "elapsed_time": "1.22 secs",       "cpu_time": "1.19
-   * secs"     }
+   * For example, a query could return the statistics as follows: { "rows_returned": "3",
+   * "elapsed_time": "1.22 secs", "cpu_time": "1.19 secs" }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,10 +79,8 @@ public final class ResultSetStats extends com.google.api.client.json.GenericJson
 
   /**
    * Aggregated statistics from the execution of the query. Only present when the query is profiled.
-   * For example, a query could return the statistics as follows:
-   *
-   *     {       "rows_returned": "3",       "elapsed_time": "1.22 secs",       "cpu_time": "1.19
-   * secs"     }
+   * For example, a query could return the statistics as follows: { "rows_returned": "3",
+   * "elapsed_time": "1.22 secs", "cpu_time": "1.19 secs" }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getQueryStats() {
@@ -93,10 +89,8 @@ public final class ResultSetStats extends com.google.api.client.json.GenericJson
 
   /**
    * Aggregated statistics from the execution of the query. Only present when the query is profiled.
-   * For example, a query could return the statistics as follows:
-   *
-   *     {       "rows_returned": "3",       "elapsed_time": "1.22 secs",       "cpu_time": "1.19
-   * secs"     }
+   * For example, a query could return the statistics as follows: { "rows_returned": "3",
+   * "elapsed_time": "1.22 secs", "cpu_time": "1.19 secs" }
    * @param queryStats queryStats or {@code null} for none
    */
   public ResultSetStats setQueryStats(java.util.Map<String, java.lang.Object> queryStats) {

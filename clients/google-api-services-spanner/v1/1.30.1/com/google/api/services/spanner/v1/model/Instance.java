@@ -57,20 +57,15 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * groups that reflect a customer's organizational needs and deployment strategies. Cloud Labels
    * can be used to filter collections of resources. They can be used to control how resource
    * metrics are aggregated. And they can be used as arguments to policy management rules (e.g.
-   * route, firewall, load balancing, etc.).
-   *
-   *  * Label keys must be between 1 and 63 characters long and must conform to    the following
-   * regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.  * Label values must be between 0 and 63
-   * characters long and must conform    to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-   * * No more than 64 labels can be associated with a given resource.
-   *
-   * See https://goo.gl/xmQnxf for more information on and examples of labels.
-   *
-   * If you plan to use labels in your own code, please note that additional characters may be
-   * allowed in the future. And so you are advised to use an internal label representation, such as
-   * JSON, which doesn't rely upon specific characters being disallowed.  For example, representing
-   * labels as the string:  name + "_" + value  would prove problematic if we were to allow "_" in a
-   * future release.
+   * route, firewall, load balancing, etc.). * Label keys must be between 1 and 63 characters long
+   * and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. * Label
+   * values must be between 0 and 63 characters long and must conform to the regular expression
+   * `([a-z]([-a-z0-9]*[a-z0-9])?)?`. * No more than 64 labels can be associated with a given
+   * resource. See https://goo.gl/xmQnxf for more information on and examples of labels. If you plan
+   * to use labels in your own code, please note that additional characters may be allowed in the
+   * future. And so you are advised to use an internal label representation, such as JSON, which
+   * doesn't rely upon specific characters being disallowed. For example, representing labels as the
+   * string: name + "_" + value would prove problematic if we were to allow "_" in a future release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,10 +82,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of nodes allocated to this instance. This may be zero in API responses for instances
-   * that are not yet in state `READY`.
-   *
-   * See [the documentation](https://cloud.google.com/spanner/docs/instances#node_count) for more
-   * information about nodes.
+   * that are not yet in state `READY`. See [the
+   * documentation](https://cloud.google.com/spanner/docs/instances#node_count) for more information
+   * about nodes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,20 +158,15 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * groups that reflect a customer's organizational needs and deployment strategies. Cloud Labels
    * can be used to filter collections of resources. They can be used to control how resource
    * metrics are aggregated. And they can be used as arguments to policy management rules (e.g.
-   * route, firewall, load balancing, etc.).
-   *
-   *  * Label keys must be between 1 and 63 characters long and must conform to    the following
-   * regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.  * Label values must be between 0 and 63
-   * characters long and must conform    to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-   * * No more than 64 labels can be associated with a given resource.
-   *
-   * See https://goo.gl/xmQnxf for more information on and examples of labels.
-   *
-   * If you plan to use labels in your own code, please note that additional characters may be
-   * allowed in the future. And so you are advised to use an internal label representation, such as
-   * JSON, which doesn't rely upon specific characters being disallowed.  For example, representing
-   * labels as the string:  name + "_" + value  would prove problematic if we were to allow "_" in a
-   * future release.
+   * route, firewall, load balancing, etc.). * Label keys must be between 1 and 63 characters long
+   * and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. * Label
+   * values must be between 0 and 63 characters long and must conform to the regular expression
+   * `([a-z]([-a-z0-9]*[a-z0-9])?)?`. * No more than 64 labels can be associated with a given
+   * resource. See https://goo.gl/xmQnxf for more information on and examples of labels. If you plan
+   * to use labels in your own code, please note that additional characters may be allowed in the
+   * future. And so you are advised to use an internal label representation, such as JSON, which
+   * doesn't rely upon specific characters being disallowed. For example, representing labels as the
+   * string: name + "_" + value would prove problematic if we were to allow "_" in a future release.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -189,20 +178,15 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * groups that reflect a customer's organizational needs and deployment strategies. Cloud Labels
    * can be used to filter collections of resources. They can be used to control how resource
    * metrics are aggregated. And they can be used as arguments to policy management rules (e.g.
-   * route, firewall, load balancing, etc.).
-   *
-   *  * Label keys must be between 1 and 63 characters long and must conform to    the following
-   * regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`.  * Label values must be between 0 and 63
-   * characters long and must conform    to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-   * * No more than 64 labels can be associated with a given resource.
-   *
-   * See https://goo.gl/xmQnxf for more information on and examples of labels.
-   *
-   * If you plan to use labels in your own code, please note that additional characters may be
-   * allowed in the future. And so you are advised to use an internal label representation, such as
-   * JSON, which doesn't rely upon specific characters being disallowed.  For example, representing
-   * labels as the string:  name + "_" + value  would prove problematic if we were to allow "_" in a
-   * future release.
+   * route, firewall, load balancing, etc.). * Label keys must be between 1 and 63 characters long
+   * and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. * Label
+   * values must be between 0 and 63 characters long and must conform to the regular expression
+   * `([a-z]([-a-z0-9]*[a-z0-9])?)?`. * No more than 64 labels can be associated with a given
+   * resource. See https://goo.gl/xmQnxf for more information on and examples of labels. If you plan
+   * to use labels in your own code, please note that additional characters may be allowed in the
+   * future. And so you are advised to use an internal label representation, such as JSON, which
+   * doesn't rely upon specific characters being disallowed. For example, representing labels as the
+   * string: name + "_" + value would prove problematic if we were to allow "_" in a future release.
    * @param labels labels or {@code null} for none
    */
   public Instance setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -233,10 +217,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of nodes allocated to this instance. This may be zero in API responses for instances
-   * that are not yet in state `READY`.
-   *
-   * See [the documentation](https://cloud.google.com/spanner/docs/instances#node_count) for more
-   * information about nodes.
+   * that are not yet in state `READY`. See [the
+   * documentation](https://cloud.google.com/spanner/docs/instances#node_count) for more information
+   * about nodes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNodeCount() {
@@ -245,10 +228,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of nodes allocated to this instance. This may be zero in API responses for instances
-   * that are not yet in state `READY`.
-   *
-   * See [the documentation](https://cloud.google.com/spanner/docs/instances#node_count) for more
-   * information about nodes.
+   * that are not yet in state `READY`. See [the
+   * documentation](https://cloud.google.com/spanner/docs/instances#node_count) for more information
+   * about nodes.
    * @param nodeCount nodeCount or {@code null} for none
    */
   public Instance setNodeCount(java.lang.Integer nodeCount) {

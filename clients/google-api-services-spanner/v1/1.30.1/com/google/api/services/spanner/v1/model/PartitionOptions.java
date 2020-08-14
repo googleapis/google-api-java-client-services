@@ -30,35 +30,32 @@ package com.google.api.services.spanner.v1.model;
 public final class PartitionOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * **Note:** This hint is currently ignored by PartitionQuery and PartitionRead requests.
-   *
-   * The desired maximum number of partitions to return.  For example, this may be set to the number
-   * of workers available.  The default for this option is currently 10,000. The maximum value is
-   * currently 200,000.  This is only a hint.  The actual number of partitions returned may be
-   * smaller or larger than this maximum count request.
+   * **Note:** This hint is currently ignored by PartitionQuery and PartitionRead requests. The
+   * desired maximum number of partitions to return. For example, this may be set to the number of
+   * workers available. The default for this option is currently 10,000. The maximum value is
+   * currently 200,000. This is only a hint. The actual number of partitions returned may be smaller
+   * or larger than this maximum count request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxPartitions;
 
   /**
-   * **Note:** This hint is currently ignored by PartitionQuery and PartitionRead requests.
-   *
-   * The desired data size for each partition generated.  The default for this option is currently 1
-   * GiB.  This is only a hint. The actual size of each partition may be smaller or larger than this
-   * size request.
+   * **Note:** This hint is currently ignored by PartitionQuery and PartitionRead requests. The
+   * desired data size for each partition generated. The default for this option is currently 1 GiB.
+   * This is only a hint. The actual size of each partition may be smaller or larger than this size
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long partitionSizeBytes;
 
   /**
-   * **Note:** This hint is currently ignored by PartitionQuery and PartitionRead requests.
-   *
-   * The desired maximum number of partitions to return.  For example, this may be set to the number
-   * of workers available.  The default for this option is currently 10,000. The maximum value is
-   * currently 200,000.  This is only a hint.  The actual number of partitions returned may be
-   * smaller or larger than this maximum count request.
+   * **Note:** This hint is currently ignored by PartitionQuery and PartitionRead requests. The
+   * desired maximum number of partitions to return. For example, this may be set to the number of
+   * workers available. The default for this option is currently 10,000. The maximum value is
+   * currently 200,000. This is only a hint. The actual number of partitions returned may be smaller
+   * or larger than this maximum count request.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxPartitions() {
@@ -66,12 +63,11 @@ public final class PartitionOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * **Note:** This hint is currently ignored by PartitionQuery and PartitionRead requests.
-   *
-   * The desired maximum number of partitions to return.  For example, this may be set to the number
-   * of workers available.  The default for this option is currently 10,000. The maximum value is
-   * currently 200,000.  This is only a hint.  The actual number of partitions returned may be
-   * smaller or larger than this maximum count request.
+   * **Note:** This hint is currently ignored by PartitionQuery and PartitionRead requests. The
+   * desired maximum number of partitions to return. For example, this may be set to the number of
+   * workers available. The default for this option is currently 10,000. The maximum value is
+   * currently 200,000. This is only a hint. The actual number of partitions returned may be smaller
+   * or larger than this maximum count request.
    * @param maxPartitions maxPartitions or {@code null} for none
    */
   public PartitionOptions setMaxPartitions(java.lang.Long maxPartitions) {
@@ -80,11 +76,10 @@ public final class PartitionOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * **Note:** This hint is currently ignored by PartitionQuery and PartitionRead requests.
-   *
-   * The desired data size for each partition generated.  The default for this option is currently 1
-   * GiB.  This is only a hint. The actual size of each partition may be smaller or larger than this
-   * size request.
+   * **Note:** This hint is currently ignored by PartitionQuery and PartitionRead requests. The
+   * desired data size for each partition generated. The default for this option is currently 1 GiB.
+   * This is only a hint. The actual size of each partition may be smaller or larger than this size
+   * request.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPartitionSizeBytes() {
@@ -92,11 +87,10 @@ public final class PartitionOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * **Note:** This hint is currently ignored by PartitionQuery and PartitionRead requests.
-   *
-   * The desired data size for each partition generated.  The default for this option is currently 1
-   * GiB.  This is only a hint. The actual size of each partition may be smaller or larger than this
-   * size request.
+   * **Note:** This hint is currently ignored by PartitionQuery and PartitionRead requests. The
+   * desired data size for each partition generated. The default for this option is currently 1 GiB.
+   * This is only a hint. The actual size of each partition may be smaller or larger than this size
+   * request.
    * @param partitionSizeBytes partitionSizeBytes or {@code null} for none
    */
   public PartitionOptions setPartitionSizeBytes(java.lang.Long partitionSizeBytes) {

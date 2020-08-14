@@ -58,15 +58,12 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private String expireTime;
 
   /**
-   * Output only for the CreateBackup operation. Required for the UpdateBackup operation.
-   *
-   * A globally unique identifier for the backup which cannot be changed. Values are of the form
+   * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
+   * unique identifier for the backup which cannot be changed. Values are of the form
    * `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and
-   * 60 characters in length.
-   *
-   * The backup is stored in the location(s) specified in the instance configuration of the instance
-   * containing the backup, identified by the prefix of the backup name of the form
-   * `projects//instances/`.
+   * 60 characters in length. The backup is stored in the location(s) specified in the instance
+   * configuration of the instance containing the backup, identified by the prefix of the backup
+   * name of the form `projects//instances/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,15 +160,12 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only for the CreateBackup operation. Required for the UpdateBackup operation.
-   *
-   * A globally unique identifier for the backup which cannot be changed. Values are of the form
+   * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
+   * unique identifier for the backup which cannot be changed. Values are of the form
    * `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and
-   * 60 characters in length.
-   *
-   * The backup is stored in the location(s) specified in the instance configuration of the instance
-   * containing the backup, identified by the prefix of the backup name of the form
-   * `projects//instances/`.
+   * 60 characters in length. The backup is stored in the location(s) specified in the instance
+   * configuration of the instance containing the backup, identified by the prefix of the backup
+   * name of the form `projects//instances/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -179,15 +173,12 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only for the CreateBackup operation. Required for the UpdateBackup operation.
-   *
-   * A globally unique identifier for the backup which cannot be changed. Values are of the form
+   * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
+   * unique identifier for the backup which cannot be changed. Values are of the form
    * `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and
-   * 60 characters in length.
-   *
-   * The backup is stored in the location(s) specified in the instance configuration of the instance
-   * containing the backup, identified by the prefix of the backup name of the form
-   * `projects//instances/`.
+   * 60 characters in length. The backup is stored in the location(s) specified in the instance
+   * configuration of the instance containing the backup, identified by the prefix of the backup
+   * name of the form `projects//instances/`.
    * @param name name or {@code null} for none
    */
   public Backup setName(java.lang.String name) {

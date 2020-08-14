@@ -31,10 +31,8 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
 
   /**
    * `id` may be used to identify the transaction in subsequent Read, ExecuteSql, Commit, or
-   * Rollback calls.
-   *
-   * Single-use read-only transactions do not have IDs, because single-use transactions do not
-   * support multiple requests.
+   * Rollback calls. Single-use read-only transactions do not have IDs, because single-use
+   * transactions do not support multiple requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,9 +40,8 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
 
   /**
    * For snapshot read-only transactions, the read timestamp chosen for the transaction. Not
-   * returned by default: see TransactionOptions.ReadOnly.return_read_timestamp.
-   *
-   * A timestamp in RFC3339 UTC \"Zulu\" format, accurate to nanoseconds. Example:
+   * returned by default: see TransactionOptions.ReadOnly.return_read_timestamp. A timestamp in
+   * RFC3339 UTC \"Zulu\" format, accurate to nanoseconds. Example:
    * `"2014-10-02T15:01:23.045123456Z"`.
    * The value may be {@code null}.
    */
@@ -53,10 +50,8 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
 
   /**
    * `id` may be used to identify the transaction in subsequent Read, ExecuteSql, Commit, or
-   * Rollback calls.
-   *
-   * Single-use read-only transactions do not have IDs, because single-use transactions do not
-   * support multiple requests.
+   * Rollback calls. Single-use read-only transactions do not have IDs, because single-use
+   * transactions do not support multiple requests.
    * @see #decodeId()
    * @return value or {@code null} for none
    */
@@ -66,10 +61,8 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
 
   /**
    * `id` may be used to identify the transaction in subsequent Read, ExecuteSql, Commit, or
-   * Rollback calls.
-   *
-   * Single-use read-only transactions do not have IDs, because single-use transactions do not
-   * support multiple requests.
+   * Rollback calls. Single-use read-only transactions do not have IDs, because single-use
+   * transactions do not support multiple requests.
    * @see #getId()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -81,10 +74,8 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
 
   /**
    * `id` may be used to identify the transaction in subsequent Read, ExecuteSql, Commit, or
-   * Rollback calls.
-   *
-   * Single-use read-only transactions do not have IDs, because single-use transactions do not
-   * support multiple requests.
+   * Rollback calls. Single-use read-only transactions do not have IDs, because single-use
+   * transactions do not support multiple requests.
    * @see #encodeId()
    * @param id id or {@code null} for none
    */
@@ -95,10 +86,8 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
 
   /**
    * `id` may be used to identify the transaction in subsequent Read, ExecuteSql, Commit, or
-   * Rollback calls.
-   *
-   * Single-use read-only transactions do not have IDs, because single-use transactions do not
-   * support multiple requests.
+   * Rollback calls. Single-use read-only transactions do not have IDs, because single-use
+   * transactions do not support multiple requests.
    * @see #setId()
    *
    * <p>
@@ -114,9 +103,8 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
 
   /**
    * For snapshot read-only transactions, the read timestamp chosen for the transaction. Not
-   * returned by default: see TransactionOptions.ReadOnly.return_read_timestamp.
-   *
-   * A timestamp in RFC3339 UTC \"Zulu\" format, accurate to nanoseconds. Example:
+   * returned by default: see TransactionOptions.ReadOnly.return_read_timestamp. A timestamp in
+   * RFC3339 UTC \"Zulu\" format, accurate to nanoseconds. Example:
    * `"2014-10-02T15:01:23.045123456Z"`.
    * @return value or {@code null} for none
    */
@@ -126,9 +114,8 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
 
   /**
    * For snapshot read-only transactions, the read timestamp chosen for the transaction. Not
-   * returned by default: see TransactionOptions.ReadOnly.return_read_timestamp.
-   *
-   * A timestamp in RFC3339 UTC \"Zulu\" format, accurate to nanoseconds. Example:
+   * returned by default: see TransactionOptions.ReadOnly.return_read_timestamp. A timestamp in
+   * RFC3339 UTC \"Zulu\" format, accurate to nanoseconds. Example:
    * `"2014-10-02T15:01:23.045123456Z"`.
    * @param readTimestamp readTimestamp or {@code null} for none
    */

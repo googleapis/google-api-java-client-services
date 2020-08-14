@@ -30,10 +30,9 @@ package com.google.api.services.spanner.v1.model;
 public final class Write extends com.google.api.client.json.GenericJson {
 
   /**
-   * The names of the columns in table to be written.
-   *
-   * The list of columns must contain enough columns to allow Cloud Spanner to derive values for all
-   * primary key columns in the row(s) to be modified.
+   * The names of the columns in table to be written. The list of columns must contain enough
+   * columns to allow Cloud Spanner to derive values for all primary key columns in the row(s) to be
+   * modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,10 +57,9 @@ public final class Write extends com.google.api.client.json.GenericJson {
   private java.util.List<java.util.List<java.lang.Object>> values;
 
   /**
-   * The names of the columns in table to be written.
-   *
-   * The list of columns must contain enough columns to allow Cloud Spanner to derive values for all
-   * primary key columns in the row(s) to be modified.
+   * The names of the columns in table to be written. The list of columns must contain enough
+   * columns to allow Cloud Spanner to derive values for all primary key columns in the row(s) to be
+   * modified.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getColumns() {
@@ -69,10 +67,9 @@ public final class Write extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The names of the columns in table to be written.
-   *
-   * The list of columns must contain enough columns to allow Cloud Spanner to derive values for all
-   * primary key columns in the row(s) to be modified.
+   * The names of the columns in table to be written. The list of columns must contain enough
+   * columns to allow Cloud Spanner to derive values for all primary key columns in the row(s) to be
+   * modified.
    * @param columns columns or {@code null} for none
    */
   public Write setColumns(java.util.List<java.lang.String> columns) {

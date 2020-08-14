@@ -30,7 +30,7 @@ package com.google.api.services.spanner.v1.model;
 public final class CreateDatabaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A `CREATE DATABASE` statement, which specifies the ID of the new database.  The
+   * Required. A `CREATE DATABASE` statement, which specifies the ID of the new database. The
    * database ID must conform to the regular expression `a-z*[a-z0-9]` and be between 2 and 30
    * characters in length. If the database ID is a reserved word or if it contains a hyphen, the
    * database ID must be enclosed in backticks (`` ` ``).
@@ -49,7 +49,7 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> extraStatements;
 
   /**
-   * Required. A `CREATE DATABASE` statement, which specifies the ID of the new database.  The
+   * Required. A `CREATE DATABASE` statement, which specifies the ID of the new database. The
    * database ID must conform to the regular expression `a-z*[a-z0-9]` and be between 2 and 30
    * characters in length. If the database ID is a reserved word or if it contains a hyphen, the
    * database ID must be enclosed in backticks (`` ` ``).
@@ -60,7 +60,7 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. A `CREATE DATABASE` statement, which specifies the ID of the new database.  The
+   * Required. A `CREATE DATABASE` statement, which specifies the ID of the new database. The
    * database ID must conform to the regular expression `a-z*[a-z0-9]` and be between 2 and 30
    * characters in length. If the database ID is a reserved word or if it contains a hyphen, the
    * database ID must be enclosed in backticks (`` ` ``).

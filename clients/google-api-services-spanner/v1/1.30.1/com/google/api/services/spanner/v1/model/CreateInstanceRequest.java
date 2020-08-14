@@ -30,7 +30,7 @@ package com.google.api.services.spanner.v1.model;
 public final class CreateInstanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The instance to create.  The name may be omitted, but if specified must be
+   * Required. The instance to create. The name may be omitted, but if specified must be
    * `/instances/`.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class CreateInstanceRequest extends com.google.api.client.json.Gene
   private Instance instance;
 
   /**
-   * Required. The ID of the instance to create.  Valid identifiers are of the form `a-z*[a-z0-9]`
+   * Required. The ID of the instance to create. Valid identifiers are of the form `a-z*[a-z0-9]`
    * and must be between 2 and 64 characters in length.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class CreateInstanceRequest extends com.google.api.client.json.Gene
   private java.lang.String instanceId;
 
   /**
-   * Required. The instance to create.  The name may be omitted, but if specified must be
+   * Required. The instance to create. The name may be omitted, but if specified must be
    * `/instances/`.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class CreateInstanceRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The instance to create.  The name may be omitted, but if specified must be
+   * Required. The instance to create. The name may be omitted, but if specified must be
    * `/instances/`.
    * @param instance instance or {@code null} for none
    */
@@ -65,7 +65,7 @@ public final class CreateInstanceRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The ID of the instance to create.  Valid identifiers are of the form `a-z*[a-z0-9]`
+   * Required. The ID of the instance to create. Valid identifiers are of the form `a-z*[a-z0-9]`
    * and must be between 2 and 64 characters in length.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class CreateInstanceRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The ID of the instance to create.  Valid identifiers are of the form `a-z*[a-z0-9]`
+   * Required. The ID of the instance to create. Valid identifiers are of the form `a-z*[a-z0-9]`
    * and must be between 2 and 64 characters in length.
    * @param instanceId instanceId or {@code null} for none
    */

@@ -37,7 +37,7 @@ public final class SslCertDetail extends com.google.api.client.json.GenericJson 
   private SslCert certInfo;
 
   /**
-   * The private key for the client cert, in pem format.  Keep private in order to protect your
+   * The private key for the client cert, in pem format. Keep private in order to protect your
    * security.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class SslCertDetail extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The private key for the client cert, in pem format.  Keep private in order to protect your
+   * The private key for the client cert, in pem format. Keep private in order to protect your
    * security.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class SslCertDetail extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The private key for the client cert, in pem format.  Keep private in order to protect your
+   * The private key for the client cert, in pem format. Keep private in order to protect your
    * security.
    * @param certPrivateKey certPrivateKey or {@code null} for none
    */

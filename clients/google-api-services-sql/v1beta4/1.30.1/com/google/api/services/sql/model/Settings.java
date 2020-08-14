@@ -31,9 +31,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The activation policy specifies when the instance is activated; it is applicable only when the
-   * instance state is RUNNABLE. Valid values:   ALWAYS: The instance is on, and remains so even in
-   * the absence of connection requests.   NEVER: The instance is off; it is not activated, even if
-   * a   connection request arrives.
+   * instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in
+   * the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if
+   * a connection request arrives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,11 +48,10 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> authorizedGaeApplications;
 
   /**
-   * Availability type. Potential values:   ZONAL: The instance serves data from only one zone.
-   * Outages in that zone affect data accessibility.   REGIONAL: The instance can serve data from
-   * more than one zone   in a region (it is highly available). For more information, see
-   *
-   * Overview of the High Availability Configuration.
+   * Availability type. Potential values: *ZONAL*: The instance serves data from only one zone.
+   * Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from
+   * more than one zone in a region (it is highly available). For more information, see Overview of
+   * the High Availability Configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +124,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private IpConfiguration ipConfiguration;
 
   /**
-   * This is always sql#settings.
+   * This is always *sql#settings*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,15 +148,15 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private MaintenanceWindow maintenanceWindow;
 
   /**
-   * The pricing plan for this instance. This can be either PER_USE or PACKAGE. Only PER_USE is
-   * supported for Second Generation instances.
+   * The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE*
+   * is supported for Second Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pricingPlan;
 
   /**
-   * The type of replication this instance uses. This can be either ASYNCHRONOUS or SYNCHRONOUS.
+   * The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*.
    * (Deprecated_ This property was only applicable to First Generation instances.
    * The value may be {@code null}.
    */
@@ -189,8 +188,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Long storageAutoResizeLimit;
 
   /**
-   * The tier (or machine type) for this instance, for example db-n1-standard-1 (MySQL instances) or
-   * db-custom-1-3840 (PostgreSQL instances).
+   * The tier (or machine type) for this instance, for example *db-n1-standard-1* (MySQL instances)
+   * or *db-custom-1-3840* (PostgreSQL instances).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,9 +204,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The activation policy specifies when the instance is activated; it is applicable only when the
-   * instance state is RUNNABLE. Valid values:   ALWAYS: The instance is on, and remains so even in
-   * the absence of connection requests.   NEVER: The instance is off; it is not activated, even if
-   * a   connection request arrives.
+   * instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in
+   * the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if
+   * a connection request arrives.
    * @return value or {@code null} for none
    */
   public java.lang.String getActivationPolicy() {
@@ -216,9 +215,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The activation policy specifies when the instance is activated; it is applicable only when the
-   * instance state is RUNNABLE. Valid values:   ALWAYS: The instance is on, and remains so even in
-   * the absence of connection requests.   NEVER: The instance is off; it is not activated, even if
-   * a   connection request arrives.
+   * instance state is RUNNABLE. Valid values: *ALWAYS*: The instance is on, and remains so even in
+   * the absence of connection requests. *NEVER*: The instance is off; it is not activated, even if
+   * a connection request arrives.
    * @param activationPolicy activationPolicy or {@code null} for none
    */
   public Settings setActivationPolicy(java.lang.String activationPolicy) {
@@ -246,11 +245,10 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Availability type. Potential values:   ZONAL: The instance serves data from only one zone.
-   * Outages in that zone affect data accessibility.   REGIONAL: The instance can serve data from
-   * more than one zone   in a region (it is highly available). For more information, see
-   *
-   * Overview of the High Availability Configuration.
+   * Availability type. Potential values: *ZONAL*: The instance serves data from only one zone.
+   * Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from
+   * more than one zone in a region (it is highly available). For more information, see Overview of
+   * the High Availability Configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailabilityType() {
@@ -258,11 +256,10 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Availability type. Potential values:   ZONAL: The instance serves data from only one zone.
-   * Outages in that zone affect data accessibility.   REGIONAL: The instance can serve data from
-   * more than one zone   in a region (it is highly available). For more information, see
-   *
-   * Overview of the High Availability Configuration.
+   * Availability type. Potential values: *ZONAL*: The instance serves data from only one zone.
+   * Outages in that zone affect data accessibility. *REGIONAL*: The instance can serve data from
+   * more than one zone in a region (it is highly available). For more information, see Overview of
+   * the High Availability Configuration.
    * @param availabilityType availabilityType or {@code null} for none
    */
   public Settings setAvailabilityType(java.lang.String availabilityType) {
@@ -415,7 +412,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always sql#settings.
+   * This is always *sql#settings*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -423,7 +420,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always sql#settings.
+   * This is always *sql#settings*.
    * @param kind kind or {@code null} for none
    */
   public Settings setKind(java.lang.String kind) {
@@ -472,8 +469,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The pricing plan for this instance. This can be either PER_USE or PACKAGE. Only PER_USE is
-   * supported for Second Generation instances.
+   * The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE*
+   * is supported for Second Generation instances.
    * @return value or {@code null} for none
    */
   public java.lang.String getPricingPlan() {
@@ -481,8 +478,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The pricing plan for this instance. This can be either PER_USE or PACKAGE. Only PER_USE is
-   * supported for Second Generation instances.
+   * The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE*
+   * is supported for Second Generation instances.
    * @param pricingPlan pricingPlan or {@code null} for none
    */
   public Settings setPricingPlan(java.lang.String pricingPlan) {
@@ -491,7 +488,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of replication this instance uses. This can be either ASYNCHRONOUS or SYNCHRONOUS.
+   * The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*.
    * (Deprecated_ This property was only applicable to First Generation instances.
    * @return value or {@code null} for none
    */
@@ -500,7 +497,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of replication this instance uses. This can be either ASYNCHRONOUS or SYNCHRONOUS.
+   * The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*.
    * (Deprecated_ This property was only applicable to First Generation instances.
    * @param replicationType replicationType or {@code null} for none
    */
@@ -567,8 +564,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier (or machine type) for this instance, for example db-n1-standard-1 (MySQL instances) or
-   * db-custom-1-3840 (PostgreSQL instances).
+   * The tier (or machine type) for this instance, for example *db-n1-standard-1* (MySQL instances)
+   * or *db-custom-1-3840* (PostgreSQL instances).
    * @return value or {@code null} for none
    */
   public java.lang.String getTier() {
@@ -576,8 +573,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier (or machine type) for this instance, for example db-n1-standard-1 (MySQL instances) or
-   * db-custom-1-3840 (PostgreSQL instances).
+   * The tier (or machine type) for this instance, for example *db-n1-standard-1* (MySQL instances)
+   * or *db-custom-1-3840* (PostgreSQL instances).
    * @param tier tier or {@code null} for none
    */
   public Settings setTier(java.lang.String tier) {

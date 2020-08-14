@@ -66,10 +66,10 @@ public final class QueryMetadata extends com.google.api.client.json.GenericJson 
   private java.lang.Long latestReportRunTimeMs;
 
   /**
-   * Locale of the generated reports. Valid values are cs      CZECH de GERMAN en      ENGLISH es
-   * SPANISH fr      FRENCH it      ITALIAN ja JAPANESE ko      KOREAN pl      POLISH pt-BR
-   * BRAZILIAN_PORTUGUESE ru RUSSIAN tr      TURKISH uk      UKRAINIAN zh-CN   CHINA_CHINESE zh-TW
-   * TAIWAN_CHINESE  An locale string not in the list above will generate reports in English.
+   * Locale of the generated reports. Valid values are cs CZECH de GERMAN en ENGLISH es SPANISH fr
+   * FRENCH it ITALIAN ja JAPANESE ko KOREAN pl POLISH pt-BR BRAZILIAN_PORTUGUESE ru RUSSIAN tr
+   * TURKISH uk UKRAINIAN zh-CN CHINA_CHINESE zh-TW TAIWAN_CHINESE An locale string not in the list
+   * above will generate reports in English.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,10 +197,10 @@ public final class QueryMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Locale of the generated reports. Valid values are cs      CZECH de GERMAN en      ENGLISH es
-   * SPANISH fr      FRENCH it      ITALIAN ja JAPANESE ko      KOREAN pl      POLISH pt-BR
-   * BRAZILIAN_PORTUGUESE ru RUSSIAN tr      TURKISH uk      UKRAINIAN zh-CN   CHINA_CHINESE zh-TW
-   * TAIWAN_CHINESE  An locale string not in the list above will generate reports in English.
+   * Locale of the generated reports. Valid values are cs CZECH de GERMAN en ENGLISH es SPANISH fr
+   * FRENCH it ITALIAN ja JAPANESE ko KOREAN pl POLISH pt-BR BRAZILIAN_PORTUGUESE ru RUSSIAN tr
+   * TURKISH uk UKRAINIAN zh-CN CHINA_CHINESE zh-TW TAIWAN_CHINESE An locale string not in the list
+   * above will generate reports in English.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocale() {
@@ -208,10 +208,10 @@ public final class QueryMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Locale of the generated reports. Valid values are cs      CZECH de GERMAN en      ENGLISH es
-   * SPANISH fr      FRENCH it      ITALIAN ja JAPANESE ko      KOREAN pl      POLISH pt-BR
-   * BRAZILIAN_PORTUGUESE ru RUSSIAN tr      TURKISH uk      UKRAINIAN zh-CN   CHINA_CHINESE zh-TW
-   * TAIWAN_CHINESE  An locale string not in the list above will generate reports in English.
+   * Locale of the generated reports. Valid values are cs CZECH de GERMAN en ENGLISH es SPANISH fr
+   * FRENCH it ITALIAN ja JAPANESE ko KOREAN pl POLISH pt-BR BRAZILIAN_PORTUGUESE ru RUSSIAN tr
+   * TURKISH uk UKRAINIAN zh-CN CHINA_CHINESE zh-TW TAIWAN_CHINESE An locale string not in the list
+   * above will generate reports in English.
    * @param locale locale or {@code null} for none
    */
   public QueryMetadata setLocale(java.lang.String locale) {

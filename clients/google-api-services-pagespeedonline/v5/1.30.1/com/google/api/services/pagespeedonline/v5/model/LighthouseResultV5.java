@@ -113,7 +113,7 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
   private java.lang.String requestedUrl;
 
   /**
-   * List of all run warnings in the LHR.  Will always output to at least `[]`.
+   * List of all run warnings in the LHR. Will always output to at least `[]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -319,7 +319,7 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of all run warnings in the LHR.  Will always output to at least `[]`.
+   * List of all run warnings in the LHR. Will always output to at least `[]`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Object> getRunWarnings() {
@@ -327,7 +327,7 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of all run warnings in the LHR.  Will always output to at least `[]`.
+   * List of all run warnings in the LHR. Will always output to at least `[]`.
    * @param runWarnings runWarnings or {@code null} for none
    */
   public LighthouseResultV5 setRunWarnings(java.util.List<java.lang.Object> runWarnings) {

@@ -55,12 +55,9 @@ public final class GoogleCloudDatacatalogV1beta1EntryGroup extends com.google.ap
   private java.lang.String displayName;
 
   /**
-   * The resource name of the entry group in URL format. Example:
-   *
-   * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
-   *
-   * Note that this EntryGroup and its child resources may not actually be stored in the location in
-   * this name.
+   * The resource name of the entry group in URL format. Example: *
+   * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this
+   * EntryGroup and its child resources may not actually be stored in the location in this name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,12 +119,9 @@ public final class GoogleCloudDatacatalogV1beta1EntryGroup extends com.google.ap
   }
 
   /**
-   * The resource name of the entry group in URL format. Example:
-   *
-   * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
-   *
-   * Note that this EntryGroup and its child resources may not actually be stored in the location in
-   * this name.
+   * The resource name of the entry group in URL format. Example: *
+   * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this
+   * EntryGroup and its child resources may not actually be stored in the location in this name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -135,12 +129,9 @@ public final class GoogleCloudDatacatalogV1beta1EntryGroup extends com.google.ap
   }
 
   /**
-   * The resource name of the entry group in URL format. Example:
-   *
-   * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
-   *
-   * Note that this EntryGroup and its child resources may not actually be stored in the location in
-   * this name.
+   * The resource name of the entry group in URL format. Example: *
+   * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this
+   * EntryGroup and its child resources may not actually be stored in the location in this name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1EntryGroup setName(java.lang.String name) {

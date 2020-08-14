@@ -33,18 +33,15 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResult extends com.
 
   /**
    * The full name of the cloud resource the entry belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name. Example:
-   *
-   *  * `//bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId`
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name. Example: *
+   * `//bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String linkedResource;
 
   /**
-   * The relative resource name of the resource in URL format. Examples:
-   *
-   *  *
+   * The relative resource name of the resource in URL format. Examples: *
    * `projects/{project_id}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}`
    * * `projects/{project_id}/tagTemplates/{tag_template_id}`
    * The value may be {@code null}.
@@ -54,7 +51,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResult extends com.
 
   /**
    * Sub-type of the search result. This is a dot-delimited description of the resource's full type,
-   * and is the same as the value callers would provide in the "type" search facet.  Examples:
+   * and is the same as the value callers would provide in the "type" search facet. Examples:
    * `entry.table`, `entry.dataStream`, `tagTemplate`.
    * The value may be {@code null}.
    */
@@ -71,9 +68,8 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResult extends com.
 
   /**
    * The full name of the cloud resource the entry belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name. Example:
-   *
-   *  * `//bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId`
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name. Example: *
+   * `//bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId`
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkedResource() {
@@ -82,9 +78,8 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResult extends com.
 
   /**
    * The full name of the cloud resource the entry belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name. Example:
-   *
-   *  * `//bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId`
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name. Example: *
+   * `//bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId`
    * @param linkedResource linkedResource or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogResult setLinkedResource(java.lang.String linkedResource) {
@@ -93,9 +88,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResult extends com.
   }
 
   /**
-   * The relative resource name of the resource in URL format. Examples:
-   *
-   *  *
+   * The relative resource name of the resource in URL format. Examples: *
    * `projects/{project_id}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}`
    * * `projects/{project_id}/tagTemplates/{tag_template_id}`
    * @return value or {@code null} for none
@@ -105,9 +98,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResult extends com.
   }
 
   /**
-   * The relative resource name of the resource in URL format. Examples:
-   *
-   *  *
+   * The relative resource name of the resource in URL format. Examples: *
    * `projects/{project_id}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}`
    * * `projects/{project_id}/tagTemplates/{tag_template_id}`
    * @param relativeResourceName relativeResourceName or {@code null} for none
@@ -119,7 +110,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResult extends com.
 
   /**
    * Sub-type of the search result. This is a dot-delimited description of the resource's full type,
-   * and is the same as the value callers would provide in the "type" search facet.  Examples:
+   * and is the same as the value callers would provide in the "type" search facet. Examples:
    * `entry.table`, `entry.dataStream`, `tagTemplate`.
    * @return value or {@code null} for none
    */
@@ -129,7 +120,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResult extends com.
 
   /**
    * Sub-type of the search result. This is a dot-delimited description of the resource's full type,
-   * and is the same as the value callers would provide in the "type" search facet.  Examples:
+   * and is the same as the value callers would provide in the "type" search facet. Examples:
    * `entry.table`, `entry.dataStream`, `tagTemplate`.
    * @param searchResultSubtype searchResultSubtype or {@code null} for none
    */

@@ -45,18 +45,16 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
   private java.lang.Boolean isRequired;
 
   /**
-   * Output only. The resource name of the tag template field in URL format. Example:
-   *
-   * * projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field}
-   *
-   * Note that this TagTemplateField may not actually be stored in the location in this name.
+   * Output only. The resource name of the tag template field in URL format. Example: *
+   * projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field} Note that
+   * this TagTemplateField may not actually be stored in the location in this name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The order of this field with respect to other fields in this tag template.  A higher value
+   * The order of this field with respect to other fields in this tag template. A higher value
    * indicates a more important field. The value can be negative. Multiple fields can have the same
    * order, and field orders within a tag do not have to be sequential.
    * The value may be {@code null}.
@@ -106,11 +104,9 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
   }
 
   /**
-   * Output only. The resource name of the tag template field in URL format. Example:
-   *
-   * * projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field}
-   *
-   * Note that this TagTemplateField may not actually be stored in the location in this name.
+   * Output only. The resource name of the tag template field in URL format. Example: *
+   * projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field} Note that
+   * this TagTemplateField may not actually be stored in the location in this name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -118,11 +114,9 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
   }
 
   /**
-   * Output only. The resource name of the tag template field in URL format. Example:
-   *
-   * * projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field}
-   *
-   * Note that this TagTemplateField may not actually be stored in the location in this name.
+   * Output only. The resource name of the tag template field in URL format. Example: *
+   * projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field} Note that
+   * this TagTemplateField may not actually be stored in the location in this name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1TagTemplateField setName(java.lang.String name) {
@@ -131,7 +125,7 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
   }
 
   /**
-   * The order of this field with respect to other fields in this tag template.  A higher value
+   * The order of this field with respect to other fields in this tag template. A higher value
    * indicates a more important field. The value can be negative. Multiple fields can have the same
    * order, and field orders within a tag do not have to be sequential.
    * @return value or {@code null} for none
@@ -141,7 +135,7 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
   }
 
   /**
-   * The order of this field with respect to other fields in this tag template.  A higher value
+   * The order of this field with respect to other fields in this tag template. A higher value
    * indicates a more important field. The value can be negative. Multiple fields can have the same
    * order, and field orders within a tag do not have to be sequential.
    * @param order order or {@code null} for none

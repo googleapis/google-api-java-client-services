@@ -4281,7 +4281,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * request filter contains a `parent.type` and `parent.id` and the caller has the
      * `resourcemanager.projects.list` permission on the parent, the results will be drawn from an
      * alternate index which provides more consistent results. In future versions of this API, this List
-     * method will be split into List and Search to properly capture the behavorial difference.
+     * method will be split into List and Search to properly capture the behavioral difference.
      *
      * Create a request for the method "projects.list".
      *
@@ -4309,7 +4309,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * request filter contains a `parent.type` and `parent.id` and the caller has the
        * `resourcemanager.projects.list` permission on the parent, the results will be drawn from an
        * alternate index which provides more consistent results. In future versions of this API, this
-       * List method will be split into List and Search to properly capture the behavorial difference.
+       * List method will be split into List and Search to properly capture the behavioral difference.
        *
        * Create a request for the method "projects.list".
        *

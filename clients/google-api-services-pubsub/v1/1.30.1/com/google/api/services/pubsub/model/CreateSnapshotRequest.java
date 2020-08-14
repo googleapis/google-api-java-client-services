@@ -30,7 +30,7 @@ package com.google.api.services.pubsub.model;
 public final class CreateSnapshotRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * See  Creating and managing labels.
+   * See Creating and managing labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -38,18 +38,18 @@ public final class CreateSnapshotRequest extends com.google.api.client.json.Gene
 
   /**
    * Required. The subscription whose backlog the snapshot retains. Specifically, the created
-   * snapshot is guaranteed to retain:  (a) The existing backlog on the subscription. More
-   * precisely, this is      defined as the messages in the subscription's backlog that are
-   * unacknowledged upon the successful completion of the      `CreateSnapshot` request; as well as:
-   * (b) Any messages published to the subscription's topic following the      successful completion
-   * of the CreateSnapshot request. Format is `projects/{project}/subscriptions/{sub}`.
+   * snapshot is guaranteed to retain: (a) The existing backlog on the subscription. More precisely,
+   * this is defined as the messages in the subscription's backlog that are unacknowledged upon the
+   * successful completion of the `CreateSnapshot` request; as well as: (b) Any messages published
+   * to the subscription's topic following the successful completion of the CreateSnapshot request.
+   * Format is `projects/{project}/subscriptions/{sub}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subscription;
 
   /**
-   * See  Creating and managing labels.
+   * See Creating and managing labels.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -57,7 +57,7 @@ public final class CreateSnapshotRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * See  Creating and managing labels.
+   * See Creating and managing labels.
    * @param labels labels or {@code null} for none
    */
   public CreateSnapshotRequest setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -67,11 +67,11 @@ public final class CreateSnapshotRequest extends com.google.api.client.json.Gene
 
   /**
    * Required. The subscription whose backlog the snapshot retains. Specifically, the created
-   * snapshot is guaranteed to retain:  (a) The existing backlog on the subscription. More
-   * precisely, this is      defined as the messages in the subscription's backlog that are
-   * unacknowledged upon the successful completion of the      `CreateSnapshot` request; as well as:
-   * (b) Any messages published to the subscription's topic following the      successful completion
-   * of the CreateSnapshot request. Format is `projects/{project}/subscriptions/{sub}`.
+   * snapshot is guaranteed to retain: (a) The existing backlog on the subscription. More precisely,
+   * this is defined as the messages in the subscription's backlog that are unacknowledged upon the
+   * successful completion of the `CreateSnapshot` request; as well as: (b) Any messages published
+   * to the subscription's topic following the successful completion of the CreateSnapshot request.
+   * Format is `projects/{project}/subscriptions/{sub}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubscription() {
@@ -80,11 +80,11 @@ public final class CreateSnapshotRequest extends com.google.api.client.json.Gene
 
   /**
    * Required. The subscription whose backlog the snapshot retains. Specifically, the created
-   * snapshot is guaranteed to retain:  (a) The existing backlog on the subscription. More
-   * precisely, this is      defined as the messages in the subscription's backlog that are
-   * unacknowledged upon the successful completion of the      `CreateSnapshot` request; as well as:
-   * (b) Any messages published to the subscription's topic following the      successful completion
-   * of the CreateSnapshot request. Format is `projects/{project}/subscriptions/{sub}`.
+   * snapshot is guaranteed to retain: (a) The existing backlog on the subscription. More precisely,
+   * this is defined as the messages in the subscription's backlog that are unacknowledged upon the
+   * successful completion of the `CreateSnapshot` request; as well as: (b) Any messages published
+   * to the subscription's topic following the successful completion of the CreateSnapshot request.
+   * Format is `projects/{project}/subscriptions/{sub}`.
    * @param subscription subscription or {@code null} for none
    */
   public CreateSnapshotRequest setSubscription(java.lang.String subscription) {

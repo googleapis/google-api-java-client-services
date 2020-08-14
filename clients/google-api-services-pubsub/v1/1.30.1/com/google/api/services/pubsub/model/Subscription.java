@@ -32,21 +32,16 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to
    * acknowledge receipt before resending the message. In the interval after the message is
-   * delivered and before it is acknowledged, it is considered to be outstanding. During that time
-   * period, the message will not be redelivered (on a best-effort basis).
-   *
-   * For pull subscriptions, this value is used as the initial value for the ack deadline. To
-   * override this value for a given message, call `ModifyAckDeadline` with the corresponding
-   * `ack_id` if using non-streaming pull or send the `ack_id` in a
-   * `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom deadline you
-   * can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10
-   * minutes). If this parameter is 0, a default value of 10 seconds is used.
-   *
-   * For push delivery, this value is also used to set the request timeout for the call to the push
-   * endpoint.
-   *
-   * If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver
-   * the message.
+   * delivered and before it is acknowledged, it is considered to be *outstanding*. During that time
+   * period, the message will not be redelivered (on a best-effort basis). For pull subscriptions,
+   * this value is used as the initial value for the ack deadline. To override this value for a
+   * given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming
+   * pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The
+   * minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can
+   * specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is
+   * used. For push delivery, this value is also used to set the request timeout for the call to the
+   * push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will
+   * eventually redeliver the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,11 +49,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * A policy that specifies the conditions for dead lettering messages in this subscription. If
-   * dead_letter_policy is not set, dead lettering is disabled.
-   *
-   * The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e.,
-   * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to
-   * Acknowledge() messages on this subscription.
+   * dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account
+   * associated with this subscriptions's parent project (i.e., service-{project_number}@gcp-sa-
+   * pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this
+   * subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +99,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.String filter;
 
   /**
-   * See  Creating and managing labels.
+   * See Creating and managing labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,10 +145,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean retainAckedMessages;
 
   /**
-   * A policy that specifies how Pub/Sub retries message delivery for this subscription.
-   *
-   * If not set, the default retry policy is applied. This generally implies that messages will be
-   * retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
+   * A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set,
+   * the default retry policy is applied. This generally implies that messages will be retried as
+   * soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
    * acknowledgement deadline exceeded events for a given message.
    * The value may be {@code null}.
    */
@@ -173,21 +166,16 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to
    * acknowledge receipt before resending the message. In the interval after the message is
-   * delivered and before it is acknowledged, it is considered to be outstanding. During that time
-   * period, the message will not be redelivered (on a best-effort basis).
-   *
-   * For pull subscriptions, this value is used as the initial value for the ack deadline. To
-   * override this value for a given message, call `ModifyAckDeadline` with the corresponding
-   * `ack_id` if using non-streaming pull or send the `ack_id` in a
-   * `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom deadline you
-   * can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10
-   * minutes). If this parameter is 0, a default value of 10 seconds is used.
-   *
-   * For push delivery, this value is also used to set the request timeout for the call to the push
-   * endpoint.
-   *
-   * If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver
-   * the message.
+   * delivered and before it is acknowledged, it is considered to be *outstanding*. During that time
+   * period, the message will not be redelivered (on a best-effort basis). For pull subscriptions,
+   * this value is used as the initial value for the ack deadline. To override this value for a
+   * given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming
+   * pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The
+   * minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can
+   * specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is
+   * used. For push delivery, this value is also used to set the request timeout for the call to the
+   * push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will
+   * eventually redeliver the message.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAckDeadlineSeconds() {
@@ -197,21 +185,16 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to
    * acknowledge receipt before resending the message. In the interval after the message is
-   * delivered and before it is acknowledged, it is considered to be outstanding. During that time
-   * period, the message will not be redelivered (on a best-effort basis).
-   *
-   * For pull subscriptions, this value is used as the initial value for the ack deadline. To
-   * override this value for a given message, call `ModifyAckDeadline` with the corresponding
-   * `ack_id` if using non-streaming pull or send the `ack_id` in a
-   * `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom deadline you
-   * can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10
-   * minutes). If this parameter is 0, a default value of 10 seconds is used.
-   *
-   * For push delivery, this value is also used to set the request timeout for the call to the push
-   * endpoint.
-   *
-   * If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver
-   * the message.
+   * delivered and before it is acknowledged, it is considered to be *outstanding*. During that time
+   * period, the message will not be redelivered (on a best-effort basis). For pull subscriptions,
+   * this value is used as the initial value for the ack deadline. To override this value for a
+   * given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming
+   * pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The
+   * minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can
+   * specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is
+   * used. For push delivery, this value is also used to set the request timeout for the call to the
+   * push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will
+   * eventually redeliver the message.
    * @param ackDeadlineSeconds ackDeadlineSeconds or {@code null} for none
    */
   public Subscription setAckDeadlineSeconds(java.lang.Integer ackDeadlineSeconds) {
@@ -221,11 +204,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * A policy that specifies the conditions for dead lettering messages in this subscription. If
-   * dead_letter_policy is not set, dead lettering is disabled.
-   *
-   * The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e.,
-   * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to
-   * Acknowledge() messages on this subscription.
+   * dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account
+   * associated with this subscriptions's parent project (i.e., service-{project_number}@gcp-sa-
+   * pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this
+   * subscription.
    * @return value or {@code null} for none
    */
   public DeadLetterPolicy getDeadLetterPolicy() {
@@ -234,11 +216,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * A policy that specifies the conditions for dead lettering messages in this subscription. If
-   * dead_letter_policy is not set, dead lettering is disabled.
-   *
-   * The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e.,
-   * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to
-   * Acknowledge() messages on this subscription.
+   * dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account
+   * associated with this subscriptions's parent project (i.e., service-{project_number}@gcp-sa-
+   * pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this
+   * subscription.
    * @param deadLetterPolicy deadLetterPolicy or {@code null} for none
    */
   public Subscription setDeadLetterPolicy(DeadLetterPolicy deadLetterPolicy) {
@@ -339,7 +320,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See  Creating and managing labels.
+   * See Creating and managing labels.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -347,7 +328,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See  Creating and managing labels.
+   * See Creating and managing labels.
    * @param labels labels or {@code null} for none
    */
   public Subscription setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -446,10 +427,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A policy that specifies how Pub/Sub retries message delivery for this subscription.
-   *
-   * If not set, the default retry policy is applied. This generally implies that messages will be
-   * retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
+   * A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set,
+   * the default retry policy is applied. This generally implies that messages will be retried as
+   * soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
    * acknowledgement deadline exceeded events for a given message.
    * @return value or {@code null} for none
    */
@@ -458,10 +438,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A policy that specifies how Pub/Sub retries message delivery for this subscription.
-   *
-   * If not set, the default retry policy is applied. This generally implies that messages will be
-   * retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
+   * A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set,
+   * the default retry policy is applied. This generally implies that messages will be retried as
+   * soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
    * acknowledgement deadline exceeded events for a given message.
    * @param retryPolicy retryPolicy or {@code null} for none
    */

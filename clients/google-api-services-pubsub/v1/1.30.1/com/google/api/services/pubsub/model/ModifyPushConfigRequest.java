@@ -30,22 +30,20 @@ package com.google.api.services.pubsub.model;
 public final class ModifyPushConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The push configuration for future deliveries.
-   *
-   * An empty `pushConfig` indicates that the Pub/Sub system should stop pushing messages from the
-   * given subscription and allow messages to be pulled and acknowledged - effectively pausing the
-   * subscription if `Pull` or `StreamingPull` is not called.
+   * Required. The push configuration for future deliveries. An empty `pushConfig` indicates that
+   * the Pub/Sub system should stop pushing messages from the given subscription and allow messages
+   * to be pulled and acknowledged - effectively pausing the subscription if `Pull` or
+   * `StreamingPull` is not called.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PushConfig pushConfig;
 
   /**
-   * Required. The push configuration for future deliveries.
-   *
-   * An empty `pushConfig` indicates that the Pub/Sub system should stop pushing messages from the
-   * given subscription and allow messages to be pulled and acknowledged - effectively pausing the
-   * subscription if `Pull` or `StreamingPull` is not called.
+   * Required. The push configuration for future deliveries. An empty `pushConfig` indicates that
+   * the Pub/Sub system should stop pushing messages from the given subscription and allow messages
+   * to be pulled and acknowledged - effectively pausing the subscription if `Pull` or
+   * `StreamingPull` is not called.
    * @return value or {@code null} for none
    */
   public PushConfig getPushConfig() {
@@ -53,11 +51,10 @@ public final class ModifyPushConfigRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The push configuration for future deliveries.
-   *
-   * An empty `pushConfig` indicates that the Pub/Sub system should stop pushing messages from the
-   * given subscription and allow messages to be pulled and acknowledged - effectively pausing the
-   * subscription if `Pull` or `StreamingPull` is not called.
+   * Required. The push configuration for future deliveries. An empty `pushConfig` indicates that
+   * the Pub/Sub system should stop pushing messages from the given subscription and allow messages
+   * to be pulled and acknowledged - effectively pausing the subscription if `Pull` or
+   * `StreamingPull` is not called.
    * @param pushConfig pushConfig or {@code null} for none
    */
   public ModifyPushConfigRequest setPushConfig(PushConfig pushConfig) {

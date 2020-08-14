@@ -30,28 +30,24 @@ package com.google.api.services.cloudtasks.v2.model;
 public final class RunTaskRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The response_view specifies which subset of the Task will be returned.
-   *
-   * By default response_view is BASIC; not all information is retrieved by default because some
-   * data, such as payloads, might be desirable to return only when needed because of its large size
-   * or because of the sensitivity of data that it contains.
-   *
-   * Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
-   * IAM](https://cloud.google.com/iam/) permission on the Task resource.
+   * The response_view specifies which subset of the Task will be returned. By default response_view
+   * is BASIC; not all information is retrieved by default because some data, such as payloads,
+   * might be desirable to return only when needed because of its large size or because of the
+   * sensitivity of data that it contains. Authorization for FULL requires
+   * `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task
+   * resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String responseView;
 
   /**
-   * The response_view specifies which subset of the Task will be returned.
-   *
-   * By default response_view is BASIC; not all information is retrieved by default because some
-   * data, such as payloads, might be desirable to return only when needed because of its large size
-   * or because of the sensitivity of data that it contains.
-   *
-   * Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
-   * IAM](https://cloud.google.com/iam/) permission on the Task resource.
+   * The response_view specifies which subset of the Task will be returned. By default response_view
+   * is BASIC; not all information is retrieved by default because some data, such as payloads,
+   * might be desirable to return only when needed because of its large size or because of the
+   * sensitivity of data that it contains. Authorization for FULL requires
+   * `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task
+   * resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseView() {
@@ -59,14 +55,12 @@ public final class RunTaskRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The response_view specifies which subset of the Task will be returned.
-   *
-   * By default response_view is BASIC; not all information is retrieved by default because some
-   * data, such as payloads, might be desirable to return only when needed because of its large size
-   * or because of the sensitivity of data that it contains.
-   *
-   * Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
-   * IAM](https://cloud.google.com/iam/) permission on the Task resource.
+   * The response_view specifies which subset of the Task will be returned. By default response_view
+   * is BASIC; not all information is retrieved by default because some data, such as payloads,
+   * might be desirable to return only when needed because of its large size or because of the
+   * sensitivity of data that it contains. Authorization for FULL requires
+   * `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task
+   * resource.
    * @param responseView responseView or {@code null} for none
    */
   public RunTaskRequest setResponseView(java.lang.String responseView) {

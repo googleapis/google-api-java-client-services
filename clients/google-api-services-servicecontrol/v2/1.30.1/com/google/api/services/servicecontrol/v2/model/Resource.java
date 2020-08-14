@@ -40,14 +40,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   /**
    * The stable identifier (name) of a resource on the `service`. A resource can be logically
    * identified as "//{resource.service}/{resource.name}". The differences between a resource name
-   * and a URI are:
-   *
-   * *   Resource name is a logical identifier, independent of network     protocol and API version.
-   * For example,     `//pubsub.googleapis.com/projects/123/topics/news-feed`. *   URI often
-   * includes protocol and version information, so it can     be used directly by applications. For
-   * example,     `https://pubsub.googleapis.com/v1/projects/123/topics/news-feed`.
-   *
-   * See https://cloud.google.com/apis/design/resource_names for details.
+   * and a URI are: * Resource name is a logical identifier, independent of network protocol and API
+   * version. For example, `//pubsub.googleapis.com/projects/123/topics/news-feed`. * URI often
+   * includes protocol and version information, so it can be used directly by applications. For
+   * example, `https://pubsub.googleapis.com/v1/projects/123/topics/news-feed`. See
+   * https://cloud.google.com/apis/design/resource_names for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +60,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of the resource. The syntax is platform-specific because different platforms define
-   * their resources differently.
-   *
-   * For Google APIs, the type format must be "{service}/{kind}".
+   * their resources differently. For Google APIs, the type format must be "{service}/{kind}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,14 +86,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   /**
    * The stable identifier (name) of a resource on the `service`. A resource can be logically
    * identified as "//{resource.service}/{resource.name}". The differences between a resource name
-   * and a URI are:
-   *
-   * *   Resource name is a logical identifier, independent of network     protocol and API version.
-   * For example,     `//pubsub.googleapis.com/projects/123/topics/news-feed`. *   URI often
-   * includes protocol and version information, so it can     be used directly by applications. For
-   * example,     `https://pubsub.googleapis.com/v1/projects/123/topics/news-feed`.
-   *
-   * See https://cloud.google.com/apis/design/resource_names for details.
+   * and a URI are: * Resource name is a logical identifier, independent of network protocol and API
+   * version. For example, `//pubsub.googleapis.com/projects/123/topics/news-feed`. * URI often
+   * includes protocol and version information, so it can be used directly by applications. For
+   * example, `https://pubsub.googleapis.com/v1/projects/123/topics/news-feed`. See
+   * https://cloud.google.com/apis/design/resource_names for details.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,14 +100,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   /**
    * The stable identifier (name) of a resource on the `service`. A resource can be logically
    * identified as "//{resource.service}/{resource.name}". The differences between a resource name
-   * and a URI are:
-   *
-   * *   Resource name is a logical identifier, independent of network     protocol and API version.
-   * For example,     `//pubsub.googleapis.com/projects/123/topics/news-feed`. *   URI often
-   * includes protocol and version information, so it can     be used directly by applications. For
-   * example,     `https://pubsub.googleapis.com/v1/projects/123/topics/news-feed`.
-   *
-   * See https://cloud.google.com/apis/design/resource_names for details.
+   * and a URI are: * Resource name is a logical identifier, independent of network protocol and API
+   * version. For example, `//pubsub.googleapis.com/projects/123/topics/news-feed`. * URI often
+   * includes protocol and version information, so it can be used directly by applications. For
+   * example, `https://pubsub.googleapis.com/v1/projects/123/topics/news-feed`. See
+   * https://cloud.google.com/apis/design/resource_names for details.
    * @param name name or {@code null} for none
    */
   public Resource setName(java.lang.String name) {
@@ -144,9 +133,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of the resource. The syntax is platform-specific because different platforms define
-   * their resources differently.
-   *
-   * For Google APIs, the type format must be "{service}/{kind}".
+   * their resources differently. For Google APIs, the type format must be "{service}/{kind}".
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -155,9 +142,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of the resource. The syntax is platform-specific because different platforms define
-   * their resources differently.
-   *
-   * For Google APIs, the type format must be "{service}/{kind}".
+   * their resources differently. For Google APIs, the type format must be "{service}/{kind}".
    * @param type type or {@code null} for none
    */
   public Resource setType(java.lang.String type) {

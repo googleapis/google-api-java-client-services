@@ -33,24 +33,20 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
   /**
    * The ID of the key used to sign the blob. The key used for signing will remain valid for at
    * least 12 hours after the blob is signed. To verify the signature, you can retrieve the public
-   * key in several formats from the following endpoints:
-   *
-   * - RSA public key wrapped in an X.509 v3 certificate:
-   * `https://www.googleapis.com/service_accounts/v1/metadata/x509/{ACCOUNT_EMAIL}` - Raw key in
-   * JSON format: `https://www.googleapis.com/service_accounts/v1/metadata/raw/{ACCOUNT_EMAIL}` -
-   * JSON Web Key (JWK):
-   * `https://www.googleapis.com/service_accounts/v1/metadata/jwk/{ACCOUNT_EMAIL}`
+   * key in several formats from the following endpoints: - RSA public key wrapped in an X.509 v3
+   * certificate: `https://www.googleapis.com/service_accounts/v1/metadata/x509/{ACCOUNT_EMAIL}` -
+   * Raw key in JSON format:
+   * `https://www.googleapis.com/service_accounts/v1/metadata/raw/{ACCOUNT_EMAIL}` - JSON Web Key
+   * (JWK): `https://www.googleapis.com/service_accounts/v1/metadata/jwk/{ACCOUNT_EMAIL}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String keyId;
 
   /**
-   * The signature for the blob. Does not include the original blob.
-   *
-   * After the key pair referenced by the `key_id` response field expires, Google no longer exposes
-   * the public key that can be used to verify the blob. As a result, the receiver can no longer
-   * verify the signature.
+   * The signature for the blob. Does not include the original blob. After the key pair referenced
+   * by the `key_id` response field expires, Google no longer exposes the public key that can be
+   * used to verify the blob. As a result, the receiver can no longer verify the signature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,13 +55,11 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
   /**
    * The ID of the key used to sign the blob. The key used for signing will remain valid for at
    * least 12 hours after the blob is signed. To verify the signature, you can retrieve the public
-   * key in several formats from the following endpoints:
-   *
-   * - RSA public key wrapped in an X.509 v3 certificate:
-   * `https://www.googleapis.com/service_accounts/v1/metadata/x509/{ACCOUNT_EMAIL}` - Raw key in
-   * JSON format: `https://www.googleapis.com/service_accounts/v1/metadata/raw/{ACCOUNT_EMAIL}` -
-   * JSON Web Key (JWK):
-   * `https://www.googleapis.com/service_accounts/v1/metadata/jwk/{ACCOUNT_EMAIL}`
+   * key in several formats from the following endpoints: - RSA public key wrapped in an X.509 v3
+   * certificate: `https://www.googleapis.com/service_accounts/v1/metadata/x509/{ACCOUNT_EMAIL}` -
+   * Raw key in JSON format:
+   * `https://www.googleapis.com/service_accounts/v1/metadata/raw/{ACCOUNT_EMAIL}` - JSON Web Key
+   * (JWK): `https://www.googleapis.com/service_accounts/v1/metadata/jwk/{ACCOUNT_EMAIL}`
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyId() {
@@ -75,13 +69,11 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
   /**
    * The ID of the key used to sign the blob. The key used for signing will remain valid for at
    * least 12 hours after the blob is signed. To verify the signature, you can retrieve the public
-   * key in several formats from the following endpoints:
-   *
-   * - RSA public key wrapped in an X.509 v3 certificate:
-   * `https://www.googleapis.com/service_accounts/v1/metadata/x509/{ACCOUNT_EMAIL}` - Raw key in
-   * JSON format: `https://www.googleapis.com/service_accounts/v1/metadata/raw/{ACCOUNT_EMAIL}` -
-   * JSON Web Key (JWK):
-   * `https://www.googleapis.com/service_accounts/v1/metadata/jwk/{ACCOUNT_EMAIL}`
+   * key in several formats from the following endpoints: - RSA public key wrapped in an X.509 v3
+   * certificate: `https://www.googleapis.com/service_accounts/v1/metadata/x509/{ACCOUNT_EMAIL}` -
+   * Raw key in JSON format:
+   * `https://www.googleapis.com/service_accounts/v1/metadata/raw/{ACCOUNT_EMAIL}` - JSON Web Key
+   * (JWK): `https://www.googleapis.com/service_accounts/v1/metadata/jwk/{ACCOUNT_EMAIL}`
    * @param keyId keyId or {@code null} for none
    */
   public SignBlobResponse setKeyId(java.lang.String keyId) {
@@ -90,11 +82,9 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The signature for the blob. Does not include the original blob.
-   *
-   * After the key pair referenced by the `key_id` response field expires, Google no longer exposes
-   * the public key that can be used to verify the blob. As a result, the receiver can no longer
-   * verify the signature.
+   * The signature for the blob. Does not include the original blob. After the key pair referenced
+   * by the `key_id` response field expires, Google no longer exposes the public key that can be
+   * used to verify the blob. As a result, the receiver can no longer verify the signature.
    * @see #decodeSignedBlob()
    * @return value or {@code null} for none
    */
@@ -103,11 +93,9 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The signature for the blob. Does not include the original blob.
-   *
-   * After the key pair referenced by the `key_id` response field expires, Google no longer exposes
-   * the public key that can be used to verify the blob. As a result, the receiver can no longer
-   * verify the signature.
+   * The signature for the blob. Does not include the original blob. After the key pair referenced
+   * by the `key_id` response field expires, Google no longer exposes the public key that can be
+   * used to verify the blob. As a result, the receiver can no longer verify the signature.
    * @see #getSignedBlob()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -118,11 +106,9 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The signature for the blob. Does not include the original blob.
-   *
-   * After the key pair referenced by the `key_id` response field expires, Google no longer exposes
-   * the public key that can be used to verify the blob. As a result, the receiver can no longer
-   * verify the signature.
+   * The signature for the blob. Does not include the original blob. After the key pair referenced
+   * by the `key_id` response field expires, Google no longer exposes the public key that can be
+   * used to verify the blob. As a result, the receiver can no longer verify the signature.
    * @see #encodeSignedBlob()
    * @param signedBlob signedBlob or {@code null} for none
    */
@@ -132,11 +118,9 @@ public final class SignBlobResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The signature for the blob. Does not include the original blob.
-   *
-   * After the key pair referenced by the `key_id` response field expires, Google no longer exposes
-   * the public key that can be used to verify the blob. As a result, the receiver can no longer
-   * verify the signature.
+   * The signature for the blob. Does not include the original blob. After the key pair referenced
+   * by the `key_id` response field expires, Google no longer exposes the public key that can be
+   * used to verify the blob. As a result, the receiver can no longer verify the signature.
    * @see #setSignedBlob()
    *
    * <p>

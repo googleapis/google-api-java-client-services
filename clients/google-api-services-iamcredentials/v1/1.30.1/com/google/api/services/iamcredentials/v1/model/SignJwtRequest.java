@@ -34,11 +34,9 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
    * The sequence of service accounts in a delegation chain. Each service account must be granted
    * the `roles/iam.serviceAccountTokenCreator` role on its next service account in the chain. The
    * last service account in the chain must be granted the `roles/iam.serviceAccountTokenCreator`
-   * role on the service account that is specified in the `name` field of the request.
-   *
-   * The delegates must have the following format:
-   * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
-   * required; replacing it with a project ID is invalid.
+   * role on the service account that is specified in the `name` field of the request. The delegates
+   * must have the following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The
+   * `-` wildcard character is required; replacing it with a project ID is invalid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,10 +44,9 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claims
-   * Set. For example: `{"sub": "user@example.com", "iat": 313435}`
-   *
-   * If the JWT Claims Set contains an expiration time (`exp`) claim, it must be an integer
-   * timestamp that is not in the past and no more than 12 hours in the future.
+   * Set. For example: `{"sub": "user@example.com", "iat": 313435}` If the JWT Claims Set contains
+   * an expiration time (`exp`) claim, it must be an integer timestamp that is not in the past and
+   * no more than 12 hours in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,11 +56,9 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
    * The sequence of service accounts in a delegation chain. Each service account must be granted
    * the `roles/iam.serviceAccountTokenCreator` role on its next service account in the chain. The
    * last service account in the chain must be granted the `roles/iam.serviceAccountTokenCreator`
-   * role on the service account that is specified in the `name` field of the request.
-   *
-   * The delegates must have the following format:
-   * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
-   * required; replacing it with a project ID is invalid.
+   * role on the service account that is specified in the `name` field of the request. The delegates
+   * must have the following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The
+   * `-` wildcard character is required; replacing it with a project ID is invalid.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDelegates() {
@@ -74,11 +69,9 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
    * The sequence of service accounts in a delegation chain. Each service account must be granted
    * the `roles/iam.serviceAccountTokenCreator` role on its next service account in the chain. The
    * last service account in the chain must be granted the `roles/iam.serviceAccountTokenCreator`
-   * role on the service account that is specified in the `name` field of the request.
-   *
-   * The delegates must have the following format:
-   * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
-   * required; replacing it with a project ID is invalid.
+   * role on the service account that is specified in the `name` field of the request. The delegates
+   * must have the following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The
+   * `-` wildcard character is required; replacing it with a project ID is invalid.
    * @param delegates delegates or {@code null} for none
    */
   public SignJwtRequest setDelegates(java.util.List<java.lang.String> delegates) {
@@ -88,10 +81,9 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claims
-   * Set. For example: `{"sub": "user@example.com", "iat": 313435}`
-   *
-   * If the JWT Claims Set contains an expiration time (`exp`) claim, it must be an integer
-   * timestamp that is not in the past and no more than 12 hours in the future.
+   * Set. For example: `{"sub": "user@example.com", "iat": 313435}` If the JWT Claims Set contains
+   * an expiration time (`exp`) claim, it must be an integer timestamp that is not in the past and
+   * no more than 12 hours in the future.
    * @return value or {@code null} for none
    */
   public java.lang.String getPayload() {
@@ -100,10 +92,9 @@ public final class SignJwtRequest extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The JWT payload to sign. Must be a serialized JSON object that contains a JWT Claims
-   * Set. For example: `{"sub": "user@example.com", "iat": 313435}`
-   *
-   * If the JWT Claims Set contains an expiration time (`exp`) claim, it must be an integer
-   * timestamp that is not in the past and no more than 12 hours in the future.
+   * Set. For example: `{"sub": "user@example.com", "iat": 313435}` If the JWT Claims Set contains
+   * an expiration time (`exp`) claim, it must be an integer timestamp that is not in the past and
+   * no more than 12 hours in the future.
    * @param payload payload or {@code null} for none
    */
   public SignJwtRequest setPayload(java.lang.String payload) {

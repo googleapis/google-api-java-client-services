@@ -34,11 +34,9 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
    * The sequence of service accounts in a delegation chain. Each service account must be granted
    * the `roles/iam.serviceAccountTokenCreator` role on its next service account in the chain. The
    * last service account in the chain must be granted the `roles/iam.serviceAccountTokenCreator`
-   * role on the service account that is specified in the `name` field of the request.
-   *
-   * The delegates must have the following format:
-   * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
-   * required; replacing it with a project ID is invalid.
+   * role on the service account that is specified in the `name` field of the request. The delegates
+   * must have the following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The
+   * `-` wildcard character is required; replacing it with a project ID is invalid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,11 +64,9 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
    * The sequence of service accounts in a delegation chain. Each service account must be granted
    * the `roles/iam.serviceAccountTokenCreator` role on its next service account in the chain. The
    * last service account in the chain must be granted the `roles/iam.serviceAccountTokenCreator`
-   * role on the service account that is specified in the `name` field of the request.
-   *
-   * The delegates must have the following format:
-   * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
-   * required; replacing it with a project ID is invalid.
+   * role on the service account that is specified in the `name` field of the request. The delegates
+   * must have the following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The
+   * `-` wildcard character is required; replacing it with a project ID is invalid.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDelegates() {
@@ -81,11 +77,9 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
    * The sequence of service accounts in a delegation chain. Each service account must be granted
    * the `roles/iam.serviceAccountTokenCreator` role on its next service account in the chain. The
    * last service account in the chain must be granted the `roles/iam.serviceAccountTokenCreator`
-   * role on the service account that is specified in the `name` field of the request.
-   *
-   * The delegates must have the following format:
-   * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
-   * required; replacing it with a project ID is invalid.
+   * role on the service account that is specified in the `name` field of the request. The delegates
+   * must have the following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The
+   * `-` wildcard character is required; replacing it with a project ID is invalid.
    * @param delegates delegates or {@code null} for none
    */
   public GenerateAccessTokenRequest setDelegates(java.util.List<java.lang.String> delegates) {

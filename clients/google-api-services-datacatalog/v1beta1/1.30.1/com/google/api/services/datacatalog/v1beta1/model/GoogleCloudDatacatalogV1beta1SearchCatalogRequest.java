@@ -31,12 +31,9 @@ package com.google.api.services.datacatalog.v1beta1.model;
 public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the ordering of results, currently supported case-sensitive choices are:
-   *
-   *   * `relevance`, only supports descending   * `last_modified_timestamp [asc|desc]`, defaults to
-   * descending if not     specified
-   *
-   * If not specified, defaults to `relevance` descending.
+   * Specifies the ordering of results, currently supported case-sensitive choices are: *
+   * `relevance`, only supports descending * `last_modified_timestamp [asc|desc]`, defaults to
+   * descending if not specified If not specified, defaults to `relevance` descending.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,15 +57,12 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   private java.lang.String pageToken;
 
   /**
-   * Required. The query string in search query syntax. The query must be non-empty.
-   *
-   * Query strings can be simple as "x" or more qualified as:
-   *
-   * * name:x * column:x * description:y
-   *
-   * Note: Query tokens need to have a minimum of 3 characters for substring matching to work
-   * correctly. See [Data Catalog Search Syntax](https://cloud.google.com/data-catalog/docs/how-to
-   * /search-reference) for more information.
+   * Optional. The query string in search query syntax. An empty query string will result in all
+   * data assets (in the specified scope) that the user has access to. Query strings can be simple
+   * as "x" or more qualified as: * name:x * column:x * description:y Note: Query tokens need to
+   * have a minimum of 3 characters for substring matching to work correctly. See [Data Catalog
+   * Search Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference) for more
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,12 +78,9 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   private GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope scope;
 
   /**
-   * Specifies the ordering of results, currently supported case-sensitive choices are:
-   *
-   *   * `relevance`, only supports descending   * `last_modified_timestamp [asc|desc]`, defaults to
-   * descending if not     specified
-   *
-   * If not specified, defaults to `relevance` descending.
+   * Specifies the ordering of results, currently supported case-sensitive choices are: *
+   * `relevance`, only supports descending * `last_modified_timestamp [asc|desc]`, defaults to
+   * descending if not specified If not specified, defaults to `relevance` descending.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -97,12 +88,9 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   }
 
   /**
-   * Specifies the ordering of results, currently supported case-sensitive choices are:
-   *
-   *   * `relevance`, only supports descending   * `last_modified_timestamp [asc|desc]`, defaults to
-   * descending if not     specified
-   *
-   * If not specified, defaults to `relevance` descending.
+   * Specifies the ordering of results, currently supported case-sensitive choices are: *
+   * `relevance`, only supports descending * `last_modified_timestamp [asc|desc]`, defaults to
+   * descending if not specified If not specified, defaults to `relevance` descending.
    * @param orderBy orderBy or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogRequest setOrderBy(java.lang.String orderBy) {
@@ -151,15 +139,12 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   }
 
   /**
-   * Required. The query string in search query syntax. The query must be non-empty.
-   *
-   * Query strings can be simple as "x" or more qualified as:
-   *
-   * * name:x * column:x * description:y
-   *
-   * Note: Query tokens need to have a minimum of 3 characters for substring matching to work
-   * correctly. See [Data Catalog Search Syntax](https://cloud.google.com/data-catalog/docs/how-to
-   * /search-reference) for more information.
+   * Optional. The query string in search query syntax. An empty query string will result in all
+   * data assets (in the specified scope) that the user has access to. Query strings can be simple
+   * as "x" or more qualified as: * name:x * column:x * description:y Note: Query tokens need to
+   * have a minimum of 3 characters for substring matching to work correctly. See [Data Catalog
+   * Search Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference) for more
+   * information.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -167,15 +152,12 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogRequest extends com
   }
 
   /**
-   * Required. The query string in search query syntax. The query must be non-empty.
-   *
-   * Query strings can be simple as "x" or more qualified as:
-   *
-   * * name:x * column:x * description:y
-   *
-   * Note: Query tokens need to have a minimum of 3 characters for substring matching to work
-   * correctly. See [Data Catalog Search Syntax](https://cloud.google.com/data-catalog/docs/how-to
-   * /search-reference) for more information.
+   * Optional. The query string in search query syntax. An empty query string will result in all
+   * data assets (in the specified scope) that the user has access to. Query strings can be simple
+   * as "x" or more qualified as: * name:x * column:x * description:y Note: Query tokens need to
+   * have a minimum of 3 characters for substring matching to work correctly. See [Data Catalog
+   * Search Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference) for more
+   * information.
    * @param query query or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogRequest setQuery(java.lang.String query) {

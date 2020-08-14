@@ -53,9 +53,7 @@ public final class GoogleCloudDatacatalogV1beta1SerializedPolicyTag extends com.
   private java.lang.String displayName;
 
   /**
-   * Resource name of the policy tag.
-   *
-   * This field will be ignored when calling ImportTaxonomies.
+   * Resource name of the policy tag. This field will be ignored when calling ImportTaxonomies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,9 +113,7 @@ public final class GoogleCloudDatacatalogV1beta1SerializedPolicyTag extends com.
   }
 
   /**
-   * Resource name of the policy tag.
-   *
-   * This field will be ignored when calling ImportTaxonomies.
+   * Resource name of the policy tag. This field will be ignored when calling ImportTaxonomies.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyTag() {
@@ -125,9 +121,7 @@ public final class GoogleCloudDatacatalogV1beta1SerializedPolicyTag extends com.
   }
 
   /**
-   * Resource name of the policy tag.
-   *
-   * This field will be ignored when calling ImportTaxonomies.
+   * Resource name of the policy tag. This field will be ignored when calling ImportTaxonomies.
    * @param policyTag policyTag or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1SerializedPolicyTag setPolicyTag(java.lang.String policyTag) {

@@ -30,11 +30,10 @@ package com.google.api.services.spanner.v1.model;
 public final class ResultSetMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates the field names and types for the rows in the result set.  For example, a SQL query
-   * like `"SELECT UserId, UserName FROM Users"` could return a `row_type` value like:
-   *
-   *     "fields": [       { "name": "UserId", "type": { "code": "INT64" } },       { "name":
-   * "UserName", "type": { "code": "STRING" } },     ]
+   * Indicates the field names and types for the rows in the result set. For example, a SQL query
+   * like `"SELECT UserId, UserName FROM Users"` could return a `row_type` value like: "fields": [ {
+   * "name": "UserId", "type": { "code": "INT64" } }, { "name": "UserName", "type": { "code":
+   * "STRING" } }, ]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,11 +48,10 @@ public final class ResultSetMetadata extends com.google.api.client.json.GenericJ
   private Transaction transaction;
 
   /**
-   * Indicates the field names and types for the rows in the result set.  For example, a SQL query
-   * like `"SELECT UserId, UserName FROM Users"` could return a `row_type` value like:
-   *
-   *     "fields": [       { "name": "UserId", "type": { "code": "INT64" } },       { "name":
-   * "UserName", "type": { "code": "STRING" } },     ]
+   * Indicates the field names and types for the rows in the result set. For example, a SQL query
+   * like `"SELECT UserId, UserName FROM Users"` could return a `row_type` value like: "fields": [ {
+   * "name": "UserId", "type": { "code": "INT64" } }, { "name": "UserName", "type": { "code":
+   * "STRING" } }, ]
    * @return value or {@code null} for none
    */
   public StructType getRowType() {
@@ -61,11 +59,10 @@ public final class ResultSetMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Indicates the field names and types for the rows in the result set.  For example, a SQL query
-   * like `"SELECT UserId, UserName FROM Users"` could return a `row_type` value like:
-   *
-   *     "fields": [       { "name": "UserId", "type": { "code": "INT64" } },       { "name":
-   * "UserName", "type": { "code": "STRING" } },     ]
+   * Indicates the field names and types for the rows in the result set. For example, a SQL query
+   * like `"SELECT UserId, UserName FROM Users"` could return a `row_type` value like: "fields": [ {
+   * "name": "UserId", "type": { "code": "INT64" } }, { "name": "UserName", "type": { "code":
+   * "STRING" } }, ]
    * @param rowType rowType or {@code null} for none
    */
   public ResultSetMetadata setRowType(StructType rowType) {

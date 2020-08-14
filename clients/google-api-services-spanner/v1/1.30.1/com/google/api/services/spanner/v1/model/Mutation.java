@@ -17,7 +17,7 @@
 package com.google.api.services.spanner.v1.model;
 
 /**
- * A modification to one or more Cloud Spanner rows.  Mutations can be applied to a Cloud Spanner
+ * A modification to one or more Cloud Spanner rows. Mutations can be applied to a Cloud Spanner
  * database by sending them in a Commit call.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -47,11 +47,10 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
 
   /**
    * Like insert, except that if the row already exists, then its column values are overwritten with
-   * the ones provided. Any column values not explicitly written are preserved.
-   *
-   * When using insert_or_update, just as when using insert, all `NOT NULL` columns in the table
-   * must be given a value. This holds true even when the row already exists and will therefore
-   * actually be updated.
+   * the ones provided. Any column values not explicitly written are preserved. When using
+   * insert_or_update, just as when using insert, all `NOT NULL` columns in the table must be given
+   * a value. This holds true even when the row already exists and will therefore actually be
+   * updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,11 +59,9 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
   /**
    * Like insert, except that if the row already exists, it is deleted, and the column values
    * provided are inserted instead. Unlike insert_or_update, this means any values not explicitly
-   * written become `NULL`.
-   *
-   * In an interleaved table, if you create the child table with the `ON DELETE CASCADE` annotation,
-   * then replacing a parent row also deletes the child rows. Otherwise, you must delete the child
-   * rows before you replace the parent row.
+   * written become `NULL`. In an interleaved table, if you create the child table with the `ON
+   * DELETE CASCADE` annotation, then replacing a parent row also deletes the child rows. Otherwise,
+   * you must delete the child rows before you replace the parent row.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,11 +113,10 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
 
   /**
    * Like insert, except that if the row already exists, then its column values are overwritten with
-   * the ones provided. Any column values not explicitly written are preserved.
-   *
-   * When using insert_or_update, just as when using insert, all `NOT NULL` columns in the table
-   * must be given a value. This holds true even when the row already exists and will therefore
-   * actually be updated.
+   * the ones provided. Any column values not explicitly written are preserved. When using
+   * insert_or_update, just as when using insert, all `NOT NULL` columns in the table must be given
+   * a value. This holds true even when the row already exists and will therefore actually be
+   * updated.
    * @return value or {@code null} for none
    */
   public Write getInsertOrUpdate() {
@@ -129,11 +125,10 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
 
   /**
    * Like insert, except that if the row already exists, then its column values are overwritten with
-   * the ones provided. Any column values not explicitly written are preserved.
-   *
-   * When using insert_or_update, just as when using insert, all `NOT NULL` columns in the table
-   * must be given a value. This holds true even when the row already exists and will therefore
-   * actually be updated.
+   * the ones provided. Any column values not explicitly written are preserved. When using
+   * insert_or_update, just as when using insert, all `NOT NULL` columns in the table must be given
+   * a value. This holds true even when the row already exists and will therefore actually be
+   * updated.
    * @param insertOrUpdate insertOrUpdate or {@code null} for none
    */
   public Mutation setInsertOrUpdate(Write insertOrUpdate) {
@@ -144,11 +139,9 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
   /**
    * Like insert, except that if the row already exists, it is deleted, and the column values
    * provided are inserted instead. Unlike insert_or_update, this means any values not explicitly
-   * written become `NULL`.
-   *
-   * In an interleaved table, if you create the child table with the `ON DELETE CASCADE` annotation,
-   * then replacing a parent row also deletes the child rows. Otherwise, you must delete the child
-   * rows before you replace the parent row.
+   * written become `NULL`. In an interleaved table, if you create the child table with the `ON
+   * DELETE CASCADE` annotation, then replacing a parent row also deletes the child rows. Otherwise,
+   * you must delete the child rows before you replace the parent row.
    * @return value or {@code null} for none
    */
   public Write getReplace() {
@@ -158,11 +151,9 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
   /**
    * Like insert, except that if the row already exists, it is deleted, and the column values
    * provided are inserted instead. Unlike insert_or_update, this means any values not explicitly
-   * written become `NULL`.
-   *
-   * In an interleaved table, if you create the child table with the `ON DELETE CASCADE` annotation,
-   * then replacing a parent row also deletes the child rows. Otherwise, you must delete the child
-   * rows before you replace the parent row.
+   * written become `NULL`. In an interleaved table, if you create the child table with the `ON
+   * DELETE CASCADE` annotation, then replacing a parent row also deletes the child rows. Otherwise,
+   * you must delete the child rows before you replace the parent row.
    * @param replace replace or {@code null} for none
    */
   public Mutation setReplace(Write replace) {

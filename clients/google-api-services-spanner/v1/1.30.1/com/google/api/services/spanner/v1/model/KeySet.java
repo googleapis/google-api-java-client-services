@@ -18,10 +18,9 @@ package com.google.api.services.spanner.v1.model;
 
 /**
  * `KeySet` defines a collection of Cloud Spanner keys and/or key ranges. All the keys are expected
- * to be in the same table or index. The keys need not be sorted in any particular way.
- *
- * If the same key is specified multiple times in the set (for example if two ranges, two keys, or a
- * key and a range overlap), Cloud Spanner behaves as if the key were only specified once.
+ * to be in the same table or index. The keys need not be sorted in any particular way. If the same
+ * key is specified multiple times in the set (for example if two ranges, two keys, or a key and a
+ * range overlap), Cloud Spanner behaves as if the key were only specified once.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:
@@ -43,8 +42,8 @@ public final class KeySet extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of specific keys. Entries in `keys` should have exactly as many elements as there are
-   * columns in the primary or index key with which this `KeySet` is used.  Individual key values
-   * are encoded as described here.
+   * columns in the primary or index key with which this `KeySet` is used. Individual key values are
+   * encoded as described here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +83,8 @@ public final class KeySet extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of specific keys. Entries in `keys` should have exactly as many elements as there are
-   * columns in the primary or index key with which this `KeySet` is used.  Individual key values
-   * are encoded as described here.
+   * columns in the primary or index key with which this `KeySet` is used. Individual key values are
+   * encoded as described here.
    * @return value or {@code null} for none
    */
   public java.util.List<java.util.List<java.lang.Object>> getKeys() {
@@ -94,8 +93,8 @@ public final class KeySet extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of specific keys. Entries in `keys` should have exactly as many elements as there are
-   * columns in the primary or index key with which this `KeySet` is used.  Individual key values
-   * are encoded as described here.
+   * columns in the primary or index key with which this `KeySet` is used. Individual key values are
+   * encoded as described here.
    * @param keys keys or {@code null} for none
    */
   public KeySet setKeys(java.util.List<java.util.List<java.lang.Object>> keys) {

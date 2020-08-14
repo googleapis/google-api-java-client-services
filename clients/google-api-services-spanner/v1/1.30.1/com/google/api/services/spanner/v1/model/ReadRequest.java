@@ -47,14 +47,11 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   /**
    * Required. `key_set` identifies the rows to be yielded. `key_set` names the primary keys of the
    * rows in table to be yielded, unless index is present. If index is present, then key_set instead
-   * names index keys in index.
-   *
-   * If the partition_token field is empty, rows are yielded in table primary key order (if index is
-   * empty) or index key order (if index is non-empty).  If the partition_token field is not empty,
-   * rows will be yielded in an unspecified order.
-   *
-   * It is not an error for the `key_set` to name rows that do not exist in the database. Read
-   * yields nothing for nonexistent rows.
+   * names index keys in index. If the partition_token field is empty, rows are yielded in table
+   * primary key order (if index is empty) or index key order (if index is non-empty). If the
+   * partition_token field is not empty, rows will be yielded in an unspecified order. It is not an
+   * error for the `key_set` to name rows that do not exist in the database. Read yields nothing for
+   * nonexistent rows.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +67,8 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * If present, results will be restricted to the specified partition previously created using
-   * PartitionRead().    There must be an exact match for the values of fields common to this
-   * message and the PartitionReadRequest message used to create this partition_token.
+   * PartitionRead(). There must be an exact match for the values of fields common to this message
+   * and the PartitionReadRequest message used to create this partition_token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,14 +138,11 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   /**
    * Required. `key_set` identifies the rows to be yielded. `key_set` names the primary keys of the
    * rows in table to be yielded, unless index is present. If index is present, then key_set instead
-   * names index keys in index.
-   *
-   * If the partition_token field is empty, rows are yielded in table primary key order (if index is
-   * empty) or index key order (if index is non-empty).  If the partition_token field is not empty,
-   * rows will be yielded in an unspecified order.
-   *
-   * It is not an error for the `key_set` to name rows that do not exist in the database. Read
-   * yields nothing for nonexistent rows.
+   * names index keys in index. If the partition_token field is empty, rows are yielded in table
+   * primary key order (if index is empty) or index key order (if index is non-empty). If the
+   * partition_token field is not empty, rows will be yielded in an unspecified order. It is not an
+   * error for the `key_set` to name rows that do not exist in the database. Read yields nothing for
+   * nonexistent rows.
    * @return value or {@code null} for none
    */
   public KeySet getKeySet() {
@@ -158,14 +152,11 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   /**
    * Required. `key_set` identifies the rows to be yielded. `key_set` names the primary keys of the
    * rows in table to be yielded, unless index is present. If index is present, then key_set instead
-   * names index keys in index.
-   *
-   * If the partition_token field is empty, rows are yielded in table primary key order (if index is
-   * empty) or index key order (if index is non-empty).  If the partition_token field is not empty,
-   * rows will be yielded in an unspecified order.
-   *
-   * It is not an error for the `key_set` to name rows that do not exist in the database. Read
-   * yields nothing for nonexistent rows.
+   * names index keys in index. If the partition_token field is empty, rows are yielded in table
+   * primary key order (if index is empty) or index key order (if index is non-empty). If the
+   * partition_token field is not empty, rows will be yielded in an unspecified order. It is not an
+   * error for the `key_set` to name rows that do not exist in the database. Read yields nothing for
+   * nonexistent rows.
    * @param keySet keySet or {@code null} for none
    */
   public ReadRequest setKeySet(KeySet keySet) {
@@ -194,8 +185,8 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * If present, results will be restricted to the specified partition previously created using
-   * PartitionRead().    There must be an exact match for the values of fields common to this
-   * message and the PartitionReadRequest message used to create this partition_token.
+   * PartitionRead(). There must be an exact match for the values of fields common to this message
+   * and the PartitionReadRequest message used to create this partition_token.
    * @see #decodePartitionToken()
    * @return value or {@code null} for none
    */
@@ -205,8 +196,8 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * If present, results will be restricted to the specified partition previously created using
-   * PartitionRead().    There must be an exact match for the values of fields common to this
-   * message and the PartitionReadRequest message used to create this partition_token.
+   * PartitionRead(). There must be an exact match for the values of fields common to this message
+   * and the PartitionReadRequest message used to create this partition_token.
    * @see #getPartitionToken()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -218,8 +209,8 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * If present, results will be restricted to the specified partition previously created using
-   * PartitionRead().    There must be an exact match for the values of fields common to this
-   * message and the PartitionReadRequest message used to create this partition_token.
+   * PartitionRead(). There must be an exact match for the values of fields common to this message
+   * and the PartitionReadRequest message used to create this partition_token.
    * @see #encodePartitionToken()
    * @param partitionToken partitionToken or {@code null} for none
    */
@@ -230,8 +221,8 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * If present, results will be restricted to the specified partition previously created using
-   * PartitionRead().    There must be an exact match for the values of fields common to this
-   * message and the PartitionReadRequest message used to create this partition_token.
+   * PartitionRead(). There must be an exact match for the values of fields common to this message
+   * and the PartitionReadRequest message used to create this partition_token.
    * @see #setPartitionToken()
    *
    * <p>

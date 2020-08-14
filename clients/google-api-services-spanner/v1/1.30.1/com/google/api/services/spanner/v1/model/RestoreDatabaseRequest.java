@@ -30,7 +30,7 @@ package com.google.api.services.spanner.v1.model;
 public final class RestoreDatabaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the backup from which to restore.  Values are of the form
+   * Name of the backup from which to restore. Values are of the form
    * `projects//instances//backups/`.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class RestoreDatabaseRequest extends com.google.api.client.json.Gen
   private java.lang.String databaseId;
 
   /**
-   * Name of the backup from which to restore.  Values are of the form
+   * Name of the backup from which to restore. Values are of the form
    * `projects//instances//backups/`.
    * @return value or {@code null} for none
    */
@@ -56,7 +56,7 @@ public final class RestoreDatabaseRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Name of the backup from which to restore.  Values are of the form
+   * Name of the backup from which to restore. Values are of the form
    * `projects//instances//backups/`.
    * @param backup backup or {@code null} for none
    */

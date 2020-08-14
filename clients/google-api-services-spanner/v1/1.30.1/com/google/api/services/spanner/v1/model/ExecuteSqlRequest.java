@@ -30,30 +30,24 @@ package com.google.api.services.spanner.v1.model;
 public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * It is not always possible for Cloud Spanner to infer the right SQL type from a JSON value.  For
+   * It is not always possible for Cloud Spanner to infer the right SQL type from a JSON value. For
    * example, values of type `BYTES` and values of type `STRING` both appear in params as JSON
-   * strings.
-   *
-   * In these cases, `param_types` can be used to specify the exact SQL type for some or all of the
-   * SQL statement parameters. See the definition of Type for more information about SQL types.
+   * strings. In these cases, `param_types` can be used to specify the exact SQL type for some or
+   * all of the SQL statement parameters. See the definition of Type for more information about SQL
+   * types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Type> paramTypes;
 
   /**
-   * Parameter names and values that bind to placeholders in the SQL string.
-   *
-   * A parameter placeholder consists of the `@` character followed by the parameter name (for
-   * example, `@firstName`). Parameter names must conform to the naming requirements of identifiers
-   * as specified at https://cloud.google.com/spanner/docs/lexical#identifiers.
-   *
-   * Parameters can appear anywhere that a literal value is expected.  The same parameter name can
-   * be used more than once, for example:
-   *
-   * `"WHERE id > @msg_id AND id < @msg_id + 100"`
-   *
-   * It is an error to execute a SQL statement with unbound parameters.
+   * Parameter names and values that bind to placeholders in the SQL string. A parameter placeholder
+   * consists of the `@` character followed by the parameter name (for example, `@firstName`).
+   * Parameter names must conform to the naming requirements of identifiers as specified at
+   * https://cloud.google.com/spanner/docs/lexical#identifiers. Parameters can appear anywhere that
+   * a literal value is expected. The same parameter name can be used more than once, for example:
+   * `"WHERE id > @msg_id AND id < @msg_id + 100"` It is an error to execute a SQL statement with
+   * unbound parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +55,7 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
 
   /**
    * If present, results will be restricted to the specified partition previously created using
-   * PartitionQuery().  There must be an exact match for the values of fields common to this message
+   * PartitionQuery(). There must be an exact match for the values of fields common to this message
    * and the PartitionQueryRequest message used to create this partition_token.
    * The value may be {@code null}.
    */
@@ -95,13 +89,10 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
 
   /**
    * A per-transaction sequence number used to identify this request. This field makes each request
-   * idempotent such that if the request is received multiple times, at most one will succeed.
-   *
-   * The sequence number must be monotonically increasing within the transaction. If a request
-   * arrives for the first time with an out-of-order sequence number, the transaction may be
-   * aborted. Replays of previously handled requests will yield the same response as the first
-   * execution.
-   *
+   * idempotent such that if the request is received multiple times, at most one will succeed. The
+   * sequence number must be monotonically increasing within the transaction. If a request arrives
+   * for the first time with an out-of-order sequence number, the transaction may be aborted.
+   * Replays of previously handled requests will yield the same response as the first execution.
    * Required for DML statements. Ignored for queries.
    * The value may be {@code null}.
    */
@@ -116,28 +107,22 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   private java.lang.String sql;
 
   /**
-   * The transaction to use.
-   *
-   * For queries, if none is provided, the default is a temporary read-only transaction with strong
-   * concurrency.
-   *
-   * Standard DML statements require a read-write transaction. To protect against replays, single-
-   * use transactions are not supported.  The caller must either supply an existing transaction ID
-   * or begin a new transaction.
-   *
-   * Partitioned DML requires an existing Partitioned DML transaction ID.
+   * The transaction to use. For queries, if none is provided, the default is a temporary read-only
+   * transaction with strong concurrency. Standard DML statements require a read-write transaction.
+   * To protect against replays, single-use transactions are not supported. The caller must either
+   * supply an existing transaction ID or begin a new transaction. Partitioned DML requires an
+   * existing Partitioned DML transaction ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TransactionSelector transaction;
 
   /**
-   * It is not always possible for Cloud Spanner to infer the right SQL type from a JSON value.  For
+   * It is not always possible for Cloud Spanner to infer the right SQL type from a JSON value. For
    * example, values of type `BYTES` and values of type `STRING` both appear in params as JSON
-   * strings.
-   *
-   * In these cases, `param_types` can be used to specify the exact SQL type for some or all of the
-   * SQL statement parameters. See the definition of Type for more information about SQL types.
+   * strings. In these cases, `param_types` can be used to specify the exact SQL type for some or
+   * all of the SQL statement parameters. See the definition of Type for more information about SQL
+   * types.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Type> getParamTypes() {
@@ -145,12 +130,11 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * It is not always possible for Cloud Spanner to infer the right SQL type from a JSON value.  For
+   * It is not always possible for Cloud Spanner to infer the right SQL type from a JSON value. For
    * example, values of type `BYTES` and values of type `STRING` both appear in params as JSON
-   * strings.
-   *
-   * In these cases, `param_types` can be used to specify the exact SQL type for some or all of the
-   * SQL statement parameters. See the definition of Type for more information about SQL types.
+   * strings. In these cases, `param_types` can be used to specify the exact SQL type for some or
+   * all of the SQL statement parameters. See the definition of Type for more information about SQL
+   * types.
    * @param paramTypes paramTypes or {@code null} for none
    */
   public ExecuteSqlRequest setParamTypes(java.util.Map<String, Type> paramTypes) {
@@ -159,18 +143,13 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Parameter names and values that bind to placeholders in the SQL string.
-   *
-   * A parameter placeholder consists of the `@` character followed by the parameter name (for
-   * example, `@firstName`). Parameter names must conform to the naming requirements of identifiers
-   * as specified at https://cloud.google.com/spanner/docs/lexical#identifiers.
-   *
-   * Parameters can appear anywhere that a literal value is expected.  The same parameter name can
-   * be used more than once, for example:
-   *
-   * `"WHERE id > @msg_id AND id < @msg_id + 100"`
-   *
-   * It is an error to execute a SQL statement with unbound parameters.
+   * Parameter names and values that bind to placeholders in the SQL string. A parameter placeholder
+   * consists of the `@` character followed by the parameter name (for example, `@firstName`).
+   * Parameter names must conform to the naming requirements of identifiers as specified at
+   * https://cloud.google.com/spanner/docs/lexical#identifiers. Parameters can appear anywhere that
+   * a literal value is expected. The same parameter name can be used more than once, for example:
+   * `"WHERE id > @msg_id AND id < @msg_id + 100"` It is an error to execute a SQL statement with
+   * unbound parameters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -178,18 +157,13 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Parameter names and values that bind to placeholders in the SQL string.
-   *
-   * A parameter placeholder consists of the `@` character followed by the parameter name (for
-   * example, `@firstName`). Parameter names must conform to the naming requirements of identifiers
-   * as specified at https://cloud.google.com/spanner/docs/lexical#identifiers.
-   *
-   * Parameters can appear anywhere that a literal value is expected.  The same parameter name can
-   * be used more than once, for example:
-   *
-   * `"WHERE id > @msg_id AND id < @msg_id + 100"`
-   *
-   * It is an error to execute a SQL statement with unbound parameters.
+   * Parameter names and values that bind to placeholders in the SQL string. A parameter placeholder
+   * consists of the `@` character followed by the parameter name (for example, `@firstName`).
+   * Parameter names must conform to the naming requirements of identifiers as specified at
+   * https://cloud.google.com/spanner/docs/lexical#identifiers. Parameters can appear anywhere that
+   * a literal value is expected. The same parameter name can be used more than once, for example:
+   * `"WHERE id > @msg_id AND id < @msg_id + 100"` It is an error to execute a SQL statement with
+   * unbound parameters.
    * @param params params or {@code null} for none
    */
   public ExecuteSqlRequest setParams(java.util.Map<String, java.lang.Object> params) {
@@ -199,7 +173,7 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
 
   /**
    * If present, results will be restricted to the specified partition previously created using
-   * PartitionQuery().  There must be an exact match for the values of fields common to this message
+   * PartitionQuery(). There must be an exact match for the values of fields common to this message
    * and the PartitionQueryRequest message used to create this partition_token.
    * @see #decodePartitionToken()
    * @return value or {@code null} for none
@@ -210,7 +184,7 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
 
   /**
    * If present, results will be restricted to the specified partition previously created using
-   * PartitionQuery().  There must be an exact match for the values of fields common to this message
+   * PartitionQuery(). There must be an exact match for the values of fields common to this message
    * and the PartitionQueryRequest message used to create this partition_token.
    * @see #getPartitionToken()
    * @return Base64 decoded value or {@code null} for none
@@ -223,7 +197,7 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
 
   /**
    * If present, results will be restricted to the specified partition previously created using
-   * PartitionQuery().  There must be an exact match for the values of fields common to this message
+   * PartitionQuery(). There must be an exact match for the values of fields common to this message
    * and the PartitionQueryRequest message used to create this partition_token.
    * @see #encodePartitionToken()
    * @param partitionToken partitionToken or {@code null} for none
@@ -235,7 +209,7 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
 
   /**
    * If present, results will be restricted to the specified partition previously created using
-   * PartitionQuery().  There must be an exact match for the values of fields common to this message
+   * PartitionQuery(). There must be an exact match for the values of fields common to this message
    * and the PartitionQueryRequest message used to create this partition_token.
    * @see #setPartitionToken()
    *
@@ -345,13 +319,10 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
 
   /**
    * A per-transaction sequence number used to identify this request. This field makes each request
-   * idempotent such that if the request is received multiple times, at most one will succeed.
-   *
-   * The sequence number must be monotonically increasing within the transaction. If a request
-   * arrives for the first time with an out-of-order sequence number, the transaction may be
-   * aborted. Replays of previously handled requests will yield the same response as the first
-   * execution.
-   *
+   * idempotent such that if the request is received multiple times, at most one will succeed. The
+   * sequence number must be monotonically increasing within the transaction. If a request arrives
+   * for the first time with an out-of-order sequence number, the transaction may be aborted.
+   * Replays of previously handled requests will yield the same response as the first execution.
    * Required for DML statements. Ignored for queries.
    * @return value or {@code null} for none
    */
@@ -361,13 +332,10 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
 
   /**
    * A per-transaction sequence number used to identify this request. This field makes each request
-   * idempotent such that if the request is received multiple times, at most one will succeed.
-   *
-   * The sequence number must be monotonically increasing within the transaction. If a request
-   * arrives for the first time with an out-of-order sequence number, the transaction may be
-   * aborted. Replays of previously handled requests will yield the same response as the first
-   * execution.
-   *
+   * idempotent such that if the request is received multiple times, at most one will succeed. The
+   * sequence number must be monotonically increasing within the transaction. If a request arrives
+   * for the first time with an out-of-order sequence number, the transaction may be aborted.
+   * Replays of previously handled requests will yield the same response as the first execution.
    * Required for DML statements. Ignored for queries.
    * @param seqno seqno or {@code null} for none
    */
@@ -394,16 +362,11 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The transaction to use.
-   *
-   * For queries, if none is provided, the default is a temporary read-only transaction with strong
-   * concurrency.
-   *
-   * Standard DML statements require a read-write transaction. To protect against replays, single-
-   * use transactions are not supported.  The caller must either supply an existing transaction ID
-   * or begin a new transaction.
-   *
-   * Partitioned DML requires an existing Partitioned DML transaction ID.
+   * The transaction to use. For queries, if none is provided, the default is a temporary read-only
+   * transaction with strong concurrency. Standard DML statements require a read-write transaction.
+   * To protect against replays, single-use transactions are not supported. The caller must either
+   * supply an existing transaction ID or begin a new transaction. Partitioned DML requires an
+   * existing Partitioned DML transaction ID.
    * @return value or {@code null} for none
    */
   public TransactionSelector getTransaction() {
@@ -411,16 +374,11 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The transaction to use.
-   *
-   * For queries, if none is provided, the default is a temporary read-only transaction with strong
-   * concurrency.
-   *
-   * Standard DML statements require a read-write transaction. To protect against replays, single-
-   * use transactions are not supported.  The caller must either supply an existing transaction ID
-   * or begin a new transaction.
-   *
-   * Partitioned DML requires an existing Partitioned DML transaction ID.
+   * The transaction to use. For queries, if none is provided, the default is a temporary read-only
+   * transaction with strong concurrency. Standard DML statements require a read-write transaction.
+   * To protect against replays, single-use transactions are not supported. The caller must either
+   * supply an existing transaction ID or begin a new transaction. Partitioned DML requires an
+   * existing Partitioned DML transaction ID.
    * @param transaction transaction or {@code null} for none
    */
   public ExecuteSqlRequest setTransaction(TransactionSelector transaction) {

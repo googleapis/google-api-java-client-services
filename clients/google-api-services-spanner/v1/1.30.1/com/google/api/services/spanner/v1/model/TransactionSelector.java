@@ -17,9 +17,8 @@
 package com.google.api.services.spanner.v1.model;
 
 /**
- * This message is used to select the transaction in which a Read or ExecuteSql call runs.
- *
- * See TransactionOptions for more information about transactions.
+ * This message is used to select the transaction in which a Read or ExecuteSql call runs. See
+ * TransactionOptions for more information about transactions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:

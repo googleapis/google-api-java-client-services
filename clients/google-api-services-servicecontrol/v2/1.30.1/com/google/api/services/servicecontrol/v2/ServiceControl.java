@@ -143,35 +143,26 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
   public class Services {
 
     /**
-     * Private Preview. This feature is only available for approved services.
-     *
-     * This method provides admission control for services that are integrated with [Service
-     * Infrastructure](/service-infrastructure). It checks whether an operation should be allowed based
-     * on the service configuration and relevant policies. It must be called before the operation is
-     * executed. For more information, see [Admission Control](/service-infrastructure/docs/admission-
-     * control).
-     *
-     * NOTE: The admission control has an expected policy propagation delay of 60s. The caller **must**
-     * not depend on the most recent policy changes.
-     *
-     * NOTE: The admission control has a hard limit of 1 referenced resources per call. If an operation
-     * refers to more than 1 resources, the caller must call the Check method multiple times.
-     *
-     * This method requires the `servicemanagement.services.check` permission on the specified service.
-     * For more information, see [Service Control API Access Control](https://cloud.google.com/service-
-     * infrastructure/docs/service-control/access-control).
+     * Private Preview. This feature is only available for approved services. This method provides
+     * admission control for services that are integrated with [Service Infrastructure](/service-
+     * infrastructure). It checks whether an operation should be allowed based on the service
+     * configuration and relevant policies. It must be called before the operation is executed. For more
+     * information, see [Admission Control](/service-infrastructure/docs/admission-control). NOTE: The
+     * admission control has an expected policy propagation delay of 60s. The caller **must** not depend
+     * on the most recent policy changes. NOTE: The admission control has a hard limit of 1 referenced
+     * resources per call. If an operation refers to more than 1 resources, the caller must call the
+     * Check method multiple times. This method requires the `servicemanagement.services.check`
+     * permission on the specified service. For more information, see [Service Control API Access
+     * Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).
      *
      * Create a request for the method "services.check".
      *
      * This request holds the parameters needed by the servicecontrol server.  After setting any
      * optional parameters, call the {@link Check#execute()} method to invoke the remote operation.
      *
-     * @param serviceName The service name as specified in its service configuration. For example,
-    `"pubsub.googleapis.com"`.
-     *        See
-    [google.api.Service](https://cloud.google.com/service-
-     *        management/reference/rpc/google.api#google.api.Service)
-    for the definition of a service
+     * @param serviceName The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`.
+     *        See [google.api.Service](https://cloud.google.com/service-
+     *        management/reference/rpc/google.api#google.api.Service) for the definition of a service
      *        name.
      * @param content the {@link com.google.api.services.servicecontrol.v2.model.CheckRequest}
      * @return the request
@@ -187,24 +178,18 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
       private static final String REST_PATH = "v2/services/{serviceName}:check";
 
       /**
-       * Private Preview. This feature is only available for approved services.
-       *
-       * This method provides admission control for services that are integrated with [Service
-       * Infrastructure](/service-infrastructure). It checks whether an operation should be allowed
-       * based on the service configuration and relevant policies. It must be called before the
-       * operation is executed. For more information, see [Admission Control](/service-
-       * infrastructure/docs/admission-control).
-       *
+       * Private Preview. This feature is only available for approved services. This method provides
+       * admission control for services that are integrated with [Service Infrastructure](/service-
+       * infrastructure). It checks whether an operation should be allowed based on the service
+       * configuration and relevant policies. It must be called before the operation is executed. For
+       * more information, see [Admission Control](/service-infrastructure/docs/admission-control).
        * NOTE: The admission control has an expected policy propagation delay of 60s. The caller
-       * **must** not depend on the most recent policy changes.
-       *
-       * NOTE: The admission control has a hard limit of 1 referenced resources per call. If an
-       * operation refers to more than 1 resources, the caller must call the Check method multiple
-       * times.
-       *
-       * This method requires the `servicemanagement.services.check` permission on the specified
-       * service. For more information, see [Service Control API Access
-       * Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).
+       * **must** not depend on the most recent policy changes. NOTE: The admission control has a hard
+       * limit of 1 referenced resources per call. If an operation refers to more than 1 resources, the
+       * caller must call the Check method multiple times. This method requires the
+       * `servicemanagement.services.check` permission on the specified service. For more information,
+       * see [Service Control API Access Control](https://cloud.google.com/service-infrastructure/docs
+       * /service-control/access-control).
        *
        * Create a request for the method "services.check".
        *
@@ -214,12 +199,9 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
        * Check#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param serviceName The service name as specified in its service configuration. For example,
-    `"pubsub.googleapis.com"`.
-     *        See
-    [google.api.Service](https://cloud.google.com/service-
-     *        management/reference/rpc/google.api#google.api.Service)
-    for the definition of a service
+       * @param serviceName The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`.
+     *        See [google.api.Service](https://cloud.google.com/service-
+     *        management/reference/rpc/google.api#google.api.Service) for the definition of a service
      *        name.
        * @param content the {@link com.google.api.services.servicecontrol.v2.model.CheckRequest}
        * @since 1.13
@@ -286,9 +268,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
       /**
        * The service name as specified in its service configuration. For example,
-       * `"pubsub.googleapis.com"`.
-       *
-       * See [google.api.Service](https://cloud.google.com/service-
+       * `"pubsub.googleapis.com"`. See [google.api.Service](https://cloud.google.com/service-
        * management/reference/rpc/google.api#google.api.Service) for the definition of a service
        * name.
        */
@@ -296,7 +276,6 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
       private java.lang.String serviceName;
 
       /** The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`.
-
      See [google.api.Service](https://cloud.google.com/service-
      management/reference/rpc/google.api#google.api.Service) for the definition of a service name.
        */
@@ -306,9 +285,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
       /**
        * The service name as specified in its service configuration. For example,
-       * `"pubsub.googleapis.com"`.
-       *
-       * See [google.api.Service](https://cloud.google.com/service-
+       * `"pubsub.googleapis.com"`. See [google.api.Service](https://cloud.google.com/service-
        * management/reference/rpc/google.api#google.api.Service) for the definition of a service
        * name.
        */
@@ -323,31 +300,24 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
       }
     }
     /**
-     * Private Preview. This feature is only available for approved services.
-     *
-     * This method provides telemetry reporting for services that are integrated with [Service
-     * Infrastructure](/service-infrastructure). It reports a list of operations that have occurred on a
-     * service. It must be called after the operations have been executed. For more information, see
-     * [Telemetry Reporting](/service-infrastructure/docs/telemetry-reporting).
-     *
-     * NOTE: The telemetry reporting has a hard limit of 1000 operations and 1MB per Report call. It is
-     * recommended to have no more than 100 operations per call.
-     *
-     * This method requires the `servicemanagement.services.report` permission on the specified service.
-     * For more information, see [Service Control API Access Control](https://cloud.google.com/service-
-     * infrastructure/docs/service-control/access-control).
+     * Private Preview. This feature is only available for approved services. This method provides
+     * telemetry reporting for services that are integrated with [Service Infrastructure](/service-
+     * infrastructure). It reports a list of operations that have occurred on a service. It must be
+     * called after the operations have been executed. For more information, see [Telemetry Reporting
+     * ](/service-infrastructure/docs/telemetry-reporting). NOTE: The telemetry reporting has a hard
+     * limit of 1000 operations and 1MB per Report call. It is recommended to have no more than 100
+     * operations per call. This method requires the `servicemanagement.services.report` permission on
+     * the specified service. For more information, see [Service Control API Access
+     * Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).
      *
      * Create a request for the method "services.report".
      *
      * This request holds the parameters needed by the servicecontrol server.  After setting any
      * optional parameters, call the {@link Report#execute()} method to invoke the remote operation.
      *
-     * @param serviceName The service name as specified in its service configuration. For example,
-    `"pubsub.googleapis.com"`.
-     *        See
-    [google.api.Service](https://cloud.google.com/service-
-     *        management/reference/rpc/google.api#google.api.Service)
-    for the definition of a service
+     * @param serviceName The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`.
+     *        See [google.api.Service](https://cloud.google.com/service-
+     *        management/reference/rpc/google.api#google.api.Service) for the definition of a service
      *        name.
      * @param content the {@link com.google.api.services.servicecontrol.v2.model.ReportRequest}
      * @return the request
@@ -363,18 +333,14 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
       private static final String REST_PATH = "v2/services/{serviceName}:report";
 
       /**
-       * Private Preview. This feature is only available for approved services.
-       *
-       * This method provides telemetry reporting for services that are integrated with [Service
-       * Infrastructure](/service-infrastructure). It reports a list of operations that have occurred on
-       * a service. It must be called after the operations have been executed. For more information, see
-       * [Telemetry Reporting](/service-infrastructure/docs/telemetry-reporting).
-       *
-       * NOTE: The telemetry reporting has a hard limit of 1000 operations and 1MB per Report call. It
-       * is recommended to have no more than 100 operations per call.
-       *
-       * This method requires the `servicemanagement.services.report` permission on the specified
-       * service. For more information, see [Service Control API Access
+       * Private Preview. This feature is only available for approved services. This method provides
+       * telemetry reporting for services that are integrated with [Service Infrastructure](/service-
+       * infrastructure). It reports a list of operations that have occurred on a service. It must be
+       * called after the operations have been executed. For more information, see [Telemetry Reporting
+       * ](/service-infrastructure/docs/telemetry-reporting). NOTE: The telemetry reporting has a hard
+       * limit of 1000 operations and 1MB per Report call. It is recommended to have no more than 100
+       * operations per call. This method requires the `servicemanagement.services.report` permission on
+       * the specified service. For more information, see [Service Control API Access
        * Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).
        *
        * Create a request for the method "services.report".
@@ -385,12 +351,9 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
        * Report#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param serviceName The service name as specified in its service configuration. For example,
-    `"pubsub.googleapis.com"`.
-     *        See
-    [google.api.Service](https://cloud.google.com/service-
-     *        management/reference/rpc/google.api#google.api.Service)
-    for the definition of a service
+       * @param serviceName The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`.
+     *        See [google.api.Service](https://cloud.google.com/service-
+     *        management/reference/rpc/google.api#google.api.Service) for the definition of a service
      *        name.
        * @param content the {@link com.google.api.services.servicecontrol.v2.model.ReportRequest}
        * @since 1.13
@@ -457,9 +420,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
       /**
        * The service name as specified in its service configuration. For example,
-       * `"pubsub.googleapis.com"`.
-       *
-       * See [google.api.Service](https://cloud.google.com/service-
+       * `"pubsub.googleapis.com"`. See [google.api.Service](https://cloud.google.com/service-
        * management/reference/rpc/google.api#google.api.Service) for the definition of a service
        * name.
        */
@@ -467,7 +428,6 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
       private java.lang.String serviceName;
 
       /** The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`.
-
      See [google.api.Service](https://cloud.google.com/service-
      management/reference/rpc/google.api#google.api.Service) for the definition of a service name.
        */
@@ -477,9 +437,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
       /**
        * The service name as specified in its service configuration. For example,
-       * `"pubsub.googleapis.com"`.
-       *
-       * See [google.api.Service](https://cloud.google.com/service-
+       * `"pubsub.googleapis.com"`. See [google.api.Service](https://cloud.google.com/service-
        * management/reference/rpc/google.api#google.api.Service) for the definition of a service
        * name.
        */

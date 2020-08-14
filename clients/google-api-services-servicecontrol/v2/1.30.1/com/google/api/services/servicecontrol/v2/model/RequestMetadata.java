@@ -46,8 +46,7 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
    * organization (or project) as the accessed resource. See
    * https://cloud.google.com/compute/docs/vpc/ for more information. This is a scheme-less URI full
    * resource name. For example:
-   *
-   *     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
+   * "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,13 +54,11 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * The user agent of the caller. This information is not authenticated and should be treated
-   * accordingly. For example:
-   *
-   * +   `google-api-python-client/1.4.0`:     The request was made by the Google API client for
-   * Python. +   `Cloud SDK Command Line Tool apitools-client/1.0 gcloud/0.9.62`:     The request
-   * was made by the Google Cloud SDK CLI (gcloud). +   `AppEngine-Google;
-   * (+http://code.google.com/appengine; appid: s~my-project`:     The request was made from the
-   * `my-project` App Engine app. NOLINT
+   * accordingly. For example: + `google-api-python-client/1.4.0`: The request was made by the
+   * Google API client for Python. + `Cloud SDK Command Line Tool apitools-client/1.0
+   * gcloud/0.9.62`: The request was made by the Google Cloud SDK CLI (gcloud). + `AppEngine-Google;
+   * (+http://code.google.com/appengine; appid: s~my-project`: The request was made from the `my-
+   * project` App Engine app. NOLINT
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,10 +76,9 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * Request attributes used in IAM condition evaluation. This field contains request attributes
-   * like request time and access levels associated with the request.
-   *
-   * To get the whole view of the attributes used in IAM condition evaluation, the user must also
-   * look into `AuditLog.authentication_info.resource_attributes`.
+   * like request time and access levels associated with the request. To get the whole view of the
+   * attributes used in IAM condition evaluation, the user must also look into
+   * `AuditLog.authentication_info.resource_attributes`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,8 +116,7 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
    * organization (or project) as the accessed resource. See
    * https://cloud.google.com/compute/docs/vpc/ for more information. This is a scheme-less URI full
    * resource name. For example:
-   *
-   *     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
+   * "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
    * @return value or {@code null} for none
    */
   public java.lang.String getCallerNetwork() {
@@ -133,8 +128,7 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
    * organization (or project) as the accessed resource. See
    * https://cloud.google.com/compute/docs/vpc/ for more information. This is a scheme-less URI full
    * resource name. For example:
-   *
-   *     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
+   * "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
    * @param callerNetwork callerNetwork or {@code null} for none
    */
   public RequestMetadata setCallerNetwork(java.lang.String callerNetwork) {
@@ -144,13 +138,11 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * The user agent of the caller. This information is not authenticated and should be treated
-   * accordingly. For example:
-   *
-   * +   `google-api-python-client/1.4.0`:     The request was made by the Google API client for
-   * Python. +   `Cloud SDK Command Line Tool apitools-client/1.0 gcloud/0.9.62`:     The request
-   * was made by the Google Cloud SDK CLI (gcloud). +   `AppEngine-Google;
-   * (+http://code.google.com/appengine; appid: s~my-project`:     The request was made from the
-   * `my-project` App Engine app. NOLINT
+   * accordingly. For example: + `google-api-python-client/1.4.0`: The request was made by the
+   * Google API client for Python. + `Cloud SDK Command Line Tool apitools-client/1.0
+   * gcloud/0.9.62`: The request was made by the Google Cloud SDK CLI (gcloud). + `AppEngine-Google;
+   * (+http://code.google.com/appengine; appid: s~my-project`: The request was made from the `my-
+   * project` App Engine app. NOLINT
    * @return value or {@code null} for none
    */
   public java.lang.String getCallerSuppliedUserAgent() {
@@ -159,13 +151,11 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * The user agent of the caller. This information is not authenticated and should be treated
-   * accordingly. For example:
-   *
-   * +   `google-api-python-client/1.4.0`:     The request was made by the Google API client for
-   * Python. +   `Cloud SDK Command Line Tool apitools-client/1.0 gcloud/0.9.62`:     The request
-   * was made by the Google Cloud SDK CLI (gcloud). +   `AppEngine-Google;
-   * (+http://code.google.com/appengine; appid: s~my-project`:     The request was made from the
-   * `my-project` App Engine app. NOLINT
+   * accordingly. For example: + `google-api-python-client/1.4.0`: The request was made by the
+   * Google API client for Python. + `Cloud SDK Command Line Tool apitools-client/1.0
+   * gcloud/0.9.62`: The request was made by the Google Cloud SDK CLI (gcloud). + `AppEngine-Google;
+   * (+http://code.google.com/appengine; appid: s~my-project`: The request was made from the `my-
+   * project` App Engine app. NOLINT
    * @param callerSuppliedUserAgent callerSuppliedUserAgent or {@code null} for none
    */
   public RequestMetadata setCallerSuppliedUserAgent(java.lang.String callerSuppliedUserAgent) {
@@ -198,10 +188,9 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * Request attributes used in IAM condition evaluation. This field contains request attributes
-   * like request time and access levels associated with the request.
-   *
-   * To get the whole view of the attributes used in IAM condition evaluation, the user must also
-   * look into `AuditLog.authentication_info.resource_attributes`.
+   * like request time and access levels associated with the request. To get the whole view of the
+   * attributes used in IAM condition evaluation, the user must also look into
+   * `AuditLog.authentication_info.resource_attributes`.
    * @return value or {@code null} for none
    */
   public Request getRequestAttributes() {
@@ -210,10 +199,9 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * Request attributes used in IAM condition evaluation. This field contains request attributes
-   * like request time and access levels associated with the request.
-   *
-   * To get the whole view of the attributes used in IAM condition evaluation, the user must also
-   * look into `AuditLog.authentication_info.resource_attributes`.
+   * like request time and access levels associated with the request. To get the whole view of the
+   * attributes used in IAM condition evaluation, the user must also look into
+   * `AuditLog.authentication_info.resource_attributes`.
    * @param requestAttributes requestAttributes or {@code null} for none
    */
   public RequestMetadata setRequestAttributes(Request requestAttributes) {

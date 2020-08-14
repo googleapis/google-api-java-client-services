@@ -31,7 +31,7 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class DownloadLineItemsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Retrieved line items in CSV format. For more information about file formats, see  Entity Write
+   * Retrieved line items in CSV format. For more information about file formats, see Entity Write
    * File Format.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class DownloadLineItemsResponse extends com.google.api.client.json.
   private java.lang.String lineItems;
 
   /**
-   * Retrieved line items in CSV format. For more information about file formats, see  Entity Write
+   * Retrieved line items in CSV format. For more information about file formats, see Entity Write
    * File Format.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class DownloadLineItemsResponse extends com.google.api.client.json.
   }
 
   /**
-   * Retrieved line items in CSV format. For more information about file formats, see  Entity Write
+   * Retrieved line items in CSV format. For more information about file formats, see Entity Write
    * File Format.
    * @param lineItems lineItems or {@code null} for none
    */

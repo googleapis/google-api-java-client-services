@@ -63,7 +63,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "";
+  public static final String DEFAULT_SERVICE_PATH = "doubleclickbidmanager/v1/";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -162,7 +162,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
 
     public class Downloadlineitems extends DoubleClickBidManagerRequest<com.google.api.services.doubleclickbidmanager.model.DownloadLineItemsResponse> {
 
-      private static final String REST_PATH = "doubleclickbidmanager/v1/lineitems/downloadlineitems";
+      private static final String REST_PATH = "lineitems/downloadlineitems";
 
       /**
        * Retrieves line items in CSV format. YouTube & partners line items are not supported.
@@ -262,7 +262,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
 
     public class Uploadlineitems extends DoubleClickBidManagerRequest<com.google.api.services.doubleclickbidmanager.model.UploadLineItemsResponse> {
 
-      private static final String REST_PATH = "doubleclickbidmanager/v1/lineitems/uploadlineitems";
+      private static final String REST_PATH = "lineitems/uploadlineitems";
 
       /**
        * Uploads line items in CSV format. YouTube & partners line items are not supported.
@@ -385,7 +385,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
 
     public class Createquery extends DoubleClickBidManagerRequest<com.google.api.services.doubleclickbidmanager.model.Query> {
 
-      private static final String REST_PATH = "doubleclickbidmanager/v1/query";
+      private static final String REST_PATH = "query";
 
       /**
        * Creates a query.
@@ -485,7 +485,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
 
     public class Deletequery extends DoubleClickBidManagerRequest<Void> {
 
-      private static final String REST_PATH = "doubleclickbidmanager/v1/query/{queryId}";
+      private static final String REST_PATH = "query/{queryId}";
 
       /**
        * Deletes a stored query as well as the associated stored reports.
@@ -601,7 +601,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
 
     public class Getquery extends DoubleClickBidManagerRequest<com.google.api.services.doubleclickbidmanager.model.Query> {
 
-      private static final String REST_PATH = "doubleclickbidmanager/v1/query/{queryId}";
+      private static final String REST_PATH = "query/{queryId}";
 
       /**
        * Retrieves a stored query.
@@ -727,7 +727,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
 
     public class Listqueries extends DoubleClickBidManagerRequest<com.google.api.services.doubleclickbidmanager.model.ListQueriesResponse> {
 
-      private static final String REST_PATH = "doubleclickbidmanager/v1/queries";
+      private static final String REST_PATH = "queries";
 
       /**
        * Retrieves stored queries.
@@ -836,7 +836,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
 
     public class Runquery extends DoubleClickBidManagerRequest<Void> {
 
-      private static final String REST_PATH = "doubleclickbidmanager/v1/query/{queryId}";
+      private static final String REST_PATH = "query/{queryId}";
 
       /**
        * Runs a stored query to generate a report.
@@ -977,7 +977,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
 
     public class Listreports extends DoubleClickBidManagerRequest<com.google.api.services.doubleclickbidmanager.model.ListReportsResponse> {
 
-      private static final String REST_PATH = "doubleclickbidmanager/v1/queries/{queryId}/reports";
+      private static final String REST_PATH = "queries/{queryId}/reports";
 
       /**
        * Retrieves stored reports.
@@ -1126,7 +1126,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
 
     public class Download extends DoubleClickBidManagerRequest<com.google.api.services.doubleclickbidmanager.model.DownloadResponse> {
 
-      private static final String REST_PATH = "doubleclickbidmanager/v1/sdf/download";
+      private static final String REST_PATH = "sdf/download";
 
       /**
        * Retrieves entities in SDF format.

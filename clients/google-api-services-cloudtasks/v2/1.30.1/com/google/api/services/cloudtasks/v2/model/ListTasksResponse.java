@@ -30,11 +30,8 @@ package com.google.api.services.cloudtasks.v2.model;
 public final class ListTasksResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token to retrieve next page of results.
-   *
-   * To return the next page of results, call ListTasks with this value as the page_token.
-   *
-   * If the next_page_token is empty, there are no more results.
+   * A token to retrieve next page of results. To return the next page of results, call ListTasks
+   * with this value as the page_token. If the next_page_token is empty, there are no more results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,11 +45,8 @@ public final class ListTasksResponse extends com.google.api.client.json.GenericJ
   private java.util.List<Task> tasks;
 
   /**
-   * A token to retrieve next page of results.
-   *
-   * To return the next page of results, call ListTasks with this value as the page_token.
-   *
-   * If the next_page_token is empty, there are no more results.
+   * A token to retrieve next page of results. To return the next page of results, call ListTasks
+   * with this value as the page_token. If the next_page_token is empty, there are no more results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -60,11 +54,8 @@ public final class ListTasksResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A token to retrieve next page of results.
-   *
-   * To return the next page of results, call ListTasks with this value as the page_token.
-   *
-   * If the next_page_token is empty, there are no more results.
+   * A token to retrieve next page of results. To return the next page of results, call ListTasks
+   * with this value as the page_token. If the next_page_token is empty, there are no more results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListTasksResponse setNextPageToken(java.lang.String nextPageToken) {

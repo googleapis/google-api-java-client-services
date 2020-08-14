@@ -40,7 +40,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   private java.lang.String followGaeApplication;
 
   /**
-   * This is always sql#locationPreference.
+   * This is always *sql#locationPreference*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   }
 
   /**
-   * This is always sql#locationPreference.
+   * This is always *sql#locationPreference*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -79,7 +79,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   }
 
   /**
-   * This is always sql#locationPreference.
+   * This is always *sql#locationPreference*.
    * @param kind kind or {@code null} for none
    */
   public LocationPreference setKind(java.lang.String kind) {

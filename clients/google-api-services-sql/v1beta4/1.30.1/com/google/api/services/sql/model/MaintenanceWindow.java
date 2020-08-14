@@ -45,14 +45,14 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   private java.lang.Integer hour;
 
   /**
-   * This is always sql#maintenanceWindow.
+   * This is always *sql#maintenanceWindow*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Maintenance timing setting: canary (Earlier) or stable (Later).  Learn more.
+   * Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always sql#maintenanceWindow.
+   * This is always *sql#maintenanceWindow*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -101,7 +101,7 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This is always sql#maintenanceWindow.
+   * This is always *sql#maintenanceWindow*.
    * @param kind kind or {@code null} for none
    */
   public MaintenanceWindow setKind(java.lang.String kind) {
@@ -110,7 +110,7 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Maintenance timing setting: canary (Earlier) or stable (Later).  Learn more.
+   * Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdateTrack() {
@@ -118,7 +118,7 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Maintenance timing setting: canary (Earlier) or stable (Later).  Learn more.
+   * Maintenance timing setting: *canary* (Earlier) or *stable* (Later). Learn more.
    * @param updateTrack updateTrack or {@code null} for none
    */
   public MaintenanceWindow setUpdateTrack(java.lang.String updateTrack) {

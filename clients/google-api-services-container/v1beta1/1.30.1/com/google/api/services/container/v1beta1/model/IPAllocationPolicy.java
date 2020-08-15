@@ -34,12 +34,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network
    * routes. By default we do not allow cluster CIDR ranges to intersect with any user declared
    * routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger
-   * than the cluster CIDR range.
-   *
-   * If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g.
-   * `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true,
-   * `cluster_ipv4_cidr_block` and    `services_ipv4_cidr_block` must be fully-specified. 2) When
-   * `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be    fully-specified.
+   * than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must
+   * be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases`
+   * is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2)
+   * When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,15 +52,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
 
   /**
    * The IP address range for the cluster pod IPs. If this field is set, then
-   * `cluster.cluster_ipv4_cidr` must be left blank.
-   *
-   * This field is only applicable when `use_ip_aliases` is true.
-   *
-   * Set to blank to have a range chosen with the default size.
-   *
-   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
-   *
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `cluster.cluster_ipv4_cidr` must be left blank. This field is only applicable when
+   * `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to
+   * /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * The value may be {@code null}.
@@ -71,20 +64,18 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.String clusterIpv4CidrBlock;
 
   /**
-   * The name of the secondary range to be used for the cluster CIDR block.  The secondary range
-   * will be used for pod IP addresses. This must be an existing secondary range associated with the
-   * cluster subnetwork.
-   *
-   * This field is only applicable with use_ip_aliases and create_subnetwork is false.
+   * The name of the secondary range to be used for the cluster CIDR block. The secondary range will
+   * be used for pod IP addresses. This must be an existing secondary range associated with the
+   * cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork is
+   * false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterSecondaryRangeName;
 
   /**
-   * Whether a new subnetwork will be created automatically for the cluster.
-   *
-   * This field is only applicable when `use_ip_aliases` is true.
+   * Whether a new subnetwork will be created automatically for the cluster. This field is only
+   * applicable when `use_ip_aliases` is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,15 +89,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.String nodeIpv4Cidr;
 
   /**
-   * The IP address range of the instance IPs in this cluster.
-   *
-   * This is applicable only if `create_subnetwork` is true.
-   *
-   * Set to blank to have a range chosen with the default size.
-   *
-   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
-   *
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * The IP address range of the instance IPs in this cluster. This is applicable only if
+   * `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to
+   * /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * The value may be {@code null}.
@@ -123,15 +109,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
 
   /**
    * The IP address range of the services IPs in this cluster. If blank, a range will be
-   * automatically chosen with the default size.
-   *
-   * This field is only applicable when `use_ip_aliases` is true.
-   *
-   * Set to blank to have a range chosen with the default size.
-   *
-   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
-   *
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * automatically chosen with the default size. This field is only applicable when `use_ip_aliases`
+   * is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g.
+   * `/14`) to have a range chosen with a specific netmask. Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * The value may be {@code null}.
@@ -140,18 +121,17 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.String servicesIpv4CidrBlock;
 
   /**
-   * The name of the secondary range to be used as for the services CIDR block.  The secondary range
+   * The name of the secondary range to be used as for the services CIDR block. The secondary range
    * will be used for service ClusterIPs. This must be an existing secondary range associated with
-   * the cluster subnetwork.
-   *
-   * This field is only applicable with use_ip_aliases and create_subnetwork is false.
+   * the cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork
+   * is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String servicesSecondaryRangeName;
 
   /**
-   * A custom subnetwork name to be used if `create_subnetwork` is true.  If this field is empty,
+   * A custom subnetwork name to be used if `create_subnetwork` is true. If this field is empty,
    * then an automatic name will be chosen for the new subnetwork.
    * The value may be {@code null}.
    */
@@ -160,18 +140,12 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
 
   /**
    * The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be
-   * automatically chosen with the default size.
-   *
-   * This field is only applicable when `use_ip_aliases` is true.
-   *
-   * If unspecified, the range will use the default size.
-   *
-   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
-   *
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
-   * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
-   * `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use
-   * cluster.tpu_config.ipv4_cidr_block instead.
+   * automatically chosen with the default size. This field is only applicable when `use_ip_aliases`
+   * is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to
+   * have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki
+   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private
+   * networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to
+   * use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,12 +173,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network
    * routes. By default we do not allow cluster CIDR ranges to intersect with any user declared
    * routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger
-   * than the cluster CIDR range.
-   *
-   * If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g.
-   * `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true,
-   * `cluster_ipv4_cidr_block` and    `services_ipv4_cidr_block` must be fully-specified. 2) When
-   * `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be    fully-specified.
+   * than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must
+   * be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases`
+   * is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2)
+   * When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowRouteOverlap() {
@@ -215,12 +187,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network
    * routes. By default we do not allow cluster CIDR ranges to intersect with any user declared
    * routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger
-   * than the cluster CIDR range.
-   *
-   * If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g.
-   * `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true,
-   * `cluster_ipv4_cidr_block` and    `services_ipv4_cidr_block` must be fully-specified. 2) When
-   * `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be    fully-specified.
+   * than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must
+   * be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases`
+   * is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2)
+   * When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified.
    * @param allowRouteOverlap allowRouteOverlap or {@code null} for none
    */
   public IPAllocationPolicy setAllowRouteOverlap(java.lang.Boolean allowRouteOverlap) {
@@ -247,15 +217,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
 
   /**
    * The IP address range for the cluster pod IPs. If this field is set, then
-   * `cluster.cluster_ipv4_cidr` must be left blank.
-   *
-   * This field is only applicable when `use_ip_aliases` is true.
-   *
-   * Set to blank to have a range chosen with the default size.
-   *
-   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
-   *
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `cluster.cluster_ipv4_cidr` must be left blank. This field is only applicable when
+   * `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to
+   * /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * @return value or {@code null} for none
@@ -266,15 +231,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
 
   /**
    * The IP address range for the cluster pod IPs. If this field is set, then
-   * `cluster.cluster_ipv4_cidr` must be left blank.
-   *
-   * This field is only applicable when `use_ip_aliases` is true.
-   *
-   * Set to blank to have a range chosen with the default size.
-   *
-   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
-   *
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `cluster.cluster_ipv4_cidr` must be left blank. This field is only applicable when
+   * `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to
+   * /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * @param clusterIpv4CidrBlock clusterIpv4CidrBlock or {@code null} for none
@@ -285,11 +245,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the secondary range to be used for the cluster CIDR block.  The secondary range
-   * will be used for pod IP addresses. This must be an existing secondary range associated with the
-   * cluster subnetwork.
-   *
-   * This field is only applicable with use_ip_aliases and create_subnetwork is false.
+   * The name of the secondary range to be used for the cluster CIDR block. The secondary range will
+   * be used for pod IP addresses. This must be an existing secondary range associated with the
+   * cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork is
+   * false.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterSecondaryRangeName() {
@@ -297,11 +256,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the secondary range to be used for the cluster CIDR block.  The secondary range
-   * will be used for pod IP addresses. This must be an existing secondary range associated with the
-   * cluster subnetwork.
-   *
-   * This field is only applicable with use_ip_aliases and create_subnetwork is false.
+   * The name of the secondary range to be used for the cluster CIDR block. The secondary range will
+   * be used for pod IP addresses. This must be an existing secondary range associated with the
+   * cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork is
+   * false.
    * @param clusterSecondaryRangeName clusterSecondaryRangeName or {@code null} for none
    */
   public IPAllocationPolicy setClusterSecondaryRangeName(java.lang.String clusterSecondaryRangeName) {
@@ -310,9 +268,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether a new subnetwork will be created automatically for the cluster.
-   *
-   * This field is only applicable when `use_ip_aliases` is true.
+   * Whether a new subnetwork will be created automatically for the cluster. This field is only
+   * applicable when `use_ip_aliases` is true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCreateSubnetwork() {
@@ -320,9 +277,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether a new subnetwork will be created automatically for the cluster.
-   *
-   * This field is only applicable when `use_ip_aliases` is true.
+   * Whether a new subnetwork will be created automatically for the cluster. This field is only
+   * applicable when `use_ip_aliases` is true.
    * @param createSubnetwork createSubnetwork or {@code null} for none
    */
   public IPAllocationPolicy setCreateSubnetwork(java.lang.Boolean createSubnetwork) {
@@ -348,15 +304,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The IP address range of the instance IPs in this cluster.
-   *
-   * This is applicable only if `create_subnetwork` is true.
-   *
-   * Set to blank to have a range chosen with the default size.
-   *
-   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
-   *
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * The IP address range of the instance IPs in this cluster. This is applicable only if
+   * `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to
+   * /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * @return value or {@code null} for none
@@ -366,15 +317,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The IP address range of the instance IPs in this cluster.
-   *
-   * This is applicable only if `create_subnetwork` is true.
-   *
-   * Set to blank to have a range chosen with the default size.
-   *
-   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
-   *
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * The IP address range of the instance IPs in this cluster. This is applicable only if
+   * `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to
+   * /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * @param nodeIpv4CidrBlock nodeIpv4CidrBlock or {@code null} for none
@@ -403,15 +349,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
 
   /**
    * The IP address range of the services IPs in this cluster. If blank, a range will be
-   * automatically chosen with the default size.
-   *
-   * This field is only applicable when `use_ip_aliases` is true.
-   *
-   * Set to blank to have a range chosen with the default size.
-   *
-   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
-   *
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * automatically chosen with the default size. This field is only applicable when `use_ip_aliases`
+   * is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g.
+   * `/14`) to have a range chosen with a specific netmask. Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * @return value or {@code null} for none
@@ -422,15 +363,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
 
   /**
    * The IP address range of the services IPs in this cluster. If blank, a range will be
-   * automatically chosen with the default size.
-   *
-   * This field is only applicable when `use_ip_aliases` is true.
-   *
-   * Set to blank to have a range chosen with the default size.
-   *
-   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
-   *
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * automatically chosen with the default size. This field is only applicable when `use_ip_aliases`
+   * is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g.
+   * `/14`) to have a range chosen with a specific netmask. Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
    * `192.168.0.0/16`) to pick a specific range to use.
    * @param servicesIpv4CidrBlock servicesIpv4CidrBlock or {@code null} for none
@@ -441,11 +377,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the secondary range to be used as for the services CIDR block.  The secondary range
+   * The name of the secondary range to be used as for the services CIDR block. The secondary range
    * will be used for service ClusterIPs. This must be an existing secondary range associated with
-   * the cluster subnetwork.
-   *
-   * This field is only applicable with use_ip_aliases and create_subnetwork is false.
+   * the cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork
+   * is false.
    * @return value or {@code null} for none
    */
   public java.lang.String getServicesSecondaryRangeName() {
@@ -453,11 +388,10 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the secondary range to be used as for the services CIDR block.  The secondary range
+   * The name of the secondary range to be used as for the services CIDR block. The secondary range
    * will be used for service ClusterIPs. This must be an existing secondary range associated with
-   * the cluster subnetwork.
-   *
-   * This field is only applicable with use_ip_aliases and create_subnetwork is false.
+   * the cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork
+   * is false.
    * @param servicesSecondaryRangeName servicesSecondaryRangeName or {@code null} for none
    */
   public IPAllocationPolicy setServicesSecondaryRangeName(java.lang.String servicesSecondaryRangeName) {
@@ -466,7 +400,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * A custom subnetwork name to be used if `create_subnetwork` is true.  If this field is empty,
+   * A custom subnetwork name to be used if `create_subnetwork` is true. If this field is empty,
    * then an automatic name will be chosen for the new subnetwork.
    * @return value or {@code null} for none
    */
@@ -475,7 +409,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * A custom subnetwork name to be used if `create_subnetwork` is true.  If this field is empty,
+   * A custom subnetwork name to be used if `create_subnetwork` is true. If this field is empty,
    * then an automatic name will be chosen for the new subnetwork.
    * @param subnetworkName subnetworkName or {@code null} for none
    */
@@ -486,18 +420,12 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
 
   /**
    * The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be
-   * automatically chosen with the default size.
-   *
-   * This field is only applicable when `use_ip_aliases` is true.
-   *
-   * If unspecified, the range will use the default size.
-   *
-   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
-   *
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
-   * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
-   * `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use
-   * cluster.tpu_config.ipv4_cidr_block instead.
+   * automatically chosen with the default size. This field is only applicable when `use_ip_aliases`
+   * is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to
+   * have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki
+   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private
+   * networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to
+   * use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getTpuIpv4CidrBlock() {
@@ -506,18 +434,12 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
 
   /**
    * The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be
-   * automatically chosen with the default size.
-   *
-   * This field is only applicable when `use_ip_aliases` is true.
-   *
-   * If unspecified, the range will use the default size.
-   *
-   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
-   *
-   * Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
-   * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
-   * `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use
-   * cluster.tpu_config.ipv4_cidr_block instead.
+   * automatically chosen with the default size. This field is only applicable when `use_ip_aliases`
+   * is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to
+   * have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki
+   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private
+   * networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to
+   * use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
    * @param tpuIpv4CidrBlock tpuIpv4CidrBlock or {@code null} for none
    */
   public IPAllocationPolicy setTpuIpv4CidrBlock(java.lang.String tpuIpv4CidrBlock) {

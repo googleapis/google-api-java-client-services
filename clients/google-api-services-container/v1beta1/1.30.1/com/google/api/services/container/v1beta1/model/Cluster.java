@@ -98,7 +98,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String currentMasterVersion;
 
   /**
-   * [Output only]  The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
+   * [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
    * directly to retrieve node information.
    * The value may be {@code null}.
    */
@@ -157,9 +157,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] The IP address of this cluster's master endpoint. The endpoint can be accessed
-   * from the internet at `https://username:password@endpoint/`.
-   *
-   * See the `masterAuth` property of this resource for username and password information.
+   * from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of
+   * this resource for username and password information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,17 +173,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String expireTime;
 
   /**
-   * The initial Kubernetes version for this cluster.  Valid versions are those found in
-   * validMasterVersions returned by getServerConfig.  The version can be upgraded over time; such
-   * upgrades are reflected in currentMasterVersion and currentNodeVersion.
-   *
-   * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
-   * which have the following behavior:
-   *
-   * - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the
-   * 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default
-   * Kubernetes version
+   * The initial Kubernetes version for this cluster. Valid versions are those found in
+   * validMasterVersions returned by getServerConfig. The version can be upgraded over time; such
+   * upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either
+   * explicit versions offered by Kubernetes Engine or version aliases, which have the following
+   * behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest
+   * valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in
+   * the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the
+   * default Kubernetes version
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,9 +192,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    * instances. You must also have available firewall and routes quota. For requests, this field
    * should only be used in lieu of a "node_pool" object, since this configuration (along with the
    * "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not
-   * use this and a node_pool at the same time.
-   *
-   * This field is deprecated, use node_pool.initial_node_count instead.
+   * use this and a node_pool at the same time. This field is deprecated, use
+   * node_pool.initial_node_count instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,13 +247,11 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> locations;
 
   /**
-   * The logging service the cluster should use to write logs. Currently available options:
-   *
-   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
+   * The logging service the cluster should use to write logs. Currently available options: *
+   * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
    * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
-   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
-   *
-   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an
+   * empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `logging.googleapis.com` for earlier versions.
    * The value may be {@code null}.
    */
@@ -305,13 +298,11 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String masterIpv4CidrBlock;
 
   /**
-   * The monitoring service the cluster should use to write metrics. Currently available options:
-   *
-   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
-   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
-   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
-   *
-   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * The monitoring service the cluster should use to write metrics. Currently available options: *
+   * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native
+   * resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer
+   * available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as
+   * an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `monitoring.googleapis.com` for earlier versions.
    * The value may be {@code null}.
    */
@@ -320,10 +311,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of this cluster. The name must be unique within this project and location (e.g. zone
-   * or region), and can be up to 40 characters with the following restrictions:
-   *
-   * * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a
-   * number or a letter.
+   * or region), and can be up to 40 characters with the following restrictions: * Lowercase
+   * letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a
+   * letter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -358,9 +348,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    * will be used to create a "NodePool" object with an auto-generated name. Do not use this and a
    * node_pool at the same time. For responses, this field will be populated with the node
    * configuration of the first node pool. (For configuration of each node pool, see
-   * `node_pool.config`)
-   *
-   * If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+   * `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use
+   * node_pool.config instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -382,6 +371,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<NodePool> nodePools;
+
+  /**
+   * Notification configuration of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NotificationConfig notificationConfig;
 
   /**
    * Configuration for the PodSecurityPolicy feature.
@@ -676,7 +672,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only]  The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
+   * [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
    * directly to retrieve node information.
    * @return value or {@code null} for none
    */
@@ -685,7 +681,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only]  The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
+   * [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
    * directly to retrieve node information.
    * @param currentNodeCount currentNodeCount or {@code null} for none
    */
@@ -814,9 +810,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] The IP address of this cluster's master endpoint. The endpoint can be accessed
-   * from the internet at `https://username:password@endpoint/`.
-   *
-   * See the `masterAuth` property of this resource for username and password information.
+   * from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of
+   * this resource for username and password information.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndpoint() {
@@ -825,9 +820,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] The IP address of this cluster's master endpoint. The endpoint can be accessed
-   * from the internet at `https://username:password@endpoint/`.
-   *
-   * See the `masterAuth` property of this resource for username and password information.
+   * from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of
+   * this resource for username and password information.
    * @param endpoint endpoint or {@code null} for none
    */
   public Cluster setEndpoint(java.lang.String endpoint) {
@@ -855,17 +849,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The initial Kubernetes version for this cluster.  Valid versions are those found in
-   * validMasterVersions returned by getServerConfig.  The version can be upgraded over time; such
-   * upgrades are reflected in currentMasterVersion and currentNodeVersion.
-   *
-   * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
-   * which have the following behavior:
-   *
-   * - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the
-   * 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default
-   * Kubernetes version
+   * The initial Kubernetes version for this cluster. Valid versions are those found in
+   * validMasterVersions returned by getServerConfig. The version can be upgraded over time; such
+   * upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either
+   * explicit versions offered by Kubernetes Engine or version aliases, which have the following
+   * behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest
+   * valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in
+   * the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the
+   * default Kubernetes version
    * @return value or {@code null} for none
    */
   public java.lang.String getInitialClusterVersion() {
@@ -873,17 +864,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The initial Kubernetes version for this cluster.  Valid versions are those found in
-   * validMasterVersions returned by getServerConfig.  The version can be upgraded over time; such
-   * upgrades are reflected in currentMasterVersion and currentNodeVersion.
-   *
-   * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
-   * which have the following behavior:
-   *
-   * - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the
-   * 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default
-   * Kubernetes version
+   * The initial Kubernetes version for this cluster. Valid versions are those found in
+   * validMasterVersions returned by getServerConfig. The version can be upgraded over time; such
+   * upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either
+   * explicit versions offered by Kubernetes Engine or version aliases, which have the following
+   * behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest
+   * valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in
+   * the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the
+   * default Kubernetes version
    * @param initialClusterVersion initialClusterVersion or {@code null} for none
    */
   public Cluster setInitialClusterVersion(java.lang.String initialClusterVersion) {
@@ -897,9 +885,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    * instances. You must also have available firewall and routes quota. For requests, this field
    * should only be used in lieu of a "node_pool" object, since this configuration (along with the
    * "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not
-   * use this and a node_pool at the same time.
-   *
-   * This field is deprecated, use node_pool.initial_node_count instead.
+   * use this and a node_pool at the same time. This field is deprecated, use
+   * node_pool.initial_node_count instead.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialNodeCount() {
@@ -912,9 +899,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    * instances. You must also have available firewall and routes quota. For requests, this field
    * should only be used in lieu of a "node_pool" object, since this configuration (along with the
    * "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not
-   * use this and a node_pool at the same time.
-   *
-   * This field is deprecated, use node_pool.initial_node_count instead.
+   * use this and a node_pool at the same time. This field is deprecated, use
+   * node_pool.initial_node_count instead.
    * @param initialNodeCount initialNodeCount or {@code null} for none
    */
   public Cluster setInitialNodeCount(java.lang.Integer initialNodeCount) {
@@ -1035,13 +1021,11 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The logging service the cluster should use to write logs. Currently available options:
-   *
-   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
+   * The logging service the cluster should use to write logs. Currently available options: *
+   * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
    * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
-   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
-   *
-   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an
+   * empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `logging.googleapis.com` for earlier versions.
    * @return value or {@code null} for none
    */
@@ -1050,13 +1034,11 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The logging service the cluster should use to write logs. Currently available options:
-   *
-   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
+   * The logging service the cluster should use to write logs. Currently available options: *
+   * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
    * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
-   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
-   *
-   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an
+   * empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `logging.googleapis.com` for earlier versions.
    * @param loggingService loggingService or {@code null} for none
    */
@@ -1159,13 +1141,11 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The monitoring service the cluster should use to write metrics. Currently available options:
-   *
-   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
-   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
-   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
-   *
-   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * The monitoring service the cluster should use to write metrics. Currently available options: *
+   * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native
+   * resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer
+   * available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as
+   * an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `monitoring.googleapis.com` for earlier versions.
    * @return value or {@code null} for none
    */
@@ -1174,13 +1154,11 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The monitoring service the cluster should use to write metrics. Currently available options:
-   *
-   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
-   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
-   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
-   *
-   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * The monitoring service the cluster should use to write metrics. Currently available options: *
+   * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native
+   * resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer
+   * available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as
+   * an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `monitoring.googleapis.com` for earlier versions.
    * @param monitoringService monitoringService or {@code null} for none
    */
@@ -1191,10 +1169,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of this cluster. The name must be unique within this project and location (e.g. zone
-   * or region), and can be up to 40 characters with the following restrictions:
-   *
-   * * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a
-   * number or a letter.
+   * or region), and can be up to 40 characters with the following restrictions: * Lowercase
+   * letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a
+   * letter.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -1203,10 +1180,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of this cluster. The name must be unique within this project and location (e.g. zone
-   * or region), and can be up to 40 characters with the following restrictions:
-   *
-   * * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a
-   * number or a letter.
+   * or region), and can be up to 40 characters with the following restrictions: * Lowercase
+   * letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a
+   * letter.
    * @param name name or {@code null} for none
    */
   public Cluster setName(java.lang.String name) {
@@ -1275,9 +1251,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    * will be used to create a "NodePool" object with an auto-generated name. Do not use this and a
    * node_pool at the same time. For responses, this field will be populated with the node
    * configuration of the first node pool. (For configuration of each node pool, see
-   * `node_pool.config`)
-   *
-   * If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+   * `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use
+   * node_pool.config instead.
    * @return value or {@code null} for none
    */
   public NodeConfig getNodeConfig() {
@@ -1290,9 +1265,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    * will be used to create a "NodePool" object with an auto-generated name. Do not use this and a
    * node_pool at the same time. For responses, this field will be populated with the node
    * configuration of the first node pool. (For configuration of each node pool, see
-   * `node_pool.config`)
-   *
-   * If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+   * `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use
+   * node_pool.config instead.
    * @param nodeConfig nodeConfig or {@code null} for none
    */
   public Cluster setNodeConfig(NodeConfig nodeConfig) {
@@ -1337,6 +1311,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setNodePools(java.util.List<NodePool> nodePools) {
     this.nodePools = nodePools;
+    return this;
+  }
+
+  /**
+   * Notification configuration of the cluster.
+   * @return value or {@code null} for none
+   */
+  public NotificationConfig getNotificationConfig() {
+    return notificationConfig;
+  }
+
+  /**
+   * Notification configuration of the cluster.
+   * @param notificationConfig notificationConfig or {@code null} for none
+   */
+  public Cluster setNotificationConfig(NotificationConfig notificationConfig) {
+    this.notificationConfig = notificationConfig;
     return this;
   }
 

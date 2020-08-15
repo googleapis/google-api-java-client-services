@@ -51,17 +51,12 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
 
   /**
    * The set of Google API scopes to be made available on all of the node VMs under the "default"
-   * service account.
-   *
-   * The following scopes are recommended, but not required, and by default are not included:
-   *
-   * * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your
-   * nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating
-   * with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-
-   * registry/)).
-   *
-   * If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
-   * which case their required scopes will be added.
+   * service account. The following scopes are recommended, but not required, and by default are not
+   * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
+   * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
+   * communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com
+   * /container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud
+   * Monitoring are enabled, in which case their required scopes will be added.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,17 +124,12 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
 
   /**
    * The set of Google API scopes to be made available on all of the node VMs under the "default"
-   * service account.
-   *
-   * The following scopes are recommended, but not required, and by default are not included:
-   *
-   * * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your
-   * nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating
-   * with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-
-   * registry/)).
-   *
-   * If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
-   * which case their required scopes will be added.
+   * service account. The following scopes are recommended, but not required, and by default are not
+   * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
+   * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
+   * communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com
+   * /container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud
+   * Monitoring are enabled, in which case their required scopes will be added.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOauthScopes() {
@@ -148,17 +138,12 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
 
   /**
    * The set of Google API scopes to be made available on all of the node VMs under the "default"
-   * service account.
-   *
-   * The following scopes are recommended, but not required, and by default are not included:
-   *
-   * * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your
-   * nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating
-   * with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-
-   * registry/)).
-   *
-   * If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
-   * which case their required scopes will be added.
+   * service account. The following scopes are recommended, but not required, and by default are not
+   * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
+   * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
+   * communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com
+   * /container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud
+   * Monitoring are enabled, in which case their required scopes will be added.
    * @param oauthScopes oauthScopes or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setOauthScopes(java.util.List<java.lang.String> oauthScopes) {

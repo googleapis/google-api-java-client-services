@@ -17,10 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * A generic empty message that you can re-use to avoid defining duplicated empty messages in your
- * APIs. A typical example is to use it as the request or the response type of an API method. For
- * instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The
- * JSON representation for `Empty` is empty JSON object `{}`.
+ * NotificationConfig is the configuration of notifications.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -31,16 +28,40 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Empty extends com.google.api.client.json.GenericJson {
+public final class NotificationConfig extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public Empty set(String fieldName, Object value) {
-    return (Empty) super.set(fieldName, value);
+  /**
+   * Notification config for Pub/Sub.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PubSub pubsub;
+
+  /**
+   * Notification config for Pub/Sub.
+   * @return value or {@code null} for none
+   */
+  public PubSub getPubsub() {
+    return pubsub;
+  }
+
+  /**
+   * Notification config for Pub/Sub.
+   * @param pubsub pubsub or {@code null} for none
+   */
+  public NotificationConfig setPubsub(PubSub pubsub) {
+    this.pubsub = pubsub;
+    return this;
   }
 
   @Override
-  public Empty clone() {
-    return (Empty) super.clone();
+  public NotificationConfig set(String fieldName, Object value) {
+    return (NotificationConfig) super.set(fieldName, value);
+  }
+
+  @Override
+  public NotificationConfig clone() {
+    return (NotificationConfig) super.clone();
   }
 
 }

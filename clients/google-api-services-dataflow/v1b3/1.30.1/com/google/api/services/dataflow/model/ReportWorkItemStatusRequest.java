@@ -60,9 +60,9 @@ public final class ReportWorkItemStatusRequest extends com.google.api.client.jso
   private java.util.List<WorkItemStatus> workItemStatuses;
 
   /**
-   * The ID of the worker reporting the WorkItem status.  If this does not match the ID of the
-   * worker which the Dataflow service believes currently has the lease on the WorkItem, the report
-   * will be dropped (with an error response).
+   * The ID of the worker reporting the WorkItem status. If this does not match the ID of the worker
+   * which the Dataflow service believes currently has the lease on the WorkItem, the report will be
+   * dropped (with an error response).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,9 +141,9 @@ public final class ReportWorkItemStatusRequest extends com.google.api.client.jso
   }
 
   /**
-   * The ID of the worker reporting the WorkItem status.  If this does not match the ID of the
-   * worker which the Dataflow service believes currently has the lease on the WorkItem, the report
-   * will be dropped (with an error response).
+   * The ID of the worker reporting the WorkItem status. If this does not match the ID of the worker
+   * which the Dataflow service believes currently has the lease on the WorkItem, the report will be
+   * dropped (with an error response).
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerId() {
@@ -151,9 +151,9 @@ public final class ReportWorkItemStatusRequest extends com.google.api.client.jso
   }
 
   /**
-   * The ID of the worker reporting the WorkItem status.  If this does not match the ID of the
-   * worker which the Dataflow service believes currently has the lease on the WorkItem, the report
-   * will be dropped (with an error response).
+   * The ID of the worker reporting the WorkItem status. If this does not match the ID of the worker
+   * which the Dataflow service believes currently has the lease on the WorkItem, the report will be
+   * dropped (with an error response).
    * @param workerId workerId or {@code null} for none
    */
   public ReportWorkItemStatusRequest setWorkerId(java.lang.String workerId) {

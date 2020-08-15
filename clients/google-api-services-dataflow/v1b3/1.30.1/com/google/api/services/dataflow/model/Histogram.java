@@ -17,12 +17,10 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Histogram of value counts for a distribution.
- *
- * Buckets have an inclusive lower bound and exclusive upper bound and use "1,2,5 bucketing": The
- * first bucket range is from [0,1) and all subsequent bucket boundaries are powers of ten
- * multiplied by 1, 2, or 5. Thus, bucket boundaries are 0, 1, 2, 5, 10, 20, 50, 100, 200, 500,
- * 1000, ... Negative values are not supported.
+ * Histogram of value counts for a distribution. Buckets have an inclusive lower bound and exclusive
+ * upper bound and use "1,2,5 bucketing": The first bucket range is from [0,1) and all subsequent
+ * bucket boundaries are powers of ten multiplied by 1, 2, or 5. Thus, bucket boundaries are 0, 1,
+ * 2, 5, 10, 20, 50, 100, 200, 500, 1000, ... Negative values are not supported.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -45,7 +43,7 @@ public final class Histogram extends com.google.api.client.json.GenericJson {
 
   /**
    * Starting index of first stored bucket. The non-inclusive upper-bound of the ith bucket is given
-   * by:   pow(10,(i-first_bucket_offset)/3) * (1,2,5)[(i-first_bucket_offset)%3]
+   * by: pow(10,(i-first_bucket_offset)/3) * (1,2,5)[(i-first_bucket_offset)%3]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +72,7 @@ public final class Histogram extends com.google.api.client.json.GenericJson {
 
   /**
    * Starting index of first stored bucket. The non-inclusive upper-bound of the ith bucket is given
-   * by:   pow(10,(i-first_bucket_offset)/3) * (1,2,5)[(i-first_bucket_offset)%3]
+   * by: pow(10,(i-first_bucket_offset)/3) * (1,2,5)[(i-first_bucket_offset)%3]
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFirstBucketOffset() {
@@ -83,7 +81,7 @@ public final class Histogram extends com.google.api.client.json.GenericJson {
 
   /**
    * Starting index of first stored bucket. The non-inclusive upper-bound of the ith bucket is given
-   * by:   pow(10,(i-first_bucket_offset)/3) * (1,2,5)[(i-first_bucket_offset)%3]
+   * by: pow(10,(i-first_bucket_offset)/3) * (1,2,5)[(i-first_bucket_offset)%3]
    * @param firstBucketOffset firstBucketOffset or {@code null} for none
    */
   public Histogram setFirstBucketOffset(java.lang.Integer firstBucketOffset) {

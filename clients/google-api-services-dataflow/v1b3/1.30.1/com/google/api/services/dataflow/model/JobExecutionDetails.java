@@ -17,8 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * WorkerHealthReportResponse contains information returned to the worker in response to a health
- * ping.
+ * Information about the execution of a job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -28,43 +27,40 @@ package com.google.api.services.dataflow.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class WorkerHealthReportResponse extends com.google.api.client.json.GenericJson {
+public final class JobExecutionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * A positive value indicates the worker should change its reporting interval to the specified
-   * value. The default value of zero means no change in report rate is requested by the server.
+   * The stages of the job execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String reportInterval;
+  private java.util.List<StageSummary> stages;
 
   /**
-   * A positive value indicates the worker should change its reporting interval to the specified
-   * value. The default value of zero means no change in report rate is requested by the server.
+   * The stages of the job execution.
    * @return value or {@code null} for none
    */
-  public String getReportInterval() {
-    return reportInterval;
+  public java.util.List<StageSummary> getStages() {
+    return stages;
   }
 
   /**
-   * A positive value indicates the worker should change its reporting interval to the specified
-   * value. The default value of zero means no change in report rate is requested by the server.
-   * @param reportInterval reportInterval or {@code null} for none
+   * The stages of the job execution.
+   * @param stages stages or {@code null} for none
    */
-  public WorkerHealthReportResponse setReportInterval(String reportInterval) {
-    this.reportInterval = reportInterval;
+  public JobExecutionDetails setStages(java.util.List<StageSummary> stages) {
+    this.stages = stages;
     return this;
   }
 
   @Override
-  public WorkerHealthReportResponse set(String fieldName, Object value) {
-    return (WorkerHealthReportResponse) super.set(fieldName, value);
+  public JobExecutionDetails set(String fieldName, Object value) {
+    return (JobExecutionDetails) super.set(fieldName, value);
   }
 
   @Override
-  public WorkerHealthReportResponse clone() {
-    return (WorkerHealthReportResponse) super.clone();
+  public JobExecutionDetails clone() {
+    return (JobExecutionDetails) super.clone();
   }
 
 }

@@ -31,8 +31,8 @@ public final class WorkerMessage extends com.google.api.client.json.GenericJson 
 
   /**
    * Labels are used to group WorkerMessages. For example, a worker_message about a particular
-   * container might have the labels: { "JOB_ID": "2015-04-22",   "WORKER_ID": "wordcount-vm-2015…"
-   * "CONTAINER_TYPE": "worker",   "CONTAINER_ID": "ac1234def"} Label tags typically correspond to
+   * container might have the labels: { "JOB_ID": "2015-04-22", "WORKER_ID": "wordcount-vm-2015…"
+   * "CONTAINER_TYPE": "worker", "CONTAINER_ID": "ac1234def"} Label tags typically correspond to
    * Label enum values. However, for ease of development other strings can be used as tags.
    * LABEL_UNSPECIFIED should not be used here.
    * The value may be {@code null}.
@@ -84,8 +84,8 @@ public final class WorkerMessage extends com.google.api.client.json.GenericJson 
 
   /**
    * Labels are used to group WorkerMessages. For example, a worker_message about a particular
-   * container might have the labels: { "JOB_ID": "2015-04-22",   "WORKER_ID": "wordcount-vm-2015…"
-   * "CONTAINER_TYPE": "worker",   "CONTAINER_ID": "ac1234def"} Label tags typically correspond to
+   * container might have the labels: { "JOB_ID": "2015-04-22", "WORKER_ID": "wordcount-vm-2015…"
+   * "CONTAINER_TYPE": "worker", "CONTAINER_ID": "ac1234def"} Label tags typically correspond to
    * Label enum values. However, for ease of development other strings can be used as tags.
    * LABEL_UNSPECIFIED should not be used here.
    * @return value or {@code null} for none
@@ -96,8 +96,8 @@ public final class WorkerMessage extends com.google.api.client.json.GenericJson 
 
   /**
    * Labels are used to group WorkerMessages. For example, a worker_message about a particular
-   * container might have the labels: { "JOB_ID": "2015-04-22",   "WORKER_ID": "wordcount-vm-2015…"
-   * "CONTAINER_TYPE": "worker",   "CONTAINER_ID": "ac1234def"} Label tags typically correspond to
+   * container might have the labels: { "JOB_ID": "2015-04-22", "WORKER_ID": "wordcount-vm-2015…"
+   * "CONTAINER_TYPE": "worker", "CONTAINER_ID": "ac1234def"} Label tags typically correspond to
    * Label enum values. However, for ease of development other strings can be used as tags.
    * LABEL_UNSPECIFIED should not be used here.
    * @param labels labels or {@code null} for none

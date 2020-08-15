@@ -30,7 +30,7 @@ package com.google.api.services.dataflow.model;
 public final class SourceMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * An estimate of the total size (in bytes) of the data that would be read from this source.  This
+   * An estimate of the total size (in bytes) of the data that would be read from this source. This
    * estimate is in terms of external storage size, before any decompression or other processing
    * done by the reader.
    * The value may be {@code null}.
@@ -54,7 +54,7 @@ public final class SourceMetadata extends com.google.api.client.json.GenericJson
   private java.lang.Boolean producesSortedKeys;
 
   /**
-   * An estimate of the total size (in bytes) of the data that would be read from this source.  This
+   * An estimate of the total size (in bytes) of the data that would be read from this source. This
    * estimate is in terms of external storage size, before any decompression or other processing
    * done by the reader.
    * @return value or {@code null} for none
@@ -64,7 +64,7 @@ public final class SourceMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * An estimate of the total size (in bytes) of the data that would be read from this source.  This
+   * An estimate of the total size (in bytes) of the data that would be read from this source. This
    * estimate is in terms of external storage size, before any decompression or other processing
    * done by the reader.
    * @param estimatedSizeBytes estimatedSizeBytes or {@code null} for none

@@ -31,10 +31,9 @@ public final class MetricStructuredName extends com.google.api.client.json.Gener
 
   /**
    * Zero or more labeled fields which identify the part of the job this metric is associated with,
-   * such as the name of a step or collection.
-   *
-   * For example, built-in counters associated with steps will have context['step'] = . Counters
-   * associated with PCollections in the SDK will have context['pcollection'] = .
+   * such as the name of a step or collection. For example, built-in counters associated with steps
+   * will have context['step'] = . Counters associated with PCollections in the SDK will have
+   * context['pcollection'] = .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,10 +56,9 @@ public final class MetricStructuredName extends com.google.api.client.json.Gener
 
   /**
    * Zero or more labeled fields which identify the part of the job this metric is associated with,
-   * such as the name of a step or collection.
-   *
-   * For example, built-in counters associated with steps will have context['step'] = . Counters
-   * associated with PCollections in the SDK will have context['pcollection'] = .
+   * such as the name of a step or collection. For example, built-in counters associated with steps
+   * will have context['step'] = . Counters associated with PCollections in the SDK will have
+   * context['pcollection'] = .
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getContext() {
@@ -69,10 +67,9 @@ public final class MetricStructuredName extends com.google.api.client.json.Gener
 
   /**
    * Zero or more labeled fields which identify the part of the job this metric is associated with,
-   * such as the name of a step or collection.
-   *
-   * For example, built-in counters associated with steps will have context['step'] = . Counters
-   * associated with PCollections in the SDK will have context['pcollection'] = .
+   * such as the name of a step or collection. For example, built-in counters associated with steps
+   * will have context['step'] = . Counters associated with PCollections in the SDK will have
+   * context['pcollection'] = .
    * @param context context or {@code null} for none
    */
   public MetricStructuredName setContext(java.util.Map<String, java.lang.String> context) {

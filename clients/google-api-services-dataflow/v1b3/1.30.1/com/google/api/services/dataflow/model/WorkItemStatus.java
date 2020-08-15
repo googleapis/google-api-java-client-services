@@ -57,7 +57,7 @@ public final class WorkItemStatus extends com.google.api.client.json.GenericJson
   private DynamicSourceSplit dynamicSourceSplit;
 
   /**
-   * Specifies errors which occurred during processing.  If errors are provided, and completed =
+   * Specifies errors which occurred during processing. If errors are provided, and completed =
    * true, then the WorkItem is considered to have failed.
    * The value may be {@code null}.
    */
@@ -91,15 +91,14 @@ public final class WorkItemStatus extends com.google.api.client.json.GenericJson
   private ApproximateProgress progress;
 
   /**
-   * The report index.  When a WorkItem is leased, the lease will contain an initial report index.
+   * The report index. When a WorkItem is leased, the lease will contain an initial report index.
    * When a WorkItem's status is reported to the system, the report should be sent with that report
    * index, and the response will contain the index the worker should use for the next report.
-   * Reports received with unexpected index values will be rejected by the service.
-   *
-   * In order to preserve idempotency, the worker should not alter the contents of a report, even if
-   * the worker must submit the same report multiple times before getting back a response.  The
-   * worker should not submit a subsequent report until the response for the previous report had
-   * been received from the service.
+   * Reports received with unexpected index values will be rejected by the service. In order to
+   * preserve idempotency, the worker should not alter the contents of a report, even if the worker
+   * must submit the same report multiple times before getting back a response. The worker should
+   * not submit a subsequent report until the response for the previous report had been received
+   * from the service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -142,19 +141,17 @@ public final class WorkItemStatus extends com.google.api.client.json.GenericJson
    * represent the same input as would be read by the current task if the split did not happen. The
    * exact way in which the original task is decomposed into the two parts is specified either as a
    * position demarcating them (stop_position), or explicitly as two DerivedSources, if this task
-   * consumes a user-defined source type (dynamic_source_split).
-   *
-   * The "current" task is adjusted as a result of the split: after a task with range [A, B) sends a
-   * stop_position update at C, its range is considered to be [A, C), e.g.: * Progress should be
-   * interpreted relative to the new range, e.g.   "75% completed" means "75% of [A, C) completed" *
-   * The worker should interpret proposed_stop_position relative to the   new range, e.g. "split at
-   * 68%" should be interpreted as   "split at 68% of [A, C)". * If the worker chooses to split
-   * again using stop_position, only   stop_positions in [A, C) will be accepted. * Etc.
-   * dynamic_source_split has similar semantics: e.g., if a task with source S splits using
-   * dynamic_source_split into {P, R} (where P and R must be together equivalent to S), then
-   * subsequent progress and proposed_stop_position should be interpreted relative to P, and in a
-   * potential subsequent dynamic_source_split into {P', R'}, P' and R' must be together equivalent
-   * to P, etc.
+   * consumes a user-defined source type (dynamic_source_split). The "current" task is adjusted as a
+   * result of the split: after a task with range [A, B) sends a stop_position update at C, its
+   * range is considered to be [A, C), e.g.: * Progress should be interpreted relative to the new
+   * range, e.g. "75% completed" means "75% of [A, C) completed" * The worker should interpret
+   * proposed_stop_position relative to the new range, e.g. "split at 68%" should be interpreted as
+   * "split at 68% of [A, C)". * If the worker chooses to split again using stop_position, only
+   * stop_positions in [A, C) will be accepted. * Etc. dynamic_source_split has similar semantics:
+   * e.g., if a task with source S splits using dynamic_source_split into {P, R} (where P and R must
+   * be together equivalent to S), then subsequent progress and proposed_stop_position should be
+   * interpreted relative to P, and in a potential subsequent dynamic_source_split into {P', R'}, P'
+   * and R' must be together equivalent to P, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,7 +223,7 @@ public final class WorkItemStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies errors which occurred during processing.  If errors are provided, and completed =
+   * Specifies errors which occurred during processing. If errors are provided, and completed =
    * true, then the WorkItem is considered to have failed.
    * @return value or {@code null} for none
    */
@@ -235,7 +232,7 @@ public final class WorkItemStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies errors which occurred during processing.  If errors are provided, and completed =
+   * Specifies errors which occurred during processing. If errors are provided, and completed =
    * true, then the WorkItem is considered to have failed.
    * @param errors errors or {@code null} for none
    */
@@ -279,15 +276,14 @@ public final class WorkItemStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The report index.  When a WorkItem is leased, the lease will contain an initial report index.
+   * The report index. When a WorkItem is leased, the lease will contain an initial report index.
    * When a WorkItem's status is reported to the system, the report should be sent with that report
    * index, and the response will contain the index the worker should use for the next report.
-   * Reports received with unexpected index values will be rejected by the service.
-   *
-   * In order to preserve idempotency, the worker should not alter the contents of a report, even if
-   * the worker must submit the same report multiple times before getting back a response.  The
-   * worker should not submit a subsequent report until the response for the previous report had
-   * been received from the service.
+   * Reports received with unexpected index values will be rejected by the service. In order to
+   * preserve idempotency, the worker should not alter the contents of a report, even if the worker
+   * must submit the same report multiple times before getting back a response. The worker should
+   * not submit a subsequent report until the response for the previous report had been received
+   * from the service.
    * @return value or {@code null} for none
    */
   public java.lang.Long getReportIndex() {
@@ -295,15 +291,14 @@ public final class WorkItemStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The report index.  When a WorkItem is leased, the lease will contain an initial report index.
+   * The report index. When a WorkItem is leased, the lease will contain an initial report index.
    * When a WorkItem's status is reported to the system, the report should be sent with that report
    * index, and the response will contain the index the worker should use for the next report.
-   * Reports received with unexpected index values will be rejected by the service.
-   *
-   * In order to preserve idempotency, the worker should not alter the contents of a report, even if
-   * the worker must submit the same report multiple times before getting back a response.  The
-   * worker should not submit a subsequent report until the response for the previous report had
-   * been received from the service.
+   * Reports received with unexpected index values will be rejected by the service. In order to
+   * preserve idempotency, the worker should not alter the contents of a report, even if the worker
+   * must submit the same report multiple times before getting back a response. The worker should
+   * not submit a subsequent report until the response for the previous report had been received
+   * from the service.
    * @param reportIndex reportIndex or {@code null} for none
    */
   public WorkItemStatus setReportIndex(java.lang.Long reportIndex) {
@@ -389,19 +384,17 @@ public final class WorkItemStatus extends com.google.api.client.json.GenericJson
    * represent the same input as would be read by the current task if the split did not happen. The
    * exact way in which the original task is decomposed into the two parts is specified either as a
    * position demarcating them (stop_position), or explicitly as two DerivedSources, if this task
-   * consumes a user-defined source type (dynamic_source_split).
-   *
-   * The "current" task is adjusted as a result of the split: after a task with range [A, B) sends a
-   * stop_position update at C, its range is considered to be [A, C), e.g.: * Progress should be
-   * interpreted relative to the new range, e.g.   "75% completed" means "75% of [A, C) completed" *
-   * The worker should interpret proposed_stop_position relative to the   new range, e.g. "split at
-   * 68%" should be interpreted as   "split at 68% of [A, C)". * If the worker chooses to split
-   * again using stop_position, only   stop_positions in [A, C) will be accepted. * Etc.
-   * dynamic_source_split has similar semantics: e.g., if a task with source S splits using
-   * dynamic_source_split into {P, R} (where P and R must be together equivalent to S), then
-   * subsequent progress and proposed_stop_position should be interpreted relative to P, and in a
-   * potential subsequent dynamic_source_split into {P', R'}, P' and R' must be together equivalent
-   * to P, etc.
+   * consumes a user-defined source type (dynamic_source_split). The "current" task is adjusted as a
+   * result of the split: after a task with range [A, B) sends a stop_position update at C, its
+   * range is considered to be [A, C), e.g.: * Progress should be interpreted relative to the new
+   * range, e.g. "75% completed" means "75% of [A, C) completed" * The worker should interpret
+   * proposed_stop_position relative to the new range, e.g. "split at 68%" should be interpreted as
+   * "split at 68% of [A, C)". * If the worker chooses to split again using stop_position, only
+   * stop_positions in [A, C) will be accepted. * Etc. dynamic_source_split has similar semantics:
+   * e.g., if a task with source S splits using dynamic_source_split into {P, R} (where P and R must
+   * be together equivalent to S), then subsequent progress and proposed_stop_position should be
+   * interpreted relative to P, and in a potential subsequent dynamic_source_split into {P', R'}, P'
+   * and R' must be together equivalent to P, etc.
    * @return value or {@code null} for none
    */
   public Position getStopPosition() {
@@ -416,19 +409,17 @@ public final class WorkItemStatus extends com.google.api.client.json.GenericJson
    * represent the same input as would be read by the current task if the split did not happen. The
    * exact way in which the original task is decomposed into the two parts is specified either as a
    * position demarcating them (stop_position), or explicitly as two DerivedSources, if this task
-   * consumes a user-defined source type (dynamic_source_split).
-   *
-   * The "current" task is adjusted as a result of the split: after a task with range [A, B) sends a
-   * stop_position update at C, its range is considered to be [A, C), e.g.: * Progress should be
-   * interpreted relative to the new range, e.g.   "75% completed" means "75% of [A, C) completed" *
-   * The worker should interpret proposed_stop_position relative to the   new range, e.g. "split at
-   * 68%" should be interpreted as   "split at 68% of [A, C)". * If the worker chooses to split
-   * again using stop_position, only   stop_positions in [A, C) will be accepted. * Etc.
-   * dynamic_source_split has similar semantics: e.g., if a task with source S splits using
-   * dynamic_source_split into {P, R} (where P and R must be together equivalent to S), then
-   * subsequent progress and proposed_stop_position should be interpreted relative to P, and in a
-   * potential subsequent dynamic_source_split into {P', R'}, P' and R' must be together equivalent
-   * to P, etc.
+   * consumes a user-defined source type (dynamic_source_split). The "current" task is adjusted as a
+   * result of the split: after a task with range [A, B) sends a stop_position update at C, its
+   * range is considered to be [A, C), e.g.: * Progress should be interpreted relative to the new
+   * range, e.g. "75% completed" means "75% of [A, C) completed" * The worker should interpret
+   * proposed_stop_position relative to the new range, e.g. "split at 68%" should be interpreted as
+   * "split at 68% of [A, C)". * If the worker chooses to split again using stop_position, only
+   * stop_positions in [A, C) will be accepted. * Etc. dynamic_source_split has similar semantics:
+   * e.g., if a task with source S splits using dynamic_source_split into {P, R} (where P and R must
+   * be together equivalent to S), then subsequent progress and proposed_stop_position should be
+   * interpreted relative to P, and in a potential subsequent dynamic_source_split into {P', R'}, P'
+   * and R' must be together equivalent to P, etc.
    * @param stopPosition stopPosition or {@code null} for none
    */
   public WorkItemStatus setStopPosition(Position stopPosition) {

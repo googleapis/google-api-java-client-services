@@ -17,10 +17,8 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * WorkerHealthReport contains information about the health of a worker.
- *
- * The VM should be identified by the labels attached to the WorkerMessage that this health ping
- * belongs to.
+ * WorkerHealthReport contains information about the health of a worker. The VM should be identified
+ * by the labels attached to the WorkerMessage that this health ping belongs to.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -41,10 +39,8 @@ public final class WorkerHealthReport extends com.google.api.client.json.Generic
 
   /**
    * The pods running on the worker. See: http://kubernetes.io/v1.1/docs/api-
-   * reference/v1/definitions.html#_v1_pod
-   *
-   * This field is used by the worker to send the status of the indvidual containers running on each
-   * worker.
+   * reference/v1/definitions.html#_v1_pod This field is used by the worker to send the status of
+   * the indvidual containers running on each worker.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,10 +95,8 @@ public final class WorkerHealthReport extends com.google.api.client.json.Generic
 
   /**
    * The pods running on the worker. See: http://kubernetes.io/v1.1/docs/api-
-   * reference/v1/definitions.html#_v1_pod
-   *
-   * This field is used by the worker to send the status of the indvidual containers running on each
-   * worker.
+   * reference/v1/definitions.html#_v1_pod This field is used by the worker to send the status of
+   * the indvidual containers running on each worker.
    * @return value or {@code null} for none
    */
   public java.util.List<java.util.Map<String, java.lang.Object>> getPods() {
@@ -111,10 +105,8 @@ public final class WorkerHealthReport extends com.google.api.client.json.Generic
 
   /**
    * The pods running on the worker. See: http://kubernetes.io/v1.1/docs/api-
-   * reference/v1/definitions.html#_v1_pod
-   *
-   * This field is used by the worker to send the status of the indvidual containers running on each
-   * worker.
+   * reference/v1/definitions.html#_v1_pod This field is used by the worker to send the status of
+   * the indvidual containers running on each worker.
    * @param pods pods or {@code null} for none
    */
   public WorkerHealthReport setPods(java.util.List<java.util.Map<String, java.lang.Object>> pods) {

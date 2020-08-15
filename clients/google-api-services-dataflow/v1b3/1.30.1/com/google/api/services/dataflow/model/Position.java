@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Position defines a position within a collection of data.  The value can be either the end
+ * Position defines a position within a collection of data. The value can be either the end
  * position, a key (used with ordered collections), a byte offset, or a record index.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

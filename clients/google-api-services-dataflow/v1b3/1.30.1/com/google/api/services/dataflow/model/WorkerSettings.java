@@ -30,13 +30,11 @@ package com.google.api.services.dataflow.model;
 public final class WorkerSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The base URL for accessing Google Cloud APIs.
-   *
-   * When workers access Google Cloud APIs, they logically do so via relative URLs.  If this field
-   * is specified, it supplies the base URL to use for resolving these relative URLs.  The normative
-   * algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators".
-   *
-   * If not specified, the default value is "http://www.googleapis.com/"
+   * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they
+   * logically do so via relative URLs. If this field is specified, it supplies the base URL to use
+   * for resolving these relative URLs. The normative algorithm used is defined by RFC 1808,
+   * "Relative Uniform Resource Locators". If not specified, the default value is
+   * "http://www.googleapis.com/"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,13 +63,9 @@ public final class WorkerSettings extends com.google.api.client.json.GenericJson
   private java.lang.String shuffleServicePath;
 
   /**
-   * The prefix of the resources the system should use for temporary storage.
-   *
-   * The supported resource type is:
-   *
-   * Google Cloud Storage:
-   *
-   *   storage.googleapis.com/{bucket}/{object}   bucket.storage.googleapis.com/{object}
+   * The prefix of the resources the system should use for temporary storage. The supported resource
+   * type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object}
+   * bucket.storage.googleapis.com/{object}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,13 +79,11 @@ public final class WorkerSettings extends com.google.api.client.json.GenericJson
   private java.lang.String workerId;
 
   /**
-   * The base URL for accessing Google Cloud APIs.
-   *
-   * When workers access Google Cloud APIs, they logically do so via relative URLs.  If this field
-   * is specified, it supplies the base URL to use for resolving these relative URLs.  The normative
-   * algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators".
-   *
-   * If not specified, the default value is "http://www.googleapis.com/"
+   * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they
+   * logically do so via relative URLs. If this field is specified, it supplies the base URL to use
+   * for resolving these relative URLs. The normative algorithm used is defined by RFC 1808,
+   * "Relative Uniform Resource Locators". If not specified, the default value is
+   * "http://www.googleapis.com/"
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseUrl() {
@@ -99,13 +91,11 @@ public final class WorkerSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The base URL for accessing Google Cloud APIs.
-   *
-   * When workers access Google Cloud APIs, they logically do so via relative URLs.  If this field
-   * is specified, it supplies the base URL to use for resolving these relative URLs.  The normative
-   * algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators".
-   *
-   * If not specified, the default value is "http://www.googleapis.com/"
+   * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they
+   * logically do so via relative URLs. If this field is specified, it supplies the base URL to use
+   * for resolving these relative URLs. The normative algorithm used is defined by RFC 1808,
+   * "Relative Uniform Resource Locators". If not specified, the default value is
+   * "http://www.googleapis.com/"
    * @param baseUrl baseUrl or {@code null} for none
    */
   public WorkerSettings setBaseUrl(java.lang.String baseUrl) {
@@ -167,13 +157,9 @@ public final class WorkerSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The prefix of the resources the system should use for temporary storage.
-   *
-   * The supported resource type is:
-   *
-   * Google Cloud Storage:
-   *
-   *   storage.googleapis.com/{bucket}/{object}   bucket.storage.googleapis.com/{object}
+   * The prefix of the resources the system should use for temporary storage. The supported resource
+   * type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object}
+   * bucket.storage.googleapis.com/{object}
    * @return value or {@code null} for none
    */
   public java.lang.String getTempStoragePrefix() {
@@ -181,13 +167,9 @@ public final class WorkerSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The prefix of the resources the system should use for temporary storage.
-   *
-   * The supported resource type is:
-   *
-   * Google Cloud Storage:
-   *
-   *   storage.googleapis.com/{bucket}/{object}   bucket.storage.googleapis.com/{object}
+   * The prefix of the resources the system should use for temporary storage. The supported resource
+   * type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object}
+   * bucket.storage.googleapis.com/{object}
    * @param tempStoragePrefix tempStoragePrefix or {@code null} for none
    */
   public WorkerSettings setTempStoragePrefix(java.lang.String tempStoragePrefix) {

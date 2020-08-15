@@ -17,10 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * JobMetrics contains a collection of metrics describing the detailed progress of a Dataflow job.
- * Metrics correspond to user-defined and system-defined metrics in the job. This resource captures
- * only the most recent values of each metric; time-series data can be queried for them (under the
- * same metric names) from Cloud Monitoring.
+ * A point in the timeseries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -30,64 +27,64 @@ package com.google.api.services.dataflow.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class JobMetrics extends com.google.api.client.json.GenericJson {
+public final class Point extends com.google.api.client.json.GenericJson {
 
   /**
-   * Timestamp as of which metric values are current.
+   * The timestamp of the point.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String metricTime;
+  private String time;
 
   /**
-   * All metrics for this job.
+   * The value of the point.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<MetricUpdate> metrics;
+  private java.lang.Double value;
 
   /**
-   * Timestamp as of which metric values are current.
+   * The timestamp of the point.
    * @return value or {@code null} for none
    */
-  public String getMetricTime() {
-    return metricTime;
+  public String getTime() {
+    return time;
   }
 
   /**
-   * Timestamp as of which metric values are current.
-   * @param metricTime metricTime or {@code null} for none
+   * The timestamp of the point.
+   * @param time time or {@code null} for none
    */
-  public JobMetrics setMetricTime(String metricTime) {
-    this.metricTime = metricTime;
+  public Point setTime(String time) {
+    this.time = time;
     return this;
   }
 
   /**
-   * All metrics for this job.
+   * The value of the point.
    * @return value or {@code null} for none
    */
-  public java.util.List<MetricUpdate> getMetrics() {
-    return metrics;
+  public java.lang.Double getValue() {
+    return value;
   }
 
   /**
-   * All metrics for this job.
-   * @param metrics metrics or {@code null} for none
+   * The value of the point.
+   * @param value value or {@code null} for none
    */
-  public JobMetrics setMetrics(java.util.List<MetricUpdate> metrics) {
-    this.metrics = metrics;
+  public Point setValue(java.lang.Double value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public JobMetrics set(String fieldName, Object value) {
-    return (JobMetrics) super.set(fieldName, value);
+  public Point set(String fieldName, Object value) {
+    return (Point) super.set(fieldName, value);
   }
 
   @Override
-  public JobMetrics clone() {
-    return (JobMetrics) super.clone();
+  public Point clone() {
+    return (Point) super.clone();
   }
 
 }

@@ -494,22 +494,25 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Optional. Indicates which fields in the provided 'recommendation_model' to update. If
-           * not set, will only update the catalog_item_level_config field.
+           * Optional. Indicates which fields in the provided 'catalog' to update. If not set, will
+           * only update the catalog_item_level_config field. Currently only fields that can be
+           * updated are catalog_item_level_config.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Optional. Indicates which fields in the provided 'recommendation_model' to update. If not set, will
-         only update the catalog_item_level_config field.
+          /** Optional. Indicates which fields in the provided 'catalog' to update. If not set, will only update
+         the catalog_item_level_config field. Currently only fields that can be updated are
+         catalog_item_level_config.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Optional. Indicates which fields in the provided 'recommendation_model' to update. If
-           * not set, will only update the catalog_item_level_config field.
+           * Optional. Indicates which fields in the provided 'catalog' to update. If not set, will
+           * only update the catalog_item_level_config field. Currently only fields that can be
+           * updated are catalog_item_level_config.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

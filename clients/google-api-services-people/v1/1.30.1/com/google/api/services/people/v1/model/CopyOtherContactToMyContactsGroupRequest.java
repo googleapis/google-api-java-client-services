@@ -42,8 +42,8 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
    * be specified by separating them with commas. Defaults to the copy mask with metadata and
    * membership fields if not set. Valid values are: * addresses * ageRanges * biographies *
    * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
-   * genders * imClients * interests * locales * memberships * metadata * miscKeywords * names *
-   * nicknames * occupations * organizations * phoneNumbers * photos * relations * residences *
+   * genders * imClients * interests * locales * locations * memberships * metadata * miscKeywords *
+   * names * nicknames * occupations * organizations * phoneNumbers * photos * relations *
    * sipAddresses * skills * urls * userDefined
    * The value may be {@code null}.
    */
@@ -82,8 +82,8 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
    * be specified by separating them with commas. Defaults to the copy mask with metadata and
    * membership fields if not set. Valid values are: * addresses * ageRanges * biographies *
    * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
-   * genders * imClients * interests * locales * memberships * metadata * miscKeywords * names *
-   * nicknames * occupations * organizations * phoneNumbers * photos * relations * residences *
+   * genders * imClients * interests * locales * locations * memberships * metadata * miscKeywords *
+   * names * nicknames * occupations * organizations * phoneNumbers * photos * relations *
    * sipAddresses * skills * urls * userDefined
    * @return value or {@code null} for none
    */
@@ -96,8 +96,8 @@ public final class CopyOtherContactToMyContactsGroupRequest extends com.google.a
    * be specified by separating them with commas. Defaults to the copy mask with metadata and
    * membership fields if not set. Valid values are: * addresses * ageRanges * biographies *
    * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
-   * genders * imClients * interests * locales * memberships * metadata * miscKeywords * names *
-   * nicknames * occupations * organizations * phoneNumbers * photos * relations * residences *
+   * genders * imClients * interests * locales * locations * memberships * metadata * miscKeywords *
+   * names * nicknames * occupations * organizations * phoneNumbers * photos * relations *
    * sipAddresses * skills * urls * userDefined
    * @param readMask readMask or {@code null} for none
    */

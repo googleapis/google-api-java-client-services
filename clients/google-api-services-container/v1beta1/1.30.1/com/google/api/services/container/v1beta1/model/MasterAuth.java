@@ -63,7 +63,7 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
 
   /**
    * The password to use for HTTP basic authentication to the master endpoint. Because the master
-   * endpoint is open to the Internet, you should create a strong password.  If a password is
+   * endpoint is open to the Internet, you should create a strong password. If a password is
    * provided for cluster creation, username must be non-empty.
    * The value may be {@code null}.
    */
@@ -153,7 +153,7 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
 
   /**
    * The password to use for HTTP basic authentication to the master endpoint. Because the master
-   * endpoint is open to the Internet, you should create a strong password.  If a password is
+   * endpoint is open to the Internet, you should create a strong password. If a password is
    * provided for cluster creation, username must be non-empty.
    * @return value or {@code null} for none
    */
@@ -163,7 +163,7 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
 
   /**
    * The password to use for HTTP basic authentication to the master endpoint. Because the master
-   * endpoint is open to the Internet, you should create a strong password.  If a password is
+   * endpoint is open to the Internet, you should create a strong password. If a password is
    * provided for cluster creation, username must be non-empty.
    * @param password password or {@code null} for none
    */

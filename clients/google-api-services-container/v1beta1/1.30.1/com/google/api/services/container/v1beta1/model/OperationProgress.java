@@ -31,9 +31,9 @@ package com.google.api.services.container.v1beta1.model;
 public final class OperationProgress extends com.google.api.client.json.GenericJson {
 
   /**
-   * Progress metric bundle, for example:   metrics: [{name: "nodes done",     int_value: 15},
-   * {name: "nodes total",    int_value: 32}] or   metrics: [{name: "progress",       double_value:
-   * 0.56},             {name: "progress scale", double_value: 1.0}]
+   * Progress metric bundle, for example: metrics: [{name: "nodes done", int_value: 15}, {name:
+   * "nodes total", int_value: 32}] or metrics: [{name: "progress", double_value: 0.56}, {name:
+   * "progress scale", double_value: 1.0}]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,9 +67,9 @@ public final class OperationProgress extends com.google.api.client.json.GenericJ
   private java.lang.String status;
 
   /**
-   * Progress metric bundle, for example:   metrics: [{name: "nodes done",     int_value: 15},
-   * {name: "nodes total",    int_value: 32}] or   metrics: [{name: "progress",       double_value:
-   * 0.56},             {name: "progress scale", double_value: 1.0}]
+   * Progress metric bundle, for example: metrics: [{name: "nodes done", int_value: 15}, {name:
+   * "nodes total", int_value: 32}] or metrics: [{name: "progress", double_value: 0.56}, {name:
+   * "progress scale", double_value: 1.0}]
    * @return value or {@code null} for none
    */
   public java.util.List<Metric> getMetrics() {
@@ -77,9 +77,9 @@ public final class OperationProgress extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Progress metric bundle, for example:   metrics: [{name: "nodes done",     int_value: 15},
-   * {name: "nodes total",    int_value: 32}] or   metrics: [{name: "progress",       double_value:
-   * 0.56},             {name: "progress scale", double_value: 1.0}]
+   * Progress metric bundle, for example: metrics: [{name: "nodes done", int_value: 15}, {name:
+   * "nodes total", int_value: 32}] or metrics: [{name: "progress", double_value: 0.56}, {name:
+   * "progress scale", double_value: 1.0}]
    * @param metrics metrics or {@code null} for none
    */
   public OperationProgress setMetrics(java.util.List<Metric> metrics) {

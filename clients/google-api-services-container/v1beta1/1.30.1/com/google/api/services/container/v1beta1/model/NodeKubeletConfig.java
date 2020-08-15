@@ -31,27 +31,20 @@ package com.google.api.services.container.v1beta1.model;
 public final class NodeKubeletConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enable CPU CFS quota enforcement for containers that specify CPU limits.
-   *
-   * If this option is enabled, kubelet uses CFS quota
-   * (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU
-   * limits. Otherwise, CPU limits will not be enforced at all.
-   *
+   * Enable CPU CFS quota enforcement for containers that specify CPU limits. If this option is
+   * enabled, kubelet uses CFS quota (https://www.kernel.org/doc/Documentation/scheduler/sched-
+   * bwc.txt) to enforce container CPU limits. Otherwise, CPU limits will not be enforced at all.
    * Disable this option to mitigate CPU throttling problems while still having your pods to be in
-   * Guaranteed QoS class by specifying the CPU limits.
-   *
-   * The default value is 'true' if unspecified.
+   * Guaranteed QoS class by specifying the CPU limits. The default value is 'true' if unspecified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean cpuCfsQuota;
 
   /**
-   * Set the CPU CFS quota period value 'cpu.cfs_period_us'.
-   *
-   * The string must be a sequence of decimal numbers, each with optional fraction and a unit
-   * suffix, such as "300ms". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The
-   * value must be a positive duration.
+   * Set the CPU CFS quota period value 'cpu.cfs_period_us'. The string must be a sequence of
+   * decimal numbers, each with optional fraction and a unit suffix, such as "300ms". Valid time
+   * units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,27 +52,20 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-
-   * cluster/cpu-management-policies/
-   *
-   * The following values are allowed.   - "none": the default, which represents the existing
-   * scheduling behavior.   - "static": allows pods with certain resource characteristics to be
-   * granted increased CPU affinity and exclusivity on the node.
+   * cluster/cpu-management-policies/ The following values are allowed. - "none": the default, which
+   * represents the existing scheduling behavior. - "static": allows pods with certain resource
+   * characteristics to be granted increased CPU affinity and exclusivity on the node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cpuManagerPolicy;
 
   /**
-   * Enable CPU CFS quota enforcement for containers that specify CPU limits.
-   *
-   * If this option is enabled, kubelet uses CFS quota
-   * (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU
-   * limits. Otherwise, CPU limits will not be enforced at all.
-   *
+   * Enable CPU CFS quota enforcement for containers that specify CPU limits. If this option is
+   * enabled, kubelet uses CFS quota (https://www.kernel.org/doc/Documentation/scheduler/sched-
+   * bwc.txt) to enforce container CPU limits. Otherwise, CPU limits will not be enforced at all.
    * Disable this option to mitigate CPU throttling problems while still having your pods to be in
-   * Guaranteed QoS class by specifying the CPU limits.
-   *
-   * The default value is 'true' if unspecified.
+   * Guaranteed QoS class by specifying the CPU limits. The default value is 'true' if unspecified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCpuCfsQuota() {
@@ -87,16 +73,11 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Enable CPU CFS quota enforcement for containers that specify CPU limits.
-   *
-   * If this option is enabled, kubelet uses CFS quota
-   * (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU
-   * limits. Otherwise, CPU limits will not be enforced at all.
-   *
+   * Enable CPU CFS quota enforcement for containers that specify CPU limits. If this option is
+   * enabled, kubelet uses CFS quota (https://www.kernel.org/doc/Documentation/scheduler/sched-
+   * bwc.txt) to enforce container CPU limits. Otherwise, CPU limits will not be enforced at all.
    * Disable this option to mitigate CPU throttling problems while still having your pods to be in
-   * Guaranteed QoS class by specifying the CPU limits.
-   *
-   * The default value is 'true' if unspecified.
+   * Guaranteed QoS class by specifying the CPU limits. The default value is 'true' if unspecified.
    * @param cpuCfsQuota cpuCfsQuota or {@code null} for none
    */
   public NodeKubeletConfig setCpuCfsQuota(java.lang.Boolean cpuCfsQuota) {
@@ -105,11 +86,9 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Set the CPU CFS quota period value 'cpu.cfs_period_us'.
-   *
-   * The string must be a sequence of decimal numbers, each with optional fraction and a unit
-   * suffix, such as "300ms". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The
-   * value must be a positive duration.
+   * Set the CPU CFS quota period value 'cpu.cfs_period_us'. The string must be a sequence of
+   * decimal numbers, each with optional fraction and a unit suffix, such as "300ms". Valid time
+   * units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.
    * @return value or {@code null} for none
    */
   public java.lang.String getCpuCfsQuotaPeriod() {
@@ -117,11 +96,9 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Set the CPU CFS quota period value 'cpu.cfs_period_us'.
-   *
-   * The string must be a sequence of decimal numbers, each with optional fraction and a unit
-   * suffix, such as "300ms". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The
-   * value must be a positive duration.
+   * Set the CPU CFS quota period value 'cpu.cfs_period_us'. The string must be a sequence of
+   * decimal numbers, each with optional fraction and a unit suffix, such as "300ms". Valid time
+   * units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.
    * @param cpuCfsQuotaPeriod cpuCfsQuotaPeriod or {@code null} for none
    */
   public NodeKubeletConfig setCpuCfsQuotaPeriod(java.lang.String cpuCfsQuotaPeriod) {
@@ -131,11 +108,9 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-
-   * cluster/cpu-management-policies/
-   *
-   * The following values are allowed.   - "none": the default, which represents the existing
-   * scheduling behavior.   - "static": allows pods with certain resource characteristics to be
-   * granted increased CPU affinity and exclusivity on the node.
+   * cluster/cpu-management-policies/ The following values are allowed. - "none": the default, which
+   * represents the existing scheduling behavior. - "static": allows pods with certain resource
+   * characteristics to be granted increased CPU affinity and exclusivity on the node.
    * @return value or {@code null} for none
    */
   public java.lang.String getCpuManagerPolicy() {
@@ -144,11 +119,9 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Control the CPU management policy on the node. See https://kubernetes.io/docs/tasks/administer-
-   * cluster/cpu-management-policies/
-   *
-   * The following values are allowed.   - "none": the default, which represents the existing
-   * scheduling behavior.   - "static": allows pods with certain resource characteristics to be
-   * granted increased CPU affinity and exclusivity on the node.
+   * cluster/cpu-management-policies/ The following values are allowed. - "none": the default, which
+   * represents the existing scheduling behavior. - "static": allows pods with certain resource
+   * characteristics to be granted increased CPU affinity and exclusivity on the node.
    * @param cpuManagerPolicy cpuManagerPolicy or {@code null} for none
    */
   public NodeKubeletConfig setCpuManagerPolicy(java.lang.String cpuManagerPolicy) {

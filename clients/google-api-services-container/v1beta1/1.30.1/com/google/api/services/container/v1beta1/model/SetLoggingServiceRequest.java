@@ -40,13 +40,10 @@ public final class SetLoggingServiceRequest extends com.google.api.client.json.G
 
   /**
    * Required. The logging service the cluster should use to write logs. Currently available
-   * options:
-   *
-   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
-   * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
-   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
-   *
-   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * options: * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-
+   * native resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an
+   * empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `logging.googleapis.com` for earlier versions.
    * The value may be {@code null}.
    */
@@ -100,13 +97,10 @@ public final class SetLoggingServiceRequest extends com.google.api.client.json.G
 
   /**
    * Required. The logging service the cluster should use to write logs. Currently available
-   * options:
-   *
-   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
-   * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
-   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
-   *
-   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * options: * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-
+   * native resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an
+   * empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `logging.googleapis.com` for earlier versions.
    * @return value or {@code null} for none
    */
@@ -116,13 +110,10 @@ public final class SetLoggingServiceRequest extends com.google.api.client.json.G
 
   /**
    * Required. The logging service the cluster should use to write logs. Currently available
-   * options:
-   *
-   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
-   * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
-   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
-   *
-   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * options: * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-
+   * native resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an
+   * empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `logging.googleapis.com` for earlier versions.
    * @param loggingService loggingService or {@code null} for none
    */

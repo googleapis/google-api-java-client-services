@@ -17,10 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Kubernetes taint is comprised of three fields: key, value, and effect. Effect can only be one of
- * three types: NoSchedule, PreferNoSchedule or NoExecute. See
- * [here](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration) for more
- * information, including usage and the valid values.
+ * Pub/Sub specific notification config.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -31,88 +28,67 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class NodeTaint extends com.google.api.client.json.GenericJson {
+public final class PubSub extends com.google.api.client.json.GenericJson {
 
   /**
-   * Effect for taint.
+   * Enable notifications for Pub/Sub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String effect;
+  private java.lang.Boolean enabled;
 
   /**
-   * Key for taint.
+   * The desired Pub/Sub topic to which notifications will be sent by GKE. Format is
+   * `projects/{project}/topics/{topic}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String key;
+  private java.lang.String topic;
 
   /**
-   * Value for taint.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String value;
-
-  /**
-   * Effect for taint.
+   * Enable notifications for Pub/Sub.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEffect() {
-    return effect;
+  public java.lang.Boolean getEnabled() {
+    return enabled;
   }
 
   /**
-   * Effect for taint.
-   * @param effect effect or {@code null} for none
+   * Enable notifications for Pub/Sub.
+   * @param enabled enabled or {@code null} for none
    */
-  public NodeTaint setEffect(java.lang.String effect) {
-    this.effect = effect;
+  public PubSub setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
     return this;
   }
 
   /**
-   * Key for taint.
+   * The desired Pub/Sub topic to which notifications will be sent by GKE. Format is
+   * `projects/{project}/topics/{topic}`.
    * @return value or {@code null} for none
    */
-  public java.lang.String getKey() {
-    return key;
+  public java.lang.String getTopic() {
+    return topic;
   }
 
   /**
-   * Key for taint.
-   * @param key key or {@code null} for none
+   * The desired Pub/Sub topic to which notifications will be sent by GKE. Format is
+   * `projects/{project}/topics/{topic}`.
+   * @param topic topic or {@code null} for none
    */
-  public NodeTaint setKey(java.lang.String key) {
-    this.key = key;
-    return this;
-  }
-
-  /**
-   * Value for taint.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getValue() {
-    return value;
-  }
-
-  /**
-   * Value for taint.
-   * @param value value or {@code null} for none
-   */
-  public NodeTaint setValue(java.lang.String value) {
-    this.value = value;
+  public PubSub setTopic(java.lang.String topic) {
+    this.topic = topic;
     return this;
   }
 
   @Override
-  public NodeTaint set(String fieldName, Object value) {
-    return (NodeTaint) super.set(fieldName, value);
+  public PubSub set(String fieldName, Object value) {
+    return (PubSub) super.set(fieldName, value);
   }
 
   @Override
-  public NodeTaint clone() {
-    return (NodeTaint) super.clone();
+  public PubSub clone() {
+    return (PubSub) super.clone();
   }
 
 }

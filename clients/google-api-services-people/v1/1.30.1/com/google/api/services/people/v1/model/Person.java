@@ -256,6 +256,19 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The person's locations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Location> locations;
+
+  static {
+    // hack to force ProGuard to consider Location used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Location.class);
+  }
+
+  /**
    * The person's group memberships.
    * The value may be {@code null}.
    */
@@ -376,7 +389,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   private java.util.List<RelationshipStatus> relationshipStatuses;
 
   /**
-   * The person's residences.
+   * **DEPRECATED**: (Please use `person.locations` instead) The person's residences.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -734,6 +747,23 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The person's locations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Location> getLocations() {
+    return locations;
+  }
+
+  /**
+   * The person's locations.
+   * @param locations locations or {@code null} for none
+   */
+  public Person setLocations(java.util.List<Location> locations) {
+    this.locations = locations;
+    return this;
+  }
+
+  /**
    * The person's group memberships.
    * @return value or {@code null} for none
    */
@@ -938,7 +968,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's residences.
+   * **DEPRECATED**: (Please use `person.locations` instead) The person's residences.
    * @return value or {@code null} for none
    */
   public java.util.List<Residence> getResidences() {
@@ -946,7 +976,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's residences.
+   * **DEPRECATED**: (Please use `person.locations` instead) The person's residences.
    * @param residences residences or {@code null} for none
    */
   public Person setResidences(java.util.List<Residence> residences) {

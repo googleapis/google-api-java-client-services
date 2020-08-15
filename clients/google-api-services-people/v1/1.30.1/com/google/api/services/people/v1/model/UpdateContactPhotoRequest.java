@@ -35,8 +35,8 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
    * be specified by separating them with commas. Defaults to empty if not set, which will skip the
    * post mutate get. Valid values are: * addresses * ageRanges * biographies * birthdays *
    * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds * genders *
-   * imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
-   * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
+   * imClients * interests * locales * locations * memberships * metadata * miscKeywords * names *
+   * nicknames * occupations * organizations * phoneNumbers * photos * relations * sipAddresses *
    * skills * urls * userDefined
    * The value may be {@code null}.
    */
@@ -63,8 +63,8 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
    * be specified by separating them with commas. Defaults to empty if not set, which will skip the
    * post mutate get. Valid values are: * addresses * ageRanges * biographies * birthdays *
    * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds * genders *
-   * imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
-   * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
+   * imClients * interests * locales * locations * memberships * metadata * miscKeywords * names *
+   * nicknames * occupations * organizations * phoneNumbers * photos * relations * sipAddresses *
    * skills * urls * userDefined
    * @return value or {@code null} for none
    */
@@ -77,8 +77,8 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
    * be specified by separating them with commas. Defaults to empty if not set, which will skip the
    * post mutate get. Valid values are: * addresses * ageRanges * biographies * birthdays *
    * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds * genders *
-   * imClients * interests * locales * memberships * metadata * miscKeywords * names * nicknames *
-   * occupations * organizations * phoneNumbers * photos * relations * residences * sipAddresses *
+   * imClients * interests * locales * locations * memberships * metadata * miscKeywords * names *
+   * nicknames * occupations * organizations * phoneNumbers * photos * relations * sipAddresses *
    * skills * urls * userDefined
    * @param personFields personFields or {@code null} for none
    */

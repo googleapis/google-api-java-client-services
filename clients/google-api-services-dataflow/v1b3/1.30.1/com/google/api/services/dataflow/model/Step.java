@@ -17,27 +17,15 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Defines a particular step within a Cloud Dataflow job.
- *
- * A job consists of multiple steps, each of which performs some specific operation as part of the
- * overall job.  Data is typically passed from one step to another as part of the job.
- *
- * Here's an example of a sequence of steps which together implement a Map-Reduce job:
- *
- *   * Read a collection of data from some source, parsing the     collection's elements.
- *
- *   * Validate the elements.
- *
- *   * Apply a user-defined function to map each element to some value     and extract an element-
- * specific key value.
- *
- *   * Group elements with the same key into a single element with     that key, transforming a
- * multiply-keyed collection into a     uniquely-keyed collection.
- *
- *   * Write the elements out to some data sink.
- *
- * Note that the Cloud Dataflow service may be used to run many different types of jobs, not just
- * Map-Reduce.
+ * Defines a particular step within a Cloud Dataflow job. A job consists of multiple steps, each of
+ * which performs some specific operation as part of the overall job. Data is typically passed from
+ * one step to another as part of the job. Here's an example of a sequence of steps which together
+ * implement a Map-Reduce job: * Read a collection of data from some source, parsing the
+ * collection's elements. * Validate the elements. * Apply a user-defined function to map each
+ * element to some value and extract an element-specific key value. * Group elements with the same
+ * key into a single element with that key, transforming a multiply-keyed collection into a
+ * uniquely-keyed collection. * Write the elements out to some data sink. Note that the Cloud
+ * Dataflow service may be used to run many different types of jobs, not just Map-Reduce.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -66,7 +54,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
 
   /**
    * Named properties associated with the step. Each kind of predefined step has its own required
-   * set of properties. Must be provided on Create.  Only retrieved with JOB_VIEW_ALL.
+   * set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +98,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
 
   /**
    * Named properties associated with the step. Each kind of predefined step has its own required
-   * set of properties. Must be provided on Create.  Only retrieved with JOB_VIEW_ALL.
+   * set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getProperties() {
@@ -119,7 +107,7 @@ public final class Step extends com.google.api.client.json.GenericJson {
 
   /**
    * Named properties associated with the step. Each kind of predefined step has its own required
-   * set of properties. Must be provided on Create.  Only retrieved with JOB_VIEW_ALL.
+   * set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
    * @param properties properties or {@code null} for none
    */
   public Step setProperties(java.util.Map<String, java.lang.Object> properties) {

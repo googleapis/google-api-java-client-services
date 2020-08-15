@@ -38,7 +38,7 @@ public final class ParDoInstruction extends com.google.api.client.json.GenericJs
   private InstructionInput input;
 
   /**
-   * Information about each of the outputs, if user_fn is a  MultiDoFn.
+   * Information about each of the outputs, if user_fn is a MultiDoFn.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class ParDoInstruction extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Information about each of the outputs, if user_fn is a  MultiDoFn.
+   * Information about each of the outputs, if user_fn is a MultiDoFn.
    * @return value or {@code null} for none
    */
   public java.util.List<MultiOutputInfo> getMultiOutputInfos() {
@@ -97,7 +97,7 @@ public final class ParDoInstruction extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Information about each of the outputs, if user_fn is a  MultiDoFn.
+   * Information about each of the outputs, if user_fn is a MultiDoFn.
    * @param multiOutputInfos multiOutputInfos or {@code null} for none
    */
   public ParDoInstruction setMultiOutputInfos(java.util.List<MultiOutputInfo> multiOutputInfos) {

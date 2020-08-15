@@ -44,13 +44,11 @@ public final class TaskRunnerSettings extends com.google.api.client.json.Generic
   private java.lang.String baseTaskDir;
 
   /**
-   * The base URL for the taskrunner to use when accessing Google Cloud APIs.
-   *
-   * When workers access Google Cloud APIs, they logically do so via relative URLs.  If this field
-   * is specified, it supplies the base URL to use for resolving these relative URLs.  The normative
-   * algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators".
-   *
-   * If not specified, the default value is "http://www.googleapis.com/"
+   * The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access
+   * Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it
+   * supplies the base URL to use for resolving these relative URLs. The normative algorithm used is
+   * defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value
+   * is "http://www.googleapis.com/"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,11 +104,8 @@ public final class TaskRunnerSettings extends com.google.api.client.json.Generic
   private java.lang.Boolean logToSerialconsole;
 
   /**
-   * Indicates where to put logs.  If this is not specified, the logs will not be uploaded.
-   *
-   * The supported resource type is:
-   *
-   * Google Cloud Storage:   storage.googleapis.com/{bucket}/{object}
+   * Indicates where to put logs. If this is not specified, the logs will not be uploaded. The
+   * supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object}
    * bucket.storage.googleapis.com/{object}
    * The value may be {@code null}.
    */
@@ -153,11 +148,8 @@ public final class TaskRunnerSettings extends com.google.api.client.json.Generic
   private java.lang.String taskUser;
 
   /**
-   * The prefix of the resources the taskrunner should use for temporary storage.
-   *
-   * The supported resource type is:
-   *
-   * Google Cloud Storage:   storage.googleapis.com/{bucket}/{object}
+   * The prefix of the resources the taskrunner should use for temporary storage. The supported
+   * resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object}
    * bucket.storage.googleapis.com/{object}
    * The value may be {@code null}.
    */
@@ -213,13 +205,11 @@ public final class TaskRunnerSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * The base URL for the taskrunner to use when accessing Google Cloud APIs.
-   *
-   * When workers access Google Cloud APIs, they logically do so via relative URLs.  If this field
-   * is specified, it supplies the base URL to use for resolving these relative URLs.  The normative
-   * algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators".
-   *
-   * If not specified, the default value is "http://www.googleapis.com/"
+   * The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access
+   * Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it
+   * supplies the base URL to use for resolving these relative URLs. The normative algorithm used is
+   * defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value
+   * is "http://www.googleapis.com/"
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseUrl() {
@@ -227,13 +217,11 @@ public final class TaskRunnerSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * The base URL for the taskrunner to use when accessing Google Cloud APIs.
-   *
-   * When workers access Google Cloud APIs, they logically do so via relative URLs.  If this field
-   * is specified, it supplies the base URL to use for resolving these relative URLs.  The normative
-   * algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators".
-   *
-   * If not specified, the default value is "http://www.googleapis.com/"
+   * The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access
+   * Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it
+   * supplies the base URL to use for resolving these relative URLs. The normative algorithm used is
+   * defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value
+   * is "http://www.googleapis.com/"
    * @param baseUrl baseUrl or {@code null} for none
    */
   public TaskRunnerSettings setBaseUrl(java.lang.String baseUrl) {
@@ -361,11 +349,8 @@ public final class TaskRunnerSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Indicates where to put logs.  If this is not specified, the logs will not be uploaded.
-   *
-   * The supported resource type is:
-   *
-   * Google Cloud Storage:   storage.googleapis.com/{bucket}/{object}
+   * Indicates where to put logs. If this is not specified, the logs will not be uploaded. The
+   * supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object}
    * bucket.storage.googleapis.com/{object}
    * @return value or {@code null} for none
    */
@@ -374,11 +359,8 @@ public final class TaskRunnerSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Indicates where to put logs.  If this is not specified, the logs will not be uploaded.
-   *
-   * The supported resource type is:
-   *
-   * Google Cloud Storage:   storage.googleapis.com/{bucket}/{object}
+   * Indicates where to put logs. If this is not specified, the logs will not be uploaded. The
+   * supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object}
    * bucket.storage.googleapis.com/{object}
    * @param logUploadLocation logUploadLocation or {@code null} for none
    */
@@ -473,11 +455,8 @@ public final class TaskRunnerSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * The prefix of the resources the taskrunner should use for temporary storage.
-   *
-   * The supported resource type is:
-   *
-   * Google Cloud Storage:   storage.googleapis.com/{bucket}/{object}
+   * The prefix of the resources the taskrunner should use for temporary storage. The supported
+   * resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object}
    * bucket.storage.googleapis.com/{object}
    * @return value or {@code null} for none
    */
@@ -486,11 +465,8 @@ public final class TaskRunnerSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * The prefix of the resources the taskrunner should use for temporary storage.
-   *
-   * The supported resource type is:
-   *
-   * Google Cloud Storage:   storage.googleapis.com/{bucket}/{object}
+   * The prefix of the resources the taskrunner should use for temporary storage. The supported
+   * resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object}
    * bucket.storage.googleapis.com/{object}
    * @param tempStoragePrefix tempStoragePrefix or {@code null} for none
    */

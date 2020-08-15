@@ -38,7 +38,7 @@ public final class InstructionInput extends com.google.api.client.json.GenericJs
 
   /**
    * The index (origin zero) of the parallel instruction that produces the output to be consumed by
-   * this input.  This index is relative to the list of instructions in this input's instruction's
+   * this input. This index is relative to the list of instructions in this input's instruction's
    * containing MapTask.
    * The value may be {@code null}.
    */
@@ -64,7 +64,7 @@ public final class InstructionInput extends com.google.api.client.json.GenericJs
 
   /**
    * The index (origin zero) of the parallel instruction that produces the output to be consumed by
-   * this input.  This index is relative to the list of instructions in this input's instruction's
+   * this input. This index is relative to the list of instructions in this input's instruction's
    * containing MapTask.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class InstructionInput extends com.google.api.client.json.GenericJs
 
   /**
    * The index (origin zero) of the parallel instruction that produces the output to be consumed by
-   * this input.  This index is relative to the list of instructions in this input's instruction's
+   * this input. This index is relative to the list of instructions in this input's instruction's
    * containing MapTask.
    * @param producerInstructionIndex producerInstructionIndex or {@code null} for none
    */

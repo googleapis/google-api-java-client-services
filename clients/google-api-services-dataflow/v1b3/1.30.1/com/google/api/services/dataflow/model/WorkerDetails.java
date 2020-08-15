@@ -17,10 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * JobMetrics contains a collection of metrics describing the detailed progress of a Dataflow job.
- * Metrics correspond to user-defined and system-defined metrics in the job. This resource captures
- * only the most recent values of each metric; time-series data can be queried for them (under the
- * same metric names) from Cloud Monitoring.
+ * Information about a worker
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -30,64 +27,70 @@ package com.google.api.services.dataflow.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class JobMetrics extends com.google.api.client.json.GenericJson {
+public final class WorkerDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Timestamp as of which metric values are current.
+   * Work items processed by this worker, sorted by time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String metricTime;
+  private java.util.List<WorkItemDetails> workItems;
 
-  /**
-   * All metrics for this job.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<MetricUpdate> metrics;
-
-  /**
-   * Timestamp as of which metric values are current.
-   * @return value or {@code null} for none
-   */
-  public String getMetricTime() {
-    return metricTime;
+  static {
+    // hack to force ProGuard to consider WorkItemDetails used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(WorkItemDetails.class);
   }
 
   /**
-   * Timestamp as of which metric values are current.
-   * @param metricTime metricTime or {@code null} for none
+   * Name of this worker
+   * The value may be {@code null}.
    */
-  public JobMetrics setMetricTime(String metricTime) {
-    this.metricTime = metricTime;
+  @com.google.api.client.util.Key
+  private java.lang.String workerName;
+
+  /**
+   * Work items processed by this worker, sorted by time.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<WorkItemDetails> getWorkItems() {
+    return workItems;
+  }
+
+  /**
+   * Work items processed by this worker, sorted by time.
+   * @param workItems workItems or {@code null} for none
+   */
+  public WorkerDetails setWorkItems(java.util.List<WorkItemDetails> workItems) {
+    this.workItems = workItems;
     return this;
   }
 
   /**
-   * All metrics for this job.
+   * Name of this worker
    * @return value or {@code null} for none
    */
-  public java.util.List<MetricUpdate> getMetrics() {
-    return metrics;
+  public java.lang.String getWorkerName() {
+    return workerName;
   }
 
   /**
-   * All metrics for this job.
-   * @param metrics metrics or {@code null} for none
+   * Name of this worker
+   * @param workerName workerName or {@code null} for none
    */
-  public JobMetrics setMetrics(java.util.List<MetricUpdate> metrics) {
-    this.metrics = metrics;
+  public WorkerDetails setWorkerName(java.lang.String workerName) {
+    this.workerName = workerName;
     return this;
   }
 
   @Override
-  public JobMetrics set(String fieldName, Object value) {
-    return (JobMetrics) super.set(fieldName, value);
+  public WorkerDetails set(String fieldName, Object value) {
+    return (WorkerDetails) super.set(fieldName, value);
   }
 
   @Override
-  public JobMetrics clone() {
-    return (JobMetrics) super.clone();
+  public WorkerDetails clone() {
+    return (WorkerDetails) super.clone();
   }
 
 }

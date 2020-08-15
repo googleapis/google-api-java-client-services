@@ -18,7 +18,7 @@ package com.google.api.services.dataflow.model;
 
 /**
  * Describes one particular pool of Cloud Dataflow workers to be instantiated by the Cloud Dataflow
- * service in order to perform the computations required by a job.  Note that a workflow job may use
+ * service in order to perform the computations required by a job. Note that a workflow job may use
  * multiple pools, in order to match the various computational requirements of the various stages of
  * the job.
  *
@@ -53,15 +53,15 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The default package set to install.  This allows the service to select a default set of
-   * packages which are useful to worker harnesses written in a particular language.
+   * The default package set to install. This allows the service to select a default set of packages
+   * which are useful to worker harnesses written in a particular language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultPackageSet;
 
   /**
-   * Size of root disk for VMs, in GB.  If zero or unspecified, the service will attempt to choose a
+   * Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a
    * reasonable default.
    * The value may be {@code null}.
    */
@@ -76,7 +76,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   private java.lang.String diskSourceImage;
 
   /**
-   * Type of root disk for VMs.  If empty or unspecified, the service will attempt to choose a
+   * Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a
    * reasonable default.
    * The value may be {@code null}.
    */
@@ -98,7 +98,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Machine type (e.g. "n1-standard-1").  If empty or unspecified, the service will attempt to
+   * Machine type (e.g. "n1-standard-1"). If empty or unspecified, the service will attempt to
    * choose a reasonable default.
    * The value may be {@code null}.
    */
@@ -113,7 +113,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
-   * Network to which VMs will be assigned.  If empty or unspecified, the service will use the
+   * Network to which VMs will be assigned. If empty or unspecified, the service will use the
    * network "default".
    * The value may be {@code null}.
    */
@@ -130,7 +130,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   private java.lang.Integer numThreadsPerWorker;
 
   /**
-   * Number of Google Compute Engine workers in this pool needed to execute the job.  If zero or
+   * Number of Google Compute Engine workers in this pool needed to execute the job. If zero or
    * unspecified, the service will attempt to choose a reasonable default.
    * The value may be {@code null}.
    */
@@ -180,7 +180,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subnetwork to which VMs will be assigned, if desired.  Expected to be of the form
+   * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form
    * "regions/REGION/subnetworks/SUBNETWORK".
    * The value may be {@code null}.
    */
@@ -189,7 +189,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
 
   /**
    * Settings passed through to Google Compute Engine workers when using the standard Dataflow task
-   * runner.  Users should ignore this field.
+   * runner. Users should ignore this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,14 +200,11 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
    * `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers
    * are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means
    * workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn
-   * down.
-   *
-   * If the workers are not torn down by the service, they will continue to run and use Google
+   * down. If the workers are not torn down by the service, they will continue to run and use Google
    * Compute Engine VM resources in the user's project until they are explicitly terminated by the
    * user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small,
-   * manually supervised test jobs.
-   *
-   * If unknown or unspecified, the service will attempt to choose a reasonable default.
+   * manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a
+   * reasonable default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,16 +212,15 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Docker container image that executes the Cloud Dataflow worker harness, residing in
-   * Google Container Registry.
-   *
-   * Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+   * Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workerHarnessContainerImage;
 
   /**
-   * Zone to run the worker pools in.  If empty or unspecified, the service will attempt to choose a
+   * Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a
    * reasonable default.
    * The value may be {@code null}.
    */
@@ -266,8 +262,8 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The default package set to install.  This allows the service to select a default set of
-   * packages which are useful to worker harnesses written in a particular language.
+   * The default package set to install. This allows the service to select a default set of packages
+   * which are useful to worker harnesses written in a particular language.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultPackageSet() {
@@ -275,8 +271,8 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The default package set to install.  This allows the service to select a default set of
-   * packages which are useful to worker harnesses written in a particular language.
+   * The default package set to install. This allows the service to select a default set of packages
+   * which are useful to worker harnesses written in a particular language.
    * @param defaultPackageSet defaultPackageSet or {@code null} for none
    */
   public WorkerPool setDefaultPackageSet(java.lang.String defaultPackageSet) {
@@ -285,7 +281,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of root disk for VMs, in GB.  If zero or unspecified, the service will attempt to choose a
+   * Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a
    * reasonable default.
    * @return value or {@code null} for none
    */
@@ -294,7 +290,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of root disk for VMs, in GB.  If zero or unspecified, the service will attempt to choose a
+   * Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a
    * reasonable default.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
@@ -321,7 +317,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of root disk for VMs.  If empty or unspecified, the service will attempt to choose a
+   * Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a
    * reasonable default.
    * @return value or {@code null} for none
    */
@@ -330,7 +326,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of root disk for VMs.  If empty or unspecified, the service will attempt to choose a
+   * Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a
    * reasonable default.
    * @param diskType diskType or {@code null} for none
    */
@@ -374,7 +370,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Machine type (e.g. "n1-standard-1").  If empty or unspecified, the service will attempt to
+   * Machine type (e.g. "n1-standard-1"). If empty or unspecified, the service will attempt to
    * choose a reasonable default.
    * @return value or {@code null} for none
    */
@@ -383,7 +379,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Machine type (e.g. "n1-standard-1").  If empty or unspecified, the service will attempt to
+   * Machine type (e.g. "n1-standard-1"). If empty or unspecified, the service will attempt to
    * choose a reasonable default.
    * @param machineType machineType or {@code null} for none
    */
@@ -410,7 +406,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network to which VMs will be assigned.  If empty or unspecified, the service will use the
+   * Network to which VMs will be assigned. If empty or unspecified, the service will use the
    * network "default".
    * @return value or {@code null} for none
    */
@@ -419,7 +415,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network to which VMs will be assigned.  If empty or unspecified, the service will use the
+   * Network to which VMs will be assigned. If empty or unspecified, the service will use the
    * network "default".
    * @param network network or {@code null} for none
    */
@@ -450,7 +446,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of Google Compute Engine workers in this pool needed to execute the job.  If zero or
+   * Number of Google Compute Engine workers in this pool needed to execute the job. If zero or
    * unspecified, the service will attempt to choose a reasonable default.
    * @return value or {@code null} for none
    */
@@ -459,7 +455,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of Google Compute Engine workers in this pool needed to execute the job.  If zero or
+   * Number of Google Compute Engine workers in this pool needed to execute the job. If zero or
    * unspecified, the service will attempt to choose a reasonable default.
    * @param numWorkers numWorkers or {@code null} for none
    */
@@ -541,7 +537,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subnetwork to which VMs will be assigned, if desired.  Expected to be of the form
+   * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form
    * "regions/REGION/subnetworks/SUBNETWORK".
    * @return value or {@code null} for none
    */
@@ -550,7 +546,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subnetwork to which VMs will be assigned, if desired.  Expected to be of the form
+   * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form
    * "regions/REGION/subnetworks/SUBNETWORK".
    * @param subnetwork subnetwork or {@code null} for none
    */
@@ -561,7 +557,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
 
   /**
    * Settings passed through to Google Compute Engine workers when using the standard Dataflow task
-   * runner.  Users should ignore this field.
+   * runner. Users should ignore this field.
    * @return value or {@code null} for none
    */
   public TaskRunnerSettings getTaskrunnerSettings() {
@@ -570,7 +566,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
 
   /**
    * Settings passed through to Google Compute Engine workers when using the standard Dataflow task
-   * runner.  Users should ignore this field.
+   * runner. Users should ignore this field.
    * @param taskrunnerSettings taskrunnerSettings or {@code null} for none
    */
   public WorkerPool setTaskrunnerSettings(TaskRunnerSettings taskrunnerSettings) {
@@ -583,14 +579,11 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
    * `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers
    * are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means
    * workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn
-   * down.
-   *
-   * If the workers are not torn down by the service, they will continue to run and use Google
+   * down. If the workers are not torn down by the service, they will continue to run and use Google
    * Compute Engine VM resources in the user's project until they are explicitly terminated by the
    * user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small,
-   * manually supervised test jobs.
-   *
-   * If unknown or unspecified, the service will attempt to choose a reasonable default.
+   * manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a
+   * reasonable default.
    * @return value or {@code null} for none
    */
   public java.lang.String getTeardownPolicy() {
@@ -602,14 +595,11 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
    * `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers
    * are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means
    * workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn
-   * down.
-   *
-   * If the workers are not torn down by the service, they will continue to run and use Google
+   * down. If the workers are not torn down by the service, they will continue to run and use Google
    * Compute Engine VM resources in the user's project until they are explicitly terminated by the
    * user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small,
-   * manually supervised test jobs.
-   *
-   * If unknown or unspecified, the service will attempt to choose a reasonable default.
+   * manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a
+   * reasonable default.
    * @param teardownPolicy teardownPolicy or {@code null} for none
    */
   public WorkerPool setTeardownPolicy(java.lang.String teardownPolicy) {
@@ -619,9 +609,8 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Docker container image that executes the Cloud Dataflow worker harness, residing in
-   * Google Container Registry.
-   *
-   * Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+   * Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerHarnessContainerImage() {
@@ -630,9 +619,8 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Docker container image that executes the Cloud Dataflow worker harness, residing in
-   * Google Container Registry.
-   *
-   * Deprecated for the Fn API path. Use sdk_harness_container_images instead.
+   * Google Container Registry. Deprecated for the Fn API path. Use sdk_harness_container_images
+   * instead.
    * @param workerHarnessContainerImage workerHarnessContainerImage or {@code null} for none
    */
   public WorkerPool setWorkerHarnessContainerImage(java.lang.String workerHarnessContainerImage) {
@@ -641,7 +629,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Zone to run the worker pools in.  If empty or unspecified, the service will attempt to choose a
+   * Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a
    * reasonable default.
    * @return value or {@code null} for none
    */
@@ -650,7 +638,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Zone to run the worker pools in.  If empty or unspecified, the service will attempt to choose a
+   * Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a
    * reasonable default.
    * @param zone zone or {@code null} for none
    */

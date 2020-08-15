@@ -71,7 +71,7 @@ public final class TransformSummary extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * User  names for all collection outputs to this transform.
+   * User names for all collection outputs to this transform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,7 @@ public final class TransformSummary extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * User  names for all collection outputs to this transform.
+   * User names for all collection outputs to this transform.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOutputCollectionName() {
@@ -171,7 +171,7 @@ public final class TransformSummary extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * User  names for all collection outputs to this transform.
+   * User names for all collection outputs to this transform.
    * @param outputCollectionName outputCollectionName or {@code null} for none
    */
   public TransformSummary setOutputCollectionName(java.util.List<java.lang.String> outputCollectionName) {

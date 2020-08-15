@@ -56,14 +56,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String createdFromSnapshotId;
 
   /**
-   * The current state of the job.
-   *
-   * Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified.
-   *
-   * A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job
-   * has reached a terminal state, no further state updates may be made.
-   *
-   * This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+   * The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless
+   * otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal
+   * state. After a job has reached a terminal state, no further state updates may be made. This
+   * field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,10 +87,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private JobExecutionInfo executionInfo;
 
   /**
-   * The unique ID of this job.
-   *
-   * This field is set by the Cloud Dataflow service when the Job is created, and is immutable for
-   * the life of the job.
+   * The unique ID of this job. This field is set by the Cloud Dataflow service when the Job is
+   * created, and is immutable for the life of the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,12 +103,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private JobMetadata jobMetadata;
 
   /**
-   * User-defined labels for this job.
-   *
-   * The labels map can contain no more than 64 entries.  Entries of the labels map are UTF8 strings
-   * that comply with the following restrictions:
-   *
-   * * Keys must conform to regexp:  \p{Ll}\p{Lo}{0,62} * Values must conform to regexp:
+   * User-defined labels for this job. The labels map can contain no more than 64 entries. Entries
+   * of the labels map are UTF8 strings that comply with the following restrictions: * Keys must
+   * conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp:
    * [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128
    * bytes in size.
    * The value may be {@code null}.
@@ -131,13 +122,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
-   * The user-specified Cloud Dataflow job name.
-   *
-   * Only one Job with a given name may exist in a project at any given time. If a caller attempts
-   * to create a Job with the same name as an already-existing Job, the attempt returns the existing
-   * Job.
-   *
-   * The name must match the regular expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+   * The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a
+   * project at any given time. If a caller attempts to create a Job with the same name as an
+   * already-existing Job, the attempt returns the existing Job. The name must match the regular
+   * expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +133,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Preliminary field: The format of this data may change at any time. A description of the user
-   * pipeline and stages through which it is executed. Created by Cloud Dataflow service.  Only
+   * pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only
    * retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
    * The value may be {@code null}.
    */
@@ -161,7 +149,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * If this job is an update of an existing job, this field is the job ID of the job it replaced.
-   *
    * When sending a `CreateJobRequest`, you can update a job by specifying it here. The job named
    * here is stopped, and its intermediate state is transferred to this job.
    * The value may be {@code null}.
@@ -178,12 +165,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String replacedByJobId;
 
   /**
-   * The job's requested state.
-   *
-   * `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING`
-   * states, by setting requested_state.  `UpdateJob` may also be used to directly set a job's
-   * requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job
-   * if it has not already reached a terminal state.
+   * The job's requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED`
+   * and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to
+   * directly set a job's requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably
+   * terminating the job if it has not already reached a terminal state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,9 +198,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private String startTime;
 
   /**
-   * Exactly one of step or steps_location should be specified.
-   *
-   * The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
+   * Exactly one of step or steps_location should be specified. The top-level steps that constitute
+   * the entire job. Only retrieved with JOB_VIEW_ALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,13 +215,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   /**
    * A set of files the system should be aware of that are used for temporary storage. These
    * temporary files will be removed on job completion. No duplicates are allowed. No file patterns
-   * are supported.
-   *
-   * The supported files are:
-   *
-   * Google Cloud Storage:
-   *
-   *    storage.googleapis.com/{bucket}/{object}    bucket.storage.googleapis.com/{object}
+   * are supported. The supported files are: Google Cloud Storage:
+   * storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -320,14 +299,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current state of the job.
-   *
-   * Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified.
-   *
-   * A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job
-   * has reached a terminal state, no further state updates may be made.
-   *
-   * This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+   * The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless
+   * otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal
+   * state. After a job has reached a terminal state, no further state updates may be made. This
+   * field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentState() {
@@ -335,14 +310,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current state of the job.
-   *
-   * Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified.
-   *
-   * A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job
-   * has reached a terminal state, no further state updates may be made.
-   *
-   * This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+   * The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless
+   * otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal
+   * state. After a job has reached a terminal state, no further state updates may be made. This
+   * field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
    * @param currentState currentState or {@code null} for none
    */
   public Job setCurrentState(java.lang.String currentState) {
@@ -402,10 +373,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of this job.
-   *
-   * This field is set by the Cloud Dataflow service when the Job is created, and is immutable for
-   * the life of the job.
+   * The unique ID of this job. This field is set by the Cloud Dataflow service when the Job is
+   * created, and is immutable for the life of the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -413,10 +382,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of this job.
-   *
-   * This field is set by the Cloud Dataflow service when the Job is created, and is immutable for
-   * the life of the job.
+   * The unique ID of this job. This field is set by the Cloud Dataflow service when the Job is
+   * created, and is immutable for the life of the job.
    * @param id id or {@code null} for none
    */
   public Job setId(java.lang.String id) {
@@ -444,12 +411,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-defined labels for this job.
-   *
-   * The labels map can contain no more than 64 entries.  Entries of the labels map are UTF8 strings
-   * that comply with the following restrictions:
-   *
-   * * Keys must conform to regexp:  \p{Ll}\p{Lo}{0,62} * Values must conform to regexp:
+   * User-defined labels for this job. The labels map can contain no more than 64 entries. Entries
+   * of the labels map are UTF8 strings that comply with the following restrictions: * Keys must
+   * conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp:
    * [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128
    * bytes in size.
    * @return value or {@code null} for none
@@ -459,12 +423,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-defined labels for this job.
-   *
-   * The labels map can contain no more than 64 entries.  Entries of the labels map are UTF8 strings
-   * that comply with the following restrictions:
-   *
-   * * Keys must conform to regexp:  \p{Ll}\p{Lo}{0,62} * Values must conform to regexp:
+   * User-defined labels for this job. The labels map can contain no more than 64 entries. Entries
+   * of the labels map are UTF8 strings that comply with the following restrictions: * Keys must
+   * conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp:
    * [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128
    * bytes in size.
    * @param labels labels or {@code null} for none
@@ -494,13 +455,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-specified Cloud Dataflow job name.
-   *
-   * Only one Job with a given name may exist in a project at any given time. If a caller attempts
-   * to create a Job with the same name as an already-existing Job, the attempt returns the existing
-   * Job.
-   *
-   * The name must match the regular expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+   * The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a
+   * project at any given time. If a caller attempts to create a Job with the same name as an
+   * already-existing Job, the attempt returns the existing Job. The name must match the regular
+   * expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -508,13 +466,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-specified Cloud Dataflow job name.
-   *
-   * Only one Job with a given name may exist in a project at any given time. If a caller attempts
-   * to create a Job with the same name as an already-existing Job, the attempt returns the existing
-   * Job.
-   *
-   * The name must match the regular expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+   * The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a
+   * project at any given time. If a caller attempts to create a Job with the same name as an
+   * already-existing Job, the attempt returns the existing Job. The name must match the regular
+   * expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
    * @param name name or {@code null} for none
    */
   public Job setName(java.lang.String name) {
@@ -524,7 +479,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Preliminary field: The format of this data may change at any time. A description of the user
-   * pipeline and stages through which it is executed. Created by Cloud Dataflow service.  Only
+   * pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only
    * retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
    * @return value or {@code null} for none
    */
@@ -534,7 +489,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Preliminary field: The format of this data may change at any time. A description of the user
-   * pipeline and stages through which it is executed. Created by Cloud Dataflow service.  Only
+   * pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only
    * retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
    * @param pipelineDescription pipelineDescription or {@code null} for none
    */
@@ -562,7 +517,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * If this job is an update of an existing job, this field is the job ID of the job it replaced.
-   *
    * When sending a `CreateJobRequest`, you can update a job by specifying it here. The job named
    * here is stopped, and its intermediate state is transferred to this job.
    * @return value or {@code null} for none
@@ -573,7 +527,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * If this job is an update of an existing job, this field is the job ID of the job it replaced.
-   *
    * When sending a `CreateJobRequest`, you can update a job by specifying it here. The job named
    * here is stopped, and its intermediate state is transferred to this job.
    * @param replaceJobId replaceJobId or {@code null} for none
@@ -603,12 +556,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The job's requested state.
-   *
-   * `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING`
-   * states, by setting requested_state.  `UpdateJob` may also be used to directly set a job's
-   * requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job
-   * if it has not already reached a terminal state.
+   * The job's requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED`
+   * and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to
+   * directly set a job's requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably
+   * terminating the job if it has not already reached a terminal state.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestedState() {
@@ -616,12 +567,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The job's requested state.
-   *
-   * `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING`
-   * states, by setting requested_state.  `UpdateJob` may also be used to directly set a job's
-   * requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job
-   * if it has not already reached a terminal state.
+   * The job's requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED`
+   * and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to
+   * directly set a job's requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably
+   * terminating the job if it has not already reached a terminal state.
    * @param requestedState requestedState or {@code null} for none
    */
   public Job setRequestedState(java.lang.String requestedState) {
@@ -670,9 +619,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Exactly one of step or steps_location should be specified.
-   *
-   * The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
+   * Exactly one of step or steps_location should be specified. The top-level steps that constitute
+   * the entire job. Only retrieved with JOB_VIEW_ALL.
    * @return value or {@code null} for none
    */
   public java.util.List<Step> getSteps() {
@@ -680,9 +628,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Exactly one of step or steps_location should be specified.
-   *
-   * The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
+   * Exactly one of step or steps_location should be specified. The top-level steps that constitute
+   * the entire job. Only retrieved with JOB_VIEW_ALL.
    * @param steps steps or {@code null} for none
    */
   public Job setSteps(java.util.List<Step> steps) {
@@ -710,13 +657,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   /**
    * A set of files the system should be aware of that are used for temporary storage. These
    * temporary files will be removed on job completion. No duplicates are allowed. No file patterns
-   * are supported.
-   *
-   * The supported files are:
-   *
-   * Google Cloud Storage:
-   *
-   *    storage.googleapis.com/{bucket}/{object}    bucket.storage.googleapis.com/{object}
+   * are supported. The supported files are: Google Cloud Storage:
+   * storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTempFiles() {
@@ -726,13 +668,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   /**
    * A set of files the system should be aware of that are used for temporary storage. These
    * temporary files will be removed on job completion. No duplicates are allowed. No file patterns
-   * are supported.
-   *
-   * The supported files are:
-   *
-   * Google Cloud Storage:
-   *
-   *    storage.googleapis.com/{bucket}/{object}    bucket.storage.googleapis.com/{object}
+   * are supported. The supported files are: Google Cloud Storage:
+   * storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
    * @param tempFiles tempFiles or {@code null} for none
    */
   public Job setTempFiles(java.util.List<java.lang.String> tempFiles) {

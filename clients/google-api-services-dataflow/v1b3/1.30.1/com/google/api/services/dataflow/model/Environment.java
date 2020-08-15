@@ -30,8 +30,8 @@ package com.google.api.services.dataflow.model;
 public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of cluster manager API to use.  If unknown or unspecified, the service will attempt to
-   * choose a reasonable default.  This should be in the form of the API service name, e.g.
+   * The type of cluster manager API to use. If unknown or unspecified, the service will attempt to
+   * choose a reasonable default. This should be in the form of the API service name, e.g.
    * "compute.googleapis.com".
    * The value may be {@code null}.
    */
@@ -39,11 +39,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String clusterManagerApiService;
 
   /**
-   * The dataset for the current project where various workflow related tables are stored.
-   *
-   * The supported resource type is:
-   *
-   * Google BigQuery:   bigquery.googleapis.com/{dataset}
+   * The dataset for the current project where various workflow related tables are stored. The
+   * supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,24 +85,20 @@ public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
    * If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer
-   * Managed Encryption Key (CMEK).
-   *
-   * Format:   projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
+   * Managed Encryption Key (CMEK). Format:
+   * projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceKmsKeyName;
 
   /**
-   * The prefix of the resources the system should use for temporary storage.  The system will
-   * append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the
-   * job_name field.  The resulting bucket and object prefix is used as the prefix of the resources
-   * used to store temporary data needed during the job execution.  NOTE: This will override the
-   * value in taskrunner_settings. The supported resource type is:
-   *
-   * Google Cloud Storage:
-   *
-   *   storage.googleapis.com/{bucket}/{object}   bucket.storage.googleapis.com/{object}
+   * The prefix of the resources the system should use for temporary storage. The system will append
+   * the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the
+   * job_name field. The resulting bucket and object prefix is used as the prefix of the resources
+   * used to store temporary data needed during the job execution. NOTE: This will override the
+   * value in taskrunner_settings. The supported resource type is: Google Cloud Storage:
+   * storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,8 +147,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String workerZone;
 
   /**
-   * The type of cluster manager API to use.  If unknown or unspecified, the service will attempt to
-   * choose a reasonable default.  This should be in the form of the API service name, e.g.
+   * The type of cluster manager API to use. If unknown or unspecified, the service will attempt to
+   * choose a reasonable default. This should be in the form of the API service name, e.g.
    * "compute.googleapis.com".
    * @return value or {@code null} for none
    */
@@ -164,8 +157,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of cluster manager API to use.  If unknown or unspecified, the service will attempt to
-   * choose a reasonable default.  This should be in the form of the API service name, e.g.
+   * The type of cluster manager API to use. If unknown or unspecified, the service will attempt to
+   * choose a reasonable default. This should be in the form of the API service name, e.g.
    * "compute.googleapis.com".
    * @param clusterManagerApiService clusterManagerApiService or {@code null} for none
    */
@@ -175,11 +168,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dataset for the current project where various workflow related tables are stored.
-   *
-   * The supported resource type is:
-   *
-   * Google BigQuery:   bigquery.googleapis.com/{dataset}
+   * The dataset for the current project where various workflow related tables are stored. The
+   * supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}
    * @return value or {@code null} for none
    */
   public java.lang.String getDataset() {
@@ -187,11 +177,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dataset for the current project where various workflow related tables are stored.
-   *
-   * The supported resource type is:
-   *
-   * Google BigQuery:   bigquery.googleapis.com/{dataset}
+   * The dataset for the current project where various workflow related tables are stored. The
+   * supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}
    * @param dataset dataset or {@code null} for none
    */
   public Environment setDataset(java.lang.String dataset) {
@@ -290,9 +277,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
    * If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer
-   * Managed Encryption Key (CMEK).
-   *
-   * Format:   projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
+   * Managed Encryption Key (CMEK). Format:
+   * projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceKmsKeyName() {
@@ -301,9 +287,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
    * If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer
-   * Managed Encryption Key (CMEK).
-   *
-   * Format:   projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
+   * Managed Encryption Key (CMEK). Format:
+   * projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
    * @param serviceKmsKeyName serviceKmsKeyName or {@code null} for none
    */
   public Environment setServiceKmsKeyName(java.lang.String serviceKmsKeyName) {
@@ -312,15 +297,12 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The prefix of the resources the system should use for temporary storage.  The system will
-   * append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the
-   * job_name field.  The resulting bucket and object prefix is used as the prefix of the resources
-   * used to store temporary data needed during the job execution.  NOTE: This will override the
-   * value in taskrunner_settings. The supported resource type is:
-   *
-   * Google Cloud Storage:
-   *
-   *   storage.googleapis.com/{bucket}/{object}   bucket.storage.googleapis.com/{object}
+   * The prefix of the resources the system should use for temporary storage. The system will append
+   * the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the
+   * job_name field. The resulting bucket and object prefix is used as the prefix of the resources
+   * used to store temporary data needed during the job execution. NOTE: This will override the
+   * value in taskrunner_settings. The supported resource type is: Google Cloud Storage:
+   * storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
    * @return value or {@code null} for none
    */
   public java.lang.String getTempStoragePrefix() {
@@ -328,15 +310,12 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The prefix of the resources the system should use for temporary storage.  The system will
-   * append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the
-   * job_name field.  The resulting bucket and object prefix is used as the prefix of the resources
-   * used to store temporary data needed during the job execution.  NOTE: This will override the
-   * value in taskrunner_settings. The supported resource type is:
-   *
-   * Google Cloud Storage:
-   *
-   *   storage.googleapis.com/{bucket}/{object}   bucket.storage.googleapis.com/{object}
+   * The prefix of the resources the system should use for temporary storage. The system will append
+   * the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the
+   * job_name field. The resulting bucket and object prefix is used as the prefix of the resources
+   * used to store temporary data needed during the job execution. NOTE: This will override the
+   * value in taskrunner_settings. The supported resource type is: Google Cloud Storage:
+   * storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
    * @param tempStoragePrefix tempStoragePrefix or {@code null} for none
    */
   public Environment setTempStoragePrefix(java.lang.String tempStoragePrefix) {

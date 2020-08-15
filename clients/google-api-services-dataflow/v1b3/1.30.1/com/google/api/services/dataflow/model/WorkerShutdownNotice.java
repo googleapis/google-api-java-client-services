@@ -31,18 +31,18 @@ package com.google.api.services.dataflow.model;
 public final class WorkerShutdownNotice extends com.google.api.client.json.GenericJson {
 
   /**
-   * The reason for the worker shutdown. Current possible values are:   "UNKNOWN": shutdown reason
-   * is unknown.   "PREEMPTION": shutdown reason is preemption. Other possible reasons may be added
-   * in the future.
+   * The reason for the worker shutdown. Current possible values are: "UNKNOWN": shutdown reason is
+   * unknown. "PREEMPTION": shutdown reason is preemption. Other possible reasons may be added in
+   * the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * The reason for the worker shutdown. Current possible values are:   "UNKNOWN": shutdown reason
-   * is unknown.   "PREEMPTION": shutdown reason is preemption. Other possible reasons may be added
-   * in the future.
+   * The reason for the worker shutdown. Current possible values are: "UNKNOWN": shutdown reason is
+   * unknown. "PREEMPTION": shutdown reason is preemption. Other possible reasons may be added in
+   * the future.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -50,9 +50,9 @@ public final class WorkerShutdownNotice extends com.google.api.client.json.Gener
   }
 
   /**
-   * The reason for the worker shutdown. Current possible values are:   "UNKNOWN": shutdown reason
-   * is unknown.   "PREEMPTION": shutdown reason is preemption. Other possible reasons may be added
-   * in the future.
+   * The reason for the worker shutdown. Current possible values are: "UNKNOWN": shutdown reason is
+   * unknown. "PREEMPTION": shutdown reason is preemption. Other possible reasons may be added in
+   * the future.
    * @param reason reason or {@code null} for none
    */
   public WorkerShutdownNotice setReason(java.lang.String reason) {

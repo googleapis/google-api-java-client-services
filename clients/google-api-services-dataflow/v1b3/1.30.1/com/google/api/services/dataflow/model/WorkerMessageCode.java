@@ -19,10 +19,8 @@ package com.google.api.services.dataflow.model;
 /**
  * A message code is used to report status and error messages to the service. The message codes are
  * intended to be machine readable. The service will take care of translating these into user
- * understandable messages if necessary.
- *
- * Example use cases:   1. Worker processes reporting successful startup.   2. Worker processes
- * reporting specific errors (e.g. package staging      failure).
+ * understandable messages if necessary. Example use cases: 1. Worker processes reporting successful
+ * startup. 2. Worker processes reporting specific errors (e.g. package staging failure).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -36,33 +34,25 @@ public final class WorkerMessageCode extends com.google.api.client.json.GenericJ
 
   /**
    * The code is a string intended for consumption by a machine that identifies the type of message
-   * being sent. Examples:  1. "HARNESS_STARTED" might be used to indicate the worker harness has
-   * started.  2. "GCS_DOWNLOAD_ERROR" might be used to indicate an error downloading     a GCS file
-   * as part of the boot process of one of the worker containers.
-   *
-   * This is a string and not an enum to make it easy to add new codes without waiting for an API
-   * change.
+   * being sent. Examples: 1. "HARNESS_STARTED" might be used to indicate the worker harness has
+   * started. 2. "GCS_DOWNLOAD_ERROR" might be used to indicate an error downloading a GCS file as
+   * part of the boot process of one of the worker containers. This is a string and not an enum to
+   * make it easy to add new codes without waiting for an API change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
 
   /**
-   * Parameters contains specific information about the code.
-   *
-   * This is a struct to allow parameters of different types.
-   *
-   * Examples:  1. For a "HARNESS_STARTED" message parameters might provide the name     of the
-   * worker and additional data like timing information.  2. For a "GCS_DOWNLOAD_ERROR" parameters
-   * might contain fields listing     the GCS objects being downloaded and fields containing errors.
-   *
-   * In general complex data structures should be avoided. If a worker needs to send a specific and
-   * complicated data structure then please consider defining a new proto and adding it to the data
-   * oneof in WorkerMessageResponse.
-   *
-   * Conventions:  Parameters should only be used for information that isn't typically passed  as a
-   * label.  hostname and other worker identifiers should almost always be passed  as labels since
-   * they will be included on most messages.
+   * Parameters contains specific information about the code. This is a struct to allow parameters
+   * of different types. Examples: 1. For a "HARNESS_STARTED" message parameters might provide the
+   * name of the worker and additional data like timing information. 2. For a "GCS_DOWNLOAD_ERROR"
+   * parameters might contain fields listing the GCS objects being downloaded and fields containing
+   * errors. In general complex data structures should be avoided. If a worker needs to send a
+   * specific and complicated data structure then please consider defining a new proto and adding it
+   * to the data oneof in WorkerMessageResponse. Conventions: Parameters should only be used for
+   * information that isn't typically passed as a label. hostname and other worker identifiers
+   * should almost always be passed as labels since they will be included on most messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,12 +60,10 @@ public final class WorkerMessageCode extends com.google.api.client.json.GenericJ
 
   /**
    * The code is a string intended for consumption by a machine that identifies the type of message
-   * being sent. Examples:  1. "HARNESS_STARTED" might be used to indicate the worker harness has
-   * started.  2. "GCS_DOWNLOAD_ERROR" might be used to indicate an error downloading     a GCS file
-   * as part of the boot process of one of the worker containers.
-   *
-   * This is a string and not an enum to make it easy to add new codes without waiting for an API
-   * change.
+   * being sent. Examples: 1. "HARNESS_STARTED" might be used to indicate the worker harness has
+   * started. 2. "GCS_DOWNLOAD_ERROR" might be used to indicate an error downloading a GCS file as
+   * part of the boot process of one of the worker containers. This is a string and not an enum to
+   * make it easy to add new codes without waiting for an API change.
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -84,12 +72,10 @@ public final class WorkerMessageCode extends com.google.api.client.json.GenericJ
 
   /**
    * The code is a string intended for consumption by a machine that identifies the type of message
-   * being sent. Examples:  1. "HARNESS_STARTED" might be used to indicate the worker harness has
-   * started.  2. "GCS_DOWNLOAD_ERROR" might be used to indicate an error downloading     a GCS file
-   * as part of the boot process of one of the worker containers.
-   *
-   * This is a string and not an enum to make it easy to add new codes without waiting for an API
-   * change.
+   * being sent. Examples: 1. "HARNESS_STARTED" might be used to indicate the worker harness has
+   * started. 2. "GCS_DOWNLOAD_ERROR" might be used to indicate an error downloading a GCS file as
+   * part of the boot process of one of the worker containers. This is a string and not an enum to
+   * make it easy to add new codes without waiting for an API change.
    * @param code code or {@code null} for none
    */
   public WorkerMessageCode setCode(java.lang.String code) {
@@ -98,21 +84,15 @@ public final class WorkerMessageCode extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Parameters contains specific information about the code.
-   *
-   * This is a struct to allow parameters of different types.
-   *
-   * Examples:  1. For a "HARNESS_STARTED" message parameters might provide the name     of the
-   * worker and additional data like timing information.  2. For a "GCS_DOWNLOAD_ERROR" parameters
-   * might contain fields listing     the GCS objects being downloaded and fields containing errors.
-   *
-   * In general complex data structures should be avoided. If a worker needs to send a specific and
-   * complicated data structure then please consider defining a new proto and adding it to the data
-   * oneof in WorkerMessageResponse.
-   *
-   * Conventions:  Parameters should only be used for information that isn't typically passed  as a
-   * label.  hostname and other worker identifiers should almost always be passed  as labels since
-   * they will be included on most messages.
+   * Parameters contains specific information about the code. This is a struct to allow parameters
+   * of different types. Examples: 1. For a "HARNESS_STARTED" message parameters might provide the
+   * name of the worker and additional data like timing information. 2. For a "GCS_DOWNLOAD_ERROR"
+   * parameters might contain fields listing the GCS objects being downloaded and fields containing
+   * errors. In general complex data structures should be avoided. If a worker needs to send a
+   * specific and complicated data structure then please consider defining a new proto and adding it
+   * to the data oneof in WorkerMessageResponse. Conventions: Parameters should only be used for
+   * information that isn't typically passed as a label. hostname and other worker identifiers
+   * should almost always be passed as labels since they will be included on most messages.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -120,21 +100,15 @@ public final class WorkerMessageCode extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Parameters contains specific information about the code.
-   *
-   * This is a struct to allow parameters of different types.
-   *
-   * Examples:  1. For a "HARNESS_STARTED" message parameters might provide the name     of the
-   * worker and additional data like timing information.  2. For a "GCS_DOWNLOAD_ERROR" parameters
-   * might contain fields listing     the GCS objects being downloaded and fields containing errors.
-   *
-   * In general complex data structures should be avoided. If a worker needs to send a specific and
-   * complicated data structure then please consider defining a new proto and adding it to the data
-   * oneof in WorkerMessageResponse.
-   *
-   * Conventions:  Parameters should only be used for information that isn't typically passed  as a
-   * label.  hostname and other worker identifiers should almost always be passed  as labels since
-   * they will be included on most messages.
+   * Parameters contains specific information about the code. This is a struct to allow parameters
+   * of different types. Examples: 1. For a "HARNESS_STARTED" message parameters might provide the
+   * name of the worker and additional data like timing information. 2. For a "GCS_DOWNLOAD_ERROR"
+   * parameters might contain fields listing the GCS objects being downloaded and fields containing
+   * errors. In general complex data structures should be avoided. If a worker needs to send a
+   * specific and complicated data structure then please consider defining a new proto and adding it
+   * to the data oneof in WorkerMessageResponse. Conventions: Parameters should only be used for
+   * information that isn't typically passed as a label. hostname and other worker identifiers
+   * should almost always be passed as labels since they will be included on most messages.
    * @param parameters parameters or {@code null} for none
    */
   public WorkerMessageCode setParameters(java.util.Map<String, java.lang.Object> parameters) {

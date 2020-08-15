@@ -18,12 +18,10 @@ package com.google.api.services.dataflow.model;
 
 /**
  * The packages that must be installed in order for a worker to run the steps of the Cloud Dataflow
- * job that will be assigned to its worker pool.
- *
- * This is the mechanism by which the Cloud Dataflow SDK causes code to be loaded onto the workers.
- * For example, the Cloud Dataflow Java SDK might use this to install jars containing the user's
- * code and all of the various dependencies (libraries, data files, etc.) required in order for that
- * code to run.
+ * job that will be assigned to its worker pool. This is the mechanism by which the Cloud Dataflow
+ * SDK causes code to be loaded onto the workers. For example, the Cloud Dataflow Java SDK might use
+ * this to install jars containing the user's code and all of the various dependencies (libraries,
+ * data files, etc.) required in order for that code to run.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -36,11 +34,8 @@ package com.google.api.services.dataflow.model;
 public final class DataflowPackage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource to read the package from. The supported resource type is:
-   *
-   * Google Cloud Storage:
-   *
-   *   storage.googleapis.com/{bucket}   bucket.storage.googleapis.com/
+   * The resource to read the package from. The supported resource type is: Google Cloud Storage:
+   * storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,11 +49,8 @@ public final class DataflowPackage extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * The resource to read the package from. The supported resource type is:
-   *
-   * Google Cloud Storage:
-   *
-   *   storage.googleapis.com/{bucket}   bucket.storage.googleapis.com/
+   * The resource to read the package from. The supported resource type is: Google Cloud Storage:
+   * storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -66,11 +58,8 @@ public final class DataflowPackage extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The resource to read the package from. The supported resource type is:
-   *
-   * Google Cloud Storage:
-   *
-   *   storage.googleapis.com/{bucket}   bucket.storage.googleapis.com/
+   * The resource to read the package from. The supported resource type is: Google Cloud Storage:
+   * storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
    * @param location location or {@code null} for none
    */
   public DataflowPackage setLocation(java.lang.String location) {

@@ -53,6 +53,13 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.lang.Boolean bypassTempDirValidation;
 
   /**
+   * Whether to enable Streaming Engine for the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableStreamingEngine;
+
+  /**
    * Configuration for VM IPs.
    * The value may be {@code null}.
    */
@@ -83,7 +90,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.lang.Integer maxWorkers;
 
   /**
-   * Network to which VMs will be assigned.  If empty or unspecified, the service will use the
+   * Network to which VMs will be assigned. If empty or unspecified, the service will use the
    * network "default".
    * The value may be {@code null}.
    */
@@ -105,7 +112,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.lang.String serviceAccountEmail;
 
   /**
-   * Subnetwork to which VMs will be assigned, if desired.  Expected to be of the form
+   * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form
    * "regions/REGION/subnetworks/SUBNETWORK".
    * The value may be {@code null}.
    */
@@ -205,6 +212,23 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
+   * Whether to enable Streaming Engine for the job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableStreamingEngine() {
+    return enableStreamingEngine;
+  }
+
+  /**
+   * Whether to enable Streaming Engine for the job.
+   * @param enableStreamingEngine enableStreamingEngine or {@code null} for none
+   */
+  public RuntimeEnvironment setEnableStreamingEngine(java.lang.Boolean enableStreamingEngine) {
+    this.enableStreamingEngine = enableStreamingEngine;
+    return this;
+  }
+
+  /**
    * Configuration for VM IPs.
    * @return value or {@code null} for none
    */
@@ -277,7 +301,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Network to which VMs will be assigned.  If empty or unspecified, the service will use the
+   * Network to which VMs will be assigned. If empty or unspecified, the service will use the
    * network "default".
    * @return value or {@code null} for none
    */
@@ -286,7 +310,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Network to which VMs will be assigned.  If empty or unspecified, the service will use the
+   * Network to which VMs will be assigned. If empty or unspecified, the service will use the
    * network "default".
    * @param network network or {@code null} for none
    */
@@ -330,7 +354,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Subnetwork to which VMs will be assigned, if desired.  Expected to be of the form
+   * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form
    * "regions/REGION/subnetworks/SUBNETWORK".
    * @return value or {@code null} for none
    */
@@ -339,7 +363,7 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Subnetwork to which VMs will be assigned, if desired.  Expected to be of the form
+   * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form
    * "regions/REGION/subnetworks/SUBNETWORK".
    * @param subnetwork subnetwork or {@code null} for none
    */

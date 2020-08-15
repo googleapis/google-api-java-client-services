@@ -18,9 +18,8 @@ package com.google.api.services.dataflow.model;
 
 /**
  * MapTask consists of an ordered set of instructions, each of which describes one particular low-
- * level operation for the worker to perform in order to accomplish the MapTask's WorkItem.
- *
- * Each instruction must appear in the list before any instructions which depends on its output.
+ * level operation for the worker to perform in order to accomplish the MapTask's WorkItem. Each
+ * instruction must appear in the list before any instructions which depends on its output.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:

@@ -49,18 +49,14 @@ public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
    * Setting this value to true hints to the framework that the source doesn't need splitting, and
-   * using SourceSplitRequest on it would yield SOURCE_SPLIT_OUTCOME_USE_CURRENT.
-   *
-   * E.g. a file splitter may set this to true when splitting a single file into a set of byte
-   * ranges of appropriate size, and set this to false when splitting a filepattern into individual
-   * files. However, for efficiency, a file splitter may decide to produce file subranges directly
-   * from the filepattern to avoid a splitting round-trip.
-   *
-   * See SourceSplitRequest for an overview of the splitting process.
-   *
-   * This field is meaningful only in the Source objects populated by the user (e.g. when filling in
-   * a DerivedSource). Source objects supplied by the framework to the user don't have this field
-   * populated.
+   * using SourceSplitRequest on it would yield SOURCE_SPLIT_OUTCOME_USE_CURRENT. E.g. a file
+   * splitter may set this to true when splitting a single file into a set of byte ranges of
+   * appropriate size, and set this to false when splitting a filepattern into individual files.
+   * However, for efficiency, a file splitter may decide to produce file subranges directly from the
+   * filepattern to avoid a splitting round-trip. See SourceSplitRequest for an overview of the
+   * splitting process. This field is meaningful only in the Source objects populated by the user
+   * (e.g. when filling in a DerivedSource). Source objects supplied by the framework to the user
+   * don't have this field populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,11 +64,9 @@ public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
    * Optionally, metadata for this source can be supplied right away, avoiding a
-   * SourceGetMetadataOperation roundtrip (see SourceOperationRequest).
-   *
-   * This field is meaningful only in the Source objects populated by the user (e.g. when filling in
-   * a DerivedSource). Source objects supplied by the framework to the user don't have this field
-   * populated.
+   * SourceGetMetadataOperation roundtrip (see SourceOperationRequest). This field is meaningful
+   * only in the Source objects populated by the user (e.g. when filling in a DerivedSource). Source
+   * objects supplied by the framework to the user don't have this field populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,18 +123,14 @@ public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
    * Setting this value to true hints to the framework that the source doesn't need splitting, and
-   * using SourceSplitRequest on it would yield SOURCE_SPLIT_OUTCOME_USE_CURRENT.
-   *
-   * E.g. a file splitter may set this to true when splitting a single file into a set of byte
-   * ranges of appropriate size, and set this to false when splitting a filepattern into individual
-   * files. However, for efficiency, a file splitter may decide to produce file subranges directly
-   * from the filepattern to avoid a splitting round-trip.
-   *
-   * See SourceSplitRequest for an overview of the splitting process.
-   *
-   * This field is meaningful only in the Source objects populated by the user (e.g. when filling in
-   * a DerivedSource). Source objects supplied by the framework to the user don't have this field
-   * populated.
+   * using SourceSplitRequest on it would yield SOURCE_SPLIT_OUTCOME_USE_CURRENT. E.g. a file
+   * splitter may set this to true when splitting a single file into a set of byte ranges of
+   * appropriate size, and set this to false when splitting a filepattern into individual files.
+   * However, for efficiency, a file splitter may decide to produce file subranges directly from the
+   * filepattern to avoid a splitting round-trip. See SourceSplitRequest for an overview of the
+   * splitting process. This field is meaningful only in the Source objects populated by the user
+   * (e.g. when filling in a DerivedSource). Source objects supplied by the framework to the user
+   * don't have this field populated.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDoesNotNeedSplitting() {
@@ -149,18 +139,14 @@ public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
    * Setting this value to true hints to the framework that the source doesn't need splitting, and
-   * using SourceSplitRequest on it would yield SOURCE_SPLIT_OUTCOME_USE_CURRENT.
-   *
-   * E.g. a file splitter may set this to true when splitting a single file into a set of byte
-   * ranges of appropriate size, and set this to false when splitting a filepattern into individual
-   * files. However, for efficiency, a file splitter may decide to produce file subranges directly
-   * from the filepattern to avoid a splitting round-trip.
-   *
-   * See SourceSplitRequest for an overview of the splitting process.
-   *
-   * This field is meaningful only in the Source objects populated by the user (e.g. when filling in
-   * a DerivedSource). Source objects supplied by the framework to the user don't have this field
-   * populated.
+   * using SourceSplitRequest on it would yield SOURCE_SPLIT_OUTCOME_USE_CURRENT. E.g. a file
+   * splitter may set this to true when splitting a single file into a set of byte ranges of
+   * appropriate size, and set this to false when splitting a filepattern into individual files.
+   * However, for efficiency, a file splitter may decide to produce file subranges directly from the
+   * filepattern to avoid a splitting round-trip. See SourceSplitRequest for an overview of the
+   * splitting process. This field is meaningful only in the Source objects populated by the user
+   * (e.g. when filling in a DerivedSource). Source objects supplied by the framework to the user
+   * don't have this field populated.
    * @param doesNotNeedSplitting doesNotNeedSplitting or {@code null} for none
    */
   public Source setDoesNotNeedSplitting(java.lang.Boolean doesNotNeedSplitting) {
@@ -170,11 +156,9 @@ public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
    * Optionally, metadata for this source can be supplied right away, avoiding a
-   * SourceGetMetadataOperation roundtrip (see SourceOperationRequest).
-   *
-   * This field is meaningful only in the Source objects populated by the user (e.g. when filling in
-   * a DerivedSource). Source objects supplied by the framework to the user don't have this field
-   * populated.
+   * SourceGetMetadataOperation roundtrip (see SourceOperationRequest). This field is meaningful
+   * only in the Source objects populated by the user (e.g. when filling in a DerivedSource). Source
+   * objects supplied by the framework to the user don't have this field populated.
    * @return value or {@code null} for none
    */
   public SourceMetadata getMetadata() {
@@ -183,11 +167,9 @@ public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
    * Optionally, metadata for this source can be supplied right away, avoiding a
-   * SourceGetMetadataOperation roundtrip (see SourceOperationRequest).
-   *
-   * This field is meaningful only in the Source objects populated by the user (e.g. when filling in
-   * a DerivedSource). Source objects supplied by the framework to the user don't have this field
-   * populated.
+   * SourceGetMetadataOperation roundtrip (see SourceOperationRequest). This field is meaningful
+   * only in the Source objects populated by the user (e.g. when filling in a DerivedSource). Source
+   * objects supplied by the framework to the user don't have this field populated.
    * @param metadata metadata or {@code null} for none
    */
   public Source setMetadata(SourceMetadata metadata) {

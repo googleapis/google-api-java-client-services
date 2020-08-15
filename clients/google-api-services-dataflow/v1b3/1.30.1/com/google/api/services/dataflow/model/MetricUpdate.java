@@ -61,11 +61,9 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
   private java.lang.Object internal;
 
   /**
-   * Metric aggregation kind.  The possible metric aggregation kinds are "Sum", "Max", "Min",
-   * "Mean", "Set", "And", "Or", and "Distribution". The specified aggregation kind is case-
-   * insensitive.
-   *
-   * If omitted, this is not an aggregated value but instead a single metric sample value.
+   * Metric aggregation kind. The possible metric aggregation kinds are "Sum", "Max", "Min", "Mean",
+   * "Set", "And", "Or", and "Distribution". The specified aggregation kind is case-insensitive. If
+   * omitted, this is not an aggregated value but instead a single metric sample value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,17 +95,17 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
   private MetricStructuredName name;
 
   /**
-   * Worker-computed aggregate value for aggregation kinds "Sum", "Max", "Min", "And", and "Or".
-   * The possible value types are Long, Double, and Boolean.
+   * Worker-computed aggregate value for aggregation kinds "Sum", "Max", "Min", "And", and "Or". The
+   * possible value types are Long, Double, and Boolean.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object scalar;
 
   /**
-   * Worker-computed aggregate value for the "Set" aggregation kind.  The only possible value type
-   * is a list of Values whose type can be Long, Double, or String, according to the metric's type.
-   * All Values in the list must be of the same type.
+   * Worker-computed aggregate value for the "Set" aggregation kind. The only possible value type is
+   * a list of Values whose type can be Long, Double, or String, according to the metric's type. All
+   * Values in the list must be of the same type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,11 +194,9 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metric aggregation kind.  The possible metric aggregation kinds are "Sum", "Max", "Min",
-   * "Mean", "Set", "And", "Or", and "Distribution". The specified aggregation kind is case-
-   * insensitive.
-   *
-   * If omitted, this is not an aggregated value but instead a single metric sample value.
+   * Metric aggregation kind. The possible metric aggregation kinds are "Sum", "Max", "Min", "Mean",
+   * "Set", "And", "Or", and "Distribution". The specified aggregation kind is case-insensitive. If
+   * omitted, this is not an aggregated value but instead a single metric sample value.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -208,11 +204,9 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metric aggregation kind.  The possible metric aggregation kinds are "Sum", "Max", "Min",
-   * "Mean", "Set", "And", "Or", and "Distribution". The specified aggregation kind is case-
-   * insensitive.
-   *
-   * If omitted, this is not an aggregated value but instead a single metric sample value.
+   * Metric aggregation kind. The possible metric aggregation kinds are "Sum", "Max", "Min", "Mean",
+   * "Set", "And", "Or", and "Distribution". The specified aggregation kind is case-insensitive. If
+   * omitted, this is not an aggregated value but instead a single metric sample value.
    * @param kind kind or {@code null} for none
    */
   public MetricUpdate setKind(java.lang.String kind) {
@@ -280,8 +274,8 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Worker-computed aggregate value for aggregation kinds "Sum", "Max", "Min", "And", and "Or".
-   * The possible value types are Long, Double, and Boolean.
+   * Worker-computed aggregate value for aggregation kinds "Sum", "Max", "Min", "And", and "Or". The
+   * possible value types are Long, Double, and Boolean.
    * @return value or {@code null} for none
    */
   public java.lang.Object getScalar() {
@@ -289,8 +283,8 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Worker-computed aggregate value for aggregation kinds "Sum", "Max", "Min", "And", and "Or".
-   * The possible value types are Long, Double, and Boolean.
+   * Worker-computed aggregate value for aggregation kinds "Sum", "Max", "Min", "And", and "Or". The
+   * possible value types are Long, Double, and Boolean.
    * @param scalar scalar or {@code null} for none
    */
   public MetricUpdate setScalar(java.lang.Object scalar) {
@@ -299,9 +293,9 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Worker-computed aggregate value for the "Set" aggregation kind.  The only possible value type
-   * is a list of Values whose type can be Long, Double, or String, according to the metric's type.
-   * All Values in the list must be of the same type.
+   * Worker-computed aggregate value for the "Set" aggregation kind. The only possible value type is
+   * a list of Values whose type can be Long, Double, or String, according to the metric's type. All
+   * Values in the list must be of the same type.
    * @return value or {@code null} for none
    */
   public java.lang.Object getSet() {
@@ -309,9 +303,9 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Worker-computed aggregate value for the "Set" aggregation kind.  The only possible value type
-   * is a list of Values whose type can be Long, Double, or String, according to the metric's type.
-   * All Values in the list must be of the same type.
+   * Worker-computed aggregate value for the "Set" aggregation kind. The only possible value type is
+   * a list of Values whose type can be Long, Double, or String, according to the metric's type. All
+   * Values in the list must be of the same type.
    * @param set set or {@code null} for none
    */
   public MetricUpdate setSet(java.lang.Object set) {

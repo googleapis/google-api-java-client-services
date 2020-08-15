@@ -39,7 +39,7 @@ public final class Voice extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> languageCodes;
 
   /**
-   * The name of this voice.  Each distinct voice has a unique name.
+   * The name of this voice. Each distinct voice has a unique name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class Voice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of this voice.  Each distinct voice has a unique name.
+   * The name of this voice. Each distinct voice has a unique name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -87,7 +87,7 @@ public final class Voice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of this voice.  Each distinct voice has a unique name.
+   * The name of this voice. Each distinct voice has a unique name.
    * @param name name or {@code null} for none
    */
   public Voice setName(java.lang.String name) {

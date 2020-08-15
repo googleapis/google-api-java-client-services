@@ -32,14 +32,12 @@ public final class EventTrigger extends com.google.api.client.json.GenericJson {
   /**
    * Required. The type of event to observe. For example:
    * `providers/cloud.storage/eventTypes/object.change` and
-   * `providers/cloud.pubsub/eventTypes/topic.publish`.
-   *
-   * Event types match pattern `providers/eventTypes.*`. The pattern contains:
-   *
-   * 1. namespace: For example, `cloud.storage` and    `google.firebase.analytics`. 2. resource
-   * type: The type of resource on which event occurs. For    example, the Google Cloud Storage API
-   * includes the type `object`. 3. action: The action that generates the event. For example, action
-   * for    a Google Cloud Storage Object is 'change'. These parts are lower case.
+   * `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern
+   * `providers/eventTypes.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and
+   * `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For
+   * example, the Google Cloud Storage API includes the type `object`. 3. action: The action that
+   * generates the event. For example, action for a Google Cloud Storage Object is 'change'. These
+   * parts are lower case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,30 +52,23 @@ public final class EventTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The resource(s) from which to observe events, for example,
-   * `projects/_/buckets/myBucket`.
-   *
-   * Not all syntactically correct values are accepted by all services. For example:
-   *
-   * 1. The authorization model must support it. Google Cloud Functions    only allows EventTriggers
-   * to be deployed that observe resources in the    same project as the `CloudFunction`. 2. The
-   * resource type must match the pattern expected for an    `event_type`. For example, an
-   * `EventTrigger` that has an    `event_type` of "google.pubsub.topic.publish" should have a
-   * resource    that matches Google Cloud Pub/Sub topics.
-   *
-   * Additionally, some services may support short names when creating an `EventTrigger`. These will
-   * always be returned in the normalized "long" format.
-   *
-   * See each *service's* documentation for supported formats.
+   * `projects/_/buckets/myBucket`. Not all syntactically correct values are accepted by all
+   * services. For example: 1. The authorization model must support it. Google Cloud Functions only
+   * allows EventTriggers to be deployed that observe resources in the same project as the
+   * `CloudFunction`. 2. The resource type must match the pattern expected for an `event_type`. For
+   * example, an `EventTrigger` that has an `event_type` of "google.pubsub.topic.publish" should
+   * have a resource that matches Google Cloud Pub/Sub topics. Additionally, some services may
+   * support short names when creating an `EventTrigger`. These will always be returned in the
+   * normalized "long" format. See each *service's* documentation for supported formats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resource;
 
   /**
-   * The hostname of the service that should be observed.
-   *
-   * If no string is provided, the default service implementing the API will be used. For example,
-   * `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.
+   * The hostname of the service that should be observed. If no string is provided, the default
+   * service implementing the API will be used. For example, `storage.googleapis.com` is the default
+   * for all event types in the `google.storage` namespace.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,14 +77,12 @@ public final class EventTrigger extends com.google.api.client.json.GenericJson {
   /**
    * Required. The type of event to observe. For example:
    * `providers/cloud.storage/eventTypes/object.change` and
-   * `providers/cloud.pubsub/eventTypes/topic.publish`.
-   *
-   * Event types match pattern `providers/eventTypes.*`. The pattern contains:
-   *
-   * 1. namespace: For example, `cloud.storage` and    `google.firebase.analytics`. 2. resource
-   * type: The type of resource on which event occurs. For    example, the Google Cloud Storage API
-   * includes the type `object`. 3. action: The action that generates the event. For example, action
-   * for    a Google Cloud Storage Object is 'change'. These parts are lower case.
+   * `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern
+   * `providers/eventTypes.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and
+   * `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For
+   * example, the Google Cloud Storage API includes the type `object`. 3. action: The action that
+   * generates the event. For example, action for a Google Cloud Storage Object is 'change'. These
+   * parts are lower case.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -103,14 +92,12 @@ public final class EventTrigger extends com.google.api.client.json.GenericJson {
   /**
    * Required. The type of event to observe. For example:
    * `providers/cloud.storage/eventTypes/object.change` and
-   * `providers/cloud.pubsub/eventTypes/topic.publish`.
-   *
-   * Event types match pattern `providers/eventTypes.*`. The pattern contains:
-   *
-   * 1. namespace: For example, `cloud.storage` and    `google.firebase.analytics`. 2. resource
-   * type: The type of resource on which event occurs. For    example, the Google Cloud Storage API
-   * includes the type `object`. 3. action: The action that generates the event. For example, action
-   * for    a Google Cloud Storage Object is 'change'. These parts are lower case.
+   * `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern
+   * `providers/eventTypes.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and
+   * `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For
+   * example, the Google Cloud Storage API includes the type `object`. 3. action: The action that
+   * generates the event. For example, action for a Google Cloud Storage Object is 'change'. These
+   * parts are lower case.
    * @param eventType eventType or {@code null} for none
    */
   public EventTrigger setEventType(java.lang.String eventType) {
@@ -137,20 +124,14 @@ public final class EventTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The resource(s) from which to observe events, for example,
-   * `projects/_/buckets/myBucket`.
-   *
-   * Not all syntactically correct values are accepted by all services. For example:
-   *
-   * 1. The authorization model must support it. Google Cloud Functions    only allows EventTriggers
-   * to be deployed that observe resources in the    same project as the `CloudFunction`. 2. The
-   * resource type must match the pattern expected for an    `event_type`. For example, an
-   * `EventTrigger` that has an    `event_type` of "google.pubsub.topic.publish" should have a
-   * resource    that matches Google Cloud Pub/Sub topics.
-   *
-   * Additionally, some services may support short names when creating an `EventTrigger`. These will
-   * always be returned in the normalized "long" format.
-   *
-   * See each *service's* documentation for supported formats.
+   * `projects/_/buckets/myBucket`. Not all syntactically correct values are accepted by all
+   * services. For example: 1. The authorization model must support it. Google Cloud Functions only
+   * allows EventTriggers to be deployed that observe resources in the same project as the
+   * `CloudFunction`. 2. The resource type must match the pattern expected for an `event_type`. For
+   * example, an `EventTrigger` that has an `event_type` of "google.pubsub.topic.publish" should
+   * have a resource that matches Google Cloud Pub/Sub topics. Additionally, some services may
+   * support short names when creating an `EventTrigger`. These will always be returned in the
+   * normalized "long" format. See each *service's* documentation for supported formats.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -159,20 +140,14 @@ public final class EventTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The resource(s) from which to observe events, for example,
-   * `projects/_/buckets/myBucket`.
-   *
-   * Not all syntactically correct values are accepted by all services. For example:
-   *
-   * 1. The authorization model must support it. Google Cloud Functions    only allows EventTriggers
-   * to be deployed that observe resources in the    same project as the `CloudFunction`. 2. The
-   * resource type must match the pattern expected for an    `event_type`. For example, an
-   * `EventTrigger` that has an    `event_type` of "google.pubsub.topic.publish" should have a
-   * resource    that matches Google Cloud Pub/Sub topics.
-   *
-   * Additionally, some services may support short names when creating an `EventTrigger`. These will
-   * always be returned in the normalized "long" format.
-   *
-   * See each *service's* documentation for supported formats.
+   * `projects/_/buckets/myBucket`. Not all syntactically correct values are accepted by all
+   * services. For example: 1. The authorization model must support it. Google Cloud Functions only
+   * allows EventTriggers to be deployed that observe resources in the same project as the
+   * `CloudFunction`. 2. The resource type must match the pattern expected for an `event_type`. For
+   * example, an `EventTrigger` that has an `event_type` of "google.pubsub.topic.publish" should
+   * have a resource that matches Google Cloud Pub/Sub topics. Additionally, some services may
+   * support short names when creating an `EventTrigger`. These will always be returned in the
+   * normalized "long" format. See each *service's* documentation for supported formats.
    * @param resource resource or {@code null} for none
    */
   public EventTrigger setResource(java.lang.String resource) {
@@ -181,10 +156,9 @@ public final class EventTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hostname of the service that should be observed.
-   *
-   * If no string is provided, the default service implementing the API will be used. For example,
-   * `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.
+   * The hostname of the service that should be observed. If no string is provided, the default
+   * service implementing the API will be used. For example, `storage.googleapis.com` is the default
+   * for all event types in the `google.storage` namespace.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -192,10 +166,9 @@ public final class EventTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hostname of the service that should be observed.
-   *
-   * If no string is provided, the default service implementing the API will be used. For example,
-   * `storage.googleapis.com` is the default for all event types in the `google.storage` namespace.
+   * The hostname of the service that should be observed. If no string is provided, the default
+   * service implementing the API will be used. For example, `storage.googleapis.com` is the default
+   * for all event types in the `google.storage` namespace.
    * @param service service or {@code null} for none
    */
   public EventTrigger setService(java.lang.String service) {

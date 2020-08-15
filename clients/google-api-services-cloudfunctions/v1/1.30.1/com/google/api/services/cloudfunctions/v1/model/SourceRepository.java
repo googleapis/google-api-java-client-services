@@ -40,15 +40,12 @@ public final class SourceRepository extends com.google.api.client.json.GenericJs
 
   /**
    * The URL pointing to the hosted repository where the function is defined. There are supported
-   * Cloud Source Repository URLs in the following formats:
-   *
-   * To refer to a specific commit:
+   * Cloud Source Repository URLs in the following formats: To refer to a specific commit:
    * `https://source.developers.google.com/projects/repos/revisions/paths` To refer to a moveable
    * alias (branch): `https://source.developers.google.com/projects/repos/moveable-aliases/paths` In
    * particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias
-   * (tag): `https://source.developers.google.com/projects/repos/fixed-aliases/paths`
-   *
-   * You may omit `paths` if you want to use the main directory.
+   * (tag): `https://source.developers.google.com/projects/repos/fixed-aliases/paths` You may omit
+   * `paths` if you want to use the main directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,15 +72,12 @@ public final class SourceRepository extends com.google.api.client.json.GenericJs
 
   /**
    * The URL pointing to the hosted repository where the function is defined. There are supported
-   * Cloud Source Repository URLs in the following formats:
-   *
-   * To refer to a specific commit:
+   * Cloud Source Repository URLs in the following formats: To refer to a specific commit:
    * `https://source.developers.google.com/projects/repos/revisions/paths` To refer to a moveable
    * alias (branch): `https://source.developers.google.com/projects/repos/moveable-aliases/paths` In
    * particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias
-   * (tag): `https://source.developers.google.com/projects/repos/fixed-aliases/paths`
-   *
-   * You may omit `paths` if you want to use the main directory.
+   * (tag): `https://source.developers.google.com/projects/repos/fixed-aliases/paths` You may omit
+   * `paths` if you want to use the main directory.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -92,15 +86,12 @@ public final class SourceRepository extends com.google.api.client.json.GenericJs
 
   /**
    * The URL pointing to the hosted repository where the function is defined. There are supported
-   * Cloud Source Repository URLs in the following formats:
-   *
-   * To refer to a specific commit:
+   * Cloud Source Repository URLs in the following formats: To refer to a specific commit:
    * `https://source.developers.google.com/projects/repos/revisions/paths` To refer to a moveable
    * alias (branch): `https://source.developers.google.com/projects/repos/moveable-aliases/paths` In
    * particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias
-   * (tag): `https://source.developers.google.com/projects/repos/fixed-aliases/paths`
-   *
-   * You may omit `paths` if you want to use the main directory.
+   * (tag): `https://source.developers.google.com/projects/repos/fixed-aliases/paths` You may omit
+   * `paths` if you want to use the main directory.
    * @param url url or {@code null} for none
    */
   public SourceRepository setUrl(java.lang.String url) {

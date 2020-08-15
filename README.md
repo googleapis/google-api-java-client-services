@@ -55,7 +55,7 @@ packages on [Maven Central][maven-search].
 | Cloud Billing Budget API | [v1beta1](clients/google-api-services-billingbudgets/v1beta1) |
 | Cloud Build API | [v1](clients/google-api-services-cloudbuild/v1), [v1alpha1](clients/google-api-services-cloudbuild/v1alpha1), [v1alpha2](clients/google-api-services-cloudbuild/v1alpha2) |
 | Cloud Composer API | [v1](clients/google-api-services-composer/v1), [v1beta1](clients/google-api-services-composer/v1beta1) |
-| Cloud DNS API | [v1](clients/google-api-services-dns/v1), [v1beta2](clients/google-api-services-dns/v1beta2), [v2beta1](clients/google-api-services-dns/v2beta1) |
+| Cloud DNS API | [v1](clients/google-api-services-dns/v1), [v1beta2](clients/google-api-services-dns/v1beta2) |
 | Cloud Data Fusion API | [v1](clients/google-api-services-datafusion/v1), [v1beta1](clients/google-api-services-datafusion/v1beta1) |
 | Cloud Data Loss Prevention (DLP) API | [v2](clients/google-api-services-dlp/v2) |
 | Cloud Dataproc API | [v1](clients/google-api-services-dataproc/v1), [v1beta2](clients/google-api-services-dataproc/v1beta2) |

@@ -171,8 +171,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * change detection, and the watch operation on a resource or set of resources. Clients must treat
    * these values as opaque and passed unmodified back to the server. They may only be valid for a
    * particular resource or set of resources. Populated by the system. Read-only. Value must be
-   * treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel
-   * /api-conventions.md#concurrency-control-and-consistency
+   * treated as opaque by clients. More info: https://git.k8s.io/community/contributors/devel/sig-
+   * architecture/api-conventions.md#concurrency-control-and-consistency
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -508,8 +508,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * change detection, and the watch operation on a resource or set of resources. Clients must treat
    * these values as opaque and passed unmodified back to the server. They may only be valid for a
    * particular resource or set of resources. Populated by the system. Read-only. Value must be
-   * treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel
-   * /api-conventions.md#concurrency-control-and-consistency
+   * treated as opaque by clients. More info: https://git.k8s.io/community/contributors/devel/sig-
+   * architecture/api-conventions.md#concurrency-control-and-consistency
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceVersion() {
@@ -522,8 +522,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * change detection, and the watch operation on a resource or set of resources. Clients must treat
    * these values as opaque and passed unmodified back to the server. They may only be valid for a
    * particular resource or set of resources. Populated by the system. Read-only. Value must be
-   * treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel
-   * /api-conventions.md#concurrency-control-and-consistency
+   * treated as opaque by clients. More info: https://git.k8s.io/community/contributors/devel/sig-
+   * architecture/api-conventions.md#concurrency-control-and-consistency
    * @param resourceVersion resourceVersion or {@code null} for none
    */
   public ObjectMeta setResourceVersion(java.lang.String resourceVersion) {

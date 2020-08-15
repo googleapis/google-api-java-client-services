@@ -38,7 +38,7 @@ public final class ExecAction extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String command;
+  private java.util.List<java.lang.String> command;
 
   /**
    * Command is the command line to execute inside the container, the working directory for the
@@ -48,7 +48,7 @@ public final class ExecAction extends com.google.api.client.json.GenericJson {
    * non-zero is unhealthy. +optional
    * @return value or {@code null} for none
    */
-  public java.lang.String getCommand() {
+  public java.util.List<java.lang.String> getCommand() {
     return command;
   }
 
@@ -60,7 +60,7 @@ public final class ExecAction extends com.google.api.client.json.GenericJson {
    * non-zero is unhealthy. +optional
    * @param command command or {@code null} for none
    */
-  public ExecAction setCommand(java.lang.String command) {
+  public ExecAction setCommand(java.util.List<java.lang.String> command) {
     this.command = command;
     return this;
   }

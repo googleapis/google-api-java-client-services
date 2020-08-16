@@ -508,7 +508,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
       public class Operations {
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -533,7 +533,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -649,13 +649,12 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-         * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
          *
          * Create a request for the method "operations.list".
          *
@@ -680,13 +679,12 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a
-           * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
            *
            * Create a request for the method "operations.list".
            *
@@ -1298,8 +1296,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
          * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
          * @return the request
          */
@@ -1327,8 +1324,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
            * @since 1.13
            */
@@ -1436,42 +1432,32 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
-           *
-           * To learn which resources support conditions in their IAM policies, see the [IAM
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned.
-
-         Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-         Requests for policies with any conditional bindings must specify version 3. Policies without any
-         conditional bindings may specify any valid value or leave the field unset.
-
-         To learn which resources support conditions in their IAM policies, see the [IAM
-         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+         must specify version 3. Policies without any conditional bindings may specify any valid value or
+         leave the field unset. To learn which resources support conditions in their IAM policies, see the
+         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
-           *
-           * To learn which resources support conditions in their IAM policies, see the [IAM
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -1662,8 +1648,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the artifactregistry server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the repository, for example:
-        "projects/p1/locations/us-central1/repositories/repo1".
+         * @param name The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
          * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.Repository}
          * @return the request
          */
@@ -1691,8 +1676,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the repository, for example:
-        "projects/p1/locations/us-central1/repositories/repo1".
+           * @param name The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
            * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.Repository}
            * @since 1.13
            */
@@ -1825,8 +1809,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
          * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.SetIamPolicyRequest}
          * @return the request
@@ -1855,8 +1838,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.SetIamPolicyRequest}
            * @since 1.13
@@ -1968,8 +1950,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
          * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.TestIamPermissionsRequest}
          * @return the request
@@ -1998,8 +1979,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.TestIamPermissionsRequest}
            * @since 1.13
@@ -2396,14 +2376,10 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
             /**
              * An expression for filtering the results of the request. Filter rules are case
-             * insensitive. The fields eligible for filtering are:
-             *
-             * * `name` * `owner`
-             *
-             * An example of using a filter:
-             *
-             * * `name="projects/p1/locations/us-central1/repositories/repo1/files/a/b"` --> Files
-             * with an ID starting with "a/b/". * `owner="projects/p1/locations/us-
+             * insensitive. The fields eligible for filtering are: * `name` * `owner` An example of
+             * using a filter: * `name="projects/p1/locations/us-
+             * central1/repositories/repo1/files/a/b"` --> Files with an ID starting with "a/b/". *
+             * `owner="projects/p1/locations/us-
              * central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Files owned by the
              * version `1.0` in package `pkg1`.
              */
@@ -2411,13 +2387,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             private java.lang.String filter;
 
             /** An expression for filtering the results of the request. Filter rules are case insensitive. The
-           fields eligible for filtering are:
-
-           * `name` * `owner`
-
-           An example of using a filter:
-
-           * `name="projects/p1/locations/us-central1/repositories/repo1/files/a/b"` --> Files with an ID
+           fields eligible for filtering are: * `name` * `owner` An example of using a filter: *
+           `name="projects/p1/locations/us-central1/repositories/repo1/files/a/b"` --> Files with an ID
            starting with "a/b/". * `owner="projects/p1/locations/us-
            central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Files owned by the version `1.0` in
            package `pkg1`.
@@ -2428,14 +2399,10 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
             /**
              * An expression for filtering the results of the request. Filter rules are case
-             * insensitive. The fields eligible for filtering are:
-             *
-             * * `name` * `owner`
-             *
-             * An example of using a filter:
-             *
-             * * `name="projects/p1/locations/us-central1/repositories/repo1/files/a/b"` --> Files
-             * with an ID starting with "a/b/". * `owner="projects/p1/locations/us-
+             * insensitive. The fields eligible for filtering are: * `name` * `owner` An example of
+             * using a filter: * `name="projects/p1/locations/us-
+             * central1/repositories/repo1/files/a/b"` --> Files with an ID starting with "a/b/". *
+             * `owner="projects/p1/locations/us-
              * central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Files owned by the
              * version `1.0` in package `pkg1`.
              */
@@ -3512,13 +3479,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
               /**
                * An expression for filtering the results of the request. Filter rules are case
-               * insensitive. The fields eligible for filtering are:
-               *
-               * * `version`
-               *
-               * An example of using a filter:
-               *
-               * * `version="projects/p1/locations/us-
+               * insensitive. The fields eligible for filtering are: * `version` An example of using
+               * a filter: * `version="projects/p1/locations/us-
                * central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Tags that are applied
                * to the version `1.0` in package `pkg1`.
                */
@@ -3526,13 +3488,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               private java.lang.String filter;
 
               /** An expression for filtering the results of the request. Filter rules are case insensitive. The
-             fields eligible for filtering are:
-
-             * `version`
-
-             An example of using a filter:
-
-             * `version="projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/1.0"` -->
+             fields eligible for filtering are: * `version` An example of using a filter: *
+             `version="projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/1.0"` -->
              Tags that are applied to the version `1.0` in package `pkg1`.
                */
               public java.lang.String getFilter() {
@@ -3541,13 +3498,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
               /**
                * An expression for filtering the results of the request. Filter rules are case
-               * insensitive. The fields eligible for filtering are:
-               *
-               * * `version`
-               *
-               * An example of using a filter:
-               *
-               * * `version="projects/p1/locations/us-
+               * insensitive. The fields eligible for filtering are: * `version` An example of using
+               * a filter: * `version="projects/p1/locations/us-
                * central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Tags that are applied
                * to the version `1.0` in package `pkg1`.
                */
@@ -3601,8 +3553,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * This request holds the parameters needed by the artifactregistry server.  After setting any
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the tag, for example:
-            "projects/p1/locations/us-
+             * @param name The name of the tag, for example: "projects/p1/locations/us-
              *        central1/repositories/repo1/packages/pkg1/tags/tag1".
              * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.Tag}
              * @return the request
@@ -3631,8 +3582,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the tag, for example:
-            "projects/p1/locations/us-
+               * @param name The name of the tag, for example: "projects/p1/locations/us-
              *        central1/repositories/repo1/packages/pkg1/tags/tag1".
                * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.Tag}
                * @since 1.13

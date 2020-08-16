@@ -17,10 +17,8 @@
 package com.google.api.services.container.model;
 
 /**
- * ReleaseChannel indicates which release channel a cluster is subscribed to. Release channels are
- * arranged in order of risk. When a cluster is subscribed to a release channel, Google maintains
- * both the master version and the node version. Node auto-upgrade defaults to true and cannot be
- * disabled.
+ * DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the
+ * cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -31,40 +29,40 @@ package com.google.api.services.container.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ReleaseChannel extends com.google.api.client.json.GenericJson {
+public final class DefaultSnatStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * channel specifies which release channel the cluster is subscribed to.
+   * Disables cluster default sNAT rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String channel;
+  private java.lang.Boolean disabled;
 
   /**
-   * channel specifies which release channel the cluster is subscribed to.
+   * Disables cluster default sNAT rules.
    * @return value or {@code null} for none
    */
-  public java.lang.String getChannel() {
-    return channel;
+  public java.lang.Boolean getDisabled() {
+    return disabled;
   }
 
   /**
-   * channel specifies which release channel the cluster is subscribed to.
-   * @param channel channel or {@code null} for none
+   * Disables cluster default sNAT rules.
+   * @param disabled disabled or {@code null} for none
    */
-  public ReleaseChannel setChannel(java.lang.String channel) {
-    this.channel = channel;
+  public DefaultSnatStatus setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
     return this;
   }
 
   @Override
-  public ReleaseChannel set(String fieldName, Object value) {
-    return (ReleaseChannel) super.set(fieldName, value);
+  public DefaultSnatStatus set(String fieldName, Object value) {
+    return (DefaultSnatStatus) super.set(fieldName, value);
   }
 
   @Override
-  public ReleaseChannel clone() {
-    return (ReleaseChannel) super.clone();
+  public DefaultSnatStatus clone() {
+    return (DefaultSnatStatus) super.clone();
   }
 
 }

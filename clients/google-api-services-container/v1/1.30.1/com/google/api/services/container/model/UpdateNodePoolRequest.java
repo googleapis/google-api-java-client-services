@@ -73,15 +73,12 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String nodePoolId;
 
   /**
-   * Required. The Kubernetes version to change the nodes to (typically an upgrade).
-   *
-   * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
-   * which have the following behavior:
-   *
-   * - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the
-   * 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the Kubernetes
-   * master version
+   * Required. The Kubernetes version to change the nodes to (typically an upgrade). Users may
+   * specify either explicit versions offered by Kubernetes Engine or version aliases, which have
+   * the following behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks
+   * the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N
+   * patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks
+   * the Kubernetes master version
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,15 +216,12 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The Kubernetes version to change the nodes to (typically an upgrade).
-   *
-   * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
-   * which have the following behavior:
-   *
-   * - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the
-   * 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the Kubernetes
-   * master version
+   * Required. The Kubernetes version to change the nodes to (typically an upgrade). Users may
+   * specify either explicit versions offered by Kubernetes Engine or version aliases, which have
+   * the following behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks
+   * the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N
+   * patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks
+   * the Kubernetes master version
    * @return value or {@code null} for none
    */
   public java.lang.String getNodeVersion() {
@@ -235,15 +229,12 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The Kubernetes version to change the nodes to (typically an upgrade).
-   *
-   * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
-   * which have the following behavior:
-   *
-   * - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the
-   * 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the Kubernetes
-   * master version
+   * Required. The Kubernetes version to change the nodes to (typically an upgrade). Users may
+   * specify either explicit versions offered by Kubernetes Engine or version aliases, which have
+   * the following behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks
+   * the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N
+   * patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks
+   * the Kubernetes master version
    * @param nodeVersion nodeVersion or {@code null} for none
    */
   public UpdateNodePoolRequest setNodeVersion(java.lang.String nodeVersion) {

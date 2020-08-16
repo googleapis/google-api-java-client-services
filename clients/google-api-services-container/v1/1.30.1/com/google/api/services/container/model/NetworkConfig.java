@@ -31,6 +31,15 @@ package com.google.api.services.container.model;
 public final class NetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled
+   * when default_snat_status is disabled. When disabled is set to false, default IP masquerade
+   * rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DefaultSnatStatus defaultSnatStatus;
+
+  /**
    * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod
    * traffic visible for VPC network.
    * The value may be {@code null}.
@@ -55,6 +64,27 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
+
+  /**
+   * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled
+   * when default_snat_status is disabled. When disabled is set to false, default IP masquerade
+   * rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+   * @return value or {@code null} for none
+   */
+  public DefaultSnatStatus getDefaultSnatStatus() {
+    return defaultSnatStatus;
+  }
+
+  /**
+   * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled
+   * when default_snat_status is disabled. When disabled is set to false, default IP masquerade
+   * rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+   * @param defaultSnatStatus defaultSnatStatus or {@code null} for none
+   */
+  public NetworkConfig setDefaultSnatStatus(DefaultSnatStatus defaultSnatStatus) {
+    this.defaultSnatStatus = defaultSnatStatus;
+    return this;
+  }
 
   /**
    * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod

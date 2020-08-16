@@ -17,10 +17,7 @@
 package com.google.api.services.container.model;
 
 /**
- * ReleaseChannel indicates which release channel a cluster is subscribed to. Release channels are
- * arranged in order of risk. When a cluster is subscribed to a release channel, Google maintains
- * both the master version and the node version. Node auto-upgrade defaults to true and cannot be
- * disabled.
+ * Configuration for controlling master global access settings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -31,40 +28,40 @@ package com.google.api.services.container.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ReleaseChannel extends com.google.api.client.json.GenericJson {
+public final class PrivateClusterMasterGlobalAccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * channel specifies which release channel the cluster is subscribed to.
+   * Whenever master is accessible globally or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String channel;
+  private java.lang.Boolean enabled;
 
   /**
-   * channel specifies which release channel the cluster is subscribed to.
+   * Whenever master is accessible globally or not.
    * @return value or {@code null} for none
    */
-  public java.lang.String getChannel() {
-    return channel;
+  public java.lang.Boolean getEnabled() {
+    return enabled;
   }
 
   /**
-   * channel specifies which release channel the cluster is subscribed to.
-   * @param channel channel or {@code null} for none
+   * Whenever master is accessible globally or not.
+   * @param enabled enabled or {@code null} for none
    */
-  public ReleaseChannel setChannel(java.lang.String channel) {
-    this.channel = channel;
+  public PrivateClusterMasterGlobalAccessConfig setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
     return this;
   }
 
   @Override
-  public ReleaseChannel set(String fieldName, Object value) {
-    return (ReleaseChannel) super.set(fieldName, value);
+  public PrivateClusterMasterGlobalAccessConfig set(String fieldName, Object value) {
+    return (PrivateClusterMasterGlobalAccessConfig) super.set(fieldName, value);
   }
 
   @Override
-  public ReleaseChannel clone() {
-    return (ReleaseChannel) super.clone();
+  public PrivateClusterMasterGlobalAccessConfig clone() {
+    return (PrivateClusterMasterGlobalAccessConfig) super.clone();
   }
 
 }

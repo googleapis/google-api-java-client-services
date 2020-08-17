@@ -160,6 +160,16 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.lang.String tensorflowVersion;
 
   /**
+   * Whether the VPC peering for the node is set up through Service Networking API. The VPC Peering
+   * should be set up before provisioning the node. If this field is set, cidr_block field should
+   * not be specified. If the network, that you want to peer the TPU Node to, is Shared VPC
+   * networks, the node must be created with this this field enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useServiceNetworking;
+
+  /**
    * The type of hardware accelerators associated with this node. Required.
    * @return value or {@code null} for none
    */
@@ -452,6 +462,29 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setTensorflowVersion(java.lang.String tensorflowVersion) {
     this.tensorflowVersion = tensorflowVersion;
+    return this;
+  }
+
+  /**
+   * Whether the VPC peering for the node is set up through Service Networking API. The VPC Peering
+   * should be set up before provisioning the node. If this field is set, cidr_block field should
+   * not be specified. If the network, that you want to peer the TPU Node to, is Shared VPC
+   * networks, the node must be created with this this field enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseServiceNetworking() {
+    return useServiceNetworking;
+  }
+
+  /**
+   * Whether the VPC peering for the node is set up through Service Networking API. The VPC Peering
+   * should be set up before provisioning the node. If this field is set, cidr_block field should
+   * not be specified. If the network, that you want to peer the TPU Node to, is Shared VPC
+   * networks, the node must be created with this this field enabled.
+   * @param useServiceNetworking useServiceNetworking or {@code null} for none
+   */
+  public Node setUseServiceNetworking(java.lang.Boolean useServiceNetworking) {
+    this.useServiceNetworking = useServiceNetworking;
     return this;
   }
 

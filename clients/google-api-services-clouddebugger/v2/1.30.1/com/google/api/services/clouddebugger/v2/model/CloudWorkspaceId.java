@@ -31,7 +31,7 @@ package com.google.api.services.clouddebugger.v2.model;
 public final class CloudWorkspaceId extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique name of the workspace within the repo.  This is the name chosen by the client in the
+   * The unique name of the workspace within the repo. This is the name chosen by the client in the
    * Source API's CreateWorkspace method.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class CloudWorkspaceId extends com.google.api.client.json.GenericJs
   private RepoId repoId;
 
   /**
-   * The unique name of the workspace within the repo.  This is the name chosen by the client in the
+   * The unique name of the workspace within the repo. This is the name chosen by the client in the
    * Source API's CreateWorkspace method.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class CloudWorkspaceId extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The unique name of the workspace within the repo.  This is the name chosen by the client in the
+   * The unique name of the workspace within the repo. This is the name chosen by the client in the
    * Source API's CreateWorkspace method.
    * @param name name or {@code null} for none
    */

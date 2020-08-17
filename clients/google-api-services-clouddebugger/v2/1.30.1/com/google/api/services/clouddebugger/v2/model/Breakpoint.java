@@ -18,9 +18,7 @@ package com.google.api.services.clouddebugger.v2.model;
 
 /**
  * ------------------------------------------------------------------------------ ## Breakpoint (the
- * resource)
- *
- * Represents the breakpoint specification, status and results.
+ * resource) Represents the breakpoint specification, status and results.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Debugger API. For a detailed explanation see:
@@ -129,10 +127,8 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
    * Only relevant when action is `LOG`. Defines the message to log when the breakpoint hits. The
    * message may include parameter placeholders `$0`, `$1`, etc. These placeholders are replaced
    * with the evaluated value of the appropriate expression. Expressions not referenced in
-   * `log_message_format` are not logged.
-   *
-   * Example: `Message received, id = $0, count = $1` with `expressions` = `[ message.id,
-   * message.count ]`.
+   * `log_message_format` are not logged. Example: `Message received, id = $0, count = $1` with
+   * `expressions` = `[ message.id, message.count ]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,20 +150,12 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Breakpoint status.
-   *
-   * The status includes an error flag and a human readable message. This field is usually unset.
-   * The message can be either informational or an error message. Regardless, clients should always
-   * display the text message back to the user.
-   *
-   * Error status indicates complete failure of the breakpoint.
-   *
-   * Example (non-final state): `Still loading symbols...`
-   *
-   * Examples (final state):
-   *
-   * *   `Invalid line number` referring to location *   `Field f not found in class C` referring to
-   * condition
+   * Breakpoint status. The status includes an error flag and a human readable message. This field
+   * is usually unset. The message can be either informational or an error message. Regardless,
+   * clients should always display the text message back to the user. Error status indicates
+   * complete failure of the breakpoint. Example (non-final state): `Still loading symbols...`
+   * Examples (final state): * `Invalid line number` referring to location * `Field f not found in
+   * class C` referring to condition
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,12 +172,11 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
    * The `variable_table` exists to aid with computation, memory and network traffic optimization.
    * It enables storing a variable once and reference it from multiple variables, including
    * variables stored in the `variable_table` itself. For example, the same `this` object, which may
-   * appear at many levels of the stack, can have all of its data stored once in this table.  The
-   * stack frame variables then would hold only a reference to it.
-   *
-   * The variable `var_table_index` field is an index into this repeated field. The stored objects
-   * are nameless and get their name from the referencing variable. The effective variable is a
-   * merge of the referencing variable and the referenced variable.
+   * appear at many levels of the stack, can have all of its data stored once in this table. The
+   * stack frame variables then would hold only a reference to it. The variable `var_table_index`
+   * field is an index into this repeated field. The stored objects are nameless and get their name
+   * from the referencing variable. The effective variable is a merge of the referencing variable
+   * and the referenced variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -421,10 +408,8 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
    * Only relevant when action is `LOG`. Defines the message to log when the breakpoint hits. The
    * message may include parameter placeholders `$0`, `$1`, etc. These placeholders are replaced
    * with the evaluated value of the appropriate expression. Expressions not referenced in
-   * `log_message_format` are not logged.
-   *
-   * Example: `Message received, id = $0, count = $1` with `expressions` = `[ message.id,
-   * message.count ]`.
+   * `log_message_format` are not logged. Example: `Message received, id = $0, count = $1` with
+   * `expressions` = `[ message.id, message.count ]`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogMessageFormat() {
@@ -435,10 +420,8 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
    * Only relevant when action is `LOG`. Defines the message to log when the breakpoint hits. The
    * message may include parameter placeholders `$0`, `$1`, etc. These placeholders are replaced
    * with the evaluated value of the appropriate expression. Expressions not referenced in
-   * `log_message_format` are not logged.
-   *
-   * Example: `Message received, id = $0, count = $1` with `expressions` = `[ message.id,
-   * message.count ]`.
+   * `log_message_format` are not logged. Example: `Message received, id = $0, count = $1` with
+   * `expressions` = `[ message.id, message.count ]`.
    * @param logMessageFormat logMessageFormat or {@code null} for none
    */
   public Breakpoint setLogMessageFormat(java.lang.String logMessageFormat) {
@@ -483,20 +466,12 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Breakpoint status.
-   *
-   * The status includes an error flag and a human readable message. This field is usually unset.
-   * The message can be either informational or an error message. Regardless, clients should always
-   * display the text message back to the user.
-   *
-   * Error status indicates complete failure of the breakpoint.
-   *
-   * Example (non-final state): `Still loading symbols...`
-   *
-   * Examples (final state):
-   *
-   * *   `Invalid line number` referring to location *   `Field f not found in class C` referring to
-   * condition
+   * Breakpoint status. The status includes an error flag and a human readable message. This field
+   * is usually unset. The message can be either informational or an error message. Regardless,
+   * clients should always display the text message back to the user. Error status indicates
+   * complete failure of the breakpoint. Example (non-final state): `Still loading symbols...`
+   * Examples (final state): * `Invalid line number` referring to location * `Field f not found in
+   * class C` referring to condition
    * @return value or {@code null} for none
    */
   public StatusMessage getStatus() {
@@ -504,20 +479,12 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Breakpoint status.
-   *
-   * The status includes an error flag and a human readable message. This field is usually unset.
-   * The message can be either informational or an error message. Regardless, clients should always
-   * display the text message back to the user.
-   *
-   * Error status indicates complete failure of the breakpoint.
-   *
-   * Example (non-final state): `Still loading symbols...`
-   *
-   * Examples (final state):
-   *
-   * *   `Invalid line number` referring to location *   `Field f not found in class C` referring to
-   * condition
+   * Breakpoint status. The status includes an error flag and a human readable message. This field
+   * is usually unset. The message can be either informational or an error message. Regardless,
+   * clients should always display the text message back to the user. Error status indicates
+   * complete failure of the breakpoint. Example (non-final state): `Still loading symbols...`
+   * Examples (final state): * `Invalid line number` referring to location * `Field f not found in
+   * class C` referring to condition
    * @param status status or {@code null} for none
    */
   public Breakpoint setStatus(StatusMessage status) {
@@ -546,12 +513,11 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
    * The `variable_table` exists to aid with computation, memory and network traffic optimization.
    * It enables storing a variable once and reference it from multiple variables, including
    * variables stored in the `variable_table` itself. For example, the same `this` object, which may
-   * appear at many levels of the stack, can have all of its data stored once in this table.  The
-   * stack frame variables then would hold only a reference to it.
-   *
-   * The variable `var_table_index` field is an index into this repeated field. The stored objects
-   * are nameless and get their name from the referencing variable. The effective variable is a
-   * merge of the referencing variable and the referenced variable.
+   * appear at many levels of the stack, can have all of its data stored once in this table. The
+   * stack frame variables then would hold only a reference to it. The variable `var_table_index`
+   * field is an index into this repeated field. The stored objects are nameless and get their name
+   * from the referencing variable. The effective variable is a merge of the referencing variable
+   * and the referenced variable.
    * @return value or {@code null} for none
    */
   public java.util.List<Variable> getVariableTable() {
@@ -562,12 +528,11 @@ public final class Breakpoint extends com.google.api.client.json.GenericJson {
    * The `variable_table` exists to aid with computation, memory and network traffic optimization.
    * It enables storing a variable once and reference it from multiple variables, including
    * variables stored in the `variable_table` itself. For example, the same `this` object, which may
-   * appear at many levels of the stack, can have all of its data stored once in this table.  The
-   * stack frame variables then would hold only a reference to it.
-   *
-   * The variable `var_table_index` field is an index into this repeated field. The stored objects
-   * are nameless and get their name from the referencing variable. The effective variable is a
-   * merge of the referencing variable and the referenced variable.
+   * appear at many levels of the stack, can have all of its data stored once in this table. The
+   * stack frame variables then would hold only a reference to it. The variable `var_table_index`
+   * field is an index into this repeated field. The stored objects are nameless and get their name
+   * from the referencing variable. The effective variable is a merge of the referencing variable
+   * and the referenced variable.
    * @param variableTable variableTable or {@code null} for none
    */
   public Breakpoint setVariableTable(java.util.List<Variable> variableTable) {

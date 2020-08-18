@@ -30,10 +30,9 @@ package com.google.api.services.firestore.v1beta1.model;
 public final class ExistenceFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * The total count of documents that match target_id.
-   *
-   * If different from the count of documents in the client that match, the client must manually
-   * determine which documents no longer match the target.
+   * The total count of documents that match target_id. If different from the count of documents in
+   * the client that match, the client must manually determine which documents no longer match the
+   * target.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,10 +46,9 @@ public final class ExistenceFilter extends com.google.api.client.json.GenericJso
   private java.lang.Integer targetId;
 
   /**
-   * The total count of documents that match target_id.
-   *
-   * If different from the count of documents in the client that match, the client must manually
-   * determine which documents no longer match the target.
+   * The total count of documents that match target_id. If different from the count of documents in
+   * the client that match, the client must manually determine which documents no longer match the
+   * target.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCount() {
@@ -58,10 +56,9 @@ public final class ExistenceFilter extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The total count of documents that match target_id.
-   *
-   * If different from the count of documents in the client that match, the client must manually
-   * determine which documents no longer match the target.
+   * The total count of documents that match target_id. If different from the count of documents in
+   * the client that match, the client must manually determine which documents no longer match the
+   * target.
    * @param count count or {@code null} for none
    */
   public ExistenceFilter setCount(java.lang.Integer count) {

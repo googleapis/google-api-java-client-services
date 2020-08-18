@@ -30,9 +30,8 @@ package com.google.api.services.firestore.v1.model;
 public final class Projection extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fields to return.
-   *
-   * If empty, all fields are returned. To only return the name of the document, use `['__name__']`.
+   * The fields to return. If empty, all fields are returned. To only return the name of the
+   * document, use `['__name__']`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,9 +44,8 @@ public final class Projection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fields to return.
-   *
-   * If empty, all fields are returned. To only return the name of the document, use `['__name__']`.
+   * The fields to return. If empty, all fields are returned. To only return the name of the
+   * document, use `['__name__']`.
    * @return value or {@code null} for none
    */
   public java.util.List<FieldReference> getFields() {
@@ -55,9 +53,8 @@ public final class Projection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fields to return.
-   *
-   * If empty, all fields are returned. To only return the name of the document, use `['__name__']`.
+   * The fields to return. If empty, all fields are returned. To only return the name of the
+   * document, use `['__name__']`.
    * @param fields fields or {@code null} for none
    */
   public Projection setFields(java.util.List<FieldReference> fields) {

@@ -30,22 +30,20 @@ package com.google.api.services.firestore.v1beta1.model;
 public final class MapValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * The map's fields.
-   *
-   * The map keys represent field names. Field names matching the regular expression `__.*__` are
-   * reserved. Reserved field names are forbidden except in certain documented contexts. The map
-   * keys, represented as UTF-8, must not exceed 1,500 bytes and cannot be empty.
+   * The map's fields. The map keys represent field names. Field names matching the regular
+   * expression `__.*__` are reserved. Reserved field names are forbidden except in certain
+   * documented contexts. The map keys, represented as UTF-8, must not exceed 1,500 bytes and cannot
+   * be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Value> fields;
 
   /**
-   * The map's fields.
-   *
-   * The map keys represent field names. Field names matching the regular expression `__.*__` are
-   * reserved. Reserved field names are forbidden except in certain documented contexts. The map
-   * keys, represented as UTF-8, must not exceed 1,500 bytes and cannot be empty.
+   * The map's fields. The map keys represent field names. Field names matching the regular
+   * expression `__.*__` are reserved. Reserved field names are forbidden except in certain
+   * documented contexts. The map keys, represented as UTF-8, must not exceed 1,500 bytes and cannot
+   * be empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Value> getFields() {
@@ -53,11 +51,10 @@ public final class MapValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The map's fields.
-   *
-   * The map keys represent field names. Field names matching the regular expression `__.*__` are
-   * reserved. Reserved field names are forbidden except in certain documented contexts. The map
-   * keys, represented as UTF-8, must not exceed 1,500 bytes and cannot be empty.
+   * The map's fields. The map keys represent field names. Field names matching the regular
+   * expression `__.*__` are reserved. Reserved field names are forbidden except in certain
+   * documented contexts. The map keys, represented as UTF-8, must not exceed 1,500 bytes and cannot
+   * be empty.
    * @param fields fields or {@code null} for none
    */
   public MapValue setFields(java.util.Map<String, Value> fields) {

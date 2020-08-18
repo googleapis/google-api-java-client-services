@@ -39,10 +39,8 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
   /**
    * The time at which the document was read. This may be monotonically increasing; in this case,
    * the previous documents in the result stream are guaranteed not to have changed between their
-   * `read_time` and this one.
-   *
-   * If the query returns no results, a response with `read_time` and no `document` will be sent,
-   * and this represents the time at which the query was run.
+   * `read_time` and this one. If the query returns no results, a response with `read_time` and no
+   * `document` will be sent, and this represents the time at which the query was run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,10 +83,8 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
   /**
    * The time at which the document was read. This may be monotonically increasing; in this case,
    * the previous documents in the result stream are guaranteed not to have changed between their
-   * `read_time` and this one.
-   *
-   * If the query returns no results, a response with `read_time` and no `document` will be sent,
-   * and this represents the time at which the query was run.
+   * `read_time` and this one. If the query returns no results, a response with `read_time` and no
+   * `document` will be sent, and this represents the time at which the query was run.
    * @return value or {@code null} for none
    */
   public String getReadTime() {
@@ -98,10 +94,8 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
   /**
    * The time at which the document was read. This may be monotonically increasing; in this case,
    * the previous documents in the result stream are guaranteed not to have changed between their
-   * `read_time` and this one.
-   *
-   * If the query returns no results, a response with `read_time` and no `document` will be sent,
-   * and this represents the time at which the query was run.
+   * `read_time` and this one. If the query returns no results, a response with `read_time` and no
+   * `document` will be sent, and this represents the time at which the query was run.
    * @param readTime readTime or {@code null} for none
    */
   public RunQueryResponse setReadTime(String readTime) {

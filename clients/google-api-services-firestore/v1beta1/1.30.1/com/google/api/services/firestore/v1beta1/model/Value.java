@@ -30,10 +30,8 @@ package com.google.api.services.firestore.v1beta1.model;
 public final class Value extends com.google.api.client.json.GenericJson {
 
   /**
-   * An array value.
-   *
-   * Cannot directly contain another array value, though can contain an map which contains another
-   * array.
+   * An array value. Cannot directly contain another array value, though can contain an map which
+   * contains another array.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +45,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean booleanValue;
 
   /**
-   * A bytes value.
-   *
-   * Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by queries.
+   * A bytes value. Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by
+   * queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,29 +96,24 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private java.lang.String referenceValue;
 
   /**
-   * A string value.
-   *
-   * The string, represented as UTF-8, must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes
-   * of the UTF-8 representation are considered by queries.
+   * A string value. The string, represented as UTF-8, must not exceed 1 MiB - 89 bytes. Only the
+   * first 1,500 bytes of the UTF-8 representation are considered by queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stringValue;
 
   /**
-   * A timestamp value.
-   *
-   * Precise only to microseconds. When stored, any additional precision is rounded down.
+   * A timestamp value. Precise only to microseconds. When stored, any additional precision is
+   * rounded down.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timestampValue;
 
   /**
-   * An array value.
-   *
-   * Cannot directly contain another array value, though can contain an map which contains another
-   * array.
+   * An array value. Cannot directly contain another array value, though can contain an map which
+   * contains another array.
    * @return value or {@code null} for none
    */
   public ArrayValue getArrayValue() {
@@ -129,10 +121,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An array value.
-   *
-   * Cannot directly contain another array value, though can contain an map which contains another
-   * array.
+   * An array value. Cannot directly contain another array value, though can contain an map which
+   * contains another array.
    * @param arrayValue arrayValue or {@code null} for none
    */
   public Value setArrayValue(ArrayValue arrayValue) {
@@ -158,9 +148,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A bytes value.
-   *
-   * Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by queries.
+   * A bytes value. Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by
+   * queries.
    * @see #decodeBytesValue()
    * @return value or {@code null} for none
    */
@@ -169,9 +158,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A bytes value.
-   *
-   * Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by queries.
+   * A bytes value. Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by
+   * queries.
    * @see #getBytesValue()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -182,9 +170,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A bytes value.
-   *
-   * Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by queries.
+   * A bytes value. Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by
+   * queries.
    * @see #encodeBytesValue()
    * @param bytesValue bytesValue or {@code null} for none
    */
@@ -194,9 +181,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A bytes value.
-   *
-   * Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by queries.
+   * A bytes value. Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by
+   * queries.
    * @see #setBytesValue()
    *
    * <p>
@@ -315,10 +301,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string value.
-   *
-   * The string, represented as UTF-8, must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes
-   * of the UTF-8 representation are considered by queries.
+   * A string value. The string, represented as UTF-8, must not exceed 1 MiB - 89 bytes. Only the
+   * first 1,500 bytes of the UTF-8 representation are considered by queries.
    * @return value or {@code null} for none
    */
   public java.lang.String getStringValue() {
@@ -326,10 +310,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string value.
-   *
-   * The string, represented as UTF-8, must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes
-   * of the UTF-8 representation are considered by queries.
+   * A string value. The string, represented as UTF-8, must not exceed 1 MiB - 89 bytes. Only the
+   * first 1,500 bytes of the UTF-8 representation are considered by queries.
    * @param stringValue stringValue or {@code null} for none
    */
   public Value setStringValue(java.lang.String stringValue) {
@@ -338,9 +320,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A timestamp value.
-   *
-   * Precise only to microseconds. When stored, any additional precision is rounded down.
+   * A timestamp value. Precise only to microseconds. When stored, any additional precision is
+   * rounded down.
    * @return value or {@code null} for none
    */
   public String getTimestampValue() {
@@ -348,9 +329,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A timestamp value.
-   *
-   * Precise only to microseconds. When stored, any additional precision is rounded down.
+   * A timestamp value. Precise only to microseconds. When stored, any additional precision is
+   * rounded down.
    * @param timestampValue timestampValue or {@code null} for none
    */
   public Value setTimestampValue(String timestampValue) {

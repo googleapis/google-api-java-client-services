@@ -43,9 +43,8 @@ public final class WriteResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The last update time of the document after applying the write. Not set after a `delete`.
-   *
-   * If the write did not actually change the document, this will be the previous update_time.
+   * The last update time of the document after applying the write. Not set after a `delete`. If the
+   * write did not actually change the document, this will be the previous update_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,9 +68,8 @@ public final class WriteResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The last update time of the document after applying the write. Not set after a `delete`.
-   *
-   * If the write did not actually change the document, this will be the previous update_time.
+   * The last update time of the document after applying the write. Not set after a `delete`. If the
+   * write did not actually change the document, this will be the previous update_time.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -79,9 +77,8 @@ public final class WriteResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The last update time of the document after applying the write. Not set after a `delete`.
-   *
-   * If the write did not actually change the document, this will be the previous update_time.
+   * The last update time of the document after applying the write. Not set after a `delete`. If the
+   * write did not actually change the document, this will be the previous update_time.
    * @param updateTime updateTime or {@code null} for none
    */
   public WriteResult setUpdateTime(String updateTime) {

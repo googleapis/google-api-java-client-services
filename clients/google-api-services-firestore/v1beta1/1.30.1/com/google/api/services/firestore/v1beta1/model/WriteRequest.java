@@ -17,15 +17,11 @@
 package com.google.api.services.firestore.v1beta1.model;
 
 /**
- * The request for Firestore.Write.
- *
- * The first request creates a stream, or resumes an existing one from a token.
- *
- * When creating a new stream, the server replies with a response containing only an ID and a token,
- * to use in the next request.
- *
- * When resuming a stream, the server first streams any responses later than the given token, then a
- * response containing only an up-to-date token, to use in the next request.
+ * The request for Firestore.Write. The first request creates a stream, or resumes an existing one
+ * from a token. When creating a new stream, the server replies with a response containing only an
+ * ID and a token, to use in the next request. When resuming a stream, the server first streams any
+ * responses later than the given token, then a response containing only an up-to-date token, to use
+ * in the next request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -53,28 +49,20 @@ public final class WriteRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String streamId;
 
   /**
-   * A stream token that was previously sent by the server.
-   *
-   * The client should set this field to the token from the most recent WriteResponse it has
-   * received. This acknowledges that the client has received responses up to this token. After
-   * sending this token, earlier tokens may not be used anymore.
-   *
-   * The server may close the stream if there are too many unacknowledged responses.
-   *
-   * Leave this field unset when creating a new stream. To resume a stream at a specific point, set
-   * this field and the `stream_id` field.
-   *
-   * Leave this field unset when creating a new stream.
+   * A stream token that was previously sent by the server. The client should set this field to the
+   * token from the most recent WriteResponse it has received. This acknowledges that the client has
+   * received responses up to this token. After sending this token, earlier tokens may not be used
+   * anymore. The server may close the stream if there are too many unacknowledged responses. Leave
+   * this field unset when creating a new stream. To resume a stream at a specific point, set this
+   * field and the `stream_id` field. Leave this field unset when creating a new stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String streamToken;
 
   /**
-   * The writes to apply.
-   *
-   * Always executed atomically and in order. This must be empty on the first request. This may be
-   * empty on the last request. This must not be empty on all other requests.
+   * The writes to apply. Always executed atomically and in order. This must be empty on the first
+   * request. This may be empty on the last request. This must not be empty on all other requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,18 +111,12 @@ public final class WriteRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A stream token that was previously sent by the server.
-   *
-   * The client should set this field to the token from the most recent WriteResponse it has
-   * received. This acknowledges that the client has received responses up to this token. After
-   * sending this token, earlier tokens may not be used anymore.
-   *
-   * The server may close the stream if there are too many unacknowledged responses.
-   *
-   * Leave this field unset when creating a new stream. To resume a stream at a specific point, set
-   * this field and the `stream_id` field.
-   *
-   * Leave this field unset when creating a new stream.
+   * A stream token that was previously sent by the server. The client should set this field to the
+   * token from the most recent WriteResponse it has received. This acknowledges that the client has
+   * received responses up to this token. After sending this token, earlier tokens may not be used
+   * anymore. The server may close the stream if there are too many unacknowledged responses. Leave
+   * this field unset when creating a new stream. To resume a stream at a specific point, set this
+   * field and the `stream_id` field. Leave this field unset when creating a new stream.
    * @see #decodeStreamToken()
    * @return value or {@code null} for none
    */
@@ -143,18 +125,12 @@ public final class WriteRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A stream token that was previously sent by the server.
-   *
-   * The client should set this field to the token from the most recent WriteResponse it has
-   * received. This acknowledges that the client has received responses up to this token. After
-   * sending this token, earlier tokens may not be used anymore.
-   *
-   * The server may close the stream if there are too many unacknowledged responses.
-   *
-   * Leave this field unset when creating a new stream. To resume a stream at a specific point, set
-   * this field and the `stream_id` field.
-   *
-   * Leave this field unset when creating a new stream.
+   * A stream token that was previously sent by the server. The client should set this field to the
+   * token from the most recent WriteResponse it has received. This acknowledges that the client has
+   * received responses up to this token. After sending this token, earlier tokens may not be used
+   * anymore. The server may close the stream if there are too many unacknowledged responses. Leave
+   * this field unset when creating a new stream. To resume a stream at a specific point, set this
+   * field and the `stream_id` field. Leave this field unset when creating a new stream.
    * @see #getStreamToken()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -165,18 +141,12 @@ public final class WriteRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A stream token that was previously sent by the server.
-   *
-   * The client should set this field to the token from the most recent WriteResponse it has
-   * received. This acknowledges that the client has received responses up to this token. After
-   * sending this token, earlier tokens may not be used anymore.
-   *
-   * The server may close the stream if there are too many unacknowledged responses.
-   *
-   * Leave this field unset when creating a new stream. To resume a stream at a specific point, set
-   * this field and the `stream_id` field.
-   *
-   * Leave this field unset when creating a new stream.
+   * A stream token that was previously sent by the server. The client should set this field to the
+   * token from the most recent WriteResponse it has received. This acknowledges that the client has
+   * received responses up to this token. After sending this token, earlier tokens may not be used
+   * anymore. The server may close the stream if there are too many unacknowledged responses. Leave
+   * this field unset when creating a new stream. To resume a stream at a specific point, set this
+   * field and the `stream_id` field. Leave this field unset when creating a new stream.
    * @see #encodeStreamToken()
    * @param streamToken streamToken or {@code null} for none
    */
@@ -186,18 +156,12 @@ public final class WriteRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A stream token that was previously sent by the server.
-   *
-   * The client should set this field to the token from the most recent WriteResponse it has
-   * received. This acknowledges that the client has received responses up to this token. After
-   * sending this token, earlier tokens may not be used anymore.
-   *
-   * The server may close the stream if there are too many unacknowledged responses.
-   *
-   * Leave this field unset when creating a new stream. To resume a stream at a specific point, set
-   * this field and the `stream_id` field.
-   *
-   * Leave this field unset when creating a new stream.
+   * A stream token that was previously sent by the server. The client should set this field to the
+   * token from the most recent WriteResponse it has received. This acknowledges that the client has
+   * received responses up to this token. After sending this token, earlier tokens may not be used
+   * anymore. The server may close the stream if there are too many unacknowledged responses. Leave
+   * this field unset when creating a new stream. To resume a stream at a specific point, set this
+   * field and the `stream_id` field. Leave this field unset when creating a new stream.
    * @see #setStreamToken()
    *
    * <p>
@@ -212,10 +176,8 @@ public final class WriteRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The writes to apply.
-   *
-   * Always executed atomically and in order. This must be empty on the first request. This may be
-   * empty on the last request. This must not be empty on all other requests.
+   * The writes to apply. Always executed atomically and in order. This must be empty on the first
+   * request. This may be empty on the last request. This must not be empty on all other requests.
    * @return value or {@code null} for none
    */
   public java.util.List<Write> getWrites() {
@@ -223,10 +185,8 @@ public final class WriteRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The writes to apply.
-   *
-   * Always executed atomically and in order. This must be empty on the first request. This may be
-   * empty on the last request. This must not be empty on all other requests.
+   * The writes to apply. Always executed atomically and in order. This must be empty on the first
+   * request. This may be empty on the last request. This must not be empty on all other requests.
    * @param writes writes or {@code null} for none
    */
   public WriteRequest setWrites(java.util.List<Write> writes) {

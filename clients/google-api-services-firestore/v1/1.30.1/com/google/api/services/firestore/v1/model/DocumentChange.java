@@ -17,13 +17,9 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * A Document has changed.
- *
- * May be the result of multiple writes, including deletes, that ultimately resulted in a new value
- * for the Document.
- *
- * Multiple DocumentChange messages may be returned for the same logical change, if multiple targets
- * are affected.
+ * A Document has changed. May be the result of multiple writes, including deletes, that ultimately
+ * resulted in a new value for the Document. Multiple DocumentChange messages may be returned for
+ * the same logical change, if multiple targets are affected.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -36,9 +32,8 @@ package com.google.api.services.firestore.v1.model;
 public final class DocumentChange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The new state of the Document.
-   *
-   * If `mask` is set, contains only fields that were updated or added.
+   * The new state of the Document. If `mask` is set, contains only fields that were updated or
+   * added.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,9 +54,8 @@ public final class DocumentChange extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.Integer> targetIds;
 
   /**
-   * The new state of the Document.
-   *
-   * If `mask` is set, contains only fields that were updated or added.
+   * The new state of the Document. If `mask` is set, contains only fields that were updated or
+   * added.
    * @return value or {@code null} for none
    */
   public Document getDocument() {
@@ -69,9 +63,8 @@ public final class DocumentChange extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The new state of the Document.
-   *
-   * If `mask` is set, contains only fields that were updated or added.
+   * The new state of the Document. If `mask` is set, contains only fields that were updated or
+   * added.
    * @param document document or {@code null} for none
    */
   public DocumentChange setDocument(Document document) {

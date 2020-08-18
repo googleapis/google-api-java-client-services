@@ -18,8 +18,8 @@ package com.google.api.services.sheets.v4.model;
 
 /**
  * A histogram chart. A histogram chart groups data items into bins, displaying each bin as a column
- * of stacked items.  Histograms are used to display the distribution of a dataset.  Each column of
- * items represents a range into which those items fall.  The number of bins can be chosen
+ * of stacked items. Histograms are used to display the distribution of a dataset. Each column of
+ * items represents a range into which those items fall. The number of bins can be chosen
  * automatically or specified explicitly.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -50,8 +50,8 @@ public final class HistogramChartSpec extends com.google.api.client.json.Generic
 
   /**
    * The outlier percentile is used to ensure that outliers do not adversely affect the calculation
-   * of bucket sizes.  For example, setting an outlier percentile of 0.05 indicates that the top and
-   * bottom 5% of values when calculating buckets.  The values are still included in the chart, they
+   * of bucket sizes. For example, setting an outlier percentile of 0.05 indicates that the top and
+   * bottom 5% of values when calculating buckets. The values are still included in the chart, they
    * will be added to the first or last buckets instead of their own buckets. Must be between 0.0
    * and 0.5.
    * The value may be {@code null}.
@@ -115,8 +115,8 @@ public final class HistogramChartSpec extends com.google.api.client.json.Generic
 
   /**
    * The outlier percentile is used to ensure that outliers do not adversely affect the calculation
-   * of bucket sizes.  For example, setting an outlier percentile of 0.05 indicates that the top and
-   * bottom 5% of values when calculating buckets.  The values are still included in the chart, they
+   * of bucket sizes. For example, setting an outlier percentile of 0.05 indicates that the top and
+   * bottom 5% of values when calculating buckets. The values are still included in the chart, they
    * will be added to the first or last buckets instead of their own buckets. Must be between 0.0
    * and 0.5.
    * @return value or {@code null} for none
@@ -127,8 +127,8 @@ public final class HistogramChartSpec extends com.google.api.client.json.Generic
 
   /**
    * The outlier percentile is used to ensure that outliers do not adversely affect the calculation
-   * of bucket sizes.  For example, setting an outlier percentile of 0.05 indicates that the top and
-   * bottom 5% of values when calculating buckets.  The values are still included in the chart, they
+   * of bucket sizes. For example, setting an outlier percentile of 0.05 indicates that the top and
+   * bottom 5% of values when calculating buckets. The values are still included in the chart, they
    * will be added to the first or last buckets instead of their own buckets. Must be between 0.0
    * and 0.5.
    * @param outlierPercentile outlierPercentile or {@code null} for none

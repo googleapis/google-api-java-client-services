@@ -46,9 +46,8 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
   private Editors editors;
 
   /**
-   * The named range this protected range is backed by, if any.
-   *
-   * When writing, only one of range or named_range_id may be set.
+   * The named range this protected range is backed by, if any. When writing, only one of range or
+   * named_range_id may be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +62,7 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
 
   /**
    * The range that is being protected. The range may be fully unbounded, in which case this is
-   * considered a protected sheet.
-   *
-   * When writing, only one of range or named_range_id may be set.
+   * considered a protected sheet. When writing, only one of range or named_range_id may be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,11 +93,10 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
   /**
    * True if this protected range will show a warning when editing. Warning-based protection means
    * that every user can edit data in the protected range, except editing will prompt a warning
-   * asking the user to confirm the edit.
-   *
-   * When writing: if this field is true, then editors is ignored. Additionally, if this field is
-   * changed from true to false and the `editors` field is not set (nor included in the field mask),
-   * then the editors will be set to all the editors in the document.
+   * asking the user to confirm the edit. When writing: if this field is true, then editors is
+   * ignored. Additionally, if this field is changed from true to false and the `editors` field is
+   * not set (nor included in the field mask), then the editors will be set to all the editors in
+   * the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,9 +141,8 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The named range this protected range is backed by, if any.
-   *
-   * When writing, only one of range or named_range_id may be set.
+   * The named range this protected range is backed by, if any. When writing, only one of range or
+   * named_range_id may be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamedRangeId() {
@@ -155,9 +150,8 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The named range this protected range is backed by, if any.
-   *
-   * When writing, only one of range or named_range_id may be set.
+   * The named range this protected range is backed by, if any. When writing, only one of range or
+   * named_range_id may be set.
    * @param namedRangeId namedRangeId or {@code null} for none
    */
   public ProtectedRange setNamedRangeId(java.lang.String namedRangeId) {
@@ -184,9 +178,7 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
 
   /**
    * The range that is being protected. The range may be fully unbounded, in which case this is
-   * considered a protected sheet.
-   *
-   * When writing, only one of range or named_range_id may be set.
+   * considered a protected sheet. When writing, only one of range or named_range_id may be set.
    * @return value or {@code null} for none
    */
   public GridRange getRange() {
@@ -195,9 +187,7 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
 
   /**
    * The range that is being protected. The range may be fully unbounded, in which case this is
-   * considered a protected sheet.
-   *
-   * When writing, only one of range or named_range_id may be set.
+   * considered a protected sheet. When writing, only one of range or named_range_id may be set.
    * @param range range or {@code null} for none
    */
   public ProtectedRange setRange(GridRange range) {
@@ -246,11 +236,10 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
   /**
    * True if this protected range will show a warning when editing. Warning-based protection means
    * that every user can edit data in the protected range, except editing will prompt a warning
-   * asking the user to confirm the edit.
-   *
-   * When writing: if this field is true, then editors is ignored. Additionally, if this field is
-   * changed from true to false and the `editors` field is not set (nor included in the field mask),
-   * then the editors will be set to all the editors in the document.
+   * asking the user to confirm the edit. When writing: if this field is true, then editors is
+   * ignored. Additionally, if this field is changed from true to false and the `editors` field is
+   * not set (nor included in the field mask), then the editors will be set to all the editors in
+   * the document.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWarningOnly() {
@@ -260,11 +249,10 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
   /**
    * True if this protected range will show a warning when editing. Warning-based protection means
    * that every user can edit data in the protected range, except editing will prompt a warning
-   * asking the user to confirm the edit.
-   *
-   * When writing: if this field is true, then editors is ignored. Additionally, if this field is
-   * changed from true to false and the `editors` field is not set (nor included in the field mask),
-   * then the editors will be set to all the editors in the document.
+   * asking the user to confirm the edit. When writing: if this field is true, then editors is
+   * ignored. Additionally, if this field is changed from true to false and the `editors` field is
+   * not set (nor included in the field mask), then the editors will be set to all the editors in
+   * the document.
    * @param warningOnly warningOnly or {@code null} for none
    */
   public ProtectedRange setWarningOnly(java.lang.Boolean warningOnly) {

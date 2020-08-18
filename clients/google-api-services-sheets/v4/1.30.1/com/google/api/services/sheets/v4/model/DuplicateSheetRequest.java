@@ -46,7 +46,7 @@ public final class DuplicateSheetRequest extends com.google.api.client.json.Gene
   private java.lang.Integer newSheetId;
 
   /**
-   * The name of the new sheet.  If empty, a new name is chosen for you.
+   * The name of the new sheet. If empty, a new name is chosen for you.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class DuplicateSheetRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The name of the new sheet.  If empty, a new name is chosen for you.
+   * The name of the new sheet. If empty, a new name is chosen for you.
    * @return value or {@code null} for none
    */
   public java.lang.String getNewSheetName() {
@@ -106,7 +106,7 @@ public final class DuplicateSheetRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The name of the new sheet.  If empty, a new name is chosen for you.
+   * The name of the new sheet. If empty, a new name is chosen for you.
    * @param newSheetName newSheetName or {@code null} for none
    */
   public DuplicateSheetRequest setNewSheetName(java.lang.String newSheetName) {

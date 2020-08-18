@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class UpdateDimensionPropertiesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fields that should be updated.  At least one field must be specified. The root `properties`
+   * The fields that should be updated. At least one field must be specified. The root `properties`
    * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
    * every field.
    * The value may be {@code null}.
@@ -53,7 +53,7 @@ public final class UpdateDimensionPropertiesRequest extends com.google.api.clien
   private DimensionRange range;
 
   /**
-   * The fields that should be updated.  At least one field must be specified. The root `properties`
+   * The fields that should be updated. At least one field must be specified. The root `properties`
    * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
    * every field.
    * @return value or {@code null} for none
@@ -63,7 +63,7 @@ public final class UpdateDimensionPropertiesRequest extends com.google.api.clien
   }
 
   /**
-   * The fields that should be updated.  At least one field must be specified. The root `properties`
+   * The fields that should be updated. At least one field must be specified. The root `properties`
    * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
    * every field.
    * @param fields fields or {@code null} for none

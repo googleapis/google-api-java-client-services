@@ -19,7 +19,7 @@ package com.google.api.services.sheets.v4.model;
 /**
  * Developer metadata associated with a location or object in a spreadsheet. Developer metadata may
  * be used to associate arbitrary data with various parts of a spreadsheet and will remain
- * associated at those locations as they move around and the spreadsheet is edited.  For example, if
+ * associated at those locations as they move around and the spreadsheet is edited. For example, if
  * developer metadata is associated with row 5 and another row is then subsequently inserted above
  * row 5, that original metadata will still be associated with the row it was first associated with
  * (what is now row 6). If the associated object is deleted its metadata is deleted too.
@@ -50,7 +50,7 @@ public final class DeveloperMetadata extends com.google.api.client.json.GenericJ
   private java.lang.Integer metadataId;
 
   /**
-   * The metadata key. There may be multiple metadata in a spreadsheet with the same key.  Developer
+   * The metadata key. There may be multiple metadata in a spreadsheet with the same key. Developer
    * metadata must always have a key specified.
    * The value may be {@code null}.
    */
@@ -65,7 +65,7 @@ public final class DeveloperMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String metadataValue;
 
   /**
-   * The metadata visibility.  Developer metadata must always have a visibility specified.
+   * The metadata visibility. Developer metadata must always have a visibility specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class DeveloperMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The metadata key. There may be multiple metadata in a spreadsheet with the same key.  Developer
+   * The metadata key. There may be multiple metadata in a spreadsheet with the same key. Developer
    * metadata must always have a key specified.
    * @return value or {@code null} for none
    */
@@ -117,7 +117,7 @@ public final class DeveloperMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The metadata key. There may be multiple metadata in a spreadsheet with the same key.  Developer
+   * The metadata key. There may be multiple metadata in a spreadsheet with the same key. Developer
    * metadata must always have a key specified.
    * @param metadataKey metadataKey or {@code null} for none
    */
@@ -144,7 +144,7 @@ public final class DeveloperMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The metadata visibility.  Developer metadata must always have a visibility specified.
+   * The metadata visibility. Developer metadata must always have a visibility specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisibility() {
@@ -152,7 +152,7 @@ public final class DeveloperMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The metadata visibility.  Developer metadata must always have a visibility specified.
+   * The metadata visibility. Developer metadata must always have a visibility specified.
    * @param visibility visibility or {@code null} for none
    */
   public DeveloperMetadata setVisibility(java.lang.String visibility) {

@@ -39,7 +39,7 @@ public final class DeveloperMetadataLocation extends com.google.api.client.json.
   private DimensionRange dimensionRange;
 
   /**
-   * The type of location this object represents.  This field is read-only.
+   * The type of location this object represents. This field is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class DeveloperMetadataLocation extends com.google.api.client.json.
   }
 
   /**
-   * The type of location this object represents.  This field is read-only.
+   * The type of location this object represents. This field is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationType() {
@@ -89,7 +89,7 @@ public final class DeveloperMetadataLocation extends com.google.api.client.json.
   }
 
   /**
-   * The type of location this object represents.  This field is read-only.
+   * The type of location this object represents. This field is read-only.
    * @param locationType locationType or {@code null} for none
    */
   public DeveloperMetadataLocation setLocationType(java.lang.String locationType) {

@@ -31,7 +31,7 @@ public final class UpdateEmbeddedObjectPositionRequest extends com.google.api.cl
 
   /**
    * The fields of OverlayPosition that should be updated when setting a new position. Used only if
-   * newPosition.overlayPosition is set, in which case at least one field must be specified.  The
+   * newPosition.overlayPosition is set, in which case at least one field must be specified. The
    * root `newPosition.overlayPosition` is implied and should not be specified. A single `"*"` can
    * be used as short-hand for listing every field.
    * The value may be {@code null}.
@@ -57,7 +57,7 @@ public final class UpdateEmbeddedObjectPositionRequest extends com.google.api.cl
 
   /**
    * The fields of OverlayPosition that should be updated when setting a new position. Used only if
-   * newPosition.overlayPosition is set, in which case at least one field must be specified.  The
+   * newPosition.overlayPosition is set, in which case at least one field must be specified. The
    * root `newPosition.overlayPosition` is implied and should not be specified. A single `"*"` can
    * be used as short-hand for listing every field.
    * @return value or {@code null} for none
@@ -68,7 +68,7 @@ public final class UpdateEmbeddedObjectPositionRequest extends com.google.api.cl
 
   /**
    * The fields of OverlayPosition that should be updated when setting a new position. Used only if
-   * newPosition.overlayPosition is set, in which case at least one field must be specified.  The
+   * newPosition.overlayPosition is set, in which case at least one field must be specified. The
    * root `newPosition.overlayPosition` is implied and should not be specified. A single `"*"` can
    * be used as short-hand for listing every field.
    * @param fields fields or {@code null} for none

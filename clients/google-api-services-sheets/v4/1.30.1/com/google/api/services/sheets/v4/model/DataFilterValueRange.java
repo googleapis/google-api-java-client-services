@@ -44,9 +44,9 @@ public final class DataFilterValueRange extends com.google.api.client.json.Gener
   private java.lang.String majorDimension;
 
   /**
-   * The data to be written.  If the provided values exceed any of the ranges matched by the data
-   * filter then the request fails.  If the provided values are less than the matched ranges only
-   * the specified values are written, existing values in the matched ranges remain unaffected.
+   * The data to be written. If the provided values exceed any of the ranges matched by the data
+   * filter then the request fails. If the provided values are less than the matched ranges only the
+   * specified values are written, existing values in the matched ranges remain unaffected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +87,9 @@ public final class DataFilterValueRange extends com.google.api.client.json.Gener
   }
 
   /**
-   * The data to be written.  If the provided values exceed any of the ranges matched by the data
-   * filter then the request fails.  If the provided values are less than the matched ranges only
-   * the specified values are written, existing values in the matched ranges remain unaffected.
+   * The data to be written. If the provided values exceed any of the ranges matched by the data
+   * filter then the request fails. If the provided values are less than the matched ranges only the
+   * specified values are written, existing values in the matched ranges remain unaffected.
    * @return value or {@code null} for none
    */
   public java.util.List<java.util.List<java.lang.Object>> getValues() {
@@ -97,9 +97,9 @@ public final class DataFilterValueRange extends com.google.api.client.json.Gener
   }
 
   /**
-   * The data to be written.  If the provided values exceed any of the ranges matched by the data
-   * filter then the request fails.  If the provided values are less than the matched ranges only
-   * the specified values are written, existing values in the matched ranges remain unaffected.
+   * The data to be written. If the provided values exceed any of the ranges matched by the data
+   * filter then the request fails. If the provided values are less than the matched ranges only the
+   * specified values are written, existing values in the matched ranges remain unaffected.
    * @param values values or {@code null} for none
    */
   public DataFilterValueRange setValues(java.util.List<java.util.List<java.lang.Object>> values) {

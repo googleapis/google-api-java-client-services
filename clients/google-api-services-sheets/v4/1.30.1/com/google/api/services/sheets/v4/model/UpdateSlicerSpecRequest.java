@@ -31,7 +31,7 @@ package com.google.api.services.sheets.v4.model;
 public final class UpdateSlicerSpecRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fields that should be updated.  At least one field must be specified. The root `SlicerSpec`
+   * The fields that should be updated. At least one field must be specified. The root `SlicerSpec`
    * is implied and should not be specified. A single "*"` can be used as short-hand for listing
    * every field.
    * The value may be {@code null}.
@@ -54,7 +54,7 @@ public final class UpdateSlicerSpecRequest extends com.google.api.client.json.Ge
   private SlicerSpec spec;
 
   /**
-   * The fields that should be updated.  At least one field must be specified. The root `SlicerSpec`
+   * The fields that should be updated. At least one field must be specified. The root `SlicerSpec`
    * is implied and should not be specified. A single "*"` can be used as short-hand for listing
    * every field.
    * @return value or {@code null} for none
@@ -64,7 +64,7 @@ public final class UpdateSlicerSpecRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The fields that should be updated.  At least one field must be specified. The root `SlicerSpec`
+   * The fields that should be updated. At least one field must be specified. The root `SlicerSpec`
    * is implied and should not be specified. A single "*"` can be used as short-hand for listing
    * every field.
    * @param fields fields or {@code null} for none

@@ -34,14 +34,9 @@ public final class ChartSourceRange extends com.google.api.client.json.GenericJs
    * all sources in the list must have the same dimension with length 1. The domain (if it exists) &
    * all series must have the same number of source ranges. If using more than one source range,
    * then the source range at a given offset must be in order and contiguous across the domain and
-   * series.
-   *
-   * For example, these are valid configurations:
-   *
-   *     domain sources: A1:A5     series1 sources: B1:B5     series2 sources: D6:D10
-   *
-   *     domain sources: A1:A5, C10:C12     series1 sources: B1:B5, D10:D12     series2 sources:
-   * C1:C5, E10:E12
+   * series. For example, these are valid configurations: domain sources: A1:A5 series1 sources:
+   * B1:B5 series2 sources: D6:D10 domain sources: A1:A5, C10:C12 series1 sources: B1:B5, D10:D12
+   * series2 sources: C1:C5, E10:E12
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,14 +47,9 @@ public final class ChartSourceRange extends com.google.api.client.json.GenericJs
    * all sources in the list must have the same dimension with length 1. The domain (if it exists) &
    * all series must have the same number of source ranges. If using more than one source range,
    * then the source range at a given offset must be in order and contiguous across the domain and
-   * series.
-   *
-   * For example, these are valid configurations:
-   *
-   *     domain sources: A1:A5     series1 sources: B1:B5     series2 sources: D6:D10
-   *
-   *     domain sources: A1:A5, C10:C12     series1 sources: B1:B5, D10:D12     series2 sources:
-   * C1:C5, E10:E12
+   * series. For example, these are valid configurations: domain sources: A1:A5 series1 sources:
+   * B1:B5 series2 sources: D6:D10 domain sources: A1:A5, C10:C12 series1 sources: B1:B5, D10:D12
+   * series2 sources: C1:C5, E10:E12
    * @return value or {@code null} for none
    */
   public java.util.List<GridRange> getSources() {
@@ -71,14 +61,9 @@ public final class ChartSourceRange extends com.google.api.client.json.GenericJs
    * all sources in the list must have the same dimension with length 1. The domain (if it exists) &
    * all series must have the same number of source ranges. If using more than one source range,
    * then the source range at a given offset must be in order and contiguous across the domain and
-   * series.
-   *
-   * For example, these are valid configurations:
-   *
-   *     domain sources: A1:A5     series1 sources: B1:B5     series2 sources: D6:D10
-   *
-   *     domain sources: A1:A5, C10:C12     series1 sources: B1:B5, D10:D12     series2 sources:
-   * C1:C5, E10:E12
+   * series. For example, these are valid configurations: domain sources: A1:A5 series1 sources:
+   * B1:B5 series2 sources: D6:D10 domain sources: A1:A5, C10:C12 series1 sources: B1:B5, D10:D12
+   * series2 sources: C1:C5, E10:E12
    * @param sources sources or {@code null} for none
    */
   public ChartSourceRange setSources(java.util.List<GridRange> sources) {

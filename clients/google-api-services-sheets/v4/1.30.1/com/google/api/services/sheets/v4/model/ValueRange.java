@@ -30,17 +30,12 @@ package com.google.api.services.sheets.v4.model;
 public final class ValueRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The major dimension of the values.
-   *
-   * For output, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-   * `range=A1:B2,majorDimension=ROWS` will return `[[1,2],[3,4]]`, whereas requesting
-   * `range=A1:B2,majorDimension=COLUMNS` will return `[[1,3],[2,4]]`.
-   *
-   * For input, with `range=A1:B2,majorDimension=ROWS` then `[[1,2],[3,4]]` will set
-   * `A1=1,B1=2,A2=3,B2=4`. With `range=A1:B2,majorDimension=COLUMNS` then `[[1,2],[3,4]]` will set
-   * `A1=1,B1=3,A2=2,B2=4`.
-   *
-   * When writing, if this field is not set, it defaults to ROWS.
+   * The major dimension of the values. For output, if the spreadsheet data is:
+   * `A1=1,B1=2,A2=3,B2=4`, then requesting `range=A1:B2,majorDimension=ROWS` will return
+   * `[[1,2],[3,4]]`, whereas requesting `range=A1:B2,majorDimension=COLUMNS` will return
+   * `[[1,3],[2,4]]`. For input, with `range=A1:B2,majorDimension=ROWS` then `[[1,2],[3,4]]` will
+   * set `A1=1,B1=2,A2=3,B2=4`. With `range=A1:B2,majorDimension=COLUMNS` then `[[1,2],[3,4]]` will
+   * set `A1=1,B1=3,A2=2,B2=4`. When writing, if this field is not set, it defaults to ROWS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,31 +52,23 @@ public final class ValueRange extends com.google.api.client.json.GenericJson {
   private java.lang.String range;
 
   /**
-   * The data that was read or to be written.  This is an array of arrays, the outer array
+   * The data that was read or to be written. This is an array of arrays, the outer array
    * representing all the data and each inner array representing a major dimension. Each item in the
-   * inner array corresponds with one cell.
-   *
-   * For output, empty trailing rows and columns will not be included.
-   *
-   * For input, supported value types are: bool, string, and double. Null values will be skipped. To
-   * set a cell to an empty value, set the string value to an empty string.
+   * inner array corresponds with one cell. For output, empty trailing rows and columns will not be
+   * included. For input, supported value types are: bool, string, and double. Null values will be
+   * skipped. To set a cell to an empty value, set the string value to an empty string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.util.List<java.lang.Object>> values;
 
   /**
-   * The major dimension of the values.
-   *
-   * For output, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-   * `range=A1:B2,majorDimension=ROWS` will return `[[1,2],[3,4]]`, whereas requesting
-   * `range=A1:B2,majorDimension=COLUMNS` will return `[[1,3],[2,4]]`.
-   *
-   * For input, with `range=A1:B2,majorDimension=ROWS` then `[[1,2],[3,4]]` will set
-   * `A1=1,B1=2,A2=3,B2=4`. With `range=A1:B2,majorDimension=COLUMNS` then `[[1,2],[3,4]]` will set
-   * `A1=1,B1=3,A2=2,B2=4`.
-   *
-   * When writing, if this field is not set, it defaults to ROWS.
+   * The major dimension of the values. For output, if the spreadsheet data is:
+   * `A1=1,B1=2,A2=3,B2=4`, then requesting `range=A1:B2,majorDimension=ROWS` will return
+   * `[[1,2],[3,4]]`, whereas requesting `range=A1:B2,majorDimension=COLUMNS` will return
+   * `[[1,3],[2,4]]`. For input, with `range=A1:B2,majorDimension=ROWS` then `[[1,2],[3,4]]` will
+   * set `A1=1,B1=2,A2=3,B2=4`. With `range=A1:B2,majorDimension=COLUMNS` then `[[1,2],[3,4]]` will
+   * set `A1=1,B1=3,A2=2,B2=4`. When writing, if this field is not set, it defaults to ROWS.
    * @return value or {@code null} for none
    */
   public java.lang.String getMajorDimension() {
@@ -89,17 +76,12 @@ public final class ValueRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The major dimension of the values.
-   *
-   * For output, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-   * `range=A1:B2,majorDimension=ROWS` will return `[[1,2],[3,4]]`, whereas requesting
-   * `range=A1:B2,majorDimension=COLUMNS` will return `[[1,3],[2,4]]`.
-   *
-   * For input, with `range=A1:B2,majorDimension=ROWS` then `[[1,2],[3,4]]` will set
-   * `A1=1,B1=2,A2=3,B2=4`. With `range=A1:B2,majorDimension=COLUMNS` then `[[1,2],[3,4]]` will set
-   * `A1=1,B1=3,A2=2,B2=4`.
-   *
-   * When writing, if this field is not set, it defaults to ROWS.
+   * The major dimension of the values. For output, if the spreadsheet data is:
+   * `A1=1,B1=2,A2=3,B2=4`, then requesting `range=A1:B2,majorDimension=ROWS` will return
+   * `[[1,2],[3,4]]`, whereas requesting `range=A1:B2,majorDimension=COLUMNS` will return
+   * `[[1,3],[2,4]]`. For input, with `range=A1:B2,majorDimension=ROWS` then `[[1,2],[3,4]]` will
+   * set `A1=1,B1=2,A2=3,B2=4`. With `range=A1:B2,majorDimension=COLUMNS` then `[[1,2],[3,4]]` will
+   * set `A1=1,B1=3,A2=2,B2=4`. When writing, if this field is not set, it defaults to ROWS.
    * @param majorDimension majorDimension or {@code null} for none
    */
   public ValueRange setMajorDimension(java.lang.String majorDimension) {
@@ -131,14 +113,11 @@ public final class ValueRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The data that was read or to be written.  This is an array of arrays, the outer array
+   * The data that was read or to be written. This is an array of arrays, the outer array
    * representing all the data and each inner array representing a major dimension. Each item in the
-   * inner array corresponds with one cell.
-   *
-   * For output, empty trailing rows and columns will not be included.
-   *
-   * For input, supported value types are: bool, string, and double. Null values will be skipped. To
-   * set a cell to an empty value, set the string value to an empty string.
+   * inner array corresponds with one cell. For output, empty trailing rows and columns will not be
+   * included. For input, supported value types are: bool, string, and double. Null values will be
+   * skipped. To set a cell to an empty value, set the string value to an empty string.
    * @return value or {@code null} for none
    */
   public java.util.List<java.util.List<java.lang.Object>> getValues() {
@@ -146,14 +125,11 @@ public final class ValueRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The data that was read or to be written.  This is an array of arrays, the outer array
+   * The data that was read or to be written. This is an array of arrays, the outer array
    * representing all the data and each inner array representing a major dimension. Each item in the
-   * inner array corresponds with one cell.
-   *
-   * For output, empty trailing rows and columns will not be included.
-   *
-   * For input, supported value types are: bool, string, and double. Null values will be skipped. To
-   * set a cell to an empty value, set the string value to an empty string.
+   * inner array corresponds with one cell. For output, empty trailing rows and columns will not be
+   * included. For input, supported value types are: bool, string, and double. Null values will be
+   * skipped. To set a cell to an empty value, set the string value to an empty string.
    * @param values values or {@code null} for none
    */
   public ValueRange setValues(java.util.List<java.util.List<java.lang.Object>> values) {

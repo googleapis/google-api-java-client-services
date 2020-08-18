@@ -37,7 +37,7 @@ public final class CutPasteRequest extends com.google.api.client.json.GenericJso
   private GridCoordinate destination;
 
   /**
-   * What kind of data to paste.  All the source data will be cut, regardless of what is pasted.
+   * What kind of data to paste. All the source data will be cut, regardless of what is pasted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class CutPasteRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * What kind of data to paste.  All the source data will be cut, regardless of what is pasted.
+   * What kind of data to paste. All the source data will be cut, regardless of what is pasted.
    * @return value or {@code null} for none
    */
   public java.lang.String getPasteType() {
@@ -76,7 +76,7 @@ public final class CutPasteRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * What kind of data to paste.  All the source data will be cut, regardless of what is pasted.
+   * What kind of data to paste. All the source data will be cut, regardless of what is pasted.
    * @param pasteType pasteType or {@code null} for none
    */
   public CutPasteRequest setPasteType(java.lang.String pasteType) {

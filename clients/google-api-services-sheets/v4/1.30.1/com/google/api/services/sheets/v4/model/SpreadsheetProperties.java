@@ -45,23 +45,18 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   private CellFormat defaultFormat;
 
   /**
-   * Determines whether and how circular references are resolved with iterative calculation.
-   * Absence of this field means that circular references result in calculation errors.
+   * Determines whether and how circular references are resolved with iterative calculation. Absence
+   * of this field means that circular references result in calculation errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IterativeCalculationSettings iterativeCalculationSettings;
 
   /**
-   * The locale of the spreadsheet in one of the following formats:
-   *
-   * * an ISO 639-1 language code such as `en`
-   *
-   * * an ISO 639-2 language code such as `fil`, if no 639-1 code exists
-   *
-   * * a combination of the ISO language code and country code, such as `en_US`
-   *
-   * Note: when updating this field, not all locales/languages are supported.
+   * The locale of the spreadsheet in one of the following formats: * an ISO 639-1 language code
+   * such as `en` * an ISO 639-2 language code such as `fil`, if no 639-1 code exists * a
+   * combination of the ISO language code and country code, such as `en_US` Note: when updating this
+   * field, not all locales/languages are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,8 +121,8 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   }
 
   /**
-   * Determines whether and how circular references are resolved with iterative calculation.
-   * Absence of this field means that circular references result in calculation errors.
+   * Determines whether and how circular references are resolved with iterative calculation. Absence
+   * of this field means that circular references result in calculation errors.
    * @return value or {@code null} for none
    */
   public IterativeCalculationSettings getIterativeCalculationSettings() {
@@ -135,8 +130,8 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   }
 
   /**
-   * Determines whether and how circular references are resolved with iterative calculation.
-   * Absence of this field means that circular references result in calculation errors.
+   * Determines whether and how circular references are resolved with iterative calculation. Absence
+   * of this field means that circular references result in calculation errors.
    * @param iterativeCalculationSettings iterativeCalculationSettings or {@code null} for none
    */
   public SpreadsheetProperties setIterativeCalculationSettings(IterativeCalculationSettings iterativeCalculationSettings) {
@@ -145,15 +140,10 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   }
 
   /**
-   * The locale of the spreadsheet in one of the following formats:
-   *
-   * * an ISO 639-1 language code such as `en`
-   *
-   * * an ISO 639-2 language code such as `fil`, if no 639-1 code exists
-   *
-   * * a combination of the ISO language code and country code, such as `en_US`
-   *
-   * Note: when updating this field, not all locales/languages are supported.
+   * The locale of the spreadsheet in one of the following formats: * an ISO 639-1 language code
+   * such as `en` * an ISO 639-2 language code such as `fil`, if no 639-1 code exists * a
+   * combination of the ISO language code and country code, such as `en_US` Note: when updating this
+   * field, not all locales/languages are supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocale() {
@@ -161,15 +151,10 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   }
 
   /**
-   * The locale of the spreadsheet in one of the following formats:
-   *
-   * * an ISO 639-1 language code such as `en`
-   *
-   * * an ISO 639-2 language code such as `fil`, if no 639-1 code exists
-   *
-   * * a combination of the ISO language code and country code, such as `en_US`
-   *
-   * Note: when updating this field, not all locales/languages are supported.
+   * The locale of the spreadsheet in one of the following formats: * an ISO 639-1 language code
+   * such as `en` * an ISO 639-2 language code such as `fil`, if no 639-1 code exists * a
+   * combination of the ISO language code and country code, such as `en_US` Note: when updating this
+   * field, not all locales/languages are supported.
    * @param locale locale or {@code null} for none
    */
   public SpreadsheetProperties setLocale(java.lang.String locale) {

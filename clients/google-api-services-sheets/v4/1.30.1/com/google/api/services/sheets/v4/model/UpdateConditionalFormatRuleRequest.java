@@ -52,7 +52,7 @@ public final class UpdateConditionalFormatRuleRequest extends com.google.api.cli
   private ConditionalFormatRule rule;
 
   /**
-   * The sheet of the rule to move.  Required if new_index is set, unused otherwise.
+   * The sheet of the rule to move. Required if new_index is set, unused otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class UpdateConditionalFormatRuleRequest extends com.google.api.cli
   }
 
   /**
-   * The sheet of the rule to move.  Required if new_index is set, unused otherwise.
+   * The sheet of the rule to move. Required if new_index is set, unused otherwise.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSheetId() {
@@ -118,7 +118,7 @@ public final class UpdateConditionalFormatRuleRequest extends com.google.api.cli
   }
 
   /**
-   * The sheet of the rule to move.  Required if new_index is set, unused otherwise.
+   * The sheet of the rule to move. Required if new_index is set, unused otherwise.
    * @param sheetId sheetId or {@code null} for none
    */
   public UpdateConditionalFormatRuleRequest setSheetId(java.lang.Integer sheetId) {

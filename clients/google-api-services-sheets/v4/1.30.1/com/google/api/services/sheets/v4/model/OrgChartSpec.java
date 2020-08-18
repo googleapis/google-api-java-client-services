@@ -19,12 +19,10 @@ package com.google.api.services.sheets.v4.model;
 /**
  * An org chart. Org charts require a unique set of labels in labels and may optionally include
  * parent_labels and tooltips. parent_labels contain, for each node, the label identifying the
- * parent node.  tooltips contain, for each node, an optional tooltip.
- *
- * For example, to describe an OrgChart with Alice as the CEO, Bob as the President (reporting to
- * Alice) and Cathy as VP of Sales (also reporting to Alice), have labels contain "Alice", "Bob",
- * "Cathy", parent_labels contain "", "Alice", "Alice" and tooltips contain "CEO", "President", "VP
- * Sales".
+ * parent node. tooltips contain, for each node, an optional tooltip. For example, to describe an
+ * OrgChart with Alice as the CEO, Bob as the President (reporting to Alice) and Cathy as VP of
+ * Sales (also reporting to Alice), have labels contain "Alice", "Bob", "Cathy", parent_labels
+ * contain "", "Alice", "Alice" and tooltips contain "CEO", "President", "VP Sales".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -37,7 +35,7 @@ package com.google.api.services.sheets.v4.model;
 public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The data containing the labels for all the nodes in the chart.  Labels must be unique.
+   * The data containing the labels for all the nodes in the chart. Labels must be unique.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,15 +86,15 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
   private ColorStyle selectedNodeColorStyle;
 
   /**
-   * The data containing the tooltip for the corresponding node.  A blank value results in no
-   * tooltip being displayed for the node. This field is optional.
+   * The data containing the tooltip for the corresponding node. A blank value results in no tooltip
+   * being displayed for the node. This field is optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ChartData tooltips;
 
   /**
-   * The data containing the labels for all the nodes in the chart.  Labels must be unique.
+   * The data containing the labels for all the nodes in the chart. Labels must be unique.
    * @return value or {@code null} for none
    */
   public ChartData getLabels() {
@@ -104,7 +102,7 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The data containing the labels for all the nodes in the chart.  Labels must be unique.
+   * The data containing the labels for all the nodes in the chart. Labels must be unique.
    * @param labels labels or {@code null} for none
    */
   public OrgChartSpec setLabels(ChartData labels) {
@@ -219,8 +217,8 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The data containing the tooltip for the corresponding node.  A blank value results in no
-   * tooltip being displayed for the node. This field is optional.
+   * The data containing the tooltip for the corresponding node. A blank value results in no tooltip
+   * being displayed for the node. This field is optional.
    * @return value or {@code null} for none
    */
   public ChartData getTooltips() {
@@ -228,8 +226,8 @@ public final class OrgChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The data containing the tooltip for the corresponding node.  A blank value results in no
-   * tooltip being displayed for the node. This field is optional.
+   * The data containing the tooltip for the corresponding node. A blank value results in no tooltip
+   * being displayed for the node. This field is optional.
    * @param tooltips tooltips or {@code null} for none
    */
   public OrgChartSpec setTooltips(ChartData tooltips) {

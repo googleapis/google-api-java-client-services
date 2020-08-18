@@ -44,7 +44,7 @@ public final class TextToColumnsRequest extends com.google.api.client.json.Gener
   private java.lang.String delimiterType;
 
   /**
-   * The source data range.  This must span exactly one column.
+   * The source data range. This must span exactly one column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class TextToColumnsRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The source data range.  This must span exactly one column.
+   * The source data range. This must span exactly one column.
    * @return value or {@code null} for none
    */
   public GridRange getSource() {
@@ -93,7 +93,7 @@ public final class TextToColumnsRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The source data range.  This must span exactly one column.
+   * The source data range. This must span exactly one column.
    * @param source source or {@code null} for none
    */
   public TextToColumnsRequest setSource(GridRange source) {

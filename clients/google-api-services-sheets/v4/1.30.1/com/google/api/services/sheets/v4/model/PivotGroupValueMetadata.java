@@ -37,8 +37,8 @@ public final class PivotGroupValueMetadata extends com.google.api.client.json.Ge
   private java.lang.Boolean collapsed;
 
   /**
-   * The calculated value the metadata corresponds to. (Note that formulaValue is not valid,
-   * because the values will be calculated.)
+   * The calculated value the metadata corresponds to. (Note that formulaValue is not valid, because
+   * the values will be calculated.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class PivotGroupValueMetadata extends com.google.api.client.json.Ge
   }
 
   /**
-   * The calculated value the metadata corresponds to. (Note that formulaValue is not valid,
-   * because the values will be calculated.)
+   * The calculated value the metadata corresponds to. (Note that formulaValue is not valid, because
+   * the values will be calculated.)
    * @return value or {@code null} for none
    */
   public ExtendedValue getValue() {
@@ -71,8 +71,8 @@ public final class PivotGroupValueMetadata extends com.google.api.client.json.Ge
   }
 
   /**
-   * The calculated value the metadata corresponds to. (Note that formulaValue is not valid,
-   * because the values will be calculated.)
+   * The calculated value the metadata corresponds to. (Note that formulaValue is not valid, because
+   * the values will be calculated.)
    * @param value value or {@code null} for none
    */
   public PivotGroupValueMetadata setValue(ExtendedValue value) {

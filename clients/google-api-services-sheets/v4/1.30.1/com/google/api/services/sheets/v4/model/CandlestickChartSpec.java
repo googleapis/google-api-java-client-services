@@ -37,7 +37,7 @@ public final class CandlestickChartSpec extends com.google.api.client.json.Gener
   private java.util.List<CandlestickData> data;
 
   /**
-   * The domain data (horizontal axis) for the candlestick chart.  String data will be treated as
+   * The domain data (horizontal axis) for the candlestick chart. String data will be treated as
    * discrete labels, other data will be treated as continuous values.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class CandlestickChartSpec extends com.google.api.client.json.Gener
   }
 
   /**
-   * The domain data (horizontal axis) for the candlestick chart.  String data will be treated as
+   * The domain data (horizontal axis) for the candlestick chart. String data will be treated as
    * discrete labels, other data will be treated as continuous values.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class CandlestickChartSpec extends com.google.api.client.json.Gener
   }
 
   /**
-   * The domain data (horizontal axis) for the candlestick chart.  String data will be treated as
+   * The domain data (horizontal axis) for the candlestick chart. String data will be treated as
    * discrete labels, other data will be treated as continuous values.
    * @param domain domain or {@code null} for none
    */

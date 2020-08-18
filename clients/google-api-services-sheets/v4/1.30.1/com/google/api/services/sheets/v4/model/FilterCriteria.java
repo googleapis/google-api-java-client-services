@@ -31,7 +31,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * A condition that must be true for values to be shown. (This does not override hidden_values --
-   * if a value is listed there,  it will still be hidden.)
+   * if a value is listed there, it will still be hidden.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * A condition that must be true for values to be shown. (This does not override hidden_values --
-   * if a value is listed there,  it will still be hidden.)
+   * if a value is listed there, it will still be hidden.)
    * @return value or {@code null} for none
    */
   public BooleanCondition getCondition() {
@@ -89,7 +89,7 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
 
   /**
    * A condition that must be true for values to be shown. (This does not override hidden_values --
-   * if a value is listed there,  it will still be hidden.)
+   * if a value is listed there, it will still be hidden.)
    * @param condition condition or {@code null} for none
    */
   public FilterCriteria setCondition(BooleanCondition condition) {

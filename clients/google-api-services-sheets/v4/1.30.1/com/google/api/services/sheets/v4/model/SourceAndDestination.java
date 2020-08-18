@@ -38,7 +38,7 @@ public final class SourceAndDestination extends com.google.api.client.json.Gener
 
   /**
    * The number of rows or columns that data should be filled into. Positive numbers expand beyond
-   * the last row or last column of the source.  Negative numbers expand before the first row or
+   * the last row or last column of the source. Negative numbers expand before the first row or
    * first column of the source.
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class SourceAndDestination extends com.google.api.client.json.Gener
 
   /**
    * The number of rows or columns that data should be filled into. Positive numbers expand beyond
-   * the last row or last column of the source.  Negative numbers expand before the first row or
+   * the last row or last column of the source. Negative numbers expand before the first row or
    * first column of the source.
    * @return value or {@code null} for none
    */
@@ -81,7 +81,7 @@ public final class SourceAndDestination extends com.google.api.client.json.Gener
 
   /**
    * The number of rows or columns that data should be filled into. Positive numbers expand beyond
-   * the last row or last column of the source.  Negative numbers expand before the first row or
+   * the last row or last column of the source. Negative numbers expand before the first row or
    * first column of the source.
    * @param fillLength fillLength or {@code null} for none
    */

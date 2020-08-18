@@ -39,10 +39,8 @@ public final class UpdateCellsRequest extends com.google.api.client.json.Generic
   private String fields;
 
   /**
-   * The range to write data to.
-   *
-   * If the data in rows does not cover the entire requested range, the fields matching those set in
-   * fields will be cleared.
+   * The range to write data to. If the data in rows does not cover the entire requested range, the
+   * fields matching those set in fields will be cleared.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,10 +89,8 @@ public final class UpdateCellsRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The range to write data to.
-   *
-   * If the data in rows does not cover the entire requested range, the fields matching those set in
-   * fields will be cleared.
+   * The range to write data to. If the data in rows does not cover the entire requested range, the
+   * fields matching those set in fields will be cleared.
    * @return value or {@code null} for none
    */
   public GridRange getRange() {
@@ -102,10 +98,8 @@ public final class UpdateCellsRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The range to write data to.
-   *
-   * If the data in rows does not cover the entire requested range, the fields matching those set in
-   * fields will be cleared.
+   * The range to write data to. If the data in rows does not cover the entire requested range, the
+   * fields matching those set in fields will be cleared.
    * @param range range or {@code null} for none
    */
   public UpdateCellsRequest setRange(GridRange range) {

@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class Editors extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if anyone in the document's domain has edit access to the protected range.  Domain
+   * True if anyone in the document's domain has edit access to the protected range. Domain
    * protection is only supported on documents within a domain.
    * The value may be {@code null}.
    */
@@ -52,7 +52,7 @@ public final class Editors extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> users;
 
   /**
-   * True if anyone in the document's domain has edit access to the protected range.  Domain
+   * True if anyone in the document's domain has edit access to the protected range. Domain
    * protection is only supported on documents within a domain.
    * @return value or {@code null} for none
    */
@@ -61,7 +61,7 @@ public final class Editors extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True if anyone in the document's domain has edit access to the protected range.  Domain
+   * True if anyone in the document's domain has edit access to the protected range. Domain
    * protection is only supported on documents within a domain.
    * @param domainUsersCanEdit domainUsersCanEdit or {@code null} for none
    */

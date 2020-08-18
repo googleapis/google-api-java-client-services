@@ -31,16 +31,16 @@ package com.google.api.services.sheets.v4.model;
 public final class BasicChartSeries extends com.google.api.client.json.GenericJson {
 
   /**
-   * The color for elements (such as bars, lines, and points) associated with this series.  If
-   * empty, a default color is used.
+   * The color for elements (such as bars, lines, and points) associated with this series. If empty,
+   * a default color is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Color color;
 
   /**
-   * The color for elements (such as bars, lines, and points) associated with this series.  If
-   * empty, a default color is used. If color is also set, this field takes precedence.
+   * The color for elements (such as bars, lines, and points) associated with this series. If empty,
+   * a default color is used. If color is also set, this field takes precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +80,8 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
   private java.lang.String type;
 
   /**
-   * The color for elements (such as bars, lines, and points) associated with this series.  If
-   * empty, a default color is used.
+   * The color for elements (such as bars, lines, and points) associated with this series. If empty,
+   * a default color is used.
    * @return value or {@code null} for none
    */
   public Color getColor() {
@@ -89,8 +89,8 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The color for elements (such as bars, lines, and points) associated with this series.  If
-   * empty, a default color is used.
+   * The color for elements (such as bars, lines, and points) associated with this series. If empty,
+   * a default color is used.
    * @param color color or {@code null} for none
    */
   public BasicChartSeries setColor(Color color) {
@@ -99,8 +99,8 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The color for elements (such as bars, lines, and points) associated with this series.  If
-   * empty, a default color is used. If color is also set, this field takes precedence.
+   * The color for elements (such as bars, lines, and points) associated with this series. If empty,
+   * a default color is used. If color is also set, this field takes precedence.
    * @return value or {@code null} for none
    */
   public ColorStyle getColorStyle() {
@@ -108,8 +108,8 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The color for elements (such as bars, lines, and points) associated with this series.  If
-   * empty, a default color is used. If color is also set, this field takes precedence.
+   * The color for elements (such as bars, lines, and points) associated with this series. If empty,
+   * a default color is used. If color is also set, this field takes precedence.
    * @param colorStyle colorStyle or {@code null} for none
    */
   public BasicChartSeries setColorStyle(ColorStyle colorStyle) {

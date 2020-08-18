@@ -32,12 +32,10 @@ public final class DimensionGroup extends com.google.api.client.json.GenericJson
 
   /**
    * This field is true if this group is collapsed. A collapsed group remains collapsed if an
-   * overlapping group at a shallower depth is expanded.
-   *
-   * A true value does not imply that all dimensions within the group are hidden, since a
-   * dimension's visibility can change independently from this group property. However, when this
-   * property is updated, all dimensions within it are set to hidden if this field is true, or set
-   * to visible if this field is false.
+   * overlapping group at a shallower depth is expanded. A true value does not imply that all
+   * dimensions within the group are hidden, since a dimension's visibility can change independently
+   * from this group property. However, when this property is updated, all dimensions within it are
+   * set to hidden if this field is true, or set to visible if this field is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,12 +58,10 @@ public final class DimensionGroup extends com.google.api.client.json.GenericJson
 
   /**
    * This field is true if this group is collapsed. A collapsed group remains collapsed if an
-   * overlapping group at a shallower depth is expanded.
-   *
-   * A true value does not imply that all dimensions within the group are hidden, since a
-   * dimension's visibility can change independently from this group property. However, when this
-   * property is updated, all dimensions within it are set to hidden if this field is true, or set
-   * to visible if this field is false.
+   * overlapping group at a shallower depth is expanded. A true value does not imply that all
+   * dimensions within the group are hidden, since a dimension's visibility can change independently
+   * from this group property. However, when this property is updated, all dimensions within it are
+   * set to hidden if this field is true, or set to visible if this field is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCollapsed() {
@@ -74,12 +70,10 @@ public final class DimensionGroup extends com.google.api.client.json.GenericJson
 
   /**
    * This field is true if this group is collapsed. A collapsed group remains collapsed if an
-   * overlapping group at a shallower depth is expanded.
-   *
-   * A true value does not imply that all dimensions within the group are hidden, since a
-   * dimension's visibility can change independently from this group property. However, when this
-   * property is updated, all dimensions within it are set to hidden if this field is true, or set
-   * to visible if this field is false.
+   * overlapping group at a shallower depth is expanded. A true value does not imply that all
+   * dimensions within the group are hidden, since a dimension's visibility can change independently
+   * from this group property. However, when this property is updated, all dimensions within it are
+   * set to hidden if this field is true, or set to visible if this field is false.
    * @param collapsed collapsed or {@code null} for none
    */
   public DimensionGroup setCollapsed(java.lang.Boolean collapsed) {

@@ -17,10 +17,8 @@
 package com.google.api.services.datastore.v1beta3.model;
 
 /**
- * Options for beginning a new transaction.
- *
- * Transactions can be created explicitly with calls to Datastore.BeginTransaction or implicitly by
- * setting ReadOptions.new_transaction in read requests.
+ * Options for beginning a new transaction. Transactions can be created explicitly with calls to
+ * Datastore.BeginTransaction or implicitly by setting ReadOptions.new_transaction in read requests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Datastore API. For a detailed explanation see:

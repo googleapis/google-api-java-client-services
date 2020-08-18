@@ -60,10 +60,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private java.lang.Double doubleValue;
 
   /**
-   * An entity value.
-   *
-   * - May have no key. - May have a key with an incomplete key path. - May have a reserved/read-
-   * only key.
+   * An entity value. - May have no key. - May have a key with an incomplete key path. - May have a
+   * reserved/read-only key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -230,10 +228,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An entity value.
-   *
-   * - May have no key. - May have a key with an incomplete key path. - May have a reserved/read-
-   * only key.
+   * An entity value. - May have no key. - May have a key with an incomplete key path. - May have a
+   * reserved/read-only key.
    * @return value or {@code null} for none
    */
   public Entity getEntityValue() {
@@ -241,10 +237,8 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An entity value.
-   *
-   * - May have no key. - May have a key with an incomplete key path. - May have a reserved/read-
-   * only key.
+   * An entity value. - May have no key. - May have a key with an incomplete key path. - May have a
+   * reserved/read-only key.
    * @param entityValue entityValue or {@code null} for none
    */
   public Value setEntityValue(Entity entityValue) {

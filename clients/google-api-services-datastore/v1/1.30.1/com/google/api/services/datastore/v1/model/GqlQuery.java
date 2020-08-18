@@ -40,9 +40,8 @@ public final class GqlQuery extends com.google.api.client.json.GenericJson {
 
   /**
    * For each non-reserved named binding site in the query string, there must be a named parameter
-   * with that name, but not necessarily the inverse.
-   *
-   * Key must match regex `A-Za-z_$*`, must not match regex `__.*__`, and must not be `""`.
+   * with that name, but not necessarily the inverse. Key must match regex `A-Za-z_$*`, must not
+   * match regex `__.*__`, and must not be `""`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,10 +49,8 @@ public final class GqlQuery extends com.google.api.client.json.GenericJson {
 
   /**
    * Numbered binding site @1 references the first numbered parameter, effectively using 1-based
-   * indexing, rather than the usual 0.
-   *
-   * For each binding site numbered i in `query_string`, there must be an i-th numbered parameter.
-   * The inverse must also be true.
+   * indexing, rather than the usual 0. For each binding site numbered i in `query_string`, there
+   * must be an i-th numbered parameter. The inverse must also be true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,9 +87,8 @@ public final class GqlQuery extends com.google.api.client.json.GenericJson {
 
   /**
    * For each non-reserved named binding site in the query string, there must be a named parameter
-   * with that name, but not necessarily the inverse.
-   *
-   * Key must match regex `A-Za-z_$*`, must not match regex `__.*__`, and must not be `""`.
+   * with that name, but not necessarily the inverse. Key must match regex `A-Za-z_$*`, must not
+   * match regex `__.*__`, and must not be `""`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GqlQueryParameter> getNamedBindings() {
@@ -101,9 +97,8 @@ public final class GqlQuery extends com.google.api.client.json.GenericJson {
 
   /**
    * For each non-reserved named binding site in the query string, there must be a named parameter
-   * with that name, but not necessarily the inverse.
-   *
-   * Key must match regex `A-Za-z_$*`, must not match regex `__.*__`, and must not be `""`.
+   * with that name, but not necessarily the inverse. Key must match regex `A-Za-z_$*`, must not
+   * match regex `__.*__`, and must not be `""`.
    * @param namedBindings namedBindings or {@code null} for none
    */
   public GqlQuery setNamedBindings(java.util.Map<String, GqlQueryParameter> namedBindings) {
@@ -113,10 +108,8 @@ public final class GqlQuery extends com.google.api.client.json.GenericJson {
 
   /**
    * Numbered binding site @1 references the first numbered parameter, effectively using 1-based
-   * indexing, rather than the usual 0.
-   *
-   * For each binding site numbered i in `query_string`, there must be an i-th numbered parameter.
-   * The inverse must also be true.
+   * indexing, rather than the usual 0. For each binding site numbered i in `query_string`, there
+   * must be an i-th numbered parameter. The inverse must also be true.
    * @return value or {@code null} for none
    */
   public java.util.List<GqlQueryParameter> getPositionalBindings() {
@@ -125,10 +118,8 @@ public final class GqlQuery extends com.google.api.client.json.GenericJson {
 
   /**
    * Numbered binding site @1 references the first numbered parameter, effectively using 1-based
-   * indexing, rather than the usual 0.
-   *
-   * For each binding site numbered i in `query_string`, there must be an i-th numbered parameter.
-   * The inverse must also be true.
+   * indexing, rather than the usual 0. For each binding site numbered i in `query_string`, there
+   * must be an i-th numbered parameter. The inverse must also be true.
    * @param positionalBindings positionalBindings or {@code null} for none
    */
   public GqlQuery setPositionalBindings(java.util.List<GqlQueryParameter> positionalBindings) {

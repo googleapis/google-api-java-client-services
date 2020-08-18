@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-datastore</artifactId>
-  <version>v1-rev20200709-1.30.10</version>
-  <name>Cloud Datastore API v1-rev20200709-1.30.10</name>
+  <version>v1-rev20200802-1.30.10</version>
+  <name>Cloud Datastore API v1-rev20200802-1.30.10</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

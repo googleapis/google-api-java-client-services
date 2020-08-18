@@ -44,21 +44,17 @@ public final class GoogleDatastoreAdminV1beta1ExportEntitiesRequest extends com.
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Location for the export metadata and data files.
-   *
-   * The full resource URL of the external storage location. Currently, only Google Cloud Storage is
-   * supported. So output_url_prefix should be of the form: `gs://BUCKET_NAME[/NAMESPACE_PATH]`,
-   * where `BUCKET_NAME` is the name of the Cloud Storage bucket and `NAMESPACE_PATH` is an optional
-   * Cloud Storage namespace path (this is not a Cloud Datastore namespace). For more information
-   * about Cloud Storage namespace paths, see [Object name
-   * considerations](https://cloud.google.com/storage/docs/naming#object-considerations).
-   *
-   * The resulting files will be nested deeper than the specified URL prefix. The final output URL
-   * will be provided in the google.datastore.admin.v1beta1.ExportEntitiesResponse.output_url field.
-   * That value should be used for subsequent ImportEntities operations.
-   *
-   * By nesting the data files deeper, the same Cloud Storage bucket can be used in multiple
-   * ExportEntities operations without conflict.
+   * Location for the export metadata and data files. The full resource URL of the external storage
+   * location. Currently, only Google Cloud Storage is supported. So output_url_prefix should be of
+   * the form: `gs://BUCKET_NAME[/NAMESPACE_PATH]`, where `BUCKET_NAME` is the name of the Cloud
+   * Storage bucket and `NAMESPACE_PATH` is an optional Cloud Storage namespace path (this is not a
+   * Cloud Datastore namespace). For more information about Cloud Storage namespace paths, see
+   * [Object name considerations](https://cloud.google.com/storage/docs/naming#object-
+   * considerations). The resulting files will be nested deeper than the specified URL prefix. The
+   * final output URL will be provided in the
+   * google.datastore.admin.v1beta1.ExportEntitiesResponse.output_url field. That value should be
+   * used for subsequent ImportEntities operations. By nesting the data files deeper, the same Cloud
+   * Storage bucket can be used in multiple ExportEntities operations without conflict.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,21 +95,17 @@ public final class GoogleDatastoreAdminV1beta1ExportEntitiesRequest extends com.
   }
 
   /**
-   * Location for the export metadata and data files.
-   *
-   * The full resource URL of the external storage location. Currently, only Google Cloud Storage is
-   * supported. So output_url_prefix should be of the form: `gs://BUCKET_NAME[/NAMESPACE_PATH]`,
-   * where `BUCKET_NAME` is the name of the Cloud Storage bucket and `NAMESPACE_PATH` is an optional
-   * Cloud Storage namespace path (this is not a Cloud Datastore namespace). For more information
-   * about Cloud Storage namespace paths, see [Object name
-   * considerations](https://cloud.google.com/storage/docs/naming#object-considerations).
-   *
-   * The resulting files will be nested deeper than the specified URL prefix. The final output URL
-   * will be provided in the google.datastore.admin.v1beta1.ExportEntitiesResponse.output_url field.
-   * That value should be used for subsequent ImportEntities operations.
-   *
-   * By nesting the data files deeper, the same Cloud Storage bucket can be used in multiple
-   * ExportEntities operations without conflict.
+   * Location for the export metadata and data files. The full resource URL of the external storage
+   * location. Currently, only Google Cloud Storage is supported. So output_url_prefix should be of
+   * the form: `gs://BUCKET_NAME[/NAMESPACE_PATH]`, where `BUCKET_NAME` is the name of the Cloud
+   * Storage bucket and `NAMESPACE_PATH` is an optional Cloud Storage namespace path (this is not a
+   * Cloud Datastore namespace). For more information about Cloud Storage namespace paths, see
+   * [Object name considerations](https://cloud.google.com/storage/docs/naming#object-
+   * considerations). The resulting files will be nested deeper than the specified URL prefix. The
+   * final output URL will be provided in the
+   * google.datastore.admin.v1beta1.ExportEntitiesResponse.output_url field. That value should be
+   * used for subsequent ImportEntities operations. By nesting the data files deeper, the same Cloud
+   * Storage bucket can be used in multiple ExportEntities operations without conflict.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputUrlPrefix() {
@@ -121,21 +113,17 @@ public final class GoogleDatastoreAdminV1beta1ExportEntitiesRequest extends com.
   }
 
   /**
-   * Location for the export metadata and data files.
-   *
-   * The full resource URL of the external storage location. Currently, only Google Cloud Storage is
-   * supported. So output_url_prefix should be of the form: `gs://BUCKET_NAME[/NAMESPACE_PATH]`,
-   * where `BUCKET_NAME` is the name of the Cloud Storage bucket and `NAMESPACE_PATH` is an optional
-   * Cloud Storage namespace path (this is not a Cloud Datastore namespace). For more information
-   * about Cloud Storage namespace paths, see [Object name
-   * considerations](https://cloud.google.com/storage/docs/naming#object-considerations).
-   *
-   * The resulting files will be nested deeper than the specified URL prefix. The final output URL
-   * will be provided in the google.datastore.admin.v1beta1.ExportEntitiesResponse.output_url field.
-   * That value should be used for subsequent ImportEntities operations.
-   *
-   * By nesting the data files deeper, the same Cloud Storage bucket can be used in multiple
-   * ExportEntities operations without conflict.
+   * Location for the export metadata and data files. The full resource URL of the external storage
+   * location. Currently, only Google Cloud Storage is supported. So output_url_prefix should be of
+   * the form: `gs://BUCKET_NAME[/NAMESPACE_PATH]`, where `BUCKET_NAME` is the name of the Cloud
+   * Storage bucket and `NAMESPACE_PATH` is an optional Cloud Storage namespace path (this is not a
+   * Cloud Datastore namespace). For more information about Cloud Storage namespace paths, see
+   * [Object name considerations](https://cloud.google.com/storage/docs/naming#object-
+   * considerations). The resulting files will be nested deeper than the specified URL prefix. The
+   * final output URL will be provided in the
+   * google.datastore.admin.v1beta1.ExportEntitiesResponse.output_url field. That value should be
+   * used for subsequent ImportEntities operations. By nesting the data files deeper, the same Cloud
+   * Storage bucket can be used in multiple ExportEntities operations without conflict.
    * @param outputUrlPrefix outputUrlPrefix or {@code null} for none
    */
   public GoogleDatastoreAdminV1beta1ExportEntitiesRequest setOutputUrlPrefix(java.lang.String outputUrlPrefix) {

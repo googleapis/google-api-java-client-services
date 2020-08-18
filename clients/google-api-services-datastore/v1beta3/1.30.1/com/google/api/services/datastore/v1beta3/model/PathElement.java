@@ -17,10 +17,8 @@
 package com.google.api.services.datastore.v1beta3.model;
 
 /**
- * A (kind, ID/name) pair used to construct a key path.
- *
- * If either name or ID is set, the element is complete. If neither is set, the element is
- * incomplete.
+ * A (kind, ID/name) pair used to construct a key path. If either name or ID is set, the element is
+ * complete. If neither is set, the element is incomplete.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Datastore API. For a detailed explanation see:

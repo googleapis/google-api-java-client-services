@@ -30,7 +30,7 @@ package com.google.api.services.datastore.v1.model;
 public final class GoogleDatastoreAdminV1Index extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The index's ancestor mode.  Must not be ANCESTOR_MODE_UNSPECIFIED.
+   * Required. The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   private java.lang.String state;
 
   /**
-   * Required. The index's ancestor mode.  Must not be ANCESTOR_MODE_UNSPECIFIED.
+   * Required. The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
    * @return value or {@code null} for none
    */
   public java.lang.String getAncestor() {
@@ -80,7 +80,7 @@ public final class GoogleDatastoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * Required. The index's ancestor mode.  Must not be ANCESTOR_MODE_UNSPECIFIED.
+   * Required. The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
    * @param ancestor ancestor or {@code null} for none
    */
   public GoogleDatastoreAdminV1Index setAncestor(java.lang.String ancestor) {

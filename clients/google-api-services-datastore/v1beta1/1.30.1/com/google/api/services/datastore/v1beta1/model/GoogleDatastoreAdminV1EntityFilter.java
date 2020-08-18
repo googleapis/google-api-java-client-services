@@ -19,18 +19,11 @@ package com.google.api.services.datastore.v1beta1.model;
 /**
  * Identifies a subset of entities in a project. This is specified as combinations of kinds and
  * namespaces (either or both of which may be all, as described in the following examples). Example
- * usage:
- *
- * Entire project:   kinds=[], namespace_ids=[]
- *
- * Kinds Foo and Bar in all namespaces:   kinds=['Foo', 'Bar'], namespace_ids=[]
- *
- * Kinds Foo and Bar only in the default namespace:   kinds=['Foo', 'Bar'], namespace_ids=['']
- *
- * Kinds Foo and Bar in both the default and Baz namespaces:   kinds=['Foo', 'Bar'],
- * namespace_ids=['', 'Baz']
- *
- * The entire Baz namespace:   kinds=[], namespace_ids=['Baz']
+ * usage: Entire project: kinds=[], namespace_ids=[] Kinds Foo and Bar in all namespaces:
+ * kinds=['Foo', 'Bar'], namespace_ids=[] Kinds Foo and Bar only in the default namespace:
+ * kinds=['Foo', 'Bar'], namespace_ids=[''] Kinds Foo and Bar in both the default and Baz
+ * namespaces: kinds=['Foo', 'Bar'], namespace_ids=['', 'Baz'] The entire Baz namespace: kinds=[],
+ * namespace_ids=['Baz']
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Datastore API. For a detailed explanation see:
@@ -51,11 +44,9 @@ public final class GoogleDatastoreAdminV1EntityFilter extends com.google.api.cli
 
   /**
    * An empty list represents all namespaces. This is the preferred usage for projects that don't
-   * use namespaces.
-   *
-   * An empty string element represents the default namespace. This should be used if the project
-   * has data in non-default namespaces, but doesn't want to include them. Each namespace in this
-   * list must be unique.
+   * use namespaces. An empty string element represents the default namespace. This should be used
+   * if the project has data in non-default namespaces, but doesn't want to include them. Each
+   * namespace in this list must be unique.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,11 +71,9 @@ public final class GoogleDatastoreAdminV1EntityFilter extends com.google.api.cli
 
   /**
    * An empty list represents all namespaces. This is the preferred usage for projects that don't
-   * use namespaces.
-   *
-   * An empty string element represents the default namespace. This should be used if the project
-   * has data in non-default namespaces, but doesn't want to include them. Each namespace in this
-   * list must be unique.
+   * use namespaces. An empty string element represents the default namespace. This should be used
+   * if the project has data in non-default namespaces, but doesn't want to include them. Each
+   * namespace in this list must be unique.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNamespaceIds() {
@@ -93,11 +82,9 @@ public final class GoogleDatastoreAdminV1EntityFilter extends com.google.api.cli
 
   /**
    * An empty list represents all namespaces. This is the preferred usage for projects that don't
-   * use namespaces.
-   *
-   * An empty string element represents the default namespace. This should be used if the project
-   * has data in non-default namespaces, but doesn't want to include them. Each namespace in this
-   * list must be unique.
+   * use namespaces. An empty string element represents the default namespace. This should be used
+   * if the project has data in non-default namespaces, but doesn't want to include them. Each
+   * namespace in this list must be unique.
    * @param namespaceIds namespaceIds or {@code null} for none
    */
   public GoogleDatastoreAdminV1EntityFilter setNamespaceIds(java.util.List<java.lang.String> namespaceIds) {

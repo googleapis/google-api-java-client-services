@@ -30,8 +30,8 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * BigQuery URI to a dataset, up to 2000 characters long, in the format
-   * `bq://projectId.bqDatasetId`
+   * BigQuery URI to an existing  dataset, up to 2000 characters long, in the format
+   * `bq://projectId.bqDatasetId`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   private SchemaConfig schemaConfig;
 
   /**
-   * BigQuery URI to a dataset, up to 2000 characters long, in the format
-   * `bq://projectId.bqDatasetId`
+   * BigQuery URI to an existing  dataset, up to 2000 characters long, in the format
+   * `bq://projectId.bqDatasetId`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetUri() {
@@ -62,8 +62,8 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   }
 
   /**
-   * BigQuery URI to a dataset, up to 2000 characters long, in the format
-   * `bq://projectId.bqDatasetId`
+   * BigQuery URI to an existing  dataset, up to 2000 characters long, in the format
+   * `bq://projectId.bqDatasetId`.
    * @param datasetUri datasetUri or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1FhirBigQueryDestination setDatasetUri(java.lang.String datasetUri) {

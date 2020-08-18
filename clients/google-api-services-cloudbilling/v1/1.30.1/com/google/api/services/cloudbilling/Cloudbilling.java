@@ -20,8 +20,7 @@ package com.google.api.services.cloudbilling;
  * Service definition for Cloudbilling (v1).
  *
  * <p>
- * Allows developers to manage billing for their Google Cloud Platform projects
-    programmatically.
+ * Allows developers to manage billing for their Google Cloud Platform projects programmatically.
  * </p>
  *
  * <p>
@@ -145,9 +144,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
     /**
      * Creates a billing account. This method can only be used to create [billing
-     * subaccounts](https://cloud.google.com/billing/docs/concepts) by GCP resellers. When creating a
-     * subaccount, the current authenticated user must have the `billing.accounts.update` IAM permission
-     * on the master account, which is typically given to billing account
+     * subaccounts](https://cloud.google.com/billing/docs/concepts) by Google Cloud resellers. When
+     * creating a subaccount, the current authenticated user must have the `billing.accounts.update` IAM
+     * permission on the master account, which is typically given to billing account
      * [administrators](https://cloud.google.com/billing/docs/how-to/billing-access). This method will
      * return an error if the master account has not been provisioned as a reseller account.
      *
@@ -171,9 +170,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
       /**
        * Creates a billing account. This method can only be used to create [billing
-       * subaccounts](https://cloud.google.com/billing/docs/concepts) by GCP resellers. When creating a
-       * subaccount, the current authenticated user must have the `billing.accounts.update` IAM
-       * permission on the master account, which is typically given to billing account
+       * subaccounts](https://cloud.google.com/billing/docs/concepts) by Google Cloud resellers. When
+       * creating a subaccount, the current authenticated user must have the `billing.accounts.update`
+       * IAM permission on the master account, which is typically given to billing account
        * [administrators](https://cloud.google.com/billing/docs/how-to/billing-access). This method will
        * return an error if the master account has not been provisioned as a reseller account.
        *
@@ -411,8 +410,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudbilling server.  After setting any optional
      * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
      * @return the request
      */
@@ -442,8 +440,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
        * @since 1.13
        */
@@ -551,43 +548,33 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. The policy format version to be returned.
-       *
-       * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-       *
-       * Requests for policies with any conditional bindings must specify version 3. Policies
-       * without any conditional bindings may specify any valid value or leave the field unset.
-       *
-       * To learn which resources support conditions in their IAM policies, see the [IAM
-       * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+       * Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+       * specifying an invalid value will be rejected. Requests for policies with any conditional
+       * bindings must specify version 3. Policies without any conditional bindings may specify any
+       * valid value or leave the field unset. To learn which resources support conditions in their
+       * IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions
+       * /resource-policies).
        */
       @com.google.api.client.util.Key("options.requestedPolicyVersion")
       private java.lang.Integer optionsRequestedPolicyVersion;
 
-      /** Optional. The policy format version to be returned.
-
-     Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-     Requests for policies with any conditional bindings must specify version 3. Policies without any
-     conditional bindings may specify any valid value or leave the field unset.
-
-     To learn which resources support conditions in their IAM policies, see the [IAM
-     documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+      /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+     specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+     must specify version 3. Policies without any conditional bindings may specify any valid value or
+     leave the field unset. To learn which resources support conditions in their IAM policies, see the
+     [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
        */
       public java.lang.Integer getOptionsRequestedPolicyVersion() {
         return optionsRequestedPolicyVersion;
       }
 
       /**
-       * Optional. The policy format version to be returned.
-       *
-       * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-       *
-       * Requests for policies with any conditional bindings must specify version 3. Policies
-       * without any conditional bindings may specify any valid value or leave the field unset.
-       *
-       * To learn which resources support conditions in their IAM policies, see the [IAM
-       * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+       * Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+       * specifying an invalid value will be rejected. Requests for policies with any conditional
+       * bindings must specify version 3. Policies without any conditional bindings may specify any
+       * valid value or leave the field unset. To learn which resources support conditions in their
+       * IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions
+       * /resource-policies).
        */
       public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
         this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -733,9 +720,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /**
-       * Requested page size. The maximum page size is 100; this is also the default.
-       */
+      /** Requested page size. The maximum page size is 100; this is also the default. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
@@ -745,9 +730,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         return pageSize;
       }
 
-      /**
-       * Requested page size. The maximum page size is 100; this is also the default.
-       */
+      /** Requested page size. The maximum page size is 100; this is also the default. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -916,9 +899,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /**
-       * The update mask applied to the resource. Only "display_name" is currently supported.
-       */
+      /** The update mask applied to the resource. Only "display_name" is currently supported. */
       @com.google.api.client.util.Key
       private String updateMask;
 
@@ -928,9 +909,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         return updateMask;
       }
 
-      /**
-       * The update mask applied to the resource. Only "display_name" is currently supported.
-       */
+      /** The update mask applied to the resource. Only "display_name" is currently supported. */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -951,8 +930,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudbilling server.  After setting any optional
      * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.cloudbilling.model.SetIamPolicyRequest}
      * @return the request
@@ -984,8 +962,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.cloudbilling.model.SetIamPolicyRequest}
        * @since 1.13
@@ -1098,8 +1075,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudbilling server.  After setting any optional
      * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
      *
-     * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
      * @param content the {@link com.google.api.services.cloudbilling.model.TestIamPermissionsRequest}
      * @return the request
@@ -1130,8 +1106,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.cloudbilling.model.TestIamPermissionsRequest}
        * @since 1.13
@@ -1265,8 +1240,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the cloudbilling server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the billing account associated with the projects that
-      you want to
+       * @param name Required. The resource name of the billing account associated with the projects that you want to
        *        list. For example, `billingAccounts/012345-567890-ABCDEF`.
        * @return the request
        */
@@ -1295,8 +1269,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the billing account associated with the projects that
-      you want to
+         * @param name Required. The resource name of the billing account associated with the projects that you want to
        *        list. For example, `billingAccounts/012345-567890-ABCDEF`.
          * @since 1.13
          */
@@ -1403,9 +1376,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /**
-         * Requested page size. The maximum page size is 100; this is also the default.
-         */
+        /** Requested page size. The maximum page size is 100; this is also the default. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
@@ -1415,9 +1386,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
           return pageSize;
         }
 
-        /**
-         * Requested page size. The maximum page size is 100; this is also the default.
-         */
+        /** Requested page size. The maximum page size is 100; this is also the default. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -1487,8 +1456,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudbilling server.  After setting any optional
      * parameters, call the {@link GetBillingInfo#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the project for which billing information is
-    retrieved. For example,
+     * @param name Required. The resource name of the project for which billing information is retrieved. For example,
      *        `projects/tokyo-rain-123`.
      * @return the request
      */
@@ -1518,8 +1486,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param name Required. The resource name of the project for which billing information is
-    retrieved. For example,
+       * @param name Required. The resource name of the project for which billing information is retrieved. For example,
      *        `projects/tokyo-rain-123`.
        * @since 1.13
        */
@@ -1636,34 +1603,28 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
      * account by setting the `billing_account_name` in the `ProjectBillingInfo` resource to the
      * resource name of a billing account. Associating a project with an open billing account enables
      * billing on the project and allows charges for resource usage. If the project already had a
-     * billing account, this method changes the billing account used for resource usage charges.
-     *
-     * *Note:* Incurred charges that have not yet been reported in the transaction history of the GCP
+     * billing account, this method changes the billing account used for resource usage charges. *Note:*
+     * Incurred charges that have not yet been reported in the transaction history of the Google Cloud
      * Console might be billed to the new billing account, even if the charge occurred before the new
-     * billing account was assigned to the project.
-     *
-     * The current authenticated user must have ownership privileges for both the
-     * [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo ) and the [billing
-     * account](https://cloud.google.com/billing/docs/how-to/billing-access).
-     *
-     * You can disable billing on the project by setting the `billing_account_name` field to empty. This
-     * action disassociates the current billing account from the project. Any billable activity of your
-     * in-use services will stop, and your application could stop functioning as expected. Any unbilled
-     * charges to date will be billed to the previously associated account. The current authenticated
-     * user must be either an owner of the project or an owner of the billing account for the project.
-     *
-     * Note that associating a project with a *closed* billing account will have much the same effect as
-     * disabling billing on the project: any paid resources used by the project will be shut down. Thus,
-     * unless you wish to disable billing, you should always call this method with the name of an *open*
-     * billing account.
+     * billing account was assigned to the project. The current authenticated user must have ownership
+     * privileges for both the [project](https://cloud.google.com/docs/permissions-
+     * overview#h.bgs0oxofvnoo ) and the [billing account](https://cloud.google.com/billing/docs/how-to
+     * /billing-access). You can disable billing on the project by setting the `billing_account_name`
+     * field to empty. This action disassociates the current billing account from the project. Any
+     * billable activity of your in-use services will stop, and your application could stop functioning
+     * as expected. Any unbilled charges to date will be billed to the previously associated account.
+     * The current authenticated user must be either an owner of the project or an owner of the billing
+     * account for the project. Note that associating a project with a *closed* billing account will
+     * have much the same effect as disabling billing on the project: any paid resources used by the
+     * project will be shut down. Thus, unless you wish to disable billing, you should always call this
+     * method with the name of an *open* billing account.
      *
      * Create a request for the method "projects.updateBillingInfo".
      *
      * This request holds the parameters needed by the cloudbilling server.  After setting any optional
      * parameters, call the {@link UpdateBillingInfo#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the project associated with the billing information
-    that you want to
+     * @param name Required. The resource name of the project associated with the billing information that you want to
      *        update. For example, `projects/tokyo-rain-123`.
      * @param content the {@link com.google.api.services.cloudbilling.model.ProjectBillingInfo}
      * @return the request
@@ -1687,26 +1648,20 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * resource name of a billing account. Associating a project with an open billing account enables
        * billing on the project and allows charges for resource usage. If the project already had a
        * billing account, this method changes the billing account used for resource usage charges.
-       *
-       * *Note:* Incurred charges that have not yet been reported in the transaction history of the GCP
-       * Console might be billed to the new billing account, even if the charge occurred before the new
-       * billing account was assigned to the project.
-       *
-       * The current authenticated user must have ownership privileges for both the
-       * [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo ) and the [billing
-       * account](https://cloud.google.com/billing/docs/how-to/billing-access).
-       *
-       * You can disable billing on the project by setting the `billing_account_name` field to empty.
-       * This action disassociates the current billing account from the project. Any billable activity
-       * of your in-use services will stop, and your application could stop functioning as expected. Any
-       * unbilled charges to date will be billed to the previously associated account. The current
-       * authenticated user must be either an owner of the project or an owner of the billing account
-       * for the project.
-       *
-       * Note that associating a project with a *closed* billing account will have much the same effect
-       * as disabling billing on the project: any paid resources used by the project will be shut down.
-       * Thus, unless you wish to disable billing, you should always call this method with the name of
-       * an *open* billing account.
+       * *Note:* Incurred charges that have not yet been reported in the transaction history of the
+       * Google Cloud Console might be billed to the new billing account, even if the charge occurred
+       * before the new billing account was assigned to the project. The current authenticated user must
+       * have ownership privileges for both the [project](https://cloud.google.com/docs/permissions-
+       * overview#h.bgs0oxofvnoo ) and the [billing account](https://cloud.google.com/billing/docs/how-
+       * to/billing-access). You can disable billing on the project by setting the
+       * `billing_account_name` field to empty. This action disassociates the current billing account
+       * from the project. Any billable activity of your in-use services will stop, and your application
+       * could stop functioning as expected. Any unbilled charges to date will be billed to the
+       * previously associated account. The current authenticated user must be either an owner of the
+       * project or an owner of the billing account for the project. Note that associating a project
+       * with a *closed* billing account will have much the same effect as disabling billing on the
+       * project: any paid resources used by the project will be shut down. Thus, unless you wish to
+       * disable billing, you should always call this method with the name of an *open* billing account.
        *
        * Create a request for the method "projects.updateBillingInfo".
        *
@@ -1716,8 +1671,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * stractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the project associated with the billing information
-    that you want to
+       * @param name Required. The resource name of the project associated with the billing information that you want to
      *        update. For example, `projects/tokyo-rain-123`.
        * @param content the {@link com.google.api.services.cloudbilling.model.ProjectBillingInfo}
        * @since 1.13
@@ -2019,8 +1973,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the cloudbilling server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the service.
-      Example: "services/DA34-426B-A397"
+       * @param parent Required. The name of the service. Example: "services/DA34-426B-A397"
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2046,8 +1999,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the service.
-      Example: "services/DA34-426B-A397"
+         * @param parent Required. The name of the service. Example: "services/DA34-426B-A397"
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2125,9 +2077,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the service. Example: "services/DA34-426B-A397"
-         */
+        /** Required. The name of the service. Example: "services/DA34-426B-A397" */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -2137,9 +2087,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
           return parent;
         }
 
-        /**
-         * Required. The name of the service. Example: "services/DA34-426B-A397"
-         */
+        /** Required. The name of the service. Example: "services/DA34-426B-A397" */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

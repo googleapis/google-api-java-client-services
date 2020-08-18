@@ -31,7 +31,7 @@ public final class GeoTaxonomy extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of regions associated with a sku. Empty for Global skus, which are associated with all
-   * GCP regions.
+   * Google Cloud regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class GeoTaxonomy extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of regions associated with a sku. Empty for Global skus, which are associated with all
-   * GCP regions.
+   * Google Cloud regions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegions() {
@@ -55,7 +55,7 @@ public final class GeoTaxonomy extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of regions associated with a sku. Empty for Global skus, which are associated with all
-   * GCP regions.
+   * Google Cloud regions.
    * @param regions regions or {@code null} for none
    */
   public GeoTaxonomy setRegions(java.util.List<java.lang.String> regions) {

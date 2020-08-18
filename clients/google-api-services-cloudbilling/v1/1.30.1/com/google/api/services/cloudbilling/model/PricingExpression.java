@@ -17,13 +17,10 @@
 package com.google.api.services.cloudbilling.model;
 
 /**
- * Expresses a mathematical pricing formula. For Example:-
- *
- * `usage_unit: GBy` `tiered_rates:`    `[start_usage_amount: 20, unit_price: $10]`
- * `[start_usage_amount: 100, unit_price: $5]`
- *
- * The above expresses a pricing formula where the first 20GB is free, the next 80GB is priced at
- * $10 per GB followed by $5 per GB for additional usage.
+ * Expresses a mathematical pricing formula. For Example:- `usage_unit: GBy` `tiered_rates:`
+ * `[start_usage_amount: 20, unit_price: $10]` `[start_usage_amount: 100, unit_price: $5]` The above
+ * expresses a pricing formula where the first 20GB is free, the next 80GB is priced at $10 per GB
+ * followed by $5 per GB for additional usage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing API. For a detailed explanation see:

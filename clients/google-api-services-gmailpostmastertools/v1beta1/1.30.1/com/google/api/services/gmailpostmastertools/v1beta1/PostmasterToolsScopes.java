@@ -17,7 +17,7 @@
 package com.google.api.services.gmailpostmastertools.v1beta1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Postmaster Tools API.
+ * Available OAuth 2.0 scopes for use with the Gmail Postmaster Tools API.
  *
  * @since 1.4
  */

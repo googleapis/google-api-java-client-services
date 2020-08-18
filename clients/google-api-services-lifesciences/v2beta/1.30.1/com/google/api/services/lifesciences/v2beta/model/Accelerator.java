@@ -38,13 +38,11 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   private java.lang.Long count;
 
   /**
-   * The accelerator type string (for example, "nvidia-tesla-k80").
-   *
-   * Only NVIDIA GPU accelerators are currently supported. If an NVIDIA GPU is attached, the
-   * required runtime libraries will be made available to all containers under `/usr/local/nvidia`.
-   * The driver version to install must be specified using the NVIDIA driver version parameter on
-   * the virtual machine specification. Note that attaching a GPU increases the worker VM startup
-   * time by a few minutes.
+   * The accelerator type string (for example, "nvidia-tesla-k80"). Only NVIDIA GPU accelerators are
+   * currently supported. If an NVIDIA GPU is attached, the required runtime libraries will be made
+   * available to all containers under `/usr/local/nvidia`. The driver version to install must be
+   * specified using the NVIDIA driver version parameter on the virtual machine specification. Note
+   * that attaching a GPU increases the worker VM startup time by a few minutes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,13 +66,11 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The accelerator type string (for example, "nvidia-tesla-k80").
-   *
-   * Only NVIDIA GPU accelerators are currently supported. If an NVIDIA GPU is attached, the
-   * required runtime libraries will be made available to all containers under `/usr/local/nvidia`.
-   * The driver version to install must be specified using the NVIDIA driver version parameter on
-   * the virtual machine specification. Note that attaching a GPU increases the worker VM startup
-   * time by a few minutes.
+   * The accelerator type string (for example, "nvidia-tesla-k80"). Only NVIDIA GPU accelerators are
+   * currently supported. If an NVIDIA GPU is attached, the required runtime libraries will be made
+   * available to all containers under `/usr/local/nvidia`. The driver version to install must be
+   * specified using the NVIDIA driver version parameter on the virtual machine specification. Note
+   * that attaching a GPU increases the worker VM startup time by a few minutes.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -82,13 +78,11 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The accelerator type string (for example, "nvidia-tesla-k80").
-   *
-   * Only NVIDIA GPU accelerators are currently supported. If an NVIDIA GPU is attached, the
-   * required runtime libraries will be made available to all containers under `/usr/local/nvidia`.
-   * The driver version to install must be specified using the NVIDIA driver version parameter on
-   * the virtual machine specification. Note that attaching a GPU increases the worker VM startup
-   * time by a few minutes.
+   * The accelerator type string (for example, "nvidia-tesla-k80"). Only NVIDIA GPU accelerators are
+   * currently supported. If an NVIDIA GPU is attached, the required runtime libraries will be made
+   * available to all containers under `/usr/local/nvidia`. The driver version to install must be
+   * specified using the NVIDIA driver version parameter on the virtual machine specification. Note
+   * that attaching a GPU increases the worker VM startup time by a few minutes.
    * @param type type or {@code null} for none
    */
   public Accelerator setType(java.lang.String type) {

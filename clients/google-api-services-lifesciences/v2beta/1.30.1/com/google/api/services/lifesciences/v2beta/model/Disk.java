@@ -17,9 +17,8 @@
 package com.google.api.services.lifesciences.v2beta.model;
 
 /**
- * Carries information about a disk that can be attached to a VM.
- *
- * See https://cloud.google.com/compute/docs/disks/performance for more information about disk type,
+ * Carries information about a disk that can be attached to a VM. See
+ * https://cloud.google.com/compute/docs/disks/performance for more information about disk type,
  * size, and performance considerations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -44,11 +43,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The size, in GB, of the disk to attach. If the size is not specified, a default is chosen to
-   * ensure reasonable I/O performance.
-   *
-   * If the disk type is specified as `local-ssd`, multiple local drives are automatically combined
-   * to provide the requested size. Note, however, that each physical SSD is 375GB in size, and no
-   * more than 8 drives can be attached to a single instance.
+   * ensure reasonable I/O performance. If the disk type is specified as `local-ssd`, multiple local
+   * drives are automatically combined to provide the requested size. Note, however, that each
+   * physical SSD is 375GB in size, and no more than 8 drives can be attached to a single instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,11 +88,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The size, in GB, of the disk to attach. If the size is not specified, a default is chosen to
-   * ensure reasonable I/O performance.
-   *
-   * If the disk type is specified as `local-ssd`, multiple local drives are automatically combined
-   * to provide the requested size. Note, however, that each physical SSD is 375GB in size, and no
-   * more than 8 drives can be attached to a single instance.
+   * ensure reasonable I/O performance. If the disk type is specified as `local-ssd`, multiple local
+   * drives are automatically combined to provide the requested size. Note, however, that each
+   * physical SSD is 375GB in size, and no more than 8 drives can be attached to a single instance.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSizeGb() {
@@ -104,11 +99,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * The size, in GB, of the disk to attach. If the size is not specified, a default is chosen to
-   * ensure reasonable I/O performance.
-   *
-   * If the disk type is specified as `local-ssd`, multiple local drives are automatically combined
-   * to provide the requested size. Note, however, that each physical SSD is 375GB in size, and no
-   * more than 8 drives can be attached to a single instance.
+   * ensure reasonable I/O performance. If the disk type is specified as `local-ssd`, multiple local
+   * drives are automatically combined to provide the requested size. Note, however, that each
+   * physical SSD is 375GB in size, and no more than 8 drives can be attached to a single instance.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public Disk setSizeGb(java.lang.Integer sizeGb) {

@@ -60,11 +60,10 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
   private Resources resources;
 
   /**
-   * The maximum amount of time to give the pipeline to complete.  This includes the time spent
-   * waiting for a worker to be allocated.  If the pipeline fails to complete before the timeout, it
-   * will be cancelled and the error code will be set to DEADLINE_EXCEEDED.
-   *
-   * If unspecified, it will default to 7 days.
+   * The maximum amount of time to give the pipeline to complete. This includes the time spent
+   * waiting for a worker to be allocated. If the pipeline fails to complete before the timeout, it
+   * will be cancelled and the error code will be set to DEADLINE_EXCEEDED. If unspecified, it will
+   * default to 7 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,11 +125,10 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The maximum amount of time to give the pipeline to complete.  This includes the time spent
-   * waiting for a worker to be allocated.  If the pipeline fails to complete before the timeout, it
-   * will be cancelled and the error code will be set to DEADLINE_EXCEEDED.
-   *
-   * If unspecified, it will default to 7 days.
+   * The maximum amount of time to give the pipeline to complete. This includes the time spent
+   * waiting for a worker to be allocated. If the pipeline fails to complete before the timeout, it
+   * will be cancelled and the error code will be set to DEADLINE_EXCEEDED. If unspecified, it will
+   * default to 7 days.
    * @return value or {@code null} for none
    */
   public String getTimeout() {
@@ -138,11 +136,10 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The maximum amount of time to give the pipeline to complete.  This includes the time spent
-   * waiting for a worker to be allocated.  If the pipeline fails to complete before the timeout, it
-   * will be cancelled and the error code will be set to DEADLINE_EXCEEDED.
-   *
-   * If unspecified, it will default to 7 days.
+   * The maximum amount of time to give the pipeline to complete. This includes the time spent
+   * waiting for a worker to be allocated. If the pipeline fails to complete before the timeout, it
+   * will be cancelled and the error code will be set to DEADLINE_EXCEEDED. If unspecified, it will
+   * default to 7 days.
    * @param timeout timeout or {@code null} for none
    */
   public Pipeline setTimeout(String timeout) {

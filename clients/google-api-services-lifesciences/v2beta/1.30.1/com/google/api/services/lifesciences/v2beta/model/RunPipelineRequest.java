@@ -35,7 +35,6 @@ public final class RunPipelineRequest extends com.google.api.client.json.Generic
   /**
    * User-defined labels to associate with the returned operation. These labels are not propagated
    * to any Google Cloud Platform resources used by the operation, and can be modified at any time.
-   *
    * To associate labels with resources created while executing the operation, see the appropriate
    * resource message (for example, `VirtualMachine`).
    * The value may be {@code null}.
@@ -53,7 +52,6 @@ public final class RunPipelineRequest extends com.google.api.client.json.Generic
   /**
    * User-defined labels to associate with the returned operation. These labels are not propagated
    * to any Google Cloud Platform resources used by the operation, and can be modified at any time.
-   *
    * To associate labels with resources created while executing the operation, see the appropriate
    * resource message (for example, `VirtualMachine`).
    * @return value or {@code null} for none
@@ -65,7 +63,6 @@ public final class RunPipelineRequest extends com.google.api.client.json.Generic
   /**
    * User-defined labels to associate with the returned operation. These labels are not propagated
    * to any Google Cloud Platform resources used by the operation, and can be modified at any time.
-   *
    * To associate labels with resources created while executing the operation, see the appropriate
    * resource message (for example, `VirtualMachine`).
    * @param labels labels or {@code null} for none

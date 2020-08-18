@@ -51,18 +51,16 @@ public final class Target extends com.google.api.client.json.GenericJson {
   private QueryTarget query;
 
   /**
-   * Start listening after a specific `read_time`.
-   *
-   * The client must know the state of matching documents at this time.
+   * Start listening after a specific `read_time`. The client must know the state of matching
+   * documents at this time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String readTime;
 
   /**
-   * A resume token from a prior TargetChange for an identical target.
-   *
-   * Using a resume token with a different target is unsupported and may fail.
+   * A resume token from a prior TargetChange for an identical target. Using a resume token with a
+   * different target is unsupported and may fail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,9 +125,8 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Start listening after a specific `read_time`.
-   *
-   * The client must know the state of matching documents at this time.
+   * Start listening after a specific `read_time`. The client must know the state of matching
+   * documents at this time.
    * @return value or {@code null} for none
    */
   public String getReadTime() {
@@ -137,9 +134,8 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Start listening after a specific `read_time`.
-   *
-   * The client must know the state of matching documents at this time.
+   * Start listening after a specific `read_time`. The client must know the state of matching
+   * documents at this time.
    * @param readTime readTime or {@code null} for none
    */
   public Target setReadTime(String readTime) {
@@ -148,9 +144,8 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A resume token from a prior TargetChange for an identical target.
-   *
-   * Using a resume token with a different target is unsupported and may fail.
+   * A resume token from a prior TargetChange for an identical target. Using a resume token with a
+   * different target is unsupported and may fail.
    * @see #decodeResumeToken()
    * @return value or {@code null} for none
    */
@@ -159,9 +154,8 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A resume token from a prior TargetChange for an identical target.
-   *
-   * Using a resume token with a different target is unsupported and may fail.
+   * A resume token from a prior TargetChange for an identical target. Using a resume token with a
+   * different target is unsupported and may fail.
    * @see #getResumeToken()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -172,9 +166,8 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A resume token from a prior TargetChange for an identical target.
-   *
-   * Using a resume token with a different target is unsupported and may fail.
+   * A resume token from a prior TargetChange for an identical target. Using a resume token with a
+   * different target is unsupported and may fail.
    * @see #encodeResumeToken()
    * @param resumeToken resumeToken or {@code null} for none
    */
@@ -184,9 +177,8 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A resume token from a prior TargetChange for an identical target.
-   *
-   * Using a resume token with a different target is unsupported and may fail.
+   * A resume token from a prior TargetChange for an identical target. Using a resume token with a
+   * different target is unsupported and may fail.
    * @see #setResumeToken()
    *
    * <p>

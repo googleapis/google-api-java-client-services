@@ -30,27 +30,24 @@ package com.google.api.services.firestore.v1.model;
 public final class BatchWriteResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status of applying the writes.
-   *
-   * This i-th write status corresponds to the i-th write in the request.
+   * The status of applying the writes. This i-th write status corresponds to the i-th write in the
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Status> status;
 
   /**
-   * The result of applying the writes.
-   *
-   * This i-th write result corresponds to the i-th write in the request.
+   * The result of applying the writes. This i-th write result corresponds to the i-th write in the
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WriteResult> writeResults;
 
   /**
-   * The status of applying the writes.
-   *
-   * This i-th write status corresponds to the i-th write in the request.
+   * The status of applying the writes. This i-th write status corresponds to the i-th write in the
+   * request.
    * @return value or {@code null} for none
    */
   public java.util.List<Status> getStatus() {
@@ -58,9 +55,8 @@ public final class BatchWriteResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The status of applying the writes.
-   *
-   * This i-th write status corresponds to the i-th write in the request.
+   * The status of applying the writes. This i-th write status corresponds to the i-th write in the
+   * request.
    * @param status status or {@code null} for none
    */
   public BatchWriteResponse setStatus(java.util.List<Status> status) {
@@ -69,9 +65,8 @@ public final class BatchWriteResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The result of applying the writes.
-   *
-   * This i-th write result corresponds to the i-th write in the request.
+   * The result of applying the writes. This i-th write result corresponds to the i-th write in the
+   * request.
    * @return value or {@code null} for none
    */
   public java.util.List<WriteResult> getWriteResults() {
@@ -79,9 +74,8 @@ public final class BatchWriteResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The result of applying the writes.
-   *
-   * This i-th write result corresponds to the i-th write in the request.
+   * The result of applying the writes. This i-th write result corresponds to the i-th write in the
+   * request.
    * @param writeResults writeResults or {@code null} for none
    */
   public BatchWriteResponse setWriteResults(java.util.List<WriteResult> writeResults) {

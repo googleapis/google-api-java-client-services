@@ -37,9 +37,7 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   private java.lang.String transaction;
 
   /**
-   * The writes to apply.
-   *
-   * Always executed atomically and in order.
+   * The writes to apply. Always executed atomically and in order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,9 +89,7 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The writes to apply.
-   *
-   * Always executed atomically and in order.
+   * The writes to apply. Always executed atomically and in order.
    * @return value or {@code null} for none
    */
   public java.util.List<Write> getWrites() {
@@ -101,9 +97,7 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The writes to apply.
-   *
-   * Always executed atomically and in order.
+   * The writes to apply. Always executed atomically and in order.
    * @param writes writes or {@code null} for none
    */
   public CommitRequest setWrites(java.util.List<Write> writes) {

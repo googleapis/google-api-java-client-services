@@ -51,10 +51,9 @@ public final class ListenResponse extends com.google.api.client.json.GenericJson
   private DocumentRemove documentRemove;
 
   /**
-   * A filter to apply to the set of documents previously returned for the given target.
-   *
-   * Returned when documents may have been removed from the given target, but the exact documents
-   * are unknown.
+   * A filter to apply to the set of documents previously returned for the given target. Returned
+   * when documents may have been removed from the given target, but the exact documents are
+   * unknown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,10 +118,9 @@ public final class ListenResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A filter to apply to the set of documents previously returned for the given target.
-   *
-   * Returned when documents may have been removed from the given target, but the exact documents
-   * are unknown.
+   * A filter to apply to the set of documents previously returned for the given target. Returned
+   * when documents may have been removed from the given target, but the exact documents are
+   * unknown.
    * @return value or {@code null} for none
    */
   public ExistenceFilter getFilter() {
@@ -130,10 +128,9 @@ public final class ListenResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A filter to apply to the set of documents previously returned for the given target.
-   *
-   * Returned when documents may have been removed from the given target, but the exact documents
-   * are unknown.
+   * A filter to apply to the set of documents previously returned for the given target. Returned
+   * when documents may have been removed from the given target, but the exact documents are
+   * unknown.
    * @param filter filter or {@code null} for none
    */
   public ListenResponse setFilter(ExistenceFilter filter) {

@@ -17,13 +17,10 @@
 package com.google.api.services.firestore.v1beta1.model;
 
 /**
- * A Document has been removed from the view of the targets.
- *
- * Sent if the document is no longer relevant to a target and is out of view. Can be sent instead of
- * a DocumentDelete or a DocumentChange if the server can not send the new value of the document.
- *
- * Multiple DocumentRemove messages may be returned for the same logical write or delete, if
- * multiple targets are affected.
+ * A Document has been removed from the view of the targets. Sent if the document is no longer
+ * relevant to a target and is out of view. Can be sent instead of a DocumentDelete or a
+ * DocumentChange if the server can not send the new value of the document. Multiple DocumentRemove
+ * messages may be returned for the same logical write or delete, if multiple targets are affected.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -43,9 +40,8 @@ public final class DocumentRemove extends com.google.api.client.json.GenericJson
   private java.lang.String document;
 
   /**
-   * The read timestamp at which the remove was observed.
-   *
-   * Greater or equal to the `commit_time` of the change/delete/remove.
+   * The read timestamp at which the remove was observed. Greater or equal to the `commit_time` of
+   * the change/delete/remove.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,9 +72,8 @@ public final class DocumentRemove extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The read timestamp at which the remove was observed.
-   *
-   * Greater or equal to the `commit_time` of the change/delete/remove.
+   * The read timestamp at which the remove was observed. Greater or equal to the `commit_time` of
+   * the change/delete/remove.
    * @return value or {@code null} for none
    */
   public String getReadTime() {
@@ -86,9 +81,8 @@ public final class DocumentRemove extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The read timestamp at which the remove was observed.
-   *
-   * Greater or equal to the `commit_time` of the change/delete/remove.
+   * The read timestamp at which the remove was observed. Greater or equal to the `commit_time` of
+   * the change/delete/remove.
    * @param readTime readTime or {@code null} for none
    */
   public DocumentRemove setReadTime(String readTime) {

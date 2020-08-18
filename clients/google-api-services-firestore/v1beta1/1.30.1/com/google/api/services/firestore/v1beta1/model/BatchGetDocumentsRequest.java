@@ -40,10 +40,8 @@ public final class BatchGetDocumentsRequest extends com.google.api.client.json.G
   private java.util.List<java.lang.String> documents;
 
   /**
-   * The fields to return. If not set, returns all fields.
-   *
-   * If a document has a field that is not present in this mask, that field will not be returned in
-   * the response.
+   * The fields to return. If not set, returns all fields. If a document has a field that is not
+   * present in this mask, that field will not be returned in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,10 +93,8 @@ public final class BatchGetDocumentsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The fields to return. If not set, returns all fields.
-   *
-   * If a document has a field that is not present in this mask, that field will not be returned in
-   * the response.
+   * The fields to return. If not set, returns all fields. If a document has a field that is not
+   * present in this mask, that field will not be returned in the response.
    * @return value or {@code null} for none
    */
   public DocumentMask getMask() {
@@ -106,10 +102,8 @@ public final class BatchGetDocumentsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The fields to return. If not set, returns all fields.
-   *
-   * If a document has a field that is not present in this mask, that field will not be returned in
-   * the response.
+   * The fields to return. If not set, returns all fields. If a document has a field that is not
+   * present in this mask, that field will not be returned in the response.
    * @param mask mask or {@code null} for none
    */
   public BatchGetDocumentsRequest setMask(DocumentMask mask) {

@@ -50,39 +50,30 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The maximum number of results to return.
-   *
-   * Applies after all other constraints. Must be >= 0 if specified.
+   * The maximum number of results to return. Applies after all other constraints. Must be >= 0 if
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer limit;
 
   /**
-   * The number of results to skip.
-   *
-   * Applies before limit, but after all other constraints. Must be >= 0 if specified.
+   * The number of results to skip. Applies before limit, but after all other constraints. Must be
+   * >= 0 if specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer offset;
 
   /**
-   * The order to apply to the query results.
-   *
-   * Firestore guarantees a stable ordering through the following rules:
-   *
-   *  * Any field required to appear in `order_by`, that is not already    specified in `order_by`,
-   * is appended to the order in field name order    by default.  * If an order on `__name__` is not
-   * specified, it is appended by default.
-   *
-   * Fields are appended with the same sort direction as the last order specified, or 'ASCENDING' if
-   * no order was specified. For example:
-   *
-   *  * `SELECT * FROM Foo ORDER BY A` becomes    `SELECT * FROM Foo ORDER BY A, __name__`  *
-   * `SELECT * FROM Foo ORDER BY A DESC` becomes    `SELECT * FROM Foo ORDER BY A DESC, __name__
-   * DESC`  * `SELECT * FROM Foo WHERE A > 1` becomes    `SELECT * FROM Foo WHERE A > 1 ORDER BY A,
-   * __name__`
+   * The order to apply to the query results. Firestore guarantees a stable ordering through the
+   * following rules: * Any field required to appear in `order_by`, that is not already specified in
+   * `order_by`, is appended to the order in field name order by default. * If an order on
+   * `__name__` is not specified, it is appended by default. Fields are appended with the same sort
+   * direction as the last order specified, or 'ASCENDING' if no order was specified. For example: *
+   * `SELECT * FROM Foo ORDER BY A` becomes `SELECT * FROM Foo ORDER BY A, __name__` * `SELECT *
+   * FROM Foo ORDER BY A DESC` becomes `SELECT * FROM Foo ORDER BY A DESC, __name__ DESC` * `SELECT
+   * * FROM Foo WHERE A > 1` becomes `SELECT * FROM Foo WHERE A > 1 ORDER BY A, __name__`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,9 +141,8 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The maximum number of results to return.
-   *
-   * Applies after all other constraints. Must be >= 0 if specified.
+   * The maximum number of results to return. Applies after all other constraints. Must be >= 0 if
+   * specified.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLimit() {
@@ -160,9 +150,8 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The maximum number of results to return.
-   *
-   * Applies after all other constraints. Must be >= 0 if specified.
+   * The maximum number of results to return. Applies after all other constraints. Must be >= 0 if
+   * specified.
    * @param limit limit or {@code null} for none
    */
   public StructuredQuery setLimit(java.lang.Integer limit) {
@@ -171,9 +160,8 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The number of results to skip.
-   *
-   * Applies before limit, but after all other constraints. Must be >= 0 if specified.
+   * The number of results to skip. Applies before limit, but after all other constraints. Must be
+   * >= 0 if specified.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getOffset() {
@@ -181,9 +169,8 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The number of results to skip.
-   *
-   * Applies before limit, but after all other constraints. Must be >= 0 if specified.
+   * The number of results to skip. Applies before limit, but after all other constraints. Must be
+   * >= 0 if specified.
    * @param offset offset or {@code null} for none
    */
   public StructuredQuery setOffset(java.lang.Integer offset) {
@@ -192,21 +179,14 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The order to apply to the query results.
-   *
-   * Firestore guarantees a stable ordering through the following rules:
-   *
-   *  * Any field required to appear in `order_by`, that is not already    specified in `order_by`,
-   * is appended to the order in field name order    by default.  * If an order on `__name__` is not
-   * specified, it is appended by default.
-   *
-   * Fields are appended with the same sort direction as the last order specified, or 'ASCENDING' if
-   * no order was specified. For example:
-   *
-   *  * `SELECT * FROM Foo ORDER BY A` becomes    `SELECT * FROM Foo ORDER BY A, __name__`  *
-   * `SELECT * FROM Foo ORDER BY A DESC` becomes    `SELECT * FROM Foo ORDER BY A DESC, __name__
-   * DESC`  * `SELECT * FROM Foo WHERE A > 1` becomes    `SELECT * FROM Foo WHERE A > 1 ORDER BY A,
-   * __name__`
+   * The order to apply to the query results. Firestore guarantees a stable ordering through the
+   * following rules: * Any field required to appear in `order_by`, that is not already specified in
+   * `order_by`, is appended to the order in field name order by default. * If an order on
+   * `__name__` is not specified, it is appended by default. Fields are appended with the same sort
+   * direction as the last order specified, or 'ASCENDING' if no order was specified. For example: *
+   * `SELECT * FROM Foo ORDER BY A` becomes `SELECT * FROM Foo ORDER BY A, __name__` * `SELECT *
+   * FROM Foo ORDER BY A DESC` becomes `SELECT * FROM Foo ORDER BY A DESC, __name__ DESC` * `SELECT
+   * * FROM Foo WHERE A > 1` becomes `SELECT * FROM Foo WHERE A > 1 ORDER BY A, __name__`
    * @return value or {@code null} for none
    */
   public java.util.List<Order> getOrderBy() {
@@ -214,21 +194,14 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The order to apply to the query results.
-   *
-   * Firestore guarantees a stable ordering through the following rules:
-   *
-   *  * Any field required to appear in `order_by`, that is not already    specified in `order_by`,
-   * is appended to the order in field name order    by default.  * If an order on `__name__` is not
-   * specified, it is appended by default.
-   *
-   * Fields are appended with the same sort direction as the last order specified, or 'ASCENDING' if
-   * no order was specified. For example:
-   *
-   *  * `SELECT * FROM Foo ORDER BY A` becomes    `SELECT * FROM Foo ORDER BY A, __name__`  *
-   * `SELECT * FROM Foo ORDER BY A DESC` becomes    `SELECT * FROM Foo ORDER BY A DESC, __name__
-   * DESC`  * `SELECT * FROM Foo WHERE A > 1` becomes    `SELECT * FROM Foo WHERE A > 1 ORDER BY A,
-   * __name__`
+   * The order to apply to the query results. Firestore guarantees a stable ordering through the
+   * following rules: * Any field required to appear in `order_by`, that is not already specified in
+   * `order_by`, is appended to the order in field name order by default. * If an order on
+   * `__name__` is not specified, it is appended by default. Fields are appended with the same sort
+   * direction as the last order specified, or 'ASCENDING' if no order was specified. For example: *
+   * `SELECT * FROM Foo ORDER BY A` becomes `SELECT * FROM Foo ORDER BY A, __name__` * `SELECT *
+   * FROM Foo ORDER BY A DESC` becomes `SELECT * FROM Foo ORDER BY A DESC, __name__ DESC` * `SELECT
+   * * FROM Foo WHERE A > 1` becomes `SELECT * FROM Foo WHERE A > 1 ORDER BY A, __name__`
    * @param orderBy orderBy or {@code null} for none
    */
   public StructuredQuery setOrderBy(java.util.List<Order> orderBy) {

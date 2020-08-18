@@ -17,12 +17,9 @@
 package com.google.api.services.firestore.v1beta1.model;
 
 /**
- * A Document has been deleted.
- *
- * May be the result of multiple writes, including updates, the last of which deleted the Document.
- *
- * Multiple DocumentDelete messages may be returned for the same logical delete, if multiple targets
- * are affected.
+ * A Document has been deleted. May be the result of multiple writes, including updates, the last of
+ * which deleted the Document. Multiple DocumentDelete messages may be returned for the same logical
+ * delete, if multiple targets are affected.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -42,9 +39,8 @@ public final class DocumentDelete extends com.google.api.client.json.GenericJson
   private java.lang.String document;
 
   /**
-   * The read timestamp at which the delete was observed.
-   *
-   * Greater or equal to the `commit_time` of the delete.
+   * The read timestamp at which the delete was observed. Greater or equal to the `commit_time` of
+   * the delete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,9 +71,8 @@ public final class DocumentDelete extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The read timestamp at which the delete was observed.
-   *
-   * Greater or equal to the `commit_time` of the delete.
+   * The read timestamp at which the delete was observed. Greater or equal to the `commit_time` of
+   * the delete.
    * @return value or {@code null} for none
    */
   public String getReadTime() {
@@ -85,9 +80,8 @@ public final class DocumentDelete extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The read timestamp at which the delete was observed.
-   *
-   * Greater or equal to the `commit_time` of the delete.
+   * The read timestamp at which the delete was observed. Greater or equal to the `commit_time` of
+   * the delete.
    * @param readTime readTime or {@code null} for none
    */
   public DocumentDelete setReadTime(String readTime) {

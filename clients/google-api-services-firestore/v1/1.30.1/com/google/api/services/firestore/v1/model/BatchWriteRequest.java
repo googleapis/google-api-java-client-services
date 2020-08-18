@@ -37,10 +37,9 @@ public final class BatchWriteRequest extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The writes to apply.
-   *
-   * Method does not apply writes atomically and does not guarantee ordering. Each write succeeds or
-   * fails independently. You cannot write to the same document more than once per request.
+   * The writes to apply. Method does not apply writes atomically and does not guarantee ordering.
+   * Each write succeeds or fails independently. You cannot write to the same document more than
+   * once per request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,10 +63,9 @@ public final class BatchWriteRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The writes to apply.
-   *
-   * Method does not apply writes atomically and does not guarantee ordering. Each write succeeds or
-   * fails independently. You cannot write to the same document more than once per request.
+   * The writes to apply. Method does not apply writes atomically and does not guarantee ordering.
+   * Each write succeeds or fails independently. You cannot write to the same document more than
+   * once per request.
    * @return value or {@code null} for none
    */
   public java.util.List<Write> getWrites() {
@@ -75,10 +73,9 @@ public final class BatchWriteRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The writes to apply.
-   *
-   * Method does not apply writes atomically and does not guarantee ordering. Each write succeeds or
-   * fails independently. You cannot write to the same document more than once per request.
+   * The writes to apply. Method does not apply writes atomically and does not guarantee ordering.
+   * Each write succeeds or fails independently. You cannot write to the same document more than
+   * once per request.
    * @param writes writes or {@code null} for none
    */
   public BatchWriteRequest setWrites(java.util.List<Write> writes) {

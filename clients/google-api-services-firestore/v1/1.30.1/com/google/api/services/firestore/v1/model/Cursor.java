@@ -39,9 +39,7 @@ public final class Cursor extends com.google.api.client.json.GenericJson {
 
   /**
    * The values that represent a position, in the order they appear in the order by clause of a
-   * query.
-   *
-   * Can contain fewer values than specified in the order by clause.
+   * query. Can contain fewer values than specified in the order by clause.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +66,7 @@ public final class Cursor extends com.google.api.client.json.GenericJson {
 
   /**
    * The values that represent a position, in the order they appear in the order by clause of a
-   * query.
-   *
-   * Can contain fewer values than specified in the order by clause.
+   * query. Can contain fewer values than specified in the order by clause.
    * @return value or {@code null} for none
    */
   public java.util.List<Value> getValues() {
@@ -79,9 +75,7 @@ public final class Cursor extends com.google.api.client.json.GenericJson {
 
   /**
    * The values that represent a position, in the order they appear in the order by clause of a
-   * query.
-   *
-   * Can contain fewer values than specified in the order by clause.
+   * query. Can contain fewer values than specified in the order by clause.
    * @param values values or {@code null} for none
    */
   public Cursor setValues(java.util.List<Value> values) {

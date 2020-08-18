@@ -38,13 +38,11 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
 
   /**
    * The consistent `read_time` for the given `target_ids` (omitted when the target_ids are not at a
-   * consistent snapshot).
-   *
-   * The stream is guaranteed to send a `read_time` with `target_ids` empty whenever the entire
-   * stream reaches a new consistent snapshot. ADD, CURRENT, and RESET messages are guaranteed to
-   * (eventually) result in a new consistent snapshot (while NO_CHANGE and REMOVE messages are not).
-   *
-   * For a given stream, `read_time` is guaranteed to be monotonically increasing.
+   * consistent snapshot). The stream is guaranteed to send a `read_time` with `target_ids` empty
+   * whenever the entire stream reaches a new consistent snapshot. ADD, CURRENT, and RESET messages
+   * are guaranteed to (eventually) result in a new consistent snapshot (while NO_CHANGE and REMOVE
+   * messages are not). For a given stream, `read_time` is guaranteed to be monotonically
+   * increasing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,9 +50,7 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
 
   /**
    * A token that can be used to resume the stream for the given `target_ids`, or all targets if
-   * `target_ids` is empty.
-   *
-   * Not set on every target change.
+   * `target_ids` is empty. Not set on every target change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,11 +64,8 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
   private java.lang.String targetChangeType;
 
   /**
-   * The target IDs of targets that have changed.
-   *
-   * If empty, the change applies to all targets.
-   *
-   * The order of the target IDs is not defined.
+   * The target IDs of targets that have changed. If empty, the change applies to all targets. The
+   * order of the target IDs is not defined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,13 +90,11 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
 
   /**
    * The consistent `read_time` for the given `target_ids` (omitted when the target_ids are not at a
-   * consistent snapshot).
-   *
-   * The stream is guaranteed to send a `read_time` with `target_ids` empty whenever the entire
-   * stream reaches a new consistent snapshot. ADD, CURRENT, and RESET messages are guaranteed to
-   * (eventually) result in a new consistent snapshot (while NO_CHANGE and REMOVE messages are not).
-   *
-   * For a given stream, `read_time` is guaranteed to be monotonically increasing.
+   * consistent snapshot). The stream is guaranteed to send a `read_time` with `target_ids` empty
+   * whenever the entire stream reaches a new consistent snapshot. ADD, CURRENT, and RESET messages
+   * are guaranteed to (eventually) result in a new consistent snapshot (while NO_CHANGE and REMOVE
+   * messages are not). For a given stream, `read_time` is guaranteed to be monotonically
+   * increasing.
    * @return value or {@code null} for none
    */
   public String getReadTime() {
@@ -112,13 +103,11 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
 
   /**
    * The consistent `read_time` for the given `target_ids` (omitted when the target_ids are not at a
-   * consistent snapshot).
-   *
-   * The stream is guaranteed to send a `read_time` with `target_ids` empty whenever the entire
-   * stream reaches a new consistent snapshot. ADD, CURRENT, and RESET messages are guaranteed to
-   * (eventually) result in a new consistent snapshot (while NO_CHANGE and REMOVE messages are not).
-   *
-   * For a given stream, `read_time` is guaranteed to be monotonically increasing.
+   * consistent snapshot). The stream is guaranteed to send a `read_time` with `target_ids` empty
+   * whenever the entire stream reaches a new consistent snapshot. ADD, CURRENT, and RESET messages
+   * are guaranteed to (eventually) result in a new consistent snapshot (while NO_CHANGE and REMOVE
+   * messages are not). For a given stream, `read_time` is guaranteed to be monotonically
+   * increasing.
    * @param readTime readTime or {@code null} for none
    */
   public TargetChange setReadTime(String readTime) {
@@ -128,9 +117,7 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
 
   /**
    * A token that can be used to resume the stream for the given `target_ids`, or all targets if
-   * `target_ids` is empty.
-   *
-   * Not set on every target change.
+   * `target_ids` is empty. Not set on every target change.
    * @see #decodeResumeToken()
    * @return value or {@code null} for none
    */
@@ -140,9 +127,7 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
 
   /**
    * A token that can be used to resume the stream for the given `target_ids`, or all targets if
-   * `target_ids` is empty.
-   *
-   * Not set on every target change.
+   * `target_ids` is empty. Not set on every target change.
    * @see #getResumeToken()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -154,9 +139,7 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
 
   /**
    * A token that can be used to resume the stream for the given `target_ids`, or all targets if
-   * `target_ids` is empty.
-   *
-   * Not set on every target change.
+   * `target_ids` is empty. Not set on every target change.
    * @see #encodeResumeToken()
    * @param resumeToken resumeToken or {@code null} for none
    */
@@ -167,9 +150,7 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
 
   /**
    * A token that can be used to resume the stream for the given `target_ids`, or all targets if
-   * `target_ids` is empty.
-   *
-   * Not set on every target change.
+   * `target_ids` is empty. Not set on every target change.
    * @see #setResumeToken()
    *
    * <p>
@@ -201,11 +182,8 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target IDs of targets that have changed.
-   *
-   * If empty, the change applies to all targets.
-   *
-   * The order of the target IDs is not defined.
+   * The target IDs of targets that have changed. If empty, the change applies to all targets. The
+   * order of the target IDs is not defined.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getTargetIds() {
@@ -213,11 +191,8 @@ public final class TargetChange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target IDs of targets that have changed.
-   *
-   * If empty, the change applies to all targets.
-   *
-   * The order of the target IDs is not defined.
+   * The target IDs of targets that have changed. If empty, the change applies to all targets. The
+   * order of the target IDs is not defined.
    * @param targetIds targetIds or {@code null} for none
    */
   public TargetChange setTargetIds(java.util.List<java.lang.Integer> targetIds) {

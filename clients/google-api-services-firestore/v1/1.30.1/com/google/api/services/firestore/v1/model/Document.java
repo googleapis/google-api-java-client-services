@@ -17,9 +17,7 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * A Firestore document.
- *
- * Must not exceed 1 MiB - 4 bytes.
+ * A Firestore document. Must not exceed 1 MiB - 4 bytes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -32,35 +30,27 @@ package com.google.api.services.firestore.v1.model;
 public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time at which the document was created.
-   *
-   * This value increases monotonically when a document is deleted then recreated. It can also be
-   * compared to values from other documents and the `read_time` of a query.
+   * Output only. The time at which the document was created. This value increases monotonically
+   * when a document is deleted then recreated. It can also be compared to values from other
+   * documents and the `read_time` of a query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The document's fields.
-   *
-   * The map keys represent field names.
-   *
-   * A simple field name contains only characters `a` to `z`, `A` to `Z`, `0` to `9`, or `_`, and
-   * must not start with `0` to `9`. For example, `foo_bar_17`.
-   *
-   * Field names matching the regular expression `__.*__` are reserved. Reserved field names are
-   * forbidden except in certain documented contexts. The map keys, represented as UTF-8, must not
-   * exceed 1,500 bytes and cannot be empty.
-   *
-   * Field paths may be used in other contexts to refer to structured fields defined here. For
-   * `map_value`, the field path is represented by the simple or quoted field names of the
-   * containing fields, delimited by `.`. For example, the structured field `"foo" : { map_value: {
-   * "x" : { string_value: "hello" }}}` would be represented by the field path `foo.x`.
-   *
-   * Within a field path, a quoted field name starts and ends with `` ` `` and may contain any
-   * character. Some characters, including `` ` ``, must be escaped using a `\`. For example, `` `x`
-   * `` represents `x` and `` `bak\`tik` `` represents `` bak`tik ``.
+   * The document's fields. The map keys represent field names. A simple field name contains only
+   * characters `a` to `z`, `A` to `Z`, `0` to `9`, or `_`, and must not start with `0` to `9`. For
+   * example, `foo_bar_17`. Field names matching the regular expression `__.*__` are reserved.
+   * Reserved field names are forbidden except in certain documented contexts. The map keys,
+   * represented as UTF-8, must not exceed 1,500 bytes and cannot be empty. Field paths may be used
+   * in other contexts to refer to structured fields defined here. For `map_value`, the field path
+   * is represented by the simple or quoted field names of the containing fields, delimited by `.`.
+   * For example, the structured field `"foo" : { map_value: { "x" : { string_value: "hello" }}}`
+   * would be represented by the field path `foo.x`. Within a field path, a quoted field name starts
+   * and ends with `` ` `` and may contain any character. Some characters, including `` ` ``, must
+   * be escaped using a `\`. For example, `` `x` `` represents `x` and `` `bak\`tik` `` represents
+   * `` bak`tik ``.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,21 +65,18 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. The time at which the document was last changed.
-   *
-   * This value is initially set to the `create_time` then increases monotonically with each change
-   * to the document. It can also be compared to values from other documents and the `read_time` of
-   * a query.
+   * Output only. The time at which the document was last changed. This value is initially set to
+   * the `create_time` then increases monotonically with each change to the document. It can also be
+   * compared to values from other documents and the `read_time` of a query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The time at which the document was created.
-   *
-   * This value increases monotonically when a document is deleted then recreated. It can also be
-   * compared to values from other documents and the `read_time` of a query.
+   * Output only. The time at which the document was created. This value increases monotonically
+   * when a document is deleted then recreated. It can also be compared to values from other
+   * documents and the `read_time` of a query.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -97,10 +84,9 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the document was created.
-   *
-   * This value increases monotonically when a document is deleted then recreated. It can also be
-   * compared to values from other documents and the `read_time` of a query.
+   * Output only. The time at which the document was created. This value increases monotonically
+   * when a document is deleted then recreated. It can also be compared to values from other
+   * documents and the `read_time` of a query.
    * @param createTime createTime or {@code null} for none
    */
   public Document setCreateTime(String createTime) {
@@ -109,25 +95,18 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The document's fields.
-   *
-   * The map keys represent field names.
-   *
-   * A simple field name contains only characters `a` to `z`, `A` to `Z`, `0` to `9`, or `_`, and
-   * must not start with `0` to `9`. For example, `foo_bar_17`.
-   *
-   * Field names matching the regular expression `__.*__` are reserved. Reserved field names are
-   * forbidden except in certain documented contexts. The map keys, represented as UTF-8, must not
-   * exceed 1,500 bytes and cannot be empty.
-   *
-   * Field paths may be used in other contexts to refer to structured fields defined here. For
-   * `map_value`, the field path is represented by the simple or quoted field names of the
-   * containing fields, delimited by `.`. For example, the structured field `"foo" : { map_value: {
-   * "x" : { string_value: "hello" }}}` would be represented by the field path `foo.x`.
-   *
-   * Within a field path, a quoted field name starts and ends with `` ` `` and may contain any
-   * character. Some characters, including `` ` ``, must be escaped using a `\`. For example, `` `x`
-   * `` represents `x` and `` `bak\`tik` `` represents `` bak`tik ``.
+   * The document's fields. The map keys represent field names. A simple field name contains only
+   * characters `a` to `z`, `A` to `Z`, `0` to `9`, or `_`, and must not start with `0` to `9`. For
+   * example, `foo_bar_17`. Field names matching the regular expression `__.*__` are reserved.
+   * Reserved field names are forbidden except in certain documented contexts. The map keys,
+   * represented as UTF-8, must not exceed 1,500 bytes and cannot be empty. Field paths may be used
+   * in other contexts to refer to structured fields defined here. For `map_value`, the field path
+   * is represented by the simple or quoted field names of the containing fields, delimited by `.`.
+   * For example, the structured field `"foo" : { map_value: { "x" : { string_value: "hello" }}}`
+   * would be represented by the field path `foo.x`. Within a field path, a quoted field name starts
+   * and ends with `` ` `` and may contain any character. Some characters, including `` ` ``, must
+   * be escaped using a `\`. For example, `` `x` `` represents `x` and `` `bak\`tik` `` represents
+   * `` bak`tik ``.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Value> getFields() {
@@ -135,25 +114,18 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The document's fields.
-   *
-   * The map keys represent field names.
-   *
-   * A simple field name contains only characters `a` to `z`, `A` to `Z`, `0` to `9`, or `_`, and
-   * must not start with `0` to `9`. For example, `foo_bar_17`.
-   *
-   * Field names matching the regular expression `__.*__` are reserved. Reserved field names are
-   * forbidden except in certain documented contexts. The map keys, represented as UTF-8, must not
-   * exceed 1,500 bytes and cannot be empty.
-   *
-   * Field paths may be used in other contexts to refer to structured fields defined here. For
-   * `map_value`, the field path is represented by the simple or quoted field names of the
-   * containing fields, delimited by `.`. For example, the structured field `"foo" : { map_value: {
-   * "x" : { string_value: "hello" }}}` would be represented by the field path `foo.x`.
-   *
-   * Within a field path, a quoted field name starts and ends with `` ` `` and may contain any
-   * character. Some characters, including `` ` ``, must be escaped using a `\`. For example, `` `x`
-   * `` represents `x` and `` `bak\`tik` `` represents `` bak`tik ``.
+   * The document's fields. The map keys represent field names. A simple field name contains only
+   * characters `a` to `z`, `A` to `Z`, `0` to `9`, or `_`, and must not start with `0` to `9`. For
+   * example, `foo_bar_17`. Field names matching the regular expression `__.*__` are reserved.
+   * Reserved field names are forbidden except in certain documented contexts. The map keys,
+   * represented as UTF-8, must not exceed 1,500 bytes and cannot be empty. Field paths may be used
+   * in other contexts to refer to structured fields defined here. For `map_value`, the field path
+   * is represented by the simple or quoted field names of the containing fields, delimited by `.`.
+   * For example, the structured field `"foo" : { map_value: { "x" : { string_value: "hello" }}}`
+   * would be represented by the field path `foo.x`. Within a field path, a quoted field name starts
+   * and ends with `` ` `` and may contain any character. Some characters, including `` ` ``, must
+   * be escaped using a `\`. For example, `` `x` `` represents `x` and `` `bak\`tik` `` represents
+   * `` bak`tik ``.
    * @param fields fields or {@code null} for none
    */
   public Document setFields(java.util.Map<String, Value> fields) {
@@ -181,11 +153,9 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the document was last changed.
-   *
-   * This value is initially set to the `create_time` then increases monotonically with each change
-   * to the document. It can also be compared to values from other documents and the `read_time` of
-   * a query.
+   * Output only. The time at which the document was last changed. This value is initially set to
+   * the `create_time` then increases monotonically with each change to the document. It can also be
+   * compared to values from other documents and the `read_time` of a query.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -193,11 +163,9 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the document was last changed.
-   *
-   * This value is initially set to the `create_time` then increases monotonically with each change
-   * to the document. It can also be compared to values from other documents and the `read_time` of
-   * a query.
+   * Output only. The time at which the document was last changed. This value is initially set to
+   * the `create_time` then increases monotonically with each change to the document. It can also be
+   * compared to values from other documents and the `read_time` of a query.
    * @param updateTime updateTime or {@code null} for none
    */
   public Document setUpdateTime(String updateTime) {

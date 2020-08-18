@@ -46,18 +46,15 @@ public final class WriteResponse extends com.google.api.client.json.GenericJson 
 
   /**
    * A token that represents the position of this response in the stream. This can be used by a
-   * client to resume the stream at this point.
-   *
-   * This field is always set.
+   * client to resume the stream at this point. This field is always set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String streamToken;
 
   /**
-   * The result of applying the writes.
-   *
-   * This i-th write result corresponds to the i-th write in the request.
+   * The result of applying the writes. This i-th write result corresponds to the i-th write in the
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,9 +98,7 @@ public final class WriteResponse extends com.google.api.client.json.GenericJson 
 
   /**
    * A token that represents the position of this response in the stream. This can be used by a
-   * client to resume the stream at this point.
-   *
-   * This field is always set.
+   * client to resume the stream at this point. This field is always set.
    * @see #decodeStreamToken()
    * @return value or {@code null} for none
    */
@@ -113,9 +108,7 @@ public final class WriteResponse extends com.google.api.client.json.GenericJson 
 
   /**
    * A token that represents the position of this response in the stream. This can be used by a
-   * client to resume the stream at this point.
-   *
-   * This field is always set.
+   * client to resume the stream at this point. This field is always set.
    * @see #getStreamToken()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -127,9 +120,7 @@ public final class WriteResponse extends com.google.api.client.json.GenericJson 
 
   /**
    * A token that represents the position of this response in the stream. This can be used by a
-   * client to resume the stream at this point.
-   *
-   * This field is always set.
+   * client to resume the stream at this point. This field is always set.
    * @see #encodeStreamToken()
    * @param streamToken streamToken or {@code null} for none
    */
@@ -140,9 +131,7 @@ public final class WriteResponse extends com.google.api.client.json.GenericJson 
 
   /**
    * A token that represents the position of this response in the stream. This can be used by a
-   * client to resume the stream at this point.
-   *
-   * This field is always set.
+   * client to resume the stream at this point. This field is always set.
    * @see #setStreamToken()
    *
    * <p>
@@ -157,9 +146,8 @@ public final class WriteResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The result of applying the writes.
-   *
-   * This i-th write result corresponds to the i-th write in the request.
+   * The result of applying the writes. This i-th write result corresponds to the i-th write in the
+   * request.
    * @return value or {@code null} for none
    */
   public java.util.List<WriteResult> getWriteResults() {
@@ -167,9 +155,8 @@ public final class WriteResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The result of applying the writes.
-   *
-   * This i-th write result corresponds to the i-th write in the request.
+   * The result of applying the writes. This i-th write result corresponds to the i-th write in the
+   * request.
    * @param writeResults writeResults or {@code null} for none
    */
   public WriteResponse setWriteResults(java.util.List<WriteResult> writeResults) {

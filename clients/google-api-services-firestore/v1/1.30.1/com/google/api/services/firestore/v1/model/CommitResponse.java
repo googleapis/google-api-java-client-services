@@ -38,9 +38,8 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   private String commitTime;
 
   /**
-   * The result of applying the writes.
-   *
-   * This i-th write result corresponds to the i-th write in the request.
+   * The result of applying the writes. This i-th write result corresponds to the i-th write in the
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +65,8 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The result of applying the writes.
-   *
-   * This i-th write result corresponds to the i-th write in the request.
+   * The result of applying the writes. This i-th write result corresponds to the i-th write in the
+   * request.
    * @return value or {@code null} for none
    */
   public java.util.List<WriteResult> getWriteResults() {
@@ -76,9 +74,8 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The result of applying the writes.
-   *
-   * This i-th write result corresponds to the i-th write in the request.
+   * The result of applying the writes. This i-th write result corresponds to the i-th write in the
+   * request.
    * @param writeResults writeResults or {@code null} for none
    */
   public CommitResponse setWriteResults(java.util.List<WriteResult> writeResults) {

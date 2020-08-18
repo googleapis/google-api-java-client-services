@@ -17,8 +17,8 @@
 package com.google.api.services.cloudbilling.model;
 
 /**
- * A billing account in [GCP Console](https://console.cloud.google.com/). You can assign a billing
- * account to one or more projects.
+ * A billing account in the [Google Cloud Console](https://console.cloud.google.com/). You can
+ * assign a billing account to one or more projects.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing API. For a detailed explanation see:
@@ -32,7 +32,7 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
 
   /**
    * The display name given to the billing account, such as `My Billing Account`. This name is
-   * displayed in the GCP Console.
+   * displayed in the Google Cloud Console.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
 
   /**
    * The display name given to the billing account, such as `My Billing Account`. This name is
-   * displayed in the GCP Console.
+   * displayed in the Google Cloud Console.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -76,7 +76,7 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
 
   /**
    * The display name given to the billing account, such as `My Billing Account`. This name is
-   * displayed in the GCP Console.
+   * displayed in the Google Cloud Console.
    * @param displayName displayName or {@code null} for none
    */
   public BillingAccount setDisplayName(java.lang.String displayName) {

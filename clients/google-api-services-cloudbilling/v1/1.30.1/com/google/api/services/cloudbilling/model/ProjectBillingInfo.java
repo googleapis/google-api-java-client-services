@@ -17,8 +17,8 @@
 package com.google.api.services.cloudbilling.model;
 
 /**
- * Encapsulation of billing information for a GCP Console project. A project has at most one
- * associated billing account at a time (but a billing account can be assigned to multiple
+ * Encapsulation of billing information for a Google Cloud Console project. A project has at most
+ * one associated billing account at a time (but a billing account can be assigned to multiple
  * projects).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

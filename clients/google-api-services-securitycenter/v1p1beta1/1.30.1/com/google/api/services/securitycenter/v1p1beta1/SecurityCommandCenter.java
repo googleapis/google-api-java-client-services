@@ -824,8 +824,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         @com.google.api.client.util.Key
         private String fieldMask;
 
-        /**  A field mask to specify the ListAssetsResult fields to be listed in the response. An empty field
-        mask will list all fields.
+        /** A field mask to specify the ListAssetsResult fields to be listed in the response. An empty field
+       mask will list all fields.
          */
         public String getFieldMask() {
           return fieldMask;
@@ -1075,9 +1075,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Runs asset discovery. The discovery is tracked with a long-running operation. // This API can
-       * only be called with limited frequency for an organization. If it is called too frequently the
-       * caller will receive a TOO_MANY_REQUESTS error.
+       * Runs asset discovery. The discovery is tracked with a long-running operation. This API can only
+       * be called with limited frequency for an organization. If it is called too frequently the caller
+       * will receive a TOO_MANY_REQUESTS error.
        *
        * Create a request for the method "assets.runDiscovery".
        *
@@ -1104,9 +1104,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Runs asset discovery. The discovery is tracked with a long-running operation. // This API can
-         * only be called with limited frequency for an organization. If it is called too frequently the
-         * caller will receive a TOO_MANY_REQUESTS error.
+         * Runs asset discovery. The discovery is tracked with a long-running operation. This API can only
+         * be called with limited frequency for an organization. If it is called too frequently the caller
+         * will receive a TOO_MANY_REQUESTS error.
          *
          * Create a request for the method "assets.runDiscovery".
          *
@@ -4539,8 +4539,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           @com.google.api.client.util.Key
           private String fieldMask;
 
-          /**  A field mask to specify the Finding fields to be listed in the response. An empty field mask will
-          list all fields.
+          /** A field mask to specify the Finding fields to be listed in the response. An empty field mask will
+         list all fields.
            */
           public String getFieldMask() {
             return fieldMask;

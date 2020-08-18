@@ -31,10 +31,8 @@ public final class ConditionValue extends com.google.api.client.json.GenericJson
 
   /**
    * A relative date (based on the current date). Valid only if the type is DATE_BEFORE, DATE_AFTER,
-   * DATE_ON_OR_BEFORE or DATE_ON_OR_AFTER.
-   *
-   * Relative dates are not supported in data validation. They are supported only in conditional
-   * formatting and conditional filters.
+   * DATE_ON_OR_BEFORE or DATE_ON_OR_AFTER. Relative dates are not supported in data validation.
+   * They are supported only in conditional formatting and conditional filters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,10 +48,8 @@ public final class ConditionValue extends com.google.api.client.json.GenericJson
 
   /**
    * A relative date (based on the current date). Valid only if the type is DATE_BEFORE, DATE_AFTER,
-   * DATE_ON_OR_BEFORE or DATE_ON_OR_AFTER.
-   *
-   * Relative dates are not supported in data validation. They are supported only in conditional
-   * formatting and conditional filters.
+   * DATE_ON_OR_BEFORE or DATE_ON_OR_AFTER. Relative dates are not supported in data validation.
+   * They are supported only in conditional formatting and conditional filters.
    * @return value or {@code null} for none
    */
   public java.lang.String getRelativeDate() {
@@ -62,10 +58,8 @@ public final class ConditionValue extends com.google.api.client.json.GenericJson
 
   /**
    * A relative date (based on the current date). Valid only if the type is DATE_BEFORE, DATE_AFTER,
-   * DATE_ON_OR_BEFORE or DATE_ON_OR_AFTER.
-   *
-   * Relative dates are not supported in data validation. They are supported only in conditional
-   * formatting and conditional filters.
+   * DATE_ON_OR_BEFORE or DATE_ON_OR_AFTER. Relative dates are not supported in data validation.
+   * They are supported only in conditional formatting and conditional filters.
    * @param relativeDate relativeDate or {@code null} for none
    */
   public ConditionValue setRelativeDate(java.lang.String relativeDate) {

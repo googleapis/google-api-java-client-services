@@ -31,7 +31,7 @@ public final class SearchDeveloperMetadataRequest extends com.google.api.client.
 
   /**
    * The data filters describing the criteria used to determine which DeveloperMetadata entries to
-   * return.  DeveloperMetadata matching any of the specified filters are included in the response.
+   * return. DeveloperMetadata matching any of the specified filters are included in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class SearchDeveloperMetadataRequest extends com.google.api.client.
 
   /**
    * The data filters describing the criteria used to determine which DeveloperMetadata entries to
-   * return.  DeveloperMetadata matching any of the specified filters are included in the response.
+   * return. DeveloperMetadata matching any of the specified filters are included in the response.
    * @return value or {@code null} for none
    */
   public java.util.List<DataFilter> getDataFilters() {
@@ -54,7 +54,7 @@ public final class SearchDeveloperMetadataRequest extends com.google.api.client.
 
   /**
    * The data filters describing the criteria used to determine which DeveloperMetadata entries to
-   * return.  DeveloperMetadata matching any of the specified filters are included in the response.
+   * return. DeveloperMetadata matching any of the specified filters are included in the response.
    * @param dataFilters dataFilters or {@code null} for none
    */
   public SearchDeveloperMetadataRequest setDataFilters(java.util.List<DataFilter> dataFilters) {

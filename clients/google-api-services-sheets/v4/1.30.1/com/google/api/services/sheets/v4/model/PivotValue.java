@@ -41,7 +41,7 @@ public final class PivotValue extends com.google.api.client.json.GenericJson {
   private java.lang.String calculatedDisplayType;
 
   /**
-   * A custom formula to calculate the value.  The formula must start with an `=` character.
+   * A custom formula to calculate the value. The formula must start with an `=` character.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,10 +55,9 @@ public final class PivotValue extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The column offset of the source range that this value reads from.
-   *
-   * For example, if the source was `C10:E15`, a `sourceColumnOffset` of `0` means this value refers
-   * to column `C`, whereas the offset `1` would refer to column `D`.
+   * The column offset of the source range that this value reads from. For example, if the source
+   * was `C10:E15`, a `sourceColumnOffset` of `0` means this value refers to column `C`, whereas the
+   * offset `1` would refer to column `D`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +97,7 @@ public final class PivotValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A custom formula to calculate the value.  The formula must start with an `=` character.
+   * A custom formula to calculate the value. The formula must start with an `=` character.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormula() {
@@ -106,7 +105,7 @@ public final class PivotValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A custom formula to calculate the value.  The formula must start with an `=` character.
+   * A custom formula to calculate the value. The formula must start with an `=` character.
    * @param formula formula or {@code null} for none
    */
   public PivotValue setFormula(java.lang.String formula) {
@@ -132,10 +131,9 @@ public final class PivotValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The column offset of the source range that this value reads from.
-   *
-   * For example, if the source was `C10:E15`, a `sourceColumnOffset` of `0` means this value refers
-   * to column `C`, whereas the offset `1` would refer to column `D`.
+   * The column offset of the source range that this value reads from. For example, if the source
+   * was `C10:E15`, a `sourceColumnOffset` of `0` means this value refers to column `C`, whereas the
+   * offset `1` would refer to column `D`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSourceColumnOffset() {
@@ -143,10 +141,9 @@ public final class PivotValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The column offset of the source range that this value reads from.
-   *
-   * For example, if the source was `C10:E15`, a `sourceColumnOffset` of `0` means this value refers
-   * to column `C`, whereas the offset `1` would refer to column `D`.
+   * The column offset of the source range that this value reads from. For example, if the source
+   * was `C10:E15`, a `sourceColumnOffset` of `0` means this value refers to column `C`, whereas the
+   * offset `1` would refer to column `D`.
    * @param sourceColumnOffset sourceColumnOffset or {@code null} for none
    */
   public PivotValue setSourceColumnOffset(java.lang.Integer sourceColumnOffset) {

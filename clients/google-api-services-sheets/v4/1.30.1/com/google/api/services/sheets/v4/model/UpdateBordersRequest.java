@@ -18,12 +18,10 @@ package com.google.api.services.sheets.v4.model;
 
 /**
  * Updates the borders of a range. If a field is not set in the request, that means the border
- * remains as-is. For example, with two subsequent UpdateBordersRequest:
- *
- *  1. range: A1:A5 `{ top: RED, bottom: WHITE }`  2. range: A1:A5 `{ left: BLUE }`
- *
- * That would result in A1:A5 having a borders of `{ top: RED, bottom: WHITE, left: BLUE }`. If you
- * want to clear a border, explicitly set the style to NONE.
+ * remains as-is. For example, with two subsequent UpdateBordersRequest: 1. range: A1:A5 `{ top:
+ * RED, bottom: WHITE }` 2. range: A1:A5 `{ left: BLUE }` That would result in A1:A5 having a
+ * borders of `{ top: RED, bottom: WHITE, left: BLUE }`. If you want to clear a border, explicitly
+ * set the style to NONE.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

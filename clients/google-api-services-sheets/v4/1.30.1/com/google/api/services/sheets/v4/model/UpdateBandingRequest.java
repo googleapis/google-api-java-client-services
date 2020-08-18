@@ -37,9 +37,9 @@ public final class UpdateBandingRequest extends com.google.api.client.json.Gener
   private BandedRange bandedRange;
 
   /**
-   * The fields that should be updated.  At least one field must be specified. The root
-   * `bandedRange` is implied and should not be specified. A single `"*"` can be used as short-hand
-   * for listing every field.
+   * The fields that should be updated. At least one field must be specified. The root `bandedRange`
+   * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
+   * every field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +63,9 @@ public final class UpdateBandingRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The fields that should be updated.  At least one field must be specified. The root
-   * `bandedRange` is implied and should not be specified. A single `"*"` can be used as short-hand
-   * for listing every field.
+   * The fields that should be updated. At least one field must be specified. The root `bandedRange`
+   * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
+   * every field.
    * @return value or {@code null} for none
    */
   public String getFields() {
@@ -73,9 +73,9 @@ public final class UpdateBandingRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The fields that should be updated.  At least one field must be specified. The root
-   * `bandedRange` is implied and should not be specified. A single `"*"` can be used as short-hand
-   * for listing every field.
+   * The fields that should be updated. At least one field must be specified. The root `bandedRange`
+   * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
+   * every field.
    * @param fields fields or {@code null} for none
    */
   public UpdateBandingRequest setFields(String fields) {

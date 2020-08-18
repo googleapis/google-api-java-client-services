@@ -18,7 +18,7 @@ package com.google.api.services.sheets.v4.model;
 
 /**
  * Updates a chart's specifications. (This does not move or resize a chart. To move or resize a
- * chart, use  UpdateEmbeddedObjectPositionRequest.)
+ * chart, use UpdateEmbeddedObjectPositionRequest.)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The new values to apply to the spreadsheet.  If more than one range is matched by the specified
+   * The new values to apply to the spreadsheet. If more than one range is matched by the specified
    * DataFilter the specified values are applied to all of those ranges.
    * The value may be {@code null}.
    */
@@ -73,7 +73,7 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
   private java.lang.String valueInputOption;
 
   /**
-   * The new values to apply to the spreadsheet.  If more than one range is matched by the specified
+   * The new values to apply to the spreadsheet. If more than one range is matched by the specified
    * DataFilter the specified values are applied to all of those ranges.
    * @return value or {@code null} for none
    */
@@ -82,7 +82,7 @@ public final class BatchUpdateValuesByDataFilterRequest extends com.google.api.c
   }
 
   /**
-   * The new values to apply to the spreadsheet.  If more than one range is matched by the specified
+   * The new values to apply to the spreadsheet. If more than one range is matched by the specified
    * DataFilter the specified values are applied to all of those ranges.
    * @param data data or {@code null} for none
    */

@@ -31,8 +31,8 @@ public final class CandlestickData extends com.google.api.client.json.GenericJso
 
   /**
    * The range data (vertical axis) for the close/final value for each candle. This is the top of
-   * the candle body.  If greater than the open value the candle will be filled.  Otherwise the
-   * candle will be hollow.
+   * the candle body. If greater than the open value the candle will be filled. Otherwise the candle
+   * will be hollow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class CandlestickData extends com.google.api.client.json.GenericJso
 
   /**
    * The range data (vertical axis) for the open/initial value for each candle. This is the bottom
-   * of the candle body.  If less than the close value the candle will be filled.  Otherwise the
+   * of the candle body. If less than the close value the candle will be filled. Otherwise the
    * candle will be hollow.
    * The value may be {@code null}.
    */
@@ -65,8 +65,8 @@ public final class CandlestickData extends com.google.api.client.json.GenericJso
 
   /**
    * The range data (vertical axis) for the close/final value for each candle. This is the top of
-   * the candle body.  If greater than the open value the candle will be filled.  Otherwise the
-   * candle will be hollow.
+   * the candle body. If greater than the open value the candle will be filled. Otherwise the candle
+   * will be hollow.
    * @return value or {@code null} for none
    */
   public CandlestickSeries getCloseSeries() {
@@ -75,8 +75,8 @@ public final class CandlestickData extends com.google.api.client.json.GenericJso
 
   /**
    * The range data (vertical axis) for the close/final value for each candle. This is the top of
-   * the candle body.  If greater than the open value the candle will be filled.  Otherwise the
-   * candle will be hollow.
+   * the candle body. If greater than the open value the candle will be filled. Otherwise the candle
+   * will be hollow.
    * @param closeSeries closeSeries or {@code null} for none
    */
   public CandlestickData setCloseSeries(CandlestickSeries closeSeries) {
@@ -124,7 +124,7 @@ public final class CandlestickData extends com.google.api.client.json.GenericJso
 
   /**
    * The range data (vertical axis) for the open/initial value for each candle. This is the bottom
-   * of the candle body.  If less than the close value the candle will be filled.  Otherwise the
+   * of the candle body. If less than the close value the candle will be filled. Otherwise the
    * candle will be hollow.
    * @return value or {@code null} for none
    */
@@ -134,7 +134,7 @@ public final class CandlestickData extends com.google.api.client.json.GenericJso
 
   /**
    * The range data (vertical axis) for the open/initial value for each candle. This is the bottom
-   * of the candle body.  If less than the close value the candle will be filled.  Otherwise the
+   * of the candle body. If less than the close value the candle will be filled. Otherwise the
    * candle will be hollow.
    * @param openSeries openSeries or {@code null} for none
    */

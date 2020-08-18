@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class ChartSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The alternative text that describes the chart.  This is often used for accessibility.
+   * The alternative text that describes the chart. This is often used for accessibility.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +74,8 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   private CandlestickChartSpec candlestickChart;
 
   /**
-   * The name of the font to use by default for all chart text (e.g. title, axis labels, legend).
-   * If a font is specified for a specific part of the chart it will override this font name.
+   * The name of the font to use by default for all chart text (e.g. title, axis labels, legend). If
+   * a font is specified for a specific part of the chart it will override this font name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   private HistogramChartSpec histogramChart;
 
   /**
-   * True to make a chart fill the entire space in which it's rendered with minimum padding.  False
+   * True to make a chart fill the entire space in which it's rendered with minimum padding. False
    * to use the default padding. (Not applicable to Geo and Org charts.)
    * The value may be {@code null}.
    */
@@ -181,7 +181,7 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   private WaterfallChartSpec waterfallChart;
 
   /**
-   * The alternative text that describes the chart.  This is often used for accessibility.
+   * The alternative text that describes the chart. This is often used for accessibility.
    * @return value or {@code null} for none
    */
   public java.lang.String getAltText() {
@@ -189,7 +189,7 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The alternative text that describes the chart.  This is often used for accessibility.
+   * The alternative text that describes the chart. This is often used for accessibility.
    * @param altText altText or {@code null} for none
    */
   public ChartSpec setAltText(java.lang.String altText) {
@@ -287,8 +287,8 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the font to use by default for all chart text (e.g. title, axis labels, legend).
-   * If a font is specified for a specific part of the chart it will override this font name.
+   * The name of the font to use by default for all chart text (e.g. title, axis labels, legend). If
+   * a font is specified for a specific part of the chart it will override this font name.
    * @return value or {@code null} for none
    */
   public java.lang.String getFontName() {
@@ -296,8 +296,8 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the font to use by default for all chart text (e.g. title, axis labels, legend).
-   * If a font is specified for a specific part of the chart it will override this font name.
+   * The name of the font to use by default for all chart text (e.g. title, axis labels, legend). If
+   * a font is specified for a specific part of the chart it will override this font name.
    * @param fontName fontName or {@code null} for none
    */
   public ChartSpec setFontName(java.lang.String fontName) {
@@ -340,7 +340,7 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True to make a chart fill the entire space in which it's rendered with minimum padding.  False
+   * True to make a chart fill the entire space in which it's rendered with minimum padding. False
    * to use the default padding. (Not applicable to Geo and Org charts.)
    * @return value or {@code null} for none
    */
@@ -349,7 +349,7 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True to make a chart fill the entire space in which it's rendered with minimum padding.  False
+   * True to make a chart fill the entire space in which it's rendered with minimum padding. False
    * to use the default padding. (Not applicable to Geo and Org charts.)
    * @param maximized maximized or {@code null} for none
    */

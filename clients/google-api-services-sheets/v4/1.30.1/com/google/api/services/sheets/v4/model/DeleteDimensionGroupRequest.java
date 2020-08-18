@@ -18,10 +18,9 @@ package com.google.api.services.sheets.v4.model;
 
 /**
  * Deletes a group over the specified range by decrementing the depth of the dimensions in the
- * range.
- *
- * For example, assume the sheet has a depth-1 group over B:E and a depth-2 group over C:D. Deleting
- * a group over D:E leaves the sheet with a depth-1 group over B:D and a depth-2 group over C:C.
+ * range. For example, assume the sheet has a depth-1 group over B:E and a depth-2 group over C:D.
+ * Deleting a group over D:E leaves the sheet with a depth-1 group over B:D and a depth-2 group over
+ * C:C.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

@@ -17,12 +17,12 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Selects DeveloperMetadata that matches all of the specified fields.  For example, if only a
+ * Selects DeveloperMetadata that matches all of the specified fields. For example, if only a
  * metadata ID is specified this considers the DeveloperMetadata with that particular unique ID. If
- * a metadata key is specified, this considers all developer metadata with that key.  If a key,
+ * a metadata key is specified, this considers all developer metadata with that key. If a key,
  * visibility, and location type are all specified, this considers all developer metadata with that
- * key and visibility that are associated with a location of that type.  In general, this selects
- * all DeveloperMetadata that matches the intersection of all the specified fields; any field or
+ * key and visibility that are associated with a location of that type. In general, this selects all
+ * DeveloperMetadata that matches the intersection of all the specified fields; any field or
  * combination of fields may be specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -36,11 +36,11 @@ package com.google.api.services.sheets.v4.model;
 public final class DeveloperMetadataLookup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Determines how this lookup matches the location.  If this field is specified as EXACT, only
-   * developer metadata associated on the exact location specified is matched.  If this field is
+   * Determines how this lookup matches the location. If this field is specified as EXACT, only
+   * developer metadata associated on the exact location specified is matched. If this field is
    * specified to INTERSECTING, developer metadata associated on intersecting locations is also
-   * matched.  If left unspecified, this field assumes a default value of INTERSECTING. If this
-   * field is specified, a metadataLocation must also be specified.
+   * matched. If left unspecified, this field assumes a default value of INTERSECTING. If this field
+   * is specified, a metadataLocation must also be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,13 +48,12 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
 
   /**
    * Limits the selected developer metadata to those entries which are associated with locations of
-   * the specified type.  For example, when this field is specified as ROW this lookup only
-   * considers developer metadata associated on rows.  If the field is left unspecified, all
-   * location types are considered.  This field cannot be specified as SPREADSHEET when the
-   * locationMatchingStrategy is specified as INTERSECTING or when the metadataLocation is specified
-   * as a non-spreadsheet location: spreadsheet metadata cannot intersect any other developer
-   * metadata location.  This field also must be left unspecified when the locationMatchingStrategy
-   * is specified as EXACT.
+   * the specified type. For example, when this field is specified as ROW this lookup only considers
+   * developer metadata associated on rows. If the field is left unspecified, all location types are
+   * considered. This field cannot be specified as SPREADSHEET when the locationMatchingStrategy is
+   * specified as INTERSECTING or when the metadataLocation is specified as a non-spreadsheet
+   * location: spreadsheet metadata cannot intersect any other developer metadata location. This
+   * field also must be left unspecified when the locationMatchingStrategy is specified as EXACT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +94,7 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
 
   /**
    * Limits the selected developer metadata to that which has a matching
-   * DeveloperMetadata.visibility.  If left unspecified, all developer metadata visibile to the
+   * DeveloperMetadata.visibility. If left unspecified, all developer metadata visibile to the
    * requesting project is considered.
    * The value may be {@code null}.
    */
@@ -103,11 +102,11 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
   private java.lang.String visibility;
 
   /**
-   * Determines how this lookup matches the location.  If this field is specified as EXACT, only
-   * developer metadata associated on the exact location specified is matched.  If this field is
+   * Determines how this lookup matches the location. If this field is specified as EXACT, only
+   * developer metadata associated on the exact location specified is matched. If this field is
    * specified to INTERSECTING, developer metadata associated on intersecting locations is also
-   * matched.  If left unspecified, this field assumes a default value of INTERSECTING. If this
-   * field is specified, a metadataLocation must also be specified.
+   * matched. If left unspecified, this field assumes a default value of INTERSECTING. If this field
+   * is specified, a metadataLocation must also be specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationMatchingStrategy() {
@@ -115,11 +114,11 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
   }
 
   /**
-   * Determines how this lookup matches the location.  If this field is specified as EXACT, only
-   * developer metadata associated on the exact location specified is matched.  If this field is
+   * Determines how this lookup matches the location. If this field is specified as EXACT, only
+   * developer metadata associated on the exact location specified is matched. If this field is
    * specified to INTERSECTING, developer metadata associated on intersecting locations is also
-   * matched.  If left unspecified, this field assumes a default value of INTERSECTING. If this
-   * field is specified, a metadataLocation must also be specified.
+   * matched. If left unspecified, this field assumes a default value of INTERSECTING. If this field
+   * is specified, a metadataLocation must also be specified.
    * @param locationMatchingStrategy locationMatchingStrategy or {@code null} for none
    */
   public DeveloperMetadataLookup setLocationMatchingStrategy(java.lang.String locationMatchingStrategy) {
@@ -129,13 +128,12 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
 
   /**
    * Limits the selected developer metadata to those entries which are associated with locations of
-   * the specified type.  For example, when this field is specified as ROW this lookup only
-   * considers developer metadata associated on rows.  If the field is left unspecified, all
-   * location types are considered.  This field cannot be specified as SPREADSHEET when the
-   * locationMatchingStrategy is specified as INTERSECTING or when the metadataLocation is specified
-   * as a non-spreadsheet location: spreadsheet metadata cannot intersect any other developer
-   * metadata location.  This field also must be left unspecified when the locationMatchingStrategy
-   * is specified as EXACT.
+   * the specified type. For example, when this field is specified as ROW this lookup only considers
+   * developer metadata associated on rows. If the field is left unspecified, all location types are
+   * considered. This field cannot be specified as SPREADSHEET when the locationMatchingStrategy is
+   * specified as INTERSECTING or when the metadataLocation is specified as a non-spreadsheet
+   * location: spreadsheet metadata cannot intersect any other developer metadata location. This
+   * field also must be left unspecified when the locationMatchingStrategy is specified as EXACT.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationType() {
@@ -144,13 +142,12 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
 
   /**
    * Limits the selected developer metadata to those entries which are associated with locations of
-   * the specified type.  For example, when this field is specified as ROW this lookup only
-   * considers developer metadata associated on rows.  If the field is left unspecified, all
-   * location types are considered.  This field cannot be specified as SPREADSHEET when the
-   * locationMatchingStrategy is specified as INTERSECTING or when the metadataLocation is specified
-   * as a non-spreadsheet location: spreadsheet metadata cannot intersect any other developer
-   * metadata location.  This field also must be left unspecified when the locationMatchingStrategy
-   * is specified as EXACT.
+   * the specified type. For example, when this field is specified as ROW this lookup only considers
+   * developer metadata associated on rows. If the field is left unspecified, all location types are
+   * considered. This field cannot be specified as SPREADSHEET when the locationMatchingStrategy is
+   * specified as INTERSECTING or when the metadataLocation is specified as a non-spreadsheet
+   * location: spreadsheet metadata cannot intersect any other developer metadata location. This
+   * field also must be left unspecified when the locationMatchingStrategy is specified as EXACT.
    * @param locationType locationType or {@code null} for none
    */
   public DeveloperMetadataLookup setLocationType(java.lang.String locationType) {
@@ -238,7 +235,7 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
 
   /**
    * Limits the selected developer metadata to that which has a matching
-   * DeveloperMetadata.visibility.  If left unspecified, all developer metadata visibile to the
+   * DeveloperMetadata.visibility. If left unspecified, all developer metadata visibile to the
    * requesting project is considered.
    * @return value or {@code null} for none
    */
@@ -248,7 +245,7 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
 
   /**
    * Limits the selected developer metadata to that which has a matching
-   * DeveloperMetadata.visibility.  If left unspecified, all developer metadata visibile to the
+   * DeveloperMetadata.visibility. If left unspecified, all developer metadata visibile to the
    * requesting project is considered.
    * @param visibility visibility or {@code null} for none
    */

@@ -53,7 +53,7 @@ public final class InterpolationPoint extends com.google.api.client.json.Generic
   private java.lang.String type;
 
   /**
-   * The value this interpolation point uses.  May be a formula. Unused if type is MIN or MAX.
+   * The value this interpolation point uses. May be a formula. Unused if type is MIN or MAX.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class InterpolationPoint extends com.google.api.client.json.Generic
   }
 
   /**
-   * The value this interpolation point uses.  May be a formula. Unused if type is MIN or MAX.
+   * The value this interpolation point uses. May be a formula. Unused if type is MIN or MAX.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -121,7 +121,7 @@ public final class InterpolationPoint extends com.google.api.client.json.Generic
   }
 
   /**
-   * The value this interpolation point uses.  May be a formula. Unused if type is MIN or MAX.
+   * The value this interpolation point uses. May be a formula. Unused if type is MIN or MAX.
    * @param value value or {@code null} for none
    */
   public InterpolationPoint setValue(java.lang.String value) {

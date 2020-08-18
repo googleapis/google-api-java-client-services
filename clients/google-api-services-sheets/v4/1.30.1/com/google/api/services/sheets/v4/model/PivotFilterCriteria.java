@@ -30,14 +30,14 @@ package com.google.api.services.sheets.v4.model;
 public final class PivotFilterCriteria extends com.google.api.client.json.GenericJson {
 
   /**
-   * Values that should be included.  Values not listed here are excluded.
+   * Values that should be included. Values not listed here are excluded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> visibleValues;
 
   /**
-   * Values that should be included.  Values not listed here are excluded.
+   * Values that should be included. Values not listed here are excluded.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getVisibleValues() {
@@ -45,7 +45,7 @@ public final class PivotFilterCriteria extends com.google.api.client.json.Generi
   }
 
   /**
-   * Values that should be included.  Values not listed here are excluded.
+   * Values that should be included. Values not listed here are excluded.
    * @param visibleValues visibleValues or {@code null} for none
    */
   public PivotFilterCriteria setVisibleValues(java.util.List<java.lang.String> visibleValues) {

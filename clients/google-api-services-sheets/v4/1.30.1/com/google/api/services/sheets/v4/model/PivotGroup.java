@@ -42,11 +42,9 @@ public final class PivotGroup extends com.google.api.client.json.GenericJson {
    * column label is `Product` (which could be renamed `Item`). Pivot tables created before December
    * 2017 do not have header labels. If you'd like to add header labels to an existing pivot table,
    * please delete the existing pivot table and then create a new pivot table with same parameters.
-   *
-   *     +--------------+---------+-------+     | SUM of Units | Product |       |     | Region
-   * | Pen     | Paper |     +--------------+---------+-------+     | New York     |     345 |    98
-   * |     | Oregon       |     234 |   123 |     | Tennessee    |     531 |   415 |
-   * +--------------+---------+-------+     | Grand Total  |    1110 |   636 |
+   * +--------------+---------+-------+ | SUM of Units | Product | | | Region | Pen | Paper |
+   * +--------------+---------+-------+ | New York | 345 | 98 | | Oregon | 234 | 123 | | Tennessee |
+   * 531 | 415 | +--------------+---------+-------+ | Grand Total | 1110 | 636 |
    * +--------------+---------+-------+
    * The value may be {@code null}.
    */
@@ -55,15 +53,12 @@ public final class PivotGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * True if the headings in this pivot group should be repeated. This is only valid for row
-   * groupings and is ignored by columns.
-   *
-   * By default, we minimize repitition of headings by not showing higher level headings where they
-   * are the same. For example, even though the third row below corresponds to "Q1 Mar", "Q1" is not
-   * shown because it is redundant with previous rows. Setting repeat_headings to true would cause
-   * "Q1" to be repeated for "Feb" and "Mar".
-   *
-   *     +--------------+     | Q1     | Jan |     |        | Feb |     |        | Mar |
-   * +--------+-----+     | Q1 Total     |     +--------------+
+   * groupings and is ignored by columns. By default, we minimize repitition of headings by not
+   * showing higher level headings where they are the same. For example, even though the third row
+   * below corresponds to "Q1 Mar", "Q1" is not shown because it is redundant with previous rows.
+   * Setting repeat_headings to true would cause "Q1" to be repeated for "Feb" and "Mar".
+   * +--------------+ | Q1 | Jan | | | Feb | | | Mar | +--------+-----+ | Q1 Total |
+   * +--------------+
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,10 +79,9 @@ public final class PivotGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String sortOrder;
 
   /**
-   * The column offset of the source range that this grouping is based on.
-   *
-   * For example, if the source was `C10:E15`, a `sourceColumnOffset` of `0` means this group refers
-   * to column `C`, whereas the offset `1` would refer to column `D`.
+   * The column offset of the source range that this grouping is based on. For example, if the
+   * source was `C10:E15`, a `sourceColumnOffset` of `0` means this group refers to column `C`,
+   * whereas the offset `1` would refer to column `D`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,11 +125,9 @@ public final class PivotGroup extends com.google.api.client.json.GenericJson {
    * column label is `Product` (which could be renamed `Item`). Pivot tables created before December
    * 2017 do not have header labels. If you'd like to add header labels to an existing pivot table,
    * please delete the existing pivot table and then create a new pivot table with same parameters.
-   *
-   *     +--------------+---------+-------+     | SUM of Units | Product |       |     | Region
-   * | Pen     | Paper |     +--------------+---------+-------+     | New York     |     345 |    98
-   * |     | Oregon       |     234 |   123 |     | Tennessee    |     531 |   415 |
-   * +--------------+---------+-------+     | Grand Total  |    1110 |   636 |
+   * +--------------+---------+-------+ | SUM of Units | Product | | | Region | Pen | Paper |
+   * +--------------+---------+-------+ | New York | 345 | 98 | | Oregon | 234 | 123 | | Tennessee |
+   * 531 | 415 | +--------------+---------+-------+ | Grand Total | 1110 | 636 |
    * +--------------+---------+-------+
    * @return value or {@code null} for none
    */
@@ -149,11 +141,9 @@ public final class PivotGroup extends com.google.api.client.json.GenericJson {
    * column label is `Product` (which could be renamed `Item`). Pivot tables created before December
    * 2017 do not have header labels. If you'd like to add header labels to an existing pivot table,
    * please delete the existing pivot table and then create a new pivot table with same parameters.
-   *
-   *     +--------------+---------+-------+     | SUM of Units | Product |       |     | Region
-   * | Pen     | Paper |     +--------------+---------+-------+     | New York     |     345 |    98
-   * |     | Oregon       |     234 |   123 |     | Tennessee    |     531 |   415 |
-   * +--------------+---------+-------+     | Grand Total  |    1110 |   636 |
+   * +--------------+---------+-------+ | SUM of Units | Product | | | Region | Pen | Paper |
+   * +--------------+---------+-------+ | New York | 345 | 98 | | Oregon | 234 | 123 | | Tennessee |
+   * 531 | 415 | +--------------+---------+-------+ | Grand Total | 1110 | 636 |
    * +--------------+---------+-------+
    * @param label label or {@code null} for none
    */
@@ -164,15 +154,12 @@ public final class PivotGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * True if the headings in this pivot group should be repeated. This is only valid for row
-   * groupings and is ignored by columns.
-   *
-   * By default, we minimize repitition of headings by not showing higher level headings where they
-   * are the same. For example, even though the third row below corresponds to "Q1 Mar", "Q1" is not
-   * shown because it is redundant with previous rows. Setting repeat_headings to true would cause
-   * "Q1" to be repeated for "Feb" and "Mar".
-   *
-   *     +--------------+     | Q1     | Jan |     |        | Feb |     |        | Mar |
-   * +--------+-----+     | Q1 Total     |     +--------------+
+   * groupings and is ignored by columns. By default, we minimize repitition of headings by not
+   * showing higher level headings where they are the same. For example, even though the third row
+   * below corresponds to "Q1 Mar", "Q1" is not shown because it is redundant with previous rows.
+   * Setting repeat_headings to true would cause "Q1" to be repeated for "Feb" and "Mar".
+   * +--------------+ | Q1 | Jan | | | Feb | | | Mar | +--------+-----+ | Q1 Total |
+   * +--------------+
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRepeatHeadings() {
@@ -181,15 +168,12 @@ public final class PivotGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * True if the headings in this pivot group should be repeated. This is only valid for row
-   * groupings and is ignored by columns.
-   *
-   * By default, we minimize repitition of headings by not showing higher level headings where they
-   * are the same. For example, even though the third row below corresponds to "Q1 Mar", "Q1" is not
-   * shown because it is redundant with previous rows. Setting repeat_headings to true would cause
-   * "Q1" to be repeated for "Feb" and "Mar".
-   *
-   *     +--------------+     | Q1     | Jan |     |        | Feb |     |        | Mar |
-   * +--------+-----+     | Q1 Total     |     +--------------+
+   * groupings and is ignored by columns. By default, we minimize repitition of headings by not
+   * showing higher level headings where they are the same. For example, even though the third row
+   * below corresponds to "Q1 Mar", "Q1" is not shown because it is redundant with previous rows.
+   * Setting repeat_headings to true would cause "Q1" to be repeated for "Feb" and "Mar".
+   * +--------------+ | Q1 | Jan | | | Feb | | | Mar | +--------+-----+ | Q1 Total |
+   * +--------------+
    * @param repeatHeadings repeatHeadings or {@code null} for none
    */
   public PivotGroup setRepeatHeadings(java.lang.Boolean repeatHeadings) {
@@ -232,10 +216,9 @@ public final class PivotGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The column offset of the source range that this grouping is based on.
-   *
-   * For example, if the source was `C10:E15`, a `sourceColumnOffset` of `0` means this group refers
-   * to column `C`, whereas the offset `1` would refer to column `D`.
+   * The column offset of the source range that this grouping is based on. For example, if the
+   * source was `C10:E15`, a `sourceColumnOffset` of `0` means this group refers to column `C`,
+   * whereas the offset `1` would refer to column `D`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSourceColumnOffset() {
@@ -243,10 +226,9 @@ public final class PivotGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The column offset of the source range that this grouping is based on.
-   *
-   * For example, if the source was `C10:E15`, a `sourceColumnOffset` of `0` means this group refers
-   * to column `C`, whereas the offset `1` would refer to column `D`.
+   * The column offset of the source range that this grouping is based on. For example, if the
+   * source was `C10:E15`, a `sourceColumnOffset` of `0` means this group refers to column `C`,
+   * whereas the offset `1` would refer to column `D`.
    * @param sourceColumnOffset sourceColumnOffset or {@code null} for none
    */
   public PivotGroup setSourceColumnOffset(java.lang.Integer sourceColumnOffset) {

@@ -43,14 +43,11 @@ public final class PivotTable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional mapping of filters per source column offset.
-   *
-   * The filters are applied before aggregating data into the pivot table. The map's key is the
-   * column offset of the source range that you want to filter, and the value is the criteria for
-   * that column.
-   *
-   * For example, if the source was `C10:E15`, a key of `0` will have the filter for column `C`,
-   * whereas the key `1` is for column `D`.
+   * An optional mapping of filters per source column offset. The filters are applied before
+   * aggregating data into the pivot table. The map's key is the column offset of the source range
+   * that you want to filter, and the value is the criteria for that column. For example, if the
+   * source was `C10:E15`, a key of `0` will have the filter for column `C`, whereas the key `1` is
+   * for column `D`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,14 +111,11 @@ public final class PivotTable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional mapping of filters per source column offset.
-   *
-   * The filters are applied before aggregating data into the pivot table. The map's key is the
-   * column offset of the source range that you want to filter, and the value is the criteria for
-   * that column.
-   *
-   * For example, if the source was `C10:E15`, a key of `0` will have the filter for column `C`,
-   * whereas the key `1` is for column `D`.
+   * An optional mapping of filters per source column offset. The filters are applied before
+   * aggregating data into the pivot table. The map's key is the column offset of the source range
+   * that you want to filter, and the value is the criteria for that column. For example, if the
+   * source was `C10:E15`, a key of `0` will have the filter for column `C`, whereas the key `1` is
+   * for column `D`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, PivotFilterCriteria> getCriteria() {
@@ -129,14 +123,11 @@ public final class PivotTable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional mapping of filters per source column offset.
-   *
-   * The filters are applied before aggregating data into the pivot table. The map's key is the
-   * column offset of the source range that you want to filter, and the value is the criteria for
-   * that column.
-   *
-   * For example, if the source was `C10:E15`, a key of `0` will have the filter for column `C`,
-   * whereas the key `1` is for column `D`.
+   * An optional mapping of filters per source column offset. The filters are applied before
+   * aggregating data into the pivot table. The map's key is the column offset of the source range
+   * that you want to filter, and the value is the criteria for that column. For example, if the
+   * source was `C10:E15`, a key of `0` will have the filter for column `C`, whereas the key `1` is
+   * for column `D`.
    * @param criteria criteria or {@code null} for none
    */
   public PivotTable setCriteria(java.util.Map<String, PivotFilterCriteria> criteria) {

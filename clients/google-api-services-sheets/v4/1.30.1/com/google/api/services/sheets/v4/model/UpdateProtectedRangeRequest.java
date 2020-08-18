@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class UpdateProtectedRangeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fields that should be updated.  At least one field must be specified. The root
+   * The fields that should be updated. At least one field must be specified. The root
    * `protectedRange` is implied and should not be specified. A single `"*"` can be used as short-
    * hand for listing every field.
    * The value may be {@code null}.
@@ -46,7 +46,7 @@ public final class UpdateProtectedRangeRequest extends com.google.api.client.jso
   private ProtectedRange protectedRange;
 
   /**
-   * The fields that should be updated.  At least one field must be specified. The root
+   * The fields that should be updated. At least one field must be specified. The root
    * `protectedRange` is implied and should not be specified. A single `"*"` can be used as short-
    * hand for listing every field.
    * @return value or {@code null} for none
@@ -56,7 +56,7 @@ public final class UpdateProtectedRangeRequest extends com.google.api.client.jso
   }
 
   /**
-   * The fields that should be updated.  At least one field must be specified. The root
+   * The fields that should be updated. At least one field must be specified. The root
    * `protectedRange` is implied and should not be specified. A single `"*"` can be used as short-
    * hand for listing every field.
    * @param fields fields or {@code null} for none

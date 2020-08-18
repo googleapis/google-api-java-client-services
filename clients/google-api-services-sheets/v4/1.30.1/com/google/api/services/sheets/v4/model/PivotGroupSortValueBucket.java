@@ -30,13 +30,12 @@ package com.google.api.services.sheets.v4.model;
 public final class PivotGroupSortValueBucket extends com.google.api.client.json.GenericJson {
 
   /**
-   * Determines the bucket from which values are chosen to sort.
-   *
-   * For example, in a pivot table with one row group & two column groups, the row group can list up
-   * to two values. The first value corresponds to a value within the first column group, and the
-   * second value corresponds to a value in the second column group.  If no values are listed, this
-   * would indicate that the row should be sorted according to the "Grand Total" over the column
-   * groups. If a single value is listed, this would correspond to using the "Total" of that bucket.
+   * Determines the bucket from which values are chosen to sort. For example, in a pivot table with
+   * one row group & two column groups, the row group can list up to two values. The first value
+   * corresponds to a value within the first column group, and the second value corresponds to a
+   * value in the second column group. If no values are listed, this would indicate that the row
+   * should be sorted according to the "Grand Total" over the column groups. If a single value is
+   * listed, this would correspond to using the "Total" of that bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,13 +55,12 @@ public final class PivotGroupSortValueBucket extends com.google.api.client.json.
   private java.lang.Integer valuesIndex;
 
   /**
-   * Determines the bucket from which values are chosen to sort.
-   *
-   * For example, in a pivot table with one row group & two column groups, the row group can list up
-   * to two values. The first value corresponds to a value within the first column group, and the
-   * second value corresponds to a value in the second column group.  If no values are listed, this
-   * would indicate that the row should be sorted according to the "Grand Total" over the column
-   * groups. If a single value is listed, this would correspond to using the "Total" of that bucket.
+   * Determines the bucket from which values are chosen to sort. For example, in a pivot table with
+   * one row group & two column groups, the row group can list up to two values. The first value
+   * corresponds to a value within the first column group, and the second value corresponds to a
+   * value in the second column group. If no values are listed, this would indicate that the row
+   * should be sorted according to the "Grand Total" over the column groups. If a single value is
+   * listed, this would correspond to using the "Total" of that bucket.
    * @return value or {@code null} for none
    */
   public java.util.List<ExtendedValue> getBuckets() {
@@ -70,13 +68,12 @@ public final class PivotGroupSortValueBucket extends com.google.api.client.json.
   }
 
   /**
-   * Determines the bucket from which values are chosen to sort.
-   *
-   * For example, in a pivot table with one row group & two column groups, the row group can list up
-   * to two values. The first value corresponds to a value within the first column group, and the
-   * second value corresponds to a value in the second column group.  If no values are listed, this
-   * would indicate that the row should be sorted according to the "Grand Total" over the column
-   * groups. If a single value is listed, this would correspond to using the "Total" of that bucket.
+   * Determines the bucket from which values are chosen to sort. For example, in a pivot table with
+   * one row group & two column groups, the row group can list up to two values. The first value
+   * corresponds to a value within the first column group, and the second value corresponds to a
+   * value in the second column group. If no values are listed, this would indicate that the row
+   * should be sorted according to the "Grand Total" over the column groups. If a single value is
+   * listed, this would correspond to using the "Total" of that bucket.
    * @param buckets buckets or {@code null} for none
    */
   public PivotGroupSortValueBucket setBuckets(java.util.List<ExtendedValue> buckets) {

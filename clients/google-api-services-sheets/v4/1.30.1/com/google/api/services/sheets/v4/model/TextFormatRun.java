@@ -31,7 +31,7 @@ package com.google.api.services.sheets.v4.model;
 public final class TextFormatRun extends com.google.api.client.json.GenericJson {
 
   /**
-   * The format of this run.  Absent values inherit the cell's format.
+   * The format of this run. Absent values inherit the cell's format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class TextFormatRun extends com.google.api.client.json.GenericJson 
   private java.lang.Integer startIndex;
 
   /**
-   * The format of this run.  Absent values inherit the cell's format.
+   * The format of this run. Absent values inherit the cell's format.
    * @return value or {@code null} for none
    */
   public TextFormat getFormat() {
@@ -53,7 +53,7 @@ public final class TextFormatRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The format of this run.  Absent values inherit the cell's format.
+   * The format of this run. Absent values inherit the cell's format.
    * @param format format or {@code null} for none
    */
   public TextFormatRun setFormat(TextFormat format) {

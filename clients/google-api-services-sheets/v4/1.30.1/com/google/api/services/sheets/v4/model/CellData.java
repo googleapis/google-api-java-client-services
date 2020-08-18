@@ -30,9 +30,8 @@ package com.google.api.services.sheets.v4.model;
 public final class CellData extends com.google.api.client.json.GenericJson {
 
   /**
-   * A data validation rule on the cell, if any.
-   *
-   * When writing, the new data validation rule will overwrite any prior rule.
+   * A data validation rule on the cell, if any. When writing, the new data validation rule will
+   * overwrite any prior rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +48,7 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   private CellFormat effectiveFormat;
 
   /**
-   * The effective value of the cell. For cells with formulas, this is the calculated value.  For
+   * The effective value of the cell. For cells with formulas, this is the calculated value. For
    * cells with literals, this is the same as the user_entered_value. This field is read-only.
    * The value may be {@code null}.
    */
@@ -65,7 +64,7 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   private java.lang.String formattedValue;
 
   /**
-   * A hyperlink this cell points to, if any. This field is read-only.  (To set it, use a
+   * A hyperlink this cell points to, if any. This field is read-only. (To set it, use a
    * `=HYPERLINK` formula in the userEnteredValue.formulaValue field.)
    * The value may be {@code null}.
    */
@@ -90,23 +89,20 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   private PivotTable pivotTable;
 
   /**
-   * Runs of rich text applied to subsections of the cell.  Runs are only valid on user entered
+   * Runs of rich text applied to subsections of the cell. Runs are only valid on user entered
    * strings, not formulas, bools, or numbers. Runs start at specific indexes in the text and
    * continue until the next run. Properties of a run will continue unless explicitly changed in a
    * subsequent run (and properties of the first run will continue the properties of the cell unless
-   * explicitly changed).
-   *
-   * When writing, the new runs will overwrite any prior runs.  When writing a new
-   * user_entered_value, previous runs are erased.
+   * explicitly changed). When writing, the new runs will overwrite any prior runs. When writing a
+   * new user_entered_value, previous runs are erased.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TextFormatRun> textFormatRuns;
 
   /**
-   * The format the user entered for the cell.
-   *
-   * When writing, the new format will be merged with the existing format.
+   * The format the user entered for the cell. When writing, the new format will be merged with the
+   * existing format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,9 +117,8 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   private ExtendedValue userEnteredValue;
 
   /**
-   * A data validation rule on the cell, if any.
-   *
-   * When writing, the new data validation rule will overwrite any prior rule.
+   * A data validation rule on the cell, if any. When writing, the new data validation rule will
+   * overwrite any prior rule.
    * @return value or {@code null} for none
    */
   public DataValidationRule getDataValidation() {
@@ -131,9 +126,8 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A data validation rule on the cell, if any.
-   *
-   * When writing, the new data validation rule will overwrite any prior rule.
+   * A data validation rule on the cell, if any. When writing, the new data validation rule will
+   * overwrite any prior rule.
    * @param dataValidation dataValidation or {@code null} for none
    */
   public CellData setDataValidation(DataValidationRule dataValidation) {
@@ -165,7 +159,7 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The effective value of the cell. For cells with formulas, this is the calculated value.  For
+   * The effective value of the cell. For cells with formulas, this is the calculated value. For
    * cells with literals, this is the same as the user_entered_value. This field is read-only.
    * @return value or {@code null} for none
    */
@@ -174,7 +168,7 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The effective value of the cell. For cells with formulas, this is the calculated value.  For
+   * The effective value of the cell. For cells with formulas, this is the calculated value. For
    * cells with literals, this is the same as the user_entered_value. This field is read-only.
    * @param effectiveValue effectiveValue or {@code null} for none
    */
@@ -203,7 +197,7 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A hyperlink this cell points to, if any. This field is read-only.  (To set it, use a
+   * A hyperlink this cell points to, if any. This field is read-only. (To set it, use a
    * `=HYPERLINK` formula in the userEnteredValue.formulaValue field.)
    * @return value or {@code null} for none
    */
@@ -212,7 +206,7 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A hyperlink this cell points to, if any. This field is read-only.  (To set it, use a
+   * A hyperlink this cell points to, if any. This field is read-only. (To set it, use a
    * `=HYPERLINK` formula in the userEnteredValue.formulaValue field.)
    * @param hyperlink hyperlink or {@code null} for none
    */
@@ -262,14 +256,12 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Runs of rich text applied to subsections of the cell.  Runs are only valid on user entered
+   * Runs of rich text applied to subsections of the cell. Runs are only valid on user entered
    * strings, not formulas, bools, or numbers. Runs start at specific indexes in the text and
    * continue until the next run. Properties of a run will continue unless explicitly changed in a
    * subsequent run (and properties of the first run will continue the properties of the cell unless
-   * explicitly changed).
-   *
-   * When writing, the new runs will overwrite any prior runs.  When writing a new
-   * user_entered_value, previous runs are erased.
+   * explicitly changed). When writing, the new runs will overwrite any prior runs. When writing a
+   * new user_entered_value, previous runs are erased.
    * @return value or {@code null} for none
    */
   public java.util.List<TextFormatRun> getTextFormatRuns() {
@@ -277,14 +269,12 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Runs of rich text applied to subsections of the cell.  Runs are only valid on user entered
+   * Runs of rich text applied to subsections of the cell. Runs are only valid on user entered
    * strings, not formulas, bools, or numbers. Runs start at specific indexes in the text and
    * continue until the next run. Properties of a run will continue unless explicitly changed in a
    * subsequent run (and properties of the first run will continue the properties of the cell unless
-   * explicitly changed).
-   *
-   * When writing, the new runs will overwrite any prior runs.  When writing a new
-   * user_entered_value, previous runs are erased.
+   * explicitly changed). When writing, the new runs will overwrite any prior runs. When writing a
+   * new user_entered_value, previous runs are erased.
    * @param textFormatRuns textFormatRuns or {@code null} for none
    */
   public CellData setTextFormatRuns(java.util.List<TextFormatRun> textFormatRuns) {
@@ -293,9 +283,8 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The format the user entered for the cell.
-   *
-   * When writing, the new format will be merged with the existing format.
+   * The format the user entered for the cell. When writing, the new format will be merged with the
+   * existing format.
    * @return value or {@code null} for none
    */
   public CellFormat getUserEnteredFormat() {
@@ -303,9 +292,8 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The format the user entered for the cell.
-   *
-   * When writing, the new format will be merged with the existing format.
+   * The format the user entered for the cell. When writing, the new format will be merged with the
+   * existing format.
    * @param userEnteredFormat userEnteredFormat or {@code null} for none
    */
   public CellData setUserEnteredFormat(CellFormat userEnteredFormat) {

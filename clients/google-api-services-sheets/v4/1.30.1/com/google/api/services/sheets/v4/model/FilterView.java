@@ -51,18 +51,16 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   private java.lang.Integer filterViewId;
 
   /**
-   * The named range this filter view is backed by, if any.
-   *
-   * When writing, only one of range or named_range_id may be set.
+   * The named range this filter view is backed by, if any. When writing, only one of range or
+   * named_range_id may be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String namedRangeId;
 
   /**
-   * The range this filter view covers.
-   *
-   * When writing, only one of range or named_range_id may be set.
+   * The range this filter view covers. When writing, only one of range or named_range_id may be
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,9 +118,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The named range this filter view is backed by, if any.
-   *
-   * When writing, only one of range or named_range_id may be set.
+   * The named range this filter view is backed by, if any. When writing, only one of range or
+   * named_range_id may be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamedRangeId() {
@@ -130,9 +127,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The named range this filter view is backed by, if any.
-   *
-   * When writing, only one of range or named_range_id may be set.
+   * The named range this filter view is backed by, if any. When writing, only one of range or
+   * named_range_id may be set.
    * @param namedRangeId namedRangeId or {@code null} for none
    */
   public FilterView setNamedRangeId(java.lang.String namedRangeId) {
@@ -141,9 +137,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range this filter view covers.
-   *
-   * When writing, only one of range or named_range_id may be set.
+   * The range this filter view covers. When writing, only one of range or named_range_id may be
+   * set.
    * @return value or {@code null} for none
    */
   public GridRange getRange() {
@@ -151,9 +146,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range this filter view covers.
-   *
-   * When writing, only one of range or named_range_id may be set.
+   * The range this filter view covers. When writing, only one of range or named_range_id may be
+   * set.
    * @param range range or {@code null} for none
    */
   public FilterView setRange(GridRange range) {

@@ -38,8 +38,8 @@ public final class BooleanCondition extends com.google.api.client.json.GenericJs
   private java.lang.String type;
 
   /**
-   * The values of the condition. The number of supported values depends on the condition type.
-   * Some support zero values, others one or two values, and ConditionType.ONE_OF_LIST supports an
+   * The values of the condition. The number of supported values depends on the condition type. Some
+   * support zero values, others one or two values, and ConditionType.ONE_OF_LIST supports an
    * arbitrary number of values.
    * The value may be {@code null}.
    */
@@ -64,8 +64,8 @@ public final class BooleanCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The values of the condition. The number of supported values depends on the condition type.
-   * Some support zero values, others one or two values, and ConditionType.ONE_OF_LIST supports an
+   * The values of the condition. The number of supported values depends on the condition type. Some
+   * support zero values, others one or two values, and ConditionType.ONE_OF_LIST supports an
    * arbitrary number of values.
    * @return value or {@code null} for none
    */
@@ -74,8 +74,8 @@ public final class BooleanCondition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The values of the condition. The number of supported values depends on the condition type.
-   * Some support zero values, others one or two values, and ConditionType.ONE_OF_LIST supports an
+   * The values of the condition. The number of supported values depends on the condition type. Some
+   * support zero values, others one or two values, and ConditionType.ONE_OF_LIST supports an
    * arbitrary number of values.
    * @param values values or {@code null} for none
    */

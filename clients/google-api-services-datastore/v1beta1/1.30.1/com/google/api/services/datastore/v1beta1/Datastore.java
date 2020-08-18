@@ -20,8 +20,7 @@ package com.google.api.services.datastore.v1beta1;
  * Service definition for Datastore (v1beta1).
  *
  * <p>
- * Accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.
-
+ * Accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application. 
  * </p>
  *
  * <p>

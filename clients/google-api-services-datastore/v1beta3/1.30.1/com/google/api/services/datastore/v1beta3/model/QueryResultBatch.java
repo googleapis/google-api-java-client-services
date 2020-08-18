@@ -81,11 +81,10 @@ public final class QueryResultBatch extends com.google.api.client.json.GenericJs
   /**
    * The version number of the snapshot this batch was returned from. This applies to the range of
    * results from the query's `start_cursor` (or the beginning of the query if no cursor was given)
-   * to this batch's `end_cursor` (not the query's `end_cursor`).
-   *
-   * In a single transaction, subsequent query result batches for the same query can have a greater
-   * snapshot version number. Each batch's snapshot version is valid for all preceding batches. The
-   * value will be zero for eventually consistent queries.
+   * to this batch's `end_cursor` (not the query's `end_cursor`). In a single transaction,
+   * subsequent query result batches for the same query can have a greater snapshot version number.
+   * Each batch's snapshot version is valid for all preceding batches. The value will be zero for
+   * eventually consistent queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -256,11 +255,10 @@ public final class QueryResultBatch extends com.google.api.client.json.GenericJs
   /**
    * The version number of the snapshot this batch was returned from. This applies to the range of
    * results from the query's `start_cursor` (or the beginning of the query if no cursor was given)
-   * to this batch's `end_cursor` (not the query's `end_cursor`).
-   *
-   * In a single transaction, subsequent query result batches for the same query can have a greater
-   * snapshot version number. Each batch's snapshot version is valid for all preceding batches. The
-   * value will be zero for eventually consistent queries.
+   * to this batch's `end_cursor` (not the query's `end_cursor`). In a single transaction,
+   * subsequent query result batches for the same query can have a greater snapshot version number.
+   * Each batch's snapshot version is valid for all preceding batches. The value will be zero for
+   * eventually consistent queries.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSnapshotVersion() {
@@ -270,11 +268,10 @@ public final class QueryResultBatch extends com.google.api.client.json.GenericJs
   /**
    * The version number of the snapshot this batch was returned from. This applies to the range of
    * results from the query's `start_cursor` (or the beginning of the query if no cursor was given)
-   * to this batch's `end_cursor` (not the query's `end_cursor`).
-   *
-   * In a single transaction, subsequent query result batches for the same query can have a greater
-   * snapshot version number. Each batch's snapshot version is valid for all preceding batches. The
-   * value will be zero for eventually consistent queries.
+   * to this batch's `end_cursor` (not the query's `end_cursor`). In a single transaction,
+   * subsequent query result batches for the same query can have a greater snapshot version number.
+   * Each batch's snapshot version is valid for all preceding batches. The value will be zero for
+   * eventually consistent queries.
    * @param snapshotVersion snapshotVersion or {@code null} for none
    */
   public QueryResultBatch setSnapshotVersion(java.lang.Long snapshotVersion) {

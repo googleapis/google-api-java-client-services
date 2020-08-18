@@ -17,10 +17,8 @@
 package com.google.api.services.datastore.v1beta3.model;
 
 /**
- * A Datastore data object.
- *
- * An entity is limited to 1 megabyte when stored. That _roughly_ corresponds to a limit of 1
- * megabyte for the serialized form of this message.
+ * A Datastore data object. An entity is limited to 1 megabyte when stored. That _roughly_
+ * corresponds to a limit of 1 megabyte for the serialized form of this message.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Datastore API. For a detailed explanation see:
@@ -33,11 +31,9 @@ package com.google.api.services.datastore.v1beta3.model;
 public final class Entity extends com.google.api.client.json.GenericJson {
 
   /**
-   * The entity's key.
-   *
-   * An entity must have a key, unless otherwise documented (for example, an entity in
-   * `Value.entity_value` may have no key). An entity's kind is its key path's last element's kind,
-   * or null if it has no key.
+   * The entity's key. An entity must have a key, unless otherwise documented (for example, an
+   * entity in `Value.entity_value` may have no key). An entity's kind is its key path's last
+   * element's kind, or null if it has no key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,11 +49,9 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, Value> properties;
 
   /**
-   * The entity's key.
-   *
-   * An entity must have a key, unless otherwise documented (for example, an entity in
-   * `Value.entity_value` may have no key). An entity's kind is its key path's last element's kind,
-   * or null if it has no key.
+   * The entity's key. An entity must have a key, unless otherwise documented (for example, an
+   * entity in `Value.entity_value` may have no key). An entity's kind is its key path's last
+   * element's kind, or null if it has no key.
    * @return value or {@code null} for none
    */
   public Key getKey() {
@@ -65,11 +59,9 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The entity's key.
-   *
-   * An entity must have a key, unless otherwise documented (for example, an entity in
-   * `Value.entity_value` may have no key). An entity's kind is its key path's last element's kind,
-   * or null if it has no key.
+   * The entity's key. An entity must have a key, unless otherwise documented (for example, an
+   * entity in `Value.entity_value` may have no key). An entity's kind is its key path's last
+   * element's kind, or null if it has no key.
    * @param key key or {@code null} for none
    */
   public Entity setKey(Key key) {

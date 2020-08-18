@@ -30,7 +30,7 @@ package com.google.api.services.datastore.v1.model;
 public final class GoogleDatastoreAdminV1IndexedProperty extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The indexed property's direction.  Must not be DIRECTION_UNSPECIFIED.
+   * Required. The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleDatastoreAdminV1IndexedProperty extends com.google.api.
   private java.lang.String name;
 
   /**
-   * Required. The indexed property's direction.  Must not be DIRECTION_UNSPECIFIED.
+   * Required. The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
    * @return value or {@code null} for none
    */
   public java.lang.String getDirection() {
@@ -52,7 +52,7 @@ public final class GoogleDatastoreAdminV1IndexedProperty extends com.google.api.
   }
 
   /**
-   * Required. The indexed property's direction.  Must not be DIRECTION_UNSPECIFIED.
+   * Required. The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
    * @param direction direction or {@code null} for none
    */
   public GoogleDatastoreAdminV1IndexedProperty setDirection(java.lang.String direction) {

@@ -37,16 +37,11 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   private java.lang.String mode;
 
   /**
-   * The mutations to perform.
-   *
-   * When mode is `TRANSACTIONAL`, mutations affecting a single entity are applied in order. The
-   * following sequences of mutations affecting a single entity are not permitted in a single
-   * `Commit` request:
-   *
-   * - `insert` followed by `insert` - `update` followed by `insert` - `upsert` followed by `insert`
-   * - `delete` followed by `update`
-   *
-   * When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single entity.
+   * The mutations to perform. When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+   * applied in order. The following sequences of mutations affecting a single entity are not
+   * permitted in a single `Commit` request: - `insert` followed by `insert` - `update` followed by
+   * `insert` - `upsert` followed by `insert` - `delete` followed by `update` When mode is
+   * `NON_TRANSACTIONAL`, no two mutations may affect a single entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,16 +73,11 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The mutations to perform.
-   *
-   * When mode is `TRANSACTIONAL`, mutations affecting a single entity are applied in order. The
-   * following sequences of mutations affecting a single entity are not permitted in a single
-   * `Commit` request:
-   *
-   * - `insert` followed by `insert` - `update` followed by `insert` - `upsert` followed by `insert`
-   * - `delete` followed by `update`
-   *
-   * When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single entity.
+   * The mutations to perform. When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+   * applied in order. The following sequences of mutations affecting a single entity are not
+   * permitted in a single `Commit` request: - `insert` followed by `insert` - `update` followed by
+   * `insert` - `upsert` followed by `insert` - `delete` followed by `update` When mode is
+   * `NON_TRANSACTIONAL`, no two mutations may affect a single entity.
    * @return value or {@code null} for none
    */
   public java.util.List<Mutation> getMutations() {
@@ -95,16 +85,11 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The mutations to perform.
-   *
-   * When mode is `TRANSACTIONAL`, mutations affecting a single entity are applied in order. The
-   * following sequences of mutations affecting a single entity are not permitted in a single
-   * `Commit` request:
-   *
-   * - `insert` followed by `insert` - `update` followed by `insert` - `upsert` followed by `insert`
-   * - `delete` followed by `update`
-   *
-   * When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single entity.
+   * The mutations to perform. When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+   * applied in order. The following sequences of mutations affecting a single entity are not
+   * permitted in a single `Commit` request: - `insert` followed by `insert` - `update` followed by
+   * `insert` - `upsert` followed by `insert` - `delete` followed by `update` When mode is
+   * `NON_TRANSACTIONAL`, no two mutations may affect a single entity.
    * @param mutations mutations or {@code null} for none
    */
   public CommitRequest setMutations(java.util.List<Mutation> mutations) {

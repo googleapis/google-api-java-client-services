@@ -46,12 +46,9 @@ public final class EntityResult extends com.google.api.client.json.GenericJson {
 
   /**
    * The version of the entity, a strictly positive number that monotonically increases with changes
-   * to the entity.
-   *
-   * This field is set for `FULL` entity results.
-   *
-   * For missing entities in `LookupResponse`, this is the version of the snapshot that was used to
-   * look up the entity, and it is always set except for eventually consistent reads.
+   * to the entity. This field is set for `FULL` entity results. For missing entities in
+   * `LookupResponse`, this is the version of the snapshot that was used to look up the entity, and
+   * it is always set except for eventually consistent reads.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -125,12 +122,9 @@ public final class EntityResult extends com.google.api.client.json.GenericJson {
 
   /**
    * The version of the entity, a strictly positive number that monotonically increases with changes
-   * to the entity.
-   *
-   * This field is set for `FULL` entity results.
-   *
-   * For missing entities in `LookupResponse`, this is the version of the snapshot that was used to
-   * look up the entity, and it is always set except for eventually consistent reads.
+   * to the entity. This field is set for `FULL` entity results. For missing entities in
+   * `LookupResponse`, this is the version of the snapshot that was used to look up the entity, and
+   * it is always set except for eventually consistent reads.
    * @return value or {@code null} for none
    */
   public java.lang.Long getVersion() {
@@ -139,12 +133,9 @@ public final class EntityResult extends com.google.api.client.json.GenericJson {
 
   /**
    * The version of the entity, a strictly positive number that monotonically increases with changes
-   * to the entity.
-   *
-   * This field is set for `FULL` entity results.
-   *
-   * For missing entities in `LookupResponse`, this is the version of the snapshot that was used to
-   * look up the entity, and it is always set except for eventually consistent reads.
+   * to the entity. This field is set for `FULL` entity results. For missing entities in
+   * `LookupResponse`, this is the version of the snapshot that was used to look up the entity, and
+   * it is always set except for eventually consistent reads.
    * @param version version or {@code null} for none
    */
   public EntityResult setVersion(java.lang.Long version) {

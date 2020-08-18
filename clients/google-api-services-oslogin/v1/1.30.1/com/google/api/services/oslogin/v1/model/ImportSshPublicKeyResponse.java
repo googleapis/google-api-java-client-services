@@ -30,11 +30,35 @@ package com.google.api.services.oslogin.v1.model;
 public final class ImportSshPublicKeyResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Detailed information about import results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String details;
+
+  /**
    * The login profile information for the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LoginProfile loginProfile;
+
+  /**
+   * Detailed information about import results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDetails() {
+    return details;
+  }
+
+  /**
+   * Detailed information about import results.
+   * @param details details or {@code null} for none
+   */
+  public ImportSshPublicKeyResponse setDetails(java.lang.String details) {
+    this.details = details;
+    return this;
+  }
 
   /**
    * The login profile information for the user.

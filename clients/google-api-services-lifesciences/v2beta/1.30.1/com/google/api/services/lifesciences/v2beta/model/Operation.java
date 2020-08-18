@@ -53,7 +53,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * The server-assigned name for the operation.  This may be passed to the other operation methods
+   * The server-assigned name for the operation. This may be passed to the other operation methods
    * to retrieve information about the operation's status.
    * The value may be {@code null}.
    */
@@ -121,7 +121,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The server-assigned name for the operation.  This may be passed to the other operation methods
+   * The server-assigned name for the operation. This may be passed to the other operation methods
    * to retrieve information about the operation's status.
    * @return value or {@code null} for none
    */
@@ -130,7 +130,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The server-assigned name for the operation.  This may be passed to the other operation methods
+   * The server-assigned name for the operation. This may be passed to the other operation methods
    * to retrieve information about the operation's status.
    * @param name name or {@code null} for none
    */

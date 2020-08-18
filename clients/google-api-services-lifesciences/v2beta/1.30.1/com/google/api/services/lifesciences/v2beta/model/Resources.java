@@ -17,9 +17,8 @@
 package com.google.api.services.lifesciences.v2beta.model;
 
 /**
- * The system resources for the pipeline run.
- *
- * At least one zone or region must be specified or the pipeline run will fail.
+ * The system resources for the pipeline run. At least one zone or region must be specified or the
+ * pipeline run will fail.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Life Sciences API. For a detailed explanation

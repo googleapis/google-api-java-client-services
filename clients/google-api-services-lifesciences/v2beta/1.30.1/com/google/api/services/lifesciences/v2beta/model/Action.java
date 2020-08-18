@@ -60,9 +60,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * If the specified image is hosted on a private registry other than Google Container Registry,
-   * the credentials required to pull the image must be specified here as an encrypted secret.
-   *
-   * The secret must decrypt to a JSON-encoded dictionary containing both `username` and `password`
+   * the credentials required to pull the image must be specified here as an encrypted secret. The
+   * secret must decrypt to a JSON-encoded dictionary containing both `username` and `password`
    * keys.
    * The value may be {@code null}.
    */
@@ -72,10 +71,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * All container images are typically downloaded before any actions are executed. This helps
    * prevent typos in URIs or issues like lack of disk space from wasting large amounts of compute
-   * resources.
-   *
-   * If set, this flag prevents the worker from downloading the image until just before the action
-   * is executed.
+   * resources. If set, this flag prevents the worker from downloading the image until just before
+   * the action is executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,10 +89,9 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * Enable access to the FUSE device for this action. Filesystems can then be mounted into disks
    * shared with other actions. The other actions do not need the `enable_fuse` flag to access the
-   * mounted filesystem.
-   *
-   * This has the effect of causing the container to be executed with `CAP_SYS_ADMIN` and exposes
-   * `/dev/fuse` to the container, so use it only for containers you trust.
+   * mounted filesystem. This has the effect of causing the container to be executed with
+   * `CAP_SYS_ADMIN` and exposes `/dev/fuse` to the container, so use it only for containers you
+   * trust.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,18 +106,14 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * The environment to pass into the container. This environment is merged with values specified in
-   * the google.cloud.lifesciences.v2beta.Pipeline message, overwriting any duplicate values.
-   *
-   * In addition to the values passed here, a few other values are automatically injected into the
-   * environment. These cannot be hidden or overwritten.
-   *
-   * `GOOGLE_PIPELINE_FAILED` will be set to "1" if the pipeline failed because an action has exited
-   * with a non-zero status (and did not have the `IGNORE_EXIT_STATUS` flag set). This can be used
-   * to determine if additional debug or logging actions should execute.
-   *
-   * `GOOGLE_LAST_EXIT_STATUS` will be set to the exit status of the last non-background action that
-   * executed. This can be used by workflow engine authors to determine whether an individual action
-   * has succeeded or failed.
+   * the google.cloud.lifesciences.v2beta.Pipeline message, overwriting any duplicate values. In
+   * addition to the values passed here, a few other values are automatically injected into the
+   * environment. These cannot be hidden or overwritten. `GOOGLE_PIPELINE_FAILED` will be set to "1"
+   * if the pipeline failed because an action has exited with a non-zero status (and did not have
+   * the `IGNORE_EXIT_STATUS` flag set). This can be used to determine if additional debug or
+   * logging actions should execute. `GOOGLE_LAST_EXIT_STATUS` will be set to the exit status of the
+   * last non-background action that executed. This can be used by workflow engine authors to
+   * determine whether an individual action has succeeded or failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,16 +131,12 @@ public final class Action extends com.google.api.client.json.GenericJson {
    * Required. The URI to pull the container image from. Note that all images referenced by actions
    * in the pipeline are pulled before the first action runs. If multiple actions reference the same
    * image, it is only pulled once, ensuring that the same image is used for all actions in a single
-   * pipeline.
-   *
-   * The image URI can be either a complete host and image specification (e.g.,
+   * pipeline. The image URI can be either a complete host and image specification (e.g.,
    * quay.io/biocontainers/samtools), a library and image name (e.g., google/cloud-sdk) or a bare
-   * image name ('bash') to pull from the default library.  No schema is required in any of these
-   * cases.
-   *
-   * If the specified image is not public, the service account specified for the Virtual Machine
-   * must have access to pull the images from GCR, or appropriate credentials must be specified in
-   * the google.cloud.lifesciences.v2beta.Action.credentials field.
+   * image name ('bash') to pull from the default library. No schema is required in any of these
+   * cases. If the specified image is not public, the service account specified for the Virtual
+   * Machine must have access to pull the images from GCR, or appropriate credentials must be
+   * specified in the google.cloud.lifesciences.v2beta.Action.credentials field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,16 +153,13 @@ public final class Action extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * A list of mounts to make available to the action.
-   *
-   * In addition to the values specified here, every action has a special virtual disk mounted under
-   * `/google` that contains log files and other operational components.
-   *
-   *   /google/logs All logs written during the pipeline   execution.   /google/logs/output The
-   * combined standard output and   standard error of all actions run as part of the pipeline
-   * execution.   /google/logs/action/stdout The complete contents of   each individual action's
-   * standard output.   /google/logs/action/stderr The complete contents of   each individual
-   * action's standard error output.
+   * A list of mounts to make available to the action. In addition to the values specified here,
+   * every action has a special virtual disk mounted under `/google` that contains log files and
+   * other operational components. - /google/logs All logs written during the pipeline execution. -
+   * /google/logs/output The combined standard output and standard error of all actions run as part
+   * of the pipeline execution. - /google/logs/action/stdout The complete contents of each
+   * individual action's standard output. - /google/logs/action/stderr The complete contents of each
+   * individual action's standard error output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +167,7 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional identifier for a PID namespace to run the action inside. Multiple actions should
-   * use the same string to share a namespace.  If unspecified, a separate isolated namespace is
+   * use the same string to share a namespace. If unspecified, a separate isolated namespace is
    * used.
    * The value may be {@code null}.
    */
@@ -191,11 +176,9 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * A map of containers to host port mappings for this container. If the container already
-   * specifies exposed ports, use the `PUBLISH_EXPOSED_PORTS` flag instead.
-   *
-   * The host port number must be less than 65536. If it is zero, an unused random port is assigned.
-   * To determine the resulting port number, consult the `ContainerStartedEvent` in the operation
-   * metadata.
+   * specifies exposed ports, use the `PUBLISH_EXPOSED_PORTS` flag instead. The host port number
+   * must be less than 65536. If it is zero, an unused random port is assigned. To determine the
+   * resulting port number, consult the `ContainerStartedEvent` in the operation metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -295,9 +278,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * If the specified image is hosted on a private registry other than Google Container Registry,
-   * the credentials required to pull the image must be specified here as an encrypted secret.
-   *
-   * The secret must decrypt to a JSON-encoded dictionary containing both `username` and `password`
+   * the credentials required to pull the image must be specified here as an encrypted secret. The
+   * secret must decrypt to a JSON-encoded dictionary containing both `username` and `password`
    * keys.
    * @return value or {@code null} for none
    */
@@ -307,9 +289,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * If the specified image is hosted on a private registry other than Google Container Registry,
-   * the credentials required to pull the image must be specified here as an encrypted secret.
-   *
-   * The secret must decrypt to a JSON-encoded dictionary containing both `username` and `password`
+   * the credentials required to pull the image must be specified here as an encrypted secret. The
+   * secret must decrypt to a JSON-encoded dictionary containing both `username` and `password`
    * keys.
    * @param credentials credentials or {@code null} for none
    */
@@ -321,10 +302,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * All container images are typically downloaded before any actions are executed. This helps
    * prevent typos in URIs or issues like lack of disk space from wasting large amounts of compute
-   * resources.
-   *
-   * If set, this flag prevents the worker from downloading the image until just before the action
-   * is executed.
+   * resources. If set, this flag prevents the worker from downloading the image until just before
+   * the action is executed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableImagePrefetch() {
@@ -334,10 +313,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * All container images are typically downloaded before any actions are executed. This helps
    * prevent typos in URIs or issues like lack of disk space from wasting large amounts of compute
-   * resources.
-   *
-   * If set, this flag prevents the worker from downloading the image until just before the action
-   * is executed.
+   * resources. If set, this flag prevents the worker from downloading the image until just before
+   * the action is executed.
    * @param disableImagePrefetch disableImagePrefetch or {@code null} for none
    */
   public Action setDisableImagePrefetch(java.lang.Boolean disableImagePrefetch) {
@@ -367,10 +344,9 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * Enable access to the FUSE device for this action. Filesystems can then be mounted into disks
    * shared with other actions. The other actions do not need the `enable_fuse` flag to access the
-   * mounted filesystem.
-   *
-   * This has the effect of causing the container to be executed with `CAP_SYS_ADMIN` and exposes
-   * `/dev/fuse` to the container, so use it only for containers you trust.
+   * mounted filesystem. This has the effect of causing the container to be executed with
+   * `CAP_SYS_ADMIN` and exposes `/dev/fuse` to the container, so use it only for containers you
+   * trust.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableFuse() {
@@ -380,10 +356,9 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * Enable access to the FUSE device for this action. Filesystems can then be mounted into disks
    * shared with other actions. The other actions do not need the `enable_fuse` flag to access the
-   * mounted filesystem.
-   *
-   * This has the effect of causing the container to be executed with `CAP_SYS_ADMIN` and exposes
-   * `/dev/fuse` to the container, so use it only for containers you trust.
+   * mounted filesystem. This has the effect of causing the container to be executed with
+   * `CAP_SYS_ADMIN` and exposes `/dev/fuse` to the container, so use it only for containers you
+   * trust.
    * @param enableFuse enableFuse or {@code null} for none
    */
   public Action setEnableFuse(java.lang.Boolean enableFuse) {
@@ -410,18 +385,14 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * The environment to pass into the container. This environment is merged with values specified in
-   * the google.cloud.lifesciences.v2beta.Pipeline message, overwriting any duplicate values.
-   *
-   * In addition to the values passed here, a few other values are automatically injected into the
-   * environment. These cannot be hidden or overwritten.
-   *
-   * `GOOGLE_PIPELINE_FAILED` will be set to "1" if the pipeline failed because an action has exited
-   * with a non-zero status (and did not have the `IGNORE_EXIT_STATUS` flag set). This can be used
-   * to determine if additional debug or logging actions should execute.
-   *
-   * `GOOGLE_LAST_EXIT_STATUS` will be set to the exit status of the last non-background action that
-   * executed. This can be used by workflow engine authors to determine whether an individual action
-   * has succeeded or failed.
+   * the google.cloud.lifesciences.v2beta.Pipeline message, overwriting any duplicate values. In
+   * addition to the values passed here, a few other values are automatically injected into the
+   * environment. These cannot be hidden or overwritten. `GOOGLE_PIPELINE_FAILED` will be set to "1"
+   * if the pipeline failed because an action has exited with a non-zero status (and did not have
+   * the `IGNORE_EXIT_STATUS` flag set). This can be used to determine if additional debug or
+   * logging actions should execute. `GOOGLE_LAST_EXIT_STATUS` will be set to the exit status of the
+   * last non-background action that executed. This can be used by workflow engine authors to
+   * determine whether an individual action has succeeded or failed.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getEnvironment() {
@@ -430,18 +401,14 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * The environment to pass into the container. This environment is merged with values specified in
-   * the google.cloud.lifesciences.v2beta.Pipeline message, overwriting any duplicate values.
-   *
-   * In addition to the values passed here, a few other values are automatically injected into the
-   * environment. These cannot be hidden or overwritten.
-   *
-   * `GOOGLE_PIPELINE_FAILED` will be set to "1" if the pipeline failed because an action has exited
-   * with a non-zero status (and did not have the `IGNORE_EXIT_STATUS` flag set). This can be used
-   * to determine if additional debug or logging actions should execute.
-   *
-   * `GOOGLE_LAST_EXIT_STATUS` will be set to the exit status of the last non-background action that
-   * executed. This can be used by workflow engine authors to determine whether an individual action
-   * has succeeded or failed.
+   * the google.cloud.lifesciences.v2beta.Pipeline message, overwriting any duplicate values. In
+   * addition to the values passed here, a few other values are automatically injected into the
+   * environment. These cannot be hidden or overwritten. `GOOGLE_PIPELINE_FAILED` will be set to "1"
+   * if the pipeline failed because an action has exited with a non-zero status (and did not have
+   * the `IGNORE_EXIT_STATUS` flag set). This can be used to determine if additional debug or
+   * logging actions should execute. `GOOGLE_LAST_EXIT_STATUS` will be set to the exit status of the
+   * last non-background action that executed. This can be used by workflow engine authors to
+   * determine whether an individual action has succeeded or failed.
    * @param environment environment or {@code null} for none
    */
   public Action setEnvironment(java.util.Map<String, java.lang.String> environment) {
@@ -472,16 +439,12 @@ public final class Action extends com.google.api.client.json.GenericJson {
    * Required. The URI to pull the container image from. Note that all images referenced by actions
    * in the pipeline are pulled before the first action runs. If multiple actions reference the same
    * image, it is only pulled once, ensuring that the same image is used for all actions in a single
-   * pipeline.
-   *
-   * The image URI can be either a complete host and image specification (e.g.,
+   * pipeline. The image URI can be either a complete host and image specification (e.g.,
    * quay.io/biocontainers/samtools), a library and image name (e.g., google/cloud-sdk) or a bare
-   * image name ('bash') to pull from the default library.  No schema is required in any of these
-   * cases.
-   *
-   * If the specified image is not public, the service account specified for the Virtual Machine
-   * must have access to pull the images from GCR, or appropriate credentials must be specified in
-   * the google.cloud.lifesciences.v2beta.Action.credentials field.
+   * image name ('bash') to pull from the default library. No schema is required in any of these
+   * cases. If the specified image is not public, the service account specified for the Virtual
+   * Machine must have access to pull the images from GCR, or appropriate credentials must be
+   * specified in the google.cloud.lifesciences.v2beta.Action.credentials field.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUri() {
@@ -492,16 +455,12 @@ public final class Action extends com.google.api.client.json.GenericJson {
    * Required. The URI to pull the container image from. Note that all images referenced by actions
    * in the pipeline are pulled before the first action runs. If multiple actions reference the same
    * image, it is only pulled once, ensuring that the same image is used for all actions in a single
-   * pipeline.
-   *
-   * The image URI can be either a complete host and image specification (e.g.,
+   * pipeline. The image URI can be either a complete host and image specification (e.g.,
    * quay.io/biocontainers/samtools), a library and image name (e.g., google/cloud-sdk) or a bare
-   * image name ('bash') to pull from the default library.  No schema is required in any of these
-   * cases.
-   *
-   * If the specified image is not public, the service account specified for the Virtual Machine
-   * must have access to pull the images from GCR, or appropriate credentials must be specified in
-   * the google.cloud.lifesciences.v2beta.Action.credentials field.
+   * image name ('bash') to pull from the default library. No schema is required in any of these
+   * cases. If the specified image is not public, the service account specified for the Virtual
+   * Machine must have access to pull the images from GCR, or appropriate credentials must be
+   * specified in the google.cloud.lifesciences.v2beta.Action.credentials field.
    * @param imageUri imageUri or {@code null} for none
    */
   public Action setImageUri(java.lang.String imageUri) {
@@ -533,16 +492,13 @@ public final class Action extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of mounts to make available to the action.
-   *
-   * In addition to the values specified here, every action has a special virtual disk mounted under
-   * `/google` that contains log files and other operational components.
-   *
-   *   /google/logs All logs written during the pipeline   execution.   /google/logs/output The
-   * combined standard output and   standard error of all actions run as part of the pipeline
-   * execution.   /google/logs/action/stdout The complete contents of   each individual action's
-   * standard output.   /google/logs/action/stderr The complete contents of   each individual
-   * action's standard error output.
+   * A list of mounts to make available to the action. In addition to the values specified here,
+   * every action has a special virtual disk mounted under `/google` that contains log files and
+   * other operational components. - /google/logs All logs written during the pipeline execution. -
+   * /google/logs/output The combined standard output and standard error of all actions run as part
+   * of the pipeline execution. - /google/logs/action/stdout The complete contents of each
+   * individual action's standard output. - /google/logs/action/stderr The complete contents of each
+   * individual action's standard error output.
    * @return value or {@code null} for none
    */
   public java.util.List<Mount> getMounts() {
@@ -550,16 +506,13 @@ public final class Action extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of mounts to make available to the action.
-   *
-   * In addition to the values specified here, every action has a special virtual disk mounted under
-   * `/google` that contains log files and other operational components.
-   *
-   *   /google/logs All logs written during the pipeline   execution.   /google/logs/output The
-   * combined standard output and   standard error of all actions run as part of the pipeline
-   * execution.   /google/logs/action/stdout The complete contents of   each individual action's
-   * standard output.   /google/logs/action/stderr The complete contents of   each individual
-   * action's standard error output.
+   * A list of mounts to make available to the action. In addition to the values specified here,
+   * every action has a special virtual disk mounted under `/google` that contains log files and
+   * other operational components. - /google/logs All logs written during the pipeline execution. -
+   * /google/logs/output The combined standard output and standard error of all actions run as part
+   * of the pipeline execution. - /google/logs/action/stdout The complete contents of each
+   * individual action's standard output. - /google/logs/action/stderr The complete contents of each
+   * individual action's standard error output.
    * @param mounts mounts or {@code null} for none
    */
   public Action setMounts(java.util.List<Mount> mounts) {
@@ -569,7 +522,7 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional identifier for a PID namespace to run the action inside. Multiple actions should
-   * use the same string to share a namespace.  If unspecified, a separate isolated namespace is
+   * use the same string to share a namespace. If unspecified, a separate isolated namespace is
    * used.
    * @return value or {@code null} for none
    */
@@ -579,7 +532,7 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional identifier for a PID namespace to run the action inside. Multiple actions should
-   * use the same string to share a namespace.  If unspecified, a separate isolated namespace is
+   * use the same string to share a namespace. If unspecified, a separate isolated namespace is
    * used.
    * @param pidNamespace pidNamespace or {@code null} for none
    */
@@ -590,11 +543,9 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * A map of containers to host port mappings for this container. If the container already
-   * specifies exposed ports, use the `PUBLISH_EXPOSED_PORTS` flag instead.
-   *
-   * The host port number must be less than 65536. If it is zero, an unused random port is assigned.
-   * To determine the resulting port number, consult the `ContainerStartedEvent` in the operation
-   * metadata.
+   * specifies exposed ports, use the `PUBLISH_EXPOSED_PORTS` flag instead. The host port number
+   * must be less than 65536. If it is zero, an unused random port is assigned. To determine the
+   * resulting port number, consult the `ContainerStartedEvent` in the operation metadata.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Integer> getPortMappings() {
@@ -603,11 +554,9 @@ public final class Action extends com.google.api.client.json.GenericJson {
 
   /**
    * A map of containers to host port mappings for this container. If the container already
-   * specifies exposed ports, use the `PUBLISH_EXPOSED_PORTS` flag instead.
-   *
-   * The host port number must be less than 65536. If it is zero, an unused random port is assigned.
-   * To determine the resulting port number, consult the `ContainerStartedEvent` in the operation
-   * metadata.
+   * specifies exposed ports, use the `PUBLISH_EXPOSED_PORTS` flag instead. The host port number
+   * must be less than 65536. If it is zero, an unused random port is assigned. To determine the
+   * resulting port number, consult the `ContainerStartedEvent` in the operation metadata.
    * @param portMappings portMappings or {@code null} for none
    */
   public Action setPortMappings(java.util.Map<String, java.lang.Integer> portMappings) {

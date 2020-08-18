@@ -47,11 +47,10 @@ public final class ContainerStoppedEvent extends com.google.api.client.json.Gene
   /**
    * The tail end of any content written to standard error by the container. If the content emits
    * large amounts of debugging noise or contains sensitive information, you can prevent the content
-   * from being printed by setting the `DISABLE_STANDARD_ERROR_CAPTURE` flag.
-   *
-   * Note that only a small amount of the end of the stream is captured here. The entire stream is
-   * stored in the `/google/logs` directory mounted into each action, and can be copied off the
-   * machine as described elsewhere.
+   * from being printed by setting the `DISABLE_STANDARD_ERROR_CAPTURE` flag. Note that only a small
+   * amount of the end of the stream is captured here. The entire stream is stored in the
+   * `/google/logs` directory mounted into each action, and can be copied off the machine as
+   * described elsewhere.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,11 +93,10 @@ public final class ContainerStoppedEvent extends com.google.api.client.json.Gene
   /**
    * The tail end of any content written to standard error by the container. If the content emits
    * large amounts of debugging noise or contains sensitive information, you can prevent the content
-   * from being printed by setting the `DISABLE_STANDARD_ERROR_CAPTURE` flag.
-   *
-   * Note that only a small amount of the end of the stream is captured here. The entire stream is
-   * stored in the `/google/logs` directory mounted into each action, and can be copied off the
-   * machine as described elsewhere.
+   * from being printed by setting the `DISABLE_STANDARD_ERROR_CAPTURE` flag. Note that only a small
+   * amount of the end of the stream is captured here. The entire stream is stored in the
+   * `/google/logs` directory mounted into each action, and can be copied off the machine as
+   * described elsewhere.
    * @return value or {@code null} for none
    */
   public java.lang.String getStderr() {
@@ -108,11 +106,10 @@ public final class ContainerStoppedEvent extends com.google.api.client.json.Gene
   /**
    * The tail end of any content written to standard error by the container. If the content emits
    * large amounts of debugging noise or contains sensitive information, you can prevent the content
-   * from being printed by setting the `DISABLE_STANDARD_ERROR_CAPTURE` flag.
-   *
-   * Note that only a small amount of the end of the stream is captured here. The entire stream is
-   * stored in the `/google/logs` directory mounted into each action, and can be copied off the
-   * machine as described elsewhere.
+   * from being printed by setting the `DISABLE_STANDARD_ERROR_CAPTURE` flag. Note that only a small
+   * amount of the end of the stream is captured here. The entire stream is stored in the
+   * `/google/logs` directory mounted into each action, and can be copied off the machine as
+   * described elsewhere.
    * @param stderr stderr or {@code null} for none
    */
   public ContainerStoppedEvent setStderr(java.lang.String stderr) {

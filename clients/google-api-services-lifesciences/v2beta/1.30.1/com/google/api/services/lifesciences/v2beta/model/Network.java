@@ -33,9 +33,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   /**
    * The network name to attach the VM's network interface to. The value will be prefixed with
    * `global/networks/` unless it contains a `/`, in which case it is assumed to be a fully
-   * specified network resource URL.
-   *
-   * If unspecified, the global default network is used.
+   * specified network resource URL. If unspecified, the global default network is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,13 +41,10 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * If the specified network is configured for custom subnet creation, the name of the subnetwork
-   * to attach the instance to must be specified here.
-   *
-   * The value is prefixed with `regions/subnetworks/` unless it contains a `/`, in which case it is
-   * assumed to be a fully specified subnetwork resource URL.
-   *
-   * If the `*` character appears in the value, it is replaced with the region that the virtual
-   * machine has been allocated in.
+   * to attach the instance to must be specified here. The value is prefixed with
+   * `regions/subnetworks/` unless it contains a `/`, in which case it is assumed to be a fully
+   * specified subnetwork resource URL. If the `*` character appears in the value, it is replaced
+   * with the region that the virtual machine has been allocated in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,9 +52,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * If set to true, do not attach a public IP address to the VM. Note that without a public IP
-   * address, additional configuration is required to allow the VM to access Google services.
-   *
-   * See https://cloud.google.com/vpc/docs/configure-private-google-access for more information.
+   * address, additional configuration is required to allow the VM to access Google services. See
+   * https://cloud.google.com/vpc/docs/configure-private-google-access for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +62,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   /**
    * The network name to attach the VM's network interface to. The value will be prefixed with
    * `global/networks/` unless it contains a `/`, in which case it is assumed to be a fully
-   * specified network resource URL.
-   *
-   * If unspecified, the global default network is used.
+   * specified network resource URL. If unspecified, the global default network is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -80,9 +72,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   /**
    * The network name to attach the VM's network interface to. The value will be prefixed with
    * `global/networks/` unless it contains a `/`, in which case it is assumed to be a fully
-   * specified network resource URL.
-   *
-   * If unspecified, the global default network is used.
+   * specified network resource URL. If unspecified, the global default network is used.
    * @param network network or {@code null} for none
    */
   public Network setNetwork(java.lang.String network) {
@@ -92,13 +82,10 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * If the specified network is configured for custom subnet creation, the name of the subnetwork
-   * to attach the instance to must be specified here.
-   *
-   * The value is prefixed with `regions/subnetworks/` unless it contains a `/`, in which case it is
-   * assumed to be a fully specified subnetwork resource URL.
-   *
-   * If the `*` character appears in the value, it is replaced with the region that the virtual
-   * machine has been allocated in.
+   * to attach the instance to must be specified here. The value is prefixed with
+   * `regions/subnetworks/` unless it contains a `/`, in which case it is assumed to be a fully
+   * specified subnetwork resource URL. If the `*` character appears in the value, it is replaced
+   * with the region that the virtual machine has been allocated in.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -107,13 +94,10 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * If the specified network is configured for custom subnet creation, the name of the subnetwork
-   * to attach the instance to must be specified here.
-   *
-   * The value is prefixed with `regions/subnetworks/` unless it contains a `/`, in which case it is
-   * assumed to be a fully specified subnetwork resource URL.
-   *
-   * If the `*` character appears in the value, it is replaced with the region that the virtual
-   * machine has been allocated in.
+   * to attach the instance to must be specified here. The value is prefixed with
+   * `regions/subnetworks/` unless it contains a `/`, in which case it is assumed to be a fully
+   * specified subnetwork resource URL. If the `*` character appears in the value, it is replaced
+   * with the region that the virtual machine has been allocated in.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public Network setSubnetwork(java.lang.String subnetwork) {
@@ -123,9 +107,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * If set to true, do not attach a public IP address to the VM. Note that without a public IP
-   * address, additional configuration is required to allow the VM to access Google services.
-   *
-   * See https://cloud.google.com/vpc/docs/configure-private-google-access for more information.
+   * address, additional configuration is required to allow the VM to access Google services. See
+   * https://cloud.google.com/vpc/docs/configure-private-google-access for more information.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUsePrivateAddress() {
@@ -134,9 +117,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
    * If set to true, do not attach a public IP address to the VM. Note that without a public IP
-   * address, additional configuration is required to allow the VM to access Google services.
-   *
-   * See https://cloud.google.com/vpc/docs/configure-private-google-access for more information.
+   * address, additional configuration is required to allow the VM to access Google services. See
+   * https://cloud.google.com/vpc/docs/configure-private-google-access for more information.
    * @param usePrivateAddress usePrivateAddress or {@code null} for none
    */
   public Network setUsePrivateAddress(java.lang.Boolean usePrivateAddress) {

@@ -516,8 +516,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * This request holds the parameters needed by the memcache server.  After setting any optional
          * parameters, call the {@link ApplyParameters#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the Memcached instance for which parameter group updates
-        should be
+         * @param name Required. Resource name of the Memcached instance for which parameter group updates should be
          *        applied.
          * @param content the {@link com.google.api.services.memcache.v1.model.ApplyParametersRequest}
          * @return the request
@@ -547,8 +546,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name Required. Resource name of the Memcached instance for which parameter group updates
-        should be
+           * @param name Required. Resource name of the Memcached instance for which parameter group updates should be
          *        applied.
            * @param content the {@link com.google.api.services.memcache.v1.model.ApplyParametersRequest}
            * @since 1.13
@@ -660,8 +658,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the instance location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-        where `location_id` refers to a GCP region
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region
          * @param content the {@link com.google.api.services.memcache.v1.model.Instance}
          * @return the request
          */
@@ -690,8 +687,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the instance location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-        where `location_id` refers to a GCP region
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region
            * @param content the {@link com.google.api.services.memcache.v1.model.Instance}
            * @since 1.13
            */
@@ -792,21 +788,17 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
 
           /**
            * Required. The logical name of the Memcached instance in the user project with the
-           * following restrictions:
-           *
-           * * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
-           * letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must
-           * be unique within the user project / location
+           * following restrictions: * Must contain only lowercase letters, numbers, and hyphens. *
+           * Must start with a letter. * Must be between 1-40 characters. * Must end with a number
+           * or a letter. * Must be unique within the user project / location
            */
           @com.google.api.client.util.Key
           private java.lang.String instanceId;
 
           /** Required. The logical name of the Memcached instance in the user project with the following
-         restrictions:
-
-         * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be
-         between 1-40 characters. * Must end with a number or a letter. * Must be unique within the user
-         project / location
+         restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
+         letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique
+         within the user project / location
            */
           public java.lang.String getInstanceId() {
             return instanceId;
@@ -814,11 +806,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
 
           /**
            * Required. The logical name of the Memcached instance in the user project with the
-           * following restrictions:
-           *
-           * * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
-           * letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must
-           * be unique within the user project / location
+           * following restrictions: * Must contain only lowercase letters, numbers, and hyphens. *
+           * Must start with a letter. * Must be between 1-40 characters. * Must end with a number
+           * or a letter. * Must be unique within the user project / location
            */
           public Create setInstanceId(java.lang.String instanceId) {
             this.instanceId = instanceId;
@@ -839,8 +829,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Memcached instance resource name in the format:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region
          * @return the request
          */
@@ -869,8 +858,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Memcached instance resource name in the format:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region
            * @since 1.13
            */
@@ -984,8 +972,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Memcached instance resource name in the format:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region
          * @return the request
          */
@@ -1013,8 +1000,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Memcached instance resource name in the format:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region
            * @since 1.13
            */
@@ -1138,8 +1124,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the instance location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-        where `location_id` refers to a GCP region
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1166,8 +1151,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the instance location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-        where `location_id` refers to a GCP region
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1315,42 +1299,35 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
 
           /**
-           * The maximum number of items to return.
-           *
-           * If not specified, a default value of 1000 will be used by the service. Regardless of
-           * the page_size value, the response may include a partial list and a caller should only
-           * rely on response's next_page_token to determine if there are more instances left to be
-           * queried.
+           * The maximum number of items to return. If not specified, a default value of 1000 will
+           * be used by the service. Regardless of the page_size value, the response may include a
+           * partial list and a caller should only rely on response's next_page_token to determine
+           * if there are more instances left to be queried.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of items to return.
-
-         If not specified, a default value of 1000 will be used by the service. Regardless of the page_size
-         value, the response may include a partial list and a caller should only rely on response's
-         next_page_token to determine if there are more instances left to be queried.
+          /** The maximum number of items to return. If not specified, a default value of 1000 will be used by
+         the service. Regardless of the page_size value, the response may include a partial list and a
+         caller should only rely on response's next_page_token to determine if there are more instances left
+         to be queried.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of items to return.
-           *
-           * If not specified, a default value of 1000 will be used by the service. Regardless of
-           * the page_size value, the response may include a partial list and a caller should only
-           * rely on response's next_page_token to determine if there are more instances left to be
-           * queried.
+           * The maximum number of items to return. If not specified, a default value of 1000 will
+           * be used by the service. Regardless of the page_size value, the response may include a
+           * partial list and a caller should only rely on response's next_page_token to determine
+           * if there are more instances left to be queried.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * The next_page_token value returned from a previous List request, if any.
-           */
+          /** The next_page_token value returned from a previous List request, if any. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
@@ -1360,9 +1337,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
             return pageToken;
           }
 
-          /**
-           * The next_page_token value returned from a previous List request, if any.
-           */
+          /** The next_page_token value returned from a previous List request, if any. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -1381,16 +1356,11 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * This request holds the parameters needed by the memcache server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Unique name of the resource in this scope including project and
-        location using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        Note: Memcached
-         *        instances are managed and addressed at regional level so
-        location_id here refers to a GCP
-         *        region; however, users may choose which
-        zones Memcached nodes within an instances should
-         *        be provisioned in.
-        Refer to [zones] field for more details.
+         * @param name Required. Unique name of the resource in this scope including project and location using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached
+         *        instances are managed and addressed at regional level so location_id here refers to a GCP
+         *        region; however, users may choose which zones Memcached nodes within an instances should
+         *        be provisioned in. Refer to [zones] field for more details.
          * @param content the {@link com.google.api.services.memcache.v1.model.Instance}
          * @return the request
          */
@@ -1418,16 +1388,11 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Unique name of the resource in this scope including project and
-        location using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        Note: Memcached
-         *        instances are managed and addressed at regional level so
-        location_id here refers to a GCP
-         *        region; however, users may choose which
-        zones Memcached nodes within an instances should
-         *        be provisioned in.
-        Refer to [zones] field for more details.
+           * @param name Required. Unique name of the resource in this scope including project and location using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached
+         *        instances are managed and addressed at regional level so location_id here refers to a GCP
+         *        region; however, users may choose which zones Memcached nodes within an instances should
+         *        be provisioned in. Refer to [zones] field for more details.
            * @param content the {@link com.google.api.services.memcache.v1.model.Instance}
            * @since 1.13
            */
@@ -1499,7 +1464,6 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           /**
            * Required. Unique name of the resource in this scope including project and location
            * using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-           *
            * Note: Memcached instances are managed and addressed at regional level so location_id
            * here refers to a GCP region; however, users may choose which zones Memcached nodes
            * within an instances should be provisioned in. Refer to [zones] field for more details.
@@ -1508,11 +1472,10 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           private java.lang.String name;
 
           /** Required. Unique name of the resource in this scope including project and location using the form:
-         `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-
-         Note: Memcached instances are managed and addressed at regional level so location_id here refers to
-         a GCP region; however, users may choose which zones Memcached nodes within an instances should be
-         provisioned in. Refer to [zones] field for more details.
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached instances
+         are managed and addressed at regional level so location_id here refers to a GCP region; however,
+         users may choose which zones Memcached nodes within an instances should be provisioned in. Refer to
+         [zones] field for more details.
            */
           public java.lang.String getName() {
             return name;
@@ -1521,7 +1484,6 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           /**
            * Required. Unique name of the resource in this scope including project and location
            * using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-           *
            * Note: Memcached instances are managed and addressed at regional level so location_id
            * here refers to a GCP region; however, users may choose which zones Memcached nodes
            * within an instances should be provisioned in. Refer to [zones] field for more details.
@@ -1536,21 +1498,17 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
             return this;
           }
 
-          /**
-           * Required. Mask of fields to update. *   `displayName`
-           */
+          /** Required. Mask of fields to update. * `displayName` */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Mask of fields to update. *   `displayName`
+          /** Required. Mask of fields to update. * `displayName`
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * Required. Mask of fields to update. *   `displayName`
-           */
+          /** Required. Mask of fields to update. * `displayName` */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -1571,8 +1529,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * This request holds the parameters needed by the memcache server.  After setting any optional
          * parameters, call the {@link UpdateParameters#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the Memcached instance for which the parameters should be
-        updated.
+         * @param name Required. Resource name of the Memcached instance for which the parameters should be updated.
          * @param content the {@link com.google.api.services.memcache.v1.model.UpdateParametersRequest}
          * @return the request
          */
@@ -1602,8 +1559,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * tractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the Memcached instance for which the parameters should be
-        updated.
+           * @param name Required. Resource name of the Memcached instance for which the parameters should be updated.
            * @param content the {@link com.google.api.services.memcache.v1.model.UpdateParametersRequest}
            * @since 1.13
            */
@@ -1727,9 +1683,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -1758,13 +1714,13 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -2003,7 +1959,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -2028,7 +1984,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -2144,13 +2100,12 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-         * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
          *
          * Create a request for the method "operations.list".
          *
@@ -2175,13 +2130,12 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a
-           * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
            *
            * Create a request for the method "operations.list".
            *

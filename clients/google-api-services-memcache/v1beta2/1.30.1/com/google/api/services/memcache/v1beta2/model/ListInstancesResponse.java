@@ -39,10 +39,8 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
 
   /**
    * A list of Memcached instances in the project in the specified location, or across all
-   * locations.
-   *
-   * If the `location_id` in the parent field of the request is "-", all regions available to the
-   * project are queried, and the results aggregated.
+   * locations. If the `location_id` in the parent field of the request is "-", all regions
+   * available to the project are queried, and the results aggregated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,10 +78,8 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
 
   /**
    * A list of Memcached instances in the project in the specified location, or across all
-   * locations.
-   *
-   * If the `location_id` in the parent field of the request is "-", all regions available to the
-   * project are queried, and the results aggregated.
+   * locations. If the `location_id` in the parent field of the request is "-", all regions
+   * available to the project are queried, and the results aggregated.
    * @return value or {@code null} for none
    */
   public java.util.List<Instance> getResources() {
@@ -92,10 +88,8 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
 
   /**
    * A list of Memcached instances in the project in the specified location, or across all
-   * locations.
-   *
-   * If the `location_id` in the parent field of the request is "-", all regions available to the
-   * project are queried, and the results aggregated.
+   * locations. If the `location_id` in the parent field of the request is "-", all regions
+   * available to the project are queried, and the results aggregated.
    * @param resources resources or {@code null} for none
    */
   public ListInstancesResponse setResources(java.util.List<Instance> resources) {

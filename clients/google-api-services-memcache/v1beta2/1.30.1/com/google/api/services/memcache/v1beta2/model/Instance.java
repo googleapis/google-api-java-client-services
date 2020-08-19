@@ -102,11 +102,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Unique name of the resource in this scope including project and location using the
-   * form:     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-   *
-   * Note: Memcached instances are managed and addressed at regional level so location_id here
-   * refers to a GCP region; however, users may choose which zones Memcached nodes within an
-   * instances should be provisioned in. Refer to [zones] field for more details.
+   * form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached
+   * instances are managed and addressed at regional level so location_id here refers to a GCP
+   * region; however, users may choose which zones Memcached nodes within an instances should be
+   * provisioned in. Refer to [zones] field for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -325,11 +324,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Unique name of the resource in this scope including project and location using the
-   * form:     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-   *
-   * Note: Memcached instances are managed and addressed at regional level so location_id here
-   * refers to a GCP region; however, users may choose which zones Memcached nodes within an
-   * instances should be provisioned in. Refer to [zones] field for more details.
+   * form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached
+   * instances are managed and addressed at regional level so location_id here refers to a GCP
+   * region; however, users may choose which zones Memcached nodes within an instances should be
+   * provisioned in. Refer to [zones] field for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -338,11 +336,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Unique name of the resource in this scope including project and location using the
-   * form:     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-   *
-   * Note: Memcached instances are managed and addressed at regional level so location_id here
-   * refers to a GCP region; however, users may choose which zones Memcached nodes within an
-   * instances should be provisioned in. Refer to [zones] field for more details.
+   * form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached
+   * instances are managed and addressed at regional level so location_id here refers to a GCP
+   * region; however, users may choose which zones Memcached nodes within an instances should be
+   * provisioned in. Refer to [zones] field for more details.
    * @param name name or {@code null} for none
    */
   public Instance setName(java.lang.String name) {

@@ -286,9 +286,7 @@ public class Kgsearch extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'.
-       */
+      /** The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'. */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> languages;
 
@@ -298,9 +296,7 @@ public class Kgsearch extends com.google.api.client.googleapis.services.json.Abs
         return languages;
       }
 
-      /**
-       * The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'.
-       */
+      /** The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'. */
       public Search setLanguages(java.util.List<java.lang.String> languages) {
         this.languages = languages;
         return this;

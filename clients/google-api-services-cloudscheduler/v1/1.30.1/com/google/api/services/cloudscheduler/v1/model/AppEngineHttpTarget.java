@@ -42,42 +42,28 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
   private AppEngineRouting appEngineRouting;
 
   /**
-   * Body.
-   *
-   * HTTP request body. A request body is allowed only if the HTTP method is POST or PUT. It will
-   * result in invalid argument error to set a body on a job with an incompatible HttpMethod.
+   * Body. HTTP request body. A request body is allowed only if the HTTP method is POST or PUT. It
+   * will result in invalid argument error to set a body on a job with an incompatible HttpMethod.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String body;
 
   /**
-   * HTTP request headers.
-   *
-   * This map contains the header field names and values. Headers can be set when the job is
-   * created.
-   *
-   * Cloud Scheduler sets some headers to default values:
-   *
-   * * `User-Agent`: By default, this header is   `"AppEngine-Google;
-   * (+http://code.google.com/appengine)"`.   This header can be modified, but Cloud Scheduler will
-   * append   `"AppEngine-Google; (+http://code.google.com/appengine)"` to the   modified `User-
-   * Agent`. * `X-CloudScheduler`: This header will be set to true.
-   *
-   * If the job has an body, Cloud Scheduler sets the following headers:
-   *
-   * * `Content-Type`: By default, the `Content-Type` header is set to   `"application/octet-
-   * stream"`. The default can be overridden by explictly   setting `Content-Type` to a particular
-   * media type when the job is   created.   For example, `Content-Type` can be set to
-   * `"application/json"`. * `Content-Length`: This is computed by Cloud Scheduler. This value is
-   * output only. It cannot be changed.
-   *
-   * The headers below are output only. They cannot be set or overridden:
-   *
-   * * `X-Google-*`: For Google internal use only. * `X-AppEngine-*`: For Google internal use only.
-   *
-   * In addition, some App Engine headers, which contain job-specific information, are also be sent
-   * to the job handler.
+   * HTTP request headers. This map contains the header field names and values. Headers can be set
+   * when the job is created. Cloud Scheduler sets some headers to default values: * `User-Agent`:
+   * By default, this header is `"AppEngine-Google; (+http://code.google.com/appengine)"`. This
+   * header can be modified, but Cloud Scheduler will append `"AppEngine-Google;
+   * (+http://code.google.com/appengine)"` to the modified `User-Agent`. * `X-CloudScheduler`: This
+   * header will be set to true. If the job has an body, Cloud Scheduler sets the following headers:
+   * * `Content-Type`: By default, the `Content-Type` header is set to `"application/octet-stream"`.
+   * The default can be overridden by explictly setting `Content-Type` to a particular media type
+   * when the job is created. For example, `Content-Type` can be set to `"application/json"`. *
+   * `Content-Length`: This is computed by Cloud Scheduler. This value is output only. It cannot be
+   * changed. The headers below are output only. They cannot be set or overridden: * `X-Google-*`:
+   * For Google internal use only. * `X-AppEngine-*`: For Google internal use only. In addition,
+   * some App Engine headers, which contain job-specific information, are also be sent to the job
+   * handler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,12 +77,10 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
   private java.lang.String httpMethod;
 
   /**
-   * The relative URI.
-   *
-   * The relative URL must begin with "/" and must be a valid HTTP relative URL. It can contain a
-   * path, query string arguments, and `#` fragments. If the relative URL is empty, then the root
-   * path "/" will be used. No spaces are allowed, and the maximum length allowed is 2083
-   * characters.
+   * The relative URI. The relative URL must begin with "/" and must be a valid HTTP relative URL.
+   * It can contain a path, query string arguments, and `#` fragments. If the relative URL is empty,
+   * then the root path "/" will be used. No spaces are allowed, and the maximum length allowed is
+   * 2083 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,10 +104,8 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
   }
 
   /**
-   * Body.
-   *
-   * HTTP request body. A request body is allowed only if the HTTP method is POST or PUT. It will
-   * result in invalid argument error to set a body on a job with an incompatible HttpMethod.
+   * Body. HTTP request body. A request body is allowed only if the HTTP method is POST or PUT. It
+   * will result in invalid argument error to set a body on a job with an incompatible HttpMethod.
    * @see #decodeBody()
    * @return value or {@code null} for none
    */
@@ -132,10 +114,8 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
   }
 
   /**
-   * Body.
-   *
-   * HTTP request body. A request body is allowed only if the HTTP method is POST or PUT. It will
-   * result in invalid argument error to set a body on a job with an incompatible HttpMethod.
+   * Body. HTTP request body. A request body is allowed only if the HTTP method is POST or PUT. It
+   * will result in invalid argument error to set a body on a job with an incompatible HttpMethod.
    * @see #getBody()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -146,10 +126,8 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
   }
 
   /**
-   * Body.
-   *
-   * HTTP request body. A request body is allowed only if the HTTP method is POST or PUT. It will
-   * result in invalid argument error to set a body on a job with an incompatible HttpMethod.
+   * Body. HTTP request body. A request body is allowed only if the HTTP method is POST or PUT. It
+   * will result in invalid argument error to set a body on a job with an incompatible HttpMethod.
    * @see #encodeBody()
    * @param body body or {@code null} for none
    */
@@ -159,10 +137,8 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
   }
 
   /**
-   * Body.
-   *
-   * HTTP request body. A request body is allowed only if the HTTP method is POST or PUT. It will
-   * result in invalid argument error to set a body on a job with an incompatible HttpMethod.
+   * Body. HTTP request body. A request body is allowed only if the HTTP method is POST or PUT. It
+   * will result in invalid argument error to set a body on a job with an incompatible HttpMethod.
    * @see #setBody()
    *
    * <p>
@@ -177,32 +153,20 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
   }
 
   /**
-   * HTTP request headers.
-   *
-   * This map contains the header field names and values. Headers can be set when the job is
-   * created.
-   *
-   * Cloud Scheduler sets some headers to default values:
-   *
-   * * `User-Agent`: By default, this header is   `"AppEngine-Google;
-   * (+http://code.google.com/appengine)"`.   This header can be modified, but Cloud Scheduler will
-   * append   `"AppEngine-Google; (+http://code.google.com/appengine)"` to the   modified `User-
-   * Agent`. * `X-CloudScheduler`: This header will be set to true.
-   *
-   * If the job has an body, Cloud Scheduler sets the following headers:
-   *
-   * * `Content-Type`: By default, the `Content-Type` header is set to   `"application/octet-
-   * stream"`. The default can be overridden by explictly   setting `Content-Type` to a particular
-   * media type when the job is   created.   For example, `Content-Type` can be set to
-   * `"application/json"`. * `Content-Length`: This is computed by Cloud Scheduler. This value is
-   * output only. It cannot be changed.
-   *
-   * The headers below are output only. They cannot be set or overridden:
-   *
-   * * `X-Google-*`: For Google internal use only. * `X-AppEngine-*`: For Google internal use only.
-   *
-   * In addition, some App Engine headers, which contain job-specific information, are also be sent
-   * to the job handler.
+   * HTTP request headers. This map contains the header field names and values. Headers can be set
+   * when the job is created. Cloud Scheduler sets some headers to default values: * `User-Agent`:
+   * By default, this header is `"AppEngine-Google; (+http://code.google.com/appengine)"`. This
+   * header can be modified, but Cloud Scheduler will append `"AppEngine-Google;
+   * (+http://code.google.com/appengine)"` to the modified `User-Agent`. * `X-CloudScheduler`: This
+   * header will be set to true. If the job has an body, Cloud Scheduler sets the following headers:
+   * * `Content-Type`: By default, the `Content-Type` header is set to `"application/octet-stream"`.
+   * The default can be overridden by explictly setting `Content-Type` to a particular media type
+   * when the job is created. For example, `Content-Type` can be set to `"application/json"`. *
+   * `Content-Length`: This is computed by Cloud Scheduler. This value is output only. It cannot be
+   * changed. The headers below are output only. They cannot be set or overridden: * `X-Google-*`:
+   * For Google internal use only. * `X-AppEngine-*`: For Google internal use only. In addition,
+   * some App Engine headers, which contain job-specific information, are also be sent to the job
+   * handler.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getHeaders() {
@@ -210,32 +174,20 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
   }
 
   /**
-   * HTTP request headers.
-   *
-   * This map contains the header field names and values. Headers can be set when the job is
-   * created.
-   *
-   * Cloud Scheduler sets some headers to default values:
-   *
-   * * `User-Agent`: By default, this header is   `"AppEngine-Google;
-   * (+http://code.google.com/appengine)"`.   This header can be modified, but Cloud Scheduler will
-   * append   `"AppEngine-Google; (+http://code.google.com/appengine)"` to the   modified `User-
-   * Agent`. * `X-CloudScheduler`: This header will be set to true.
-   *
-   * If the job has an body, Cloud Scheduler sets the following headers:
-   *
-   * * `Content-Type`: By default, the `Content-Type` header is set to   `"application/octet-
-   * stream"`. The default can be overridden by explictly   setting `Content-Type` to a particular
-   * media type when the job is   created.   For example, `Content-Type` can be set to
-   * `"application/json"`. * `Content-Length`: This is computed by Cloud Scheduler. This value is
-   * output only. It cannot be changed.
-   *
-   * The headers below are output only. They cannot be set or overridden:
-   *
-   * * `X-Google-*`: For Google internal use only. * `X-AppEngine-*`: For Google internal use only.
-   *
-   * In addition, some App Engine headers, which contain job-specific information, are also be sent
-   * to the job handler.
+   * HTTP request headers. This map contains the header field names and values. Headers can be set
+   * when the job is created. Cloud Scheduler sets some headers to default values: * `User-Agent`:
+   * By default, this header is `"AppEngine-Google; (+http://code.google.com/appengine)"`. This
+   * header can be modified, but Cloud Scheduler will append `"AppEngine-Google;
+   * (+http://code.google.com/appengine)"` to the modified `User-Agent`. * `X-CloudScheduler`: This
+   * header will be set to true. If the job has an body, Cloud Scheduler sets the following headers:
+   * * `Content-Type`: By default, the `Content-Type` header is set to `"application/octet-stream"`.
+   * The default can be overridden by explictly setting `Content-Type` to a particular media type
+   * when the job is created. For example, `Content-Type` can be set to `"application/json"`. *
+   * `Content-Length`: This is computed by Cloud Scheduler. This value is output only. It cannot be
+   * changed. The headers below are output only. They cannot be set or overridden: * `X-Google-*`:
+   * For Google internal use only. * `X-AppEngine-*`: For Google internal use only. In addition,
+   * some App Engine headers, which contain job-specific information, are also be sent to the job
+   * handler.
    * @param headers headers or {@code null} for none
    */
   public AppEngineHttpTarget setHeaders(java.util.Map<String, java.lang.String> headers) {
@@ -261,12 +213,10 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
   }
 
   /**
-   * The relative URI.
-   *
-   * The relative URL must begin with "/" and must be a valid HTTP relative URL. It can contain a
-   * path, query string arguments, and `#` fragments. If the relative URL is empty, then the root
-   * path "/" will be used. No spaces are allowed, and the maximum length allowed is 2083
-   * characters.
+   * The relative URI. The relative URL must begin with "/" and must be a valid HTTP relative URL.
+   * It can contain a path, query string arguments, and `#` fragments. If the relative URL is empty,
+   * then the root path "/" will be used. No spaces are allowed, and the maximum length allowed is
+   * 2083 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getRelativeUri() {
@@ -274,12 +224,10 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
   }
 
   /**
-   * The relative URI.
-   *
-   * The relative URL must begin with "/" and must be a valid HTTP relative URL. It can contain a
-   * path, query string arguments, and `#` fragments. If the relative URL is empty, then the root
-   * path "/" will be used. No spaces are allowed, and the maximum length allowed is 2083
-   * characters.
+   * The relative URI. The relative URL must begin with "/" and must be a valid HTTP relative URL.
+   * It can contain a path, query string arguments, and `#` fragments. If the relative URL is empty,
+   * then the root path "/" will be used. No spaces are allowed, and the maximum length allowed is
+   * 2083 characters.
    * @param relativeUri relativeUri or {@code null} for none
    */
   public AppEngineHttpTarget setRelativeUri(java.lang.String relativeUri) {

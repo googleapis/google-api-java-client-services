@@ -49,9 +49,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * of headers that will be ignored or replaced is below: - Host: This will be computed by Cloud
    * Scheduler and derived from uri. * `Content-Length`: This will be computed by Cloud Scheduler. *
    * `User-Agent`: This will be set to `"Google-Cloud-Scheduler"`. * `X-Google-*`: Google internal
-   * use only. * `X-AppEngine-*`: Google internal use only.
-   *
-   * The total size of headers must be less than 80KB.
+   * use only. * `X-AppEngine-*`: Google internal use only. The total size of headers must be less
+   * than 80KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +65,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
 
   /**
    * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
-   * generated and attached as an `Authorization` header in the HTTP request.
-   *
-   * This type of authorization should generally only be used when calling Google APIs hosted on
+   * generated and attached as an `Authorization` header in the HTTP request. This type of
+   * authorization should generally only be used when calling Google APIs hosted on
    * *.googleapis.com.
    * The value may be {@code null}.
    */
@@ -77,10 +75,9 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
 
   /**
    * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
-   * will be generated and attached as an `Authorization` header in the HTTP request.
-   *
-   * This type of authorization can be used for many scenarios, including calling Cloud Run, or
-   * endpoints where you intend to validate the token yourself.
+   * will be generated and attached as an `Authorization` header in the HTTP request. This type of
+   * authorization can be used for many scenarios, including calling Cloud Run, or endpoints where
+   * you intend to validate the token yourself.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,9 +150,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * of headers that will be ignored or replaced is below: - Host: This will be computed by Cloud
    * Scheduler and derived from uri. * `Content-Length`: This will be computed by Cloud Scheduler. *
    * `User-Agent`: This will be set to `"Google-Cloud-Scheduler"`. * `X-Google-*`: Google internal
-   * use only. * `X-AppEngine-*`: Google internal use only.
-   *
-   * The total size of headers must be less than 80KB.
+   * use only. * `X-AppEngine-*`: Google internal use only. The total size of headers must be less
+   * than 80KB.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getHeaders() {
@@ -170,9 +166,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * of headers that will be ignored or replaced is below: - Host: This will be computed by Cloud
    * Scheduler and derived from uri. * `Content-Length`: This will be computed by Cloud Scheduler. *
    * `User-Agent`: This will be set to `"Google-Cloud-Scheduler"`. * `X-Google-*`: Google internal
-   * use only. * `X-AppEngine-*`: Google internal use only.
-   *
-   * The total size of headers must be less than 80KB.
+   * use only. * `X-AppEngine-*`: Google internal use only. The total size of headers must be less
+   * than 80KB.
    * @param headers headers or {@code null} for none
    */
   public HttpTarget setHeaders(java.util.Map<String, java.lang.String> headers) {
@@ -199,9 +194,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
 
   /**
    * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
-   * generated and attached as an `Authorization` header in the HTTP request.
-   *
-   * This type of authorization should generally only be used when calling Google APIs hosted on
+   * generated and attached as an `Authorization` header in the HTTP request. This type of
+   * authorization should generally only be used when calling Google APIs hosted on
    * *.googleapis.com.
    * @return value or {@code null} for none
    */
@@ -211,9 +205,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
 
   /**
    * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
-   * generated and attached as an `Authorization` header in the HTTP request.
-   *
-   * This type of authorization should generally only be used when calling Google APIs hosted on
+   * generated and attached as an `Authorization` header in the HTTP request. This type of
+   * authorization should generally only be used when calling Google APIs hosted on
    * *.googleapis.com.
    * @param oauthToken oauthToken or {@code null} for none
    */
@@ -224,10 +217,9 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
 
   /**
    * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
-   * will be generated and attached as an `Authorization` header in the HTTP request.
-   *
-   * This type of authorization can be used for many scenarios, including calling Cloud Run, or
-   * endpoints where you intend to validate the token yourself.
+   * will be generated and attached as an `Authorization` header in the HTTP request. This type of
+   * authorization can be used for many scenarios, including calling Cloud Run, or endpoints where
+   * you intend to validate the token yourself.
    * @return value or {@code null} for none
    */
   public OidcToken getOidcToken() {
@@ -236,10 +228,9 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
 
   /**
    * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
-   * will be generated and attached as an `Authorization` header in the HTTP request.
-   *
-   * This type of authorization can be used for many scenarios, including calling Cloud Run, or
-   * endpoints where you intend to validate the token yourself.
+   * will be generated and attached as an `Authorization` header in the HTTP request. This type of
+   * authorization can be used for many scenarios, including calling Cloud Run, or endpoints where
+   * you intend to validate the token yourself.
    * @param oidcToken oidcToken or {@code null} for none
    */
   public HttpTarget setOidcToken(OidcToken oidcToken) {

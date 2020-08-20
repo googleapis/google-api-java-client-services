@@ -30,18 +30,16 @@ package com.google.api.services.cloudscheduler.v1beta1.model;
 public final class PubsubTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * Attributes for PubsubMessage.
-   *
-   * Pubsub message must contain either non-empty data, or at least one attribute.
+   * Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least
+   * one attribute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> attributes;
 
   /**
-   * The message payload for PubsubMessage.
-   *
-   * Pubsub message must contain either non-empty data, or at least one attribute.
+   * The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at
+   * least one attribute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,18 +49,16 @@ public final class PubsubTarget extends com.google.api.client.json.GenericJson {
    * Required. The name of the Cloud Pub/Sub topic to which messages will be published when a job is
    * delivered. The topic name must be in the same format as required by PubSub's [PublishRequest.na
    * me](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for
-   * example `projects/PROJECT_ID/topics/TOPIC_ID`.
-   *
-   * The topic must be in the same project as the Cloud Scheduler job.
+   * example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the
+   * Cloud Scheduler job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String topicName;
 
   /**
-   * Attributes for PubsubMessage.
-   *
-   * Pubsub message must contain either non-empty data, or at least one attribute.
+   * Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least
+   * one attribute.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAttributes() {
@@ -70,9 +66,8 @@ public final class PubsubTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Attributes for PubsubMessage.
-   *
-   * Pubsub message must contain either non-empty data, or at least one attribute.
+   * Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least
+   * one attribute.
    * @param attributes attributes or {@code null} for none
    */
   public PubsubTarget setAttributes(java.util.Map<String, java.lang.String> attributes) {
@@ -81,9 +76,8 @@ public final class PubsubTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message payload for PubsubMessage.
-   *
-   * Pubsub message must contain either non-empty data, or at least one attribute.
+   * The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at
+   * least one attribute.
    * @see #decodeData()
    * @return value or {@code null} for none
    */
@@ -92,9 +86,8 @@ public final class PubsubTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message payload for PubsubMessage.
-   *
-   * Pubsub message must contain either non-empty data, or at least one attribute.
+   * The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at
+   * least one attribute.
    * @see #getData()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -105,9 +98,8 @@ public final class PubsubTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message payload for PubsubMessage.
-   *
-   * Pubsub message must contain either non-empty data, or at least one attribute.
+   * The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at
+   * least one attribute.
    * @see #encodeData()
    * @param data data or {@code null} for none
    */
@@ -117,9 +109,8 @@ public final class PubsubTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message payload for PubsubMessage.
-   *
-   * Pubsub message must contain either non-empty data, or at least one attribute.
+   * The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at
+   * least one attribute.
    * @see #setData()
    *
    * <p>
@@ -137,9 +128,8 @@ public final class PubsubTarget extends com.google.api.client.json.GenericJson {
    * Required. The name of the Cloud Pub/Sub topic to which messages will be published when a job is
    * delivered. The topic name must be in the same format as required by PubSub's [PublishRequest.na
    * me](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for
-   * example `projects/PROJECT_ID/topics/TOPIC_ID`.
-   *
-   * The topic must be in the same project as the Cloud Scheduler job.
+   * example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the
+   * Cloud Scheduler job.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopicName() {
@@ -150,9 +140,8 @@ public final class PubsubTarget extends com.google.api.client.json.GenericJson {
    * Required. The name of the Cloud Pub/Sub topic to which messages will be published when a job is
    * delivered. The topic name must be in the same format as required by PubSub's [PublishRequest.na
    * me](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for
-   * example `projects/PROJECT_ID/topics/TOPIC_ID`.
-   *
-   * The topic must be in the same project as the Cloud Scheduler job.
+   * example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the
+   * Cloud Scheduler job.
    * @param topicName topicName or {@code null} for none
    */
   public PubsubTarget setTopicName(java.lang.String topicName) {

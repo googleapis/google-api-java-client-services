@@ -146,7 +146,6 @@ packages on [Maven Central][maven-search].
 | Google Play Game Services Publishing API | [v1configuration](clients/google-api-services-gamesConfiguration/v1configuration) |
 | Google Search Console API | [v1](clients/google-api-services-searchconsole/v1) |
 | Google Sheets API | [v4](clients/google-api-services-sheets/v4) |
-| Google Site Verification API | [v1](clients/google-api-services-siteVerification/v1) |
 | Google Slides API | [v1](clients/google-api-services-slides/v1) |
 | Google+ API | [v1](clients/google-api-services-plus/v1) |
 | Groups Settings API | [v1](clients/google-api-services-groupssettings/v1) |
@@ -191,6 +190,7 @@ packages on [Maven Central][maven-search].
 | Street View Publish API | [v1](clients/google-api-services-streetviewpublish/v1) |
 | Tag Manager API | [v1](clients/google-api-services-tagmanager/v1), [v2](clients/google-api-services-tagmanager/v2) |
 | Tasks API | [v1](clients/google-api-services-tasks/v1) |
+| Web Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
 | Web Security Scanner API | [v1](clients/google-api-services-websecurityscanner/v1), [v1alpha](clients/google-api-services-websecurityscanner/v1alpha), [v1beta](clients/google-api-services-websecurityscanner/v1beta) |
 | YouTube Analytics API | [v1](clients/google-api-services-youtubeAnalytics/v1), [v2](clients/google-api-services-youtubeAnalytics/v2) |
 | YouTube Data API v3 | [v3](clients/google-api-services-youtube/v3) |

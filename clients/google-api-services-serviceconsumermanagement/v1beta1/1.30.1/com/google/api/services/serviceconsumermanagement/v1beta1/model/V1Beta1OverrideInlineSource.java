@@ -32,7 +32,8 @@ public final class V1Beta1OverrideInlineSource extends com.google.api.client.jso
 
   /**
    * The overrides to create. Each override must have a value for 'metric' and 'unit', to specify
-   * which metric and which limit the override should be applied to.
+   * which metric and which limit the override should be applied to. The 'name' field of the
+   * override does not need to be set; it is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +41,8 @@ public final class V1Beta1OverrideInlineSource extends com.google.api.client.jso
 
   /**
    * The overrides to create. Each override must have a value for 'metric' and 'unit', to specify
-   * which metric and which limit the override should be applied to.
+   * which metric and which limit the override should be applied to. The 'name' field of the
+   * override does not need to be set; it is ignored.
    * @return value or {@code null} for none
    */
   public java.util.List<V1Beta1QuotaOverride> getOverrides() {
@@ -49,7 +51,8 @@ public final class V1Beta1OverrideInlineSource extends com.google.api.client.jso
 
   /**
    * The overrides to create. Each override must have a value for 'metric' and 'unit', to specify
-   * which metric and which limit the override should be applied to.
+   * which metric and which limit the override should be applied to. The 'name' field of the
+   * override does not need to be set; it is ignored.
    * @param overrides overrides or {@code null} for none
    */
   public V1Beta1OverrideInlineSource setOverrides(java.util.List<V1Beta1QuotaOverride> overrides) {

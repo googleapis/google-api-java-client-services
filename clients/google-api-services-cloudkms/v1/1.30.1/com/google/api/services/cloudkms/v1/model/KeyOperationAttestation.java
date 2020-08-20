@@ -32,6 +32,13 @@ package com.google.api.services.cloudkms.v1.model;
 public final class KeyOperationAttestation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The certificate chains needed to validate the attestation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CertificateChains certChains;
+
+  /**
    * Output only. The attestation data provided by the HSM when the key operation was performed.
    * The value may be {@code null}.
    */
@@ -44,6 +51,23 @@ public final class KeyOperationAttestation extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String format;
+
+  /**
+   * Output only. The certificate chains needed to validate the attestation
+   * @return value or {@code null} for none
+   */
+  public CertificateChains getCertChains() {
+    return certChains;
+  }
+
+  /**
+   * Output only. The certificate chains needed to validate the attestation
+   * @param certChains certChains or {@code null} for none
+   */
+  public KeyOperationAttestation setCertChains(CertificateChains certChains) {
+    this.certChains = certChains;
+    return this;
+  }
 
   /**
    * Output only. The attestation data provided by the HSM when the key operation was performed.

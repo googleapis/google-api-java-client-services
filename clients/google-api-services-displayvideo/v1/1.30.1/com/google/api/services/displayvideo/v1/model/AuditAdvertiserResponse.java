@@ -31,6 +31,54 @@ package com.google.api.services.displayvideo.v1.model;
 public final class AuditAdvertiserResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The number of individual targeting options from the following targeting types that are assigned
+   * to a line item under this advertiser. These individual targeting options count towards the
+   * limit of 4500000 ad group targeting options per advertiser. Qualifying Targeting types: *
+   * Channels, URLs, apps, and collections * Demographic * Google Audiences, including Affinity,
+   * Custom Affinity, and In-market audiences * Inventory source * Keyword * Mobile app category *
+   * User lists * Video targeting * Viewability
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long adGroupCriteriaCount;
+
+  /**
+   * The number of individual targeting options from the following targeting types that are assigned
+   * to a line item under this advertiser. These individual targeting options count towards the
+   * limit of 900000 campaign targeting options per advertiser. Qualifying Targeting types: *
+   * Position * Browser * Connection speed * Day and time * Device and operating system * Digital
+   * content label * Sensitive categories * Environment * Geography, including business chains and
+   * proximity * ISP * Language * Third-party verification
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long campaignCriteriaCount;
+
+  /**
+   * The number of channels created under this advertiser. These channels count towards the limit of
+   * 1000 channels per advertiser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long channelsCount;
+
+  /**
+   * The number of negative keyword lists created under this advertiser. These negative keyword
+   * lists count towards the limit of 20 negative keyword lists per advertiser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long negativeKeywordListsCount;
+
+  /**
+   * The number of negatively targeted channels created under this advertiser. These negatively
+   * targeted channels count towards the limit of 5 negatively targeted channels per advertiser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long negativelyTargetedChannelsCount;
+
+  /**
    * The number of ACTIVE and PAUSED campaigns under this advertiser. These campaigns count towards
    * the limit of 9999 campaigns per advertiser.
    * The value may be {@code null}.
@@ -53,6 +101,117 @@ public final class AuditAdvertiserResponse extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long usedLineItemsCount;
+
+  /**
+   * The number of individual targeting options from the following targeting types that are assigned
+   * to a line item under this advertiser. These individual targeting options count towards the
+   * limit of 4500000 ad group targeting options per advertiser. Qualifying Targeting types: *
+   * Channels, URLs, apps, and collections * Demographic * Google Audiences, including Affinity,
+   * Custom Affinity, and In-market audiences * Inventory source * Keyword * Mobile app category *
+   * User lists * Video targeting * Viewability
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAdGroupCriteriaCount() {
+    return adGroupCriteriaCount;
+  }
+
+  /**
+   * The number of individual targeting options from the following targeting types that are assigned
+   * to a line item under this advertiser. These individual targeting options count towards the
+   * limit of 4500000 ad group targeting options per advertiser. Qualifying Targeting types: *
+   * Channels, URLs, apps, and collections * Demographic * Google Audiences, including Affinity,
+   * Custom Affinity, and In-market audiences * Inventory source * Keyword * Mobile app category *
+   * User lists * Video targeting * Viewability
+   * @param adGroupCriteriaCount adGroupCriteriaCount or {@code null} for none
+   */
+  public AuditAdvertiserResponse setAdGroupCriteriaCount(java.lang.Long adGroupCriteriaCount) {
+    this.adGroupCriteriaCount = adGroupCriteriaCount;
+    return this;
+  }
+
+  /**
+   * The number of individual targeting options from the following targeting types that are assigned
+   * to a line item under this advertiser. These individual targeting options count towards the
+   * limit of 900000 campaign targeting options per advertiser. Qualifying Targeting types: *
+   * Position * Browser * Connection speed * Day and time * Device and operating system * Digital
+   * content label * Sensitive categories * Environment * Geography, including business chains and
+   * proximity * ISP * Language * Third-party verification
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCampaignCriteriaCount() {
+    return campaignCriteriaCount;
+  }
+
+  /**
+   * The number of individual targeting options from the following targeting types that are assigned
+   * to a line item under this advertiser. These individual targeting options count towards the
+   * limit of 900000 campaign targeting options per advertiser. Qualifying Targeting types: *
+   * Position * Browser * Connection speed * Day and time * Device and operating system * Digital
+   * content label * Sensitive categories * Environment * Geography, including business chains and
+   * proximity * ISP * Language * Third-party verification
+   * @param campaignCriteriaCount campaignCriteriaCount or {@code null} for none
+   */
+  public AuditAdvertiserResponse setCampaignCriteriaCount(java.lang.Long campaignCriteriaCount) {
+    this.campaignCriteriaCount = campaignCriteriaCount;
+    return this;
+  }
+
+  /**
+   * The number of channels created under this advertiser. These channels count towards the limit of
+   * 1000 channels per advertiser.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getChannelsCount() {
+    return channelsCount;
+  }
+
+  /**
+   * The number of channels created under this advertiser. These channels count towards the limit of
+   * 1000 channels per advertiser.
+   * @param channelsCount channelsCount or {@code null} for none
+   */
+  public AuditAdvertiserResponse setChannelsCount(java.lang.Long channelsCount) {
+    this.channelsCount = channelsCount;
+    return this;
+  }
+
+  /**
+   * The number of negative keyword lists created under this advertiser. These negative keyword
+   * lists count towards the limit of 20 negative keyword lists per advertiser.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNegativeKeywordListsCount() {
+    return negativeKeywordListsCount;
+  }
+
+  /**
+   * The number of negative keyword lists created under this advertiser. These negative keyword
+   * lists count towards the limit of 20 negative keyword lists per advertiser.
+   * @param negativeKeywordListsCount negativeKeywordListsCount or {@code null} for none
+   */
+  public AuditAdvertiserResponse setNegativeKeywordListsCount(java.lang.Long negativeKeywordListsCount) {
+    this.negativeKeywordListsCount = negativeKeywordListsCount;
+    return this;
+  }
+
+  /**
+   * The number of negatively targeted channels created under this advertiser. These negatively
+   * targeted channels count towards the limit of 5 negatively targeted channels per advertiser.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNegativelyTargetedChannelsCount() {
+    return negativelyTargetedChannelsCount;
+  }
+
+  /**
+   * The number of negatively targeted channels created under this advertiser. These negatively
+   * targeted channels count towards the limit of 5 negatively targeted channels per advertiser.
+   * @param negativelyTargetedChannelsCount negativelyTargetedChannelsCount or {@code null} for none
+   */
+  public AuditAdvertiserResponse setNegativelyTargetedChannelsCount(java.lang.Long negativelyTargetedChannelsCount) {
+    this.negativelyTargetedChannelsCount = negativelyTargetedChannelsCount;
+    return this;
+  }
 
   /**
    * The number of ACTIVE and PAUSED campaigns under this advertiser. These campaigns count towards

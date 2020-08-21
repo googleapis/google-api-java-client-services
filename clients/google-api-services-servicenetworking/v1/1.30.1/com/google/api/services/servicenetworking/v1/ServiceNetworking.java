@@ -2876,6 +2876,424 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
 
     }
     /**
+     * An accessor for creating requests from the Projects collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ServiceNetworking servicenetworking = new ServiceNetworking(...);}
+     *   {@code ServiceNetworking.Projects.List request = servicenetworking.projects().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Projects projects() {
+      return new Projects();
+    }
+
+    /**
+     * The "projects" collection of methods.
+     */
+    public class Projects {
+
+      /**
+       * An accessor for creating requests from the Global collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ServiceNetworking servicenetworking = new ServiceNetworking(...);}
+       *   {@code ServiceNetworking.Global.List request = servicenetworking.global().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Global global() {
+        return new Global();
+      }
+
+      /**
+       * The "global" collection of methods.
+       */
+      public class Global {
+
+        /**
+         * An accessor for creating requests from the Networks collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ServiceNetworking servicenetworking = new ServiceNetworking(...);}
+         *   {@code ServiceNetworking.Networks.List request = servicenetworking.networks().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Networks networks() {
+          return new Networks();
+        }
+
+        /**
+         * The "networks" collection of methods.
+         */
+        public class Networks {
+
+          /**
+           * An accessor for creating requests from the PeeredDnsDomains collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ServiceNetworking servicenetworking = new ServiceNetworking(...);}
+           *   {@code ServiceNetworking.PeeredDnsDomains.List request = servicenetworking.peeredDnsDomains().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public PeeredDnsDomains peeredDnsDomains() {
+            return new PeeredDnsDomains();
+          }
+
+          /**
+           * The "peeredDnsDomains" collection of methods.
+           */
+          public class PeeredDnsDomains {
+
+            /**
+             * Creates a peered DNS domain which sends requests for records in given namespace originating in
+             * the service producer VPC network to the consumer VPC network to be resolved.
+             *
+             * Create a request for the method "peeredDnsDomains.create".
+             *
+             * This request holds the parameters needed by the servicenetworking server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Parent resource identifying the connection for which the peered DNS domain will be created
+             *        in the format: `services/{service}/projects/{project}/global/networks/{network}` {service}
+             *        is the peering service that is managing connectivity for the service producer's
+             *        organization. For Google services that support this functionality, this value is
+             *        `servicenetworking.googleapis.com`. {project} is the number of the project that contains
+             *        the service consumer's VPC network e.g. `12345`. {network} is the name of the service
+             *        consumer's VPC network.
+             * @param content the {@link com.google.api.services.servicenetworking.v1.model.PeeredDnsDomain}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.PeeredDnsDomain content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+parent}/peeredDnsDomains";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+
+              /**
+               * Creates a peered DNS domain which sends requests for records in given namespace originating in
+               * the service producer VPC network to the consumer VPC network to be resolved.
+               *
+               * Create a request for the method "peeredDnsDomains.create".
+               *
+               * This request holds the parameters needed by the the servicenetworking server.  After setting
+               * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Parent resource identifying the connection for which the peered DNS domain will be created
+             *        in the format: `services/{service}/projects/{project}/global/networks/{network}` {service}
+             *        is the peering service that is managing connectivity for the service producer's
+             *        organization. For Google services that support this functionality, this value is
+             *        `servicenetworking.googleapis.com`. {project} is the number of the project that contains
+             *        the service consumer's VPC network e.g. `12345`. {network} is the name of the service
+             *        consumer's VPC network.
+               * @param content the {@link com.google.api.services.servicenetworking.v1.model.PeeredDnsDomain}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.PeeredDnsDomain content) {
+                super(ServiceNetworking.this, "POST", REST_PATH, content, com.google.api.services.servicenetworking.v1.model.Operation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Parent resource identifying the connection for which the peered DNS
+               * domain will be created in the format:
+               * `services/{service}/projects/{project}/global/networks/{network}` {service} is the
+               * peering service that is managing connectivity for the service producer's
+               * organization. For Google services that support this functionality, this value is
+               * `servicenetworking.googleapis.com`. {project} is the number of the project that
+               * contains the service consumer's VPC network e.g. `12345`. {network} is the name of
+               * the service consumer's VPC network.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Parent resource identifying the connection for which the peered DNS domain will be
+             created in the format: `services/{service}/projects/{project}/global/networks/{network}` {service}
+             is the peering service that is managing connectivity for the service producer's organization. For
+             Google services that support this functionality, this value is `servicenetworking.googleapis.com`.
+             {project} is the number of the project that contains the service consumer's VPC network e.g.
+             `12345`. {network} is the name of the service consumer's VPC network.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. Parent resource identifying the connection for which the peered DNS
+               * domain will be created in the format:
+               * `services/{service}/projects/{project}/global/networks/{network}` {service} is the
+               * peering service that is managing connectivity for the service producer's
+               * organization. For Google services that support this functionality, this value is
+               * `servicenetworking.googleapis.com`. {project} is the number of the project that
+               * contains the service consumer's VPC network e.g. `12345`. {network} is the name of
+               * the service consumer's VPC network.
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes a peered DNS domain.
+             *
+             * Create a request for the method "peeredDnsDomains.delete".
+             *
+             * This request holds the parameters needed by the servicenetworking server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the peered DNS domain to delete in the format:
+             *        `services/{service}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}`.
+             *        {service} is the peering service that is managing connectivity for the service producer's
+             *        organization. For Google services that support this functionality, this value is
+             *        `servicenetworking.googleapis.com`. {project} is the number of the project that contains
+             *        the service consumer's VPC network e.g. `12345`. {network} is the name of the service
+             *        consumer's VPC network. {name} is the name of the peered DNS domain.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^services/[^/]+/projects/[^/]+/global/networks/[^/]+/peeredDnsDomains/[^/]+$");
+
+              /**
+               * Deletes a peered DNS domain.
+               *
+               * Create a request for the method "peeredDnsDomains.delete".
+               *
+               * This request holds the parameters needed by the the servicenetworking server.  After setting
+               * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the peered DNS domain to delete in the format:
+             *        `services/{service}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}`.
+             *        {service} is the peering service that is managing connectivity for the service producer's
+             *        organization. For Google services that support this functionality, this value is
+             *        `servicenetworking.googleapis.com`. {project} is the number of the project that contains
+             *        the service consumer's VPC network e.g. `12345`. {network} is the name of the service
+             *        consumer's VPC network. {name} is the name of the peered DNS domain.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(ServiceNetworking.this, "DELETE", REST_PATH, null, com.google.api.services.servicenetworking.v1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+/peeredDnsDomains/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the peered DNS domain to delete in the format: `services/{ser
+               * vice}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}`.
+               * {service} is the peering service that is managing connectivity for the service
+               * producer's organization. For Google services that support this functionality, this
+               * value is `servicenetworking.googleapis.com`. {project} is the number of the project
+               * that contains the service consumer's VPC network e.g. `12345`. {network} is the
+               * name of the service consumer's VPC network. {name} is the name of the peered DNS
+               * domain.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the peered DNS domain to delete in the format:
+             `services/{service}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}`.
+             {service} is the peering service that is managing connectivity for the service producer's
+             organization. For Google services that support this functionality, this value is
+             `servicenetworking.googleapis.com`. {project} is the number of the project that contains the
+             service consumer's VPC network e.g. `12345`. {network} is the name of the service consumer's VPC
+             network. {name} is the name of the peered DNS domain.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the peered DNS domain to delete in the format: `services/{ser
+               * vice}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}`.
+               * {service} is the peering service that is managing connectivity for the service
+               * producer's organization. For Google services that support this functionality, this
+               * value is `servicenetworking.googleapis.com`. {project} is the number of the project
+               * that contains the service consumer's VPC network e.g. `12345`. {network} is the
+               * name of the service consumer's VPC network. {name} is the name of the peered DNS
+               * domain.
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+/peeredDnsDomains/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+      }
+    }
+    /**
      * An accessor for creating requests from the Roles collection.
      *
      * <p>The typical use is:</p>

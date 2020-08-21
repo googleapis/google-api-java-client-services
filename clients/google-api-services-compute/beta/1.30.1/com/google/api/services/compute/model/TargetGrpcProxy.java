@@ -21,7 +21,8 @@ package com.google.api.services.compute.model;
  *
  * A target gRPC proxy is a component of load balancers intended for load balancing gRPC traffic.
  * Global forwarding rules reference a target gRPC proxy. The Target gRPC Proxy references a URL map
- * which specifies how traffic routes to gRPC backend services.
+ * which specifies how traffic routes to gRPC backend services. (== resource_for
+ * {$api_version}.targetGrpcProxies ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -110,10 +111,10 @@ public final class TargetGrpcProxy extends com.google.api.client.json.GenericJso
    * If true, indicates that the BackendServices referenced by the urlMap may be accessed by gRPC
    * applications without using a sidecar proxy. This will enable configuration checks on urlMap and
    * its referenced BackendServices to not allow unsupported features. A gRPC application must use
-   * "xds-experimental:" scheme in the target URI of the service it is connecting to. If false,
-   * indicates that the BackendServices referenced by the urlMap will be accessed by gRPC
-   * applications via a sidecar proxy. In this case, a gRPC application must not use "xds-
-   * experimental:" scheme in the target URI of the service it is connecting to
+   * "xds:" scheme in the target URI of the service it is connecting to. If false, indicates that
+   * the BackendServices referenced by the urlMap will be accessed by gRPC applications via a
+   * sidecar proxy. In this case, a gRPC application must not use "xds:" scheme in the target URI of
+   * the service it is connecting to
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -332,10 +333,10 @@ public final class TargetGrpcProxy extends com.google.api.client.json.GenericJso
    * If true, indicates that the BackendServices referenced by the urlMap may be accessed by gRPC
    * applications without using a sidecar proxy. This will enable configuration checks on urlMap and
    * its referenced BackendServices to not allow unsupported features. A gRPC application must use
-   * "xds-experimental:" scheme in the target URI of the service it is connecting to. If false,
-   * indicates that the BackendServices referenced by the urlMap will be accessed by gRPC
-   * applications via a sidecar proxy. In this case, a gRPC application must not use "xds-
-   * experimental:" scheme in the target URI of the service it is connecting to
+   * "xds:" scheme in the target URI of the service it is connecting to. If false, indicates that
+   * the BackendServices referenced by the urlMap will be accessed by gRPC applications via a
+   * sidecar proxy. In this case, a gRPC application must not use "xds:" scheme in the target URI of
+   * the service it is connecting to
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateForProxyless() {
@@ -346,10 +347,10 @@ public final class TargetGrpcProxy extends com.google.api.client.json.GenericJso
    * If true, indicates that the BackendServices referenced by the urlMap may be accessed by gRPC
    * applications without using a sidecar proxy. This will enable configuration checks on urlMap and
    * its referenced BackendServices to not allow unsupported features. A gRPC application must use
-   * "xds-experimental:" scheme in the target URI of the service it is connecting to. If false,
-   * indicates that the BackendServices referenced by the urlMap will be accessed by gRPC
-   * applications via a sidecar proxy. In this case, a gRPC application must not use "xds-
-   * experimental:" scheme in the target URI of the service it is connecting to
+   * "xds:" scheme in the target URI of the service it is connecting to. If false, indicates that
+   * the BackendServices referenced by the urlMap will be accessed by gRPC applications via a
+   * sidecar proxy. In this case, a gRPC application must not use "xds:" scheme in the target URI of
+   * the service it is connecting to
    * @param validateForProxyless validateForProxyless or {@code null} for none
    */
   public TargetGrpcProxy setValidateForProxyless(java.lang.Boolean validateForProxyless) {

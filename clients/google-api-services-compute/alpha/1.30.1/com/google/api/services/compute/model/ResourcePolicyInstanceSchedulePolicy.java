@@ -31,21 +31,48 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicyInstanceSchedulePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the schedule for starting instance.
+   * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field
+   * must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
+
+  /**
+   * Specifies the schedule for starting instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourcePolicyInstanceSchedulePolicySchedule vmStartSchedule;
 
   /**
-   * Specifies the schedule for stopping instance.
+   * Specifies the schedule for stopping instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourcePolicyInstanceSchedulePolicySchedule vmStopSchedule;
 
   /**
-   * Specifies the schedule for starting instance.
+   * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field
+   * must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field
+   * must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public ResourcePolicyInstanceSchedulePolicy setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
+    return this;
+  }
+
+  /**
+   * Specifies the schedule for starting instances.
    * @return value or {@code null} for none
    */
   public ResourcePolicyInstanceSchedulePolicySchedule getVmStartSchedule() {
@@ -53,7 +80,7 @@ public final class ResourcePolicyInstanceSchedulePolicy extends com.google.api.c
   }
 
   /**
-   * Specifies the schedule for starting instance.
+   * Specifies the schedule for starting instances.
    * @param vmStartSchedule vmStartSchedule or {@code null} for none
    */
   public ResourcePolicyInstanceSchedulePolicy setVmStartSchedule(ResourcePolicyInstanceSchedulePolicySchedule vmStartSchedule) {
@@ -62,7 +89,7 @@ public final class ResourcePolicyInstanceSchedulePolicy extends com.google.api.c
   }
 
   /**
-   * Specifies the schedule for stopping instance.
+   * Specifies the schedule for stopping instances.
    * @return value or {@code null} for none
    */
   public ResourcePolicyInstanceSchedulePolicySchedule getVmStopSchedule() {
@@ -70,7 +97,7 @@ public final class ResourcePolicyInstanceSchedulePolicy extends com.google.api.c
   }
 
   /**
-   * Specifies the schedule for stopping instance.
+   * Specifies the schedule for stopping instances.
    * @param vmStopSchedule vmStopSchedule or {@code null} for none
    */
   public ResourcePolicyInstanceSchedulePolicy setVmStopSchedule(ResourcePolicyInstanceSchedulePolicySchedule vmStopSchedule) {

@@ -64,11 +64,11 @@ public final class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings exte
   private java.lang.Integer numTotalNatPorts;
 
   /**
-   * Priority of the NAT Rule.
+   * Rule number of the NAT Rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer priority;
+  private java.lang.Integer ruleNumber;
 
   /**
    * List of all drain IP:port-range mappings assigned to this interface by this rule. These ranges
@@ -151,19 +151,19 @@ public final class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings exte
   }
 
   /**
-   * Priority of the NAT Rule.
+   * Rule number of the NAT Rule.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getPriority() {
-    return priority;
+  public java.lang.Integer getRuleNumber() {
+    return ruleNumber;
   }
 
   /**
-   * Priority of the NAT Rule.
-   * @param priority priority or {@code null} for none
+   * Rule number of the NAT Rule.
+   * @param ruleNumber ruleNumber or {@code null} for none
    */
-  public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings setPriority(java.lang.Integer priority) {
-    this.priority = priority;
+  public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings setRuleNumber(java.lang.Integer ruleNumber) {
+    this.ruleNumber = ruleNumber;
     return this;
   }
 

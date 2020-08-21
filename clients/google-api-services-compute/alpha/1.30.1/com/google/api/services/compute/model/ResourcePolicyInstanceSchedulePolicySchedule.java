@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Schedule for the instance operation.
+ * Schedule for an instance operation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -37,14 +37,6 @@ public final class ResourcePolicyInstanceSchedulePolicySchedule extends com.goog
   private java.lang.String schedule;
 
   /**
-   * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field
-   * must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String timeZone;
-
-  /**
    * Specifies the frequency for the operation, using the unix-cron format.
    * @return value or {@code null} for none
    */
@@ -58,25 +50,6 @@ public final class ResourcePolicyInstanceSchedulePolicySchedule extends com.goog
    */
   public ResourcePolicyInstanceSchedulePolicySchedule setSchedule(java.lang.String schedule) {
     this.schedule = schedule;
-    return this;
-  }
-
-  /**
-   * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field
-   * must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTimeZone() {
-    return timeZone;
-  }
-
-  /**
-   * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field
-   * must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-   * @param timeZone timeZone or {@code null} for none
-   */
-  public ResourcePolicyInstanceSchedulePolicySchedule setTimeZone(java.lang.String timeZone) {
-    this.timeZone = timeZone;
     return this;
   }
 

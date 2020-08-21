@@ -1979,8 +1979,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canMoveChildrenOutOfTeamDrive;
 
     /**
-     * Whether the current user can move children of this folder within the shared drive. This is
-     * false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can move children of this folder within this drive. This is false when
+     * the item is not a folder. Note that a request to move the child may still fail depending on the
+     * current user's access to the child and to the destination folder.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -2017,9 +2018,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canMoveItemOutOfTeamDrive;
 
     /**
-     * Whether the current user can move this item within this shared drive. Note that a request to
-     * change the parent of the item may still fail depending on the new parent that is being added.
-     * Only populated for items in shared drives.
+     * Whether the current user can move this item within this drive. Note that a request to change
+     * the parent of the item may still fail depending on the new parent that is being added and the
+     * parent that is being removed.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -2407,8 +2408,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move children of this folder within the shared drive. This is
-     * false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can move children of this folder within this drive. This is false when
+     * the item is not a folder. Note that a request to move the child may still fail depending on the
+     * current user's access to the child and to the destination folder.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanMoveChildrenWithinDrive() {
@@ -2416,8 +2418,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move children of this folder within the shared drive. This is
-     * false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can move children of this folder within this drive. This is false when
+     * the item is not a folder. Note that a request to move the child may still fail depending on the
+     * current user's access to the child and to the destination folder.
      * @param canMoveChildrenWithinDrive canMoveChildrenWithinDrive or {@code null} for none
      */
     public Capabilities setCanMoveChildrenWithinDrive(java.lang.Boolean canMoveChildrenWithinDrive) {
@@ -2498,9 +2501,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move this item within this shared drive. Note that a request to
-     * change the parent of the item may still fail depending on the new parent that is being added.
-     * Only populated for items in shared drives.
+     * Whether the current user can move this item within this drive. Note that a request to change
+     * the parent of the item may still fail depending on the new parent that is being added and the
+     * parent that is being removed.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanMoveItemWithinDrive() {
@@ -2508,9 +2511,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move this item within this shared drive. Note that a request to
-     * change the parent of the item may still fail depending on the new parent that is being added.
-     * Only populated for items in shared drives.
+     * Whether the current user can move this item within this drive. Note that a request to change
+     * the parent of the item may still fail depending on the new parent that is being added and the
+     * parent that is being removed.
      * @param canMoveItemWithinDrive canMoveItemWithinDrive or {@code null} for none
      */
     public Capabilities setCanMoveItemWithinDrive(java.lang.Boolean canMoveItemWithinDrive) {

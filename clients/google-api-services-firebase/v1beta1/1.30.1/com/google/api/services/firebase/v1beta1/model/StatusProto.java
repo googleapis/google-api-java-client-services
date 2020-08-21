@@ -61,23 +61,6 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
   private MessageSet messageSet;
 
   /**
-   * DEPRECATED. This field was deprecated in 2011 with cl/20297133. Java support for the field was
-   * moved to a proto1 backward compatibility class in April 2017 with cl/142615857 and
-   * cl/154123203. There was never support for this field in Go; if set Go will ignore it. C++
-   * stopped setting StatusProto::payload in October 2015 with cl/106347055, and stopped reading the
-   * field in October 2017 with cl/173324114. In general, newly written code should use only
-   * "message_set". If you need to maintain backward compatibility with code written before
-   * 3/25/2011, do the following: - During the transition period, either (1) set both "payload" and
-   * "message_set", or (2) write the consumer of StatusProto so that it can forge a MessageSet
-   * object from "payload" if "message_set" is missing. The C++ util::Status implementation does
-   * (2). - Once all the consumers are converted to accept "message_set", then remove the use of
-   * "payload" on the producer side.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private TypedMessage payload;
-
-  /**
    * The following are usually only present when code != 0 Space to which this status belongs
    * The value may be {@code null}.
    */
@@ -153,43 +136,6 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
    */
   public StatusProto setMessageSet(MessageSet messageSet) {
     this.messageSet = messageSet;
-    return this;
-  }
-
-  /**
-   * DEPRECATED. This field was deprecated in 2011 with cl/20297133. Java support for the field was
-   * moved to a proto1 backward compatibility class in April 2017 with cl/142615857 and
-   * cl/154123203. There was never support for this field in Go; if set Go will ignore it. C++
-   * stopped setting StatusProto::payload in October 2015 with cl/106347055, and stopped reading the
-   * field in October 2017 with cl/173324114. In general, newly written code should use only
-   * "message_set". If you need to maintain backward compatibility with code written before
-   * 3/25/2011, do the following: - During the transition period, either (1) set both "payload" and
-   * "message_set", or (2) write the consumer of StatusProto so that it can forge a MessageSet
-   * object from "payload" if "message_set" is missing. The C++ util::Status implementation does
-   * (2). - Once all the consumers are converted to accept "message_set", then remove the use of
-   * "payload" on the producer side.
-   * @return value or {@code null} for none
-   */
-  public TypedMessage getPayload() {
-    return payload;
-  }
-
-  /**
-   * DEPRECATED. This field was deprecated in 2011 with cl/20297133. Java support for the field was
-   * moved to a proto1 backward compatibility class in April 2017 with cl/142615857 and
-   * cl/154123203. There was never support for this field in Go; if set Go will ignore it. C++
-   * stopped setting StatusProto::payload in October 2015 with cl/106347055, and stopped reading the
-   * field in October 2017 with cl/173324114. In general, newly written code should use only
-   * "message_set". If you need to maintain backward compatibility with code written before
-   * 3/25/2011, do the following: - During the transition period, either (1) set both "payload" and
-   * "message_set", or (2) write the consumer of StatusProto so that it can forge a MessageSet
-   * object from "payload" if "message_set" is missing. The C++ util::Status implementation does
-   * (2). - Once all the consumers are converted to accept "message_set", then remove the use of
-   * "payload" on the producer side.
-   * @param payload payload or {@code null} for none
-   */
-  public StatusProto setPayload(TypedMessage payload) {
-    this.payload = payload;
     return this;
   }
 

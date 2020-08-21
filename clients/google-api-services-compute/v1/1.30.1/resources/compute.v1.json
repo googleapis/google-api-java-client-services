@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/CksIT3-yvN8mvgQ0wLcNMxzX3cw\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/FWKLLmBLe_ZSL6-D10gDeUs_6TY\"",
  "discoveryVersion": "v1",
  "id": "compute:v1",
  "name": "compute",
  "version": "v1",
- "revision": "20200719",
+ "revision": "20200727",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -616,9 +616,11 @@
       "DNS_RESOLVER",
       "GCE_ENDPOINT",
       "NAT_AUTO",
+      "SHARED_LOADBALANCER_VIP",
       "VPC_PEERING"
      ],
      "enumDescriptions": [
+      "",
       "",
       "",
       "",
@@ -21252,7 +21254,7 @@
    "properties": {
     "srcIpRanges": {
      "type": "array",
-     "description": "CIDR IP address range.",
+     "description": "CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.",
      "items": {
       "type": "string"
      }
@@ -23092,7 +23094,7 @@
   "TargetGrpcProxy": {
    "id": "TargetGrpcProxy",
    "type": "object",
-   "description": "Represents a Target gRPC Proxy resource.\n\nA target gRPC proxy is a component of load balancers intended for load balancing gRPC traffic. Global forwarding rules reference a target gRPC proxy. The Target gRPC Proxy references a URL map which specifies how traffic routes to gRPC backend services.",
+   "description": "Represents a Target gRPC Proxy resource.\n\nA target gRPC proxy is a component of load balancers intended for load balancing gRPC traffic. Global forwarding rules reference a target gRPC proxy. The Target gRPC Proxy references a URL map which specifies how traffic routes to gRPC backend services. (== resource_for {$api_version}.targetGrpcProxies ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -23141,7 +23143,7 @@
     },
     "validateForProxyless": {
      "type": "boolean",
-     "description": "If true, indicates that the BackendServices referenced by the urlMap may be accessed by gRPC applications without using a sidecar proxy. This will enable configuration checks on urlMap and its referenced BackendServices to not allow unsupported features. A gRPC application must use \"xds-experimental:///\" scheme in the target URI of the service it is connecting to. If false, indicates that the BackendServices referenced by the urlMap will be accessed by gRPC applications via a sidecar proxy. In this case, a gRPC application must not use \"xds-experimental:///\" scheme in the target URI of the service it is connecting to"
+     "description": "If true, indicates that the BackendServices referenced by the urlMap may be accessed by gRPC applications without using a sidecar proxy. This will enable configuration checks on urlMap and its referenced BackendServices to not allow unsupported features. A gRPC application must use \"xds:///\" scheme in the target URI of the service it is connecting to. If false, indicates that the BackendServices referenced by the urlMap will be accessed by gRPC applications via a sidecar proxy. In this case, a gRPC application must not use \"xds:///\" scheme in the target URI of the service it is connecting to"
     }
    }
   },
@@ -26982,7 +26984,7 @@
   "VpnTunnel": {
    "id": "VpnTunnel",
    "type": "object",
-   "description": "Represents a Cloud VPN Tunnel resource.\n\nFor more information about VPN, read the the Cloud VPN Overview. (== resource_for {$api_version}.vpnTunnels ==)",
+   "description": "Represents a Cloud VPN Tunnel resource.\n\nFor more information about VPN, read the  the Cloud VPN Overview. (== resource_for {$api_version}.vpnTunnels ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",

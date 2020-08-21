@@ -39,8 +39,8 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy extends com.goog
   private java.lang.Integer code;
 
   /**
-   * The TTL (in seconds) to cache responses with the corresponding status code for. A TTL of ?0?
-   * means ?always revalidate? and a value of ?-1? disables caching for that status code. The
+   * The TTL (in seconds) to cache responses with the corresponding status code for. A TTL of "0"
+   * means "always revalidate" and a value of "-1" disables caching for that status code. The
    * maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be
    * evicted from the cache before the defined TTL.
    * The value may be {@code null}.
@@ -70,8 +70,8 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy extends com.goog
   }
 
   /**
-   * The TTL (in seconds) to cache responses with the corresponding status code for. A TTL of ?0?
-   * means ?always revalidate? and a value of ?-1? disables caching for that status code. The
+   * The TTL (in seconds) to cache responses with the corresponding status code for. A TTL of "0"
+   * means "always revalidate" and a value of "-1" disables caching for that status code. The
    * maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be
    * evicted from the cache before the defined TTL.
    * @return value or {@code null} for none
@@ -81,8 +81,8 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy extends com.goog
   }
 
   /**
-   * The TTL (in seconds) to cache responses with the corresponding status code for. A TTL of ?0?
-   * means ?always revalidate? and a value of ?-1? disables caching for that status code. The
+   * The TTL (in seconds) to cache responses with the corresponding status code for. A TTL of "0"
+   * means "always revalidate" and a value of "-1" disables caching for that status code. The
    * maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be
    * evicted from the cache before the defined TTL.
    * @param ttl ttl or {@code null} for none

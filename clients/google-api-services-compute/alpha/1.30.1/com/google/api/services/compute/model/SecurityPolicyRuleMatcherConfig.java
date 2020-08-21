@@ -57,7 +57,7 @@ public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client
   private java.util.List<SecurityPolicyRuleMatcherConfigLayer4Config> layer4Configs;
 
   /**
-   * CIDR IP address range.
+   * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +127,7 @@ public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client
   }
 
   /**
-   * CIDR IP address range.
+   * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSrcIpRanges() {
@@ -135,7 +135,7 @@ public final class SecurityPolicyRuleMatcherConfig extends com.google.api.client
   }
 
   /**
-   * CIDR IP address range.
+   * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
    * @param srcIpRanges srcIpRanges or {@code null} for none
    */
   public SecurityPolicyRuleMatcherConfig setSrcIpRanges(java.util.List<java.lang.String> srcIpRanges) {

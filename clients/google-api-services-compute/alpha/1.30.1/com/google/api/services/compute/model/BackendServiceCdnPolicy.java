@@ -43,7 +43,7 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
   private java.lang.String cacheMode;
 
   /**
-   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN?s
+   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN's
    * edge caches. Leaving this empty will use the same cache TTL for both Cloud CDN and the client-
    * facing response. The maximum allowed value is 86400s (1 day).
    * The value may be {@code null}.
@@ -53,8 +53,8 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
 
   /**
    * Specifies the default TTL for cached content served by this origin for responses that do not
-   * have an existing valid TTL (max-age or s-max-age). Setting a TTL of ?0? means ?always
-   * revalidate? and a value of ?-1? disables caching for that status code. The value of defaultTTL
+   * have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always
+   * revalidate" and a value of "-1" disables caching for that status code. The value of defaultTTL
    * cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is
    * set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum
    * allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted
@@ -68,8 +68,8 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
    * Specifies the maximum allowed TTL for cached content served by this origin. Cache directives
    * that attempt to set a max-age or s-maxage higher than this, or an Expires header more than
    * maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of
-   * an s-maxage Cache-Control directive. Setting a TTL of ?0? means ?always revalidate? and a value
-   * of ?-1? disables caching for that status code. The maximum allowed value is 31,622,400s (1
+   * an s-maxage Cache-Control directive. Setting a TTL of "0" means "always revalidate" and a value
+   * of "-1" disables caching for that status code. The maximum allowed value is 31,622,400s (1
    * year), noting that infrequently accessed objects may be evicted from the cache before the
    * defined TTL.
    * The value may be {@code null}.
@@ -93,14 +93,14 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
   /**
    * Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to
    * configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled
-   * will use Cloud CDN?s default cache TTLs. Note that when specifying an explicit
+   * will use Cloud CDN's default cache TTLs. Note that when specifying an explicit
    * negative_caching_policy, you should take care to specify a cache TTL for all response codes
    * that you wish to cache. Cloud CDN will not apply any default negative caching when a policy
    * exists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<BackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicys;
+  private java.util.List<BackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicy;
 
   /**
    * If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number
@@ -162,7 +162,7 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN?s
+   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN's
    * edge caches. Leaving this empty will use the same cache TTL for both Cloud CDN and the client-
    * facing response. The maximum allowed value is 86400s (1 day).
    * @return value or {@code null} for none
@@ -172,7 +172,7 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN?s
+   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN's
    * edge caches. Leaving this empty will use the same cache TTL for both Cloud CDN and the client-
    * facing response. The maximum allowed value is 86400s (1 day).
    * @param clientTtl clientTtl or {@code null} for none
@@ -184,8 +184,8 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
 
   /**
    * Specifies the default TTL for cached content served by this origin for responses that do not
-   * have an existing valid TTL (max-age or s-max-age). Setting a TTL of ?0? means ?always
-   * revalidate? and a value of ?-1? disables caching for that status code. The value of defaultTTL
+   * have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always
+   * revalidate" and a value of "-1" disables caching for that status code. The value of defaultTTL
    * cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is
    * set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum
    * allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted
@@ -198,8 +198,8 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
 
   /**
    * Specifies the default TTL for cached content served by this origin for responses that do not
-   * have an existing valid TTL (max-age or s-max-age). Setting a TTL of ?0? means ?always
-   * revalidate? and a value of ?-1? disables caching for that status code. The value of defaultTTL
+   * have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always
+   * revalidate" and a value of "-1" disables caching for that status code. The value of defaultTTL
    * cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is
    * set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum
    * allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted
@@ -215,8 +215,8 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
    * Specifies the maximum allowed TTL for cached content served by this origin. Cache directives
    * that attempt to set a max-age or s-maxage higher than this, or an Expires header more than
    * maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of
-   * an s-maxage Cache-Control directive. Setting a TTL of ?0? means ?always revalidate? and a value
-   * of ?-1? disables caching for that status code. The maximum allowed value is 31,622,400s (1
+   * an s-maxage Cache-Control directive. Setting a TTL of "0" means "always revalidate" and a value
+   * of "-1" disables caching for that status code. The maximum allowed value is 31,622,400s (1
    * year), noting that infrequently accessed objects may be evicted from the cache before the
    * defined TTL.
    * @return value or {@code null} for none
@@ -229,8 +229,8 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
    * Specifies the maximum allowed TTL for cached content served by this origin. Cache directives
    * that attempt to set a max-age or s-maxage higher than this, or an Expires header more than
    * maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of
-   * an s-maxage Cache-Control directive. Setting a TTL of ?0? means ?always revalidate? and a value
-   * of ?-1? disables caching for that status code. The maximum allowed value is 31,622,400s (1
+   * an s-maxage Cache-Control directive. Setting a TTL of "0" means "always revalidate" and a value
+   * of "-1" disables caching for that status code. The maximum allowed value is 31,622,400s (1
    * year), noting that infrequently accessed objects may be evicted from the cache before the
    * defined TTL.
    * @param maxTtl maxTtl or {@code null} for none
@@ -272,27 +272,27 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
   /**
    * Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to
    * configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled
-   * will use Cloud CDN?s default cache TTLs. Note that when specifying an explicit
+   * will use Cloud CDN's default cache TTLs. Note that when specifying an explicit
    * negative_caching_policy, you should take care to specify a cache TTL for all response codes
    * that you wish to cache. Cloud CDN will not apply any default negative caching when a policy
    * exists.
    * @return value or {@code null} for none
    */
-  public java.util.List<BackendServiceCdnPolicyNegativeCachingPolicy> getNegativeCachingPolicys() {
-    return negativeCachingPolicys;
+  public java.util.List<BackendServiceCdnPolicyNegativeCachingPolicy> getNegativeCachingPolicy() {
+    return negativeCachingPolicy;
   }
 
   /**
    * Sets a cache TTL for the specified HTTP status code. negative_caching must be enabled to
    * configure negative_caching_policy. Omitting the policy and leaving negative_caching enabled
-   * will use Cloud CDN?s default cache TTLs. Note that when specifying an explicit
+   * will use Cloud CDN's default cache TTLs. Note that when specifying an explicit
    * negative_caching_policy, you should take care to specify a cache TTL for all response codes
    * that you wish to cache. Cloud CDN will not apply any default negative caching when a policy
    * exists.
-   * @param negativeCachingPolicys negativeCachingPolicys or {@code null} for none
+   * @param negativeCachingPolicy negativeCachingPolicy or {@code null} for none
    */
-  public BackendServiceCdnPolicy setNegativeCachingPolicys(java.util.List<BackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicys) {
-    this.negativeCachingPolicys = negativeCachingPolicys;
+  public BackendServiceCdnPolicy setNegativeCachingPolicy(java.util.List<BackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicy) {
+    this.negativeCachingPolicy = negativeCachingPolicy;
     return this;
   }
 

@@ -58,12 +58,12 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
   private java.lang.String match;
 
   /**
-   * An integer indicating the priority of a rule in the list. The priority must be a positive value
-   * between 0 and 65000. The priority must be unique among rules within a NAT.
+   * An integer uniquely identifying a rule in the list. The rule number must be a positive value
+   * between 0 and 65000, and must be unique among rules within a NAT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Long priority;
+  private java.lang.Long ruleNumber;
 
   /**
    * The action to be enforced for traffic that matches this rule.
@@ -131,21 +131,21 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * An integer indicating the priority of a rule in the list. The priority must be a positive value
-   * between 0 and 65000. The priority must be unique among rules within a NAT.
+   * An integer uniquely identifying a rule in the list. The rule number must be a positive value
+   * between 0 and 65000, and must be unique among rules within a NAT.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getPriority() {
-    return priority;
+  public java.lang.Long getRuleNumber() {
+    return ruleNumber;
   }
 
   /**
-   * An integer indicating the priority of a rule in the list. The priority must be a positive value
-   * between 0 and 65000. The priority must be unique among rules within a NAT.
-   * @param priority priority or {@code null} for none
+   * An integer uniquely identifying a rule in the list. The rule number must be a positive value
+   * between 0 and 65000, and must be unique among rules within a NAT.
+   * @param ruleNumber ruleNumber or {@code null} for none
    */
-  public RouterNatRule setPriority(java.lang.Long priority) {
-    this.priority = priority;
+  public RouterNatRule setRuleNumber(java.lang.Long ruleNumber) {
+    this.ruleNumber = ruleNumber;
     return this;
   }
 

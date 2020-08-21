@@ -59,11 +59,11 @@ public final class RouterStatusNatStatusNatRuleStatus extends com.google.api.cli
   private java.lang.Integer numVmEndpointsWithNatMappings;
 
   /**
-   * Priority of the rule.
+   * Rule number of the rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer priority;
+  private java.lang.Integer ruleNumber;
 
   /**
    * A list of active IPs for NAT. Example: ["1.1.1.1", "179.12.26.133"].
@@ -136,19 +136,19 @@ public final class RouterStatusNatStatusNatRuleStatus extends com.google.api.cli
   }
 
   /**
-   * Priority of the rule.
+   * Rule number of the rule.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getPriority() {
-    return priority;
+  public java.lang.Integer getRuleNumber() {
+    return ruleNumber;
   }
 
   /**
-   * Priority of the rule.
-   * @param priority priority or {@code null} for none
+   * Rule number of the rule.
+   * @param ruleNumber ruleNumber or {@code null} for none
    */
-  public RouterStatusNatStatusNatRuleStatus setPriority(java.lang.Integer priority) {
-    this.priority = priority;
+  public RouterStatusNatStatusNatRuleStatus setRuleNumber(java.lang.Integer ruleNumber) {
+    this.ruleNumber = ruleNumber;
     return this;
   }
 

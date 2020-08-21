@@ -1691,15 +1691,12 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Flag indicating whether completed tasks are returned in the result. Optional. The default
-       * is True. Note that showHidden must also be True to show tasks completed in first party
-       * clients, such as the web UI and Google's mobile apps.
+       * is True.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean showCompleted;
 
       /** Flag indicating whether completed tasks are returned in the result. Optional. The default is True.
-     Note that showHidden must also be True to show tasks completed in first party clients, such as the
-     web UI and Google's mobile apps.
        */
       public java.lang.Boolean getShowCompleted() {
         return showCompleted;
@@ -1707,8 +1704,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Flag indicating whether completed tasks are returned in the result. Optional. The default
-       * is True. Note that showHidden must also be True to show tasks completed in first party
-       * clients, such as the web UI and Google's mobile apps.
+       * is True.
        */
       public List setShowCompleted(java.lang.Boolean showCompleted) {
         this.showCompleted = showCompleted;

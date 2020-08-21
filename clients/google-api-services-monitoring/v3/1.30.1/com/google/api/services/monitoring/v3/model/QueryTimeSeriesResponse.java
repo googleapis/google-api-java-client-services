@@ -60,6 +60,19 @@ public final class QueryTimeSeriesResponse extends com.google.api.client.json.Ge
   private TimeSeriesDescriptor timeSeriesDescriptor;
 
   /**
+   * Warnings about query, includes unit errors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QueryError> warnings;
+
+  static {
+    // hack to force ProGuard to consider QueryError used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(QueryError.class);
+  }
+
+  /**
    * If there are more results than have been returned, then this field is set to a non-empty value.
    * To see the additional results, use that value as page_token in the next call to this method.
    * @return value or {@code null} for none
@@ -128,6 +141,23 @@ public final class QueryTimeSeriesResponse extends com.google.api.client.json.Ge
    */
   public QueryTimeSeriesResponse setTimeSeriesDescriptor(TimeSeriesDescriptor timeSeriesDescriptor) {
     this.timeSeriesDescriptor = timeSeriesDescriptor;
+    return this;
+  }
+
+  /**
+   * Warnings about query, includes unit errors.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QueryError> getWarnings() {
+    return warnings;
+  }
+
+  /**
+   * Warnings about query, includes unit errors.
+   * @param warnings warnings or {@code null} for none
+   */
+  public QueryTimeSeriesResponse setWarnings(java.util.List<QueryError> warnings) {
+    this.warnings = warnings;
     return this;
   }
 

@@ -149,6 +149,7 @@ packages on [Maven Central][maven-search].
 | Google Sheets API | [v4](clients/google-api-services-sheets/v4) |
 | Google Slides API | [v1](clients/google-api-services-slides/v1) |
 | Google+ API | [v1](clients/google-api-services-plus/v1) |
+| Groups Migration API | [v1](clients/google-api-services-groupsmigration/v1) |
 | Groups Settings API | [v1](clients/google-api-services-groupssettings/v1) |
 | Hangouts Chat API | [v1](clients/google-api-services-chat/v1) |
 | HomeGraph API | [v1](clients/google-api-services-homegraph/v1) |

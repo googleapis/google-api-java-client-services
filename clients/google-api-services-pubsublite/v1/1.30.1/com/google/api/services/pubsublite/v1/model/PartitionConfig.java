@@ -44,7 +44,8 @@ public final class PartitionConfig extends com.google.api.client.json.GenericJso
   private java.lang.Long count;
 
   /**
-   * Every partition in the topic is allocated throughput equivalent to `scale` times the standard
+   * DEPRECATED: Use capacity instead which can express a superset of configurations. Every
+   * partition in the topic is allocated throughput equivalent to `scale` times the standard
    * partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with
    * `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range
    * [1,4].
@@ -88,7 +89,8 @@ public final class PartitionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Every partition in the topic is allocated throughput equivalent to `scale` times the standard
+   * DEPRECATED: Use capacity instead which can express a superset of configurations. Every
+   * partition in the topic is allocated throughput equivalent to `scale` times the standard
    * partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with
    * `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range
    * [1,4].
@@ -99,7 +101,8 @@ public final class PartitionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Every partition in the topic is allocated throughput equivalent to `scale` times the standard
+   * DEPRECATED: Use capacity instead which can express a superset of configurations. Every
+   * partition in the topic is allocated throughput equivalent to `scale` times the standard
    * partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with
    * `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range
    * [1,4].

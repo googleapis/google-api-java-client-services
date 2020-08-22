@@ -2046,6 +2046,37 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
+       * A query string compatible with Google's [AIP-160](https://google.aip.dev/160) standard. Use
+       * any of the following fields in a query: *
+       * [`appId`](../projects.apps#FirebaseProjectInfo.FIELDS.app_id) *
+       * [`namespace`](../projects.apps#FirebaseProjectInfo.FIELDS.namespace) *
+       * [`platform`](../projects.apps#FirebaseProjectInfo.FIELDS.platform)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A query string compatible with Google's [AIP-160](https://google.aip.dev/160) standard. Use any of
+     the following fields in a query: * [`appId`](../projects.apps#FirebaseProjectInfo.FIELDS.app_id) *
+     [`namespace`](../projects.apps#FirebaseProjectInfo.FIELDS.namespace) *
+     [`platform`](../projects.apps#FirebaseProjectInfo.FIELDS.platform)
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A query string compatible with Google's [AIP-160](https://google.aip.dev/160) standard. Use
+       * any of the following fields in a query: *
+       * [`appId`](../projects.apps#FirebaseProjectInfo.FIELDS.app_id) *
+       * [`namespace`](../projects.apps#FirebaseProjectInfo.FIELDS.namespace) *
+       * [`platform`](../projects.apps#FirebaseProjectInfo.FIELDS.platform)
+       */
+      public SearchApps setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
        * The maximum number of Apps to return in the response. The server may return fewer than this
        * value at its discretion. If no value is specified (or too large a value is specified), then
        * the server will impose its own limit. This value cannot be negative.

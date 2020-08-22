@@ -74,6 +74,16 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
+   * Output only. Immutable. A unique, Firebase-assigned identifier for the `WebApp`. This
+   * identifier is only used to populate the `namespace` value for the `WebApp`. For most use cases,
+   * use `appId` to identify or reference the App. The `webId` value is only unique within a
+   * `FirebaseProject` and its associated Apps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String webId;
+
+  /**
    * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier
    * should be treated as an opaque token, as the data format is not specified.
    * @return value or {@code null} for none
@@ -171,6 +181,29 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
    */
   public WebApp setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Output only. Immutable. A unique, Firebase-assigned identifier for the `WebApp`. This
+   * identifier is only used to populate the `namespace` value for the `WebApp`. For most use cases,
+   * use `appId` to identify or reference the App. The `webId` value is only unique within a
+   * `FirebaseProject` and its associated Apps.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWebId() {
+    return webId;
+  }
+
+  /**
+   * Output only. Immutable. A unique, Firebase-assigned identifier for the `WebApp`. This
+   * identifier is only used to populate the `namespace` value for the `WebApp`. For most use cases,
+   * use `appId` to identify or reference the App. The `webId` value is only unique within a
+   * `FirebaseProject` and its associated Apps.
+   * @param webId webId or {@code null} for none
+   */
+  public WebApp setWebId(java.lang.String webId) {
+    this.webId = webId;
     return this;
   }
 

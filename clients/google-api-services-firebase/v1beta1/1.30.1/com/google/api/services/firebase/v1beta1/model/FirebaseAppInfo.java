@@ -31,8 +31,8 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class FirebaseAppInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier
-   * should be treated as an opaque token, as the data format is not specified.
+   * Output only. Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
+   * This identifier should be treated as an opaque token, as the data format is not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,6 +54,18 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * Output only. Immutable. The platform-specific identifier of the App. *Note:* For most use
+   * cases, use `appId`, which is the canonical, globally unique identifier for referencing an App.
+   * This string is derived from a native identifier for each platform: `packageName` for an
+   * `AndroidApp`, `bundleId` for an `IosApp`, and `webId` for a `WebApp`. Its contents should be
+   * treated as opaque, as the native identifier format may change as platforms evolve. This string
+   * is only unique within a `FirebaseProject` and its associated Apps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String namespace;
+
+  /**
    * The platform of the Firebase App.
    * The value may be {@code null}.
    */
@@ -61,8 +73,8 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
   private java.lang.String platform;
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier
-   * should be treated as an opaque token, as the data format is not specified.
+   * Output only. Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
+   * This identifier should be treated as an opaque token, as the data format is not specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppId() {
@@ -70,8 +82,8 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier
-   * should be treated as an opaque token, as the data format is not specified.
+   * Output only. Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.
+   * This identifier should be treated as an opaque token, as the data format is not specified.
    * @param appId appId or {@code null} for none
    */
   public FirebaseAppInfo setAppId(java.lang.String appId) {
@@ -112,6 +124,33 @@ public final class FirebaseAppInfo extends com.google.api.client.json.GenericJso
    */
   public FirebaseAppInfo setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Immutable. The platform-specific identifier of the App. *Note:* For most use
+   * cases, use `appId`, which is the canonical, globally unique identifier for referencing an App.
+   * This string is derived from a native identifier for each platform: `packageName` for an
+   * `AndroidApp`, `bundleId` for an `IosApp`, and `webId` for a `WebApp`. Its contents should be
+   * treated as opaque, as the native identifier format may change as platforms evolve. This string
+   * is only unique within a `FirebaseProject` and its associated Apps.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNamespace() {
+    return namespace;
+  }
+
+  /**
+   * Output only. Immutable. The platform-specific identifier of the App. *Note:* For most use
+   * cases, use `appId`, which is the canonical, globally unique identifier for referencing an App.
+   * This string is derived from a native identifier for each platform: `packageName` for an
+   * `AndroidApp`, `bundleId` for an `IosApp`, and `webId` for a `WebApp`. Its contents should be
+   * treated as opaque, as the native identifier format may change as platforms evolve. This string
+   * is only unique within a `FirebaseProject` and its associated Apps.
+   * @param namespace namespace or {@code null} for none
+   */
+  public FirebaseAppInfo setNamespace(java.lang.String namespace) {
+    this.namespace = namespace;
     return this;
   }
 

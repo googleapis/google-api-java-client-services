@@ -38,11 +38,10 @@ public final class AllowedIpRange extends com.google.api.client.json.GenericJson
 
   /**
    * IP address or range, defined using CIDR notation, of requests that this rule applies to.
-   * Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32`           or
-   * `2001:0db8:0000:0042:0000:8a2e:0370:7334`.
-   *
-   * IP range prefixes should be properly truncated. For example, `1.2.3.4/24` should be truncated
-   * to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.
+   * Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or
+   * `2001:0db8:0000:0042:0000:8a2e:0370:7334`. IP range prefixes should be properly truncated. For
+   * example, `1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6,
+   * `2001:db8::1/32` should be truncated to `2001:db8::/32`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,11 +66,10 @@ public final class AllowedIpRange extends com.google.api.client.json.GenericJson
 
   /**
    * IP address or range, defined using CIDR notation, of requests that this rule applies to.
-   * Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32`           or
-   * `2001:0db8:0000:0042:0000:8a2e:0370:7334`.
-   *
-   * IP range prefixes should be properly truncated. For example, `1.2.3.4/24` should be truncated
-   * to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.
+   * Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or
+   * `2001:0db8:0000:0042:0000:8a2e:0370:7334`. IP range prefixes should be properly truncated. For
+   * example, `1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6,
+   * `2001:db8::1/32` should be truncated to `2001:db8::/32`.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -80,11 +78,10 @@ public final class AllowedIpRange extends com.google.api.client.json.GenericJson
 
   /**
    * IP address or range, defined using CIDR notation, of requests that this rule applies to.
-   * Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32`           or
-   * `2001:0db8:0000:0042:0000:8a2e:0370:7334`.
-   *
-   * IP range prefixes should be properly truncated. For example, `1.2.3.4/24` should be truncated
-   * to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.
+   * Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or
+   * `2001:0db8:0000:0042:0000:8a2e:0370:7334`. IP range prefixes should be properly truncated. For
+   * example, `1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6,
+   * `2001:db8::1/32` should be truncated to `2001:db8::/32`.
    * @param value value or {@code null} for none
    */
   public AllowedIpRange setValue(java.lang.String value) {

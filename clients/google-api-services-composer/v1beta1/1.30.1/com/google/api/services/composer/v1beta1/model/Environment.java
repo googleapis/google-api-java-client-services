@@ -46,11 +46,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * Optional. User-defined labels for this environment. The labels map can contain no more than 64
    * entries. Entries of the labels map are UTF8 strings that comply with the following
-   * restrictions:
-   *
-   * * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp:
-   * [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128
-   * bytes in size.
+   * restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to
+   * regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be
+   * <= 128 bytes in size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,10 +56,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the environment, in the form:
-   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
-   *
-   * EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters,
-   * numbers, or hyphens, and cannot end with a hyphen.
+   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must
+   * start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and
+   * cannot end with a hyphen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,11 +123,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * Optional. User-defined labels for this environment. The labels map can contain no more than 64
    * entries. Entries of the labels map are UTF8 strings that comply with the following
-   * restrictions:
-   *
-   * * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp:
-   * [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128
-   * bytes in size.
+   * restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to
+   * regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be
+   * <= 128 bytes in size.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -140,11 +135,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * Optional. User-defined labels for this environment. The labels map can contain no more than 64
    * entries. Entries of the labels map are UTF8 strings that comply with the following
-   * restrictions:
-   *
-   * * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp:
-   * [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128
-   * bytes in size.
+   * restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to
+   * regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be
+   * <= 128 bytes in size.
    * @param labels labels or {@code null} for none
    */
   public Environment setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -154,10 +147,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the environment, in the form:
-   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
-   *
-   * EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters,
-   * numbers, or hyphens, and cannot end with a hyphen.
+   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must
+   * start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and
+   * cannot end with a hyphen.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -166,10 +158,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the environment, in the form:
-   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
-   *
-   * EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters,
-   * numbers, or hyphens, and cannot end with a hyphen.
+   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must
+   * start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and
+   * cannot end with a hyphen.
    * @param name name or {@code null} for none
    */
   public Environment setName(java.lang.String name) {

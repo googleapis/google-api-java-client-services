@@ -30,19 +30,16 @@ package com.google.api.services.composer.v1beta1.model;
 public final class SoftwareConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Apache Airflow configuration properties to override.
-   *
-   * Property keys contain the section and property names, separated by a hyphen, for example "core-
+   * Optional. Apache Airflow configuration properties to override. Property keys contain the
+   * section and property names, separated by a hyphen, for example "core-
    * dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square
-   * brackets ("["),  or closing square brackets ("]"). The property name must not be empty and must
+   * brackets ("["), or closing square brackets ("]"). The property name must not be empty and must
    * not contain an equals sign ("=") or semicolon (";"). Section and property names must not
    * contain a period ("."). Apache Airflow configuration property names must be written in
    * [snake_case](https://en.wikipedia.org/wiki/Snake_case). Property values can contain any
-   * character, and can be written in any lower/upper case format.
-   *
-   * Certain Apache Airflow configuration property values are [blacklisted](/composer/docs/how-
-   * to/managing/setting-airflow-configurations#airflow_configuration_blacklists), and cannot be
-   * overridden.
+   * character, and can be written in any lower/upper case format. Certain Apache Airflow
+   * configuration property values are [blacklisted](/composer/docs/how-to/managing/setting-airflow-
+   * configurations#airflow_configuration_blacklists), and cannot be overridden.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,15 +47,12 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Additional environment variables to provide to the Apache Airflow scheduler, worker,
-   * and webserver processes.
-   *
-   * Environment variable names must match the regular expression `a-zA-Z_*`. They cannot specify
-   * Apache Airflow software configuration overrides (they cannot match the regular expression
-   * `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names:
-   *
-   * * `AIRFLOW_HOME` * `C_FORCE_ROOT` * `CONTAINER_NAME` * `DAGS_FOLDER` * `GCP_PROJECT` *
-   * `GCS_BUCKET` * `GKE_CLUSTER_NAME` * `SQL_DATABASE` * `SQL_INSTANCE` * `SQL_PASSWORD` *
-   * `SQL_PROJECT` * `SQL_REGION` * `SQL_USER`
+   * and webserver processes. Environment variable names must match the regular expression `a-zA-
+   * Z_*`. They cannot specify Apache Airflow software configuration overrides (they cannot match
+   * the regular expression `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the
+   * following reserved names: * `AIRFLOW_HOME` * `C_FORCE_ROOT` * `CONTAINER_NAME` * `DAGS_FOLDER`
+   * * `GCP_PROJECT` * `GCS_BUCKET` * `GKE_CLUSTER_NAME` * `SQL_DATABASE` * `SQL_INSTANCE` *
+   * `SQL_PASSWORD` * `SQL_PROJECT` * `SQL_REGION` * `SQL_USER`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,28 +63,23 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * Cloud Composer functionality and the version of Apache Airflow. It must match the regular
    * expression `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When
    * used as input, the server also checks if the provided version is supported and denies the
-   * request for an unsupported version.
-   *
-   * The Cloud Composer portion of the version is a [semantic version](https://semver.org) or
-   * `latest`. When the patch version is omitted, the current Cloud Composer patch version is
-   * selected. When `latest` is provided instead of an explicit version number, the server replaces
-   * `latest` with the current Cloud Composer version and stores that version number in the same
-   * field.
-   *
-   * The portion of the image version that follows airflow- is an official Apache Airflow repository
-   * [release name](https://github.com/apache/incubator-airflow/releases).
-   *
-   * See also [Version List](/composer/docs/concepts/versioning/composer-versions).
+   * request for an unsupported version. The Cloud Composer portion of the version is a [semantic
+   * version](https://semver.org) or `latest`. When the patch version is omitted, the current Cloud
+   * Composer patch version is selected. When `latest` is provided instead of an explicit version
+   * number, the server replaces `latest` with the current Cloud Composer version and stores that
+   * version number in the same field. The portion of the image version that follows *airflow-* is
+   * an official Apache Airflow repository [release name](https://github.com/apache/incubator-
+   * airflow/releases). See also [Version List](/composer/docs/concepts/versioning/composer-
+   * versions).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageVersion;
 
   /**
-   * Optional. Custom Python Package Index (PyPI) packages to be installed in the environment.
-   *
-   * Keys refer to the lowercase package name such as "numpy" and values are the lowercase extras
-   * and version specifier such as "==1.12.0", "[devel,gcp_api]", or "[devel]>=1.8.2, <1.9.2". To
+   * Optional. Custom Python Package Index (PyPI) packages to be installed in the environment. Keys
+   * refer to the lowercase package name such as "numpy" and values are the lowercase extras and
+   * version specifier such as "==1.12.0", "[devel,gcp_api]", or "[devel]>=1.8.2, <1.9.2". To
    * specify a package without pinning it to a version specifier, use the empty string as the value.
    * The value may be {@code null}.
    */
@@ -99,28 +88,24 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
-   * webserver processes.
-   *
-   * Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+   * webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be
+   * updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pythonVersion;
 
   /**
-   * Optional. Apache Airflow configuration properties to override.
-   *
-   * Property keys contain the section and property names, separated by a hyphen, for example "core-
+   * Optional. Apache Airflow configuration properties to override. Property keys contain the
+   * section and property names, separated by a hyphen, for example "core-
    * dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square
-   * brackets ("["),  or closing square brackets ("]"). The property name must not be empty and must
+   * brackets ("["), or closing square brackets ("]"). The property name must not be empty and must
    * not contain an equals sign ("=") or semicolon (";"). Section and property names must not
    * contain a period ("."). Apache Airflow configuration property names must be written in
    * [snake_case](https://en.wikipedia.org/wiki/Snake_case). Property values can contain any
-   * character, and can be written in any lower/upper case format.
-   *
-   * Certain Apache Airflow configuration property values are [blacklisted](/composer/docs/how-
-   * to/managing/setting-airflow-configurations#airflow_configuration_blacklists), and cannot be
-   * overridden.
+   * character, and can be written in any lower/upper case format. Certain Apache Airflow
+   * configuration property values are [blacklisted](/composer/docs/how-to/managing/setting-airflow-
+   * configurations#airflow_configuration_blacklists), and cannot be overridden.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAirflowConfigOverrides() {
@@ -128,19 +113,16 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Apache Airflow configuration properties to override.
-   *
-   * Property keys contain the section and property names, separated by a hyphen, for example "core-
+   * Optional. Apache Airflow configuration properties to override. Property keys contain the
+   * section and property names, separated by a hyphen, for example "core-
    * dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square
-   * brackets ("["),  or closing square brackets ("]"). The property name must not be empty and must
+   * brackets ("["), or closing square brackets ("]"). The property name must not be empty and must
    * not contain an equals sign ("=") or semicolon (";"). Section and property names must not
    * contain a period ("."). Apache Airflow configuration property names must be written in
    * [snake_case](https://en.wikipedia.org/wiki/Snake_case). Property values can contain any
-   * character, and can be written in any lower/upper case format.
-   *
-   * Certain Apache Airflow configuration property values are [blacklisted](/composer/docs/how-
-   * to/managing/setting-airflow-configurations#airflow_configuration_blacklists), and cannot be
-   * overridden.
+   * character, and can be written in any lower/upper case format. Certain Apache Airflow
+   * configuration property values are [blacklisted](/composer/docs/how-to/managing/setting-airflow-
+   * configurations#airflow_configuration_blacklists), and cannot be overridden.
    * @param airflowConfigOverrides airflowConfigOverrides or {@code null} for none
    */
   public SoftwareConfig setAirflowConfigOverrides(java.util.Map<String, java.lang.String> airflowConfigOverrides) {
@@ -150,15 +132,12 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Additional environment variables to provide to the Apache Airflow scheduler, worker,
-   * and webserver processes.
-   *
-   * Environment variable names must match the regular expression `a-zA-Z_*`. They cannot specify
-   * Apache Airflow software configuration overrides (they cannot match the regular expression
-   * `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names:
-   *
-   * * `AIRFLOW_HOME` * `C_FORCE_ROOT` * `CONTAINER_NAME` * `DAGS_FOLDER` * `GCP_PROJECT` *
-   * `GCS_BUCKET` * `GKE_CLUSTER_NAME` * `SQL_DATABASE` * `SQL_INSTANCE` * `SQL_PASSWORD` *
-   * `SQL_PROJECT` * `SQL_REGION` * `SQL_USER`
+   * and webserver processes. Environment variable names must match the regular expression `a-zA-
+   * Z_*`. They cannot specify Apache Airflow software configuration overrides (they cannot match
+   * the regular expression `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the
+   * following reserved names: * `AIRFLOW_HOME` * `C_FORCE_ROOT` * `CONTAINER_NAME` * `DAGS_FOLDER`
+   * * `GCP_PROJECT` * `GCS_BUCKET` * `GKE_CLUSTER_NAME` * `SQL_DATABASE` * `SQL_INSTANCE` *
+   * `SQL_PASSWORD` * `SQL_PROJECT` * `SQL_REGION` * `SQL_USER`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getEnvVariables() {
@@ -167,15 +146,12 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Additional environment variables to provide to the Apache Airflow scheduler, worker,
-   * and webserver processes.
-   *
-   * Environment variable names must match the regular expression `a-zA-Z_*`. They cannot specify
-   * Apache Airflow software configuration overrides (they cannot match the regular expression
-   * `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the following reserved names:
-   *
-   * * `AIRFLOW_HOME` * `C_FORCE_ROOT` * `CONTAINER_NAME` * `DAGS_FOLDER` * `GCP_PROJECT` *
-   * `GCS_BUCKET` * `GKE_CLUSTER_NAME` * `SQL_DATABASE` * `SQL_INSTANCE` * `SQL_PASSWORD` *
-   * `SQL_PROJECT` * `SQL_REGION` * `SQL_USER`
+   * and webserver processes. Environment variable names must match the regular expression `a-zA-
+   * Z_*`. They cannot specify Apache Airflow software configuration overrides (they cannot match
+   * the regular expression `AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+`), and they cannot match any of the
+   * following reserved names: * `AIRFLOW_HOME` * `C_FORCE_ROOT` * `CONTAINER_NAME` * `DAGS_FOLDER`
+   * * `GCP_PROJECT` * `GCS_BUCKET` * `GKE_CLUSTER_NAME` * `SQL_DATABASE` * `SQL_INSTANCE` *
+   * `SQL_PASSWORD` * `SQL_PROJECT` * `SQL_REGION` * `SQL_USER`
    * @param envVariables envVariables or {@code null} for none
    */
   public SoftwareConfig setEnvVariables(java.util.Map<String, java.lang.String> envVariables) {
@@ -188,18 +164,14 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * Cloud Composer functionality and the version of Apache Airflow. It must match the regular
    * expression `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When
    * used as input, the server also checks if the provided version is supported and denies the
-   * request for an unsupported version.
-   *
-   * The Cloud Composer portion of the version is a [semantic version](https://semver.org) or
-   * `latest`. When the patch version is omitted, the current Cloud Composer patch version is
-   * selected. When `latest` is provided instead of an explicit version number, the server replaces
-   * `latest` with the current Cloud Composer version and stores that version number in the same
-   * field.
-   *
-   * The portion of the image version that follows airflow- is an official Apache Airflow repository
-   * [release name](https://github.com/apache/incubator-airflow/releases).
-   *
-   * See also [Version List](/composer/docs/concepts/versioning/composer-versions).
+   * request for an unsupported version. The Cloud Composer portion of the version is a [semantic
+   * version](https://semver.org) or `latest`. When the patch version is omitted, the current Cloud
+   * Composer patch version is selected. When `latest` is provided instead of an explicit version
+   * number, the server replaces `latest` with the current Cloud Composer version and stores that
+   * version number in the same field. The portion of the image version that follows *airflow-* is
+   * an official Apache Airflow repository [release name](https://github.com/apache/incubator-
+   * airflow/releases). See also [Version List](/composer/docs/concepts/versioning/composer-
+   * versions).
    * @return value or {@code null} for none
    */
   public java.lang.String getImageVersion() {
@@ -211,18 +183,14 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * Cloud Composer functionality and the version of Apache Airflow. It must match the regular
    * expression `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When
    * used as input, the server also checks if the provided version is supported and denies the
-   * request for an unsupported version.
-   *
-   * The Cloud Composer portion of the version is a [semantic version](https://semver.org) or
-   * `latest`. When the patch version is omitted, the current Cloud Composer patch version is
-   * selected. When `latest` is provided instead of an explicit version number, the server replaces
-   * `latest` with the current Cloud Composer version and stores that version number in the same
-   * field.
-   *
-   * The portion of the image version that follows airflow- is an official Apache Airflow repository
-   * [release name](https://github.com/apache/incubator-airflow/releases).
-   *
-   * See also [Version List](/composer/docs/concepts/versioning/composer-versions).
+   * request for an unsupported version. The Cloud Composer portion of the version is a [semantic
+   * version](https://semver.org) or `latest`. When the patch version is omitted, the current Cloud
+   * Composer patch version is selected. When `latest` is provided instead of an explicit version
+   * number, the server replaces `latest` with the current Cloud Composer version and stores that
+   * version number in the same field. The portion of the image version that follows *airflow-* is
+   * an official Apache Airflow repository [release name](https://github.com/apache/incubator-
+   * airflow/releases). See also [Version List](/composer/docs/concepts/versioning/composer-
+   * versions).
    * @param imageVersion imageVersion or {@code null} for none
    */
   public SoftwareConfig setImageVersion(java.lang.String imageVersion) {
@@ -231,10 +199,9 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Custom Python Package Index (PyPI) packages to be installed in the environment.
-   *
-   * Keys refer to the lowercase package name such as "numpy" and values are the lowercase extras
-   * and version specifier such as "==1.12.0", "[devel,gcp_api]", or "[devel]>=1.8.2, <1.9.2". To
+   * Optional. Custom Python Package Index (PyPI) packages to be installed in the environment. Keys
+   * refer to the lowercase package name such as "numpy" and values are the lowercase extras and
+   * version specifier such as "==1.12.0", "[devel,gcp_api]", or "[devel]>=1.8.2, <1.9.2". To
    * specify a package without pinning it to a version specifier, use the empty string as the value.
    * @return value or {@code null} for none
    */
@@ -243,10 +210,9 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Custom Python Package Index (PyPI) packages to be installed in the environment.
-   *
-   * Keys refer to the lowercase package name such as "numpy" and values are the lowercase extras
-   * and version specifier such as "==1.12.0", "[devel,gcp_api]", or "[devel]>=1.8.2, <1.9.2". To
+   * Optional. Custom Python Package Index (PyPI) packages to be installed in the environment. Keys
+   * refer to the lowercase package name such as "numpy" and values are the lowercase extras and
+   * version specifier such as "==1.12.0", "[devel,gcp_api]", or "[devel]>=1.8.2, <1.9.2". To
    * specify a package without pinning it to a version specifier, use the empty string as the value.
    * @param pypiPackages pypiPackages or {@code null} for none
    */
@@ -257,9 +223,8 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
-   * webserver processes.
-   *
-   * Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+   * webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be
+   * updated.
    * @return value or {@code null} for none
    */
   public java.lang.String getPythonVersion() {
@@ -268,9 +233,8 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
-   * webserver processes.
-   *
-   * Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+   * webserver processes. Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be
+   * updated.
    * @param pythonVersion pythonVersion or {@code null} for none
    */
   public SoftwareConfig setPythonVersion(java.lang.String pythonVersion) {

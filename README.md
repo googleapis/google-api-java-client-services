@@ -192,6 +192,7 @@ packages on [Maven Central][maven-search].
 | Street View Publish API | [v1](clients/google-api-services-streetviewpublish/v1) |
 | Tag Manager API | [v1](clients/google-api-services-tagmanager/v1), [v2](clients/google-api-services-tagmanager/v2) |
 | Tasks API | [v1](clients/google-api-services-tasks/v1) |
+| Traffic Director API | [v2](clients/google-api-services-trafficdirector/v2) |
 | Web Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
 | Web Security Scanner API | [v1](clients/google-api-services-websecurityscanner/v1), [v1alpha](clients/google-api-services-websecurityscanner/v1alpha), [v1beta](clients/google-api-services-websecurityscanner/v1beta) |
 | YouTube Analytics API | [v1](clients/google-api-services-youtubeAnalytics/v1), [v2](clients/google-api-services-youtubeAnalytics/v2) |

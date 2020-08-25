@@ -17,7 +17,7 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * Policies for apps on the personal profile of a Corporate Owned Personally Enabled device.
+ * Policies for apps on the personal profile of a company-owned device with a work profile.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

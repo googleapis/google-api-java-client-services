@@ -160,6 +160,7 @@ packages on [Maven Central][maven-search].
 | Kubernetes Engine API | [v1](clients/google-api-services-container/v1), [v1beta1](clients/google-api-services-container/v1beta1) |
 | Library Agent API | [v1](clients/google-api-services-libraryagent/v1) |
 | Licensing API | [v1](clients/google-api-services-licensing/v1) |
+| Local Services API | [v1](clients/google-api-services-localservices/v1) |
 | Managed Service for Microsoft Active Directory API | [v1](clients/google-api-services-managedidentities/v1), [v1alpha1](clients/google-api-services-managedidentities/v1alpha1), [v1beta1](clients/google-api-services-managedidentities/v1beta1) |
 | Manufacturer Center API | [v1](clients/google-api-services-manufacturers/v1) |
 | Network Management API | [v1](clients/google-api-services-networkmanagement/v1), [v1beta1](clients/google-api-services-networkmanagement/v1beta1) |
@@ -179,7 +180,7 @@ packages on [Maven Central][maven-search].
 | Search Ads 360 API | [v2](clients/google-api-services-doubleclicksearch/v2) |
 | Search Console API | [v3](clients/google-api-services-webmasters/v3) |
 | Secret Manager API | [v1](clients/google-api-services-secretmanager/v1), [v1beta1](clients/google-api-services-secretmanager/v1beta1) |
-| Security Command Center API | [v1](clients/google-api-services-securitycenter/v1), [v1beta1](clients/google-api-services-securitycenter/v1beta1), [v1p1alpha1](clients/google-api-services-securitycenter/v1p1alpha1), [v1p1beta1](clients/google-api-services-securitycenter/v1p1beta1) |
+| Security Command Center API | [v1](clients/google-api-services-securitycenter/v1), [v1beta1](clients/google-api-services-securitycenter/v1beta1), [v1beta2](clients/google-api-services-securitycenter/v1beta2), [v1p1alpha1](clients/google-api-services-securitycenter/v1p1alpha1), [v1p1beta1](clients/google-api-services-securitycenter/v1p1beta1) |
 | Semantic Tile API | [v1](clients/google-api-services-vectortile/v1) |
 | Service Consumer Management API | [v1](clients/google-api-services-serviceconsumermanagement/v1), [v1beta1](clients/google-api-services-serviceconsumermanagement/v1beta1) |
 | Service Control API | [v1](clients/google-api-services-servicecontrol/v1), [v2](clients/google-api-services-servicecontrol/v2) |

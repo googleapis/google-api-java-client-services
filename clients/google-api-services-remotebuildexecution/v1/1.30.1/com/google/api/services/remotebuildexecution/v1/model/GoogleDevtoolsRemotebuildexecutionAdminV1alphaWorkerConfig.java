@@ -17,7 +17,7 @@
 package com.google.api.services.remotebuildexecution.v1.model;
 
 /**
- * Defines the configuration to be used for a creating workers in the worker pool.
+ * Defines the configuration to be used for creating workers in the worker pool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Remote Build Execution API. For a detailed
@@ -106,6 +106,13 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reserved;
+
+  /**
+   * Sole-tenant node information for pools hosted on STNs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsRemotebuildexecutionAdminV1alphaSoleTenancyConfig soleTenancy;
 
   /**
    * The name of the image used by each VM.
@@ -292,6 +299,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setReserved(java.lang.Boolean reserved) {
     this.reserved = reserved;
+    return this;
+  }
+
+  /**
+   * Sole-tenant node information for pools hosted on STNs.
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaSoleTenancyConfig getSoleTenancy() {
+    return soleTenancy;
+  }
+
+  /**
+   * Sole-tenant node information for pools hosted on STNs.
+   * @param soleTenancy soleTenancy or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setSoleTenancy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaSoleTenancyConfig soleTenancy) {
+    this.soleTenancy = soleTenancy;
     return this;
   }
 

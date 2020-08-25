@@ -38,6 +38,13 @@ public final class FailureDetail extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean crashed;
 
   /**
+   * If the device ran out of memory during a test, causing the test to crash.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deviceOutOfMemory;
+
+  /**
    * If the Roboscript failed to complete successfully, e.g., because a Roboscript action or
    * assertion failed or a Roboscript action could not be matched during the entire crawl.
    * The value may be {@code null}.
@@ -88,6 +95,23 @@ public final class FailureDetail extends com.google.api.client.json.GenericJson 
    */
   public FailureDetail setCrashed(java.lang.Boolean crashed) {
     this.crashed = crashed;
+    return this;
+  }
+
+  /**
+   * If the device ran out of memory during a test, causing the test to crash.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeviceOutOfMemory() {
+    return deviceOutOfMemory;
+  }
+
+  /**
+   * If the device ran out of memory during a test, causing the test to crash.
+   * @param deviceOutOfMemory deviceOutOfMemory or {@code null} for none
+   */
+  public FailureDetail setDeviceOutOfMemory(java.lang.Boolean deviceOutOfMemory) {
+    this.deviceOutOfMemory = deviceOutOfMemory;
     return this;
   }
 

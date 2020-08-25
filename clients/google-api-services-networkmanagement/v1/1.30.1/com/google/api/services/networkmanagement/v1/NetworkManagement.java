@@ -531,14 +531,12 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
           /**
            * Creates a new Connectivity Test. After you create a test, the reachability analysis is performed
-           * as part of the long running operation, which completes when the analysis completes.
-           *
-           * If the endpoint specifications in `ConnectivityTest` are invalid (for example, containing non-
-           * existent resources in the network, or you don't have read permissions to the network
-           * configurations of listed projects), then the reachability result returns a value of `UNKNOWN`.
-           *
-           * If the endpoint specifications in `ConnectivityTest` are incomplete, the reachability result
-           * returns a value of AMBIGUOUS. For more information, see the Connectivity Test documentation.
+           * as part of the long running operation, which completes when the analysis completes. If the
+           * endpoint specifications in `ConnectivityTest` are invalid (for example, containing non-existent
+           * resources in the network, or you don't have read permissions to the network configurations of
+           * listed projects), then the reachability result returns a value of `UNKNOWN`. If the endpoint
+           * specifications in `ConnectivityTest` are incomplete, the reachability result returns a value of
+           * AMBIGUOUS. For more information, see the Connectivity Test documentation.
            *
            * Create a request for the method "connectivityTests.create".
            *
@@ -566,11 +564,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
             /**
              * Creates a new Connectivity Test. After you create a test, the reachability analysis is
              * performed as part of the long running operation, which completes when the analysis completes.
-             *
              * If the endpoint specifications in `ConnectivityTest` are invalid (for example, containing non-
              * existent resources in the network, or you don't have read permissions to the network
              * configurations of listed projects), then the reachability result returns a value of `UNKNOWN`.
-             *
              * If the endpoint specifications in `ConnectivityTest` are incomplete, the reachability result
              * returns a value of AMBIGUOUS. For more information, see the Connectivity Test documentation.
              *
@@ -682,21 +678,17 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Required. The logical name of the Connectivity Test in your project with the
-             * following restrictions:
-             *
-             * * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
-             * letter. * Must be between 1-40 characters. * Must end with a number or a letter. *
-             * Must be unique within the customer project
+             * following restrictions: * Must contain only lowercase letters, numbers, and hyphens.
+             * * Must start with a letter. * Must be between 1-40 characters. * Must end with a
+             * number or a letter. * Must be unique within the customer project
              */
             @com.google.api.client.util.Key
             private java.lang.String testId;
 
             /** Required. The logical name of the Connectivity Test in your project with the following
-           restrictions:
-
-           * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be
-           between 1-40 characters. * Must end with a number or a letter. * Must be unique within the customer
-           project
+           restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
+           letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique
+           within the customer project
              */
             public java.lang.String getTestId() {
               return testId;
@@ -704,11 +696,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Required. The logical name of the Connectivity Test in your project with the
-             * following restrictions:
-             *
-             * * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
-             * letter. * Must be between 1-40 characters. * Must end with a number or a letter. *
-             * Must be unique within the customer project
+             * following restrictions: * Must contain only lowercase letters, numbers, and hyphens.
+             * * Must start with a letter. * Must be between 1-40 characters. * Must end with a
+             * number or a letter. * Must be unique within the customer project
              */
             public Create setTestId(java.lang.String testId) {
               this.testId = testId;
@@ -1016,8 +1006,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
            * operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
            * @return the request
            */
@@ -1046,8 +1035,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
              * @since 1.13
              */
@@ -1155,44 +1143,32 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
-             *
-             * To learn which resources support conditions in their IAM policies, see the [IAM
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned.
-
-           Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-           Requests for policies with any conditional bindings must specify version 3. Policies without any
-           conditional bindings may specify any valid value or leave the field unset.
-
-           To learn which resources support conditions in their IAM policies, see the [IAM
-           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+           must specify version 3. Policies without any conditional bindings may specify any valid value or
+           leave the field unset. To learn which resources support conditions in their IAM policies, see the
+           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
-             *
-             * To learn which resources support conditions in their IAM policies, see the [IAM
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -1213,8 +1189,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the networkmanagement server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource of the Connectivity Tests:
-           *        `projects/{project_id}/locations/global`
+           * @param parent Required. The parent resource of the Connectivity Tests: `projects/{project_id}/locations/global`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -1241,8 +1216,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource of the Connectivity Tests:
-           *        `projects/{project_id}/locations/global`
+             * @param parent Required. The parent resource of the Connectivity Tests: `projects/{project_id}/locations/global`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -1349,31 +1323,26 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Lists the `ConnectivityTests` that match the filter expression. A filter expression
-             * filters the resources listed in the response. The expression must be of the form `  `
+             * filters the resources listed in the response. The expression must be of the form ` `
              * where operators: `<`, `>`, `<=`, `>=`, `!=`, `=`, `:` are supported (colon `:`
-             * represents a HAS operator which is roughly synonymous with equality).  can refer to a
+             * represents a HAS operator which is roughly synonymous with equality). can refer to a
              * proto or JSON field, or a synthetic field. Field names can be camelCase or
-             * snake_case.
-             *
-             * Examples: - Filter by name: name =
-             * "projects/proj-1/locations/global/connectivityTests/test-1
-             *
-             * - Filter by labels: - Resources that have a key called `foo` labels.foo:* - Resources
-             * that have a key called `foo` whose value is `bar` labels.foo = bar
+             * snake_case. Examples: - Filter by name: name =
+             * "projects/proj-1/locations/global/connectivityTests/test-1 - Filter by labels: -
+             * Resources that have a key called `foo` labels.foo:* - Resources that have a key
+             * called `foo` whose value is `bar` labels.foo = bar
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Lists the `ConnectivityTests` that match the filter expression. A filter expression filters the
-           resources listed in the response. The expression must be of the form `  ` where operators: `<`,
-           `>`, `<=`, `>=`, `!=`, `=`, `:` are supported (colon `:` represents a HAS operator which is roughly
-           synonymous with equality).  can refer to a proto or JSON field, or a synthetic field. Field names
-           can be camelCase or snake_case.
-
-           Examples: - Filter by name: name = "projects/proj-1/locations/global/connectivityTests/test-1
-
-           - Filter by labels: - Resources that have a key called `foo` labels.foo:* - Resources that have a
-           key called `foo` whose value is `bar` labels.foo = bar
+           resources listed in the response. The expression must be of the form ` ` where operators: `<`, `>`,
+           `<=`, `>=`, `!=`, `=`, `:` are supported (colon `:` represents a HAS operator which is roughly
+           synonymous with equality). can refer to a proto or JSON field, or a synthetic field. Field names
+           can be camelCase or snake_case. Examples: - Filter by name: name =
+           "projects/proj-1/locations/global/connectivityTests/test-1 - Filter by labels: - Resources that
+           have a key called `foo` labels.foo:* - Resources that have a key called `foo` whose value is `bar`
+           labels.foo = bar
              */
             public java.lang.String getFilter() {
               return filter;
@@ -1381,17 +1350,14 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Lists the `ConnectivityTests` that match the filter expression. A filter expression
-             * filters the resources listed in the response. The expression must be of the form `  `
+             * filters the resources listed in the response. The expression must be of the form ` `
              * where operators: `<`, `>`, `<=`, `>=`, `!=`, `=`, `:` are supported (colon `:`
-             * represents a HAS operator which is roughly synonymous with equality).  can refer to a
+             * represents a HAS operator which is roughly synonymous with equality). can refer to a
              * proto or JSON field, or a synthetic field. Field names can be camelCase or
-             * snake_case.
-             *
-             * Examples: - Filter by name: name =
-             * "projects/proj-1/locations/global/connectivityTests/test-1
-             *
-             * - Filter by labels: - Resources that have a key called `foo` labels.foo:* - Resources
-             * that have a key called `foo` whose value is `bar` labels.foo = bar
+             * snake_case. Examples: - Filter by name: name =
+             * "projects/proj-1/locations/global/connectivityTests/test-1 - Filter by labels: -
+             * Resources that have a key called `foo` labels.foo:* - Resources that have a key
+             * called `foo` whose value is `bar` labels.foo = bar
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -1455,14 +1421,12 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * Updates the configuration of an existing `ConnectivityTest`. After you update a test, the
            * reachability analysis is performed as part of the long running operation, which completes when
            * the analysis completes. The Reachability state in the test resource is updated with the new
-           * result.
-           *
-           * If the endpoint specifications in `ConnectivityTest` are invalid (for example, they contain non-
-           * existent resources in the network, or the user does not have read permissions to the network
-           * configurations of listed projects), then the reachability result returns a value of UNKNOWN.
-           *
-           * If the endpoint specifications in `ConnectivityTest` are incomplete, the reachability result
-           * returns a value of `AMBIGUOUS`. See the documentation in `ConnectivityTest` for for more details.
+           * result. If the endpoint specifications in `ConnectivityTest` are invalid (for example, they
+           * contain non-existent resources in the network, or the user does not have read permissions to the
+           * network configurations of listed projects), then the reachability result returns a value of
+           * UNKNOWN. If the endpoint specifications in `ConnectivityTest` are incomplete, the reachability
+           * result returns a value of `AMBIGUOUS`. See the documentation in `ConnectivityTest` for for more
+           * details.
            *
            * Create a request for the method "connectivityTests.patch".
            *
@@ -1491,15 +1455,11 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * Updates the configuration of an existing `ConnectivityTest`. After you update a test, the
              * reachability analysis is performed as part of the long running operation, which completes when
              * the analysis completes. The Reachability state in the test resource is updated with the new
-             * result.
-             *
-             * If the endpoint specifications in `ConnectivityTest` are invalid (for example, they contain
-             * non-existent resources in the network, or the user does not have read permissions to the
-             * network configurations of listed projects), then the reachability result returns a value of
-             * UNKNOWN.
-             *
-             * If the endpoint specifications in `ConnectivityTest` are incomplete, the reachability result
-             * returns a value of `AMBIGUOUS`. See the documentation in `ConnectivityTest` for for more
+             * result. If the endpoint specifications in `ConnectivityTest` are invalid (for example, they
+             * contain non-existent resources in the network, or the user does not have read permissions to
+             * the network configurations of listed projects), then the reachability result returns a value of
+             * UNKNOWN. If the endpoint specifications in `ConnectivityTest` are incomplete, the reachability
+             * result returns a value of `AMBIGUOUS`. See the documentation in `ConnectivityTest` for for more
              * details.
              *
              * Create a request for the method "connectivityTests.patch".
@@ -1636,14 +1596,11 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           /**
            * Rerun an existing `ConnectivityTest`. After the user triggers the rerun, the reachability
            * analysis is performed as part of the long running operation, which completes when the analysis
-           * completes.
-           *
-           * Even though the test configuration remains the same, the reachability result may change due to
-           * underlying network configuration changes.
-           *
-           * If the endpoint specifications in `ConnectivityTest` become invalid (for example, specified
-           * resources are deleted in the network, or you lost read permissions to the network configurations
-           * of listed projects), then the reachability result returns a value of `UNKNOWN`.
+           * completes. Even though the test configuration remains the same, the reachability result may
+           * change due to underlying network configuration changes. If the endpoint specifications in
+           * `ConnectivityTest` become invalid (for example, specified resources are deleted in the network,
+           * or you lost read permissions to the network configurations of listed projects), then the
+           * reachability result returns a value of `UNKNOWN`.
            *
            * Create a request for the method "connectivityTests.rerun".
            *
@@ -1671,14 +1628,11 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
             /**
              * Rerun an existing `ConnectivityTest`. After the user triggers the rerun, the reachability
              * analysis is performed as part of the long running operation, which completes when the analysis
-             * completes.
-             *
-             * Even though the test configuration remains the same, the reachability result may change due to
-             * underlying network configuration changes.
-             *
-             * If the endpoint specifications in `ConnectivityTest` become invalid (for example, specified
-             * resources are deleted in the network, or you lost read permissions to the network
-             * configurations of listed projects), then the reachability result returns a value of `UNKNOWN`.
+             * completes. Even though the test configuration remains the same, the reachability result may
+             * change due to underlying network configuration changes. If the endpoint specifications in
+             * `ConnectivityTest` become invalid (for example, specified resources are deleted in the network,
+             * or you lost read permissions to the network configurations of listed projects), then the
+             * reachability result returns a value of `UNKNOWN`.
              *
              * Create a request for the method "connectivityTests.rerun".
              *
@@ -1792,9 +1746,8 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
             }
           }
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "connectivityTests.setIamPolicy".
            *
@@ -1802,8 +1755,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
            * operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.networkmanagement.v1.model.SetIamPolicyRequest}
            * @return the request
@@ -1822,9 +1774,8 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/connectivityTests/[^/]+$");
 
             /**
-             * Sets the access control policy on the specified resource. Replaces any existing policy.
-             *
-             * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
              * Create a request for the method "connectivityTests.setIamPolicy".
              *
@@ -1834,8 +1785,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.networkmanagement.v1.model.SetIamPolicyRequest}
              * @since 1.13
@@ -1940,10 +1890,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           }
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-           * this will return an empty set of permissions, not a `NOT_FOUND` error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "connectivityTests.testIamPermissions".
            *
@@ -1951,8 +1900,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
            * operation.
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.networkmanagement.v1.model.TestIamPermissionsRequest}
            * @return the request
@@ -1972,10 +1920,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
-             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
-             *
-             * Note: This operation is designed to be used for building permission-aware UIs and command-line
-             * tools, not for authorization checking. This operation may "fail open" without warning.
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
              *
              * Create a request for the method "connectivityTests.testIamPermissions".
              *
@@ -1985,8 +1932,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
              * @param content the {@link com.google.api.services.networkmanagement.v1.model.TestIamPermissionsRequest}
              * @since 1.13
@@ -2112,9 +2058,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         public class Operations {
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-           * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-           * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
            * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -2143,13 +2089,13 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/operations/[^/]+$");
 
             /**
-             * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-             * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-             * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-             * other methods to check whether the cancellation succeeded or whether the operation completed
-             * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-             * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-             * corresponding to `Code.CANCELLED`.
+             * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+             * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+             * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+             * methods to check whether the cancellation succeeded or whether the operation completed despite
+             * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+             * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+             * `Code.CANCELLED`.
              *
              * Create a request for the method "operations.cancel".
              *
@@ -2388,7 +2334,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
             }
           }
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -2413,7 +2359,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/operations/[^/]+$");
 
             /**
-             * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
              * operation result at intervals as recommended by the API service.
              *
              * Create a request for the method "operations.get".
@@ -2530,13 +2476,12 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           }
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-           * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+           * the binding to use different resource name schemes, such as `users/operations`. To override the
+           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
            *
            * Create a request for the method "operations.list".
            *
@@ -2561,13 +2506,12 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`.
-             *
-             * NOTE: the `name` binding allows API services to override the binding to use different resource
-             * name schemes, such as `users/operations`. To override the binding, API services can add a
-             * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-             * compatibility, the default name includes the operations collection id, however overriding users
-             * must ensure the name binding is the parent resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+             * override the binding to use different resource name schemes, such as `users/operations`. To
+             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+             * their service configuration. For backwards compatibility, the default name includes the
+             * operations collection id, however overriding users must ensure the name binding is the parent
+             * resource, without the operations collection id.
              *
              * Create a request for the method "operations.list".
              *

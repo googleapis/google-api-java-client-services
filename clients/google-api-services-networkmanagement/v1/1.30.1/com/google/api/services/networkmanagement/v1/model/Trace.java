@@ -17,13 +17,11 @@
 package com.google.api.services.networkmanagement.v1.model;
 
 /**
- * Trace represents one simulated packet forwarding path.
- *
- *   Each trace contains multiple ordered steps.   Each step is in a particular state and has an
- * associated   configuration. State is categorized as a final or non-final   state. Each final
- * state has a reason associated with it.   Each trace must end with a final state (the last step).
- *
- *   |---------------------Trace----------------------|   Step1(State) Step2(State) ---
+ * Trace represents one simulated packet forwarding path. - Each trace contains multiple ordered
+ * steps. - Each step is in a particular state and has an associated configuration. - State is
+ * categorized as a final or non-final state. - Each final state has a reason associated with it. -
+ * Each trace must end with a final state (the last step).
+ * |---------------------Trace----------------------| Step1(State) Step2(State) ---
  * StepN(State(final))
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -48,10 +46,9 @@ public final class Trace extends com.google.api.client.json.GenericJson {
 
   /**
    * A trace of a test contains multiple steps from the initial state to the final state (delivered,
-   * dropped, forwarded, or aborted).
-   *
-   * The steps are ordered by the processing sequence within the simulated network state machine. It
-   * is critical to preserve the order of the steps and avoid reordering or sorting them.
+   * dropped, forwarded, or aborted). The steps are ordered by the processing sequence within the
+   * simulated network state machine. It is critical to preserve the order of the steps and avoid
+   * reordering or sorting them.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,10 +83,9 @@ public final class Trace extends com.google.api.client.json.GenericJson {
 
   /**
    * A trace of a test contains multiple steps from the initial state to the final state (delivered,
-   * dropped, forwarded, or aborted).
-   *
-   * The steps are ordered by the processing sequence within the simulated network state machine. It
-   * is critical to preserve the order of the steps and avoid reordering or sorting them.
+   * dropped, forwarded, or aborted). The steps are ordered by the processing sequence within the
+   * simulated network state machine. It is critical to preserve the order of the steps and avoid
+   * reordering or sorting them.
    * @return value or {@code null} for none
    */
   public java.util.List<Step> getSteps() {
@@ -98,10 +94,9 @@ public final class Trace extends com.google.api.client.json.GenericJson {
 
   /**
    * A trace of a test contains multiple steps from the initial state to the final state (delivered,
-   * dropped, forwarded, or aborted).
-   *
-   * The steps are ordered by the processing sequence within the simulated network state machine. It
-   * is critical to preserve the order of the steps and avoid reordering or sorting them.
+   * dropped, forwarded, or aborted). The steps are ordered by the processing sequence within the
+   * simulated network state machine. It is critical to preserve the order of the steps and avoid
+   * reordering or sorting them.
    * @param steps steps or {@code null} for none
    */
   public Trace setSteps(java.util.List<Step> steps) {

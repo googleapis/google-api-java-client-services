@@ -31,6 +31,21 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudSqlInstance;
+
+  /**
+   * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-
+   * engine/docs/concepts/cluster-architecture).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gkeMasterCluster;
+
+  /**
    * A Compute Engine instance URI.
    * The value may be {@code null}.
    */
@@ -39,8 +54,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is
-   * only allowed when the test's destination is a [global load balancer VIP](/load-balancing/docs
-   * /load-balancing-overview).
+   * only allowed when the test's destination is a [global load balancer
+   * VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,6 +95,42 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
+   * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudSqlInstance() {
+    return cloudSqlInstance;
+  }
+
+  /**
+   * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
+   * @param cloudSqlInstance cloudSqlInstance or {@code null} for none
+   */
+  public Endpoint setCloudSqlInstance(java.lang.String cloudSqlInstance) {
+    this.cloudSqlInstance = cloudSqlInstance;
+    return this;
+  }
+
+  /**
+   * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-
+   * engine/docs/concepts/cluster-architecture).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGkeMasterCluster() {
+    return gkeMasterCluster;
+  }
+
+  /**
+   * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-
+   * engine/docs/concepts/cluster-architecture).
+   * @param gkeMasterCluster gkeMasterCluster or {@code null} for none
+   */
+  public Endpoint setGkeMasterCluster(java.lang.String gkeMasterCluster) {
+    this.gkeMasterCluster = gkeMasterCluster;
+    return this;
+  }
+
+  /**
    * A Compute Engine instance URI.
    * @return value or {@code null} for none
    */
@@ -98,8 +149,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is
-   * only allowed when the test's destination is a [global load balancer VIP](/load-balancing/docs
-   * /load-balancing-overview).
+   * only allowed when the test's destination is a [global load balancer
+   * VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -108,8 +159,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is
-   * only allowed when the test's destination is a [global load balancer VIP](/load-balancing/docs
-   * /load-balancing-overview).
+   * only allowed when the test's destination is a [global load balancer
+   * VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
    * @param ipAddress ipAddress or {@code null} for none
    */
   public Endpoint setIpAddress(java.lang.String ipAddress) {

@@ -39,8 +39,18 @@ public final class FilteredBidDetailRow extends com.google.api.client.json.Gener
   private MetricValue bidCount;
 
   /**
-   * The ID of the detail. The associated value can be looked up in the dictionary file
-   * corresponding to the DetailType in the response message.
+   * The ID of the detail, can be numeric or text. The associated value can be looked up in the
+   * dictionary file corresponding to the DetailType in the response message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String detail;
+
+  /**
+   * Note: this field will be deprecated, use "detail" field instead. When "detail" field represents
+   * an integer value, this field is populated as the same integer value "detail" field represents,
+   * otherwise this field will be 0. The ID of the detail. The associated value can be looked up in
+   * the dictionary file corresponding to the DetailType in the response message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +81,29 @@ public final class FilteredBidDetailRow extends com.google.api.client.json.Gener
   }
 
   /**
-   * The ID of the detail. The associated value can be looked up in the dictionary file
-   * corresponding to the DetailType in the response message.
+   * The ID of the detail, can be numeric or text. The associated value can be looked up in the
+   * dictionary file corresponding to the DetailType in the response message.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDetail() {
+    return detail;
+  }
+
+  /**
+   * The ID of the detail, can be numeric or text. The associated value can be looked up in the
+   * dictionary file corresponding to the DetailType in the response message.
+   * @param detail detail or {@code null} for none
+   */
+  public FilteredBidDetailRow setDetail(java.lang.String detail) {
+    this.detail = detail;
+    return this;
+  }
+
+  /**
+   * Note: this field will be deprecated, use "detail" field instead. When "detail" field represents
+   * an integer value, this field is populated as the same integer value "detail" field represents,
+   * otherwise this field will be 0. The ID of the detail. The associated value can be looked up in
+   * the dictionary file corresponding to the DetailType in the response message.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDetailId() {
@@ -80,8 +111,10 @@ public final class FilteredBidDetailRow extends com.google.api.client.json.Gener
   }
 
   /**
-   * The ID of the detail. The associated value can be looked up in the dictionary file
-   * corresponding to the DetailType in the response message.
+   * Note: this field will be deprecated, use "detail" field instead. When "detail" field represents
+   * an integer value, this field is populated as the same integer value "detail" field represents,
+   * otherwise this field will be 0. The ID of the detail. The associated value can be looked up in
+   * the dictionary file corresponding to the DetailType in the response message.
    * @param detailId detailId or {@code null} for none
    */
   public FilteredBidDetailRow setDetailId(java.lang.Integer detailId) {

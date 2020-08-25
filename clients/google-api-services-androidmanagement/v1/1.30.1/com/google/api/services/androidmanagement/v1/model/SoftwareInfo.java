@@ -104,6 +104,13 @@ public final class SoftwareInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String securityPatchLevel;
 
   /**
+   * Information about a potential pending system update.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SystemUpdateInfo systemUpdateInfo;
+
+  /**
    * Android build ID string meant for displaying to the user. For example, shamu-userdebug 6.0.1
    * MOB30I 2756745 dev-keys.
    * @return value or {@code null} for none
@@ -276,6 +283,23 @@ public final class SoftwareInfo extends com.google.api.client.json.GenericJson {
    */
   public SoftwareInfo setSecurityPatchLevel(java.lang.String securityPatchLevel) {
     this.securityPatchLevel = securityPatchLevel;
+    return this;
+  }
+
+  /**
+   * Information about a potential pending system update.
+   * @return value or {@code null} for none
+   */
+  public SystemUpdateInfo getSystemUpdateInfo() {
+    return systemUpdateInfo;
+  }
+
+  /**
+   * Information about a potential pending system update.
+   * @param systemUpdateInfo systemUpdateInfo or {@code null} for none
+   */
+  public SoftwareInfo setSystemUpdateInfo(SystemUpdateInfo systemUpdateInfo) {
+    this.systemUpdateInfo = systemUpdateInfo;
     return this;
   }
 

@@ -41,7 +41,12 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
   private java.lang.String additionalData;
 
   /**
-   * Controls personal usage on devices provisioned using this enrollment token.
+   * Controls whether personal usage is allowed on a device provisioned with this enrollment
+   * token.For company-owned devices: Enabling personal usage allows the user to set up a work
+   * profile on the device. Disabling personal usage requires the user provision the device as a
+   * fully managed device.For personally-owned devices: Enabling personal usage allows the user to
+   * set up a work profile on the device. Disabling personal usage will prevent the device from
+   * provisioning. Personal usage cannot be disabled on personally-owned device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +145,12 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Controls personal usage on devices provisioned using this enrollment token.
+   * Controls whether personal usage is allowed on a device provisioned with this enrollment
+   * token.For company-owned devices: Enabling personal usage allows the user to set up a work
+   * profile on the device. Disabling personal usage requires the user provision the device as a
+   * fully managed device.For personally-owned devices: Enabling personal usage allows the user to
+   * set up a work profile on the device. Disabling personal usage will prevent the device from
+   * provisioning. Personal usage cannot be disabled on personally-owned device.
    * @return value or {@code null} for none
    */
   public java.lang.String getAllowPersonalUsage() {
@@ -148,7 +158,12 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Controls personal usage on devices provisioned using this enrollment token.
+   * Controls whether personal usage is allowed on a device provisioned with this enrollment
+   * token.For company-owned devices: Enabling personal usage allows the user to set up a work
+   * profile on the device. Disabling personal usage requires the user provision the device as a
+   * fully managed device.For personally-owned devices: Enabling personal usage allows the user to
+   * set up a work profile on the device. Disabling personal usage will prevent the device from
+   * provisioning. Personal usage cannot be disabled on personally-owned device.
    * @param allowPersonalUsage allowPersonalUsage or {@code null} for none
    */
   public EnrollmentToken setAllowPersonalUsage(java.lang.String allowPersonalUsage) {

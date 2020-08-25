@@ -71,6 +71,21 @@ public final class GoogleApiServiceusageV1ServiceConfig extends com.google.api.c
   }
 
   /**
+   * Defines the monitored resources used by this service. This is required by the
+   * Service.monitoring and Service.logging configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MonitoredResourceDescriptor> monitoredResources;
+
+  /**
+   * Monitoring configuration. This should not include the 'producer_destinations' field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Monitoring monitoring;
+
+  /**
    * The DNS address at which this service is available. An example DNS address would be:
    * `calendar.googleapis.com`.
    * The value may be {@code null}.
@@ -166,6 +181,42 @@ public final class GoogleApiServiceusageV1ServiceConfig extends com.google.api.c
    */
   public GoogleApiServiceusageV1ServiceConfig setEndpoints(java.util.List<Endpoint> endpoints) {
     this.endpoints = endpoints;
+    return this;
+  }
+
+  /**
+   * Defines the monitored resources used by this service. This is required by the
+   * Service.monitoring and Service.logging configurations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MonitoredResourceDescriptor> getMonitoredResources() {
+    return monitoredResources;
+  }
+
+  /**
+   * Defines the monitored resources used by this service. This is required by the
+   * Service.monitoring and Service.logging configurations.
+   * @param monitoredResources monitoredResources or {@code null} for none
+   */
+  public GoogleApiServiceusageV1ServiceConfig setMonitoredResources(java.util.List<MonitoredResourceDescriptor> monitoredResources) {
+    this.monitoredResources = monitoredResources;
+    return this;
+  }
+
+  /**
+   * Monitoring configuration. This should not include the 'producer_destinations' field.
+   * @return value or {@code null} for none
+   */
+  public Monitoring getMonitoring() {
+    return monitoring;
+  }
+
+  /**
+   * Monitoring configuration. This should not include the 'producer_destinations' field.
+   * @param monitoring monitoring or {@code null} for none
+   */
+  public GoogleApiServiceusageV1ServiceConfig setMonitoring(Monitoring monitoring) {
+    this.monitoring = monitoring;
     return this;
   }
 

@@ -19,8 +19,8 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 /**
  * Note: this resource requires whitelisting for access. Please contact your account manager for
  * access to Marketplace resources. Represents a publisher profile
- * (https://support.google.com/admanager/answer/6035806?hl=en) in Marketplace. All fields are read
- * only. All string fields are free-form text entered by the publisher unless noted otherwise.
+ * (https://support.google.com/admanager/answer/6035806) in Marketplace. All fields are read only.
+ * All string fields are free-form text entered by the publisher unless noted otherwise.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation
@@ -85,7 +85,7 @@ public final class PublisherProfile extends com.google.api.client.json.GenericJs
    * of inventory. One seller should have only one parent publisher profile, and can have multiple
    * child profiles. Publisher profiles for the same seller will have same value of field
    * google.ads.adexchange.buyer.v2beta1.PublisherProfile.seller. See
-   * https://support.google.com/admanager/answer/6035806?hl=en for details.
+   * https://support.google.com/admanager/answer/6035806 for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -273,7 +273,7 @@ public final class PublisherProfile extends com.google.api.client.json.GenericJs
    * of inventory. One seller should have only one parent publisher profile, and can have multiple
    * child profiles. Publisher profiles for the same seller will have same value of field
    * google.ads.adexchange.buyer.v2beta1.PublisherProfile.seller. See
-   * https://support.google.com/admanager/answer/6035806?hl=en for details.
+   * https://support.google.com/admanager/answer/6035806 for details.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsParent() {
@@ -286,7 +286,7 @@ public final class PublisherProfile extends com.google.api.client.json.GenericJs
    * of inventory. One seller should have only one parent publisher profile, and can have multiple
    * child profiles. Publisher profiles for the same seller will have same value of field
    * google.ads.adexchange.buyer.v2beta1.PublisherProfile.seller. See
-   * https://support.google.com/admanager/answer/6035806?hl=en for details.
+   * https://support.google.com/admanager/answer/6035806 for details.
    * @param isParent isParent or {@code null} for none
    */
   public PublisherProfile setIsParent(java.lang.Boolean isParent) {

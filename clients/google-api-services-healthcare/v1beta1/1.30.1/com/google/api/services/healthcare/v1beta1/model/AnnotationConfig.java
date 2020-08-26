@@ -31,12 +31,11 @@ public final class AnnotationConfig extends com.google.api.client.json.GenericJs
 
   /**
    * The name of the annotation store, in the form `projects/{project_id}/locations/{location_id}/da
-   * tasets/{dataset_id}/annotationStores/{annotation_store_id}`).
-   *
-   *  * The destination annotation store must be in the same project as the    source data. De-
-   * identifying data across multiple projects is not    supported.  * The destination annotation
-   * store must exist when using    DeidentifyDicomStore or    DeidentifyFhirStore.
-   * DeidentifyDataset    automatically creates the destination annotation store.
+   * tasets/{dataset_id}/annotationStores/{annotation_store_id}`). * The destination annotation
+   * store must be in the same project as the source data. De-identifying data across multiple
+   * projects is not supported. * The destination annotation store must exist when using
+   * DeidentifyDicomStore or DeidentifyFhirStore. DeidentifyDataset automatically creates the
+   * destination annotation store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,12 +50,11 @@ public final class AnnotationConfig extends com.google.api.client.json.GenericJs
 
   /**
    * The name of the annotation store, in the form `projects/{project_id}/locations/{location_id}/da
-   * tasets/{dataset_id}/annotationStores/{annotation_store_id}`).
-   *
-   *  * The destination annotation store must be in the same project as the    source data. De-
-   * identifying data across multiple projects is not    supported.  * The destination annotation
-   * store must exist when using    DeidentifyDicomStore or    DeidentifyFhirStore.
-   * DeidentifyDataset    automatically creates the destination annotation store.
+   * tasets/{dataset_id}/annotationStores/{annotation_store_id}`). * The destination annotation
+   * store must be in the same project as the source data. De-identifying data across multiple
+   * projects is not supported. * The destination annotation store must exist when using
+   * DeidentifyDicomStore or DeidentifyFhirStore. DeidentifyDataset automatically creates the
+   * destination annotation store.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnnotationStoreName() {
@@ -65,12 +63,11 @@ public final class AnnotationConfig extends com.google.api.client.json.GenericJs
 
   /**
    * The name of the annotation store, in the form `projects/{project_id}/locations/{location_id}/da
-   * tasets/{dataset_id}/annotationStores/{annotation_store_id}`).
-   *
-   *  * The destination annotation store must be in the same project as the    source data. De-
-   * identifying data across multiple projects is not    supported.  * The destination annotation
-   * store must exist when using    DeidentifyDicomStore or    DeidentifyFhirStore.
-   * DeidentifyDataset    automatically creates the destination annotation store.
+   * tasets/{dataset_id}/annotationStores/{annotation_store_id}`). * The destination annotation
+   * store must be in the same project as the source data. De-identifying data across multiple
+   * projects is not supported. * The destination annotation store must exist when using
+   * DeidentifyDicomStore or DeidentifyFhirStore. DeidentifyDataset automatically creates the
+   * destination annotation store.
    * @param annotationStoreName annotationStoreName or {@code null} for none
    */
   public AnnotationConfig setAnnotationStoreName(java.lang.String annotationStoreName) {

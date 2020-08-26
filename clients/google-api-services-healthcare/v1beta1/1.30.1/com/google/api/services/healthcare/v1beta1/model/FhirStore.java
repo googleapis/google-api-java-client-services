@@ -78,16 +78,12 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableUpdateCreate;
 
   /**
-   * User-supplied key-value pairs used to organize FHIR stores.
-   *
-   * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
-   * bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}
-   *
-   * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of
-   * maximum 128 bytes, and must conform to the following PCRE regular expression:
-   * [\p{Ll}\p{Lo}\p{N}_-]{0,63}
-   *
-   * No more than 64 labels can be associated with a given store.
+   * User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63
+   * characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following
+   * PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63
+   * characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following
+   * PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated
+   * with a given store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +124,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * The FHIR specification version that this FHIR store supports natively. This field is immutable
    * after store creation. Requests are rejected if they contain FHIR resources of a different
-   * version. An empty value is treated as STU3.
+   * version. Version is required for every FHIR store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -243,16 +239,12 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-supplied key-value pairs used to organize FHIR stores.
-   *
-   * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
-   * bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}
-   *
-   * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of
-   * maximum 128 bytes, and must conform to the following PCRE regular expression:
-   * [\p{Ll}\p{Lo}\p{N}_-]{0,63}
-   *
-   * No more than 64 labels can be associated with a given store.
+   * User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63
+   * characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following
+   * PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63
+   * characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following
+   * PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated
+   * with a given store.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -260,16 +252,12 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-supplied key-value pairs used to organize FHIR stores.
-   *
-   * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
-   * bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}
-   *
-   * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of
-   * maximum 128 bytes, and must conform to the following PCRE regular expression:
-   * [\p{Ll}\p{Lo}\p{N}_-]{0,63}
-   *
-   * No more than 64 labels can be associated with a given store.
+   * User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63
+   * characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following
+   * PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63
+   * characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following
+   * PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated
+   * with a given store.
    * @param labels labels or {@code null} for none
    */
   public FhirStore setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -353,7 +341,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * The FHIR specification version that this FHIR store supports natively. This field is immutable
    * after store creation. Requests are rejected if they contain FHIR resources of a different
-   * version. An empty value is treated as STU3.
+   * version. Version is required for every FHIR store.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -363,7 +351,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * The FHIR specification version that this FHIR store supports natively. This field is immutable
    * after store creation. Requests are rejected if they contain FHIR resources of a different
-   * version. An empty value is treated as STU3.
+   * version. Version is required for every FHIR store.
    * @param version version or {@code null} for none
    */
   public FhirStore setVersion(java.lang.String version) {

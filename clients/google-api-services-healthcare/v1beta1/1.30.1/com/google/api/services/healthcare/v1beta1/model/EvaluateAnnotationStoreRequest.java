@@ -41,10 +41,10 @@ public final class EvaluateAnnotationStoreRequest extends com.google.api.client.
    * Optional. InfoType mapping for `eval_store`. Different resources can map to the same infoType.
    * For example, `PERSON_NAME`, `PERSON`, `NAME`, and `HUMAN` are different. To map all of these
    * into a single infoType (such as `PERSON_NAME`), specify the following mapping: ```
-   * info_type_mapping["PERSON"] = "PERSON_NAME"   info_type_mapping["NAME"] = "PERSON_NAME"
+   * info_type_mapping["PERSON"] = "PERSON_NAME" info_type_mapping["NAME"] = "PERSON_NAME"
    * info_type_mapping["HUMAN"] = "PERSON_NAME" ``` Unmentioned infoTypes, such as `DATE`, are
-   * treated as identity mapping. For example: ```   info_type_mapping["DATE"] = "DATE" ```
-   * InfoTypes are case-insensitive.
+   * treated as identity mapping. For example: ``` info_type_mapping["DATE"] = "DATE" ``` InfoTypes
+   * are case-insensitive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,6 +72,14 @@ public final class EvaluateAnnotationStoreRequest extends com.google.api.client.
   private InfoTypeConfig infoTypeConfig;
 
   /**
+   * The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}
+   * /locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * The BigQuery table where the server writes the output. BigQueryDestination requires the
    * `roles/bigquery.dataEditor` and `roles/bigquery.jobUser` Cloud IAM roles.
    * @return value or {@code null} for none
@@ -94,10 +102,10 @@ public final class EvaluateAnnotationStoreRequest extends com.google.api.client.
    * Optional. InfoType mapping for `eval_store`. Different resources can map to the same infoType.
    * For example, `PERSON_NAME`, `PERSON`, `NAME`, and `HUMAN` are different. To map all of these
    * into a single infoType (such as `PERSON_NAME`), specify the following mapping: ```
-   * info_type_mapping["PERSON"] = "PERSON_NAME"   info_type_mapping["NAME"] = "PERSON_NAME"
+   * info_type_mapping["PERSON"] = "PERSON_NAME" info_type_mapping["NAME"] = "PERSON_NAME"
    * info_type_mapping["HUMAN"] = "PERSON_NAME" ``` Unmentioned infoTypes, such as `DATE`, are
-   * treated as identity mapping. For example: ```   info_type_mapping["DATE"] = "DATE" ```
-   * InfoTypes are case-insensitive.
+   * treated as identity mapping. For example: ``` info_type_mapping["DATE"] = "DATE" ``` InfoTypes
+   * are case-insensitive.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getEvalInfoTypeMapping() {
@@ -108,10 +116,10 @@ public final class EvaluateAnnotationStoreRequest extends com.google.api.client.
    * Optional. InfoType mapping for `eval_store`. Different resources can map to the same infoType.
    * For example, `PERSON_NAME`, `PERSON`, `NAME`, and `HUMAN` are different. To map all of these
    * into a single infoType (such as `PERSON_NAME`), specify the following mapping: ```
-   * info_type_mapping["PERSON"] = "PERSON_NAME"   info_type_mapping["NAME"] = "PERSON_NAME"
+   * info_type_mapping["PERSON"] = "PERSON_NAME" info_type_mapping["NAME"] = "PERSON_NAME"
    * info_type_mapping["HUMAN"] = "PERSON_NAME" ``` Unmentioned infoTypes, such as `DATE`, are
-   * treated as identity mapping. For example: ```   info_type_mapping["DATE"] = "DATE" ```
-   * InfoTypes are case-insensitive.
+   * treated as identity mapping. For example: ``` info_type_mapping["DATE"] = "DATE" ``` InfoTypes
+   * are case-insensitive.
    * @param evalInfoTypeMapping evalInfoTypeMapping or {@code null} for none
    */
   public EvaluateAnnotationStoreRequest setEvalInfoTypeMapping(java.util.Map<String, java.lang.String> evalInfoTypeMapping) {
@@ -167,6 +175,25 @@ public final class EvaluateAnnotationStoreRequest extends com.google.api.client.
    */
   public EvaluateAnnotationStoreRequest setInfoTypeConfig(InfoTypeConfig infoTypeConfig) {
     this.infoTypeConfig = infoTypeConfig;
+    return this;
+  }
+
+  /**
+   * The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}
+   * /locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}
+   * /locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+   * @param name name or {@code null} for none
+   */
+  public EvaluateAnnotationStoreRequest setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

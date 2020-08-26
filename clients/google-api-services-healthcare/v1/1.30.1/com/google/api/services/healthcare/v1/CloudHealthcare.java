@@ -193,8 +193,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The name of the project where the server creates the dataset. For
-        example,
+         * @param parent The name of the project where the server creates the dataset. For example,
          *        `projects/{project_id}/locations/{location_id}`.
          * @param content the {@link com.google.api.services.healthcare.v1.model.Dataset}
          * @return the request
@@ -226,8 +225,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The name of the project where the server creates the dataset. For
-        example,
+           * @param parent The name of the project where the server creates the dataset. For example,
          *        `projects/{project_id}/locations/{location_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.Dataset}
            * @since 1.13
@@ -801,8 +799,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
          * @return the request
          */
@@ -831,8 +828,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
            * @since 1.13
            */
@@ -940,42 +936,32 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
-           *
-           * To learn which resources support conditions in their IAM policies, see the [IAM
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned.
-
-         Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-         Requests for policies with any conditional bindings must specify version 3. Policies without any
-         conditional bindings may specify any valid value or leave the field unset.
-
-         To learn which resources support conditions in their IAM policies, see the [IAM
-         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+         must specify version 3. Policies without any conditional bindings may specify any valid value or
+         leave the field unset. To learn which resources support conditions in their IAM policies, see the
+         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
-           *
-           * To learn which resources support conditions in their IAM policies, see the [IAM
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
            * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -996,8 +982,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The name of the project whose datasets should be listed.
-        For example,
+         * @param parent The name of the project whose datasets should be listed. For example,
          *        `projects/{project_id}/locations/{location_id}`.
          * @return the request
          */
@@ -1024,8 +1009,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The name of the project whose datasets should be listed.
-        For example,
+           * @param parent The name of the project whose datasets should be listed. For example,
          *        `projects/{project_id}/locations/{location_id}`.
            * @since 1.13
            */
@@ -1339,17 +1323,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "datasets.setIamPolicy".
          *
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.healthcare.v1.model.SetIamPolicyRequest}
          * @return the request
@@ -1368,9 +1350,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "datasets.setIamPolicy".
            *
@@ -1380,8 +1361,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1.model.SetIamPolicyRequest}
            * @since 1.13
@@ -1486,18 +1466,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a `NOT_FOUND` error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "datasets.testIamPermissions".
          *
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.healthcare.v1.model.TestIamPermissionsRequest}
          * @return the request
@@ -1517,10 +1495,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "datasets.testIamPermissions".
            *
@@ -1530,8 +1507,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1.model.TestIamPermissionsRequest}
            * @since 1.13
@@ -2100,8 +2076,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param name The DICOM store resource name from which to export the data. For
-          example,
+           * @param name The DICOM store resource name from which to export the data. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.ExportDicomDataRequest}
@@ -2133,8 +2108,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The DICOM store resource name from which to export the data. For
-          example,
+             * @param name The DICOM store resource name from which to export the data. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.ExportDicomDataRequest}
@@ -2387,8 +2361,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
            * @return the request
            */
@@ -2417,8 +2390,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
              * @since 1.13
              */
@@ -2526,44 +2498,32 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
-             *
-             * To learn which resources support conditions in their IAM policies, see the [IAM
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned.
-
-           Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-           Requests for policies with any conditional bindings must specify version 3. Policies without any
-           conditional bindings may specify any valid value or leave the field unset.
-
-           To learn which resources support conditions in their IAM policies, see the [IAM
-           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+           must specify version 3. Policies without any conditional bindings may specify any valid value or
+           leave the field unset. To learn which resources support conditions in their IAM policies, see the
+           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
-             *
-             * To learn which resources support conditions in their IAM policies, see the [IAM
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -2587,8 +2547,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the remote
            * operation.
            *
-           * @param name The name of the DICOM store resource into which the data is imported.
-          For example,
+           * @param name The name of the DICOM store resource into which the data is imported. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.ImportDicomDataRequest}
@@ -2620,8 +2579,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param name The name of the DICOM store resource into which the data is imported.
-          For example,
+             * @param name The name of the DICOM store resource into which the data is imported. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.ImportDicomDataRequest}
@@ -3109,10 +3067,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-           * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
-          `instances`,
-           *        `series/{series_uid}/instances`, or
-          `studies/{study_uid}/instances`.
+           * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+           *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
            * @return the request
            */
           public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -3146,10 +3102,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
-          `instances`,
-           *        `series/{series_uid}/instances`, or
-          `studies/{study_uid}/instances`.
+             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+           *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              * @since 1.13
              */
             protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -3672,17 +3626,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "dicomStores.setIamPolicy".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1.model.SetIamPolicyRequest}
            * @return the request
@@ -3701,9 +3653,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
 
             /**
-             * Sets the access control policy on the specified resource. Replaces any existing policy.
-             *
-             * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
              * Create a request for the method "dicomStores.setIamPolicy".
              *
@@ -3713,8 +3664,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1.model.SetIamPolicyRequest}
              * @since 1.13
@@ -3830,8 +3780,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-           * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example,
-          `studies/[{study_uid}]`. Note that the
+           * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that the
            *        `study_uid` is optional.
            * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
            * @return the request
@@ -3868,8 +3817,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-             * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example,
-          `studies/[{study_uid}]`. Note that the
+             * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that the
            *        `study_uid` is optional.
              * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
              * @since 1.13
@@ -4008,18 +3956,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-           * this will return an empty set of permissions, not a `NOT_FOUND` error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "dicomStores.testIamPermissions".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1.model.TestIamPermissionsRequest}
            * @return the request
@@ -4039,10 +3985,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
-             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
-             *
-             * Note: This operation is designed to be used for building permission-aware UIs and command-line
-             * tools, not for authorization checking. This operation may "fail open" without warning.
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
              *
              * Create a request for the method "dicomStores.testIamPermissions".
              *
@@ -4052,8 +3997,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1.model.TestIamPermissionsRequest}
              * @since 1.13
@@ -4180,11 +4124,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * DeleteStudy deletes all instances within the given study. Delete requests are equivalent to the
              * GET requests specified in the Retrieve transaction. The method returns an Operation which will be
-             * marked successful when the deletion is complete.
-             *
-             * Warning: Inserting instances into a study while a delete operation is running for that study
-             * could result in the new instances not appearing in search results until the deletion operation
-             * finishes.
+             * marked successful when the deletion is complete. Warning: Inserting instances into a study while
+             * a delete operation is running for that study could result in the new instances not appearing in
+             * search results until the deletion operation finishes.
              *
              * Create a request for the method "studies.delete".
              *
@@ -4214,11 +4156,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * DeleteStudy deletes all instances within the given study. Delete requests are equivalent to the
                * GET requests specified in the Retrieve transaction. The method returns an Operation which will
-               * be marked successful when the deletion is complete.
-               *
-               * Warning: Inserting instances into a study while a delete operation is running for that study
-               * could result in the new instances not appearing in search results until the deletion operation
-               * finishes.
+               * be marked successful when the deletion is complete. Warning: Inserting instances into a study
+               * while a delete operation is running for that study could result in the new instances not
+               * appearing in search results until the deletion operation finishes.
                *
                * Create a request for the method "studies.delete".
                *
@@ -4362,8 +4302,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request. For example,
-            `studies/{study_uid}/metadata`.
+             * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request. For example, `studies/{study_uid}/metadata`.
              * @return the request
              */
             public RetrieveMetadata retrieveMetadata(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -4398,8 +4337,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request. For example,
-            `studies/{study_uid}/metadata`.
+               * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request. For example, `studies/{study_uid}/metadata`.
                * @since 1.13
                */
               protected RetrieveMetadata(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -4556,8 +4494,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the RetrieveStudy DICOMweb request. For example,
-            `studies/{study_uid}`.
+             * @param dicomWebPath The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
              * @return the request
              */
             public RetrieveStudy retrieveStudy(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -4591,8 +4528,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the RetrieveStudy DICOMweb request. For example,
-            `studies/{study_uid}`.
+               * @param dicomWebPath The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
                * @since 1.13
                */
               protected RetrieveStudy(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -4746,10 +4682,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
-            `instances`,
-             *        `series/{series_uid}/instances`, or
-            `studies/{study_uid}/instances`.
+             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+             *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              * @return the request
              */
             public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -4783,10 +4717,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
-            `instances`,
-             *        `series/{series_uid}/instances`, or
-            `studies/{study_uid}/instances`.
+               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+             *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                * @since 1.13
                */
               protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -5137,8 +5069,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example,
-            `studies/[{study_uid}]`. Note that the
+             * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that the
              *        `study_uid` is optional.
              * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
              * @return the request
@@ -5175,8 +5106,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example,
-            `studies/[{study_uid}]`. Note that the
+               * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that the
              *        `study_uid` is optional.
                * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
                * @since 1.13
@@ -5337,11 +5267,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * DeleteSeries deletes all instances within the given study and series. Delete requests are
                * equivalent to the GET requests specified in the Retrieve transaction. The method returns an
-               * Operation which will be marked successful when the deletion is complete.
-               *
-               * Warning: Inserting instances into a series while a delete operation is running for that series
-               * could result in the new instances not appearing in search results until the deletion operation
-               * finishes.
+               * Operation which will be marked successful when the deletion is complete. Warning: Inserting
+               * instances into a series while a delete operation is running for that series could result in the
+               * new instances not appearing in search results until the deletion operation finishes.
                *
                * Create a request for the method "series.delete".
                *
@@ -5351,8 +5279,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-               * @param dicomWebPath The path of the DeleteSeries request. For example,
-              `studies/{study_uid}/series/{series_uid}`.
+               * @param dicomWebPath The path of the DeleteSeries request. For example, `studies/{study_uid}/series/{series_uid}`.
                * @return the request
                */
               public Delete delete(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -5374,11 +5301,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 /**
                  * DeleteSeries deletes all instances within the given study and series. Delete requests are
                  * equivalent to the GET requests specified in the Retrieve transaction. The method returns an
-                 * Operation which will be marked successful when the deletion is complete.
-                 *
-                 * Warning: Inserting instances into a series while a delete operation is running for that series
-                 * could result in the new instances not appearing in search results until the deletion operation
-                 * finishes.
+                 * Operation which will be marked successful when the deletion is complete. Warning: Inserting
+                 * instances into a series while a delete operation is running for that series could result in the
+                 * new instances not appearing in search results until the deletion operation finishes.
                  *
                  * Create a request for the method "series.delete".
                  *
@@ -5391,8 +5316,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-                 * @param dicomWebPath The path of the DeleteSeries request. For example,
-              `studies/{study_uid}/series/{series_uid}`.
+                 * @param dicomWebPath The path of the DeleteSeries request. For example, `studies/{study_uid}/series/{series_uid}`.
                  * @since 1.13
                  */
                 protected Delete(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -5933,10 +5857,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
-              `instances`,
-               *        `series/{series_uid}/instances`, or
-              `studies/{study_uid}/instances`.
+               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+               *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                * @return the request
                */
               public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -5970,10 +5892,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-                 * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
-              `instances`,
-               *        `series/{series_uid}/instances`, or
-              `studies/{study_uid}/instances`.
+                 * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+               *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                  * @since 1.13
                  */
                 protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -7798,15 +7718,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Export resources from the FHIR store to the specified destination.
-           *
-           * This method returns an Operation that can be used to track the status of the export by calling
-           * GetOperation.
-           *
-           * Immediate fatal errors appear in the error field, errors are also logged to Cloud Logging (see
-           * [Viewing logs](/healthcare/docs/how-tos/logging)). Otherwise, when the operation finishes, a
-           * detailed response of type ExportResourcesResponse is returned in the response field. The metadata
-           * field type for this operation is OperationMetadata.
+           * Export resources from the FHIR store to the specified destination. This method returns an
+           * Operation that can be used to track the status of the export by calling GetOperation. Immediate
+           * fatal errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing
+           * logs](/healthcare/docs/how-tos/logging)). Otherwise, when the operation finishes, a detailed
+           * response of type ExportResourcesResponse is returned in the response field. The metadata field
+           * type for this operation is OperationMetadata.
            *
            * Create a request for the method "fhirStores.export".
            *
@@ -7833,15 +7750,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
             /**
-             * Export resources from the FHIR store to the specified destination.
-             *
-             * This method returns an Operation that can be used to track the status of the export by calling
-             * GetOperation.
-             *
-             * Immediate fatal errors appear in the error field, errors are also logged to Cloud Logging (see
-             * [Viewing logs](/healthcare/docs/how-tos/logging)). Otherwise, when the operation finishes, a
-             * detailed response of type ExportResourcesResponse is returned in the response field. The
-             * metadata field type for this operation is OperationMetadata.
+             * Export resources from the FHIR store to the specified destination. This method returns an
+             * Operation that can be used to track the status of the export by calling GetOperation. Immediate
+             * fatal errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing
+             * logs](/healthcare/docs/how-tos/logging)). Otherwise, when the operation finishes, a detailed
+             * response of type ExportResourcesResponse is returned in the response field. The metadata field
+             * type for this operation is OperationMetadata.
              *
              * Create a request for the method "fhirStores.export".
              *
@@ -8102,8 +8016,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
            * @return the request
            */
@@ -8132,8 +8045,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
              * @since 1.13
              */
@@ -8241,44 +8153,32 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
-             *
-             * To learn which resources support conditions in their IAM policies, see the [IAM
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned.
-
-           Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-           Requests for policies with any conditional bindings must specify version 3. Policies without any
-           conditional bindings may specify any valid value or leave the field unset.
-
-           To learn which resources support conditions in their IAM policies, see the [IAM
-           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+           must specify version 3. Policies without any conditional bindings may specify any valid value or
+           leave the field unset. To learn which resources support conditions in their IAM policies, see the
+           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
-             *
-             * To learn which resources support conditions in their IAM policies, see the [IAM
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -8296,53 +8196,41 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * optimized to load large quantities of data using import semantics that ignore some FHIR store
            * configuration options and are not suitable for all use cases. It is primarily intended to load
            * data into an empty FHIR store that is not being used by other clients. In cases where this method
-           * is not appropriate, consider using ExecuteBundle to load data.
-           *
-           * Every resource in the input must contain a client-supplied ID. Each resource is stored using the
-           * supplied ID regardless of the enable_update_create setting on the FHIR store.
-           *
-           * The import process does not enforce referential integrity, regardless of the
-           * disable_referential_integrity setting on the FHIR store. This allows the import of resources with
-           * arbitrary interdependencies without considering grouping or ordering, but if the input data
-           * contains invalid references or if some resources fail to be imported, the FHIR store might be
-           * left in a state that violates referential integrity.
-           *
-           * The import process does not trigger Pub/Sub notification or BigQuery streaming update, regardless
-           * of how those are configured on the FHIR store.
-           *
-           * If a resource with the specified ID already exists, the most recent version of the resource is
-           * overwritten without creating a new historical version, regardless of the
-           * disable_resource_versioning setting on the FHIR store. If transient failures occur during the
-           * import, it's possible that successfully imported resources will be overwritten more than once.
-           *
-           * The import operation is idempotent unless the input data contains multiple valid resources with
-           * the same ID but different contents. In that case, after the import completes, the store contains
-           * exactly one resource with that ID but there is no ordering guarantee on which version of the
-           * contents it will have. The operation result counters do not count duplicate IDs as an error and
-           * count one success for each resource in the input, which might result in a success count larger
-           * than the number of resources in the FHIR store. This often occurs when importing data organized
-           * in bundles produced by Patient-everything where each bundle contains its own copy of a resource
-           * such as Practitioner that might be referred to by many patients.
-           *
-           * If some resources fail to import, for example due to parsing errors, successfully imported
-           * resources are not rolled back.
-           *
-           * The location and format of the input data is specified by the parameters below. Note that if no
-           * format is specified, this method assumes the `BUNDLE` format. When using the `BUNDLE` format this
-           * method ignores the `Bundle.type` field, except that `history` bundles are rejected, and does not
-           * apply any of the bundle processing semantics for batch or transaction bundles. Unlike in
-           * ExecuteBundle, transaction bundles are not executed as a single transaction and bundle-internal
-           * references are not rewritten. The bundle is treated as a collection of resources to be written as
-           * provided in `Bundle.entry.resource`, ignoring `Bundle.entry.request`. As an example, this allows
-           * the import of `searchset` bundles produced by a FHIR search or Patient-everything operation.
-           *
-           * This method returns an Operation that can be used to track the status of the import by calling
-           * GetOperation.
-           *
-           * Immediate fatal errors appear in the error field, errors are also logged to Cloud Logging (see
-           * [Viewing logs](/healthcare/docs/how-tos/logging)). Otherwise, when the operation finishes, a
-           * detailed response of type ImportResourcesResponse is returned in the response field. The metadata
-           * field type for this operation is OperationMetadata.
+           * is not appropriate, consider using ExecuteBundle to load data. Every resource in the input must
+           * contain a client-supplied ID. Each resource is stored using the supplied ID regardless of the
+           * enable_update_create setting on the FHIR store. The import process does not enforce referential
+           * integrity, regardless of the disable_referential_integrity setting on the FHIR store. This allows
+           * the import of resources with arbitrary interdependencies without considering grouping or
+           * ordering, but if the input data contains invalid references or if some resources fail to be
+           * imported, the FHIR store might be left in a state that violates referential integrity. The import
+           * process does not trigger Pub/Sub notification or BigQuery streaming update, regardless of how
+           * those are configured on the FHIR store. If a resource with the specified ID already exists, the
+           * most recent version of the resource is overwritten without creating a new historical version,
+           * regardless of the disable_resource_versioning setting on the FHIR store. If transient failures
+           * occur during the import, it's possible that successfully imported resources will be overwritten
+           * more than once. The import operation is idempotent unless the input data contains multiple valid
+           * resources with the same ID but different contents. In that case, after the import completes, the
+           * store contains exactly one resource with that ID but there is no ordering guarantee on which
+           * version of the contents it will have. The operation result counters do not count duplicate IDs as
+           * an error and count one success for each resource in the input, which might result in a success
+           * count larger than the number of resources in the FHIR store. This often occurs when importing
+           * data organized in bundles produced by Patient-everything where each bundle contains its own copy
+           * of a resource such as Practitioner that might be referred to by many patients. If some resources
+           * fail to import, for example due to parsing errors, successfully imported resources are not rolled
+           * back. The location and format of the input data is specified by the parameters in
+           * ImportResourcesRequest. Note that if no format is specified, this method assumes the `BUNDLE`
+           * format. When using the `BUNDLE` format this method ignores the `Bundle.type` field, except that
+           * `history` bundles are rejected, and does not apply any of the bundle processing semantics for
+           * batch or transaction bundles. Unlike in ExecuteBundle, transaction bundles are not executed as a
+           * single transaction and bundle-internal references are not rewritten. The bundle is treated as a
+           * collection of resources to be written as provided in `Bundle.entry.resource`, ignoring
+           * `Bundle.entry.request`. As an example, this allows the import of `searchset` bundles produced by
+           * a FHIR search or Patient-everything operation. This method returns an Operation that can be used
+           * to track the status of the import by calling GetOperation. Immediate fatal errors appear in the
+           * error field, errors are also logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how-
+           * tos/logging)). Otherwise, when the operation finishes, a detailed response of type
+           * ImportResourcesResponse is returned in the response field. The metadata field type for this
+           * operation is OperationMetadata.
            *
            * Create a request for the method "fhirStores.import".
            *
@@ -8374,54 +8262,42 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * optimized to load large quantities of data using import semantics that ignore some FHIR store
              * configuration options and are not suitable for all use cases. It is primarily intended to load
              * data into an empty FHIR store that is not being used by other clients. In cases where this
-             * method is not appropriate, consider using ExecuteBundle to load data.
-             *
-             * Every resource in the input must contain a client-supplied ID. Each resource is stored using
-             * the supplied ID regardless of the enable_update_create setting on the FHIR store.
-             *
-             * The import process does not enforce referential integrity, regardless of the
-             * disable_referential_integrity setting on the FHIR store. This allows the import of resources
-             * with arbitrary interdependencies without considering grouping or ordering, but if the input
-             * data contains invalid references or if some resources fail to be imported, the FHIR store might
-             * be left in a state that violates referential integrity.
-             *
-             * The import process does not trigger Pub/Sub notification or BigQuery streaming update,
-             * regardless of how those are configured on the FHIR store.
-             *
-             * If a resource with the specified ID already exists, the most recent version of the resource is
-             * overwritten without creating a new historical version, regardless of the
-             * disable_resource_versioning setting on the FHIR store. If transient failures occur during the
-             * import, it's possible that successfully imported resources will be overwritten more than once.
-             *
-             * The import operation is idempotent unless the input data contains multiple valid resources with
-             * the same ID but different contents. In that case, after the import completes, the store
-             * contains exactly one resource with that ID but there is no ordering guarantee on which version
-             * of the contents it will have. The operation result counters do not count duplicate IDs as an
-             * error and count one success for each resource in the input, which might result in a success
-             * count larger than the number of resources in the FHIR store. This often occurs when importing
-             * data organized in bundles produced by Patient-everything where each bundle contains its own
-             * copy of a resource such as Practitioner that might be referred to by many patients.
-             *
-             * If some resources fail to import, for example due to parsing errors, successfully imported
-             * resources are not rolled back.
-             *
-             * The location and format of the input data is specified by the parameters below. Note that if no
-             * format is specified, this method assumes the `BUNDLE` format. When using the `BUNDLE` format
-             * this method ignores the `Bundle.type` field, except that `history` bundles are rejected, and
-             * does not apply any of the bundle processing semantics for batch or transaction bundles. Unlike
-             * in ExecuteBundle, transaction bundles are not executed as a single transaction and bundle-
-             * internal references are not rewritten. The bundle is treated as a collection of resources to be
-             * written as provided in `Bundle.entry.resource`, ignoring `Bundle.entry.request`. As an example,
-             * this allows the import of `searchset` bundles produced by a FHIR search or Patient-everything
-             * operation.
-             *
-             * This method returns an Operation that can be used to track the status of the import by calling
-             * GetOperation.
-             *
-             * Immediate fatal errors appear in the error field, errors are also logged to Cloud Logging (see
-             * [Viewing logs](/healthcare/docs/how-tos/logging)). Otherwise, when the operation finishes, a
-             * detailed response of type ImportResourcesResponse is returned in the response field. The
-             * metadata field type for this operation is OperationMetadata.
+             * method is not appropriate, consider using ExecuteBundle to load data. Every resource in the
+             * input must contain a client-supplied ID. Each resource is stored using the supplied ID
+             * regardless of the enable_update_create setting on the FHIR store. The import process does not
+             * enforce referential integrity, regardless of the disable_referential_integrity setting on the
+             * FHIR store. This allows the import of resources with arbitrary interdependencies without
+             * considering grouping or ordering, but if the input data contains invalid references or if some
+             * resources fail to be imported, the FHIR store might be left in a state that violates
+             * referential integrity. The import process does not trigger Pub/Sub notification or BigQuery
+             * streaming update, regardless of how those are configured on the FHIR store. If a resource with
+             * the specified ID already exists, the most recent version of the resource is overwritten without
+             * creating a new historical version, regardless of the disable_resource_versioning setting on the
+             * FHIR store. If transient failures occur during the import, it's possible that successfully
+             * imported resources will be overwritten more than once. The import operation is idempotent
+             * unless the input data contains multiple valid resources with the same ID but different
+             * contents. In that case, after the import completes, the store contains exactly one resource
+             * with that ID but there is no ordering guarantee on which version of the contents it will have.
+             * The operation result counters do not count duplicate IDs as an error and count one success for
+             * each resource in the input, which might result in a success count larger than the number of
+             * resources in the FHIR store. This often occurs when importing data organized in bundles
+             * produced by Patient-everything where each bundle contains its own copy of a resource such as
+             * Practitioner that might be referred to by many patients. If some resources fail to import, for
+             * example due to parsing errors, successfully imported resources are not rolled back. The
+             * location and format of the input data is specified by the parameters in ImportResourcesRequest.
+             * Note that if no format is specified, this method assumes the `BUNDLE` format. When using the
+             * `BUNDLE` format this method ignores the `Bundle.type` field, except that `history` bundles are
+             * rejected, and does not apply any of the bundle processing semantics for batch or transaction
+             * bundles. Unlike in ExecuteBundle, transaction bundles are not executed as a single transaction
+             * and bundle-internal references are not rewritten. The bundle is treated as a collection of
+             * resources to be written as provided in `Bundle.entry.resource`, ignoring
+             * `Bundle.entry.request`. As an example, this allows the import of `searchset` bundles produced
+             * by a FHIR search or Patient-everything operation. This method returns an Operation that can be
+             * used to track the status of the import by calling GetOperation. Immediate fatal errors appear
+             * in the error field, errors are also logged to Cloud Logging (see [Viewing
+             * logs](/healthcare/docs/how-tos/logging)). Otherwise, when the operation finishes, a detailed
+             * response of type ImportResourcesResponse is returned in the response field. The metadata field
+             * type for this operation is OperationMetadata.
              *
              * Create a request for the method "fhirStores.import".
              *
@@ -8695,21 +8571,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Limit on the number of FHIR stores to return in a single response.  If zero the
+             * Limit on the number of FHIR stores to return in a single response. If zero the
              * default page size of 100 is used.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Limit on the number of FHIR stores to return in a single response.  If zero the default page size
-           of 100 is used.
+            /** Limit on the number of FHIR stores to return in a single response. If zero the default page size of
+           100 is used.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Limit on the number of FHIR stores to return in a single response.  If zero the
+             * Limit on the number of FHIR stores to return in a single response. If zero the
              * default page size of 100 is used.
              */
             public List setPageSize(java.lang.Integer pageSize) {
@@ -8904,17 +8780,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "fhirStores.setIamPolicy".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1.model.SetIamPolicyRequest}
            * @return the request
@@ -8933,9 +8807,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
             /**
-             * Sets the access control policy on the specified resource. Replaces any existing policy.
-             *
-             * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
              * Create a request for the method "fhirStores.setIamPolicy".
              *
@@ -8945,8 +8818,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1.model.SetIamPolicyRequest}
              * @since 1.13
@@ -9051,18 +8923,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-           * this will return an empty set of permissions, not a `NOT_FOUND` error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "fhirStores.testIamPermissions".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1.model.TestIamPermissionsRequest}
            * @return the request
@@ -9082,10 +8952,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
-             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
-             *
-             * Note: This operation is designed to be used for building permission-aware UIs and command-line
-             * tools, not for authorization checking. This operation may "fail open" without warning.
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
              *
              * Create a request for the method "fhirStores.testIamPermissions".
              *
@@ -9095,8 +8964,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1.model.TestIamPermissionsRequest}
              * @since 1.13
@@ -9221,31 +9089,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           public class Fhir {
 
             /**
-             * Retrieves a Patient resource and resources related to that patient.
-             *
-             * Implements the FHIR extended operation Patient-everything
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/patient-operations.html#everything),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/patient-operations.html#everything),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/patient-operations.html#everything)).
-             *
-             * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-             * of type `searchset`, containing the results of the operation. Errors generated by the FHIR store
-             * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
-             * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-             * returned instead.
-             *
-             * The resources in scope for the response are:
-             *
-             * * The patient resource itself. * All the resources directly referenced by the patient resource. *
-             * Resources directly referencing the patient resource that meet the   inclusion criteria. The
-             * inclusion criteria are based on the membership   rules in the patient compartment definition
-             * ([DSTU2](http://hl7.org/fhir/DSTU2/compartment-patient.html),
+             * Retrieves a Patient resource and resources related to that patient. Implements the FHIR extended
+             * operation Patient-everything ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/patient-
+             * operations.html#everything), [STU3](http://hl7.org/implement/standards/fhir/STU3/patient-
+             * operations.html#everything), [R4](http://hl7.org/implement/standards/fhir/R4/patient-
+             * operations.html#everything)). On success, the response body will contain a JSON-encoded
+             * representation of a `Bundle` resource of type `searchset`, containing the results of the
+             * operation. Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome`
+             * resource describing the reason for the error. If the request cannot be mapped to a valid API
+             * method on a FHIR store, a generic GCP error might be returned instead. The resources in scope for
+             * the response are: * The patient resource itself. * All the resources directly referenced by the
+             * patient resource. * Resources directly referencing the patient resource that meet the inclusion
+             * criteria. The inclusion criteria are based on the membership rules in the patient compartment
+             * definition ([DSTU2](http://hl7.org/fhir/DSTU2/compartment-patient.html),
              * [STU3](http://www.hl7.org/fhir/stu3/compartmentdefinition-patient.html),
-             * [R4](http://hl7.org/fhir/R4/compartmentdefinition-patient.html)), which   details the eligible
-             * resource types and referencing search parameters.
-             *
-             * For samples that show how to call `Patient-everything`, see [Getting all patient compartment
-             * resources](/healthcare/docs/how-tos/fhir-resources#getting_all_patient_compartment_resources).
+             * [R4](http://hl7.org/fhir/R4/compartmentdefinition-patient.html)), which details the eligible
+             * resource types and referencing search parameters. For samples that show how to call `Patient-
+             * everything`, see [Getting all patient compartment resources](/healthcare/docs/how-tos/fhir-
+             * resources#getting_all_patient_compartment_resources).
              *
              * Create a request for the method "fhir.Patient-everything".
              *
@@ -9269,31 +9130,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
 
               /**
-               * Retrieves a Patient resource and resources related to that patient.
-               *
-               * Implements the FHIR extended operation Patient-everything
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/patient-operations.html#everything),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/patient-operations.html#everything),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/patient-operations.html#everything)).
-               *
-               * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-               * of type `searchset`, containing the results of the operation. Errors generated by the FHIR
-               * store will contain a JSON-encoded `OperationOutcome` resource describing the reason for the
-               * error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP
-               * error might be returned instead.
-               *
-               * The resources in scope for the response are:
-               *
-               * * The patient resource itself. * All the resources directly referenced by the patient resource.
-               * * Resources directly referencing the patient resource that meet the   inclusion criteria. The
-               * inclusion criteria are based on the membership   rules in the patient compartment definition
-               * ([DSTU2](http://hl7.org/fhir/DSTU2/compartment-patient.html),
+               * Retrieves a Patient resource and resources related to that patient. Implements the FHIR
+               * extended operation Patient-everything ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2
+               * /patient-operations.html#everything), [STU3](http://hl7.org/implement/standards/fhir/STU3
+               * /patient-operations.html#everything), [R4](http://hl7.org/implement/standards/fhir/R4/patient-
+               * operations.html#everything)). On success, the response body will contain a JSON-encoded
+               * representation of a `Bundle` resource of type `searchset`, containing the results of the
+               * operation. Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome`
+               * resource describing the reason for the error. If the request cannot be mapped to a valid API
+               * method on a FHIR store, a generic GCP error might be returned instead. The resources in scope
+               * for the response are: * The patient resource itself. * All the resources directly referenced by
+               * the patient resource. * Resources directly referencing the patient resource that meet the
+               * inclusion criteria. The inclusion criteria are based on the membership rules in the patient
+               * compartment definition ([DSTU2](http://hl7.org/fhir/DSTU2/compartment-patient.html),
                * [STU3](http://www.hl7.org/fhir/stu3/compartmentdefinition-patient.html),
-               * [R4](http://hl7.org/fhir/R4/compartmentdefinition-patient.html)), which   details the eligible
-               * resource types and referencing search parameters.
-               *
-               * For samples that show how to call `Patient-everything`, see [Getting all patient compartment
-               * resources](/healthcare/docs/how-tos/fhir-resources#getting_all_patient_compartment_resources).
+               * [R4](http://hl7.org/fhir/R4/compartmentdefinition-patient.html)), which details the eligible
+               * resource types and referencing search parameters. For samples that show how to call `Patient-
+               * everything`, see [Getting all patient compartment resources](/healthcare/docs/how-tos/fhir-
+               * resources#getting_all_patient_compartment_resources).
                *
                * Create a request for the method "fhir.Patient-everything".
                *
@@ -9422,18 +9276,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Used to retrieve the next or previous page of results when using pagination. Set
                * `_page_token` to the value of _page_token set in next or previous page links' url.
                * Next and previous page are returned in the response bundle's links field, where
-               * `link.relation` is "previous" or "next".
-               *
-               * Omit `_page_token` if no previous request has been made.
+               * `link.relation` is "previous" or "next". Omit `_page_token` if no previous request
+               * has been made.
                */
               @com.google.api.client.util.Key("_page_token")
               private java.lang.String pageToken;
 
               /** Used to retrieve the next or previous page of results when using pagination. Set `_page_token` to
              the value of _page_token set in next or previous page links' url. Next and previous page are
-             returned in the response bundle's links field, where `link.relation` is "previous" or "next".
-
-             Omit `_page_token` if no previous request has been made.
+             returned in the response bundle's links field, where `link.relation` is "previous" or "next". Omit
+             `_page_token` if no previous request has been made.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
@@ -9443,9 +9295,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Used to retrieve the next or previous page of results when using pagination. Set
                * `_page_token` to the value of _page_token set in next or previous page links' url.
                * Next and previous page are returned in the response bundle's links field, where
-               * `link.relation` is "previous" or "next".
-               *
-               * Omit `_page_token` if no previous request has been made.
+               * `link.relation` is "previous" or "next". Omit `_page_token` if no previous request
+               * has been made.
                */
               public PatientEverything setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
@@ -9557,12 +9408,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Deletes all the historical versions of a resource (excluding the current version) from the FHIR
              * store. To remove all versions of a resource, first delete the current version and then call this
-             * method.
-             *
-             * This is not a FHIR standard operation.
-             *
-             * For samples that show how to call `Resource-purge`, see [Deleting historical versions of a FHIR
-             * resource](/healthcare/docs/how-tos/fhir-
+             * method. This is not a FHIR standard operation. For samples that show how to call `Resource-
+             * purge`, see [Deleting historical versions of a FHIR resource](/healthcare/docs/how-tos/fhir-
              * resources#deleting_historical_versions_of_a_fhir_resource).
              *
              * Create a request for the method "fhir.Resource-purge".
@@ -9589,13 +9436,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Deletes all the historical versions of a resource (excluding the current version) from the FHIR
                * store. To remove all versions of a resource, first delete the current version and then call
-               * this method.
-               *
-               * This is not a FHIR standard operation.
-               *
-               * For samples that show how to call `Resource-purge`, see [Deleting historical versions of a FHIR
-               * resource](/healthcare/docs/how-tos/fhir-
-               * resources#deleting_historical_versions_of_a_fhir_resource).
+               * this method. This is not a FHIR standard operation. For samples that show how to call
+               * `Resource-purge`, see [Deleting historical versions of a FHIR resource](/healthcare/docs/how-
+               * tos/fhir-resources#deleting_historical_versions_of_a_fhir_resource).
                *
                * Create a request for the method "fhir.Resource-purge".
                *
@@ -9704,15 +9547,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * ([STU3](http://hl7.org/implement/standards/fhir/STU3/capabilitystatement.html),
              * [R4](http://hl7.org/implement/standards/fhir/R4/capabilitystatement.html)), or the [conformance
              * statement](http://hl7.org/implement/standards/fhir/DSTU2/conformance.html) in the DSTU2 case for
-             * the store, which contains a description of functionality supported by the server.
-             *
-             * Implements the FHIR standard capabilities interaction
+             * the store, which contains a description of functionality supported by the server. Implements the
+             * FHIR standard capabilities interaction
              * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#capabilities),
              * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#capabilities)), or the [conformance
              * interaction](http://hl7.org/implement/standards/fhir/DSTU2/http.html#conformance) in the DSTU2
-             * case.
-             *
-             * On success, the response body will contain a JSON-encoded representation of a
+             * case. On success, the response body will contain a JSON-encoded representation of a
              * `CapabilityStatement` resource.
              *
              * Create a request for the method "fhir.capabilities".
@@ -9742,14 +9582,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * [R4](http://hl7.org/implement/standards/fhir/R4/capabilitystatement.html)), or the [conformance
                * statement](http://hl7.org/implement/standards/fhir/DSTU2/conformance.html) in the DSTU2 case
                * for the store, which contains a description of functionality supported by the server.
-               *
                * Implements the FHIR standard capabilities interaction
                * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#capabilities),
                * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#capabilities)), or the [conformance
                * interaction](http://hl7.org/implement/standards/fhir/DSTU2/http.html#conformance) in the DSTU2
-               * case.
-               *
-               * On success, the response body will contain a JSON-encoded representation of a
+               * case. On success, the response body will contain a JSON-encoded representation of a
                * `CapabilityStatement` resource.
                *
                * Create a request for the method "fhir.capabilities".
@@ -9865,25 +9702,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Creates a FHIR resource.
-             *
-             * Implements the FHIR standard create interaction
+             * Creates a FHIR resource. Implements the FHIR standard create interaction
              * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#create),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#create),
              * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#create)), which creates a new resource
-             * with a server-assigned resource ID.
-             *
-             * The request body must contain a JSON-encoded FHIR resource, and the request headers must contain
-             * `Content-Type: application/fhir+json`.
-             *
-             * On success, the response body will contain a JSON-encoded representation of the resource as it
-             * was created on the server, including the server-assigned resource ID and version ID. Errors
-             * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
-             * the reason for the error. If the request cannot be mapped to a valid API method on a FHIR store,
-             * a generic GCP error might be returned instead.
-             *
-             * For samples that show how to call `create`, see [Creating a FHIR resource](/healthcare/docs/how-
-             * tos/fhir-resources#creating_a_fhir_resource).
+             * with a server-assigned resource ID. The request body must contain a JSON-encoded FHIR resource,
+             * and the request headers must contain `Content-Type: application/fhir+json`. On success, the
+             * response body will contain a JSON-encoded representation of the resource as it was created on the
+             * server, including the server-assigned resource ID and version ID. Errors generated by the FHIR
+             * store will contain a JSON-encoded `OperationOutcome` resource describing the reason for the
+             * error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error
+             * might be returned instead. For samples that show how to call `create`, see [Creating a FHIR
+             * resource](/healthcare/docs/how-tos/fhir-resources#creating_a_fhir_resource).
              *
              * Create a request for the method "fhir.create".
              *
@@ -9891,13 +9721,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
              * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The FHIR resource type to create, such as Patient or Observation. For a
-            complete list, see the FHIR
-             *        Resource Index
-            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             * @param type The FHIR resource type to create, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
-            Must match the
+             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
              *        resource type in the provided content.
              * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
              * @return the request
@@ -9919,25 +9746,19 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^[^/]+$");
 
               /**
-               * Creates a FHIR resource.
-               *
-               * Implements the FHIR standard create interaction
+               * Creates a FHIR resource. Implements the FHIR standard create interaction
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#create),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#create),
                * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#create)), which creates a new
-               * resource with a server-assigned resource ID.
-               *
-               * The request body must contain a JSON-encoded FHIR resource, and the request headers must
-               * contain `Content-Type: application/fhir+json`.
-               *
-               * On success, the response body will contain a JSON-encoded representation of the resource as it
-               * was created on the server, including the server-assigned resource ID and version ID. Errors
+               * resource with a server-assigned resource ID. The request body must contain a JSON-encoded FHIR
+               * resource, and the request headers must contain `Content-Type: application/fhir+json`. On
+               * success, the response body will contain a JSON-encoded representation of the resource as it was
+               * created on the server, including the server-assigned resource ID and version ID. Errors
                * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
                * the reason for the error. If the request cannot be mapped to a valid API method on a FHIR
-               * store, a generic GCP error might be returned instead.
-               *
-               * For samples that show how to call `create`, see [Creating a FHIR resource](/healthcare/docs
-               * /how-tos/fhir-resources#creating_a_fhir_resource).
+               * store, a generic GCP error might be returned instead. For samples that show how to call
+               * `create`, see [Creating a FHIR resource](/healthcare/docs/how-tos/fhir-
+               * resources#creating_a_fhir_resource).
                *
                * Create a request for the method "fhir.create".
                *
@@ -9948,13 +9769,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The FHIR resource type to create, such as Patient or Observation. For a
-            complete list, see the FHIR
-             *        Resource Index
-            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * @param type The FHIR resource type to create, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
-            Must match the
+             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
              *        resource type in the provided content.
                * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
                * @since 1.13
@@ -10096,19 +9914,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Deletes a FHIR resource.
-             *
-             * Implements the FHIR standard delete interaction
+             * Deletes a FHIR resource. Implements the FHIR standard delete interaction
              * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#delete),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#delete),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#delete)).
-             *
-             * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
-             * the FHIR store, the deleted resources will be moved to a history repository that can still be
-             * retrieved through vread and related methods, unless they are removed by the purge method.
-             *
-             * For samples that show how to call `delete`, see [Deleting a FHIR resource](/healthcare/docs/how-
-             * tos/fhir-resources#deleting_a_fhir_resource).
+             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#delete)). Note: Unless resource
+             * versioning is disabled by setting the disable_resource_versioning flag on the FHIR store, the
+             * deleted resources will be moved to a history repository that can still be retrieved through vread
+             * and related methods, unless they are removed by the purge method. For samples that show how to
+             * call `delete`, see [Deleting a FHIR resource](/healthcare/docs/how-tos/fhir-
+             * resources#deleting_a_fhir_resource).
              *
              * Create a request for the method "fhir.delete".
              *
@@ -10132,19 +9946,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
 
               /**
-               * Deletes a FHIR resource.
-               *
-               * Implements the FHIR standard delete interaction
+               * Deletes a FHIR resource. Implements the FHIR standard delete interaction
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#delete),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#delete),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#delete)).
-               *
-               * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
-               * the FHIR store, the deleted resources will be moved to a history repository that can still be
-               * retrieved through vread and related methods, unless they are removed by the purge method.
-               *
-               * For samples that show how to call `delete`, see [Deleting a FHIR resource](/healthcare/docs
-               * /how-tos/fhir-resources#deleting_a_fhir_resource).
+               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#delete)). Note: Unless resource
+               * versioning is disabled by setting the disable_resource_versioning flag on the FHIR store, the
+               * deleted resources will be moved to a history repository that can still be retrieved through
+               * vread and related methods, unless they are removed by the purge method. For samples that show
+               * how to call `delete`, see [Deleting a FHIR resource](/healthcare/docs/how-tos/fhir-
+               * resources#deleting_a_fhir_resource).
                *
                * Create a request for the method "fhir.delete".
                *
@@ -10249,34 +10059,27 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Executes all the requests in the given Bundle.
-             *
-             * Implements the FHIR standard batch/transaction interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#transaction),
+             * Executes all the requests in the given Bundle. Implements the FHIR standard batch/transaction
+             * interaction ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#transaction),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#transaction),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#transaction)).
-             *
-             * Supports all interactions within a bundle, except search. This method accepts Bundles of type
-             * `batch` and `transaction`, processing them according to the batch processing rules
+             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#transaction)). Supports all
+             * interactions within a bundle, except search. This method accepts Bundles of type `batch` and
+             * `transaction`, processing them according to the batch processing rules
              * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.1),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1),
              * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#brules)) and transaction processing
              * rules ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.2),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#trules)).
-             *
-             * The request body must contain a JSON-encoded FHIR `Bundle` resource, and the request headers must
-             * contain `Content-Type: application/fhir+json`.
-             *
-             * For a batch bundle or a successful transaction the response body will contain a JSON-encoded
-             * representation of a `Bundle` resource of type `batch-response` or `transaction-response`
-             * containing one entry for each entry in the request, with the outcome of processing the entry. In
-             * the case of an error for a transaction bundle, the response body will contain a JSON-encoded
-             * `OperationOutcome` resource describing the reason for the error. If the request cannot be mapped
-             * to a valid API method on a FHIR store, a generic GCP error might be returned instead.
-             *
-             * For samples that show how to call `executeBundle`, see [Managing FHIR resources using FHIR
-             * bundles](/healthcare/docs/how-tos/fhir-bundles).
+             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#trules)). The request body must contain
+             * a JSON-encoded FHIR `Bundle` resource, and the request headers must contain `Content-Type:
+             * application/fhir+json`. For a batch bundle or a successful transaction the response body will
+             * contain a JSON-encoded representation of a `Bundle` resource of type `batch-response` or
+             * `transaction-response` containing one entry for each entry in the request, with the outcome of
+             * processing the entry. In the case of an error for a transaction bundle, the response body will
+             * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
+             * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+             * returned instead. For samples that show how to call `executeBundle`, see [Managing FHIR resources
+             * using FHIR bundles](/healthcare/docs/how-tos/fhir-bundles).
              *
              * Create a request for the method "fhir.executeBundle".
              *
@@ -10301,34 +10104,27 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
               /**
-               * Executes all the requests in the given Bundle.
-               *
-               * Implements the FHIR standard batch/transaction interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#transaction),
+               * Executes all the requests in the given Bundle. Implements the FHIR standard batch/transaction
+               * interaction ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#transaction),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#transaction),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#transaction)).
-               *
-               * Supports all interactions within a bundle, except search. This method accepts Bundles of type
-               * `batch` and `transaction`, processing them according to the batch processing rules
+               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#transaction)). Supports all
+               * interactions within a bundle, except search. This method accepts Bundles of type `batch` and
+               * `transaction`, processing them according to the batch processing rules
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.1),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1),
                * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#brules)) and transaction processing
                * rules ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.2),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#trules)).
-               *
-               * The request body must contain a JSON-encoded FHIR `Bundle` resource, and the request headers
-               * must contain `Content-Type: application/fhir+json`.
-               *
-               * For a batch bundle or a successful transaction the response body will contain a JSON-encoded
-               * representation of a `Bundle` resource of type `batch-response` or `transaction-response`
-               * containing one entry for each entry in the request, with the outcome of processing the entry.
-               * In the case of an error for a transaction bundle, the response body will contain a JSON-encoded
-               * `OperationOutcome` resource describing the reason for the error. If the request cannot be
-               * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
-               *
-               * For samples that show how to call `executeBundle`, see [Managing FHIR resources using FHIR
-               * bundles](/healthcare/docs/how-tos/fhir-bundles).
+               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#trules)). The request body must
+               * contain a JSON-encoded FHIR `Bundle` resource, and the request headers must contain `Content-
+               * Type: application/fhir+json`. For a batch bundle or a successful transaction the response body
+               * will contain a JSON-encoded representation of a `Bundle` resource of type `batch-response` or
+               * `transaction-response` containing one entry for each entry in the request, with the outcome of
+               * processing the entry. In the case of an error for a transaction bundle, the response body will
+               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
+               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+               * returned instead. For samples that show how to call `executeBundle`, see [Managing FHIR
+               * resources using FHIR bundles](/healthcare/docs/how-tos/fhir-bundles).
                *
                * Create a request for the method "fhir.executeBundle".
                *
@@ -10435,21 +10231,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * Lists all the versions of a resource (including the current version and deleted versions) from
-             * the FHIR store.
-             *
-             * Implements the per-resource form of the FHIR standard history interaction
+             * the FHIR store. Implements the per-resource form of the FHIR standard history interaction
              * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#history),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#history),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#history)).
-             *
-             * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-             * of type `history`, containing the version history sorted from most recent to oldest versions.
-             * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
-             * describing the reason for the error. If the request cannot be mapped to a valid API method on a
-             * FHIR store, a generic GCP error might be returned instead.
-             *
-             * For samples that show how to call `history`, see [Listing FHIR resource
-             * versions](/healthcare/docs/how-tos/fhir-resources#listing_fhir_resource_versions).
+             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#history)). On success, the response
+             * body will contain a JSON-encoded representation of a `Bundle` resource of type `history`,
+             * containing the version history sorted from most recent to oldest versions. Errors generated by
+             * the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing the reason for
+             * the error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP
+             * error might be returned instead. For samples that show how to call `history`, see [Listing FHIR
+             * resource versions](/healthcare/docs/how-tos/fhir-resources#listing_fhir_resource_versions).
              *
              * Create a request for the method "fhir.history".
              *
@@ -10474,21 +10265,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Lists all the versions of a resource (including the current version and deleted versions) from
-               * the FHIR store.
-               *
-               * Implements the per-resource form of the FHIR standard history interaction
+               * the FHIR store. Implements the per-resource form of the FHIR standard history interaction
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#history),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#history),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#history)).
-               *
-               * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-               * of type `history`, containing the version history sorted from most recent to oldest versions.
-               * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
-               * describing the reason for the error. If the request cannot be mapped to a valid API method on a
-               * FHIR store, a generic GCP error might be returned instead.
-               *
-               * For samples that show how to call `history`, see [Listing FHIR resource
-               * versions](/healthcare/docs/how-tos/fhir-resources#listing_fhir_resource_versions).
+               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#history)). On success, the response
+               * body will contain a JSON-encoded representation of a `Bundle` resource of type `history`,
+               * containing the version history sorted from most recent to oldest versions. Errors generated by
+               * the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing the reason
+               * for the error. If the request cannot be mapped to a valid API method on a FHIR store, a generic
+               * GCP error might be returned instead. For samples that show how to call `history`, see [Listing
+               * FHIR resource versions](/healthcare/docs/how-tos/fhir-
+               * resources#listing_fhir_resource_versions).
                *
                * Create a request for the method "fhir.history".
                *
@@ -10600,23 +10387,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Only include resource versions that were current at some point during the time
                * period specified in the date time value. The date parameter format is yyyy-mm-
-               * ddThh:mm:ss[Z|(+|-)hh:mm]
-               *
-               * Clients may specify any of the following:
-               *
-               * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day:
-               * `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
+               * ddThh:mm:ss[Z|(+|-)hh:mm] Clients may specify any of the following: * An entire
+               * year: `_at=2019` * An entire month: `_at=2019-01` * A specific day:
+               * `_at=2019-01-20` * A specific second: `_at=2018-12-31T23:59:58Z`
                */
               @com.google.api.client.util.Key("_at")
               private java.lang.String at;
 
               /** Only include resource versions that were current at some point during the time period specified in
-             the date time value. The date parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm]
-
-             Clients may specify any of the following:
-
-             *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day: `_at=2019-01-20`
-             *  A specific second: `_at=2018-12-31T23:59:58Z`
+             the date time value. The date parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm] Clients may
+             specify any of the following: * An entire year: `_at=2019` * An entire month: `_at=2019-01` * A
+             specific day: `_at=2019-01-20` * A specific second: `_at=2018-12-31T23:59:58Z`
                */
               public java.lang.String getAt() {
                 return at;
@@ -10625,12 +10406,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Only include resource versions that were current at some point during the time
                * period specified in the date time value. The date parameter format is yyyy-mm-
-               * ddThh:mm:ss[Z|(+|-)hh:mm]
-               *
-               * Clients may specify any of the following:
-               *
-               * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day:
-               * `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
+               * ddThh:mm:ss[Z|(+|-)hh:mm] Clients may specify any of the following: * An entire
+               * year: `_at=2019` * An entire month: `_at=2019-01` * A specific day:
+               * `_at=2019-01-20` * A specific second: `_at=2018-12-31T23:59:58Z`
                */
               public History setAt(java.lang.String at) {
                 this.at = at;
@@ -10657,9 +10435,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Used to retrieve the first, previous, next, or last page of resource versions when
                * using pagination. Value should be set to the value of `_page_token` set in next or
                * previous page links' URLs. Next and previous page are returned in the response
-               * bundle's links field, where `link.relation` is "previous" or "next".
-               *
-               * Omit `_page_token` if no previous request has been made.
+               * bundle's links field, where `link.relation` is "previous" or "next". Omit
+               * `_page_token` if no previous request has been made.
                */
               @com.google.api.client.util.Key("_page_token")
               private java.lang.String pageToken;
@@ -10667,9 +10444,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /** Used to retrieve the first, previous, next, or last page of resource versions when using
              pagination. Value should be set to the value of `_page_token` set in next or previous page links'
              URLs. Next and previous page are returned in the response bundle's links field, where
-             `link.relation` is "previous" or "next".
-
-             Omit `_page_token` if no previous request has been made.
+             `link.relation` is "previous" or "next". Omit `_page_token` if no previous request has been made.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
@@ -10679,9 +10454,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Used to retrieve the first, previous, next, or last page of resource versions when
                * using pagination. Value should be set to the value of `_page_token` set in next or
                * previous page links' URLs. Next and previous page are returned in the response
-               * bundle's links field, where `link.relation` is "previous" or "next".
-               *
-               * Omit `_page_token` if no previous request has been made.
+               * bundle's links field, where `link.relation` is "previous" or "next". Omit
+               * `_page_token` if no previous request has been made.
                */
               public History setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
@@ -10723,24 +10497,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * Updates part of an existing resource by applying the operations specified in a [JSON
-             * Patch](http://jsonpatch.com/) document.
-             *
-             * Implements the FHIR standard patch interaction
+             * Patch](http://jsonpatch.com/) document. Implements the FHIR standard patch interaction
              * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)).
-             *
-             * DSTU2 doesn't define a patch method, but the server supports it in the same way it supports STU3.
-             *
-             * The request body must contain a JSON Patch document, and the request headers must contain
-             * `Content-Type: application/json-patch+json`.
-             *
-             * On success, the response body will contain a JSON-encoded representation of the updated resource,
-             * including the server-assigned version ID. Errors generated by the FHIR store will contain a JSON-
-             * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
-             * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
-             *
-             * For samples that show how to call `patch`, see [Patching a FHIR resource](/healthcare/docs/how-
-             * tos/fhir-resources#patching_a_fhir_resource).
+             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)). DSTU2 doesn't define a patch
+             * method, but the server supports it in the same way it supports STU3. The request body must
+             * contain a JSON Patch document, and the request headers must contain `Content-Type: application
+             * /json-patch+json`. On success, the response body will contain a JSON-encoded representation of
+             * the updated resource, including the server-assigned version ID. Errors generated by the FHIR
+             * store will contain a JSON-encoded `OperationOutcome` resource describing the reason for the
+             * error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error
+             * might be returned instead. For samples that show how to call `patch`, see [Patching a FHIR
+             * resource](/healthcare/docs/how-tos/fhir-resources#patching_a_fhir_resource).
              *
              * Create a request for the method "fhir.patch".
              *
@@ -10766,26 +10533,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Updates part of an existing resource by applying the operations specified in a [JSON
-               * Patch](http://jsonpatch.com/) document.
-               *
-               * Implements the FHIR standard patch interaction
+               * Patch](http://jsonpatch.com/) document. Implements the FHIR standard patch interaction
                * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)).
-               *
-               * DSTU2 doesn't define a patch method, but the server supports it in the same way it supports
-               * STU3.
-               *
-               * The request body must contain a JSON Patch document, and the request headers must contain
-               * `Content-Type: application/json-patch+json`.
-               *
-               * On success, the response body will contain a JSON-encoded representation of the updated
-               * resource, including the server-assigned version ID. Errors generated by the FHIR store will
-               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
-               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-               * returned instead.
-               *
-               * For samples that show how to call `patch`, see [Patching a FHIR resource](/healthcare/docs/how-
-               * tos/fhir-resources#patching_a_fhir_resource).
+               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)). DSTU2 doesn't define a patch
+               * method, but the server supports it in the same way it supports STU3. The request body must
+               * contain a JSON Patch document, and the request headers must contain `Content-Type: application
+               * /json-patch+json`. On success, the response body will contain a JSON-encoded representation of
+               * the updated resource, including the server-assigned version ID. Errors generated by the FHIR
+               * store will contain a JSON-encoded `OperationOutcome` resource describing the reason for the
+               * error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP
+               * error might be returned instead. For samples that show how to call `patch`, see [Patching a
+               * FHIR resource](/healthcare/docs/how-tos/fhir-resources#patching_a_fhir_resource).
                *
                * Create a request for the method "fhir.patch".
                *
@@ -10891,26 +10649,20 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Gets the contents of a FHIR resource.
-             *
-             * Implements the FHIR standard read interaction
+             * Gets the contents of a FHIR resource. Implements the FHIR standard read interaction
              * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#read),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#read),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#read)).
-             *
-             * Also supports the FHIR standard conditional read interaction
+             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#read)). Also supports the FHIR standard
+             * conditional read interaction
              * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#cread),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#cread),
              * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#cread)) specified by supplying an `If-
-             * Modified-Since` header with a date/time value or an `If-None-Match` header with an ETag value.
-             *
-             * On success, the response body will contain a JSON-encoded representation of the resource. Errors
+             * Modified-Since` header with a date/time value or an `If-None-Match` header with an ETag value. On
+             * success, the response body will contain a JSON-encoded representation of the resource. Errors
              * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
              * the reason for the error. If the request cannot be mapped to a valid API method on a FHIR store,
-             * a generic GCP error might be returned instead.
-             *
-             * For samples that show how to call `read`, see [Getting a FHIR resource](/healthcare/docs/how-tos
-             * /fhir-resources#getting_a_fhir_resource).
+             * a generic GCP error might be returned instead. For samples that show how to call `read`, see
+             * [Getting a FHIR resource](/healthcare/docs/how-tos/fhir-resources#getting_a_fhir_resource).
              *
              * Create a request for the method "fhir.read".
              *
@@ -10934,27 +10686,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
 
               /**
-               * Gets the contents of a FHIR resource.
-               *
-               * Implements the FHIR standard read interaction
+               * Gets the contents of a FHIR resource. Implements the FHIR standard read interaction
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#read),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#read),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#read)).
-               *
-               * Also supports the FHIR standard conditional read interaction
+               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#read)). Also supports the FHIR
+               * standard conditional read interaction
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#cread),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#cread),
                * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#cread)) specified by supplying an
                * `If-Modified-Since` header with a date/time value or an `If-None-Match` header with an ETag
-               * value.
-               *
-               * On success, the response body will contain a JSON-encoded representation of the resource.
-               * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
-               * describing the reason for the error. If the request cannot be mapped to a valid API method on a
-               * FHIR store, a generic GCP error might be returned instead.
-               *
-               * For samples that show how to call `read`, see [Getting a FHIR resource](/healthcare/docs/how-
-               * tos/fhir-resources#getting_a_fhir_resource).
+               * value. On success, the response body will contain a JSON-encoded representation of the
+               * resource. Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome`
+               * resource describing the reason for the error. If the request cannot be mapped to a valid API
+               * method on a FHIR store, a generic GCP error might be returned instead. For samples that show
+               * how to call `read`, see [Getting a FHIR resource](/healthcare/docs/how-tos/fhir-
+               * resources#getting_a_fhir_resource).
                *
                * Create a request for the method "fhir.read".
                *
@@ -11069,57 +10815,40 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * Searches for resources in the given FHIR store according to criteria specified as query
-             * parameters.
-             *
-             * Implements the FHIR standard search interaction
+             * parameters. Implements the FHIR standard search interaction
              * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#search),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#search),
              * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#search)) using the search semantics
              * described in the FHIR Search specification
              * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/search.html),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/search.html),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/search.html)).
-             *
-             * Supports three methods of search defined by the specification:
-             *
-             * *  `GET [base]?[parameters]` to search across all resources. *  `GET [base]/[type]?[parameters]`
-             * to search resources of a specified type. *  `POST [base]/[type]/_search?[parameters]` as an
-             * alternate form having the same semantics as the `GET` method.
-             *
-             * The `GET` methods do not support compartment searches. The `POST` method does not support
-             * `application/x-www-form-urlencoded` search parameters.
-             *
-             * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-             * of type `searchset`, containing the results of the search. Errors generated by the FHIR store
-             * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
-             * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-             * returned instead.
-             *
-             * The server's capability statement, retrieved through capabilities, indicates what search
-             * parameters are supported on each FHIR resource. A list of all search parameters defined by the
-             * specification can be found in the FHIR Search Parameter Registry
-             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/searchparameter-registry.html)). FHIR search
-             * parameters for DSTU2 can be found on each resource's definition page.
-             *
-             * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
-             * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
-             *
-             * Supported search result parameters: `_sort`, `_count`, `_include`, `_revinclude`,
-             * `_summary=text`, `_summary=data`, and `_elements`.
-             *
+             * [R4](http://hl7.org/implement/standards/fhir/R4/search.html)). Supports three methods of search
+             * defined by the specification: * `GET [base]?[parameters]` to search across all resources. * `GET
+             * [base]/[type]?[parameters]` to search resources of a specified type. * `POST
+             * [base]/[type]/_search?[parameters]` as an alternate form having the same semantics as the `GET`
+             * method. The `GET` methods do not support compartment searches. The `POST` method does not support
+             * `application/x-www-form-urlencoded` search parameters. On success, the response body will contain
+             * a JSON-encoded representation of a `Bundle` resource of type `searchset`, containing the results
+             * of the search. Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome`
+             * resource describing the reason for the error. If the request cannot be mapped to a valid API
+             * method on a FHIR store, a generic GCP error might be returned instead. The server's capability
+             * statement, retrieved through capabilities, indicates what search parameters are supported on each
+             * FHIR resource. A list of all search parameters defined by the specification can be found in the
+             * FHIR Search Parameter Registry ([STU3](http://hl7.org/implement/standards/fhir/STU3
+             * /searchparameter-registry.html), [R4](http://hl7.org/implement/standards/fhir/R4/searchparameter-
+             * registry.html)). FHIR search parameters for DSTU2 can be found on each resource's definition
+             * page. Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
+             * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`. Supported search result parameters:
+             * `_sort`, `_count`, `_include`, `_revinclude`, `_summary=text`, `_summary=data`, and `_elements`.
              * The maximum number of search results returned defaults to 100, which can be overridden by the
              * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
-             * `Bundle` will contain pagination links.
-             *
-             * Resources with a total size larger than 5MB or a field count larger than 50,000 might not be
-             * fully searchable as the server might trim its generated search index in those cases.
-             *
-             * Note: FHIR resources are indexed asynchronously, so there might be a slight delay between the
-             * time a resource is created or changes and when the change is reflected in search results.
-             *
-             * For samples and detailed information, see [Searching for FHIR resources](/healthcare/docs/how-tos
-             * /fhir-search) and [Advanced FHIR search features](/healthcare/docs/how-tos/fhir-advanced-search).
+             * `Bundle` will contain pagination links. Resources with a total size larger than 5MB or a field
+             * count larger than 50,000 might not be fully searchable as the server might trim its generated
+             * search index in those cases. Note: FHIR resources are indexed asynchronously, so there might be a
+             * slight delay between the time a resource is created or changes and when the change is reflected
+             * in search results. For samples and detailed information, see [Searching for FHIR
+             * resources](/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR search
+             * features](/healthcare/docs/how-tos/fhir-advanced-search).
              *
              * Create a request for the method "fhir.search".
              *
@@ -11145,59 +10874,41 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Searches for resources in the given FHIR store according to criteria specified as query
-               * parameters.
-               *
-               * Implements the FHIR standard search interaction
+               * parameters. Implements the FHIR standard search interaction
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#search),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#search),
                * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#search)) using the search semantics
                * described in the FHIR Search specification
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/search.html),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/search.html),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/search.html)).
-               *
-               * Supports three methods of search defined by the specification:
-               *
-               * *  `GET [base]?[parameters]` to search across all resources. *  `GET
-               * [base]/[type]?[parameters]` to search resources of a specified type. *  `POST
+               * [R4](http://hl7.org/implement/standards/fhir/R4/search.html)). Supports three methods of search
+               * defined by the specification: * `GET [base]?[parameters]` to search across all resources. *
+               * `GET [base]/[type]?[parameters]` to search resources of a specified type. * `POST
                * [base]/[type]/_search?[parameters]` as an alternate form having the same semantics as the `GET`
-               * method.
-               *
-               * The `GET` methods do not support compartment searches. The `POST` method does not support
-               * `application/x-www-form-urlencoded` search parameters.
-               *
-               * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-               * of type `searchset`, containing the results of the search. Errors generated by the FHIR store
-               * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
-               * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might
-               * be returned instead.
-               *
+               * method. The `GET` methods do not support compartment searches. The `POST` method does not
+               * support `application/x-www-form-urlencoded` search parameters. On success, the response body
+               * will contain a JSON-encoded representation of a `Bundle` resource of type `searchset`,
+               * containing the results of the search. Errors generated by the FHIR store will contain a JSON-
+               * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot
+               * be mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
                * The server's capability statement, retrieved through capabilities, indicates what search
                * parameters are supported on each FHIR resource. A list of all search parameters defined by the
                * specification can be found in the FHIR Search Parameter Registry
                * ([STU3](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html),
                * [R4](http://hl7.org/implement/standards/fhir/R4/searchparameter-registry.html)). FHIR search
-               * parameters for DSTU2 can be found on each resource's definition page.
-               *
-               * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
-               * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
-               *
-               * Supported search result parameters: `_sort`, `_count`, `_include`, `_revinclude`,
-               * `_summary=text`, `_summary=data`, and `_elements`.
-               *
-               * The maximum number of search results returned defaults to 100, which can be overridden by the
-               * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
-               * `Bundle` will contain pagination links.
-               *
-               * Resources with a total size larger than 5MB or a field count larger than 50,000 might not be
-               * fully searchable as the server might trim its generated search index in those cases.
-               *
-               * Note: FHIR resources are indexed asynchronously, so there might be a slight delay between the
-               * time a resource is created or changes and when the change is reflected in search results.
-               *
-               * For samples and detailed information, see [Searching for FHIR resources](/healthcare/docs/how-
-               * tos/fhir-search) and [Advanced FHIR search features](/healthcare/docs/how-tos/fhir-advanced-
-               * search).
+               * parameters for DSTU2 can be found on each resource's definition page. Supported search
+               * modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`, `:above`, `:below`,
+               * `:[type]`, `:not`, and `:recurse`. Supported search result parameters: `_sort`, `_count`,
+               * `_include`, `_revinclude`, `_summary=text`, `_summary=data`, and `_elements`. The maximum
+               * number of search results returned defaults to 100, which can be overridden by the `_count`
+               * parameter up to a maximum limit of 1000. If there are additional results, the returned `Bundle`
+               * will contain pagination links. Resources with a total size larger than 5MB or a field count
+               * larger than 50,000 might not be fully searchable as the server might trim its generated search
+               * index in those cases. Note: FHIR resources are indexed asynchronously, so there might be a
+               * slight delay between the time a resource is created or changes and when the change is reflected
+               * in search results. For samples and detailed information, see [Searching for FHIR
+               * resources](/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR search
+               * features](/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search".
                *
@@ -11303,27 +11014,20 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Updates the entire contents of a resource.
-             *
-             * Implements the FHIR standard update interaction
+             * Updates the entire contents of a resource. Implements the FHIR standard update interaction
              * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#update),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#update),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#update)).
-             *
-             * If the specified resource does not exist and the FHIR store has enable_update_create set, creates
-             * the resource with the client-specified ID.
-             *
-             * The request body must contain a JSON-encoded FHIR resource, and the request headers must contain
-             * `Content-Type: application/fhir+json`. The resource must contain an `id` element having an
-             * identical value to the ID in the REST path of the request.
-             *
-             * On success, the response body will contain a JSON-encoded representation of the updated resource,
-             * including the server-assigned version ID. Errors generated by the FHIR store will contain a JSON-
-             * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
-             * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
-             *
-             * For samples that show how to call `update`, see [Updating a FHIR resource](/healthcare/docs/how-
-             * tos/fhir-resources#updating_a_fhir_resource).
+             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#update)). If the specified resource
+             * does not exist and the FHIR store has enable_update_create set, creates the resource with the
+             * client-specified ID. The request body must contain a JSON-encoded FHIR resource, and the request
+             * headers must contain `Content-Type: application/fhir+json`. The resource must contain an `id`
+             * element having an identical value to the ID in the REST path of the request. On success, the
+             * response body will contain a JSON-encoded representation of the updated resource, including the
+             * server-assigned version ID. Errors generated by the FHIR store will contain a JSON-encoded
+             * `OperationOutcome` resource describing the reason for the error. If the request cannot be mapped
+             * to a valid API method on a FHIR store, a generic GCP error might be returned instead. For samples
+             * that show how to call `update`, see [Updating a FHIR resource](/healthcare/docs/how-tos/fhir-
+             * resources#updating_a_fhir_resource).
              *
              * Create a request for the method "fhir.update".
              *
@@ -11348,28 +11052,20 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
 
               /**
-               * Updates the entire contents of a resource.
-               *
-               * Implements the FHIR standard update interaction
+               * Updates the entire contents of a resource. Implements the FHIR standard update interaction
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#update),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#update),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#update)).
-               *
-               * If the specified resource does not exist and the FHIR store has enable_update_create set,
-               * creates the resource with the client-specified ID.
-               *
-               * The request body must contain a JSON-encoded FHIR resource, and the request headers must
-               * contain `Content-Type: application/fhir+json`. The resource must contain an `id` element having
-               * an identical value to the ID in the REST path of the request.
-               *
-               * On success, the response body will contain a JSON-encoded representation of the updated
-               * resource, including the server-assigned version ID. Errors generated by the FHIR store will
-               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
-               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-               * returned instead.
-               *
-               * For samples that show how to call `update`, see [Updating a FHIR resource](/healthcare/docs
-               * /how-tos/fhir-resources#updating_a_fhir_resource).
+               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#update)). If the specified resource
+               * does not exist and the FHIR store has enable_update_create set, creates the resource with the
+               * client-specified ID. The request body must contain a JSON-encoded FHIR resource, and the
+               * request headers must contain `Content-Type: application/fhir+json`. The resource must contain
+               * an `id` element having an identical value to the ID in the REST path of the request. On
+               * success, the response body will contain a JSON-encoded representation of the updated resource,
+               * including the server-assigned version ID. Errors generated by the FHIR store will contain a
+               * JSON-encoded `OperationOutcome` resource describing the reason for the error. If the request
+               * cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be returned
+               * instead. For samples that show how to call `update`, see [Updating a FHIR
+               * resource](/healthcare/docs/how-tos/fhir-resources#updating_a_fhir_resource).
                *
                * Create a request for the method "fhir.update".
                *
@@ -11476,18 +11172,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * Gets the contents of a version (current or historical) of a FHIR resource by version ID.
-             *
              * Implements the FHIR standard vread interaction
              * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#vread),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#vread),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#vread)).
-             *
-             * On success, the response body will contain a JSON-encoded representation of the resource. Errors
-             * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
-             * the reason for the error. If the request cannot be mapped to a valid API method on a FHIR store,
-             * a generic GCP error might be returned instead.
-             *
-             * For samples that show how to call `vread`, see [Retrieving a FHIR resource
+             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#vread)). On success, the response body
+             * will contain a JSON-encoded representation of the resource. Errors generated by the FHIR store
+             * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
+             * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+             * returned instead. For samples that show how to call `vread`, see [Retrieving a FHIR resource
              * version](/healthcare/docs/how-tos/fhir-resources#retrieving_a_fhir_resource_version).
              *
              * Create a request for the method "fhir.vread".
@@ -11513,19 +11205,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Gets the contents of a version (current or historical) of a FHIR resource by version ID.
-               *
                * Implements the FHIR standard vread interaction
                * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#vread),
                * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#vread),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#vread)).
-               *
-               * On success, the response body will contain a JSON-encoded representation of the resource.
-               * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
-               * describing the reason for the error. If the request cannot be mapped to a valid API method on a
-               * FHIR store, a generic GCP error might be returned instead.
-               *
-               * For samples that show how to call `vread`, see [Retrieving a FHIR resource
-               * version](/healthcare/docs/how-tos/fhir-resources#retrieving_a_fhir_resource_version).
+               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#vread)). On success, the response
+               * body will contain a JSON-encoded representation of the resource. Errors generated by the FHIR
+               * store will contain a JSON-encoded `OperationOutcome` resource describing the reason for the
+               * error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP
+               * error might be returned instead. For samples that show how to call `vread`, see [Retrieving a
+               * FHIR resource version](/healthcare/docs/how-tos/fhir-
+               * resources#retrieving_a_fhir_resource_version).
                *
                * Create a request for the method "fhir.vread".
                *
@@ -12092,8 +11781,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
            * @return the request
            */
@@ -12122,8 +11810,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
              * @since 1.13
              */
@@ -12231,44 +11918,32 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
-             *
-             * To learn which resources support conditions in their IAM policies, see the [IAM
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned.
-
-           Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-           Requests for policies with any conditional bindings must specify version 3. Policies without any
-           conditional bindings may specify any valid value or leave the field unset.
-
-           To learn which resources support conditions in their IAM policies, see the [IAM
-           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+           must specify version 3. Policies without any conditional bindings may specify any valid value or
+           leave the field unset. To learn which resources support conditions in their IAM policies, see the
+           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
-             *
-             * To learn which resources support conditions in their IAM policies, see the [IAM
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
              * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
@@ -12650,17 +12325,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "hl7V2Stores.setIamPolicy".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1.model.SetIamPolicyRequest}
            * @return the request
@@ -12679,9 +12352,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
 
             /**
-             * Sets the access control policy on the specified resource. Replaces any existing policy.
-             *
-             * Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
              * Create a request for the method "hl7V2Stores.setIamPolicy".
              *
@@ -12691,8 +12363,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1.model.SetIamPolicyRequest}
              * @since 1.13
@@ -12797,18 +12468,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-           * this will return an empty set of permissions, not a `NOT_FOUND` error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "hl7V2Stores.testIamPermissions".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1.model.TestIamPermissionsRequest}
            * @return the request
@@ -12828,10 +12497,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
-             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error.
-             *
-             * Note: This operation is designed to be used for building permission-aware UIs and command-line
-             * tools, not for authorization checking. This operation may "fail open" without warning.
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
              *
              * Create a request for the method "hl7V2Stores.testIamPermissions".
              *
@@ -12841,8 +12509,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1.model.TestIamPermissionsRequest}
              * @since 1.13
@@ -13541,10 +13208,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Lists all the messages in the given HL7v2 store with support for filtering.
-             *
-             * Note: HL7v2 messages are indexed asynchronously, so there might be a slight delay between the
-             * time a message is created and when it can be found through a filter.
+             * Lists all the messages in the given HL7v2 store with support for filtering. Note: HL7v2 messages
+             * are indexed asynchronously, so there might be a slight delay between the time a message is
+             * created and when it can be found through a filter.
              *
              * Create a request for the method "messages.list".
              *
@@ -13568,10 +13234,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
 
               /**
-               * Lists all the messages in the given HL7v2 store with support for filtering.
-               *
-               * Note: HL7v2 messages are indexed asynchronously, so there might be a slight delay between the
-               * time a message is created and when it can be found through a filter.
+               * Lists all the messages in the given HL7v2 store with support for filtering. Note: HL7v2
+               * messages are indexed asynchronously, so there might be a slight delay between the time a
+               * message is created and when it can be found through a filter.
                *
                * Create a request for the method "messages.list".
                *
@@ -13682,20 +13347,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Restricts messages returned to those matching a filter. Syntax:
                * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
-               *
-               * Fields/functions available for filtering are:
-               *
-               * *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`.
-               * *  `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the
-               * dataset's time_zone, from the MSH-7 segment. For example, `send_date <
-               * "2017-01-02"`. *  `send_time`, the timestamp when the message was sent, using the
-               * RFC3339 time format for comparisons, from the MSH-7 segment. For example,
-               * `send_time < "2017-01-02T00:00:00-05:00"`. *  `send_facility`, the care center that
-               * the message came from, from the MSH-4 segment. For example, `send_facility =
-               * "ABC"`. *  `PatientId(value, type)`, which matches if the message lists a patient
-               * having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments.
-               * For example, `PatientId("123456", "MRN")`. *  `labels.x`, a string value of the
-               * label with key `x` as set using the Message.labels map. For example,
+               * Fields/functions available for filtering are: * `message_type`, from the MSH-9.1
+               * field. For example, `NOT message_type = "ADT"`. * `send_date` or `sendDate`, the
+               * YYYY-MM-DD date the message was sent in the dataset's time_zone, from the MSH-7
+               * segment. For example, `send_date < "2017-01-02"`. * `send_time`, the timestamp when
+               * the message was sent, using the RFC3339 time format for comparisons, from the MSH-7
+               * segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. * `send_facility`,
+               * the care center that the message came from, from the MSH-4 segment. For example,
+               * `send_facility = "ABC"`. * `PatientId(value, type)`, which matches if the message
+               * lists a patient having an ID of the given value and type in the PID-2, PID-3, or
+               * PID-4 segments. For example, `PatientId("123456", "MRN")`. * `labels.x`, a string
+               * value of the label with key `x` as set using the Message.labels map. For example,
                * `labels."priority"="high"`. The operator `:*` can be used to assert the existence
                * of a label. For example, `labels."priority":*`.
                */
@@ -13703,21 +13365,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               private java.lang.String filter;
 
               /** Restricts messages returned to those matching a filter. Syntax:
-             https://cloud.google.com/appengine/docs/standard/python/search/query_strings
-
-             Fields/functions available for filtering are:
-
-             *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`. *  `send_date`
-             or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone, from the MSH-7
-             segment. For example, `send_date < "2017-01-02"`. *  `send_time`, the timestamp when the message
-             was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example,
-             `send_time < "2017-01-02T00:00:00-05:00"`. *  `send_facility`, the care center that the message
-             came from, from the MSH-4 segment. For example, `send_facility = "ABC"`. *  `PatientId(value,
-             type)`, which matches if the message lists a patient having an ID of the given value and type in
-             the PID-2, PID-3, or PID-4 segments. For example, `PatientId("123456", "MRN")`. *  `labels.x`, a
-             string value of the label with key `x` as set using the Message.labels map. For example,
-             `labels."priority"="high"`. The operator `:*` can be used to assert the existence of a label. For
-             example, `labels."priority":*`.
+             https://cloud.google.com/appengine/docs/standard/python/search/query_strings Fields/functions
+             available for filtering are: * `message_type`, from the MSH-9.1 field. For example, `NOT
+             message_type = "ADT"`. * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the
+             dataset's time_zone, from the MSH-7 segment. For example, `send_date < "2017-01-02"`. *
+             `send_time`, the timestamp when the message was sent, using the RFC3339 time format for
+             comparisons, from the MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. *
+             `send_facility`, the care center that the message came from, from the MSH-4 segment. For example,
+             `send_facility = "ABC"`. * `PatientId(value, type)`, which matches if the message lists a patient
+             having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example,
+             `PatientId("123456", "MRN")`. * `labels.x`, a string value of the label with key `x` as set using
+             the Message.labels map. For example, `labels."priority"="high"`. The operator `:*` can be used to
+             assert the existence of a label. For example, `labels."priority":*`.
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -13726,20 +13385,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Restricts messages returned to those matching a filter. Syntax:
                * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
-               *
-               * Fields/functions available for filtering are:
-               *
-               * *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`.
-               * *  `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the
-               * dataset's time_zone, from the MSH-7 segment. For example, `send_date <
-               * "2017-01-02"`. *  `send_time`, the timestamp when the message was sent, using the
-               * RFC3339 time format for comparisons, from the MSH-7 segment. For example,
-               * `send_time < "2017-01-02T00:00:00-05:00"`. *  `send_facility`, the care center that
-               * the message came from, from the MSH-4 segment. For example, `send_facility =
-               * "ABC"`. *  `PatientId(value, type)`, which matches if the message lists a patient
-               * having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments.
-               * For example, `PatientId("123456", "MRN")`. *  `labels.x`, a string value of the
-               * label with key `x` as set using the Message.labels map. For example,
+               * Fields/functions available for filtering are: * `message_type`, from the MSH-9.1
+               * field. For example, `NOT message_type = "ADT"`. * `send_date` or `sendDate`, the
+               * YYYY-MM-DD date the message was sent in the dataset's time_zone, from the MSH-7
+               * segment. For example, `send_date < "2017-01-02"`. * `send_time`, the timestamp when
+               * the message was sent, using the RFC3339 time format for comparisons, from the MSH-7
+               * segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. * `send_facility`,
+               * the care center that the message came from, from the MSH-4 segment. For example,
+               * `send_facility = "ABC"`. * `PatientId(value, type)`, which matches if the message
+               * lists a patient having an ID of the given value and type in the PID-2, PID-3, or
+               * PID-4 segments. For example, `PatientId("123456", "MRN")`. * `labels.x`, a string
+               * value of the label with key `x` as set using the Message.labels map. For example,
                * `labels."priority"="high"`. The operator `:*` can be used to assert the existence
                * of a label. For example, `labels."priority":*`.
                */
@@ -13750,21 +13406,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Orders messages returned by the specified order_by clause. Syntax:
-               * https://cloud.google.com/apis/design/design_patterns#sorting_order
-               *
-               * Fields available for ordering are:
-               *
-               * *  `send_time`
+               * https://cloud.google.com/apis/design/design_patterns#sorting_order Fields available
+               * for ordering are: * `send_time`
                */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
               /** Orders messages returned by the specified order_by clause. Syntax:
-             https://cloud.google.com/apis/design/design_patterns#sorting_order
-
-             Fields available for ordering are:
-
-             *  `send_time`
+             https://cloud.google.com/apis/design/design_patterns#sorting_order Fields available for ordering
+             are: * `send_time`
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
@@ -13772,11 +13422,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Orders messages returned by the specified order_by clause. Syntax:
-               * https://cloud.google.com/apis/design/design_patterns#sorting_order
-               *
-               * Fields available for ordering are:
-               *
-               * *  `send_time`
+               * https://cloud.google.com/apis/design/design_patterns#sorting_order Fields available
+               * for ordering are: * `send_time`
                */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;
@@ -13856,12 +13503,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Update the message.
-             *
-             * The contents of the message in Message.data and data extracted from the contents such as
-             * Message.create_time cannot be altered. Only the Message.labels field is allowed to be updated.
-             * The labels in the request are merged with the existing set of labels. Existing labels with the
-             * same keys are updated.
+             * Update the message. The contents of the message in Message.data and data extracted from the
+             * contents such as Message.create_time cannot be altered. Only the Message.labels field is allowed
+             * to be updated. The labels in the request are merged with the existing set of labels. Existing
+             * labels with the same keys are updated.
              *
              * Create a request for the method "messages.patch".
              *
@@ -13870,8 +13515,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *
              * @param name Resource name of the Message, of the form
              *        `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{messa
-             *        ge_id}`.
-            Assigned by the server.
+             *        ge_id}`. Assigned by the server.
              * @param content the {@link com.google.api.services.healthcare.v1.model.Message}
              * @return the request
              */
@@ -13889,12 +13533,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+/messages/[^/]+$");
 
               /**
-               * Update the message.
-               *
-               * The contents of the message in Message.data and data extracted from the contents such as
-               * Message.create_time cannot be altered. Only the Message.labels field is allowed to be updated.
-               * The labels in the request are merged with the existing set of labels. Existing labels with the
-               * same keys are updated.
+               * Update the message. The contents of the message in Message.data and data extracted from the
+               * contents such as Message.create_time cannot be altered. Only the Message.labels field is
+               * allowed to be updated. The labels in the request are merged with the existing set of labels.
+               * Existing labels with the same keys are updated.
                *
                * Create a request for the method "messages.patch".
                *
@@ -13906,8 +13548,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * @param name Resource name of the Message, of the form
              *        `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{messa
-             *        ge_id}`.
-            Assigned by the server.
+             *        ge_id}`. Assigned by the server.
                * @param content the {@link com.google.api.services.healthcare.v1.model.Message}
                * @since 1.13
                */
@@ -14059,9 +13700,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         public class Operations {
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-           * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-           * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
            * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -14090,13 +13731,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/operations/[^/]+$");
 
             /**
-             * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-             * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-             * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-             * other methods to check whether the cancellation succeeded or whether the operation completed
-             * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-             * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-             * corresponding to `Code.CANCELLED`.
+             * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+             * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+             * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+             * methods to check whether the cancellation succeeded or whether the operation completed despite
+             * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+             * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+             * `Code.CANCELLED`.
              *
              * Create a request for the method "operations.cancel".
              *
@@ -14202,7 +13843,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -14227,7 +13868,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/operations/[^/]+$");
 
             /**
-             * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
              * operation result at intervals as recommended by the API service.
              *
              * Create a request for the method "operations.get".
@@ -14343,13 +13984,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-           * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+           * the binding to use different resource name schemes, such as `users/operations`. To override the
+           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
            *
            * Create a request for the method "operations.list".
            *
@@ -14374,13 +14014,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`.
-             *
-             * NOTE: the `name` binding allows API services to override the binding to use different resource
-             * name schemes, such as `users/operations`. To override the binding, API services can add a
-             * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-             * compatibility, the default name includes the operations collection id, however overriding users
-             * must ensure the name binding is the parent resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+             * override the binding to use different resource name schemes, such as `users/operations`. To
+             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+             * their service configuration. For backwards compatibility, the default name includes the
+             * operations collection id, however overriding users must ensure the name binding is the parent
+             * resource, without the operations collection id.
              *
              * Create a request for the method "operations.list".
              *

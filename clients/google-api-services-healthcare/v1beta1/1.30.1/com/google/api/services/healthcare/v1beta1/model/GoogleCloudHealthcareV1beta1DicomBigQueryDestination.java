@@ -30,8 +30,9 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * This flag is being replaced by write_disposition which provides additional options. force=false
-   * is equivalent to WRITE_EMPTY and force=true is equivalent to WRITE_TRUNCATE.
+   * If the destination table already exists and this flag is `TRUE`, the table is overwritten by
+   * the contents of the DICOM store. If the flag is not set and the destination table already
+   * exists, the export call returns an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +47,9 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends 
   private java.lang.String tableUri;
 
   /**
-   * This flag is being replaced by write_disposition which provides additional options. force=false
-   * is equivalent to WRITE_EMPTY and force=true is equivalent to WRITE_TRUNCATE.
+   * If the destination table already exists and this flag is `TRUE`, the table is overwritten by
+   * the contents of the DICOM store. If the flag is not set and the destination table already
+   * exists, the export call returns an error.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForce() {
@@ -55,8 +57,9 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends 
   }
 
   /**
-   * This flag is being replaced by write_disposition which provides additional options. force=false
-   * is equivalent to WRITE_EMPTY and force=true is equivalent to WRITE_TRUNCATE.
+   * If the destination table already exists and this flag is `TRUE`, the table is overwritten by
+   * the contents of the DICOM store. If the flag is not set and the destination table already
+   * exists, the export call returns an error.
    * @param force force or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DicomBigQueryDestination setForce(java.lang.Boolean force) {

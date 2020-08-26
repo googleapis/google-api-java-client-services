@@ -30,9 +30,8 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class DeidentifySummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of resources that failed to process. The failures might be caused by:
-   *
-   *   * Invalid user input data   * Transient errors that could be skipped
+   * Number of resources that failed to process. The failures might be caused by: * Invalid user
+   * input data * Transient errors that could be skipped
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -53,9 +52,8 @@ public final class DeidentifySummary extends com.google.api.client.json.GenericJ
   private java.lang.Long successStoreCount;
 
   /**
-   * Number of resources that failed to process. The failures might be caused by:
-   *
-   *   * Invalid user input data   * Transient errors that could be skipped
+   * Number of resources that failed to process. The failures might be caused by: * Invalid user
+   * input data * Transient errors that could be skipped
    * @return value or {@code null} for none
    */
   public java.lang.Long getFailureResourceCount() {
@@ -63,9 +61,8 @@ public final class DeidentifySummary extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of resources that failed to process. The failures might be caused by:
-   *
-   *   * Invalid user input data   * Transient errors that could be skipped
+   * Number of resources that failed to process. The failures might be caused by: * Invalid user
+   * input data * Transient errors that could be skipped
    * @param failureResourceCount failureResourceCount or {@code null} for none
    */
   public DeidentifySummary setFailureResourceCount(java.lang.Long failureResourceCount) {

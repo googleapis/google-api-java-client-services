@@ -44,20 +44,13 @@ public final class InfoTypeConfig extends com.google.api.client.json.GenericJson
 
   /**
    * If `TRUE`, infoTypes described by `filter` are used for evaluation. Otherwise, infoTypes are
-   * not considered for evaluation. For example:
-   *
-   * * Annotated text:   "Toronto is a location" * Finding 1:   `{"infoType": "PERSON", "quote":
-   * "Toronto", "start": 0, "end": 7}` * Finding 2:   `{"infoType": "CITY", "quote": "Toronto",
-   * "start": 0, "end": 7}` * Finding 3:   `{}` * Ground truth:   `{"infoType": "LOCATION", "quote":
-   * "Toronto", "start": 0, "end": 7}`
-   *
-   * When `strict_matching` is `TRUE`:
-   *
-   * * Finding 1: 1 false positive * Finding 2: 1 false positive * Finding 3: 1 false negative
-   *
-   * When `strict_matching` is `FALSE`:
-   *
-   * * Finding 1: 1 true positive * Finding 2: 1 true positive * Finding 3: 1 false negative
+   * not considered for evaluation. For example: * Annotated text: "Toronto is a location" * Finding
+   * 1: `{"infoType": "PERSON", "quote": "Toronto", "start": 0, "end": 7}` * Finding 2:
+   * `{"infoType": "CITY", "quote": "Toronto", "start": 0, "end": 7}` * Finding 3: `{}` * Ground
+   * truth: `{"infoType": "LOCATION", "quote": "Toronto", "start": 0, "end": 7}` When
+   * `strict_matching` is `TRUE`: * Finding 1: 1 false positive * Finding 2: 1 false positive *
+   * Finding 3: 1 false negative When `strict_matching` is `FALSE`: * Finding 1: 1 true positive *
+   * Finding 2: 1 true positive * Finding 3: 1 false negative
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,20 +88,13 @@ public final class InfoTypeConfig extends com.google.api.client.json.GenericJson
 
   /**
    * If `TRUE`, infoTypes described by `filter` are used for evaluation. Otherwise, infoTypes are
-   * not considered for evaluation. For example:
-   *
-   * * Annotated text:   "Toronto is a location" * Finding 1:   `{"infoType": "PERSON", "quote":
-   * "Toronto", "start": 0, "end": 7}` * Finding 2:   `{"infoType": "CITY", "quote": "Toronto",
-   * "start": 0, "end": 7}` * Finding 3:   `{}` * Ground truth:   `{"infoType": "LOCATION", "quote":
-   * "Toronto", "start": 0, "end": 7}`
-   *
-   * When `strict_matching` is `TRUE`:
-   *
-   * * Finding 1: 1 false positive * Finding 2: 1 false positive * Finding 3: 1 false negative
-   *
-   * When `strict_matching` is `FALSE`:
-   *
-   * * Finding 1: 1 true positive * Finding 2: 1 true positive * Finding 3: 1 false negative
+   * not considered for evaluation. For example: * Annotated text: "Toronto is a location" * Finding
+   * 1: `{"infoType": "PERSON", "quote": "Toronto", "start": 0, "end": 7}` * Finding 2:
+   * `{"infoType": "CITY", "quote": "Toronto", "start": 0, "end": 7}` * Finding 3: `{}` * Ground
+   * truth: `{"infoType": "LOCATION", "quote": "Toronto", "start": 0, "end": 7}` When
+   * `strict_matching` is `TRUE`: * Finding 1: 1 false positive * Finding 2: 1 false positive *
+   * Finding 3: 1 false negative When `strict_matching` is `FALSE`: * Finding 1: 1 true positive *
+   * Finding 2: 1 true positive * Finding 3: 1 false negative
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStrictMatching() {
@@ -117,20 +103,13 @@ public final class InfoTypeConfig extends com.google.api.client.json.GenericJson
 
   /**
    * If `TRUE`, infoTypes described by `filter` are used for evaluation. Otherwise, infoTypes are
-   * not considered for evaluation. For example:
-   *
-   * * Annotated text:   "Toronto is a location" * Finding 1:   `{"infoType": "PERSON", "quote":
-   * "Toronto", "start": 0, "end": 7}` * Finding 2:   `{"infoType": "CITY", "quote": "Toronto",
-   * "start": 0, "end": 7}` * Finding 3:   `{}` * Ground truth:   `{"infoType": "LOCATION", "quote":
-   * "Toronto", "start": 0, "end": 7}`
-   *
-   * When `strict_matching` is `TRUE`:
-   *
-   * * Finding 1: 1 false positive * Finding 2: 1 false positive * Finding 3: 1 false negative
-   *
-   * When `strict_matching` is `FALSE`:
-   *
-   * * Finding 1: 1 true positive * Finding 2: 1 true positive * Finding 3: 1 false negative
+   * not considered for evaluation. For example: * Annotated text: "Toronto is a location" * Finding
+   * 1: `{"infoType": "PERSON", "quote": "Toronto", "start": 0, "end": 7}` * Finding 2:
+   * `{"infoType": "CITY", "quote": "Toronto", "start": 0, "end": 7}` * Finding 3: `{}` * Ground
+   * truth: `{"infoType": "LOCATION", "quote": "Toronto", "start": 0, "end": 7}` When
+   * `strict_matching` is `TRUE`: * Finding 1: 1 false positive * Finding 2: 1 false positive *
+   * Finding 3: 1 false negative When `strict_matching` is `FALSE`: * Finding 1: 1 true positive *
+   * Finding 2: 1 true positive * Finding 3: 1 false negative
    * @param strictMatching strictMatching or {@code null} for none
    */
   public InfoTypeConfig setStrictMatching(java.lang.Boolean strictMatching) {

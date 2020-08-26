@@ -30,16 +30,12 @@ package com.google.api.services.healthcare.v1.model;
 public final class DicomStore extends com.google.api.client.json.GenericJson {
 
   /**
-   * User-supplied key-value pairs used to organize DICOM stores.
-   *
-   * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
-   * bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}
-   *
-   * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of
-   * maximum 128 bytes, and must conform to the following PCRE regular expression:
-   * [\p{Ll}\p{Lo}\p{N}_-]{0,63}
-   *
-   * No more than 64 labels can be associated with a given store.
+   * User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and
+   * 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
+   * following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be
+   * between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform
+   * to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels
+   * can be associated with a given store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,16 +57,12 @@ public final class DicomStore extends com.google.api.client.json.GenericJson {
   private NotificationConfig notificationConfig;
 
   /**
-   * User-supplied key-value pairs used to organize DICOM stores.
-   *
-   * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
-   * bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}
-   *
-   * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of
-   * maximum 128 bytes, and must conform to the following PCRE regular expression:
-   * [\p{Ll}\p{Lo}\p{N}_-]{0,63}
-   *
-   * No more than 64 labels can be associated with a given store.
+   * User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and
+   * 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
+   * following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be
+   * between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform
+   * to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels
+   * can be associated with a given store.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -78,16 +70,12 @@ public final class DicomStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-supplied key-value pairs used to organize DICOM stores.
-   *
-   * Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128
-   * bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}
-   *
-   * Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of
-   * maximum 128 bytes, and must conform to the following PCRE regular expression:
-   * [\p{Ll}\p{Lo}\p{N}_-]{0,63}
-   *
-   * No more than 64 labels can be associated with a given store.
+   * User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and
+   * 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
+   * following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be
+   * between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform
+   * to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels
+   * can be associated with a given store.
    * @param labels labels or {@code null} for none
    */
   public DicomStore setLabels(java.util.Map<String, java.lang.String> labels) {

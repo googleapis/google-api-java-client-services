@@ -55,7 +55,7 @@ public class GroupsMigration extends com.google.api.client.googleapis.services.j
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://groupsmigration.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class GroupsMigration extends com.google.api.client.googleapis.services.j
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/groupsmigration/v1";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated

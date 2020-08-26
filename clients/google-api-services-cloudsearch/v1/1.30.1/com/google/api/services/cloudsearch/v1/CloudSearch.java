@@ -3271,13 +3271,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * and is intended for large items that can not be [inlined during index
      * requests](https://developers.google.com/cloud-
      * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content: 1.
-     * Call indexing.datasources.items.upload with the resource name to begin an upload session and
-     * retrieve the UploadItemRef. 1. Call media.upload to upload the content using the same resource
-     * name from step 1. 1. Call indexing.datasources.items.index to index the item. Populate the
-     * [ItemContent](/cloud-search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with
-     * the UploadItemRef from step 1. For additional information, see [Create a content connector using
-     * the REST API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
-     * **Note:** This API requires a service account to execute.
+     * Call indexing.datasources.items.upload with the item name to begin an upload session and retrieve
+     * the UploadItemRef. 1. Call media.upload to upload the content, as a streaming request, using the
+     * same resource name from the UploadItemRef from step 1. 1. Call indexing.datasources.items.index
+     * to index the item. Populate the [ItemContent](/cloud-
+     * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with the UploadItemRef from
+     * step 1. For additional information, see [Create a content connector using the REST
+     * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest). **Note:**
+     * This API requires a service account to execute.
      *
      * Create a request for the method "media.upload".
      *
@@ -3299,13 +3300,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * and is intended for large items that can not be [inlined during index
      * requests](https://developers.google.com/cloud-
      * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content: 1.
-     * Call indexing.datasources.items.upload with the resource name to begin an upload session and
-     * retrieve the UploadItemRef. 1. Call media.upload to upload the content using the same resource
-     * name from step 1. 1. Call indexing.datasources.items.index to index the item. Populate the
-     * [ItemContent](/cloud-search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with
-     * the UploadItemRef from step 1. For additional information, see [Create a content connector using
-     * the REST API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest).
-     * **Note:** This API requires a service account to execute.
+     * Call indexing.datasources.items.upload with the item name to begin an upload session and retrieve
+     * the UploadItemRef. 1. Call media.upload to upload the content, as a streaming request, using the
+     * same resource name from the UploadItemRef from step 1. 1. Call indexing.datasources.items.index
+     * to index the item. Populate the [ItemContent](/cloud-
+     * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with the UploadItemRef from
+     * step 1. For additional information, see [Create a content connector using the REST
+     * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest). **Note:**
+     * This API requires a service account to execute.
      *
      * Create a request for the method "media.upload".
      *
@@ -3340,13 +3342,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * and is intended for large items that can not be [inlined during index
        * requests](https://developers.google.com/cloud-
        * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
-       * 1. Call indexing.datasources.items.upload with the resource name to begin an upload session and
-       * retrieve the UploadItemRef. 1. Call media.upload to upload the content using the same resource
-       * name from step 1. 1. Call indexing.datasources.items.index to index the item. Populate the
-       * [ItemContent](/cloud-search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with
-       * the UploadItemRef from step 1. For additional information, see [Create a content connector
-       * using the REST API](https://developers.google.com/cloud-search/docs/guides/content-
-       * connector#rest). **Note:** This API requires a service account to execute.
+       * 1. Call indexing.datasources.items.upload with the item name to begin an upload session and
+       * retrieve the UploadItemRef. 1. Call media.upload to upload the content, as a streaming request,
+       * using the same resource name from the UploadItemRef from step 1. 1. Call
+       * indexing.datasources.items.index to index the item. Populate the [ItemContent](/cloud-
+       * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with the UploadItemRef
+       * from step 1. For additional information, see [Create a content connector using the REST
+       * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest). **Note:**
+       * This API requires a service account to execute.
        *
        * Create a request for the method "media.upload".
        *
@@ -3375,13 +3378,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * and is intended for large items that can not be [inlined during index
        * requests](https://developers.google.com/cloud-
        * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
-       * 1. Call indexing.datasources.items.upload with the resource name to begin an upload session and
-       * retrieve the UploadItemRef. 1. Call media.upload to upload the content using the same resource
-       * name from step 1. 1. Call indexing.datasources.items.index to index the item. Populate the
-       * [ItemContent](/cloud-search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with
-       * the UploadItemRef from step 1. For additional information, see [Create a content connector
-       * using the REST API](https://developers.google.com/cloud-search/docs/guides/content-
-       * connector#rest). **Note:** This API requires a service account to execute.
+       * 1. Call indexing.datasources.items.upload with the item name to begin an upload session and
+       * retrieve the UploadItemRef. 1. Call media.upload to upload the content, as a streaming request,
+       * using the same resource name from the UploadItemRef from step 1. 1. Call
+       * indexing.datasources.items.index to index the item. Populate the [ItemContent](/cloud-
+       * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with the UploadItemRef
+       * from step 1. For additional information, see [Create a content connector using the REST
+       * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest). **Note:**
+       * This API requires a service account to execute.
        *
        * Create a request for the method "media.upload".
        *
@@ -3651,6 +3655,226 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       }
     }
 
+    /**
+     * An accessor for creating requests from the Lro collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudSearch cloudsearch = new CloudSearch(...);}
+     *   {@code CloudSearch.Lro.List request = cloudsearch.lro().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Lro lro() {
+      return new Lro();
+    }
+
+    /**
+     * The "lro" collection of methods.
+     */
+    public class Lro {
+
+      /**
+       * Lists operations that match the specified filter in the request. If the server doesn't support
+       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+       * the binding to use different resource name schemes, such as `users/operations`. To override the
+       * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+       * configuration. For backwards compatibility, the default name includes the operations collection
+       * id, however overriding users must ensure the name binding is the parent resource, without the
+       * operations collection id.
+       *
+       * Create a request for the method "lro.list".
+       *
+       * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation's parent resource.
+       * @return the request
+       */
+      public List list(java.lang.String name) throws java.io.IOException {
+        List result = new List(name);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.ListOperationsResponse> {
+
+        private static final String REST_PATH = "v1/{+name}/lro";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^operations/.*$");
+
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+         * override the binding to use different resource name schemes, such as `users/operations`. To
+         * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+         * their service configuration. For backwards compatibility, the default name includes the
+         * operations collection id, however overriding users must ensure the name binding is the parent
+         * resource, without the operations collection id.
+         *
+         * Create a request for the method "lro.list".
+         *
+         * This request holds the parameters needed by the the cloudsearch server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation's parent resource.
+         * @since 1.13
+         */
+        protected List(java.lang.String name) {
+          super(CloudSearch.this, "GET", REST_PATH, null, com.google.api.services.cloudsearch.v1.model.ListOperationsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^operations/.*$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation's parent resource. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation's parent resource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation's parent resource. */
+        public List setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^operations/.*$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** The standard list filter. */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The standard list filter.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /** The standard list filter. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The standard list page size. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The standard list page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The standard list page size. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The standard list page token. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The standard list page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

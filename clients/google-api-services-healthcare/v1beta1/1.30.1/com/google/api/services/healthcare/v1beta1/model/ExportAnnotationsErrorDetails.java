@@ -17,8 +17,8 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Response for failed annotation export operations. This structure is included in error details
- * upon operation completion.
+ * Deprecated. Response for failed annotation export operations. This structure is included in error
+ * details upon operation completion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

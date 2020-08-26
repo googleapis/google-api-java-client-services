@@ -40,7 +40,7 @@ public final class SchemaConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Long recursiveStructureDepth;
 
   /**
-   * Specifies the output schema type. If unspecified, the default is `LOSSLESS`.
+   * Specifies the output schema type. Schema type is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class SchemaConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the output schema type. If unspecified, the default is `LOSSLESS`.
+   * Specifies the output schema type. Schema type is required.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchemaType() {
@@ -78,7 +78,7 @@ public final class SchemaConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the output schema type. If unspecified, the default is `LOSSLESS`.
+   * Specifies the output schema type. Schema type is required.
    * @param schemaType schemaType or {@code null} for none
    */
   public SchemaConfig setSchemaType(java.lang.String schemaType) {

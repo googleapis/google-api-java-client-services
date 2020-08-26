@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * BigQuery URI to an existing  dataset, up to 2000 characters long, in the format
+   * BigQuery URI to an existing dataset, up to 2000 characters long, in the format
    * `bq://projectId.bqDatasetId`.
    * The value may be {@code null}.
    */
@@ -38,8 +38,9 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   private java.lang.String datasetUri;
 
   /**
-   * This flag is being replaced by write_disposition which provides additional options. force=false
-   * is equivalent to WRITE_EMPTY and force=true is equivalent to WRITE_TRUNCATE.
+   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
+   * tables are written. If the flag is not set and the destination dataset contains tables, the
+   * export call returns an error. This option is not used for the streaming export.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   private SchemaConfig schemaConfig;
 
   /**
-   * BigQuery URI to an existing  dataset, up to 2000 characters long, in the format
+   * BigQuery URI to an existing dataset, up to 2000 characters long, in the format
    * `bq://projectId.bqDatasetId`.
    * @return value or {@code null} for none
    */
@@ -62,7 +63,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   }
 
   /**
-   * BigQuery URI to an existing  dataset, up to 2000 characters long, in the format
+   * BigQuery URI to an existing dataset, up to 2000 characters long, in the format
    * `bq://projectId.bqDatasetId`.
    * @param datasetUri datasetUri or {@code null} for none
    */
@@ -72,8 +73,9 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   }
 
   /**
-   * This flag is being replaced by write_disposition which provides additional options. force=false
-   * is equivalent to WRITE_EMPTY and force=true is equivalent to WRITE_TRUNCATE.
+   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
+   * tables are written. If the flag is not set and the destination dataset contains tables, the
+   * export call returns an error. This option is not used for the streaming export.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForce() {
@@ -81,8 +83,9 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   }
 
   /**
-   * This flag is being replaced by write_disposition which provides additional options. force=false
-   * is equivalent to WRITE_EMPTY and force=true is equivalent to WRITE_TRUNCATE.
+   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
+   * tables are written. If the flag is not set and the destination dataset contains tables, the
+   * export call returns an error. This option is not used for the streaming export.
    * @param force force or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1FhirBigQueryDestination setForce(java.lang.Boolean force) {

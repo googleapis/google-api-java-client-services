@@ -31,8 +31,8 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class ExportAnnotationsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The BigQuery output destination, which requires two IAM roles:   `roles/bigquery.dataEditor`
-   * and `roles/bigquery.jobUser`.
+   * The BigQuery output destination, which requires two IAM roles: `roles/bigquery.dataEditor` and
+   * `roles/bigquery.jobUser`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,16 @@ public final class ExportAnnotationsRequest extends com.google.api.client.json.G
   private GoogleCloudHealthcareV1beta1AnnotationGcsDestination gcsDestination;
 
   /**
-   * The BigQuery output destination, which requires two IAM roles:   `roles/bigquery.dataEditor`
-   * and `roles/bigquery.jobUser`.
+   * The name of the Annotation store to export annotations to, in the format of `projects/{project_
+   * id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * The BigQuery output destination, which requires two IAM roles: `roles/bigquery.dataEditor` and
+   * `roles/bigquery.jobUser`.
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination getBigqueryDestination() {
@@ -55,8 +63,8 @@ public final class ExportAnnotationsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The BigQuery output destination, which requires two IAM roles:   `roles/bigquery.dataEditor`
-   * and `roles/bigquery.jobUser`.
+   * The BigQuery output destination, which requires two IAM roles: `roles/bigquery.dataEditor` and
+   * `roles/bigquery.jobUser`.
    * @param bigqueryDestination bigqueryDestination or {@code null} for none
    */
   public ExportAnnotationsRequest setBigqueryDestination(GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination bigqueryDestination) {
@@ -78,6 +86,25 @@ public final class ExportAnnotationsRequest extends com.google.api.client.json.G
    */
   public ExportAnnotationsRequest setGcsDestination(GoogleCloudHealthcareV1beta1AnnotationGcsDestination gcsDestination) {
     this.gcsDestination = gcsDestination;
+    return this;
+  }
+
+  /**
+   * The name of the Annotation store to export annotations to, in the format of `projects/{project_
+   * id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * The name of the Annotation store to export annotations to, in the format of `projects/{project_
+   * id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+   * @param name name or {@code null} for none
+   */
+  public ExportAnnotationsRequest setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

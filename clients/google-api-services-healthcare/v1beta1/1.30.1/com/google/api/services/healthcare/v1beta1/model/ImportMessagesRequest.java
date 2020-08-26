@@ -30,18 +30,16 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class ImportMessagesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Storage source data location and import configuration.
-   *
-   * The Cloud Storage location requires the `roles/storage.objectViewer` Cloud IAM role.
+   * Cloud Storage source data location and import configuration. The Cloud Storage location
+   * requires the `roles/storage.objectViewer` Cloud IAM role.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GcsSource gcsSource;
 
   /**
-   * Cloud Storage source data location and import configuration.
-   *
-   * The Cloud Storage location requires the `roles/storage.objectViewer` Cloud IAM role.
+   * Cloud Storage source data location and import configuration. The Cloud Storage location
+   * requires the `roles/storage.objectViewer` Cloud IAM role.
    * @return value or {@code null} for none
    */
   public GcsSource getGcsSource() {
@@ -49,9 +47,8 @@ public final class ImportMessagesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Cloud Storage source data location and import configuration.
-   *
-   * The Cloud Storage location requires the `roles/storage.objectViewer` Cloud IAM role.
+   * Cloud Storage source data location and import configuration. The Cloud Storage location
+   * requires the `roles/storage.objectViewer` Cloud IAM role.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public ImportMessagesRequest setGcsSource(GcsSource gcsSource) {

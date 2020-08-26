@@ -38,19 +38,15 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfig extends com.goo
    * store resides in. To get the project number, go to the Cloud Console Dashboard. It is
    * recommended to not have a custom schema in the destination table which could conflict with the
    * schema created by the Cloud Healthcare API. Instance deletions are not applied to the
-   * destination table.
-   *
-   * The destination's table schema will be automatically updated in case a new instance's data is
-   * incompatible with the current schema. The schema should not be updated manually as this can
-   * cause incompatibilies that cannot be resolved automatically. One resolution in this case is to
-   * delete the incompatible table and let the server recreate one, though the newly created table
-   * only contains data after the table recreation.
-   *
-   * BigQuery imposes a 1 MB limit on streaming insert row size, therefore any instance that
-   * generates more than 1 MB of BigQuery data will not be streamed.
-   *
-   * If an instance cannot be streamed to BigQuery, errors will be logged to Cloud Logging (see
-   * [Viewing logs](/healthcare/docs/how- [Viewing logs](/healthcare/docs/how-tos/logging)).
+   * destination table. The destination's table schema will be automatically updated in case a new
+   * instance's data is incompatible with the current schema. The schema should not be updated
+   * manually as this can cause incompatibilies that cannot be resolved automatically. One
+   * resolution in this case is to delete the incompatible table and let the server recreate one,
+   * though the newly created table only contains data after the table recreation. BigQuery imposes
+   * a 1 MB limit on streaming insert row size, therefore any instance that generates more than 1 MB
+   * of BigQuery data will not be streamed. If an instance cannot be streamed to BigQuery, errors
+   * will be logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how- [Viewing
+   * logs](/healthcare/docs/how-tos/logging)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,19 +61,15 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfig extends com.goo
    * store resides in. To get the project number, go to the Cloud Console Dashboard. It is
    * recommended to not have a custom schema in the destination table which could conflict with the
    * schema created by the Cloud Healthcare API. Instance deletions are not applied to the
-   * destination table.
-   *
-   * The destination's table schema will be automatically updated in case a new instance's data is
-   * incompatible with the current schema. The schema should not be updated manually as this can
-   * cause incompatibilies that cannot be resolved automatically. One resolution in this case is to
-   * delete the incompatible table and let the server recreate one, though the newly created table
-   * only contains data after the table recreation.
-   *
-   * BigQuery imposes a 1 MB limit on streaming insert row size, therefore any instance that
-   * generates more than 1 MB of BigQuery data will not be streamed.
-   *
-   * If an instance cannot be streamed to BigQuery, errors will be logged to Cloud Logging (see
-   * [Viewing logs](/healthcare/docs/how- [Viewing logs](/healthcare/docs/how-tos/logging)).
+   * destination table. The destination's table schema will be automatically updated in case a new
+   * instance's data is incompatible with the current schema. The schema should not be updated
+   * manually as this can cause incompatibilies that cannot be resolved automatically. One
+   * resolution in this case is to delete the incompatible table and let the server recreate one,
+   * though the newly created table only contains data after the table recreation. BigQuery imposes
+   * a 1 MB limit on streaming insert row size, therefore any instance that generates more than 1 MB
+   * of BigQuery data will not be streamed. If an instance cannot be streamed to BigQuery, errors
+   * will be logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how- [Viewing
+   * logs](/healthcare/docs/how-tos/logging)).
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DicomBigQueryDestination getBigqueryDestination() {
@@ -93,19 +85,15 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfig extends com.goo
    * store resides in. To get the project number, go to the Cloud Console Dashboard. It is
    * recommended to not have a custom schema in the destination table which could conflict with the
    * schema created by the Cloud Healthcare API. Instance deletions are not applied to the
-   * destination table.
-   *
-   * The destination's table schema will be automatically updated in case a new instance's data is
-   * incompatible with the current schema. The schema should not be updated manually as this can
-   * cause incompatibilies that cannot be resolved automatically. One resolution in this case is to
-   * delete the incompatible table and let the server recreate one, though the newly created table
-   * only contains data after the table recreation.
-   *
-   * BigQuery imposes a 1 MB limit on streaming insert row size, therefore any instance that
-   * generates more than 1 MB of BigQuery data will not be streamed.
-   *
-   * If an instance cannot be streamed to BigQuery, errors will be logged to Cloud Logging (see
-   * [Viewing logs](/healthcare/docs/how- [Viewing logs](/healthcare/docs/how-tos/logging)).
+   * destination table. The destination's table schema will be automatically updated in case a new
+   * instance's data is incompatible with the current schema. The schema should not be updated
+   * manually as this can cause incompatibilies that cannot be resolved automatically. One
+   * resolution in this case is to delete the incompatible table and let the server recreate one,
+   * though the newly created table only contains data after the table recreation. BigQuery imposes
+   * a 1 MB limit on streaming insert row size, therefore any instance that generates more than 1 MB
+   * of BigQuery data will not be streamed. If an instance cannot be streamed to BigQuery, errors
+   * will be logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how- [Viewing
+   * logs](/healthcare/docs/how-tos/logging)).
    * @param bigqueryDestination bigqueryDestination or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DicomStreamConfig setBigqueryDestination(GoogleCloudHealthcareV1beta1DicomBigQueryDestination bigqueryDestination) {

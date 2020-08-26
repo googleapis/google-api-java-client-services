@@ -75,6 +75,13 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Determines how unexpected segments (segments not matched to the schema) are handled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String unexpectedSegmentHandling;
+
+  /**
    * Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can
    * omit any group, segment, field, component, or subcomponent.
    * @return value or {@code null} for none
@@ -149,6 +156,23 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
    */
   public SchemaPackage setTypes(java.util.List<Hl7TypesConfig> types) {
     this.types = types;
+    return this;
+  }
+
+  /**
+   * Determines how unexpected segments (segments not matched to the schema) are handled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUnexpectedSegmentHandling() {
+    return unexpectedSegmentHandling;
+  }
+
+  /**
+   * Determines how unexpected segments (segments not matched to the schema) are handled.
+   * @param unexpectedSegmentHandling unexpectedSegmentHandling or {@code null} for none
+   */
+  public SchemaPackage setUnexpectedSegmentHandling(java.lang.String unexpectedSegmentHandling) {
+    this.unexpectedSegmentHandling = unexpectedSegmentHandling;
     return this;
   }
 

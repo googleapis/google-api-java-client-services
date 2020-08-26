@@ -17,8 +17,8 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Final response of importing Annotations in partial or total failure case. This structure is
- * included in the error details. It is only included when the operation finishes.
+ * Deprecated. Final response of importing Annotations in partial or total failure case. This
+ * structure is included in the error details. It is only included when the operation finishes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

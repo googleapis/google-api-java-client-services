@@ -23,6 +23,9 @@ package com.google.api.services.billingbudgets.v1beta1;
  */
 public class CloudBillingBudgetScopes {
 
+  /** View and manage your Google Cloud Platform billing accounts. */
+  public static final String CLOUD_BILLING = "https://www.googleapis.com/auth/cloud-billing";
+
   /** View and manage your data across Google Cloud Platform services. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
@@ -33,6 +36,7 @@ public class CloudBillingBudgetScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CLOUD_BILLING);
     set.add(CLOUD_PLATFORM);
     return java.util.Collections.unmodifiableSet(set);
   }

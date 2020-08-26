@@ -30,6 +30,19 @@ package com.google.api.services.testing.model;
 public final class IosTestSetup extends com.google.api.client.json.GenericJson {
 
   /**
+   * iOS apps to install in addition to those being directly tested.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FileReference> additionalIpas;
+
+  static {
+    // hack to force ProGuard to consider FileReference used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FileReference.class);
+  }
+
+  /**
    * The network traffic profile used for running the test. Available network profiles can be
    * queried by using the NETWORK_CONFIGURATION environment type when calling
    * TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
@@ -37,6 +50,23 @@ public final class IosTestSetup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String networkProfile;
+
+  /**
+   * iOS apps to install in addition to those being directly tested.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FileReference> getAdditionalIpas() {
+    return additionalIpas;
+  }
+
+  /**
+   * iOS apps to install in addition to those being directly tested.
+   * @param additionalIpas additionalIpas or {@code null} for none
+   */
+  public IosTestSetup setAdditionalIpas(java.util.List<FileReference> additionalIpas) {
+    this.additionalIpas = additionalIpas;
+    return this;
+  }
 
   /**
    * The network traffic profile used for running the test. Available network profiles can be

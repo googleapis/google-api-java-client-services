@@ -35,7 +35,7 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> approvedCountrys;
+  private java.util.List<java.lang.String> approvedCountries;
 
   /**
    * The name of the destination
@@ -49,14 +49,14 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> disapprovedCountrys;
+  private java.util.List<java.lang.String> disapprovedCountries;
 
   /**
    * List of country codes (ISO 3166-1 alpha-2) where the offer is pending approval.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> pendingCountrys;
+  private java.util.List<java.lang.String> pendingCountries;
 
   /**
    * Destination approval status in `targetCountry` of the offer.
@@ -69,16 +69,16 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
    * List of country codes (ISO 3166-1 alpha-2) where the offer is approved.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getApprovedCountrys() {
-    return approvedCountrys;
+  public java.util.List<java.lang.String> getApprovedCountries() {
+    return approvedCountries;
   }
 
   /**
    * List of country codes (ISO 3166-1 alpha-2) where the offer is approved.
-   * @param approvedCountrys approvedCountrys or {@code null} for none
+   * @param approvedCountries approvedCountries or {@code null} for none
    */
-  public ProductStatusDestinationStatus setApprovedCountrys(java.util.List<java.lang.String> approvedCountrys) {
-    this.approvedCountrys = approvedCountrys;
+  public ProductStatusDestinationStatus setApprovedCountries(java.util.List<java.lang.String> approvedCountries) {
+    this.approvedCountries = approvedCountries;
     return this;
   }
 
@@ -103,16 +103,16 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
    * List of country codes (ISO 3166-1 alpha-2) where the offer is disapproved.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getDisapprovedCountrys() {
-    return disapprovedCountrys;
+  public java.util.List<java.lang.String> getDisapprovedCountries() {
+    return disapprovedCountries;
   }
 
   /**
    * List of country codes (ISO 3166-1 alpha-2) where the offer is disapproved.
-   * @param disapprovedCountrys disapprovedCountrys or {@code null} for none
+   * @param disapprovedCountries disapprovedCountries or {@code null} for none
    */
-  public ProductStatusDestinationStatus setDisapprovedCountrys(java.util.List<java.lang.String> disapprovedCountrys) {
-    this.disapprovedCountrys = disapprovedCountrys;
+  public ProductStatusDestinationStatus setDisapprovedCountries(java.util.List<java.lang.String> disapprovedCountries) {
+    this.disapprovedCountries = disapprovedCountries;
     return this;
   }
 
@@ -120,16 +120,16 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
    * List of country codes (ISO 3166-1 alpha-2) where the offer is pending approval.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getPendingCountrys() {
-    return pendingCountrys;
+  public java.util.List<java.lang.String> getPendingCountries() {
+    return pendingCountries;
   }
 
   /**
    * List of country codes (ISO 3166-1 alpha-2) where the offer is pending approval.
-   * @param pendingCountrys pendingCountrys or {@code null} for none
+   * @param pendingCountries pendingCountries or {@code null} for none
    */
-  public ProductStatusDestinationStatus setPendingCountrys(java.util.List<java.lang.String> pendingCountrys) {
-    this.pendingCountrys = pendingCountrys;
+  public ProductStatusDestinationStatus setPendingCountries(java.util.List<java.lang.String> pendingCountries) {
+    this.pendingCountries = pendingCountries;
     return this;
   }
 

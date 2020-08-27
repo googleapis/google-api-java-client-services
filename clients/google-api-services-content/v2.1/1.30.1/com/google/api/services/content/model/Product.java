@@ -533,6 +533,14 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private ProductShippingDimension shippingWidth;
 
   /**
+   * List of country codes (ISO 3166-1 alpha-2) to exclude the offer from Shopping Ads destination.
+   * Countries from this list are removed from countries configured in MC feed settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> shoppingAdsExcludedCountries;
+
+  /**
    * System in which the size is specified. Recommended for apparel items.
    * The value may be {@code null}.
    */
@@ -1798,6 +1806,25 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setShippingWidth(ProductShippingDimension shippingWidth) {
     this.shippingWidth = shippingWidth;
+    return this;
+  }
+
+  /**
+   * List of country codes (ISO 3166-1 alpha-2) to exclude the offer from Shopping Ads destination.
+   * Countries from this list are removed from countries configured in MC feed settings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getShoppingAdsExcludedCountries() {
+    return shoppingAdsExcludedCountries;
+  }
+
+  /**
+   * List of country codes (ISO 3166-1 alpha-2) to exclude the offer from Shopping Ads destination.
+   * Countries from this list are removed from countries configured in MC feed settings.
+   * @param shoppingAdsExcludedCountries shoppingAdsExcludedCountries or {@code null} for none
+   */
+  public Product setShoppingAdsExcludedCountries(java.util.List<java.lang.String> shoppingAdsExcludedCountries) {
+    this.shoppingAdsExcludedCountries = shoppingAdsExcludedCountries;
     return this;
   }
 

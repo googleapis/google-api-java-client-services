@@ -72,7 +72,7 @@ packages on [Maven Central][maven-search].
 | Cloud Key Management Service (KMS) API | [v1](clients/google-api-services-cloudkms/v1) |
 | Cloud Life Sciences API | [v2beta](clients/google-api-services-lifesciences/v2beta) |
 | Cloud Logging API | [v2](clients/google-api-services-logging/v2) |
-| Cloud Memorystore for Memcached API | [v1](clients/google-api-services-memcache/v1), [v1beta2](clients/google-api-services-memcache/v1beta2) |
+| Cloud Memorystore for Memcached API | [v1beta2](clients/google-api-services-memcache/v1beta2) |
 | Cloud Monitoring API | [v1](clients/google-api-services-monitoring/v1), [v3](clients/google-api-services-monitoring/v3) |
 | Cloud Natural Language API | [v1](clients/google-api-services-language/v1), [v1beta1](clients/google-api-services-language/v1beta1), [v1beta2](clients/google-api-services-language/v1beta2) |
 | Cloud OS Config API | [v1](clients/google-api-services-osconfig/v1), [v1beta](clients/google-api-services-osconfig/v1beta) |
@@ -147,6 +147,7 @@ packages on [Maven Central][maven-search].
 | Google Play Game Services Publishing API | [v1configuration](clients/google-api-services-gamesConfiguration/v1configuration) |
 | Google Search Console API | [v1](clients/google-api-services-searchconsole/v1) |
 | Google Sheets API | [v4](clients/google-api-services-sheets/v4) |
+| Google Site Verification API | [v1](clients/google-api-services-siteVerification/v1) |
 | Google Slides API | [v1](clients/google-api-services-slides/v1) |
 | Google+ API | [v1](clients/google-api-services-plus/v1) |
 | Groups Migration API | [v1](clients/google-api-services-groupsmigration/v1) |
@@ -180,7 +181,7 @@ packages on [Maven Central][maven-search].
 | Search Ads 360 API | [v2](clients/google-api-services-doubleclicksearch/v2) |
 | Search Console API | [v3](clients/google-api-services-webmasters/v3) |
 | Secret Manager API | [v1](clients/google-api-services-secretmanager/v1), [v1beta1](clients/google-api-services-secretmanager/v1beta1) |
-| Security Command Center API | [v1](clients/google-api-services-securitycenter/v1), [v1beta1](clients/google-api-services-securitycenter/v1beta1), [v1beta2](clients/google-api-services-securitycenter/v1beta2), [v1p1alpha1](clients/google-api-services-securitycenter/v1p1alpha1), [v1p1beta1](clients/google-api-services-securitycenter/v1p1beta1) |
+| Security Command Center API | [v1](clients/google-api-services-securitycenter/v1), [v1beta1](clients/google-api-services-securitycenter/v1beta1), [v1beta2](clients/google-api-services-securitycenter/v1beta2) |
 | Semantic Tile API | [v1](clients/google-api-services-vectortile/v1) |
 | Service Consumer Management API | [v1](clients/google-api-services-serviceconsumermanagement/v1), [v1beta1](clients/google-api-services-serviceconsumermanagement/v1beta1) |
 | Service Control API | [v1](clients/google-api-services-servicecontrol/v1), [v2](clients/google-api-services-servicecontrol/v2) |

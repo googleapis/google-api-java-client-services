@@ -5406,6 +5406,64 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If an item's
+       * last parent is deleted but the item itself is not, the item will be placed under its
+       * owner's root.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceSingleParent;
+
+      /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If an item's last parent is
+     deleted but the item itself is not, the item will be placed under its owner's root. [default:
+     false]
+       */
+      public java.lang.Boolean getEnforceSingleParent() {
+        return enforceSingleParent;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If an item's
+       * last parent is deleted but the item itself is not, the item will be placed under its
+       * owner's root.
+       */
+      public Delete setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If an item's last parent is
+     deleted but the item itself is not, the item will be placed under its owner's root.
+       * </p>
+       */
+      public boolean isEnforceSingleParent() {
+        if (enforceSingleParent == null || enforceSingleParent == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceSingleParent;
+      }
+
       /** Whether the requesting application supports both My Drives and shared drives. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
@@ -5567,6 +5625,64 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public EmptyTrash setUserIp(java.lang.String userIp) {
         return (EmptyTrash) super.setUserIp(userIp);
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If an item's
+       * last parent is deleted but the item itself is not, the item will be placed under its
+       * owner's root.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceSingleParent;
+
+      /** Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If an item's last parent is
+     deleted but the item itself is not, the item will be placed under its owner's root. [default:
+     false]
+       */
+      public java.lang.Boolean getEnforceSingleParent() {
+        return enforceSingleParent;
+      }
+
+      /**
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent.
+       * This parameter will only take effect if the item is not in a shared drive. If an item's
+       * last parent is deleted but the item itself is not, the item will be placed under its
+       * owner's root.
+       */
+      public EmptyTrash setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Set to true to opt in to API behavior that aims for all items to have exactly one parent. This
+     parameter will only take effect if the item is not in a shared drive. If an item's last parent is
+     deleted but the item itself is not, the item will be placed under its owner's root.
+       * </p>
+       */
+      public boolean isEnforceSingleParent() {
+        if (enforceSingleParent == null || enforceSingleParent == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceSingleParent;
       }
 
       @Override

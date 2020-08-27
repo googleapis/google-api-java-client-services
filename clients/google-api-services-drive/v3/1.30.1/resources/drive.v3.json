@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/iw5KltrEyyVmddHJpTcj8RnsLIs\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/l7m-JIhSvmu0HFIAKZgPpq4u-fg\"",
  "discoveryVersion": "v1",
  "id": "drive:v3",
  "name": "drive",
  "version": "v3",
- "revision": "20200811",
+ "revision": "20200813",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -2689,6 +2689,12 @@
      "httpMethod": "DELETE",
      "description": "Permanently deletes a file owned by the user without moving it to the trash. If the file belongs to a shared drive the user must be an organizer on the parent. If the target is a folder, all descendants owned by the user are also deleted.",
      "parameters": {
+      "enforceSingleParent": {
+       "type": "boolean",
+       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter will only take effect if the item is not in a shared drive. If an item's last parent is deleted but the item itself is not, the item will be placed under its owner's root.",
+       "default": "false",
+       "location": "query"
+      },
       "fileId": {
        "type": "string",
        "description": "The ID of the file.",
@@ -2722,6 +2728,14 @@
      "path": "files/trash",
      "httpMethod": "DELETE",
      "description": "Permanently deletes all of the user's trashed files.",
+     "parameters": {
+      "enforceSingleParent": {
+       "type": "boolean",
+       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter will only take effect if the item is not in a shared drive. If an item's last parent is deleted but the item itself is not, the item will be placed under its owner's root.",
+       "default": "false",
+       "location": "query"
+      }
+     },
      "scopes": [
       "https://www.googleapis.com/auth/drive"
      ]

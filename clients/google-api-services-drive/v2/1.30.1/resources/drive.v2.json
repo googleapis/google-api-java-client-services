@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/g_FXgEBUU2zytdB3NoOSx8Gl_nI\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/QtG7knxdUtFPSnbAhyORy9os_NM\"",
  "discoveryVersion": "v1",
  "id": "drive:v2",
  "name": "drive",
  "version": "v2",
- "revision": "20200811",
+ "revision": "20200813",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -3719,6 +3719,12 @@
      "httpMethod": "DELETE",
      "description": "Permanently deletes a file by ID. Skips the trash. The currently authenticated user must own the file or be an organizer on the parent for shared drive files.",
      "parameters": {
+      "enforceSingleParent": {
+       "type": "boolean",
+       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter will only take effect if the item is not in a shared drive. If an item's last parent is deleted but the item itself is not, the item will be placed under its owner's root.",
+       "default": "false",
+       "location": "query"
+      },
       "fileId": {
        "type": "string",
        "description": "The ID of the file to delete.",
@@ -3752,6 +3758,14 @@
      "path": "files/trash",
      "httpMethod": "DELETE",
      "description": "Permanently deletes all of the user's trashed files.",
+     "parameters": {
+      "enforceSingleParent": {
+       "type": "boolean",
+       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter will only take effect if the item is not in a shared drive. If an item's last parent is deleted but the item itself is not, the item will be placed under its owner's root.",
+       "default": "false",
+       "location": "query"
+      }
+     },
      "scopes": [
       "https://www.googleapis.com/auth/drive"
      ]

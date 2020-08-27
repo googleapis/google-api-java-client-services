@@ -35,7 +35,7 @@ public final class ProductStatusItemLevelIssue extends com.google.api.client.jso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> applicableCountrys;
+  private java.util.List<java.lang.String> applicableCountries;
 
   /**
    * The attribute's name, if the issue is caused by a single attribute.
@@ -97,16 +97,16 @@ public final class ProductStatusItemLevelIssue extends com.google.api.client.jso
    * List of country codes (ISO 3166-1 alpha-2) where issue applies to the offer.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getApplicableCountrys() {
-    return applicableCountrys;
+  public java.util.List<java.lang.String> getApplicableCountries() {
+    return applicableCountries;
   }
 
   /**
    * List of country codes (ISO 3166-1 alpha-2) where issue applies to the offer.
-   * @param applicableCountrys applicableCountrys or {@code null} for none
+   * @param applicableCountries applicableCountries or {@code null} for none
    */
-  public ProductStatusItemLevelIssue setApplicableCountrys(java.util.List<java.lang.String> applicableCountrys) {
-    this.applicableCountrys = applicableCountrys;
+  public ProductStatusItemLevelIssue setApplicableCountries(java.util.List<java.lang.String> applicableCountries) {
+    this.applicableCountries = applicableCountries;
     return this;
   }
 

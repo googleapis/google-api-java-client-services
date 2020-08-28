@@ -54,6 +54,12 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private GoogleCloudMlV1AutoScaling autoScaling;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1ContainerSpec container;
+
+  /**
    * Output only. The time the version was created.
    * The value may be {@code null}.
    */
@@ -78,15 +84,6 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
-
-  /**
-   * Optional. Output only. If set by server, the http(s) endpoints returned to user after the
-   * public/private deployment is successful.
-   * https://cloud.google.com/apis/design/design_patterns#output_fields.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudMlV1EndpointMap endpoints;
 
   /**
    * Output only. The details of a failure or a cancellation.
@@ -248,6 +245,12 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private GoogleCloudMlV1RequestLoggingConfig requestLoggingConfig;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1RouteMap routes;
+
+  /**
    * Required. The AI Platform runtime version to use for this deployment. For more information, see
    * the [runtime version list](/ml-engine/docs/runtime-version-list) and [how to manage runtime
    * versions](/ml-engine/docs/versioning).
@@ -319,6 +322,21 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1ContainerSpec getContainer() {
+    return container;
+  }
+
+  /**
+   * @param container container or {@code null} for none
+   */
+  public GoogleCloudMlV1Version setContainer(GoogleCloudMlV1ContainerSpec container) {
+    this.container = container;
+    return this;
+  }
+
+  /**
    * Output only. The time the version was created.
    * @return value or {@code null} for none
    */
@@ -376,27 +394,6 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    */
   public GoogleCloudMlV1Version setDescription(java.lang.String description) {
     this.description = description;
-    return this;
-  }
-
-  /**
-   * Optional. Output only. If set by server, the http(s) endpoints returned to user after the
-   * public/private deployment is successful.
-   * https://cloud.google.com/apis/design/design_patterns#output_fields.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudMlV1EndpointMap getEndpoints() {
-    return endpoints;
-  }
-
-  /**
-   * Optional. Output only. If set by server, the http(s) endpoints returned to user after the
-   * public/private deployment is successful.
-   * https://cloud.google.com/apis/design/design_patterns#output_fields.
-   * @param endpoints endpoints or {@code null} for none
-   */
-  public GoogleCloudMlV1Version setEndpoints(GoogleCloudMlV1EndpointMap endpoints) {
-    this.endpoints = endpoints;
     return this;
   }
 
@@ -795,6 +792,21 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    */
   public GoogleCloudMlV1Version setRequestLoggingConfig(GoogleCloudMlV1RequestLoggingConfig requestLoggingConfig) {
     this.requestLoggingConfig = requestLoggingConfig;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1RouteMap getRoutes() {
+    return routes;
+  }
+
+  /**
+   * @param routes routes or {@code null} for none
+   */
+  public GoogleCloudMlV1Version setRoutes(GoogleCloudMlV1RouteMap routes) {
+    this.routes = routes;
     return this;
   }
 

@@ -66,8 +66,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> advertiserId;
 
   /**
-   * The name of the company being advertised in the creative. The value provided must exist in the
-   * advertisers.txt file.
+   * The name of the company being advertised in the creative. A list of advertisers is provided in
+   * the advertisers.txt file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -371,8 +371,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the company being advertised in the creative. The value provided must exist in the
-   * advertisers.txt file.
+   * The name of the company being advertised in the creative. A list of advertisers is provided in
+   * the advertisers.txt file.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdvertiserName() {
@@ -380,8 +380,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the company being advertised in the creative. The value provided must exist in the
-   * advertisers.txt file.
+   * The name of the company being advertised in the creative. A list of advertisers is provided in
+   * the advertisers.txt file.
    * @param advertiserName advertiserName or {@code null} for none
    */
   public Creative setAdvertiserName(java.lang.String advertiserName) {

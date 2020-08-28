@@ -91,7 +91,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   /**
    * The sum of squared deviations from the mean of the values in the population. For values x_i
    * this is: Sum[i=1..n]((x_i - mean)^2) Knuth, "The Art of Computer Programming", Vol. 2, page
-   * 323, 3rd edition describes Welford's method for accumulating this sum in one pass.If count is
+   * 232, 3rd edition describes Welford's method for accumulating this sum in one pass.If count is
    * zero then this field must be zero.
    * The value may be {@code null}.
    */
@@ -221,7 +221,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   /**
    * The sum of squared deviations from the mean of the values in the population. For values x_i
    * this is: Sum[i=1..n]((x_i - mean)^2) Knuth, "The Art of Computer Programming", Vol. 2, page
-   * 323, 3rd edition describes Welford's method for accumulating this sum in one pass.If count is
+   * 232, 3rd edition describes Welford's method for accumulating this sum in one pass.If count is
    * zero then this field must be zero.
    * @return value or {@code null} for none
    */
@@ -232,7 +232,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   /**
    * The sum of squared deviations from the mean of the values in the population. For values x_i
    * this is: Sum[i=1..n]((x_i - mean)^2) Knuth, "The Art of Computer Programming", Vol. 2, page
-   * 323, 3rd edition describes Welford's method for accumulating this sum in one pass.If count is
+   * 232, 3rd edition describes Welford's method for accumulating this sum in one pass.If count is
    * zero then this field must be zero.
    * @param sumOfSquaredDeviation sumOfSquaredDeviation or {@code null} for none
    */

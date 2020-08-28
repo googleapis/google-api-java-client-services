@@ -64,6 +64,14 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   private GridLayout gridLayout;
 
   /**
+   * The content is arranged as a grid of tiles, with each content widget occupying one or more
+   * tiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MosaicLayout mosaicLayout;
+
+  /**
    * Immutable. The resource name of the dashboard.
    * The value may be {@code null}.
    */
@@ -152,6 +160,25 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
    */
   public Dashboard setGridLayout(GridLayout gridLayout) {
     this.gridLayout = gridLayout;
+    return this;
+  }
+
+  /**
+   * The content is arranged as a grid of tiles, with each content widget occupying one or more
+   * tiles.
+   * @return value or {@code null} for none
+   */
+  public MosaicLayout getMosaicLayout() {
+    return mosaicLayout;
+  }
+
+  /**
+   * The content is arranged as a grid of tiles, with each content widget occupying one or more
+   * tiles.
+   * @param mosaicLayout mosaicLayout or {@code null} for none
+   */
+  public Dashboard setMosaicLayout(MosaicLayout mosaicLayout) {
+    this.mosaicLayout = mosaicLayout;
     return this;
   }
 

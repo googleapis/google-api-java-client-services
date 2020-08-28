@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"F5McR9eEaw0XRpaO3M9gbIugkbs/kylXz47Q3_sc3JaxX2Y-ulfwPrA\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/qT7gqVy0TbKnLALk98had0IK6KM\"",
  "discoveryVersion": "v1",
  "id": "adexchangebuyer:v1.4",
  "name": "adexchangebuyer",
  "canonicalName": "Ad Exchange Buyer",
  "version": "v1.4",
- "revision": "20191108",
+ "revision": "20200826",
  "title": "Ad Exchange Buyer API",
  "description": "Accesses your bidding-account information, submits creatives for validation, finds available direct deals, and retrieves performance reports.",
  "ownerDomain": "google.com",
@@ -417,7 +417,7 @@
     },
     "advertiserName": {
      "type": "string",
-     "description": "The name of the company being advertised in the creative. The value provided must exist in the advertisers.txt file.",
+     "description": "The name of the company being advertised in the creative. A list of advertisers is provided in the advertisers.txt file.",
      "annotations": {
       "required": [
        "adexchangebuyer.creatives.insert"
@@ -1354,6 +1354,9 @@
      "description": "The time (ms since epoch) when the deal was last updated. (readonly)",
      "format": "int64"
     },
+    "makegoodRequestedReason": {
+     "type": "string"
+    },
     "name": {
      "type": "string",
      "description": "The name of the deal. (updatable)"
@@ -1477,6 +1480,18 @@
      "type": "string",
      "description": "The timestamp (ms since epoch) that this note was created. (readonly)",
      "format": "int64"
+    }
+   }
+  },
+  "MobileApplication": {
+   "id": "MobileApplication",
+   "type": "object",
+   "properties": {
+    "appStore": {
+     "type": "string"
+    },
+    "externalAppId": {
+     "type": "string"
     }
    }
   },
@@ -2244,6 +2259,21 @@
     "programmaticContact": {
      "type": "string",
      "description": "Programmatic contact for the publisher profile."
+    },
+    "publisherAppIds": {
+     "type": "array",
+     "description": "The list of app IDs represented in this pubisher profile. Empty if this is a parent profile. Deprecated in favor of publisher_app.",
+     "items": {
+      "type": "string",
+      "format": "int64"
+     }
+    },
+    "publisherApps": {
+     "type": "array",
+     "description": "The list of apps represented in this pubisher profile. Empty if this is a parent profile.",
+     "items": {
+      "$ref": "MobileApplication"
+     }
     },
     "publisherDomains": {
      "type": "array",

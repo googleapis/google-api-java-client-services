@@ -130,6 +130,27 @@ public final class PublisherProfileApiProto extends com.google.api.client.json.G
   private java.lang.String programmaticContact;
 
   /**
+   * The list of app IDs represented in this pubisher profile. Empty if this is a parent profile.
+   * Deprecated in favor of publisher_app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> publisherAppIds;
+
+  /**
+   * The list of apps represented in this pubisher profile. Empty if this is a parent profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MobileApplication> publisherApps;
+
+  static {
+    // hack to force ProGuard to consider MobileApplication used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MobileApplication.class);
+  }
+
+  /**
    * The list of domains represented in this publisher profile. Empty if this is a parent profile.
    * The value may be {@code null}.
    */
@@ -422,6 +443,42 @@ public final class PublisherProfileApiProto extends com.google.api.client.json.G
    */
   public PublisherProfileApiProto setProgrammaticContact(java.lang.String programmaticContact) {
     this.programmaticContact = programmaticContact;
+    return this;
+  }
+
+  /**
+   * The list of app IDs represented in this pubisher profile. Empty if this is a parent profile.
+   * Deprecated in favor of publisher_app.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getPublisherAppIds() {
+    return publisherAppIds;
+  }
+
+  /**
+   * The list of app IDs represented in this pubisher profile. Empty if this is a parent profile.
+   * Deprecated in favor of publisher_app.
+   * @param publisherAppIds publisherAppIds or {@code null} for none
+   */
+  public PublisherProfileApiProto setPublisherAppIds(java.util.List<java.lang.Long> publisherAppIds) {
+    this.publisherAppIds = publisherAppIds;
+    return this;
+  }
+
+  /**
+   * The list of apps represented in this pubisher profile. Empty if this is a parent profile.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MobileApplication> getPublisherApps() {
+    return publisherApps;
+  }
+
+  /**
+   * The list of apps represented in this pubisher profile. Empty if this is a parent profile.
+   * @param publisherApps publisherApps or {@code null} for none
+   */
+  public PublisherProfileApiProto setPublisherApps(java.util.List<MobileApplication> publisherApps) {
+    this.publisherApps = publisherApps;
     return this;
   }
 

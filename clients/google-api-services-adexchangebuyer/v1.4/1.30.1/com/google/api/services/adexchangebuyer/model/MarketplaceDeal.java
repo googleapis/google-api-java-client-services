@@ -145,6 +145,12 @@ public final class MarketplaceDeal extends com.google.api.client.json.GenericJso
   private java.lang.Long lastUpdateTimeMs;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String makegoodRequestedReason;
+
+  /**
    * The name of the deal. (updatable)
    * The value may be {@code null}.
    */
@@ -488,6 +494,21 @@ public final class MarketplaceDeal extends com.google.api.client.json.GenericJso
    */
   public MarketplaceDeal setLastUpdateTimeMs(java.lang.Long lastUpdateTimeMs) {
     this.lastUpdateTimeMs = lastUpdateTimeMs;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMakegoodRequestedReason() {
+    return makegoodRequestedReason;
+  }
+
+  /**
+   * @param makegoodRequestedReason makegoodRequestedReason or {@code null} for none
+   */
+  public MarketplaceDeal setMakegoodRequestedReason(java.lang.String makegoodRequestedReason) {
+    this.makegoodRequestedReason = makegoodRequestedReason;
     return this;
   }
 

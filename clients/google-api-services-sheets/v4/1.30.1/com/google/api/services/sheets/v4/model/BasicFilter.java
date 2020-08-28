@@ -38,6 +38,14 @@ public final class BasicFilter extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, FilterCriteria> criteria;
 
   /**
+   * The filter criteria per column. Both criteria and filter_specs are populated in responses. If
+   * both fields are specified in an update request, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FilterSpec> filterSpecs;
+
+  /**
    * The range the filter covers.
    * The value may be {@code null}.
    */
@@ -68,6 +76,25 @@ public final class BasicFilter extends com.google.api.client.json.GenericJson {
    */
   public BasicFilter setCriteria(java.util.Map<String, FilterCriteria> criteria) {
     this.criteria = criteria;
+    return this;
+  }
+
+  /**
+   * The filter criteria per column. Both criteria and filter_specs are populated in responses. If
+   * both fields are specified in an update request, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FilterSpec> getFilterSpecs() {
+    return filterSpecs;
+  }
+
+  /**
+   * The filter criteria per column. Both criteria and filter_specs are populated in responses. If
+   * both fields are specified in an update request, this field takes precedence.
+   * @param filterSpecs filterSpecs or {@code null} for none
+   */
+  public BasicFilter setFilterSpecs(java.util.List<FilterSpec> filterSpecs) {
+    this.filterSpecs = filterSpecs;
     return this;
   }
 

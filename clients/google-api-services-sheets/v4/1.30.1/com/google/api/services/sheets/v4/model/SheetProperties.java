@@ -30,6 +30,13 @@ package com.google.api.services.sheets.v4.model;
 public final class SheetProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. If present, the field contains SheetType.DATA_SOURCE sheet specific properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataSourceSheetProperties dataSourceSheetProperties;
+
+  /**
    * Additional properties of the sheet if this sheet is a grid. (If the sheet is an object sheet,
    * containing a chart or image, then this field will be absent.) When writing it is an error to
    * set any grid properties on non-grid sheets.
@@ -99,6 +106,23 @@ public final class SheetProperties extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
+
+  /**
+   * Output only. If present, the field contains SheetType.DATA_SOURCE sheet specific properties.
+   * @return value or {@code null} for none
+   */
+  public DataSourceSheetProperties getDataSourceSheetProperties() {
+    return dataSourceSheetProperties;
+  }
+
+  /**
+   * Output only. If present, the field contains SheetType.DATA_SOURCE sheet specific properties.
+   * @param dataSourceSheetProperties dataSourceSheetProperties or {@code null} for none
+   */
+  public SheetProperties setDataSourceSheetProperties(DataSourceSheetProperties dataSourceSheetProperties) {
+    this.dataSourceSheetProperties = dataSourceSheetProperties;
+    return this;
+  }
 
   /**
    * Additional properties of the sheet if this sheet is a grid. (If the sheet is an object sheet,

@@ -17,8 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Automatically resizes one or more dimensions based on the contents of the cells in that
- * dimension.
+ * The specification of a data source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -28,64 +27,70 @@ package com.google.api.services.sheets.v4.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AutoResizeDimensionsRequest extends com.google.api.client.json.GenericJson {
+public final class DataSourceSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
+   * A BigQueryDataSourceSpec.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DataSourceSheetDimensionRange dataSourceSheetDimensions;
+  private BigQueryDataSourceSpec bigQuery;
 
   /**
-   * The dimensions to automatically resize.
+   * The parameters of the data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DimensionRange dimensions;
+  private java.util.List<DataSourceParameter> parameters;
 
-  /**
-   * The dimensions on a data source sheet to automatically resize.
-   * @return value or {@code null} for none
-   */
-  public DataSourceSheetDimensionRange getDataSourceSheetDimensions() {
-    return dataSourceSheetDimensions;
+  static {
+    // hack to force ProGuard to consider DataSourceParameter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataSourceParameter.class);
   }
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
-   * @param dataSourceSheetDimensions dataSourceSheetDimensions or {@code null} for none
+   * A BigQueryDataSourceSpec.
+   * @return value or {@code null} for none
    */
-  public AutoResizeDimensionsRequest setDataSourceSheetDimensions(DataSourceSheetDimensionRange dataSourceSheetDimensions) {
-    this.dataSourceSheetDimensions = dataSourceSheetDimensions;
+  public BigQueryDataSourceSpec getBigQuery() {
+    return bigQuery;
+  }
+
+  /**
+   * A BigQueryDataSourceSpec.
+   * @param bigQuery bigQuery or {@code null} for none
+   */
+  public DataSourceSpec setBigQuery(BigQueryDataSourceSpec bigQuery) {
+    this.bigQuery = bigQuery;
     return this;
   }
 
   /**
-   * The dimensions to automatically resize.
+   * The parameters of the data source.
    * @return value or {@code null} for none
    */
-  public DimensionRange getDimensions() {
-    return dimensions;
+  public java.util.List<DataSourceParameter> getParameters() {
+    return parameters;
   }
 
   /**
-   * The dimensions to automatically resize.
-   * @param dimensions dimensions or {@code null} for none
+   * The parameters of the data source.
+   * @param parameters parameters or {@code null} for none
    */
-  public AutoResizeDimensionsRequest setDimensions(DimensionRange dimensions) {
-    this.dimensions = dimensions;
+  public DataSourceSpec setParameters(java.util.List<DataSourceParameter> parameters) {
+    this.parameters = parameters;
     return this;
   }
 
   @Override
-  public AutoResizeDimensionsRequest set(String fieldName, Object value) {
-    return (AutoResizeDimensionsRequest) super.set(fieldName, value);
+  public DataSourceSpec set(String fieldName, Object value) {
+    return (DataSourceSpec) super.set(fieldName, value);
   }
 
   @Override
-  public AutoResizeDimensionsRequest clone() {
-    return (AutoResizeDimensionsRequest) super.clone();
+  public DataSourceSpec clone() {
+    return (DataSourceSpec) super.clone();
   }
 
 }

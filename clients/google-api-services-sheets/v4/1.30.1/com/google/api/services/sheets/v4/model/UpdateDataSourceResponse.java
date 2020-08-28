@@ -17,8 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Automatically resizes one or more dimensions based on the contents of the cells in that
- * dimension.
+ * The response from updating data source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -28,64 +27,64 @@ package com.google.api.services.sheets.v4.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AutoResizeDimensionsRequest extends com.google.api.client.json.GenericJson {
+public final class UpdateDataSourceResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
+   * The data execution status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DataSourceSheetDimensionRange dataSourceSheetDimensions;
+  private DataExecutionStatus dataExecutionStatus;
 
   /**
-   * The dimensions to automatically resize.
+   * The updated data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DimensionRange dimensions;
+  private DataSource dataSource;
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
+   * The data execution status.
    * @return value or {@code null} for none
    */
-  public DataSourceSheetDimensionRange getDataSourceSheetDimensions() {
-    return dataSourceSheetDimensions;
+  public DataExecutionStatus getDataExecutionStatus() {
+    return dataExecutionStatus;
   }
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
-   * @param dataSourceSheetDimensions dataSourceSheetDimensions or {@code null} for none
+   * The data execution status.
+   * @param dataExecutionStatus dataExecutionStatus or {@code null} for none
    */
-  public AutoResizeDimensionsRequest setDataSourceSheetDimensions(DataSourceSheetDimensionRange dataSourceSheetDimensions) {
-    this.dataSourceSheetDimensions = dataSourceSheetDimensions;
+  public UpdateDataSourceResponse setDataExecutionStatus(DataExecutionStatus dataExecutionStatus) {
+    this.dataExecutionStatus = dataExecutionStatus;
     return this;
   }
 
   /**
-   * The dimensions to automatically resize.
+   * The updated data source.
    * @return value or {@code null} for none
    */
-  public DimensionRange getDimensions() {
-    return dimensions;
+  public DataSource getDataSource() {
+    return dataSource;
   }
 
   /**
-   * The dimensions to automatically resize.
-   * @param dimensions dimensions or {@code null} for none
+   * The updated data source.
+   * @param dataSource dataSource or {@code null} for none
    */
-  public AutoResizeDimensionsRequest setDimensions(DimensionRange dimensions) {
-    this.dimensions = dimensions;
+  public UpdateDataSourceResponse setDataSource(DataSource dataSource) {
+    this.dataSource = dataSource;
     return this;
   }
 
   @Override
-  public AutoResizeDimensionsRequest set(String fieldName, Object value) {
-    return (AutoResizeDimensionsRequest) super.set(fieldName, value);
+  public UpdateDataSourceResponse set(String fieldName, Object value) {
+    return (UpdateDataSourceResponse) super.set(fieldName, value);
   }
 
   @Override
-  public AutoResizeDimensionsRequest clone() {
-    return (AutoResizeDimensionsRequest) super.clone();
+  public UpdateDataSourceResponse clone() {
+    return (UpdateDataSourceResponse) super.clone();
   }
 
 }

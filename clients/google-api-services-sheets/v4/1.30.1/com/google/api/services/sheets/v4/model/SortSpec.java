@@ -47,6 +47,13 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
   private ColorStyle backgroundColorStyle;
 
   /**
+   * Reference to a data source column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataSourceColumnReference dataSourceColumnReference;
+
+  /**
    * The dimension the sort should be applied to.
    * The value may be {@code null}.
    */
@@ -114,6 +121,23 @@ public final class SortSpec extends com.google.api.client.json.GenericJson {
    */
   public SortSpec setBackgroundColorStyle(ColorStyle backgroundColorStyle) {
     this.backgroundColorStyle = backgroundColorStyle;
+    return this;
+  }
+
+  /**
+   * Reference to a data source column.
+   * @return value or {@code null} for none
+   */
+  public DataSourceColumnReference getDataSourceColumnReference() {
+    return dataSourceColumnReference;
+  }
+
+  /**
+   * Reference to a data source column.
+   * @param dataSourceColumnReference dataSourceColumnReference or {@code null} for none
+   */
+  public SortSpec setDataSourceColumnReference(DataSourceColumnReference dataSourceColumnReference) {
+    this.dataSourceColumnReference = dataSourceColumnReference;
     return this;
   }
 

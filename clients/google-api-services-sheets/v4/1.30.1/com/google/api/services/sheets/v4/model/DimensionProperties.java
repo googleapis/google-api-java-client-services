@@ -30,6 +30,13 @@ package com.google.api.services.sheets.v4.model;
 public final class DimensionProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. If set, this is a column in a data source sheet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataSourceColumnReference dataSourceColumnReference;
+
+  /**
    * The developer metadata associated with a single row or column.
    * The value may be {@code null}.
    */
@@ -62,6 +69,23 @@ public final class DimensionProperties extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.Integer pixelSize;
+
+  /**
+   * Output only. If set, this is a column in a data source sheet.
+   * @return value or {@code null} for none
+   */
+  public DataSourceColumnReference getDataSourceColumnReference() {
+    return dataSourceColumnReference;
+  }
+
+  /**
+   * Output only. If set, this is a column in a data source sheet.
+   * @param dataSourceColumnReference dataSourceColumnReference or {@code null} for none
+   */
+  public DimensionProperties setDataSourceColumnReference(DataSourceColumnReference dataSourceColumnReference) {
+    this.dataSourceColumnReference = dataSourceColumnReference;
+    return this;
+  }
 
   /**
    * The developer metadata associated with a single row or column.

@@ -30,6 +30,13 @@ package com.google.api.services.sheets.v4.model;
 public final class UpdateDimensionPropertiesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The columns on a data source sheet to update.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataSourceSheetDimensionRange dataSourceSheetRange;
+
+  /**
    * The fields that should be updated. At least one field must be specified. The root `properties`
    * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
    * every field.
@@ -51,6 +58,23 @@ public final class UpdateDimensionPropertiesRequest extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private DimensionRange range;
+
+  /**
+   * The columns on a data source sheet to update.
+   * @return value or {@code null} for none
+   */
+  public DataSourceSheetDimensionRange getDataSourceSheetRange() {
+    return dataSourceSheetRange;
+  }
+
+  /**
+   * The columns on a data source sheet to update.
+   * @param dataSourceSheetRange dataSourceSheetRange or {@code null} for none
+   */
+  public UpdateDimensionPropertiesRequest setDataSourceSheetRange(DataSourceSheetDimensionRange dataSourceSheetRange) {
+    this.dataSourceSheetRange = dataSourceSheetRange;
+    return this;
+  }
 
   /**
    * The fields that should be updated. At least one field must be specified. The root `properties`

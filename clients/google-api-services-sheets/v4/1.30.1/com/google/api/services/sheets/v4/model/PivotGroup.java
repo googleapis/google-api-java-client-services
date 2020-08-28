@@ -30,6 +30,20 @@ package com.google.api.services.sheets.v4.model;
 public final class PivotGroup extends com.google.api.client.json.GenericJson {
 
   /**
+   * The reference to the data source column this grouping is based on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataSourceColumnReference dataSourceColumnReference;
+
+  /**
+   * The count limit on rows or columns to apply to this pivot group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PivotGroupLimit groupLimit;
+
+  /**
    * The group rule to apply to this row/column group.
    * The value may be {@code null}.
    */
@@ -101,6 +115,40 @@ public final class PivotGroup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<PivotGroupValueMetadata> valueMetadata;
+
+  /**
+   * The reference to the data source column this grouping is based on.
+   * @return value or {@code null} for none
+   */
+  public DataSourceColumnReference getDataSourceColumnReference() {
+    return dataSourceColumnReference;
+  }
+
+  /**
+   * The reference to the data source column this grouping is based on.
+   * @param dataSourceColumnReference dataSourceColumnReference or {@code null} for none
+   */
+  public PivotGroup setDataSourceColumnReference(DataSourceColumnReference dataSourceColumnReference) {
+    this.dataSourceColumnReference = dataSourceColumnReference;
+    return this;
+  }
+
+  /**
+   * The count limit on rows or columns to apply to this pivot group.
+   * @return value or {@code null} for none
+   */
+  public PivotGroupLimit getGroupLimit() {
+    return groupLimit;
+  }
+
+  /**
+   * The count limit on rows or columns to apply to this pivot group.
+   * @param groupLimit groupLimit or {@code null} for none
+   */
+  public PivotGroup setGroupLimit(PivotGroupLimit groupLimit) {
+    this.groupLimit = groupLimit;
+    return this;
+  }
 
   /**
    * The group rule to apply to this row/column group.

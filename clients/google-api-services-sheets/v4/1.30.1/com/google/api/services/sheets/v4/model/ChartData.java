@@ -30,11 +30,86 @@ package com.google.api.services.sheets.v4.model;
 public final class ChartData extends com.google.api.client.json.GenericJson {
 
   /**
+   * The aggregation type for the series of a data source chart. Not supported for regular charts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String aggregateType;
+
+  /**
+   * The reference to the data source column that the data reads from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataSourceColumnReference columnReference;
+
+  /**
+   * The rule to group the data by if the ChartData backs the domain of a data source chart. Not
+   * supported for regular charts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChartGroupRule groupRule;
+
+  /**
    * The source ranges of the data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ChartSourceRange sourceRange;
+
+  /**
+   * The aggregation type for the series of a data source chart. Not supported for regular charts.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAggregateType() {
+    return aggregateType;
+  }
+
+  /**
+   * The aggregation type for the series of a data source chart. Not supported for regular charts.
+   * @param aggregateType aggregateType or {@code null} for none
+   */
+  public ChartData setAggregateType(java.lang.String aggregateType) {
+    this.aggregateType = aggregateType;
+    return this;
+  }
+
+  /**
+   * The reference to the data source column that the data reads from.
+   * @return value or {@code null} for none
+   */
+  public DataSourceColumnReference getColumnReference() {
+    return columnReference;
+  }
+
+  /**
+   * The reference to the data source column that the data reads from.
+   * @param columnReference columnReference or {@code null} for none
+   */
+  public ChartData setColumnReference(DataSourceColumnReference columnReference) {
+    this.columnReference = columnReference;
+    return this;
+  }
+
+  /**
+   * The rule to group the data by if the ChartData backs the domain of a data source chart. Not
+   * supported for regular charts.
+   * @return value or {@code null} for none
+   */
+  public ChartGroupRule getGroupRule() {
+    return groupRule;
+  }
+
+  /**
+   * The rule to group the data by if the ChartData backs the domain of a data source chart. Not
+   * supported for regular charts.
+   * @param groupRule groupRule or {@code null} for none
+   */
+  public ChartData setGroupRule(ChartGroupRule groupRule) {
+    this.groupRule = groupRule;
+    return this;
+  }
 
   /**
    * The source ranges of the data.

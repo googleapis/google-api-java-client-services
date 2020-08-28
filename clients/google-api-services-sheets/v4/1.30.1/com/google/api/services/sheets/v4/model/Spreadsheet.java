@@ -30,6 +30,32 @@ package com.google.api.services.sheets.v4.model;
 public final class Spreadsheet extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A list of data source refresh schedules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DataSourceRefreshSchedule> dataSourceSchedules;
+
+  static {
+    // hack to force ProGuard to consider DataSourceRefreshSchedule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataSourceRefreshSchedule.class);
+  }
+
+  /**
+   * A list of external data sources connected with the spreadsheet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DataSource> dataSources;
+
+  static {
+    // hack to force ProGuard to consider DataSource used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataSource.class);
+  }
+
+  /**
    * The developer metadata associated with a spreadsheet.
    * The value may be {@code null}.
    */
@@ -88,6 +114,40 @@ public final class Spreadsheet extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String spreadsheetUrl;
+
+  /**
+   * Output only. A list of data source refresh schedules.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DataSourceRefreshSchedule> getDataSourceSchedules() {
+    return dataSourceSchedules;
+  }
+
+  /**
+   * Output only. A list of data source refresh schedules.
+   * @param dataSourceSchedules dataSourceSchedules or {@code null} for none
+   */
+  public Spreadsheet setDataSourceSchedules(java.util.List<DataSourceRefreshSchedule> dataSourceSchedules) {
+    this.dataSourceSchedules = dataSourceSchedules;
+    return this;
+  }
+
+  /**
+   * A list of external data sources connected with the spreadsheet.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DataSource> getDataSources() {
+    return dataSources;
+  }
+
+  /**
+   * A list of external data sources connected with the spreadsheet.
+   * @param dataSources dataSources or {@code null} for none
+   */
+  public Spreadsheet setDataSources(java.util.List<DataSource> dataSources) {
+    this.dataSources = dataSources;
+    return this;
+  }
 
   /**
    * The developer metadata associated with a spreadsheet.

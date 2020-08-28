@@ -43,9 +43,12 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
   private java.util.List<java.lang.String> delegates;
 
   /**
-   * The desired lifetime duration of the access token in seconds. Must be set to a value less than
-   * or equal to 3600 (1 hour). If a value is not specified, the token's lifetime will be set to a
-   * default value of one hour.
+   * The desired lifetime duration of the access token in seconds. By default, the maximum allowed
+   * value is 1 hour. To set a lifetime of up to 12 hours, you can add the service account as an
+   * allowed value in an Organization Policy that enforces the
+   * `constraints/iam.allowServiceAccountCredentialLifetimeExtension` constraint. See detailed
+   * instructions at https://cloud.google.com/iam/help/credentials/lifetime If a value is not
+   * specified, the token's lifetime will be set to a default value of 1 hour.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,9 +91,12 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
   }
 
   /**
-   * The desired lifetime duration of the access token in seconds. Must be set to a value less than
-   * or equal to 3600 (1 hour). If a value is not specified, the token's lifetime will be set to a
-   * default value of one hour.
+   * The desired lifetime duration of the access token in seconds. By default, the maximum allowed
+   * value is 1 hour. To set a lifetime of up to 12 hours, you can add the service account as an
+   * allowed value in an Organization Policy that enforces the
+   * `constraints/iam.allowServiceAccountCredentialLifetimeExtension` constraint. See detailed
+   * instructions at https://cloud.google.com/iam/help/credentials/lifetime If a value is not
+   * specified, the token's lifetime will be set to a default value of 1 hour.
    * @return value or {@code null} for none
    */
   public String getLifetime() {
@@ -98,9 +104,12 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
   }
 
   /**
-   * The desired lifetime duration of the access token in seconds. Must be set to a value less than
-   * or equal to 3600 (1 hour). If a value is not specified, the token's lifetime will be set to a
-   * default value of one hour.
+   * The desired lifetime duration of the access token in seconds. By default, the maximum allowed
+   * value is 1 hour. To set a lifetime of up to 12 hours, you can add the service account as an
+   * allowed value in an Organization Policy that enforces the
+   * `constraints/iam.allowServiceAccountCredentialLifetimeExtension` constraint. See detailed
+   * instructions at https://cloud.google.com/iam/help/credentials/lifetime If a value is not
+   * specified, the token's lifetime will be set to a default value of 1 hour.
    * @param lifetime lifetime or {@code null} for none
    */
   public GenerateAccessTokenRequest setLifetime(String lifetime) {

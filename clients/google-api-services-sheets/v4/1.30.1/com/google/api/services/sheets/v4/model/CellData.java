@@ -30,6 +30,25 @@ package com.google.api.services.sheets.v4.model;
 public final class CellData extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Information about a data source formula on the cell. The field is set if
+   * user_entered_value is a formula referencing some [SheetType.DATA_SOURCE] sheet, e.g
+   * `=SUM(DataSheet!Column)`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataSourceFormula dataSourceFormula;
+
+  /**
+   * A data source table anchored at this cell. The size of data source table itself is computed
+   * dynamically based on its configuration. Only the first cell of the data source table contains
+   * the data source table definition. The other cells will contain the display values of the data
+   * source table result in their effective_value fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataSourceTable dataSourceTable;
+
+  /**
    * A data validation rule on the cell, if any. When writing, the new data validation rule will
    * overwrite any prior rule.
    * The value may be {@code null}.
@@ -115,6 +134,50 @@ public final class CellData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ExtendedValue userEnteredValue;
+
+  /**
+   * Output only. Information about a data source formula on the cell. The field is set if
+   * user_entered_value is a formula referencing some [SheetType.DATA_SOURCE] sheet, e.g
+   * `=SUM(DataSheet!Column)`.
+   * @return value or {@code null} for none
+   */
+  public DataSourceFormula getDataSourceFormula() {
+    return dataSourceFormula;
+  }
+
+  /**
+   * Output only. Information about a data source formula on the cell. The field is set if
+   * user_entered_value is a formula referencing some [SheetType.DATA_SOURCE] sheet, e.g
+   * `=SUM(DataSheet!Column)`.
+   * @param dataSourceFormula dataSourceFormula or {@code null} for none
+   */
+  public CellData setDataSourceFormula(DataSourceFormula dataSourceFormula) {
+    this.dataSourceFormula = dataSourceFormula;
+    return this;
+  }
+
+  /**
+   * A data source table anchored at this cell. The size of data source table itself is computed
+   * dynamically based on its configuration. Only the first cell of the data source table contains
+   * the data source table definition. The other cells will contain the display values of the data
+   * source table result in their effective_value fields.
+   * @return value or {@code null} for none
+   */
+  public DataSourceTable getDataSourceTable() {
+    return dataSourceTable;
+  }
+
+  /**
+   * A data source table anchored at this cell. The size of data source table itself is computed
+   * dynamically based on its configuration. Only the first cell of the data source table contains
+   * the data source table definition. The other cells will contain the display values of the data
+   * source table result in their effective_value fields.
+   * @param dataSourceTable dataSourceTable or {@code null} for none
+   */
+  public CellData setDataSourceTable(DataSourceTable dataSourceTable) {
+    this.dataSourceTable = dataSourceTable;
+    return this;
+  }
 
   /**
    * A data validation rule on the cell, if any. When writing, the new data validation rule will

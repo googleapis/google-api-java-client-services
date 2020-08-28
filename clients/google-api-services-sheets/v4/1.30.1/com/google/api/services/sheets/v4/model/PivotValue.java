@@ -33,12 +33,19 @@ public final class PivotValue extends com.google.api.client.json.GenericJson {
    * If specified, indicates that pivot values should be displayed as the result of a calculation
    * with another pivot value. For example, if calculated_display_type is specified as
    * PERCENT_OF_GRAND_TOTAL, all the pivot values are displayed as the percentage of the grand
-   * total. In the Sheets UI, this is referred to as "Show As" in the value section of a pivot
+   * total. In the Sheets editor, this is referred to as "Show As" in the value section of a pivot
    * table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String calculatedDisplayType;
+
+  /**
+   * The reference to the data source column that this value reads from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataSourceColumnReference dataSourceColumnReference;
 
   /**
    * A custom formula to calculate the value. The formula must start with an `=` character.
@@ -75,7 +82,7 @@ public final class PivotValue extends com.google.api.client.json.GenericJson {
    * If specified, indicates that pivot values should be displayed as the result of a calculation
    * with another pivot value. For example, if calculated_display_type is specified as
    * PERCENT_OF_GRAND_TOTAL, all the pivot values are displayed as the percentage of the grand
-   * total. In the Sheets UI, this is referred to as "Show As" in the value section of a pivot
+   * total. In the Sheets editor, this is referred to as "Show As" in the value section of a pivot
    * table.
    * @return value or {@code null} for none
    */
@@ -87,12 +94,29 @@ public final class PivotValue extends com.google.api.client.json.GenericJson {
    * If specified, indicates that pivot values should be displayed as the result of a calculation
    * with another pivot value. For example, if calculated_display_type is specified as
    * PERCENT_OF_GRAND_TOTAL, all the pivot values are displayed as the percentage of the grand
-   * total. In the Sheets UI, this is referred to as "Show As" in the value section of a pivot
+   * total. In the Sheets editor, this is referred to as "Show As" in the value section of a pivot
    * table.
    * @param calculatedDisplayType calculatedDisplayType or {@code null} for none
    */
   public PivotValue setCalculatedDisplayType(java.lang.String calculatedDisplayType) {
     this.calculatedDisplayType = calculatedDisplayType;
+    return this;
+  }
+
+  /**
+   * The reference to the data source column that this value reads from.
+   * @return value or {@code null} for none
+   */
+  public DataSourceColumnReference getDataSourceColumnReference() {
+    return dataSourceColumnReference;
+  }
+
+  /**
+   * The reference to the data source column that this value reads from.
+   * @param dataSourceColumnReference dataSourceColumnReference or {@code null} for none
+   */
+  public PivotValue setDataSourceColumnReference(DataSourceColumnReference dataSourceColumnReference) {
+    this.dataSourceColumnReference = dataSourceColumnReference;
     return this;
   }
 

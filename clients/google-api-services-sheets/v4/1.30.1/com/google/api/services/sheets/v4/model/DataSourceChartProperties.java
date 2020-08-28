@@ -17,8 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Automatically resizes one or more dimensions based on the contents of the cells in that
- * dimension.
+ * Properties of a data source chart.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -28,64 +27,64 @@ package com.google.api.services.sheets.v4.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AutoResizeDimensionsRequest extends com.google.api.client.json.GenericJson {
+public final class DataSourceChartProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
+   * Output only. The data execution status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DataSourceSheetDimensionRange dataSourceSheetDimensions;
+  private DataExecutionStatus dataExecutionStatus;
 
   /**
-   * The dimensions to automatically resize.
+   * ID of the data source that the chart is associated with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DimensionRange dimensions;
+  private java.lang.String dataSourceId;
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
+   * Output only. The data execution status.
    * @return value or {@code null} for none
    */
-  public DataSourceSheetDimensionRange getDataSourceSheetDimensions() {
-    return dataSourceSheetDimensions;
+  public DataExecutionStatus getDataExecutionStatus() {
+    return dataExecutionStatus;
   }
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
-   * @param dataSourceSheetDimensions dataSourceSheetDimensions or {@code null} for none
+   * Output only. The data execution status.
+   * @param dataExecutionStatus dataExecutionStatus or {@code null} for none
    */
-  public AutoResizeDimensionsRequest setDataSourceSheetDimensions(DataSourceSheetDimensionRange dataSourceSheetDimensions) {
-    this.dataSourceSheetDimensions = dataSourceSheetDimensions;
+  public DataSourceChartProperties setDataExecutionStatus(DataExecutionStatus dataExecutionStatus) {
+    this.dataExecutionStatus = dataExecutionStatus;
     return this;
   }
 
   /**
-   * The dimensions to automatically resize.
+   * ID of the data source that the chart is associated with.
    * @return value or {@code null} for none
    */
-  public DimensionRange getDimensions() {
-    return dimensions;
+  public java.lang.String getDataSourceId() {
+    return dataSourceId;
   }
 
   /**
-   * The dimensions to automatically resize.
-   * @param dimensions dimensions or {@code null} for none
+   * ID of the data source that the chart is associated with.
+   * @param dataSourceId dataSourceId or {@code null} for none
    */
-  public AutoResizeDimensionsRequest setDimensions(DimensionRange dimensions) {
-    this.dimensions = dimensions;
+  public DataSourceChartProperties setDataSourceId(java.lang.String dataSourceId) {
+    this.dataSourceId = dataSourceId;
     return this;
   }
 
   @Override
-  public AutoResizeDimensionsRequest set(String fieldName, Object value) {
-    return (AutoResizeDimensionsRequest) super.set(fieldName, value);
+  public DataSourceChartProperties set(String fieldName, Object value) {
+    return (DataSourceChartProperties) super.set(fieldName, value);
   }
 
   @Override
-  public AutoResizeDimensionsRequest clone() {
-    return (AutoResizeDimensionsRequest) super.clone();
+  public DataSourceChartProperties clone() {
+    return (DataSourceChartProperties) super.clone();
   }
 
 }

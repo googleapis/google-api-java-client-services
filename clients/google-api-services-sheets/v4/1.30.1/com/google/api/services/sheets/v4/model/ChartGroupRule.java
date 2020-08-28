@@ -17,8 +17,11 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Automatically resizes one or more dimensions based on the contents of the cells in that
- * dimension.
+ * An optional setting on the ChartData of the domain of a data source chart that defines buckets
+ * for the values in the domain rather than breaking out each individual value. For example, when
+ * plotting a data source chart, you can specify a histogram rule on the domain (it should only
+ * contain numeric values), grouping its values into buckets. Any values of a chart series that fall
+ * into the same bucket are aggregated based on the aggregate_type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -28,64 +31,64 @@ package com.google.api.services.sheets.v4.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AutoResizeDimensionsRequest extends com.google.api.client.json.GenericJson {
+public final class ChartGroupRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
+   * A ChartDateTimeRule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DataSourceSheetDimensionRange dataSourceSheetDimensions;
+  private ChartDateTimeRule dateTimeRule;
 
   /**
-   * The dimensions to automatically resize.
+   * A ChartHistogramRule
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DimensionRange dimensions;
+  private ChartHistogramRule histogramRule;
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
+   * A ChartDateTimeRule.
    * @return value or {@code null} for none
    */
-  public DataSourceSheetDimensionRange getDataSourceSheetDimensions() {
-    return dataSourceSheetDimensions;
+  public ChartDateTimeRule getDateTimeRule() {
+    return dateTimeRule;
   }
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
-   * @param dataSourceSheetDimensions dataSourceSheetDimensions or {@code null} for none
+   * A ChartDateTimeRule.
+   * @param dateTimeRule dateTimeRule or {@code null} for none
    */
-  public AutoResizeDimensionsRequest setDataSourceSheetDimensions(DataSourceSheetDimensionRange dataSourceSheetDimensions) {
-    this.dataSourceSheetDimensions = dataSourceSheetDimensions;
+  public ChartGroupRule setDateTimeRule(ChartDateTimeRule dateTimeRule) {
+    this.dateTimeRule = dateTimeRule;
     return this;
   }
 
   /**
-   * The dimensions to automatically resize.
+   * A ChartHistogramRule
    * @return value or {@code null} for none
    */
-  public DimensionRange getDimensions() {
-    return dimensions;
+  public ChartHistogramRule getHistogramRule() {
+    return histogramRule;
   }
 
   /**
-   * The dimensions to automatically resize.
-   * @param dimensions dimensions or {@code null} for none
+   * A ChartHistogramRule
+   * @param histogramRule histogramRule or {@code null} for none
    */
-  public AutoResizeDimensionsRequest setDimensions(DimensionRange dimensions) {
-    this.dimensions = dimensions;
+  public ChartGroupRule setHistogramRule(ChartHistogramRule histogramRule) {
+    this.histogramRule = histogramRule;
     return this;
   }
 
   @Override
-  public AutoResizeDimensionsRequest set(String fieldName, Object value) {
-    return (AutoResizeDimensionsRequest) super.set(fieldName, value);
+  public ChartGroupRule set(String fieldName, Object value) {
+    return (ChartGroupRule) super.set(fieldName, value);
   }
 
   @Override
-  public AutoResizeDimensionsRequest clone() {
-    return (AutoResizeDimensionsRequest) super.clone();
+  public ChartGroupRule clone() {
+    return (ChartGroupRule) super.clone();
   }
 
 }

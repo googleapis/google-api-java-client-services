@@ -44,6 +44,21 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The filter criteria for showing/hiding values per column. Both criteria and filter_specs are
+   * populated in responses. If both fields are specified in an update request, this field takes
+   * precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FilterSpec> filterSpecs;
+
+  static {
+    // hack to force ProGuard to consider FilterSpec used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FilterSpec.class);
+  }
+
+  /**
    * The ID of the filter view.
    * The value may be {@code null}.
    */
@@ -97,6 +112,27 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
    */
   public FilterView setCriteria(java.util.Map<String, FilterCriteria> criteria) {
     this.criteria = criteria;
+    return this;
+  }
+
+  /**
+   * The filter criteria for showing/hiding values per column. Both criteria and filter_specs are
+   * populated in responses. If both fields are specified in an update request, this field takes
+   * precedence.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FilterSpec> getFilterSpecs() {
+    return filterSpecs;
+  }
+
+  /**
+   * The filter criteria for showing/hiding values per column. Both criteria and filter_specs are
+   * populated in responses. If both fields are specified in an update request, this field takes
+   * precedence.
+   * @param filterSpecs filterSpecs or {@code null} for none
+   */
+  public FilterView setFilterSpecs(java.util.List<FilterSpec> filterSpecs) {
+    this.filterSpecs = filterSpecs;
     return this;
   }
 

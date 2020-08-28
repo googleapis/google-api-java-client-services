@@ -17,8 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Automatically resizes one or more dimensions based on the contents of the cells in that
- * dimension.
+ * A data source column.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -28,64 +27,64 @@ package com.google.api.services.sheets.v4.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AutoResizeDimensionsRequest extends com.google.api.client.json.GenericJson {
+public final class DataSourceColumn extends com.google.api.client.json.GenericJson {
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
+   * The formula of the calculated column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DataSourceSheetDimensionRange dataSourceSheetDimensions;
+  private java.lang.String formula;
 
   /**
-   * The dimensions to automatically resize.
+   * The column reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DimensionRange dimensions;
+  private DataSourceColumnReference reference;
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
+   * The formula of the calculated column.
    * @return value or {@code null} for none
    */
-  public DataSourceSheetDimensionRange getDataSourceSheetDimensions() {
-    return dataSourceSheetDimensions;
+  public java.lang.String getFormula() {
+    return formula;
   }
 
   /**
-   * The dimensions on a data source sheet to automatically resize.
-   * @param dataSourceSheetDimensions dataSourceSheetDimensions or {@code null} for none
+   * The formula of the calculated column.
+   * @param formula formula or {@code null} for none
    */
-  public AutoResizeDimensionsRequest setDataSourceSheetDimensions(DataSourceSheetDimensionRange dataSourceSheetDimensions) {
-    this.dataSourceSheetDimensions = dataSourceSheetDimensions;
+  public DataSourceColumn setFormula(java.lang.String formula) {
+    this.formula = formula;
     return this;
   }
 
   /**
-   * The dimensions to automatically resize.
+   * The column reference.
    * @return value or {@code null} for none
    */
-  public DimensionRange getDimensions() {
-    return dimensions;
+  public DataSourceColumnReference getReference() {
+    return reference;
   }
 
   /**
-   * The dimensions to automatically resize.
-   * @param dimensions dimensions or {@code null} for none
+   * The column reference.
+   * @param reference reference or {@code null} for none
    */
-  public AutoResizeDimensionsRequest setDimensions(DimensionRange dimensions) {
-    this.dimensions = dimensions;
+  public DataSourceColumn setReference(DataSourceColumnReference reference) {
+    this.reference = reference;
     return this;
   }
 
   @Override
-  public AutoResizeDimensionsRequest set(String fieldName, Object value) {
-    return (AutoResizeDimensionsRequest) super.set(fieldName, value);
+  public DataSourceColumn set(String fieldName, Object value) {
+    return (DataSourceColumn) super.set(fieldName, value);
   }
 
   @Override
-  public AutoResizeDimensionsRequest clone() {
-    return (AutoResizeDimensionsRequest) super.clone();
+  public DataSourceColumn clone() {
+    return (DataSourceColumn) super.clone();
   }
 
 }

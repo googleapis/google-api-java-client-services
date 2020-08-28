@@ -44,6 +44,13 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private AddChartResponse addChart;
 
   /**
+   * A reply from adding a data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddDataSourceResponse addDataSource;
+
+  /**
    * A reply from adding a dimension group.
    * The value may be {@code null}.
    */
@@ -142,6 +149,13 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private FindReplaceResponse findReplace;
 
   /**
+   * A reply from refreshing data source objects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RefreshDataSourceResponse refreshDataSource;
+
+  /**
    * A reply from trimming whitespace.
    * The value may be {@code null}.
    */
@@ -154,6 +168,13 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UpdateConditionalFormatRuleResponse updateConditionalFormatRule;
+
+  /**
+   * A reply from updating a data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateDataSourceResponse updateDataSource;
 
   /**
    * A reply from updating a developer metadata entry.
@@ -200,6 +221,23 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setAddChart(AddChartResponse addChart) {
     this.addChart = addChart;
+    return this;
+  }
+
+  /**
+   * A reply from adding a data source.
+   * @return value or {@code null} for none
+   */
+  public AddDataSourceResponse getAddDataSource() {
+    return addDataSource;
+  }
+
+  /**
+   * A reply from adding a data source.
+   * @param addDataSource addDataSource or {@code null} for none
+   */
+  public Response setAddDataSource(AddDataSourceResponse addDataSource) {
+    this.addDataSource = addDataSource;
     return this;
   }
 
@@ -442,6 +480,23 @@ public final class Response extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A reply from refreshing data source objects.
+   * @return value or {@code null} for none
+   */
+  public RefreshDataSourceResponse getRefreshDataSource() {
+    return refreshDataSource;
+  }
+
+  /**
+   * A reply from refreshing data source objects.
+   * @param refreshDataSource refreshDataSource or {@code null} for none
+   */
+  public Response setRefreshDataSource(RefreshDataSourceResponse refreshDataSource) {
+    this.refreshDataSource = refreshDataSource;
+    return this;
+  }
+
+  /**
    * A reply from trimming whitespace.
    * @return value or {@code null} for none
    */
@@ -472,6 +527,23 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setUpdateConditionalFormatRule(UpdateConditionalFormatRuleResponse updateConditionalFormatRule) {
     this.updateConditionalFormatRule = updateConditionalFormatRule;
+    return this;
+  }
+
+  /**
+   * A reply from updating a data source.
+   * @return value or {@code null} for none
+   */
+  public UpdateDataSourceResponse getUpdateDataSource() {
+    return updateDataSource;
+  }
+
+  /**
+   * A reply from updating a data source.
+   * @param updateDataSource updateDataSource or {@code null} for none
+   */
+  public Response setUpdateDataSource(UpdateDataSourceResponse updateDataSource) {
+    this.updateDataSource = updateDataSource;
     return this;
   }
 

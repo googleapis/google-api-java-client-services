@@ -74,6 +74,20 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   private CandlestickChartSpec candlestickChart;
 
   /**
+   * If present, the field contains data source chart specific properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataSourceChartProperties dataSourceChartProperties;
+
+  /**
+   * The filters applied to the source data of the chart. Only supported for data source charts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FilterSpec> filterSpecs;
+
+  /**
    * The name of the font to use by default for all chart text (e.g. title, axis labels, legend). If
    * a font is specified for a specific part of the chart it will override this font name.
    * The value may be {@code null}.
@@ -123,6 +137,14 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ScorecardChartSpec scorecardChart;
+
+  /**
+   * The order to sort the chart data by. Only a single sort spec is supported. Only supported for
+   * data source charts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SortSpec> sortSpecs;
 
   /**
    * The subtitle of the chart.
@@ -287,6 +309,40 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * If present, the field contains data source chart specific properties.
+   * @return value or {@code null} for none
+   */
+  public DataSourceChartProperties getDataSourceChartProperties() {
+    return dataSourceChartProperties;
+  }
+
+  /**
+   * If present, the field contains data source chart specific properties.
+   * @param dataSourceChartProperties dataSourceChartProperties or {@code null} for none
+   */
+  public ChartSpec setDataSourceChartProperties(DataSourceChartProperties dataSourceChartProperties) {
+    this.dataSourceChartProperties = dataSourceChartProperties;
+    return this;
+  }
+
+  /**
+   * The filters applied to the source data of the chart. Only supported for data source charts.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FilterSpec> getFilterSpecs() {
+    return filterSpecs;
+  }
+
+  /**
+   * The filters applied to the source data of the chart. Only supported for data source charts.
+   * @param filterSpecs filterSpecs or {@code null} for none
+   */
+  public ChartSpec setFilterSpecs(java.util.List<FilterSpec> filterSpecs) {
+    this.filterSpecs = filterSpecs;
+    return this;
+  }
+
+  /**
    * The name of the font to use by default for all chart text (e.g. title, axis labels, legend). If
    * a font is specified for a specific part of the chart it will override this font name.
    * @return value or {@code null} for none
@@ -406,6 +462,25 @@ public final class ChartSpec extends com.google.api.client.json.GenericJson {
    */
   public ChartSpec setScorecardChart(ScorecardChartSpec scorecardChart) {
     this.scorecardChart = scorecardChart;
+    return this;
+  }
+
+  /**
+   * The order to sort the chart data by. Only a single sort spec is supported. Only supported for
+   * data source charts.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SortSpec> getSortSpecs() {
+    return sortSpecs;
+  }
+
+  /**
+   * The order to sort the chart data by. Only a single sort spec is supported. Only supported for
+   * data source charts.
+   * @param sortSpecs sortSpecs or {@code null} for none
+   */
+  public ChartSpec setSortSpecs(java.util.List<SortSpec> sortSpecs) {
+    this.sortSpecs = sortSpecs;
     return this;
   }
 

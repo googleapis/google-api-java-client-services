@@ -60,6 +60,35 @@ public final class PivotTable extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The data execution status for data source pivot tables.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataExecutionStatus dataExecutionStatus;
+
+  /**
+   * The ID of the data source the pivot table is reading data from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataSourceId;
+
+  /**
+   * The filters applied to the source columns before aggregating data for the pivot table. Both
+   * criteria and filter_specs are populated in responses. If both fields are specified in an update
+   * request, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PivotFilterSpec> filterSpecs;
+
+  static {
+    // hack to force ProGuard to consider PivotFilterSpec used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PivotFilterSpec.class);
+  }
+
+  /**
    * Each row grouping in the pivot table.
    * The value may be {@code null}.
    */
@@ -132,6 +161,61 @@ public final class PivotTable extends com.google.api.client.json.GenericJson {
    */
   public PivotTable setCriteria(java.util.Map<String, PivotFilterCriteria> criteria) {
     this.criteria = criteria;
+    return this;
+  }
+
+  /**
+   * Output only. The data execution status for data source pivot tables.
+   * @return value or {@code null} for none
+   */
+  public DataExecutionStatus getDataExecutionStatus() {
+    return dataExecutionStatus;
+  }
+
+  /**
+   * Output only. The data execution status for data source pivot tables.
+   * @param dataExecutionStatus dataExecutionStatus or {@code null} for none
+   */
+  public PivotTable setDataExecutionStatus(DataExecutionStatus dataExecutionStatus) {
+    this.dataExecutionStatus = dataExecutionStatus;
+    return this;
+  }
+
+  /**
+   * The ID of the data source the pivot table is reading data from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataSourceId() {
+    return dataSourceId;
+  }
+
+  /**
+   * The ID of the data source the pivot table is reading data from.
+   * @param dataSourceId dataSourceId or {@code null} for none
+   */
+  public PivotTable setDataSourceId(java.lang.String dataSourceId) {
+    this.dataSourceId = dataSourceId;
+    return this;
+  }
+
+  /**
+   * The filters applied to the source columns before aggregating data for the pivot table. Both
+   * criteria and filter_specs are populated in responses. If both fields are specified in an update
+   * request, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PivotFilterSpec> getFilterSpecs() {
+    return filterSpecs;
+  }
+
+  /**
+   * The filters applied to the source columns before aggregating data for the pivot table. Both
+   * criteria and filter_specs are populated in responses. If both fields are specified in an update
+   * request, this field takes precedence.
+   * @param filterSpecs filterSpecs or {@code null} for none
+   */
+  public PivotTable setFilterSpecs(java.util.List<PivotFilterSpec> filterSpecs) {
+    this.filterSpecs = filterSpecs;
     return this;
   }
 

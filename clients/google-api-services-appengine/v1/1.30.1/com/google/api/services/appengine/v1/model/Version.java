@@ -63,6 +63,14 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> betaSettings;
 
   /**
+   * Environment variables available to the build environment.Only returned in GET requests if
+   * view=FULL is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> buildEnvVariables;
+
+  /**
    * Time that this version was created.@OutputOnly
    * The value may be {@code null}.
    */
@@ -413,6 +421,25 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setBetaSettings(java.util.Map<String, java.lang.String> betaSettings) {
     this.betaSettings = betaSettings;
+    return this;
+  }
+
+  /**
+   * Environment variables available to the build environment.Only returned in GET requests if
+   * view=FULL is set.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getBuildEnvVariables() {
+    return buildEnvVariables;
+  }
+
+  /**
+   * Environment variables available to the build environment.Only returned in GET requests if
+   * view=FULL is set.
+   * @param buildEnvVariables buildEnvVariables or {@code null} for none
+   */
+  public Version setBuildEnvVariables(java.util.Map<String, java.lang.String> buildEnvVariables) {
+    this.buildEnvVariables = buildEnvVariables;
     return this;
   }
 

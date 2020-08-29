@@ -152,6 +152,13 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * [Output Only] Specifies whether this snapshot satisfies zone separation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPhysicalZoneSeparation;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -544,6 +551,23 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] Specifies whether this snapshot satisfies zone separation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPhysicalZoneSeparation() {
+    return satisfiesPhysicalZoneSeparation;
+  }
+
+  /**
+   * [Output Only] Specifies whether this snapshot satisfies zone separation.
+   * @param satisfiesPhysicalZoneSeparation satisfiesPhysicalZoneSeparation or {@code null} for none
+   */
+  public Snapshot setSatisfiesPhysicalZoneSeparation(java.lang.Boolean satisfiesPhysicalZoneSeparation) {
+    this.satisfiesPhysicalZoneSeparation = satisfiesPhysicalZoneSeparation;
     return this;
   }
 

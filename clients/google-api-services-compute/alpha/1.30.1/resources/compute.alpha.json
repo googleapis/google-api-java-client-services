@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/dQTKcKkHCtoDI02XVzspF-olZZM\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/aGjerDYNJkugWsmUg4Vi8HifQEA\"",
  "discoveryVersion": "v1",
  "id": "compute:alpha",
  "name": "compute",
  "version": "alpha",
- "revision": "20200727",
+ "revision": "20200811",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -658,6 +658,7 @@
      "enum": [
       "DNS_RESOLVER",
       "GCE_ENDPOINT",
+      "IPSEC_INTERCONNECT",
       "NAT_AUTO",
       "PRIVATE_SERVICE_CONNECT",
       "PSC_PRODUCER_NAT_RANGE",
@@ -665,6 +666,7 @@
       "VPC_PEERING"
      ],
      "enumDescriptions": [
+      "",
       "",
       "",
       "",
@@ -1052,6 +1054,11 @@
     "enableNestedVirtualization": {
      "type": "boolean",
      "description": "Whether to enable nested virtualization or not (default is false)."
+    },
+    "threadsPerCore": {
+     "type": "integer",
+     "description": "The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.",
+     "format": "int32"
     }
    }
   },
@@ -2332,6 +2339,13 @@
    "type": "object",
    "description": "Message containing Cloud CDN configuration for a backend bucket.",
    "properties": {
+    "bypassCacheOnRequestHeaders": {
+     "type": "array",
+     "description": "Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.",
+     "items": {
+      "$ref": "BackendBucketCdnPolicyBypassCacheOnRequestHeader"
+     }
+    },
     "cacheMode": {
      "type": "string",
      "enum": [
@@ -2377,6 +2391,11 @@
      "type": "boolean",
      "description": "If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin."
     },
+    "serveWhileStale": {
+     "type": "integer",
+     "description": "Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache. This setting defines the default \"max-stale\" duration for any cached responses that do not specify a max-stale directive. Stale responses that exceed the TTL configured here will not be served. The default limit (max-stale) is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-age (or s-max-age) of a cached response. The maximum allowed value is 604800(1 week). Set this to zero (0) to disable serve-while-stale.",
+     "format": "int32"
+    },
     "signedUrlCacheMaxAgeSec": {
      "type": "string",
      "description": "Maximum number of seconds the response to a signed URL request will be considered fresh. After this time period, the response will be revalidated before being served. Defaults to 1hr (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a \"Cache-Control: public, max-age=[TTL]\" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered.",
@@ -2388,6 +2407,17 @@
      "items": {
       "type": "string"
      }
+    }
+   }
+  },
+  "BackendBucketCdnPolicyBypassCacheOnRequestHeader": {
+   "id": "BackendBucketCdnPolicyBypassCacheOnRequestHeader",
+   "type": "object",
+   "description": "Bypass the cache when the specified request headers are present, e.g. Pragma or Authorization headers. Values are case insensitive. The presence of such a header overrides the cache_mode setting.",
+   "properties": {
+    "headerName": {
+     "type": "string",
+     "description": "The header field name to match on when bypassing cache. Values are case-insensitive."
     }
    }
   },
@@ -2529,7 +2559,7 @@
    "properties": {
     "affinityCookieTtlSec": {
      "type": "integer",
-     "description": "If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value is one day (86,400).",
+     "description": "If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value is one day (86,400).\n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.",
      "format": "int32"
     },
     "backends": {
@@ -2545,14 +2575,14 @@
     },
     "circuitBreakers": {
      "$ref": "CircuitBreakers",
-     "description": "Settings controlling the volume of connections to a backend service. If not set, this feature is considered disabled.\n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED."
+     "description": "Settings controlling the volume of connections to a backend service. If not set, this feature is considered disabled.\n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.  \n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true."
     },
     "connectionDraining": {
      "$ref": "ConnectionDraining"
     },
     "consistentHash": {
      "$ref": "ConsistentHashLoadBalancerSettings",
-     "description": "Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or RING_HASH.\n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED."
+     "description": "Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or RING_HASH.\n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.  \n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true."
     },
     "creationTimestamp": {
      "type": "string",
@@ -2630,7 +2660,7 @@
     },
     "localityLbPolicy": {
      "type": "string",
-     "description": "The load balancing algorithm used within the scope of the locality. The possible values are:  \n- ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. \n- LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. \n- RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. \n- RANDOM: The load balancer selects a random healthy host. \n- ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. \n- MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see https://ai.google/research/pubs/pub44824 \n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.  \n\nIf sessionAffinity is not NONE, and this field is not set to \u003eMAGLEV or RING_HASH, session affinity settings will not take effect.",
+     "description": "The load balancing algorithm used within the scope of the locality. The possible values are:  \n- ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. \n- LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. \n- RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. \n- RANDOM: The load balancer selects a random healthy host. \n- ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. \n- MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see https://ai.google/research/pubs/pub44824 \n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.  \n\nIf sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect.\n\nOnly the default ROUND_ROBIN policy is supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.",
      "enum": [
       "INVALID_LB_POLICY",
       "LEAST_REQUEST",
@@ -2665,7 +2695,7 @@
     },
     "outlierDetection": {
      "$ref": "OutlierDetection",
-     "description": "Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service. If not set, this feature is considered disabled.\n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED."
+     "description": "Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service. If not set, this feature is considered disabled.\n\nThis field is applicable to either:  \n- A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. \n- A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.  \n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true."
     },
     "port": {
      "type": "integer",
@@ -2678,7 +2708,7 @@
     },
     "protocol": {
      "type": "string",
-     "description": "The protocol this BackendService uses to communicate with backends.\n\nPossible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load balancer or Traffic Director configuration. Refer to the documentation for the load balancer or for Traffic Director for more information.",
+     "description": "The protocol this BackendService uses to communicate with backends.\n\nPossible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load balancer or Traffic Director configuration. Refer to the documentation for the load balancer or for Traffic Director for more information.\n\nMust be set to GRPC when the backend service is referenced by a URL map that is bound to target gRPC proxy.",
      "enum": [
       "ALL",
       "GRPC",
@@ -2722,7 +2752,7 @@
     },
     "sessionAffinity": {
      "type": "string",
-     "description": "Type of session affinity to use. The default is NONE. Session affinity is not applicable if the --protocol is UDP.\n\nWhen the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or GENERATED_COOKIE. You can use GENERATED_COOKIE if the protocol is HTTP or HTTPS.\n\nWhen the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO, or CLIENT_IP_PORT_PROTO.\n\nWhen the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.",
+     "description": "Type of session affinity to use. The default is NONE. Session affinity is not applicable if the --protocol is UDP.\n\nWhen the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or GENERATED_COOKIE. You can use GENERATED_COOKIE if the protocol is HTTP or HTTPS.\n\nWhen the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO, or CLIENT_IP_PORT_PROTO.\n\nWhen the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.\n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.",
      "enum": [
       "CLIENT_IP",
       "CLIENT_IP_NO_DESTINATION",
@@ -2878,6 +2908,13 @@
    "type": "object",
    "description": "Message containing Cloud CDN configuration for a backend service.",
    "properties": {
+    "bypassCacheOnRequestHeaders": {
+     "type": "array",
+     "description": "Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.",
+     "items": {
+      "$ref": "BackendServiceCdnPolicyBypassCacheOnRequestHeader"
+     }
+    },
     "cacheKeyPolicy": {
      "$ref": "CacheKeyPolicy",
      "description": "The CacheKeyPolicy for this CdnPolicy."
@@ -2927,6 +2964,11 @@
      "type": "boolean",
      "description": "If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin."
     },
+    "serveWhileStale": {
+     "type": "integer",
+     "description": "Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache. This setting defines the default \"max-stale\" duration for any cached responses that do not specify a max-stale directive. Stale responses that exceed the TTL configured here will not be served. The default limit (max-stale) is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-age (or s-max-age) of a cached response. The maximum allowed value is 604800(1 week). Set this to zero (0) to disable serve-while-stale.",
+     "format": "int32"
+    },
     "signedUrlCacheMaxAgeSec": {
      "type": "string",
      "description": "Maximum number of seconds the response to a signed URL request will be considered fresh. After this time period, the response will be revalidated before being served. Defaults to 1hr (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as though all responses from this backend had a \"Cache-Control: public, max-age=[TTL]\" header, regardless of any existing Cache-Control header. The actual headers served in responses will not be altered.",
@@ -2938,6 +2980,17 @@
      "items": {
       "type": "string"
      }
+    }
+   }
+  },
+  "BackendServiceCdnPolicyBypassCacheOnRequestHeader": {
+   "id": "BackendServiceCdnPolicyBypassCacheOnRequestHeader",
+   "type": "object",
+   "description": "Bypass the cache when the specified request headers are present, e.g. Pragma or Authorization headers. Values are case insensitive. The presence of such a header overrides the cache_mode setting.",
+   "properties": {
+    "headerName": {
+     "type": "string",
+     "description": "The header field name to match on when bypassing cache. Values are case-insensitive."
     }
    }
   },
@@ -4444,7 +4497,6 @@
   "CustomerEncryptionKey": {
    "id": "CustomerEncryptionKey",
    "type": "object",
-   "description": "Represents a customer-supplied encryption key",
    "properties": {
     "kmsKeyName": {
      "type": "string",
@@ -4654,6 +4706,10 @@
       "type": "string"
      }
     },
+    "satisfiesPhysicalZoneSeparation": {
+     "type": "boolean",
+     "description": "[Output Only] Specifies whether this disk satisfies zone separation."
+    },
     "selfLink": {
      "type": "string",
      "description": "[Output Only] Server-defined fully-qualified URL for this resource."
@@ -4694,6 +4750,14 @@
     "sourceInPlaceSnapshotId": {
      "type": "string",
      "description": "[Deprecated] [Output Only] The unique ID of the in-place snapshot used to create this disk. This value identifies the exact in-place snapshot that was used to create this persistent disk. For example, if you created the persistent disk from an in-place snapshot that was later deleted and recreated under the same name, the source in-place snapshot ID would identify the exact version of the in-place snapshot that was used."
+    },
+    "sourceInstantSnapshot": {
+     "type": "string",
+     "description": "The source instant snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  \n- https://www.googleapis.com/compute/v1/projects/project/zones/zone/instantSnapshots/instantSnapshot \n- projects/project/zones/zone/instantSnapshots/instantSnapshot \n- zones/zone/instantSnapshots/instantSnapshot"
+    },
+    "sourceInstantSnapshotId": {
+     "type": "string",
+     "description": "[Output Only] The unique ID of the instant snapshot used to create this disk. This value identifies the exact instant snapshot that was used to create this persistent disk. For example, if you created the persistent disk from an instant snapshot that was later deleted and recreated under the same name, the source instant snapshot ID would identify the exact version of the instant snapshot that was used."
     },
     "sourceSnapshot": {
      "type": "string",
@@ -6686,7 +6750,7 @@
    "properties": {
     "IPAddress": {
      "type": "string",
-     "description": "IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule.\n\nIf you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address:\n\n* IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name * Partial URL or by name, as in: * projects/project_id/regions/region/addresses/address-name * regions/region/addresses/address-name * global/addresses/address-name * address-name \n\nThe loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, refer to [IP address specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications)."
+     "description": "IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule.\n\nIf you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address:\n\n* IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name * Partial URL or by name, as in: * projects/project_id/regions/region/addresses/address-name * regions/region/addresses/address-name * global/addresses/address-name * address-name \n\nThe loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, refer to [IP address specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).\n\nMust be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field set to true."
     },
     "IPProtocol": {
      "type": "string",
@@ -6795,7 +6859,7 @@
     },
     "metadataFilters": {
      "type": "array",
-     "description": "Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule will not be visible to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata.\nmetadataFilters specified here will be applifed before those specified in the UrlMap that this ForwardingRule references.\nmetadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
+     "description": "Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. When there is a match, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule will not be visible to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match.\nmetadataFilters specified here will be applifed before those specified in the UrlMap that this ForwardingRule references.\nmetadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
      "items": {
       "$ref": "MetadataFilter"
      }
@@ -6845,6 +6909,13 @@
     "selfLinkWithId": {
      "type": "string",
      "description": "[Output Only] Server-defined URL for this resource with the resource id."
+    },
+    "serviceDirectoryRegistrations": {
+     "type": "array",
+     "description": "Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource.",
+     "items": {
+      "$ref": "ForwardingRuleServiceDirectoryRegistration"
+     }
     },
     "serviceLabel": {
      "type": "string",
@@ -7106,6 +7177,21 @@
    "properties": {
     "forwardingRule": {
      "type": "string"
+    }
+   }
+  },
+  "ForwardingRuleServiceDirectoryRegistration": {
+   "id": "ForwardingRuleServiceDirectoryRegistration",
+   "type": "object",
+   "description": "Describes the auto-registration of the Forwarding Rule to Service Directory. The region and project of the Service Directory resource generated from this registration will be the same as this Forwarding Rule.",
+   "properties": {
+    "namespace": {
+     "type": "string",
+     "description": "Service Directory namespace to register the forwarding rule under."
+    },
+    "service": {
+     "type": "string",
+     "description": "Service Directory service to register the forwarding rule under."
     }
    }
   },
@@ -8354,7 +8440,7 @@
     },
     "hosts": {
      "type": "array",
-     "description": "The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or ..",
+     "description": "The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or ..\n\n* based matching is not supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.",
      "items": {
       "type": "string"
      }
@@ -8913,7 +8999,7 @@
     },
     "metadataFilters": {
      "type": "array",
-     "description": "Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the relevant routing configuration is made available to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata.\nmetadataFilters specified here will be applied after those specified in ForwardingRule that refers to the UrlMap this HttpRouteRuleMatch belongs to.\nmetadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
+     "description": "Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. When there is a match, the relevant routing configuration is made available to those proxies.\nFor each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match.\nmetadataFilters specified here will be applied after those specified in ForwardingRule that refers to the UrlMap this HttpRouteRuleMatch belongs to.\nmetadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.",
      "items": {
       "$ref": "MetadataFilter"
      }
@@ -9852,6 +9938,10 @@
      "items": {
       "type": "string"
      }
+    },
+    "satisfiesPhysicalZoneSeparation": {
+     "type": "boolean",
+     "description": "[Output Only] Specifies whether this instance satisfies zone separation."
     },
     "scheduling": {
      "$ref": "Scheduling",
@@ -12938,6 +13028,18 @@
       ""
      ]
     },
+    "encryption": {
+     "type": "string",
+     "description": "Indicates the user-supplied encryption option of this interconnect attachment.",
+     "enum": [
+      "IPSEC",
+      "NONE"
+     ],
+     "enumDescriptions": [
+      "",
+      ""
+     ]
+    },
     "googleReferenceId": {
      "type": "string",
      "description": "[Output Only] Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used."
@@ -12950,6 +13052,13 @@
     "interconnect": {
      "type": "string",
      "description": "URL of the underlying Interconnect object that this attachment's traffic will traverse through."
+    },
+    "ipsecInternalAddresses": {
+     "type": "array",
+     "description": "URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has the encryption option as IPSEC. The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway?s IP address will be allocated from the IP address range specified here. For example, if the HA VPN gateway?s interface 0 is paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated from the IP address specified for this interconnect attachment. If this field is not specified for interconnect attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment, the HA VPN gateway's IP address will be allocated from regional external IP address pool.",
+     "items": {
+      "type": "string"
+     }
     },
     "kind": {
      "type": "string",
@@ -15017,7 +15126,7 @@
     },
     "deprecated": {
      "$ref": "DeprecationStatus",
-     "description": "[Output Only] The deprecation status associated with this machine type."
+     "description": "[Output Only] The deprecation status associated with this machine type. Only applicable if the machine type is unavailable."
     },
     "description": {
      "type": "string",
@@ -16941,7 +17050,7 @@
     },
     "maintenancePolicy": {
      "type": "string",
-     "description": "Specifies how to handle instances when a node in the group undergoes maintenance.",
+     "description": "Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see  Maintenance policies.",
      "enum": [
       "DEFAULT",
       "MAINTENANCE_POLICY_UNSPECIFIED",
@@ -17137,7 +17246,7 @@
     },
     "mode": {
      "type": "string",
-     "description": "The autoscaling mode.",
+     "description": "The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see  Autoscaler modes.",
      "enum": [
       "MODE_UNSPECIFIED",
       "OFF",
@@ -17328,6 +17437,10 @@
     "nodeType": {
      "type": "string",
      "description": "The type of this node."
+    },
+    "satisfiesPhysicalZoneSeparation": {
+     "type": "boolean",
+     "description": "[Output Only] Specifies whether this node satisfies zone separation."
     },
     "serverBinding": {
      "$ref": "ServerBinding",
@@ -19872,15 +19985,15 @@
    "properties": {
     "defaultRouteAction": {
      "$ref": "HttpRouteAction",
-     "description": "defaultRouteAction takes effect when none of the  pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any  weightedBackendServices.\nOnly one of defaultRouteAction or defaultUrlRedirect must be set.\nUrlMaps for external HTTP(S) load balancers support only the urlRewrite action within a pathMatcher's defaultRouteAction."
+     "description": "defaultRouteAction takes effect when none of the  pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any  weightedBackendServices.\nOnly one of defaultRouteAction or defaultUrlRedirect must be set.\nUrlMaps for external HTTP(S) load balancers support only the urlRewrite action within a pathMatcher's defaultRouteAction.\n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true."
     },
     "defaultService": {
      "type": "string",
-     "description": "The full or partial URL to the BackendService resource. This will be used if none of the pathRules or routeRules defined by this PathMatcher are matched. For example, the following are all valid URLs to a BackendService resource:  \n- https://www.googleapis.com/compute/v1/projects/project/global/backendServices/backendService \n- compute/v1/projects/project/global/backendServices/backendService \n- global/backendServices/backendService  If defaultRouteAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices. Conversely, if defaultRouteAction specifies any weightedBackendServices, defaultService must not be specified.\nOnly one of defaultService, defaultUrlRedirect  or defaultRouteAction.weightedBackendService must be set.\nAuthorization requires one or more of the following Google IAM permissions on the specified resource default_service:  \n- compute.backendBuckets.use \n- compute.backendServices.use"
+     "description": "The full or partial URL to the BackendService resource. This will be used if none of the pathRules or routeRules defined by this PathMatcher are matched. For example, the following are all valid URLs to a BackendService resource:  \n- https://www.googleapis.com/compute/v1/projects/project/global/backendServices/backendService \n- compute/v1/projects/project/global/backendServices/backendService \n- global/backendServices/backendService  If defaultRouteAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices. Conversely, if defaultRouteAction specifies any weightedBackendServices, defaultService must not be specified.\nOnly one of defaultService, defaultUrlRedirect  or defaultRouteAction.weightedBackendService must be set.\nAuthorization requires one or more of the following Google IAM permissions on the specified resource default_service:  \n- compute.backendBuckets.use \n- compute.backendServices.use  \n\npathMatchers[].defaultService is the only option available when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true."
     },
     "defaultUrlRedirect": {
      "$ref": "HttpRedirectAction",
-     "description": "When none of the specified pathRules or routeRules match, the request is redirected to a URL specified by defaultUrlRedirect.\nIf defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set."
+     "description": "When none of the specified pathRules or routeRules match, the request is redirected to a URL specified by defaultUrlRedirect.\nIf defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set.\n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy."
     },
     "description": {
      "type": "string",
@@ -19888,7 +20001,7 @@
     },
     "headerAction": {
      "$ref": "HttpHeaderAction",
-     "description": "Specifies changes to request and response headers that need to take effect for the selected backendService.\nHeaderAction specified here are applied after the matching HttpRouteRule HeaderAction and before the HeaderAction in the UrlMap \nNote that headerAction is not supported for Loadbalancers that have their loadBalancingScheme set to EXTERNAL."
+     "description": "Specifies changes to request and response headers that need to take effect for the selected backendService.\nHeaderAction specified here are applied after the matching HttpRouteRule HeaderAction and before the HeaderAction in the UrlMap \nNote that headerAction is not supported for Loadbalancers that have their loadBalancingScheme set to EXTERNAL.\n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true."
     },
     "name": {
      "type": "string",
@@ -19896,14 +20009,14 @@
     },
     "pathRules": {
      "type": "array",
-     "description": "The list of path rules. Use this list instead of routeRules when routing based on simple path matching is all that's required. The order by which path rules are specified does not matter. Matches are always done on the longest-path-first basis.\nFor example: a pathRule with a path /a/b/c/* will match before /a/b/* irrespective of the order in which those paths appear in this list.\nWithin a given pathMatcher, only one of pathRules or routeRules must be set.",
+     "description": "The list of path rules. Use this list instead of routeRules when routing based on simple path matching is all that's required. The order by which path rules are specified does not matter. Matches are always done on the longest-path-first basis.\nFor example: a pathRule with a path /a/b/c/* will match before /a/b/* irrespective of the order in which those paths appear in this list.\nWithin a given pathMatcher, only one of pathRules or routeRules must be set.\n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.",
      "items": {
       "$ref": "PathRule"
      }
     },
     "routeRules": {
      "type": "array",
-     "description": "The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number.\nWithin a given pathMatcher, you can set only one of pathRules or routeRules.",
+     "description": "The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number.\nWithin a given pathMatcher, you can set only one of pathRules or routeRules.\n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.",
      "items": {
       "$ref": "HttpRouteRule"
      }
@@ -20331,7 +20444,7 @@
     },
     "xpnProjectStatus": {
      "type": "string",
-     "description": "[Output Only] The role this project has in a shared VPC configuration. Currently only HOST projects are differentiated.",
+     "description": "[Output Only] The role this project has in a shared VPC configuration. Currently, only projects with the host role, which is specified by the value HOST, are differentiated.",
      "enum": [
       "HOST",
       "UNSPECIFIED_XPN_PROJECT_STATUS"
@@ -20632,9 +20745,17 @@
    "type": "object",
    "description": "Represents a CIDR range which can be used to assign addresses.",
    "properties": {
+    "ipRange": {
+     "type": "string",
+     "description": "The IP address range of the public delegated prefix"
+    },
     "name": {
      "type": "string",
      "description": "The name of the public delegated prefix"
+    },
+    "project": {
+     "type": "string",
+     "description": "The project number of the public delegated prefix"
     },
     "region": {
      "type": "string",
@@ -21469,6 +21590,10 @@
       ""
      ]
     },
+    "supportsPhysicalZoneSeparation": {
+     "type": "boolean",
+     "description": "[Output Only] Specifies whether this region supports physical zone separation."
+    },
     "zones": {
      "type": "array",
      "description": "[Output Only] A list of zones available in this region, in the form of resource URLs.",
@@ -22041,7 +22166,7 @@
   "RegionInstanceGroupManagersApplyUpdatesRequest": {
    "id": "RegionInstanceGroupManagersApplyUpdatesRequest",
    "type": "object",
-   "description": "InstanceGroupManagers.applyUpdatesToInstances",
+   "description": "RegionInstanceGroupManagers.applyUpdatesToInstances",
    "properties": {
     "allInstances": {
      "type": "boolean",
@@ -26152,7 +26277,7 @@
    "properties": {
     "blockDuration": {
      "type": "integer",
-     "description": "Can only be specifed if the action for the rule is \"rate_based_blacklist\" If specified, determines the time (in seconds) the traffic will continue to be blocked by the rate limit after the rate falls below the threshold. The default value is 0 seconds.",
+     "description": "Can only be specified if the action for the rule is \"rate_based_blacklist\" If specified, determines the time (in seconds) the traffic will continue to be blocked by the rate limit after the rate falls below the threshold. The default value is 0 seconds.",
      "format": "int32"
     },
     "conformAction": {
@@ -26201,7 +26326,7 @@
     },
     "clientTlsPolicy": {
      "type": "string",
-     "description": "Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how clients should authenticate with this service's backends.\nclientTlsPolicy only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.\nIf left blank, communications are not encrypted."
+     "description": "Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how clients should authenticate with this service's backends.\nclientTlsPolicy only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.\nIf left blank, communications are not encrypted.\nNote: This field currently has no impact."
     },
     "clientTlsSettings": {
      "$ref": "ClientTlsSettings",
@@ -26209,7 +26334,7 @@
     },
     "subjectAltNames": {
      "type": "array",
-     "description": "Optional. A list of Subject Alternative Names (SANs) that the client verifies during a mutual TLS handshake with an server/endpoint for this BackendService. When the server presents its X.509 certificate to the client, the client inspects the certificate's subjectAltName field. If the field contains one of the specified values, the communication continues. Otherwise, it fails. This additional check enables the client to verify that the server is authorized to run the requested service.\nNote that the contents of the server certificate's subjectAltName field are configured by the Public Key Infrastructure which provisions server identities.\nOnly applies to a global BackendService with loadBalancingScheme set to INTERNAL_SELF_MANAGED. Only applies when BackendService has an attached clientTlsPolicy with clientCertificate (mTLS mode).",
+     "description": "Optional. A list of Subject Alternative Names (SANs) that the client verifies during a mutual TLS handshake with an server/endpoint for this BackendService. When the server presents its X.509 certificate to the client, the client inspects the certificate's subjectAltName field. If the field contains one of the specified values, the communication continues. Otherwise, it fails. This additional check enables the client to verify that the server is authorized to run the requested service.\nNote that the contents of the server certificate's subjectAltName field are configured by the Public Key Infrastructure which provisions server identities.\nOnly applies to a global BackendService with loadBalancingScheme set to INTERNAL_SELF_MANAGED. Only applies when BackendService has an attached clientTlsPolicy with clientCertificate (mTLS mode).\nNote: This field currently has no impact.",
      "items": {
       "type": "string"
      }
@@ -26752,6 +26877,10 @@
      "type": "string",
      "description": "Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.",
      "pattern": "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?"
+    },
+    "satisfiesPhysicalZoneSeparation": {
+     "type": "boolean",
+     "description": "[Output Only] Specifies whether this snapshot satisfies zone separation."
     },
     "selfLink": {
      "type": "string",
@@ -29273,7 +29402,7 @@
     },
     "authorizationPolicy": {
      "type": "string",
-     "description": "Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy.\nRefer to the AuthorizationPolicy resource for additional details.\nauthorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED."
+     "description": "Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy.\nRefer to the AuthorizationPolicy resource for additional details.\nauthorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.\nNote: This field currently has no impact."
     },
     "certificateMap": {
      "type": "string",
@@ -29334,7 +29463,7 @@
     },
     "serverTlsPolicy": {
      "type": "string",
-     "description": "Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the proxy should authenticate inbound traffic.\nserverTlsPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.\nIf left blank, communications are not encrypted."
+     "description": "Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the proxy should authenticate inbound traffic.\nserverTlsPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.\nIf left blank, communications are not encrypted.\nNote: This field currently has no impact."
     },
     "sslCertificates": {
      "type": "array",
@@ -31486,11 +31615,11 @@
    "properties": {
     "date": {
      "type": "string",
-     "description": "[Output Only] The date when the maintenance will take place. This value is in RFC3339 text format."
+     "description": "[Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead."
     },
     "time": {
      "type": "string",
-     "description": "[Output Only] The time when the maintenance will take place. This value is in RFC3339 text format."
+     "description": "[Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead."
     },
     "type": {
      "type": "string",
@@ -31511,7 +31640,7 @@
   "UrlMap": {
    "id": "UrlMap",
    "type": "object",
-   "description": "Represents a URL Map resource.\n\nGoogle Compute Engine has two URL Map resources:\n\n* [Global](/compute/docs/reference/rest/{$api_version}/urlMaps) * [Regional](/compute/docs/reference/rest/{$api_version}/regionUrlMaps)\n\nA URL map resource is a component of certain types of GCP load balancers and Traffic Director.\n\n* urlMaps are used by external HTTP(S) load balancers and Traffic Director. * regionUrlMaps are used by internal HTTP(S) load balancers.\n\nThis resource defines mappings from host names and URL paths to either a backend service or a backend bucket.\n\nTo use the global urlMaps resource, the backend service must have a loadBalancingScheme of either EXTERNAL or INTERNAL_SELF_MANAGED. To use the regionUrlMaps resource, the backend service must have a loadBalancingScheme of INTERNAL_MANAGED. For more information, read URL Map Concepts.",
+   "description": "Represents a URL Map resource.\n\nGoogle Compute Engine has two URL Map resources:\n\n* [Global](/compute/docs/reference/rest/{$api_version}/urlMaps) * [Regional](/compute/docs/reference/rest/{$api_version}/regionUrlMaps)\n\nA URL map resource is a component of certain types of GCP load balancers and Traffic Director.\n\n* urlMaps are used by external HTTP(S) load balancers and Traffic Director. * regionUrlMaps are used by internal HTTP(S) load balancers.\n\nFor a list of supported URL map features by load balancer type, see the  Load balancing features: Routing and traffic management table.\n\nFor a list of supported URL map features for Traffic Director, see the  Traffic Director features: Routing and traffic management table.\n\nThis resource defines mappings from host names and URL paths to either a backend service or a backend bucket.\n\nTo use the global urlMaps resource, the backend service must have a loadBalancingScheme of either EXTERNAL or INTERNAL_SELF_MANAGED. To use the regionUrlMaps resource, the backend service must have a loadBalancingScheme of INTERNAL_MANAGED. For more information, read URL Map Concepts.",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -31519,15 +31648,15 @@
     },
     "defaultRouteAction": {
      "$ref": "HttpRouteAction",
-     "description": "defaultRouteAction takes effect when none of the  hostRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any  weightedBackendServices.\nOnly one of defaultRouteAction or defaultUrlRedirect must be set.\nUrlMaps for external HTTP(S) load balancers support only the urlRewrite action within defaultRouteAction."
+     "description": "defaultRouteAction takes effect when none of the  hostRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any  weightedBackendServices.\nOnly one of defaultRouteAction or defaultUrlRedirect must be set.\nUrlMaps for external HTTP(S) load balancers support only the urlRewrite action within defaultRouteAction.\n\ndefaultRouteAction has no effect when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true."
     },
     "defaultService": {
      "type": "string",
-     "description": "The full or partial URL of the defaultService resource to which traffic is directed if none of the hostRules match. If defaultRouteAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices. Conversely, if routeAction specifies any weightedBackendServices, service must not be specified.\nOnly one of defaultService, defaultUrlRedirect  or defaultRouteAction.weightedBackendService must be set."
+     "description": "The full or partial URL of the defaultService resource to which traffic is directed if none of the hostRules match. If defaultRouteAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices. Conversely, if routeAction specifies any weightedBackendServices, service must not be specified.\nOnly one of defaultService, defaultUrlRedirect  or defaultRouteAction.weightedBackendService must be set.\n\ndefaultService has no effect when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true."
     },
     "defaultUrlRedirect": {
      "$ref": "HttpRedirectAction",
-     "description": "When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect.\nIf defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set."
+     "description": "When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect.\nIf defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set.\n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy."
     },
     "description": {
      "type": "string",
@@ -31540,7 +31669,7 @@
     },
     "headerAction": {
      "$ref": "HttpHeaderAction",
-     "description": "Specifies changes to request and response headers that need to take effect for the selected backendService.\nThe headerAction specified here take effect after headerAction specified under pathMatcher."
+     "description": "Specifies changes to request and response headers that need to take effect for the selected backendService.\nThe headerAction specified here take effect after headerAction specified under pathMatcher.\n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true."
     },
     "hostRules": {
      "type": "array",
@@ -31581,7 +31710,7 @@
     },
     "tests": {
      "type": "array",
-     "description": "The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass. You can specify a maximum of 100 tests per UrlMap.",
+     "description": "The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass. You can specify a maximum of 100 tests per UrlMap.\n\nNot supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.",
      "items": {
       "$ref": "UrlMapTest"
      }
@@ -32808,6 +32937,10 @@
      "description": "The numeric ID of this VPN gateway interface.",
      "format": "uint32"
     },
+    "interconnectAttachment": {
+     "type": "string",
+     "description": "URL of the interconnect attachment resource. When the value of this field is present, the VPN Gateway will be used for IPsec over Interconnect; all Egress or Ingress traffic for this VPN Gateway interface will go through the specified interconnect attachment resource."
+    },
     "ipAddress": {
      "type": "string",
      "description": "[Output Only] The external IP address for this VPN gateway interface."
@@ -33651,6 +33784,10 @@
       "",
       ""
      ]
+    },
+    "supportsPhysicalZoneSeparation": {
+     "type": "boolean",
+     "description": "[Output Only] Specifies whether this zone supports physical zone separation."
     }
    }
   },
@@ -49742,7 +49879,7 @@
      "parameters": {
       "parentId": {
        "type": "string",
-       "description": "Parent ID for this request.",
+       "description": "Parent ID for this request. The ID can be either be \"folders/[FOLDER_ID]\" if the parent is a folder or \"organizations/[ORGANIZATION_ID]\" if the parent is an organization.",
        "location": "query"
       },
       "requestId": {

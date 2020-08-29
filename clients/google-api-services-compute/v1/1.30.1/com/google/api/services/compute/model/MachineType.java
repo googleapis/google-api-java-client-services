@@ -54,7 +54,8 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
-   * [Output Only] The deprecation status associated with this machine type.
+   * [Output Only] The deprecation status associated with this machine type. Only applicable if the
+   * machine type is unavailable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,7 +194,8 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The deprecation status associated with this machine type.
+   * [Output Only] The deprecation status associated with this machine type. Only applicable if the
+   * machine type is unavailable.
    * @return value or {@code null} for none
    */
   public DeprecationStatus getDeprecated() {
@@ -201,7 +203,8 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The deprecation status associated with this machine type.
+   * [Output Only] The deprecation status associated with this machine type. Only applicable if the
+   * machine type is unavailable.
    * @param deprecated deprecated or {@code null} for none
    */
   public MachineType setDeprecated(DeprecationStatus deprecated) {

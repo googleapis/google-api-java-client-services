@@ -104,6 +104,13 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
+   * [Output Only] Specifies whether this zone supports physical zone separation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportsPhysicalZoneSeparation;
+
+  /**
    * [Output Only] Available cpu/platform selections for the zone.
    * @return value or {@code null} for none
    */
@@ -270,6 +277,23 @@ public final class Zone extends com.google.api.client.json.GenericJson {
    */
   public Zone setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * [Output Only] Specifies whether this zone supports physical zone separation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportsPhysicalZoneSeparation() {
+    return supportsPhysicalZoneSeparation;
+  }
+
+  /**
+   * [Output Only] Specifies whether this zone supports physical zone separation.
+   * @param supportsPhysicalZoneSeparation supportsPhysicalZoneSeparation or {@code null} for none
+   */
+  public Zone setSupportsPhysicalZoneSeparation(java.lang.Boolean supportsPhysicalZoneSeparation) {
+    this.supportsPhysicalZoneSeparation = supportsPhysicalZoneSeparation;
     return this;
   }
 

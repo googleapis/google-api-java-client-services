@@ -44,7 +44,8 @@ public final class NodeGroupAutoscalingPolicy extends com.google.api.client.json
   private java.lang.Integer minNodes;
 
   /**
-   * The autoscaling mode.
+   * The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see
+   * Autoscaler modes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +86,8 @@ public final class NodeGroupAutoscalingPolicy extends com.google.api.client.json
   }
 
   /**
-   * The autoscaling mode.
+   * The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see
+   * Autoscaler modes.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -93,7 +95,8 @@ public final class NodeGroupAutoscalingPolicy extends com.google.api.client.json
   }
 
   /**
-   * The autoscaling mode.
+   * The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see
+   * Autoscaler modes.
    * @param mode mode or {@code null} for none
    */
   public NodeGroupAutoscalingPolicy setMode(java.lang.String mode) {

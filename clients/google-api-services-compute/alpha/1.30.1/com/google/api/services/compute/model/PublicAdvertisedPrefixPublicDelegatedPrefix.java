@@ -30,11 +30,25 @@ package com.google.api.services.compute.model;
 public final class PublicAdvertisedPrefixPublicDelegatedPrefix extends com.google.api.client.json.GenericJson {
 
   /**
+   * The IP address range of the public delegated prefix
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipRange;
+
+  /**
    * The name of the public delegated prefix
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The project number of the public delegated prefix
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String project;
 
   /**
    * The region of the public delegated prefix if it is regional. If absent, the prefix is global.
@@ -53,6 +67,23 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefix extends com.googl
   private java.lang.String status;
 
   /**
+   * The IP address range of the public delegated prefix
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpRange() {
+    return ipRange;
+  }
+
+  /**
+   * The IP address range of the public delegated prefix
+   * @param ipRange ipRange or {@code null} for none
+   */
+  public PublicAdvertisedPrefixPublicDelegatedPrefix setIpRange(java.lang.String ipRange) {
+    this.ipRange = ipRange;
+    return this;
+  }
+
+  /**
    * The name of the public delegated prefix
    * @return value or {@code null} for none
    */
@@ -66,6 +97,23 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefix extends com.googl
    */
   public PublicAdvertisedPrefixPublicDelegatedPrefix setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The project number of the public delegated prefix
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProject() {
+    return project;
+  }
+
+  /**
+   * The project number of the public delegated prefix
+   * @param project project or {@code null} for none
+   */
+  public PublicAdvertisedPrefixPublicDelegatedPrefix setProject(java.lang.String project) {
+    this.project = project;
     return this;
   }
 

@@ -63,7 +63,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * the proxy should authorize inbound traffic. If left blank, access will not be restricted by an
    * authorization policy. Refer to the AuthorizationPolicy resource for additional details.
    * authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules
-   * with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no
+   * impact.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +148,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
    * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
    * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
-   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted.
+   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field
+   * currently has no impact.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,7 +221,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * the proxy should authorize inbound traffic. If left blank, access will not be restricted by an
    * authorization policy. Refer to the AuthorizationPolicy resource for additional details.
    * authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules
-   * with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no
+   * impact.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorizationPolicy() {
@@ -231,7 +234,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * the proxy should authorize inbound traffic. If left blank, access will not be restricted by an
    * authorization policy. Refer to the AuthorizationPolicy resource for additional details.
    * authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules
-   * with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no
+   * impact.
    * @param authorizationPolicy authorizationPolicy or {@code null} for none
    */
   public TargetHttpsProxy setAuthorizationPolicy(java.lang.String authorizationPolicy) {
@@ -418,7 +422,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
    * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
    * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
-   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted.
+   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field
+   * currently has no impact.
    * @return value or {@code null} for none
    */
   public java.lang.String getServerTlsPolicy() {
@@ -429,7 +434,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
    * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
    * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
-   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted.
+   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field
+   * currently has no impact.
    * @param serverTlsPolicy serverTlsPolicy or {@code null} for none
    */
   public TargetHttpsProxy setServerTlsPolicy(java.lang.String serverTlsPolicy) {

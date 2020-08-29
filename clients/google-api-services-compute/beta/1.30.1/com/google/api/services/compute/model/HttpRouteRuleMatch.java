@@ -65,14 +65,15 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
   /**
    * Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set
    * of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
-   * metadata. If a match takes place, the relevant routing configuration is made available to those
+   * metadata. When there is a match, the relevant routing configuration is made available to those
    * proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY,
    * at least one of the filterLabels must match the corresponding label provided in the metadata.
    * If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
-   * corresponding labels provided in the metadata. metadataFilters specified here will be applied
-   * after those specified in ForwardingRule that refers to the UrlMap this HttpRouteRuleMatch
-   * belongs to. metadataFilters only applies to Loadbalancers that have their loadBalancingScheme
-   * set to INTERNAL_SELF_MANAGED.
+   * corresponding labels provided in the metadata. If multiple metadataFilters are specified, all
+   * of them need to be satisfied in order to be considered a match. metadataFilters specified here
+   * will be applied after those specified in ForwardingRule that refers to the UrlMap this
+   * HttpRouteRuleMatch belongs to. metadataFilters only applies to Loadbalancers that have their
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,14 +178,15 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
   /**
    * Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set
    * of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
-   * metadata. If a match takes place, the relevant routing configuration is made available to those
+   * metadata. When there is a match, the relevant routing configuration is made available to those
    * proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY,
    * at least one of the filterLabels must match the corresponding label provided in the metadata.
    * If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
-   * corresponding labels provided in the metadata. metadataFilters specified here will be applied
-   * after those specified in ForwardingRule that refers to the UrlMap this HttpRouteRuleMatch
-   * belongs to. metadataFilters only applies to Loadbalancers that have their loadBalancingScheme
-   * set to INTERNAL_SELF_MANAGED.
+   * corresponding labels provided in the metadata. If multiple metadataFilters are specified, all
+   * of them need to be satisfied in order to be considered a match. metadataFilters specified here
+   * will be applied after those specified in ForwardingRule that refers to the UrlMap this
+   * HttpRouteRuleMatch belongs to. metadataFilters only applies to Loadbalancers that have their
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.util.List<MetadataFilter> getMetadataFilters() {
@@ -194,14 +196,15 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
   /**
    * Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set
    * of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
-   * metadata. If a match takes place, the relevant routing configuration is made available to those
+   * metadata. When there is a match, the relevant routing configuration is made available to those
    * proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY,
    * at least one of the filterLabels must match the corresponding label provided in the metadata.
    * If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with
-   * corresponding labels provided in the metadata. metadataFilters specified here will be applied
-   * after those specified in ForwardingRule that refers to the UrlMap this HttpRouteRuleMatch
-   * belongs to. metadataFilters only applies to Loadbalancers that have their loadBalancingScheme
-   * set to INTERNAL_SELF_MANAGED.
+   * corresponding labels provided in the metadata. If multiple metadataFilters are specified, all
+   * of them need to be satisfied in order to be considered a match. metadataFilters specified here
+   * will be applied after those specified in ForwardingRule that refers to the UrlMap this
+   * HttpRouteRuleMatch belongs to. metadataFilters only applies to Loadbalancers that have their
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
    * @param metadataFilters metadataFilters or {@code null} for none
    */
   public HttpRouteRuleMatch setMetadataFilters(java.util.List<MetadataFilter> metadataFilters) {

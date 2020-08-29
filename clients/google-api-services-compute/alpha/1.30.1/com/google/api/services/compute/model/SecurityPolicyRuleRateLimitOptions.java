@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Can only be specifed if the action for the rule is "rate_based_blacklist" If specified,
+   * Can only be specified if the action for the rule is "rate_based_blacklist" If specified,
    * determines the time (in seconds) the traffic will continue to be blocked by the rate limit
    * after the rate falls below the threshold. The default value is 0 seconds.
    * The value may be {@code null}.
@@ -72,7 +72,7 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
   private java.lang.Integer thresholdRps;
 
   /**
-   * Can only be specifed if the action for the rule is "rate_based_blacklist" If specified,
+   * Can only be specified if the action for the rule is "rate_based_blacklist" If specified,
    * determines the time (in seconds) the traffic will continue to be blocked by the rate limit
    * after the rate falls below the threshold. The default value is 0 seconds.
    * @return value or {@code null} for none
@@ -82,7 +82,7 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
   }
 
   /**
-   * Can only be specifed if the action for the rule is "rate_based_blacklist" If specified,
+   * Can only be specified if the action for the rule is "rate_based_blacklist" If specified,
    * determines the time (in seconds) the traffic will continue to be blocked by the rate limit
    * after the rate falls below the threshold. The default value is 0 seconds.
    * @param blockDuration blockDuration or {@code null} for none

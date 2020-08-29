@@ -30,6 +30,15 @@ package com.google.api.services.compute.model;
 public final class BackendBucketCdnPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization
+   * headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode
+   * settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BackendBucketCdnPolicyBypassCacheOnRequestHeader> bypassCacheOnRequestHeaders;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,6 +113,19 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
   private java.lang.Boolean requestCoalescing;
 
   /**
+   * Serve existing content from the cache (if available) when revalidating content with the origin,
+   * or when an error is encountered when refreshing the cache. This setting defines the default
+   * "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale
+   * responses that exceed the TTL configured here will not be served. The default limit (max-stale)
+   * is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-
+   * age (or s-max-age) of a cached response. The maximum allowed value is 604800(1 week). Set this
+   * to zero (0) to disable serve-while-stale.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer serveWhileStale;
+
+  /**
    * Maximum number of seconds the response to a signed URL request will be considered fresh. After
    * this time period, the response will be revalidated before being served. Defaults to 1hr
    * (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as
@@ -121,6 +143,27 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> signedUrlKeyNames;
+
+  /**
+   * Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization
+   * headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode
+   * settings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BackendBucketCdnPolicyBypassCacheOnRequestHeader> getBypassCacheOnRequestHeaders() {
+    return bypassCacheOnRequestHeaders;
+  }
+
+  /**
+   * Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization
+   * headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode
+   * settings.
+   * @param bypassCacheOnRequestHeaders bypassCacheOnRequestHeaders or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setBypassCacheOnRequestHeaders(java.util.List<BackendBucketCdnPolicyBypassCacheOnRequestHeader> bypassCacheOnRequestHeaders) {
+    this.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -288,6 +331,35 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    */
   public BackendBucketCdnPolicy setRequestCoalescing(java.lang.Boolean requestCoalescing) {
     this.requestCoalescing = requestCoalescing;
+    return this;
+  }
+
+  /**
+   * Serve existing content from the cache (if available) when revalidating content with the origin,
+   * or when an error is encountered when refreshing the cache. This setting defines the default
+   * "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale
+   * responses that exceed the TTL configured here will not be served. The default limit (max-stale)
+   * is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-
+   * age (or s-max-age) of a cached response. The maximum allowed value is 604800(1 week). Set this
+   * to zero (0) to disable serve-while-stale.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getServeWhileStale() {
+    return serveWhileStale;
+  }
+
+  /**
+   * Serve existing content from the cache (if available) when revalidating content with the origin,
+   * or when an error is encountered when refreshing the cache. This setting defines the default
+   * "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale
+   * responses that exceed the TTL configured here will not be served. The default limit (max-stale)
+   * is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-
+   * age (or s-max-age) of a cached response. The maximum allowed value is 604800(1 week). Set this
+   * to zero (0) to disable serve-while-stale.
+   * @param serveWhileStale serveWhileStale or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setServeWhileStale(java.lang.Integer serveWhileStale) {
+    this.serveWhileStale = serveWhileStale;
     return this;
   }
 

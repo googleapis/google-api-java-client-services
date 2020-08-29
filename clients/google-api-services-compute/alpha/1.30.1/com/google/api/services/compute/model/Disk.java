@@ -229,6 +229,13 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
+   * [Output Only] Specifies whether this disk satisfies zone separation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPhysicalZoneSeparation;
+
+  /**
    * [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
@@ -335,6 +342,28 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceInPlaceSnapshotId;
+
+  /**
+   * The source instant snapshot used to create this disk. You can provide this as a partial or full
+   * URL to the resource. For example, the following are valid values: - https://www.googleapis.com/
+   * compute/v1/projects/project/zones/zone/instantSnapshots/instantSnapshot  -
+   * projects/project/zones/zone/instantSnapshots/instantSnapshot  -
+   * zones/zone/instantSnapshots/instantSnapshot
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceInstantSnapshot;
+
+  /**
+   * [Output Only] The unique ID of the instant snapshot used to create this disk. This value
+   * identifies the exact instant snapshot that was used to create this persistent disk. For
+   * example, if you created the persistent disk from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would identify the exact version
+   * of the instant snapshot that was used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceInstantSnapshotId;
 
   /**
    * The source snapshot used to create this disk. You can provide this as a partial or full URL to
@@ -887,6 +916,23 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] Specifies whether this disk satisfies zone separation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPhysicalZoneSeparation() {
+    return satisfiesPhysicalZoneSeparation;
+  }
+
+  /**
+   * [Output Only] Specifies whether this disk satisfies zone separation.
+   * @param satisfiesPhysicalZoneSeparation satisfiesPhysicalZoneSeparation or {@code null} for none
+   */
+  public Disk setSatisfiesPhysicalZoneSeparation(java.lang.Boolean satisfiesPhysicalZoneSeparation) {
+    this.satisfiesPhysicalZoneSeparation = satisfiesPhysicalZoneSeparation;
+    return this;
+  }
+
+  /**
    * [Output Only] Server-defined fully-qualified URL for this resource.
    * @return value or {@code null} for none
    */
@@ -1129,6 +1175,56 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setSourceInPlaceSnapshotId(java.lang.String sourceInPlaceSnapshotId) {
     this.sourceInPlaceSnapshotId = sourceInPlaceSnapshotId;
+    return this;
+  }
+
+  /**
+   * The source instant snapshot used to create this disk. You can provide this as a partial or full
+   * URL to the resource. For example, the following are valid values: - https://www.googleapis.com/
+   * compute/v1/projects/project/zones/zone/instantSnapshots/instantSnapshot  -
+   * projects/project/zones/zone/instantSnapshots/instantSnapshot  -
+   * zones/zone/instantSnapshots/instantSnapshot
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceInstantSnapshot() {
+    return sourceInstantSnapshot;
+  }
+
+  /**
+   * The source instant snapshot used to create this disk. You can provide this as a partial or full
+   * URL to the resource. For example, the following are valid values: - https://www.googleapis.com/
+   * compute/v1/projects/project/zones/zone/instantSnapshots/instantSnapshot  -
+   * projects/project/zones/zone/instantSnapshots/instantSnapshot  -
+   * zones/zone/instantSnapshots/instantSnapshot
+   * @param sourceInstantSnapshot sourceInstantSnapshot or {@code null} for none
+   */
+  public Disk setSourceInstantSnapshot(java.lang.String sourceInstantSnapshot) {
+    this.sourceInstantSnapshot = sourceInstantSnapshot;
+    return this;
+  }
+
+  /**
+   * [Output Only] The unique ID of the instant snapshot used to create this disk. This value
+   * identifies the exact instant snapshot that was used to create this persistent disk. For
+   * example, if you created the persistent disk from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would identify the exact version
+   * of the instant snapshot that was used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceInstantSnapshotId() {
+    return sourceInstantSnapshotId;
+  }
+
+  /**
+   * [Output Only] The unique ID of the instant snapshot used to create this disk. This value
+   * identifies the exact instant snapshot that was used to create this persistent disk. For
+   * example, if you created the persistent disk from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would identify the exact version
+   * of the instant snapshot that was used.
+   * @param sourceInstantSnapshotId sourceInstantSnapshotId or {@code null} for none
+   */
+  public Disk setSourceInstantSnapshotId(java.lang.String sourceInstantSnapshotId) {
+    this.sourceInstantSnapshotId = sourceInstantSnapshotId;
     return this;
   }
 

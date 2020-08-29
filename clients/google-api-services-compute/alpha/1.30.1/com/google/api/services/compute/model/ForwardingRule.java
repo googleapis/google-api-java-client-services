@@ -59,6 +59,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * The loadBalancingScheme and the forwarding rule's target determine the type of IP address that
    * you can use. For detailed information, refer to [IP address specifications](/load-
    * balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+   *
+   * Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field
+   * set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("IPAddress")
@@ -210,15 +213,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set
    * of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
-   * metadata. If a match takes place, the relevant configuration is made available to those
-   * proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the
-   * ForwardingRule will not be visible to those proxies. For each metadataFilter in this list, if
-   * its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the
+   * metadata. When there is a match, the relevant configuration is made available to those proxies.
+   * Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule
+   * will not be visible to those proxies. For each metadataFilter in this list, if its
+   * filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the
    * corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL,
-   * then all of its filterLabels must match with corresponding labels provided in the metadata.
-   * metadataFilters specified here will be applifed before those specified in the UrlMap that this
-   * ForwardingRule references. metadataFilters only applies to Loadbalancers that have their
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * then all of its filterLabels must match with corresponding labels provided in the metadata. If
+   * multiple metadataFilters are specified, all of them need to be satisfied in order to be
+   * considered a match. metadataFilters specified here will be applifed before those specified in
+   * the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers
+   * that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,6 +325,14 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String selfLinkWithId;
 
   /**
+   * Service Directory resources to register this forwarding rule with. Currently, only supports a
+   * single Service Directory resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ForwardingRuleServiceDirectoryRegistration> serviceDirectoryRegistrations;
+
+  /**
    * An optional prefix to the service name for this Forwarding Rule. If specified, the prefix is
    * the first label of the fully qualified service name.
    *
@@ -383,6 +395,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * The loadBalancingScheme and the forwarding rule's target determine the type of IP address that
    * you can use. For detailed information, refer to [IP address specifications](/load-
    * balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+   *
+   * Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field
+   * set to true.
    * @return value or {@code null} for none
    */
   public java.lang.String getIPAddress() {
@@ -404,6 +419,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * The loadBalancingScheme and the forwarding rule's target determine the type of IP address that
    * you can use. For detailed information, refer to [IP address specifications](/load-
    * balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+   *
+   * Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field
+   * set to true.
    * @param iPAddress iPAddress or {@code null} for none
    */
   public ForwardingRule setIPAddress(java.lang.String iPAddress) {
@@ -820,15 +838,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set
    * of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
-   * metadata. If a match takes place, the relevant configuration is made available to those
-   * proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the
-   * ForwardingRule will not be visible to those proxies. For each metadataFilter in this list, if
-   * its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the
+   * metadata. When there is a match, the relevant configuration is made available to those proxies.
+   * Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule
+   * will not be visible to those proxies. For each metadataFilter in this list, if its
+   * filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the
    * corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL,
-   * then all of its filterLabels must match with corresponding labels provided in the metadata.
-   * metadataFilters specified here will be applifed before those specified in the UrlMap that this
-   * ForwardingRule references. metadataFilters only applies to Loadbalancers that have their
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * then all of its filterLabels must match with corresponding labels provided in the metadata. If
+   * multiple metadataFilters are specified, all of them need to be satisfied in order to be
+   * considered a match. metadataFilters specified here will be applifed before those specified in
+   * the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers
+   * that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.util.List<MetadataFilter> getMetadataFilters() {
@@ -838,15 +857,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set
    * of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node
-   * metadata. If a match takes place, the relevant configuration is made available to those
-   * proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the
-   * ForwardingRule will not be visible to those proxies. For each metadataFilter in this list, if
-   * its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the
+   * metadata. When there is a match, the relevant configuration is made available to those proxies.
+   * Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule
+   * will not be visible to those proxies. For each metadataFilter in this list, if its
+   * filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the
    * corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL,
-   * then all of its filterLabels must match with corresponding labels provided in the metadata.
-   * metadataFilters specified here will be applifed before those specified in the UrlMap that this
-   * ForwardingRule references. metadataFilters only applies to Loadbalancers that have their
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * then all of its filterLabels must match with corresponding labels provided in the metadata. If
+   * multiple metadataFilters are specified, all of them need to be satisfied in order to be
+   * considered a match. metadataFilters specified here will be applifed before those specified in
+   * the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers
+   * that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
    * @param metadataFilters metadataFilters or {@code null} for none
    */
   public ForwardingRule setMetadataFilters(java.util.List<MetadataFilter> metadataFilters) {
@@ -1067,6 +1087,25 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * Service Directory resources to register this forwarding rule with. Currently, only supports a
+   * single Service Directory resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ForwardingRuleServiceDirectoryRegistration> getServiceDirectoryRegistrations() {
+    return serviceDirectoryRegistrations;
+  }
+
+  /**
+   * Service Directory resources to register this forwarding rule with. Currently, only supports a
+   * single Service Directory resource.
+   * @param serviceDirectoryRegistrations serviceDirectoryRegistrations or {@code null} for none
+   */
+  public ForwardingRule setServiceDirectoryRegistrations(java.util.List<ForwardingRuleServiceDirectoryRegistration> serviceDirectoryRegistrations) {
+    this.serviceDirectoryRegistrations = serviceDirectoryRegistrations;
     return this;
   }
 

@@ -84,6 +84,13 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   private java.lang.String nodeType;
 
   /**
+   * [Output Only] Specifies whether this node satisfies zone separation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPhysicalZoneSeparation;
+
+  /**
    * Binding properties for the physical server.
    * The value may be {@code null}.
    */
@@ -202,6 +209,23 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
    */
   public NodeGroupNode setNodeType(java.lang.String nodeType) {
     this.nodeType = nodeType;
+    return this;
+  }
+
+  /**
+   * [Output Only] Specifies whether this node satisfies zone separation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPhysicalZoneSeparation() {
+    return satisfiesPhysicalZoneSeparation;
+  }
+
+  /**
+   * [Output Only] Specifies whether this node satisfies zone separation.
+   * @param satisfiesPhysicalZoneSeparation satisfiesPhysicalZoneSeparation or {@code null} for none
+   */
+  public NodeGroupNode setSatisfiesPhysicalZoneSeparation(java.lang.Boolean satisfiesPhysicalZoneSeparation) {
+    this.satisfiesPhysicalZoneSeparation = satisfiesPhysicalZoneSeparation;
     return this;
   }
 

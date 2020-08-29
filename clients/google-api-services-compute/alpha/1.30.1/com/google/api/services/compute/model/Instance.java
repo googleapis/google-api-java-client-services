@@ -312,6 +312,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
+   * [Output Only] Specifies whether this instance satisfies zone separation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPhysicalZoneSeparation;
+
+  /**
    * Sets the scheduling options for this instance.
    * The value may be {@code null}.
    */
@@ -1131,6 +1138,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
     this.resourcePolicies = resourcePolicies;
+    return this;
+  }
+
+  /**
+   * [Output Only] Specifies whether this instance satisfies zone separation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPhysicalZoneSeparation() {
+    return satisfiesPhysicalZoneSeparation;
+  }
+
+  /**
+   * [Output Only] Specifies whether this instance satisfies zone separation.
+   * @param satisfiesPhysicalZoneSeparation satisfiesPhysicalZoneSeparation or {@code null} for none
+   */
+  public Instance setSatisfiesPhysicalZoneSeparation(java.lang.Boolean satisfiesPhysicalZoneSeparation) {
+    this.satisfiesPhysicalZoneSeparation = satisfiesPhysicalZoneSeparation;
     return this;
   }
 

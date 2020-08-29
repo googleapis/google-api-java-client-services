@@ -31,7 +31,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text
-   * format.
+   * format. DEPRECATED: Use start_time_window instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The time when the maintenance will take place. This value is in RFC3339 text
-   * format.
+   * format. DEPRECATED: Use start_time_window instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text
-   * format.
+   * format. DEPRECATED: Use start_time_window instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getDate() {
@@ -63,7 +63,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text
-   * format.
+   * format. DEPRECATED: Use start_time_window instead.
    * @param date date or {@code null} for none
    */
   public UpcomingMaintenance setDate(java.lang.String date) {
@@ -73,7 +73,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The time when the maintenance will take place. This value is in RFC3339 text
-   * format.
+   * format. DEPRECATED: Use start_time_window instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getTime() {
@@ -82,7 +82,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
 
   /**
    * [Output Only] The time when the maintenance will take place. This value is in RFC3339 text
-   * format.
+   * format. DEPRECATED: Use start_time_window instead.
    * @param time time or {@code null} for none
    */
   public UpcomingMaintenance setTime(java.lang.String time) {

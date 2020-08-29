@@ -41,6 +41,9 @@ public final class HostRule extends com.google.api.client.json.GenericJson {
    * The list of host patterns to match. They must be valid hostnames with optional port numbers in
    * the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first
    * character and must be followed in the pattern by either - or ..
+   *
+   * * based matching is not supported when the URL map is bound to target gRPC proxy that has
+   * validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,6 +78,9 @@ public final class HostRule extends com.google.api.client.json.GenericJson {
    * The list of host patterns to match. They must be valid hostnames with optional port numbers in
    * the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first
    * character and must be followed in the pattern by either - or ..
+   *
+   * * based matching is not supported when the URL map is bound to target gRPC proxy that has
+   * validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHosts() {
@@ -85,6 +91,9 @@ public final class HostRule extends com.google.api.client.json.GenericJson {
    * The list of host patterns to match. They must be valid hostnames with optional port numbers in
    * the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first
    * character and must be followed in the pattern by either - or ..
+   *
+   * * based matching is not supported when the URL map is bound to target gRPC proxy that has
+   * validateForProxyless field set to true.
    * @param hosts hosts or {@code null} for none
    */
   public HostRule setHosts(java.util.List<java.lang.String> hosts) {

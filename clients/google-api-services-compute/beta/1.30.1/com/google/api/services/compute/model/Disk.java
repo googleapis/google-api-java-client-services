@@ -329,6 +329,15 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceSnapshotId;
 
   /**
+   * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
+   * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceStorageObject;
+
+  /**
    * [Output Only] The status of disk creation. CREATING: Disk is provisioning. RESTORING: Source
    * data is being copied into the disk. FAILED: Disk creation failed. READY: Disk is ready for use.
    * DELETING: Disk is deleting.
@@ -1065,6 +1074,27 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setSourceSnapshotId(java.lang.String sourceSnapshotId) {
     this.sourceSnapshotId = sourceSnapshotId;
+    return this;
+  }
+
+  /**
+   * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
+   * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceStorageObject() {
+    return sourceStorageObject;
+  }
+
+  /**
+   * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
+   * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/.
+   * @param sourceStorageObject sourceStorageObject or {@code null} for none
+   */
+  public Disk setSourceStorageObject(java.lang.String sourceStorageObject) {
+    this.sourceStorageObject = sourceStorageObject;
     return this;
   }
 

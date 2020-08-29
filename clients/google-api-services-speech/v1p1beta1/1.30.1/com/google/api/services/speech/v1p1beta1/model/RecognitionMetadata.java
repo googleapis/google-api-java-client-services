@@ -39,7 +39,7 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
 
   /**
    * The industry vertical to which this speech recognition request most closely applies. This is
-   * most indicative of the topics contained in the audio.  Use the 6-digit NAICS code to identify
+   * most indicative of the topics contained in the audio. Use the 6-digit NAICS code to identify
    * the industry vertical - see https://www.naics.com/search/.
    * The value may be {@code null}.
    */
@@ -76,7 +76,7 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
   private java.lang.String originalMediaType;
 
   /**
-   * Mime type of the original audio file.  For example `audio/m4a`, `audio/x-alaw-basic`,
+   * Mime type of the original audio file. For example `audio/m4a`, `audio/x-alaw-basic`,
    * `audio/mp3`, `audio/3gpp`. A list of possible audio mime types is maintained at
    * http://www.iana.org/assignments/media-types/media-types.xhtml#audio
    * The value may be {@code null}.
@@ -85,8 +85,8 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
   private java.lang.String originalMimeType;
 
   /**
-   * The device used to make the recording.  Examples 'Nexus 5X' or 'Polycom SoundStation IP 6000'
-   * or 'POTS' or 'VoIP' or 'Cardioid Microphone'.
+   * The device used to make the recording. Examples 'Nexus 5X' or 'Polycom SoundStation IP 6000' or
+   * 'POTS' or 'VoIP' or 'Cardioid Microphone'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
 
   /**
    * The industry vertical to which this speech recognition request most closely applies. This is
-   * most indicative of the topics contained in the audio.  Use the 6-digit NAICS code to identify
+   * most indicative of the topics contained in the audio. Use the 6-digit NAICS code to identify
    * the industry vertical - see https://www.naics.com/search/.
    * @return value or {@code null} for none
    */
@@ -128,7 +128,7 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
 
   /**
    * The industry vertical to which this speech recognition request most closely applies. This is
-   * most indicative of the topics contained in the audio.  Use the 6-digit NAICS code to identify
+   * most indicative of the topics contained in the audio. Use the 6-digit NAICS code to identify
    * the industry vertical - see https://www.naics.com/search/.
    * @param industryNaicsCodeOfAudio industryNaicsCodeOfAudio or {@code null} for none
    */
@@ -208,7 +208,7 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
   }
 
   /**
-   * Mime type of the original audio file.  For example `audio/m4a`, `audio/x-alaw-basic`,
+   * Mime type of the original audio file. For example `audio/m4a`, `audio/x-alaw-basic`,
    * `audio/mp3`, `audio/3gpp`. A list of possible audio mime types is maintained at
    * http://www.iana.org/assignments/media-types/media-types.xhtml#audio
    * @return value or {@code null} for none
@@ -218,7 +218,7 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
   }
 
   /**
-   * Mime type of the original audio file.  For example `audio/m4a`, `audio/x-alaw-basic`,
+   * Mime type of the original audio file. For example `audio/m4a`, `audio/x-alaw-basic`,
    * `audio/mp3`, `audio/3gpp`. A list of possible audio mime types is maintained at
    * http://www.iana.org/assignments/media-types/media-types.xhtml#audio
    * @param originalMimeType originalMimeType or {@code null} for none
@@ -229,8 +229,8 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
   }
 
   /**
-   * The device used to make the recording.  Examples 'Nexus 5X' or 'Polycom SoundStation IP 6000'
-   * or 'POTS' or 'VoIP' or 'Cardioid Microphone'.
+   * The device used to make the recording. Examples 'Nexus 5X' or 'Polycom SoundStation IP 6000' or
+   * 'POTS' or 'VoIP' or 'Cardioid Microphone'.
    * @return value or {@code null} for none
    */
   public java.lang.String getRecordingDeviceName() {
@@ -238,8 +238,8 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
   }
 
   /**
-   * The device used to make the recording.  Examples 'Nexus 5X' or 'Polycom SoundStation IP 6000'
-   * or 'POTS' or 'VoIP' or 'Cardioid Microphone'.
+   * The device used to make the recording. Examples 'Nexus 5X' or 'Polycom SoundStation IP 6000' or
+   * 'POTS' or 'VoIP' or 'Cardioid Microphone'.
    * @param recordingDeviceName recordingDeviceName or {@code null} for none
    */
   public RecognitionMetadata setRecordingDeviceName(java.lang.String recordingDeviceName) {

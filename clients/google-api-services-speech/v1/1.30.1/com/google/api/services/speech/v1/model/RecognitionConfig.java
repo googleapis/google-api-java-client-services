@@ -122,16 +122,13 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Which model to select for the given request. Select the model best suited to your domain to get
    * best results. If a model is not explicitly specified, then we auto-select a model based on the
-   * parameters in the RecognitionConfig.
-   *
-   *        Model     Description           command_and_search     Best for short queries such as
-   * voice commands or voice search.           phone_call     Best for audio that originated from a
-   * phone call (typically     recorded at an 8khz sampling rate).           video     Best for
-   * audio that originated from from video or includes multiple         speakers. Ideally the audio
-   * is recorded at a 16khz or greater         sampling rate. This is a premium model that costs
-   * more than the         standard rate.           default     Best for audio that is not one of
-   * the specific audio models.         For example, long-form audio. Ideally the audio is high-
-   * fidelity,         recorded at a 16khz or greater sampling rate.
+   * parameters in the RecognitionConfig. *Model* *Description* command_and_search Best for short
+   * queries such as voice commands or voice search. phone_call Best for audio that originated from
+   * a phone call (typically recorded at an 8khz sampling rate). video Best for audio that
+   * originated from from video or includes multiple speakers. Ideally the audio is recorded at a
+   * 16khz or greater sampling rate. This is a premium model that costs more than the standard rate.
+   * default Best for audio that is not one of the specific audio models. For example, long-form
+   * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,10 +166,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Set to true to use an enhanced model for speech recognition. If `use_enhanced` is set to true
    * and the `model` field is not set, then an appropriate enhanced model is chosen if an enhanced
-   * model exists for the audio.
-   *
-   * If `use_enhanced` is true and an enhanced version of the specified model does not exist, then
-   * the speech is recognized using the standard version of the specified model.
+   * model exists for the audio. If `use_enhanced` is true and an enhanced version of the specified
+   * model does not exist, then the speech is recognized using the standard version of the specified
+   * model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -386,16 +382,13 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Which model to select for the given request. Select the model best suited to your domain to get
    * best results. If a model is not explicitly specified, then we auto-select a model based on the
-   * parameters in the RecognitionConfig.
-   *
-   *        Model     Description           command_and_search     Best for short queries such as
-   * voice commands or voice search.           phone_call     Best for audio that originated from a
-   * phone call (typically     recorded at an 8khz sampling rate).           video     Best for
-   * audio that originated from from video or includes multiple         speakers. Ideally the audio
-   * is recorded at a 16khz or greater         sampling rate. This is a premium model that costs
-   * more than the         standard rate.           default     Best for audio that is not one of
-   * the specific audio models.         For example, long-form audio. Ideally the audio is high-
-   * fidelity,         recorded at a 16khz or greater sampling rate.
+   * parameters in the RecognitionConfig. *Model* *Description* command_and_search Best for short
+   * queries such as voice commands or voice search. phone_call Best for audio that originated from
+   * a phone call (typically recorded at an 8khz sampling rate). video Best for audio that
+   * originated from from video or includes multiple speakers. Ideally the audio is recorded at a
+   * 16khz or greater sampling rate. This is a premium model that costs more than the standard rate.
+   * default Best for audio that is not one of the specific audio models. For example, long-form
+   * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -405,16 +398,13 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Which model to select for the given request. Select the model best suited to your domain to get
    * best results. If a model is not explicitly specified, then we auto-select a model based on the
-   * parameters in the RecognitionConfig.
-   *
-   *        Model     Description           command_and_search     Best for short queries such as
-   * voice commands or voice search.           phone_call     Best for audio that originated from a
-   * phone call (typically     recorded at an 8khz sampling rate).           video     Best for
-   * audio that originated from from video or includes multiple         speakers. Ideally the audio
-   * is recorded at a 16khz or greater         sampling rate. This is a premium model that costs
-   * more than the         standard rate.           default     Best for audio that is not one of
-   * the specific audio models.         For example, long-form audio. Ideally the audio is high-
-   * fidelity,         recorded at a 16khz or greater sampling rate.
+   * parameters in the RecognitionConfig. *Model* *Description* command_and_search Best for short
+   * queries such as voice commands or voice search. phone_call Best for audio that originated from
+   * a phone call (typically recorded at an 8khz sampling rate). video Best for audio that
+   * originated from from video or includes multiple speakers. Ideally the audio is recorded at a
+   * 16khz or greater sampling rate. This is a premium model that costs more than the standard rate.
+   * default Best for audio that is not one of the specific audio models. For example, long-form
+   * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
    * @param model model or {@code null} for none
    */
   public RecognitionConfig setModel(java.lang.String model) {
@@ -492,10 +482,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Set to true to use an enhanced model for speech recognition. If `use_enhanced` is set to true
    * and the `model` field is not set, then an appropriate enhanced model is chosen if an enhanced
-   * model exists for the audio.
-   *
-   * If `use_enhanced` is true and an enhanced version of the specified model does not exist, then
-   * the speech is recognized using the standard version of the specified model.
+   * model exists for the audio. If `use_enhanced` is true and an enhanced version of the specified
+   * model does not exist, then the speech is recognized using the standard version of the specified
+   * model.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseEnhanced() {
@@ -505,10 +494,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Set to true to use an enhanced model for speech recognition. If `use_enhanced` is set to true
    * and the `model` field is not set, then an appropriate enhanced model is chosen if an enhanced
-   * model exists for the audio.
-   *
-   * If `use_enhanced` is true and an enhanced version of the specified model does not exist, then
-   * the speech is recognized using the standard version of the specified model.
+   * model exists for the audio. If `use_enhanced` is true and an enhanced version of the specified
+   * model does not exist, then the speech is recognized using the standard version of the specified
+   * model.
    * @param useEnhanced useEnhanced or {@code null} for none
    */
   public RecognitionConfig setUseEnhanced(java.lang.Boolean useEnhanced) {

@@ -52,7 +52,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   private java.lang.Integer maxDaysWithWorkOff;
 
   /**
-   * Policy applied to applications on the personal profile.
+   * Policy applied to applications in the personal profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,8 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * Controls how apps on the personal profile are allowed or blocked.
+   * Used together with personal_applications to control how apps in the personal profile are
+   * allowed or blocked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +131,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * Policy applied to applications on the personal profile.
+   * Policy applied to applications in the personal profile.
    * @return value or {@code null} for none
    */
   public java.util.List<PersonalApplicationPolicy> getPersonalApplications() {
@@ -138,7 +139,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * Policy applied to applications on the personal profile.
+   * Policy applied to applications in the personal profile.
    * @param personalApplications personalApplications or {@code null} for none
    */
   public PersonalUsagePolicies setPersonalApplications(java.util.List<PersonalApplicationPolicy> personalApplications) {
@@ -147,7 +148,8 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * Controls how apps on the personal profile are allowed or blocked.
+   * Used together with personal_applications to control how apps in the personal profile are
+   * allowed or blocked.
    * @return value or {@code null} for none
    */
   public java.lang.String getPersonalPlayStoreMode() {
@@ -155,7 +157,8 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * Controls how apps on the personal profile are allowed or blocked.
+   * Used together with personal_applications to control how apps in the personal profile are
+   * allowed or blocked.
    * @param personalPlayStoreMode personalPlayStoreMode or {@code null} for none
    */
   public PersonalUsagePolicies setPersonalPlayStoreMode(java.lang.String personalPlayStoreMode) {

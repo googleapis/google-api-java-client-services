@@ -31,6 +31,33 @@ package com.google.api.services.container.v1beta1.model;
 public final class AutoprovisioningNodePoolDefaults extends com.google.api.client.json.GenericJson {
 
   /**
+   * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the
+   * node pool. This should be of the form
+   * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
+   * more information about protecting resources with Cloud KMS Keys please see:
+   * https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bootDiskKmsKey;
+
+  /**
+   * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
+   * 10GB. If unspecified, the default disk size is 100GB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer diskSizeGb;
+
+  /**
+   * Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd') If unspecified, the
+   * default disk type is 'pd-standard'
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String diskType;
+
+  /**
    * NodeManagement configuration for this NodePool.
    * The value may be {@code null}.
    */
@@ -72,11 +99,81 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   private java.lang.String serviceAccount;
 
   /**
+   * Shielded Instance options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedInstanceConfig shieldedInstanceConfig;
+
+  /**
    * Upgrade settings control disruption and speed of the upgrade.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UpgradeSettings upgradeSettings;
+
+  /**
+   * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the
+   * node pool. This should be of the form
+   * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
+   * more information about protecting resources with Cloud KMS Keys please see:
+   * https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBootDiskKmsKey() {
+    return bootDiskKmsKey;
+  }
+
+  /**
+   * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the
+   * node pool. This should be of the form
+   * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
+   * more information about protecting resources with Cloud KMS Keys please see:
+   * https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+   * @param bootDiskKmsKey bootDiskKmsKey or {@code null} for none
+   */
+  public AutoprovisioningNodePoolDefaults setBootDiskKmsKey(java.lang.String bootDiskKmsKey) {
+    this.bootDiskKmsKey = bootDiskKmsKey;
+    return this;
+  }
+
+  /**
+   * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
+   * 10GB. If unspecified, the default disk size is 100GB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDiskSizeGb() {
+    return diskSizeGb;
+  }
+
+  /**
+   * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
+   * 10GB. If unspecified, the default disk size is 100GB.
+   * @param diskSizeGb diskSizeGb or {@code null} for none
+   */
+  public AutoprovisioningNodePoolDefaults setDiskSizeGb(java.lang.Integer diskSizeGb) {
+    this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
+   * Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd') If unspecified, the
+   * default disk type is 'pd-standard'
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDiskType() {
+    return diskType;
+  }
+
+  /**
+   * Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd') If unspecified, the
+   * default disk type is 'pd-standard'
+   * @param diskType diskType or {@code null} for none
+   */
+  public AutoprovisioningNodePoolDefaults setDiskType(java.lang.String diskType) {
+    this.diskType = diskType;
+    return this;
+  }
 
   /**
    * NodeManagement configuration for this NodePool.
@@ -169,6 +266,23 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    */
   public AutoprovisioningNodePoolDefaults setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Shielded Instance options.
+   * @return value or {@code null} for none
+   */
+  public ShieldedInstanceConfig getShieldedInstanceConfig() {
+    return shieldedInstanceConfig;
+  }
+
+  /**
+   * Shielded Instance options.
+   * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
+   */
+  public AutoprovisioningNodePoolDefaults setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
+    this.shieldedInstanceConfig = shieldedInstanceConfig;
     return this;
   }
 

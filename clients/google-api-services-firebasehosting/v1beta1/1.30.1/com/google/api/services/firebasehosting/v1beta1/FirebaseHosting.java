@@ -657,6 +657,750 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
       public class Channels {
 
         /**
+         * Creates a new channel in the specified site.
+         *
+         * Create a request for the method "channels.create".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The site in which this channel should be created.
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Channel content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Channel> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/channels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+          /**
+           * Creates a new channel in the specified site.
+           *
+           * Create a request for the method "channels.create".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The site in which this channel should be created.
+           * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Channel content) {
+            super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Channel.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The site in which this channel should be created. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The site in which this channel should be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The site in which this channel should be created. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. Immutable. A unique id within the site to identify the channel. */
+          @com.google.api.client.util.Key
+          private java.lang.String channelId;
+
+          /** Required. Immutable. A unique id within the site to identify the channel.
+           */
+          public java.lang.String getChannelId() {
+            return channelId;
+          }
+
+          /** Required. Immutable. A unique id within the site to identify the channel. */
+          public Create setChannelId(java.lang.String channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a channel of a site. The `live` channel cannot be deleted.
+         *
+         * Create a request for the method "channels.delete".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The fully-qualified identifier for the site.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Empty> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+
+          /**
+           * Deletes a channel of a site. The `live` channel cannot be deleted.
+           *
+           * Create a request for the method "channels.delete".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The fully-qualified identifier for the site.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(FirebaseHosting.this, "DELETE", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The fully-qualified identifier for the site. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The fully-qualified identifier for the site.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The fully-qualified identifier for the site. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves information for the specified channel of a site.
+         *
+         * Create a request for the method "channels.get".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The fully-qualified identifier for the channel.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Channel> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+
+          /**
+           * Retrieves information for the specified channel of a site.
+           *
+           * Create a request for the method "channels.get".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The fully-qualified identifier for the channel.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Channel.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The fully-qualified identifier for the channel. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The fully-qualified identifier for the channel.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The fully-qualified identifier for the channel. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the channels for the specified site. All sites have a default "live" channel.
+         *
+         * Create a request for the method "channels.list".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The site from which to list channels.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.ListChannelsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/channels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+          /**
+           * Lists the channels for the specified site. All sites have a default "live" channel.
+           *
+           * Create a request for the method "channels.list".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The site from which to list channels.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.ListChannelsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The site from which to list channels. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The site from which to list channels.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The site from which to list channels. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of versions to return. The service may return fewer than this value.
+           * If unspecified, at most 25 channels will be returned. The maximum value is 100;
+           * valuupdateses above 100 will be coerced to 100
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of versions to return. The service may return fewer than this value. If
+         unspecified, at most 25 channels will be returned. The maximum value is 100; valuupdateses above
+         100 will be coerced to 100
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of versions to return. The service may return fewer than this value.
+           * If unspecified, at most 25 channels will be returned. The maximum value is 100;
+           * valuupdateses above 100 will be coerced to 100
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The next_page_token from a previous request, if provided. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token from a previous request, if provided.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The next_page_token from a previous request, if provided. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates information for the specified channel of a site. This method will implicitly create a
+         * channel if it doesn't exist.
+         *
+         * Create a request for the method "channels.patch".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The fully-qualified identifier of the Channel.
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Channel content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Channel> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+
+          /**
+           * Updates information for the specified channel of a site. This method will implicitly create a
+           * channel if it doesn't exist.
+           *
+           * Create a request for the method "channels.patch".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The fully-qualified identifier of the Channel.
+           * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Channel content) {
+            super(FirebaseHosting.this, "PATCH", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Channel.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The fully-qualified identifier of the Channel. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The fully-qualified identifier of the Channel.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The fully-qualified identifier of the Channel. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** A comma-separated list of fields to be updated in this request. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** A comma-separated list of fields to be updated in this request.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** A comma-separated list of fields to be updated in this request. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
          * An accessor for creating requests from the Releases collection.
          *
          * <p>The typical use is:</p>
@@ -2120,6 +2864,143 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
       public class Versions {
 
         /**
+         * Creates a new version on the target site using the content of the specified version.
+         *
+         * Create a request for the method "versions.clone".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Clone#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The target site where the cloned version will reside, in the format: `sites/{site}`
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest}
+         * @return the request
+         */
+        public Clone clone(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest content) throws java.io.IOException {
+          Clone result = new Clone(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Clone extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/versions:clone";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+          /**
+           * Creates a new version on the target site using the content of the specified version.
+           *
+           * Create a request for the method "versions.clone".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Clone#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Clone#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The target site where the cloned version will reside, in the format: `sites/{site}`
+           * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest}
+           * @since 1.13
+           */
+          protected Clone(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest content) {
+            super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+          }
+
+          @Override
+          public Clone set$Xgafv(java.lang.String $Xgafv) {
+            return (Clone) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Clone setAccessToken(java.lang.String accessToken) {
+            return (Clone) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Clone setAlt(java.lang.String alt) {
+            return (Clone) super.setAlt(alt);
+          }
+
+          @Override
+          public Clone setCallback(java.lang.String callback) {
+            return (Clone) super.setCallback(callback);
+          }
+
+          @Override
+          public Clone setFields(java.lang.String fields) {
+            return (Clone) super.setFields(fields);
+          }
+
+          @Override
+          public Clone setKey(java.lang.String key) {
+            return (Clone) super.setKey(key);
+          }
+
+          @Override
+          public Clone setOauthToken(java.lang.String oauthToken) {
+            return (Clone) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Clone setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Clone) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Clone setQuotaUser(java.lang.String quotaUser) {
+            return (Clone) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Clone setUploadType(java.lang.String uploadType) {
+            return (Clone) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Clone setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Clone) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The target site where the cloned version will reside, in the format:
+           * `sites/{site}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The target site where the cloned version will reside, in the format: `sites/{site}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The target site where the cloned version will reside, in the format:
+           * `sites/{site}`
+           */
+          public Clone setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Clone set(String parameterName, Object value) {
+            return (Clone) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a new version for a site.
          *
          * Create a request for the method "versions.create".
@@ -3528,6 +4409,750 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
      * The "channels" collection of methods.
      */
     public class Channels {
+
+      /**
+       * Creates a new channel in the specified site.
+       *
+       * Create a request for the method "channels.create".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The site in which this channel should be created.
+       * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Channel content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Channel> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/channels";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+$");
+
+        /**
+         * Creates a new channel in the specified site.
+         *
+         * Create a request for the method "channels.create".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The site in which this channel should be created.
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Channel content) {
+          super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Channel.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The site in which this channel should be created. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The site in which this channel should be created.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The site in which this channel should be created. */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Required. Immutable. A unique id within the site to identify the channel. */
+        @com.google.api.client.util.Key
+        private java.lang.String channelId;
+
+        /** Required. Immutable. A unique id within the site to identify the channel.
+         */
+        public java.lang.String getChannelId() {
+          return channelId;
+        }
+
+        /** Required. Immutable. A unique id within the site to identify the channel. */
+        public Create setChannelId(java.lang.String channelId) {
+          this.channelId = channelId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a channel of a site. The `live` channel cannot be deleted.
+       *
+       * Create a request for the method "channels.delete".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The fully-qualified identifier for the site.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Empty> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+/channels/[^/]+$");
+
+        /**
+         * Deletes a channel of a site. The `live` channel cannot be deleted.
+         *
+         * Create a request for the method "channels.delete".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The fully-qualified identifier for the site.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(FirebaseHosting.this, "DELETE", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/channels/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The fully-qualified identifier for the site. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The fully-qualified identifier for the site.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The fully-qualified identifier for the site. */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/channels/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves information for the specified channel of a site.
+       *
+       * Create a request for the method "channels.get".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The fully-qualified identifier for the channel.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Channel> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+/channels/[^/]+$");
+
+        /**
+         * Retrieves information for the specified channel of a site.
+         *
+         * Create a request for the method "channels.get".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The fully-qualified identifier for the channel.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Channel.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/channels/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The fully-qualified identifier for the channel. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The fully-qualified identifier for the channel.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The fully-qualified identifier for the channel. */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/channels/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists the channels for the specified site. All sites have a default "live" channel.
+       *
+       * Create a request for the method "channels.list".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The site from which to list channels.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.ListChannelsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/channels";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+$");
+
+        /**
+         * Lists the channels for the specified site. All sites have a default "live" channel.
+         *
+         * Create a request for the method "channels.list".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The site from which to list channels.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.ListChannelsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The site from which to list channels. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The site from which to list channels.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The site from which to list channels. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of versions to return. The service may return fewer than this value.
+         * If unspecified, at most 25 channels will be returned. The maximum value is 100;
+         * valuupdateses above 100 will be coerced to 100
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of versions to return. The service may return fewer than this value. If
+       unspecified, at most 25 channels will be returned. The maximum value is 100; valuupdateses above
+       100 will be coerced to 100
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of versions to return. The service may return fewer than this value.
+         * If unspecified, at most 25 channels will be returned. The maximum value is 100;
+         * valuupdateses above 100 will be coerced to 100
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The next_page_token from a previous request, if provided. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The next_page_token from a previous request, if provided.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The next_page_token from a previous request, if provided. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates information for the specified channel of a site. This method will implicitly create a
+       * channel if it doesn't exist.
+       *
+       * Create a request for the method "channels.patch".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name The fully-qualified identifier of the Channel.
+       * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Channel content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Channel> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+/channels/[^/]+$");
+
+        /**
+         * Updates information for the specified channel of a site. This method will implicitly create a
+         * channel if it doesn't exist.
+         *
+         * Create a request for the method "channels.patch".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The fully-qualified identifier of the Channel.
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Channel content) {
+          super(FirebaseHosting.this, "PATCH", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Channel.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/channels/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The fully-qualified identifier of the Channel. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The fully-qualified identifier of the Channel.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The fully-qualified identifier of the Channel. */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/channels/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** A comma-separated list of fields to be updated in this request. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** A comma-separated list of fields to be updated in this request.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** A comma-separated list of fields to be updated in this request. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the Releases collection.
@@ -4990,6 +6615,143 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
      */
     public class Versions {
 
+      /**
+       * Creates a new version on the target site using the content of the specified version.
+       *
+       * Create a request for the method "versions.clone".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Clone#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The target site where the cloned version will reside, in the format: `sites/{site}`
+       * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest}
+       * @return the request
+       */
+      public Clone clone(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest content) throws java.io.IOException {
+        Clone result = new Clone(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Clone extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/versions:clone";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+$");
+
+        /**
+         * Creates a new version on the target site using the content of the specified version.
+         *
+         * Create a request for the method "versions.clone".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Clone#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Clone#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The target site where the cloned version will reside, in the format: `sites/{site}`
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest}
+         * @since 1.13
+         */
+        protected Clone(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest content) {
+          super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+        }
+
+        @Override
+        public Clone set$Xgafv(java.lang.String $Xgafv) {
+          return (Clone) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Clone setAccessToken(java.lang.String accessToken) {
+          return (Clone) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Clone setAlt(java.lang.String alt) {
+          return (Clone) super.setAlt(alt);
+        }
+
+        @Override
+        public Clone setCallback(java.lang.String callback) {
+          return (Clone) super.setCallback(callback);
+        }
+
+        @Override
+        public Clone setFields(java.lang.String fields) {
+          return (Clone) super.setFields(fields);
+        }
+
+        @Override
+        public Clone setKey(java.lang.String key) {
+          return (Clone) super.setKey(key);
+        }
+
+        @Override
+        public Clone setOauthToken(java.lang.String oauthToken) {
+          return (Clone) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Clone setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Clone) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Clone setQuotaUser(java.lang.String quotaUser) {
+          return (Clone) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Clone setUploadType(java.lang.String uploadType) {
+          return (Clone) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Clone setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Clone) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The target site where the cloned version will reside, in the format:
+         * `sites/{site}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The target site where the cloned version will reside, in the format: `sites/{site}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The target site where the cloned version will reside, in the format:
+         * `sites/{site}`
+         */
+        public Clone setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Clone set(String parameterName, Object value) {
+          return (Clone) super.set(parameterName, value);
+        }
+      }
       /**
        * Creates a new version for a site.
        *

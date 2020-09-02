@@ -1135,10 +1135,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * Allows filtering by advertiser properties. Supported syntax: * Filter expressions are made
        * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
        * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-       * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: .
-       * - `advertiserId` . - `displayName` - `entityStatus` Examples: * All active advertisers
-       * under a partner: `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field should be
-       * no more than 500 characters.
+       * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+       * `advertiserId` - `displayName` - `entityStatus` Examples: * All active advertisers under a
+       * partner: `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field should be no more
+       * than 500 characters.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
@@ -1146,8 +1146,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /** Allows filtering by advertiser properties. Supported syntax: * Filter expressions are made up of
      one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
      sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-     {value}`. * The operator must be `EQUALS (=)`. * Supported fields: . - `advertiserId` . -
-     `displayName` - `entityStatus` Examples: * All active advertisers under a partner:
+     {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `advertiserId` - `displayName`
+     - `entityStatus` Examples: * All active advertisers under a partner:
      `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field should be no more than 500
      characters.
        */
@@ -1159,10 +1159,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * Allows filtering by advertiser properties. Supported syntax: * Filter expressions are made
        * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
        * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-       * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: .
-       * - `advertiserId` . - `displayName` - `entityStatus` Examples: * All active advertisers
-       * under a partner: `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field should be
-       * no more than 500 characters.
+       * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+       * `advertiserId` - `displayName` - `entityStatus` Examples: * All active advertisers under a
+       * partner: `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field should be no more
+       * than 500 characters.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

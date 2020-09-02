@@ -3057,7 +3057,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * SearchForInstances returns a list of matching instances. See [Search Transaction]
-           * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
+           * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6). For details on
+           * the implementation of SearchForInstances, see [Search
+           * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+           * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
+           * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+           * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
            *
            * Create a request for the method "dicomStores.searchForInstances".
            *
@@ -3089,7 +3094,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * SearchForInstances returns a list of matching instances. See [Search Transaction]
-             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6). For details on
+             * the implementation of SearchForInstances, see [Search
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
+             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
              *
              * Create a request for the method "dicomStores.searchForInstances".
              *
@@ -3250,7 +3260,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * SearchForSeries returns a list of matching series. See [Search Transaction]
-           * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
+           * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6). For details on
+           * the implementation of SearchForSeries, see [Search
+           * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+           * Healthcare API conformance statement. For samples that show how to call SearchForSeries, see
+           * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+           * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
            *
            * Create a request for the method "dicomStores.searchForSeries".
            *
@@ -3282,7 +3297,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * SearchForSeries returns a list of matching series. See [Search Transaction]
-             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6). For details on
+             * the implementation of SearchForSeries, see [Search
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call SearchForSeries, see
+             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
              *
              * Create a request for the method "dicomStores.searchForSeries".
              *
@@ -3443,7 +3463,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * SearchForStudies returns a list of matching studies. See [Search Transaction]
-           * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
+           * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6). For details on
+           * the implementation of SearchForStudies, see [Search
+           * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+           * Healthcare API conformance statement. For samples that show how to call SearchForStudies, see
+           * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+           * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
            *
            * Create a request for the method "dicomStores.searchForStudies".
            *
@@ -3474,7 +3499,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * SearchForStudies returns a list of matching studies. See [Search Transaction]
-             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6). For details on
+             * the implementation of SearchForStudies, see [Search
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call SearchForStudies, see
+             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
              *
              * Create a request for the method "dicomStores.searchForStudies".
              *
@@ -3770,7 +3800,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
            * See [Store Transaction]
-           * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5).
+           * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5). For details on
+           * the implementation of StoreInstances, see [Store
+           * transaction](https://cloud.google.com/healthcare/docs/dicom#store_transaction) in the Cloud
+           * Healthcare API conformance statement. For samples that show how to call StoreInstances, see
+           * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
+           * tos/dicomweb#storing_dicom_data).
            *
            * Create a request for the method "dicomStores.storeInstances".
            *
@@ -3804,7 +3839,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
              * See [Store Transaction]
-             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5).
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5). For details on
+             * the implementation of StoreInstances, see [Store
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#store_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call StoreInstances, see
+             * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
+             * tos/dicomweb#storing_dicom_data).
              *
              * Create a request for the method "dicomStores.storeInstances".
              *
@@ -4126,7 +4166,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * GET requests specified in the Retrieve transaction. The method returns an Operation which will be
              * marked successful when the deletion is complete. Warning: Inserting instances into a study while
              * a delete operation is running for that study could result in the new instances not appearing in
-             * search results until the deletion operation finishes.
+             * search results until the deletion operation finishes. For samples that show how to call
+             * DeleteStudy, see [Deleting a study, series, or instance](https://cloud.google.com/healthcare/docs
+             * /how-tos/dicomweb#deleting_a_study_series_or_instance).
              *
              * Create a request for the method "studies.delete".
              *
@@ -4158,7 +4200,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * GET requests specified in the Retrieve transaction. The method returns an Operation which will
                * be marked successful when the deletion is complete. Warning: Inserting instances into a study
                * while a delete operation is running for that study could result in the new instances not
-               * appearing in search results until the deletion operation finishes.
+               * appearing in search results until the deletion operation finishes. For samples that show how to
+               * call DeleteStudy, see [Deleting a study, series, or
+               * instance](https://cloud.google.com/healthcare/docs/how-
+               * tos/dicomweb#deleting_a_study_series_or_instance).
                *
                * Create a request for the method "studies.delete".
                *
@@ -4292,7 +4337,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * RetrieveStudyMetadata returns instance associated with the given study presented as metadata with
              * the bulk data removed. See [RetrieveTransaction]
-             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+             * the implementation of RetrieveStudyMetadata, see [Metadata
+             * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call RetrieveStudyMetadata,
+             * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
+             * tos/dicomweb#retrieving_metadata).
              *
              * Create a request for the method "studies.retrieveMetadata".
              *
@@ -4324,7 +4374,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * RetrieveStudyMetadata returns instance associated with the given study presented as metadata
                * with the bulk data removed. See [RetrieveTransaction]
-               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+               * the implementation of RetrieveStudyMetadata, see [Metadata
+               * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
+               * Healthcare API conformance statement. For samples that show how to call RetrieveStudyMetadata,
+               * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
+               * tos/dicomweb#retrieving_metadata).
                *
                * Create a request for the method "studies.retrieveMetadata".
                *
@@ -4484,7 +4539,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * RetrieveStudy returns all instances within the given study. See [RetrieveTransaction]
-             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+             * the implementation of RetrieveStudy, see [DICOM study/series/instances](https://cloud.google.com/
+             * healthcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance
+             * statement. For samples that show how to call RetrieveStudy, see [Retrieving DICOM
+             * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
              *
              * Create a request for the method "studies.retrieveStudy".
              *
@@ -4515,7 +4574,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * RetrieveStudy returns all instances within the given study. See [RetrieveTransaction]
-               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+               * the implementation of RetrieveStudy, see [DICOM study/series/instances](https://cloud.google.co
+               * m/healthcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance
+               * statement. For samples that show how to call RetrieveStudy, see [Retrieving DICOM
+               * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
                *
                * Create a request for the method "studies.retrieveStudy".
                *
@@ -4672,7 +4735,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * SearchForInstances returns a list of matching instances. See [Search Transaction]
-             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6). For details on
+             * the implementation of SearchForInstances, see [Search
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
+             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
              *
              * Create a request for the method "studies.searchForInstances".
              *
@@ -4704,7 +4772,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * SearchForInstances returns a list of matching instances. See [Search Transaction]
-               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6). For details on
+               * the implementation of SearchForInstances, see [Search
+               * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+               * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
+               * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+               * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
                *
                * Create a request for the method "studies.searchForInstances".
                *
@@ -4865,7 +4938,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * SearchForSeries returns a list of matching series. See [Search Transaction]
-             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6). For details on
+             * the implementation of SearchForSeries, see [Search
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call SearchForSeries, see
+             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
              *
              * Create a request for the method "studies.searchForSeries".
              *
@@ -4897,7 +4975,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * SearchForSeries returns a list of matching series. See [Search Transaction]
-               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6). For details on
+               * the implementation of SearchForSeries, see [Search
+               * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+               * Healthcare API conformance statement. For samples that show how to call SearchForSeries, see
+               * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+               * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
                *
                * Create a request for the method "studies.searchForSeries".
                *
@@ -5059,7 +5142,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
              * See [Store Transaction]
-             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5).
+             * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5). For details on
+             * the implementation of StoreInstances, see [Store
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#store_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call StoreInstances, see
+             * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
+             * tos/dicomweb#storing_dicom_data).
              *
              * Create a request for the method "studies.storeInstances".
              *
@@ -5093,7 +5181,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
                * See [Store Transaction]
-               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5).
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5). For details on
+               * the implementation of StoreInstances, see [Store
+               * transaction](https://cloud.google.com/healthcare/docs/dicom#store_transaction) in the Cloud
+               * Healthcare API conformance statement. For samples that show how to call StoreInstances, see
+               * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
+               * tos/dicomweb#storing_dicom_data).
                *
                * Create a request for the method "studies.storeInstances".
                *
@@ -5269,7 +5362,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * equivalent to the GET requests specified in the Retrieve transaction. The method returns an
                * Operation which will be marked successful when the deletion is complete. Warning: Inserting
                * instances into a series while a delete operation is running for that series could result in the
-               * new instances not appearing in search results until the deletion operation finishes.
+               * new instances not appearing in search results until the deletion operation finishes. For samples
+               * that show how to call DeleteSeries, see [Deleting a study, series, or
+               * instance](https://cloud.google.com/healthcare/docs/how-
+               * tos/dicomweb#deleting_a_study_series_or_instance).
                *
                * Create a request for the method "series.delete".
                *
@@ -5303,7 +5399,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * equivalent to the GET requests specified in the Retrieve transaction. The method returns an
                  * Operation which will be marked successful when the deletion is complete. Warning: Inserting
                  * instances into a series while a delete operation is running for that series could result in the
-                 * new instances not appearing in search results until the deletion operation finishes.
+                 * new instances not appearing in search results until the deletion operation finishes. For
+                 * samples that show how to call DeleteSeries, see [Deleting a study, series, or
+                 * instance](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#deleting_a_study_series_or_instance).
                  *
                  * Create a request for the method "series.delete".
                  *
@@ -5455,7 +5554,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * RetrieveSeriesMetadata returns instance associated with the given study and series, presented as
                * metadata with the bulk data removed. See [RetrieveTransaction]
-               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+               * the implementation of RetrieveSeriesMetadata, see [Metadata
+               * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
+               * Healthcare API conformance statement. For samples that show how to call RetrieveSeriesMetadata,
+               * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
+               * tos/dicomweb#retrieving_metadata).
                *
                * Create a request for the method "series.retrieveMetadata".
                *
@@ -5488,7 +5592,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 /**
                  * RetrieveSeriesMetadata returns instance associated with the given study and series, presented
                  * as metadata with the bulk data removed. See [RetrieveTransaction]
-                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+                 * the implementation of RetrieveSeriesMetadata, see [Metadata
+                 * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
+                 * Healthcare API conformance statement. For samples that show how to call RetrieveSeriesMetadata,
+                 * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#retrieving_metadata).
                  *
                  * Create a request for the method "series.retrieveMetadata".
                  *
@@ -5651,7 +5760,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
               /**
                * RetrieveSeries returns all instances within the given study and series. See [RetrieveTransaction]
-               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+               * the implementation of RetrieveSeries, see [DICOM study/series/instances](https://cloud.google.com
+               * /healthcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance
+               * statement. For samples that show how to call RetrieveSeries, see [Retrieving DICOM
+               * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
                *
                * Create a request for the method "series.retrieveSeries".
                *
@@ -5684,7 +5797,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 /**
                  * RetrieveSeries returns all instances within the given study and series. See
                  * [RetrieveTransaction]
-                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+                 * the implementation of RetrieveSeries, see [DICOM study/series/instances](https://cloud.google.c
+                 * om/healthcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance
+                 * statement. For samples that show how to call RetrieveSeries, see [Retrieving DICOM
+                 * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
                  *
                  * Create a request for the method "series.retrieveSeries".
                  *
@@ -5847,7 +5964,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
               /**
                * SearchForInstances returns a list of matching instances. See [Search Transaction]
-               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6). For details on
+               * the implementation of SearchForInstances, see [Search
+               * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+               * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
+               * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+               * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
                *
                * Create a request for the method "series.searchForInstances".
                *
@@ -5879,7 +6001,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * SearchForInstances returns a list of matching instances. See [Search Transaction]
-                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6).
+                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6). For details on
+                 * the implementation of SearchForInstances, see [Search
+                 * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+                 * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
+                 * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+                 * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
                  *
                  * Create a request for the method "series.searchForInstances".
                  *
@@ -6065,7 +6192,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * DeleteInstance deletes an instance associated with the given study, series, and SOP Instance UID.
                  * Delete requests are equivalent to the GET requests specified in the Retrieve transaction. Study
                  * and series search results can take a few seconds to be updated after an instance is deleted using
-                 * DeleteInstance.
+                 * DeleteInstance. For samples that show how to call DeleteInstance, see [Deleting a study, series,
+                 * or instance](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#deleting_a_study_series_or_instance).
                  *
                  * Create a request for the method "instances.delete".
                  *
@@ -6099,7 +6228,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * DeleteInstance deletes an instance associated with the given study, series, and SOP Instance
                    * UID. Delete requests are equivalent to the GET requests specified in the Retrieve transaction.
                    * Study and series search results can take a few seconds to be updated after an instance is
-                   * deleted using DeleteInstance.
+                   * deleted using DeleteInstance. For samples that show how to call DeleteInstance, see [Deleting a
+                   * study, series, or instance](https://cloud.google.com/healthcare/docs/how-
+                   * tos/dicomweb#deleting_a_study_series_or_instance).
                    *
                    * Create a request for the method "instances.delete".
                    *
@@ -6253,7 +6384,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 /**
                  * RetrieveInstance returns instance associated with the given study, series, and SOP Instance UID.
                  * See [RetrieveTransaction]
-                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+                 * the implementation of RetrieveInstance, see [DICOM study/series/instances](https://cloud.google.c
+                 * om/healthcare/docs/dicom#dicom_studyseriesinstances) and [DICOM
+                 * instances](https://cloud.google.com/healthcare/docs/dicom#dicom_instances) in the Cloud
+                 * Healthcare API conformance statement. For samples that show how to call RetrieveInstance, see
+                 * [Retrieving an instance](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#retrieving_an_instance).
                  *
                  * Create a request for the method "instances.retrieveInstance".
                  *
@@ -6286,7 +6423,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * RetrieveInstance returns instance associated with the given study, series, and SOP Instance
                    * UID. See [RetrieveTransaction]
-                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+                   * the implementation of RetrieveInstance, see [DICOM study/series/instances](https://cloud.google
+                   * .com/healthcare/docs/dicom#dicom_studyseriesinstances) and [DICOM
+                   * instances](https://cloud.google.com/healthcare/docs/dicom#dicom_instances) in the Cloud
+                   * Healthcare API conformance statement. For samples that show how to call RetrieveInstance, see
+                   * [Retrieving an instance](https://cloud.google.com/healthcare/docs/how-
+                   * tos/dicomweb#retrieving_an_instance).
                    *
                    * Create a request for the method "instances.retrieveInstance".
                    *
@@ -6450,7 +6593,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 /**
                  * RetrieveInstanceMetadata returns instance associated with the given study, series, and SOP
                  * Instance UID presented as metadata with the bulk data removed. See [RetrieveTransaction]
-                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+                 * the implementation of RetrieveInstanceMetadata, see [Metadata
+                 * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
+                 * Healthcare API conformance statement. For samples that show how to call RetrieveInstanceMetadata,
+                 * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#retrieving_metadata).
                  *
                  * Create a request for the method "instances.retrieveMetadata".
                  *
@@ -6483,7 +6631,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * RetrieveInstanceMetadata returns instance associated with the given study, series, and SOP
                    * Instance UID presented as metadata with the bulk data removed. See [RetrieveTransaction]
-                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+                   * the implementation of RetrieveInstanceMetadata, see [Metadata
+                   * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
+                   * Healthcare API conformance statement. For samples that show how to call
+                   * RetrieveInstanceMetadata, see [Retrieving metadata](https://cloud.google.com/healthcare/docs
+                   * /how-tos/dicomweb#retrieving_metadata).
                    *
                    * Create a request for the method "instances.retrieveMetadata".
                    *
@@ -6647,7 +6800,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 /**
                  * RetrieveRenderedInstance returns instance associated with the given study, series, and SOP
                  * Instance UID in an acceptable Rendered Media Type. See [RetrieveTransaction]
-                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+                 * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+                 * the implementation of RetrieveRenderedInstance, see [Rendered
+                 * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
+                 * Healthcare API conformance statement. For samples that show how to call RetrieveRenderedInstance,
+                 * see [Retrieving consumer image formats](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#retrieving_consumer_image_formats).
                  *
                  * Create a request for the method "instances.retrieveRendered".
                  *
@@ -6680,7 +6838,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * RetrieveRenderedInstance returns instance associated with the given study, series, and SOP
                    * Instance UID in an acceptable Rendered Media Type. See [RetrieveTransaction]
-                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+                   * the implementation of RetrieveRenderedInstance, see [Rendered
+                   * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
+                   * Healthcare API conformance statement. For samples that show how to call
+                   * RetrieveRenderedInstance, see [Retrieving consumer image
+                   * formats](https://cloud.google.com/healthcare/docs/how-
+                   * tos/dicomweb#retrieving_consumer_image_formats).
                    *
                    * Create a request for the method "instances.retrieveRendered".
                    *
@@ -6865,7 +7029,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * RetrieveFrames returns instances associated with the given study, series, SOP Instance UID and
                    * frame numbers. See [RetrieveTransaction]
-                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4}.
+                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4}. For details on
+                   * the implementation of RetrieveFrames, see [DICOM
+                   * frames](https://cloud.google.com/healthcare/docs/dicom#dicom_frames) in the Cloud Healthcare API
+                   * conformance statement. For samples that show how to call RetrieveFrames, see [Retrieving DICOM
+                   * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
                    *
                    * Create a request for the method "frames.retrieveFrames".
                    *
@@ -6898,7 +7066,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     /**
                      * RetrieveFrames returns instances associated with the given study, series, SOP Instance UID and
                      * frame numbers. See [RetrieveTransaction]
-                     * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4}.
+                     * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4}. For details on
+                     * the implementation of RetrieveFrames, see [DICOM
+                     * frames](https://cloud.google.com/healthcare/docs/dicom#dicom_frames) in the Cloud Healthcare
+                     * API conformance statement. For samples that show how to call RetrieveFrames, see [Retrieving
+                     * DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
                      *
                      * Create a request for the method "frames.retrieveFrames".
                      *
@@ -7062,7 +7234,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * RetrieveRenderedFrames returns instances associated with the given study, series, SOP Instance
                    * UID and frame numbers in an acceptable Rendered Media Type. See [RetrieveTransaction]
-                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+                   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+                   * the implementation of RetrieveRenderedFrames, see [Rendered
+                   * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
+                   * Healthcare API conformance statement. For samples that show how to call RetrieveRenderedFrames,
+                   * see [Retrieving consumer image formats](https://cloud.google.com/healthcare/docs/how-
+                   * tos/dicomweb#retrieving_consumer_image_formats).
                    *
                    * Create a request for the method "frames.retrieveRendered".
                    *
@@ -7096,7 +7273,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     /**
                      * RetrieveRenderedFrames returns instances associated with the given study, series, SOP Instance
                      * UID and frame numbers in an acceptable Rendered Media Type. See [RetrieveTransaction]
-                     * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4).
+                     * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+                     * the implementation of RetrieveRenderedFrames, see [Rendered
+                     * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
+                     * Healthcare API conformance statement. For samples that show how to call RetrieveRenderedFrames,
+                     * see [Retrieving consumer image formats](https://cloud.google.com/healthcare/docs/how-
+                     * tos/dicomweb#retrieving_consumer_image_formats).
                      *
                      * Create a request for the method "frames.retrieveRendered".
                      *

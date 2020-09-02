@@ -17,7 +17,7 @@
 package com.google.api.services.cloudbuild.v1.model;
 
 /**
- * Specifies a build to retry.
+ * Request to create a new build.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:
@@ -27,22 +27,14 @@ package com.google.api.services.cloudbuild.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RetryBuildRequest extends com.google.api.client.json.GenericJson {
+public final class CreateBuildRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Build ID of the original build.
+   * Required. Build resource to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
-
-  /**
-   * The name of the `Build` to retry. Format:
-   * `projects/{project}/locations/{location}/builds/{build}`
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
+  private Build build;
 
   /**
    * Required. ID of the project.
@@ -52,38 +44,19 @@ public final class RetryBuildRequest extends com.google.api.client.json.GenericJ
   private java.lang.String projectId;
 
   /**
-   * Required. Build ID of the original build.
+   * Required. Build resource to create.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public Build getBuild() {
+    return build;
   }
 
   /**
-   * Required. Build ID of the original build.
-   * @param id id or {@code null} for none
+   * Required. Build resource to create.
+   * @param build build or {@code null} for none
    */
-  public RetryBuildRequest setId(java.lang.String id) {
-    this.id = id;
-    return this;
-  }
-
-  /**
-   * The name of the `Build` to retry. Format:
-   * `projects/{project}/locations/{location}/builds/{build}`
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * The name of the `Build` to retry. Format:
-   * `projects/{project}/locations/{location}/builds/{build}`
-   * @param name name or {@code null} for none
-   */
-  public RetryBuildRequest setName(java.lang.String name) {
-    this.name = name;
+  public CreateBuildRequest setBuild(Build build) {
+    this.build = build;
     return this;
   }
 
@@ -99,19 +72,19 @@ public final class RetryBuildRequest extends com.google.api.client.json.GenericJ
    * Required. ID of the project.
    * @param projectId projectId or {@code null} for none
    */
-  public RetryBuildRequest setProjectId(java.lang.String projectId) {
+  public CreateBuildRequest setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
     return this;
   }
 
   @Override
-  public RetryBuildRequest set(String fieldName, Object value) {
-    return (RetryBuildRequest) super.set(fieldName, value);
+  public CreateBuildRequest set(String fieldName, Object value) {
+    return (CreateBuildRequest) super.set(fieldName, value);
   }
 
   @Override
-  public RetryBuildRequest clone() {
-    return (RetryBuildRequest) super.clone();
+  public CreateBuildRequest clone() {
+    return (CreateBuildRequest) super.clone();
   }
 
 }

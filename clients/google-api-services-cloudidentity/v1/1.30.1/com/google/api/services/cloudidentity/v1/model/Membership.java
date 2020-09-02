@@ -62,6 +62,13 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.util.List<MembershipRole> roles;
 
   /**
+   * Output only. The type of the membership.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Output only. Last updated timestamp of the Membership. Output only.
    * The value may be {@code null}.
    */
@@ -141,6 +148,23 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    */
   public Membership setRoles(java.util.List<MembershipRole> roles) {
     this.roles = roles;
+    return this;
+  }
+
+  /**
+   * Output only. The type of the membership.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Output only. The type of the membership.
+   * @param type type or {@code null} for none
+   */
+  public Membership setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

@@ -65,6 +65,15 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run
+   * data processing pipelines. This allows users to have fine-grained access control on Dataproc's
+   * accesses to cloud resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataprocServiceAccount;
+
+  /**
    * A description of this instance.
    * The value may be {@code null}.
    */
@@ -274,6 +283,27 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run
+   * data processing pipelines. This allows users to have fine-grained access control on Dataproc's
+   * accesses to cloud resources.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataprocServiceAccount() {
+    return dataprocServiceAccount;
+  }
+
+  /**
+   * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run
+   * data processing pipelines. This allows users to have fine-grained access control on Dataproc's
+   * accesses to cloud resources.
+   * @param dataprocServiceAccount dataprocServiceAccount or {@code null} for none
+   */
+  public Instance setDataprocServiceAccount(java.lang.String dataprocServiceAccount) {
+    this.dataprocServiceAccount = dataprocServiceAccount;
     return this;
   }
 

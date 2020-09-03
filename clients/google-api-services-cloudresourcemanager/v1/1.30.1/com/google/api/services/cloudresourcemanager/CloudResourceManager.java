@@ -4392,9 +4392,10 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * An expression for filtering the results of the request. Filter rules are case insensitive.
-       * Some eligible fields for filtering are: + `name` + `id` + `labels.` (where *key* is the
-       * name of a label) + `parent.type` + `parent.id` + `lifecycleState` Some examples of filter
-       * strings: | Filter | Description |
+       * If multiple fields are included in a filter query, the query will return results that match
+       * any of the fields. Some eligible fields for filtering are: + `name` + `id` + `labels.`
+       * (where *key* is the name of a label) + `parent.type` + `parent.id` + `lifecycleState` Some
+       * examples of filter strings: | Filter | Description |
        * |------------------|-----------------------------------------------------| | name:how* |
        * The project's name starts with "how". | | name:Howl | The project's name is `Howl` or
        * `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
@@ -4413,11 +4414,12 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** An expression for filtering the results of the request. Filter rules are case insensitive. Some
-     eligible fields for filtering are: + `name` + `id` + `labels.` (where *key* is the name of a label)
-     + `parent.type` + `parent.id` + `lifecycleState` Some examples of filter strings: | Filter |
-     Description | |------------------|-----------------------------------------------------| |
-     name:how* | The project's name starts with "how". | | name:Howl | The project's name is `Howl` or
+      /** An expression for filtering the results of the request. Filter rules are case insensitive. If
+     multiple fields are included in a filter query, the query will return results that match any of the
+     fields. Some eligible fields for filtering are: + `name` + `id` + `labels.` (where *key* is the
+     name of a label) + `parent.type` + `parent.id` + `lifecycleState` Some examples of filter strings:
+     | Filter | Description | |------------------|-----------------------------------------------------|
+     | name:how* | The project's name starts with "how". | | name:Howl | The project's name is `Howl` or
      `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
      labels.color:* | The project has the label `color`. | | labels.color:red | The project's label
      `color` has the value `red`. | | labels.color:red labels.size:big | The project's label `color` | :
@@ -4436,9 +4438,10 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * An expression for filtering the results of the request. Filter rules are case insensitive.
-       * Some eligible fields for filtering are: + `name` + `id` + `labels.` (where *key* is the
-       * name of a label) + `parent.type` + `parent.id` + `lifecycleState` Some examples of filter
-       * strings: | Filter | Description |
+       * If multiple fields are included in a filter query, the query will return results that match
+       * any of the fields. Some eligible fields for filtering are: + `name` + `id` + `labels.`
+       * (where *key* is the name of a label) + `parent.type` + `parent.id` + `lifecycleState` Some
+       * examples of filter strings: | Filter | Description |
        * |------------------|-----------------------------------------------------| | name:how* |
        * The project's name starts with "how". | | name:Howl | The project's name is `Howl` or
        * `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |

@@ -51,7 +51,7 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.String diskName;
 
   /**
-   * Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a
+   * Specifies the size of the disk in GB. The size must be at least 10 GB. If you specify a
    * sourceImage, which is required for boot disks, the default size is the size of the sourceImage.
    * If you do not specify a sourceImage, the default disk size is 500 GB.
    * The value may be {@code null}.

@@ -45,7 +45,7 @@ public final class AggregateRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Specifies that data be aggregated each activity segment recored for a user. Similar to
+   * Specifies that data be aggregated each activity segment recorded for a user. Similar to
    * bucketByActivitySegment, but bucketing is done for each activity segment rather than all
    * segments of the same type. Mutually exclusive of other bucketing specifications.
    * The value may be {@code null}.
@@ -125,7 +125,7 @@ public final class AggregateRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Specifies that data be aggregated each activity segment recored for a user. Similar to
+   * Specifies that data be aggregated each activity segment recorded for a user. Similar to
    * bucketByActivitySegment, but bucketing is done for each activity segment rather than all
    * segments of the same type. Mutually exclusive of other bucketing specifications.
    * @return value or {@code null} for none
@@ -135,7 +135,7 @@ public final class AggregateRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Specifies that data be aggregated each activity segment recored for a user. Similar to
+   * Specifies that data be aggregated each activity segment recorded for a user. Similar to
    * bucketByActivitySegment, but bucketing is done for each activity segment rather than all
    * segments of the same type. Mutually exclusive of other bucketing specifications.
    * @param bucketByActivitySegment bucketByActivitySegment or {@code null} for none

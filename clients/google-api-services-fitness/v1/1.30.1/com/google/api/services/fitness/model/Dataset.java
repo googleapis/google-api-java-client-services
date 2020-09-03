@@ -66,9 +66,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String nextPageToken;
 
   /**
-   * A partial list of data points contained in the dataset, ordered by largest endTimeNanos first.
-   * This list is considered complete when retrieving a small dataset and partial when patching a
-   * dataset or retrieving a dataset that is too large to include in a single response.
+   * A partial list of data points contained in the dataset, ordered by endTimeNanos. This list is
+   * considered complete when retrieving a small dataset and partial when patching a dataset or
+   * retrieving a dataset that is too large to include in a single response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,9 +161,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A partial list of data points contained in the dataset, ordered by largest endTimeNanos first.
-   * This list is considered complete when retrieving a small dataset and partial when patching a
-   * dataset or retrieving a dataset that is too large to include in a single response.
+   * A partial list of data points contained in the dataset, ordered by endTimeNanos. This list is
+   * considered complete when retrieving a small dataset and partial when patching a dataset or
+   * retrieving a dataset that is too large to include in a single response.
    * @return value or {@code null} for none
    */
   public java.util.List<DataPoint> getPoint() {
@@ -171,9 +171,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A partial list of data points contained in the dataset, ordered by largest endTimeNanos first.
-   * This list is considered complete when retrieving a small dataset and partial when patching a
-   * dataset or retrieving a dataset that is too large to include in a single response.
+   * A partial list of data points contained in the dataset, ordered by endTimeNanos. This list is
+   * considered complete when retrieving a small dataset and partial when patching a dataset or
+   * retrieving a dataset that is too large to include in a single response.
    * @param point point or {@code null} for none
    */
   public Dataset setPoint(java.util.List<DataPoint> point) {

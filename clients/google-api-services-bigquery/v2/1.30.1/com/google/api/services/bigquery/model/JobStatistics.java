@@ -154,6 +154,14 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.Long totalSlotMs;
 
   /**
+   * [Output-only] [Alpha] Information of the multi-statement transaction if this job is part of
+   * one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TransactionInfo transactionInfoTemplate;
+
+  /**
    * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
    * @return value or {@code null} for none
    */
@@ -434,6 +442,25 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   public JobStatistics setTotalSlotMs(java.lang.Long totalSlotMs) {
     this.totalSlotMs = totalSlotMs;
+    return this;
+  }
+
+  /**
+   * [Output-only] [Alpha] Information of the multi-statement transaction if this job is part of
+   * one.
+   * @return value or {@code null} for none
+   */
+  public TransactionInfo getTransactionInfoTemplate() {
+    return transactionInfoTemplate;
+  }
+
+  /**
+   * [Output-only] [Alpha] Information of the multi-statement transaction if this job is part of
+   * one.
+   * @param transactionInfoTemplate transactionInfoTemplate or {@code null} for none
+   */
+  public JobStatistics setTransactionInfoTemplate(TransactionInfo transactionInfoTemplate) {
+    this.transactionInfoTemplate = transactionInfoTemplate;
     return this;
   }
 

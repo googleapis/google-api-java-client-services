@@ -45,8 +45,7 @@ public final class QuerySchedule extends com.google.api.client.json.GenericJson 
   private java.lang.String frequency;
 
   /**
-   * Time of day at which a new report will be generated, represented as minutes past midnight.
-   * Range is 0 to 1439. Only applies to scheduled reports.
+   * Deprecated. This field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,8 +100,7 @@ public final class QuerySchedule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Time of day at which a new report will be generated, represented as minutes past midnight.
-   * Range is 0 to 1439. Only applies to scheduled reports.
+   * Deprecated. This field has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNextRunMinuteOfDay() {
@@ -110,8 +108,7 @@ public final class QuerySchedule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Time of day at which a new report will be generated, represented as minutes past midnight.
-   * Range is 0 to 1439. Only applies to scheduled reports.
+   * Deprecated. This field has no effect.
    * @param nextRunMinuteOfDay nextRunMinuteOfDay or {@code null} for none
    */
   public QuerySchedule setNextRunMinuteOfDay(java.lang.Integer nextRunMinuteOfDay) {

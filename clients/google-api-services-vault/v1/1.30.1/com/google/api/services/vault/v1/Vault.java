@@ -834,9 +834,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The number of matters to return in the response. Default and maximum are 100.
-       */
+      /** The number of matters to return in the response. Default and maximum are 100. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
@@ -846,9 +844,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         return pageSize;
       }
 
-      /**
-       * The number of matters to return in the response. Default and maximum are 100.
-       */
+      /** The number of matters to return in the response. Default and maximum are 100. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -3490,8 +3486,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the vault server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param matterId The matter ID of the parent matter for which the saved query is to be
-      created.
+       * @param matterId The matter ID of the parent matter for which the saved query is to be created.
        * @param content the {@link com.google.api.services.vault.v1.model.SavedQuery}
        * @return the request
        */
@@ -3515,8 +3510,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param matterId The matter ID of the parent matter for which the saved query is to be
-      created.
+         * @param matterId The matter ID of the parent matter for which the saved query is to be created.
          * @param content the {@link com.google.api.services.vault.v1.model.SavedQuery}
          * @since 1.13
          */
@@ -3580,9 +3574,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The matter ID of the parent matter for which the saved query is to be created.
-         */
+        /** The matter ID of the parent matter for which the saved query is to be created. */
         @com.google.api.client.util.Key
         private java.lang.String matterId;
 
@@ -3592,9 +3584,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return matterId;
         }
 
-        /**
-         * The matter ID of the parent matter for which the saved query is to be created.
-         */
+        /** The matter ID of the parent matter for which the saved query is to be created. */
         public Create setMatterId(java.lang.String matterId) {
           this.matterId = matterId;
           return this;
@@ -3613,8 +3603,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the vault server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param matterId The matter ID of the parent matter for which the saved query is to be
-      deleted.
+       * @param matterId The matter ID of the parent matter for which the saved query is to be deleted.
        * @param savedQueryId ID of the saved query to be deleted.
        * @return the request
        */
@@ -3638,8 +3627,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param matterId The matter ID of the parent matter for which the saved query is to be
-      deleted.
+         * @param matterId The matter ID of the parent matter for which the saved query is to be deleted.
          * @param savedQueryId ID of the saved query to be deleted.
          * @since 1.13
          */
@@ -3704,9 +3692,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The matter ID of the parent matter for which the saved query is to be deleted.
-         */
+        /** The matter ID of the parent matter for which the saved query is to be deleted. */
         @com.google.api.client.util.Key
         private java.lang.String matterId;
 
@@ -3716,9 +3702,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return matterId;
         }
 
-        /**
-         * The matter ID of the parent matter for which the saved query is to be deleted.
-         */
+        /** The matter ID of the parent matter for which the saved query is to be deleted. */
         public Delete setMatterId(java.lang.String matterId) {
           this.matterId = matterId;
           return this;
@@ -3753,8 +3737,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the vault server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param matterId The matter ID of the parent matter for which the saved query is to be
-      retrieved.
+       * @param matterId The matter ID of the parent matter for which the saved query is to be retrieved.
        * @param savedQueryId ID of the saved query to be retrieved.
        * @return the request
        */
@@ -3778,8 +3761,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param matterId The matter ID of the parent matter for which the saved query is to be
-      retrieved.
+         * @param matterId The matter ID of the parent matter for which the saved query is to be retrieved.
          * @param savedQueryId ID of the saved query to be retrieved.
          * @since 1.13
          */
@@ -3854,9 +3836,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The matter ID of the parent matter for which the saved query is to be retrieved.
-         */
+        /** The matter ID of the parent matter for which the saved query is to be retrieved. */
         @com.google.api.client.util.Key
         private java.lang.String matterId;
 
@@ -3866,9 +3846,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return matterId;
         }
 
-        /**
-         * The matter ID of the parent matter for which the saved query is to be retrieved.
-         */
+        /** The matter ID of the parent matter for which the saved query is to be retrieved. */
         public Get setMatterId(java.lang.String matterId) {
           this.matterId = matterId;
           return this;
@@ -3904,8 +3882,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the vault server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param matterId The matter ID of the parent matter for which the saved queries are to be
-      retrieved.
+       * @param matterId The matter ID of the parent matter for which the saved queries are to be retrieved.
        * @return the request
        */
       public List list(java.lang.String matterId) throws java.io.IOException {
@@ -3929,8 +3906,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param matterId The matter ID of the parent matter for which the saved queries are to be
-      retrieved.
+         * @param matterId The matter ID of the parent matter for which the saved queries are to be retrieved.
          * @since 1.13
          */
         protected List(java.lang.String matterId) {
@@ -4003,9 +3979,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The matter ID of the parent matter for which the saved queries are to be retrieved.
-         */
+        /** The matter ID of the parent matter for which the saved queries are to be retrieved. */
         @com.google.api.client.util.Key
         private java.lang.String matterId;
 
@@ -4015,9 +3989,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return matterId;
         }
 
-        /**
-         * The matter ID of the parent matter for which the saved queries are to be retrieved.
-         */
+        /** The matter ID of the parent matter for which the saved queries are to be retrieved. */
         public List setMatterId(java.lang.String matterId) {
           this.matterId = matterId;
           return this;

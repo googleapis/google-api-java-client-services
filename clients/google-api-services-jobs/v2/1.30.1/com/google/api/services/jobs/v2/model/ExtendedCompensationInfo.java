@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Deprecated. Use CompensationInfo.
- *
- * Describes job compensation.
+ * Deprecated. Use CompensationInfo. Describes job compensation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -73,10 +71,9 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   private java.lang.String currency;
 
   /**
-   * Optional. Job compensation information.
-   *
-   * At most one entry can be of type ExtendedCompensationInfo.CompensationType.BASE, which is
-   * referred as ** base compensation entry ** for the job.
+   * Optional. Job compensation information. At most one entry can be of type
+   * ExtendedCompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry
+   * ** for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,10 +175,9 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Job compensation information.
-   *
-   * At most one entry can be of type ExtendedCompensationInfo.CompensationType.BASE, which is
-   * referred as ** base compensation entry ** for the job.
+   * Optional. Job compensation information. At most one entry can be of type
+   * ExtendedCompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry
+   * ** for the job.
    * @return value or {@code null} for none
    */
   public java.util.List<ExtendedCompensationInfoCompensationEntry> getEntries() {
@@ -189,10 +185,9 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Job compensation information.
-   *
-   * At most one entry can be of type ExtendedCompensationInfo.CompensationType.BASE, which is
-   * referred as ** base compensation entry ** for the job.
+   * Optional. Job compensation information. At most one entry can be of type
+   * ExtendedCompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry
+   * ** for the job.
    * @param entries entries or {@code null} for none
    */
   public ExtendedCompensationInfo setEntries(java.util.List<ExtendedCompensationInfoCompensationEntry> entries) {

@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v3p1beta1.model;
 
 /**
- * Input only.
- *
- * Parameters needed for commute search.
+ * Input only. Parameters needed for commute search.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -36,12 +34,10 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
    * Optional. If true, jobs without "precise" addresses (street level addresses or GPS coordinates)
    * might also be returned. For city and coarser level addresses, text matching is used. If this
    * field is set to false or is not specified, only jobs that include precise addresses are
-   * returned by Commute Search.
-   *
-   * Note: If `allow_imprecise_addresses` is set to true, Commute Search is not able to calculate
-   * accurate commute times to jobs with city level and coarser address information. Jobs with
-   * imprecise addresses will return a `travel_duration` time of 0 regardless of distance from the
-   * job seeker.
+   * returned by Commute Search. Note: If `allow_imprecise_addresses` is set to true, Commute Search
+   * is not able to calculate accurate commute times to jobs with city level and coarser address
+   * information. Jobs with imprecise addresses will return a `travel_duration` time of 0 regardless
+   * of distance from the job seeker.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,9 +52,8 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The departure time used to calculate traffic impact, represented as
-   * google.type.TimeOfDay in local time zone.
-   *
-   * Currently traffic model is restricted to hour level resolution.
+   * google.type.TimeOfDay in local time zone. Currently traffic model is restricted to hour level
+   * resolution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,12 +85,10 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
    * Optional. If true, jobs without "precise" addresses (street level addresses or GPS coordinates)
    * might also be returned. For city and coarser level addresses, text matching is used. If this
    * field is set to false or is not specified, only jobs that include precise addresses are
-   * returned by Commute Search.
-   *
-   * Note: If `allow_imprecise_addresses` is set to true, Commute Search is not able to calculate
-   * accurate commute times to jobs with city level and coarser address information. Jobs with
-   * imprecise addresses will return a `travel_duration` time of 0 regardless of distance from the
-   * job seeker.
+   * returned by Commute Search. Note: If `allow_imprecise_addresses` is set to true, Commute Search
+   * is not able to calculate accurate commute times to jobs with city level and coarser address
+   * information. Jobs with imprecise addresses will return a `travel_duration` time of 0 regardless
+   * of distance from the job seeker.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowImpreciseAddresses() {
@@ -106,12 +99,10 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
    * Optional. If true, jobs without "precise" addresses (street level addresses or GPS coordinates)
    * might also be returned. For city and coarser level addresses, text matching is used. If this
    * field is set to false or is not specified, only jobs that include precise addresses are
-   * returned by Commute Search.
-   *
-   * Note: If `allow_imprecise_addresses` is set to true, Commute Search is not able to calculate
-   * accurate commute times to jobs with city level and coarser address information. Jobs with
-   * imprecise addresses will return a `travel_duration` time of 0 regardless of distance from the
-   * job seeker.
+   * returned by Commute Search. Note: If `allow_imprecise_addresses` is set to true, Commute Search
+   * is not able to calculate accurate commute times to jobs with city level and coarser address
+   * information. Jobs with imprecise addresses will return a `travel_duration` time of 0 regardless
+   * of distance from the job seeker.
    * @param allowImpreciseAddresses allowImpreciseAddresses or {@code null} for none
    */
   public CommuteFilter setAllowImpreciseAddresses(java.lang.Boolean allowImpreciseAddresses) {
@@ -138,9 +129,8 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The departure time used to calculate traffic impact, represented as
-   * google.type.TimeOfDay in local time zone.
-   *
-   * Currently traffic model is restricted to hour level resolution.
+   * google.type.TimeOfDay in local time zone. Currently traffic model is restricted to hour level
+   * resolution.
    * @return value or {@code null} for none
    */
   public TimeOfDay getDepartureTime() {
@@ -149,9 +139,8 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The departure time used to calculate traffic impact, represented as
-   * google.type.TimeOfDay in local time zone.
-   *
-   * Currently traffic model is restricted to hour level resolution.
+   * google.type.TimeOfDay in local time zone. Currently traffic model is restricted to hour level
+   * resolution.
    * @param departureTime departureTime or {@code null} for none
    */
   public CommuteFilter setDepartureTime(TimeOfDay departureTime) {

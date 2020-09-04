@@ -17,10 +17,8 @@
 package com.google.api.services.jobs.v3.model;
 
 /**
- * Input only.
- *
- * Meta information related to the job searcher or entity conducting the job search. This
- * information is used to improve the performance of the service.
+ * Input only. Meta information related to the job searcher or entity conducting the job search.
+ * This information is used to improve the performance of the service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -42,16 +40,12 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * Required. The client-defined scope or source of the service call, which typically is the domain
-   * on which the service has been implemented and is currently being run.
-   *
-   * For example, if the service is being run by client Foo, Inc., on job board www.foo.com and
-   * career site www.bar.com, then this field is set to "foo.com" for use on the job board, and
-   * "bar.com" for use on the career site.
-   *
-   * If this field isn't available for some reason, send "UNKNOWN". Any improvements to the model
-   * for a particular tenant site rely on this field being set correctly to a domain.
-   *
-   * The maximum number of allowed characters is 255.
+   * on which the service has been implemented and is currently being run. For example, if the
+   * service is being run by client *Foo, Inc.*, on job board www.foo.com and career site
+   * www.bar.com, then this field is set to "foo.com" for use on the job board, and "bar.com" for
+   * use on the career site. If this field isn't available for some reason, send "UNKNOWN". Any
+   * improvements to the model for a particular tenant site rely on this field being set correctly
+   * to a domain. The maximum number of allowed characters is 255.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,13 +54,10 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   /**
    * Required. A unique session identification string. A session is defined as the duration of an
    * end user's interaction with the service over a certain period. Obfuscate this field for privacy
-   * concerns before providing it to the service.
-   *
-   * If this field is not available for some reason, send "UNKNOWN". Note that any improvements to
-   * the model for a particular tenant site, rely on this field being set correctly to some unique
-   * session_id.
-   *
-   * The maximum number of allowed characters is 255.
+   * concerns before providing it to the service. If this field is not available for some reason,
+   * send "UNKNOWN". Note that any improvements to the model for a particular tenant site, rely on
+   * this field being set correctly to some unique session_id. The maximum number of allowed
+   * characters is 255.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,13 +66,10 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   /**
    * Required. A unique user identification string, as determined by the client. To have the
    * strongest positive impact on search quality make sure the client-level is unique. Obfuscate
-   * this field for privacy concerns before providing it to the service.
-   *
-   * If this field is not available for some reason, send "UNKNOWN". Note that any improvements to
-   * the model for a particular tenant site, rely on this field being set correctly to a unique
-   * user_id.
-   *
-   * The maximum number of allowed characters is 255.
+   * this field for privacy concerns before providing it to the service. If this field is not
+   * available for some reason, send "UNKNOWN". Note that any improvements to the model for a
+   * particular tenant site, rely on this field being set correctly to a unique user_id. The maximum
+   * number of allowed characters is 255.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,16 +94,12 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * Required. The client-defined scope or source of the service call, which typically is the domain
-   * on which the service has been implemented and is currently being run.
-   *
-   * For example, if the service is being run by client Foo, Inc., on job board www.foo.com and
-   * career site www.bar.com, then this field is set to "foo.com" for use on the job board, and
-   * "bar.com" for use on the career site.
-   *
-   * If this field isn't available for some reason, send "UNKNOWN". Any improvements to the model
-   * for a particular tenant site rely on this field being set correctly to a domain.
-   *
-   * The maximum number of allowed characters is 255.
+   * on which the service has been implemented and is currently being run. For example, if the
+   * service is being run by client *Foo, Inc.*, on job board www.foo.com and career site
+   * www.bar.com, then this field is set to "foo.com" for use on the job board, and "bar.com" for
+   * use on the career site. If this field isn't available for some reason, send "UNKNOWN". Any
+   * improvements to the model for a particular tenant site rely on this field being set correctly
+   * to a domain. The maximum number of allowed characters is 255.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -124,16 +108,12 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * Required. The client-defined scope or source of the service call, which typically is the domain
-   * on which the service has been implemented and is currently being run.
-   *
-   * For example, if the service is being run by client Foo, Inc., on job board www.foo.com and
-   * career site www.bar.com, then this field is set to "foo.com" for use on the job board, and
-   * "bar.com" for use on the career site.
-   *
-   * If this field isn't available for some reason, send "UNKNOWN". Any improvements to the model
-   * for a particular tenant site rely on this field being set correctly to a domain.
-   *
-   * The maximum number of allowed characters is 255.
+   * on which the service has been implemented and is currently being run. For example, if the
+   * service is being run by client *Foo, Inc.*, on job board www.foo.com and career site
+   * www.bar.com, then this field is set to "foo.com" for use on the job board, and "bar.com" for
+   * use on the career site. If this field isn't available for some reason, send "UNKNOWN". Any
+   * improvements to the model for a particular tenant site rely on this field being set correctly
+   * to a domain. The maximum number of allowed characters is 255.
    * @param domain domain or {@code null} for none
    */
   public RequestMetadata setDomain(java.lang.String domain) {
@@ -144,13 +124,10 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   /**
    * Required. A unique session identification string. A session is defined as the duration of an
    * end user's interaction with the service over a certain period. Obfuscate this field for privacy
-   * concerns before providing it to the service.
-   *
-   * If this field is not available for some reason, send "UNKNOWN". Note that any improvements to
-   * the model for a particular tenant site, rely on this field being set correctly to some unique
-   * session_id.
-   *
-   * The maximum number of allowed characters is 255.
+   * concerns before providing it to the service. If this field is not available for some reason,
+   * send "UNKNOWN". Note that any improvements to the model for a particular tenant site, rely on
+   * this field being set correctly to some unique session_id. The maximum number of allowed
+   * characters is 255.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionId() {
@@ -160,13 +137,10 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   /**
    * Required. A unique session identification string. A session is defined as the duration of an
    * end user's interaction with the service over a certain period. Obfuscate this field for privacy
-   * concerns before providing it to the service.
-   *
-   * If this field is not available for some reason, send "UNKNOWN". Note that any improvements to
-   * the model for a particular tenant site, rely on this field being set correctly to some unique
-   * session_id.
-   *
-   * The maximum number of allowed characters is 255.
+   * concerns before providing it to the service. If this field is not available for some reason,
+   * send "UNKNOWN". Note that any improvements to the model for a particular tenant site, rely on
+   * this field being set correctly to some unique session_id. The maximum number of allowed
+   * characters is 255.
    * @param sessionId sessionId or {@code null} for none
    */
   public RequestMetadata setSessionId(java.lang.String sessionId) {
@@ -177,13 +151,10 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   /**
    * Required. A unique user identification string, as determined by the client. To have the
    * strongest positive impact on search quality make sure the client-level is unique. Obfuscate
-   * this field for privacy concerns before providing it to the service.
-   *
-   * If this field is not available for some reason, send "UNKNOWN". Note that any improvements to
-   * the model for a particular tenant site, rely on this field being set correctly to a unique
-   * user_id.
-   *
-   * The maximum number of allowed characters is 255.
+   * this field for privacy concerns before providing it to the service. If this field is not
+   * available for some reason, send "UNKNOWN". Note that any improvements to the model for a
+   * particular tenant site, rely on this field being set correctly to a unique user_id. The maximum
+   * number of allowed characters is 255.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -193,13 +164,10 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   /**
    * Required. A unique user identification string, as determined by the client. To have the
    * strongest positive impact on search quality make sure the client-level is unique. Obfuscate
-   * this field for privacy concerns before providing it to the service.
-   *
-   * If this field is not available for some reason, send "UNKNOWN". Note that any improvements to
-   * the model for a particular tenant site, rely on this field being set correctly to a unique
-   * user_id.
-   *
-   * The maximum number of allowed characters is 255.
+   * this field for privacy concerns before providing it to the service. If this field is not
+   * available for some reason, send "UNKNOWN". Note that any improvements to the model for a
+   * particular tenant site, rely on this field being set correctly to a unique user_id. The maximum
+   * number of allowed characters is 255.
    * @param userId userId or {@code null} for none
    */
   public RequestMetadata setUserId(java.lang.String userId) {

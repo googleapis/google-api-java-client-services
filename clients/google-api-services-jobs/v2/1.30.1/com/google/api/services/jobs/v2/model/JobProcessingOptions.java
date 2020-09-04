@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Input only.
- *
- * Options for job processing.
+ * Input only. Options for job processing.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -41,13 +39,10 @@ public final class JobProcessingOptions extends com.google.api.client.json.Gener
   private java.lang.Boolean disableStreetAddressResolution;
 
   /**
-   * Optional. Option for job HTML content sanitization. Applied fields are:
-   *
-   * * description * applicationInstruction * incentives * qualifications * responsibilities
-   *
-   * HTML tags in these fields may be stripped if sanitiazation is not disabled.
-   *
-   * Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
+   * Optional. Option for job HTML content sanitization. Applied fields are: * description *
+   * applicationInstruction * incentives * qualifications * responsibilities HTML tags in these
+   * fields may be stripped if sanitiazation is not disabled. Defaults to
+   * HtmlSanitization.SIMPLE_FORMATTING_ONLY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,13 +68,10 @@ public final class JobProcessingOptions extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Option for job HTML content sanitization. Applied fields are:
-   *
-   * * description * applicationInstruction * incentives * qualifications * responsibilities
-   *
-   * HTML tags in these fields may be stripped if sanitiazation is not disabled.
-   *
-   * Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
+   * Optional. Option for job HTML content sanitization. Applied fields are: * description *
+   * applicationInstruction * incentives * qualifications * responsibilities HTML tags in these
+   * fields may be stripped if sanitiazation is not disabled. Defaults to
+   * HtmlSanitization.SIMPLE_FORMATTING_ONLY.
    * @return value or {@code null} for none
    */
   public java.lang.String getHtmlSanitization() {
@@ -87,13 +79,10 @@ public final class JobProcessingOptions extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Option for job HTML content sanitization. Applied fields are:
-   *
-   * * description * applicationInstruction * incentives * qualifications * responsibilities
-   *
-   * HTML tags in these fields may be stripped if sanitiazation is not disabled.
-   *
-   * Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
+   * Optional. Option for job HTML content sanitization. Applied fields are: * description *
+   * applicationInstruction * incentives * qualifications * responsibilities HTML tags in these
+   * fields may be stripped if sanitiazation is not disabled. Defaults to
+   * HtmlSanitization.SIMPLE_FORMATTING_ONLY.
    * @param htmlSanitization htmlSanitization or {@code null} for none
    */
   public JobProcessingOptions setHtmlSanitization(java.lang.String htmlSanitization) {

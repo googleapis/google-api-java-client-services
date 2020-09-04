@@ -50,9 +50,8 @@ public final class ClientEvent extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Extra information about this event. Used for storing information with no matching
-   * field in event payload, for example, user application specific context or details.
-   *
-   * At most 20 keys are supported. The maximum total size of all keys and values is 2 KB.
+   * field in event payload, for example, user application specific context or details. At most 20
+   * keys are supported. The maximum total size of all keys and values is 2 KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,9 +121,8 @@ public final class ClientEvent extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Extra information about this event. Used for storing information with no matching
-   * field in event payload, for example, user application specific context or details.
-   *
-   * At most 20 keys are supported. The maximum total size of all keys and values is 2 KB.
+   * field in event payload, for example, user application specific context or details. At most 20
+   * keys are supported. The maximum total size of all keys and values is 2 KB.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getExtraInfo() {
@@ -133,9 +131,8 @@ public final class ClientEvent extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Extra information about this event. Used for storing information with no matching
-   * field in event payload, for example, user application specific context or details.
-   *
-   * At most 20 keys are supported. The maximum total size of all keys and values is 2 KB.
+   * field in event payload, for example, user application specific context or details. At most 20
+   * keys are supported. The maximum total size of all keys and values is 2 KB.
    * @param extraInfo extraInfo or {@code null} for none
    */
   public ClientEvent setExtraInfo(java.util.Map<String, java.lang.String> extraInfo) {

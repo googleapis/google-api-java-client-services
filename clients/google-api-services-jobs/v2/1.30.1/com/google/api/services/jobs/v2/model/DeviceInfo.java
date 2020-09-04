@@ -17,10 +17,9 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Input only.
- *
- * Device information collected from the job seeker, candidate, or other entity conducting the job
- * search. Providing this information improves the quality of the search results across devices.
+ * Input only. Device information collected from the job seeker, candidate, or other entity
+ * conducting the job search. Providing this information improves the quality of the search results
+ * across devices.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation

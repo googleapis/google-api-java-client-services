@@ -18,11 +18,9 @@ package com.google.api.services.jobs.v3p1beta1.model;
 
 /**
  * A compensation entry that represents one component of compensation, such as base pay, bonus, or
- * other compensation type.
- *
- * Annualization: One compensation entry can be annualized if - it contains valid amount or range. -
- * and its expected_units_per_year is set or can be derived. Its annualized range is determined as
- * (amount or range) times expected_units_per_year.
+ * other compensation type. Annualization: One compensation entry can be annualized if - it contains
+ * valid amount or range. - and its expected_units_per_year is set or can be derived. Its annualized
+ * range is determined as (amount or range) times expected_units_per_year.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -43,7 +41,7 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   private Money amount;
 
   /**
-   * Optional. Compensation description.  For example, could indicate equity terms or provide
+   * Optional. Compensation description. For example, could indicate equity terms or provide
    * additional context to an estimated bonus.
    * The value may be {@code null}.
    */
@@ -67,18 +65,15 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   private CompensationRange range;
 
   /**
-   * Optional. Compensation type.
-   *
-   * Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
+   * Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. Frequency of the specified amount.
-   *
-   * Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+   * Optional. Frequency of the specified amount. Default is
+   * CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +97,7 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Compensation description.  For example, could indicate equity terms or provide
+   * Optional. Compensation description. For example, could indicate equity terms or provide
    * additional context to an estimated bonus.
    * @return value or {@code null} for none
    */
@@ -111,7 +106,7 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Compensation description.  For example, could indicate equity terms or provide
+   * Optional. Compensation description. For example, could indicate equity terms or provide
    * additional context to an estimated bonus.
    * @param description description or {@code null} for none
    */
@@ -159,9 +154,7 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Compensation type.
-   *
-   * Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
+   * Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -169,9 +162,7 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Compensation type.
-   *
-   * Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
+   * Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
    * @param type type or {@code null} for none
    */
   public CompensationEntry setType(java.lang.String type) {
@@ -180,9 +171,8 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Frequency of the specified amount.
-   *
-   * Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+   * Optional. Frequency of the specified amount. Default is
+   * CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -190,9 +180,8 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Frequency of the specified amount.
-   *
-   * Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+   * Optional. Frequency of the specified amount. Default is
+   * CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
    * @param unit unit or {@code null} for none
    */
   public CompensationEntry setUnit(java.lang.String unit) {

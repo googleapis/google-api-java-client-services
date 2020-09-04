@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v3p1beta1.model;
 
 /**
- * Output only.
- *
- * Job entry with metadata inside SearchJobsResponse.
+ * Output only. Job entry with metadata inside SearchJobsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -33,7 +31,7 @@ package com.google.api.services.jobs.v3p1beta1.model;
 public final class MatchingJob extends com.google.api.client.json.GenericJson {
 
   /**
-   * Commute information which is generated based on specified  CommuteFilter.
+   * Commute information which is generated based on specified CommuteFilter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +69,7 @@ public final class MatchingJob extends com.google.api.client.json.GenericJson {
   private java.lang.String searchTextSnippet;
 
   /**
-   * Commute information which is generated based on specified  CommuteFilter.
+   * Commute information which is generated based on specified CommuteFilter.
    * @return value or {@code null} for none
    */
   public CommuteInfo getCommuteInfo() {
@@ -79,7 +77,7 @@ public final class MatchingJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Commute information which is generated based on specified  CommuteFilter.
+   * Commute information which is generated based on specified CommuteFilter.
    * @param commuteInfo commuteInfo or {@code null} for none
    */
   public MatchingJob setCommuteInfo(CommuteInfo commuteInfo) {

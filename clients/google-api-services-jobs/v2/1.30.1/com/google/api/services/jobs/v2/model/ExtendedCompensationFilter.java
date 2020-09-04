@@ -17,11 +17,8 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Deprecated. Always use CompensationFilter.
- *
- * Input only.
- *
- * Filter on job compensation type and amount.
+ * Deprecated. Always use CompensationFilter. Input only. Filter on job compensation type and
+ * amount.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation

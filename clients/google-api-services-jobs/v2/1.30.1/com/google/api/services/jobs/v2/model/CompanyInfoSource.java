@@ -17,7 +17,7 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * A resource that represents an external  Google identifier for a company, for example, a Google+
+ * A resource that represents an external Google identifier for a company, for example, a Google+
  * business page or a Google Maps business page. For unsupported types, use `unknown_type_id`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

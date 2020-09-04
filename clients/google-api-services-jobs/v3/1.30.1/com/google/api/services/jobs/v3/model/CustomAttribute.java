@@ -33,20 +33,15 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   /**
    * Optional. If the `filterable` flag is true, the custom field values may be used for custom
    * attribute filters JobQuery.custom_attribute_filter. If false, these values may not be used for
-   * custom attribute filters.
-   *
-   * Default is false.
+   * custom attribute filters. Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean filterable;
 
   /**
-   * Optional but exactly one of string_values or long_values must be specified.
-   *
-   * This field is used to perform number range search. (`EQ`, `GT`, `GE`, `LE`, `LT`) over
-   * filterable `long_value`.
-   *
+   * Optional but exactly one of string_values or long_values must be specified. This field is used
+   * to perform number range search. (`EQ`, `GT`, `GE`, `LE`, `LT`) over filterable `long_value`.
    * Currently at most 1 long_values is supported.
    * The value may be {@code null}.
    */
@@ -54,15 +49,11 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.Long> longValues;
 
   /**
-   * Optional but exactly one of string_values or long_values must be specified.
-   *
-   * This field is used to perform a string match (`CASE_SENSITIVE_MATCH` or
-   * `CASE_INSENSITIVE_MATCH`) search. For filterable `string_value`s, a maximum total number of 200
-   * values is allowed, with each `string_value` has a byte size of no more than 500B. For
-   * unfilterable `string_values`, the maximum total byte size of unfilterable `string_values` is
-   * 50KB.
-   *
-   * Empty string is not allowed.
+   * Optional but exactly one of string_values or long_values must be specified. This field is used
+   * to perform a string match (`CASE_SENSITIVE_MATCH` or `CASE_INSENSITIVE_MATCH`) search. For
+   * filterable `string_value`s, a maximum total number of 200 values is allowed, with each
+   * `string_value` has a byte size of no more than 500B. For unfilterable `string_values`, the
+   * maximum total byte size of unfilterable `string_values` is 50KB. Empty string is not allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,9 +62,7 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   /**
    * Optional. If the `filterable` flag is true, the custom field values may be used for custom
    * attribute filters JobQuery.custom_attribute_filter. If false, these values may not be used for
-   * custom attribute filters.
-   *
-   * Default is false.
+   * custom attribute filters. Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFilterable() {
@@ -83,9 +72,7 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   /**
    * Optional. If the `filterable` flag is true, the custom field values may be used for custom
    * attribute filters JobQuery.custom_attribute_filter. If false, these values may not be used for
-   * custom attribute filters.
-   *
-   * Default is false.
+   * custom attribute filters. Default is false.
    * @param filterable filterable or {@code null} for none
    */
   public CustomAttribute setFilterable(java.lang.Boolean filterable) {
@@ -94,11 +81,8 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional but exactly one of string_values or long_values must be specified.
-   *
-   * This field is used to perform number range search. (`EQ`, `GT`, `GE`, `LE`, `LT`) over
-   * filterable `long_value`.
-   *
+   * Optional but exactly one of string_values or long_values must be specified. This field is used
+   * to perform number range search. (`EQ`, `GT`, `GE`, `LE`, `LT`) over filterable `long_value`.
    * Currently at most 1 long_values is supported.
    * @return value or {@code null} for none
    */
@@ -107,11 +91,8 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional but exactly one of string_values or long_values must be specified.
-   *
-   * This field is used to perform number range search. (`EQ`, `GT`, `GE`, `LE`, `LT`) over
-   * filterable `long_value`.
-   *
+   * Optional but exactly one of string_values or long_values must be specified. This field is used
+   * to perform number range search. (`EQ`, `GT`, `GE`, `LE`, `LT`) over filterable `long_value`.
    * Currently at most 1 long_values is supported.
    * @param longValues longValues or {@code null} for none
    */
@@ -121,15 +102,11 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional but exactly one of string_values or long_values must be specified.
-   *
-   * This field is used to perform a string match (`CASE_SENSITIVE_MATCH` or
-   * `CASE_INSENSITIVE_MATCH`) search. For filterable `string_value`s, a maximum total number of 200
-   * values is allowed, with each `string_value` has a byte size of no more than 500B. For
-   * unfilterable `string_values`, the maximum total byte size of unfilterable `string_values` is
-   * 50KB.
-   *
-   * Empty string is not allowed.
+   * Optional but exactly one of string_values or long_values must be specified. This field is used
+   * to perform a string match (`CASE_SENSITIVE_MATCH` or `CASE_INSENSITIVE_MATCH`) search. For
+   * filterable `string_value`s, a maximum total number of 200 values is allowed, with each
+   * `string_value` has a byte size of no more than 500B. For unfilterable `string_values`, the
+   * maximum total byte size of unfilterable `string_values` is 50KB. Empty string is not allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getStringValues() {
@@ -137,15 +114,11 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional but exactly one of string_values or long_values must be specified.
-   *
-   * This field is used to perform a string match (`CASE_SENSITIVE_MATCH` or
-   * `CASE_INSENSITIVE_MATCH`) search. For filterable `string_value`s, a maximum total number of 200
-   * values is allowed, with each `string_value` has a byte size of no more than 500B. For
-   * unfilterable `string_values`, the maximum total byte size of unfilterable `string_values` is
-   * 50KB.
-   *
-   * Empty string is not allowed.
+   * Optional but exactly one of string_values or long_values must be specified. This field is used
+   * to perform a string match (`CASE_SENSITIVE_MATCH` or `CASE_INSENSITIVE_MATCH`) search. For
+   * filterable `string_value`s, a maximum total number of 200 values is allowed, with each
+   * `string_value` has a byte size of no more than 500B. For unfilterable `string_values`, the
+   * maximum total byte size of unfilterable `string_values` is 50KB. Empty string is not allowed.
    * @param stringValues stringValues or {@code null} for none
    */
   public CustomAttribute setStringValues(java.util.List<java.lang.String> stringValues) {

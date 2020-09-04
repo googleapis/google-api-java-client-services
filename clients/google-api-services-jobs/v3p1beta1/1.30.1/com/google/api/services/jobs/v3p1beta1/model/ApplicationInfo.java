@@ -31,49 +31,38 @@ package com.google.api.services.jobs.v3p1beta1.model;
 public final class ApplicationInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional but at least one of uris, emails or instruction must be specified.
-   *
-   * Use this field to specify email address(es) to which resumes or applications can be sent.
-   *
-   * The maximum number of allowed characters for each entry is 255.
+   * Optional but at least one of uris, emails or instruction must be specified. Use this field to
+   * specify email address(es) to which resumes or applications can be sent. The maximum number of
+   * allowed characters for each entry is 255.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> emails;
 
   /**
-   * Optional but at least one of uris, emails or instruction must be specified.
-   *
-   * Use this field to provide instructions, such as "Mail your application to ...", that a
-   * candidate can follow to apply for the job.
-   *
-   * This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and
-   * unordered list markup tags.
-   *
-   * The maximum number of allowed characters is 3,000.
+   * Optional but at least one of uris, emails or instruction must be specified. Use this field to
+   * provide instructions, such as "Mail your application to ...", that a candidate can follow to
+   * apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic,
+   * ordered list, and unordered list markup tags. The maximum number of allowed characters is
+   * 3,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instruction;
 
   /**
-   * Optional but at least one of uris, emails or instruction must be specified.
-   *
-   * Use this URI field to direct an applicant to a website, for example to link to an online
-   * application form.
-   *
-   * The maximum number of allowed characters for each entry is 2,000.
+   * Optional but at least one of uris, emails or instruction must be specified. Use this URI field
+   * to direct an applicant to a website, for example to link to an online application form. The
+   * maximum number of allowed characters for each entry is 2,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> uris;
 
   /**
-   * Optional but at least one of uris, emails or instruction must be specified.
-   *
-   * Use this field to specify email address(es) to which resumes or applications can be sent.
-   *
-   * The maximum number of allowed characters for each entry is 255.
+   * Optional but at least one of uris, emails or instruction must be specified. Use this field to
+   * specify email address(es) to which resumes or applications can be sent. The maximum number of
+   * allowed characters for each entry is 255.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEmails() {
@@ -81,11 +70,9 @@ public final class ApplicationInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional but at least one of uris, emails or instruction must be specified.
-   *
-   * Use this field to specify email address(es) to which resumes or applications can be sent.
-   *
-   * The maximum number of allowed characters for each entry is 255.
+   * Optional but at least one of uris, emails or instruction must be specified. Use this field to
+   * specify email address(es) to which resumes or applications can be sent. The maximum number of
+   * allowed characters for each entry is 255.
    * @param emails emails or {@code null} for none
    */
   public ApplicationInfo setEmails(java.util.List<java.lang.String> emails) {
@@ -94,15 +81,11 @@ public final class ApplicationInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional but at least one of uris, emails or instruction must be specified.
-   *
-   * Use this field to provide instructions, such as "Mail your application to ...", that a
-   * candidate can follow to apply for the job.
-   *
-   * This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and
-   * unordered list markup tags.
-   *
-   * The maximum number of allowed characters is 3,000.
+   * Optional but at least one of uris, emails or instruction must be specified. Use this field to
+   * provide instructions, such as "Mail your application to ...", that a candidate can follow to
+   * apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic,
+   * ordered list, and unordered list markup tags. The maximum number of allowed characters is
+   * 3,000.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstruction() {
@@ -110,15 +93,11 @@ public final class ApplicationInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional but at least one of uris, emails or instruction must be specified.
-   *
-   * Use this field to provide instructions, such as "Mail your application to ...", that a
-   * candidate can follow to apply for the job.
-   *
-   * This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and
-   * unordered list markup tags.
-   *
-   * The maximum number of allowed characters is 3,000.
+   * Optional but at least one of uris, emails or instruction must be specified. Use this field to
+   * provide instructions, such as "Mail your application to ...", that a candidate can follow to
+   * apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic,
+   * ordered list, and unordered list markup tags. The maximum number of allowed characters is
+   * 3,000.
    * @param instruction instruction or {@code null} for none
    */
   public ApplicationInfo setInstruction(java.lang.String instruction) {
@@ -127,12 +106,9 @@ public final class ApplicationInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional but at least one of uris, emails or instruction must be specified.
-   *
-   * Use this URI field to direct an applicant to a website, for example to link to an online
-   * application form.
-   *
-   * The maximum number of allowed characters for each entry is 2,000.
+   * Optional but at least one of uris, emails or instruction must be specified. Use this URI field
+   * to direct an applicant to a website, for example to link to an online application form. The
+   * maximum number of allowed characters for each entry is 2,000.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUris() {
@@ -140,12 +116,9 @@ public final class ApplicationInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional but at least one of uris, emails or instruction must be specified.
-   *
-   * Use this URI field to direct an applicant to a website, for example to link to an online
-   * application form.
-   *
-   * The maximum number of allowed characters for each entry is 2,000.
+   * Optional but at least one of uris, emails or instruction must be specified. Use this URI field
+   * to direct an applicant to a website, for example to link to an online application form. The
+   * maximum number of allowed characters for each entry is 2,000.
    * @param uris uris or {@code null} for none
    */
   public ApplicationInfo setUris(java.util.List<java.lang.String> uris) {

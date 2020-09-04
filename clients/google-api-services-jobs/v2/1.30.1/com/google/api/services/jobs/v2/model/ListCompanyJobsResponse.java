@@ -17,11 +17,7 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Deprecated. Use ListJobsResponse instead.
- *
- * Output only.
- *
- * The List jobs response object.
+ * Deprecated. Use ListJobsResponse instead. Output only. The List jobs response object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -35,9 +31,8 @@ package com.google.api.services.jobs.v2.model;
 public final class ListCompanyJobsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Jobs for a given company.
-   *
-   * The maximum number of items returned is based on the limit field provided in the request.
+   * The Jobs for a given company. The maximum number of items returned is based on the limit field
+   * provided in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,9 +67,8 @@ public final class ListCompanyJobsResponse extends com.google.api.client.json.Ge
   private java.lang.Long totalSize;
 
   /**
-   * The Jobs for a given company.
-   *
-   * The maximum number of items returned is based on the limit field provided in the request.
+   * The Jobs for a given company. The maximum number of items returned is based on the limit field
+   * provided in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<Job> getJobs() {
@@ -82,9 +76,8 @@ public final class ListCompanyJobsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The Jobs for a given company.
-   *
-   * The maximum number of items returned is based on the limit field provided in the request.
+   * The Jobs for a given company. The maximum number of items returned is based on the limit field
+   * provided in the request.
    * @param jobs jobs or {@code null} for none
    */
   public ListCompanyJobsResponse setJobs(java.util.List<Job> jobs) {

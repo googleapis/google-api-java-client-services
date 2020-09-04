@@ -131,11 +131,9 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
   /**
    * If true, disable organic experiment selection (at all diversion points). Organic selection
    * means experiment selection process based on traffic allocation and diversion condition
-   * evaluation. This does not disable selection of forced experiments.
-   *
-   * This is useful in cases when it is not known whether experiment selection behavior is
-   * responsible for a error or breakage. Disabling organic selection may help to isolate the cause
-   * of a given problem.
+   * evaluation. This does not disable selection of forced experiments. This is useful in cases when
+   * it is not known whether experiment selection behavior is responsible for a error or breakage.
+   * Disabling organic selection may help to isolate the cause of a given problem.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -387,11 +385,9 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
   /**
    * If true, disable organic experiment selection (at all diversion points). Organic selection
    * means experiment selection process based on traffic allocation and diversion condition
-   * evaluation. This does not disable selection of forced experiments.
-   *
-   * This is useful in cases when it is not known whether experiment selection behavior is
-   * responsible for a error or breakage. Disabling organic selection may help to isolate the cause
-   * of a given problem.
+   * evaluation. This does not disable selection of forced experiments. This is useful in cases when
+   * it is not known whether experiment selection behavior is responsible for a error or breakage.
+   * Disabling organic selection may help to isolate the cause of a given problem.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableOrganicSelection() {
@@ -401,11 +397,9 @@ public final class NamespacedDebugInput extends com.google.api.client.json.Gener
   /**
    * If true, disable organic experiment selection (at all diversion points). Organic selection
    * means experiment selection process based on traffic allocation and diversion condition
-   * evaluation. This does not disable selection of forced experiments.
-   *
-   * This is useful in cases when it is not known whether experiment selection behavior is
-   * responsible for a error or breakage. Disabling organic selection may help to isolate the cause
-   * of a given problem.
+   * evaluation. This does not disable selection of forced experiments. This is useful in cases when
+   * it is not known whether experiment selection behavior is responsible for a error or breakage.
+   * Disabling organic selection may help to isolate the cause of a given problem.
    * @param disableOrganicSelection disableOrganicSelection or {@code null} for none
    */
   public NamespacedDebugInput setDisableOrganicSelection(java.lang.Boolean disableOrganicSelection) {

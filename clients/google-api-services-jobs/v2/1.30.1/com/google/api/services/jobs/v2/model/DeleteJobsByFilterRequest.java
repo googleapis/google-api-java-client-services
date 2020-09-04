@@ -17,13 +17,8 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Deprecated. Use BatchDeleteJobsRequest instead.
- *
- * Input only.
- *
- * Delete job by filter request.
- *
- * The job typically becomes unsearchable within 10 seconds, but it may take up to 5 minutes.
+ * Deprecated. Use BatchDeleteJobsRequest instead. Input only. Delete job by filter request. The job
+ * typically becomes unsearchable within 10 seconds, but it may take up to 5 minutes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation

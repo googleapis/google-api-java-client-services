@@ -56,18 +56,16 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
   private java.lang.String id;
 
   /**
-   * Latitude of the location, in degrees north of the equator. Only some locations -- generally,
-   * ballot drop boxes for vote-by-mail elections -- will have this set; for others, use a geocoding
-   * service like the Google Maps API to resolve the address to a geographic point.
+   * Latitude of the location, in degrees north of the equator. Note this field may not be available
+   * for some locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double latitude;
 
   /**
-   * Longitude of the location, in degrees east of the Prime Meridian. Only some locations --
-   * generally, ballot drop boxes for vote-by-mail elections -- will have this set; for others, use
-   * a geocoding service like the Google Maps API to resolve the address to a geographic point.
+   * Longitude of the location, in degrees east of the Prime Meridian. Note this field may not be
+   * available for some locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,9 +175,8 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Latitude of the location, in degrees north of the equator. Only some locations -- generally,
-   * ballot drop boxes for vote-by-mail elections -- will have this set; for others, use a geocoding
-   * service like the Google Maps API to resolve the address to a geographic point.
+   * Latitude of the location, in degrees north of the equator. Note this field may not be available
+   * for some locations.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLatitude() {
@@ -187,9 +184,8 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Latitude of the location, in degrees north of the equator. Only some locations -- generally,
-   * ballot drop boxes for vote-by-mail elections -- will have this set; for others, use a geocoding
-   * service like the Google Maps API to resolve the address to a geographic point.
+   * Latitude of the location, in degrees north of the equator. Note this field may not be available
+   * for some locations.
    * @param latitude latitude or {@code null} for none
    */
   public PollingLocation setLatitude(java.lang.Double latitude) {
@@ -198,9 +194,8 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Longitude of the location, in degrees east of the Prime Meridian. Only some locations --
-   * generally, ballot drop boxes for vote-by-mail elections -- will have this set; for others, use
-   * a geocoding service like the Google Maps API to resolve the address to a geographic point.
+   * Longitude of the location, in degrees east of the Prime Meridian. Note this field may not be
+   * available for some locations.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLongitude() {
@@ -208,9 +203,8 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Longitude of the location, in degrees east of the Prime Meridian. Only some locations --
-   * generally, ballot drop boxes for vote-by-mail elections -- will have this set; for others, use
-   * a geocoding service like the Google Maps API to resolve the address to a geographic point.
+   * Longitude of the location, in degrees east of the Prime Meridian. Note this field may not be
+   * available for some locations.
    * @param longitude longitude or {@code null} for none
    */
   public PollingLocation setLongitude(java.lang.Double longitude) {

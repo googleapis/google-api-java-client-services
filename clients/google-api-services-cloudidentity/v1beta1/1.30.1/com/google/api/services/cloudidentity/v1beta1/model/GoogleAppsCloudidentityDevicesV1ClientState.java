@@ -68,7 +68,10 @@ public final class GoogleAppsCloudidentityDevicesV1ClientState extends com.googl
   private java.lang.String etag;
 
   /**
-   * The Health score of the resource
+   * The Health score of the resource. The Health score is the callers specification of the
+   * condition of the device from a usability point of view. For example, a third-party device
+   * management provider may specify a health score based on its compliance with organizational
+   * policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +104,11 @@ public final class GoogleAppsCloudidentityDevicesV1ClientState extends com.googl
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
    * ClientState in format:
    * `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where partner_id
-   * corresponds to the partner storing the data.
+   * corresponds to the partner storing the data. For partners belonging to the "BeyondCorp
+   * Alliance", this is the partner ID specified to you by Google. For all other callers, this is a
+   * string of the form: `{customer_id}-suffix`, where `customer_id` is your customer id. The suffix
+   * is any string the caller specifies. This string will be displayed verbatim in the
+   * administration console.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +218,10 @@ public final class GoogleAppsCloudidentityDevicesV1ClientState extends com.googl
   }
 
   /**
-   * The Health score of the resource
+   * The Health score of the resource. The Health score is the callers specification of the
+   * condition of the device from a usability point of view. For example, a third-party device
+   * management provider may specify a health score based on its compliance with organizational
+   * policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthScore() {
@@ -219,7 +229,10 @@ public final class GoogleAppsCloudidentityDevicesV1ClientState extends com.googl
   }
 
   /**
-   * The Health score of the resource
+   * The Health score of the resource. The Health score is the callers specification of the
+   * condition of the device from a usability point of view. For example, a third-party device
+   * management provider may specify a health score based on its compliance with organizational
+   * policies.
    * @param healthScore healthScore or {@code null} for none
    */
   public GoogleAppsCloudidentityDevicesV1ClientState setHealthScore(java.lang.String healthScore) {
@@ -286,7 +299,11 @@ public final class GoogleAppsCloudidentityDevicesV1ClientState extends com.googl
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
    * ClientState in format:
    * `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where partner_id
-   * corresponds to the partner storing the data.
+   * corresponds to the partner storing the data. For partners belonging to the "BeyondCorp
+   * Alliance", this is the partner ID specified to you by Google. For all other callers, this is a
+   * string of the form: `{customer_id}-suffix`, where `customer_id` is your customer id. The suffix
+   * is any string the caller specifies. This string will be displayed verbatim in the
+   * administration console.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -297,7 +314,11 @@ public final class GoogleAppsCloudidentityDevicesV1ClientState extends com.googl
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
    * ClientState in format:
    * `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where partner_id
-   * corresponds to the partner storing the data.
+   * corresponds to the partner storing the data. For partners belonging to the "BeyondCorp
+   * Alliance", this is the partner ID specified to you by Google. For all other callers, this is a
+   * string of the form: `{customer_id}-suffix`, where `customer_id` is your customer id. The suffix
+   * is any string the caller specifies. This string will be displayed verbatim in the
+   * administration console.
    * @param name name or {@code null} for none
    */
   public GoogleAppsCloudidentityDevicesV1ClientState setName(java.lang.String name) {

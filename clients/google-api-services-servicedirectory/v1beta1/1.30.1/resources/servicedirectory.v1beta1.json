@@ -1,43 +1,64 @@
 {
-  "discoveryVersion": "v1",
-  "mtlsRootUrl": "https://servicedirectory.mtls.googleapis.com/",
-  "rootUrl": "https://servicedirectory.googleapis.com/",
-  "canonicalName": "Service Directory",
-  "protocol": "rest",
-  "servicePath": "",
-  "id": "servicedirectory:v1beta1",
-  "basePath": "",
-  "version": "v1beta1",
+  "name": "servicedirectory",
+  "icons": {
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
+  },
   "parameters": {
-    "key": {
+    "oauth_token": {
       "location": "query",
-      "type": "string",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
+      "description": "OAuth 2.0 token for the current user.",
+      "type": "string"
     },
-    "uploadType": {
+    "callback": {
       "location": "query",
       "type": "string",
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
+      "description": "JSONP"
+    },
+    "prettyPrint": {
+      "location": "query",
+      "type": "boolean",
+      "default": "true",
+      "description": "Returns response with indentations and line breaks."
+    },
+    "quotaUser": {
+      "type": "string",
+      "location": "query",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."
     },
     "alt": {
-      "type": "string",
-      "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
-      ],
-      "default": "json",
       "enum": [
         "json",
         "media",
         "proto"
       ],
+      "description": "Data format for response.",
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ],
+      "type": "string",
       "location": "query",
-      "description": "Data format for response."
+      "default": "json"
+    },
+    "key": {
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "location": "query",
+      "type": "string"
+    },
+    "access_token": {
+      "location": "query",
+      "type": "string",
+      "description": "OAuth access token."
+    },
+    "upload_protocol": {
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "location": "query",
+      "type": "string"
     },
     "$.xgafv": {
-      "description": "V1 error format.",
-      "type": "string",
+      "location": "query",
       "enumDescriptions": [
         "v1 error format",
         "v2 error format"
@@ -46,49 +67,30 @@
         "1",
         "2"
       ],
-      "location": "query"
-    },
-    "callback": {
-      "description": "JSONP",
-      "type": "string",
-      "location": "query"
-    },
-    "oauth_token": {
-      "type": "string",
-      "description": "OAuth 2.0 token for the current user.",
-      "location": "query"
-    },
-    "quotaUser": {
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "location": "query",
+      "description": "V1 error format.",
       "type": "string"
     },
     "fields": {
-      "description": "Selector specifying which fields to include in a partial response.",
       "location": "query",
+      "description": "Selector specifying which fields to include in a partial response.",
       "type": "string"
     },
-    "prettyPrint": {
-      "location": "query",
-      "description": "Returns response with indentations and line breaks.",
-      "type": "boolean",
-      "default": "true"
-    },
-    "access_token": {
-      "description": "OAuth access token.",
+    "uploadType": {
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
       "type": "string",
-      "location": "query"
-    },
-    "upload_protocol": {
-      "type": "string",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
       "location": "query"
     }
   },
-  "fullyEncodeReservedExpansion": true,
   "description": "Service Directory is a platform for discovering, publishing, and connecting services. ",
+  "version": "v1beta1",
+  "fullyEncodeReservedExpansion": true,
+  "kind": "discovery#restDescription",
+  "ownerDomain": "google.com",
+  "ownerName": "Google",
+  "discoveryVersion": "v1",
   "baseUrl": "https://servicedirectory.googleapis.com/",
-  "documentationLink": "https://cloud.google.com/service-directory",
+  "id": "servicedirectory:v1beta1",
+  "version_module": true,
   "resources": {
     "projects": {
       "resources": {
@@ -96,142 +98,196 @@
           "resources": {
             "namespaces": {
               "methods": {
-                "setIamPolicy": {
-                  "description": "Sets the IAM Policy for a resource (namespace or service only).",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "request": {
-                    "$ref": "SetIamPolicyRequest"
-                  },
-                  "parameters": {
-                    "resource": {
-                      "required": true,
-                      "type": "string",
-                      "location": "path",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
-                      "description": "REQUIRED: The resource for which the policy is being specified. See the operation documentation for the appropriate value for this field."
-                    }
-                  },
-                  "parameterOrder": [
-                    "resource"
-                  ],
-                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}:setIamPolicy",
-                  "response": {
-                    "$ref": "Policy"
-                  },
-                  "id": "servicedirectory.projects.locations.namespaces.setIamPolicy",
-                  "path": "v1beta1/{+resource}:setIamPolicy",
-                  "httpMethod": "POST"
-                },
-                "testIamPermissions": {
-                  "parameters": {
-                    "resource": {
-                      "location": "path",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
-                      "description": "REQUIRED: The resource for which the policy detail is being requested. See the operation documentation for the appropriate value for this field.",
-                      "type": "string",
-                      "required": true
-                    }
-                  },
-                  "description": "Tests IAM permissions for a resource (namespace or service only).",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "response": {
-                    "$ref": "TestIamPermissionsResponse"
-                  },
-                  "request": {
-                    "$ref": "TestIamPermissionsRequest"
-                  },
-                  "httpMethod": "POST",
-                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}:testIamPermissions",
-                  "path": "v1beta1/{+resource}:testIamPermissions",
-                  "parameterOrder": [
-                    "resource"
-                  ],
-                  "id": "servicedirectory.projects.locations.namespaces.testIamPermissions"
-                },
                 "getIamPolicy": {
-                  "response": {
-                    "$ref": "Policy"
-                  },
-                  "httpMethod": "POST",
-                  "id": "servicedirectory.projects.locations.namespaces.getIamPolicy",
-                  "parameterOrder": [
-                    "resource"
-                  ],
                   "scopes": [
                     "https://www.googleapis.com/auth/cloud-platform"
                   ],
                   "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}:getIamPolicy",
-                  "path": "v1beta1/{+resource}:getIamPolicy",
                   "description": "Gets the IAM Policy for a resource (namespace or service only).",
+                  "path": "v1beta1/{+resource}:getIamPolicy",
                   "parameters": {
                     "resource": {
                       "type": "string",
                       "location": "path",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
                       "description": "REQUIRED: The resource for which the policy is being requested. See the operation documentation for the appropriate value for this field.",
-                      "required": true
+                      "required": true,
+                      "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$"
                     }
                   },
                   "request": {
                     "$ref": "GetIamPolicyRequest"
+                  },
+                  "parameterOrder": [
+                    "resource"
+                  ],
+                  "id": "servicedirectory.projects.locations.namespaces.getIamPolicy",
+                  "httpMethod": "POST",
+                  "response": {
+                    "$ref": "Policy"
                   }
                 },
-                "delete": {
-                  "path": "v1beta1/{+name}",
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "id": "servicedirectory.projects.locations.namespaces.delete",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "response": {
-                    "$ref": "Empty"
+                "testIamPermissions": {
+                  "id": "servicedirectory.projects.locations.namespaces.testIamPermissions",
+                  "request": {
+                    "$ref": "TestIamPermissionsRequest"
                   },
-                  "description": "Deletes a namespace. This also deletes all services and endpoints in the namespace.",
                   "parameters": {
-                    "name": {
-                      "type": "string",
-                      "description": "Required. The name of the namespace to delete.",
-                      "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
-                      "location": "path",
-                      "required": true
-                    }
-                  },
-                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}",
-                  "httpMethod": "DELETE"
-                },
-                "get": {
-                  "path": "v1beta1/{+name}",
-                  "parameters": {
-                    "name": {
-                      "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
+                    "resource": {
                       "location": "path",
                       "required": true,
                       "type": "string",
-                      "description": "Required. The name of the namespace to retrieve."
+                      "description": "REQUIRED: The resource for which the policy detail is being requested. See the operation documentation for the appropriate value for this field.",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$"
                     }
                   },
+                  "description": "Tests IAM permissions for a resource (namespace or service only).",
+                  "response": {
+                    "$ref": "TestIamPermissionsResponse"
+                  },
+                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}:testIamPermissions",
+                  "path": "v1beta1/{+resource}:testIamPermissions",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "parameterOrder": [
+                    "resource"
+                  ],
+                  "httpMethod": "POST"
+                },
+                "create": {
+                  "id": "servicedirectory.projects.locations.namespaces.create",
+                  "description": "Creates a namespace, and returns the new Namespace.",
+                  "request": {
+                    "$ref": "Namespace"
+                  },
+                  "parameterOrder": [
+                    "parent"
+                  ],
+                  "path": "v1beta1/{+parent}/namespaces",
+                  "httpMethod": "POST",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "parameters": {
+                    "parent": {
+                      "type": "string",
+                      "location": "path",
+                      "pattern": "^projects/[^/]+/locations/[^/]+$",
+                      "required": true,
+                      "description": "Required. The resource name of the project and location the namespace will be created in."
+                    },
+                    "namespaceId": {
+                      "description": "Required. The Resource ID must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.",
+                      "location": "query",
+                      "type": "string"
+                    }
+                  },
+                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces",
+                  "response": {
+                    "$ref": "Namespace"
+                  }
+                },
+                "setIamPolicy": {
+                  "parameters": {
+                    "resource": {
+                      "description": "REQUIRED: The resource for which the policy is being specified. See the operation documentation for the appropriate value for this field.",
+                      "location": "path",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
+                      "required": true,
+                      "type": "string"
+                    }
+                  },
+                  "id": "servicedirectory.projects.locations.namespaces.setIamPolicy",
+                  "description": "Sets the IAM Policy for a resource (namespace or service only).",
+                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}:setIamPolicy",
+                  "parameterOrder": [
+                    "resource"
+                  ],
+                  "httpMethod": "POST",
+                  "response": {
+                    "$ref": "Policy"
+                  },
+                  "request": {
+                    "$ref": "SetIamPolicyRequest"
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "path": "v1beta1/{+resource}:setIamPolicy"
+                },
+                "delete": {
+                  "description": "Deletes a namespace. This also deletes all services and endpoints in the namespace.",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "path": "v1beta1/{+name}",
+                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}",
+                  "httpMethod": "DELETE",
+                  "id": "servicedirectory.projects.locations.namespaces.delete",
+                  "response": {
+                    "$ref": "Empty"
+                  },
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "parameters": {
+                    "name": {
+                      "type": "string",
+                      "required": true,
+                      "location": "path",
+                      "description": "Required. The name of the namespace to delete.",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$"
+                    }
+                  }
+                },
+                "get": {
                   "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}",
                   "id": "servicedirectory.projects.locations.namespaces.get",
+                  "path": "v1beta1/{+name}",
+                  "parameters": {
+                    "name": {
+                      "required": true,
+                      "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
+                      "type": "string",
+                      "description": "Required. The name of the namespace to retrieve.",
+                      "location": "path"
+                    }
+                  },
+                  "response": {
+                    "$ref": "Namespace"
+                  },
                   "scopes": [
                     "https://www.googleapis.com/auth/cloud-platform"
                   ],
                   "description": "Gets a namespace.",
                   "httpMethod": "GET",
-                  "response": {
-                    "$ref": "Namespace"
-                  },
                   "parameterOrder": [
                     "name"
                   ]
                 },
                 "patch": {
                   "httpMethod": "PATCH",
+                  "id": "servicedirectory.projects.locations.namespaces.patch",
+                  "request": {
+                    "$ref": "Namespace"
+                  },
+                  "description": "Updates a namespace.",
+                  "path": "v1beta1/{+name}",
+                  "parameters": {
+                    "name": {
+                      "required": true,
+                      "type": "string",
+                      "location": "path",
+                      "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
+                      "description": "Immutable. The resource name for the namespace in the format 'projects/*/locations/*/namespaces/*'."
+                    },
+                    "updateMask": {
+                      "location": "query",
+                      "format": "google-fieldmask",
+                      "description": "Required. List of fields to be updated in this request.",
+                      "type": "string"
+                    }
+                  },
                   "response": {
                     "$ref": "Namespace"
                   },
@@ -241,191 +297,464 @@
                   "parameterOrder": [
                     "name"
                   ],
-                  "description": "Updates a namespace.",
-                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}",
-                  "parameters": {
-                    "name": {
-                      "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
-                      "type": "string",
-                      "description": "Immutable. The resource name for the namespace in the format 'projects/*/locations/*/namespaces/*'.",
-                      "required": true,
-                      "location": "path"
-                    },
-                    "updateMask": {
-                      "type": "string",
-                      "format": "google-fieldmask",
-                      "description": "Required. List of fields to be updated in this request.",
-                      "location": "query"
-                    }
-                  },
-                  "path": "v1beta1/{+name}",
-                  "request": {
-                    "$ref": "Namespace"
-                  },
-                  "id": "servicedirectory.projects.locations.namespaces.patch"
-                },
-                "create": {
-                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces",
-                  "parameters": {
-                    "namespaceId": {
-                      "description": "Required. The Resource ID must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.",
-                      "type": "string",
-                      "location": "query"
-                    },
-                    "parent": {
-                      "description": "Required. The resource name of the project and location the namespace will be created in.",
-                      "location": "path",
-                      "type": "string",
-                      "pattern": "^projects/[^/]+/locations/[^/]+$",
-                      "required": true
-                    }
-                  },
-                  "httpMethod": "POST",
-                  "path": "v1beta1/{+parent}/namespaces",
-                  "id": "servicedirectory.projects.locations.namespaces.create",
-                  "response": {
-                    "$ref": "Namespace"
-                  },
-                  "request": {
-                    "$ref": "Namespace"
-                  },
-                  "description": "Creates a namespace, and returns the new Namespace.",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "parameterOrder": [
-                    "parent"
-                  ]
+                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}"
                 },
                 "list": {
+                  "description": "Lists all namespaces.",
                   "response": {
                     "$ref": "ListNamespacesResponse"
                   },
                   "path": "v1beta1/{+parent}/namespaces",
-                  "id": "servicedirectory.projects.locations.namespaces.list",
-                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces",
-                  "parameterOrder": [
-                    "parent"
-                  ],
                   "scopes": [
                     "https://www.googleapis.com/auth/cloud-platform"
                   ],
-                  "httpMethod": "GET",
+                  "parameterOrder": [
+                    "parent"
+                  ],
+                  "id": "servicedirectory.projects.locations.namespaces.list",
                   "parameters": {
                     "pageToken": {
+                      "type": "string",
                       "description": "Optional. The next_page_token value returned from a previous List request, if any.",
-                      "location": "query",
-                      "type": "string"
-                    },
-                    "filter": {
-                      "description": "Optional. The filter to list result by. General filter string syntax: () can be \"name\", or \"labels.\" for map field. can be \"\u003c, \u003e, \u003c=, \u003e=, !=, =, :\". Of which \":\" means HAS, and is roughly the same as \"=\". must be the same data type as field. can be \"AND, OR, NOT\". Examples of valid filters: * \"labels.owner\" returns Namespaces that have a label with the key \"owner\" this is the same as \"labels:owner\". * \"labels.protocol=gRPC\" returns Namespaces that have key/value \"protocol=gRPC\". * \"name\u003eprojects/my-project/locations/us-east/namespaces/namespace-c\" returns Namespaces that have name that is alphabetically later than the string, so \"namespace-e\" will be returned but \"namespace-a\" will not be. * \"labels.owner!=sd AND labels.foo=bar\" returns Namespaces that have \"owner\" in label key but value is not \"sd\" AND have key/value foo=bar. * \"doesnotexist.foo=bar\" returns an empty list. Note that Namespace doesn't have a field called \"doesnotexist\". Since the filter does not match any Namespaces, it returns no results.",
-                      "type": "string",
                       "location": "query"
-                    },
-                    "parent": {
-                      "type": "string",
-                      "pattern": "^projects/[^/]+/locations/[^/]+$",
-                      "location": "path",
-                      "required": true,
-                      "description": "Required. The resource name of the project and location whose namespaces we'd like to list."
                     },
                     "orderBy": {
                       "type": "string",
                       "description": "Optional. The order to list result by. General order by string syntax: () (,) allows values {\"name\"} ascending or descending order by . If this is left blank, \"asc\" is used. Note that an empty order_by string result in default order, which is order by name in ascending order.",
                       "location": "query"
                     },
+                    "parent": {
+                      "required": true,
+                      "description": "Required. The resource name of the project and location whose namespaces we'd like to list.",
+                      "pattern": "^projects/[^/]+/locations/[^/]+$",
+                      "location": "path",
+                      "type": "string"
+                    },
                     "pageSize": {
-                      "location": "query",
                       "type": "integer",
-                      "format": "int32",
-                      "description": "Optional. The maximum number of items to return."
+                      "location": "query",
+                      "description": "Optional. The maximum number of items to return.",
+                      "format": "int32"
+                    },
+                    "filter": {
+                      "location": "query",
+                      "type": "string",
+                      "description": "Optional. The filter to list result by. General filter string syntax: () can be \"name\", or \"labels.\" for map field. can be \"\u003c, \u003e, \u003c=, \u003e=, !=, =, :\". Of which \":\" means HAS, and is roughly the same as \"=\". must be the same data type as field. can be \"AND, OR, NOT\". Examples of valid filters: * \"labels.owner\" returns Namespaces that have a label with the key \"owner\" this is the same as \"labels:owner\". * \"labels.protocol=gRPC\" returns Namespaces that have key/value \"protocol=gRPC\". * \"name\u003eprojects/my-project/locations/us-east/namespaces/namespace-c\" returns Namespaces that have name that is alphabetically later than the string, so \"namespace-e\" will be returned but \"namespace-a\" will not be. * \"labels.owner!=sd AND labels.foo=bar\" returns Namespaces that have \"owner\" in label key but value is not \"sd\" AND have key/value foo=bar. * \"doesnotexist.foo=bar\" returns an empty list. Note that Namespace doesn't have a field called \"doesnotexist\". Since the filter does not match any Namespaces, it returns no results."
                     }
                   },
-                  "description": "Lists all namespaces."
+                  "httpMethod": "GET",
+                  "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces"
                 }
               },
               "resources": {
                 "services": {
+                  "methods": {
+                    "resolve": {
+                      "httpMethod": "POST",
+                      "description": "Returns a service and its associated endpoints. Resolving a service is not considered an active developer method.",
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "response": {
+                        "$ref": "ResolveServiceResponse"
+                      },
+                      "path": "v1beta1/{+name}:resolve",
+                      "request": {
+                        "$ref": "ResolveServiceRequest"
+                      },
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "parameters": {
+                        "name": {
+                          "required": true,
+                          "type": "string",
+                          "location": "path",
+                          "description": "Required. The name of the service to resolve.",
+                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$"
+                        }
+                      },
+                      "id": "servicedirectory.projects.locations.namespaces.services.resolve",
+                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}:resolve"
+                    },
+                    "get": {
+                      "httpMethod": "GET",
+                      "parameters": {
+                        "name": {
+                          "required": true,
+                          "description": "Required. The name of the service to get.",
+                          "type": "string",
+                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
+                          "location": "path"
+                        }
+                      },
+                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}",
+                      "response": {
+                        "$ref": "Service"
+                      },
+                      "id": "servicedirectory.projects.locations.namespaces.services.get",
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "description": "Gets a service.",
+                      "path": "v1beta1/{+name}",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ]
+                    },
+                    "delete": {
+                      "httpMethod": "DELETE",
+                      "parameters": {
+                        "name": {
+                          "required": true,
+                          "description": "Required. The name of the service to delete.",
+                          "type": "string",
+                          "location": "path",
+                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$"
+                        }
+                      },
+                      "description": "Deletes a service. This also deletes all endpoints associated with the service.",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "response": {
+                        "$ref": "Empty"
+                      },
+                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}",
+                      "id": "servicedirectory.projects.locations.namespaces.services.delete",
+                      "path": "v1beta1/{+name}",
+                      "parameterOrder": [
+                        "name"
+                      ]
+                    },
+                    "getIamPolicy": {
+                      "response": {
+                        "$ref": "Policy"
+                      },
+                      "parameterOrder": [
+                        "resource"
+                      ],
+                      "request": {
+                        "$ref": "GetIamPolicyRequest"
+                      },
+                      "path": "v1beta1/{+resource}:getIamPolicy",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "parameters": {
+                        "resource": {
+                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
+                          "type": "string",
+                          "description": "REQUIRED: The resource for which the policy is being requested. See the operation documentation for the appropriate value for this field.",
+                          "location": "path",
+                          "required": true
+                        }
+                      },
+                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}:getIamPolicy",
+                      "id": "servicedirectory.projects.locations.namespaces.services.getIamPolicy",
+                      "httpMethod": "POST",
+                      "description": "Gets the IAM Policy for a resource (namespace or service only)."
+                    },
+                    "list": {
+                      "httpMethod": "GET",
+                      "id": "servicedirectory.projects.locations.namespaces.services.list",
+                      "response": {
+                        "$ref": "ListServicesResponse"
+                      },
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "parameterOrder": [
+                        "parent"
+                      ],
+                      "parameters": {
+                        "pageSize": {
+                          "location": "query",
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "Optional. The maximum number of items to return."
+                        },
+                        "orderBy": {
+                          "location": "query",
+                          "description": "Optional. The order to list result by.",
+                          "type": "string"
+                        },
+                        "pageToken": {
+                          "type": "string",
+                          "location": "query",
+                          "description": "Optional. The next_page_token value returned from a previous List request, if any."
+                        },
+                        "parent": {
+                          "location": "path",
+                          "type": "string",
+                          "description": "Required. The resource name of the namespace whose services we'd like to list.",
+                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
+                          "required": true
+                        },
+                        "filter": {
+                          "description": "Optional. The filter to list result by. General filter string syntax: () can be \"name\", or \"metadata.\" for map field. can be \"\u003c, \u003e, \u003c=, \u003e=, !=, =, :\". Of which \":\" means HAS, and is roughly the same as \"=\". must be the same data type as field. can be \"AND, OR, NOT\". Examples of valid filters: * \"metadata.owner\" returns Services that have a label with the key \"owner\" this is the same as \"metadata:owner\". * \"metadata.protocol=gRPC\" returns Services that have key/value \"protocol=gRPC\". * \"name\u003eprojects/my-project/locations/us-east/namespaces/my-namespace/services/service-c\" returns Services that have name that is alphabetically later than the string, so \"service-e\" will be returned but \"service-a\" will not be. * \"metadata.owner!=sd AND metadata.foo=bar\" returns Services that have \"owner\" in label key but value is not \"sd\" AND have key/value foo=bar. * \"doesnotexist.foo=bar\" returns an empty list. Note that Service doesn't have a field called \"doesnotexist\". Since the filter does not match any Services, it returns no results.",
+                          "location": "query",
+                          "type": "string"
+                        }
+                      },
+                      "path": "v1beta1/{+parent}/services",
+                      "description": "Lists all services belonging to a namespace.",
+                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services"
+                    },
+                    "create": {
+                      "httpMethod": "POST",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "parameterOrder": [
+                        "parent"
+                      ],
+                      "id": "servicedirectory.projects.locations.namespaces.services.create",
+                      "parameters": {
+                        "parent": {
+                          "type": "string",
+                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
+                          "required": true,
+                          "description": "Required. The resource name of the namespace this service will belong to.",
+                          "location": "path"
+                        },
+                        "serviceId": {
+                          "type": "string",
+                          "location": "query",
+                          "description": "Required. The Resource ID must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash."
+                        }
+                      },
+                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services",
+                      "description": "Creates a service, and returns the new Service.",
+                      "path": "v1beta1/{+parent}/services",
+                      "request": {
+                        "$ref": "Service"
+                      },
+                      "response": {
+                        "$ref": "Service"
+                      }
+                    },
+                    "setIamPolicy": {
+                      "id": "servicedirectory.projects.locations.namespaces.services.setIamPolicy",
+                      "request": {
+                        "$ref": "SetIamPolicyRequest"
+                      },
+                      "parameters": {
+                        "resource": {
+                          "type": "string",
+                          "description": "REQUIRED: The resource for which the policy is being specified. See the operation documentation for the appropriate value for this field.",
+                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
+                          "location": "path",
+                          "required": true
+                        }
+                      },
+                      "parameterOrder": [
+                        "resource"
+                      ],
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "httpMethod": "POST",
+                      "response": {
+                        "$ref": "Policy"
+                      },
+                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}:setIamPolicy",
+                      "path": "v1beta1/{+resource}:setIamPolicy",
+                      "description": "Sets the IAM Policy for a resource (namespace or service only)."
+                    },
+                    "testIamPermissions": {
+                      "parameterOrder": [
+                        "resource"
+                      ],
+                      "parameters": {
+                        "resource": {
+                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
+                          "required": true,
+                          "type": "string",
+                          "location": "path",
+                          "description": "REQUIRED: The resource for which the policy detail is being requested. See the operation documentation for the appropriate value for this field."
+                        }
+                      },
+                      "description": "Tests IAM permissions for a resource (namespace or service only).",
+                      "response": {
+                        "$ref": "TestIamPermissionsResponse"
+                      },
+                      "id": "servicedirectory.projects.locations.namespaces.services.testIamPermissions",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "path": "v1beta1/{+resource}:testIamPermissions",
+                      "request": {
+                        "$ref": "TestIamPermissionsRequest"
+                      },
+                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}:testIamPermissions",
+                      "httpMethod": "POST"
+                    },
+                    "patch": {
+                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}",
+                      "request": {
+                        "$ref": "Service"
+                      },
+                      "httpMethod": "PATCH",
+                      "response": {
+                        "$ref": "Service"
+                      },
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "parameters": {
+                        "name": {
+                          "required": true,
+                          "description": "Immutable. The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.",
+                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
+                          "type": "string",
+                          "location": "path"
+                        },
+                        "updateMask": {
+                          "type": "string",
+                          "location": "query",
+                          "format": "google-fieldmask",
+                          "description": "Required. List of fields to be updated in this request."
+                        }
+                      },
+                      "description": "Updates a service.",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "path": "v1beta1/{+name}",
+                      "id": "servicedirectory.projects.locations.namespaces.services.patch"
+                    }
+                  },
                   "resources": {
                     "endpoints": {
                       "methods": {
                         "list": {
+                          "parameterOrder": [
+                            "parent"
+                          ],
+                          "description": "Lists all endpoints.",
+                          "scopes": [
+                            "https://www.googleapis.com/auth/cloud-platform"
+                          ],
                           "id": "servicedirectory.projects.locations.namespaces.services.endpoints.list",
-                          "httpMethod": "GET",
-                          "path": "v1beta1/{+parent}/endpoints",
                           "response": {
                             "$ref": "ListEndpointsResponse"
                           },
                           "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}/endpoints",
                           "parameters": {
-                            "parent": {
-                              "description": "Required. The resource name of the service whose endpoints we'd like to list.",
-                              "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
-                              "location": "path",
-                              "type": "string",
-                              "required": true
-                            },
-                            "orderBy": {
-                              "description": "Optional. The order to list result by.",
-                              "type": "string",
+                            "pageSize": {
+                              "description": "Optional. The maximum number of items to return.",
+                              "type": "integer",
+                              "format": "int32",
                               "location": "query"
+                            },
+                            "filter": {
+                              "location": "query",
+                              "type": "string",
+                              "description": "Optional. The filter to list result by. General filter string syntax: () can be \"name\", \"address\", \"port\" or \"metadata.\" for map field. can be \"\u003c, \u003e, \u003c=, \u003e=, !=, =, :\". Of which \":\" means HAS, and is roughly the same as \"=\". must be the same data type as field. can be \"AND, OR, NOT\". Examples of valid filters: * \"metadata.owner\" returns Endpoints that have a label with the key \"owner\" this is the same as \"metadata:owner\". * \"metadata.protocol=gRPC\" returns Endpoints that have key/value \"protocol=gRPC\". * \"address=192.108.1.105\" returns Endpoints that have this address. * \"port\u003e8080\" returns Endpoints that have port number larger than 8080. * \"name\u003eprojects/my-project/locations/us-east/namespaces/my-namespace/services/my-service/endpoints/endpoint-c\" returns Endpoints that have name that is alphabetically later than the string, so \"endpoint-e\" will be returned but \"endpoint-a\" will not be. * \"metadata.owner!=sd AND metadata.foo=bar\" returns Endpoints that have \"owner\" in label key but value is not \"sd\" AND have key/value foo=bar. * \"doesnotexist.foo=bar\" returns an empty list. Note that Endpoint doesn't have a field called \"doesnotexist\". Since the filter does not match any Endpoints, it returns no results."
                             },
                             "pageToken": {
                               "type": "string",
                               "location": "query",
                               "description": "Optional. The next_page_token value returned from a previous List request, if any."
                             },
-                            "pageSize": {
-                              "type": "integer",
-                              "location": "query",
-                              "format": "int32",
-                              "description": "Optional. The maximum number of items to return."
-                            },
-                            "filter": {
+                            "orderBy": {
                               "location": "query",
                               "type": "string",
-                              "description": "Optional. The filter to list result by. General filter string syntax: () can be \"name\", \"address\", \"port\" or \"metadata.\" for map field. can be \"\u003c, \u003e, \u003c=, \u003e=, !=, =, :\". Of which \":\" means HAS, and is roughly the same as \"=\". must be the same data type as field. can be \"AND, OR, NOT\". Examples of valid filters: * \"metadata.owner\" returns Endpoints that have a label with the key \"owner\" this is the same as \"metadata:owner\". * \"metadata.protocol=gRPC\" returns Endpoints that have key/value \"protocol=gRPC\". * \"address=192.108.1.105\" returns Endpoints that have this address. * \"port\u003e8080\" returns Endpoints that have port number larger than 8080. * \"name\u003eprojects/my-project/locations/us-east/namespaces/my-namespace/services/my-service/endpoints/endpoint-c\" returns Endpoints that have name that is alphabetically later than the string, so \"endpoint-e\" will be returned but \"endpoint-a\" will not be. * \"metadata.owner!=sd AND metadata.foo=bar\" returns Endpoints that have \"owner\" in label key but value is not \"sd\" AND have key/value foo=bar. * \"doesnotexist.foo=bar\" returns an empty list. Note that Endpoint doesn't have a field called \"doesnotexist\". Since the filter does not match any Endpoints, it returns no results."
+                              "description": "Optional. The order to list result by."
+                            },
+                            "parent": {
+                              "location": "path",
+                              "type": "string",
+                              "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
+                              "required": true,
+                              "description": "Required. The resource name of the service whose endpoints we'd like to list."
                             }
                           },
-                          "parameterOrder": [
-                            "parent"
-                          ],
+                          "httpMethod": "GET",
+                          "path": "v1beta1/{+parent}/endpoints"
+                        },
+                        "get": {
+                          "httpMethod": "GET",
                           "scopes": [
                             "https://www.googleapis.com/auth/cloud-platform"
                           ],
-                          "description": "Lists all endpoints."
-                        },
-                        "patch": {
-                          "request": {
-                            "$ref": "Endpoint"
-                          },
                           "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}/endpoints/{endpointsId}",
-                          "id": "servicedirectory.projects.locations.namespaces.services.endpoints.patch",
-                          "httpMethod": "PATCH",
                           "parameterOrder": [
                             "name"
                           ],
-                          "scopes": [
-                            "https://www.googleapis.com/auth/cloud-platform"
-                          ],
-                          "description": "Updates a endpoint.",
+                          "description": "Gets a endpoint.",
                           "path": "v1beta1/{+name}",
                           "response": {
                             "$ref": "Endpoint"
                           },
+                          "id": "servicedirectory.projects.locations.namespaces.services.endpoints.get",
                           "parameters": {
-                            "updateMask": {
-                              "location": "query",
-                              "type": "string",
-                              "description": "Required. List of fields to be updated in this request.",
-                              "format": "google-fieldmask"
-                            },
                             "name": {
                               "location": "path",
-                              "description": "Immutable. The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'.",
+                              "required": true,
+                              "description": "Required. The name of the endpoint to get.",
                               "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+/endpoints/[^/]+$",
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "delete": {
+                          "parameters": {
+                            "name": {
+                              "required": true,
                               "type": "string",
-                              "required": true
+                              "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+/endpoints/[^/]+$",
+                              "location": "path",
+                              "description": "Required. The name of the endpoint to delete."
+                            }
+                          },
+                          "path": "v1beta1/{+name}",
+                          "parameterOrder": [
+                            "name"
+                          ],
+                          "response": {
+                            "$ref": "Empty"
+                          },
+                          "scopes": [
+                            "https://www.googleapis.com/auth/cloud-platform"
+                          ],
+                          "id": "servicedirectory.projects.locations.namespaces.services.endpoints.delete",
+                          "httpMethod": "DELETE",
+                          "description": "Deletes a endpoint.",
+                          "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}/endpoints/{endpointsId}"
+                        },
+                        "patch": {
+                          "response": {
+                            "$ref": "Endpoint"
+                          },
+                          "description": "Updates a endpoint.",
+                          "httpMethod": "PATCH",
+                          "parameterOrder": [
+                            "name"
+                          ],
+                          "id": "servicedirectory.projects.locations.namespaces.services.endpoints.patch",
+                          "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}/endpoints/{endpointsId}",
+                          "request": {
+                            "$ref": "Endpoint"
+                          },
+                          "path": "v1beta1/{+name}",
+                          "scopes": [
+                            "https://www.googleapis.com/auth/cloud-platform"
+                          ],
+                          "parameters": {
+                            "updateMask": {
+                              "description": "Required. List of fields to be updated in this request.",
+                              "type": "string",
+                              "format": "google-fieldmask",
+                              "location": "query"
+                            },
+                            "name": {
+                              "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+/endpoints/[^/]+$",
+                              "description": "Immutable. The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'.",
+                              "required": true,
+                              "location": "path",
+                              "type": "string"
                             }
                           }
                         },
@@ -433,363 +762,36 @@
                           "parameterOrder": [
                             "parent"
                           ],
-                          "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}/endpoints",
-                          "response": {
-                            "$ref": "Endpoint"
-                          },
+                          "httpMethod": "POST",
                           "scopes": [
                             "https://www.googleapis.com/auth/cloud-platform"
                           ],
+                          "description": "Creates a endpoint, and returns the new Endpoint.",
+                          "id": "servicedirectory.projects.locations.namespaces.services.endpoints.create",
+                          "response": {
+                            "$ref": "Endpoint"
+                          },
+                          "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}/endpoints",
                           "request": {
                             "$ref": "Endpoint"
                           },
-                          "description": "Creates a endpoint, and returns the new Endpoint.",
-                          "httpMethod": "POST",
-                          "id": "servicedirectory.projects.locations.namespaces.services.endpoints.create",
+                          "path": "v1beta1/{+parent}/endpoints",
                           "parameters": {
                             "parent": {
-                              "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
                               "description": "Required. The resource name of the service that this endpoint provides.",
                               "required": true,
-                              "type": "string",
-                              "location": "path"
+                              "location": "path",
+                              "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
+                              "type": "string"
                             },
                             "endpointId": {
                               "description": "Required. The Resource ID must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.",
-                              "location": "query",
-                              "type": "string"
-                            }
-                          },
-                          "path": "v1beta1/{+parent}/endpoints"
-                        },
-                        "get": {
-                          "response": {
-                            "$ref": "Endpoint"
-                          },
-                          "httpMethod": "GET",
-                          "id": "servicedirectory.projects.locations.namespaces.services.endpoints.get",
-                          "parameters": {
-                            "name": {
-                              "description": "Required. The name of the endpoint to get.",
-                              "location": "path",
-                              "required": true,
-                              "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+/endpoints/[^/]+$",
-                              "type": "string"
-                            }
-                          },
-                          "path": "v1beta1/{+name}",
-                          "scopes": [
-                            "https://www.googleapis.com/auth/cloud-platform"
-                          ],
-                          "parameterOrder": [
-                            "name"
-                          ],
-                          "description": "Gets a endpoint.",
-                          "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}/endpoints/{endpointsId}"
-                        },
-                        "delete": {
-                          "id": "servicedirectory.projects.locations.namespaces.services.endpoints.delete",
-                          "parameterOrder": [
-                            "name"
-                          ],
-                          "path": "v1beta1/{+name}",
-                          "httpMethod": "DELETE",
-                          "description": "Deletes a endpoint.",
-                          "response": {
-                            "$ref": "Empty"
-                          },
-                          "scopes": [
-                            "https://www.googleapis.com/auth/cloud-platform"
-                          ],
-                          "parameters": {
-                            "name": {
-                              "description": "Required. The name of the endpoint to delete.",
-                              "location": "path",
-                              "required": true,
                               "type": "string",
-                              "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+/endpoints/[^/]+$"
+                              "location": "query"
                             }
-                          },
-                          "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}/endpoints/{endpointsId}"
+                          }
                         }
                       }
-                    }
-                  },
-                  "methods": {
-                    "getIamPolicy": {
-                      "request": {
-                        "$ref": "GetIamPolicyRequest"
-                      },
-                      "httpMethod": "POST",
-                      "parameterOrder": [
-                        "resource"
-                      ],
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "parameters": {
-                        "resource": {
-                          "location": "path",
-                          "required": true,
-                          "type": "string",
-                          "description": "REQUIRED: The resource for which the policy is being requested. See the operation documentation for the appropriate value for this field.",
-                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$"
-                        }
-                      },
-                      "response": {
-                        "$ref": "Policy"
-                      },
-                      "id": "servicedirectory.projects.locations.namespaces.services.getIamPolicy",
-                      "path": "v1beta1/{+resource}:getIamPolicy",
-                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}:getIamPolicy",
-                      "description": "Gets the IAM Policy for a resource (namespace or service only)."
-                    },
-                    "resolve": {
-                      "id": "servicedirectory.projects.locations.namespaces.services.resolve",
-                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}:resolve",
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "request": {
-                        "$ref": "ResolveServiceRequest"
-                      },
-                      "response": {
-                        "$ref": "ResolveServiceResponse"
-                      },
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "path": "v1beta1/{+name}:resolve",
-                      "description": "Returns a service and its associated endpoints. Resolving a service is not considered an active developer method.",
-                      "httpMethod": "POST",
-                      "parameters": {
-                        "name": {
-                          "description": "Required. The name of the service to resolve.",
-                          "location": "path",
-                          "type": "string",
-                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
-                          "required": true
-                        }
-                      }
-                    },
-                    "testIamPermissions": {
-                      "description": "Tests IAM permissions for a resource (namespace or service only).",
-                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}:testIamPermissions",
-                      "request": {
-                        "$ref": "TestIamPermissionsRequest"
-                      },
-                      "parameterOrder": [
-                        "resource"
-                      ],
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "parameters": {
-                        "resource": {
-                          "required": true,
-                          "type": "string",
-                          "description": "REQUIRED: The resource for which the policy detail is being requested. See the operation documentation for the appropriate value for this field.",
-                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
-                          "location": "path"
-                        }
-                      },
-                      "httpMethod": "POST",
-                      "path": "v1beta1/{+resource}:testIamPermissions",
-                      "id": "servicedirectory.projects.locations.namespaces.services.testIamPermissions",
-                      "response": {
-                        "$ref": "TestIamPermissionsResponse"
-                      }
-                    },
-                    "get": {
-                      "httpMethod": "GET",
-                      "description": "Gets a service.",
-                      "id": "servicedirectory.projects.locations.namespaces.services.get",
-                      "parameters": {
-                        "name": {
-                          "required": true,
-                          "type": "string",
-                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
-                          "description": "Required. The name of the service to get.",
-                          "location": "path"
-                        }
-                      },
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}",
-                      "path": "v1beta1/{+name}",
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "response": {
-                        "$ref": "Service"
-                      }
-                    },
-                    "delete": {
-                      "response": {
-                        "$ref": "Empty"
-                      },
-                      "parameters": {
-                        "name": {
-                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
-                          "description": "Required. The name of the service to delete.",
-                          "location": "path",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "path": "v1beta1/{+name}",
-                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}",
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "description": "Deletes a service. This also deletes all endpoints associated with the service.",
-                      "httpMethod": "DELETE",
-                      "id": "servicedirectory.projects.locations.namespaces.services.delete"
-                    },
-                    "setIamPolicy": {
-                      "path": "v1beta1/{+resource}:setIamPolicy",
-                      "description": "Sets the IAM Policy for a resource (namespace or service only).",
-                      "parameterOrder": [
-                        "resource"
-                      ],
-                      "parameters": {
-                        "resource": {
-                          "required": true,
-                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
-                          "type": "string",
-                          "location": "path",
-                          "description": "REQUIRED: The resource for which the policy is being specified. See the operation documentation for the appropriate value for this field."
-                        }
-                      },
-                      "request": {
-                        "$ref": "SetIamPolicyRequest"
-                      },
-                      "response": {
-                        "$ref": "Policy"
-                      },
-                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}:setIamPolicy",
-                      "httpMethod": "POST",
-                      "id": "servicedirectory.projects.locations.namespaces.services.setIamPolicy",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ]
-                    },
-                    "create": {
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "parameters": {
-                        "parent": {
-                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
-                          "description": "Required. The resource name of the namespace this service will belong to.",
-                          "required": true,
-                          "location": "path",
-                          "type": "string"
-                        },
-                        "serviceId": {
-                          "location": "query",
-                          "type": "string",
-                          "description": "Required. The Resource ID must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash."
-                        }
-                      },
-                      "path": "v1beta1/{+parent}/services",
-                      "id": "servicedirectory.projects.locations.namespaces.services.create",
-                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services",
-                      "httpMethod": "POST",
-                      "parameterOrder": [
-                        "parent"
-                      ],
-                      "response": {
-                        "$ref": "Service"
-                      },
-                      "description": "Creates a service, and returns the new Service.",
-                      "request": {
-                        "$ref": "Service"
-                      }
-                    },
-                    "list": {
-                      "parameters": {
-                        "pageToken": {
-                          "description": "Optional. The next_page_token value returned from a previous List request, if any.",
-                          "location": "query",
-                          "type": "string"
-                        },
-                        "parent": {
-                          "required": true,
-                          "description": "Required. The resource name of the namespace whose services we'd like to list.",
-                          "location": "path",
-                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$",
-                          "type": "string"
-                        },
-                        "filter": {
-                          "location": "query",
-                          "description": "Optional. The filter to list result by. General filter string syntax: () can be \"name\", or \"metadata.\" for map field. can be \"\u003c, \u003e, \u003c=, \u003e=, !=, =, :\". Of which \":\" means HAS, and is roughly the same as \"=\". must be the same data type as field. can be \"AND, OR, NOT\". Examples of valid filters: * \"metadata.owner\" returns Services that have a label with the key \"owner\" this is the same as \"metadata:owner\". * \"metadata.protocol=gRPC\" returns Services that have key/value \"protocol=gRPC\". * \"name\u003eprojects/my-project/locations/us-east/namespaces/my-namespace/services/service-c\" returns Services that have name that is alphabetically later than the string, so \"service-e\" will be returned but \"service-a\" will not be. * \"metadata.owner!=sd AND metadata.foo=bar\" returns Services that have \"owner\" in label key but value is not \"sd\" AND have key/value foo=bar. * \"doesnotexist.foo=bar\" returns an empty list. Note that Service doesn't have a field called \"doesnotexist\". Since the filter does not match any Services, it returns no results.",
-                          "type": "string"
-                        },
-                        "pageSize": {
-                          "location": "query",
-                          "format": "int32",
-                          "type": "integer",
-                          "description": "Optional. The maximum number of items to return."
-                        },
-                        "orderBy": {
-                          "location": "query",
-                          "type": "string",
-                          "description": "Optional. The order to list result by."
-                        }
-                      },
-                      "description": "Lists all services belonging to a namespace.",
-                      "response": {
-                        "$ref": "ListServicesResponse"
-                      },
-                      "path": "v1beta1/{+parent}/services",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "httpMethod": "GET",
-                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services",
-                      "parameterOrder": [
-                        "parent"
-                      ],
-                      "id": "servicedirectory.projects.locations.namespaces.services.list"
-                    },
-                    "patch": {
-                      "httpMethod": "PATCH",
-                      "description": "Updates a service.",
-                      "id": "servicedirectory.projects.locations.namespaces.services.patch",
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "response": {
-                        "$ref": "Service"
-                      },
-                      "path": "v1beta1/{+name}",
-                      "parameters": {
-                        "name": {
-                          "location": "path",
-                          "pattern": "^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$",
-                          "description": "Immutable. The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.",
-                          "required": true,
-                          "type": "string"
-                        },
-                        "updateMask": {
-                          "location": "query",
-                          "description": "Required. List of fields to be updated in this request.",
-                          "type": "string",
-                          "format": "google-fieldmask"
-                        }
-                      },
-                      "request": {
-                        "$ref": "Service"
-                      },
-                      "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}/namespaces/{namespacesId}/services/{servicesId}"
                     }
                   }
                 }
@@ -798,45 +800,48 @@
           },
           "methods": {
             "get": {
+              "path": "v1beta1/{+name}",
+              "httpMethod": "GET",
+              "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}",
+              "response": {
+                "$ref": "Location"
+              },
+              "description": "Gets information about a location.",
+              "parameterOrder": [
+                "name"
+              ],
+              "id": "servicedirectory.projects.locations.get",
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
               "parameters": {
                 "name": {
-                  "location": "path",
-                  "required": true,
                   "pattern": "^projects/[^/]+/locations/[^/]+$",
+                  "location": "path",
                   "description": "Resource name for the location.",
-                  "type": "string"
+                  "type": "string",
+                  "required": true
                 }
-              },
-              "description": "Gets information about a location.",
-              "flatPath": "v1beta1/projects/{projectsId}/locations/{locationsId}",
-              "httpMethod": "GET",
-              "parameterOrder": [
-                "name"
-              ],
-              "response": {
-                "$ref": "Location"
-              },
-              "path": "v1beta1/{+name}",
-              "id": "servicedirectory.projects.locations.get"
+              }
             },
             "list": {
+              "response": {
+                "$ref": "ListLocationsResponse"
+              },
               "id": "servicedirectory.projects.locations.list",
               "parameters": {
-                "name": {
-                  "type": "string",
-                  "location": "path",
-                  "pattern": "^projects/[^/]+$",
-                  "description": "The resource that owns the locations collection, if applicable.",
-                  "required": true
-                },
                 "pageSize": {
+                  "location": "query",
                   "description": "The standard list page size.",
                   "format": "int32",
-                  "type": "integer",
-                  "location": "query"
+                  "type": "integer"
+                },
+                "name": {
+                  "pattern": "^projects/[^/]+$",
+                  "type": "string",
+                  "required": true,
+                  "description": "The resource that owns the locations collection, if applicable.",
+                  "location": "path"
                 },
                 "pageToken": {
                   "location": "query",
@@ -844,34 +849,30 @@
                   "description": "The standard list page token."
                 },
                 "filter": {
-                  "description": "The standard list filter.",
                   "type": "string",
-                  "location": "query"
+                  "location": "query",
+                  "description": "The standard list filter."
                 }
               },
-              "response": {
-                "$ref": "ListLocationsResponse"
-              },
-              "flatPath": "v1beta1/projects/{projectsId}/locations",
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
+              "path": "v1beta1/{+name}/locations",
+              "flatPath": "v1beta1/projects/{projectsId}/locations",
               "description": "Lists information about the supported locations for this service.",
-              "httpMethod": "GET",
               "parameterOrder": [
                 "name"
               ],
-              "path": "v1beta1/{+name}/locations"
+              "httpMethod": "GET"
             }
           }
         }
       }
     }
   },
-  "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
-  },
+  "mtlsRootUrl": "https://servicedirectory.mtls.googleapis.com/",
+  "batchPath": "batch",
+  "title": "Service Directory API",
   "auth": {
     "oauth2": {
       "scopes": {
@@ -881,126 +882,283 @@
       }
     }
   },
-  "title": "Service Directory API",
-  "ownerName": "Google",
-  "version_module": true,
-  "ownerDomain": "google.com",
+  "rootUrl": "https://servicedirectory.googleapis.com/",
+  "servicePath": "",
+  "canonicalName": "Service Directory",
+  "protocol": "rest",
+  "revision": "20200826",
+  "basePath": "",
   "schemas": {
-    "Binding": {
-      "description": "Associates `members` with a `role`.",
+    "TestIamPermissionsResponse": {
+      "type": "object",
+      "id": "TestIamPermissionsResponse",
       "properties": {
-        "members": {
+        "permissions": {
           "type": "array",
-          "description": "Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values: * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account. * `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`. * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`. * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a user that has been recently deleted. For example, `alice@example.com?uid=123456789012345678901`. If the user is recovered, this value reverts to `user:{emailid}` and the recovered user retains the role in the binding. * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a service account that has been recently deleted. For example, `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. If the service account is undeleted, this value reverts to `serviceAccount:{emailid}` and the undeleted service account retains the role in the binding. * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a Google group that has been recently deleted. For example, `admins@example.com?uid=123456789012345678901`. If the group is recovered, this value reverts to `group:{emailid}` and the recovered group retains the role in the binding. * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`. ",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "A subset of `TestPermissionsRequest.permissions` that the caller is allowed."
+        }
+      },
+      "description": "Response message for `TestIamPermissions` method."
+    },
+    "Empty": {
+      "type": "object",
+      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`.",
+      "id": "Empty",
+      "properties": {}
+    },
+    "ListNamespacesResponse": {
+      "properties": {
+        "namespaces": {
+          "items": {
+            "$ref": "Namespace"
+          },
+          "type": "array",
+          "description": "The list of namespaces."
         },
-        "role": {
+        "nextPageToken": {
           "type": "string",
-          "description": "Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`."
-        },
-        "condition": {
-          "description": "The condition that is associated with this binding. If the condition evaluates to `true`, then this binding applies to the current request. If the condition evaluates to `false`, then this binding does not apply to the current request. However, a different role binding might grant the same role to one or more of the members in this binding. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
-          "$ref": "Expr"
+          "description": "Token to retrieve the next page of results, or empty if there are no more results in the list."
         }
       },
       "type": "object",
-      "id": "Binding"
+      "id": "ListNamespacesResponse",
+      "description": "The response message for RegistrationService.ListNamespaces."
     },
-    "ListLocationsResponse": {
-      "description": "The response message for Locations.ListLocations.",
+    "SetIamPolicyRequest": {
       "type": "object",
-      "id": "ListLocationsResponse",
+      "description": "Request message for `SetIamPolicy` method.",
       "properties": {
-        "nextPageToken": {
-          "type": "string",
-          "description": "The standard List next-page token."
-        },
-        "locations": {
-          "items": {
-            "$ref": "Location"
-          },
-          "type": "array",
-          "description": "A list of locations that matches the specified filter in the request."
+        "policy": {
+          "description": "REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is limited to a few 10s of KB. An empty policy is a valid policy but certain Cloud Platform services (such as Projects) might reject them.",
+          "$ref": "Policy"
         }
-      }
+      },
+      "id": "SetIamPolicyRequest"
     },
-    "Policy": {
-      "description": "An Identity and Access Management (IAM) policy, which specifies access controls for Google Cloud resources. A `Policy` is a collection of `bindings`. A `binding` binds one or more `members` to a single `role`. Members can be user accounts, service accounts, Google groups, and domains (such as G Suite). A `role` is a named list of permissions; each `role` can be an IAM predefined role or a user-created custom role. For some types of Google Cloud resources, a `binding` can also specify a `condition`, which is a logical expression that allows access to a resource only if the expression evaluates to `true`. A condition can add constraints based on attributes of the request, the resource, or both. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies). **JSON example:** { \"bindings\": [ { \"role\": \"roles/resourcemanager.organizationAdmin\", \"members\": [ \"user:mike@example.com\", \"group:admins@example.com\", \"domain:google.com\", \"serviceAccount:my-project-id@appspot.gserviceaccount.com\" ] }, { \"role\": \"roles/resourcemanager.organizationViewer\", \"members\": [ \"user:eve@example.com\" ], \"condition\": { \"title\": \"expirable access\", \"description\": \"Does not grant access after Sep 2020\", \"expression\": \"request.time \u003c timestamp('2020-10-01T00:00:00.000Z')\", } } ], \"etag\": \"BwWWja0YfJA=\", \"version\": 3 } **YAML example:** bindings: - members: - user:mike@example.com - group:admins@example.com - domain:google.com - serviceAccount:my-project-id@appspot.gserviceaccount.com role: roles/resourcemanager.organizationAdmin - members: - user:eve@example.com role: roles/resourcemanager.organizationViewer condition: title: expirable access description: Does not grant access after Sep 2020 expression: request.time \u003c timestamp('2020-10-01T00:00:00.000Z') - etag: BwWWja0YfJA= - version: 3 For a description of IAM and its features, see the [IAM documentation](https://cloud.google.com/iam/docs/).",
-      "id": "Policy",
-      "type": "object",
+    "Endpoint": {
+      "description": "An individual endpoint that provides a service. The service must already exist to create an endpoint.",
+      "id": "Endpoint",
       "properties": {
-        "etag": {
-          "description": "`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected to put that etag in the request to `setIamPolicy` to ensure that their change will be applied to the same version of the policy. **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost.",
-          "type": "string",
-          "format": "byte"
+        "address": {
+          "description": "Optional. An IPv4 or IPv6 address. Service Directory will reject bad addresses like: \"8.8.8\" \"8.8.8.8:53\" \"test:bad:address\" \"[::1]\" \"[::1]:8080\" Limited to 45 characters.",
+          "type": "string"
         },
-        "bindings": {
-          "type": "array",
-          "items": {
-            "$ref": "Binding"
-          },
-          "description": "Associates a list of `members` to a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one member."
-        },
-        "version": {
-          "format": "int32",
-          "type": "integer",
-          "description": "Specifies the format of the policy. Valid values are `0`, `1`, and `3`. Requests that specify an invalid value are rejected. Any operation that affects conditional role bindings must specify version `3`. This requirement applies to the following operations: * Getting a policy that includes a conditional role binding * Adding a conditional role binding to a policy * Changing a conditional role binding in a policy * Removing any role binding, with or without a condition, from a policy that includes conditions **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost. If a policy does not include any conditions, operations on that policy may specify any valid version or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies)."
-        }
-      }
-    },
-    "Location": {
-      "id": "Location",
-      "properties": {
         "name": {
           "type": "string",
-          "description": "Resource name for the location, which may vary between implementations. For example: `\"projects/example-project/locations/us-east1\"`"
+          "description": "Immutable. The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'."
         },
-        "displayName": {
-          "description": "The friendly name for this location, typically a nearby city name. For example, \"Tokyo\".",
-          "type": "string"
+        "port": {
+          "format": "int32",
+          "description": "Optional. Service Directory will reject values outside of [0, 65535].",
+          "type": "integer"
+        },
+        "metadata": {
+          "description": "Optional. Metadata for the endpoint. This data can be consumed by service clients. The entire metadata dictionary may contain up to 512 characters, spread accoss all key-value pairs. Metadata that goes beyond any these limits will be rejected.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "type": "object"
+    },
+    "Location": {
+      "type": "object",
+      "id": "Location",
+      "properties": {
+        "metadata": {
+          "type": "object",
+          "description": "Service-specific metadata. For example the available capacity at the given location.",
+          "additionalProperties": {
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
+          }
         },
         "locationId": {
           "description": "The canonical id for this location. For example: `\"us-east1\"`.",
           "type": "string"
         },
-        "metadata": {
-          "type": "object",
-          "description": "Service-specific metadata. For example the available capacity at the given location.",
-          "additionalProperties": {
-            "type": "any",
-            "description": "Properties of the object. Contains field @type with type URL."
-          }
-        },
         "labels": {
+          "type": "object",
           "additionalProperties": {
             "type": "string"
           },
-          "type": "object",
           "description": "Cross-service attributes for the location. For example {\"cloud.googleapis.com/region\": \"us-east1\"}"
+        },
+        "displayName": {
+          "description": "The friendly name for this location, typically a nearby city name. For example, \"Tokyo\".",
+          "type": "string"
+        },
+        "name": {
+          "description": "Resource name for the location, which may vary between implementations. For example: `\"projects/example-project/locations/us-east1\"`",
+          "type": "string"
         }
       },
-      "description": "A resource that represents Google Cloud Platform location.",
-      "type": "object"
+      "description": "A resource that represents Google Cloud Platform location."
     },
-    "TestIamPermissionsResponse": {
+    "Service": {
+      "description": "An individual service. A service contains a name and optional metadata. A service must exist before endpoints can be added to it.",
+      "id": "Service",
       "type": "object",
-      "description": "Response message for `TestIamPermissions` method.",
-      "id": "TestIamPermissionsResponse",
       "properties": {
-        "permissions": {
-          "items": {
+        "name": {
+          "description": "Immutable. The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.",
+          "type": "string"
+        },
+        "metadata": {
+          "description": "Optional. Metadata for the service. This data can be consumed by service clients. The entire metadata dictionary may contain up to 2000 characters, spread across all key-value pairs. Metadata that goes beyond any these limits will be rejected.",
+          "additionalProperties": {
             "type": "string"
           },
-          "description": "A subset of `TestPermissionsRequest.permissions` that the caller is allowed.",
+          "type": "object"
+        },
+        "endpoints": {
+          "description": "Output only. Endpoints associated with this service. Returned on LookupService.Resolve. Control plane clients should use RegistrationService.ListEndpoints.",
+          "readOnly": true,
+          "items": {
+            "$ref": "Endpoint"
+          },
           "type": "array"
         }
       }
     },
+    "ListServicesResponse": {
+      "description": "The response message for RegistrationService.ListServices.",
+      "id": "ListServicesResponse",
+      "properties": {
+        "nextPageToken": {
+          "type": "string",
+          "description": "Token to retrieve the next page of results, or empty if there are no more results in the list."
+        },
+        "services": {
+          "items": {
+            "$ref": "Service"
+          },
+          "type": "array",
+          "description": "The list of services."
+        }
+      },
+      "type": "object"
+    },
+    "TestIamPermissionsRequest": {
+      "id": "TestIamPermissionsRequest",
+      "type": "object",
+      "properties": {
+        "permissions": {
+          "description": "The set of permissions to check for the `resource`. Permissions with wildcards (such as '*' or 'storage.*') are not allowed. For more information see [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "description": "Request message for `TestIamPermissions` method."
+    },
+    "GetPolicyOptions": {
+      "description": "Encapsulates settings provided to GetIamPolicy.",
+      "properties": {
+        "requestedPolicyVersion": {
+          "description": "Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests for policies with any conditional bindings must specify version 3. Policies without any conditional bindings may specify any valid value or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "type": "object",
+      "id": "GetPolicyOptions"
+    },
+    "Policy": {
+      "description": "An Identity and Access Management (IAM) policy, which specifies access controls for Google Cloud resources. A `Policy` is a collection of `bindings`. A `binding` binds one or more `members` to a single `role`. Members can be user accounts, service accounts, Google groups, and domains (such as G Suite). A `role` is a named list of permissions; each `role` can be an IAM predefined role or a user-created custom role. For some types of Google Cloud resources, a `binding` can also specify a `condition`, which is a logical expression that allows access to a resource only if the expression evaluates to `true`. A condition can add constraints based on attributes of the request, the resource, or both. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies). **JSON example:** { \"bindings\": [ { \"role\": \"roles/resourcemanager.organizationAdmin\", \"members\": [ \"user:mike@example.com\", \"group:admins@example.com\", \"domain:google.com\", \"serviceAccount:my-project-id@appspot.gserviceaccount.com\" ] }, { \"role\": \"roles/resourcemanager.organizationViewer\", \"members\": [ \"user:eve@example.com\" ], \"condition\": { \"title\": \"expirable access\", \"description\": \"Does not grant access after Sep 2020\", \"expression\": \"request.time \u003c timestamp('2020-10-01T00:00:00.000Z')\", } } ], \"etag\": \"BwWWja0YfJA=\", \"version\": 3 } **YAML example:** bindings: - members: - user:mike@example.com - group:admins@example.com - domain:google.com - serviceAccount:my-project-id@appspot.gserviceaccount.com role: roles/resourcemanager.organizationAdmin - members: - user:eve@example.com role: roles/resourcemanager.organizationViewer condition: title: expirable access description: Does not grant access after Sep 2020 expression: request.time \u003c timestamp('2020-10-01T00:00:00.000Z') - etag: BwWWja0YfJA= - version: 3 For a description of IAM and its features, see the [IAM documentation](https://cloud.google.com/iam/docs/).",
+      "id": "Policy",
+      "properties": {
+        "bindings": {
+          "items": {
+            "$ref": "Binding"
+          },
+          "type": "array",
+          "description": "Associates a list of `members` to a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one member."
+        },
+        "version": {
+          "type": "integer",
+          "description": "Specifies the format of the policy. Valid values are `0`, `1`, and `3`. Requests that specify an invalid value are rejected. Any operation that affects conditional role bindings must specify version `3`. This requirement applies to the following operations: * Getting a policy that includes a conditional role binding * Adding a conditional role binding to a policy * Changing a conditional role binding in a policy * Removing any role binding, with or without a condition, from a policy that includes conditions **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost. If a policy does not include any conditions, operations on that policy may specify any valid version or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
+          "format": "int32"
+        },
+        "etag": {
+          "description": "`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected to put that etag in the request to `setIamPolicy` to ensure that their change will be applied to the same version of the policy. **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost.",
+          "format": "byte",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ListLocationsResponse": {
+      "properties": {
+        "locations": {
+          "type": "array",
+          "description": "A list of locations that matches the specified filter in the request.",
+          "items": {
+            "$ref": "Location"
+          }
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "The standard List next-page token."
+        }
+      },
+      "id": "ListLocationsResponse",
+      "type": "object",
+      "description": "The response message for Locations.ListLocations."
+    },
+    "ResolveServiceRequest": {
+      "type": "object",
+      "id": "ResolveServiceRequest",
+      "properties": {
+        "maxEndpoints": {
+          "description": "Optional. The maximum number of endpoints to return. Defaults to 25. Maximum is 100. If a value less than one is specified, the Default is used. If a value greater than the Maximum is specified, the Maximum is used.",
+          "format": "int32",
+          "type": "integer"
+        },
+        "endpointFilter": {
+          "description": "Optional. The filter applied to the endpoints of the resolved service. General filter string syntax: () can be \"name\" or \"metadata.\" for map field. can be \"\u003c, \u003e, \u003c=, \u003e=, !=, =, :\". Of which \":\" means HAS and is roughly the same as \"=\". must be the same data type as the field. can be \"AND, OR, NOT\". Examples of valid filters: * \"metadata.owner\" returns Endpoints that have a label with the key \"owner\", this is the same as \"metadata:owner\" * \"metadata.protocol=gRPC\" returns Endpoints that have key/value \"protocol=gRPC\" * \"metadata.owner!=sd AND metadata.foo=bar\" returns Endpoints that have \"owner\" field in metadata with a value that is not \"sd\" AND have the key/value foo=bar.",
+          "type": "string"
+        }
+      },
+      "description": "The request message for LookupService.ResolveService. Looks up a service by its name, returns the service and its endpoints."
+    },
+    "GetIamPolicyRequest": {
+      "description": "Request message for `GetIamPolicy` method.",
+      "type": "object",
+      "properties": {
+        "options": {
+          "description": "OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.",
+          "$ref": "GetPolicyOptions"
+        }
+      },
+      "id": "GetIamPolicyRequest"
+    },
+    "ListEndpointsResponse": {
+      "properties": {
+        "endpoints": {
+          "type": "array",
+          "items": {
+            "$ref": "Endpoint"
+          },
+          "description": "The list of endpoints."
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "Token to retrieve the next page of results, or empty if there are no more results in the list."
+        }
+      },
+      "id": "ListEndpointsResponse",
+      "description": "The response message for RegistrationService.ListEndpoints.",
+      "type": "object"
+    },
     "Namespace": {
-      "id": "Namespace",
       "description": "A container for services. Namespaces allow administrators to group services together and define permissions for a collection of services.",
+      "id": "Namespace",
       "type": "object",
       "properties": {
         "name": {
@@ -1008,227 +1166,73 @@
           "description": "Immutable. The resource name for the namespace in the format 'projects/*/locations/*/namespaces/*'."
         },
         "labels": {
-          "description": "Optional. Resource labels associated with this Namespace. No more than 64 user labels can be associated with a given resource. Label keys and values can be no longer than 63 characters.",
           "type": "object",
           "additionalProperties": {
             "type": "string"
-          }
+          },
+          "description": "Optional. Resource labels associated with this Namespace. No more than 64 user labels can be associated with a given resource. Label keys and values can be no longer than 63 characters."
         }
       }
-    },
-    "ListEndpointsResponse": {
-      "id": "ListEndpointsResponse",
-      "description": "The response message for RegistrationService.ListEndpoints.",
-      "properties": {
-        "endpoints": {
-          "items": {
-            "$ref": "Endpoint"
-          },
-          "description": "The list of endpoints.",
-          "type": "array"
-        },
-        "nextPageToken": {
-          "type": "string",
-          "description": "Token to retrieve the next page of results, or empty if there are no more results in the list."
-        }
-      },
-      "type": "object"
-    },
-    "ResolveServiceResponse": {
-      "description": "The response message for LookupService.ResolveService.",
-      "id": "ResolveServiceResponse",
-      "properties": {
-        "service": {
-          "$ref": "Service"
-        }
-      },
-      "type": "object"
-    },
-    "Endpoint": {
-      "properties": {
-        "name": {
-          "description": "Immutable. The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'.",
-          "type": "string"
-        },
-        "address": {
-          "type": "string",
-          "description": "Optional. An IPv4 or IPv6 address. Service Directory will reject bad addresses like: \"8.8.8\" \"8.8.8.8:53\" \"test:bad:address\" \"[::1]\" \"[::1]:8080\" Limited to 45 characters."
-        },
-        "metadata": {
-          "description": "Optional. Metadata for the endpoint. This data can be consumed by service clients. The entire metadata dictionary may contain up to 512 characters, spread accoss all key-value pairs. Metadata that goes beyond any these limits will be rejected.",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "type": "object"
-        },
-        "port": {
-          "description": "Optional. Service Directory will reject values outside of [0, 65535].",
-          "format": "int32",
-          "type": "integer"
-        }
-      },
-      "description": "An individual endpoint that provides a service. The service must already exist to create an endpoint.",
-      "id": "Endpoint",
-      "type": "object"
-    },
-    "ResolveServiceRequest": {
-      "type": "object",
-      "description": "The request message for LookupService.ResolveService. Looks up a service by its name, returns the service and its endpoints.",
-      "id": "ResolveServiceRequest",
-      "properties": {
-        "endpointFilter": {
-          "type": "string",
-          "description": "Optional. The filter applied to the endpoints of the resolved service. General filter string syntax: () can be \"name\" or \"metadata.\" for map field. can be \"\u003c, \u003e, \u003c=, \u003e=, !=, =, :\". Of which \":\" means HAS and is roughly the same as \"=\". must be the same data type as the field. can be \"AND, OR, NOT\". Examples of valid filters: * \"metadata.owner\" returns Endpoints that have a label with the key \"owner\", this is the same as \"metadata:owner\" * \"metadata.protocol=gRPC\" returns Endpoints that have key/value \"protocol=gRPC\" * \"metadata.owner!=sd AND metadata.foo=bar\" returns Endpoints that have \"owner\" field in metadata with a value that is not \"sd\" AND have the key/value foo=bar."
-        },
-        "maxEndpoints": {
-          "format": "int32",
-          "type": "integer",
-          "description": "Optional. The maximum number of endpoints to return. Defaults to 25. Maximum is 100. If a value less than one is specified, the Default is used. If a value greater than the Maximum is specified, the Maximum is used."
-        }
-      }
-    },
-    "TestIamPermissionsRequest": {
-      "id": "TestIamPermissionsRequest",
-      "type": "object",
-      "properties": {
-        "permissions": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array",
-          "description": "The set of permissions to check for the `resource`. Permissions with wildcards (such as '*' or 'storage.*') are not allowed. For more information see [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions)."
-        }
-      },
-      "description": "Request message for `TestIamPermissions` method."
-    },
-    "Service": {
-      "type": "object",
-      "id": "Service",
-      "properties": {
-        "name": {
-          "description": "Immutable. The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.",
-          "type": "string"
-        },
-        "endpoints": {
-          "readOnly": true,
-          "type": "array",
-          "items": {
-            "$ref": "Endpoint"
-          },
-          "description": "Output only. Endpoints associated with this service. Returned on LookupService.Resolve. Control plane clients should use RegistrationService.ListEndpoints."
-        },
-        "metadata": {
-          "additionalProperties": {
-            "type": "string"
-          },
-          "description": "Optional. Metadata for the service. This data can be consumed by service clients. The entire metadata dictionary may contain up to 2000 characters, spread across all key-value pairs. Metadata that goes beyond any these limits will be rejected.",
-          "type": "object"
-        }
-      },
-      "description": "An individual service. A service contains a name and optional metadata. A service must exist before endpoints can be added to it."
-    },
-    "GetPolicyOptions": {
-      "type": "object",
-      "id": "GetPolicyOptions",
-      "description": "Encapsulates settings provided to GetIamPolicy.",
-      "properties": {
-        "requestedPolicyVersion": {
-          "format": "int32",
-          "type": "integer",
-          "description": "Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests for policies with any conditional bindings must specify version 3. Policies without any conditional bindings may specify any valid value or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies)."
-        }
-      }
-    },
-    "Empty": {
-      "id": "Empty",
-      "type": "object",
-      "properties": {},
-      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`."
-    },
-    "GetIamPolicyRequest": {
-      "properties": {
-        "options": {
-          "$ref": "GetPolicyOptions",
-          "description": "OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`."
-        }
-      },
-      "description": "Request message for `GetIamPolicy` method.",
-      "id": "GetIamPolicyRequest",
-      "type": "object"
     },
     "Expr": {
+      "type": "object",
+      "id": "Expr",
       "description": "Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. The syntax and semantics of CEL are documented at https://github.com/google/cel-spec. Example (Comparison): title: \"Summary size limit\" description: \"Determines if a summary is less than 100 chars\" expression: \"document.summary.size() \u003c 100\" Example (Equality): title: \"Requestor is owner\" description: \"Determines if requestor is the document owner\" expression: \"document.owner == request.auth.claims.email\" Example (Logic): title: \"Public documents\" description: \"Determine whether the document should be publicly visible\" expression: \"document.type != 'private' && document.type != 'internal'\" Example (Data Manipulation): title: \"Notification string\" description: \"Create a notification string with a timestamp.\" expression: \"'New message received at ' + string(document.create_time)\" The exact variables and functions that may be referenced within an expression are determined by the service that evaluates it. See the service documentation for additional information.",
       "properties": {
+        "description": {
+          "type": "string",
+          "description": "Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI."
+        },
         "expression": {
           "type": "string",
           "description": "Textual representation of an expression in Common Expression Language syntax."
-        },
-        "location": {
-          "type": "string",
-          "description": "Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file."
         },
         "title": {
           "type": "string",
           "description": "Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression."
         },
-        "description": {
+        "location": {
+          "description": "Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.",
+          "type": "string"
+        }
+      }
+    },
+    "Binding": {
+      "type": "object",
+      "description": "Associates `members` with a `role`.",
+      "properties": {
+        "condition": {
+          "description": "The condition that is associated with this binding. If the condition evaluates to `true`, then this binding applies to the current request. If the condition evaluates to `false`, then this binding does not apply to the current request. However, a different role binding might grant the same role to one or more of the members in this binding. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
+          "$ref": "Expr"
+        },
+        "bindingId": {
+          "description": "A client-specified ID for this binding. Expected to be globally unique to support the internal bindings-by-ID API.",
+          "type": "string"
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values: * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account. * `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`. * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`. * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a user that has been recently deleted. For example, `alice@example.com?uid=123456789012345678901`. If the user is recovered, this value reverts to `user:{emailid}` and the recovered user retains the role in the binding. * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a service account that has been recently deleted. For example, `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. If the service account is undeleted, this value reverts to `serviceAccount:{emailid}` and the undeleted service account retains the role in the binding. * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a Google group that has been recently deleted. For example, `admins@example.com?uid=123456789012345678901`. If the group is recovered, this value reverts to `group:{emailid}` and the recovered group retains the role in the binding. * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`. "
+        },
+        "role": {
           "type": "string",
-          "description": "Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI."
+          "description": "Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`."
         }
       },
-      "id": "Expr",
-      "type": "object"
+      "id": "Binding"
     },
-    "SetIamPolicyRequest": {
+    "ResolveServiceResponse": {
       "properties": {
-        "policy": {
-          "description": "REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is limited to a few 10s of KB. An empty policy is a valid policy but certain Cloud Platform services (such as Projects) might reject them.",
-          "$ref": "Policy"
+        "service": {
+          "$ref": "Service"
         }
       },
-      "id": "SetIamPolicyRequest",
+      "description": "The response message for LookupService.ResolveService.",
       "type": "object",
-      "description": "Request message for `SetIamPolicy` method."
-    },
-    "ListNamespacesResponse": {
-      "properties": {
-        "nextPageToken": {
-          "description": "Token to retrieve the next page of results, or empty if there are no more results in the list.",
-          "type": "string"
-        },
-        "namespaces": {
-          "type": "array",
-          "items": {
-            "$ref": "Namespace"
-          },
-          "description": "The list of namespaces."
-        }
-      },
-      "id": "ListNamespacesResponse",
-      "type": "object",
-      "description": "The response message for RegistrationService.ListNamespaces."
-    },
-    "ListServicesResponse": {
-      "description": "The response message for RegistrationService.ListServices.",
-      "type": "object",
-      "properties": {
-        "services": {
-          "items": {
-            "$ref": "Service"
-          },
-          "type": "array",
-          "description": "The list of services."
-        },
-        "nextPageToken": {
-          "description": "Token to retrieve the next page of results, or empty if there are no more results in the list.",
-          "type": "string"
-        }
-      },
-      "id": "ListServicesResponse"
+      "id": "ResolveServiceResponse"
     }
   },
-  "name": "servicedirectory",
-  "revision": "20200803",
-  "batchPath": "batch",
-  "kind": "discovery#restDescription"
+  "documentationLink": "https://cloud.google.com/service-directory"
 }

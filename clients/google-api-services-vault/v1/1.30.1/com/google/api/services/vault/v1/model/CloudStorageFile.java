@@ -31,7 +31,7 @@ public final class CloudStorageFile extends com.google.api.client.json.GenericJs
 
   /**
    * The cloud storage bucket name of this export file. Can be used in cloud storage JSON/XML API,
-   * but not to list the bucket contents. Instead, you can  get individual export files by object
+   * but not to list the bucket contents. Instead, you can get individual export files by object
    * name.
    * The value may be {@code null}.
    */
@@ -61,7 +61,7 @@ public final class CloudStorageFile extends com.google.api.client.json.GenericJs
 
   /**
    * The cloud storage bucket name of this export file. Can be used in cloud storage JSON/XML API,
-   * but not to list the bucket contents. Instead, you can  get individual export files by object
+   * but not to list the bucket contents. Instead, you can get individual export files by object
    * name.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class CloudStorageFile extends com.google.api.client.json.GenericJs
 
   /**
    * The cloud storage bucket name of this export file. Can be used in cloud storage JSON/XML API,
-   * but not to list the bucket contents. Instead, you can  get individual export files by object
+   * but not to list the bucket contents. Instead, you can get individual export files by object
    * name.
    * @param bucketName bucketName or {@code null} for none
    */

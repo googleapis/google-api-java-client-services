@@ -1,92 +1,18 @@
 {
-  "title": "Cloud Identity API",
+  "kind": "discovery#restDescription",
   "baseUrl": "https://cloudidentity.googleapis.com/",
-  "parameters": {
-    "upload_protocol": {
-      "location": "query",
-      "type": "string",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
-    },
-    "oauth_token": {
-      "description": "OAuth 2.0 token for the current user.",
-      "type": "string",
-      "location": "query"
-    },
-    "prettyPrint": {
-      "location": "query",
-      "description": "Returns response with indentations and line breaks.",
-      "type": "boolean",
-      "default": "true"
-    },
-    "$.xgafv": {
-      "type": "string",
-      "enum": [
-        "1",
-        "2"
-      ],
-      "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
-      ],
-      "description": "V1 error format.",
-      "location": "query"
-    },
-    "callback": {
-      "type": "string",
-      "description": "JSONP",
-      "location": "query"
-    },
-    "alt": {
-      "enum": [
-        "json",
-        "media",
-        "proto"
-      ],
-      "description": "Data format for response.",
-      "type": "string",
-      "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
-      ],
-      "location": "query",
-      "default": "json"
-    },
-    "access_token": {
-      "location": "query",
-      "description": "OAuth access token.",
-      "type": "string"
-    },
-    "fields": {
-      "type": "string",
-      "location": "query",
-      "description": "Selector specifying which fields to include in a partial response."
-    },
-    "key": {
-      "location": "query",
-      "type": "string",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
-    },
-    "uploadType": {
-      "location": "query",
-      "type": "string",
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
-    },
-    "quotaUser": {
-      "location": "query",
-      "type": "string",
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."
-    }
-  },
-  "servicePath": "",
+  "mtlsRootUrl": "https://cloudidentity.mtls.googleapis.com/",
   "auth": {
     "oauth2": {
       "scopes": {
+        "https://www.googleapis.com/auth/cloud-platform": {
+          "description": "View and manage your data across Google Cloud Platform services"
+        },
         "https://www.googleapis.com/auth/cloud-identity.groups": {
           "description": "See, change, create, and delete any of the Cloud Identity Groups that you can access, including the members of each group"
         },
-        "https://www.googleapis.com/auth/cloud-platform": {
-          "description": "View and manage your data across Google Cloud Platform services"
+        "https://www.googleapis.com/auth/cloud-identity.devices.lookup": {
+          "description": "See your device details"
         },
         "https://www.googleapis.com/auth/cloud-identity.groups.readonly": {
           "description": "See any Cloud Identity Groups that you can access, including group members and their emails"
@@ -94,283 +20,329 @@
       }
     }
   },
-  "revision": "20200829",
-  "ownerName": "Google",
-  "discoveryVersion": "v1",
-  "name": "cloudidentity",
-  "rootUrl": "https://cloudidentity.googleapis.com/",
-  "protocol": "rest",
-  "id": "cloudidentity:v1",
-  "mtlsRootUrl": "https://cloudidentity.mtls.googleapis.com/",
+  "servicePath": "",
+  "description": "API for provisioning and managing identity resources.",
   "schemas": {
-    "GoogleAppsCloudidentityDevicesV1DeviceUser": {
+    "Group": {
+      "type": "object",
       "properties": {
-        "compromisedState": {
-          "description": "Compromised State of the DeviceUser object",
+        "groupKey": {
+          "$ref": "EntityKey",
+          "description": "Required. Immutable. EntityKey of the Group. Must be set when creating a Group, read-only afterwards."
+        },
+        "updateTime": {
+          "format": "google-datetime",
+          "type": "string",
+          "readOnly": true,
+          "description": "Output only. The time when the Group was last updated. Output only."
+        },
+        "displayName": {
+          "description": "The Group's display name.",
+          "type": "string"
+        },
+        "description": {
+          "type": "string",
+          "description": "An extended description to help users determine the purpose of a Group. For example, you can include information about who should join the Group, the types of messages to send to the Group, links to FAQs about the Group, or related Groups. Maximum length is 4,096 characters."
+        },
+        "parent": {
+          "type": "string",
+          "description": "Required. Immutable. The entity under which this Group resides in Cloud Identity resource hierarchy. Must be set when creating a Group, read-only afterwards. Currently allowed types: `identitysources`."
+        },
+        "name": {
+          "type": "string",
+          "readOnly": true,
+          "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group. Must be left blank while creating a Group."
+        },
+        "createTime": {
+          "type": "string",
+          "description": "Output only. The time when the Group was created. Output only.",
+          "readOnly": true,
+          "format": "google-datetime"
+        },
+        "labels": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Required. `Required`. Labels for Group resource. For creating Groups under a namespace, set label key to 'labels/system/groups/external' and label value as empty."
+        }
+      },
+      "id": "Group",
+      "description": "Resource representing a Group."
+    },
+    "GoogleAppsCloudidentityDevicesV1CustomAttributeValue": {
+      "id": "GoogleAppsCloudidentityDevicesV1CustomAttributeValue",
+      "description": "Additional custom attribute values may be one of these types",
+      "properties": {
+        "numberValue": {
+          "format": "double",
+          "type": "number",
+          "description": "Represents a double value."
+        },
+        "stringValue": {
+          "description": "Represents a string value.",
+          "type": "string"
+        },
+        "boolValue": {
+          "description": "Represents a boolean value.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "GoogleAppsCloudidentityDevicesV1Device": {
+      "type": "object",
+      "id": "GoogleAppsCloudidentityDevicesV1Device",
+      "properties": {
+        "createTime": {
+          "description": "Output only. When the Company-Owned device was imported. This field is empty for BYOD devices.",
+          "type": "string",
+          "format": "google-datetime",
+          "readOnly": true
+        },
+        "ownerType": {
+          "readOnly": true,
           "enumDescriptions": [
-            "Compromised state of Device User account is unknown or unspecified.",
-            "Device User Account is compromised.",
-            "Device User Account is not compromised."
+            "Default value. The value is unused.",
+            "Company owns the device.",
+            "Bring Your Own Device (i.e. individual owns the device)"
+          ],
+          "description": "Output only. Whether the device is owned by the company or an individual",
+          "type": "string",
+          "enum": [
+            "DEVICE_OWNERSHIP_UNSPECIFIED",
+            "COMPANY",
+            "BYOD"
+          ]
+        },
+        "deviceType": {
+          "enum": [
+            "DEVICE_TYPE_UNSPECIFIED",
+            "ANDROID",
+            "IOS",
+            "GOOGLE_SYNC",
+            "WINDOWS",
+            "MAC_OS",
+            "LINUX",
+            "CHROME_OS"
+          ],
+          "readOnly": true,
+          "description": "Output only. Type of device.",
+          "type": "string",
+          "enumDescriptions": [
+            "Unknown device type",
+            "Device is an Android device",
+            "Device is an iOS device",
+            "Device is a Google Sync device.",
+            "Device is a Windows device.",
+            "Device is a MacOS device.",
+            "Device is a Linux device.",
+            "Device is a ChromeOS device."
+          ]
+        },
+        "assetTag": {
+          "type": "string",
+          "description": "Asset tag of the device."
+        },
+        "name": {
+          "readOnly": true,
+          "type": "string",
+          "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique id assigned to the Device."
+        },
+        "securityPatchTime": {
+          "description": "Output only. OS security patch update time on device.",
+          "format": "google-datetime",
+          "readOnly": true,
+          "type": "string"
+        },
+        "compromisedState": {
+          "enumDescriptions": [
+            "Default value.",
+            "The device is compromised (currently, this means Android device is rooted).",
+            "The device is safe (currently, this means Android device is unrooted)."
           ],
           "type": "string",
+          "readOnly": true,
           "enum": [
             "COMPROMISED_STATE_UNSPECIFIED",
             "COMPROMISED",
-            "NOT_COMPROMISED"
+            "UNCOMPROMISED"
+          ],
+          "description": "Output only. Represents whether the Device is compromised."
+        },
+        "basebandVersion": {
+          "description": "Output only. Baseband version of the device.",
+          "readOnly": true,
+          "type": "string"
+        },
+        "releaseVersion": {
+          "type": "string",
+          "description": "Output only. OS release version. Example: 6.0.",
+          "readOnly": true
+        },
+        "serialNumber": {
+          "type": "string",
+          "description": "Serial Number of device. Example: HT82V1A01076."
+        },
+        "brand": {
+          "type": "string",
+          "readOnly": true,
+          "description": "Output only. Device brand. Example: Samsung."
+        },
+        "enabledDeveloperOptions": {
+          "type": "boolean",
+          "description": "Output only. Whether developer options is enabled on device.",
+          "readOnly": true
+        },
+        "bootloaderVersion": {
+          "description": "Output only. Device bootloader version. Example: 0.6.7.",
+          "readOnly": true,
+          "type": "string"
+        },
+        "androidSpecificAttributes": {
+          "description": "Output only. Attributes specific to Android devices.",
+          "readOnly": true,
+          "$ref": "GoogleAppsCloudidentityDevicesV1AndroidAttributes"
+        },
+        "encryptionState": {
+          "description": "Output only. Device encryption state.",
+          "type": "string",
+          "readOnly": true,
+          "enumDescriptions": [
+            "Encryption Status is not set.",
+            "Device doesn't support encryption.",
+            "Device is encrypted.",
+            "Device is not encrypted."
+          ],
+          "enum": [
+            "ENCRYPTION_STATE_UNSPECIFIED",
+            "UNSUPPORTED_BY_DEVICE",
+            "ENCRYPTED",
+            "NOT_ENCRYPTED"
           ]
         },
-        "name": {
-          "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the DeviceUser in format: `devices/{device_id}/deviceUsers/{user_id}`, where user_id is the ID of the user associated with the user session.",
+        "model": {
+          "description": "Output only. Model name of device. Example: Pixel 3.",
           "readOnly": true,
           "type": "string"
         },
-        "firstSyncTime": {
-          "format": "google-datetime",
+        "otherAccounts": {
+          "description": "Output only. Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account's domain has only one account. Examples: \"com.example\", \"xyz.com\".",
           "readOnly": true,
-          "description": "Output only. Most recent time when user registered with this service.",
-          "type": "string"
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         },
-        "userEmail": {
-          "description": "Email address of the user registered on the device.",
+        "wifiMacAddresses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "WiFi MAC addresses of device."
+        },
+        "manufacturer": {
+          "description": "Output only. Device manufacturer. Example: Motorola.",
+          "type": "string",
+          "readOnly": true
+        },
+        "meid": {
+          "description": "Output only. MEID number of device if CDMA device; empty otherwise.",
+          "type": "string",
+          "readOnly": true
+        },
+        "osVersion": {
+          "description": "Output only. OS version of the device. Example: Android 8.1.0.",
+          "type": "string",
+          "readOnly": true
+        },
+        "buildNumber": {
+          "description": "Output only. Build number of the device.",
+          "readOnly": true,
           "type": "string"
         },
         "managementState": {
           "enum": [
             "MANAGEMENT_STATE_UNSPECIFIED",
-            "WIPING",
-            "WIPED",
             "APPROVED",
             "BLOCKED",
-            "PENDING_APPROVAL",
-            "UNENROLLED"
+            "PENDING",
+            "UNPROVISIONED",
+            "WIPING",
+            "WIPED"
           ],
+          "description": "Output only. Management state of the device",
           "type": "string",
-          "description": "Output only. Management state of the user on the device.",
           "enumDescriptions": [
             "Default value. This value is unused.",
-            "This user's data and profile is being removed from the device.",
-            "This user's data and profile is removed from the device.",
-            "User is approved to access data on the device.",
-            "User is blocked from accessing data on the device.",
-            "User is awaiting approval.",
-            "User is unenrolled from Advanced Windows Management, but the Windows account is still intact."
+            "Device is approved.",
+            "Device is blocked.",
+            "Device is pending approval.",
+            "The device is not provisioned. Device will start from this state until some action is taken (i.e. a user starts using the device).",
+            "Data and settings on the device are being removed.",
+            "All data and settings on the device are removed."
           ],
           "readOnly": true
         },
         "lastSyncTime": {
-          "description": "Output only. Last time when user synced with policies.",
-          "readOnly": true,
-          "format": "google-datetime",
-          "type": "string"
-        },
-        "createTime": {
-          "description": "When the user first signed in to the device",
-          "format": "google-datetime",
-          "type": "string"
-        },
-        "passwordState": {
           "type": "string",
-          "enumDescriptions": [
-            "Password state not set.",
-            "Password set in object.",
-            "Password not set in object."
-          ],
-          "description": "Password state of the DeviceUser object",
-          "enum": [
-            "PASSWORD_STATE_UNSPECIFIED",
-            "PASSWORD_SET",
-            "PASSWORD_NOT_SET"
-          ]
+          "description": "Most recent time when device synced with this service.",
+          "format": "google-datetime"
         },
-        "userAgent": {
+        "networkOperator": {
           "readOnly": true,
           "type": "string",
-          "description": "Output only. User agent on the device for this specific user"
+          "description": "Output only. Mobile or network operator of device, if available."
         },
-        "languageCode": {
+        "kernelVersion": {
+          "readOnly": true,
+          "description": "Output only. Kernel version of the device.",
+          "type": "string"
+        },
+        "imei": {
+          "description": "Output only. IMEI number of device if GSM device; empty otherwise.",
           "type": "string",
-          "description": "Output only. Default locale used on device, in IETF BCP-47 format.",
+          "readOnly": true
+        },
+        "enabledUsbDebugging": {
+          "description": "Output only. Whether USB debugging is enabled on device.",
+          "type": "boolean",
           "readOnly": true
         }
       },
-      "type": "object",
-      "description": "Represents a user's use of a Device in the Cloud Identity Devices API. A DeviceUser is a resource representing a user's use of a Device",
-      "id": "GoogleAppsCloudidentityDevicesV1DeviceUser"
-    },
-    "Status": {
-      "type": "object",
-      "id": "Status",
-      "description": "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).",
-      "properties": {
-        "code": {
-          "description": "The status code, which should be an enum value of google.rpc.Code.",
-          "format": "int32",
-          "type": "integer"
-        },
-        "details": {
-          "description": "A list of messages that carry the error details. There is a common set of message types for APIs to use.",
-          "type": "array",
-          "items": {
-            "additionalProperties": {
-              "type": "any",
-              "description": "Properties of the object. Contains field @type with type URL."
-            },
-            "type": "object"
-          }
-        },
-        "message": {
-          "description": "A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.",
-          "type": "string"
-        }
-      }
-    },
-    "ListGroupsResponse": {
-      "id": "ListGroupsResponse",
-      "type": "object",
-      "description": "Response message for ListGroups operation.",
-      "properties": {
-        "nextPageToken": {
-          "type": "string",
-          "description": "Token to retrieve the next page of results, or empty if there are no more results available for listing."
-        },
-        "groups": {
-          "type": "array",
-          "description": "Groups returned in response to list request. The results are not sorted.",
-          "items": {
-            "$ref": "Group"
-          }
-        }
-      }
-    },
-    "EntityKey": {
-      "properties": {
-        "namespace": {
-          "description": "Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace. Namespaces are currently only created as part of IdentitySource creation from Admin Console. A namespace `\"identitysources/{identity_source_id}\"` is created corresponding to every Identity Source `identity_source_id`.",
-          "type": "string"
-        },
-        "id": {
-          "description": "The ID of the entity within the given namespace. The ID must be unique within its namespace.",
-          "type": "string"
-        }
-      },
-      "type": "object",
-      "id": "EntityKey",
-      "description": "An EntityKey uniquely identifies an Entity. Namespaces are used to provide isolation for IDs. A single ID can be reused across namespaces but the combination of a namespace and an ID must be unique."
+      "description": " A Device within the Cloud Identity Devices API. Represents a Device known to Google Cloud, independent of the device ownership, type, and whether it is assigned or in use by a user."
     },
     "GoogleAppsCloudidentityDevicesV1ApproveDeviceUserResponse": {
-      "description": "Response message for approving the device to access user data.",
-      "type": "object",
       "id": "GoogleAppsCloudidentityDevicesV1ApproveDeviceUserResponse",
       "properties": {
         "deviceUser": {
-          "description": "Resultant DeviceUser object for the action.",
-          "$ref": "GoogleAppsCloudidentityDevicesV1DeviceUser"
-        }
-      }
-    },
-    "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserResponse": {
-      "properties": {
-        "deviceUser": {
-          "description": "Resultant DeviceUser object for the action.",
-          "$ref": "GoogleAppsCloudidentityDevicesV1DeviceUser"
+          "$ref": "GoogleAppsCloudidentityDevicesV1DeviceUser",
+          "description": "Resultant DeviceUser object for the action."
         }
       },
-      "description": "Response message for cancelling an unfinished user account wipe.",
-      "type": "object",
-      "id": "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserResponse"
-    },
-    "LookupGroupNameResponse": {
-      "id": "LookupGroupNameResponse",
-      "type": "object",
-      "properties": {
-        "name": {
-          "description": "[Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.",
-          "type": "string"
-        }
-      }
-    },
-    "GoogleAppsCloudidentityDevicesV1WipeDeviceResponse": {
-      "type": "object",
-      "id": "GoogleAppsCloudidentityDevicesV1WipeDeviceResponse",
-      "description": "Response message for wiping all data on the device.",
-      "properties": {
-        "device": {
-          "description": "Resultant Device object for the action. Note that asset tags will not be returned in the device object.",
-          "$ref": "GoogleAppsCloudidentityDevicesV1Device"
-        }
-      }
-    },
-    "GoogleAppsCloudidentityDevicesV1CustomAttributeValue": {
-      "id": "GoogleAppsCloudidentityDevicesV1CustomAttributeValue",
-      "type": "object",
-      "properties": {
-        "numberValue": {
-          "description": "Represents a double value.",
-          "format": "double",
-          "type": "number"
-        },
-        "boolValue": {
-          "type": "boolean",
-          "description": "Represents a boolean value."
-        },
-        "stringValue": {
-          "type": "string",
-          "description": "Represents a string value."
-        }
-      },
-      "description": "Additional custom attribute values may be one of these types"
-    },
-    "GoogleAppsCloudidentityDevicesV1WipeDeviceUserResponse": {
-      "type": "object",
-      "properties": {
-        "deviceUser": {
-          "description": "Resultant DeviceUser object for the action.",
-          "$ref": "GoogleAppsCloudidentityDevicesV1DeviceUser"
-        }
-      },
-      "description": "Response message for wiping the user's account from the device.",
-      "id": "GoogleAppsCloudidentityDevicesV1WipeDeviceUserResponse"
-    },
-    "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceResponse": {
-      "type": "object",
-      "description": "Response message for cancelling an unfinished device wipe.",
-      "id": "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceResponse",
-      "properties": {
-        "device": {
-          "description": "Resultant Device object for the action. Note that asset tags will not be returned in the device object.",
-          "$ref": "GoogleAppsCloudidentityDevicesV1Device"
-        }
-      }
-    },
-    "LookupMembershipNameResponse": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "description": "[Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership being looked up. Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique ID assigned to the Group to which Membership belongs to, and `member_id` is the unique ID assigned to the member.",
-          "type": "string"
-        }
-      },
-      "id": "LookupMembershipNameResponse"
-    },
-    "SearchGroupsResponse": {
-      "properties": {
-        "nextPageToken": {
-          "description": "Token to retrieve the next page of results, or empty if there are no more results available for specified query.",
-          "type": "string"
-        },
-        "groups": {
-          "items": {
-            "$ref": "Group"
-          },
-          "description": "List of Groups satisfying the search query.",
-          "type": "array"
-        }
-      },
-      "id": "SearchGroupsResponse",
+      "description": "Response message for approving the device to access user data.",
       "type": "object"
     },
     "GoogleAppsCloudidentityDevicesV1ClientState": {
       "properties": {
+        "scoreReason": {
+          "description": "A descriptive cause of the health score.",
+          "type": "string"
+        },
+        "complianceState": {
+          "enumDescriptions": [
+            "The compliance state of the resource is unknown or unspecified.",
+            "Device is compliant with third party policies",
+            "Device is not compliant with third party policies"
+          ],
+          "enum": [
+            "COMPLIANCE_STATE_UNSPECIFIED",
+            "COMPLIANT",
+            "NON_COMPLIANT"
+          ],
+          "type": "string",
+          "description": "The compliance state of the resource as specified by the API client."
+        },
         "healthScore": {
           "enumDescriptions": [
             "Default value",
@@ -389,340 +361,332 @@
             "VERY_GOOD"
           ],
           "type": "string",
-          "description": "The Health score of the resource"
-        },
-        "ownerType": {
-          "enumDescriptions": [
-            "Unknown owner type",
-            "Customer is the owner",
-            "Partner is the owner"
-          ],
-          "type": "string",
-          "description": "Output only. The owner of the ClientState",
-          "readOnly": true,
-          "enum": [
-            "OWNER_TYPE_UNSPECIFIED",
-            "OWNER_TYPE_CUSTOMER",
-            "OWNER_TYPE_PARTNER"
-          ]
-        },
-        "lastUpdateTime": {
-          "format": "google-datetime",
-          "description": "Output only. The time the client state data was last updated.",
-          "type": "string",
-          "readOnly": true
+          "description": "The Health score of the resource. The Health score is the callers specification of the condition of the device from a usability point of view. For example, a third-party device management provider may specify a health score based on its compliance with organizational policies."
         },
         "customId": {
-          "type": "string",
-          "description": "This field may be used to store a unique identifier for the API resource within which these CustomAttributes are a field."
+          "description": "This field may be used to store a unique identifier for the API resource within which these CustomAttributes are a field.",
+          "type": "string"
+        },
+        "createTime": {
+          "format": "google-datetime",
+          "description": "Output only. The time the client state data was created.",
+          "readOnly": true,
+          "type": "string"
         },
         "keyValuePairs": {
-          "description": "The map of key-value attributes stored by callers specific to a device. The total serialized length of this map may not exceed 10KB. No limit is placed on the number of attributes in a map.",
+          "type": "object",
           "additionalProperties": {
             "$ref": "GoogleAppsCloudidentityDevicesV1CustomAttributeValue"
           },
-          "type": "object"
+          "description": "The map of key-value attributes stored by callers specific to a device. The total serialized length of this map may not exceed 10KB. No limit is placed on the number of attributes in a map."
         },
         "etag": {
           "type": "string",
           "description": "The token that needs to be passed back for concurrency control in updates. Token needs to be passed back in UpdateRequest"
         },
+        "lastUpdateTime": {
+          "type": "string",
+          "format": "google-datetime",
+          "readOnly": true,
+          "description": "Output only. The time the client state data was last updated."
+        },
         "name": {
           "readOnly": true,
-          "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where partner_id corresponds to the partner storing the data.",
+          "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where partner_id corresponds to the partner storing the data. For partners belonging to the \"BeyondCorp Alliance\", this is the partner ID specified to you by Google. For all other callers, this is a string of the form: `{customer_id}-suffix`, where `customer_id` is your customer id. The suffix is any string the caller specifies. This string will be displayed verbatim in the administration console.",
           "type": "string"
         },
-        "complianceState": {
+        "ownerType": {
+          "description": "Output only. The owner of the ClientState",
           "enum": [
-            "COMPLIANCE_STATE_UNSPECIFIED",
-            "COMPLIANT",
-            "NON_COMPLIANT"
+            "OWNER_TYPE_UNSPECIFIED",
+            "OWNER_TYPE_CUSTOMER",
+            "OWNER_TYPE_PARTNER"
           ],
-          "description": "The compliance state of the resource as specified by the API client.",
-          "enumDescriptions": [
-            "The compliance state of the resource is unknown or unspecified.",
-            "Device is compliant with third party policies",
-            "Device is not compliant with third party policies"
-          ],
-          "type": "string"
-        },
-        "createTime": {
-          "description": "Output only. The time the client state data was created.",
           "readOnly": true,
-          "format": "google-datetime",
+          "enumDescriptions": [
+            "Unknown owner type",
+            "Customer is the owner",
+            "Partner is the owner"
+          ],
           "type": "string"
         },
         "managed": {
+          "type": "string",
           "enumDescriptions": [
             "The management state of the resource is unknown or unspecified.",
             "The resource is managed.",
             "The resource is not managed."
           ],
-          "type": "string",
+          "description": "The management state of the resource as specified by the API client.",
           "enum": [
             "MANAGED_STATE_UNSPECIFIED",
             "MANAGED",
             "UNMANAGED"
-          ],
-          "description": "The management state of the resource as specified by the API client."
-        },
-        "scoreReason": {
-          "type": "string",
-          "description": "A descriptive cause of the health score."
-        },
-        "assetTags": {
-          "description": "The caller can specify asset tags for this resource",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        }
-      },
-      "id": "GoogleAppsCloudidentityDevicesV1ClientState",
-      "description": "Represents the state associated with an API client calling the Devices API. Resource representing ClientState and supports updates from API users",
-      "type": "object"
-    },
-    "GoogleAppsCloudidentityDevicesV1Device": {
-      "properties": {
-        "kernelVersion": {
-          "readOnly": true,
-          "description": "Output only. Kernel version of the device.",
-          "type": "string"
-        },
-        "deviceType": {
-          "type": "string",
-          "description": "Output only. Type of device.",
-          "readOnly": true,
-          "enum": [
-            "DEVICE_TYPE_UNSPECIFIED",
-            "ANDROID",
-            "IOS",
-            "GOOGLE_SYNC",
-            "WINDOWS",
-            "MAC_OS",
-            "LINUX",
-            "CHROME_OS"
-          ],
-          "enumDescriptions": [
-            "Unknown device type",
-            "Device is an Android device",
-            "Device is an iOS device",
-            "Device is a Google Sync device.",
-            "Device is a Windows device.",
-            "Device is a MacOS device.",
-            "Device is a Linux device.",
-            "Device is a ChromeOS device."
           ]
         },
-        "networkOperator": {
-          "readOnly": true,
-          "description": "Output only. Mobile or network operator of device, if available.",
-          "type": "string"
-        },
-        "otherAccounts": {
-          "readOnly": true,
+        "assetTags": {
           "items": {
             "type": "string"
           },
           "type": "array",
-          "description": "Output only. Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account's domain has only one account. Examples: \"com.example\", \"xyz.com\"."
-        },
-        "buildNumber": {
-          "description": "Output only. Build number of the device.",
-          "readOnly": true,
-          "type": "string"
-        },
-        "releaseVersion": {
-          "readOnly": true,
-          "description": "Output only. OS release version. Example: 6.0.",
-          "type": "string"
-        },
-        "createTime": {
-          "description": "Output only. When the Company-Owned device was imported. This field is empty for BYOD devices.",
-          "type": "string",
-          "readOnly": true,
-          "format": "google-datetime"
-        },
-        "osVersion": {
-          "readOnly": true,
-          "type": "string",
-          "description": "Output only. OS version of the device. Example: Android 8.1.0."
-        },
-        "name": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique id assigned to the Device."
-        },
-        "managementState": {
-          "description": "Output only. Management state of the device",
-          "type": "string",
-          "enumDescriptions": [
-            "Default value. This value is unused.",
-            "Device is approved.",
-            "Device is blocked.",
-            "Device is pending approval.",
-            "The device is not provisioned. Device will start from this state until some action is taken (i.e. a user starts using the device).",
-            "Data and settings on the device are being removed.",
-            "All data and settings on the device are removed."
-          ],
-          "readOnly": true,
-          "enum": [
-            "MANAGEMENT_STATE_UNSPECIFIED",
-            "APPROVED",
-            "BLOCKED",
-            "PENDING",
-            "UNPROVISIONED",
-            "WIPING",
-            "WIPED"
-          ]
-        },
-        "securityPatchTime": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. OS security patch update time on device.",
-          "format": "google-datetime"
-        },
-        "lastSyncTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Most recent time when device synced with this service."
-        },
-        "ownerType": {
-          "enum": [
-            "DEVICE_OWNERSHIP_UNSPECIFIED",
-            "COMPANY",
-            "BYOD"
-          ],
-          "enumDescriptions": [
-            "Default value. The value is unused.",
-            "Company owns the device.",
-            "Bring Your Own Device (i.e. individual owns the device)"
-          ],
-          "type": "string",
-          "description": "Output only. Whether the device is owned by the company or an individual",
-          "readOnly": true
-        },
-        "enabledUsbDebugging": {
-          "type": "boolean",
-          "readOnly": true,
-          "description": "Output only. Whether USB debugging is enabled on device."
-        },
+          "description": "The caller can specify asset tags for this resource"
+        }
+      },
+      "id": "GoogleAppsCloudidentityDevicesV1ClientState",
+      "type": "object",
+      "description": "Represents the state associated with an API client calling the Devices API. Resource representing ClientState and supports updates from API users"
+    },
+    "GoogleAppsCloudidentityDevicesV1DeviceUser": {
+      "id": "GoogleAppsCloudidentityDevicesV1DeviceUser",
+      "description": "Represents a user's use of a Device in the Cloud Identity Devices API. A DeviceUser is a resource representing a user's use of a Device",
+      "type": "object",
+      "properties": {
         "compromisedState": {
-          "readOnly": true,
+          "enumDescriptions": [
+            "Compromised state of Device User account is unknown or unspecified.",
+            "Device User Account is compromised.",
+            "Device User Account is not compromised."
+          ],
+          "type": "string",
+          "description": "Compromised State of the DeviceUser object",
           "enum": [
             "COMPROMISED_STATE_UNSPECIFIED",
             "COMPROMISED",
-            "UNCOMPROMISED"
-          ],
+            "NOT_COMPROMISED"
+          ]
+        },
+        "createTime": {
           "type": "string",
+          "format": "google-datetime",
+          "description": "When the user first signed in to the device"
+        },
+        "passwordState": {
           "enumDescriptions": [
-            "Default value.",
-            "The device is compromised (currently, this means Android device is rooted).",
-            "The device is safe (currently, this means Android device is unrooted)."
-          ],
-          "description": "Output only. Represents whether the Device is compromised."
-        },
-        "meid": {
-          "description": "Output only. MEID number of device if CDMA device; empty otherwise.",
-          "type": "string",
-          "readOnly": true
-        },
-        "serialNumber": {
-          "type": "string",
-          "description": "Serial Number of device. Example: HT82V1A01076."
-        },
-        "brand": {
-          "readOnly": true,
-          "description": "Output only. Device brand. Example: Samsung.",
-          "type": "string"
-        },
-        "androidSpecificAttributes": {
-          "readOnly": true,
-          "description": "Output only. Attributes specific to Android devices.",
-          "$ref": "GoogleAppsCloudidentityDevicesV1AndroidAttributes"
-        },
-        "manufacturer": {
-          "description": "Output only. Device manufacturer. Example: Motorola.",
-          "type": "string",
-          "readOnly": true
-        },
-        "bootloaderVersion": {
-          "readOnly": true,
-          "description": "Output only. Device bootloader version. Example: 0.6.7.",
-          "type": "string"
-        },
-        "encryptionState": {
-          "description": "Output only. Device encryption state.",
-          "type": "string",
-          "enumDescriptions": [
-            "Encryption Status is not set.",
-            "Device doesn't support encryption.",
-            "Device is encrypted.",
-            "Device is not encrypted."
+            "Password state not set.",
+            "Password set in object.",
+            "Password not set in object."
           ],
           "enum": [
-            "ENCRYPTION_STATE_UNSPECIFIED",
-            "UNSUPPORTED_BY_DEVICE",
-            "ENCRYPTED",
-            "NOT_ENCRYPTED"
+            "PASSWORD_STATE_UNSPECIFIED",
+            "PASSWORD_SET",
+            "PASSWORD_NOT_SET"
           ],
-          "readOnly": true
+          "description": "Password state of the DeviceUser object",
+          "type": "string"
         },
-        "imei": {
+        "languageCode": {
           "type": "string",
           "readOnly": true,
-          "description": "Output only. IMEI number of device if GSM device; empty otherwise."
+          "description": "Output only. Default locale used on device, in IETF BCP-47 format."
         },
-        "basebandVersion": {
+        "firstSyncTime": {
           "type": "string",
-          "description": "Output only. Baseband version of the device.",
+          "format": "google-datetime",
+          "readOnly": true,
+          "description": "Output only. Most recent time when user registered with this service."
+        },
+        "userAgent": {
+          "type": "string",
+          "readOnly": true,
+          "description": "Output only. User agent on the device for this specific user"
+        },
+        "managementState": {
+          "description": "Output only. Management state of the user on the device.",
+          "type": "string",
+          "enum": [
+            "MANAGEMENT_STATE_UNSPECIFIED",
+            "WIPING",
+            "WIPED",
+            "APPROVED",
+            "BLOCKED",
+            "PENDING_APPROVAL",
+            "UNENROLLED"
+          ],
+          "readOnly": true,
+          "enumDescriptions": [
+            "Default value. This value is unused.",
+            "This user's data and profile is being removed from the device.",
+            "This user's data and profile is removed from the device.",
+            "User is approved to access data on the device.",
+            "User is blocked from accessing data on the device.",
+            "User is awaiting approval.",
+            "User is unenrolled from Advanced Windows Management, but the Windows account is still intact."
+          ]
+        },
+        "lastSyncTime": {
+          "type": "string",
+          "description": "Output only. Last time when user synced with policies.",
+          "format": "google-datetime",
           "readOnly": true
         },
-        "wifiMacAddresses": {
+        "name": {
+          "readOnly": true,
+          "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the DeviceUser in format: `devices/{device_id}/deviceUsers/{user_id}`, where user_id is the ID of the user associated with the user session.",
+          "type": "string"
+        },
+        "userEmail": {
+          "description": "Email address of the user registered on the device.",
+          "type": "string"
+        }
+      }
+    },
+    "GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest": {
+      "type": "object",
+      "id": "GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest",
+      "description": "Request message for starting an account wipe on device.",
+      "properties": {
+        "customer": {
+          "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.",
+          "type": "string"
+        }
+      }
+    },
+    "GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest": {
+      "id": "GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest",
+      "description": "Request message for approving the device to access user data.",
+      "properties": {
+        "customer": {
+          "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "GoogleAppsCloudidentityDevicesV1ListDeviceUsersResponse": {
+      "type": "object",
+      "properties": {
+        "nextPageToken": {
+          "type": "string",
+          "description": "Token to retrieve the next page of results. Empty if there are no more results."
+        },
+        "deviceUsers": {
           "items": {
-            "type": "string"
+            "$ref": "GoogleAppsCloudidentityDevicesV1DeviceUser"
           },
-          "description": "WiFi MAC addresses of device.",
+          "description": "Devices meeting the list restrictions.",
           "type": "array"
-        },
-        "model": {
-          "description": "Output only. Model name of device. Example: Pixel 3.",
-          "type": "string",
-          "readOnly": true
-        },
-        "enabledDeveloperOptions": {
-          "readOnly": true,
-          "type": "boolean",
-          "description": "Output only. Whether developer options is enabled on device."
-        },
-        "assetTag": {
-          "type": "string",
-          "description": "Asset tag of the device."
+        }
+      },
+      "id": "GoogleAppsCloudidentityDevicesV1ListDeviceUsersResponse",
+      "description": "Response message that is returned from the ListDeviceUsers method."
+    },
+    "MembershipRole": {
+      "description": "Resource representing a role within a Membership.",
+      "properties": {
+        "name": {
+          "description": "MembershipRole in string format. Currently supported MembershipRoles: `\"MEMBER\"`.",
+          "type": "string"
         }
       },
       "type": "object",
-      "description": "A Device within the Cloud Identity Devices API. Represents a Device known to Google Cloud, independent of the device ownership, type, and whether it is assigned or in use by a user.",
-      "id": "GoogleAppsCloudidentityDevicesV1Device"
+      "id": "MembershipRole"
     },
-    "Operation": {
-      "id": "Operation",
+    "LookupMembershipNameResponse": {
       "type": "object",
       "properties": {
         "name": {
           "type": "string",
-          "description": "The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`."
+          "description": "[Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership being looked up. Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique ID assigned to the Group to which Membership belongs to, and `member_id` is the unique ID assigned to the member."
+        }
+      },
+      "id": "LookupMembershipNameResponse"
+    },
+    "Membership": {
+      "type": "object",
+      "properties": {
+        "updateTime": {
+          "format": "google-datetime",
+          "type": "string",
+          "description": "Output only. Last updated timestamp of the Membership. Output only.",
+          "readOnly": true
+        },
+        "type": {
+          "type": "string",
+          "enumDescriptions": [
+            "Default. Should not be used.",
+            "Represents user type.",
+            "Represents service account type.",
+            "Represents group type.",
+            "Represents other type."
+          ],
+          "description": "Output only. The type of the membership.",
+          "enum": [
+            "TYPE_UNSPECIFIED",
+            "USER",
+            "SERVICE_ACCOUNT",
+            "GROUP",
+            "OTHER"
+          ],
+          "readOnly": true
+        },
+        "roles": {
+          "items": {
+            "$ref": "MembershipRole"
+          },
+          "description": "Roles for a member within the Group. Currently supported MembershipRoles: `\"MEMBER\"`.",
+          "type": "array"
+        },
+        "name": {
+          "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership in the format: `groups/{group_id}/memberships/{member_id}`, where group_id is the unique ID assigned to the Group to which Membership belongs to, and member_id is the unique ID assigned to the member Must be left blank while creating a Membership.",
+          "readOnly": true,
+          "type": "string"
+        },
+        "preferredMemberKey": {
+          "$ref": "EntityKey",
+          "description": "Required. Immutable. EntityKey of the entity to be added as the member. Must be set while creating a Membership, read-only afterwards. Currently allowed entity types: `Users`, `Groups`."
+        },
+        "createTime": {
+          "description": "Output only. Creation timestamp of the Membership. Output only.",
+          "format": "google-datetime",
+          "type": "string",
+          "readOnly": true
+        }
+      },
+      "description": "Resource representing a Membership within a Group",
+      "id": "Membership"
+    },
+    "GoogleAppsCloudidentityDevicesV1ListClientStatesResponse": {
+      "type": "object",
+      "description": "Response message that is returned in ListClientStates.",
+      "id": "GoogleAppsCloudidentityDevicesV1ListClientStatesResponse",
+      "properties": {
+        "nextPageToken": {
+          "description": "Token to retrieve the next page of results. Empty if there are no more results.",
+          "type": "string"
+        },
+        "clientStates": {
+          "description": "Client states meeting the list restrictions.",
+          "type": "array",
+          "items": {
+            "$ref": "GoogleAppsCloudidentityDevicesV1ClientState"
+          }
+        }
+      }
+    },
+    "Operation": {
+      "description": "This resource represents a long-running operation that is the result of a network API call.",
+      "type": "object",
+      "id": "Operation",
+      "properties": {
+        "name": {
+          "description": "The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.",
+          "type": "string"
         },
         "error": {
-          "description": "The error result of the operation in case of failure or cancellation.",
-          "$ref": "Status"
+          "$ref": "Status",
+          "description": "The error result of the operation in case of failure or cancellation."
         },
         "response": {
-          "type": "object",
-          "description": "The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.",
           "additionalProperties": {
-            "type": "any",
-            "description": "Properties of the object. Contains field @type with type URL."
-          }
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
+          },
+          "description": "The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.",
+          "type": "object"
+        },
+        "done": {
+          "description": "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.",
+          "type": "boolean"
         },
         "metadata": {
           "description": "Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.",
@@ -731,84 +695,78 @@
             "description": "Properties of the object. Contains field @type with type URL."
           },
           "type": "object"
-        },
-        "done": {
-          "description": "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.",
-          "type": "boolean"
         }
-      },
-      "description": "This resource represents a long-running operation that is the result of a network API call."
+      }
     },
-    "Group": {
+    "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceResponse": {
+      "id": "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceResponse",
+      "description": "Response message for cancelling an unfinished device wipe.",
       "properties": {
-        "createTime": {
-          "format": "google-datetime",
-          "description": "Output only. The time when the Group was created. Output only.",
-          "type": "string",
-          "readOnly": true
-        },
-        "parent": {
-          "type": "string",
-          "description": "Required. Immutable. The entity under which this Group resides in Cloud Identity resource hierarchy. Must be set when creating a Group, read-only afterwards. Currently allowed types: `identitysources`."
-        },
-        "description": {
-          "description": "An extended description to help users determine the purpose of a Group. For example, you can include information about who should join the Group, the types of messages to send to the Group, links to FAQs about the Group, or related Groups. Maximum length is 4,096 characters.",
-          "type": "string"
-        },
-        "labels": {
-          "type": "object",
-          "description": "Required. `Required`. Labels for Group resource. For creating Groups under a namespace, set label key to 'labels/system/groups/external' and label value as empty.",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "groupKey": {
-          "description": "Required. Immutable. EntityKey of the Group. Must be set when creating a Group, read-only afterwards.",
-          "$ref": "EntityKey"
-        },
-        "updateTime": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. The time when the Group was last updated. Output only.",
-          "format": "google-datetime"
-        },
-        "name": {
-          "readOnly": true,
-          "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group. Must be left blank while creating a Group.",
-          "type": "string"
-        },
-        "displayName": {
-          "type": "string",
-          "description": "The Group's display name."
-        }
-      },
-      "type": "object",
-      "id": "Group",
-      "description": "Resource representing a Group."
-    },
-    "MembershipRole": {
-      "id": "MembershipRole",
-      "description": "Resource representing a role within a Membership.",
-      "properties": {
-        "name": {
-          "description": "MembershipRole in string format. Currently supported MembershipRoles: `\"MEMBER\"`.",
-          "type": "string"
+        "device": {
+          "$ref": "GoogleAppsCloudidentityDevicesV1Device",
+          "description": "Resultant Device object for the action. Note that asset tags will not be returned in the device object."
         }
       },
       "type": "object"
     },
-    "GoogleAppsCloudidentityDevicesV1AndroidAttributes": {
+    "SearchGroupsResponse": {
+      "id": "SearchGroupsResponse",
       "type": "object",
       "properties": {
-        "enabledUnknownSources": {
-          "description": "Whether applications from unknown sources can be installed on device.",
-          "type": "boolean"
+        "nextPageToken": {
+          "description": "Token to retrieve the next page of results, or empty if there are no more results available for specified query.",
+          "type": "string"
         },
-        "ownerProfileAccount": {
+        "groups": {
+          "description": "List of Groups satisfying the search query.",
+          "items": {
+            "$ref": "Group"
+          },
+          "type": "array"
+        }
+      }
+    },
+    "EntityKey": {
+      "id": "EntityKey",
+      "properties": {
+        "id": {
+          "description": "The ID of the entity within the given namespace. The ID must be unique within its namespace.",
+          "type": "string"
+        },
+        "namespace": {
+          "description": "Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace. Namespaces are currently only created as part of IdentitySource creation from Admin Console. A namespace `\"identitysources/{identity_source_id}\"` is created corresponding to every Identity Source `identity_source_id`.",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "description": "An EntityKey uniquely identifies an Entity. Namespaces are used to provide isolation for IDs. A single ID can be reused across namespaces but the combination of a namespace and an ID must be unique."
+    },
+    "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceRequest": {
+      "type": "object",
+      "description": "Request message for cancelling an unfinished device wipe.",
+      "properties": {
+        "customer": {
+          "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.",
+          "type": "string"
+        }
+      },
+      "id": "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceRequest"
+    },
+    "GoogleAppsCloudidentityDevicesV1AndroidAttributes": {
+      "id": "GoogleAppsCloudidentityDevicesV1AndroidAttributes",
+      "type": "object",
+      "properties": {
+        "supportsWorkProfile": {
           "type": "boolean",
-          "description": "Whether this account is on an owner/primary profile. For phones, only true for owner profiles. Android 4+ devices can have secondary or restricted user profiles."
+          "description": "Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the \"Enforce Work Profile\" policy."
         },
         "ownershipPrivilege": {
+          "enumDescriptions": [
+            "Ownership privilege is not set.",
+            "Active device administrator privileges on the device.",
+            "Profile Owner privileges. The account is in a managed corporate profile.",
+            "Device Owner privileges on the device."
+          ],
           "description": "Ownership privileges on device.",
           "enum": [
             "OWNERSHIP_PRIVILEGE_UNSPECIFIED",
@@ -816,80 +774,117 @@
             "PROFILE_OWNER",
             "DEVICE_OWNER"
           ],
-          "type": "string",
-          "enumDescriptions": [
-            "Ownership privilege is not set.",
-            "Active device administrator privileges on the device.",
-            "Profile Owner privileges. The account is in a managed corporate profile.",
-            "Device Owner privileges on the device."
-          ]
+          "type": "string"
         },
-        "supportsWorkProfile": {
-          "description": "Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the \"Enforce Work Profile\" policy.",
-          "type": "boolean"
+        "enabledUnknownSources": {
+          "type": "boolean",
+          "description": "Whether applications from unknown sources can be installed on device."
+        },
+        "ownerProfileAccount": {
+          "type": "boolean",
+          "description": "Whether this account is on an owner/primary profile. For phones, only true for owner profiles. Android 4+ devices can have secondary or restricted user profiles."
         }
       },
-      "description": "Resource representing the Android specific attributes of a Device.",
-      "id": "GoogleAppsCloudidentityDevicesV1AndroidAttributes"
+      "description": "Resource representing the Android specific attributes of a Device."
     },
-    "Membership": {
-      "description": "Resource representing a Membership within a Group",
-      "id": "Membership",
+    "GoogleAppsCloudidentityDevicesV1WipeDeviceUserResponse": {
       "type": "object",
+      "description": "Response message for wiping the user's account from the device.",
+      "id": "GoogleAppsCloudidentityDevicesV1WipeDeviceUserResponse",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership in the format: `groups/{group_id}/memberships/{member_id}`, where group_id is the unique ID assigned to the Group to which Membership belongs to, and member_id is the unique ID assigned to the member Must be left blank while creating a Membership.",
-          "readOnly": true
-        },
-        "preferredMemberKey": {
-          "$ref": "EntityKey",
-          "description": "Required. Immutable. EntityKey of the entity to be added as the member. Must be set while creating a Membership, read-only afterwards. Currently allowed entity types: `Users`, `Groups`."
-        },
-        "updateTime": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. Last updated timestamp of the Membership. Output only.",
-          "format": "google-datetime"
-        },
-        "createTime": {
-          "readOnly": true,
-          "description": "Output only. Creation timestamp of the Membership. Output only.",
-          "type": "string",
-          "format": "google-datetime"
-        },
-        "roles": {
-          "type": "array",
-          "description": "Roles for a member within the Group. Currently supported MembershipRoles: `\"MEMBER\"`.",
-          "items": {
-            "$ref": "MembershipRole"
-          }
-        },
-        "type": {
-          "description": "Output only. The type of the membership.",
-          "enumDescriptions": [
-            "Default. Should not be used.",
-            "Represents user type.",
-            "Represents service account type.",
-            "Represents group type.",
-            "Represents other type."
-          ],
-          "enum": [
-            "TYPE_UNSPECIFIED",
-            "USER",
-            "SERVICE_ACCOUNT",
-            "GROUP",
-            "OTHER"
-          ],
-          "type": "string",
-          "readOnly": true
+        "deviceUser": {
+          "description": "Resultant DeviceUser object for the action.",
+          "$ref": "GoogleAppsCloudidentityDevicesV1DeviceUser"
         }
       }
     },
-    "GoogleAppsCloudidentityDevicesV1BlockDeviceUserResponse": {
-      "description": "Response message for blocking the device from accessing user data.",
-      "id": "GoogleAppsCloudidentityDevicesV1BlockDeviceUserResponse",
+    "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest": {
+      "description": "Request message for cancelling an unfinished user account wipe.",
+      "properties": {
+        "customer": {
+          "type": "string",
+          "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs."
+        }
+      },
       "type": "object",
+      "id": "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest"
+    },
+    "ListGroupsResponse": {
+      "id": "ListGroupsResponse",
+      "properties": {
+        "nextPageToken": {
+          "type": "string",
+          "description": "Token to retrieve the next page of results, or empty if there are no more results available for listing."
+        },
+        "groups": {
+          "type": "array",
+          "description": "Groups returned in response to list request. The results are not sorted.",
+          "items": {
+            "$ref": "Group"
+          }
+        }
+      },
+      "type": "object",
+      "description": "Response message for ListGroups operation."
+    },
+    "GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse": {
+      "description": "Response containing resource names of the DeviceUsers associated with the caller's credentials.",
+      "type": "object",
+      "properties": {
+        "names": {
+          "description": "[Resource names](https://cloud.google.com/apis/design/resource_names) of the DeviceUsers in the format: `devices/{device_id}/deviceUsers/{user_resource_id}`, where device_id is the unique ID assigned to a Device and user_resource_id is the unique user ID",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "nextPageToken": {
+          "description": "Token to retrieve the next page of results. Empty if there are no more results.",
+          "type": "string"
+        },
+        "customer": {
+          "description": "The obfuscated customer Id that may be passed back to other Devices API methods such as List, Get, etc.",
+          "type": "string"
+        }
+      },
+      "id": "GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse"
+    },
+    "GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest": {
+      "properties": {
+        "customer": {
+          "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "description": "Request message for blocking account on device.",
+      "id": "GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest"
+    },
+    "LookupGroupNameResponse": {
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "[Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group."
+        }
+      },
+      "id": "LookupGroupNameResponse",
+      "type": "object"
+    },
+    "GoogleAppsCloudidentityDevicesV1WipeDeviceRequest": {
+      "description": "Request message for wiping all data on the device.",
+      "id": "GoogleAppsCloudidentityDevicesV1WipeDeviceRequest",
+      "type": "object",
+      "properties": {
+        "customer": {
+          "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.",
+          "type": "string"
+        }
+      }
+    },
+    "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserResponse": {
+      "type": "object",
+      "description": "Response message for cancelling an unfinished user account wipe.",
+      "id": "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserResponse",
       "properties": {
         "deviceUser": {
           "$ref": "GoogleAppsCloudidentityDevicesV1DeviceUser",
@@ -897,321 +892,191 @@
         }
       }
     },
+    "GoogleAppsCloudidentityDevicesV1WipeDeviceResponse": {
+      "description": "Response message for wiping all data on the device.",
+      "id": "GoogleAppsCloudidentityDevicesV1WipeDeviceResponse",
+      "type": "object",
+      "properties": {
+        "device": {
+          "description": "Resultant Device object for the action. Note that asset tags will not be returned in the device object.",
+          "$ref": "GoogleAppsCloudidentityDevicesV1Device"
+        }
+      }
+    },
+    "Status": {
+      "type": "object",
+      "id": "Status",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "description": "The status code, which should be an enum value of google.rpc.Code.",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string",
+          "description": "A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client."
+        },
+        "details": {
+          "description": "A list of messages that carry the error details. There is a common set of message types for APIs to use.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "any",
+              "description": "Properties of the object. Contains field @type with type URL."
+            }
+          }
+        }
+      },
+      "description": "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors)."
+    },
+    "GoogleAppsCloudidentityDevicesV1BlockDeviceUserResponse": {
+      "id": "GoogleAppsCloudidentityDevicesV1BlockDeviceUserResponse",
+      "properties": {
+        "deviceUser": {
+          "$ref": "GoogleAppsCloudidentityDevicesV1DeviceUser",
+          "description": "Resultant DeviceUser object for the action."
+        }
+      },
+      "description": "Response message for blocking the device from accessing user data.",
+      "type": "object"
+    },
+    "GoogleAppsCloudidentityDevicesV1ListDevicesResponse": {
+      "type": "object",
+      "id": "GoogleAppsCloudidentityDevicesV1ListDevicesResponse",
+      "description": "Response message that is returned from the ListDevices method.",
+      "properties": {
+        "nextPageToken": {
+          "type": "string",
+          "description": "Token to retrieve the next page of results. Empty if there are no more results."
+        },
+        "devices": {
+          "description": "Devices meeting the list restrictions.",
+          "type": "array",
+          "items": {
+            "$ref": "GoogleAppsCloudidentityDevicesV1Device"
+          }
+        }
+      }
+    },
     "ListMembershipsResponse": {
+      "id": "ListMembershipsResponse",
+      "type": "object",
       "properties": {
         "memberships": {
-          "type": "array",
           "items": {
             "$ref": "Membership"
           },
+          "type": "array",
           "description": "List of Memberships."
         },
         "nextPageToken": {
           "description": "Token to retrieve the next page of results, or empty if there are no more results available for listing.",
           "type": "string"
         }
-      },
-      "type": "object",
-      "id": "ListMembershipsResponse"
+      }
     }
   },
-  "version_module": true,
+  "canonicalName": "Cloud Identity",
+  "documentationLink": "https://cloud.google.com/identity/",
+  "rootUrl": "https://cloudidentity.googleapis.com/",
+  "protocol": "rest",
+  "revision": "20200902",
+  "name": "cloudidentity",
+  "id": "cloudidentity:v1",
+  "fullyEncodeReservedExpansion": true,
+  "discoveryVersion": "v1",
+  "parameters": {
+    "alt": {
+      "type": "string",
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ],
+      "description": "Data format for response.",
+      "location": "query",
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ],
+      "default": "json"
+    },
+    "$.xgafv": {
+      "enumDescriptions": [
+        "v1 error format",
+        "v2 error format"
+      ],
+      "type": "string",
+      "enum": [
+        "1",
+        "2"
+      ],
+      "description": "V1 error format.",
+      "location": "query"
+    },
+    "uploadType": {
+      "location": "query",
+      "type": "string",
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
+    },
+    "oauth_token": {
+      "description": "OAuth 2.0 token for the current user.",
+      "location": "query",
+      "type": "string"
+    },
+    "access_token": {
+      "description": "OAuth access token.",
+      "type": "string",
+      "location": "query"
+    },
+    "upload_protocol": {
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "type": "string",
+      "location": "query"
+    },
+    "fields": {
+      "description": "Selector specifying which fields to include in a partial response.",
+      "location": "query",
+      "type": "string"
+    },
+    "callback": {
+      "description": "JSONP",
+      "location": "query",
+      "type": "string"
+    },
+    "quotaUser": {
+      "location": "query",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "type": "string"
+    },
+    "prettyPrint": {
+      "location": "query",
+      "type": "boolean",
+      "default": "true",
+      "description": "Returns response with indentations and line breaks."
+    },
+    "key": {
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "type": "string",
+      "location": "query"
+    }
+  },
+  "ownerName": "Google",
   "version": "v1",
   "basePath": "",
-  "kind": "discovery#restDescription",
-  "batchPath": "batch",
-  "documentationLink": "https://cloud.google.com/identity/",
   "ownerDomain": "google.com",
-  "canonicalName": "Cloud Identity",
-  "description": "API for provisioning and managing identity resources.",
+  "version_module": true,
   "icons": {
     "x16": "http://www.google.com/images/icons/product/search-16.gif",
     "x32": "http://www.google.com/images/icons/product/search-32.gif"
   },
-  "fullyEncodeReservedExpansion": true,
+  "batchPath": "batch",
   "resources": {
     "groups": {
-      "resources": {
-        "memberships": {
-          "methods": {
-            "create": {
-              "request": {
-                "$ref": "Membership"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "response": {
-                "$ref": "Operation"
-              },
-              "parameters": {
-                "parent": {
-                  "type": "string",
-                  "pattern": "^groups/[^/]+$",
-                  "location": "path",
-                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to create Membership within. Format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.",
-                  "required": true
-                }
-              },
-              "flatPath": "v1/groups/{groupsId}/memberships",
-              "path": "v1/{+parent}/memberships",
-              "httpMethod": "POST",
-              "description": "Creates a Membership.",
-              "id": "cloudidentity.groups.memberships.create",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-identity.groups",
-                "https://www.googleapis.com/auth/cloud-platform"
-              ]
-            },
-            "delete": {
-              "description": "Deletes a Membership.",
-              "parameterOrder": [
-                "name"
-              ],
-              "flatPath": "v1/groups/{groupsId}/memberships/{membershipsId}",
-              "response": {
-                "$ref": "Operation"
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-identity.groups",
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "id": "cloudidentity.groups.memberships.delete",
-              "path": "v1/{+name}",
-              "httpMethod": "DELETE",
-              "parameters": {
-                "name": {
-                  "location": "path",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^groups/[^/]+/memberships/[^/]+$",
-                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership to be deleted. Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique ID assigned to the Group to which Membership belongs to, and member_id is the unique ID assigned to the member."
-                }
-              }
-            },
-            "list": {
-              "id": "cloudidentity.groups.memberships.list",
-              "parameterOrder": [
-                "parent"
-              ],
-              "parameters": {
-                "view": {
-                  "enumDescriptions": [
-                    "Default. Should not be used.",
-                    "Server responses only include basic information.",
-                    "Full representation of the resource."
-                  ],
-                  "type": "string",
-                  "description": "Membership resource view to be returned. Defaults to View.BASIC.",
-                  "enum": [
-                    "VIEW_UNSPECIFIED",
-                    "BASIC",
-                    "FULL"
-                  ],
-                  "location": "query"
-                },
-                "pageToken": {
-                  "description": "The next_page_token value returned from a previous list request, if any.",
-                  "type": "string",
-                  "location": "query"
-                },
-                "pageSize": {
-                  "format": "int32",
-                  "type": "integer",
-                  "location": "query",
-                  "description": "The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view."
-                },
-                "parent": {
-                  "pattern": "^groups/[^/]+$",
-                  "required": true,
-                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to list Memberships within. Format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.",
-                  "type": "string",
-                  "location": "path"
-                }
-              },
-              "description": "Lists Memberships within a Group.",
-              "flatPath": "v1/groups/{groupsId}/memberships",
-              "path": "v1/{+parent}/memberships",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-identity.groups",
-                "https://www.googleapis.com/auth/cloud-identity.groups.readonly",
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "response": {
-                "$ref": "ListMembershipsResponse"
-              },
-              "httpMethod": "GET"
-            },
-            "get": {
-              "response": {
-                "$ref": "Membership"
-              },
-              "parameters": {
-                "name": {
-                  "type": "string",
-                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership to be retrieved. Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id assigned to the Group to which Membership belongs to, and `member_id` is the unique ID assigned to the member.",
-                  "pattern": "^groups/[^/]+/memberships/[^/]+$",
-                  "location": "path",
-                  "required": true
-                }
-              },
-              "httpMethod": "GET",
-              "path": "v1/{+name}",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-identity.groups",
-                "https://www.googleapis.com/auth/cloud-identity.groups.readonly",
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "parameterOrder": [
-                "name"
-              ],
-              "description": "Retrieves a Membership.",
-              "id": "cloudidentity.groups.memberships.get",
-              "flatPath": "v1/groups/{groupsId}/memberships/{membershipsId}"
-            },
-            "lookup": {
-              "flatPath": "v1/groups/{groupsId}/memberships:lookup",
-              "description": "Looks up [resource name](https://cloud.google.com/apis/design/resource_names) of a Membership within a Group by member's EntityKey.",
-              "response": {
-                "$ref": "LookupMembershipNameResponse"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "parameters": {
-                "memberKey.id": {
-                  "description": "The ID of the entity within the given namespace. The ID must be unique within its namespace.",
-                  "location": "query",
-                  "type": "string"
-                },
-                "memberKey.namespace": {
-                  "type": "string",
-                  "location": "query",
-                  "description": "Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace. Namespaces are currently only created as part of IdentitySource creation from Admin Console. A namespace `\"identitysources/{identity_source_id}\"` is created corresponding to every Identity Source `identity_source_id`."
-                },
-                "parent": {
-                  "type": "string",
-                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to lookup Membership within. Format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.",
-                  "location": "path",
-                  "pattern": "^groups/[^/]+$",
-                  "required": true
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-identity.groups",
-                "https://www.googleapis.com/auth/cloud-identity.groups.readonly",
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "id": "cloudidentity.groups.memberships.lookup",
-              "path": "v1/{+parent}/memberships:lookup",
-              "httpMethod": "GET"
-            }
-          }
-        }
-      },
       "methods": {
-        "create": {
-          "request": {
-            "$ref": "Group"
-          },
-          "flatPath": "v1/groups",
-          "parameterOrder": [],
-          "id": "cloudidentity.groups.create",
-          "path": "v1/groups",
-          "response": {
-            "$ref": "Operation"
-          },
-          "httpMethod": "POST",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-identity.groups",
-            "https://www.googleapis.com/auth/cloud-platform"
-          ],
-          "parameters": {},
-          "description": "Creates a Group."
-        },
-        "search": {
-          "path": "v1/groups:search",
-          "description": "Searches for Groups.",
-          "httpMethod": "GET",
-          "id": "cloudidentity.groups.search",
-          "parameterOrder": [],
-          "response": {
-            "$ref": "SearchGroupsResponse"
-          },
-          "flatPath": "v1/groups:search",
-          "parameters": {
-            "view": {
-              "enum": [
-                "VIEW_UNSPECIFIED",
-                "BASIC",
-                "FULL"
-              ],
-              "enumDescriptions": [
-                "Default. Should not be used.",
-                "Server responses only include basic information.",
-                "Full representation of the resource."
-              ],
-              "description": "Group resource view to be returned. Defaults to [View.BASIC]().",
-              "type": "string",
-              "location": "query"
-            },
-            "pageSize": {
-              "location": "query",
-              "description": "The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view.",
-              "format": "int32",
-              "type": "integer"
-            },
-            "query": {
-              "type": "string",
-              "location": "query",
-              "description": "Required. `Required`. Query string for performing search on groups. Users can search on parent and label attributes of groups. EXACT match ('==') is supported on parent, and CONTAINS match ('in') is supported on labels."
-            },
-            "pageToken": {
-              "description": "The next_page_token value returned from a previous search request, if any.",
-              "location": "query",
-              "type": "string"
-            }
-          },
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-identity.groups",
-            "https://www.googleapis.com/auth/cloud-identity.groups.readonly",
-            "https://www.googleapis.com/auth/cloud-platform"
-          ]
-        },
-        "get": {
-          "response": {
-            "$ref": "Group"
-          },
-          "httpMethod": "GET",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-identity.groups",
-            "https://www.googleapis.com/auth/cloud-identity.groups.readonly",
-            "https://www.googleapis.com/auth/cloud-platform"
-          ],
-          "description": "Retrieves a Group.",
-          "path": "v1/{+name}",
-          "parameterOrder": [
-            "name"
-          ],
-          "parameters": {
-            "name": {
-              "type": "string",
-              "location": "path",
-              "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.",
-              "pattern": "^groups/[^/]+$",
-              "required": true
-            }
-          },
-          "id": "cloudidentity.groups.get",
-          "flatPath": "v1/groups/{groupsId}"
-        },
         "list": {
-          "httpMethod": "GET",
-          "description": "Lists groups within a customer or a domain.",
-          "path": "v1/groups",
-          "id": "cloudidentity.groups.list",
-          "flatPath": "v1/groups",
-          "parameterOrder": [],
           "scopes": [
             "https://www.googleapis.com/auth/cloud-identity.groups",
             "https://www.googleapis.com/auth/cloud-identity.groups.readonly",
@@ -1220,130 +1085,963 @@
           "response": {
             "$ref": "ListGroupsResponse"
           },
+          "id": "cloudidentity.groups.list",
+          "path": "v1/groups",
+          "flatPath": "v1/groups",
           "parameters": {
+            "pageSize": {
+              "format": "int32",
+              "type": "integer",
+              "location": "query",
+              "description": "The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view."
+            },
             "pageToken": {
               "description": "The next_page_token value returned from a previous list request, if any.",
               "location": "query",
               "type": "string"
             },
             "view": {
-              "type": "string",
-              "location": "query",
+              "description": "Group resource view to be returned. Defaults to [View.BASIC]().",
               "enum": [
                 "VIEW_UNSPECIFIED",
                 "BASIC",
                 "FULL"
               ],
+              "location": "query",
               "enumDescriptions": [
                 "Default. Should not be used.",
                 "Server responses only include basic information.",
                 "Full representation of the resource."
               ],
-              "description": "Group resource view to be returned. Defaults to [View.BASIC]()."
+              "type": "string"
             },
             "parent": {
               "type": "string",
-              "location": "query",
-              "description": "Required. Customer ID to list all groups from."
-            },
-            "pageSize": {
-              "description": "The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view.",
-              "format": "int32",
-              "type": "integer",
+              "description": "Required. Customer ID to list all groups from.",
               "location": "query"
             }
-          }
-        },
-        "patch": {
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-identity.groups",
-            "https://www.googleapis.com/auth/cloud-platform"
-          ],
-          "httpMethod": "PATCH",
-          "response": {
-            "$ref": "Operation"
           },
-          "flatPath": "v1/groups/{groupsId}",
-          "id": "cloudidentity.groups.patch",
+          "httpMethod": "GET",
+          "parameterOrder": [],
+          "description": "Lists groups within a customer or a domain."
+        },
+        "get": {
           "parameterOrder": [
             "name"
           ],
-          "parameters": {
-            "name": {
-              "location": "path",
-              "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group. Must be left blank while creating a Group.",
-              "pattern": "^groups/[^/]+$",
-              "type": "string",
-              "required": true
-            },
-            "updateMask": {
-              "type": "string",
-              "format": "google-fieldmask",
-              "location": "query",
-              "description": "Required. Editable fields: `display_name`, `description`"
-            }
-          },
-          "request": {
-            "$ref": "Group"
-          },
-          "description": "Updates a Group.",
-          "path": "v1/{+name}"
-        },
-        "lookup": {
+          "flatPath": "v1/groups/{groupsId}",
           "scopes": [
             "https://www.googleapis.com/auth/cloud-identity.groups",
             "https://www.googleapis.com/auth/cloud-identity.groups.readonly",
             "https://www.googleapis.com/auth/cloud-platform"
           ],
+          "path": "v1/{+name}",
+          "id": "cloudidentity.groups.get",
+          "response": {
+            "$ref": "Group"
+          },
+          "httpMethod": "GET",
+          "parameters": {
+            "name": {
+              "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.",
+              "required": true,
+              "pattern": "^groups/[^/]+$",
+              "type": "string",
+              "location": "path"
+            }
+          },
+          "description": "Retrieves a Group."
+        },
+        "search": {
+          "parameters": {
+            "pageToken": {
+              "location": "query",
+              "description": "The next_page_token value returned from a previous search request, if any.",
+              "type": "string"
+            },
+            "query": {
+              "location": "query",
+              "description": "Required. `Required`. Query string for performing search on groups. Users can search on parent and label attributes of groups. EXACT match ('==') is supported on parent, and CONTAINS match ('in') is supported on labels.",
+              "type": "string"
+            },
+            "pageSize": {
+              "format": "int32",
+              "location": "query",
+              "description": "The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view.",
+              "type": "integer"
+            },
+            "view": {
+              "enumDescriptions": [
+                "Default. Should not be used.",
+                "Server responses only include basic information.",
+                "Full representation of the resource."
+              ],
+              "location": "query",
+              "type": "string",
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "BASIC",
+                "FULL"
+              ],
+              "description": "Group resource view to be returned. Defaults to [View.BASIC]()."
+            }
+          },
+          "description": "Searches for Groups.",
+          "response": {
+            "$ref": "SearchGroupsResponse"
+          },
+          "flatPath": "v1/groups:search",
+          "httpMethod": "GET",
+          "parameterOrder": [],
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-identity.groups",
+            "https://www.googleapis.com/auth/cloud-identity.groups.readonly",
+            "https://www.googleapis.com/auth/cloud-platform"
+          ],
+          "path": "v1/groups:search",
+          "id": "cloudidentity.groups.search"
+        },
+        "lookup": {
+          "httpMethod": "GET",
+          "flatPath": "v1/groups:lookup",
+          "parameterOrder": [],
+          "response": {
+            "$ref": "LookupGroupNameResponse"
+          },
+          "path": "v1/groups:lookup",
           "parameters": {
             "groupKey.id": {
               "description": "The ID of the entity within the given namespace. The ID must be unique within its namespace.",
-              "location": "query",
-              "type": "string"
+              "type": "string",
+              "location": "query"
             },
             "groupKey.namespace": {
+              "location": "query",
               "description": "Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace. Namespaces are currently only created as part of IdentitySource creation from Admin Console. A namespace `\"identitysources/{identity_source_id}\"` is created corresponding to every Identity Source `identity_source_id`.",
+              "type": "string"
+            }
+          },
+          "description": "Looks up [resource name](https://cloud.google.com/apis/design/resource_names) of a Group by its EntityKey.",
+          "id": "cloudidentity.groups.lookup",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-identity.groups",
+            "https://www.googleapis.com/auth/cloud-identity.groups.readonly",
+            "https://www.googleapis.com/auth/cloud-platform"
+          ]
+        },
+        "delete": {
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-identity.groups",
+            "https://www.googleapis.com/auth/cloud-platform"
+          ],
+          "path": "v1/{+name}",
+          "response": {
+            "$ref": "Operation"
+          },
+          "flatPath": "v1/groups/{groupsId}",
+          "parameters": {
+            "name": {
+              "required": true,
+              "location": "path",
+              "type": "string",
+              "pattern": "^groups/[^/]+$",
+              "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group."
+            }
+          },
+          "description": "Deletes a Group.",
+          "parameterOrder": [
+            "name"
+          ],
+          "id": "cloudidentity.groups.delete",
+          "httpMethod": "DELETE"
+        },
+        "create": {
+          "response": {
+            "$ref": "Operation"
+          },
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-identity.groups",
+            "https://www.googleapis.com/auth/cloud-platform"
+          ],
+          "parameterOrder": [],
+          "description": "Creates a Group.",
+          "flatPath": "v1/groups",
+          "path": "v1/groups",
+          "httpMethod": "POST",
+          "parameters": {},
+          "id": "cloudidentity.groups.create",
+          "request": {
+            "$ref": "Group"
+          }
+        },
+        "patch": {
+          "httpMethod": "PATCH",
+          "path": "v1/{+name}",
+          "request": {
+            "$ref": "Group"
+          },
+          "response": {
+            "$ref": "Operation"
+          },
+          "flatPath": "v1/groups/{groupsId}",
+          "id": "cloudidentity.groups.patch",
+          "description": "Updates a Group.",
+          "parameters": {
+            "updateMask": {
+              "description": "Required. Editable fields: `display_name`, `description`",
+              "location": "query",
+              "format": "google-fieldmask",
+              "type": "string"
+            },
+            "name": {
+              "required": true,
+              "location": "path",
+              "pattern": "^groups/[^/]+$",
+              "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group. Must be left blank while creating a Group.",
+              "type": "string"
+            }
+          },
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-identity.groups",
+            "https://www.googleapis.com/auth/cloud-platform"
+          ],
+          "parameterOrder": [
+            "name"
+          ]
+        }
+      },
+      "resources": {
+        "memberships": {
+          "methods": {
+            "list": {
+              "parameterOrder": [
+                "parent"
+              ],
+              "description": "Lists Memberships within a Group.",
+              "httpMethod": "GET",
+              "parameters": {
+                "pageToken": {
+                  "description": "The next_page_token value returned from a previous list request, if any.",
+                  "location": "query",
+                  "type": "string"
+                },
+                "view": {
+                  "type": "string",
+                  "description": "Membership resource view to be returned. Defaults to View.BASIC.",
+                  "location": "query",
+                  "enum": [
+                    "VIEW_UNSPECIFIED",
+                    "BASIC",
+                    "FULL"
+                  ],
+                  "enumDescriptions": [
+                    "Default. Should not be used.",
+                    "Server responses only include basic information.",
+                    "Full representation of the resource."
+                  ]
+                },
+                "pageSize": {
+                  "location": "query",
+                  "description": "The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view.",
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "parent": {
+                  "required": true,
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to list Memberships within. Format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.",
+                  "location": "path",
+                  "type": "string",
+                  "pattern": "^groups/[^/]+$"
+                }
+              },
+              "flatPath": "v1/groups/{groupsId}/memberships",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-identity.groups",
+                "https://www.googleapis.com/auth/cloud-identity.groups.readonly",
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "path": "v1/{+parent}/memberships",
+              "response": {
+                "$ref": "ListMembershipsResponse"
+              },
+              "id": "cloudidentity.groups.memberships.list"
+            },
+            "get": {
+              "parameters": {
+                "name": {
+                  "type": "string",
+                  "required": true,
+                  "location": "path",
+                  "pattern": "^groups/[^/]+/memberships/[^/]+$",
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership to be retrieved. Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id assigned to the Group to which Membership belongs to, and `member_id` is the unique ID assigned to the member."
+                }
+              },
+              "id": "cloudidentity.groups.memberships.get",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-identity.groups",
+                "https://www.googleapis.com/auth/cloud-identity.groups.readonly",
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "path": "v1/{+name}",
+              "httpMethod": "GET",
+              "response": {
+                "$ref": "Membership"
+              },
+              "flatPath": "v1/groups/{groupsId}/memberships/{membershipsId}",
+              "description": "Retrieves a Membership.",
+              "parameterOrder": [
+                "name"
+              ]
+            },
+            "delete": {
+              "parameterOrder": [
+                "name"
+              ],
+              "response": {
+                "$ref": "Operation"
+              },
+              "flatPath": "v1/groups/{groupsId}/memberships/{membershipsId}",
+              "path": "v1/{+name}",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-identity.groups",
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "id": "cloudidentity.groups.memberships.delete",
+              "description": "Deletes a Membership.",
+              "httpMethod": "DELETE",
+              "parameters": {
+                "name": {
+                  "type": "string",
+                  "pattern": "^groups/[^/]+/memberships/[^/]+$",
+                  "required": true,
+                  "location": "path",
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership to be deleted. Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique ID assigned to the Group to which Membership belongs to, and member_id is the unique ID assigned to the member."
+                }
+              }
+            },
+            "create": {
+              "description": "Creates a Membership.",
+              "path": "v1/{+parent}/memberships",
+              "parameters": {
+                "parent": {
+                  "location": "path",
+                  "pattern": "^groups/[^/]+$",
+                  "type": "string",
+                  "required": true,
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to create Membership within. Format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group."
+                }
+              },
+              "id": "cloudidentity.groups.memberships.create",
+              "request": {
+                "$ref": "Membership"
+              },
+              "response": {
+                "$ref": "Operation"
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-identity.groups",
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1/groups/{groupsId}/memberships",
+              "httpMethod": "POST",
+              "parameterOrder": [
+                "parent"
+              ]
+            },
+            "lookup": {
+              "description": "Looks up [resource name](https://cloud.google.com/apis/design/resource_names) of a Membership within a Group by member's EntityKey.",
+              "parameters": {
+                "memberKey.namespace": {
+                  "description": "Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace. Namespaces are currently only created as part of IdentitySource creation from Admin Console. A namespace `\"identitysources/{identity_source_id}\"` is created corresponding to every Identity Source `identity_source_id`.",
+                  "type": "string",
+                  "location": "query"
+                },
+                "parent": {
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to lookup Membership within. Format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.",
+                  "location": "path",
+                  "type": "string",
+                  "pattern": "^groups/[^/]+$",
+                  "required": true
+                },
+                "memberKey.id": {
+                  "type": "string",
+                  "location": "query",
+                  "description": "The ID of the entity within the given namespace. The ID must be unique within its namespace."
+                }
+              },
+              "response": {
+                "$ref": "LookupMembershipNameResponse"
+              },
+              "id": "cloudidentity.groups.memberships.lookup",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-identity.groups",
+                "https://www.googleapis.com/auth/cloud-identity.groups.readonly",
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1/groups/{groupsId}/memberships:lookup",
+              "parameterOrder": [
+                "parent"
+              ],
+              "httpMethod": "GET",
+              "path": "v1/{+parent}/memberships:lookup"
+            }
+          }
+        }
+      }
+    },
+    "devices": {
+      "methods": {
+        "delete": {
+          "response": {
+            "$ref": "Operation"
+          },
+          "parameterOrder": [
+            "name"
+          ],
+          "httpMethod": "DELETE",
+          "path": "v1/{+name}",
+          "description": "Deletes the specified device.",
+          "id": "cloudidentity.devices.delete",
+          "flatPath": "v1/devices/{devicesId}",
+          "parameters": {
+            "customer": {
+              "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.",
+              "type": "string",
+              "location": "query"
+            },
+            "name": {
+              "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.",
+              "location": "path",
+              "required": true,
+              "pattern": "^devices/[^/]+$",
+              "type": "string"
+            }
+          }
+        },
+        "list": {
+          "parameters": {
+            "filter": {
+              "type": "string",
+              "description": "Optional. Additional restrictions when fetching list of devices. [Help Center article link](https://support.google.com/a/answer/7549103)",
+              "location": "query"
+            },
+            "customer": {
+              "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer in the format: `customers/{customer_id}`, where customer_id is the customer to whom the device belongs. If you're using this API for your own organization, use `customers/my_customer`. If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.",
+              "type": "string",
+              "location": "query"
+            },
+            "pageSize": {
+              "type": "integer",
+              "description": "Optional. The maximum number of Devices to return. If unspecified, at most 20 Devices will be returned. The maximum value is 100; values above 100 will be coerced to 100.",
+              "location": "query",
+              "format": "int32"
+            },
+            "view": {
+              "location": "query",
+              "type": "string",
+              "description": "Optional. The view to use for the List request.",
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "COMPANY_INVENTORY",
+                "USER_ASSIGNED_DEVICES"
+              ],
+              "enumDescriptions": [
+                "Default value. The value is unused.",
+                "This view contains all devices imported by the company admin. Each device in the response contains all information specified by the company admin when importing the device (i.e. asset tags). This includes devices that may be unaassigned or assigned to users.",
+                "This view contains all devices with at least one user registered on the device. Each device in the response contains all device information, except for asset tags."
+              ]
+            },
+            "pageToken": {
+              "location": "query",
+              "description": "Optional. A page token, received from a previous `ListDevices` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListDevices` must match the call that provided the page token.",
+              "type": "string"
+            },
+            "orderBy": {
+              "description": "Optional. Order specification for devices in the response. Only one of the following field names may be used to specify the order: `create_time`, `last_sync_time`, `model`, `os_version`, `device_type` and `serial_number`. `desc` may be specified optionally at the end to specify results to be sorted in descending order. Default order is ascending.",
               "location": "query",
               "type": "string"
             }
           },
           "parameterOrder": [],
-          "path": "v1/groups:lookup",
-          "description": "Looks up [resource name](https://cloud.google.com/apis/design/resource_names) of a Group by its EntityKey.",
-          "response": {
-            "$ref": "LookupGroupNameResponse"
-          },
+          "id": "cloudidentity.devices.list",
           "httpMethod": "GET",
-          "id": "cloudidentity.groups.lookup",
-          "flatPath": "v1/groups:lookup"
+          "flatPath": "v1/devices",
+          "description": "Lists/Searches devices.",
+          "response": {
+            "$ref": "GoogleAppsCloudidentityDevicesV1ListDevicesResponse"
+          },
+          "path": "v1/devices"
         },
-        "delete": {
+        "cancelWipe": {
           "parameterOrder": [
             "name"
           ],
-          "description": "Deletes a Group.",
+          "request": {
+            "$ref": "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceRequest"
+          },
+          "parameters": {
+            "name": {
+              "type": "string",
+              "pattern": "^devices/[^/]+$",
+              "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the User.",
+              "location": "path",
+              "required": true
+            }
+          },
+          "description": "Cancels an unfinished device wipe. This operation can be used to cancel device wipe in the gap between the wipe operation returning success and the device being wiped. This operation is possible when the device is in a \"pending wipe\" state. The device enters the \"pending wipe\" state when a wipe device command is issued, but has not yet been sent to the device. The cancel wipe will fail if the wipe command has already been issued to the device.",
+          "flatPath": "v1/devices/{devicesId}:cancelWipe",
+          "httpMethod": "POST",
+          "id": "cloudidentity.devices.cancelWipe",
+          "path": "v1/{+name}:cancelWipe",
+          "response": {
+            "$ref": "Operation"
+          }
+        },
+        "wipe": {
+          "parameterOrder": [
+            "name"
+          ],
+          "path": "v1/{+name}:wipe",
+          "description": "Wipes all data on the specified device.",
+          "flatPath": "v1/devices/{devicesId}:wipe",
+          "httpMethod": "POST",
+          "id": "cloudidentity.devices.wipe",
+          "parameters": {
+            "name": {
+              "pattern": "^devices/[^/]+$",
+              "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the User.",
+              "type": "string",
+              "location": "path",
+              "required": true
+            }
+          },
           "response": {
             "$ref": "Operation"
           },
-          "httpMethod": "DELETE",
-          "path": "v1/{+name}",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-identity.groups",
-            "https://www.googleapis.com/auth/cloud-platform"
+          "request": {
+            "$ref": "GoogleAppsCloudidentityDevicesV1WipeDeviceRequest"
+          }
+        },
+        "get": {
+          "parameterOrder": [
+            "name"
           ],
-          "id": "cloudidentity.groups.delete",
+          "id": "cloudidentity.devices.get",
+          "httpMethod": "GET",
           "parameters": {
+            "customer": {
+              "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Customer in the format: `customers/{customer_id}`, where customer_id is the customer to whom the device belongs. If you're using this API for your own organization, use `customers/my_customer`. If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.",
+              "location": "query",
+              "type": "string"
+            },
             "name": {
-              "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.",
               "required": true,
-              "type": "string",
+              "pattern": "^devices/[^/]+$",
+              "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in the format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.",
               "location": "path",
-              "pattern": "^groups/[^/]+$"
+              "type": "string"
             }
           },
-          "flatPath": "v1/groups/{groupsId}"
+          "response": {
+            "$ref": "GoogleAppsCloudidentityDevicesV1Device"
+          },
+          "flatPath": "v1/devices/{devicesId}",
+          "path": "v1/{+name}",
+          "description": "Retrieves the specified device."
+        },
+        "create": {
+          "flatPath": "v1/devices",
+          "httpMethod": "POST",
+          "parameterOrder": [],
+          "response": {
+            "$ref": "Operation"
+          },
+          "request": {
+            "$ref": "GoogleAppsCloudidentityDevicesV1Device"
+          },
+          "id": "cloudidentity.devices.create",
+          "description": "Creates a device. Only company-owned device may be created.",
+          "path": "v1/devices",
+          "parameters": {
+            "customer": {
+              "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.",
+              "location": "query",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "resources": {
+        "deviceUsers": {
+          "resources": {
+            "clientStates": {
+              "methods": {
+                "get": {
+                  "flatPath": "v1/devices/{devicesId}/deviceUsers/{deviceUsersId}/clientStates/{clientStatesId}",
+                  "description": "Gets the client state for the device user",
+                  "response": {
+                    "$ref": "GoogleAppsCloudidentityDevicesV1ClientState"
+                  },
+                  "id": "cloudidentity.devices.deviceUsers.clientStates.get",
+                  "path": "v1/{+name}",
+                  "parameters": {
+                    "customer": {
+                      "type": "string",
+                      "location": "query",
+                      "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs."
+                    },
+                    "name": {
+                      "pattern": "^devices/[^/]+/deviceUsers/[^/]+/clientStates/[^/]+$",
+                      "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where device_id is the unique ID assigned to the Device, device_user_id is the unique ID assigned to the User and partner_id identifies the partner storing the data.",
+                      "required": true,
+                      "type": "string",
+                      "location": "path"
+                    }
+                  },
+                  "httpMethod": "GET",
+                  "parameterOrder": [
+                    "name"
+                  ]
+                },
+                "patch": {
+                  "response": {
+                    "$ref": "Operation"
+                  },
+                  "description": "Updates the client state for the device user",
+                  "path": "v1/{+name}",
+                  "httpMethod": "PATCH",
+                  "request": {
+                    "$ref": "GoogleAppsCloudidentityDevicesV1ClientState"
+                  },
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "parameters": {
+                    "updateMask": {
+                      "format": "google-fieldmask",
+                      "location": "query",
+                      "type": "string",
+                      "description": "Optional. Comma-separated list of fully qualified names of fields to be updated. If not specified, all updatable fields in ClientState are updated."
+                    },
+                    "customer": {
+                      "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.",
+                      "location": "query",
+                      "type": "string"
+                    },
+                    "name": {
+                      "required": true,
+                      "type": "string",
+                      "pattern": "^devices/[^/]+/deviceUsers/[^/]+/clientStates/[^/]+$",
+                      "location": "path",
+                      "description": "Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where partner_id corresponds to the partner storing the data. For partners belonging to the \"BeyondCorp Alliance\", this is the partner ID specified to you by Google. For all other callers, this is a string of the form: `{customer_id}-suffix`, where `customer_id` is your customer id. The suffix is any string the caller specifies. This string will be displayed verbatim in the administration console."
+                    }
+                  },
+                  "flatPath": "v1/devices/{devicesId}/deviceUsers/{deviceUsersId}/clientStates/{clientStatesId}",
+                  "id": "cloudidentity.devices.deviceUsers.clientStates.patch"
+                },
+                "list": {
+                  "parameterOrder": [
+                    "parent"
+                  ],
+                  "flatPath": "v1/devices/{devicesId}/deviceUsers/{deviceUsersId}/clientStates",
+                  "parameters": {
+                    "pageToken": {
+                      "type": "string",
+                      "location": "query",
+                      "description": "Optional. A page token, received from a previous `ListClientStates` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListClientStates` must match the call that provided the page token."
+                    },
+                    "customer": {
+                      "location": "query",
+                      "type": "string",
+                      "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs."
+                    },
+                    "parent": {
+                      "type": "string",
+                      "description": "Required. To list all ClientStates, set this to \"devices/-/deviceUsers/-\". To list all ClientStates owned by a DeviceUser, set this to the resource name of the DeviceUser. Format: devices/{device}/deviceUsers/{deviceUser}",
+                      "required": true,
+                      "pattern": "^devices/[^/]+/deviceUsers/[^/]+$",
+                      "location": "path"
+                    },
+                    "orderBy": {
+                      "location": "query",
+                      "description": "Optional. Order specification for client states in the response.",
+                      "type": "string"
+                    },
+                    "filter": {
+                      "description": "Optional. Additional restrictions when fetching list of client states.",
+                      "location": "query",
+                      "type": "string"
+                    }
+                  },
+                  "path": "v1/{+parent}/clientStates",
+                  "response": {
+                    "$ref": "GoogleAppsCloudidentityDevicesV1ListClientStatesResponse"
+                  },
+                  "id": "cloudidentity.devices.deviceUsers.clientStates.list",
+                  "description": "Lists the client states for the given search query.",
+                  "httpMethod": "GET"
+                }
+              }
+            }
+          },
+          "methods": {
+            "wipe": {
+              "httpMethod": "POST",
+              "parameters": {
+                "name": {
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the User.",
+                  "pattern": "^devices/[^/]+/deviceUsers/[^/]+$",
+                  "required": true,
+                  "location": "path",
+                  "type": "string"
+                }
+              },
+              "path": "v1/{+name}:wipe",
+              "description": "Wipes the user's account on a device. Other data on the device that is not associated with the user's work account is not affected. For example, if a Gmail app is installed on a device that is used for personal and work purposes, and the user is logged in to the Gmail app with their personal account as well as their work account, wiping the \"deviceUser\" by their work administrator will not affect their personal account within Gmail or other apps such as Photos.",
+              "id": "cloudidentity.devices.deviceUsers.wipe",
+              "request": {
+                "$ref": "GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest"
+              },
+              "flatPath": "v1/devices/{devicesId}/deviceUsers/{deviceUsersId}:wipe",
+              "parameterOrder": [
+                "name"
+              ],
+              "response": {
+                "$ref": "Operation"
+              }
+            },
+            "delete": {
+              "description": "Deletes the specified DeviceUser. This also revokes the user's access to device data.",
+              "parameters": {
+                "name": {
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the User.",
+                  "location": "path",
+                  "pattern": "^devices/[^/]+/deviceUsers/[^/]+$",
+                  "type": "string",
+                  "required": true
+                },
+                "customer": {
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.",
+                  "type": "string",
+                  "location": "query"
+                }
+              },
+              "path": "v1/{+name}",
+              "id": "cloudidentity.devices.deviceUsers.delete",
+              "flatPath": "v1/devices/{devicesId}/deviceUsers/{deviceUsersId}",
+              "response": {
+                "$ref": "Operation"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "httpMethod": "DELETE"
+            },
+            "block": {
+              "id": "cloudidentity.devices.deviceUsers.block",
+              "response": {
+                "$ref": "Operation"
+              },
+              "path": "v1/{+name}:block",
+              "parameterOrder": [
+                "name"
+              ],
+              "description": "Blocks device from accessing user data",
+              "httpMethod": "POST",
+              "request": {
+                "$ref": "GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest"
+              },
+              "parameters": {
+                "name": {
+                  "pattern": "^devices/[^/]+/deviceUsers/[^/]+$",
+                  "type": "string",
+                  "required": true,
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the User.",
+                  "location": "path"
+                }
+              },
+              "flatPath": "v1/devices/{devicesId}/deviceUsers/{deviceUsersId}:block"
+            },
+            "approve": {
+              "parameters": {
+                "name": {
+                  "required": true,
+                  "location": "path",
+                  "pattern": "^devices/[^/]+/deviceUsers/[^/]+$",
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the User.",
+                  "type": "string"
+                }
+              },
+              "id": "cloudidentity.devices.deviceUsers.approve",
+              "request": {
+                "$ref": "GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest"
+              },
+              "flatPath": "v1/devices/{devicesId}/deviceUsers/{deviceUsersId}:approve",
+              "response": {
+                "$ref": "Operation"
+              },
+              "path": "v1/{+name}:approve",
+              "httpMethod": "POST",
+              "parameterOrder": [
+                "name"
+              ],
+              "description": "Approves device to access user data."
+            },
+            "list": {
+              "path": "v1/{+parent}/deviceUsers",
+              "id": "cloudidentity.devices.deviceUsers.list",
+              "parameterOrder": [
+                "parent"
+              ],
+              "description": "Lists/Searches DeviceUsers.",
+              "flatPath": "v1/devices/{devicesId}/deviceUsers",
+              "parameters": {
+                "parent": {
+                  "location": "path",
+                  "type": "string",
+                  "description": "Required. To list all DeviceUsers, set this to \"devices/-\". To list all DeviceUsers owned by a device, set this to the resource name of the device. Format: devices/{device}",
+                  "required": true,
+                  "pattern": "^devices/[^/]+$"
+                },
+                "filter": {
+                  "location": "query",
+                  "description": "Optional. Additional restrictions when fetching list of devices. [HC article](https://support.google.com/a/answer/7549103)",
+                  "type": "string"
+                },
+                "pageToken": {
+                  "type": "string",
+                  "description": "Optional. A page token, received from a previous `ListDeviceUsers` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListBooks` must match the call that provided the page token.",
+                  "location": "query"
+                },
+                "customer": {
+                  "type": "string",
+                  "location": "query",
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs."
+                },
+                "pageSize": {
+                  "description": "Optional. The maximum number of DeviceUsers to return. If unspecified, at most 5 DeviceUsers will be returned. The maximum value is 20; values above 20 will be coerced to 20.",
+                  "type": "integer",
+                  "format": "int32",
+                  "location": "query"
+                },
+                "orderBy": {
+                  "type": "string",
+                  "location": "query",
+                  "description": "Optional. Order specification for devices in the response."
+                }
+              },
+              "response": {
+                "$ref": "GoogleAppsCloudidentityDevicesV1ListDeviceUsersResponse"
+              },
+              "httpMethod": "GET"
+            },
+            "get": {
+              "httpMethod": "GET",
+              "parameters": {
+                "name": {
+                  "required": true,
+                  "location": "path",
+                  "type": "string",
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the User.",
+                  "pattern": "^devices/[^/]+/deviceUsers/[^/]+$"
+                },
+                "customer": {
+                  "type": "string",
+                  "location": "query",
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you're using this API for your own organization, use `customers/my_customer` If you're using this API to manage another organization, use `customers/{customer_id}`, where customer_id is the customer to whom the device belongs."
+                }
+              },
+              "id": "cloudidentity.devices.deviceUsers.get",
+              "response": {
+                "$ref": "GoogleAppsCloudidentityDevicesV1DeviceUser"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "description": "Retrieves the specified DeviceUser",
+              "path": "v1/{+name}",
+              "flatPath": "v1/devices/{devicesId}/deviceUsers/{deviceUsersId}"
+            },
+            "lookup": {
+              "parameterOrder": [
+                "parent"
+              ],
+              "httpMethod": "GET",
+              "flatPath": "v1/devices/{devicesId}/deviceUsers:lookup",
+              "path": "v1/{+parent}:lookup",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-identity.devices.lookup"
+              ],
+              "id": "cloudidentity.devices.deviceUsers.lookup",
+              "response": {
+                "$ref": "GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse"
+              },
+              "parameters": {
+                "pageToken": {
+                  "description": "A page token, received from a previous `LookupDeviceUsers` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `LookupDeviceUsers` must match the call that provided the page token.",
+                  "location": "query",
+                  "type": "string"
+                },
+                "androidId": {
+                  "type": "string",
+                  "description": "Android Id returned by [Settings.Secure#ANDROID_ID](https://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID).",
+                  "location": "query"
+                },
+                "pageSize": {
+                  "description": "The maximum number of DeviceUsers to return. If unspecified, at most 20 DeviceUsers will be returned. The maximum value is 20; values above 20 will be coerced to 20.",
+                  "type": "integer",
+                  "location": "query",
+                  "format": "int32"
+                },
+                "rawResourceId": {
+                  "type": "string",
+                  "description": "Raw Resource Id used by Google Endpoint Verification. If the user is enrolled into Google Endpoint Verification, this id will be saved as the 'device_resource_id' field in the following platform dependent files. Mac: ~/.secureConnect/context_aware_config.json Windows: C:\\Users\\%USERPROFILE%\\.secureConnect\\context_aware_config.json Linux: ~/.secureConnect/context_aware_config.json",
+                  "location": "query"
+                },
+                "userId": {
+                  "type": "string",
+                  "description": "The user whose DeviceUser's resource name will be fetched. Must be set to 'me' to fetch the DeviceUser's resource name for the calling user.",
+                  "location": "query"
+                },
+                "parent": {
+                  "required": true,
+                  "description": "Must be set to \"devices/-/deviceUsers\" to search across all DeviceUser belonging to the user.",
+                  "location": "path",
+                  "type": "string",
+                  "pattern": "^devices/[^/]+/deviceUsers$"
+                }
+              },
+              "description": "Looks up resource names of the DeviceUsers associated with the caller's credentials, as well as the properties provided in the request. This method must be called with end-user credentials with the scope: https://www.googleapis.com/auth/cloud-identity.devices.lookup If multiple properties are provided, only DeviceUsers having all of these properties are considered as matches - i.e. the query behaves like an AND. Different platforms require different amounts of information from the caller to ensure that the DeviceUser is uniquely identified. - iOS: No properties need to be passed, the caller's credentials are sufficient to identify the corresponding DeviceUser. - Android: Specifying the 'android_id' field is required. - Desktop: Specifying the 'raw_resource_id' field is required."
+            },
+            "cancelWipe": {
+              "httpMethod": "POST",
+              "description": "Cancels an unfinished user account wipe. This operation can be used to cancel device wipe in the gap between the wipe operation returning success and the device being wiped.",
+              "flatPath": "v1/devices/{devicesId}/deviceUsers/{deviceUsersId}:cancelWipe",
+              "parameters": {
+                "name": {
+                  "required": true,
+                  "description": "Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the User.",
+                  "pattern": "^devices/[^/]+/deviceUsers/[^/]+$",
+                  "location": "path",
+                  "type": "string"
+                }
+              },
+              "request": {
+                "$ref": "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest"
+              },
+              "id": "cloudidentity.devices.deviceUsers.cancelWipe",
+              "path": "v1/{+name}:cancelWipe",
+              "parameterOrder": [
+                "name"
+              ],
+              "response": {
+                "$ref": "Operation"
+              }
+            }
+          }
         }
       }
     }
-  }
+  },
+  "title": "Cloud Identity API"
 }

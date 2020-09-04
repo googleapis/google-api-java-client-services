@@ -71,6 +71,14 @@ public final class GoogleCloudDocumentaiV1beta1DocumentPageFormField extends com
   }
 
   /**
+   * If the value is non-textual, this field represents the type. Current valid values are: - blank
+   * (this indicates the field_value is normal text) - "unfilled_checkbox" - "filled_checkbox"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String valueType;
+
+  /**
    * Layout for the FormField name. e.g. `Address`, `Email`, `Grand total`, `Phone number`, etc.
    * @return value or {@code null} for none
    */
@@ -135,6 +143,25 @@ public final class GoogleCloudDocumentaiV1beta1DocumentPageFormField extends com
    */
   public GoogleCloudDocumentaiV1beta1DocumentPageFormField setValueDetectedLanguages(java.util.List<GoogleCloudDocumentaiV1beta1DocumentPageDetectedLanguage> valueDetectedLanguages) {
     this.valueDetectedLanguages = valueDetectedLanguages;
+    return this;
+  }
+
+  /**
+   * If the value is non-textual, this field represents the type. Current valid values are: - blank
+   * (this indicates the field_value is normal text) - "unfilled_checkbox" - "filled_checkbox"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getValueType() {
+    return valueType;
+  }
+
+  /**
+   * If the value is non-textual, this field represents the type. Current valid values are: - blank
+   * (this indicates the field_value is normal text) - "unfilled_checkbox" - "filled_checkbox"
+   * @param valueType valueType or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta1DocumentPageFormField setValueType(java.lang.String valueType) {
+    this.valueType = valueType;
     return this;
   }
 

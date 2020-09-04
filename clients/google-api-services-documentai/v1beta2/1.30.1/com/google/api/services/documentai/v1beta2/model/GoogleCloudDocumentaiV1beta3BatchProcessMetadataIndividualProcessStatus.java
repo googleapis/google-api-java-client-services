@@ -31,6 +31,15 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualProcessStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * The name of the operation triggered by the processed document. If the human review process is
+   * not triggered, this field will be empty. It has the same response type and metadata as the long
+   * running operation returned by ReviewDocument method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String humanReviewOperation;
+
+  /**
    * The source of the document, same as the [input_gcs_source] field in the request when the batch
    * process started. The batch process is started by take snapshot of that document, since a user
    * can move or change that document during the process.
@@ -53,6 +62,27 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus status;
+
+  /**
+   * The name of the operation triggered by the processed document. If the human review process is
+   * not triggered, this field will be empty. It has the same response type and metadata as the long
+   * running operation returned by ReviewDocument method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHumanReviewOperation() {
+    return humanReviewOperation;
+  }
+
+  /**
+   * The name of the operation triggered by the processed document. If the human review process is
+   * not triggered, this field will be empty. It has the same response type and metadata as the long
+   * running operation returned by ReviewDocument method.
+   * @param humanReviewOperation humanReviewOperation or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualProcessStatus setHumanReviewOperation(java.lang.String humanReviewOperation) {
+    this.humanReviewOperation = humanReviewOperation;
+    return this;
+  }
 
   /**
    * The source of the document, same as the [input_gcs_source] field in the request when the batch

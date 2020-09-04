@@ -60,6 +60,14 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPage extends com.google.a
   private java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageFormField> formFields;
 
   /**
+   * Rendered image for this page. This image is preprocessed to remove any skew, rotation, and
+   * distortions such that the annotation bounding boxes can be upright and axis-aligned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta2DocumentPageImage image;
+
+  /**
    * Layout for the page.
    * The value may be {@code null}.
    */
@@ -103,6 +111,13 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPage extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageToken> tokens;
+
+  /**
+   * Transformation matrices that were applied to the original document image to produce Page.image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageMatrix> transforms;
 
   /**
    * A list of detected non-text visual elements e.g. checkbox, signature etc. on the page.
@@ -178,6 +193,25 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPage extends com.google.a
    */
   public GoogleCloudDocumentaiV1beta2DocumentPage setFormFields(java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageFormField> formFields) {
     this.formFields = formFields;
+    return this;
+  }
+
+  /**
+   * Rendered image for this page. This image is preprocessed to remove any skew, rotation, and
+   * distortions such that the annotation bounding boxes can be upright and axis-aligned.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentPageImage getImage() {
+    return image;
+  }
+
+  /**
+   * Rendered image for this page. This image is preprocessed to remove any skew, rotation, and
+   * distortions such that the annotation bounding boxes can be upright and axis-aligned.
+   * @param image image or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentPage setImage(GoogleCloudDocumentaiV1beta2DocumentPageImage image) {
+    this.image = image;
     return this;
   }
 
@@ -286,6 +320,23 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPage extends com.google.a
    */
   public GoogleCloudDocumentaiV1beta2DocumentPage setTokens(java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageToken> tokens) {
     this.tokens = tokens;
+    return this;
+  }
+
+  /**
+   * Transformation matrices that were applied to the original document image to produce Page.image.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageMatrix> getTransforms() {
+    return transforms;
+  }
+
+  /**
+   * Transformation matrices that were applied to the original document image to produce Page.image.
+   * @param transforms transforms or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentPage setTransforms(java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageMatrix> transforms) {
+    this.transforms = transforms;
     return this;
   }
 

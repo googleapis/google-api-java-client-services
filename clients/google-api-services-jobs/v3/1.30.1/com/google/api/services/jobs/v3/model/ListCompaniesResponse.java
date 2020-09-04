@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v3.model;
 
 /**
- * Output only.
- *
- * The List companies response object.
+ * Output only. The List companies response object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation

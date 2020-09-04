@@ -20,8 +20,7 @@ package com.google.api.services.jobs.v2;
  * Service definition for CloudTalentSolution (v2).
  *
  * <p>
- * Cloud Talent Solution provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.
-
+ * Cloud Talent Solution provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters. 
  * </p>
  *
  * <p>
@@ -249,8 +248,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
      * This request holds the parameters needed by the jobs server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the company to be deleted,
-    such as,
+     * @param name Required. The resource name of the company to be deleted, such as,
      *        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
      * @return the request
      */
@@ -277,8 +275,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the company to be deleted,
-    such as,
+       * @param name Required. The resource name of the company to be deleted, such as,
      *        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        * @since 1.13
        */
@@ -388,8 +385,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
      * This request holds the parameters needed by the jobs server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of the company to retrieve,
-    such as
+     * @param name Required. Resource name of the company to retrieve, such as
      *        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
      * @return the request
      */
@@ -416,8 +412,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name of the company to retrieve,
-    such as
+       * @param name Required. Resource name of the company to retrieve, such as
      *        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        * @since 1.13
        */
@@ -631,34 +626,24 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional. Set to true if the companies request must have open jobs.
-       *
-       * Defaults to false.
-       *
-       * If true, at most page_size of companies are fetched, among which only those with open jobs
-       * are returned.
+       * Optional. Set to true if the companies request must have open jobs. Defaults to false. If
+       * true, at most page_size of companies are fetched, among which only those with open jobs are
+       * returned.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean mustHaveOpenJobs;
 
-      /** Optional. Set to true if the companies request must have open jobs.
-
-     Defaults to false.
-
-     If true, at most page_size of companies are fetched, among which only those with open jobs are
-     returned.
+      /** Optional. Set to true if the companies request must have open jobs. Defaults to false. If true, at
+     most page_size of companies are fetched, among which only those with open jobs are returned.
        */
       public java.lang.Boolean getMustHaveOpenJobs() {
         return mustHaveOpenJobs;
       }
 
       /**
-       * Optional. Set to true if the companies request must have open jobs.
-       *
-       * Defaults to false.
-       *
-       * If true, at most page_size of companies are fetched, among which only those with open jobs
-       * are returned.
+       * Optional. Set to true if the companies request must have open jobs. Defaults to false. If
+       * true, at most page_size of companies are fetched, among which only those with open jobs are
+       * returned.
        */
       public List setMustHaveOpenJobs(java.lang.Boolean mustHaveOpenJobs) {
         this.mustHaveOpenJobs = mustHaveOpenJobs;
@@ -718,11 +703,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
      * This request holds the parameters needed by the jobs server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Required during company update.
-    The resource name for a company. This is generated by the service
-     *        when a
-    company is created, for example,
-    "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
+     * @param name Required during company update. The resource name for a company. This is generated by the service
+     *        when a company is created, for example, "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
      * @param content the {@link com.google.api.services.jobs.v2.model.Company}
      * @return the request
      */
@@ -750,11 +732,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required during company update.
-    The resource name for a company. This is generated by the service
-     *        when a
-    company is created, for example,
-    "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
+       * @param name Required during company update. The resource name for a company. This is generated by the service
+     *        when a company is created, for example, "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        * @param content the {@link com.google.api.services.jobs.v2.model.Company}
        * @since 1.13
        */
@@ -824,28 +803,24 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required during company update.
-       *
-       * The resource name for a company. This is generated by the service when a company is
-       * created, for example, "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
+       * Required during company update. The resource name for a company. This is generated by the
+       * service when a company is created, for example,
+       * "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required during company update.
-
-     The resource name for a company. This is generated by the service when a company is created, for
-     example, "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
+      /** Required during company update. The resource name for a company. This is generated by the service
+     when a company is created, for example, "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required during company update.
-       *
-       * The resource name for a company. This is generated by the service when a company is
-       * created, for example, "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
+       * Required during company update. The resource name for a company. This is generated by the
+       * service when a company is created, for example,
+       * "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -858,30 +833,22 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional but strongly recommended to be provided for the best service experience.
-       *
-       * If update_company_fields is provided, only the specified fields in company are updated.
-       * Otherwise all the fields are updated.
-       *
-       * A field mask to specify the company fields to update. Valid values are:
-       *
-       * * displayName * website * imageUrl * companySize * distributorBillingCompanyId *
-       * companyInfoSources * careerPageLink * hiringAgency * hqLocation * eeoText *
-       * keywordSearchableCustomAttributes * title (deprecated) * keywordSearchableCustomFields
-       * (deprecated)
+       * Optional but strongly recommended to be provided for the best service experience. If
+       * update_company_fields is provided, only the specified fields in company are updated.
+       * Otherwise all the fields are updated. A field mask to specify the company fields to update.
+       * Valid values are: * displayName * website * imageUrl * companySize *
+       * distributorBillingCompanyId * companyInfoSources * careerPageLink * hiringAgency *
+       * hqLocation * eeoText * keywordSearchableCustomAttributes * title (deprecated) *
+       * keywordSearchableCustomFields (deprecated)
        */
       @com.google.api.client.util.Key
       private String updateCompanyFields;
 
-      /** Optional but strongly recommended to be provided for the best service experience.
-
-     If update_company_fields is provided, only the specified fields in company are updated. Otherwise
-     all the fields are updated.
-
-     A field mask to specify the company fields to update. Valid values are:
-
-     * displayName * website * imageUrl * companySize * distributorBillingCompanyId * companyInfoSources
-     * careerPageLink * hiringAgency * hqLocation * eeoText * keywordSearchableCustomAttributes * title
+      /** Optional but strongly recommended to be provided for the best service experience. If
+     update_company_fields is provided, only the specified fields in company are updated. Otherwise all
+     the fields are updated. A field mask to specify the company fields to update. Valid values are: *
+     displayName * website * imageUrl * companySize * distributorBillingCompanyId * companyInfoSources *
+     careerPageLink * hiringAgency * hqLocation * eeoText * keywordSearchableCustomAttributes * title
      (deprecated) * keywordSearchableCustomFields (deprecated)
        */
       public String getUpdateCompanyFields() {
@@ -889,17 +856,13 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional but strongly recommended to be provided for the best service experience.
-       *
-       * If update_company_fields is provided, only the specified fields in company are updated.
-       * Otherwise all the fields are updated.
-       *
-       * A field mask to specify the company fields to update. Valid values are:
-       *
-       * * displayName * website * imageUrl * companySize * distributorBillingCompanyId *
-       * companyInfoSources * careerPageLink * hiringAgency * hqLocation * eeoText *
-       * keywordSearchableCustomAttributes * title (deprecated) * keywordSearchableCustomFields
-       * (deprecated)
+       * Optional but strongly recommended to be provided for the best service experience. If
+       * update_company_fields is provided, only the specified fields in company are updated.
+       * Otherwise all the fields are updated. A field mask to specify the company fields to update.
+       * Valid values are: * displayName * website * imageUrl * companySize *
+       * distributorBillingCompanyId * companyInfoSources * careerPageLink * hiringAgency *
+       * hqLocation * eeoText * keywordSearchableCustomAttributes * title (deprecated) *
+       * keywordSearchableCustomFields (deprecated)
        */
       public Patch setUpdateCompanyFields(String updateCompanyFields) {
         this.updateCompanyFields = updateCompanyFields;
@@ -933,17 +896,14 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
     public class Jobs {
 
       /**
-       * Deprecated. Use ListJobs instead.
-       *
-       * Lists all jobs associated with a company.
+       * Deprecated. Use ListJobs instead. Lists all jobs associated with a company.
        *
        * Create a request for the method "jobs.list".
        *
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param companyName Required. The resource name of the company that owns the jobs to be listed,
-      such as,
+       * @param companyName Required. The resource name of the company that owns the jobs to be listed, such as,
        *        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        * @return the request
        */
@@ -961,9 +921,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^companies/[^/]+$");
 
         /**
-         * Deprecated. Use ListJobs instead.
-         *
-         * Lists all jobs associated with a company.
+         * Deprecated. Use ListJobs instead. Lists all jobs associated with a company.
          *
          * Create a request for the method "jobs.list".
          *
@@ -972,8 +930,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param companyName Required. The resource name of the company that owns the jobs to be listed,
-      such as,
+         * @param companyName Required. The resource name of the company that owns the jobs to be listed, such as,
        *        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
          * @since 1.13
          */
@@ -1082,20 +1039,13 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
 
         /**
          * Optional. If set to `true`, only job ID, job requisition ID and language code will be
-         * returned.
-         *
-         * A typical use is to synchronize job repositories.
-         *
-         * Defaults to false.
+         * returned. A typical use is to synchronize job repositories. Defaults to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean idsOnly;
 
-        /** Optional. If set to `true`, only job ID, job requisition ID and language code will be returned.
-
-       A typical use is to synchronize job repositories.
-
-       Defaults to false.
+        /** Optional. If set to `true`, only job ID, job requisition ID and language code will be returned. A
+       typical use is to synchronize job repositories. Defaults to false.
          */
         public java.lang.Boolean getIdsOnly() {
           return idsOnly;
@@ -1103,11 +1053,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
 
         /**
          * Optional. If set to `true`, only job ID, job requisition ID and language code will be
-         * returned.
-         *
-         * A typical use is to synchronize job repositories.
-         *
-         * Defaults to false.
+         * returned. A typical use is to synchronize job repositories. Defaults to false.
          */
         public List setIdsOnly(java.lang.Boolean idsOnly) {
           this.idsOnly = idsOnly;
@@ -1116,25 +1062,15 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
 
         /**
          * Deprecated. Please DO NOT use this field except for small companies. Suggest counting
-         * jobs page by page instead.
-         *
-         * Optional.
-         *
-         * Set to true if the total number of open jobs is to be returned.
-         *
-         * Defaults to false.
+         * jobs page by page instead. Optional. Set to true if the total number of open jobs is to
+         * be returned. Defaults to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeJobsCount;
 
         /** Deprecated. Please DO NOT use this field except for small companies. Suggest counting jobs page by
-       page instead.
-
-       Optional.
-
-       Set to true if the total number of open jobs is to be returned.
-
-       Defaults to false.
+       page instead. Optional. Set to true if the total number of open jobs is to be returned. Defaults to
+       false.
          */
         public java.lang.Boolean getIncludeJobsCount() {
           return includeJobsCount;
@@ -1142,13 +1078,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
 
         /**
          * Deprecated. Please DO NOT use this field except for small companies. Suggest counting
-         * jobs page by page instead.
-         *
-         * Optional.
-         *
-         * Set to true if the total number of open jobs is to be returned.
-         *
-         * Defaults to false.
+         * jobs page by page instead. Optional. Set to true if the total number of open jobs is to
+         * be returned. Defaults to false.
          */
         public List setIncludeJobsCount(java.lang.Boolean includeJobsCount) {
           this.includeJobsCount = includeJobsCount;
@@ -1157,16 +1088,13 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
 
         /**
          * Optional. The requisition ID, also known as posting ID, assigned by the company to the
-         * job.
-         *
-         * The maximum number of allowable characters is 225.
+         * job. The maximum number of allowable characters is 225.
          */
         @com.google.api.client.util.Key
         private java.lang.String jobRequisitionId;
 
-        /** Optional. The requisition ID, also known as posting ID, assigned by the company to the job.
-
-       The maximum number of allowable characters is 225.
+        /** Optional. The requisition ID, also known as posting ID, assigned by the company to the job. The
+       maximum number of allowable characters is 225.
          */
         public java.lang.String getJobRequisitionId() {
           return jobRequisitionId;
@@ -1174,9 +1102,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
 
         /**
          * Optional. The requisition ID, also known as posting ID, assigned by the company to the
-         * job.
-         *
-         * The maximum number of allowable characters is 225.
+         * job. The maximum number of allowable characters is 225.
          */
         public List setJobRequisitionId(java.lang.String jobRequisitionId) {
           this.jobRequisitionId = jobRequisitionId;
@@ -1184,21 +1110,15 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. The maximum number of jobs to be returned per page of results.
-         *
-         * If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum
-         * allowed page size is 100.
-         *
-         * Default is 100 if empty or a number < 1 is specified.
+         * Optional. The maximum number of jobs to be returned per page of results. If ids_only is
+         * set to true, the maximum allowed page size is 1000. Otherwise, the maximum allowed page
+         * size is 100. Default is 100 if empty or a number < 1 is specified.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional. The maximum number of jobs to be returned per page of results.
-
-       If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum allowed
-       page size is 100.
-
+        /** Optional. The maximum number of jobs to be returned per page of results. If ids_only is set to
+       true, the maximum allowed page size is 1000. Otherwise, the maximum allowed page size is 100.
        Default is 100 if empty or a number < 1 is specified.
          */
         public java.lang.Integer getPageSize() {
@@ -1206,12 +1126,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. The maximum number of jobs to be returned per page of results.
-         *
-         * If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum
-         * allowed page size is 100.
-         *
-         * Default is 100 if empty or a number < 1 is specified.
+         * Optional. The maximum number of jobs to be returned per page of results. If ids_only is
+         * set to true, the maximum allowed page size is 1000. Otherwise, the maximum allowed page
+         * size is 100. Default is 100 if empty or a number < 1 is specified.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -1363,9 +1280,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
     }
     /**
-     * Creates a new job.
-     *
-     * Typically, the job becomes searchable within 10 seconds, but it may take up to 5 minutes.
+     * Creates a new job. Typically, the job becomes searchable within 10 seconds, but it may take up to
+     * 5 minutes.
      *
      * Create a request for the method "jobs.create".
      *
@@ -1386,9 +1302,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       private static final String REST_PATH = "v2/jobs";
 
       /**
-       * Creates a new job.
-       *
-       * Typically, the job becomes searchable within 10 seconds, but it may take up to 5 minutes.
+       * Creates a new job. Typically, the job becomes searchable within 10 seconds, but it may take up
+       * to 5 minutes.
        *
        * Create a request for the method "jobs.create".
        *
@@ -1465,9 +1380,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
     }
     /**
-     * Deletes the specified job.
-     *
-     * Typically, the job becomes unsearchable within 10 seconds, but it may take up to 5 minutes.
+     * Deletes the specified job. Typically, the job becomes unsearchable within 10 seconds, but it may
+     * take up to 5 minutes.
      *
      * Create a request for the method "jobs.delete".
      *
@@ -1491,9 +1405,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
           java.util.regex.Pattern.compile("^jobs/[^/]+$");
 
       /**
-       * Deletes the specified job.
-       *
-       * Typically, the job becomes unsearchable within 10 seconds, but it may take up to 5 minutes.
+       * Deletes the specified job. Typically, the job becomes unsearchable within 10 seconds, but it
+       * may take up to 5 minutes.
        *
        * Create a request for the method "jobs.delete".
        *
@@ -1592,36 +1505,25 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Deprecated. This field is not working anymore.
-       *
-       * Optional.
-       *
-       * If set to true, this call waits for all processing steps to complete before the job is
-       * cleaned up. Otherwise, the call returns while some steps are still taking place
-       * asynchronously, hence faster.
+       * Deprecated. This field is not working anymore. Optional. If set to true, this call waits
+       * for all processing steps to complete before the job is cleaned up. Otherwise, the call
+       * returns while some steps are still taking place asynchronously, hence faster.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean disableFastProcess;
 
-      /** Deprecated. This field is not working anymore.
-
-     Optional.
-
-     If set to true, this call waits for all processing steps to complete before the job is cleaned up.
-     Otherwise, the call returns while some steps are still taking place asynchronously, hence faster.
+      /** Deprecated. This field is not working anymore. Optional. If set to true, this call waits for all
+     processing steps to complete before the job is cleaned up. Otherwise, the call returns while some
+     steps are still taking place asynchronously, hence faster.
        */
       public java.lang.Boolean getDisableFastProcess() {
         return disableFastProcess;
       }
 
       /**
-       * Deprecated. This field is not working anymore.
-       *
-       * Optional.
-       *
-       * If set to true, this call waits for all processing steps to complete before the job is
-       * cleaned up. Otherwise, the call returns while some steps are still taking place
-       * asynchronously, hence faster.
+       * Deprecated. This field is not working anymore. Optional. If set to true, this call waits
+       * for all processing steps to complete before the job is cleaned up. Otherwise, the call
+       * returns while some steps are still taking place asynchronously, hence faster.
        */
       public Delete setDisableFastProcess(java.lang.Boolean disableFastProcess) {
         this.disableFastProcess = disableFastProcess;
@@ -1634,10 +1536,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
     }
     /**
-     * Deprecated. Use BatchDeleteJobs instead.
-     *
-     * Deletes the specified job by filter. You can specify whether to synchronously wait for
-     * validation, indexing, and general processing to be completed before the response is returned.
+     * Deprecated. Use BatchDeleteJobs instead. Deletes the specified job by filter. You can specify
+     * whether to synchronously wait for validation, indexing, and general processing to be completed
+     * before the response is returned.
      *
      * Create a request for the method "jobs.deleteByFilter".
      *
@@ -1658,10 +1559,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       private static final String REST_PATH = "v2/jobs:deleteByFilter";
 
       /**
-       * Deprecated. Use BatchDeleteJobs instead.
-       *
-       * Deletes the specified job by filter. You can specify whether to synchronously wait for
-       * validation, indexing, and general processing to be completed before the response is returned.
+       * Deprecated. Use BatchDeleteJobs instead. Deletes the specified job by filter. You can specify
+       * whether to synchronously wait for validation, indexing, and general processing to be completed
+       * before the response is returned.
        *
        * Create a request for the method "jobs.deleteByFilter".
        *
@@ -1878,15 +1778,11 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
     }
     /**
      * Deprecated. Use SearchJobsRequest.histogram_facets instead to make a single call with both search
-     * and histogram.
-     *
-     * Retrieves a histogram for the given GetHistogramRequest. This call provides a structured count of
-     * jobs that match against the search query, grouped by specified facets.
-     *
-     * This call constrains the visibility of jobs present in the database, and only counts jobs the
-     * caller has permission to search against.
-     *
-     * For example, use this call to generate the number of jobs in the U.S. by state.
+     * and histogram. Retrieves a histogram for the given GetHistogramRequest. This call provides a
+     * structured count of jobs that match against the search query, grouped by specified facets. This
+     * call constrains the visibility of jobs present in the database, and only counts jobs the caller
+     * has permission to search against. For example, use this call to generate the number of jobs in
+     * the U.S. by state.
      *
      * Create a request for the method "jobs.histogram".
      *
@@ -1908,15 +1804,11 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
 
       /**
        * Deprecated. Use SearchJobsRequest.histogram_facets instead to make a single call with both
-       * search and histogram.
-       *
-       * Retrieves a histogram for the given GetHistogramRequest. This call provides a structured count
-       * of jobs that match against the search query, grouped by specified facets.
-       *
-       * This call constrains the visibility of jobs present in the database, and only counts jobs the
-       * caller has permission to search against.
-       *
-       * For example, use this call to generate the number of jobs in the U.S. by state.
+       * search and histogram. Retrieves a histogram for the given GetHistogramRequest. This call
+       * provides a structured count of jobs that match against the search query, grouped by specified
+       * facets. This call constrains the visibility of jobs present in the database, and only counts
+       * jobs the caller has permission to search against. For example, use this call to generate the
+       * number of jobs in the U.S. by state.
        *
        * Create a request for the method "jobs.histogram".
        *
@@ -2095,49 +1987,27 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required. The filter string specifies the jobs to be enumerated.
-       *
-       * Supported operator: =, AND
-       *
-       * The fields eligible for filtering are:
-       *
-       * * `companyName` (Required) * `requisitionId` (Optional)
-       *
-       * Sample Query:
-       *
-       * * companyName = "companies/123" * companyName = "companies/123" AND requisitionId = "req-1"
+       * Required. The filter string specifies the jobs to be enumerated. Supported operator: =, AND
+       * The fields eligible for filtering are: * `companyName` (Required) * `requisitionId`
+       * (Optional) Sample Query: * companyName = "companies/123" * companyName = "companies/123"
+       * AND requisitionId = "req-1"
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Required. The filter string specifies the jobs to be enumerated.
-
-     Supported operator: =, AND
-
-     The fields eligible for filtering are:
-
-     * `companyName` (Required) * `requisitionId` (Optional)
-
-     Sample Query:
-
-     * companyName = "companies/123" * companyName = "companies/123" AND requisitionId = "req-1"
+      /** Required. The filter string specifies the jobs to be enumerated. Supported operator: =, AND The
+     fields eligible for filtering are: * `companyName` (Required) * `requisitionId` (Optional) Sample
+     Query: * companyName = "companies/123" * companyName = "companies/123" AND requisitionId = "req-1"
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Required. The filter string specifies the jobs to be enumerated.
-       *
-       * Supported operator: =, AND
-       *
-       * The fields eligible for filtering are:
-       *
-       * * `companyName` (Required) * `requisitionId` (Optional)
-       *
-       * Sample Query:
-       *
-       * * companyName = "companies/123" * companyName = "companies/123" AND requisitionId = "req-1"
+       * Required. The filter string specifies the jobs to be enumerated. Supported operator: =, AND
+       * The fields eligible for filtering are: * `companyName` (Required) * `requisitionId`
+       * (Optional) Sample Query: * companyName = "companies/123" * companyName = "companies/123"
+       * AND requisitionId = "req-1"
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -2146,21 +2016,13 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
 
       /**
        * Optional. If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be
-       * returned.
-       *
-       * A typical use case is to synchronize job repositories.
-       *
-       * Defaults to false.
+       * returned. A typical use case is to synchronize job repositories. Defaults to false.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean idsOnly;
 
       /** Optional. If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be
-     returned.
-
-     A typical use case is to synchronize job repositories.
-
-     Defaults to false.
+     returned. A typical use case is to synchronize job repositories. Defaults to false.
        */
       public java.lang.Boolean getIdsOnly() {
         return idsOnly;
@@ -2168,11 +2030,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
 
       /**
        * Optional. If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be
-       * returned.
-       *
-       * A typical use case is to synchronize job repositories.
-       *
-       * Defaults to false.
+       * returned. A typical use case is to synchronize job repositories. Defaults to false.
        */
       public List setIdsOnly(java.lang.Boolean idsOnly) {
         this.idsOnly = idsOnly;
@@ -2180,21 +2038,15 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional. The maximum number of jobs to be returned per page of results.
-       *
-       * If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum
-       * allowed page size is 100.
-       *
-       * Default is 100 if empty or a number < 1 is specified.
+       * Optional. The maximum number of jobs to be returned per page of results. If ids_only is set
+       * to true, the maximum allowed page size is 1000. Otherwise, the maximum allowed page size is
+       * 100. Default is 100 if empty or a number < 1 is specified.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of jobs to be returned per page of results.
-
-     If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum allowed
-     page size is 100.
-
+      /** Optional. The maximum number of jobs to be returned per page of results. If ids_only is set to
+     true, the maximum allowed page size is 1000. Otherwise, the maximum allowed page size is 100.
      Default is 100 if empty or a number < 1 is specified.
        */
       public java.lang.Integer getPageSize() {
@@ -2202,12 +2054,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional. The maximum number of jobs to be returned per page of results.
-       *
-       * If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum
-       * allowed page size is 100.
-       *
-       * Default is 100 if empty or a number < 1 is specified.
+       * Optional. The maximum number of jobs to be returned per page of results. If ids_only is set
+       * to true, the maximum allowed page size is 1000. Otherwise, the maximum allowed page size is
+       * 100. Default is 100 if empty or a number < 1 is specified.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -2236,21 +2085,16 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
     }
     /**
-     * Updates specified job.
-     *
-     * Typically, updated contents become visible in search results within 10 seconds, but it may take
-     * up to 5 minutes.
+     * Updates specified job. Typically, updated contents become visible in search results within 10
+     * seconds, but it may take up to 5 minutes.
      *
      * Create a request for the method "jobs.patch".
      *
      * This request holds the parameters needed by the jobs server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Required during job update.
-    Resource name assigned to a job by the API, for example, "/jobs/foo".
-     *        Use
-    of this field in job queries and API calls is preferred over the use of
-    requisition_id
+     * @param name Required during job update. Resource name assigned to a job by the API, for example, "/jobs/foo".
+     *        Use of this field in job queries and API calls is preferred over the use of requisition_id
      *        since this value is unique.
      * @param content the {@link com.google.api.services.jobs.v2.model.UpdateJobRequest}
      * @return the request
@@ -2269,10 +2113,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
           java.util.regex.Pattern.compile("^jobs/[^/]+$");
 
       /**
-       * Updates specified job.
-       *
-       * Typically, updated contents become visible in search results within 10 seconds, but it may take
-       * up to 5 minutes.
+       * Updates specified job. Typically, updated contents become visible in search results within 10
+       * seconds, but it may take up to 5 minutes.
        *
        * Create a request for the method "jobs.patch".
        *
@@ -2281,11 +2123,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required during job update.
-    Resource name assigned to a job by the API, for example, "/jobs/foo".
-     *        Use
-    of this field in job queries and API calls is preferred over the use of
-    requisition_id
+       * @param name Required during job update. Resource name assigned to a job by the API, for example, "/jobs/foo".
+     *        Use of this field in job queries and API calls is preferred over the use of requisition_id
      *        since this value is unique.
        * @param content the {@link com.google.api.services.jobs.v2.model.UpdateJobRequest}
        * @since 1.13
@@ -2356,30 +2195,25 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required during job update.
-       *
-       * Resource name assigned to a job by the API, for example, "/jobs/foo". Use of this field in
-       * job queries and API calls is preferred over the use of requisition_id since this value is
-       * unique.
+       * Required during job update. Resource name assigned to a job by the API, for example,
+       * "/jobs/foo". Use of this field in job queries and API calls is preferred over the use of
+       * requisition_id since this value is unique.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required during job update.
-
-     Resource name assigned to a job by the API, for example, "/jobs/foo". Use of this field in job
-     queries and API calls is preferred over the use of requisition_id since this value is unique.
+      /** Required during job update. Resource name assigned to a job by the API, for example, "/jobs/foo".
+     Use of this field in job queries and API calls is preferred over the use of requisition_id since
+     this value is unique.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required during job update.
-       *
-       * Resource name assigned to a job by the API, for example, "/jobs/foo". Use of this field in
-       * job queries and API calls is preferred over the use of requisition_id since this value is
-       * unique.
+       * Required during job update. Resource name assigned to a job by the API, for example,
+       * "/jobs/foo". Use of this field in job queries and API calls is preferred over the use of
+       * requisition_id since this value is unique.
        */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -2397,10 +2231,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
     }
     /**
-     * Searches for jobs using the provided SearchJobsRequest.
-     *
-     * This call constrains the visibility of jobs present in the database, and only returns jobs that
-     * the caller has permission to search against.
+     * Searches for jobs using the provided SearchJobsRequest. This call constrains the visibility of
+     * jobs present in the database, and only returns jobs that the caller has permission to search
+     * against.
      *
      * Create a request for the method "jobs.search".
      *
@@ -2421,10 +2254,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       private static final String REST_PATH = "v2/jobs:search";
 
       /**
-       * Searches for jobs using the provided SearchJobsRequest.
-       *
-       * This call constrains the visibility of jobs present in the database, and only returns jobs that
-       * the caller has permission to search against.
+       * Searches for jobs using the provided SearchJobsRequest. This call constrains the visibility of
+       * jobs present in the database, and only returns jobs that the caller has permission to search
+       * against.
        *
        * Create a request for the method "jobs.search".
        *
@@ -2501,14 +2333,11 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
     }
     /**
-     * Searches for jobs using the provided SearchJobsRequest.
-     *
-     * This API call is intended for the use case of targeting passive job seekers (for example, job
-     * seekers who have signed up to receive email alerts about potential job opportunities), and has
-     * different algorithmic adjustments that are targeted to passive job seekers.
-     *
-     * This call constrains the visibility of jobs present in the database, and only returns jobs the
-     * caller has permission to search against.
+     * Searches for jobs using the provided SearchJobsRequest. This API call is intended for the use
+     * case of targeting passive job seekers (for example, job seekers who have signed up to receive
+     * email alerts about potential job opportunities), and has different algorithmic adjustments that
+     * are targeted to passive job seekers. This call constrains the visibility of jobs present in the
+     * database, and only returns jobs the caller has permission to search against.
      *
      * Create a request for the method "jobs.searchForAlert".
      *
@@ -2529,14 +2358,11 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       private static final String REST_PATH = "v2/jobs:searchForAlert";
 
       /**
-       * Searches for jobs using the provided SearchJobsRequest.
-       *
-       * This API call is intended for the use case of targeting passive job seekers (for example, job
-       * seekers who have signed up to receive email alerts about potential job opportunities), and has
-       * different algorithmic adjustments that are targeted to passive job seekers.
-       *
-       * This call constrains the visibility of jobs present in the database, and only returns jobs the
-       * caller has permission to search against.
+       * Searches for jobs using the provided SearchJobsRequest. This API call is intended for the use
+       * case of targeting passive job seekers (for example, job seekers who have signed up to receive
+       * email alerts about potential job opportunities), and has different algorithmic adjustments that
+       * are targeted to passive job seekers. This call constrains the visibility of jobs present in the
+       * database, and only returns jobs the caller has permission to search against.
        *
        * Create a request for the method "jobs.searchForAlert".
        *
@@ -2759,30 +2585,21 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       /**
        * Required. The language of the query. This is the BCP-47 language code, such as "en-US" or
        * "sr-Latn". For more information, see [Tags for Identifying
-       * Languages](https://tools.ietf.org/html/bcp47).
-       *
-       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
-       *
-       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
-       * language_code are returned.
-       *
-       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
-       * having open jobs with same language_code are returned.
+       * Languages](https://tools.ietf.org/html/bcp47). For CompletionType.JOB_TITLE type, only open
+       * jobs with same language_code are returned. For CompletionType.COMPANY_NAME type, only
+       * companies having open jobs with same language_code are returned. For
+       * CompletionType.COMBINED type, only open jobs with same language_code or companies having
+       * open jobs with same language_code are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
       /** Required. The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-
      Latn". For more information, see [Tags for Identifying
-     Languages](https://tools.ietf.org/html/bcp47).
-
-     For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
-
-     For CompletionType.COMPANY_NAME type, only companies having open jobs with same language_code are
-     returned.
-
-     For CompletionType.COMBINED type, only open jobs with same language_code or companies having open
-     jobs with same language_code are returned.
+     Languages](https://tools.ietf.org/html/bcp47). For CompletionType.JOB_TITLE type, only open jobs
+     with same language_code are returned. For CompletionType.COMPANY_NAME type, only companies having
+     open jobs with same language_code are returned. For CompletionType.COMBINED type, only open jobs
+     with same language_code or companies having open jobs with same language_code are returned.
        */
       public java.lang.String getLanguageCode() {
         return languageCode;
@@ -2791,24 +2608,18 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       /**
        * Required. The language of the query. This is the BCP-47 language code, such as "en-US" or
        * "sr-Latn". For more information, see [Tags for Identifying
-       * Languages](https://tools.ietf.org/html/bcp47).
-       *
-       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
-       *
-       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
-       * language_code are returned.
-       *
-       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
-       * having open jobs with same language_code are returned.
+       * Languages](https://tools.ietf.org/html/bcp47). For CompletionType.JOB_TITLE type, only open
+       * jobs with same language_code are returned. For CompletionType.COMPANY_NAME type, only
+       * companies having open jobs with same language_code are returned. For
+       * CompletionType.COMBINED type, only open jobs with same language_code or companies having
+       * open jobs with same language_code are returned.
        */
       public Complete setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
         return this;
       }
 
-      /**
-       * Required. Completion result count. The maximum allowed page size is 10.
-       */
+      /** Required. Completion result count. The maximum allowed page size is 10. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
@@ -2818,9 +2629,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         return pageSize;
       }
 
-      /**
-       * Required. Completion result count. The maximum allowed page size is 10.
-       */
+      /** Required. Completion result count. The maximum allowed page size is 10. */
       public Complete setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;

@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Input only.
- *
- * Create job request.
+ * Input only. Create job request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -34,10 +32,8 @@ public final class CreateJobRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. Please use processing_options. This flag is ignored if processing_options is set.
-   *
-   * Optional.
-   *
-   * If set to `true`, the service does not attempt to resolve a more precise address for the job.
+   * Optional. If set to `true`, the service does not attempt to resolve a more precise address for
+   * the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,10 +55,8 @@ public final class CreateJobRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. Please use processing_options. This flag is ignored if processing_options is set.
-   *
-   * Optional.
-   *
-   * If set to `true`, the service does not attempt to resolve a more precise address for the job.
+   * Optional. If set to `true`, the service does not attempt to resolve a more precise address for
+   * the job.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableStreetAddressResolution() {
@@ -71,10 +65,8 @@ public final class CreateJobRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. Please use processing_options. This flag is ignored if processing_options is set.
-   *
-   * Optional.
-   *
-   * If set to `true`, the service does not attempt to resolve a more precise address for the job.
+   * Optional. If set to `true`, the service does not attempt to resolve a more precise address for
+   * the job.
    * @param disableStreetAddressResolution disableStreetAddressResolution or {@code null} for none
    */
   public CreateJobRequest setDisableStreetAddressResolution(java.lang.Boolean disableStreetAddressResolution) {

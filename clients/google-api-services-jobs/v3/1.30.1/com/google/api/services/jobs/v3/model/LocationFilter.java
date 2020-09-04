@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v3.model;
 
 /**
- * Input only.
- *
- * Geographic region of the search.
+ * Input only. Geographic region of the search.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -59,13 +57,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   /**
    * Optional. CLDR region code of the country/region of the address. This is used to address
    * ambiguity of the user-input location, for example, "Liverpool" against "Liverpool, NY, US" or
-   * "Liverpool, UK".
-   *
-   * Set this field if all the jobs to search against are from a same region, or jobs are world-
-   * wide, but the job seeker is from a specific region.
-   *
-   * See http://cldr.unicode.org/ and
-   * http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
+   * "Liverpool, UK". Set this field if all the jobs to search against are from a same region, or
+   * jobs are world-wide, but the job seeker is from a specific region. See http://cldr.unicode.org/
+   * and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
    * Example: "CH" for Switzerland.
    * The value may be {@code null}.
    */
@@ -78,13 +72,11 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
    * indicates if a job permits telecommuting. If this field is set to
    * TelecommutePreference.TELECOMMUTE_ALLOWED, telecommuting jobs are searched, and address and
    * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED,
-   * telecommute job are not searched.
-   *
-   * This filter can be used by itself to search exclusively for telecommuting jobs, or it can be
-   * combined with another location filter to search for a combination of job locations, such as
-   * "Mountain View" or "telecommuting" jobs. However, when used in combination with other location
-   * filters, telecommuting jobs can be treated as less relevant than other jobs in the search
-   * response.
+   * telecommute job are not searched. This filter can be used by itself to search exclusively for
+   * telecommuting jobs, or it can be combined with another location filter to search for a
+   * combination of job locations, such as "Mountain View" or "telecommuting" jobs. However, when
+   * used in combination with other location filters, telecommuting jobs can be treated as less
+   * relevant than other jobs in the search response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,13 +142,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   /**
    * Optional. CLDR region code of the country/region of the address. This is used to address
    * ambiguity of the user-input location, for example, "Liverpool" against "Liverpool, NY, US" or
-   * "Liverpool, UK".
-   *
-   * Set this field if all the jobs to search against are from a same region, or jobs are world-
-   * wide, but the job seeker is from a specific region.
-   *
-   * See http://cldr.unicode.org/ and
-   * http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
+   * "Liverpool, UK". Set this field if all the jobs to search against are from a same region, or
+   * jobs are world-wide, but the job seeker is from a specific region. See http://cldr.unicode.org/
+   * and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
    * Example: "CH" for Switzerland.
    * @return value or {@code null} for none
    */
@@ -167,13 +155,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   /**
    * Optional. CLDR region code of the country/region of the address. This is used to address
    * ambiguity of the user-input location, for example, "Liverpool" against "Liverpool, NY, US" or
-   * "Liverpool, UK".
-   *
-   * Set this field if all the jobs to search against are from a same region, or jobs are world-
-   * wide, but the job seeker is from a specific region.
-   *
-   * See http://cldr.unicode.org/ and
-   * http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
+   * "Liverpool, UK". Set this field if all the jobs to search against are from a same region, or
+   * jobs are world-wide, but the job seeker is from a specific region. See http://cldr.unicode.org/
+   * and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
    * Example: "CH" for Switzerland.
    * @param regionCode regionCode or {@code null} for none
    */
@@ -188,13 +172,11 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
    * indicates if a job permits telecommuting. If this field is set to
    * TelecommutePreference.TELECOMMUTE_ALLOWED, telecommuting jobs are searched, and address and
    * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED,
-   * telecommute job are not searched.
-   *
-   * This filter can be used by itself to search exclusively for telecommuting jobs, or it can be
-   * combined with another location filter to search for a combination of job locations, such as
-   * "Mountain View" or "telecommuting" jobs. However, when used in combination with other location
-   * filters, telecommuting jobs can be treated as less relevant than other jobs in the search
-   * response.
+   * telecommute job are not searched. This filter can be used by itself to search exclusively for
+   * telecommuting jobs, or it can be combined with another location filter to search for a
+   * combination of job locations, such as "Mountain View" or "telecommuting" jobs. However, when
+   * used in combination with other location filters, telecommuting jobs can be treated as less
+   * relevant than other jobs in the search response.
    * @return value or {@code null} for none
    */
   public java.lang.String getTelecommutePreference() {
@@ -207,13 +189,11 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
    * indicates if a job permits telecommuting. If this field is set to
    * TelecommutePreference.TELECOMMUTE_ALLOWED, telecommuting jobs are searched, and address and
    * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED,
-   * telecommute job are not searched.
-   *
-   * This filter can be used by itself to search exclusively for telecommuting jobs, or it can be
-   * combined with another location filter to search for a combination of job locations, such as
-   * "Mountain View" or "telecommuting" jobs. However, when used in combination with other location
-   * filters, telecommuting jobs can be treated as less relevant than other jobs in the search
-   * response.
+   * telecommute job are not searched. This filter can be used by itself to search exclusively for
+   * telecommuting jobs, or it can be combined with another location filter to search for a
+   * combination of job locations, such as "Mountain View" or "telecommuting" jobs. However, when
+   * used in combination with other location filters, telecommuting jobs can be treated as less
+   * relevant than other jobs in the search response.
    * @param telecommutePreference telecommutePreference or {@code null} for none
    */
   public LocationFilter setTelecommutePreference(java.lang.String telecommutePreference) {

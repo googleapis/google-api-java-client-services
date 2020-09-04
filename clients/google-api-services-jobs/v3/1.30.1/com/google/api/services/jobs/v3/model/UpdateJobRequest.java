@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v3.model;
 
 /**
- * Input only.
- *
- * Update job request.
+ * Input only. Update job request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -40,13 +38,10 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   private Job job;
 
   /**
-   * Optional but strongly recommended to be provided for the best service experience.
-   *
-   * If update_mask is provided, only the specified fields in job are updated. Otherwise all the
-   * fields are updated.
-   *
-   * A field mask to restrict the fields that are updated. Only top level fields of Job are
-   * supported.
+   * Optional but strongly recommended to be provided for the best service experience. If
+   * update_mask is provided, only the specified fields in job are updated. Otherwise all the fields
+   * are updated. A field mask to restrict the fields that are updated. Only top level fields of Job
+   * are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,13 +65,10 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional but strongly recommended to be provided for the best service experience.
-   *
-   * If update_mask is provided, only the specified fields in job are updated. Otherwise all the
-   * fields are updated.
-   *
-   * A field mask to restrict the fields that are updated. Only top level fields of Job are
-   * supported.
+   * Optional but strongly recommended to be provided for the best service experience. If
+   * update_mask is provided, only the specified fields in job are updated. Otherwise all the fields
+   * are updated. A field mask to restrict the fields that are updated. Only top level fields of Job
+   * are supported.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -84,13 +76,10 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional but strongly recommended to be provided for the best service experience.
-   *
-   * If update_mask is provided, only the specified fields in job are updated. Otherwise all the
-   * fields are updated.
-   *
-   * A field mask to restrict the fields that are updated. Only top level fields of Job are
-   * supported.
+   * Optional but strongly recommended to be provided for the best service experience. If
+   * update_mask is provided, only the specified fields in job are updated. Otherwise all the fields
+   * are updated. A field mask to restrict the fields that are updated. Only top level fields of Job
+   * are supported.
    * @param updateMask updateMask or {@code null} for none
    */
   public UpdateJobRequest setUpdateMask(String updateMask) {

@@ -18,11 +18,7 @@ package com.google.api.services.jobs.v2.model;
 
 /**
  * Deprecated. Use SearchJobsRequest.histogram_facets instead to make a single call with both search
- * and histogram.
- *
- * Output only.
- *
- * The response of the GetHistogram method.
+ * and histogram. Output only. The response of the GetHistogram method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation

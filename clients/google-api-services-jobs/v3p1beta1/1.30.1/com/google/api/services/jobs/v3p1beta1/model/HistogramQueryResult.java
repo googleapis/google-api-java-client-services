@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v3p1beta1.model;
 
 /**
- * Output only.
- *
- * Histogram result that matches HistogramSpec specified in searches.
+ * Output only. Histogram result that matches HistogramSpec specified in searches.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -34,12 +32,10 @@ public final class HistogramQueryResult extends com.google.api.client.json.Gener
 
   /**
    * A map from the values of the facet associated with distinct values to the number of matching
-   * entries with corresponding value.
-   *
-   * The key format is: * (for string histogram) string values stored in the field. * (for named
-   * numeric bucket) name specified in `bucket()` function, like   for `bucket(0, MAX, "non-
-   * negative")`, the key will be `non-negative`. * (for anonymous numeric bucket) range formatted
-   * as `-`, for example, `0-1000`, `MIN-0`, and `0-MAX`.
+   * entries with corresponding value. The key format is: * (for string histogram) string values
+   * stored in the field. * (for named numeric bucket) name specified in `bucket()` function, like
+   * for `bucket(0, MAX, "non-negative")`, the key will be `non-negative`. * (for anonymous numeric
+   * bucket) range formatted as `-`, for example, `0-1000`, `MIN-0`, and `0-MAX`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -54,12 +50,10 @@ public final class HistogramQueryResult extends com.google.api.client.json.Gener
 
   /**
    * A map from the values of the facet associated with distinct values to the number of matching
-   * entries with corresponding value.
-   *
-   * The key format is: * (for string histogram) string values stored in the field. * (for named
-   * numeric bucket) name specified in `bucket()` function, like   for `bucket(0, MAX, "non-
-   * negative")`, the key will be `non-negative`. * (for anonymous numeric bucket) range formatted
-   * as `-`, for example, `0-1000`, `MIN-0`, and `0-MAX`.
+   * entries with corresponding value. The key format is: * (for string histogram) string values
+   * stored in the field. * (for named numeric bucket) name specified in `bucket()` function, like
+   * for `bucket(0, MAX, "non-negative")`, the key will be `non-negative`. * (for anonymous numeric
+   * bucket) range formatted as `-`, for example, `0-1000`, `MIN-0`, and `0-MAX`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Long> getHistogram() {
@@ -68,12 +62,10 @@ public final class HistogramQueryResult extends com.google.api.client.json.Gener
 
   /**
    * A map from the values of the facet associated with distinct values to the number of matching
-   * entries with corresponding value.
-   *
-   * The key format is: * (for string histogram) string values stored in the field. * (for named
-   * numeric bucket) name specified in `bucket()` function, like   for `bucket(0, MAX, "non-
-   * negative")`, the key will be `non-negative`. * (for anonymous numeric bucket) range formatted
-   * as `-`, for example, `0-1000`, `MIN-0`, and `0-MAX`.
+   * entries with corresponding value. The key format is: * (for string histogram) string values
+   * stored in the field. * (for named numeric bucket) name specified in `bucket()` function, like
+   * for `bucket(0, MAX, "non-negative")`, the key will be `non-negative`. * (for anonymous numeric
+   * bucket) range formatted as `-`, for example, `0-1000`, `MIN-0`, and `0-MAX`.
    * @param histogram histogram or {@code null} for none
    */
   public HistogramQueryResult setHistogram(java.util.Map<String, java.lang.Long> histogram) {

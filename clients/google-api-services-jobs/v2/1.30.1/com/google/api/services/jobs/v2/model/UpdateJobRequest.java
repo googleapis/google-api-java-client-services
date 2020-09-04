@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Input only.
- *
- * Update job request.
+ * Input only. Update job request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -34,10 +32,8 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. Please use processing_options. This flag is ignored if processing_options is set.
-   *
-   * Optional.
-   *
-   * If set to `true`, the service does not attempt resolve a more precise address for the job.
+   * Optional. If set to `true`, the service does not attempt resolve a more precise address for the
+   * job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,23 +47,18 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   private Job job;
 
   /**
-   * Optional. Options for job processing.
-   *
-   * UpdateJobRequest.disable_street_address_resolution is ignored if this flag is set.
+   * Optional. Options for job processing. UpdateJobRequest.disable_street_address_resolution is
+   * ignored if this flag is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private JobProcessingOptions processingOptions;
 
   /**
-   * Optional but strongly recommended to be provided for the best service experience.
-   *
-   * If update_job_fields is provided, only the specified fields in job are updated. Otherwise all
-   * the fields are updated.
-   *
-   * A field mask to restrict the fields that are updated. Valid values are:
-   *
-   * * jobTitle * employmentTypes * description * applicationUrls * applicationEmailList *
+   * Optional but strongly recommended to be provided for the best service experience. If
+   * update_job_fields is provided, only the specified fields in job are updated. Otherwise all the
+   * fields are updated. A field mask to restrict the fields that are updated. Valid values are: *
+   * jobTitle * employmentTypes * description * applicationUrls * applicationEmailList *
    * applicationInstruction * responsibilities * qualifications * educationLevels * level *
    * department * startDate * endDate * compensationInfo * incentives * languageCode * benefits *
    * expireTime * customAttributes * visibility * publishDate * promotionValue * locations * region
@@ -80,10 +71,8 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. Please use processing_options. This flag is ignored if processing_options is set.
-   *
-   * Optional.
-   *
-   * If set to `true`, the service does not attempt resolve a more precise address for the job.
+   * Optional. If set to `true`, the service does not attempt resolve a more precise address for the
+   * job.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableStreetAddressResolution() {
@@ -92,10 +81,8 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Deprecated. Please use processing_options. This flag is ignored if processing_options is set.
-   *
-   * Optional.
-   *
-   * If set to `true`, the service does not attempt resolve a more precise address for the job.
+   * Optional. If set to `true`, the service does not attempt resolve a more precise address for the
+   * job.
    * @param disableStreetAddressResolution disableStreetAddressResolution or {@code null} for none
    */
   public UpdateJobRequest setDisableStreetAddressResolution(java.lang.Boolean disableStreetAddressResolution) {
@@ -121,9 +108,8 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Options for job processing.
-   *
-   * UpdateJobRequest.disable_street_address_resolution is ignored if this flag is set.
+   * Optional. Options for job processing. UpdateJobRequest.disable_street_address_resolution is
+   * ignored if this flag is set.
    * @return value or {@code null} for none
    */
   public JobProcessingOptions getProcessingOptions() {
@@ -131,9 +117,8 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Options for job processing.
-   *
-   * UpdateJobRequest.disable_street_address_resolution is ignored if this flag is set.
+   * Optional. Options for job processing. UpdateJobRequest.disable_street_address_resolution is
+   * ignored if this flag is set.
    * @param processingOptions processingOptions or {@code null} for none
    */
   public UpdateJobRequest setProcessingOptions(JobProcessingOptions processingOptions) {
@@ -142,14 +127,10 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional but strongly recommended to be provided for the best service experience.
-   *
-   * If update_job_fields is provided, only the specified fields in job are updated. Otherwise all
-   * the fields are updated.
-   *
-   * A field mask to restrict the fields that are updated. Valid values are:
-   *
-   * * jobTitle * employmentTypes * description * applicationUrls * applicationEmailList *
+   * Optional but strongly recommended to be provided for the best service experience. If
+   * update_job_fields is provided, only the specified fields in job are updated. Otherwise all the
+   * fields are updated. A field mask to restrict the fields that are updated. Valid values are: *
+   * jobTitle * employmentTypes * description * applicationUrls * applicationEmailList *
    * applicationInstruction * responsibilities * qualifications * educationLevels * level *
    * department * startDate * endDate * compensationInfo * incentives * languageCode * benefits *
    * expireTime * customAttributes * visibility * publishDate * promotionValue * locations * region
@@ -162,14 +143,10 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional but strongly recommended to be provided for the best service experience.
-   *
-   * If update_job_fields is provided, only the specified fields in job are updated. Otherwise all
-   * the fields are updated.
-   *
-   * A field mask to restrict the fields that are updated. Valid values are:
-   *
-   * * jobTitle * employmentTypes * description * applicationUrls * applicationEmailList *
+   * Optional but strongly recommended to be provided for the best service experience. If
+   * update_job_fields is provided, only the specified fields in job are updated. Otherwise all the
+   * fields are updated. A field mask to restrict the fields that are updated. Valid values are: *
+   * jobTitle * employmentTypes * description * applicationUrls * applicationEmailList *
    * applicationInstruction * responsibilities * qualifications * educationLevels * level *
    * department * startDate * endDate * compensationInfo * incentives * languageCode * benefits *
    * expireTime * customAttributes * visibility * publishDate * promotionValue * locations * region

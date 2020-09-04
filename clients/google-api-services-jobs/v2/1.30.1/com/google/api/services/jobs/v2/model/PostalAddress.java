@@ -19,17 +19,12 @@ package com.google.api.services.jobs.v2.model;
 /**
  * Represents a postal address, e.g. for postal delivery or payments addresses. Given a postal
  * address, a postal service can deliver items to a premise, P.O. Box or similar. It is not intended
- * to model geographical locations (roads, towns, mountains).
- *
- * In typical usage an address would be created via user input or from importing existing data,
- * depending on the type of process.
- *
- * Advice on address input / editing:  - Use an i18n-ready address widget such as
+ * to model geographical locations (roads, towns, mountains). In typical usage an address would be
+ * created via user input or from importing existing data, depending on the type of process. Advice
+ * on address input / editing: - Use an i18n-ready address widget such as
  * https://github.com/google/libaddressinput) - Users should not be presented with UI elements for
- * input or editing of   fields outside countries where that field is used.
- *
- * For more guidance on how to use this schema, please see:
- * https://support.google.com/business/answer/6397478
+ * input or editing of fields outside countries where that field is used. For more guidance on how
+ * to use this schema, please see: https://support.google.com/business/answer/6397478
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -43,23 +38,20 @@ package com.google.api.services.jobs.v2.model;
 public final class PostalAddress extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unstructured address lines describing the lower levels of an address.
-   *
-   * Because values in address_lines do not have type information and may sometimes contain multiple
-   * values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The
-   * order of address lines should be "envelope order" for the country/region of the address. In
-   * places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g.
-   * "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most
-   * specific line of an address can be selected based on the language.
-   *
-   * The minimum permitted structural representation of an address consists of a region_code with
-   * all remaining information placed in the address_lines. It would be possible to format such an
-   * address very approximately without geocoding, but no semantic reasoning could be made about any
-   * of the address components until it was at least partially resolved.
-   *
-   * Creating an address only containing a region_code and address_lines, and then geocoding is the
-   * recommended way to handle completely unstructured addresses (as opposed to guessing which parts
-   * of the address should be localities or administrative areas).
+   * Unstructured address lines describing the lower levels of an address. Because values in
+   * address_lines do not have type information and may sometimes contain multiple values in a
+   * single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of
+   * address lines should be "envelope order" for the country/region of the address. In places where
+   * this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-
+   * to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line
+   * of an address can be selected based on the language. The minimum permitted structural
+   * representation of an address consists of a region_code with all remaining information placed in
+   * the address_lines. It would be possible to format such an address very approximately without
+   * geocoding, but no semantic reasoning could be made about any of the address components until it
+   * was at least partially resolved. Creating an address only containing a region_code and
+   * address_lines, and then geocoding is the recommended way to handle completely unstructured
+   * addresses (as opposed to guessing which parts of the address should be localities or
+   * administrative areas).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,12 +73,9 @@ public final class PostalAddress extends com.google.api.client.json.GenericJson 
    * language of the input form or is expected to match one of the languages used in the address'
    * country/region, or their transliterated equivalents. This can affect formatting in certain
    * countries, but is not critical to the correctness of the data and will never affect any
-   * validation or other non-formatting related operations.
-   *
-   * If this value is not known, it should be omitted (rather than specifying a possibly incorrect
-   * default).
-   *
-   * Examples: "zh-Hant", "ja", "ja-Latn", "en".
+   * validation or other non-formatting related operations. If this value is not known, it should be
+   * omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-
+   * Latn", "en".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,9 +126,7 @@ public final class PostalAddress extends com.google.api.client.json.GenericJson 
 
   /**
    * The schema revision of the `PostalAddress`. This must be set to 0, which is the latest
-   * revision.
-   *
-   * All new revisions **must** be backward compatible with old revisions.
+   * revision. All new revisions **must** be backward compatible with old revisions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,23 +151,20 @@ public final class PostalAddress extends com.google.api.client.json.GenericJson 
   private java.lang.String sublocality;
 
   /**
-   * Unstructured address lines describing the lower levels of an address.
-   *
-   * Because values in address_lines do not have type information and may sometimes contain multiple
-   * values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The
-   * order of address lines should be "envelope order" for the country/region of the address. In
-   * places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g.
-   * "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most
-   * specific line of an address can be selected based on the language.
-   *
-   * The minimum permitted structural representation of an address consists of a region_code with
-   * all remaining information placed in the address_lines. It would be possible to format such an
-   * address very approximately without geocoding, but no semantic reasoning could be made about any
-   * of the address components until it was at least partially resolved.
-   *
-   * Creating an address only containing a region_code and address_lines, and then geocoding is the
-   * recommended way to handle completely unstructured addresses (as opposed to guessing which parts
-   * of the address should be localities or administrative areas).
+   * Unstructured address lines describing the lower levels of an address. Because values in
+   * address_lines do not have type information and may sometimes contain multiple values in a
+   * single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of
+   * address lines should be "envelope order" for the country/region of the address. In places where
+   * this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-
+   * to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line
+   * of an address can be selected based on the language. The minimum permitted structural
+   * representation of an address consists of a region_code with all remaining information placed in
+   * the address_lines. It would be possible to format such an address very approximately without
+   * geocoding, but no semantic reasoning could be made about any of the address components until it
+   * was at least partially resolved. Creating an address only containing a region_code and
+   * address_lines, and then geocoding is the recommended way to handle completely unstructured
+   * addresses (as opposed to guessing which parts of the address should be localities or
+   * administrative areas).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAddressLines() {
@@ -188,23 +172,20 @@ public final class PostalAddress extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Unstructured address lines describing the lower levels of an address.
-   *
-   * Because values in address_lines do not have type information and may sometimes contain multiple
-   * values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The
-   * order of address lines should be "envelope order" for the country/region of the address. In
-   * places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g.
-   * "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most
-   * specific line of an address can be selected based on the language.
-   *
-   * The minimum permitted structural representation of an address consists of a region_code with
-   * all remaining information placed in the address_lines. It would be possible to format such an
-   * address very approximately without geocoding, but no semantic reasoning could be made about any
-   * of the address components until it was at least partially resolved.
-   *
-   * Creating an address only containing a region_code and address_lines, and then geocoding is the
-   * recommended way to handle completely unstructured addresses (as opposed to guessing which parts
-   * of the address should be localities or administrative areas).
+   * Unstructured address lines describing the lower levels of an address. Because values in
+   * address_lines do not have type information and may sometimes contain multiple values in a
+   * single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of
+   * address lines should be "envelope order" for the country/region of the address. In places where
+   * this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-
+   * to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line
+   * of an address can be selected based on the language. The minimum permitted structural
+   * representation of an address consists of a region_code with all remaining information placed in
+   * the address_lines. It would be possible to format such an address very approximately without
+   * geocoding, but no semantic reasoning could be made about any of the address components until it
+   * was at least partially resolved. Creating an address only containing a region_code and
+   * address_lines, and then geocoding is the recommended way to handle completely unstructured
+   * addresses (as opposed to guessing which parts of the address should be localities or
+   * administrative areas).
    * @param addressLines addressLines or {@code null} for none
    */
   public PostalAddress setAddressLines(java.util.List<java.lang.String> addressLines) {
@@ -242,12 +223,9 @@ public final class PostalAddress extends com.google.api.client.json.GenericJson 
    * language of the input form or is expected to match one of the languages used in the address'
    * country/region, or their transliterated equivalents. This can affect formatting in certain
    * countries, but is not critical to the correctness of the data and will never affect any
-   * validation or other non-formatting related operations.
-   *
-   * If this value is not known, it should be omitted (rather than specifying a possibly incorrect
-   * default).
-   *
-   * Examples: "zh-Hant", "ja", "ja-Latn", "en".
+   * validation or other non-formatting related operations. If this value is not known, it should be
+   * omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-
+   * Latn", "en".
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -259,12 +237,9 @@ public final class PostalAddress extends com.google.api.client.json.GenericJson 
    * language of the input form or is expected to match one of the languages used in the address'
    * country/region, or their transliterated equivalents. This can affect formatting in certain
    * countries, but is not critical to the correctness of the data and will never affect any
-   * validation or other non-formatting related operations.
-   *
-   * If this value is not known, it should be omitted (rather than specifying a possibly incorrect
-   * default).
-   *
-   * Examples: "zh-Hant", "ja", "ja-Latn", "en".
+   * validation or other non-formatting related operations. If this value is not known, it should be
+   * omitted (rather than specifying a possibly incorrect default). Examples: "zh-Hant", "ja", "ja-
+   * Latn", "en".
    * @param languageCode languageCode or {@code null} for none
    */
   public PostalAddress setLanguageCode(java.lang.String languageCode) {
@@ -375,9 +350,7 @@ public final class PostalAddress extends com.google.api.client.json.GenericJson 
 
   /**
    * The schema revision of the `PostalAddress`. This must be set to 0, which is the latest
-   * revision.
-   *
-   * All new revisions **must** be backward compatible with old revisions.
+   * revision. All new revisions **must** be backward compatible with old revisions.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRevision() {
@@ -386,9 +359,7 @@ public final class PostalAddress extends com.google.api.client.json.GenericJson 
 
   /**
    * The schema revision of the `PostalAddress`. This must be set to 0, which is the latest
-   * revision.
-   *
-   * All new revisions **must** be backward compatible with old revisions.
+   * revision. All new revisions **must** be backward compatible with old revisions.
    * @param revision revision or {@code null} for none
    */
   public PostalAddress setRevision(java.lang.Integer revision) {

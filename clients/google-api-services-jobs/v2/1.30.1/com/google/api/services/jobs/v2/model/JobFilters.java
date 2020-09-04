@@ -17,11 +17,8 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Input only.
- *
- * Deprecated. Use JobQuery instead.
- *
- * The filters required to perform a search query or histogram.
+ * Input only. Deprecated. Use JobQuery instead. The filters required to perform a search query or
+ * histogram.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -36,10 +33,7 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The category filter specifies the categories of jobs to search against. See Category
-   * for more information.
-   *
-   * If a value is not specified, jobs from any category are searched against.
-   *
+   * for more information. If a value is not specified, jobs from any category are searched against.
    * If multiple values are specified, jobs from any of the specified categories are searched
    * against.
    * The value may be {@code null}.
@@ -48,38 +42,30 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> categories;
 
   /**
-   * Optional. Allows filtering jobs by commute time with different travel methods (e.g.  driving or
-   * public transit). Note: this only works with COMMUTE  MODE. When specified,
-   * [JobFilters.location_filters] will be  ignored.
-   *
-   *  Currently we do not support sorting by commute time.
+   * Optional. Allows filtering jobs by commute time with different travel methods (e.g. driving or
+   * public transit). Note: this only works with COMMUTE MODE. When specified,
+   * [JobFilters.location_filters] will be ignored. Currently we do not support sorting by commute
+   * time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CommutePreference commuteFilter;
 
   /**
-   * Optional. The company names filter specifies the company entities to search against.
-   *
-   * If a value is not specified, jobs are searched for against all companies.
-   *
-   * If multiple values are specified, jobs are searched against the specified companies.
-   *
-   * At most 20 company filters are allowed.
+   * Optional. The company names filter specifies the company entities to search against. If a value
+   * is not specified, jobs are searched for against all companies. If multiple values are
+   * specified, jobs are searched against the specified companies. At most 20 company filters are
+   * allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> companyNames;
 
   /**
-   * Optional. This filter specifies the exact company titles of jobs to search against.
-   *
-   * If a value is not specified, jobs within the search results can be associated with any company.
-   *
-   * If multiple values are specified, jobs within the search results may be associated with any of
-   * the specified companies.
-   *
-   * At most 20 company title filters are allowed.
+   * Optional. This filter specifies the exact company titles of jobs to search against. If a value
+   * is not specified, jobs within the search results can be associated with any company. If
+   * multiple values are specified, jobs within the search results may be associated with any of the
+   * specified companies. At most 20 company title filters are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,35 +82,25 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. This filter specifies a structured syntax to match against the Job.custom_attributes
-   * that are marked as `filterable`.
-   *
-   * The syntax for this expression is a subset of Google SQL syntax.
-   *
-   * Supported operators are: =, !=, <, <=, >, >= where the left of the operator is a custom field
-   * key and the right of the operator is a number or string (surrounded by quotes) value.
-   *
+   * that are marked as `filterable`. The syntax for this expression is a subset of Google SQL
+   * syntax. Supported operators are: =, !=, <, <=, >, >= where the left of the operator is a custom
+   * field key and the right of the operator is a number or string (surrounded by quotes) value.
    * Supported functions are LOWER() to perform case insensitive match and EMPTY() to filter on the
-   * existence of a key.
-   *
-   * Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (For example, "((A AND
-   * B AND C) OR NOT D) AND E"), and there can be a maximum of 100 comparisons/functions in the
-   * expression. The expression must be < 3000 bytes in length.
-   *
-   * Sample Query: (key1 = "TEST" OR LOWER(key1)="test" OR NOT EMPTY(key1)) AND key2 > 100
+   * existence of a key. Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting
+   * (For example, "((A AND B AND C) OR NOT D) AND E"), and there can be a maximum of 100
+   * comparisons/functions in the expression. The expression must be < 3000 bytes in length. Sample
+   * Query: (key1 = "TEST" OR LOWER(key1)="test" OR NOT EMPTY(key1)) AND key2 > 100
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customAttributeFilter;
 
   /**
-   * Deprecated. Use custom_attribute_filter instead.
-   *
-   * Optional.
-   *
-   * This filter specifies searching against custom field values. See Job.filterable_custom_fields
-   * for information. The key value specifies a number between 1-20 (the service supports 20 custom
-   * fields) corresponding to the desired custom field map value. If an invalid key is provided or
-   * specified together with custom_attribute_filter, an error is thrown.
+   * Deprecated. Use custom_attribute_filter instead. Optional. This filter specifies searching
+   * against custom field values. See Job.filterable_custom_fields for information. The key value
+   * specifies a number between 1-20 (the service supports 20 custom fields) corresponding to the
+   * desired custom field map value. If an invalid key is provided or specified together with
+   * custom_attribute_filter, an error is thrown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,9 +114,8 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. This flag controls the spell-check feature. If false, the service attempts to correct
-   * a misspelled query, for example, "enginee" is corrected to "engineer".
-   *
-   * Defaults to false: a spell check is performed.
+   * a misspelled query, for example, "enginee" is corrected to "engineer". Defaults to false: a
+   * spell check is performed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,39 +123,30 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The employment type filter specifies the employment type of jobs to search against,
-   * such as EmploymentType.FULL_TIME.
-   *
-   * If a value is not specified, jobs in the search results include any employment type.
-   *
-   * If multiple values are specified, jobs in the search results include any of the specified
-   * employment types.
+   * such as EmploymentType.FULL_TIME. If a value is not specified, jobs in the search results
+   * include any employment type. If multiple values are specified, jobs in the search results
+   * include any of the specified employment types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> employmentTypes;
 
   /**
-   * Deprecated. Always use compensation_filter.
-   *
-   * Optional.
-   *
-   * This search filter is applied only to Job.extended_compensation_info. For example, if the
-   * filter is specified as "Hourly job with per-hour compensation > $15", only jobs that meet these
-   * criteria are searched. If a filter is not defined, all open jobs are searched.
+   * Deprecated. Always use compensation_filter. Optional. This search filter is applied only to
+   * Job.extended_compensation_info. For example, if the filter is specified as "Hourly job with
+   * per-hour compensation > $15", only jobs that meet these criteria are searched. If a filter is
+   * not defined, all open jobs are searched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExtendedCompensationFilter extendedCompensationFilter;
 
   /**
-   * Optional. This filter specifies the locale of jobs to search against, for example, "en-US".
-   *
-   * If a value is not specified, the search results may contain jobs in any locale.
-   *
-   * Language codes should be in BCP-47 format, for example, "en-US" or "sr-Latn". For more
-   * information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
-   *
-   * At most 10 language code filters are allowed.
+   * Optional. This filter specifies the locale of jobs to search against, for example, "en-US". If
+   * a value is not specified, the search results may contain jobs in any locale. Language codes
+   * should be in BCP-47 format, for example, "en-US" or "sr-Latn". For more information, see [Tags
+   * for Identifying Languages](https://tools.ietf.org/html/bcp47). At most 10 language code filters
+   * are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,15 +154,11 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The location filter specifies geo-regions containing the jobs to search against. See
-   * LocationFilter for more information.
-   *
-   * If a location value is not specified, jobs are retrieved from all locations.
-   *
-   * If multiple values are specified, jobs are retrieved from any of the specified locations. If
-   * different values are specified for the LocationFilter.distance_in_miles parameter, the maximum
-   * provided distance is used for all locations.
-   *
-   * At most 5 location filters are allowed.
+   * LocationFilter for more information. If a location value is not specified, jobs are retrieved
+   * from all locations. If multiple values are specified, jobs are retrieved from any of the
+   * specified locations. If different values are specified for the LocationFilter.distance_in_miles
+   * parameter, the maximum provided distance is used for all locations. At most 5 location filters
+   * are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,21 +175,16 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The query filter contains the keywords that match against the job title, description,
-   * and location fields.
-   *
-   * The maximum query size is 255 bytes/characters.
+   * and location fields. The maximum query size is 255 bytes/characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String query;
 
   /**
-   * Deprecated. Do not use this field.
-   *
-   * This flag controls whether the job search should be restricted to jobs owned by the current
-   * user.
-   *
-   * Defaults to false where all jobs accessible to the user are searched against.
+   * Deprecated. Do not use this field. This flag controls whether the job search should be
+   * restricted to jobs owned by the current user. Defaults to false where all jobs accessible to
+   * the user are searched against.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,10 +192,7 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The category filter specifies the categories of jobs to search against. See Category
-   * for more information.
-   *
-   * If a value is not specified, jobs from any category are searched against.
-   *
+   * for more information. If a value is not specified, jobs from any category are searched against.
    * If multiple values are specified, jobs from any of the specified categories are searched
    * against.
    * @return value or {@code null} for none
@@ -249,10 +203,7 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The category filter specifies the categories of jobs to search against. See Category
-   * for more information.
-   *
-   * If a value is not specified, jobs from any category are searched against.
-   *
+   * for more information. If a value is not specified, jobs from any category are searched against.
    * If multiple values are specified, jobs from any of the specified categories are searched
    * against.
    * @param categories categories or {@code null} for none
@@ -263,11 +214,10 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Allows filtering jobs by commute time with different travel methods (e.g.  driving or
-   * public transit). Note: this only works with COMMUTE  MODE. When specified,
-   * [JobFilters.location_filters] will be  ignored.
-   *
-   *  Currently we do not support sorting by commute time.
+   * Optional. Allows filtering jobs by commute time with different travel methods (e.g. driving or
+   * public transit). Note: this only works with COMMUTE MODE. When specified,
+   * [JobFilters.location_filters] will be ignored. Currently we do not support sorting by commute
+   * time.
    * @return value or {@code null} for none
    */
   public CommutePreference getCommuteFilter() {
@@ -275,11 +225,10 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Allows filtering jobs by commute time with different travel methods (e.g.  driving or
-   * public transit). Note: this only works with COMMUTE  MODE. When specified,
-   * [JobFilters.location_filters] will be  ignored.
-   *
-   *  Currently we do not support sorting by commute time.
+   * Optional. Allows filtering jobs by commute time with different travel methods (e.g. driving or
+   * public transit). Note: this only works with COMMUTE MODE. When specified,
+   * [JobFilters.location_filters] will be ignored. Currently we do not support sorting by commute
+   * time.
    * @param commuteFilter commuteFilter or {@code null} for none
    */
   public JobFilters setCommuteFilter(CommutePreference commuteFilter) {
@@ -288,13 +237,10 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The company names filter specifies the company entities to search against.
-   *
-   * If a value is not specified, jobs are searched for against all companies.
-   *
-   * If multiple values are specified, jobs are searched against the specified companies.
-   *
-   * At most 20 company filters are allowed.
+   * Optional. The company names filter specifies the company entities to search against. If a value
+   * is not specified, jobs are searched for against all companies. If multiple values are
+   * specified, jobs are searched against the specified companies. At most 20 company filters are
+   * allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCompanyNames() {
@@ -302,13 +248,10 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The company names filter specifies the company entities to search against.
-   *
-   * If a value is not specified, jobs are searched for against all companies.
-   *
-   * If multiple values are specified, jobs are searched against the specified companies.
-   *
-   * At most 20 company filters are allowed.
+   * Optional. The company names filter specifies the company entities to search against. If a value
+   * is not specified, jobs are searched for against all companies. If multiple values are
+   * specified, jobs are searched against the specified companies. At most 20 company filters are
+   * allowed.
    * @param companyNames companyNames or {@code null} for none
    */
   public JobFilters setCompanyNames(java.util.List<java.lang.String> companyNames) {
@@ -317,14 +260,10 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. This filter specifies the exact company titles of jobs to search against.
-   *
-   * If a value is not specified, jobs within the search results can be associated with any company.
-   *
-   * If multiple values are specified, jobs within the search results may be associated with any of
-   * the specified companies.
-   *
-   * At most 20 company title filters are allowed.
+   * Optional. This filter specifies the exact company titles of jobs to search against. If a value
+   * is not specified, jobs within the search results can be associated with any company. If
+   * multiple values are specified, jobs within the search results may be associated with any of the
+   * specified companies. At most 20 company title filters are allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCompanyTitles() {
@@ -332,14 +271,10 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. This filter specifies the exact company titles of jobs to search against.
-   *
-   * If a value is not specified, jobs within the search results can be associated with any company.
-   *
-   * If multiple values are specified, jobs within the search results may be associated with any of
-   * the specified companies.
-   *
-   * At most 20 company title filters are allowed.
+   * Optional. This filter specifies the exact company titles of jobs to search against. If a value
+   * is not specified, jobs within the search results can be associated with any company. If
+   * multiple values are specified, jobs within the search results may be associated with any of the
+   * specified companies. At most 20 company title filters are allowed.
    * @param companyTitles companyTitles or {@code null} for none
    */
   public JobFilters setCompanyTitles(java.util.List<java.lang.String> companyTitles) {
@@ -370,21 +305,14 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. This filter specifies a structured syntax to match against the Job.custom_attributes
-   * that are marked as `filterable`.
-   *
-   * The syntax for this expression is a subset of Google SQL syntax.
-   *
-   * Supported operators are: =, !=, <, <=, >, >= where the left of the operator is a custom field
-   * key and the right of the operator is a number or string (surrounded by quotes) value.
-   *
+   * that are marked as `filterable`. The syntax for this expression is a subset of Google SQL
+   * syntax. Supported operators are: =, !=, <, <=, >, >= where the left of the operator is a custom
+   * field key and the right of the operator is a number or string (surrounded by quotes) value.
    * Supported functions are LOWER() to perform case insensitive match and EMPTY() to filter on the
-   * existence of a key.
-   *
-   * Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (For example, "((A AND
-   * B AND C) OR NOT D) AND E"), and there can be a maximum of 100 comparisons/functions in the
-   * expression. The expression must be < 3000 bytes in length.
-   *
-   * Sample Query: (key1 = "TEST" OR LOWER(key1)="test" OR NOT EMPTY(key1)) AND key2 > 100
+   * existence of a key. Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting
+   * (For example, "((A AND B AND C) OR NOT D) AND E"), and there can be a maximum of 100
+   * comparisons/functions in the expression. The expression must be < 3000 bytes in length. Sample
+   * Query: (key1 = "TEST" OR LOWER(key1)="test" OR NOT EMPTY(key1)) AND key2 > 100
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomAttributeFilter() {
@@ -393,21 +321,14 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. This filter specifies a structured syntax to match against the Job.custom_attributes
-   * that are marked as `filterable`.
-   *
-   * The syntax for this expression is a subset of Google SQL syntax.
-   *
-   * Supported operators are: =, !=, <, <=, >, >= where the left of the operator is a custom field
-   * key and the right of the operator is a number or string (surrounded by quotes) value.
-   *
+   * that are marked as `filterable`. The syntax for this expression is a subset of Google SQL
+   * syntax. Supported operators are: =, !=, <, <=, >, >= where the left of the operator is a custom
+   * field key and the right of the operator is a number or string (surrounded by quotes) value.
    * Supported functions are LOWER() to perform case insensitive match and EMPTY() to filter on the
-   * existence of a key.
-   *
-   * Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (For example, "((A AND
-   * B AND C) OR NOT D) AND E"), and there can be a maximum of 100 comparisons/functions in the
-   * expression. The expression must be < 3000 bytes in length.
-   *
-   * Sample Query: (key1 = "TEST" OR LOWER(key1)="test" OR NOT EMPTY(key1)) AND key2 > 100
+   * existence of a key. Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting
+   * (For example, "((A AND B AND C) OR NOT D) AND E"), and there can be a maximum of 100
+   * comparisons/functions in the expression. The expression must be < 3000 bytes in length. Sample
+   * Query: (key1 = "TEST" OR LOWER(key1)="test" OR NOT EMPTY(key1)) AND key2 > 100
    * @param customAttributeFilter customAttributeFilter or {@code null} for none
    */
   public JobFilters setCustomAttributeFilter(java.lang.String customAttributeFilter) {
@@ -416,14 +337,11 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Use custom_attribute_filter instead.
-   *
-   * Optional.
-   *
-   * This filter specifies searching against custom field values. See Job.filterable_custom_fields
-   * for information. The key value specifies a number between 1-20 (the service supports 20 custom
-   * fields) corresponding to the desired custom field map value. If an invalid key is provided or
-   * specified together with custom_attribute_filter, an error is thrown.
+   * Deprecated. Use custom_attribute_filter instead. Optional. This filter specifies searching
+   * against custom field values. See Job.filterable_custom_fields for information. The key value
+   * specifies a number between 1-20 (the service supports 20 custom fields) corresponding to the
+   * desired custom field map value. If an invalid key is provided or specified together with
+   * custom_attribute_filter, an error is thrown.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, CustomFieldFilter> getCustomFieldFilters() {
@@ -431,14 +349,11 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Use custom_attribute_filter instead.
-   *
-   * Optional.
-   *
-   * This filter specifies searching against custom field values. See Job.filterable_custom_fields
-   * for information. The key value specifies a number between 1-20 (the service supports 20 custom
-   * fields) corresponding to the desired custom field map value. If an invalid key is provided or
-   * specified together with custom_attribute_filter, an error is thrown.
+   * Deprecated. Use custom_attribute_filter instead. Optional. This filter specifies searching
+   * against custom field values. See Job.filterable_custom_fields for information. The key value
+   * specifies a number between 1-20 (the service supports 20 custom fields) corresponding to the
+   * desired custom field map value. If an invalid key is provided or specified together with
+   * custom_attribute_filter, an error is thrown.
    * @param customFieldFilters customFieldFilters or {@code null} for none
    */
   public JobFilters setCustomFieldFilters(java.util.Map<String, CustomFieldFilter> customFieldFilters) {
@@ -448,9 +363,8 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. This flag controls the spell-check feature. If false, the service attempts to correct
-   * a misspelled query, for example, "enginee" is corrected to "engineer".
-   *
-   * Defaults to false: a spell check is performed.
+   * a misspelled query, for example, "enginee" is corrected to "engineer". Defaults to false: a
+   * spell check is performed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableSpellCheck() {
@@ -459,9 +373,8 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. This flag controls the spell-check feature. If false, the service attempts to correct
-   * a misspelled query, for example, "enginee" is corrected to "engineer".
-   *
-   * Defaults to false: a spell check is performed.
+   * a misspelled query, for example, "enginee" is corrected to "engineer". Defaults to false: a
+   * spell check is performed.
    * @param disableSpellCheck disableSpellCheck or {@code null} for none
    */
   public JobFilters setDisableSpellCheck(java.lang.Boolean disableSpellCheck) {
@@ -471,12 +384,9 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The employment type filter specifies the employment type of jobs to search against,
-   * such as EmploymentType.FULL_TIME.
-   *
-   * If a value is not specified, jobs in the search results include any employment type.
-   *
-   * If multiple values are specified, jobs in the search results include any of the specified
-   * employment types.
+   * such as EmploymentType.FULL_TIME. If a value is not specified, jobs in the search results
+   * include any employment type. If multiple values are specified, jobs in the search results
+   * include any of the specified employment types.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEmploymentTypes() {
@@ -485,12 +395,9 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The employment type filter specifies the employment type of jobs to search against,
-   * such as EmploymentType.FULL_TIME.
-   *
-   * If a value is not specified, jobs in the search results include any employment type.
-   *
-   * If multiple values are specified, jobs in the search results include any of the specified
-   * employment types.
+   * such as EmploymentType.FULL_TIME. If a value is not specified, jobs in the search results
+   * include any employment type. If multiple values are specified, jobs in the search results
+   * include any of the specified employment types.
    * @param employmentTypes employmentTypes or {@code null} for none
    */
   public JobFilters setEmploymentTypes(java.util.List<java.lang.String> employmentTypes) {
@@ -499,13 +406,10 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Always use compensation_filter.
-   *
-   * Optional.
-   *
-   * This search filter is applied only to Job.extended_compensation_info. For example, if the
-   * filter is specified as "Hourly job with per-hour compensation > $15", only jobs that meet these
-   * criteria are searched. If a filter is not defined, all open jobs are searched.
+   * Deprecated. Always use compensation_filter. Optional. This search filter is applied only to
+   * Job.extended_compensation_info. For example, if the filter is specified as "Hourly job with
+   * per-hour compensation > $15", only jobs that meet these criteria are searched. If a filter is
+   * not defined, all open jobs are searched.
    * @return value or {@code null} for none
    */
   public ExtendedCompensationFilter getExtendedCompensationFilter() {
@@ -513,13 +417,10 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Always use compensation_filter.
-   *
-   * Optional.
-   *
-   * This search filter is applied only to Job.extended_compensation_info. For example, if the
-   * filter is specified as "Hourly job with per-hour compensation > $15", only jobs that meet these
-   * criteria are searched. If a filter is not defined, all open jobs are searched.
+   * Deprecated. Always use compensation_filter. Optional. This search filter is applied only to
+   * Job.extended_compensation_info. For example, if the filter is specified as "Hourly job with
+   * per-hour compensation > $15", only jobs that meet these criteria are searched. If a filter is
+   * not defined, all open jobs are searched.
    * @param extendedCompensationFilter extendedCompensationFilter or {@code null} for none
    */
   public JobFilters setExtendedCompensationFilter(ExtendedCompensationFilter extendedCompensationFilter) {
@@ -528,14 +429,11 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. This filter specifies the locale of jobs to search against, for example, "en-US".
-   *
-   * If a value is not specified, the search results may contain jobs in any locale.
-   *
-   * Language codes should be in BCP-47 format, for example, "en-US" or "sr-Latn". For more
-   * information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
-   *
-   * At most 10 language code filters are allowed.
+   * Optional. This filter specifies the locale of jobs to search against, for example, "en-US". If
+   * a value is not specified, the search results may contain jobs in any locale. Language codes
+   * should be in BCP-47 format, for example, "en-US" or "sr-Latn". For more information, see [Tags
+   * for Identifying Languages](https://tools.ietf.org/html/bcp47). At most 10 language code filters
+   * are allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLanguageCodes() {
@@ -543,14 +441,11 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. This filter specifies the locale of jobs to search against, for example, "en-US".
-   *
-   * If a value is not specified, the search results may contain jobs in any locale.
-   *
-   * Language codes should be in BCP-47 format, for example, "en-US" or "sr-Latn". For more
-   * information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
-   *
-   * At most 10 language code filters are allowed.
+   * Optional. This filter specifies the locale of jobs to search against, for example, "en-US". If
+   * a value is not specified, the search results may contain jobs in any locale. Language codes
+   * should be in BCP-47 format, for example, "en-US" or "sr-Latn". For more information, see [Tags
+   * for Identifying Languages](https://tools.ietf.org/html/bcp47). At most 10 language code filters
+   * are allowed.
    * @param languageCodes languageCodes or {@code null} for none
    */
   public JobFilters setLanguageCodes(java.util.List<java.lang.String> languageCodes) {
@@ -560,15 +455,11 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The location filter specifies geo-regions containing the jobs to search against. See
-   * LocationFilter for more information.
-   *
-   * If a location value is not specified, jobs are retrieved from all locations.
-   *
-   * If multiple values are specified, jobs are retrieved from any of the specified locations. If
-   * different values are specified for the LocationFilter.distance_in_miles parameter, the maximum
-   * provided distance is used for all locations.
-   *
-   * At most 5 location filters are allowed.
+   * LocationFilter for more information. If a location value is not specified, jobs are retrieved
+   * from all locations. If multiple values are specified, jobs are retrieved from any of the
+   * specified locations. If different values are specified for the LocationFilter.distance_in_miles
+   * parameter, the maximum provided distance is used for all locations. At most 5 location filters
+   * are allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<LocationFilter> getLocationFilters() {
@@ -577,15 +468,11 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The location filter specifies geo-regions containing the jobs to search against. See
-   * LocationFilter for more information.
-   *
-   * If a location value is not specified, jobs are retrieved from all locations.
-   *
-   * If multiple values are specified, jobs are retrieved from any of the specified locations. If
-   * different values are specified for the LocationFilter.distance_in_miles parameter, the maximum
-   * provided distance is used for all locations.
-   *
-   * At most 5 location filters are allowed.
+   * LocationFilter for more information. If a location value is not specified, jobs are retrieved
+   * from all locations. If multiple values are specified, jobs are retrieved from any of the
+   * specified locations. If different values are specified for the LocationFilter.distance_in_miles
+   * parameter, the maximum provided distance is used for all locations. At most 5 location filters
+   * are allowed.
    * @param locationFilters locationFilters or {@code null} for none
    */
   public JobFilters setLocationFilters(java.util.List<LocationFilter> locationFilters) {
@@ -616,9 +503,7 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The query filter contains the keywords that match against the job title, description,
-   * and location fields.
-   *
-   * The maximum query size is 255 bytes/characters.
+   * and location fields. The maximum query size is 255 bytes/characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -627,9 +512,7 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The query filter contains the keywords that match against the job title, description,
-   * and location fields.
-   *
-   * The maximum query size is 255 bytes/characters.
+   * and location fields. The maximum query size is 255 bytes/characters.
    * @param query query or {@code null} for none
    */
   public JobFilters setQuery(java.lang.String query) {
@@ -638,12 +521,9 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Do not use this field.
-   *
-   * This flag controls whether the job search should be restricted to jobs owned by the current
-   * user.
-   *
-   * Defaults to false where all jobs accessible to the user are searched against.
+   * Deprecated. Do not use this field. This flag controls whether the job search should be
+   * restricted to jobs owned by the current user. Defaults to false where all jobs accessible to
+   * the user are searched against.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTenantJobOnly() {
@@ -651,12 +531,9 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Do not use this field.
-   *
-   * This flag controls whether the job search should be restricted to jobs owned by the current
-   * user.
-   *
-   * Defaults to false where all jobs accessible to the user are searched against.
+   * Deprecated. Do not use this field. This flag controls whether the job search should be
+   * restricted to jobs owned by the current user. Defaults to false where all jobs accessible to
+   * the user are searched against.
    * @param tenantJobOnly tenantJobOnly or {@code null} for none
    */
   public JobFilters setTenantJobOnly(java.lang.Boolean tenantJobOnly) {

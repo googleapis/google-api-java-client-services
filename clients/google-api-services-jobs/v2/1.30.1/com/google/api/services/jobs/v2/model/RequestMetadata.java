@@ -17,10 +17,8 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Input only.
- *
- * Meta information related to the job searcher or entity conducting the job search. This
- * information is used to improve the performance of the service.
+ * Input only. Meta information related to the job searcher or entity conducting the job search.
+ * This information is used to improve the performance of the service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -42,15 +40,12 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * Required. The client-defined scope or source of the service call, which typically is the domain
-   * on which the service has been implemented and is currently being run.
-   *
-   * For example, if the service is being run by client Foo, Inc., on job board www.foo.com and
-   * career site www.bar.com, then this field is set to "foo.com" for use on the job board, and
-   * "bar.com" for use on the career site.
-   *
-   * If this field is not available for some reason, send "UNKNOWN". Note that any improvements to
-   * the service model for a particular tenant site rely on this field being set correctly to some
-   * domain.
+   * on which the service has been implemented and is currently being run. For example, if the
+   * service is being run by client *Foo, Inc.*, on job board www.foo.com and career site
+   * www.bar.com, then this field is set to "foo.com" for use on the job board, and "bar.com" for
+   * use on the career site. If this field is not available for some reason, send "UNKNOWN". Note
+   * that any improvements to the service model for a particular tenant site rely on this field
+   * being set correctly to some domain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,11 +54,9 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   /**
    * Required. A unique session identification string. A session is defined as the duration of an
    * end user's interaction with the service over a period. Obfuscate this field for privacy
-   * concerns before providing it to the API.
-   *
-   * If this field is not available for some reason, please send "UNKNOWN". Note that any
-   * improvements to the service model for a particular tenant site, rely on this field being set
-   * correctly to some unique session_id.
+   * concerns before providing it to the API. If this field is not available for some reason, please
+   * send "UNKNOWN". Note that any improvements to the service model for a particular tenant site,
+   * rely on this field being set correctly to some unique session_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,11 +66,9 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
    * Required. A unique user identification string, as determined by the client. The client is
    * responsible for ensuring client-level uniqueness of this value in order to have the strongest
    * positive impact on search quality. Obfuscate this field for privacy concerns before providing
-   * it to the service.
-   *
-   * If this field is not available for some reason, please send "UNKNOWN". Note that any
-   * improvements to the service model for a particular tenant site, rely on this field being set
-   * correctly to some unique user_id.
+   * it to the service. If this field is not available for some reason, please send "UNKNOWN". Note
+   * that any improvements to the service model for a particular tenant site, rely on this field
+   * being set correctly to some unique user_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,15 +93,12 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * Required. The client-defined scope or source of the service call, which typically is the domain
-   * on which the service has been implemented and is currently being run.
-   *
-   * For example, if the service is being run by client Foo, Inc., on job board www.foo.com and
-   * career site www.bar.com, then this field is set to "foo.com" for use on the job board, and
-   * "bar.com" for use on the career site.
-   *
-   * If this field is not available for some reason, send "UNKNOWN". Note that any improvements to
-   * the service model for a particular tenant site rely on this field being set correctly to some
-   * domain.
+   * on which the service has been implemented and is currently being run. For example, if the
+   * service is being run by client *Foo, Inc.*, on job board www.foo.com and career site
+   * www.bar.com, then this field is set to "foo.com" for use on the job board, and "bar.com" for
+   * use on the career site. If this field is not available for some reason, send "UNKNOWN". Note
+   * that any improvements to the service model for a particular tenant site rely on this field
+   * being set correctly to some domain.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -119,15 +107,12 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
 
   /**
    * Required. The client-defined scope or source of the service call, which typically is the domain
-   * on which the service has been implemented and is currently being run.
-   *
-   * For example, if the service is being run by client Foo, Inc., on job board www.foo.com and
-   * career site www.bar.com, then this field is set to "foo.com" for use on the job board, and
-   * "bar.com" for use on the career site.
-   *
-   * If this field is not available for some reason, send "UNKNOWN". Note that any improvements to
-   * the service model for a particular tenant site rely on this field being set correctly to some
-   * domain.
+   * on which the service has been implemented and is currently being run. For example, if the
+   * service is being run by client *Foo, Inc.*, on job board www.foo.com and career site
+   * www.bar.com, then this field is set to "foo.com" for use on the job board, and "bar.com" for
+   * use on the career site. If this field is not available for some reason, send "UNKNOWN". Note
+   * that any improvements to the service model for a particular tenant site rely on this field
+   * being set correctly to some domain.
    * @param domain domain or {@code null} for none
    */
   public RequestMetadata setDomain(java.lang.String domain) {
@@ -138,11 +123,9 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   /**
    * Required. A unique session identification string. A session is defined as the duration of an
    * end user's interaction with the service over a period. Obfuscate this field for privacy
-   * concerns before providing it to the API.
-   *
-   * If this field is not available for some reason, please send "UNKNOWN". Note that any
-   * improvements to the service model for a particular tenant site, rely on this field being set
-   * correctly to some unique session_id.
+   * concerns before providing it to the API. If this field is not available for some reason, please
+   * send "UNKNOWN". Note that any improvements to the service model for a particular tenant site,
+   * rely on this field being set correctly to some unique session_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionId() {
@@ -152,11 +135,9 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   /**
    * Required. A unique session identification string. A session is defined as the duration of an
    * end user's interaction with the service over a period. Obfuscate this field for privacy
-   * concerns before providing it to the API.
-   *
-   * If this field is not available for some reason, please send "UNKNOWN". Note that any
-   * improvements to the service model for a particular tenant site, rely on this field being set
-   * correctly to some unique session_id.
+   * concerns before providing it to the API. If this field is not available for some reason, please
+   * send "UNKNOWN". Note that any improvements to the service model for a particular tenant site,
+   * rely on this field being set correctly to some unique session_id.
    * @param sessionId sessionId or {@code null} for none
    */
   public RequestMetadata setSessionId(java.lang.String sessionId) {
@@ -168,11 +149,9 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
    * Required. A unique user identification string, as determined by the client. The client is
    * responsible for ensuring client-level uniqueness of this value in order to have the strongest
    * positive impact on search quality. Obfuscate this field for privacy concerns before providing
-   * it to the service.
-   *
-   * If this field is not available for some reason, please send "UNKNOWN". Note that any
-   * improvements to the service model for a particular tenant site, rely on this field being set
-   * correctly to some unique user_id.
+   * it to the service. If this field is not available for some reason, please send "UNKNOWN". Note
+   * that any improvements to the service model for a particular tenant site, rely on this field
+   * being set correctly to some unique user_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -183,11 +162,9 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
    * Required. A unique user identification string, as determined by the client. The client is
    * responsible for ensuring client-level uniqueness of this value in order to have the strongest
    * positive impact on search quality. Obfuscate this field for privacy concerns before providing
-   * it to the service.
-   *
-   * If this field is not available for some reason, please send "UNKNOWN". Note that any
-   * improvements to the service model for a particular tenant site, rely on this field being set
-   * correctly to some unique user_id.
+   * it to the service. If this field is not available for some reason, please send "UNKNOWN". Note
+   * that any improvements to the service model for a particular tenant site, rely on this field
+   * being set correctly to some unique user_id.
    * @param userId userId or {@code null} for none
    */
   public RequestMetadata setUserId(java.lang.String userId) {

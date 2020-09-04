@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Output only.
- *
- * Response for SearchJob method.
+ * Output only. Response for SearchJob method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -55,10 +53,8 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * An estimation of the number of jobs that match the specified query.
-   *
-   * This number is not guaranteed to be accurate. For accurate results,
-   * seenenable_precise_result_size.
+   * An estimation of the number of jobs that match the specified query. This number is not
+   * guaranteed to be accurate. For accurate results, seenenable_precise_result_size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -172,10 +168,8 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * An estimation of the number of jobs that match the specified query.
-   *
-   * This number is not guaranteed to be accurate. For accurate results,
-   * seenenable_precise_result_size.
+   * An estimation of the number of jobs that match the specified query. This number is not
+   * guaranteed to be accurate. For accurate results, seenenable_precise_result_size.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEstimatedTotalSize() {
@@ -183,10 +177,8 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * An estimation of the number of jobs that match the specified query.
-   *
-   * This number is not guaranteed to be accurate. For accurate results,
-   * seenenable_precise_result_size.
+   * An estimation of the number of jobs that match the specified query. This number is not
+   * guaranteed to be accurate. For accurate results, seenenable_precise_result_size.
    * @param estimatedTotalSize estimatedTotalSize or {@code null} for none
    */
   public SearchJobsResponse setEstimatedTotalSize(java.lang.Long estimatedTotalSize) {

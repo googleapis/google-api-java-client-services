@@ -17,11 +17,9 @@
 package com.google.api.services.jobs.v3.model;
 
 /**
- * Output only.
- *
- * Result of a histogram call. The response contains the histogram map for the search type specified
- * by HistogramResult.field. The response is a map of each filter value to the corresponding count
- * of jobs for that filter.
+ * Output only. Result of a histogram call. The response contains the histogram map for the search
+ * type specified by HistogramResult.field. The response is a map of each filter value to the
+ * corresponding count of jobs for that filter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -43,10 +41,8 @@ public final class HistogramResult extends com.google.api.client.json.GenericJso
 
   /**
    * A map from the values of field to the number of jobs with that value in this search result.
-   *
-   * Key: search type (filter names, such as the companyName).
-   *
-   * Values: the count of jobs that match the filter for this search.
+   * Key: search type (filter names, such as the companyName). Values: the count of jobs that match
+   * the filter for this search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,10 +67,8 @@ public final class HistogramResult extends com.google.api.client.json.GenericJso
 
   /**
    * A map from the values of field to the number of jobs with that value in this search result.
-   *
-   * Key: search type (filter names, such as the companyName).
-   *
-   * Values: the count of jobs that match the filter for this search.
+   * Key: search type (filter names, such as the companyName). Values: the count of jobs that match
+   * the filter for this search.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Integer> getValues() {
@@ -83,10 +77,8 @@ public final class HistogramResult extends com.google.api.client.json.GenericJso
 
   /**
    * A map from the values of field to the number of jobs with that value in this search result.
-   *
-   * Key: search type (filter names, such as the companyName).
-   *
-   * Values: the count of jobs that match the filter for this search.
+   * Key: search type (filter names, such as the companyName). Values: the count of jobs that match
+   * the filter for this search.
    * @param values values or {@code null} for none
    */
   public HistogramResult setValues(java.util.Map<String, java.lang.Integer> values) {

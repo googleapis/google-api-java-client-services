@@ -32,9 +32,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Annualized base compensation range. Computed as base compensation entry's
-   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
-   *
-   * See CompensationEntry for explanation on compensation annualization.
+   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See
+   * CompensationEntry for explanation on compensation annualization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,19 +41,17 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Annualized total compensation range. Computed as all compensation entries'
-   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
-   *
-   * See CompensationEntry for explanation on compensation annualization.
+   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See
+   * CompensationEntry for explanation on compensation annualization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CompensationRange annualizedTotalCompensationRange;
 
   /**
-   * Optional. Job compensation information.
-   *
-   * At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as
-   * ** base compensation entry ** for the job.
+   * Optional. Job compensation information. At most one entry can be of type
+   * CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for
+   * the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +65,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Annualized base compensation range. Computed as base compensation entry's
-   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
-   *
-   * See CompensationEntry for explanation on compensation annualization.
+   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See
+   * CompensationEntry for explanation on compensation annualization.
    * @return value or {@code null} for none
    */
   public CompensationRange getAnnualizedBaseCompensationRange() {
@@ -79,9 +75,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Annualized base compensation range. Computed as base compensation entry's
-   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
-   *
-   * See CompensationEntry for explanation on compensation annualization.
+   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See
+   * CompensationEntry for explanation on compensation annualization.
    * @param annualizedBaseCompensationRange annualizedBaseCompensationRange or {@code null} for none
    */
   public CompensationInfo setAnnualizedBaseCompensationRange(CompensationRange annualizedBaseCompensationRange) {
@@ -91,9 +86,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Annualized total compensation range. Computed as all compensation entries'
-   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
-   *
-   * See CompensationEntry for explanation on compensation annualization.
+   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See
+   * CompensationEntry for explanation on compensation annualization.
    * @return value or {@code null} for none
    */
   public CompensationRange getAnnualizedTotalCompensationRange() {
@@ -102,9 +96,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Annualized total compensation range. Computed as all compensation entries'
-   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
-   *
-   * See CompensationEntry for explanation on compensation annualization.
+   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See
+   * CompensationEntry for explanation on compensation annualization.
    * @param annualizedTotalCompensationRange annualizedTotalCompensationRange or {@code null} for none
    */
   public CompensationInfo setAnnualizedTotalCompensationRange(CompensationRange annualizedTotalCompensationRange) {
@@ -113,10 +106,9 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Job compensation information.
-   *
-   * At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as
-   * ** base compensation entry ** for the job.
+   * Optional. Job compensation information. At most one entry can be of type
+   * CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for
+   * the job.
    * @return value or {@code null} for none
    */
   public java.util.List<CompensationEntry> getEntries() {
@@ -124,10 +116,9 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Job compensation information.
-   *
-   * At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as
-   * ** base compensation entry ** for the job.
+   * Optional. Job compensation information. At most one entry can be of type
+   * CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for
+   * the job.
    * @param entries entries or {@code null} for none
    */
   public CompensationInfo setEntries(java.util.List<CompensationEntry> entries) {

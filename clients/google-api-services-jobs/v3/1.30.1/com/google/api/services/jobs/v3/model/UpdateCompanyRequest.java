@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v3.model;
 
 /**
- * Input only.
- *
- * Request for updating a specified company.
+ * Input only. Request for updating a specified company.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -40,12 +38,9 @@ public final class UpdateCompanyRequest extends com.google.api.client.json.Gener
   private Company company;
 
   /**
-   * Optional but strongly recommended for the best service experience.
-   *
-   * If update_mask is provided, only the specified fields in company are updated. Otherwise all the
-   * fields are updated.
-   *
-   * A field mask to specify the company fields to be updated. Only top level fields of Company are
+   * Optional but strongly recommended for the best service experience. If update_mask is provided,
+   * only the specified fields in company are updated. Otherwise all the fields are updated. A field
+   * mask to specify the company fields to be updated. Only top level fields of Company are
    * supported.
    * The value may be {@code null}.
    */
@@ -70,12 +65,9 @@ public final class UpdateCompanyRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional but strongly recommended for the best service experience.
-   *
-   * If update_mask is provided, only the specified fields in company are updated. Otherwise all the
-   * fields are updated.
-   *
-   * A field mask to specify the company fields to be updated. Only top level fields of Company are
+   * Optional but strongly recommended for the best service experience. If update_mask is provided,
+   * only the specified fields in company are updated. Otherwise all the fields are updated. A field
+   * mask to specify the company fields to be updated. Only top level fields of Company are
    * supported.
    * @return value or {@code null} for none
    */
@@ -84,12 +76,9 @@ public final class UpdateCompanyRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional but strongly recommended for the best service experience.
-   *
-   * If update_mask is provided, only the specified fields in company are updated. Otherwise all the
-   * fields are updated.
-   *
-   * A field mask to specify the company fields to be updated. Only top level fields of Company are
+   * Optional but strongly recommended for the best service experience. If update_mask is provided,
+   * only the specified fields in company are updated. Otherwise all the fields are updated. A field
+   * mask to specify the company fields to be updated. Only top level fields of Company are
    * supported.
    * @param updateMask updateMask or {@code null} for none
    */

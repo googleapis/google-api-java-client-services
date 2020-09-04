@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Input only.
- *
- * Histogram facets to be specified in SearchJobsRequest.
+ * Input only. Histogram facets to be specified in SearchJobsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation

@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v3.model;
 
 /**
- * Output only.
- *
- * Derived details about the job posting.
+ * Output only. Derived details about the job posting.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -40,9 +38,8 @@ public final class JobDerivedInfo extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> jobCategories;
 
   /**
-   * Structured locations of the job, resolved from Job.addresses.
-   *
-   * locations are exactly matched to Job.addresses in the same order.
+   * Structured locations of the job, resolved from Job.addresses. locations are exactly matched to
+   * Job.addresses in the same order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +63,8 @@ public final class JobDerivedInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Structured locations of the job, resolved from Job.addresses.
-   *
-   * locations are exactly matched to Job.addresses in the same order.
+   * Structured locations of the job, resolved from Job.addresses. locations are exactly matched to
+   * Job.addresses in the same order.
    * @return value or {@code null} for none
    */
   public java.util.List<Location> getLocations() {
@@ -76,9 +72,8 @@ public final class JobDerivedInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Structured locations of the job, resolved from Job.addresses.
-   *
-   * locations are exactly matched to Job.addresses in the same order.
+   * Structured locations of the job, resolved from Job.addresses. locations are exactly matched to
+   * Job.addresses in the same order.
    * @param locations locations or {@code null} for none
    */
   public JobDerivedInfo setLocations(java.util.List<Location> locations) {

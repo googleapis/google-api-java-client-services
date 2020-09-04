@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v3p1beta1.model;
 
 /**
- * Output only.
- *
- * List jobs response.
+ * Output only. List jobs response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -33,9 +31,8 @@ package com.google.api.services.jobs.v3p1beta1.model;
 public final class ListJobsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Jobs for a given company.
-   *
-   * The maximum number of items returned is based on the limit field provided in the request.
+   * The Jobs for a given company. The maximum number of items returned is based on the limit field
+   * provided in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,9 +59,8 @@ public final class ListJobsResponse extends com.google.api.client.json.GenericJs
   private java.lang.String nextPageToken;
 
   /**
-   * The Jobs for a given company.
-   *
-   * The maximum number of items returned is based on the limit field provided in the request.
+   * The Jobs for a given company. The maximum number of items returned is based on the limit field
+   * provided in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<Job> getJobs() {
@@ -72,9 +68,8 @@ public final class ListJobsResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The Jobs for a given company.
-   *
-   * The maximum number of items returned is based on the limit field provided in the request.
+   * The Jobs for a given company. The maximum number of items returned is based on the limit field
+   * provided in the request.
    * @param jobs jobs or {@code null} for none
    */
   public ListJobsResponse setJobs(java.util.List<Job> jobs) {

@@ -31,12 +31,9 @@ package com.google.api.services.jobs.v2.model;
 public final class CompensationInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated. Use entries instead.
-   *
-   * Optional.
-   *
-   * The amount of compensation or pay for the job. As an alternative, compensation_amount_min and
-   * compensation_amount_max may be used to define a range of compensation.
+   * Deprecated. Use entries instead. Optional. The amount of compensation or pay for the job. As an
+   * alternative, compensation_amount_min and compensation_amount_max may be used to define a range
+   * of compensation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,9 +41,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Annualized base compensation range. Computed as base compensation entry's
-   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
-   *
-   * See CompensationEntry for explanation on compensation annualization.
+   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See
+   * CompensationEntry for explanation on compensation annualization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,19 +50,17 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Annualized total compensation range. Computed as all compensation entries'
-   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
-   *
-   * See CompensationEntry for explanation on compensation annualization.
+   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See
+   * CompensationEntry for explanation on compensation annualization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CompensationRange annualizedTotalCompensationRange;
 
   /**
-   * Optional. Job compensation information.
-   *
-   * At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as
-   * ** base compensation entry ** for the job.
+   * Optional. Job compensation information. At most one entry can be of type
+   * CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for
+   * the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,47 +73,32 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Deprecated. Use entries instead.
-   *
-   * Optional.
-   *
-   * An upper bound on a range for compensation or pay for the job. The currency type is specified
-   * in compensation_amount.
+   * Deprecated. Use entries instead. Optional. An upper bound on a range for compensation or pay
+   * for the job. The currency type is specified in compensation_amount.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money max;
 
   /**
-   * Deprecated. Use entries instead.
-   *
-   * Optional.
-   *
-   * A lower bound on a range for compensation or pay for the job. The currency type is specified in
-   * compensation_amount.
+   * Deprecated. Use entries instead. Optional. A lower bound on a range for compensation or pay for
+   * the job. The currency type is specified in compensation_amount.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money min;
 
   /**
-   * Deprecated. Use entries instead.
-   *
-   * Optional.
-   *
-   * Type of job compensation.
+   * Deprecated. Use entries instead. Optional. Type of job compensation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Deprecated. Use entries instead.
-   *
-   * Optional.
-   *
-   * The amount of compensation or pay for the job. As an alternative, compensation_amount_min and
-   * compensation_amount_max may be used to define a range of compensation.
+   * Deprecated. Use entries instead. Optional. The amount of compensation or pay for the job. As an
+   * alternative, compensation_amount_min and compensation_amount_max may be used to define a range
+   * of compensation.
    * @return value or {@code null} for none
    */
   public Money getAmount() {
@@ -127,12 +106,9 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Deprecated. Use entries instead.
-   *
-   * Optional.
-   *
-   * The amount of compensation or pay for the job. As an alternative, compensation_amount_min and
-   * compensation_amount_max may be used to define a range of compensation.
+   * Deprecated. Use entries instead. Optional. The amount of compensation or pay for the job. As an
+   * alternative, compensation_amount_min and compensation_amount_max may be used to define a range
+   * of compensation.
    * @param amount amount or {@code null} for none
    */
   public CompensationInfo setAmount(Money amount) {
@@ -142,9 +118,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Annualized base compensation range. Computed as base compensation entry's
-   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
-   *
-   * See CompensationEntry for explanation on compensation annualization.
+   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See
+   * CompensationEntry for explanation on compensation annualization.
    * @return value or {@code null} for none
    */
   public CompensationRange getAnnualizedBaseCompensationRange() {
@@ -153,9 +128,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Annualized base compensation range. Computed as base compensation entry's
-   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
-   *
-   * See CompensationEntry for explanation on compensation annualization.
+   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See
+   * CompensationEntry for explanation on compensation annualization.
    * @param annualizedBaseCompensationRange annualizedBaseCompensationRange or {@code null} for none
    */
   public CompensationInfo setAnnualizedBaseCompensationRange(CompensationRange annualizedBaseCompensationRange) {
@@ -165,9 +139,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Annualized total compensation range. Computed as all compensation entries'
-   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
-   *
-   * See CompensationEntry for explanation on compensation annualization.
+   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See
+   * CompensationEntry for explanation on compensation annualization.
    * @return value or {@code null} for none
    */
   public CompensationRange getAnnualizedTotalCompensationRange() {
@@ -176,9 +149,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. Annualized total compensation range. Computed as all compensation entries'
-   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
-   *
-   * See CompensationEntry for explanation on compensation annualization.
+   * CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See
+   * CompensationEntry for explanation on compensation annualization.
    * @param annualizedTotalCompensationRange annualizedTotalCompensationRange or {@code null} for none
    */
   public CompensationInfo setAnnualizedTotalCompensationRange(CompensationRange annualizedTotalCompensationRange) {
@@ -187,10 +159,9 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Job compensation information.
-   *
-   * At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as
-   * ** base compensation entry ** for the job.
+   * Optional. Job compensation information. At most one entry can be of type
+   * CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for
+   * the job.
    * @return value or {@code null} for none
    */
   public java.util.List<CompensationEntry> getEntries() {
@@ -198,10 +169,9 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Job compensation information.
-   *
-   * At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as
-   * ** base compensation entry ** for the job.
+   * Optional. Job compensation information. At most one entry can be of type
+   * CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for
+   * the job.
    * @param entries entries or {@code null} for none
    */
   public CompensationInfo setEntries(java.util.List<CompensationEntry> entries) {
@@ -210,12 +180,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Deprecated. Use entries instead.
-   *
-   * Optional.
-   *
-   * An upper bound on a range for compensation or pay for the job. The currency type is specified
-   * in compensation_amount.
+   * Deprecated. Use entries instead. Optional. An upper bound on a range for compensation or pay
+   * for the job. The currency type is specified in compensation_amount.
    * @return value or {@code null} for none
    */
   public Money getMax() {
@@ -223,12 +189,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Deprecated. Use entries instead.
-   *
-   * Optional.
-   *
-   * An upper bound on a range for compensation or pay for the job. The currency type is specified
-   * in compensation_amount.
+   * Deprecated. Use entries instead. Optional. An upper bound on a range for compensation or pay
+   * for the job. The currency type is specified in compensation_amount.
    * @param max max or {@code null} for none
    */
   public CompensationInfo setMax(Money max) {
@@ -237,12 +199,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Deprecated. Use entries instead.
-   *
-   * Optional.
-   *
-   * A lower bound on a range for compensation or pay for the job. The currency type is specified in
-   * compensation_amount.
+   * Deprecated. Use entries instead. Optional. A lower bound on a range for compensation or pay for
+   * the job. The currency type is specified in compensation_amount.
    * @return value or {@code null} for none
    */
   public Money getMin() {
@@ -250,12 +208,8 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Deprecated. Use entries instead.
-   *
-   * Optional.
-   *
-   * A lower bound on a range for compensation or pay for the job. The currency type is specified in
-   * compensation_amount.
+   * Deprecated. Use entries instead. Optional. A lower bound on a range for compensation or pay for
+   * the job. The currency type is specified in compensation_amount.
    * @param min min or {@code null} for none
    */
   public CompensationInfo setMin(Money min) {
@@ -264,11 +218,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Deprecated. Use entries instead.
-   *
-   * Optional.
-   *
-   * Type of job compensation.
+   * Deprecated. Use entries instead. Optional. Type of job compensation.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -276,11 +226,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Deprecated. Use entries instead.
-   *
-   * Optional.
-   *
-   * Type of job compensation.
+   * Deprecated. Use entries instead. Optional. Type of job compensation.
    * @param type type or {@code null} for none
    */
   public CompensationInfo setType(java.lang.String type) {

@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v3p1beta1.model;
 
 /**
- * Input only.
- *
- * Batch delete jobs request.
+ * Input only. Batch delete jobs request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -33,14 +31,8 @@ package com.google.api.services.jobs.v3p1beta1.model;
 public final class BatchDeleteJobsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The filter string specifies the jobs to be deleted.
-   *
-   * Supported operator: =, AND
-   *
-   * The fields eligible for filtering are:
-   *
-   * * `companyName` (Required) * `requisitionId` (Required)
-   *
+   * Required. The filter string specifies the jobs to be deleted. Supported operator: =, AND The
+   * fields eligible for filtering are: * `companyName` (Required) * `requisitionId` (Required)
    * Sample Query: companyName = "projects/api-test-project/companies/123" AND requisitionId =
    * "req-1"
    * The value may be {@code null}.
@@ -49,14 +41,8 @@ public final class BatchDeleteJobsRequest extends com.google.api.client.json.Gen
   private java.lang.String filter;
 
   /**
-   * Required. The filter string specifies the jobs to be deleted.
-   *
-   * Supported operator: =, AND
-   *
-   * The fields eligible for filtering are:
-   *
-   * * `companyName` (Required) * `requisitionId` (Required)
-   *
+   * Required. The filter string specifies the jobs to be deleted. Supported operator: =, AND The
+   * fields eligible for filtering are: * `companyName` (Required) * `requisitionId` (Required)
    * Sample Query: companyName = "projects/api-test-project/companies/123" AND requisitionId =
    * "req-1"
    * @return value or {@code null} for none
@@ -66,14 +52,8 @@ public final class BatchDeleteJobsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The filter string specifies the jobs to be deleted.
-   *
-   * Supported operator: =, AND
-   *
-   * The fields eligible for filtering are:
-   *
-   * * `companyName` (Required) * `requisitionId` (Required)
-   *
+   * Required. The filter string specifies the jobs to be deleted. Supported operator: =, AND The
+   * fields eligible for filtering are: * `companyName` (Required) * `requisitionId` (Required)
    * Sample Query: companyName = "projects/api-test-project/companies/123" AND requisitionId =
    * "req-1"
    * @param filter filter or {@code null} for none

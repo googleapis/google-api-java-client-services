@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v2.model;
 
 /**
- * Input only.
- *
- * Geographic region of the search.
+ * Input only. Geographic region of the search.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -73,13 +71,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   /**
    * Optional. CLDR region code of the country/region of the address. This will be used to address
    * ambiguity of the user-input location, e.g. "Liverpool" against "Liverpool, NY, US" or
-   * "Liverpool, UK".
-   *
-   * Set this field if all the jobs to search against are from a same region, or jobs are world-wide
-   * but the job seeker is from a specific region.
-   *
-   * See http://cldr.unicode.org/ and
-   * http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
+   * "Liverpool, UK". Set this field if all the jobs to search against are from a same region, or
+   * jobs are world-wide but the job seeker is from a specific region. See http://cldr.unicode.org/
+   * and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
    * Example: "CH" for Switzerland.
    * The value may be {@code null}.
    */
@@ -177,13 +171,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   /**
    * Optional. CLDR region code of the country/region of the address. This will be used to address
    * ambiguity of the user-input location, e.g. "Liverpool" against "Liverpool, NY, US" or
-   * "Liverpool, UK".
-   *
-   * Set this field if all the jobs to search against are from a same region, or jobs are world-wide
-   * but the job seeker is from a specific region.
-   *
-   * See http://cldr.unicode.org/ and
-   * http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
+   * "Liverpool, UK". Set this field if all the jobs to search against are from a same region, or
+   * jobs are world-wide but the job seeker is from a specific region. See http://cldr.unicode.org/
+   * and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
    * Example: "CH" for Switzerland.
    * @return value or {@code null} for none
    */
@@ -194,13 +184,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   /**
    * Optional. CLDR region code of the country/region of the address. This will be used to address
    * ambiguity of the user-input location, e.g. "Liverpool" against "Liverpool, NY, US" or
-   * "Liverpool, UK".
-   *
-   * Set this field if all the jobs to search against are from a same region, or jobs are world-wide
-   * but the job seeker is from a specific region.
-   *
-   * See http://cldr.unicode.org/ and
-   * http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
+   * "Liverpool, UK". Set this field if all the jobs to search against are from a same region, or
+   * jobs are world-wide but the job seeker is from a specific region. See http://cldr.unicode.org/
+   * and http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
    * Example: "CH" for Switzerland.
    * @param regionCode regionCode or {@code null} for none
    */

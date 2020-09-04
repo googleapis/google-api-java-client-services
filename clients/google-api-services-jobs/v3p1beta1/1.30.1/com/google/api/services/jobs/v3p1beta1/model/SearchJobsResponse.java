@@ -17,9 +17,7 @@
 package com.google.api.services.jobs.v3p1beta1.model;
 
 /**
- * Output only.
- *
- * Response for SearchJob method.
+ * Output only. Response for SearchJob method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Talent Solution API. For a detailed explanation
@@ -45,10 +43,8 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   private java.lang.Integer broadenedQueryJobsCount;
 
   /**
-   * An estimation of the number of jobs that match the specified query.
-   *
-   * This number is not guaranteed to be accurate. For accurate results, see
-   * enable_precise_result_size.
+   * An estimation of the number of jobs that match the specified query. This number is not
+   * guaranteed to be accurate. For accurate results, see SearchJobsResponse.total_size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,8 +120,7 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   private SpellingCorrection spellCorrection;
 
   /**
-   * The precise result count, which is available only if the client set enable_precise_result_size
-   * to `true`, or if the response is the last page of results. Otherwise, the value is `-1`.
+   * The precise result count with limit 100,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,10 +154,8 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * An estimation of the number of jobs that match the specified query.
-   *
-   * This number is not guaranteed to be accurate. For accurate results, see
-   * enable_precise_result_size.
+   * An estimation of the number of jobs that match the specified query. This number is not
+   * guaranteed to be accurate. For accurate results, see SearchJobsResponse.total_size.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEstimatedTotalSize() {
@@ -170,10 +163,8 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * An estimation of the number of jobs that match the specified query.
-   *
-   * This number is not guaranteed to be accurate. For accurate results, see
-   * enable_precise_result_size.
+   * An estimation of the number of jobs that match the specified query. This number is not
+   * guaranteed to be accurate. For accurate results, see SearchJobsResponse.total_size.
    * @param estimatedTotalSize estimatedTotalSize or {@code null} for none
    */
   public SearchJobsResponse setEstimatedTotalSize(java.lang.Integer estimatedTotalSize) {
@@ -305,8 +296,7 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The precise result count, which is available only if the client set enable_precise_result_size
-   * to `true`, or if the response is the last page of results. Otherwise, the value is `-1`.
+   * The precise result count with limit 100,000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -314,8 +304,7 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The precise result count, which is available only if the client set enable_precise_result_size
-   * to `true`, or if the response is the last page of results. Otherwise, the value is `-1`.
+   * The precise result count with limit 100,000.
    * @param totalSize totalSize or {@code null} for none
    */
   public SearchJobsResponse setTotalSize(java.lang.Integer totalSize) {

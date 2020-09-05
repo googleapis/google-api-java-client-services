@@ -41,8 +41,8 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
    * second, minute, hour, and day duration values, respectively. The timeout duration must be from
    * 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is
    * submitted. If the workflow is running at the end of the timeout period, any remaining jobs are
-   * cancelled, the workflow is terminated, and if the workflow was running on a managed cluster,
-   * the cluster is deleted.
+   * cancelled, the workflow is ended, and if the workflow was running on a managed cluster, the
+   * cluster is deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,8 +156,8 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
    * second, minute, hour, and day duration values, respectively. The timeout duration must be from
    * 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is
    * submitted. If the workflow is running at the end of the timeout period, any remaining jobs are
-   * cancelled, the workflow is terminated, and if the workflow was running on a managed cluster,
-   * the cluster is deleted.
+   * cancelled, the workflow is ended, and if the workflow was running on a managed cluster, the
+   * cluster is deleted.
    * @return value or {@code null} for none
    */
   public String getDagTimeout() {
@@ -169,8 +169,8 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
    * second, minute, hour, and day duration values, respectively. The timeout duration must be from
    * 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is
    * submitted. If the workflow is running at the end of the timeout period, any remaining jobs are
-   * cancelled, the workflow is terminated, and if the workflow was running on a managed cluster,
-   * the cluster is deleted.
+   * cancelled, the workflow is ended, and if the workflow was running on a managed cluster, the
+   * cluster is deleted.
    * @param dagTimeout dagTimeout or {@code null} for none
    */
   public WorkflowTemplate setDagTimeout(String dagTimeout) {

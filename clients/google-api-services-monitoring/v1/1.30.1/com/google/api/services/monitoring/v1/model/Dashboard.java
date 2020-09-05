@@ -64,8 +64,8 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   private GridLayout gridLayout;
 
   /**
-   * The content is arranged as a grid of tiles, with each content widget occupying one or more
-   * tiles.
+   * The content is arranged as a grid of tiles, with each content widget occupying one or more grid
+   * squares.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,8 +164,8 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content is arranged as a grid of tiles, with each content widget occupying one or more
-   * tiles.
+   * The content is arranged as a grid of tiles, with each content widget occupying one or more grid
+   * squares.
    * @return value or {@code null} for none
    */
   public MosaicLayout getMosaicLayout() {
@@ -173,8 +173,8 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content is arranged as a grid of tiles, with each content widget occupying one or more
-   * tiles.
+   * The content is arranged as a grid of tiles, with each content widget occupying one or more grid
+   * squares.
    * @param mosaicLayout mosaicLayout or {@code null} for none
    */
   public Dashboard setMosaicLayout(MosaicLayout mosaicLayout) {

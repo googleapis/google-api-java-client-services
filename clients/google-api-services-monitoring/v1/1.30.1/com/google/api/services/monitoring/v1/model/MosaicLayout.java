@@ -32,7 +32,8 @@ package com.google.api.services.monitoring.v1.model;
 public final class MosaicLayout extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of columns in the mosaic grid.
+   * The number of columns in the mosaic grid. The number of columns must be between 1 and 12,
+   * inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,8 @@ public final class MosaicLayout extends com.google.api.client.json.GenericJson {
   private java.util.List<Tile> tiles;
 
   /**
-   * The number of columns in the mosaic grid.
+   * The number of columns in the mosaic grid. The number of columns must be between 1 and 12,
+   * inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getColumns() {
@@ -54,7 +56,8 @@ public final class MosaicLayout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of columns in the mosaic grid.
+   * The number of columns in the mosaic grid. The number of columns must be between 1 and 12,
+   * inclusive.
    * @param columns columns or {@code null} for none
    */
   public MosaicLayout setColumns(java.lang.Integer columns) {

@@ -46,6 +46,13 @@ public final class GoogleCloudDocumentaiV1beta1DocumentPageBlock extends com.goo
   private GoogleCloudDocumentaiV1beta1DocumentPageLayout layout;
 
   /**
+   * The history of this annotation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta1DocumentProvenance provenance;
+
+  /**
    * A list of detected languages together with confidence.
    * @return value or {@code null} for none
    */
@@ -76,6 +83,23 @@ public final class GoogleCloudDocumentaiV1beta1DocumentPageBlock extends com.goo
    */
   public GoogleCloudDocumentaiV1beta1DocumentPageBlock setLayout(GoogleCloudDocumentaiV1beta1DocumentPageLayout layout) {
     this.layout = layout;
+    return this;
+  }
+
+  /**
+   * The history of this annotation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta1DocumentProvenance getProvenance() {
+    return provenance;
+  }
+
+  /**
+   * The history of this annotation.
+   * @param provenance provenance or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta1DocumentPageBlock setProvenance(GoogleCloudDocumentaiV1beta1DocumentProvenance provenance) {
+    this.provenance = provenance;
     return this;
   }
 

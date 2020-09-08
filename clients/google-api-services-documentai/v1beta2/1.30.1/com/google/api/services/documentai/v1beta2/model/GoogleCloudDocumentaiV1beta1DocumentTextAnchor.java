@@ -31,11 +31,38 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiV1beta1DocumentTextAnchor extends com.google.api.client.json.GenericJson {
 
   /**
+   * Contains the content of the text span so that users do not have to look it up in the
+   * text_segments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String content;
+
+  /**
    * The text segments from the Document.text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDocumentaiV1beta1DocumentTextAnchorTextSegment> textSegments;
+
+  /**
+   * Contains the content of the text span so that users do not have to look it up in the
+   * text_segments.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContent() {
+    return content;
+  }
+
+  /**
+   * Contains the content of the text span so that users do not have to look it up in the
+   * text_segments.
+   * @param content content or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta1DocumentTextAnchor setContent(java.lang.String content) {
+    this.content = content;
+    return this;
+  }
 
   /**
    * The text segments from the Document.text.

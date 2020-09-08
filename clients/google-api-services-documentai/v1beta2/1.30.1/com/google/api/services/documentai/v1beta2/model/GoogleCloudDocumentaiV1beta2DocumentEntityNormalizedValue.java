@@ -31,6 +31,14 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue extends com.google.api.client.json.GenericJson {
 
   /**
+   * Postal address. See also: https: //github.com/googleapis/googleapis/blob/ //
+   * master/google/type/postal_address.proto
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypePostalAddress addressValue;
+
+  /**
    * Date value. Includes year, month, day. See also: https:
    * //github.com/googleapis/googleapis/blob/master/google/type/date.proto
    * The value may be {@code null}.
@@ -64,6 +72,25 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue ext
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
+
+  /**
+   * Postal address. See also: https: //github.com/googleapis/googleapis/blob/ //
+   * master/google/type/postal_address.proto
+   * @return value or {@code null} for none
+   */
+  public GoogleTypePostalAddress getAddressValue() {
+    return addressValue;
+  }
+
+  /**
+   * Postal address. See also: https: //github.com/googleapis/googleapis/blob/ //
+   * master/google/type/postal_address.proto
+   * @param addressValue addressValue or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue setAddressValue(GoogleTypePostalAddress addressValue) {
+    this.addressValue = addressValue;
+    return this;
+  }
 
   /**
    * Date value. Includes year, month, day. See also: https:

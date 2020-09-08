@@ -38,6 +38,13 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntity extends com.google
   private java.lang.Float confidence;
 
   /**
+   * Optional. Canonical id. This will be a unique value in the entity list for this document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * Deprecated. Use `id` field instead.
    * The value may be {@code null}.
    */
@@ -59,6 +66,29 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntity extends com.google
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue normalizedValue;
+
+  /**
+   * Optional. Represents the provenance of this entity wrt. the location on the page where it was
+   * found.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta2DocumentPageAnchor pageAnchor;
+
+  /**
+   * Optional. Entities can be nested to form a hierarchical data structure representing the content
+   * in the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiV1beta2DocumentEntity> properties;
+
+  /**
+   * Optional. The history of this annotation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta2DocumentProvenance provenance;
 
   /**
    * Optional. Whether the entity will be redacted for de-identification purposes.
@@ -95,6 +125,23 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntity extends com.google
    */
   public GoogleCloudDocumentaiV1beta2DocumentEntity setConfidence(java.lang.Float confidence) {
     this.confidence = confidence;
+    return this;
+  }
+
+  /**
+   * Optional. Canonical id. This will be a unique value in the entity list for this document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Optional. Canonical id. This will be a unique value in the entity list for this document.
+   * @param id id or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentEntity setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 
@@ -150,6 +197,61 @@ public final class GoogleCloudDocumentaiV1beta2DocumentEntity extends com.google
    */
   public GoogleCloudDocumentaiV1beta2DocumentEntity setNormalizedValue(GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue normalizedValue) {
     this.normalizedValue = normalizedValue;
+    return this;
+  }
+
+  /**
+   * Optional. Represents the provenance of this entity wrt. the location on the page where it was
+   * found.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentPageAnchor getPageAnchor() {
+    return pageAnchor;
+  }
+
+  /**
+   * Optional. Represents the provenance of this entity wrt. the location on the page where it was
+   * found.
+   * @param pageAnchor pageAnchor or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentEntity setPageAnchor(GoogleCloudDocumentaiV1beta2DocumentPageAnchor pageAnchor) {
+    this.pageAnchor = pageAnchor;
+    return this;
+  }
+
+  /**
+   * Optional. Entities can be nested to form a hierarchical data structure representing the content
+   * in the document.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiV1beta2DocumentEntity> getProperties() {
+    return properties;
+  }
+
+  /**
+   * Optional. Entities can be nested to form a hierarchical data structure representing the content
+   * in the document.
+   * @param properties properties or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentEntity setProperties(java.util.List<GoogleCloudDocumentaiV1beta2DocumentEntity> properties) {
+    this.properties = properties;
+    return this;
+  }
+
+  /**
+   * Optional. The history of this annotation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentProvenance getProvenance() {
+    return provenance;
+  }
+
+  /**
+   * Optional. The history of this annotation.
+   * @param provenance provenance or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta2DocumentEntity setProvenance(GoogleCloudDocumentaiV1beta2DocumentProvenance provenance) {
+    this.provenance = provenance;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta2.model;
 
 /**
- * A translation of the text segment.
+ * This message is used for text changes aka. OCR corrections.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -28,15 +28,14 @@ package com.google.api.services.documentai.v1beta2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDocumentaiV1beta2DocumentTranslation extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDocumentaiV1beta2DocumentTextChange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
-   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   * The text that replaces the text identified in the `text_anchor`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String languageCode;
+  private java.lang.String changedText;
 
   /**
    * The history of this annotation.
@@ -52,7 +51,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentTranslation extends com.g
   }
 
   /**
-   * Provenance of the translation. Text anchor indexing into the Document.text. There can only be a
+   * Provenance of the correction. Text anchor indexing into the Document.text. There can only be a
    * single `TextAnchor.text_segments` element. If the start and end index of the text segment are
    * the same, the text change is inserted before that index.
    * The value may be {@code null}.
@@ -61,28 +60,19 @@ public final class GoogleCloudDocumentaiV1beta2DocumentTranslation extends com.g
   private GoogleCloudDocumentaiV1beta2DocumentTextAnchor textAnchor;
 
   /**
-   * Text translated into the target language.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String translatedText;
-
-  /**
-   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
-   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   * The text that replaces the text identified in the `text_anchor`.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLanguageCode() {
-    return languageCode;
+  public java.lang.String getChangedText() {
+    return changedText;
   }
 
   /**
-   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
-   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
-   * @param languageCode languageCode or {@code null} for none
+   * The text that replaces the text identified in the `text_anchor`.
+   * @param changedText changedText or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta2DocumentTranslation setLanguageCode(java.lang.String languageCode) {
-    this.languageCode = languageCode;
+  public GoogleCloudDocumentaiV1beta2DocumentTextChange setChangedText(java.lang.String changedText) {
+    this.changedText = changedText;
     return this;
   }
 
@@ -98,13 +88,13 @@ public final class GoogleCloudDocumentaiV1beta2DocumentTranslation extends com.g
    * The history of this annotation.
    * @param provenance provenance or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta2DocumentTranslation setProvenance(java.util.List<GoogleCloudDocumentaiV1beta2DocumentProvenance> provenance) {
+  public GoogleCloudDocumentaiV1beta2DocumentTextChange setProvenance(java.util.List<GoogleCloudDocumentaiV1beta2DocumentProvenance> provenance) {
     this.provenance = provenance;
     return this;
   }
 
   /**
-   * Provenance of the translation. Text anchor indexing into the Document.text. There can only be a
+   * Provenance of the correction. Text anchor indexing into the Document.text. There can only be a
    * single `TextAnchor.text_segments` element. If the start and end index of the text segment are
    * the same, the text change is inserted before that index.
    * @return value or {@code null} for none
@@ -114,41 +104,24 @@ public final class GoogleCloudDocumentaiV1beta2DocumentTranslation extends com.g
   }
 
   /**
-   * Provenance of the translation. Text anchor indexing into the Document.text. There can only be a
+   * Provenance of the correction. Text anchor indexing into the Document.text. There can only be a
    * single `TextAnchor.text_segments` element. If the start and end index of the text segment are
    * the same, the text change is inserted before that index.
    * @param textAnchor textAnchor or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta2DocumentTranslation setTextAnchor(GoogleCloudDocumentaiV1beta2DocumentTextAnchor textAnchor) {
+  public GoogleCloudDocumentaiV1beta2DocumentTextChange setTextAnchor(GoogleCloudDocumentaiV1beta2DocumentTextAnchor textAnchor) {
     this.textAnchor = textAnchor;
     return this;
   }
 
-  /**
-   * Text translated into the target language.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTranslatedText() {
-    return translatedText;
-  }
-
-  /**
-   * Text translated into the target language.
-   * @param translatedText translatedText or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta2DocumentTranslation setTranslatedText(java.lang.String translatedText) {
-    this.translatedText = translatedText;
-    return this;
+  @Override
+  public GoogleCloudDocumentaiV1beta2DocumentTextChange set(String fieldName, Object value) {
+    return (GoogleCloudDocumentaiV1beta2DocumentTextChange) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDocumentaiV1beta2DocumentTranslation set(String fieldName, Object value) {
-    return (GoogleCloudDocumentaiV1beta2DocumentTranslation) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleCloudDocumentaiV1beta2DocumentTranslation clone() {
-    return (GoogleCloudDocumentaiV1beta2DocumentTranslation) super.clone();
+  public GoogleCloudDocumentaiV1beta2DocumentTextChange clone() {
+    return (GoogleCloudDocumentaiV1beta2DocumentTextChange) super.clone();
   }
 
 }

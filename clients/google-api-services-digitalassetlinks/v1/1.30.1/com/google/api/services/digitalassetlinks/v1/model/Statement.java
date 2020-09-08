@@ -18,13 +18,10 @@ package com.google.api.services.digitalassetlinks.v1.model;
 
 /**
  * Describes a reliable statement that has been made about the relationship between a source asset
- * and a target asset.
- *
- * Statements are always made by the source asset, either directly or by delegating to a statement
- * list that is stored elsewhere.
- *
- * For more detailed definitions of statements and assets, please refer to our [API documentation
- * landing page](/digital-asset-links/v1/getting-started).
+ * and a target asset. Statements are always made by the source asset, either directly or by
+ * delegating to a statement list that is stored elsewhere. For more detailed definitions of
+ * statements and assets, please refer to our [API documentation landing page](/digital-asset-
+ * links/v1/getting-started).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Digital Asset Links API. For a detailed explanation
@@ -39,16 +36,12 @@ public final class Statement extends com.google.api.client.json.GenericJson {
 
   /**
    * The relation identifies the use of the statement as intended by the source asset's owner (that
-   * is, the person or entity who issued the statement). Every complete statement has a relation.
-   *
-   * We identify relations with strings of the format `/`, where `` must be one of a set of pre-
-   * defined purpose categories, and `` is a free-form lowercase alphanumeric string that describes
-   * the specific use case of the statement.
-   *
-   * Refer to [our API documentation](/digital-asset-links/v1/relation-strings) for the current list
-   * of supported relations.
-   *
-   * Example: `delegate_permission/common.handle_all_urls` REQUIRED
+   * is, the person or entity who issued the statement). Every complete statement has a relation. We
+   * identify relations with strings of the format `/`, where `` must be one of a set of pre-defined
+   * purpose categories, and `` is a free-form lowercase alphanumeric string that describes the
+   * specific use case of the statement. Refer to [our API documentation](/digital-asset-links/v1
+   * /relation-strings) for the current list of supported relations. Example:
+   * `delegate_permission/common.handle_all_urls` REQUIRED
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,16 +63,12 @@ public final class Statement extends com.google.api.client.json.GenericJson {
 
   /**
    * The relation identifies the use of the statement as intended by the source asset's owner (that
-   * is, the person or entity who issued the statement). Every complete statement has a relation.
-   *
-   * We identify relations with strings of the format `/`, where `` must be one of a set of pre-
-   * defined purpose categories, and `` is a free-form lowercase alphanumeric string that describes
-   * the specific use case of the statement.
-   *
-   * Refer to [our API documentation](/digital-asset-links/v1/relation-strings) for the current list
-   * of supported relations.
-   *
-   * Example: `delegate_permission/common.handle_all_urls` REQUIRED
+   * is, the person or entity who issued the statement). Every complete statement has a relation. We
+   * identify relations with strings of the format `/`, where `` must be one of a set of pre-defined
+   * purpose categories, and `` is a free-form lowercase alphanumeric string that describes the
+   * specific use case of the statement. Refer to [our API documentation](/digital-asset-links/v1
+   * /relation-strings) for the current list of supported relations. Example:
+   * `delegate_permission/common.handle_all_urls` REQUIRED
    * @return value or {@code null} for none
    */
   public java.lang.String getRelation() {
@@ -88,16 +77,12 @@ public final class Statement extends com.google.api.client.json.GenericJson {
 
   /**
    * The relation identifies the use of the statement as intended by the source asset's owner (that
-   * is, the person or entity who issued the statement). Every complete statement has a relation.
-   *
-   * We identify relations with strings of the format `/`, where `` must be one of a set of pre-
-   * defined purpose categories, and `` is a free-form lowercase alphanumeric string that describes
-   * the specific use case of the statement.
-   *
-   * Refer to [our API documentation](/digital-asset-links/v1/relation-strings) for the current list
-   * of supported relations.
-   *
-   * Example: `delegate_permission/common.handle_all_urls` REQUIRED
+   * is, the person or entity who issued the statement). Every complete statement has a relation. We
+   * identify relations with strings of the format `/`, where `` must be one of a set of pre-defined
+   * purpose categories, and `` is a free-form lowercase alphanumeric string that describes the
+   * specific use case of the statement. Refer to [our API documentation](/digital-asset-links/v1
+   * /relation-strings) for the current list of supported relations. Example:
+   * `delegate_permission/common.handle_all_urls` REQUIRED
    * @param relation relation or {@code null} for none
    */
   public Statement setRelation(java.lang.String relation) {

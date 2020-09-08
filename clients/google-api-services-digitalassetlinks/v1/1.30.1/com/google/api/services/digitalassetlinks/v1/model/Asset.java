@@ -17,11 +17,9 @@
 package com.google.api.services.digitalassetlinks.v1.model;
 
 /**
- * Uniquely identifies an asset.
- *
- * A digital asset is an identifiable and addressable online entity that typically provides some
- * service or content.  Examples of assets are websites, Android apps, Twitter feeds, and Plus
- * Pages.
+ * Uniquely identifies an asset. A digital asset is an identifiable and addressable online entity
+ * that typically provides some service or content. Examples of assets are websites, Android apps,
+ * Twitter feeds, and Plus Pages.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Digital Asset Links API. For a detailed explanation

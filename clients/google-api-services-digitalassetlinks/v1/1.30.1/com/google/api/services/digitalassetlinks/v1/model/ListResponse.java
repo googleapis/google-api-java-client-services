@@ -32,13 +32,10 @@ public final class ListResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Human-readable message containing information intended to help end users understand, reproduce
-   * and debug the result.
-   *
-   * The message will be in English and we are currently not planning to offer any translations.
-   *
-   * Please note that no guarantees are made about the contents or format of this string.  Any
-   * aspect of it may be subject to change without notice. You should not attempt to
-   * programmatically parse this data.  For programmatic access, use the error_code field below.
+   * and debug the result. The message will be in English and we are currently not planning to offer
+   * any translations. Please note that no guarantees are made about the contents or format of this
+   * string. Any aspect of it may be subject to change without notice. You should not attempt to
+   * programmatically parse this data. For programmatic access, use the error_code field below.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,13 +65,10 @@ public final class ListResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Human-readable message containing information intended to help end users understand, reproduce
-   * and debug the result.
-   *
-   * The message will be in English and we are currently not planning to offer any translations.
-   *
-   * Please note that no guarantees are made about the contents or format of this string.  Any
-   * aspect of it may be subject to change without notice. You should not attempt to
-   * programmatically parse this data.  For programmatic access, use the error_code field below.
+   * and debug the result. The message will be in English and we are currently not planning to offer
+   * any translations. Please note that no guarantees are made about the contents or format of this
+   * string. Any aspect of it may be subject to change without notice. You should not attempt to
+   * programmatically parse this data. For programmatic access, use the error_code field below.
    * @return value or {@code null} for none
    */
   public java.lang.String getDebugString() {
@@ -83,13 +77,10 @@ public final class ListResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Human-readable message containing information intended to help end users understand, reproduce
-   * and debug the result.
-   *
-   * The message will be in English and we are currently not planning to offer any translations.
-   *
-   * Please note that no guarantees are made about the contents or format of this string.  Any
-   * aspect of it may be subject to change without notice. You should not attempt to
-   * programmatically parse this data.  For programmatic access, use the error_code field below.
+   * and debug the result. The message will be in English and we are currently not planning to offer
+   * any translations. Please note that no guarantees are made about the contents or format of this
+   * string. Any aspect of it may be subject to change without notice. You should not attempt to
+   * programmatically parse this data. For programmatic access, use the error_code field below.
    * @param debugString debugString or {@code null} for none
    */
   public ListResponse setDebugString(java.lang.String debugString) {

@@ -59,6 +59,21 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
   private java.lang.String electionInfoUrl;
 
   /**
+   * A last minute or emergency notification text provided by this administrative body.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String electionNoticeText;
+
+  /**
+   * A URL provided by this administrative body for additional information related to the last
+   * minute or emergency notification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String electionNoticeUrl;
+
+  /**
    * The election officials for this election administrative body.
    * The value may be {@code null}.
    */
@@ -186,6 +201,42 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    */
   public AdministrativeBody setElectionInfoUrl(java.lang.String electionInfoUrl) {
     this.electionInfoUrl = electionInfoUrl;
+    return this;
+  }
+
+  /**
+   * A last minute or emergency notification text provided by this administrative body.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getElectionNoticeText() {
+    return electionNoticeText;
+  }
+
+  /**
+   * A last minute or emergency notification text provided by this administrative body.
+   * @param electionNoticeText electionNoticeText or {@code null} for none
+   */
+  public AdministrativeBody setElectionNoticeText(java.lang.String electionNoticeText) {
+    this.electionNoticeText = electionNoticeText;
+    return this;
+  }
+
+  /**
+   * A URL provided by this administrative body for additional information related to the last
+   * minute or emergency notification.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getElectionNoticeUrl() {
+    return electionNoticeUrl;
+  }
+
+  /**
+   * A URL provided by this administrative body for additional information related to the last
+   * minute or emergency notification.
+   * @param electionNoticeUrl electionNoticeUrl or {@code null} for none
+   */
+  public AdministrativeBody setElectionNoticeUrl(java.lang.String electionNoticeUrl) {
+    this.electionNoticeUrl = electionNoticeUrl;
     return this;
   }
 

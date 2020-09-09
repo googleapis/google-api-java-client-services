@@ -30,6 +30,15 @@ package com.google.api.services.firebaseml.v1beta2.model;
 public final class TfLiteModel extends com.google.api.client.json.GenericJson {
 
   /**
+   * The AutoML model id referencing a model you created with the AutoML API. The name should have
+   * format 'projects//locations//models/' (This is the model resource name returned from the AutoML
+   * API)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String automlModel;
+
+  /**
    * The TfLite file containing the model. (Stored in Google Cloud). The gcs_tflite_uri should have
    * form: gs://some-bucket/some-model.tflite Note: If you update the file in the original location,
    * it is necessary to call UpdateModel for ML to pick up and validate the updated file.
@@ -44,6 +53,27 @@ public final class TfLiteModel extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String sizeBytes;
+
+  /**
+   * The AutoML model id referencing a model you created with the AutoML API. The name should have
+   * format 'projects//locations//models/' (This is the model resource name returned from the AutoML
+   * API)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutomlModel() {
+    return automlModel;
+  }
+
+  /**
+   * The AutoML model id referencing a model you created with the AutoML API. The name should have
+   * format 'projects//locations//models/' (This is the model resource name returned from the AutoML
+   * API)
+   * @param automlModel automlModel or {@code null} for none
+   */
+  public TfLiteModel setAutomlModel(java.lang.String automlModel) {
+    this.automlModel = automlModel;
+    return this;
+  }
 
   /**
    * The TfLite file containing the model. (Stored in Google Cloud). The gcs_tflite_uri should have

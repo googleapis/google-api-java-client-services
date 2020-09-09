@@ -113,7 +113,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * Substitutions for Build resource. The keys must match the following regular expression:
-   * `^_[A-Z0-9_]+$`.The keys cannot conflict with the keys in bindings.
+   * `^_[A-Z0-9_]+$`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -331,7 +331,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * Substitutions for Build resource. The keys must match the following regular expression:
-   * `^_[A-Z0-9_]+$`.The keys cannot conflict with the keys in bindings.
+   * `^_[A-Z0-9_]+$`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getSubstitutions() {
@@ -340,7 +340,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * Substitutions for Build resource. The keys must match the following regular expression:
-   * `^_[A-Z0-9_]+$`.The keys cannot conflict with the keys in bindings.
+   * `^_[A-Z0-9_]+$`.
    * @param substitutions substitutions or {@code null} for none
    */
   public BuildTrigger setSubstitutions(java.util.Map<String, java.lang.String> substitutions) {

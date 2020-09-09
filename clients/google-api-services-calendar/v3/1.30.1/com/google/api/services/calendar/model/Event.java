@@ -133,7 +133,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private ExtendedProperties extendedProperties;
 
   /**
-   * A gadget that extends this event.
+   * A gadget that extends this event. Gadgets are deprecated; this structure is instead only used
+   * for returning birthday calendar metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -695,7 +696,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A gadget that extends this event.
+   * A gadget that extends this event. Gadgets are deprecated; this structure is instead only used
+   * for returning birthday calendar metadata.
    * @return value or {@code null} for none
    */
   public Gadget getGadget() {
@@ -703,7 +705,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A gadget that extends this event.
+   * A gadget that extends this event. Gadgets are deprecated; this structure is instead only used
+   * for returning birthday calendar metadata.
    * @param gadget gadget or {@code null} for none
    */
   public Event setGadget(Gadget gadget) {
@@ -1596,12 +1599,13 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A gadget that extends this event.
+   * A gadget that extends this event. Gadgets are deprecated; this structure is instead only used for
+   * returning birthday calendar metadata.
    */
   public static final class Gadget extends com.google.api.client.json.GenericJson {
 
     /**
-     * The gadget's display mode. Optional. Possible values are: - "icon" - The gadget displays next
+     * The gadget's display mode. Deprecated. Possible values are: - "icon" - The gadget displays next
      * to the event's title in the calendar view.  - "chip" - The gadget displays when the event is
      * clicked.
      * The value may be {@code null}.
@@ -1611,20 +1615,21 @@ public final class Event extends com.google.api.client.json.GenericJson {
 
     /**
      * The gadget's height in pixels. The height must be an integer greater than 0. Optional.
+     * Deprecated.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Integer height;
 
     /**
-     * The gadget's icon URL. The URL scheme must be HTTPS.
+     * The gadget's icon URL. The URL scheme must be HTTPS. Deprecated.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String iconLink;
 
     /**
-     * The gadget's URL. The URL scheme must be HTTPS.
+     * The gadget's URL. The URL scheme must be HTTPS. Deprecated.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1638,14 +1643,14 @@ public final class Event extends com.google.api.client.json.GenericJson {
     private java.util.Map<String, java.lang.String> preferences;
 
     /**
-     * The gadget's title.
+     * The gadget's title. Deprecated.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String title;
 
     /**
-     * The gadget's type.
+     * The gadget's type. Deprecated.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1653,13 +1658,14 @@ public final class Event extends com.google.api.client.json.GenericJson {
 
     /**
      * The gadget's width in pixels. The width must be an integer greater than 0. Optional.
+     * Deprecated.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Integer width;
 
     /**
-     * The gadget's display mode. Optional. Possible values are: - "icon" - The gadget displays next
+     * The gadget's display mode. Deprecated. Possible values are: - "icon" - The gadget displays next
      * to the event's title in the calendar view.  - "chip" - The gadget displays when the event is
      * clicked.
      * @return value or {@code null} for none
@@ -1669,7 +1675,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The gadget's display mode. Optional. Possible values are: - "icon" - The gadget displays next
+     * The gadget's display mode. Deprecated. Possible values are: - "icon" - The gadget displays next
      * to the event's title in the calendar view.  - "chip" - The gadget displays when the event is
      * clicked.
      * @param display display or {@code null} for none
@@ -1681,6 +1687,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
 
     /**
      * The gadget's height in pixels. The height must be an integer greater than 0. Optional.
+     * Deprecated.
      * @return value or {@code null} for none
      */
     public java.lang.Integer getHeight() {
@@ -1689,6 +1696,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
 
     /**
      * The gadget's height in pixels. The height must be an integer greater than 0. Optional.
+     * Deprecated.
      * @param height height or {@code null} for none
      */
     public Gadget setHeight(java.lang.Integer height) {
@@ -1697,7 +1705,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The gadget's icon URL. The URL scheme must be HTTPS.
+     * The gadget's icon URL. The URL scheme must be HTTPS. Deprecated.
      * @return value or {@code null} for none
      */
     public java.lang.String getIconLink() {
@@ -1705,7 +1713,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The gadget's icon URL. The URL scheme must be HTTPS.
+     * The gadget's icon URL. The URL scheme must be HTTPS. Deprecated.
      * @param iconLink iconLink or {@code null} for none
      */
     public Gadget setIconLink(java.lang.String iconLink) {
@@ -1714,7 +1722,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The gadget's URL. The URL scheme must be HTTPS.
+     * The gadget's URL. The URL scheme must be HTTPS. Deprecated.
      * @return value or {@code null} for none
      */
     public java.lang.String getLink() {
@@ -1722,7 +1730,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The gadget's URL. The URL scheme must be HTTPS.
+     * The gadget's URL. The URL scheme must be HTTPS. Deprecated.
      * @param link link or {@code null} for none
      */
     public Gadget setLink(java.lang.String link) {
@@ -1748,7 +1756,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The gadget's title.
+     * The gadget's title. Deprecated.
      * @return value or {@code null} for none
      */
     public java.lang.String getTitle() {
@@ -1756,7 +1764,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The gadget's title.
+     * The gadget's title. Deprecated.
      * @param title title or {@code null} for none
      */
     public Gadget setTitle(java.lang.String title) {
@@ -1765,7 +1773,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The gadget's type.
+     * The gadget's type. Deprecated.
      * @return value or {@code null} for none
      */
     public java.lang.String getType() {
@@ -1773,7 +1781,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The gadget's type.
+     * The gadget's type. Deprecated.
      * @param type type or {@code null} for none
      */
     public Gadget setType(java.lang.String type) {
@@ -1783,6 +1791,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
 
     /**
      * The gadget's width in pixels. The width must be an integer greater than 0. Optional.
+     * Deprecated.
      * @return value or {@code null} for none
      */
     public java.lang.Integer getWidth() {
@@ -1791,6 +1800,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
 
     /**
      * The gadget's width in pixels. The width must be an integer greater than 0. Optional.
+     * Deprecated.
      * @param width width or {@code null} for none
      */
     public Gadget setWidth(java.lang.Integer width) {

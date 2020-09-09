@@ -1,14 +1,161 @@
 {
-  "name": "civicinfo",
+  "title": "Google Civic Information API",
+  "discoveryVersion": "v1",
+  "ownerDomain": "google.com",
+  "protocol": "rest",
+  "version": "v2",
   "rootUrl": "https://civicinfo.googleapis.com/",
+  "parameters": {
+    "prettyPrint": {
+      "type": "boolean",
+      "default": "true",
+      "description": "Returns response with indentations and line breaks.",
+      "location": "query"
+    },
+    "access_token": {
+      "location": "query",
+      "description": "OAuth access token.",
+      "type": "string"
+    },
+    "uploadType": {
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
+      "location": "query",
+      "type": "string"
+    },
+    "oauth_token": {
+      "type": "string",
+      "location": "query",
+      "description": "OAuth 2.0 token for the current user."
+    },
+    "$.xgafv": {
+      "enum": [
+        "1",
+        "2"
+      ],
+      "description": "V1 error format.",
+      "type": "string",
+      "location": "query",
+      "enumDescriptions": [
+        "v1 error format",
+        "v2 error format"
+      ]
+    },
+    "quotaUser": {
+      "type": "string",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "location": "query"
+    },
+    "upload_protocol": {
+      "type": "string",
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "location": "query"
+    },
+    "fields": {
+      "location": "query",
+      "type": "string",
+      "description": "Selector specifying which fields to include in a partial response."
+    },
+    "alt": {
+      "type": "string",
+      "default": "json",
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ],
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ],
+      "location": "query",
+      "description": "Data format for response."
+    },
+    "key": {
+      "type": "string",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "location": "query"
+    },
+    "callback": {
+      "location": "query",
+      "type": "string",
+      "description": "JSONP"
+    }
+  },
+  "icons": {
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
+  },
   "id": "civicinfo:v2",
+  "description": "Provides polling places, early vote locations, contest data, election officials, and government representatives for U.S. residential addresses.",
+  "name": "civicinfo",
+  "kind": "discovery#restDescription",
   "mtlsRootUrl": "https://civicinfo.mtls.googleapis.com/",
-  "baseUrl": "https://civicinfo.googleapis.com/",
+  "canonicalName": "Civic Info",
   "resources": {
+    "divisions": {
+      "methods": {
+        "search": {
+          "parameterOrder": [],
+          "parameters": {
+            "query": {
+              "description": "The search query. Queries can cover any parts of a OCD ID or a human readable division name. All words given in the query are treated as required patterns. In addition to that, most query operators of the Apache Lucene library are supported. See http://lucene.apache.org/core/2_9_4/queryparsersyntax.html",
+              "location": "query",
+              "type": "string"
+            }
+          },
+          "response": {
+            "$ref": "DivisionSearchResponse"
+          },
+          "id": "civicinfo.divisions.search",
+          "path": "civicinfo/v2/divisions",
+          "httpMethod": "GET",
+          "flatPath": "civicinfo/v2/divisions",
+          "description": "Searches for political divisions by their natural name or OCD ID."
+        }
+      }
+    },
     "representatives": {
       "methods": {
-        "representativeInfoByDivision": {
+        "representativeInfoByAddress": {
+          "parameterOrder": [],
+          "flatPath": "civicinfo/v2/representatives",
+          "httpMethod": "GET",
           "parameters": {
+            "includeOffices": {
+              "location": "query",
+              "type": "boolean",
+              "default": "true",
+              "description": "Whether to return information about offices and officials. If false, only the top-level district information will be returned."
+            },
+            "levels": {
+              "enumDescriptions": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              "type": "string",
+              "repeated": true,
+              "description": "A list of office levels to filter by. Only offices that serve at least one of these levels will be returned. Divisions that don't contain a matching office will not be returned.",
+              "enum": [
+                "international",
+                "country",
+                "administrativeArea1",
+                "regional",
+                "administrativeArea2",
+                "locality",
+                "subLocality1",
+                "subLocality2",
+                "special"
+              ],
+              "location": "query"
+            },
             "roles": {
               "enum": [
                 "headOfState",
@@ -23,98 +170,13 @@
                 "schoolBoard",
                 "specialPurposeOfficer"
               ],
+              "location": "query",
               "type": "string",
               "description": "A list of office roles to filter by. Only offices fulfilling one of these roles will be returned. Divisions that don't contain a matching office will not be returned.",
-              "enumDescriptions": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ],
-              "location": "query",
-              "repeated": true
-            },
-            "levels": {
-              "location": "query",
-              "type": "string",
               "repeated": true,
               "enumDescriptions": [
                 "",
                 "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-              ],
-              "enum": [
-                "international",
-                "country",
-                "administrativeArea1",
-                "regional",
-                "administrativeArea2",
-                "locality",
-                "subLocality1",
-                "subLocality2",
-                "special"
-              ],
-              "description": "A list of office levels to filter by. Only offices that serve at least one of these levels will be returned. Divisions that don't contain a matching office will not be returned."
-            },
-            "recursive": {
-              "location": "query",
-              "type": "boolean",
-              "description": "If true, information about all divisions contained in the division requested will be included as well. For example, if querying ocd-division/country:us/district:dc, this would also return all DC's wards and ANCs."
-            },
-            "ocdId": {
-              "required": true,
-              "type": "string",
-              "description": "The Open Civic Data division identifier of the division to look up.",
-              "location": "path"
-            }
-          },
-          "path": "civicinfo/v2/representatives/{ocdId}",
-          "description": "Looks up representative information for a single geographic division.",
-          "flatPath": "civicinfo/v2/representatives/{ocdId}",
-          "id": "civicinfo.representatives.representativeInfoByDivision",
-          "response": {
-            "$ref": "RepresentativeInfoData"
-          },
-          "parameterOrder": [
-            "ocdId"
-          ],
-          "httpMethod": "GET"
-        },
-        "representativeInfoByAddress": {
-          "response": {
-            "$ref": "RepresentativeInfoResponse"
-          },
-          "parameters": {
-            "levels": {
-              "enum": [
-                "international",
-                "country",
-                "administrativeArea1",
-                "regional",
-                "administrativeArea2",
-                "locality",
-                "subLocality1",
-                "subLocality2",
-                "special"
-              ],
-              "location": "query",
-              "description": "A list of office levels to filter by. Only offices that serve at least one of these levels will be returned. Divisions that don't contain a matching office will not be returned.",
-              "type": "string",
-              "repeated": true,
-              "enumDescriptions": [
                 "",
                 "",
                 "",
@@ -126,20 +188,27 @@
                 ""
               ]
             },
-            "includeOffices": {
-              "default": "true",
-              "location": "query",
-              "type": "boolean",
-              "description": "Whether to return information about offices and officials. If false, only the top-level district information will be returned."
-            },
             "address": {
+              "location": "query",
               "type": "string",
-              "description": "The address to look up. May only be specified if the field ocdId is not given in the URL",
-              "location": "query"
-            },
+              "description": "The address to look up. May only be specified if the field ocdId is not given in the URL"
+            }
+          },
+          "id": "civicinfo.representatives.representativeInfoByAddress",
+          "response": {
+            "$ref": "RepresentativeInfoResponse"
+          },
+          "path": "civicinfo/v2/representatives",
+          "description": "Looks up political geography and representative information for a single address."
+        },
+        "representativeInfoByDivision": {
+          "path": "civicinfo/v2/representatives/{ocdId}",
+          "flatPath": "civicinfo/v2/representatives/{ocdId}",
+          "response": {
+            "$ref": "RepresentativeInfoData"
+          },
+          "parameters": {
             "roles": {
-              "repeated": true,
-              "type": "string",
               "enum": [
                 "headOfState",
                 "headOfGovernment",
@@ -166,443 +235,221 @@
                 "",
                 ""
               ],
+              "location": "query",
+              "type": "string",
               "description": "A list of office roles to filter by. Only offices fulfilling one of these roles will be returned. Divisions that don't contain a matching office will not be returned.",
+              "repeated": true
+            },
+            "recursive": {
+              "location": "query",
+              "type": "boolean",
+              "description": "If true, information about all divisions contained in the division requested will be included as well. For example, if querying ocd-division/country:us/district:dc, this would also return all DC's wards and ANCs."
+            },
+            "ocdId": {
+              "location": "path",
+              "description": "The Open Civic Data division identifier of the division to look up.",
+              "type": "string",
+              "required": true
+            },
+            "levels": {
+              "enum": [
+                "international",
+                "country",
+                "administrativeArea1",
+                "regional",
+                "administrativeArea2",
+                "locality",
+                "subLocality1",
+                "subLocality2",
+                "special"
+              ],
+              "enumDescriptions": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+              ],
+              "type": "string",
+              "repeated": true,
+              "description": "A list of office levels to filter by. Only offices that serve at least one of these levels will be returned. Divisions that don't contain a matching office will not be returned.",
               "location": "query"
             }
           },
-          "path": "civicinfo/v2/representatives",
+          "parameterOrder": [
+            "ocdId"
+          ],
           "httpMethod": "GET",
-          "id": "civicinfo.representatives.representativeInfoByAddress",
-          "flatPath": "civicinfo/v2/representatives",
-          "parameterOrder": [],
-          "description": "Looks up political geography and representative information for a single address."
+          "id": "civicinfo.representatives.representativeInfoByDivision",
+          "description": "Looks up representative information for a single geographic division."
         }
       }
     },
     "elections": {
       "methods": {
-        "electionQuery": {
-          "path": "civicinfo/v2/elections",
-          "httpMethod": "GET",
-          "parameters": {},
-          "flatPath": "civicinfo/v2/elections",
-          "response": {
-            "$ref": "ElectionsQueryResponse"
-          },
-          "parameterOrder": [],
-          "id": "civicinfo.elections.electionQuery",
-          "description": "List of available elections to query."
-        },
         "voterInfoQuery": {
-          "parameters": {
-            "address": {
-              "location": "query",
-              "description": "The registered address of the voter to look up.",
-              "required": true,
-              "type": "string"
-            },
-            "electionId": {
-              "type": "string",
-              "location": "query",
-              "default": "0",
-              "description": "The unique ID of the election to look up. A list of election IDs can be obtained at https://www.googleapis.com/civicinfo/{version}/elections. If no election ID is specified in the query and there is more than one election with data for the given voter, the additional elections are provided in the otherElections response field.",
-              "format": "int64"
-            },
-            "returnAllAvailableData": {
-              "type": "boolean",
-              "default": "false",
-              "description": "If set to true, the query will return the success code and include any partial information when it is unable to determine a matching address or unable to determine the election for electionId=0 queries.",
-              "location": "query"
-            },
-            "officialOnly": {
-              "default": "false",
-              "type": "boolean",
-              "location": "query",
-              "description": "If set to true, only data from official state sources will be returned."
-            }
-          },
-          "path": "civicinfo/v2/voterinfo",
           "parameterOrder": [
             "address"
           ],
+          "description": "Looks up information relevant to a voter based on the voter's registered address.",
           "id": "civicinfo.elections.voterInfoQuery",
+          "path": "civicinfo/v2/voterinfo",
+          "parameters": {
+            "returnAllAvailableData": {
+              "description": "If set to true, the query will return the success code and include any partial information when it is unable to determine a matching address or unable to determine the election for electionId=0 queries.",
+              "type": "boolean",
+              "location": "query",
+              "default": "false"
+            },
+            "address": {
+              "required": true,
+              "type": "string",
+              "location": "query",
+              "description": "The registered address of the voter to look up."
+            },
+            "electionId": {
+              "description": "The unique ID of the election to look up. A list of election IDs can be obtained at https://www.googleapis.com/civicinfo/{version}/elections. If no election ID is specified in the query and there is more than one election with data for the given voter, the additional elections are provided in the otherElections response field.",
+              "format": "int64",
+              "default": "0",
+              "location": "query",
+              "type": "string"
+            },
+            "officialOnly": {
+              "default": "false",
+              "location": "query",
+              "description": "If set to true, only data from official state sources will be returned.",
+              "type": "boolean"
+            }
+          },
           "response": {
             "$ref": "VoterInfoResponse"
           },
-          "httpMethod": "GET",
           "flatPath": "civicinfo/v2/voterinfo",
-          "description": "Looks up information relevant to a voter based on the voter's registered address."
-        }
-      }
-    },
-    "divisions": {
-      "methods": {
-        "search": {
-          "description": "Searches for political divisions by their natural name or OCD ID.",
-          "response": {
-            "$ref": "DivisionSearchResponse"
-          },
-          "httpMethod": "GET",
+          "httpMethod": "GET"
+        },
+        "electionQuery": {
+          "parameters": {},
+          "id": "civicinfo.elections.electionQuery",
           "parameterOrder": [],
-          "path": "civicinfo/v2/divisions",
-          "flatPath": "civicinfo/v2/divisions",
-          "id": "civicinfo.divisions.search",
-          "parameters": {
-            "query": {
-              "location": "query",
-              "description": "The search query. Queries can cover any parts of a OCD ID or a human readable division name. All words given in the query are treated as required patterns. In addition to that, most query operators of the Apache Lucene library are supported. See http://lucene.apache.org/core/2_9_4/queryparsersyntax.html",
-              "type": "string"
-            }
-          }
+          "response": {
+            "$ref": "ElectionsQueryResponse"
+          },
+          "path": "civicinfo/v2/elections",
+          "httpMethod": "GET",
+          "description": "List of available elections to query.",
+          "flatPath": "civicinfo/v2/elections"
         }
       }
     }
   },
+  "servicePath": "",
   "basePath": "",
-  "ownerDomain": "google.com",
-  "revision": "20200903",
-  "discoveryVersion": "v1",
-  "canonicalName": "Civic Info",
   "ownerName": "Google",
-  "title": "Google Civic Information API",
+  "revision": "20200908",
   "version_module": true,
-  "parameters": {
-    "uploadType": {
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
-      "location": "query",
-      "type": "string"
-    },
-    "access_token": {
-      "type": "string",
-      "location": "query",
-      "description": "OAuth access token."
-    },
-    "alt": {
-      "location": "query",
-      "type": "string",
-      "enum": [
-        "json",
-        "media",
-        "proto"
-      ],
-      "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
-      ],
-      "default": "json",
-      "description": "Data format for response."
-    },
-    "fields": {
-      "description": "Selector specifying which fields to include in a partial response.",
-      "location": "query",
-      "type": "string"
-    },
-    "quotaUser": {
-      "type": "string",
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "location": "query"
-    },
-    "$.xgafv": {
-      "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
-      ],
-      "type": "string",
-      "description": "V1 error format.",
-      "enum": [
-        "1",
-        "2"
-      ],
-      "location": "query"
-    },
-    "oauth_token": {
-      "location": "query",
-      "type": "string",
-      "description": "OAuth 2.0 token for the current user."
-    },
-    "prettyPrint": {
-      "type": "boolean",
-      "description": "Returns response with indentations and line breaks.",
-      "location": "query",
-      "default": "true"
-    },
-    "key": {
-      "location": "query",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "type": "string"
-    },
-    "callback": {
-      "location": "query",
-      "description": "JSONP",
-      "type": "string"
-    },
-    "upload_protocol": {
-      "location": "query",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
-      "type": "string"
-    }
-  },
-  "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
-  },
-  "documentationLink": "https://developers.google.com/civic-information/",
   "batchPath": "batch",
+  "documentationLink": "https://developers.google.com/civic-information/",
   "schemas": {
-    "Election": {
-      "id": "Election",
-      "properties": {
-        "ocdDivisionId": {
-          "description": "The political division of the election. Represented as an OCD Division ID. Voters within these political jurisdictions are covered by this election. This is typically a state such as ocd-division/country:us/state:ca or for the midterms or general election the entire US (i.e. ocd-division/country:us).",
-          "type": "string"
-        },
-        "id": {
-          "description": "The unique ID of this election.",
-          "type": "string",
-          "format": "int64"
-        },
-        "name": {
-          "type": "string",
-          "description": "A displayable name for the election."
-        },
-        "electionDay": {
-          "type": "string",
-          "description": "Day of the election in YYYY-MM-DD format."
-        }
-      },
+    "RepresentativeInfoResponse": {
+      "description": "The result of a representative info lookup query.",
+      "id": "RepresentativeInfoResponse",
       "type": "object",
-      "description": "Information about the election that was queried."
-    },
-    "Official": {
       "properties": {
-        "photoUrl": {
-          "description": "A URL for a photo of the official.",
-          "type": "string"
-        },
-        "urls": {
-          "description": "The official's public website URLs.",
+        "offices": {
+          "description": "Elected offices referenced by the divisions listed above. Will only be present if includeOffices was true in the request.",
           "type": "array",
           "items": {
-            "type": "string"
+            "$ref": "Office"
           }
         },
-        "phones": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "The official's public contact phone numbers."
-        },
-        "address": {
-          "items": {
-            "$ref": "SimpleAddressType"
-          },
-          "type": "array",
-          "description": "Addresses at which to contact the official."
-        },
-        "channels": {
-          "description": "A list of known (social) media channels for this official.",
-          "items": {
-            "$ref": "Channel"
-          },
-          "type": "array"
-        },
-        "emails": {
-          "description": "The direct email addresses for the official.",
-          "type": "array",
-          "items": {
-            "type": "string"
+        "divisions": {
+          "type": "object",
+          "description": "A map of political geographic divisions that contain the requested address, keyed by the unique Open Civic Data identifier for this division.",
+          "additionalProperties": {
+            "$ref": "GeographicDivision"
           }
         },
-        "party": {
-          "description": "The full name of the party the official belongs to.",
-          "type": "string"
-        },
-        "name": {
-          "description": "The official's name.",
-          "type": "string"
-        }
-      },
-      "id": "Official",
-      "type": "object",
-      "description": "Information about a person holding an elected office."
-    },
-    "ElectionOfficial": {
-      "properties": {
-        "officePhoneNumber": {
-          "type": "string",
-          "description": "The office phone number of the election official."
-        },
-        "title": {
-          "description": "The title of the election official.",
-          "type": "string"
-        },
-        "emailAddress": {
-          "type": "string",
-          "description": "The email address of the election official."
-        },
-        "name": {
-          "description": "The full name of the election official.",
-          "type": "string"
-        },
-        "faxNumber": {
-          "type": "string",
-          "description": "The fax number of the election official."
-        }
-      },
-      "id": "ElectionOfficial",
-      "type": "object",
-      "description": "Information about individual election officials."
-    },
-    "AdministrativeBody": {
-      "type": "object",
-      "id": "AdministrativeBody",
-      "properties": {
-        "votingLocationFinderUrl": {
-          "description": "A URL provided by this administrative body for looking up where to vote.",
-          "type": "string"
-        },
-        "voter_services": {
-          "items": {
-            "type": "string"
-          },
-          "description": "A description of the services this administrative body may provide.",
-          "type": "array"
-        },
-        "electionInfoUrl": {
-          "type": "string",
-          "description": "A URL provided by this administrative body for looking up general election information."
-        },
-        "electionRegistrationConfirmationUrl": {
-          "type": "string",
-          "description": "A URL provided by this administrative body for confirming that the voter is registered to vote."
-        },
-        "hoursOfOperation": {
-          "description": "A description of the hours of operation for this administrative body.",
-          "type": "string"
-        },
-        "correspondenceAddress": {
-          "description": "The mailing address of this administrative body.",
-          "$ref": "SimpleAddressType"
-        },
-        "ballotInfoUrl": {
-          "type": "string",
-          "description": "A URL provided by this administrative body to give contest information to the voter."
-        },
-        "absenteeVotingInfoUrl": {
-          "description": "A URL provided by this administrative body for information on absentee voting.",
-          "type": "string"
-        },
-        "electionOfficials": {
-          "description": "The election officials for this election administrative body.",
-          "type": "array",
-          "items": {
-            "$ref": "ElectionOfficial"
-          }
-        },
-        "name": {
-          "description": "The name of this election administrative body.",
-          "type": "string"
-        },
-        "electionRegistrationUrl": {
-          "type": "string",
-          "description": "A URL provided by this administrative body for looking up how to register to vote."
-        },
-        "electionRulesUrl": {
-          "type": "string",
-          "description": "A URL provided by this administrative body describing election rules to the voter."
-        },
-        "physicalAddress": {
+        "normalizedInput": {
           "$ref": "SimpleAddressType",
-          "description": "The physical address of this administrative body."
+          "description": "The normalized version of the requested address"
+        },
+        "officials": {
+          "items": {
+            "$ref": "Official"
+          },
+          "type": "array",
+          "description": "Officials holding the offices listed above. Will only be present if includeOffices was true in the request."
+        },
+        "kind": {
+          "description": "Identifies what kind of resource this is. Value: the fixed string \"civicinfo#representativeInfoResponse\".",
+          "default": "civicinfo#representativeInfoResponse",
+          "type": "string"
         }
-      },
-      "description": "Information about an election administrative body (e.g. County Board of Elections)."
+      }
     },
-    "Candidate": {
-      "description": "Information about a candidate running for elected office.",
+    "DivisionSearchResponse": {
+      "description": "The result of a division search query.",
+      "id": "DivisionSearchResponse",
       "type": "object",
       "properties": {
-        "phone": {
-          "type": "string",
-          "description": "The voice phone number for the candidate's campaign office."
-        },
-        "party": {
-          "description": "The full name of the party the candidate is a member of.",
+        "kind": {
+          "default": "civicinfo#divisionSearchResponse",
+          "description": "Identifies what kind of resource this is. Value: the fixed string \"civicinfo#divisionSearchResponse\".",
           "type": "string"
         },
-        "orderOnBallot": {
-          "format": "int64",
-          "description": "The order the candidate appears on the ballot for this contest.",
-          "type": "string"
-        },
-        "candidateUrl": {
-          "type": "string",
-          "description": "The URL for the candidate's campaign web site."
-        },
-        "photoUrl": {
-          "type": "string",
-          "description": "A URL for a photo of the candidate."
-        },
-        "email": {
-          "type": "string",
-          "description": "The email address for the candidate's campaign."
-        },
-        "name": {
-          "type": "string",
-          "description": "The candidate's name. If this is a joint ticket it will indicate the name of the candidate at the top of a ticket followed by a / and that name of candidate at the bottom of the ticket. e.g. \"Mitt Romney / Paul Ryan\""
-        },
-        "channels": {
-          "description": "A list of known (social) media channels for this candidate.",
-          "type": "array",
+        "results": {
           "items": {
-            "$ref": "Channel"
-          }
+            "$ref": "DivisionSearchResult"
+          },
+          "type": "array"
         }
-      },
-      "id": "Candidate"
+      }
     },
     "PollingLocation": {
-      "description": "A location where a voter can vote. This may be an early vote site, an election day voting location, or a drop off location for a completed ballot.",
-      "id": "PollingLocation",
       "type": "object",
+      "id": "PollingLocation",
+      "description": "A location where a voter can vote. This may be an early vote site, an election day voting location, or a drop off location for a completed ballot.",
       "properties": {
-        "endDate": {
-          "description": "The last date that this early vote site or drop off location may be used. This field is not populated for polling locations.",
-          "type": "string"
-        },
-        "pollingHours": {
-          "type": "string",
-          "description": "A description of when this location is open."
-        },
-        "name": {
-          "description": "The name of the early vote site or drop off location. This field is not populated for polling locations.",
-          "type": "string"
+        "address": {
+          "$ref": "SimpleAddressType",
+          "description": "The address of the location."
         },
         "sources": {
+          "type": "array",
           "description": "A list of sources for this location. If multiple sources are listed the data has been aggregated from those sources.",
           "items": {
             "$ref": "Source"
-          },
-          "type": "array"
+          }
         },
-        "voterServices": {
-          "description": "The services provided by this early vote site or drop off location. This field is not populated for polling locations.",
-          "type": "string"
-        },
-        "startDate": {
-          "description": "The first date that this early vote site or drop off location may be used. This field is not populated for polling locations.",
-          "type": "string"
+        "endDate": {
+          "type": "string",
+          "description": "The last date that this early vote site or drop off location may be used. This field is not populated for polling locations."
         },
         "latitude": {
           "description": "Latitude of the location, in degrees north of the equator. Note this field may not be available for some locations.",
           "type": "number",
           "format": "double"
         },
-        "address": {
-          "$ref": "SimpleAddressType",
-          "description": "The address of the location."
+        "startDate": {
+          "description": "The first date that this early vote site or drop off location may be used. This field is not populated for polling locations.",
+          "type": "string"
+        },
+        "pollingHours": {
+          "description": "A description of when this location is open.",
+          "type": "string"
+        },
+        "longitude": {
+          "description": "Longitude of the location, in degrees east of the Prime Meridian. Note this field may not be available for some locations.",
+          "type": "number",
+          "format": "double"
+        },
+        "voterServices": {
+          "description": "The services provided by this early vote site or drop off location. This field is not populated for polling locations.",
+          "type": "string"
         },
         "id": {
           "description": "An ID for this object. IDs may change in future requests and should not be cached. Access to this field requires special access that can be requested from the Request more link on the Quotas page.",
@@ -612,198 +459,176 @@
           "type": "string",
           "description": "Notes about this location (e.g. accessibility ramp or entrance to use)."
         },
-        "longitude": {
-          "description": "Longitude of the location, in degrees east of the Prime Meridian. Note this field may not be available for some locations.",
-          "type": "number",
-          "format": "double"
+        "name": {
+          "description": "The name of the early vote site or drop off location. This field is not populated for polling locations.",
+          "type": "string"
         }
       }
     },
-    "Contest": {
-      "id": "Contest",
-      "description": "Information about a contest that appears on a voter's ballot.",
+    "VoterInfoResponse": {
+      "description": "The result of a voter info lookup query.",
       "properties": {
-        "ballotPlacement": {
-          "type": "string",
-          "format": "int64",
-          "description": "A number specifying the position of this contest on the voter's ballot."
+        "state": {
+          "items": {
+            "$ref": "AdministrationRegion"
+          },
+          "description": "Local Election Information for the state that the voter votes in. For the US, there will only be one element in this array.",
+          "type": "array"
         },
-        "numberElected": {
-          "description": "The number of candidates that will be elected to office in this contest.",
-          "type": "string",
-          "format": "int64"
+        "election": {
+          "description": "The election that was queried.",
+          "$ref": "Election"
         },
-        "referendumPassageThreshold": {
-          "description": "The threshold of votes that the referendum needs in order to pass, e.g. \"two-thirds\". This field is only populated for contests of type 'Referendum'.",
+        "otherElections": {
+          "type": "array",
+          "items": {
+            "$ref": "Election"
+          },
+          "description": "When there are multiple elections for a voter address, the otherElections field is populated in the API response and there are two possibilities: 1. If the earliest election is not the intended election, specify the election ID of the desired election in a second API request using the electionId field. 2. If these elections occur on the same day, the API doesn?t return any polling location, contest, or election official information to ensure that an additional query is made. For user-facing applications, we recommend displaying these elections to the user to disambiguate. A second API request using the electionId field should be made for the election that is relevant to the user."
+        },
+        "kind": {
+          "default": "civicinfo#voterInfoResponse",
+          "type": "string",
+          "description": "Identifies what kind of resource this is. Value: the fixed string \"civicinfo#voterInfoResponse\"."
+        },
+        "mailOnly": {
+          "type": "boolean",
+          "description": "Specifies whether voters in the precinct vote only by mailing their ballots (with the possible option of dropping off their ballots as well)."
+        },
+        "dropOffLocations": {
+          "type": "array",
+          "description": "Locations where a voter is eligible to drop off a completed ballot. The voter must have received and completed a ballot prior to arriving at the location. The location may not have ballots available on the premises. These locations could be open on or before election day as indicated in the pollingHours field.",
+          "items": {
+            "$ref": "PollingLocation"
+          }
+        },
+        "contests": {
+          "type": "array",
+          "items": {
+            "$ref": "Contest"
+          },
+          "description": "Contests that will appear on the voter's ballot."
+        },
+        "precinctId": {
           "type": "string"
         },
-        "numberVotingFor": {
-          "type": "string",
-          "format": "int64",
-          "description": "The number of candidates that a voter may vote for in this contest."
-        },
-        "primaryParties": {
+        "pollingLocations": {
+          "description": "Locations where the voter is eligible to vote on election day.",
           "type": "array",
+          "items": {
+            "$ref": "PollingLocation"
+          }
+        },
+        "earlyVoteSites": {
+          "description": "Locations where the voter is eligible to vote early, prior to election day.",
+          "items": {
+            "$ref": "PollingLocation"
+          },
+          "type": "array"
+        },
+        "normalizedInput": {
+          "description": "The normalized version of the requested address",
+          "$ref": "SimpleAddressType"
+        }
+      },
+      "id": "VoterInfoResponse",
+      "type": "object"
+    },
+    "Official": {
+      "type": "object",
+      "id": "Official",
+      "properties": {
+        "channels": {
+          "description": "A list of known (social) media channels for this official.",
+          "items": {
+            "$ref": "Channel"
+          },
+          "type": "array"
+        },
+        "party": {
+          "type": "string",
+          "description": "The full name of the party the official belongs to."
+        },
+        "emails": {
+          "description": "The direct email addresses for the official.",
           "items": {
             "type": "string"
           },
-          "description": "If this is a partisan election, the name of the party/parties it is for."
+          "type": "array"
         },
-        "primaryParty": {
+        "photoUrl": {
           "type": "string",
-          "description": "[DEPRECATED] If this is a partisan election, the name of the party it is for. This field as deprecated in favor of the array \"primaryParties\", as contests may contain more than one party."
+          "description": "A URL for a photo of the official."
         },
-        "district": {
-          "description": "Information about the electoral district that this contest is in.",
-          "$ref": "ElectoralDistrict"
-        },
-        "referendumEffectOfAbstain": {
-          "type": "string",
-          "description": "Specifies what effect abstaining (not voting) on the proposition will have (i.e. whether abstaining is considered a vote against it). This field is only populated for contests of type 'Referendum'."
-        },
-        "electorateSpecifications": {
-          "description": "A description of any additional eligibility requirements for voting in this contest.",
-          "type": "string"
-        },
-        "referendumBrief": {
-          "description": "Specifies a short summary of the referendum that is typically on the ballot below the title but above the text. This field is only populated for contests of type 'Referendum'.",
-          "type": "string"
-        },
-        "office": {
-          "description": "The name of the office for this contest.",
-          "type": "string"
-        },
-        "referendumConStatement": {
-          "type": "string",
-          "description": "A statement in opposition to the referendum. It does not necessarily appear on the ballot. This field is only populated for contests of type 'Referendum'."
-        },
-        "level": {
-          "type": "array",
+        "address": {
+          "description": "Addresses at which to contact the official.",
           "items": {
-            "type": "string",
-            "enum": [
-              "international",
-              "country",
-              "administrativeArea1",
-              "regional",
-              "administrativeArea2",
-              "locality",
-              "subLocality1",
-              "subLocality2",
-              "special"
-            ],
-            "enumDescriptions": [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              ""
-            ]
+            "$ref": "SimpleAddressType"
           },
-          "description": "The levels of government of the office for this contest. There may be more than one in cases where a jurisdiction effectively acts at two different levels of government; for example, the mayor of the District of Columbia acts at \"locality\" level, but also effectively at both \"administrative-area-2\" and \"administrative-area-1\"."
+          "type": "array"
         },
-        "referendumUrl": {
-          "type": "string",
-          "description": "A link to the referendum. This field is only populated for contests of type 'Referendum'."
-        },
-        "roles": {
+        "urls": {
           "items": {
-            "enum": [
-              "headOfState",
-              "headOfGovernment",
-              "deputyHeadOfGovernment",
-              "governmentOfficer",
-              "executiveCouncil",
-              "legislatorUpperBody",
-              "legislatorLowerBody",
-              "highestCourtJudge",
-              "judge",
-              "schoolBoard",
-              "specialPurposeOfficer"
-            ],
-            "type": "string",
-            "enumDescriptions": [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              ""
-            ]
+            "type": "string"
           },
           "type": "array",
-          "description": "The roles which this office fulfills."
+          "description": "The official's public website URLs."
+        },
+        "name": {
+          "description": "The official's name.",
+          "type": "string"
+        },
+        "phones": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The official's public contact phone numbers.",
+          "type": "array"
+        }
+      },
+      "description": "Information about a person holding an elected office."
+    },
+    "AdministrationRegion": {
+      "description": "Describes information about a regional election administrative area.",
+      "properties": {
+        "name": {
+          "description": "The name of the jurisdiction.",
+          "type": "string"
+        },
+        "id": {
+          "description": "An ID for this object. IDs may change in future requests and should not be cached. Access to this field requires special access that can be requested from the Request more link on the Quotas page.",
+          "type": "string"
+        },
+        "electionAdministrationBody": {
+          "$ref": "AdministrativeBody",
+          "description": "The election administration body for this area."
         },
         "sources": {
           "type": "array",
           "items": {
             "$ref": "Source"
           },
-          "description": "A list of sources for this contest. If multiple sources are listed, the data has been aggregated from those sources."
+          "description": "A list of sources for this area. If multiple sources are listed the data has been aggregated from those sources."
         },
-        "type": {
-          "type": "string",
-          "description": "The type of contest. Usually this will be 'General', 'Primary', or 'Run-off' for contests with candidates. For referenda this will be 'Referendum'. For Retention contests this will typically be 'Retention'."
-        },
-        "referendumBallotResponses": {
-          "description": "The set of ballot responses for the referendum. A ballot response represents a line on the ballot. Common examples might include \"yes\" or \"no\" for referenda. This field is only populated for contests of type 'Referendum'.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "id": {
-          "type": "string",
-          "description": "An ID for this object. IDs may change in future requests and should not be cached. Access to this field requires special access that can be requested from the Request more link on the Quotas page."
-        },
-        "referendumSubtitle": {
-          "type": "string",
-          "description": "A brief description of the referendum. This field is only populated for contests of type 'Referendum'."
-        },
-        "referendumTitle": {
-          "description": "The title of the referendum (e.g. 'Proposition 42'). This field is only populated for contests of type 'Referendum'.",
-          "type": "string"
-        },
-        "special": {
-          "type": "string",
-          "description": "\"Yes\" or \"No\" depending on whether this a contest being held outside the normal election cycle."
-        },
-        "referendumText": {
-          "description": "The full text of the referendum. This field is only populated for contests of type 'Referendum'.",
-          "type": "string"
-        },
-        "referendumProStatement": {
-          "type": "string",
-          "description": "A statement in favor of the referendum. It does not necessarily appear on the ballot. This field is only populated for contests of type 'Referendum'."
-        },
-        "candidates": {
-          "items": {
-            "$ref": "Candidate"
-          },
-          "description": "The candidate choices for this contest.",
-          "type": "array"
-        },
-        "ballotTitle": {
-          "type": "string",
-          "description": "The official title on the ballot for this contest, only where available."
+        "local_jurisdiction": {
+          "$ref": "AdministrationRegion",
+          "description": "The city or county that provides election information for this voter. This object can have the same elements as state."
         }
       },
+      "id": "AdministrationRegion",
       "type": "object"
     },
     "ElectoralDistrict": {
+      "description": "Describes the geographic scope of a contest.",
+      "type": "object",
       "properties": {
+        "id": {
+          "type": "string",
+          "description": "An identifier for this district, relative to its scope. For example, the 34th State Senate district would have id \"34\" and a scope of stateUpper."
+        },
         "name": {
-          "description": "The name of the district.",
-          "type": "string"
+          "type": "string",
+          "description": "The name of the district."
         },
         "scope": {
           "enum": [
@@ -840,334 +665,118 @@
           ],
           "type": "string",
           "description": "The geographic scope of this district. If unspecified the district's geography is not known. One of: national, statewide, congressional, stateUpper, stateLower, countywide, judicial, schoolBoard, cityWide, township, countyCouncil, cityCouncil, ward, special"
-        },
-        "id": {
-          "type": "string",
-          "description": "An identifier for this district, relative to its scope. For example, the 34th State Senate district would have id \"34\" and a scope of stateUpper."
         }
       },
-      "id": "ElectoralDistrict",
-      "type": "object",
-      "description": "Describes the geographic scope of a contest."
+      "id": "ElectoralDistrict"
     },
-    "SimpleAddressType": {
-      "type": "object",
-      "properties": {
-        "line1": {
-          "description": "The street name and number of this address.",
-          "type": "string"
-        },
-        "line3": {
-          "description": "The third line of the address, if needed.",
-          "type": "string"
-        },
-        "city": {
-          "description": "The city or town for the address.",
-          "type": "string"
-        },
-        "locationName": {
-          "type": "string",
-          "description": "The name of the location."
-        },
-        "zip": {
-          "type": "string",
-          "description": "The US Postal Zip Code of the address."
-        },
-        "line2": {
-          "type": "string",
-          "description": "The second line the address, if needed."
-        },
-        "state": {
-          "type": "string",
-          "description": "The US two letter state abbreviation of the address."
-        }
-      },
-      "id": "SimpleAddressType",
-      "description": "A simple representation of an address."
-    },
-    "ElectionsQueryResponse": {
+    "Candidate": {
+      "description": "Information about a candidate running for elected office.",
+      "id": "Candidate",
       "type": "object",
       "properties": {
-        "kind": {
-          "description": "Identifies what kind of resource this is. Value: the fixed string \"civicinfo#electionsQueryResponse\".",
-          "default": "civicinfo#electionsQueryResponse",
+        "phone": {
+          "description": "The voice phone number for the candidate's campaign office.",
           "type": "string"
         },
-        "elections": {
-          "description": "A list of available elections",
-          "items": {
-            "$ref": "Election"
-          },
-          "type": "array"
-        }
-      },
-      "id": "ElectionsQueryResponse",
-      "description": "The list of elections available for this version of the API."
-    },
-    "RepresentativeInfoData": {
-      "properties": {
-        "officials": {
+        "candidateUrl": {
+          "type": "string",
+          "description": "The URL for the candidate's campaign web site."
+        },
+        "photoUrl": {
+          "type": "string",
+          "description": "A URL for a photo of the candidate."
+        },
+        "name": {
+          "type": "string",
+          "description": "The candidate's name. If this is a joint ticket it will indicate the name of the candidate at the top of a ticket followed by a / and that name of candidate at the bottom of the ticket. e.g. \"Mitt Romney / Paul Ryan\""
+        },
+        "orderOnBallot": {
+          "type": "string",
+          "format": "int64",
+          "description": "The order the candidate appears on the ballot for this contest."
+        },
+        "email": {
+          "description": "The email address for the candidate's campaign.",
+          "type": "string"
+        },
+        "party": {
+          "description": "The full name of the party the candidate is a member of.",
+          "type": "string"
+        },
+        "channels": {
+          "description": "A list of known (social) media channels for this candidate.",
           "type": "array",
-          "description": "Officials holding the offices listed above. Will only be present if includeOffices was true in the request.",
           "items": {
-            "$ref": "Official"
+            "$ref": "Channel"
           }
-        },
-        "offices": {
-          "description": "Elected offices referenced by the divisions listed above. Will only be present if includeOffices was true in the request.",
-          "type": "array",
-          "items": {
-            "$ref": "Office"
-          }
-        },
-        "divisions": {
-          "additionalProperties": {
-            "$ref": "GeographicDivision"
-          },
-          "description": "A map of political geographic divisions that contain the requested address, keyed by the unique Open Civic Data identifier for this division.",
-          "type": "object"
         }
-      },
-      "type": "object",
-      "id": "RepresentativeInfoData"
+      }
     },
-    "DivisionSearchResponse": {
-      "type": "object",
-      "description": "The result of a division search query.",
+    "Contest": {
+      "id": "Contest",
       "properties": {
-        "results": {
+        "candidates": {
+          "description": "The candidate choices for this contest.",
           "items": {
-            "$ref": "DivisionSearchResult"
+            "$ref": "Candidate"
           },
           "type": "array"
-        },
-        "kind": {
-          "type": "string",
-          "description": "Identifies what kind of resource this is. Value: the fixed string \"civicinfo#divisionSearchResponse\".",
-          "default": "civicinfo#divisionSearchResponse"
-        }
-      },
-      "id": "DivisionSearchResponse"
-    },
-    "Source": {
-      "description": "Contains information about the data source for the element containing it.",
-      "id": "Source",
-      "properties": {
-        "official": {
-          "type": "boolean",
-          "description": "Whether this data comes from an official government source."
-        },
-        "name": {
-          "description": "The name of the data source.",
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
-    "DivisionSearchResult": {
-      "properties": {
-        "aliases": {
-          "type": "array",
-          "description": "Other Open Civic Data identifiers that refer to the same division -- for example, those that refer to other political divisions whose boundaries are defined to be coterminous with this one. For example, ocd-division/country:us/state:wy will include an alias of ocd-division/country:us/state:wy/cd:1, since Wyoming has only one Congressional district.",
-          "items": {
-            "type": "string"
-          }
-        },
-        "name": {
-          "description": "The name of the division.",
-          "type": "string"
-        },
-        "ocdId": {
-          "description": "The unique Open Civic Data identifier for this division",
-          "type": "string"
-        }
-      },
-      "id": "DivisionSearchResult",
-      "type": "object",
-      "description": "Represents a political geographic division that matches the requested query."
-    },
-    "GeographicDivision": {
-      "description": "Describes a political geography.",
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the division."
-        },
-        "officeIndices": {
-          "description": "List of indices in the offices array, one for each office elected from this division. Will only be present if includeOffices was true (or absent) in the request.",
-          "items": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "type": "array"
-        },
-        "alsoKnownAs": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Any other valid OCD IDs that refer to the same division.\\n\\nBecause OCD IDs are meant to be human-readable and at least somewhat predictable, there are occasionally several identifiers for a single division. These identifiers are defined to be equivalent to one another, and one is always indicated as the primary identifier. The primary identifier will be returned in ocd_id above, and any other equivalent valid identifiers will be returned in this list.\\n\\nFor example, if this division's OCD ID is ocd-division/country:us/district:dc, this will contain ocd-division/country:us/state:dc."
-        }
-      },
-      "id": "GeographicDivision"
-    },
-    "Channel": {
-      "description": "A social media or web channel for a candidate.",
-      "id": "Channel",
-      "properties": {
-        "type": {
-          "type": "string",
-          "description": "The type of channel. The following is a list of types of channels, but is not exhaustive. More channel types may be added at a later time. One of: GooglePlus, YouTube, Facebook, Twitter"
-        },
-        "id": {
-          "description": "The unique public identifier for the candidate's channel.",
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
-    "AdministrationRegion": {
-      "properties": {
-        "local_jurisdiction": {
-          "$ref": "AdministrationRegion",
-          "description": "The city or county that provides election information for this voter. This object can have the same elements as state."
-        },
-        "electionAdministrationBody": {
-          "description": "The election administration body for this area.",
-          "$ref": "AdministrativeBody"
-        },
-        "sources": {
-          "items": {
-            "$ref": "Source"
-          },
-          "description": "A list of sources for this area. If multiple sources are listed the data has been aggregated from those sources.",
-          "type": "array"
-        },
-        "name": {
-          "type": "string",
-          "description": "The name of the jurisdiction."
         },
         "id": {
           "type": "string",
           "description": "An ID for this object. IDs may change in future requests and should not be cached. Access to this field requires special access that can be requested from the Request more link on the Quotas page."
-        }
-      },
-      "description": "Describes information about a regional election administrative area.",
-      "type": "object",
-      "id": "AdministrationRegion"
-    },
-    "RepresentativeInfoResponse": {
-      "properties": {
-        "officials": {
-          "type": "array",
-          "items": {
-            "$ref": "Official"
-          },
-          "description": "Officials holding the offices listed above. Will only be present if includeOffices was true in the request."
         },
-        "kind": {
-          "description": "Identifies what kind of resource this is. Value: the fixed string \"civicinfo#representativeInfoResponse\".",
+        "office": {
           "type": "string",
-          "default": "civicinfo#representativeInfoResponse"
+          "description": "The name of the office for this contest."
         },
-        "normalizedInput": {
-          "description": "The normalized version of the requested address",
-          "$ref": "SimpleAddressType"
+        "special": {
+          "description": "\"Yes\" or \"No\" depending on whether this a contest being held outside the normal election cycle.",
+          "type": "string"
         },
-        "divisions": {
-          "type": "object",
-          "description": "A map of political geographic divisions that contain the requested address, keyed by the unique Open Civic Data identifier for this division.",
-          "additionalProperties": {
-            "$ref": "GeographicDivision"
+        "sources": {
+          "type": "array",
+          "description": "A list of sources for this contest. If multiple sources are listed, the data has been aggregated from those sources.",
+          "items": {
+            "$ref": "Source"
           }
         },
-        "offices": {
-          "items": {
-            "$ref": "Office"
-          },
-          "type": "array",
-          "description": "Elected offices referenced by the divisions listed above. Will only be present if includeOffices was true in the request."
-        }
-      },
-      "description": "The result of a representative info lookup query.",
-      "id": "RepresentativeInfoResponse",
-      "type": "object"
-    },
-    "VoterInfoResponse": {
-      "type": "object",
-      "id": "VoterInfoResponse",
-      "description": "The result of a voter info lookup query.",
-      "properties": {
-        "kind": {
-          "type": "string",
-          "default": "civicinfo#voterInfoResponse",
-          "description": "Identifies what kind of resource this is. Value: the fixed string \"civicinfo#voterInfoResponse\"."
-        },
-        "state": {
-          "type": "array",
-          "items": {
-            "$ref": "AdministrationRegion"
-          },
-          "description": "Local Election Information for the state that the voter votes in. For the US, there will only be one element in this array."
-        },
-        "contests": {
-          "items": {
-            "$ref": "Contest"
-          },
-          "description": "Contests that will appear on the voter's ballot.",
-          "type": "array"
-        },
-        "election": {
-          "$ref": "Election",
-          "description": "The election that was queried."
-        },
-        "pollingLocations": {
-          "items": {
-            "$ref": "PollingLocation"
-          },
-          "description": "Locations where the voter is eligible to vote on election day.",
-          "type": "array"
-        },
-        "otherElections": {
-          "items": {
-            "$ref": "Election"
-          },
-          "description": "When there are multiple elections for a voter address, the otherElections field is populated in the API response and there are two possibilities: 1. If the earliest election is not the intended election, specify the election ID of the desired election in a second API request using the electionId field. 2. If these elections occur on the same day, the API doesn?t return any polling location, contest, or election official information to ensure that an additional query is made. For user-facing applications, we recommend displaying these elections to the user to disambiguate. A second API request using the electionId field should be made for the election that is relevant to the user.",
-          "type": "array"
-        },
-        "dropOffLocations": {
-          "items": {
-            "$ref": "PollingLocation"
-          },
-          "description": "Locations where a voter is eligible to drop off a completed ballot. The voter must have received and completed a ballot prior to arriving at the location. The location may not have ballots available on the premises. These locations could be open on or before election day as indicated in the pollingHours field.",
-          "type": "array"
-        },
-        "normalizedInput": {
-          "$ref": "SimpleAddressType",
-          "description": "The normalized version of the requested address"
-        },
-        "mailOnly": {
-          "description": "Specifies whether voters in the precinct vote only by mailing their ballots (with the possible option of dropping off their ballots as well).",
-          "type": "boolean"
-        },
-        "earlyVoteSites": {
-          "items": {
-            "$ref": "PollingLocation"
-          },
-          "type": "array",
-          "description": "Locations where the voter is eligible to vote early, prior to election day."
-        },
-        "precinctId": {
+        "referendumUrl": {
+          "description": "A link to the referendum. This field is only populated for contests of type 'Referendum'.",
           "type": "string"
-        }
-      }
-    },
-    "Office": {
-      "id": "Office",
-      "properties": {
-        "levels": {
+        },
+        "ballotPlacement": {
+          "type": "string",
+          "description": "A number specifying the position of this contest on the voter's ballot.",
+          "format": "int64"
+        },
+        "referendumEffectOfAbstain": {
+          "description": "Specifies what effect abstaining (not voting) on the proposition will have (i.e. whether abstaining is considered a vote against it). This field is only populated for contests of type 'Referendum'.",
+          "type": "string"
+        },
+        "referendumBallotResponses": {
           "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "The set of ballot responses for the referendum. A ballot response represents a line on the ballot. Common examples might include \"yes\" or \"no\" for referenda. This field is only populated for contests of type 'Referendum'."
+        },
+        "referendumBrief": {
+          "description": "Specifies a short summary of the referendum that is typically on the ballot below the title but above the text. This field is only populated for contests of type 'Referendum'.",
+          "type": "string"
+        },
+        "referendumSubtitle": {
+          "type": "string",
+          "description": "A brief description of the referendum. This field is only populated for contests of type 'Referendum'."
+        },
+        "district": {
+          "$ref": "ElectoralDistrict",
+          "description": "Information about the electoral district that this contest is in."
+        },
+        "level": {
+          "description": "The levels of government of the office for this contest. There may be more than one in cases where a jurisdiction effectively acts at two different levels of government; for example, the mayor of the District of Columbia acts at \"locality\" level, but also effectively at both \"administrative-area-2\" and \"administrative-area-1\".",
+          "items": {
+            "type": "string",
             "enum": [
               "international",
               "country",
@@ -1179,7 +788,6 @@
               "subLocality2",
               "special"
             ],
-            "type": "string",
             "enumDescriptions": [
               "",
               "",
@@ -1192,11 +800,63 @@
               ""
             ]
           },
-          "description": "The levels of government of which this office is part. There may be more than one in cases where a jurisdiction effectively acts at two different levels of government; for example, the mayor of the District of Columbia acts at \"locality\" level, but also effectively at both \"administrative-area-2\" and \"administrative-area-1\".",
           "type": "array"
         },
+        "electorateSpecifications": {
+          "type": "string",
+          "description": "A description of any additional eligibility requirements for voting in this contest."
+        },
+        "referendumTitle": {
+          "description": "The title of the referendum (e.g. 'Proposition 42'). This field is only populated for contests of type 'Referendum'.",
+          "type": "string"
+        },
+        "referendumText": {
+          "description": "The full text of the referendum. This field is only populated for contests of type 'Referendum'.",
+          "type": "string"
+        },
+        "referendumConStatement": {
+          "description": "A statement in opposition to the referendum. It does not necessarily appear on the ballot. This field is only populated for contests of type 'Referendum'.",
+          "type": "string"
+        },
+        "primaryParties": {
+          "description": "If this is a partisan election, the name of the party/parties it is for.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "referendumPassageThreshold": {
+          "type": "string",
+          "description": "The threshold of votes that the referendum needs in order to pass, e.g. \"two-thirds\". This field is only populated for contests of type 'Referendum'."
+        },
+        "numberElected": {
+          "type": "string",
+          "format": "int64",
+          "description": "The number of candidates that will be elected to office in this contest."
+        },
+        "numberVotingFor": {
+          "type": "string",
+          "description": "The number of candidates that a voter may vote for in this contest.",
+          "format": "int64"
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of contest. Usually this will be 'General', 'Primary', or 'Run-off' for contests with candidates. For referenda this will be 'Referendum'. For Retention contests this will typically be 'Retention'."
+        },
+        "referendumProStatement": {
+          "type": "string",
+          "description": "A statement in favor of the referendum. It does not necessarily appear on the ballot. This field is only populated for contests of type 'Referendum'."
+        },
+        "ballotTitle": {
+          "description": "The official title on the ballot for this contest, only where available.",
+          "type": "string"
+        },
+        "primaryParty": {
+          "type": "string",
+          "description": "[DEPRECATED] If this is a partisan election, the name of the party it is for. This field as deprecated in favor of the array \"primaryParties\", as contests may contain more than one party."
+        },
         "roles": {
-          "description": "The roles which this office fulfills. Roles are not meant to be exhaustive, or to exactly specify the entire set of responsibilities of a given office, but are meant to be rough categories that are useful for general selection from or sorting of a list of offices.",
+          "description": "The roles which this office fulfills.",
           "items": {
             "type": "string",
             "enum": [
@@ -1227,38 +887,386 @@
             ]
           },
           "type": "array"
+        }
+      },
+      "type": "object",
+      "description": "Information about a contest that appears on a voter's ballot."
+    },
+    "ElectionsQueryResponse": {
+      "description": "The list of elections available for this version of the API.",
+      "id": "ElectionsQueryResponse",
+      "properties": {
+        "kind": {
+          "default": "civicinfo#electionsQueryResponse",
+          "description": "Identifies what kind of resource this is. Value: the fixed string \"civicinfo#electionsQueryResponse\".",
+          "type": "string"
+        },
+        "elections": {
+          "type": "array",
+          "items": {
+            "$ref": "Election"
+          },
+          "description": "A list of available elections"
+        }
+      },
+      "type": "object"
+    },
+    "AdministrativeBody": {
+      "description": "Information about an election administrative body (e.g. County Board of Elections).",
+      "id": "AdministrativeBody",
+      "properties": {
+        "electionInfoUrl": {
+          "type": "string",
+          "description": "A URL provided by this administrative body for looking up general election information."
+        },
+        "correspondenceAddress": {
+          "description": "The mailing address of this administrative body.",
+          "$ref": "SimpleAddressType"
+        },
+        "electionRegistrationConfirmationUrl": {
+          "type": "string",
+          "description": "A URL provided by this administrative body for confirming that the voter is registered to vote."
+        },
+        "electionRegistrationUrl": {
+          "description": "A URL provided by this administrative body for looking up how to register to vote.",
+          "type": "string"
+        },
+        "votingLocationFinderUrl": {
+          "description": "A URL provided by this administrative body for looking up where to vote.",
+          "type": "string"
+        },
+        "name": {
+          "description": "The name of this election administrative body.",
+          "type": "string"
+        },
+        "electionOfficials": {
+          "items": {
+            "$ref": "ElectionOfficial"
+          },
+          "description": "The election officials for this election administrative body.",
+          "type": "array"
+        },
+        "absenteeVotingInfoUrl": {
+          "type": "string",
+          "description": "A URL provided by this administrative body for information on absentee voting."
+        },
+        "hoursOfOperation": {
+          "type": "string",
+          "description": "A description of the hours of operation for this administrative body."
+        },
+        "electionRulesUrl": {
+          "type": "string",
+          "description": "A URL provided by this administrative body describing election rules to the voter."
+        },
+        "electionNoticeText": {
+          "type": "string",
+          "description": "A last minute or emergency notification text provided by this administrative body."
+        },
+        "physicalAddress": {
+          "description": "The physical address of this administrative body.",
+          "$ref": "SimpleAddressType"
+        },
+        "electionNoticeUrl": {
+          "type": "string",
+          "description": "A URL provided by this administrative body for additional information related to the last minute or emergency notification."
+        },
+        "voter_services": {
+          "type": "array",
+          "description": "A description of the services this administrative body may provide.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ballotInfoUrl": {
+          "type": "string",
+          "description": "A URL provided by this administrative body to give contest information to the voter."
+        }
+      },
+      "type": "object"
+    },
+    "Source": {
+      "type": "object",
+      "description": "Contains information about the data source for the element containing it.",
+      "properties": {
+        "name": {
+          "description": "The name of the data source.",
+          "type": "string"
+        },
+        "official": {
+          "type": "boolean",
+          "description": "Whether this data comes from an official government source."
+        }
+      },
+      "id": "Source"
+    },
+    "Channel": {
+      "description": "A social media or web channel for a candidate.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of channel. The following is a list of types of channels, but is not exhaustive. More channel types may be added at a later time. One of: GooglePlus, YouTube, Facebook, Twitter"
+        },
+        "id": {
+          "description": "The unique public identifier for the candidate's channel.",
+          "type": "string"
+        }
+      },
+      "id": "Channel"
+    },
+    "SimpleAddressType": {
+      "id": "SimpleAddressType",
+      "type": "object",
+      "properties": {
+        "zip": {
+          "type": "string",
+          "description": "The US Postal Zip Code of the address."
+        },
+        "line1": {
+          "description": "The street name and number of this address.",
+          "type": "string"
+        },
+        "locationName": {
+          "type": "string",
+          "description": "The name of the location."
+        },
+        "line3": {
+          "description": "The third line of the address, if needed.",
+          "type": "string"
+        },
+        "state": {
+          "description": "The US two letter state abbreviation of the address.",
+          "type": "string"
+        },
+        "city": {
+          "description": "The city or town for the address.",
+          "type": "string"
+        },
+        "line2": {
+          "description": "The second line the address, if needed.",
+          "type": "string"
+        }
+      },
+      "description": "A simple representation of an address."
+    },
+    "Election": {
+      "description": "Information about the election that was queried.",
+      "type": "object",
+      "id": "Election",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "A displayable name for the election."
+        },
+        "id": {
+          "description": "The unique ID of this election.",
+          "format": "int64",
+          "type": "string"
+        },
+        "ocdDivisionId": {
+          "description": "The political division of the election. Represented as an OCD Division ID. Voters within these political jurisdictions are covered by this election. This is typically a state such as ocd-division/country:us/state:ca or for the midterms or general election the entire US (i.e. ocd-division/country:us).",
+          "type": "string"
+        },
+        "electionDay": {
+          "type": "string",
+          "description": "Day of the election in YYYY-MM-DD format."
+        }
+      }
+    },
+    "Office": {
+      "id": "Office",
+      "properties": {
+        "officialIndices": {
+          "type": "array",
+          "description": "List of indices in the officials array of people who presently hold this office.",
+          "items": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        },
+        "roles": {
+          "type": "array",
+          "description": "The roles which this office fulfills. Roles are not meant to be exhaustive, or to exactly specify the entire set of responsibilities of a given office, but are meant to be rough categories that are useful for general selection from or sorting of a list of offices.",
+          "items": {
+            "type": "string",
+            "enumDescriptions": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "enum": [
+              "headOfState",
+              "headOfGovernment",
+              "deputyHeadOfGovernment",
+              "governmentOfficer",
+              "executiveCouncil",
+              "legislatorUpperBody",
+              "legislatorLowerBody",
+              "highestCourtJudge",
+              "judge",
+              "schoolBoard",
+              "specialPurposeOfficer"
+            ]
+          }
         },
         "divisionId": {
           "type": "string",
           "description": "The OCD ID of the division with which this office is associated."
         },
+        "name": {
+          "type": "string",
+          "description": "The human-readable name of the office."
+        },
         "sources": {
-          "type": "array",
-          "description": "A list of sources for this office. If multiple sources are listed, the data has been aggregated from those sources.",
           "items": {
             "$ref": "Source"
-          }
+          },
+          "description": "A list of sources for this office. If multiple sources are listed, the data has been aggregated from those sources.",
+          "type": "array"
         },
-        "officialIndices": {
+        "levels": {
           "type": "array",
+          "items": {
+            "enumDescriptions": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "type": "string",
+            "enum": [
+              "international",
+              "country",
+              "administrativeArea1",
+              "regional",
+              "administrativeArea2",
+              "locality",
+              "subLocality1",
+              "subLocality2",
+              "special"
+            ]
+          },
+          "description": "The levels of government of which this office is part. There may be more than one in cases where a jurisdiction effectively acts at two different levels of government; for example, the mayor of the District of Columbia acts at \"locality\" level, but also effectively at both \"administrative-area-2\" and \"administrative-area-1\"."
+        }
+      },
+      "description": "Information about an Office held by one or more Officials.",
+      "type": "object"
+    },
+    "GeographicDivision": {
+      "description": "Describes a political geography.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the division."
+        },
+        "officeIndices": {
+          "description": "List of indices in the offices array, one for each office elected from this division. Will only be present if includeOffices was true (or absent) in the request.",
           "items": {
             "type": "integer",
             "format": "uint32"
           },
-          "description": "List of indices in the officials array of people who presently hold this office."
+          "type": "array"
         },
-        "name": {
-          "description": "The human-readable name of the office.",
-          "type": "string"
+        "alsoKnownAs": {
+          "description": "Any other valid OCD IDs that refer to the same division.\\n\\nBecause OCD IDs are meant to be human-readable and at least somewhat predictable, there are occasionally several identifiers for a single division. These identifiers are defined to be equivalent to one another, and one is always indicated as the primary identifier. The primary identifier will be returned in ocd_id above, and any other equivalent valid identifiers will be returned in this list.\\n\\nFor example, if this division's OCD ID is ocd-division/country:us/district:dc, this will contain ocd-division/country:us/state:dc.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         }
       },
+      "id": "GeographicDivision",
+      "type": "object"
+    },
+    "DivisionSearchResult": {
+      "id": "DivisionSearchResult",
       "type": "object",
-      "description": "Information about an Office held by one or more Officials."
+      "description": "Represents a political geographic division that matches the requested query.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the division."
+        },
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "Other Open Civic Data identifiers that refer to the same division -- for example, those that refer to other political divisions whose boundaries are defined to be coterminous with this one. For example, ocd-division/country:us/state:wy will include an alias of ocd-division/country:us/state:wy/cd:1, since Wyoming has only one Congressional district."
+        },
+        "ocdId": {
+          "description": "The unique Open Civic Data identifier for this division",
+          "type": "string"
+        }
+      }
+    },
+    "ElectionOfficial": {
+      "type": "object",
+      "properties": {
+        "faxNumber": {
+          "type": "string",
+          "description": "The fax number of the election official."
+        },
+        "officePhoneNumber": {
+          "description": "The office phone number of the election official.",
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "description": "The full name of the election official."
+        },
+        "title": {
+          "description": "The title of the election official.",
+          "type": "string"
+        },
+        "emailAddress": {
+          "type": "string",
+          "description": "The email address of the election official."
+        }
+      },
+      "id": "ElectionOfficial",
+      "description": "Information about individual election officials."
+    },
+    "RepresentativeInfoData": {
+      "type": "object",
+      "id": "RepresentativeInfoData",
+      "properties": {
+        "officials": {
+          "type": "array",
+          "items": {
+            "$ref": "Official"
+          },
+          "description": "Officials holding the offices listed above. Will only be present if includeOffices was true in the request."
+        },
+        "divisions": {
+          "type": "object",
+          "description": "A map of political geographic divisions that contain the requested address, keyed by the unique Open Civic Data identifier for this division.",
+          "additionalProperties": {
+            "$ref": "GeographicDivision"
+          }
+        },
+        "offices": {
+          "description": "Elected offices referenced by the divisions listed above. Will only be present if includeOffices was true in the request.",
+          "type": "array",
+          "items": {
+            "$ref": "Office"
+          }
+        }
+      }
     }
   },
-  "kind": "discovery#restDescription",
-  "version": "v2",
-  "description": "Provides polling places, early vote locations, contest data, election officials, and government representatives for U.S. residential addresses.",
-  "protocol": "rest",
-  "servicePath": ""
+  "baseUrl": "https://civicinfo.googleapis.com/"
 }

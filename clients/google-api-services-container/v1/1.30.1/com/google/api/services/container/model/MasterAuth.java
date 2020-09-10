@@ -65,7 +65,10 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
   /**
    * The password to use for HTTP basic authentication to the master endpoint. Because the master
    * endpoint is open to the Internet, you should create a strong password. If a password is
-   * provided for cluster creation, username must be non-empty.
+   * provided for cluster creation, username must be non-empty. Warning: basic authentication is
+   * deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of
+   * recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to
+   * /api-server-authentication
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +77,9 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
   /**
    * The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0
    * and later, basic authentication can be disabled by leaving username unspecified (or setting it
-   * to the empty string).
+   * to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE
+   * control plane versions 1.19 and newer. For a list of recommended authentication methods, see:
+   * https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +162,10 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
   /**
    * The password to use for HTTP basic authentication to the master endpoint. Because the master
    * endpoint is open to the Internet, you should create a strong password. If a password is
-   * provided for cluster creation, username must be non-empty.
+   * provided for cluster creation, username must be non-empty. Warning: basic authentication is
+   * deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of
+   * recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to
+   * /api-server-authentication
    * @return value or {@code null} for none
    */
   public java.lang.String getPassword() {
@@ -167,7 +175,10 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
   /**
    * The password to use for HTTP basic authentication to the master endpoint. Because the master
    * endpoint is open to the Internet, you should create a strong password. If a password is
-   * provided for cluster creation, username must be non-empty.
+   * provided for cluster creation, username must be non-empty. Warning: basic authentication is
+   * deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of
+   * recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to
+   * /api-server-authentication
    * @param password password or {@code null} for none
    */
   public MasterAuth setPassword(java.lang.String password) {
@@ -178,7 +189,9 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
   /**
    * The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0
    * and later, basic authentication can be disabled by leaving username unspecified (or setting it
-   * to the empty string).
+   * to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE
+   * control plane versions 1.19 and newer. For a list of recommended authentication methods, see:
+   * https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -188,7 +201,9 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
   /**
    * The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0
    * and later, basic authentication can be disabled by leaving username unspecified (or setting it
-   * to the empty string).
+   * to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE
+   * control plane versions 1.19 and newer. For a list of recommended authentication methods, see:
+   * https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
    * @param username username or {@code null} for none
    */
   public MasterAuth setUsername(java.lang.String username) {

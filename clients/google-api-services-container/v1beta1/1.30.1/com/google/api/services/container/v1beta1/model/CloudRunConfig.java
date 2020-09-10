@@ -38,6 +38,13 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean disabled;
 
   /**
+   * Which load balancer type is installed for Cloud Run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String loadBalancerType;
+
+  /**
    * Whether Cloud Run addon is enabled for this cluster.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
    */
   public CloudRunConfig setDisabled(java.lang.Boolean disabled) {
     this.disabled = disabled;
+    return this;
+  }
+
+  /**
+   * Which load balancer type is installed for Cloud Run.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLoadBalancerType() {
+    return loadBalancerType;
+  }
+
+  /**
+   * Which load balancer type is installed for Cloud Run.
+   * @param loadBalancerType loadBalancerType or {@code null} for none
+   */
+  public CloudRunConfig setLoadBalancerType(java.lang.String loadBalancerType) {
+    this.loadBalancerType = loadBalancerType;
     return this;
   }
 

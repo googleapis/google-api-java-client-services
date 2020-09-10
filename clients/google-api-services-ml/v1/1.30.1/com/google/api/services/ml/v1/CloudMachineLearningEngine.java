@@ -4193,7 +4193,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Adds one or more trials to a study, with parameter values suggested by AI Platform Optimizer.
+           * Adds one or more trials to a study, with parameter values suggested by AI Platform Vizier.
            * Returns a long-running operation associated with the generation of trial suggestions. When this
            * long-running operation succeeds, it will contain a SuggestTrialsResponse.
            *
@@ -4220,7 +4220,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
 
             /**
-             * Adds one or more trials to a study, with parameter values suggested by AI Platform Optimizer.
+             * Adds one or more trials to a study, with parameter values suggested by AI Platform Vizier.
              * Returns a long-running operation associated with the generation of trial suggestions. When this
              * long-running operation succeeds, it will contain a SuggestTrialsResponse.
              *

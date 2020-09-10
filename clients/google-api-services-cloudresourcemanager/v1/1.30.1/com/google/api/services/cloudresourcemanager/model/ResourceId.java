@@ -33,24 +33,22 @@ package com.google.api.services.cloudresourcemanager.model;
 public final class ResourceId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required field for the type-specific id. This should correspond to the id used in the type-
-   * specific API's.
+   * The type-specific id. This should correspond to the id used in the type-specific API's.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Required field representing the resource type this id is for. At present, the valid types are:
-   * "organization", "folder", and "project".
+   * The resource type this id is for. At present, the valid types are: "organization", "folder",
+   * and "project".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Required field for the type-specific id. This should correspond to the id used in the type-
-   * specific API's.
+   * The type-specific id. This should correspond to the id used in the type-specific API's.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -58,8 +56,7 @@ public final class ResourceId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required field for the type-specific id. This should correspond to the id used in the type-
-   * specific API's.
+   * The type-specific id. This should correspond to the id used in the type-specific API's.
    * @param id id or {@code null} for none
    */
   public ResourceId setId(java.lang.String id) {
@@ -68,8 +65,8 @@ public final class ResourceId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required field representing the resource type this id is for. At present, the valid types are:
-   * "organization", "folder", and "project".
+   * The resource type this id is for. At present, the valid types are: "organization", "folder",
+   * and "project".
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -77,8 +74,8 @@ public final class ResourceId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required field representing the resource type this id is for. At present, the valid types are:
-   * "organization", "folder", and "project".
+   * The resource type this id is for. At present, the valid types are: "organization", "folder",
+   * and "project".
    * @param type type or {@code null} for none
    */
   public ResourceId setType(java.lang.String type) {

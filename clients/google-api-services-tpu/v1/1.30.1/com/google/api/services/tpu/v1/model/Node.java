@@ -153,6 +153,13 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Output only. The Symptoms that have occurred to the TPU Node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Symptom> symptoms;
+
+  /**
    * The version of Tensorflow running in the Node. Required.
    * The value may be {@code null}.
    */
@@ -445,6 +452,23 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The Symptoms that have occurred to the TPU Node.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Symptom> getSymptoms() {
+    return symptoms;
+  }
+
+  /**
+   * Output only. The Symptoms that have occurred to the TPU Node.
+   * @param symptoms symptoms or {@code null} for none
+   */
+  public Node setSymptoms(java.util.List<Symptom> symptoms) {
+    this.symptoms = symptoms;
     return this;
   }
 

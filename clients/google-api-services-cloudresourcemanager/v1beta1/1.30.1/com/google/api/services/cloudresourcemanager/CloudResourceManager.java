@@ -1236,7 +1236,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param projectId The Project ID (for example, `foo-bar-123`). Required.
+     * @param projectId The Project ID (for example, `foo-bar-123`).
      * @return the request
      */
     public Delete delete(java.lang.String projectId) throws java.io.IOException {
@@ -1267,7 +1267,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The Project ID (for example, `foo-bar-123`). Required.
+       * @param projectId The Project ID (for example, `foo-bar-123`).
        * @since 1.13
        */
       protected Delete(java.lang.String projectId) {
@@ -1330,17 +1330,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The Project ID (for example, `foo-bar-123`). Required. */
+      /** The Project ID (for example, `foo-bar-123`). */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The Project ID (for example, `foo-bar-123`). Required.
+      /** The Project ID (for example, `foo-bar-123`).
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The Project ID (for example, `foo-bar-123`). Required. */
+      /** The Project ID (for example, `foo-bar-123`). */
       public Delete setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -1360,7 +1360,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param projectId The Project ID (for example, `my-project-123`). Required.
+     * @param projectId Required. The Project ID (for example, `my-project-123`).
      * @return the request
      */
     public Get get(java.lang.String projectId) throws java.io.IOException {
@@ -1385,7 +1385,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The Project ID (for example, `my-project-123`). Required.
+       * @param projectId Required. The Project ID (for example, `my-project-123`).
        * @since 1.13
        */
       protected Get(java.lang.String projectId) {
@@ -1458,17 +1458,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The Project ID (for example, `my-project-123`). Required. */
+      /** Required. The Project ID (for example, `my-project-123`). */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The Project ID (for example, `my-project-123`). Required.
+      /** Required. The Project ID (for example, `my-project-123`).
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The Project ID (for example, `my-project-123`). Required. */
+      /** Required. The Project ID (for example, `my-project-123`). */
       public Get setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -1490,7 +1490,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link GetAncestry#execute()} method to invoke the remote
      * operation.
      *
-     * @param projectId The Project ID (for example, `my-project-123`). Required.
+     * @param projectId Required. The Project ID (for example, `my-project-123`).
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.GetAncestryRequest}
      * @return the request
      */
@@ -1517,7 +1517,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * GetAncestry#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The Project ID (for example, `my-project-123`). Required.
+       * @param projectId Required. The Project ID (for example, `my-project-123`).
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.GetAncestryRequest}
        * @since 1.13
        */
@@ -1581,17 +1581,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (GetAncestry) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The Project ID (for example, `my-project-123`). Required. */
+      /** Required. The Project ID (for example, `my-project-123`). */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The Project ID (for example, `my-project-123`). Required.
+      /** Required. The Project ID (for example, `my-project-123`).
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The Project ID (for example, `my-project-123`). Required. */
+      /** Required. The Project ID (for example, `my-project-123`). */
       public GetAncestry setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -2281,7 +2281,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
      *
-     * @param projectId The project ID (for example, `foo-bar-123`). Required.
+     * @param projectId Required. The project ID (for example, `foo-bar-123`).
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.UndeleteProjectRequest}
      * @return the request
      */
@@ -2309,7 +2309,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The project ID (for example, `foo-bar-123`). Required.
+       * @param projectId Required. The project ID (for example, `foo-bar-123`).
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.UndeleteProjectRequest}
        * @since 1.13
        */
@@ -2373,17 +2373,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Undelete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The project ID (for example, `foo-bar-123`). Required. */
+      /** Required. The project ID (for example, `foo-bar-123`). */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The project ID (for example, `foo-bar-123`). Required.
+      /** Required. The project ID (for example, `foo-bar-123`).
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The project ID (for example, `foo-bar-123`). Required. */
+      /** Required. The project ID (for example, `foo-bar-123`). */
       public Undelete setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -2403,7 +2403,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param projectId The project ID (for example, `my-project-123`). Required.
+     * @param projectId The project ID (for example, `my-project-123`).
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.Project}
      * @return the request
      */
@@ -2429,7 +2429,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The project ID (for example, `my-project-123`). Required.
+       * @param projectId The project ID (for example, `my-project-123`).
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.Project}
        * @since 1.13
        */
@@ -2493,17 +2493,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The project ID (for example, `my-project-123`). Required. */
+      /** The project ID (for example, `my-project-123`). */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The project ID (for example, `my-project-123`). Required.
+      /** The project ID (for example, `my-project-123`).
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The project ID (for example, `my-project-123`). Required. */
+      /** The project ID (for example, `my-project-123`). */
       public Update setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;

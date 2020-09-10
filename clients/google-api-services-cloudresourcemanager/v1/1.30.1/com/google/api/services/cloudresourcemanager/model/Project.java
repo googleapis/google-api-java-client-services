@@ -60,7 +60,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   /**
    * The optional user-assigned display name of the Project. When present it must be between 4 to 30
    * characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-
-   * quote, double-quote, space, and exclamation point. Example: My Project Read-write.
+   * quote, double-quote, space, and exclamation point. Example: `My Project` Read-write.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
    * An optional reference to a parent Resource. Supported parent types include "organization" and
    * "folder". Once set, the parent cannot be cleared. The `parent` can be set on creation or using
    * the `UpdateProject` method; the end user must have the `resourcemanager.projects.create`
-   * permission on the parent. Read-write.
+   * permission on the parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,15 +78,15 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * The unique, user-assigned ID of the Project. It must be 6 to 30 lowercase letters, digits, or
-   * hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: tokyo-rain-123
-   * Read-only after creation.
+   * hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: `tokyo-
+   * rain-123` Read-only after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * The number uniquely identifying the project. Example: 415104041262 Read-only.
+   * The number uniquely identifying the project. Example: `415104041262` Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -156,7 +156,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   /**
    * The optional user-assigned display name of the Project. When present it must be between 4 to 30
    * characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-
-   * quote, double-quote, space, and exclamation point. Example: My Project Read-write.
+   * quote, double-quote, space, and exclamation point. Example: `My Project` Read-write.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -166,7 +166,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   /**
    * The optional user-assigned display name of the Project. When present it must be between 4 to 30
    * characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-
-   * quote, double-quote, space, and exclamation point. Example: My Project Read-write.
+   * quote, double-quote, space, and exclamation point. Example: `My Project` Read-write.
    * @param name name or {@code null} for none
    */
   public Project setName(java.lang.String name) {
@@ -178,7 +178,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
    * An optional reference to a parent Resource. Supported parent types include "organization" and
    * "folder". Once set, the parent cannot be cleared. The `parent` can be set on creation or using
    * the `UpdateProject` method; the end user must have the `resourcemanager.projects.create`
-   * permission on the parent. Read-write.
+   * permission on the parent.
    * @return value or {@code null} for none
    */
   public ResourceId getParent() {
@@ -189,7 +189,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
    * An optional reference to a parent Resource. Supported parent types include "organization" and
    * "folder". Once set, the parent cannot be cleared. The `parent` can be set on creation or using
    * the `UpdateProject` method; the end user must have the `resourcemanager.projects.create`
-   * permission on the parent. Read-write.
+   * permission on the parent.
    * @param parent parent or {@code null} for none
    */
   public Project setParent(ResourceId parent) {
@@ -199,8 +199,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * The unique, user-assigned ID of the Project. It must be 6 to 30 lowercase letters, digits, or
-   * hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: tokyo-rain-123
-   * Read-only after creation.
+   * hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: `tokyo-
+   * rain-123` Read-only after creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -209,8 +209,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * The unique, user-assigned ID of the Project. It must be 6 to 30 lowercase letters, digits, or
-   * hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: tokyo-rain-123
-   * Read-only after creation.
+   * hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: `tokyo-
+   * rain-123` Read-only after creation.
    * @param projectId projectId or {@code null} for none
    */
   public Project setProjectId(java.lang.String projectId) {
@@ -219,7 +219,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number uniquely identifying the project. Example: 415104041262 Read-only.
+   * The number uniquely identifying the project. Example: `415104041262` Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProjectNumber() {
@@ -227,7 +227,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number uniquely identifying the project. Example: 415104041262 Read-only.
+   * The number uniquely identifying the project. Example: `415104041262` Read-only.
    * @param projectNumber projectNumber or {@code null} for none
    */
   public Project setProjectNumber(java.lang.Long projectNumber) {

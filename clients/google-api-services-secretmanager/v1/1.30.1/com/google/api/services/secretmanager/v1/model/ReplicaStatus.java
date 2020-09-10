@@ -17,7 +17,7 @@
 package com.google.api.services.secretmanager.v1.model;
 
 /**
- * Represents a Replica for this Secret.
+ * Describes the status of a user-managed replica for the SecretVersion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Secret Manager API. For a detailed explanation see:
@@ -27,47 +27,44 @@ package com.google.api.services.secretmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Replica extends com.google.api.client.json.GenericJson {
+public final class ReplicaStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The customer-managed encryption configuration of the User-Managed Replica. If no
-   * configuration is provided, Google-managed default encryption is used. Updates to the Secret
-   * encryption configuration do not apply retroactively to existing SecretVersions.
+   * Output only. The customer-managed encryption status of the SecretVersion. Only populated if
+   * customer-managed encryption is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CustomerManagedEncryption customerManagedEncryption;
+  private CustomerManagedEncryptionStatus customerManagedEncryption;
 
   /**
-   * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
+   * Output only. The canonical ID of the replica location. For example: `"us-east1"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * Optional. The customer-managed encryption configuration of the User-Managed Replica. If no
-   * configuration is provided, Google-managed default encryption is used. Updates to the Secret
-   * encryption configuration do not apply retroactively to existing SecretVersions.
+   * Output only. The customer-managed encryption status of the SecretVersion. Only populated if
+   * customer-managed encryption is used.
    * @return value or {@code null} for none
    */
-  public CustomerManagedEncryption getCustomerManagedEncryption() {
+  public CustomerManagedEncryptionStatus getCustomerManagedEncryption() {
     return customerManagedEncryption;
   }
 
   /**
-   * Optional. The customer-managed encryption configuration of the User-Managed Replica. If no
-   * configuration is provided, Google-managed default encryption is used. Updates to the Secret
-   * encryption configuration do not apply retroactively to existing SecretVersions.
+   * Output only. The customer-managed encryption status of the SecretVersion. Only populated if
+   * customer-managed encryption is used.
    * @param customerManagedEncryption customerManagedEncryption or {@code null} for none
    */
-  public Replica setCustomerManagedEncryption(CustomerManagedEncryption customerManagedEncryption) {
+  public ReplicaStatus setCustomerManagedEncryption(CustomerManagedEncryptionStatus customerManagedEncryption) {
     this.customerManagedEncryption = customerManagedEncryption;
     return this;
   }
 
   /**
-   * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
+   * Output only. The canonical ID of the replica location. For example: `"us-east1"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -75,22 +72,22 @@ public final class Replica extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
+   * Output only. The canonical ID of the replica location. For example: `"us-east1"`.
    * @param location location or {@code null} for none
    */
-  public Replica setLocation(java.lang.String location) {
+  public ReplicaStatus setLocation(java.lang.String location) {
     this.location = location;
     return this;
   }
 
   @Override
-  public Replica set(String fieldName, Object value) {
-    return (Replica) super.set(fieldName, value);
+  public ReplicaStatus set(String fieldName, Object value) {
+    return (ReplicaStatus) super.set(fieldName, value);
   }
 
   @Override
-  public Replica clone() {
-    return (Replica) super.clone();
+  public ReplicaStatus clone() {
+    return (ReplicaStatus) super.clone();
   }
 
 }

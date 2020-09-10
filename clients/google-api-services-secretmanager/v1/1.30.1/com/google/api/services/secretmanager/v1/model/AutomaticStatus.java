@@ -17,7 +17,8 @@
 package com.google.api.services.secretmanager.v1.model;
 
 /**
- * A replication policy that replicates the Secret payload without any restrictions.
+ * The replication status of a SecretVersion using automatic replication. Only populated if the
+ * parent Secret has an automatic replication policy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Secret Manager API. For a detailed explanation see:
@@ -27,46 +28,43 @@ package com.google.api.services.secretmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Automatic extends com.google.api.client.json.GenericJson {
+public final class AutomaticStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The customer-managed encryption configuration of the Secret. If no configuration is
-   * provided, Google-managed default encryption is used. Updates to the Secret encryption
-   * configuration do not apply retroactively to existing SecretVersions.
+   * Output only. The customer-managed encryption status of the SecretVersion. Only populated if
+   * customer-managed encryption is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CustomerManagedEncryption customerManagedEncryption;
+  private CustomerManagedEncryptionStatus customerManagedEncryption;
 
   /**
-   * Optional. The customer-managed encryption configuration of the Secret. If no configuration is
-   * provided, Google-managed default encryption is used. Updates to the Secret encryption
-   * configuration do not apply retroactively to existing SecretVersions.
+   * Output only. The customer-managed encryption status of the SecretVersion. Only populated if
+   * customer-managed encryption is used.
    * @return value or {@code null} for none
    */
-  public CustomerManagedEncryption getCustomerManagedEncryption() {
+  public CustomerManagedEncryptionStatus getCustomerManagedEncryption() {
     return customerManagedEncryption;
   }
 
   /**
-   * Optional. The customer-managed encryption configuration of the Secret. If no configuration is
-   * provided, Google-managed default encryption is used. Updates to the Secret encryption
-   * configuration do not apply retroactively to existing SecretVersions.
+   * Output only. The customer-managed encryption status of the SecretVersion. Only populated if
+   * customer-managed encryption is used.
    * @param customerManagedEncryption customerManagedEncryption or {@code null} for none
    */
-  public Automatic setCustomerManagedEncryption(CustomerManagedEncryption customerManagedEncryption) {
+  public AutomaticStatus setCustomerManagedEncryption(CustomerManagedEncryptionStatus customerManagedEncryption) {
     this.customerManagedEncryption = customerManagedEncryption;
     return this;
   }
 
   @Override
-  public Automatic set(String fieldName, Object value) {
-    return (Automatic) super.set(fieldName, value);
+  public AutomaticStatus set(String fieldName, Object value) {
+    return (AutomaticStatus) super.set(fieldName, value);
   }
 
   @Override
-  public Automatic clone() {
-    return (Automatic) super.clone();
+  public AutomaticStatus clone() {
+    return (AutomaticStatus) super.clone();
   }
 
 }

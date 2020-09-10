@@ -53,6 +53,13 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
+   * The replication status of the SecretVersion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReplicationStatus replicationStatus;
+
+  /**
    * Output only. The current state of the SecretVersion.
    * The value may be {@code null}.
    */
@@ -111,6 +118,23 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
    */
   public SecretVersion setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The replication status of the SecretVersion.
+   * @return value or {@code null} for none
+   */
+  public ReplicationStatus getReplicationStatus() {
+    return replicationStatus;
+  }
+
+  /**
+   * The replication status of the SecretVersion.
+   * @param replicationStatus replicationStatus or {@code null} for none
+   */
+  public SecretVersion setReplicationStatus(ReplicationStatus replicationStatus) {
+    this.replicationStatus = replicationStatus;
     return this;
   }
 

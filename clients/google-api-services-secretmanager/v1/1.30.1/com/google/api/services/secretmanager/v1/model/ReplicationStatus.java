@@ -17,7 +17,7 @@
 package com.google.api.services.secretmanager.v1.model;
 
 /**
- * A policy that defines the replication and encryption configuration of data.
+ * The replication status of a SecretVersion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Secret Manager API. For a detailed explanation see:
@@ -27,64 +27,70 @@ package com.google.api.services.secretmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Replication extends com.google.api.client.json.GenericJson {
+public final class ReplicationStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Secret will automatically be replicated without any restrictions.
+   * Describes the replication status of a SecretVersion with automatic replication. Only populated
+   * if the parent Secret has an automatic replication policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Automatic automatic;
+  private AutomaticStatus automatic;
 
   /**
-   * The Secret will only be replicated into the locations specified.
+   * Describes the replication status of a SecretVersion with user-managed replication. Only
+   * populated if the parent Secret has a user-managed replication policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private UserManaged userManaged;
+  private UserManagedStatus userManaged;
 
   /**
-   * The Secret will automatically be replicated without any restrictions.
+   * Describes the replication status of a SecretVersion with automatic replication. Only populated
+   * if the parent Secret has an automatic replication policy.
    * @return value or {@code null} for none
    */
-  public Automatic getAutomatic() {
+  public AutomaticStatus getAutomatic() {
     return automatic;
   }
 
   /**
-   * The Secret will automatically be replicated without any restrictions.
+   * Describes the replication status of a SecretVersion with automatic replication. Only populated
+   * if the parent Secret has an automatic replication policy.
    * @param automatic automatic or {@code null} for none
    */
-  public Replication setAutomatic(Automatic automatic) {
+  public ReplicationStatus setAutomatic(AutomaticStatus automatic) {
     this.automatic = automatic;
     return this;
   }
 
   /**
-   * The Secret will only be replicated into the locations specified.
+   * Describes the replication status of a SecretVersion with user-managed replication. Only
+   * populated if the parent Secret has a user-managed replication policy.
    * @return value or {@code null} for none
    */
-  public UserManaged getUserManaged() {
+  public UserManagedStatus getUserManaged() {
     return userManaged;
   }
 
   /**
-   * The Secret will only be replicated into the locations specified.
+   * Describes the replication status of a SecretVersion with user-managed replication. Only
+   * populated if the parent Secret has a user-managed replication policy.
    * @param userManaged userManaged or {@code null} for none
    */
-  public Replication setUserManaged(UserManaged userManaged) {
+  public ReplicationStatus setUserManaged(UserManagedStatus userManaged) {
     this.userManaged = userManaged;
     return this;
   }
 
   @Override
-  public Replication set(String fieldName, Object value) {
-    return (Replication) super.set(fieldName, value);
+  public ReplicationStatus set(String fieldName, Object value) {
+    return (ReplicationStatus) super.set(fieldName, value);
   }
 
   @Override
-  public Replication clone() {
-    return (Replication) super.clone();
+  public ReplicationStatus clone() {
+    return (ReplicationStatus) super.clone();
   }
 
 }

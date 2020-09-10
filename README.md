@@ -82,7 +82,7 @@ packages on [Maven Central][maven-search].
 | Cloud Resource Manager API | [v1](clients/google-api-services-cloudresourcemanager/v1), [v1beta1](clients/google-api-services-cloudresourcemanager/v1beta1), [v2](clients/google-api-services-cloudresourcemanager/v2), [v2beta1](clients/google-api-services-cloudresourcemanager/v2beta1) |
 | Cloud Run Admin API | [v1](clients/google-api-services-run/v1), [v1alpha1](clients/google-api-services-run/v1alpha1), [v1beta1](clients/google-api-services-run/v1beta1) |
 | Cloud Runtime Configuration API | [v1](clients/google-api-services-runtimeconfig/v1), [v1beta1](clients/google-api-services-runtimeconfig/v1beta1) |
-| Cloud SQL Admin API | [v1beta4](clients/google-api-services-sqladmin/v1beta4), [v1beta4](clients/google-api-services-sql/v1beta4) |
+| Cloud SQL Admin API | [v1beta4](clients/google-api-services-sqladmin/v1beta4) |
 | Cloud Scheduler API | [v1](clients/google-api-services-cloudscheduler/v1), [v1beta1](clients/google-api-services-cloudscheduler/v1beta1) |
 | Cloud Search API | [v1](clients/google-api-services-cloudsearch/v1) |
 | Cloud Shell API | [v1](clients/google-api-services-cloudshell/v1), [v1alpha1](clients/google-api-services-cloudshell/v1alpha1) |
@@ -129,6 +129,7 @@ packages on [Maven Central][maven-search].
 | Gmail API | [v1](clients/google-api-services-gmail/v1) |
 | Gmail Postmaster Tools API | [v1beta1](clients/google-api-services-gmailpostmastertools/v1beta1) |
 | Google Analytics API | [v3](clients/google-api-services-analytics/v3) |
+| Google Analytics Data API | [v1alpha](clients/google-api-services-analyticsdata/v1alpha) |
 | Google Apps Reseller API | [v1](clients/google-api-services-reseller/v1) |
 | Google Civic Information API | [v2](clients/google-api-services-civicinfo/v2) |
 | Google Classroom API | [v1](clients/google-api-services-classroom/v1) |

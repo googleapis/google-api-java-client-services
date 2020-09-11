@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends com.goo
 
   /**
    * The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that
-   * is, it must match the regular expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+   * is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100
    * characters. Can be empty to allow the system to generate one.
    * The value may be {@code null}.
    */
@@ -89,7 +89,7 @@ public final class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends com.goo
 
   /**
    * The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that
-   * is, it must match the regular expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+   * is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100
    * characters. Can be empty to allow the system to generate one.
    * @return value or {@code null} for none
    */
@@ -99,7 +99,7 @@ public final class GooglePrivacyDlpV2CreateStoredInfoTypeRequest extends com.goo
 
   /**
    * The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that
-   * is, it must match the regular expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+   * is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100
    * characters. Can be empty to allow the system to generate one.
    * @param storedInfoTypeId storedInfoTypeId or {@code null} for none
    */

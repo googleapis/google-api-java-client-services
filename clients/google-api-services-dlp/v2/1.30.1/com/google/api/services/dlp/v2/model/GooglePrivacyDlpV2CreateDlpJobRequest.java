@@ -40,7 +40,7 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
 
   /**
    * The job id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must
-   * match the regular expression: `[a-zA-Z\\d-_]+`. The maximum length is 100 characters. Can be
+   * match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be
    * empty to allow the system to generate one.
    * The value may be {@code null}.
    */
@@ -80,7 +80,7 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
 
   /**
    * The job id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must
-   * match the regular expression: `[a-zA-Z\\d-_]+`. The maximum length is 100 characters. Can be
+   * match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be
    * empty to allow the system to generate one.
    * @return value or {@code null} for none
    */
@@ -90,7 +90,7 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
 
   /**
    * The job id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must
-   * match the regular expression: `[a-zA-Z\\d-_]+`. The maximum length is 100 characters. Can be
+   * match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be
    * empty to allow the system to generate one.
    * @param jobId jobId or {@code null} for none
    */

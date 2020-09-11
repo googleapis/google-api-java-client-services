@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-sts",
+    "version": "v1beta-rev20200908-1.30.10"
+  }
+}

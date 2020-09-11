@@ -18,7 +18,7 @@ package com.google.api.services.dataproc.v1beta2.model;
 
 /**
  * Common config settings for resources of Compute Engine cluster instances, applicable to all
- * instances in the cluster.
+ * instances in the cluster. NEXT ID: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -62,6 +62,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String networkUri;
+
+  /**
+   * Optional. The type of IPv6 access for a cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String privateIpv6GoogleAccess;
 
   /**
    * Optional. Reservation Affinity for consuming Zonal reservation.
@@ -200,6 +207,23 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   public GceClusterConfig setNetworkUri(java.lang.String networkUri) {
     this.networkUri = networkUri;
+    return this;
+  }
+
+  /**
+   * Optional. The type of IPv6 access for a cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrivateIpv6GoogleAccess() {
+    return privateIpv6GoogleAccess;
+  }
+
+  /**
+   * Optional. The type of IPv6 access for a cluster.
+   * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
+   */
+  public GceClusterConfig setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {
+    this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
     return this;
   }
 

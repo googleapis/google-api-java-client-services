@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/3BrMzyfGS9HuSl7YrgvUzK5f9DE\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/lRzowdHdXDwwdlgwsMr3eieLqCo\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20200821",
+ "revision": "20200902",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -169,7 +169,7 @@
    "properties": {
     "country": {
      "type": "string",
-     "description": "CLDR country code (e.g. \"US\")."
+     "description": "CLDR country code (e.g. \"US\"). This value cannot be set for a sub-account of an MCA. All MCA sub-accounts inherit the country of their parent MCA."
     },
     "locality": {
      "type": "string",
@@ -3843,11 +3843,15 @@
    "properties": {
     "fullRefund": {
      "type": "boolean",
-     "description": "If true, the item will be fully refunded."
+     "description": "If true, the item will be fully refunded. // Allowed only when payment_type is FOP. Merchant can choose this refund option to indicate the full remaining amount of corresponding object to be refunded to the customer via FOP."
     },
     "partialRefund": {
      "$ref": "OrderreturnsPartialRefund",
-     "description": "If this is set, the item will be partially refunded."
+     "description": "If this is set, the item will be partially refunded. Merchant can choose this refund option to specify the customized amount that to be refunded to the customer."
+    },
+    "paymentType": {
+     "type": "string",
+     "description": "The payment way of issuing refund. Default value is ORIGINAL_FOP if not set."
     },
     "reasonText": {
      "type": "string",

@@ -48,6 +48,13 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Ingress settings for this service. Will apply to all versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkSettings networkSettings;
+
+  /**
    * Mapping that defines fractional HTTP traffic diversion to different versions within the
    * service.
    * The value may be {@code null}.
@@ -86,6 +93,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Ingress settings for this service. Will apply to all versions.
+   * @return value or {@code null} for none
+   */
+  public NetworkSettings getNetworkSettings() {
+    return networkSettings;
+  }
+
+  /**
+   * Ingress settings for this service. Will apply to all versions.
+   * @param networkSettings networkSettings or {@code null} for none
+   */
+  public Service setNetworkSettings(NetworkSettings networkSettings) {
+    this.networkSettings = networkSettings;
     return this;
   }
 

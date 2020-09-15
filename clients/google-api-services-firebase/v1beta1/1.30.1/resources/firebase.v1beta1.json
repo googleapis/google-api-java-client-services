@@ -1,305 +1,140 @@
 {
-  "documentationLink": "https://firebase.google.com",
-  "description": "The Firebase Management API enables programmatic setup and management of Firebase projects, including a project's Firebase resources and Firebase apps.",
-  "batchPath": "batch",
-  "basePath": "",
-  "protocol": "rest",
-  "auth": {
-    "oauth2": {
-      "scopes": {
-        "https://www.googleapis.com/auth/firebase.readonly": {
-          "description": "View all your Firebase data and settings"
-        },
-        "https://www.googleapis.com/auth/cloud-platform": {
-          "description": "View and manage your data across Google Cloud Platform services"
-        },
-        "https://www.googleapis.com/auth/firebase": {
-          "description": "View and administer all your Firebase data and settings"
-        },
-        "https://www.googleapis.com/auth/cloud-platform.read-only": {
-          "description": "View your data across Google Cloud Platform services"
-        }
-      }
-    }
-  },
-  "title": "Firebase Management API",
-  "version": "v1beta1",
-  "discoveryVersion": "v1",
-  "canonicalName": "Firebase Management",
-  "ownerName": "Google",
+  "version_module": true,
+  "fullyEncodeReservedExpansion": true,
   "schemas": {
-    "FirebaseAppInfo": {
-      "type": "object",
+    "Operation": {
       "properties": {
-        "appId": {
-          "type": "string",
-          "description": "Output only. Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified.",
-          "readOnly": true
+        "response": {
+          "description": "The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.",
+          "additionalProperties": {
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
+          },
+          "type": "object"
         },
-        "displayName": {
-          "type": "string",
-          "description": "The user-assigned display name of the Firebase App."
+        "metadata": {
+          "description": "Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.",
+          "additionalProperties": {
+            "type": "any",
+            "description": "Properties of the object. Contains field @type with type URL."
+          },
+          "type": "object"
+        },
+        "error": {
+          "description": "The error result of the operation in case of failure or cancellation.",
+          "$ref": "Status"
+        },
+        "done": {
+          "type": "boolean",
+          "description": "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available."
         },
         "name": {
-          "description": "The resource name of the Firebase App, in the format: projects/PROJECT_ID /iosApps/APP_ID or projects/PROJECT_ID/androidApps/APP_ID or projects/ PROJECT_ID/webApps/APP_ID",
-          "type": "string"
-        },
-        "platform": {
-          "enum": [
-            "PLATFORM_UNSPECIFIED",
-            "IOS",
-            "ANDROID",
-            "WEB"
-          ],
-          "description": "The platform of the Firebase App.",
-          "type": "string",
-          "enumDescriptions": [
-            "Unknown state. This is only used for distinguishing unset values.",
-            "The Firebase App is associated with iOS.",
-            "The Firebase App is associated with Android.",
-            "The Firebase App is associated with web."
-          ]
-        },
-        "namespace": {
-          "description": "Output only. Immutable. The platform-specific identifier of the App. *Note:* For most use cases, use `appId`, which is the canonical, globally unique identifier for referencing an App. This string is derived from a native identifier for each platform: `packageName` for an `AndroidApp`, `bundleId` for an `IosApp`, and `webId` for a `WebApp`. Its contents should be treated as opaque, as the native identifier format may change as platforms evolve. This string is only unique within a `FirebaseProject` and its associated Apps.",
-          "readOnly": true,
+          "description": "The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.",
           "type": "string"
         }
       },
-      "description": "A high-level summary of an App.",
-      "id": "FirebaseAppInfo"
-    },
-    "AndroidApp": {
-      "properties": {
-        "appId": {
-          "type": "string",
-          "description": "Immutable. The globally unique, Firebase-assigned identifier for the `AndroidApp`. This identifier should be treated as an opaque token, as the data format is not specified."
-        },
-        "name": {
-          "type": "string",
-          "description": "The resource name of the AndroidApp, in the format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id))."
-        },
-        "displayName": {
-          "type": "string",
-          "description": "The user-assigned display name for the `AndroidApp`."
-        },
-        "projectId": {
-          "type": "string",
-          "description": "Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `AndroidApp`."
-        },
-        "packageName": {
-          "description": "Immutable. The canonical package name of the Android app as would appear in the Google Play Developer Console.",
-          "type": "string"
-        }
-      },
-      "description": "Details of a Firebase App for Android.",
+      "description": "This resource represents a long-running operation that is the result of a network API call.",
       "type": "object",
-      "id": "AndroidApp"
+      "id": "Operation"
     },
-    "AnalyticsProperty": {
+    "AnalyticsDetails": {
       "properties": {
-        "displayName": {
-          "description": "The display name of the Google Analytics property associated with the specified `FirebaseProject`.",
-          "type": "string"
-        },
-        "id": {
-          "type": "string",
-          "description": "The globally unique, Google-assigned identifier of the Google Analytics property associated with the specified `FirebaseProject`. If you called [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) to link the `FirebaseProject` with a Google Analytics account, the value in this `id` field is the same as the ID of the property either specified or provisioned with that call to `AddGoogleAnalytics`."
-        }
-      },
-      "id": "AnalyticsProperty",
-      "type": "object",
-      "description": "Details of a Google Analytics property"
-    },
-    "IosAppConfig": {
-      "id": "IosAppConfig",
-      "type": "object",
-      "properties": {
-        "configFileContents": {
-          "format": "byte",
-          "description": "The content of the XML configuration file.",
-          "type": "string"
-        },
-        "configFilename": {
-          "description": "The filename that the configuration artifact for the `IosApp` is typically saved as. For example: `GoogleService-Info.plist`",
-          "type": "string"
-        }
-      },
-      "description": "Configuration metadata of a single Firebase App for iOS."
-    },
-    "ShaCertificate": {
-      "type": "object",
-      "description": "A SHA-1 or SHA-256 certificate associated with the AndroidApp.",
-      "id": "ShaCertificate",
-      "properties": {
-        "certType": {
-          "description": "The type of SHA certificate encoded in the hash.",
-          "enum": [
-            "SHA_CERTIFICATE_TYPE_UNSPECIFIED",
-            "SHA_1",
-            "SHA_256"
-          ],
-          "type": "string",
-          "enumDescriptions": [
-            "Unknown state. This is only used for distinguishing unset values.",
-            "Certificate is a SHA-1 type certificate.",
-            "Certificate is a SHA-256 type certificate."
-          ]
-        },
-        "shaHash": {
-          "description": "The certificate hash for the `AndroidApp`.",
-          "type": "string"
-        },
-        "name": {
-          "description": "The resource name of the ShaCertificate for the AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID/sha/SHA_HASH * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)). * SHA_HASH: the certificate hash for the App (see [`shaHash`](../projects.androidApps.sha#ShaCertificate.FIELDS.sha_hash)).",
-          "type": "string"
-        }
-      }
-    },
-    "ListFirebaseProjectsResponse": {
-      "properties": {
-        "results": {
+        "streamMappings": {
+          "description": " - For `AndroidApps` and `IosApps`: a map of `app` to `streamId` for each Firebase App in the specified `FirebaseProject`. Each `app` and `streamId` appears only once. - For `WebApps`: a map of `app` to `streamId` and `measurementId` for each `WebApp` in the specified `FirebaseProject`. Each `app`, `streamId`, and `measurementId` appears only once.",
           "type": "array",
           "items": {
-            "$ref": "FirebaseProject"
-          },
-          "description": "One page of the list of Projects that are accessible to the caller."
+            "$ref": "StreamMapping"
+          }
         },
-        "nextPageToken": {
-          "type": "string",
-          "description": "If the result list is too large to fit in a single response, then a token is returned. If the string is empty, then this response is the last page of results. This token can be used in a subsequent calls to `ListFirebaseProjects` to find the next group of Projects. Page tokens are short-lived and should not be persisted."
+        "analyticsProperty": {
+          "$ref": "AnalyticsProperty",
+          "description": "The Analytics Property object associated with the specified `FirebaseProject`. This object contains the details of the Google Analytics property associated with the Project."
         }
       },
       "type": "object",
-      "id": "ListFirebaseProjectsResponse"
+      "id": "AnalyticsDetails"
     },
-    "DefaultResources": {
+    "Location": {
+      "type": "object",
+      "id": "Location",
+      "description": "A GCP resource location that can be selected for a FirebaseProject.",
       "properties": {
-        "realtimeDatabaseInstance": {
-          "description": "The default Firebase Realtime Database instance name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the name for an existing Realtime Database instance in another project (learn more about [database sharding](https://firebase.google.com/docs/database/usage/sharding)). In these cases, your `projectId` is appended with a hyphen then five alphanumeric characters to create your default Realtime Database instance name. For example, if your `projectId` is `myproject123`, your default database instance name might be: `myproject123-a5c16`",
-          "type": "string"
-        },
         "locationId": {
           "type": "string",
-          "description": "The ID of the Project's default GCP resource location. The location is one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations). This field is omitted if the default GCP resource location has not been finalized yet. To set a Project's default GCP resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase resources to the Project."
+          "description": "The ID of the GCP resource location. It will be one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations#types)."
         },
-        "storageBucket": {
-          "type": "string",
-          "description": "The default Cloud Storage for Firebase storage bucket, in the format: PROJECT_ID.appspot.com"
-        },
-        "hostingSite": {
-          "type": "string",
-          "description": "The default Firebase Hosting site name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the name for an existing Hosting site in another project (learn more about creating non-default, [additional sites](https://firebase.google.com/docs/hosting/multisites)). In these cases, your `projectId` is appended with a hyphen then five alphanumeric characters to create your default Hosting site name. For example, if your `projectId` is `myproject123`, your default Hosting site name might be: `myproject123-a5c16`"
-        }
-      },
-      "id": "DefaultResources",
-      "description": "The default resources associated with the Project.",
-      "type": "object"
-    },
-    "AddGoogleAnalyticsRequest": {
-      "properties": {
-        "analyticsAccountId": {
-          "description": "The ID for the existing [Google Analytics account](http://www.google.com/analytics/) that you want to link with the `FirebaseProject`. Specifying this field will provision a new Google Analytics property in your Google Analytics account and associate the new property with the `FirebaseProject`.",
-          "type": "string"
-        },
-        "analyticsPropertyId": {
-          "description": "The ID for the existing Google Analytics property that you want to associate with the `FirebaseProject`.",
-          "type": "string"
-        }
-      },
-      "type": "object",
-      "id": "AddGoogleAnalyticsRequest"
-    },
-    "Empty": {
-      "properties": {},
-      "type": "object",
-      "id": "Empty",
-      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`."
-    },
-    "Status": {
-      "type": "object",
-      "id": "Status",
-      "properties": {
-        "message": {
-          "description": "A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.",
-          "type": "string"
-        },
-        "details": {
+        "features": {
+          "description": "Products and services that are available in the GCP resource location.",
           "items": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "any",
-              "description": "Properties of the object. Contains field @type with type URL."
-            }
+            "type": "string",
+            "enum": [
+              "LOCATION_FEATURE_UNSPECIFIED",
+              "FIRESTORE",
+              "DEFAULT_STORAGE",
+              "FUNCTIONS"
+            ],
+            "enumDescriptions": [
+              "Used internally for distinguishing unset values and is not intended for external use.",
+              "This location supports Cloud Firestore database instances. App Engine is available in this location, so it can be a Project's [default GCP resource location](//firebase.google.com/docs/projects/locations#default-cloud-location).",
+              "This location supports default Cloud Storage buckets. App Engine is available in this location, so it can be a Project's [default GCP resource location](//firebase.google.com/docs/projects/locations#default-cloud-location).",
+              "Cloud Functions for Firebase is available in this location."
+            ]
           },
-          "description": "A list of messages that carry the error details. There is a common set of message types for APIs to use.",
           "type": "array"
         },
-        "code": {
-          "format": "int32",
-          "description": "The status code, which should be an enum value of google.rpc.Code.",
-          "type": "integer"
+        "type": {
+          "description": "Indicates whether the GCP resource location is a [regional or multi-regional location](https://firebase.google.com/docs/projects/locations#types) for data replication.",
+          "enumDescriptions": [
+            "Used internally for distinguishing unset values and is not intended for external use.",
+            "The location is a regional location. Data in a regional location is replicated in multiple zones within a region.",
+            "The location is a multi-regional location. Data in a multi-region location is replicated in multiple regions. Within each region, data is replicated in multiple zones."
+          ],
+          "type": "string",
+          "enum": [
+            "LOCATION_TYPE_UNSPECIFIED",
+            "REGIONAL",
+            "MULTI_REGIONAL"
+          ]
         }
-      },
-      "description": "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors)."
+      }
     },
     "ListIosAppsResponse": {
       "properties": {
+        "apps": {
+          "type": "array",
+          "description": "List of each `IosApp` associated with the specified `FirebaseProject`.",
+          "items": {
+            "$ref": "IosApp"
+          }
+        },
         "nextPageToken": {
           "description": "If the result list is too large to fit in a single response, then a token is returned. If the string is empty, then this response is the last page of results. This token can be used in a subsequent call to `ListIosApps` to find the next group of Apps. Page tokens are short-lived and should not be persisted.",
           "type": "string"
-        },
-        "apps": {
-          "items": {
-            "$ref": "IosApp"
-          },
-          "type": "array",
-          "description": "List of each `IosApp` associated with the specified `FirebaseProject`."
         }
       },
       "id": "ListIosAppsResponse",
       "type": "object"
     },
-    "StreamMapping": {
-      "description": "A mapping of a Firebase App to a Google Analytics data stream",
-      "id": "StreamMapping",
-      "properties": {
-        "app": {
-          "type": "string",
-          "description": "The resource name of the Firebase App associated with the Google Analytics data stream, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID or projects/PROJECT_IDENTIFIER/iosApps/APP_ID or projects/PROJECT_IDENTIFIER /webApps/APP_ID Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values."
-        },
-        "measurementId": {
-          "type": "string",
-          "description": "Applicable for Firebase Web Apps only. The unique Google-assigned identifier of the Google Analytics web stream associated with the Firebase Web App. Firebase SDKs use this ID to interact with Google Analytics APIs. Learn more about this ID and Google Analytics web streams in the [Analytics documentation](https://support.google.com/analytics/topic/9303475)."
-        },
-        "streamId": {
-          "type": "string",
-          "format": "int64",
-          "description": "The unique Google-assigned identifier of the Google Analytics data stream associated with the Firebase App. Learn more about Google Analytics data streams in the [Analytics documentation](https://support.google.com/analytics/answer/9303323)."
-        }
-      },
-      "type": "object"
-    },
     "StatusProto": {
-      "id": "StatusProto",
+      "type": "object",
       "properties": {
-        "code": {
-          "description": "Numeric code drawn from the space specified below. Often, this is the canonical error space, and code is drawn from google3/util/task/codes.proto",
-          "type": "integer",
-          "format": "int32"
-        },
-        "space": {
-          "type": "string",
-          "description": "The following are usually only present when code != 0 Space to which this status belongs"
-        },
         "canonicalCode": {
-          "type": "integer",
           "format": "int32",
-          "description": "The canonical error code (see codes.proto) that most closely corresponds to this status. May be missing."
+          "description": "The canonical error code (see codes.proto) that most closely corresponds to this status. May be missing.",
+          "type": "integer"
+        },
+        "code": {
+          "type": "integer",
+          "description": "Numeric code drawn from the space specified below. Often, this is the canonical error space, and code is drawn from google3/util/task/codes.proto",
+          "format": "int32"
         },
         "messageSet": {
           "description": "message_set associates an arbitrary proto message with the status.",
           "$ref": "MessageSet"
+        },
+        "space": {
+          "type": "string",
+          "description": "The following are usually only present when code != 0 Space to which this status belongs"
         },
         "message": {
           "description": "Detail message",
@@ -307,139 +142,201 @@
         }
       },
       "description": "Wire-format for a Status object",
-      "type": "object"
+      "id": "StatusProto"
     },
-    "Operation": {
-      "type": "object",
+    "ListShaCertificatesResponse": {
       "properties": {
-        "error": {
-          "description": "The error result of the operation in case of failure or cancellation.",
-          "$ref": "Status"
-        },
-        "name": {
-          "type": "string",
-          "description": "The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`."
-        },
-        "response": {
-          "type": "object",
-          "additionalProperties": {
-            "description": "Properties of the object. Contains field @type with type URL.",
-            "type": "any"
-          },
-          "description": "The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`."
-        },
-        "done": {
-          "description": "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.",
-          "type": "boolean"
-        },
-        "metadata": {
-          "type": "object",
-          "description": "Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.",
-          "additionalProperties": {
-            "description": "Properties of the object. Contains field @type with type URL.",
-            "type": "any"
+        "certificates": {
+          "type": "array",
+          "description": "The list of each `ShaCertificate` associated with the `AndroidApp`.",
+          "items": {
+            "$ref": "ShaCertificate"
           }
         }
       },
-      "description": "This resource represents a long-running operation that is the result of a network API call.",
-      "id": "Operation"
+      "type": "object",
+      "id": "ListShaCertificatesResponse"
     },
-    "WebAppConfig": {
-      "id": "WebAppConfig",
+    "FirebaseProject": {
+      "description": "A `FirebaseProject` is the top-level Firebase entity. It is the container for Firebase Apps, Firebase Hosting sites, storage systems (Firebase Realtime Database, Cloud Firestore, Cloud Storage buckets), and other Firebase and Google Cloud Platform (GCP) resources. You create a `FirebaseProject` by calling AddFirebase and specifying an *existing* [GCP `Project`](https://cloud.google.com/resource-manager/reference/rest/v1/projects). This adds Firebase resources to the existing GCP `Project`. Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` has the same underlying GCP identifiers (`projectNumber` and `projectId`). This allows for easy interop with Google APIs.",
+      "type": "object",
+      "id": "FirebaseProject",
       "properties": {
+        "resources": {
+          "$ref": "DefaultResources",
+          "description": "The default Firebase resources associated with the Project."
+        },
+        "projectId": {
+          "type": "string",
+          "description": "Immutable. A user-assigned unique identifier for the Project. This identifier may appear in URLs or names for some Firebase resources associated with the Project, but it should generally be treated as a convenience alias to reference the Project."
+        },
+        "displayName": {
+          "description": "The user-assigned display name of the Project.",
+          "type": "string"
+        },
+        "projectNumber": {
+          "format": "int64",
+          "description": "Immutable. The globally unique, Google-assigned canonical identifier for the Project. Use this identifier when configuring integrations and/or making API calls to Firebase or third-party services.",
+          "type": "string"
+        },
+        "state": {
+          "enumDescriptions": [
+            "Unspecified state.",
+            "The normal and active state.",
+            "The Project has been marked for deletion by the user."
+          ],
+          "readOnly": true,
+          "enum": [
+            "STATE_UNSPECIFIED",
+            "ACTIVE",
+            "DELETED"
+          ],
+          "description": "Output only. The lifecycle state of the Project. Updates to the state must be performed via com.google.cloudresourcemanager.v1.Projects.DeleteProject and com.google.cloudresourcemanager.v1.Projects.UndeleteProject",
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "description": "The resource name of the Project, in the format: projects/PROJECT_IDENTIFIER PROJECT_IDENTIFIER: the Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`."
+        }
+      }
+    },
+    "AdminSdkConfig": {
+      "id": "AdminSdkConfig",
+      "type": "object",
+      "properties": {
+        "storageBucket": {
+          "description": "The default Cloud Storage for Firebase storage bucket name.",
+          "type": "string"
+        },
         "locationId": {
           "description": "The ID of the Project's default GCP resource location. The location is one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations). This field is omitted if the default GCP resource location has not been finalized yet. To set a Project's default GCP resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase resources to the Project.",
-          "type": "string"
-        },
-        "authDomain": {
-          "description": "The domain Firebase Auth configures for OAuth redirects, in the format: PROJECT_ID.firebaseapp.com",
-          "type": "string"
-        },
-        "messagingSenderId": {
-          "description": "The sender ID for use with Firebase Cloud Messaging.",
           "type": "string"
         },
         "databaseURL": {
           "type": "string",
           "description": "The default Firebase Realtime Database URL."
         },
-        "apiKey": {
-          "description": "The API key associated with the `WebApp`.",
+        "projectId": {
+          "description": "Immutable. A user-assigned unique identifier for the `FirebaseProject`. This identifier may appear in URLs or names for some Firebase resources associated with the Project, but it should generally be treated as a convenience alias to reference the Project.",
+          "type": "string"
+        }
+      }
+    },
+    "MessageSet": {
+      "properties": {},
+      "type": "object",
+      "description": "This is proto2's version of MessageSet.",
+      "id": "MessageSet"
+    },
+    "AndroidAppConfig": {
+      "properties": {
+        "configFilename": {
+          "description": "The filename that the configuration artifact for the `AndroidApp` is typically saved as. For example: `google-services.json`",
           "type": "string"
         },
-        "storageBucket": {
-          "description": "The default Cloud Storage for Firebase storage bucket name.",
+        "configFileContents": {
+          "type": "string",
+          "description": "The contents of the JSON configuration file.",
+          "format": "byte"
+        }
+      },
+      "type": "object",
+      "description": "Configuration metadata of a single Firebase App for Android.",
+      "id": "AndroidAppConfig"
+    },
+    "StreamMapping": {
+      "description": "A mapping of a Firebase App to a Google Analytics data stream",
+      "id": "StreamMapping",
+      "type": "object",
+      "properties": {
+        "streamId": {
+          "description": "The unique Google-assigned identifier of the Google Analytics data stream associated with the Firebase App. Learn more about Google Analytics data streams in the [Analytics documentation](https://support.google.com/analytics/answer/9303323).",
+          "format": "int64",
           "type": "string"
+        },
+        "app": {
+          "type": "string",
+          "description": "The resource name of the Firebase App associated with the Google Analytics data stream, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID or projects/PROJECT_IDENTIFIER/iosApps/APP_ID or projects/PROJECT_IDENTIFIER /webApps/APP_ID Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values."
         },
         "measurementId": {
           "type": "string",
-          "description": "The unique Google-assigned identifier of the Google Analytics web stream associated with the Firebase Web App. Firebase SDKs use this ID to interact with Google Analytics APIs. This field is only present if the App is linked to a web stream in a Google Analytics App + Web property. Learn more about this ID and Google Analytics web streams in the [Analytics documentation](https://support.google.com/analytics/topic/9303475). To generate a `measurementId` and link the Web App with a Google Analytics web stream, call [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics)."
-        },
-        "projectId": {
-          "description": "Immutable. A user-assigned unique identifier for the `FirebaseProject`.",
+          "description": "Applicable for Firebase Web Apps only. The unique Google-assigned identifier of the Google Analytics web stream associated with the Firebase Web App. Firebase SDKs use this ID to interact with Google Analytics APIs. Learn more about this ID and Google Analytics web streams in the [Analytics documentation](https://support.google.com/analytics/topic/9303475)."
+        }
+      }
+    },
+    "ListFirebaseProjectsResponse": {
+      "type": "object",
+      "properties": {
+        "nextPageToken": {
+          "description": "If the result list is too large to fit in a single response, then a token is returned. If the string is empty, then this response is the last page of results. This token can be used in a subsequent calls to `ListFirebaseProjects` to find the next group of Projects. Page tokens are short-lived and should not be persisted.",
           "type": "string"
         },
-        "appId": {
-          "description": "Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`.",
-          "type": "string"
+        "results": {
+          "description": "One page of the list of Projects that are accessible to the caller.",
+          "type": "array",
+          "items": {
+            "$ref": "FirebaseProject"
+          }
         }
       },
-      "type": "object",
-      "description": "Configuration metadata of a single Firebase App for the web."
+      "id": "ListFirebaseProjectsResponse"
     },
-    "WebApp": {
+    "ListAvailableLocationsResponse": {
+      "type": "object",
+      "id": "ListAvailableLocationsResponse",
       "properties": {
-        "displayName": {
-          "type": "string",
-          "description": "The user-assigned display name for the `WebApp`."
-        },
-        "projectId": {
-          "type": "string",
-          "description": "Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `WebApp`."
-        },
-        "appUrls": {
+        "locations": {
           "type": "array",
-          "description": "The URLs where the `WebApp` is hosted.",
+          "description": "One page of results from a call to `ListAvailableLocations`.",
           "items": {
-            "type": "string"
+            "$ref": "Location"
           }
         },
-        "webId": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. Immutable. A unique, Firebase-assigned identifier for the `WebApp`. This identifier is only used to populate the `namespace` value for the `WebApp`. For most use cases, use `appId` to identify or reference the App. The `webId` value is only unique within a `FirebaseProject` and its associated Apps."
-        },
-        "appId": {
-          "type": "string",
-          "description": "Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified."
-        },
-        "name": {
-          "type": "string",
-          "description": "The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER /webApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.webApps#WebApp.FIELDS.app_id))."
+        "nextPageToken": {
+          "description": "If the result list is too large to fit in a single response, then a token is returned. If the string is empty, then this response is the last page of results and all available locations have been listed. This token can be used in a subsequent call to `ListAvailableLocations` to find more locations. Page tokens are short-lived and should not be persisted.",
+          "type": "string"
         }
-      },
-      "description": "Details of a Firebase App for the web.",
-      "id": "WebApp",
-      "type": "object"
+      }
     },
-    "AddFirebaseRequest": {
+    "DefaultResources": {
+      "description": "The default resources associated with the Project.",
+      "type": "object",
       "properties": {
-        "timeZone": {
+        "storageBucket": {
           "type": "string",
-          "description": "Deprecated. Instead, to link a Project with a Google Analytics account, call [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) after you add Firebase resources to the GCP `Project`. The time zone that the account will use for Google Analytics data. For example: America/Los_Angeles or Africa/Abidjan"
+          "description": "The default Cloud Storage for Firebase storage bucket, in the format: PROJECT_ID.appspot.com"
         },
         "locationId": {
-          "description": "Deprecated. Instead, to set a Project's default GCP resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase resources to the GCP `Project`. The ID of the Project's default GCP resource location. The location must be one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations).",
+          "description": "The ID of the Project's default GCP resource location. The location is one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations). This field is omitted if the default GCP resource location has not been finalized yet. To set a Project's default GCP resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase resources to the Project.",
           "type": "string"
         },
-        "regionCode": {
-          "description": "Deprecated. Instead, to link a Project with a Google Analytics account, call [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) after you add Firebase resources to the GCP `Project`. The region code (CLDR) that the account will use for Google Analytics data For example: US, GB, or DE In Java, use `com.google.i18n.identifiers.RegionCode`.",
+        "hostingSite": {
+          "type": "string",
+          "description": "The default Firebase Hosting site name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the name for an existing Hosting site in another project (learn more about creating non-default, [additional sites](https://firebase.google.com/docs/hosting/multisites)). In these cases, your `projectId` is appended with a hyphen then five alphanumeric characters to create your default Hosting site name. For example, if your `projectId` is `myproject123`, your default Hosting site name might be: `myproject123-a5c16`"
+        },
+        "realtimeDatabaseInstance": {
+          "description": "The default Firebase Realtime Database instance name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the name for an existing Realtime Database instance in another project (learn more about [database sharding](https://firebase.google.com/docs/database/usage/sharding)). In these cases, your `projectId` is appended with a hyphen then five alphanumeric characters to create your default Realtime Database instance name. For example, if your `projectId` is `myproject123`, your default database instance name might be: `myproject123-a5c16`",
           "type": "string"
         }
       },
-      "id": "AddFirebaseRequest",
+      "id": "DefaultResources"
+    },
+    "ListWebAppsResponse": {
       "type": "object",
-      "description": "All fields are required."
+      "id": "ListWebAppsResponse",
+      "properties": {
+        "apps": {
+          "type": "array",
+          "items": {
+            "$ref": "WebApp"
+          },
+          "description": "List of each `WebApp` associated with the specified `FirebaseProject`."
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "If the result list is too large to fit in a single response, then a token is returned. If the string is empty, then this response is the last page of results. This token can be used in a subsequent call to `ListWebApps` to find the next group of Apps. Page tokens are short-lived and should not be persisted."
+        }
+      }
     },
     "FinalizeDefaultLocationRequest": {
       "type": "object",
@@ -451,269 +348,82 @@
       },
       "id": "FinalizeDefaultLocationRequest"
     },
-    "ListWebAppsResponse": {
+    "AddGoogleAnalyticsRequest": {
       "properties": {
-        "apps": {
+        "analyticsPropertyId": {
+          "type": "string",
+          "description": "The ID for the existing Google Analytics property that you want to associate with the `FirebaseProject`."
+        },
+        "analyticsAccountId": {
+          "type": "string",
+          "description": "The ID for the existing [Google Analytics account](http://www.google.com/analytics/) that you want to link with the `FirebaseProject`. Specifying this field will provision a new Google Analytics property in your Google Analytics account and associate the new property with the `FirebaseProject`."
+        }
+      },
+      "type": "object",
+      "id": "AddGoogleAnalyticsRequest"
+    },
+    "WebApp": {
+      "properties": {
+        "appUrls": {
           "items": {
-            "$ref": "WebApp"
+            "type": "string"
           },
-          "description": "List of each `WebApp` associated with the specified `FirebaseProject`.",
+          "description": "The URLs where the `WebApp` is hosted.",
           "type": "array"
         },
-        "nextPageToken": {
+        "appId": {
           "type": "string",
-          "description": "If the result list is too large to fit in a single response, then a token is returned. If the string is empty, then this response is the last page of results. This token can be used in a subsequent call to `ListWebApps` to find the next group of Apps. Page tokens are short-lived and should not be persisted."
-        }
-      },
-      "type": "object",
-      "id": "ListWebAppsResponse"
-    },
-    "AnalyticsDetails": {
-      "properties": {
-        "streamMappings": {
-          "description": " - For `AndroidApps` and `IosApps`: a map of `app` to `streamId` for each Firebase App in the specified `FirebaseProject`. Each `app` and `streamId` appears only once. - For `WebApps`: a map of `app` to `streamId` and `measurementId` for each `WebApp` in the specified `FirebaseProject`. Each `app`, `streamId`, and `measurementId` appears only once.",
-          "items": {
-            "$ref": "StreamMapping"
-          },
-          "type": "array"
+          "description": "Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified."
         },
-        "analyticsProperty": {
-          "description": "The Analytics Property object associated with the specified `FirebaseProject`. This object contains the details of the Google Analytics property associated with the Project.",
-          "$ref": "AnalyticsProperty"
-        }
-      },
-      "id": "AnalyticsDetails",
-      "type": "object"
-    },
-    "AdminSdkConfig": {
-      "id": "AdminSdkConfig",
-      "properties": {
-        "projectId": {
-          "type": "string",
-          "description": "Immutable. A user-assigned unique identifier for the `FirebaseProject`. This identifier may appear in URLs or names for some Firebase resources associated with the Project, but it should generally be treated as a convenience alias to reference the Project."
-        },
-        "storageBucket": {
-          "description": "The default Cloud Storage for Firebase storage bucket name.",
-          "type": "string"
-        },
-        "locationId": {
-          "type": "string",
-          "description": "The ID of the Project's default GCP resource location. The location is one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations). This field is omitted if the default GCP resource location has not been finalized yet. To set a Project's default GCP resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase resources to the Project."
-        },
-        "databaseURL": {
-          "description": "The default Firebase Realtime Database URL.",
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
-    "ProjectInfo": {
-      "id": "ProjectInfo",
-      "properties": {
-        "project": {
-          "type": "string",
-          "description": "The resource name of the GCP `Project` to which Firebase resources can be added, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values."
-        },
-        "displayName": {
-          "type": "string",
-          "description": "The user-assigned display name of the GCP `Project`, for example: `My App`"
-        },
-        "locationId": {
-          "description": "The ID of the Project's default GCP resource location. The location is one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations). Not all Projects will have this field populated. If it is not populated, it means that the Project does not yet have a default GCP resource location. To set a Project's default GCP resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase resources to the Project.",
-          "type": "string"
-        }
-      },
-      "type": "object",
-      "description": "A reference to a Google Cloud Platform (GCP) `Project`."
-    },
-    "SearchFirebaseAppsResponse": {
-      "type": "object",
-      "id": "SearchFirebaseAppsResponse",
-      "properties": {
-        "nextPageToken": {
-          "description": "If the result list is too large to fit in a single response, then a token is returned. This token can be used in a subsequent calls to `SearchFirebaseApps` to find the next group of Apps. Page tokens are short-lived and should not be persisted.",
-          "type": "string"
-        },
-        "apps": {
-          "description": "One page of results from a call to `SearchFirebaseApps`.",
-          "items": {
-            "$ref": "FirebaseAppInfo"
-          },
-          "type": "array"
-        }
-      }
-    },
-    "ListAndroidAppsResponse": {
-      "properties": {
-        "nextPageToken": {
-          "type": "string",
-          "description": "If the result list is too large to fit in a single response, then a token is returned. If the string is empty, then this response is the last page of results. This token can be used in a subsequent call to `ListAndroidApps` to find the next group of Apps. Page tokens are short-lived and should not be persisted."
-        },
-        "apps": {
-          "type": "array",
-          "description": "List of each `AndroidApp` associated with the specified `FirebaseProject`.",
-          "items": {
-            "$ref": "AndroidApp"
-          }
-        }
-      },
-      "type": "object",
-      "id": "ListAndroidAppsResponse"
-    },
-    "Location": {
-      "properties": {
-        "features": {
-          "description": "Products and services that are available in the GCP resource location.",
-          "items": {
-            "type": "string",
-            "enumDescriptions": [
-              "Used internally for distinguishing unset values and is not intended for external use.",
-              "This location supports Cloud Firestore database instances. App Engine is available in this location, so it can be a Project's [default GCP resource location](//firebase.google.com/docs/projects/locations#default-cloud-location).",
-              "This location supports default Cloud Storage buckets. App Engine is available in this location, so it can be a Project's [default GCP resource location](//firebase.google.com/docs/projects/locations#default-cloud-location).",
-              "Cloud Functions for Firebase is available in this location."
-            ],
-            "enum": [
-              "LOCATION_FEATURE_UNSPECIFIED",
-              "FIRESTORE",
-              "DEFAULT_STORAGE",
-              "FUNCTIONS"
-            ]
-          },
-          "type": "array"
-        },
-        "locationId": {
-          "description": "The ID of the GCP resource location. It will be one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations#types).",
-          "type": "string"
-        },
-        "type": {
-          "enumDescriptions": [
-            "Used internally for distinguishing unset values and is not intended for external use.",
-            "The location is a regional location. Data in a regional location is replicated in multiple zones within a region.",
-            "The location is a multi-regional location. Data in a multi-region location is replicated in multiple regions. Within each region, data is replicated in multiple zones."
-          ],
-          "description": "Indicates whether the GCP resource location is a [regional or multi-regional location](https://firebase.google.com/docs/projects/locations#types) for data replication.",
-          "enum": [
-            "LOCATION_TYPE_UNSPECIFIED",
-            "REGIONAL",
-            "MULTI_REGIONAL"
-          ],
-          "type": "string"
-        }
-      },
-      "type": "object",
-      "id": "Location",
-      "description": "A GCP resource location that can be selected for a FirebaseProject."
-    },
-    "MessageSet": {
-      "properties": {},
-      "description": "This is proto2's version of MessageSet.",
-      "id": "MessageSet",
-      "type": "object"
-    },
-    "AndroidAppConfig": {
-      "properties": {
-        "configFilename": {
-          "type": "string",
-          "description": "The filename that the configuration artifact for the `AndroidApp` is typically saved as. For example: `google-services.json`"
-        },
-        "configFileContents": {
-          "type": "string",
-          "format": "byte",
-          "description": "The contents of the JSON configuration file."
-        }
-      },
-      "id": "AndroidAppConfig",
-      "description": "Configuration metadata of a single Firebase App for Android.",
-      "type": "object"
-    },
-    "FirebaseProject": {
-      "type": "object",
-      "id": "FirebaseProject",
-      "properties": {
-        "name": {
-          "description": "The resource name of the Project, in the format: projects/PROJECT_IDENTIFIER PROJECT_IDENTIFIER: the Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`.",
-          "type": "string"
-        },
-        "displayName": {
-          "type": "string",
-          "description": "The user-assigned display name of the Project."
-        },
-        "projectNumber": {
-          "description": "Immutable. The globally unique, Google-assigned canonical identifier for the Project. Use this identifier when configuring integrations and/or making API calls to Firebase or third-party services.",
-          "format": "int64",
-          "type": "string"
-        },
-        "resources": {
-          "$ref": "DefaultResources",
-          "description": "The default Firebase resources associated with the Project."
-        },
-        "projectId": {
-          "description": "Immutable. A user-assigned unique identifier for the Project. This identifier may appear in URLs or names for some Firebase resources associated with the Project, but it should generally be treated as a convenience alias to reference the Project.",
-          "type": "string"
-        },
-        "state": {
-          "enumDescriptions": [
-            "Unspecified state.",
-            "The normal and active state.",
-            "The Project has been marked for deletion by the user."
-          ],
-          "enum": [
-            "STATE_UNSPECIFIED",
-            "ACTIVE",
-            "DELETED"
-          ],
+        "webId": {
+          "description": "Output only. Immutable. A unique, Firebase-assigned identifier for the `WebApp`. This identifier is only used to populate the `namespace` value for the `WebApp`. For most use cases, use `appId` to identify or reference the App. The `webId` value is only unique within a `FirebaseProject` and its associated Apps.",
           "readOnly": true,
-          "description": "Output only. The lifecycle state of the Project. Updates to the state must be performed via com.google.cloudresourcemanager.v1.Projects.DeleteProject and com.google.cloudresourcemanager.v1.Projects.UndeleteProject",
-          "type": "string"
-        }
-      },
-      "description": "A `FirebaseProject` is the top-level Firebase entity. It is the container for Firebase Apps, Firebase Hosting sites, storage systems (Firebase Realtime Database, Cloud Firestore, Cloud Storage buckets), and other Firebase and Google Cloud Platform (GCP) resources. You create a `FirebaseProject` by calling AddFirebase and specifying an *existing* [GCP `Project`](https://cloud.google.com/resource-manager/reference/rest/v1/projects). This adds Firebase resources to the existing GCP `Project`. Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` has the same underlying GCP identifiers (`projectNumber` and `projectId`). This allows for easy interop with Google APIs."
-    },
-    "ListAvailableProjectsResponse": {
-      "properties": {
-        "nextPageToken": {
-          "description": "If the result list is too large to fit in a single response, then a token is returned. If the string is empty, then this response is the last page of results. This token can be used in a subsequent calls to `ListAvailableProjects` to find the next group of Projects. Page tokens are short-lived and should not be persisted.",
           "type": "string"
         },
-        "projectInfo": {
-          "description": "The list of GCP `Projects` which can have Firebase resources added to them.",
-          "type": "array",
-          "items": {
-            "$ref": "ProjectInfo"
-          }
+        "name": {
+          "type": "string",
+          "description": "The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER /webApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.webApps#WebApp.FIELDS.app_id))."
+        },
+        "displayName": {
+          "description": "The user-assigned display name for the `WebApp`.",
+          "type": "string"
+        },
+        "projectId": {
+          "type": "string",
+          "description": "Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `WebApp`."
         }
       },
-      "type": "object",
-      "id": "ListAvailableProjectsResponse"
-    },
-    "ListShaCertificatesResponse": {
-      "id": "ListShaCertificatesResponse",
-      "properties": {
-        "certificates": {
-          "type": "array",
-          "items": {
-            "$ref": "ShaCertificate"
-          },
-          "description": "The list of each `ShaCertificate` associated with the `AndroidApp`."
-        }
-      },
+      "id": "WebApp",
+      "description": "Details of a Firebase App for the web.",
       "type": "object"
     },
-    "ListAvailableLocationsResponse": {
+    "ShaCertificate": {
+      "description": "A SHA-1 or SHA-256 certificate associated with the AndroidApp.",
+      "id": "ShaCertificate",
       "properties": {
-        "nextPageToken": {
-          "description": "If the result list is too large to fit in a single response, then a token is returned. If the string is empty, then this response is the last page of results and all available locations have been listed. This token can be used in a subsequent call to `ListAvailableLocations` to find more locations. Page tokens are short-lived and should not be persisted.",
+        "certType": {
+          "enumDescriptions": [
+            "Unknown state. This is only used for distinguishing unset values.",
+            "Certificate is a SHA-1 type certificate.",
+            "Certificate is a SHA-256 type certificate."
+          ],
+          "enum": [
+            "SHA_CERTIFICATE_TYPE_UNSPECIFIED",
+            "SHA_1",
+            "SHA_256"
+          ],
+          "type": "string",
+          "description": "The type of SHA certificate encoded in the hash."
+        },
+        "shaHash": {
+          "description": "The certificate hash for the `AndroidApp`.",
           "type": "string"
         },
-        "locations": {
-          "items": {
-            "$ref": "Location"
-          },
-          "description": "One page of results from a call to `ListAvailableLocations`.",
-          "type": "array"
+        "name": {
+          "type": "string",
+          "description": "The resource name of the ShaCertificate for the AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID/sha/SHA_HASH * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)). * SHA_HASH: the certificate hash for the App (see [`shaHash`](../projects.androidApps.sha#ShaCertificate.FIELDS.sha_hash))."
         }
       },
-      "id": "ListAvailableLocationsResponse",
       "type": "object"
     },
     "IosApp": {
@@ -721,78 +431,379 @@
       "type": "object",
       "properties": {
         "bundleId": {
-          "description": "Immutable. The canonical bundle ID of the iOS app as it would appear in the iOS AppStore.",
-          "type": "string"
-        },
-        "name": {
-          "description": "The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).",
-          "type": "string"
+          "type": "string",
+          "description": "Immutable. The canonical bundle ID of the iOS app as it would appear in the iOS AppStore."
         },
         "appId": {
-          "type": "string",
-          "description": "Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified."
+          "description": "Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.",
+          "type": "string"
         },
         "projectId": {
           "description": "Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `IosApp`.",
           "type": "string"
         },
+        "name": {
+          "type": "string",
+          "description": "The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id))."
+        },
+        "displayName": {
+          "description": "The user-assigned display name for the `IosApp`.",
+          "type": "string"
+        },
         "appStoreId": {
           "description": "The automatically generated Apple ID assigned to the iOS app by Apple in the iOS App Store.",
           "type": "string"
-        },
-        "displayName": {
-          "type": "string",
-          "description": "The user-assigned display name for the `IosApp`."
         }
       },
       "description": "Details of a Firebase App for iOS."
     },
-    "RemoveAnalyticsRequest": {
-      "id": "RemoveAnalyticsRequest",
+    "WebAppConfig": {
+      "description": "Configuration metadata of a single Firebase App for the web.",
+      "id": "WebAppConfig",
+      "properties": {
+        "appId": {
+          "type": "string",
+          "description": "Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`."
+        },
+        "databaseURL": {
+          "type": "string",
+          "description": "The default Firebase Realtime Database URL."
+        },
+        "measurementId": {
+          "type": "string",
+          "description": "The unique Google-assigned identifier of the Google Analytics web stream associated with the `WebApp`. Firebase SDKs use this ID to interact with Google Analytics APIs. This field is only present if the `WebApp` is linked to a web stream in a Google Analytics App + Web property. Learn more about this ID and Google Analytics web streams in the [Analytics documentation](https://support.google.com/analytics/topic/9303475). To generate a `measurementId` and link the `WebApp` with a Google Analytics web stream, call [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics). For apps using the Firebase JavaScript SDK v7.20.0 and later, Firebase dynamically fetches the `measurementId` when your app initializes Analytics. Having this ID in your config object is optional, but it does serve as a fallback in the rare case that the dynamic fetch fails."
+        },
+        "locationId": {
+          "description": "The ID of the Project's default GCP resource location. The location is one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations). This field is omitted if the default GCP resource location has not been finalized yet. To set a Project's default GCP resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase resources to the Project.",
+          "type": "string"
+        },
+        "storageBucket": {
+          "description": "The default Cloud Storage for Firebase storage bucket name.",
+          "type": "string"
+        },
+        "authDomain": {
+          "type": "string",
+          "description": "The domain Firebase Auth configures for OAuth redirects, in the format: PROJECT_ID.firebaseapp.com"
+        },
+        "projectId": {
+          "type": "string",
+          "description": "Immutable. A user-assigned unique identifier for the `FirebaseProject`."
+        },
+        "apiKey": {
+          "description": "The API key associated with the `WebApp`.",
+          "type": "string"
+        },
+        "messagingSenderId": {
+          "description": "The sender ID for use with Firebase Cloud Messaging.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "AddFirebaseRequest": {
+      "type": "object",
+      "description": "All fields are required.",
+      "id": "AddFirebaseRequest",
+      "properties": {
+        "timeZone": {
+          "description": "Deprecated. Instead, to link a Project with a Google Analytics account, call [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) after you add Firebase resources to the GCP `Project`. The time zone that the account will use for Google Analytics data. For example: America/Los_Angeles or Africa/Abidjan",
+          "type": "string"
+        },
+        "locationId": {
+          "description": "Deprecated. Instead, to set a Project's default GCP resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase resources to the GCP `Project`. The ID of the Project's default GCP resource location. The location must be one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations).",
+          "type": "string"
+        },
+        "regionCode": {
+          "type": "string",
+          "description": "Deprecated. Instead, to link a Project with a Google Analytics account, call [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) after you add Firebase resources to the GCP `Project`. The region code (CLDR) that the account will use for Google Analytics data For example: US, GB, or DE In Java, use `com.google.i18n.identifiers.RegionCode`."
+        }
+      }
+    },
+    "FirebaseAppInfo": {
+      "type": "object",
+      "description": "A high-level summary of an App.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The resource name of the Firebase App, in the format: projects/PROJECT_ID /iosApps/APP_ID or projects/PROJECT_ID/androidApps/APP_ID or projects/ PROJECT_ID/webApps/APP_ID"
+        },
+        "namespace": {
+          "type": "string",
+          "readOnly": true,
+          "description": "Output only. Immutable. The platform-specific identifier of the App. *Note:* For most use cases, use `appId`, which is the canonical, globally unique identifier for referencing an App. This string is derived from a native identifier for each platform: `packageName` for an `AndroidApp`, `bundleId` for an `IosApp`, and `webId` for a `WebApp`. Its contents should be treated as opaque, as the native identifier format may change as platforms evolve. This string is only unique within a `FirebaseProject` and its associated Apps."
+        },
+        "appId": {
+          "description": "Output only. Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified.",
+          "type": "string",
+          "readOnly": true
+        },
+        "displayName": {
+          "type": "string",
+          "description": "The user-assigned display name of the Firebase App."
+        },
+        "platform": {
+          "enumDescriptions": [
+            "Unknown state. This is only used for distinguishing unset values.",
+            "The Firebase App is associated with iOS.",
+            "The Firebase App is associated with Android.",
+            "The Firebase App is associated with web."
+          ],
+          "type": "string",
+          "enum": [
+            "PLATFORM_UNSPECIFIED",
+            "IOS",
+            "ANDROID",
+            "WEB"
+          ],
+          "description": "The platform of the Firebase App."
+        }
+      },
+      "id": "FirebaseAppInfo"
+    },
+    "IosAppConfig": {
+      "properties": {
+        "configFilename": {
+          "description": "The filename that the configuration artifact for the `IosApp` is typically saved as. For example: `GoogleService-Info.plist`",
+          "type": "string"
+        },
+        "configFileContents": {
+          "format": "byte",
+          "description": "The content of the XML configuration file.",
+          "type": "string"
+        }
+      },
+      "id": "IosAppConfig",
+      "description": "Configuration metadata of a single Firebase App for iOS.",
+      "type": "object"
+    },
+    "ListAndroidAppsResponse": {
       "type": "object",
       "properties": {
-        "analyticsPropertyId": {
-          "description": "Optional. The ID of the Google Analytics property associated with the specified `FirebaseProject`. - If not set, then the Google Analytics property that is currently associated with the specified `FirebaseProject` is removed. - If set, and the specified `FirebaseProject` is currently associated with a *different* Google Analytics property, then the response is a `412 Precondition Failed` error. ",
+        "apps": {
+          "description": "List of each `AndroidApp` associated with the specified `FirebaseProject`.",
+          "items": {
+            "$ref": "AndroidApp"
+          },
+          "type": "array"
+        },
+        "nextPageToken": {
+          "description": "If the result list is too large to fit in a single response, then a token is returned. If the string is empty, then this response is the last page of results. This token can be used in a subsequent call to `ListAndroidApps` to find the next group of Apps. Page tokens are short-lived and should not be persisted.",
           "type": "string"
+        }
+      },
+      "id": "ListAndroidAppsResponse"
+    },
+    "SearchFirebaseAppsResponse": {
+      "id": "SearchFirebaseAppsResponse",
+      "type": "object",
+      "properties": {
+        "apps": {
+          "type": "array",
+          "description": "One page of results from a call to `SearchFirebaseApps`.",
+          "items": {
+            "$ref": "FirebaseAppInfo"
+          }
+        },
+        "nextPageToken": {
+          "description": "If the result list is too large to fit in a single response, then a token is returned. This token can be used in a subsequent calls to `SearchFirebaseApps` to find the next group of Apps. Page tokens are short-lived and should not be persisted.",
+          "type": "string"
+        }
+      }
+    },
+    "ListAvailableProjectsResponse": {
+      "properties": {
+        "projectInfo": {
+          "items": {
+            "$ref": "ProjectInfo"
+          },
+          "description": "The list of GCP `Projects` which can have Firebase resources added to them.",
+          "type": "array"
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "If the result list is too large to fit in a single response, then a token is returned. If the string is empty, then this response is the last page of results. This token can be used in a subsequent calls to `ListAvailableProjects` to find the next group of Projects. Page tokens are short-lived and should not be persisted."
+        }
+      },
+      "type": "object",
+      "id": "ListAvailableProjectsResponse"
+    },
+    "ProjectInfo": {
+      "properties": {
+        "displayName": {
+          "description": "The user-assigned display name of the GCP `Project`, for example: `My App`",
+          "type": "string"
+        },
+        "locationId": {
+          "type": "string",
+          "description": "The ID of the Project's default GCP resource location. The location is one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations). Not all Projects will have this field populated. If it is not populated, it means that the Project does not yet have a default GCP resource location. To set a Project's default GCP resource location, call [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase resources to the Project."
+        },
+        "project": {
+          "type": "string",
+          "description": "The resource name of the GCP `Project` to which Firebase resources can be added, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values."
+        }
+      },
+      "type": "object",
+      "id": "ProjectInfo",
+      "description": "A reference to a Google Cloud Platform (GCP) `Project`."
+    },
+    "AndroidApp": {
+      "type": "object",
+      "properties": {
+        "appId": {
+          "description": "Immutable. The globally unique, Firebase-assigned identifier for the `AndroidApp`. This identifier should be treated as an opaque token, as the data format is not specified.",
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "description": "The resource name of the AndroidApp, in the format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id))."
+        },
+        "projectId": {
+          "type": "string",
+          "description": "Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `AndroidApp`."
+        },
+        "displayName": {
+          "description": "The user-assigned display name for the `AndroidApp`.",
+          "type": "string"
+        },
+        "packageName": {
+          "description": "Immutable. The canonical package name of the Android app as would appear in the Google Play Developer Console.",
+          "type": "string"
+        }
+      },
+      "id": "AndroidApp",
+      "description": "Details of a Firebase App for Android."
+    },
+    "RemoveAnalyticsRequest": {
+      "properties": {
+        "analyticsPropertyId": {
+          "type": "string",
+          "description": "Optional. The ID of the Google Analytics property associated with the specified `FirebaseProject`. - If not set, then the Google Analytics property that is currently associated with the specified `FirebaseProject` is removed. - If set, and the specified `FirebaseProject` is currently associated with a *different* Google Analytics property, then the response is a `412 Precondition Failed` error. "
+        }
+      },
+      "type": "object",
+      "id": "RemoveAnalyticsRequest"
+    },
+    "AnalyticsProperty": {
+      "type": "object",
+      "description": "Details of a Google Analytics property",
+      "id": "AnalyticsProperty",
+      "properties": {
+        "displayName": {
+          "type": "string",
+          "description": "The display name of the Google Analytics property associated with the specified `FirebaseProject`."
+        },
+        "id": {
+          "type": "string",
+          "description": "The globally unique, Google-assigned identifier of the Google Analytics property associated with the specified `FirebaseProject`. If you called [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) to link the `FirebaseProject` with a Google Analytics account, the value in this `id` field is the same as the ID of the property either specified or provisioned with that call to `AddGoogleAnalytics`."
+        }
+      }
+    },
+    "Empty": {
+      "properties": {},
+      "type": "object",
+      "id": "Empty",
+      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`."
+    },
+    "Status": {
+      "type": "object",
+      "description": "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).",
+      "id": "Status",
+      "properties": {
+        "details": {
+          "description": "A list of messages that carry the error details. There is a common set of message types for APIs to use.",
+          "items": {
+            "additionalProperties": {
+              "description": "Properties of the object. Contains field @type with type URL.",
+              "type": "any"
+            },
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "message": {
+          "type": "string",
+          "description": "A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client."
+        },
+        "code": {
+          "description": "The status code, which should be an enum value of google.rpc.Code.",
+          "type": "integer",
+          "format": "int32"
         }
       }
     }
   },
-  "revision": "20200822",
-  "id": "firebase:v1beta1",
-  "version_module": true,
+  "title": "Firebase Management API",
+  "mtlsRootUrl": "https://firebase.mtls.googleapis.com/",
+  "description": "The Firebase Management API enables programmatic setup and management of Firebase projects, including a project's Firebase resources and Firebase apps.",
+  "discoveryVersion": "v1",
+  "baseUrl": "https://firebase.googleapis.com/",
   "servicePath": "",
-  "ownerDomain": "google.com",
+  "basePath": "",
+  "protocol": "rest",
   "resources": {
     "operations": {
       "methods": {
         "get": {
-          "flatPath": "v1beta1/operations/{operationsId}",
           "parameters": {
             "name": {
-              "type": "string",
-              "required": true,
               "description": "The name of the operation resource.",
+              "pattern": "^operations/.*$",
+              "type": "string",
               "location": "path",
-              "pattern": "^operations/.*$"
+              "required": true
             }
           },
-          "description": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.",
-          "id": "firebase.operations.get",
-          "parameterOrder": [
-            "name"
-          ],
           "response": {
             "$ref": "Operation"
           },
+          "path": "v1beta1/{+name}",
+          "id": "firebase.operations.get",
+          "flatPath": "v1beta1/operations/{operationsId}",
+          "httpMethod": "GET",
           "scopes": [
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/cloud-platform.read-only",
             "https://www.googleapis.com/auth/firebase",
             "https://www.googleapis.com/auth/firebase.readonly"
           ],
-          "path": "v1beta1/{+name}",
-          "httpMethod": "GET"
+          "parameterOrder": [
+            "name"
+          ],
+          "description": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service."
+        }
+      }
+    },
+    "availableProjects": {
+      "methods": {
+        "list": {
+          "response": {
+            "$ref": "ListAvailableProjectsResponse"
+          },
+          "id": "firebase.availableProjects.list",
+          "path": "v1beta1/availableProjects",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/firebase",
+            "https://www.googleapis.com/auth/firebase.readonly"
+          ],
+          "description": "Lists each [Google Cloud Platform (GCP) `Project`] (https://cloud.google.com/resource-manager/reference/rest/v1/projects) that can have Firebase resources added to it. A Project will only be listed if: - The caller has sufficient [Google IAM](https://cloud.google.com/iam) permissions to call AddFirebase. - The Project is not already a FirebaseProject. - The Project is not in an Organization which has policies that prevent Firebase resources from being added. ",
+          "parameterOrder": [],
+          "parameters": {
+            "pageSize": {
+              "description": "The maximum number of Projects to return in the response. The server may return fewer than this value at its discretion. If no value is specified (or too large a value is specified), the server will impose its own limit. This value cannot be negative.",
+              "location": "query",
+              "type": "integer",
+              "format": "int32"
+            },
+            "pageToken": {
+              "description": "Token returned from a previous call to `ListAvailableProjects` indicating where in the set of Projects to resume listing.",
+              "location": "query",
+              "type": "string"
+            }
+          },
+          "httpMethod": "GET",
+          "flatPath": "v1beta1/availableProjects"
         }
       }
     },
@@ -800,203 +811,366 @@
       "resources": {
         "webApps": {
           "methods": {
-            "get": {
+            "getConfig": {
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform",
+                "https://www.googleapis.com/auth/cloud-platform.read-only",
+                "https://www.googleapis.com/auth/firebase",
+                "https://www.googleapis.com/auth/firebase.readonly"
+              ],
+              "id": "firebase.projects.webApps.getConfig",
+              "flatPath": "v1beta1/projects/{projectsId}/webApps/{webAppsId}/config",
+              "description": "Gets the configuration artifact associated with the specified WebApp.",
+              "path": "v1beta1/{+name}",
+              "httpMethod": "GET",
+              "parameters": {
+                "name": {
+                  "location": "path",
+                  "description": "The resource name of the WebApp configuration to download, in the format: projects/PROJECT_IDENTIFIER/webApps/APP_ID/config Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/webApps/APP_ID Refer to the `WebApp` [`name`](../projects.webApps#WebApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values.",
+                  "required": true,
+                  "pattern": "^projects/[^/]+/webApps/[^/]+/config$",
+                  "type": "string"
+                }
+              },
               "parameterOrder": [
                 "name"
               ],
+              "response": {
+                "$ref": "WebAppConfig"
+              }
+            },
+            "get": {
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform",
                 "https://www.googleapis.com/auth/cloud-platform.read-only",
                 "https://www.googleapis.com/auth/firebase",
                 "https://www.googleapis.com/auth/firebase.readonly"
               ],
-              "id": "firebase.projects.webApps.get",
+              "parameterOrder": [
+                "name"
+              ],
               "description": "Gets the specified WebApp.",
-              "flatPath": "v1beta1/projects/{projectsId}/webApps/{webAppsId}",
+              "id": "firebase.projects.webApps.get",
+              "httpMethod": "GET",
               "parameters": {
                 "name": {
-                  "type": "string",
-                  "required": true,
-                  "description": "The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER /webApps/APP_ID Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/webApps/APP_ID Refer to the `WebApp` [`name`](../projects.webApps#WebApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values.",
                   "pattern": "^projects/[^/]+/webApps/[^/]+$",
-                  "location": "path"
+                  "description": "The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER /webApps/APP_ID Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/webApps/APP_ID Refer to the `WebApp` [`name`](../projects.webApps#WebApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values.",
+                  "required": true,
+                  "location": "path",
+                  "type": "string"
                 }
               },
               "path": "v1beta1/{+name}",
-              "httpMethod": "GET",
               "response": {
                 "$ref": "WebApp"
-              }
-            },
-            "list": {
-              "parameters": {
-                "parent": {
-                  "required": true,
-                  "description": "The resource name of the parent FirebaseProject for which to list each associated WebApp, in the format: projects/PROJECT_IDENTIFIER/webApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
-                  "location": "path",
-                  "pattern": "^projects/[^/]+$",
-                  "type": "string"
-                },
-                "pageSize": {
-                  "format": "int32",
-                  "description": "The maximum number of Apps to return in the response. The server may return fewer than this value at its discretion. If no value is specified (or too large a value is specified), then the server will impose its own limit.",
-                  "location": "query",
-                  "type": "integer"
-                },
-                "pageToken": {
-                  "location": "query",
-                  "type": "string",
-                  "description": "Token returned from a previous call to `ListWebApps` indicating where in the set of Apps to resume listing."
-                }
               },
-              "flatPath": "v1beta1/projects/{projectsId}/webApps",
-              "id": "firebase.projects.webApps.list",
-              "description": "Lists each WebApp associated with the specified FirebaseProject. The elements are returned in no particular order, but will be a consistent view of the Apps when additional requests are made with a `pageToken`.",
-              "httpMethod": "GET",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform",
-                "https://www.googleapis.com/auth/cloud-platform.read-only",
-                "https://www.googleapis.com/auth/firebase",
-                "https://www.googleapis.com/auth/firebase.readonly"
-              ],
-              "path": "v1beta1/{+parent}/webApps",
-              "parameterOrder": [
-                "parent"
-              ],
-              "response": {
-                "$ref": "ListWebAppsResponse"
-              }
+              "flatPath": "v1beta1/projects/{projectsId}/webApps/{webAppsId}"
             },
             "patch": {
-              "id": "firebase.projects.webApps.patch",
-              "request": {
-                "$ref": "WebApp"
-              },
-              "httpMethod": "PATCH",
-              "response": {
-                "$ref": "WebApp"
-              },
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform",
                 "https://www.googleapis.com/auth/firebase"
               ],
+              "path": "v1beta1/{+name}",
+              "id": "firebase.projects.webApps.patch",
               "parameterOrder": [
                 "name"
               ],
-              "flatPath": "v1beta1/projects/{projectsId}/webApps/{webAppsId}",
-              "description": "Updates the attributes of the specified WebApp.",
-              "path": "v1beta1/{+name}",
               "parameters": {
                 "name": {
-                  "type": "string",
-                  "location": "path",
                   "description": "The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER /webApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.webApps#WebApp.FIELDS.app_id)).",
-                  "required": true,
-                  "pattern": "^projects/[^/]+/webApps/[^/]+$"
+                  "pattern": "^projects/[^/]+/webApps/[^/]+$",
+                  "location": "path",
+                  "type": "string",
+                  "required": true
                 },
                 "updateMask": {
                   "description": "Specifies which fields to update. Note that the fields `name`, `appId`, and `projectId` are all immutable.",
-                  "location": "query",
                   "format": "google-fieldmask",
-                  "type": "string"
-                }
-              }
-            },
-            "getConfig": {
-              "response": {
-                "$ref": "WebAppConfig"
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform",
-                "https://www.googleapis.com/auth/cloud-platform.read-only",
-                "https://www.googleapis.com/auth/firebase",
-                "https://www.googleapis.com/auth/firebase.readonly"
-              ],
-              "path": "v1beta1/{+name}",
-              "flatPath": "v1beta1/projects/{projectsId}/webApps/{webAppsId}/config",
-              "parameters": {
-                "name": {
                   "type": "string",
-                  "pattern": "^projects/[^/]+/webApps/[^/]+/config$",
-                  "description": "The resource name of the WebApp configuration to download, in the format: projects/PROJECT_IDENTIFIER/webApps/APP_ID/config Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/webApps/APP_ID Refer to the `WebApp` [`name`](../projects.webApps#WebApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values.",
-                  "location": "path",
-                  "required": true
+                  "location": "query"
                 }
               },
-              "id": "firebase.projects.webApps.getConfig",
-              "parameterOrder": [
-                "name"
-              ],
-              "httpMethod": "GET",
-              "description": "Gets the configuration artifact associated with the specified WebApp."
+              "response": {
+                "$ref": "WebApp"
+              },
+              "request": {
+                "$ref": "WebApp"
+              },
+              "description": "Updates the attributes of the specified WebApp.",
+              "flatPath": "v1beta1/projects/{projectsId}/webApps/{webAppsId}",
+              "httpMethod": "PATCH"
             },
             "create": {
-              "id": "firebase.projects.webApps.create",
-              "flatPath": "v1beta1/projects/{projectsId}/webApps",
-              "description": "Requests the creation of a new WebApp in the specified FirebaseProject. The result of this call is an `Operation` which can be used to track the provisioning process. The `Operation` is automatically deleted after completion, so there is no need to call `DeleteOperation`.",
-              "parameterOrder": [
-                "parent"
-              ],
+              "request": {
+                "$ref": "WebApp"
+              },
               "response": {
                 "$ref": "Operation"
               },
+              "description": "Requests the creation of a new WebApp in the specified FirebaseProject. The result of this call is an `Operation` which can be used to track the provisioning process. The `Operation` is automatically deleted after completion, so there is no need to call `DeleteOperation`.",
               "path": "v1beta1/{+parent}/webApps",
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform",
                 "https://www.googleapis.com/auth/firebase"
               ],
               "httpMethod": "POST",
-              "request": {
-                "$ref": "WebApp"
-              },
               "parameters": {
                 "parent": {
-                  "type": "string",
-                  "location": "path",
-                  "pattern": "^projects/[^/]+$",
                   "description": "The resource name of the parent FirebaseProject in which to create a WebApp, in the format: projects/PROJECT_IDENTIFIER/webApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
-                  "required": true
+                  "pattern": "^projects/[^/]+$",
+                  "location": "path",
+                  "required": true,
+                  "type": "string"
                 }
-              }
-            }
-          }
-        },
-        "availableLocations": {
-          "methods": {
-            "list": {
-              "id": "firebase.projects.availableLocations.list",
+              },
+              "id": "firebase.projects.webApps.create",
               "parameterOrder": [
                 "parent"
               ],
-              "description": "Lists the valid Google Cloud Platform (GCP) resource locations for the specified Project (including a FirebaseProject). One of these locations can be selected as the Project's [_default_ GCP resource location](https://firebase.google.com/docs/projects/locations), which is the geographical location where the Project's resources, such as Cloud Firestore, will be provisioned by default. However, if the default GCP resource location has already been set for the Project, then this setting cannot be changed. This call checks for any possible [location restrictions](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations) for the specified Project and, thus, might return a subset of all possible GCP resource locations. To list all GCP resource locations (regardless of any restrictions), call the endpoint without specifying a unique project identifier (that is, `/v1beta1/{parent=projects/-}/listAvailableLocations`). To call `ListAvailableLocations` with a specified project, a member must be at minimum a Viewer of the Project. Calls without a specified project do not require any specific project permissions.",
-              "httpMethod": "GET",
-              "flatPath": "v1beta1/projects/{projectsId}/availableLocations",
-              "parameters": {
-                "pageToken": {
-                  "description": "Token returned from a previous call to `ListAvailableLocations` indicating where in the list of locations to resume listing.",
-                  "location": "query",
-                  "type": "string"
-                },
-                "parent": {
-                  "pattern": "^projects/[^/]+$",
-                  "required": true,
-                  "description": "The FirebaseProject for which to list GCP resource locations, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values. If no unique project identifier is specified (that is, `projects/-`), the returned list does not take into account org-specific or project-specific location restrictions.",
-                  "location": "path",
-                  "type": "string"
-                },
-                "pageSize": {
-                  "type": "integer",
-                  "description": "The maximum number of locations to return in the response. The server may return fewer than this value at its discretion. If no value is specified (or too large a value is specified), then the server will impose its own limit. This value cannot be negative.",
-                  "format": "int32",
-                  "location": "query"
-                }
-              },
+              "flatPath": "v1beta1/projects/{projectsId}/webApps"
+            },
+            "list": {
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform",
                 "https://www.googleapis.com/auth/cloud-platform.read-only",
                 "https://www.googleapis.com/auth/firebase",
                 "https://www.googleapis.com/auth/firebase.readonly"
               ],
+              "httpMethod": "GET",
+              "parameterOrder": [
+                "parent"
+              ],
+              "path": "v1beta1/{+parent}/webApps",
+              "flatPath": "v1beta1/projects/{projectsId}/webApps",
+              "response": {
+                "$ref": "ListWebAppsResponse"
+              },
+              "parameters": {
+                "pageSize": {
+                  "description": "The maximum number of Apps to return in the response. The server may return fewer than this value at its discretion. If no value is specified (or too large a value is specified), then the server will impose its own limit.",
+                  "format": "int32",
+                  "location": "query",
+                  "type": "integer"
+                },
+                "parent": {
+                  "required": true,
+                  "location": "path",
+                  "description": "The resource name of the parent FirebaseProject for which to list each associated WebApp, in the format: projects/PROJECT_IDENTIFIER/webApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
+                  "type": "string",
+                  "pattern": "^projects/[^/]+$"
+                },
+                "pageToken": {
+                  "description": "Token returned from a previous call to `ListWebApps` indicating where in the set of Apps to resume listing.",
+                  "location": "query",
+                  "type": "string"
+                }
+              },
+              "description": "Lists each WebApp associated with the specified FirebaseProject. The elements are returned in no particular order, but will be a consistent view of the Apps when additional requests are made with a `pageToken`.",
+              "id": "firebase.projects.webApps.list"
+            }
+          }
+        },
+        "iosApps": {
+          "methods": {
+            "create": {
+              "httpMethod": "POST",
+              "parameters": {
+                "parent": {
+                  "pattern": "^projects/[^/]+$",
+                  "required": true,
+                  "location": "path",
+                  "type": "string",
+                  "description": "The resource name of the parent FirebaseProject in which to create an IosApp, in the format: projects/PROJECT_IDENTIFIER/iosApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values."
+                }
+              },
+              "path": "v1beta1/{+parent}/iosApps",
+              "response": {
+                "$ref": "Operation"
+              },
+              "parameterOrder": [
+                "parent"
+              ],
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform",
+                "https://www.googleapis.com/auth/firebase"
+              ],
+              "id": "firebase.projects.iosApps.create",
+              "flatPath": "v1beta1/projects/{projectsId}/iosApps",
+              "description": "Requests the creation of a new IosApp in the specified FirebaseProject. The result of this call is an `Operation` which can be used to track the provisioning process. The `Operation` is automatically deleted after completion, so there is no need to call `DeleteOperation`.",
+              "request": {
+                "$ref": "IosApp"
+              }
+            },
+            "list": {
+              "path": "v1beta1/{+parent}/iosApps",
+              "description": "Lists each IosApp associated with the specified FirebaseProject. The elements are returned in no particular order, but will be a consistent view of the Apps when additional requests are made with a `pageToken`.",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform",
+                "https://www.googleapis.com/auth/cloud-platform.read-only",
+                "https://www.googleapis.com/auth/firebase",
+                "https://www.googleapis.com/auth/firebase.readonly"
+              ],
+              "httpMethod": "GET",
+              "parameters": {
+                "parent": {
+                  "location": "path",
+                  "type": "string",
+                  "required": true,
+                  "description": "The resource name of the parent FirebaseProject for which to list each associated IosApp, in the format: projects/PROJECT_IDENTIFIER/iosApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
+                  "pattern": "^projects/[^/]+$"
+                },
+                "pageSize": {
+                  "description": "The maximum number of Apps to return in the response. The server may return fewer than this at its discretion. If no value is specified (or too large a value is specified), the server will impose its own limit.",
+                  "location": "query",
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "pageToken": {
+                  "location": "query",
+                  "type": "string",
+                  "description": "Token returned from a previous call to `ListIosApps` indicating where in the set of Apps to resume listing."
+                }
+              },
+              "flatPath": "v1beta1/projects/{projectsId}/iosApps",
+              "id": "firebase.projects.iosApps.list",
+              "parameterOrder": [
+                "parent"
+              ],
+              "response": {
+                "$ref": "ListIosAppsResponse"
+              }
+            },
+            "getConfig": {
+              "httpMethod": "GET",
+              "response": {
+                "$ref": "IosAppConfig"
+              },
+              "path": "v1beta1/{+name}",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform",
+                "https://www.googleapis.com/auth/cloud-platform.read-only",
+                "https://www.googleapis.com/auth/firebase",
+                "https://www.googleapis.com/auth/firebase.readonly"
+              ],
+              "flatPath": "v1beta1/projects/{projectsId}/iosApps/{iosAppsId}/config",
+              "id": "firebase.projects.iosApps.getConfig",
+              "parameterOrder": [
+                "name"
+              ],
+              "description": "Gets the configuration artifact associated with the specified IosApp.",
+              "parameters": {
+                "name": {
+                  "pattern": "^projects/[^/]+/iosApps/[^/]+/config$",
+                  "description": "The resource name of the App configuration to download, in the format: projects/PROJECT_IDENTIFIER/iosApps/APP_ID/config Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/iosApps/APP_ID Refer to the `IosApp` [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values.",
+                  "location": "path",
+                  "type": "string",
+                  "required": true
+                }
+              }
+            },
+            "patch": {
+              "response": {
+                "$ref": "IosApp"
+              },
+              "path": "v1beta1/{+name}",
+              "flatPath": "v1beta1/projects/{projectsId}/iosApps/{iosAppsId}",
+              "parameterOrder": [
+                "name"
+              ],
+              "request": {
+                "$ref": "IosApp"
+              },
+              "httpMethod": "PATCH",
+              "description": "Updates the attributes of the specified IosApp.",
+              "id": "firebase.projects.iosApps.patch",
+              "parameters": {
+                "name": {
+                  "description": "The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).",
+                  "pattern": "^projects/[^/]+/iosApps/[^/]+$",
+                  "required": true,
+                  "location": "path",
+                  "type": "string"
+                },
+                "updateMask": {
+                  "format": "google-fieldmask",
+                  "type": "string",
+                  "description": "Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, and `bundleId` are all immutable.",
+                  "location": "query"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform",
+                "https://www.googleapis.com/auth/firebase"
+              ]
+            },
+            "get": {
+              "httpMethod": "GET",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform",
+                "https://www.googleapis.com/auth/cloud-platform.read-only",
+                "https://www.googleapis.com/auth/firebase",
+                "https://www.googleapis.com/auth/firebase.readonly"
+              ],
+              "flatPath": "v1beta1/projects/{projectsId}/iosApps/{iosAppsId}",
+              "id": "firebase.projects.iosApps.get",
+              "parameterOrder": [
+                "name"
+              ],
+              "path": "v1beta1/{+name}",
+              "response": {
+                "$ref": "IosApp"
+              },
+              "parameters": {
+                "name": {
+                  "type": "string",
+                  "location": "path",
+                  "required": true,
+                  "description": "The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/iosApps/APP_ID Refer to the `IosApp` [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values.",
+                  "pattern": "^projects/[^/]+/iosApps/[^/]+$"
+                }
+              },
+              "description": "Gets the specified IosApp."
+            }
+          }
+        },
+        "availableLocations": {
+          "methods": {
+            "list": {
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform",
+                "https://www.googleapis.com/auth/cloud-platform.read-only",
+                "https://www.googleapis.com/auth/firebase",
+                "https://www.googleapis.com/auth/firebase.readonly"
+              ],
+              "parameters": {
+                "pageSize": {
+                  "location": "query",
+                  "format": "int32",
+                  "description": "The maximum number of locations to return in the response. The server may return fewer than this value at its discretion. If no value is specified (or too large a value is specified), then the server will impose its own limit. This value cannot be negative.",
+                  "type": "integer"
+                },
+                "parent": {
+                  "pattern": "^projects/[^/]+$",
+                  "description": "The FirebaseProject for which to list GCP resource locations, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values. If no unique project identifier is specified (that is, `projects/-`), the returned list does not take into account org-specific or project-specific location restrictions.",
+                  "location": "path",
+                  "required": true,
+                  "type": "string"
+                },
+                "pageToken": {
+                  "type": "string",
+                  "description": "Token returned from a previous call to `ListAvailableLocations` indicating where in the list of locations to resume listing.",
+                  "location": "query"
+                }
+              },
+              "flatPath": "v1beta1/projects/{projectsId}/availableLocations",
+              "httpMethod": "GET",
+              "description": "Lists the valid Google Cloud Platform (GCP) resource locations for the specified Project (including a FirebaseProject). One of these locations can be selected as the Project's [_default_ GCP resource location](https://firebase.google.com/docs/projects/locations), which is the geographical location where the Project's resources, such as Cloud Firestore, will be provisioned by default. However, if the default GCP resource location has already been set for the Project, then this setting cannot be changed. This call checks for any possible [location restrictions](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations) for the specified Project and, thus, might return a subset of all possible GCP resource locations. To list all GCP resource locations (regardless of any restrictions), call the endpoint without specifying a unique project identifier (that is, `/v1beta1/{parent=projects/-}/listAvailableLocations`). To call `ListAvailableLocations` with a specified project, a member must be at minimum a Viewer of the Project. Calls without a specified project do not require any specific project permissions.",
+              "parameterOrder": [
+                "parent"
+              ],
+              "id": "firebase.projects.availableLocations.list",
               "path": "v1beta1/{+parent}/availableLocations",
               "response": {
                 "$ref": "ListAvailableLocationsResponse"
@@ -1004,13 +1178,38 @@
             }
           }
         },
-        "iosApps": {
+        "androidApps": {
           "methods": {
-            "list": {
-              "path": "v1beta1/{+parent}/iosApps",
+            "create": {
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform",
+                "https://www.googleapis.com/auth/firebase"
+              ],
+              "description": "Requests the creation of a new AndroidApp in the specified FirebaseProject. The result of this call is an `Operation` which can be used to track the provisioning process. The `Operation` is automatically deleted after completion, so there is no need to call `DeleteOperation`.",
+              "flatPath": "v1beta1/projects/{projectsId}/androidApps",
+              "response": {
+                "$ref": "Operation"
+              },
+              "path": "v1beta1/{+parent}/androidApps",
               "parameterOrder": [
                 "parent"
               ],
+              "request": {
+                "$ref": "AndroidApp"
+              },
+              "parameters": {
+                "parent": {
+                  "type": "string",
+                  "location": "path",
+                  "required": true,
+                  "description": "The resource name of the parent FirebaseProject in which to create an AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
+                  "pattern": "^projects/[^/]+$"
+                }
+              },
+              "httpMethod": "POST",
+              "id": "firebase.projects.androidApps.create"
+            },
+            "getConfig": {
               "httpMethod": "GET",
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform",
@@ -1018,433 +1217,245 @@
                 "https://www.googleapis.com/auth/firebase",
                 "https://www.googleapis.com/auth/firebase.readonly"
               ],
-              "description": "Lists each IosApp associated with the specified FirebaseProject. The elements are returned in no particular order, but will be a consistent view of the Apps when additional requests are made with a `pageToken`.",
-              "flatPath": "v1beta1/projects/{projectsId}/iosApps",
-              "response": {
-                "$ref": "ListIosAppsResponse"
-              },
               "parameters": {
+                "name": {
+                  "type": "string",
+                  "location": "path",
+                  "required": true,
+                  "pattern": "^projects/[^/]+/androidApps/[^/]+/config$",
+                  "description": "The resource name of the AndroidApp configuration to download, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID/config Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values."
+                }
+              },
+              "description": "Gets the configuration artifact associated with the specified AndroidApp.",
+              "path": "v1beta1/{+name}",
+              "parameterOrder": [
+                "name"
+              ],
+              "response": {
+                "$ref": "AndroidAppConfig"
+              },
+              "flatPath": "v1beta1/projects/{projectsId}/androidApps/{androidAppsId}/config",
+              "id": "firebase.projects.androidApps.getConfig"
+            },
+            "get": {
+              "httpMethod": "GET",
+              "response": {
+                "$ref": "AndroidApp"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "parameters": {
+                "name": {
+                  "required": true,
+                  "description": "The resource name of the AndroidApp, in the format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values.",
+                  "type": "string",
+                  "location": "path",
+                  "pattern": "^projects/[^/]+/androidApps/[^/]+$"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform",
+                "https://www.googleapis.com/auth/cloud-platform.read-only",
+                "https://www.googleapis.com/auth/firebase",
+                "https://www.googleapis.com/auth/firebase.readonly"
+              ],
+              "description": "Gets the specified AndroidApp.",
+              "flatPath": "v1beta1/projects/{projectsId}/androidApps/{androidAppsId}",
+              "id": "firebase.projects.androidApps.get",
+              "path": "v1beta1/{+name}"
+            },
+            "list": {
+              "httpMethod": "GET",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform",
+                "https://www.googleapis.com/auth/cloud-platform.read-only",
+                "https://www.googleapis.com/auth/firebase",
+                "https://www.googleapis.com/auth/firebase.readonly"
+              ],
+              "parameterOrder": [
+                "parent"
+              ],
+              "parameters": {
+                "parent": {
+                  "type": "string",
+                  "location": "path",
+                  "required": true,
+                  "pattern": "^projects/[^/]+$",
+                  "description": "The resource name of the parent FirebaseProject for which to list each associated AndroidApp, in the format: projects/PROJECT_IDENTIFIER /androidApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values."
+                },
                 "pageSize": {
-                  "description": "The maximum number of Apps to return in the response. The server may return fewer than this at its discretion. If no value is specified (or too large a value is specified), the server will impose its own limit.",
+                  "description": "The maximum number of Apps to return in the response. The server may return fewer than this at its discretion. If no value is specified (or too large a value is specified), then the server will impose its own limit.",
                   "type": "integer",
                   "format": "int32",
                   "location": "query"
                 },
                 "pageToken": {
-                  "description": "Token returned from a previous call to `ListIosApps` indicating where in the set of Apps to resume listing.",
                   "type": "string",
+                  "description": "Token returned from a previous call to `ListAndroidApps` indicating where in the set of Apps to resume listing.",
                   "location": "query"
-                },
-                "parent": {
-                  "type": "string",
-                  "location": "path",
-                  "description": "The resource name of the parent FirebaseProject for which to list each associated IosApp, in the format: projects/PROJECT_IDENTIFIER/iosApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
-                  "required": true,
-                  "pattern": "^projects/[^/]+$"
                 }
               },
-              "id": "firebase.projects.iosApps.list"
+              "path": "v1beta1/{+parent}/androidApps",
+              "flatPath": "v1beta1/projects/{projectsId}/androidApps",
+              "description": "Lists each AndroidApp associated with the specified FirebaseProject. The elements are returned in no particular order, but will be a consistent view of the Apps when additional requests are made with a `pageToken`.",
+              "id": "firebase.projects.androidApps.list",
+              "response": {
+                "$ref": "ListAndroidAppsResponse"
+              }
             },
             "patch": {
-              "flatPath": "v1beta1/projects/{projectsId}/iosApps/{iosAppsId}",
-              "parameters": {
-                "updateMask": {
-                  "format": "google-fieldmask",
-                  "location": "query",
-                  "type": "string",
-                  "description": "Specifies which fields to update. Note that the fields `name`, `appId`, `projectId`, and `bundleId` are all immutable."
-                },
-                "name": {
-                  "required": true,
-                  "description": "The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).",
-                  "pattern": "^projects/[^/]+/iosApps/[^/]+$",
-                  "location": "path",
-                  "type": "string"
-                }
-              },
-              "path": "v1beta1/{+name}",
               "response": {
-                "$ref": "IosApp"
+                "$ref": "AndroidApp"
               },
-              "description": "Updates the attributes of the specified IosApp.",
-              "id": "firebase.projects.iosApps.patch",
-              "parameterOrder": [
-                "name"
-              ],
+              "description": "Updates the attributes of the specified AndroidApp.",
+              "request": {
+                "$ref": "AndroidApp"
+              },
+              "flatPath": "v1beta1/projects/{projectsId}/androidApps/{androidAppsId}",
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform",
                 "https://www.googleapis.com/auth/firebase"
+              ],
+              "path": "v1beta1/{+name}",
+              "parameters": {
+                "name": {
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/androidApps/[^/]+$",
+                  "description": "The resource name of the AndroidApp, in the format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id))."
+                },
+                "updateMask": {
+                  "type": "string",
+                  "location": "query",
+                  "format": "google-fieldmask",
+                  "description": "Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`, and `package_name` are all immutable."
+                }
+              },
+              "parameterOrder": [
+                "name"
               ],
               "httpMethod": "PATCH",
-              "request": {
-                "$ref": "IosApp"
-              }
-            },
-            "getConfig": {
-              "path": "v1beta1/{+name}",
-              "id": "firebase.projects.iosApps.getConfig",
-              "flatPath": "v1beta1/projects/{projectsId}/iosApps/{iosAppsId}/config",
-              "parameterOrder": [
-                "name"
-              ],
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform",
-                "https://www.googleapis.com/auth/cloud-platform.read-only",
-                "https://www.googleapis.com/auth/firebase",
-                "https://www.googleapis.com/auth/firebase.readonly"
-              ],
-              "httpMethod": "GET",
-              "description": "Gets the configuration artifact associated with the specified IosApp.",
-              "response": {
-                "$ref": "IosAppConfig"
-              },
-              "parameters": {
-                "name": {
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/iosApps/[^/]+/config$",
-                  "description": "The resource name of the App configuration to download, in the format: projects/PROJECT_IDENTIFIER/iosApps/APP_ID/config Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/iosApps/APP_ID Refer to the `IosApp` [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values.",
-                  "location": "path",
-                  "required": true
-                }
-              }
-            },
-            "get": {
-              "parameterOrder": [
-                "name"
-              ],
-              "parameters": {
-                "name": {
-                  "pattern": "^projects/[^/]+/iosApps/[^/]+$",
-                  "type": "string",
-                  "required": true,
-                  "description": "The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/iosApps/APP_ID Refer to the `IosApp` [`name`](../projects.iosApps#IosApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values.",
-                  "location": "path"
-                }
-              },
-              "response": {
-                "$ref": "IosApp"
-              },
-              "path": "v1beta1/{+name}",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform",
-                "https://www.googleapis.com/auth/cloud-platform.read-only",
-                "https://www.googleapis.com/auth/firebase",
-                "https://www.googleapis.com/auth/firebase.readonly"
-              ],
-              "httpMethod": "GET",
-              "flatPath": "v1beta1/projects/{projectsId}/iosApps/{iosAppsId}",
-              "description": "Gets the specified IosApp.",
-              "id": "firebase.projects.iosApps.get"
-            },
-            "create": {
-              "flatPath": "v1beta1/projects/{projectsId}/iosApps",
-              "id": "firebase.projects.iosApps.create",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform",
-                "https://www.googleapis.com/auth/firebase"
-              ],
-              "response": {
-                "$ref": "Operation"
-              },
-              "httpMethod": "POST",
-              "parameters": {
-                "parent": {
-                  "description": "The resource name of the parent FirebaseProject in which to create an IosApp, in the format: projects/PROJECT_IDENTIFIER/iosApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
-                  "location": "path",
-                  "type": "string",
-                  "required": true,
-                  "pattern": "^projects/[^/]+$"
-                }
-              },
-              "description": "Requests the creation of a new IosApp in the specified FirebaseProject. The result of this call is an `Operation` which can be used to track the provisioning process. The `Operation` is automatically deleted after completion, so there is no need to call `DeleteOperation`.",
-              "path": "v1beta1/{+parent}/iosApps",
-              "request": {
-                "$ref": "IosApp"
-              },
-              "parameterOrder": [
-                "parent"
-              ]
+              "id": "firebase.projects.androidApps.patch"
             }
-          }
-        },
-        "defaultLocation": {
-          "methods": {
-            "finalize": {
-              "parameterOrder": [
-                "parent"
-              ],
-              "flatPath": "v1beta1/projects/{projectsId}/defaultLocation:finalize",
-              "response": {
-                "$ref": "Operation"
-              },
-              "description": "Sets the default Google Cloud Platform (GCP) resource location for the specified FirebaseProject. This method creates an App Engine application with a [default Cloud Storage bucket](https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient/setting-up-cloud-storage#activating_a_cloud_storage_bucket), located in the specified [`locationId`](#body.request_body.FIELDS.location_id). This location must be one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations). After the default GCP resource location is finalized, or if it was already set, it cannot be changed. The default GCP resource location for the specified `FirebaseProject` might already be set because either the underlying GCP `Project` already has an App Engine application or `FinalizeDefaultLocation` was previously called with a specified `locationId`. Any new calls to `FinalizeDefaultLocation` with a *different* specified `locationId` will return a 409 error. The result of this call is an [`Operation`](../../v1beta1/operations), which can be used to track the provisioning process. The [`response`](../../v1beta1/operations#Operation.FIELDS.response) type of the `Operation` is google.protobuf.Empty. The `Operation` can be polled by its `name` using GetOperation until `done` is true. When `done` is true, the `Operation` has either succeeded or failed. If the `Operation` has succeeded, its [`response`](../../v1beta1/operations#Operation.FIELDS.response) will be set to a google.protobuf.Empty; if the `Operation` has failed, its `error` will be set to a google.rpc.Status. The `Operation` is automatically deleted after completion, so there is no need to call DeleteOperation. All fields listed in the [request body](#request-body) are required. To call `FinalizeDefaultLocation`, a member must be an Owner of the Project.",
-              "httpMethod": "POST",
-              "parameters": {
-                "parent": {
-                  "type": "string",
-                  "required": true,
-                  "pattern": "^projects/[^/]+$",
-                  "description": "The resource name of the FirebaseProject for which the default GCP resource location will be set, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
-                  "location": "path"
-                }
-              },
-              "request": {
-                "$ref": "FinalizeDefaultLocationRequest"
-              },
-              "path": "v1beta1/{+parent}/defaultLocation:finalize",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform",
-                "https://www.googleapis.com/auth/firebase"
-              ],
-              "id": "firebase.projects.defaultLocation.finalize"
-            }
-          }
-        },
-        "androidApps": {
+          },
           "resources": {
             "sha": {
               "methods": {
+                "delete": {
+                  "path": "v1beta1/{+name}",
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "response": {
+                    "$ref": "Empty"
+                  },
+                  "flatPath": "v1beta1/projects/{projectsId}/androidApps/{androidAppsId}/sha/{shaId}",
+                  "parameters": {
+                    "name": {
+                      "required": true,
+                      "location": "path",
+                      "pattern": "^projects/[^/]+/androidApps/[^/]+/sha/[^/]+$",
+                      "description": "The resource name of the ShaCertificate to remove from the parent AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID /sha/SHA_HASH Refer to the `ShaCertificate` [`name`](../projects.androidApps.sha#ShaCertificate.FIELDS.name) field for details about PROJECT_IDENTIFIER, APP_ID, and SHA_HASH values. You can obtain the full resource name of the `ShaCertificate` from the response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the original [`CreateShaCertificate`](../projects.androidApps.sha/create).",
+                      "type": "string"
+                    }
+                  },
+                  "id": "firebase.projects.androidApps.sha.delete",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform",
+                    "https://www.googleapis.com/auth/firebase"
+                  ],
+                  "httpMethod": "DELETE",
+                  "description": "Removes a ShaCertificate from the specified AndroidApp."
+                },
                 "list": {
-                  "path": "v1beta1/{+parent}/sha",
+                  "response": {
+                    "$ref": "ListShaCertificatesResponse"
+                  },
+                  "description": "Lists the SHA-1 and SHA-256 certificates for the specified AndroidApp.",
+                  "id": "firebase.projects.androidApps.sha.list",
                   "scopes": [
                     "https://www.googleapis.com/auth/cloud-platform",
                     "https://www.googleapis.com/auth/cloud-platform.read-only",
                     "https://www.googleapis.com/auth/firebase",
                     "https://www.googleapis.com/auth/firebase.readonly"
                   ],
-                  "response": {
-                    "$ref": "ListShaCertificatesResponse"
-                  },
-                  "parameters": {
-                    "parent": {
-                      "pattern": "^projects/[^/]+/androidApps/[^/]+$",
-                      "description": "The resource name of the parent AndroidApp for which to list each associated ShaCertificate, in the format: projects/PROJECT_IDENTIFIER /androidApps/APP_ID Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values.",
-                      "required": true,
-                      "location": "path",
-                      "type": "string"
-                    }
-                  },
+                  "path": "v1beta1/{+parent}/sha",
                   "flatPath": "v1beta1/projects/{projectsId}/androidApps/{androidAppsId}/sha",
-                  "description": "Lists the SHA-1 and SHA-256 certificates for the specified AndroidApp.",
+                  "httpMethod": "GET",
                   "parameterOrder": [
                     "parent"
                   ],
-                  "id": "firebase.projects.androidApps.sha.list",
-                  "httpMethod": "GET"
+                  "parameters": {
+                    "parent": {
+                      "location": "path",
+                      "type": "string",
+                      "required": true,
+                      "pattern": "^projects/[^/]+/androidApps/[^/]+$",
+                      "description": "The resource name of the parent AndroidApp for which to list each associated ShaCertificate, in the format: projects/PROJECT_IDENTIFIER /androidApps/APP_ID Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values."
+                    }
+                  }
                 },
-                "delete": {
-                  "description": "Removes a ShaCertificate from the specified AndroidApp.",
+                "create": {
+                  "response": {
+                    "$ref": "ShaCertificate"
+                  },
+                  "parameterOrder": [
+                    "parent"
+                  ],
                   "scopes": [
                     "https://www.googleapis.com/auth/cloud-platform",
                     "https://www.googleapis.com/auth/firebase"
                   ],
-                  "httpMethod": "DELETE",
-                  "id": "firebase.projects.androidApps.sha.delete",
-                  "path": "v1beta1/{+name}",
-                  "flatPath": "v1beta1/projects/{projectsId}/androidApps/{androidAppsId}/sha/{shaId}",
-                  "parameters": {
-                    "name": {
-                      "type": "string",
-                      "required": true,
-                      "pattern": "^projects/[^/]+/androidApps/[^/]+/sha/[^/]+$",
-                      "location": "path",
-                      "description": "The resource name of the ShaCertificate to remove from the parent AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID /sha/SHA_HASH Refer to the `ShaCertificate` [`name`](../projects.androidApps.sha#ShaCertificate.FIELDS.name) field for details about PROJECT_IDENTIFIER, APP_ID, and SHA_HASH values. You can obtain the full resource name of the `ShaCertificate` from the response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the original [`CreateShaCertificate`](../projects.androidApps.sha/create)."
-                    }
-                  },
-                  "response": {
-                    "$ref": "Empty"
-                  },
-                  "parameterOrder": [
-                    "name"
-                  ]
-                },
-                "create": {
-                  "parameterOrder": [
-                    "parent"
-                  ],
+                  "id": "firebase.projects.androidApps.sha.create",
+                  "description": "Adds a ShaCertificate to the specified AndroidApp.",
+                  "path": "v1beta1/{+parent}/sha",
+                  "flatPath": "v1beta1/projects/{projectsId}/androidApps/{androidAppsId}/sha",
+                  "httpMethod": "POST",
                   "request": {
                     "$ref": "ShaCertificate"
                   },
-                  "response": {
-                    "$ref": "ShaCertificate"
-                  },
-                  "flatPath": "v1beta1/projects/{projectsId}/androidApps/{androidAppsId}/sha",
-                  "id": "firebase.projects.androidApps.sha.create",
-                  "path": "v1beta1/{+parent}/sha",
-                  "description": "Adds a ShaCertificate to the specified AndroidApp.",
                   "parameters": {
                     "parent": {
+                      "type": "string",
+                      "pattern": "^projects/[^/]+/androidApps/[^/]+$",
                       "required": true,
                       "location": "path",
-                      "pattern": "^projects/[^/]+/androidApps/[^/]+$",
-                      "type": "string",
                       "description": "The resource name of the parent AndroidApp to which to add a ShaCertificate, in the format: projects/PROJECT_IDENTIFIER/androidApps/ APP_ID Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values."
                     }
-                  },
-                  "httpMethod": "POST",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform",
-                    "https://www.googleapis.com/auth/firebase"
-                  ]
+                  }
                 }
               }
             }
-          },
+          }
+        },
+        "defaultLocation": {
           "methods": {
-            "get": {
-              "response": {
-                "$ref": "AndroidApp"
-              },
-              "parameterOrder": [
-                "name"
-              ],
-              "description": "Gets the specified AndroidApp.",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform",
-                "https://www.googleapis.com/auth/cloud-platform.read-only",
-                "https://www.googleapis.com/auth/firebase",
-                "https://www.googleapis.com/auth/firebase.readonly"
-              ],
-              "id": "firebase.projects.androidApps.get",
-              "flatPath": "v1beta1/projects/{projectsId}/androidApps/{androidAppsId}",
-              "httpMethod": "GET",
-              "path": "v1beta1/{+name}",
-              "parameters": {
-                "name": {
-                  "description": "The resource name of the AndroidApp, in the format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values.",
-                  "location": "path",
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/androidApps/[^/]+$",
-                  "required": true
-                }
-              }
-            },
-            "patch": {
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform",
-                "https://www.googleapis.com/auth/firebase"
-              ],
-              "response": {
-                "$ref": "AndroidApp"
-              },
-              "request": {
-                "$ref": "AndroidApp"
-              },
-              "parameterOrder": [
-                "name"
-              ],
-              "description": "Updates the attributes of the specified AndroidApp.",
-              "parameters": {
-                "updateMask": {
-                  "description": "Specifies which fields to update. Note that the fields `name`, `app_id`, `project_id`, and `package_name` are all immutable.",
-                  "format": "google-fieldmask",
-                  "type": "string",
-                  "location": "query"
-                },
-                "name": {
-                  "description": "The resource name of the AndroidApp, in the format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).",
-                  "type": "string",
-                  "location": "path",
-                  "required": true,
-                  "pattern": "^projects/[^/]+/androidApps/[^/]+$"
-                }
-              },
-              "id": "firebase.projects.androidApps.patch",
-              "httpMethod": "PATCH",
-              "path": "v1beta1/{+name}",
-              "flatPath": "v1beta1/projects/{projectsId}/androidApps/{androidAppsId}"
-            },
-            "getConfig": {
-              "parameterOrder": [
-                "name"
-              ],
-              "id": "firebase.projects.androidApps.getConfig",
-              "response": {
-                "$ref": "AndroidAppConfig"
-              },
-              "flatPath": "v1beta1/projects/{projectsId}/androidApps/{androidAppsId}/config",
-              "parameters": {
-                "name": {
-                  "pattern": "^projects/[^/]+/androidApps/[^/]+/config$",
-                  "type": "string",
-                  "required": true,
-                  "description": "The resource name of the AndroidApp configuration to download, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID/config Since an APP_ID is a unique identifier, the Unique Resource from Sub-Collection access pattern may be used here, in the format: projects/-/androidApps/APP_ID Refer to the `AndroidApp` [`name`](../projects.androidApps#AndroidApp.FIELDS.name) field for details about PROJECT_IDENTIFIER and APP_ID values.",
-                  "location": "path"
-                }
-              },
-              "description": "Gets the configuration artifact associated with the specified AndroidApp.",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform",
-                "https://www.googleapis.com/auth/cloud-platform.read-only",
-                "https://www.googleapis.com/auth/firebase",
-                "https://www.googleapis.com/auth/firebase.readonly"
-              ],
-              "path": "v1beta1/{+name}",
-              "httpMethod": "GET"
-            },
-            "list": {
-              "id": "firebase.projects.androidApps.list",
-              "flatPath": "v1beta1/projects/{projectsId}/androidApps",
-              "parameters": {
-                "pageSize": {
-                  "type": "integer",
-                  "description": "The maximum number of Apps to return in the response. The server may return fewer than this at its discretion. If no value is specified (or too large a value is specified), then the server will impose its own limit.",
-                  "format": "int32",
-                  "location": "query"
-                },
-                "parent": {
-                  "required": true,
-                  "location": "path",
-                  "type": "string",
-                  "pattern": "^projects/[^/]+$",
-                  "description": "The resource name of the parent FirebaseProject for which to list each associated AndroidApp, in the format: projects/PROJECT_IDENTIFIER /androidApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values."
-                },
-                "pageToken": {
-                  "type": "string",
-                  "location": "query",
-                  "description": "Token returned from a previous call to `ListAndroidApps` indicating where in the set of Apps to resume listing."
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform",
-                "https://www.googleapis.com/auth/cloud-platform.read-only",
-                "https://www.googleapis.com/auth/firebase",
-                "https://www.googleapis.com/auth/firebase.readonly"
-              ],
-              "response": {
-                "$ref": "ListAndroidAppsResponse"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "description": "Lists each AndroidApp associated with the specified FirebaseProject. The elements are returned in no particular order, but will be a consistent view of the Apps when additional requests are made with a `pageToken`.",
-              "httpMethod": "GET",
-              "path": "v1beta1/{+parent}/androidApps"
-            },
-            "create": {
-              "id": "firebase.projects.androidApps.create",
-              "request": {
-                "$ref": "AndroidApp"
-              },
-              "flatPath": "v1beta1/projects/{projectsId}/androidApps",
-              "parameters": {
-                "parent": {
-                  "required": true,
-                  "description": "The resource name of the parent FirebaseProject in which to create an AndroidApp, in the format: projects/PROJECT_IDENTIFIER/androidApps Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
-                  "type": "string",
-                  "pattern": "^projects/[^/]+$",
-                  "location": "path"
-                }
-              },
-              "path": "v1beta1/{+parent}/androidApps",
+            "finalize": {
               "response": {
                 "$ref": "Operation"
               },
               "httpMethod": "POST",
+              "request": {
+                "$ref": "FinalizeDefaultLocationRequest"
+              },
+              "flatPath": "v1beta1/projects/{projectsId}/defaultLocation:finalize",
+              "path": "v1beta1/{+parent}/defaultLocation:finalize",
+              "id": "firebase.projects.defaultLocation.finalize",
+              "parameters": {
+                "parent": {
+                  "required": true,
+                  "type": "string",
+                  "location": "path",
+                  "description": "The resource name of the FirebaseProject for which the default GCP resource location will be set, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
+                  "pattern": "^projects/[^/]+$"
+                }
+              },
               "parameterOrder": [
                 "parent"
               ],
-              "description": "Requests the creation of a new AndroidApp in the specified FirebaseProject. The result of this call is an `Operation` which can be used to track the provisioning process. The `Operation` is automatically deleted after completion, so there is no need to call `DeleteOperation`.",
+              "description": "Sets the default Google Cloud Platform (GCP) resource location for the specified FirebaseProject. This method creates an App Engine application with a [default Cloud Storage bucket](https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient/setting-up-cloud-storage#activating_a_cloud_storage_bucket), located in the specified [`locationId`](#body.request_body.FIELDS.location_id). This location must be one of the available [GCP resource locations](https://firebase.google.com/docs/projects/locations). After the default GCP resource location is finalized, or if it was already set, it cannot be changed. The default GCP resource location for the specified `FirebaseProject` might already be set because either the underlying GCP `Project` already has an App Engine application or `FinalizeDefaultLocation` was previously called with a specified `locationId`. Any new calls to `FinalizeDefaultLocation` with a *different* specified `locationId` will return a 409 error. The result of this call is an [`Operation`](../../v1beta1/operations), which can be used to track the provisioning process. The [`response`](../../v1beta1/operations#Operation.FIELDS.response) type of the `Operation` is google.protobuf.Empty. The `Operation` can be polled by its `name` using GetOperation until `done` is true. When `done` is true, the `Operation` has either succeeded or failed. If the `Operation` has succeeded, its [`response`](../../v1beta1/operations#Operation.FIELDS.response) will be set to a google.protobuf.Empty; if the `Operation` has failed, its `error` will be set to a google.rpc.Status. The `Operation` is automatically deleted after completion, so there is no need to call DeleteOperation. All fields listed in the [request body](#request-body) are required. To call `FinalizeDefaultLocation`, a member must be an Owner of the Project.",
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform",
                 "https://www.googleapis.com/auth/firebase"
@@ -1454,184 +1465,204 @@
         }
       },
       "methods": {
-        "getAdminSdkConfig": {
-          "flatPath": "v1beta1/projects/{projectsId}/adminSdkConfig",
-          "parameterOrder": [
-            "name"
-          ],
-          "path": "v1beta1/{+name}",
-          "description": "Gets the configuration artifact associated with the specified FirebaseProject, which can be used by servers to simplify initialization. Typically, this configuration is used with the Firebase Admin SDK [initializeApp](https://firebase.google.com/docs/admin/setup#initialize_the_sdk) command.",
-          "response": {
-            "$ref": "AdminSdkConfig"
-          },
-          "id": "firebase.projects.getAdminSdkConfig",
+        "addGoogleAnalytics": {
           "parameters": {
-            "name": {
-              "type": "string",
-              "description": "The resource name of the FirebaseProject, in the format: projects/ PROJECT_IDENTIFIER/adminSdkConfig Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
-              "required": true,
-              "pattern": "^projects/[^/]+/adminSdkConfig$",
-              "location": "path"
-            }
-          },
-          "httpMethod": "GET",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/firebase",
-            "https://www.googleapis.com/auth/firebase.readonly"
-          ]
-        },
-        "addFirebase": {
-          "parameters": {
-            "project": {
-              "pattern": "^projects/[^/]+$",
+            "parent": {
               "location": "path",
-              "type": "string",
+              "description": "The resource name of the FirebaseProject to link to an existing Google Analytics account, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
               "required": true,
-              "description": "The resource name of the GCP `Project` to which Firebase resources will be added, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values. After calling `AddFirebase`, the unique Project identifiers ( [`projectNumber`](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project.FIELDS.project_number) and [`projectId`](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying GCP `Project` are also the identifiers of the FirebaseProject."
+              "pattern": "^projects/[^/]+$",
+              "type": "string"
             }
           },
-          "path": "v1beta1/{+project}:addFirebase",
-          "httpMethod": "POST",
-          "id": "firebase.projects.addFirebase",
           "response": {
             "$ref": "Operation"
           },
           "request": {
-            "$ref": "AddFirebaseRequest"
+            "$ref": "AddGoogleAnalyticsRequest"
           },
+          "id": "firebase.projects.addGoogleAnalytics",
+          "flatPath": "v1beta1/projects/{projectsId}:addGoogleAnalytics",
           "parameterOrder": [
-            "project"
+            "parent"
           ],
-          "flatPath": "v1beta1/projects/{projectsId}:addFirebase",
-          "description": "Adds Firebase resources to the specified existing [Google Cloud Platform (GCP) `Project`] (https://cloud.google.com/resource-manager/reference/rest/v1/projects). Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` has the same underlying GCP identifiers (`projectNumber` and `projectId`). This allows for easy interop with Google APIs. The result of this call is an [`Operation`](../../v1beta1/operations). Poll the `Operation` to track the provisioning process by calling GetOperation until [`done`](../../v1beta1/operations#Operation.FIELDS.done) is `true`. When `done` is `true`, the `Operation` has either succeeded or failed. If the `Operation` succeeded, its [`response`](../../v1beta1/operations#Operation.FIELDS.response) is set to a FirebaseProject; if the `Operation` failed, its [`error`](../../v1beta1/operations#Operation.FIELDS.error) is set to a google.rpc.Status. The `Operation` is automatically deleted after completion, so there is no need to call DeleteOperation. This method does not modify any billing account information on the underlying GCP `Project`. To call `AddFirebase`, a project member or service account must have the following permissions (the IAM roles of Editor and Owner contain these permissions): `firebase.projects.update`, `resourcemanager.projects.get`, `serviceusage.services.enable`, and `serviceusage.services.get`.",
+          "httpMethod": "POST",
           "scopes": [
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/firebase"
-          ]
+          ],
+          "description": "Links the specified FirebaseProject with an existing [Google Analytics account](http://www.google.com/analytics/). Using this call, you can either: - Specify an `analyticsAccountId` to provision a new Google Analytics property within the specified account and associate the new property with the `FirebaseProject`. - Specify an existing `analyticsPropertyId` to associate the property with the `FirebaseProject`. Note that when you call `AddGoogleAnalytics`: 1. The first check determines if any existing data streams in the Google Analytics property correspond to any existing Firebase Apps in the `FirebaseProject` (based on the `packageName` or `bundleId` associated with the data stream). Then, as applicable, the data streams and apps are linked. Note that this auto-linking only applies to `AndroidApps` and `IosApps`. 2. If no corresponding data streams are found for the Firebase Apps, new data streams are provisioned in the Google Analytics property for each of the Firebase Apps. Note that a new data stream is always provisioned for a Web App even if it was previously associated with a data stream in the Analytics property. Learn more about the hierarchy and structure of Google Analytics accounts in the [Analytics documentation](https://support.google.com/analytics/answer/9303323). The result of this call is an [`Operation`](../../v1beta1/operations). Poll the `Operation` to track the provisioning process by calling GetOperation until [`done`](../../v1beta1/operations#Operation.FIELDS.done) is `true`. When `done` is `true`, the `Operation` has either succeeded or failed. If the `Operation` succeeded, its [`response`](../../v1beta1/operations#Operation.FIELDS.response) is set to an AnalyticsDetails; if the `Operation` failed, its [`error`](../../v1beta1/operations#Operation.FIELDS.error) is set to a google.rpc.Status. To call `AddGoogleAnalytics`, a project member must be an Owner for the existing `FirebaseProject` and have the [`Edit` permission](https://support.google.com/analytics/answer/2884495) for the Google Analytics account. If the `FirebaseProject` already has Google Analytics enabled, and you call `AddGoogleAnalytics` using an `analyticsPropertyId` that's different from the currently associated property, then the call will fail. Analytics may have already been enabled in the Firebase console or by specifying `timeZone` and `regionCode` in the call to [`AddFirebase`](../../v1beta1/projects/addFirebase).",
+          "path": "v1beta1/{+parent}:addGoogleAnalytics"
         },
         "get": {
+          "path": "v1beta1/{+name}",
+          "parameterOrder": [
+            "name"
+          ],
           "httpMethod": "GET",
           "id": "firebase.projects.get",
-          "path": "v1beta1/{+name}",
+          "parameters": {
+            "name": {
+              "type": "string",
+              "location": "path",
+              "description": "The resource name of the FirebaseProject, in the format: projects/ PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
+              "pattern": "^projects/[^/]+$",
+              "required": true
+            }
+          },
+          "description": "Gets the specified FirebaseProject.",
           "scopes": [
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/cloud-platform.read-only",
             "https://www.googleapis.com/auth/firebase",
             "https://www.googleapis.com/auth/firebase.readonly"
           ],
-          "parameterOrder": [
-            "name"
-          ],
-          "flatPath": "v1beta1/projects/{projectsId}",
           "response": {
             "$ref": "FirebaseProject"
           },
-          "parameters": {
-            "name": {
-              "pattern": "^projects/[^/]+$",
-              "description": "The resource name of the FirebaseProject, in the format: projects/ PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
-              "type": "string",
-              "required": true,
-              "location": "path"
-            }
-          },
-          "description": "Gets the specified FirebaseProject."
-        },
-        "patch": {
-          "response": {
-            "$ref": "FirebaseProject"
-          },
-          "parameterOrder": [
-            "name"
-          ],
-          "parameters": {
-            "updateMask": {
-              "type": "string",
-              "description": "Specifies which fields to update. If this list is empty, then no state will be updated. Note that the fields `name`, `projectId`, and `projectNumber` are all immutable.",
-              "format": "google-fieldmask",
-              "location": "query"
-            },
-            "name": {
-              "pattern": "^projects/[^/]+$",
-              "location": "path",
-              "description": "The resource name of the Project, in the format: projects/PROJECT_IDENTIFIER PROJECT_IDENTIFIER: the Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`.",
-              "type": "string",
-              "required": true
-            }
-          },
-          "flatPath": "v1beta1/projects/{projectsId}",
-          "description": "Updates the attributes of the specified FirebaseProject. All [query parameters](#query-parameters) are required.",
-          "request": {
-            "$ref": "FirebaseProject"
-          },
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/firebase"
-          ],
-          "id": "firebase.projects.patch",
-          "httpMethod": "PATCH",
-          "path": "v1beta1/{+name}"
+          "flatPath": "v1beta1/projects/{projectsId}"
         },
         "getAnalyticsDetails": {
+          "flatPath": "v1beta1/projects/{projectsId}/analyticsDetails",
+          "description": "Gets the Google Analytics details currently associated with the specified FirebaseProject. If the `FirebaseProject` is not yet linked to Google Analytics, then the response to `GetAnalyticsDetails` is `NOT_FOUND`.",
           "parameters": {
             "name": {
               "type": "string",
-              "pattern": "^projects/[^/]+/analyticsDetails$",
               "location": "path",
               "description": "The resource name of the FirebaseProject, in the format: projects/ PROJECT_IDENTIFIER/analyticsDetails Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
-              "required": true
+              "required": true,
+              "pattern": "^projects/[^/]+/analyticsDetails$"
             }
           },
+          "parameterOrder": [
+            "name"
+          ],
+          "httpMethod": "GET",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/firebase",
+            "https://www.googleapis.com/auth/firebase.readonly"
+          ],
           "path": "v1beta1/{+name}",
           "id": "firebase.projects.getAnalyticsDetails",
           "response": {
             "$ref": "AnalyticsDetails"
-          },
-          "flatPath": "v1beta1/projects/{projectsId}/analyticsDetails",
-          "httpMethod": "GET",
-          "description": "Gets the Google Analytics details currently associated with the specified FirebaseProject. If the `FirebaseProject` is not yet linked to Google Analytics, then the response to `GetAnalyticsDetails` is `NOT_FOUND`.",
-          "parameterOrder": [
-            "name"
-          ],
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/firebase",
-            "https://www.googleapis.com/auth/firebase.readonly"
-          ]
+          }
         },
         "removeAnalytics": {
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/firebase"
-          ],
-          "flatPath": "v1beta1/projects/{projectsId}:removeAnalytics",
           "response": {
             "$ref": "Empty"
           },
-          "parameters": {
-            "parent": {
-              "required": true,
-              "description": "The resource name of the FirebaseProject to unlink from its Google Analytics account, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
-              "location": "path",
-              "type": "string",
-              "pattern": "^projects/[^/]+$"
-            }
-          },
-          "httpMethod": "POST",
-          "path": "v1beta1/{+parent}:removeAnalytics",
           "request": {
             "$ref": "RemoveAnalyticsRequest"
           },
           "id": "firebase.projects.removeAnalytics",
+          "path": "v1beta1/{+parent}:removeAnalytics",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/firebase"
+          ],
+          "description": "Unlinks the specified FirebaseProject from its Google Analytics account. This call removes the association of the specified `FirebaseProject` with its current Google Analytics property. However, this call does not delete the Google Analytics resources, such as the Google Analytics property or any data streams. These resources may be re-associated later to the `FirebaseProject` by calling [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) and specifying the same `analyticsPropertyId`. For Android Apps and iOS Apps, this call re-links data streams with their corresponding apps. However, for Web Apps, this call provisions a *new* data stream for each Web App. To call `RemoveAnalytics`, a project member must be an Owner for the `FirebaseProject`.",
+          "parameters": {
+            "parent": {
+              "location": "path",
+              "description": "The resource name of the FirebaseProject to unlink from its Google Analytics account, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
+              "type": "string",
+              "required": true,
+              "pattern": "^projects/[^/]+$"
+            }
+          },
           "parameterOrder": [
             "parent"
           ],
-          "description": "Unlinks the specified FirebaseProject from its Google Analytics account. This call removes the association of the specified `FirebaseProject` with its current Google Analytics property. However, this call does not delete the Google Analytics resources, such as the Google Analytics property or any data streams. These resources may be re-associated later to the `FirebaseProject` by calling [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) and specifying the same `analyticsPropertyId`. For Android Apps and iOS Apps, this call re-links data streams with their corresponding apps. However, for Web Apps, this call provisions a *new* data stream for each Web App. To call `RemoveAnalytics`, a project member must be an Owner for the `FirebaseProject`."
+          "httpMethod": "POST",
+          "flatPath": "v1beta1/projects/{projectsId}:removeAnalytics"
+        },
+        "patch": {
+          "path": "v1beta1/{+name}",
+          "flatPath": "v1beta1/projects/{projectsId}",
+          "parameterOrder": [
+            "name"
+          ],
+          "description": "Updates the attributes of the specified FirebaseProject. All [query parameters](#query-parameters) are required.",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/firebase"
+          ],
+          "httpMethod": "PATCH",
+          "id": "firebase.projects.patch",
+          "request": {
+            "$ref": "FirebaseProject"
+          },
+          "parameters": {
+            "name": {
+              "pattern": "^projects/[^/]+$",
+              "description": "The resource name of the Project, in the format: projects/PROJECT_IDENTIFIER PROJECT_IDENTIFIER: the Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`.",
+              "type": "string",
+              "required": true,
+              "location": "path"
+            },
+            "updateMask": {
+              "type": "string",
+              "location": "query",
+              "description": "Specifies which fields to update. If this list is empty, then no state will be updated. Note that the fields `name`, `projectId`, and `projectNumber` are all immutable.",
+              "format": "google-fieldmask"
+            }
+          },
+          "response": {
+            "$ref": "FirebaseProject"
+          }
+        },
+        "addFirebase": {
+          "request": {
+            "$ref": "AddFirebaseRequest"
+          },
+          "response": {
+            "$ref": "Operation"
+          },
+          "httpMethod": "POST",
+          "id": "firebase.projects.addFirebase",
+          "parameterOrder": [
+            "project"
+          ],
+          "parameters": {
+            "project": {
+              "location": "path",
+              "type": "string",
+              "description": "The resource name of the GCP `Project` to which Firebase resources will be added, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values. After calling `AddFirebase`, the unique Project identifiers ( [`projectNumber`](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project.FIELDS.project_number) and [`projectId`](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying GCP `Project` are also the identifiers of the FirebaseProject.",
+              "required": true,
+              "pattern": "^projects/[^/]+$"
+            }
+          },
+          "description": "Adds Firebase resources to the specified existing [Google Cloud Platform (GCP) `Project`] (https://cloud.google.com/resource-manager/reference/rest/v1/projects). Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` has the same underlying GCP identifiers (`projectNumber` and `projectId`). This allows for easy interop with Google APIs. The result of this call is an [`Operation`](../../v1beta1/operations). Poll the `Operation` to track the provisioning process by calling GetOperation until [`done`](../../v1beta1/operations#Operation.FIELDS.done) is `true`. When `done` is `true`, the `Operation` has either succeeded or failed. If the `Operation` succeeded, its [`response`](../../v1beta1/operations#Operation.FIELDS.response) is set to a FirebaseProject; if the `Operation` failed, its [`error`](../../v1beta1/operations#Operation.FIELDS.error) is set to a google.rpc.Status. The `Operation` is automatically deleted after completion, so there is no need to call DeleteOperation. This method does not modify any billing account information on the underlying GCP `Project`. To call `AddFirebase`, a project member or service account must have the following permissions (the IAM roles of Editor and Owner contain these permissions): `firebase.projects.update`, `resourcemanager.projects.get`, `serviceusage.services.enable`, and `serviceusage.services.get`.",
+          "scopes": [
+            "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/firebase"
+          ],
+          "flatPath": "v1beta1/projects/{projectsId}:addFirebase",
+          "path": "v1beta1/{+project}:addFirebase"
         },
         "list": {
+          "description": "Lists each FirebaseProject accessible to the caller. The elements are returned in no particular order, but they will be a consistent view of the Projects when additional requests are made with a `pageToken`. This method is eventually consistent with Project mutations, which means newly provisioned Projects and recent modifications to existing Projects might not be reflected in the set of Projects. The list will include only ACTIVE Projects. Use GetFirebaseProject for consistent reads as well as for additional Project details.",
+          "parameters": {
+            "pageToken": {
+              "location": "query",
+              "type": "string",
+              "description": "Token returned from a previous call to `ListFirebaseProjects` indicating where in the set of Projects to resume listing."
+            },
+            "pageSize": {
+              "location": "query",
+              "format": "int32",
+              "type": "integer",
+              "description": "The maximum number of Projects to return in the response. The server may return fewer than this at its discretion. If no value is specified (or too large a value is specified), the server will impose its own limit. This value cannot be negative."
+            }
+          },
+          "path": "v1beta1/projects",
+          "httpMethod": "GET",
+          "id": "firebase.projects.list",
+          "parameterOrder": [],
+          "flatPath": "v1beta1/projects",
           "scopes": [
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/cloud-platform.read-only",
@@ -1640,90 +1671,70 @@
           ],
           "response": {
             "$ref": "ListFirebaseProjectsResponse"
-          },
-          "id": "firebase.projects.list",
-          "path": "v1beta1/projects",
-          "parameters": {
-            "pageSize": {
-              "description": "The maximum number of Projects to return in the response. The server may return fewer than this at its discretion. If no value is specified (or too large a value is specified), the server will impose its own limit. This value cannot be negative.",
-              "format": "int32",
-              "type": "integer",
-              "location": "query"
-            },
-            "pageToken": {
-              "location": "query",
-              "type": "string",
-              "description": "Token returned from a previous call to `ListFirebaseProjects` indicating where in the set of Projects to resume listing."
-            }
-          },
-          "flatPath": "v1beta1/projects",
-          "httpMethod": "GET",
-          "parameterOrder": [],
-          "description": "Lists each FirebaseProject accessible to the caller. The elements are returned in no particular order, but they will be a consistent view of the Projects when additional requests are made with a `pageToken`. This method is eventually consistent with Project mutations, which means newly provisioned Projects and recent modifications to existing Projects might not be reflected in the set of Projects. The list will include only ACTIVE Projects. Use GetFirebaseProject for consistent reads as well as for additional Project details."
+          }
         },
-        "addGoogleAnalytics": {
-          "httpMethod": "POST",
+        "getAdminSdkConfig": {
+          "description": "Gets the configuration artifact associated with the specified FirebaseProject, which can be used by servers to simplify initialization. Typically, this configuration is used with the Firebase Admin SDK [initializeApp](https://firebase.google.com/docs/admin/setup#initialize_the_sdk) command.",
+          "id": "firebase.projects.getAdminSdkConfig",
           "scopes": [
             "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/firebase"
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/firebase",
+            "https://www.googleapis.com/auth/firebase.readonly"
           ],
-          "request": {
-            "$ref": "AddGoogleAnalyticsRequest"
-          },
-          "flatPath": "v1beta1/projects/{projectsId}:addGoogleAnalytics",
-          "path": "v1beta1/{+parent}:addGoogleAnalytics",
           "parameterOrder": [
-            "parent"
+            "name"
           ],
           "response": {
-            "$ref": "Operation"
+            "$ref": "AdminSdkConfig"
           },
+          "path": "v1beta1/{+name}",
+          "flatPath": "v1beta1/projects/{projectsId}/adminSdkConfig",
+          "httpMethod": "GET",
           "parameters": {
-            "parent": {
+            "name": {
               "required": true,
-              "pattern": "^projects/[^/]+$",
-              "location": "path",
+              "pattern": "^projects/[^/]+/adminSdkConfig$",
               "type": "string",
-              "description": "The resource name of the FirebaseProject to link to an existing Google Analytics account, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values."
+              "description": "The resource name of the FirebaseProject, in the format: projects/ PROJECT_IDENTIFIER/adminSdkConfig Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
+              "location": "path"
             }
-          },
-          "id": "firebase.projects.addGoogleAnalytics",
-          "description": "Links the specified FirebaseProject with an existing [Google Analytics account](http://www.google.com/analytics/). Using this call, you can either: - Specify an `analyticsAccountId` to provision a new Google Analytics property within the specified account and associate the new property with the `FirebaseProject`. - Specify an existing `analyticsPropertyId` to associate the property with the `FirebaseProject`. Note that when you call `AddGoogleAnalytics`: 1. The first check determines if any existing data streams in the Google Analytics property correspond to any existing Firebase Apps in the `FirebaseProject` (based on the `packageName` or `bundleId` associated with the data stream). Then, as applicable, the data streams and apps are linked. Note that this auto-linking only applies to `AndroidApps` and `IosApps`. 2. If no corresponding data streams are found for the Firebase Apps, new data streams are provisioned in the Google Analytics property for each of the Firebase Apps. Note that a new data stream is always provisioned for a Web App even if it was previously associated with a data stream in the Analytics property. Learn more about the hierarchy and structure of Google Analytics accounts in the [Analytics documentation](https://support.google.com/analytics/answer/9303323). The result of this call is an [`Operation`](../../v1beta1/operations). Poll the `Operation` to track the provisioning process by calling GetOperation until [`done`](../../v1beta1/operations#Operation.FIELDS.done) is `true`. When `done` is `true`, the `Operation` has either succeeded or failed. If the `Operation` succeeded, its [`response`](../../v1beta1/operations#Operation.FIELDS.response) is set to an AnalyticsDetails; if the `Operation` failed, its [`error`](../../v1beta1/operations#Operation.FIELDS.error) is set to a google.rpc.Status. To call `AddGoogleAnalytics`, a project member must be an Owner for the existing `FirebaseProject` and have the [`Edit` permission](https://support.google.com/analytics/answer/2884495) for the Google Analytics account. If the `FirebaseProject` already has Google Analytics enabled, and you call `AddGoogleAnalytics` using an `analyticsPropertyId` that's different from the currently associated property, then the call will fail. Analytics may have already been enabled in the Firebase console or by specifying `timeZone` and `regionCode` in the call to [`AddFirebase`](../../v1beta1/projects/addFirebase)."
+          }
         },
         "searchApps": {
+          "description": "Lists all available Apps for the specified FirebaseProject. This is a convenience method. Typically, interaction with an App should be done using the platform-specific service, but some tool use-cases require a summary of all known Apps (such as for App selector interfaces).",
           "parameterOrder": [
             "parent"
           ],
+          "flatPath": "v1beta1/projects/{projectsId}:searchApps",
+          "httpMethod": "GET",
+          "id": "firebase.projects.searchApps",
           "path": "v1beta1/{+parent}:searchApps",
           "parameters": {
+            "filter": {
+              "type": "string",
+              "description": "A query string compatible with Google's [AIP-160](https://google.aip.dev/160) standard. Use any of the following fields in a query: * [`appId`](../projects.apps#FirebaseProjectInfo.FIELDS.app_id) * [`namespace`](../projects.apps#FirebaseProjectInfo.FIELDS.namespace) * [`platform`](../projects.apps#FirebaseProjectInfo.FIELDS.platform)",
+              "location": "query"
+            },
+            "pageToken": {
+              "type": "string",
+              "location": "query",
+              "description": "Token returned from a previous call to `SearchFirebaseApps` indicating where in the set of Apps to resume listing."
+            },
+            "pageSize": {
+              "type": "integer",
+              "location": "query",
+              "description": "The maximum number of Apps to return in the response. The server may return fewer than this value at its discretion. If no value is specified (or too large a value is specified), then the server will impose its own limit. This value cannot be negative.",
+              "format": "int32"
+            },
             "parent": {
               "location": "path",
               "required": true,
-              "type": "string",
+              "pattern": "^projects/[^/]+$",
               "description": "The parent FirebaseProject for which to list Apps, in the format: projects/ PROJECT_IDENTIFIER Refer to the `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER values.",
-              "pattern": "^projects/[^/]+$"
-            },
-            "pageSize": {
-              "format": "int32",
-              "type": "integer",
-              "location": "query",
-              "description": "The maximum number of Apps to return in the response. The server may return fewer than this value at its discretion. If no value is specified (or too large a value is specified), then the server will impose its own limit. This value cannot be negative."
-            },
-            "pageToken": {
-              "location": "query",
-              "type": "string",
-              "description": "Token returned from a previous call to `SearchFirebaseApps` indicating where in the set of Apps to resume listing."
-            },
-            "filter": {
-              "description": "A query string compatible with Google's [AIP-160](https://google.aip.dev/160) standard. Use any of the following fields in a query: * [`appId`](../projects.apps#FirebaseProjectInfo.FIELDS.app_id) * [`namespace`](../projects.apps#FirebaseProjectInfo.FIELDS.namespace) * [`platform`](../projects.apps#FirebaseProjectInfo.FIELDS.platform)",
-              "type": "string",
-              "location": "query"
+              "type": "string"
             }
           },
-          "flatPath": "v1beta1/projects/{projectsId}:searchApps",
-          "description": "Lists all available Apps for the specified FirebaseProject. This is a convenience method. Typically, interaction with an App should be done using the platform-specific service, but some tool use-cases require a summary of all known Apps (such as for App selector interfaces).",
-          "httpMethod": "GET",
-          "id": "firebase.projects.searchApps",
           "scopes": [
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/cloud-platform.read-only",
@@ -1735,127 +1746,116 @@
           }
         }
       }
-    },
-    "availableProjects": {
-      "methods": {
-        "list": {
-          "flatPath": "v1beta1/availableProjects",
-          "response": {
-            "$ref": "ListAvailableProjectsResponse"
-          },
-          "httpMethod": "GET",
-          "path": "v1beta1/availableProjects",
-          "parameterOrder": [],
-          "parameters": {
-            "pageSize": {
-              "type": "integer",
-              "description": "The maximum number of Projects to return in the response. The server may return fewer than this value at its discretion. If no value is specified (or too large a value is specified), the server will impose its own limit. This value cannot be negative.",
-              "format": "int32",
-              "location": "query"
-            },
-            "pageToken": {
-              "location": "query",
-              "type": "string",
-              "description": "Token returned from a previous call to `ListAvailableProjects` indicating where in the set of Projects to resume listing."
-            }
-          },
-          "description": "Lists each [Google Cloud Platform (GCP) `Project`] (https://cloud.google.com/resource-manager/reference/rest/v1/projects) that can have Firebase resources added to it. A Project will only be listed if: - The caller has sufficient [Google IAM](https://cloud.google.com/iam) permissions to call AddFirebase. - The Project is not already a FirebaseProject. - The Project is not in an Organization which has policies that prevent Firebase resources from being added. ",
-          "scopes": [
-            "https://www.googleapis.com/auth/cloud-platform",
-            "https://www.googleapis.com/auth/cloud-platform.read-only",
-            "https://www.googleapis.com/auth/firebase",
-            "https://www.googleapis.com/auth/firebase.readonly"
-          ],
-          "id": "firebase.availableProjects.list"
-        }
-      }
     }
   },
-  "fullyEncodeReservedExpansion": true,
-  "baseUrl": "https://firebase.googleapis.com/",
-  "kind": "discovery#restDescription",
+  "batchPath": "batch",
+  "name": "firebase",
+  "icons": {
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
+  },
+  "ownerName": "Google",
+  "documentationLink": "https://firebase.google.com",
   "parameters": {
-    "upload_protocol": {
-      "type": "string",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
-      "location": "query"
-    },
-    "quotaUser": {
-      "type": "string",
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "location": "query"
-    },
-    "$.xgafv": {
-      "description": "V1 error format.",
+    "uploadType": {
       "type": "string",
       "location": "query",
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
+    },
+    "key": {
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "location": "query",
+      "type": "string"
+    },
+    "quotaUser": {
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "location": "query",
+      "type": "string"
+    },
+    "$.xgafv": {
       "enum": [
         "1",
         "2"
       ],
+      "type": "string",
+      "location": "query",
+      "description": "V1 error format.",
       "enumDescriptions": [
         "v1 error format",
         "v2 error format"
       ]
     },
-    "uploadType": {
-      "location": "query",
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
-      "type": "string"
+    "access_token": {
+      "type": "string",
+      "description": "OAuth access token.",
+      "location": "query"
     },
-    "key": {
-      "location": "query",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "type": "string"
+    "oauth_token": {
+      "type": "string",
+      "description": "OAuth 2.0 token for the current user.",
+      "location": "query"
     },
     "prettyPrint": {
-      "default": "true",
       "location": "query",
-      "description": "Returns response with indentations and line breaks.",
-      "type": "boolean"
+      "default": "true",
+      "type": "boolean",
+      "description": "Returns response with indentations and line breaks."
+    },
+    "callback": {
+      "description": "JSONP",
+      "location": "query",
+      "type": "string"
     },
     "alt": {
-      "type": "string",
       "enum": [
         "json",
         "media",
         "proto"
       ],
+      "location": "query",
+      "type": "string",
       "enumDescriptions": [
         "Responses with Content-Type of application/json",
         "Media download with context-dependent Content-Type",
         "Responses with Content-Type of application/x-protobuf"
       ],
       "description": "Data format for response.",
-      "location": "query",
       "default": "json"
     },
-    "callback": {
+    "upload_protocol": {
       "location": "query",
-      "description": "JSONP",
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
       "type": "string"
     },
     "fields": {
-      "type": "string",
       "location": "query",
+      "type": "string",
       "description": "Selector specifying which fields to include in a partial response."
-    },
-    "access_token": {
-      "description": "OAuth access token.",
-      "location": "query",
-      "type": "string"
-    },
-    "oauth_token": {
-      "type": "string",
-      "description": "OAuth 2.0 token for the current user.",
-      "location": "query"
     }
   },
-  "name": "firebase",
-  "mtlsRootUrl": "https://firebase.mtls.googleapis.com/",
+  "version": "v1beta1",
+  "revision": "20200911",
+  "id": "firebase:v1beta1",
+  "kind": "discovery#restDescription",
   "rootUrl": "https://firebase.googleapis.com/",
-  "icons": {
-    "x32": "http://www.google.com/images/icons/product/search-32.gif",
-    "x16": "http://www.google.com/images/icons/product/search-16.gif"
+  "ownerDomain": "google.com",
+  "canonicalName": "Firebase Management",
+  "auth": {
+    "oauth2": {
+      "scopes": {
+        "https://www.googleapis.com/auth/firebase": {
+          "description": "View and administer all your Firebase data and settings"
+        },
+        "https://www.googleapis.com/auth/firebase.readonly": {
+          "description": "View all your Firebase data and settings"
+        },
+        "https://www.googleapis.com/auth/cloud-platform.read-only": {
+          "description": "View your data across Google Cloud Platform services"
+        },
+        "https://www.googleapis.com/auth/cloud-platform": {
+          "description": "View and manage your data across Google Cloud Platform services"
+        }
+      }
+    }
   }
 }

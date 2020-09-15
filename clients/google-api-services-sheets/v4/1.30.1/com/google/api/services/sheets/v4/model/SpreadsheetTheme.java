@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class SpreadsheetTheme extends com.google.api.client.json.GenericJson {
 
   /**
-   * / Name of the primary font family.
+   * Name of the primary font family.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class SpreadsheetTheme extends com.google.api.client.json.GenericJs
   private java.util.List<ThemeColorPair> themeColors;
 
   /**
-   * / Name of the primary font family.
+   * Name of the primary font family.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryFontFamily() {
@@ -52,7 +52,7 @@ public final class SpreadsheetTheme extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * / Name of the primary font family.
+   * Name of the primary font family.
    * @param primaryFontFamily primaryFontFamily or {@code null} for none
    */
   public SpreadsheetTheme setPrimaryFontFamily(java.lang.String primaryFontFamily) {

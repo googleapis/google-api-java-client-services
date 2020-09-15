@@ -48,7 +48,7 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   private java.lang.String masterBillingAccount;
 
   /**
-   * The resource name of the billing account. The resource name has the form
+   * Output only. The resource name of the billing account. The resource name has the form
    * `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`
    * would be the resource name for billing account `012345-567890-ABCDEF`.
    * The value may be {@code null}.
@@ -106,7 +106,7 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The resource name of the billing account. The resource name has the form
+   * Output only. The resource name of the billing account. The resource name has the form
    * `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`
    * would be the resource name for billing account `012345-567890-ABCDEF`.
    * @return value or {@code null} for none
@@ -116,7 +116,7 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The resource name of the billing account. The resource name has the form
+   * Output only. The resource name of the billing account. The resource name has the form
    * `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`
    * would be the resource name for billing account `012345-567890-ABCDEF`.
    * @param name name or {@code null} for none

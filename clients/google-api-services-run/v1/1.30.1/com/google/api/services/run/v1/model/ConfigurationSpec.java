@@ -32,9 +32,10 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
   /**
    * Optional metadata for this Revision, including labels and annotations. Name will be generated
    * by the Configuration. To set minimum instances for this revision, use the
-   * "autoscaling.knative.dev/minScale" annotation key. (Cloud Run for Anthos only). To set maximum
-   * instances for this revision, use the "autoscaling.knative.dev/maxScale" annotation key. To set
-   * Cloud SQL connections for the revision, use the "run.googleapis.com/cloudsql-instances"
+   * "autoscaling.knative.dev/minScale" annotation key. To set maximum instances for this revision,
+   * use the "autoscaling.knative.dev/maxScale" annotation key. To set Cloud SQL connections for the
+   * revision, use the "run.googleapis.com/cloudsql-instances" annotation key. To set a Serverless
+   * VPC Access connector for the revision, use the "run.googleapis.com/vpc-access-connector"
    * annotation key. Values should be comma separated.
    * The value may be {@code null}.
    */
@@ -44,9 +45,10 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
   /**
    * Optional metadata for this Revision, including labels and annotations. Name will be generated
    * by the Configuration. To set minimum instances for this revision, use the
-   * "autoscaling.knative.dev/minScale" annotation key. (Cloud Run for Anthos only). To set maximum
-   * instances for this revision, use the "autoscaling.knative.dev/maxScale" annotation key. To set
-   * Cloud SQL connections for the revision, use the "run.googleapis.com/cloudsql-instances"
+   * "autoscaling.knative.dev/minScale" annotation key. To set maximum instances for this revision,
+   * use the "autoscaling.knative.dev/maxScale" annotation key. To set Cloud SQL connections for the
+   * revision, use the "run.googleapis.com/cloudsql-instances" annotation key. To set a Serverless
+   * VPC Access connector for the revision, use the "run.googleapis.com/vpc-access-connector"
    * annotation key. Values should be comma separated.
    * @return value or {@code null} for none
    */
@@ -57,9 +59,10 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
   /**
    * Optional metadata for this Revision, including labels and annotations. Name will be generated
    * by the Configuration. To set minimum instances for this revision, use the
-   * "autoscaling.knative.dev/minScale" annotation key. (Cloud Run for Anthos only). To set maximum
-   * instances for this revision, use the "autoscaling.knative.dev/maxScale" annotation key. To set
-   * Cloud SQL connections for the revision, use the "run.googleapis.com/cloudsql-instances"
+   * "autoscaling.knative.dev/minScale" annotation key. To set maximum instances for this revision,
+   * use the "autoscaling.knative.dev/maxScale" annotation key. To set Cloud SQL connections for the
+   * revision, use the "run.googleapis.com/cloudsql-instances" annotation key. To set a Serverless
+   * VPC Access connector for the revision, use the "run.googleapis.com/vpc-access-connector"
    * annotation key. Values should be comma separated.
    * @param template template or {@code null} for none
    */

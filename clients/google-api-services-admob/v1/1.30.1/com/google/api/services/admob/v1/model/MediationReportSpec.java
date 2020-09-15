@@ -71,8 +71,8 @@ public final class MediationReportSpec extends com.google.api.client.json.Generi
 
   /**
    * Maximum number of report data rows to return. If the value is not set, the API returns as many
-   * rows as possible, up to 100000. Acceptable values are 1-100000, inclusive. Any other values are
-   * treated as 100000.
+   * rows as possible, up to 100000. Acceptable values are 1-100000, inclusive. Values larger than
+   * 100000 return an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,8 +177,8 @@ public final class MediationReportSpec extends com.google.api.client.json.Generi
 
   /**
    * Maximum number of report data rows to return. If the value is not set, the API returns as many
-   * rows as possible, up to 100000. Acceptable values are 1-100000, inclusive. Any other values are
-   * treated as 100000.
+   * rows as possible, up to 100000. Acceptable values are 1-100000, inclusive. Values larger than
+   * 100000 return an error.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxReportRows() {
@@ -187,8 +187,8 @@ public final class MediationReportSpec extends com.google.api.client.json.Generi
 
   /**
    * Maximum number of report data rows to return. If the value is not set, the API returns as many
-   * rows as possible, up to 100000. Acceptable values are 1-100000, inclusive. Any other values are
-   * treated as 100000.
+   * rows as possible, up to 100000. Acceptable values are 1-100000, inclusive. Values larger than
+   * 100000 return an error.
    * @param maxReportRows maxReportRows or {@code null} for none
    */
   public MediationReportSpec setMaxReportRows(java.lang.Integer maxReportRows) {

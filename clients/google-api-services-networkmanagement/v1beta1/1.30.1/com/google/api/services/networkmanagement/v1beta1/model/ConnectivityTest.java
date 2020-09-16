@@ -81,6 +81,15 @@ public final class ConnectivityTest extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * Output only. The probing details of this test from the latest run, present for applicable tests
+   * only. The details are updated when creating a new test, updating an existing test, or
+   * triggering a one-time rerun of an existing test.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProbingDetails probingDetails;
+
+  /**
    * IP Protocol of the test. When not provided, "TCP" is assumed.
    * The value may be {@code null}.
    */
@@ -243,6 +252,27 @@ public final class ConnectivityTest extends com.google.api.client.json.GenericJs
    */
   public ConnectivityTest setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The probing details of this test from the latest run, present for applicable tests
+   * only. The details are updated when creating a new test, updating an existing test, or
+   * triggering a one-time rerun of an existing test.
+   * @return value or {@code null} for none
+   */
+  public ProbingDetails getProbingDetails() {
+    return probingDetails;
+  }
+
+  /**
+   * Output only. The probing details of this test from the latest run, present for applicable tests
+   * only. The details are updated when creating a new test, updating an existing test, or
+   * triggering a one-time rerun of an existing test.
+   * @param probingDetails probingDetails or {@code null} for none
+   */
+  public ConnectivityTest setProbingDetails(ProbingDetails probingDetails) {
+    this.probingDetails = probingDetails;
     return this;
   }
 

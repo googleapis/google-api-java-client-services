@@ -3150,19 +3150,22 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * A unique id for the new version. This is only specified for legacy version creations.
+           * A unique id for the new version. This is was only specified for legacy version
+           * creations, and should be blank.
            */
           @com.google.api.client.util.Key
           private java.lang.String versionId;
 
-          /** A unique id for the new version. This is only specified for legacy version creations.
+          /** A unique id for the new version. This is was only specified for legacy version creations, and
+         should be blank.
            */
           public java.lang.String getVersionId() {
             return versionId;
           }
 
           /**
-           * A unique id for the new version. This is only specified for legacy version creations.
+           * A unique id for the new version. This is was only specified for legacy version
+           * creations, and should be blank.
            */
           public Create setVersionId(java.lang.String versionId) {
             this.versionId = versionId;
@@ -6902,19 +6905,22 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * A unique id for the new version. This is only specified for legacy version creations.
+         * A unique id for the new version. This is was only specified for legacy version creations,
+         * and should be blank.
          */
         @com.google.api.client.util.Key
         private java.lang.String versionId;
 
-        /** A unique id for the new version. This is only specified for legacy version creations.
+        /** A unique id for the new version. This is was only specified for legacy version creations, and
+       should be blank.
          */
         public java.lang.String getVersionId() {
           return versionId;
         }
 
         /**
-         * A unique id for the new version. This is only specified for legacy version creations.
+         * A unique id for the new version. This is was only specified for legacy version creations,
+         * and should be blank.
          */
         public Create setVersionId(java.lang.String versionId) {
           this.versionId = versionId;

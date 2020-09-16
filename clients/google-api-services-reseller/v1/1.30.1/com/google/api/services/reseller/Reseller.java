@@ -46,7 +46,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.10 of the Google Apps Reseller API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Enterprise Apps Reseller API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -150,13 +150,9 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
+     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
      * @return the request
      */
     public Get get(java.lang.String customerId) throws java.io.IOException {
@@ -179,13 +175,9 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
+       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
        * @since 1.13
        */
       protected Get(java.lang.String customerId) {
@@ -259,14 +251,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -275,7 +267,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
@@ -385,7 +377,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * The customerAuthToken query string is required when creating a resold account that
-       * transfers a direct customers subscription or transfers another reseller customers
+       * transfers a direct customer's subscription or transfers another reseller customer's
        * subscription to your reseller management. This is a hexadecimal authentication token needed
        * to complete the subscription transfer. For more information, see the administrator help
        * center.
@@ -394,8 +386,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private java.lang.String customerAuthToken;
 
       /** The customerAuthToken query string is required when creating a resold account that transfers a
-     direct customers subscription or transfers another reseller customers subscription to your reseller
-     management. This is a hexadecimal authentication token needed to complete the subscription
+     direct customer's subscription or transfers another reseller customer's subscription to your
+     reseller management. This is a hexadecimal authentication token needed to complete the subscription
      transfer. For more information, see the administrator help center.
        */
       public java.lang.String getCustomerAuthToken() {
@@ -404,7 +396,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * The customerAuthToken query string is required when creating a resold account that
-       * transfers a direct customers subscription or transfers another reseller customers
+       * transfers a direct customer's subscription or transfers another reseller customer's
        * subscription to your reseller management. This is a hexadecimal authentication token needed
        * to complete the subscription transfer. For more information, see the administrator help
        * center.
@@ -427,13 +419,9 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
+     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
      * @param content the {@link com.google.api.services.reseller.model.Customer}
      * @return the request
      */
@@ -458,13 +446,9 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
+       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
        * @param content the {@link com.google.api.services.reseller.model.Customer}
        * @since 1.13
        */
@@ -529,14 +513,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -545,7 +529,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
@@ -567,13 +551,9 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
+     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
      * @param content the {@link com.google.api.services.reseller.model.Customer}
      * @return the request
      */
@@ -598,13 +578,9 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
+       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
        * @param content the {@link com.google.api.services.reseller.model.Customer}
        * @since 1.13
        */
@@ -669,14 +645,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -685,7 +661,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
@@ -1086,22 +1062,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-     * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+     * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
      * @return the request
      */
     public Activate activate(java.lang.String customerId, java.lang.String subscriptionId) throws java.io.IOException {
@@ -1125,22 +1092,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-       * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+       * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
        * @since 1.13
        */
       protected Activate(java.lang.String customerId, java.lang.String subscriptionId) {
@@ -1205,14 +1163,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -1221,7 +1179,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
@@ -1273,22 +1231,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link ChangePlan#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-     * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+     * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
      * @param content the {@link com.google.api.services.reseller.model.ChangePlanRequest}
      * @return the request
      */
@@ -1314,22 +1263,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * ChangePlan#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-       * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+       * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
        * @param content the {@link com.google.api.services.reseller.model.ChangePlanRequest}
        * @since 1.13
        */
@@ -1395,14 +1335,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -1411,7 +1351,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
@@ -1455,7 +1395,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Update a user licenses renewal settings. This is applicable for accounts with annual commitment
+     * Update a user license's renewal settings. This is applicable for accounts with annual commitment
      * plans only.
      *
      * Create a request for the method "subscriptions.changeRenewalSettings".
@@ -1464,22 +1404,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * parameters, call the {@link ChangeRenewalSettings#execute()} method to invoke the remote
      * operation.
      *
-     * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-     * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+     * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
      * @param content the {@link com.google.api.services.reseller.model.RenewalSettings}
      * @return the request
      */
@@ -1494,8 +1425,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/changeRenewalSettings";
 
       /**
-       * Update a user licenses renewal settings. This is applicable for accounts with annual commitment
-       * plans only.
+       * Update a user license's renewal settings. This is applicable for accounts with annual
+       * commitment plans only.
        *
        * Create a request for the method "subscriptions.changeRenewalSettings".
        *
@@ -1505,22 +1436,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-       * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+       * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
        * @param content the {@link com.google.api.services.reseller.model.RenewalSettings}
        * @since 1.13
        */
@@ -1586,14 +1508,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -1602,7 +1524,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
@@ -1646,29 +1568,20 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Update a subscriptions user license settings.
+     * Update a subscription's user license settings.
      *
      * Create a request for the method "subscriptions.changeSeats".
      *
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link ChangeSeats#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-     * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+     * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
      * @param content the {@link com.google.api.services.reseller.model.Seats}
      * @return the request
      */
@@ -1683,7 +1596,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "apps/reseller/v1/customers/{customerId}/subscriptions/{subscriptionId}/changeSeats";
 
       /**
-       * Update a subscriptions user license settings.
+       * Update a subscription's user license settings.
        *
        * Create a request for the method "subscriptions.changeSeats".
        *
@@ -1693,22 +1606,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * ChangeSeats#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-       * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+       * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
        * @param content the {@link com.google.api.services.reseller.model.Seats}
        * @since 1.13
        */
@@ -1774,14 +1678,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -1790,7 +1694,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
@@ -1841,24 +1745,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-     * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
-     * @param deletionType The deletionType query string enables the cancellation,
-    downgrade, or suspension of a subscription.
+     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+     * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
+     * @param deletionType The deletionType query string enables the cancellation, downgrade, or suspension of a subscription.
      * @return the request
      */
     public Delete delete(java.lang.String customerId, java.lang.String subscriptionId, java.lang.String deletionType) throws java.io.IOException {
@@ -1882,24 +1776,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-       * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
-       * @param deletionType The deletionType query string enables the cancellation,
-    downgrade, or suspension of a subscription.
+       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+       * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
+       * @param deletionType The deletionType query string enables the cancellation, downgrade, or suspension of a subscription.
        * @since 1.13
        */
       protected Delete(java.lang.String customerId, java.lang.String subscriptionId, java.lang.String deletionType) {
@@ -1965,14 +1849,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -1981,7 +1865,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
@@ -2054,22 +1938,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-     * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+     * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
      * @return the request
      */
     public Get get(java.lang.String customerId, java.lang.String subscriptionId) throws java.io.IOException {
@@ -2092,22 +1967,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-       * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+       * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
        * @since 1.13
        */
       protected Get(java.lang.String customerId, java.lang.String subscriptionId) {
@@ -2182,14 +2048,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -2198,7 +2064,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
@@ -2249,13 +2115,9 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
+     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
      * @param content the {@link com.google.api.services.reseller.model.Subscription}
      * @return the request
      */
@@ -2280,13 +2142,9 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
+       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
        * @param content the {@link com.google.api.services.reseller.model.Subscription}
        * @since 1.13
        */
@@ -2351,14 +2209,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -2367,7 +2225,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
@@ -2414,7 +2272,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * List of subscriptions managed by the reseller. The list can be all subscriptions, all of a
-     * customers subscriptions, or all of a customers transferable subscriptions.
+     * customer's subscriptions, or all of a customer's transferable subscriptions.
      *
      * Create a request for the method "subscriptions.list".
      *
@@ -2435,7 +2293,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * List of subscriptions managed by the reseller. The list can be all subscriptions, all of a
-       * customers subscriptions, or all of a customers transferable subscriptions.
+       * customer's subscriptions, or all of a customer's transferable subscriptions.
        *
        * Create a request for the method "subscriptions.list".
        *
@@ -2547,14 +2405,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -2563,7 +2421,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
@@ -2575,22 +2433,19 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       /**
        * When retrieving all of your subscriptions and filtering for specific customers, you can
        * enter a prefix for a customer name. Using an example customer group that includes exam.com,
-       * example20.com and example.com:
-       *
-       * exa -- Returns all customer names that start with exa which could include exam.com,
-       * example20.com, and example.com. A name prefix is similar to using a regular expressions
-       * asterisk, exa*. example -- Returns example20.com and example.com.
+       * example20.com and example.com: - exa -- Returns all customer names that start with 'exa'
+       * which could include exam.com, example20.com, and example.com. A name prefix is similar to
+       * using a regular expression's asterisk, exa*. - example -- Returns example20.com and
+       * example.com.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerNamePrefix;
 
       /** When retrieving all of your subscriptions and filtering for specific customers, you can enter a
      prefix for a customer name. Using an example customer group that includes exam.com, example20.com
-     and example.com:
-
-     exa -- Returns all customer names that start with exa which could include exam.com, example20.com,
-     and example.com. A name prefix is similar to using a regular expressions asterisk, exa*. example --
-     Returns example20.com and example.com.
+     and example.com: - exa -- Returns all customer names that start with 'exa' which could include
+     exam.com, example20.com, and example.com. A name prefix is similar to using a regular expression's
+     asterisk, exa*. - example -- Returns example20.com and example.com.
        */
       public java.lang.String getCustomerNamePrefix() {
         return customerNamePrefix;
@@ -2599,11 +2454,10 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       /**
        * When retrieving all of your subscriptions and filtering for specific customers, you can
        * enter a prefix for a customer name. Using an example customer group that includes exam.com,
-       * example20.com and example.com:
-       *
-       * exa -- Returns all customer names that start with exa which could include exam.com,
-       * example20.com, and example.com. A name prefix is similar to using a regular expressions
-       * asterisk, exa*. example -- Returns example20.com and example.com.
+       * example20.com and example.com: - exa -- Returns all customer names that start with 'exa'
+       * which could include exam.com, example20.com, and example.com. A name prefix is similar to
+       * using a regular expression's asterisk, exa*. - example -- Returns example20.com and
+       * example.com.
        */
       public List setCustomerNamePrefix(java.lang.String customerNamePrefix) {
         this.customerNamePrefix = customerNamePrefix;
@@ -2619,6 +2473,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
 
       /** When retrieving a large list, the maxResults is the maximum number of results per page. The
      nextPageToken value takes you to the next page. The default is 20.
+
+     [minimum: 1] [maximum: 100]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -2662,22 +2518,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link StartPaidService#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-     * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+     * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
      * @return the request
      */
     public StartPaidService startPaidService(java.lang.String customerId, java.lang.String subscriptionId) throws java.io.IOException {
@@ -2701,22 +2548,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * tractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-       * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+       * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
        * @since 1.13
        */
       protected StartPaidService(java.lang.String customerId, java.lang.String subscriptionId) {
@@ -2781,14 +2619,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -2797,7 +2635,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
@@ -2848,22 +2686,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the reseller server.  After setting any optional
      * parameters, call the {@link Suspend#execute()} method to invoke the remote operation.
      *
-     * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-     * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+     * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+     * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
      * @return the request
      */
     public Suspend suspend(java.lang.String customerId, java.lang.String subscriptionId) throws java.io.IOException {
@@ -2887,22 +2716,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Suspend#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Either the customers primary domain name or the customer's unique
-    identifier. If using the domain
-     *        name, we do not recommend using a
-    customerId as a key for persistent data. If the domain
-     *        name
-    for a customerId is changed, the Google system automatically
-    updates.
-       * @param subscriptionId This is a required property. The subscriptionId is the
-    subscription identifier and is unique for
-     *        each customer. Since a
-    subscriptionId changes when a subscription is updated, we
-    recommend
-     *        to not use this ID as a key for persistent data. And the
-    subscriptionId can be found using
-     *        the retrieve
-    all reseller subscriptions method.
+       * @param customerId Either the customer's primary domain name or the customer's unique identifier. If using the domain
+     *        name, we do not recommend using a customerId as a key for persistent data. If the domain
+     *        name for a customerId is changed, the Google system automatically updates.
+       * @param subscriptionId This is a required property. The subscriptionId is the subscription identifier and is unique for
+     *        each customer. Since a subscriptionId changes when a subscription is updated, we recommend
+     *        to not use this ID as a key for persistent data. And the subscriptionId can be found using
+     *        the retrieve all reseller subscriptions method.
        * @since 1.13
        */
       protected Suspend(java.lang.String customerId, java.lang.String subscriptionId) {
@@ -2967,14 +2787,14 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Either the customers primary domain name or the customer's unique identifier. If using the domain
+      /** Either the customer's primary domain name or the customer's unique identifier. If using the domain
      name, we do not recommend using a customerId as a key for persistent data. If the domain name for a
      customerId is changed, the Google system automatically updates.
        */
@@ -2983,7 +2803,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Either the customers primary domain name or the customer's unique identifier. If using the
+       * Either the customer's primary domain name or the customer's unique identifier. If using the
        * domain name, we do not recommend using a customerId as a key for persistent data. If the
        * domain name for a customerId is changed, the Google system automatically updates.
        */

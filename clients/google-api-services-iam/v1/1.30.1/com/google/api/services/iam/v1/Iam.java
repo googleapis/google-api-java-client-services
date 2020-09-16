@@ -5846,7 +5846,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Deletes a ServiceAccountKey.
+         * Deletes a ServiceAccountKey. Deleting a service account key does not revoke short-lived
+         * credentials that have been issued based on the service account key.
          *
          * Create a request for the method "keys.delete".
          *
@@ -5873,7 +5874,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+/keys/[^/]+$");
 
           /**
-           * Deletes a ServiceAccountKey.
+           * Deletes a ServiceAccountKey. Deleting a service account key does not revoke short-lived
+           * credentials that have been issued based on the service account key.
            *
            * Create a request for the method "keys.delete".
            *

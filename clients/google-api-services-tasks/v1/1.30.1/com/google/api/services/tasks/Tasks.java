@@ -55,7 +55,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://tasks.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/tasks/v1";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -1691,12 +1691,15 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Flag indicating whether completed tasks are returned in the result. Optional. The default
-       * is True.
+       * is True. Note that showHidden must also be True to show tasks completed in first party
+       * clients, such as the web UI and Google's mobile apps.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean showCompleted;
 
       /** Flag indicating whether completed tasks are returned in the result. Optional. The default is True.
+     Note that showHidden must also be True to show tasks completed in first party clients, such as the
+     web UI and Google's mobile apps.
        */
       public java.lang.Boolean getShowCompleted() {
         return showCompleted;
@@ -1704,7 +1707,8 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Flag indicating whether completed tasks are returned in the result. Optional. The default
-       * is True.
+       * is True. Note that showHidden must also be True to show tasks completed in first party
+       * clients, such as the web UI and Google's mobile apps.
        */
       public List setShowCompleted(java.lang.Boolean showCompleted) {
         this.showCompleted = showCompleted;

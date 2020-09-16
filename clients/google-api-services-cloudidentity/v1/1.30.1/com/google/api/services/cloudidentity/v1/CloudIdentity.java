@@ -3517,6 +3517,22 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Optional. The initial configuration option for the `Group`. */
+      @com.google.api.client.util.Key
+      private java.lang.String initialGroupConfig;
+
+      /** Optional. The initial configuration option for the `Group`.
+       */
+      public java.lang.String getInitialGroupConfig() {
+        return initialGroupConfig;
+      }
+
+      /** Optional. The initial configuration option for the `Group`. */
+      public Create setInitialGroupConfig(java.lang.String initialGroupConfig) {
+        this.initialGroupConfig = initialGroupConfig;
+        return this;
+      }
+
       @Override
       public Create set(String parameterName, Object value) {
         return (Create) super.set(parameterName, value);

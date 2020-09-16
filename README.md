@@ -113,6 +113,8 @@ packages on [Maven Central][maven-search].
 | DoubleClick Bid Manager API | [v1](clients/google-api-services-doubleclickbidmanager/v1), [v1.1](clients/google-api-services-doubleclickbidmanager/v1.1) |
 | Drive API | [v2](clients/google-api-services-drive/v2), [v3](clients/google-api-services-drive/v3) |
 | Drive Activity API | [v1](clients/google-api-services-appsactivity/v1), [v2](clients/google-api-services-driveactivity/v2) |
+| Enterprise Apps Reseller API | [v1](clients/google-api-services-reseller/v1) |
+| Enterprise License Manager API | [v1](clients/google-api-services-licensing/v1) |
 | Error Reporting API | [v1beta1](clients/google-api-services-clouderrorreporting/v1beta1) |
 | Fact Check Tools API | [v1alpha1](clients/google-api-services-factchecktools/v1alpha1) |
 | Firebase Cloud Messaging API | [v1](clients/google-api-services-fcm/v1) |
@@ -130,7 +132,6 @@ packages on [Maven Central][maven-search].
 | Gmail Postmaster Tools API | [v1beta1](clients/google-api-services-gmailpostmastertools/v1beta1) |
 | Google Analytics API | [v3](clients/google-api-services-analytics/v3) |
 | Google Analytics Data API | [v1alpha](clients/google-api-services-analyticsdata/v1alpha) |
-| Google Apps Reseller API | [v1](clients/google-api-services-reseller/v1) |
 | Google Civic Information API | [v2](clients/google-api-services-civicinfo/v2) |
 | Google Classroom API | [v1](clients/google-api-services-classroom/v1) |
 | Google Cloud Data Catalog API | [v1beta1](clients/google-api-services-datacatalog/v1beta1) |
@@ -162,7 +163,6 @@ packages on [Maven Central][maven-search].
 | Knowledge Graph Search API | [v1](clients/google-api-services-kgsearch/v1) |
 | Kubernetes Engine API | [v1](clients/google-api-services-container/v1), [v1beta1](clients/google-api-services-container/v1beta1) |
 | Library Agent API | [v1](clients/google-api-services-libraryagent/v1) |
-| Licensing API | [v1](clients/google-api-services-licensing/v1) |
 | Local Services API | [v1](clients/google-api-services-localservices/v1) |
 | Managed Service for Microsoft Active Directory API | [v1](clients/google-api-services-managedidentities/v1), [v1alpha1](clients/google-api-services-managedidentities/v1alpha1), [v1beta1](clients/google-api-services-managedidentities/v1beta1) |
 | Manufacturer Center API | [v1](clients/google-api-services-manufacturers/v1) |

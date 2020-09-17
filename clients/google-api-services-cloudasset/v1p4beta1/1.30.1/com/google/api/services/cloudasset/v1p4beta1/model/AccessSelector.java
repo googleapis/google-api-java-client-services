@@ -19,7 +19,8 @@ package com.google.api.services.cloudasset.v1p4beta1.model;
 /**
  * Specifies roles and/or permissions to analyze, to determine both the identities possessing them
  * and the resources they control. If multiple values are specified, results will include identities
- * and resources matching any of them.
+ * and resources matching any of them. The total number of roles and permissions should be equal or
+ * less than 10.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:

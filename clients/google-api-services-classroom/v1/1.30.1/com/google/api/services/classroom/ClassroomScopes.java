@@ -47,6 +47,12 @@ public class ClassroomScopes {
   /** View course work and grades for students in the Google Classroom classes you teach or administer. */
   public static final String CLASSROOM_COURSEWORK_STUDENTS_READONLY = "https://www.googleapis.com/auth/classroom.coursework.students.readonly";
 
+  /** See, edit, and create classwork materials in Google Classroom. */
+  public static final String CLASSROOM_COURSEWORKMATERIALS = "https://www.googleapis.com/auth/classroom.courseworkmaterials";
+
+  /** See all classwork materials for your Google Classroom classes. */
+  public static final String CLASSROOM_COURSEWORKMATERIALS_READONLY = "https://www.googleapis.com/auth/classroom.courseworkmaterials.readonly";
+
   /** View your Google Classroom guardians. */
   public static final String CLASSROOM_GUARDIANLINKS_ME_READONLY = "https://www.googleapis.com/auth/classroom.guardianlinks.me.readonly";
 
@@ -98,6 +104,8 @@ public class ClassroomScopes {
     set.add(CLASSROOM_COURSEWORK_ME_READONLY);
     set.add(CLASSROOM_COURSEWORK_STUDENTS);
     set.add(CLASSROOM_COURSEWORK_STUDENTS_READONLY);
+    set.add(CLASSROOM_COURSEWORKMATERIALS);
+    set.add(CLASSROOM_COURSEWORKMATERIALS_READONLY);
     set.add(CLASSROOM_GUARDIANLINKS_ME_READONLY);
     set.add(CLASSROOM_GUARDIANLINKS_STUDENTS);
     set.add(CLASSROOM_GUARDIANLINKS_STUDENTS_READONLY);

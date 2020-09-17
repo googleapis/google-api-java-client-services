@@ -31,9 +31,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
 
   /**
    * Absolute link to this course work material in the Classroom web UI. This is only populated if
-   * `state` is `PUBLISHED`.
-   *
-   * Read-only.
+   * `state` is `PUBLISHED`. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,27 +45,21 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   private java.lang.String assigneeMode;
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String courseId;
 
   /**
-   * Timestamp when this course work material was created.
-   *
-   * Read-only.
+   * Timestamp when this course work material was created. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String creationTime;
 
   /**
-   * Identifier for the user that created the course work material.
-   *
-   * Read-only.
+   * Identifier for the user that created the course work material. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,9 +74,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   private java.lang.String description;
 
   /**
-   * Classroom-assigned identifier of this course work material, unique per course.
-   *
-   * Read-only.
+   * Classroom-assigned identifier of this course work material, unique per course. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,16 +83,14 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   /**
    * Identifiers of students with access to the course work material. This field is set only if
    * `assigneeMode` is `INDIVIDUAL_STUDENTS`. If the `assigneeMode` is `INDIVIDUAL_STUDENTS`, then
-   * only students specified in this field will be able to see the course work material.
+   * only students specified in this field can see the course work material.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IndividualStudentsOptions individualStudentsOptions;
 
   /**
-   * Additional materials.
-   *
-   * A course work material must have no more than 20 material items.
+   * Additional materials. A course work material must have no more than 20 material items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,9 +127,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   private java.lang.String topicId;
 
   /**
-   * Timestamp of the most recent change to this course work material.
-   *
-   * Read-only.
+   * Timestamp of the most recent change to this course work material. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,9 +135,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
 
   /**
    * Absolute link to this course work material in the Classroom web UI. This is only populated if
-   * `state` is `PUBLISHED`.
-   *
-   * Read-only.
+   * `state` is `PUBLISHED`. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateLink() {
@@ -160,9 +144,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
 
   /**
    * Absolute link to this course work material in the Classroom web UI. This is only populated if
-   * `state` is `PUBLISHED`.
-   *
-   * Read-only.
+   * `state` is `PUBLISHED`. Read-only.
    * @param alternateLink alternateLink or {@code null} for none
    */
   public CourseWorkMaterial setAlternateLink(java.lang.String alternateLink) {
@@ -188,9 +170,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   }
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCourseId() {
@@ -198,9 +178,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   }
 
   /**
-   * Identifier of the course.
-   *
-   * Read-only.
+   * Identifier of the course. Read-only.
    * @param courseId courseId or {@code null} for none
    */
   public CourseWorkMaterial setCourseId(java.lang.String courseId) {
@@ -209,9 +187,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   }
 
   /**
-   * Timestamp when this course work material was created.
-   *
-   * Read-only.
+   * Timestamp when this course work material was created. Read-only.
    * @return value or {@code null} for none
    */
   public String getCreationTime() {
@@ -219,9 +195,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   }
 
   /**
-   * Timestamp when this course work material was created.
-   *
-   * Read-only.
+   * Timestamp when this course work material was created. Read-only.
    * @param creationTime creationTime or {@code null} for none
    */
   public CourseWorkMaterial setCreationTime(String creationTime) {
@@ -230,9 +204,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   }
 
   /**
-   * Identifier for the user that created the course work material.
-   *
-   * Read-only.
+   * Identifier for the user that created the course work material. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreatorUserId() {
@@ -240,9 +212,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   }
 
   /**
-   * Identifier for the user that created the course work material.
-   *
-   * Read-only.
+   * Identifier for the user that created the course work material. Read-only.
    * @param creatorUserId creatorUserId or {@code null} for none
    */
   public CourseWorkMaterial setCreatorUserId(java.lang.String creatorUserId) {
@@ -270,9 +240,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   }
 
   /**
-   * Classroom-assigned identifier of this course work material, unique per course.
-   *
-   * Read-only.
+   * Classroom-assigned identifier of this course work material, unique per course. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -280,9 +248,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   }
 
   /**
-   * Classroom-assigned identifier of this course work material, unique per course.
-   *
-   * Read-only.
+   * Classroom-assigned identifier of this course work material, unique per course. Read-only.
    * @param id id or {@code null} for none
    */
   public CourseWorkMaterial setId(java.lang.String id) {
@@ -293,7 +259,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   /**
    * Identifiers of students with access to the course work material. This field is set only if
    * `assigneeMode` is `INDIVIDUAL_STUDENTS`. If the `assigneeMode` is `INDIVIDUAL_STUDENTS`, then
-   * only students specified in this field will be able to see the course work material.
+   * only students specified in this field can see the course work material.
    * @return value or {@code null} for none
    */
   public IndividualStudentsOptions getIndividualStudentsOptions() {
@@ -303,7 +269,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   /**
    * Identifiers of students with access to the course work material. This field is set only if
    * `assigneeMode` is `INDIVIDUAL_STUDENTS`. If the `assigneeMode` is `INDIVIDUAL_STUDENTS`, then
-   * only students specified in this field will be able to see the course work material.
+   * only students specified in this field can see the course work material.
    * @param individualStudentsOptions individualStudentsOptions or {@code null} for none
    */
   public CourseWorkMaterial setIndividualStudentsOptions(IndividualStudentsOptions individualStudentsOptions) {
@@ -312,9 +278,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   }
 
   /**
-   * Additional materials.
-   *
-   * A course work material must have no more than 20 material items.
+   * Additional materials. A course work material must have no more than 20 material items.
    * @return value or {@code null} for none
    */
   public java.util.List<Material> getMaterials() {
@@ -322,9 +286,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   }
 
   /**
-   * Additional materials.
-   *
-   * A course work material must have no more than 20 material items.
+   * Additional materials. A course work material must have no more than 20 material items.
    * @param materials materials or {@code null} for none
    */
   public CourseWorkMaterial setMaterials(java.util.List<Material> materials) {
@@ -405,9 +367,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   }
 
   /**
-   * Timestamp of the most recent change to this course work material.
-   *
-   * Read-only.
+   * Timestamp of the most recent change to this course work material. Read-only.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -415,9 +375,7 @@ public final class CourseWorkMaterial extends com.google.api.client.json.Generic
   }
 
   /**
-   * Timestamp of the most recent change to this course work material.
-   *
-   * Read-only.
+   * Timestamp of the most recent change to this course work material. Read-only.
    * @param updateTime updateTime or {@code null} for none
    */
   public CourseWorkMaterial setUpdateTime(String updateTime) {

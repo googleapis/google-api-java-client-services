@@ -31,14 +31,14 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 public final class RemoveTenantProjectRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Tag of the resource within the tenancy unit.
+   * Required. Tag of the resource within the tenancy unit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tag;
 
   /**
-   * Tag of the resource within the tenancy unit.
+   * Required. Tag of the resource within the tenancy unit.
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -46,7 +46,7 @@ public final class RemoveTenantProjectRequest extends com.google.api.client.json
   }
 
   /**
-   * Tag of the resource within the tenancy unit.
+   * Required. Tag of the resource within the tenancy unit.
    * @param tag tag or {@code null} for none
    */
   public RemoveTenantProjectRequest setTag(java.lang.String tag) {

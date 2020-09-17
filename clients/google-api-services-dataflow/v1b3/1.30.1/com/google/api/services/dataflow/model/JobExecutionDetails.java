@@ -30,11 +30,38 @@ package com.google.api.services.dataflow.model;
 public final class JobExecutionDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * If present, this response does not contain all requested tasks. To obtain the next page of
+   * results, repeat the request with page_token set to this value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
    * The stages of the job execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<StageSummary> stages;
+
+  /**
+   * If present, this response does not contain all requested tasks. To obtain the next page of
+   * results, repeat the request with page_token set to this value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
+  }
+
+  /**
+   * If present, this response does not contain all requested tasks. To obtain the next page of
+   * results, repeat the request with page_token set to this value.
+   * @param nextPageToken nextPageToken or {@code null} for none
+   */
+  public JobExecutionDetails setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
+    return this;
+  }
 
   /**
    * The stages of the job execution.

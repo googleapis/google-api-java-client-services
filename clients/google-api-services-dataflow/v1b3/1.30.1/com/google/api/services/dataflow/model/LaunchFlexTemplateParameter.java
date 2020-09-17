@@ -44,6 +44,13 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
   private java.lang.String containerSpecGcsPath;
 
   /**
+   * The runtime environment for the FlexTemplate job
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FlexTemplateRuntimeEnvironment environment;
+
+  /**
    * Required. The job name to use for the created job.
    * The value may be {@code null}.
    */
@@ -96,6 +103,23 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
    */
   public LaunchFlexTemplateParameter setContainerSpecGcsPath(java.lang.String containerSpecGcsPath) {
     this.containerSpecGcsPath = containerSpecGcsPath;
+    return this;
+  }
+
+  /**
+   * The runtime environment for the FlexTemplate job
+   * @return value or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment getEnvironment() {
+    return environment;
+  }
+
+  /**
+   * The runtime environment for the FlexTemplate job
+   * @param environment environment or {@code null} for none
+   */
+  public LaunchFlexTemplateParameter setEnvironment(FlexTemplateRuntimeEnvironment environment) {
+    this.environment = environment;
     return this;
   }
 

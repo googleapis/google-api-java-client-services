@@ -4492,6 +4492,54 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /**
+           * If specified, determines the maximum number of stages to return. If unspecified, the
+           * service may choose an appropriate default, or may return an arbitrarily large number of
+           * results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** If specified, determines the maximum number of stages to return. If unspecified, the service may
+         choose an appropriate default, or may return an arbitrarily large number of results.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * If specified, determines the maximum number of stages to return. If unspecified, the
+           * service may choose an appropriate default, or may return an arbitrarily large number of
+           * results.
+           */
+          public GetExecutionDetails setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * If supplied, this should be the value of next_page_token returned by an earlier call.
+           * This will cause the next page of results to be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** If supplied, this should be the value of next_page_token returned by an earlier call. This will
+         cause the next page of results to be returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * If supplied, this should be the value of next_page_token returned by an earlier call.
+           * This will cause the next page of results to be returned.
+           */
+          public GetExecutionDetails setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
           @Override
           public GetExecutionDetails set(String parameterName, Object value) {
             return (GetExecutionDetails) super.set(parameterName, value);

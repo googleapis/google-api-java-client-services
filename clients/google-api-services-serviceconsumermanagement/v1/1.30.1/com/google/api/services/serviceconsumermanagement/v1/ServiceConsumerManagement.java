@@ -789,8 +789,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
      * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
      * any optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
      *
-     * @param parent Service for which search is performed. services/{service} {service} the name of a service, for
-     *        example 'service.googleapis.com'.
+     * @param parent Required. Service for which search is performed. services/{service} {service} the name of a service,
+     *        for example 'service.googleapis.com'.
      * @return the request
      */
     public Search search(java.lang.String parent) throws java.io.IOException {
@@ -817,8 +817,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Service for which search is performed. services/{service} {service} the name of a service, for
-     *        example 'service.googleapis.com'.
+       * @param parent Required. Service for which search is performed. services/{service} {service} the name of a service,
+     *        for example 'service.googleapis.com'.
        * @since 1.13
        */
       protected Search(java.lang.String parent) {
@@ -897,22 +897,22 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
       }
 
       /**
-       * Service for which search is performed. services/{service} {service} the name of a service,
-       * for example 'service.googleapis.com'.
+       * Required. Service for which search is performed. services/{service} {service} the name of a
+       * service, for example 'service.googleapis.com'.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Service for which search is performed. services/{service} {service} the name of a service, for
-     example 'service.googleapis.com'.
+      /** Required. Service for which search is performed. services/{service} {service} the name of a
+     service, for example 'service.googleapis.com'.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Service for which search is performed. services/{service} {service} the name of a service,
-       * for example 'service.googleapis.com'.
+       * Required. Service for which search is performed. services/{service} {service} the name of a
+       * service, for example 'service.googleapis.com'.
        */
       public Search setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -1059,7 +1059,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link AddProject#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Name of the tenancy unit. Such as
+       * @param parent Required. Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AddTenantProjectRequest}
        * @return the request
@@ -1091,7 +1091,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * AddProject#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Name of the tenancy unit. Such as
+         * @param parent Required. Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AddTenantProjectRequest}
          * @since 1.13
@@ -1162,13 +1162,13 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Name of the tenancy unit. Such as
+         * Required. Name of the tenancy unit. Such as
          * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Name of the tenancy unit. Such as
+        /** Required. Name of the tenancy unit. Such as
        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public java.lang.String getParent() {
@@ -1176,7 +1176,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Name of the tenancy unit. Such as
+         * Required. Name of the tenancy unit. Such as
          * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public AddProject setParent(java.lang.String parent) {
@@ -1213,7 +1213,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link ApplyProjectConfig#execute()} method to invoke the
        * remote operation.
        *
-       * @param name Name of the tenancy unit. Such as
+       * @param name Required. Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.ApplyTenantProjectConfigRequest}
        * @return the request
@@ -1252,7 +1252,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param name Name of the tenancy unit. Such as
+         * @param name Required. Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.ApplyTenantProjectConfigRequest}
          * @since 1.13
@@ -1323,13 +1323,13 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Name of the tenancy unit. Such as
+         * Required. Name of the tenancy unit. Such as
          * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the tenancy unit. Such as
+        /** Required. Name of the tenancy unit. Such as
        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public java.lang.String getName() {
@@ -1337,7 +1337,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Name of the tenancy unit. Such as
+         * Required. Name of the tenancy unit. Such as
          * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public ApplyProjectConfig setName(java.lang.String name) {
@@ -1370,7 +1370,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link AttachProject#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Name of the tenancy unit that the project will be attached to. Such as
+       * @param name Required. Name of the tenancy unit that the project will be attached to. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AttachTenantProjectRequest}
        * @return the request
@@ -1406,7 +1406,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Name of the tenancy unit that the project will be attached to. Such as
+         * @param name Required. Name of the tenancy unit that the project will be attached to. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AttachTenantProjectRequest}
          * @since 1.13
@@ -1477,13 +1477,13 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Name of the tenancy unit that the project will be attached to. Such as
+         * Required. Name of the tenancy unit that the project will be attached to. Such as
          * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the tenancy unit that the project will be attached to. Such as
+        /** Required. Name of the tenancy unit that the project will be attached to. Such as
        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public java.lang.String getName() {
@@ -1491,7 +1491,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Name of the tenancy unit that the project will be attached to. Such as
+         * Required. Name of the tenancy unit that the project will be attached to. Such as
          * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public AttachProject setName(java.lang.String name) {
@@ -1519,11 +1519,11 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
        * any optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent services/{service}/{collection id}/{resource id} {collection id} is the cloud resource collection
-       *        type representing the service consumer, for example 'projects', or 'organizations'.
-       *        {resource id} is the consumer numeric id, such as project number: '123456'. {service} the
-       *        name of a managed service, such as 'service.googleapis.com'. Enables service binding using
-       *        the new tenancy unit.
+       * @param parent Required. services/{service}/{collection id}/{resource id} {collection id} is the cloud resource
+       *        collection type representing the service consumer, for example 'projects', or
+       *        'organizations'. {resource id} is the consumer numeric id, such as project number:
+       *        '123456'. {service} the name of a managed service, such as 'service.googleapis.com'.
+       *        Enables service binding using the new tenancy unit.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.CreateTenancyUnitRequest}
        * @return the request
        */
@@ -1553,11 +1553,11 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent services/{service}/{collection id}/{resource id} {collection id} is the cloud resource collection
-       *        type representing the service consumer, for example 'projects', or 'organizations'.
-       *        {resource id} is the consumer numeric id, such as project number: '123456'. {service} the
-       *        name of a managed service, such as 'service.googleapis.com'. Enables service binding using
-       *        the new tenancy unit.
+         * @param parent Required. services/{service}/{collection id}/{resource id} {collection id} is the cloud resource
+       *        collection type representing the service consumer, for example 'projects', or
+       *        'organizations'. {resource id} is the consumer numeric id, such as project number:
+       *        '123456'. {service} the name of a managed service, such as 'service.googleapis.com'.
+       *        Enables service binding using the new tenancy unit.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.CreateTenancyUnitRequest}
          * @since 1.13
          */
@@ -1627,8 +1627,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * services/{service}/{collection id}/{resource id} {collection id} is the cloud resource
-         * collection type representing the service consumer, for example 'projects', or
+         * Required. services/{service}/{collection id}/{resource id} {collection id} is the cloud
+         * resource collection type representing the service consumer, for example 'projects', or
          * 'organizations'. {resource id} is the consumer numeric id, such as project number:
          * '123456'. {service} the name of a managed service, such as 'service.googleapis.com'.
          * Enables service binding using the new tenancy unit.
@@ -1636,18 +1636,19 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** services/{service}/{collection id}/{resource id} {collection id} is the cloud resource collection
-       type representing the service consumer, for example 'projects', or 'organizations'. {resource id}
-       is the consumer numeric id, such as project number: '123456'. {service} the name of a managed
-       service, such as 'service.googleapis.com'. Enables service binding using the new tenancy unit.
+        /** Required. services/{service}/{collection id}/{resource id} {collection id} is the cloud resource
+       collection type representing the service consumer, for example 'projects', or 'organizations'.
+       {resource id} is the consumer numeric id, such as project number: '123456'. {service} the name of a
+       managed service, such as 'service.googleapis.com'. Enables service binding using the new tenancy
+       unit.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * services/{service}/{collection id}/{resource id} {collection id} is the cloud resource
-         * collection type representing the service consumer, for example 'projects', or
+         * Required. services/{service}/{collection id}/{resource id} {collection id} is the cloud
+         * resource collection type representing the service consumer, for example 'projects', or
          * 'organizations'. {resource id} is the consumer numeric id, such as project number:
          * '123456'. {service} the name of a managed service, such as 'service.googleapis.com'.
          * Enables service binding using the new tenancy unit.
@@ -1676,7 +1677,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
        * any optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the tenancy unit to be deleted.
+       * @param name Required. Name of the tenancy unit to be deleted.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1704,7 +1705,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the tenancy unit to be deleted.
+         * @param name Required. Name of the tenancy unit to be deleted.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1772,17 +1773,17 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the tenancy unit to be deleted. */
+        /** Required. Name of the tenancy unit to be deleted. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the tenancy unit to be deleted.
+        /** Required. Name of the tenancy unit to be deleted.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the tenancy unit to be deleted. */
+        /** Required. Name of the tenancy unit to be deleted. */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1812,7 +1813,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link DeleteProject#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Name of the tenancy unit. Such as
+       * @param name Required. Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.DeleteTenantProjectRequest}
        * @return the request
@@ -1846,7 +1847,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Name of the tenancy unit. Such as
+         * @param name Required. Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.DeleteTenantProjectRequest}
          * @since 1.13
@@ -1917,13 +1918,13 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Name of the tenancy unit. Such as
+         * Required. Name of the tenancy unit. Such as
          * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the tenancy unit. Such as
+        /** Required. Name of the tenancy unit. Such as
        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public java.lang.String getName() {
@@ -1931,7 +1932,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Name of the tenancy unit. Such as
+         * Required. Name of the tenancy unit. Such as
          * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public DeleteProject setName(java.lang.String name) {
@@ -1960,11 +1961,11 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
        * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Managed service and service consumer. Required. services/{service}/{collection id}/{resource id}
-       *        {collection id} is the cloud resource collection type representing the service consumer,
-       *        for example 'projects', or 'organizations'. {resource id} is the consumer numeric id, such
-       *        as project number: '123456'. {service} the name of a service, such as
-       *        'service.googleapis.com'.
+       * @param parent Required. Managed service and service consumer. Required. services/{service}/{collection
+       *        id}/{resource id} {collection id} is the cloud resource collection type representing the
+       *        service consumer, for example 'projects', or 'organizations'. {resource id} is the
+       *        consumer numeric id, such as project number: '123456'. {service} the name of a service,
+       *        such as 'service.googleapis.com'.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1994,11 +1995,11 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Managed service and service consumer. Required. services/{service}/{collection id}/{resource id}
-       *        {collection id} is the cloud resource collection type representing the service consumer,
-       *        for example 'projects', or 'organizations'. {resource id} is the consumer numeric id, such
-       *        as project number: '123456'. {service} the name of a service, such as
-       *        'service.googleapis.com'.
+         * @param parent Required. Managed service and service consumer. Required. services/{service}/{collection
+       *        id}/{resource id} {collection id} is the cloud resource collection type representing the
+       *        service consumer, for example 'projects', or 'organizations'. {resource id} is the
+       *        consumer numeric id, such as project number: '123456'. {service} the name of a service,
+       *        such as 'service.googleapis.com'.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2077,7 +2078,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Managed service and service consumer. Required. services/{service}/{collection
+         * Required. Managed service and service consumer. Required. services/{service}/{collection
          * id}/{resource id} {collection id} is the cloud resource collection type representing the
          * service consumer, for example 'projects', or 'organizations'. {resource id} is the
          * consumer numeric id, such as project number: '123456'. {service} the name of a service,
@@ -2086,17 +2087,18 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Managed service and service consumer. Required. services/{service}/{collection id}/{resource id}
-       {collection id} is the cloud resource collection type representing the service consumer, for
-       example 'projects', or 'organizations'. {resource id} is the consumer numeric id, such as project
-       number: '123456'. {service} the name of a service, such as 'service.googleapis.com'.
+        /** Required. Managed service and service consumer. Required. services/{service}/{collection
+       id}/{resource id} {collection id} is the cloud resource collection type representing the service
+       consumer, for example 'projects', or 'organizations'. {resource id} is the consumer numeric id,
+       such as project number: '123456'. {service} the name of a service, such as
+       'service.googleapis.com'.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Managed service and service consumer. Required. services/{service}/{collection
+         * Required. Managed service and service consumer. Required. services/{service}/{collection
          * id}/{resource id} {collection id} is the cloud resource collection type representing the
          * service consumer, for example 'projects', or 'organizations'. {resource id} is the
          * consumer numeric id, such as project number: '123456'. {service} the name of a service,
@@ -2112,57 +2114,57 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           return this;
         }
 
-        /** Filter expression over tenancy resources field. Optional. */
+        /** Optional. Filter expression over tenancy resources field. Optional. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Filter expression over tenancy resources field. Optional.
+        /** Optional. Filter expression over tenancy resources field. Optional.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /** Filter expression over tenancy resources field. Optional. */
+        /** Optional. Filter expression over tenancy resources field. Optional. */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /** The maximum number of results returned by this request. */
+        /** Optional. The maximum number of results returned by this request. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results returned by this request.
+        /** Optional. The maximum number of results returned by this request.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The maximum number of results returned by this request. */
+        /** Optional. The maximum number of results returned by this request. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
         /**
-         * The continuation token, which is used to page through large result sets. To get the next
-         * page of results, set this parameter to the value of `nextPageToken` from the previous
-         * response.
+         * Optional. The continuation token, which is used to page through large result sets. To get
+         * the next page of results, set this parameter to the value of `nextPageToken` from the
+         * previous response.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The continuation token, which is used to page through large result sets. To get the next page of
-       results, set this parameter to the value of `nextPageToken` from the previous response.
+        /** Optional. The continuation token, which is used to page through large result sets. To get the next
+       page of results, set this parameter to the value of `nextPageToken` from the previous response.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * The continuation token, which is used to page through large result sets. To get the next
-         * page of results, set this parameter to the value of `nextPageToken` from the previous
-         * response.
+         * Optional. The continuation token, which is used to page through large result sets. To get
+         * the next page of results, set this parameter to the value of `nextPageToken` from the
+         * previous response.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -2187,7 +2189,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link RemoveProject#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Name of the tenancy unit. Such as
+       * @param name Required. Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.RemoveTenantProjectRequest}
        * @return the request
@@ -2220,7 +2222,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Name of the tenancy unit. Such as
+         * @param name Required. Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.RemoveTenantProjectRequest}
          * @since 1.13
@@ -2291,13 +2293,13 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Name of the tenancy unit. Such as
+         * Required. Name of the tenancy unit. Such as
          * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the tenancy unit. Such as
+        /** Required. Name of the tenancy unit. Such as
        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public java.lang.String getName() {
@@ -2305,7 +2307,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Name of the tenancy unit. Such as
+         * Required. Name of the tenancy unit. Such as
          * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public RemoveProject setName(java.lang.String name) {
@@ -2335,7 +2337,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link UndeleteProject#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Name of the tenancy unit. Such as
+       * @param name Required. Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.UndeleteTenantProjectRequest}
        * @return the request
@@ -2367,7 +2369,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param name Name of the tenancy unit. Such as
+         * @param name Required. Name of the tenancy unit. Such as
        *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.UndeleteTenantProjectRequest}
          * @since 1.13
@@ -2438,13 +2440,13 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Name of the tenancy unit. Such as
+         * Required. Name of the tenancy unit. Such as
          * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the tenancy unit. Such as
+        /** Required. Name of the tenancy unit. Such as
        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public java.lang.String getName() {
@@ -2452,7 +2454,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Name of the tenancy unit. Such as
+         * Required. Name of the tenancy unit. Such as
          * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public UndeleteProject setName(java.lang.String name) {

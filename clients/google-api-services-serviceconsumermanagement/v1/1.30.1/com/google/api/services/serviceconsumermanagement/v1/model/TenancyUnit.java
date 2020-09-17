@@ -31,14 +31,15 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 public final class TenancyUnit extends com.google.api.client.json.GenericJson {
 
   /**
-   * @OutputOnly Cloud resource name of the consumer of this service. For example 'projects/123456'.
+   * Output only. @OutputOnly Cloud resource name of the consumer of this service. For example
+   * 'projects/123456'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consumer;
 
   /**
-   * @OutputOnly The time this tenancy unit was created.
+   * Output only. @OutputOnly The time this tenancy unit was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +70,8 @@ public final class TenancyUnit extends com.google.api.client.json.GenericJson {
   private java.util.List<TenantResource> tenantResources;
 
   /**
-   * @OutputOnly Cloud resource name of the consumer of this service. For example 'projects/123456'.
+   * Output only. @OutputOnly Cloud resource name of the consumer of this service. For example
+   * 'projects/123456'.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumer() {
@@ -77,7 +79,8 @@ public final class TenancyUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly Cloud resource name of the consumer of this service. For example 'projects/123456'.
+   * Output only. @OutputOnly Cloud resource name of the consumer of this service. For example
+   * 'projects/123456'.
    * @param consumer consumer or {@code null} for none
    */
   public TenancyUnit setConsumer(java.lang.String consumer) {
@@ -86,7 +89,7 @@ public final class TenancyUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The time this tenancy unit was created.
+   * Output only. @OutputOnly The time this tenancy unit was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -94,7 +97,7 @@ public final class TenancyUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The time this tenancy unit was created.
+   * Output only. @OutputOnly The time this tenancy unit was created.
    * @param createTime createTime or {@code null} for none
    */
   public TenancyUnit setCreateTime(String createTime) {

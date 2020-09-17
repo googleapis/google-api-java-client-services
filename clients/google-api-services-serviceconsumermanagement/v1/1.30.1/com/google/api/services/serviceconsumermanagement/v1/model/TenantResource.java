@@ -31,8 +31,8 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 public final class TenantResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * @OutputOnly Identifier of the tenant resource. For cloud projects, it is in the form
-   * 'projects/{number}'. For example 'projects/123456'.
+   * Output only. @OutputOnly Identifier of the tenant resource. For cloud projects, it is in the
+   * form 'projects/{number}'. For example 'projects/123456'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class TenantResource extends com.google.api.client.json.GenericJson
   private java.lang.String tag;
 
   /**
-   * @OutputOnly Identifier of the tenant resource. For cloud projects, it is in the form
-   * 'projects/{number}'. For example 'projects/123456'.
+   * Output only. @OutputOnly Identifier of the tenant resource. For cloud projects, it is in the
+   * form 'projects/{number}'. For example 'projects/123456'.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -62,8 +62,8 @@ public final class TenantResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * @OutputOnly Identifier of the tenant resource. For cloud projects, it is in the form
-   * 'projects/{number}'. For example 'projects/123456'.
+   * Output only. @OutputOnly Identifier of the tenant resource. For cloud projects, it is in the
+   * form 'projects/{number}'. For example 'projects/123456'.
    * @param resource resource or {@code null} for none
    */
   public TenantResource setResource(java.lang.String resource) {

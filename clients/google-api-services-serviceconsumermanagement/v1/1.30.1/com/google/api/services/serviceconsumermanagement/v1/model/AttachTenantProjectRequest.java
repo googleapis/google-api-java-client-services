@@ -47,7 +47,8 @@ public final class AttachTenantProjectRequest extends com.google.api.client.json
   private java.lang.String reservedResource;
 
   /**
-   * Tag of the tenant resource after attachment. Must be less than 128 characters. Required.
+   * Required. Tag of the tenant resource after attachment. Must be less than 128 characters.
+   * Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +93,8 @@ public final class AttachTenantProjectRequest extends com.google.api.client.json
   }
 
   /**
-   * Tag of the tenant resource after attachment. Must be less than 128 characters. Required.
+   * Required. Tag of the tenant resource after attachment. Must be less than 128 characters.
+   * Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -100,7 +102,8 @@ public final class AttachTenantProjectRequest extends com.google.api.client.json
   }
 
   /**
-   * Tag of the tenant resource after attachment. Must be less than 128 characters. Required.
+   * Required. Tag of the tenant resource after attachment. Must be less than 128 characters.
+   * Required.
    * @param tag tag or {@code null} for none
    */
   public AttachTenantProjectRequest setTag(java.lang.String tag) {

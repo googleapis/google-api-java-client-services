@@ -38,7 +38,7 @@ public final class ApplyTenantProjectConfigRequest extends com.google.api.client
   private TenantProjectConfig projectConfig;
 
   /**
-   * Tag of the project. Must be less than 128 characters. Required.
+   * Required. Tag of the project. Must be less than 128 characters. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class ApplyTenantProjectConfigRequest extends com.google.api.client
   }
 
   /**
-   * Tag of the project. Must be less than 128 characters. Required.
+   * Required. Tag of the project. Must be less than 128 characters. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -70,7 +70,7 @@ public final class ApplyTenantProjectConfigRequest extends com.google.api.client
   }
 
   /**
-   * Tag of the project. Must be less than 128 characters. Required.
+   * Required. Tag of the project. Must be less than 128 characters. Required.
    * @param tag tag or {@code null} for none
    */
   public ApplyTenantProjectConfigRequest setTag(java.lang.String tag) {

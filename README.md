@@ -40,6 +40,7 @@ packages on [Maven Central][maven-search].
 | App Engine Admin API | [v1](clients/google-api-services-appengine/v1), [v1alpha](clients/google-api-services-appengine/v1alpha), [v1beta](clients/google-api-services-appengine/v1beta), [v1beta4](clients/google-api-services-appengine/v1beta4), [v1beta5](clients/google-api-services-appengine/v1beta5) |
 | Apps Script API | [v1](clients/google-api-services-script/v1) |
 | Artifact Registry API | [v1beta1](clients/google-api-services-artifactregistry/v1beta1) |
+| Assured Workloads API | [v1beta1](clients/google-api-services-assuredworkloads/v1beta1) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
 | BigQuery Connection API | [v1beta1](clients/google-api-services-bigqueryconnection/v1beta1) |
 | BigQuery Data Transfer API | [v1](clients/google-api-services-bigquerydatatransfer/v1) |
@@ -152,7 +153,6 @@ packages on [Maven Central][maven-search].
 | Google Sheets API | [v4](clients/google-api-services-sheets/v4) |
 | Google Site Verification API | [v1](clients/google-api-services-siteVerification/v1) |
 | Google Slides API | [v1](clients/google-api-services-slides/v1) |
-| Google+ API | [v1](clients/google-api-services-plus/v1) |
 | Groups Migration API | [v1](clients/google-api-services-groupsmigration/v1) |
 | Groups Settings API | [v1](clients/google-api-services-groupssettings/v1) |
 | Hangouts Chat API | [v1](clients/google-api-services-chat/v1) |

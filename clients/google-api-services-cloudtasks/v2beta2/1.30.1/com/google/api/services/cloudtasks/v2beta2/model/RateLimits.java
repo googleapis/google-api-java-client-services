@@ -32,22 +32,21 @@ package com.google.api.services.cloudtasks.v2beta2.model;
 public final class RateLimits extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The max burst size. Max burst size limits how fast tasks in queue are processed
-   * when many tasks are in the queue and the rate is high. This field allows the queue to have a
-   * high rate so processing starts shortly after a task is enqueued, but still limits resource
-   * usage when many tasks are enqueued in a short period of time. The [token
+   * The max burst size. Max burst size limits how fast tasks in queue are processed when many tasks
+   * are in the queue and the rate is high. This field allows the queue to have a high rate so
+   * processing starts shortly after a task is enqueued, but still limits resource usage when many
+   * tasks are enqueued in a short period of time. The [token
    * bucket](https://wikipedia.org/wiki/Token_Bucket) algorithm is used to control the rate of task
    * dispatches. Each queue has a token bucket that holds tokens, up to the maximum specified by
    * `max_burst_size`. Each time a task is dispatched, a token is removed from the bucket. Tasks
    * will be dispatched until the queue's bucket runs out of tokens. The bucket will be continuously
-   * refilled with new tokens based on max_tasks_dispatched_per_second. Cloud Tasks will pick the
-   * value of `max_burst_size` based on the value of max_tasks_dispatched_per_second. For App Engine
-   * queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is equal to [bucke
-   * t_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size).
-   * Since `max_burst_size` is output only, if UpdateQueue is called on a queue created by
-   * `queue.yaml/xml`, `max_burst_size` will be reset based on the value of
-   * max_tasks_dispatched_per_second, regardless of whether max_tasks_dispatched_per_second is
-   * updated.
+   * refilled with new tokens based on max_dispatches_per_second. The default value of
+   * `max_burst_size` is picked by Cloud Tasks based on the value of max_dispatches_per_second. The
+   * maximum value of `max_burst_size` is 500. For App Engine queues that were created or updated
+   * using `queue.yaml/xml`, `max_burst_size` is equal to [bucket_size](https://cloud.google.com/app
+   * engine/docs/standard/python/config/queueref#bucket_size). If UpdateQueue is called on a queue
+   * without explicitly setting a value for `max_burst_size`, `max_burst_size` value will get
+   * updated if UpdateQueue is updating max_dispatches_per_second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,22 +78,21 @@ public final class RateLimits extends com.google.api.client.json.GenericJson {
   private java.lang.Double maxTasksDispatchedPerSecond;
 
   /**
-   * Output only. The max burst size. Max burst size limits how fast tasks in queue are processed
-   * when many tasks are in the queue and the rate is high. This field allows the queue to have a
-   * high rate so processing starts shortly after a task is enqueued, but still limits resource
-   * usage when many tasks are enqueued in a short period of time. The [token
+   * The max burst size. Max burst size limits how fast tasks in queue are processed when many tasks
+   * are in the queue and the rate is high. This field allows the queue to have a high rate so
+   * processing starts shortly after a task is enqueued, but still limits resource usage when many
+   * tasks are enqueued in a short period of time. The [token
    * bucket](https://wikipedia.org/wiki/Token_Bucket) algorithm is used to control the rate of task
    * dispatches. Each queue has a token bucket that holds tokens, up to the maximum specified by
    * `max_burst_size`. Each time a task is dispatched, a token is removed from the bucket. Tasks
    * will be dispatched until the queue's bucket runs out of tokens. The bucket will be continuously
-   * refilled with new tokens based on max_tasks_dispatched_per_second. Cloud Tasks will pick the
-   * value of `max_burst_size` based on the value of max_tasks_dispatched_per_second. For App Engine
-   * queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is equal to [bucke
-   * t_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size).
-   * Since `max_burst_size` is output only, if UpdateQueue is called on a queue created by
-   * `queue.yaml/xml`, `max_burst_size` will be reset based on the value of
-   * max_tasks_dispatched_per_second, regardless of whether max_tasks_dispatched_per_second is
-   * updated.
+   * refilled with new tokens based on max_dispatches_per_second. The default value of
+   * `max_burst_size` is picked by Cloud Tasks based on the value of max_dispatches_per_second. The
+   * maximum value of `max_burst_size` is 500. For App Engine queues that were created or updated
+   * using `queue.yaml/xml`, `max_burst_size` is equal to [bucket_size](https://cloud.google.com/app
+   * engine/docs/standard/python/config/queueref#bucket_size). If UpdateQueue is called on a queue
+   * without explicitly setting a value for `max_burst_size`, `max_burst_size` value will get
+   * updated if UpdateQueue is updating max_dispatches_per_second.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxBurstSize() {
@@ -102,22 +100,21 @@ public final class RateLimits extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The max burst size. Max burst size limits how fast tasks in queue are processed
-   * when many tasks are in the queue and the rate is high. This field allows the queue to have a
-   * high rate so processing starts shortly after a task is enqueued, but still limits resource
-   * usage when many tasks are enqueued in a short period of time. The [token
+   * The max burst size. Max burst size limits how fast tasks in queue are processed when many tasks
+   * are in the queue and the rate is high. This field allows the queue to have a high rate so
+   * processing starts shortly after a task is enqueued, but still limits resource usage when many
+   * tasks are enqueued in a short period of time. The [token
    * bucket](https://wikipedia.org/wiki/Token_Bucket) algorithm is used to control the rate of task
    * dispatches. Each queue has a token bucket that holds tokens, up to the maximum specified by
    * `max_burst_size`. Each time a task is dispatched, a token is removed from the bucket. Tasks
    * will be dispatched until the queue's bucket runs out of tokens. The bucket will be continuously
-   * refilled with new tokens based on max_tasks_dispatched_per_second. Cloud Tasks will pick the
-   * value of `max_burst_size` based on the value of max_tasks_dispatched_per_second. For App Engine
-   * queues that were created or updated using `queue.yaml/xml`, `max_burst_size` is equal to [bucke
-   * t_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size).
-   * Since `max_burst_size` is output only, if UpdateQueue is called on a queue created by
-   * `queue.yaml/xml`, `max_burst_size` will be reset based on the value of
-   * max_tasks_dispatched_per_second, regardless of whether max_tasks_dispatched_per_second is
-   * updated.
+   * refilled with new tokens based on max_dispatches_per_second. The default value of
+   * `max_burst_size` is picked by Cloud Tasks based on the value of max_dispatches_per_second. The
+   * maximum value of `max_burst_size` is 500. For App Engine queues that were created or updated
+   * using `queue.yaml/xml`, `max_burst_size` is equal to [bucket_size](https://cloud.google.com/app
+   * engine/docs/standard/python/config/queueref#bucket_size). If UpdateQueue is called on a queue
+   * without explicitly setting a value for `max_burst_size`, `max_burst_size` value will get
+   * updated if UpdateQueue is updating max_dispatches_per_second.
    * @param maxBurstSize maxBurstSize or {@code null} for none
    */
   public RateLimits setMaxBurstSize(java.lang.Integer maxBurstSize) {

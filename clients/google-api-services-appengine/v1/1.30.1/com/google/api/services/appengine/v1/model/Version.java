@@ -41,6 +41,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * Automatic scaling is based on request rate, response latencies, and other application metrics.
+   * Instances are dynamically created and destroyed as needed in order to handle traffic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,7 +229,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * A service with manual scaling runs continuously, allowing you to perform complex initialization
-   * and rely on the state of its memory over time.
+   * and rely on the state of its memory over time. Manually scaled versions are sometimes referred
+   * to as "backends".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -371,6 +373,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * Automatic scaling is based on request rate, response latencies, and other application metrics.
+   * Instances are dynamically created and destroyed as needed in order to handle traffic.
    * @return value or {@code null} for none
    */
   public AutomaticScaling getAutomaticScaling() {
@@ -379,6 +382,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * Automatic scaling is based on request rate, response latencies, and other application metrics.
+   * Instances are dynamically created and destroyed as needed in order to handle traffic.
    * @param automaticScaling automaticScaling or {@code null} for none
    */
   public Version setAutomaticScaling(AutomaticScaling automaticScaling) {
@@ -772,7 +776,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * A service with manual scaling runs continuously, allowing you to perform complex initialization
-   * and rely on the state of its memory over time.
+   * and rely on the state of its memory over time. Manually scaled versions are sometimes referred
+   * to as "backends".
    * @return value or {@code null} for none
    */
   public ManualScaling getManualScaling() {
@@ -781,7 +786,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * A service with manual scaling runs continuously, allowing you to perform complex initialization
-   * and rely on the state of its memory over time.
+   * and rely on the state of its memory over time. Manually scaled versions are sometimes referred
+   * to as "backends".
    * @param manualScaling manualScaling or {@code null} for none
    */
   public Version setManualScaling(ManualScaling manualScaling) {

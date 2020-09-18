@@ -1,7 +1,7 @@
 {
   "maven": {
     "groupId": "com.google.apis",
-    "artifactId": "google-api-services-sql",
-    "version": "v1beta4-rev20200828-1.30.10"
+    "artifactId": "google-api-services-sqladmin",
+    "version": "v1beta4-rev20200903-1.30.10"
   }
 }

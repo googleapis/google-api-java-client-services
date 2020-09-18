@@ -1451,11 +1451,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id AccountUserProfile ID.
      * @param content the {@link com.google.api.services.dfareporting.model.AccountUserProfile}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.AccountUserProfile content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.AccountUserProfile content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -1476,12 +1477,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id AccountUserProfile ID.
        * @param content the {@link com.google.api.services.dfareporting.model.AccountUserProfile}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.AccountUserProfile content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.AccountUserProfile content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.AccountUserProfile.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -2129,11 +2132,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id Account ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Account}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Account content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Account content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -2154,12 +2158,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id Account ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Account}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Account content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Account content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Account.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -3198,11 +3204,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id Ad ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Ad}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Ad content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Ad content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -3223,12 +3230,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id Ad ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Ad}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Ad content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Ad content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Ad.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -4110,11 +4119,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id AdvertiserGroup ID.
      * @param content the {@link com.google.api.services.dfareporting.model.AdvertiserGroup}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.AdvertiserGroup content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.AdvertiserGroup content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -4135,12 +4145,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id AdvertiserGroup ID.
        * @param content the {@link com.google.api.services.dfareporting.model.AdvertiserGroup}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.AdvertiserGroup content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.AdvertiserGroup content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.AdvertiserGroup.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -4957,11 +4969,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id LandingPage ID.
      * @param content the {@link com.google.api.services.dfareporting.model.LandingPage}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.LandingPage content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.LandingPage content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -4982,12 +4995,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id LandingPage ID.
        * @param content the {@link com.google.api.services.dfareporting.model.LandingPage}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.LandingPage content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.LandingPage content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.LandingPage.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -5829,11 +5844,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id Advertiser ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Advertiser}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Advertiser content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Advertiser content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -5854,12 +5870,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id Advertiser ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Advertiser}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Advertiser content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Advertiser content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Advertiser.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -7226,11 +7244,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id Campaign ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Campaign}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Campaign content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Campaign content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -7251,12 +7270,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id Campaign ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Campaign}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Campaign content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Campaign content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Campaign.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -9132,11 +9153,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id ContentCategory ID.
      * @param content the {@link com.google.api.services.dfareporting.model.ContentCategory}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.ContentCategory content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.ContentCategory content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -9157,12 +9179,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id ContentCategory ID.
        * @param content the {@link com.google.api.services.dfareporting.model.ContentCategory}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.ContentCategory content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.ContentCategory content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.ContentCategory.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -10870,11 +10894,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      *
      * @param profileId User profile ID associated with this request.
      * @param creativeFieldId CreativeField ID.
+     * @param id CreativeFieldValue ID.
      * @param content the {@link com.google.api.services.dfareporting.model.CreativeFieldValue}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long creativeFieldId, com.google.api.services.dfareporting.model.CreativeFieldValue content) throws java.io.IOException {
-      Patch result = new Patch(profileId, creativeFieldId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long creativeFieldId, java.lang.Long id, com.google.api.services.dfareporting.model.CreativeFieldValue content) throws java.io.IOException {
+      Patch result = new Patch(profileId, creativeFieldId, id, content);
       initialize(result);
       return result;
     }
@@ -10896,13 +10921,15 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        *
        * @param profileId User profile ID associated with this request.
        * @param creativeFieldId CreativeField ID.
+       * @param id CreativeFieldValue ID.
        * @param content the {@link com.google.api.services.dfareporting.model.CreativeFieldValue}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long creativeFieldId, com.google.api.services.dfareporting.model.CreativeFieldValue content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long creativeFieldId, java.lang.Long id, com.google.api.services.dfareporting.model.CreativeFieldValue content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.CreativeFieldValue.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
         this.creativeFieldId = com.google.api.client.util.Preconditions.checkNotNull(creativeFieldId, "Required parameter creativeFieldId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -11835,11 +11862,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id CreativeField ID.
      * @param content the {@link com.google.api.services.dfareporting.model.CreativeField}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.CreativeField content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.CreativeField content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -11860,12 +11888,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id CreativeField ID.
        * @param content the {@link com.google.api.services.dfareporting.model.CreativeField}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.CreativeField content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.CreativeField content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.CreativeField.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -12646,11 +12676,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id CreativeGroup ID.
      * @param content the {@link com.google.api.services.dfareporting.model.CreativeGroup}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.CreativeGroup content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.CreativeGroup content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -12671,12 +12702,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id CreativeGroup ID.
        * @param content the {@link com.google.api.services.dfareporting.model.CreativeGroup}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.CreativeGroup content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.CreativeGroup content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.CreativeGroup.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -13584,11 +13617,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id Creative ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Creative}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Creative content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Creative content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -13609,12 +13643,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id Creative ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Creative}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Creative content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Creative content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Creative.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -15915,11 +15951,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id EventTag ID.
      * @param content the {@link com.google.api.services.dfareporting.model.EventTag}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.EventTag content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.EventTag content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -15940,12 +15977,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id EventTag ID.
        * @param content the {@link com.google.api.services.dfareporting.model.EventTag}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.EventTag content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.EventTag content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.EventTag.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -17484,11 +17523,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id FloodlightActivity ID.
      * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivity}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.FloodlightActivity content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.FloodlightActivity content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -17509,12 +17549,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id FloodlightActivity ID.
        * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivity}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.FloodlightActivity content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.FloodlightActivity content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.FloodlightActivity.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -18337,11 +18379,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id FloodlightActivityGroup ID.
      * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivityGroup}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.FloodlightActivityGroup content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.FloodlightActivityGroup content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -18362,12 +18405,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id FloodlightActivityGroup ID.
        * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivityGroup}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.FloodlightActivityGroup content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.FloodlightActivityGroup content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.FloodlightActivityGroup.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -18904,11 +18949,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id FloodlightConfiguration ID.
      * @param content the {@link com.google.api.services.dfareporting.model.FloodlightConfiguration}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.FloodlightConfiguration content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.FloodlightConfiguration content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -18929,12 +18975,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id FloodlightConfiguration ID.
        * @param content the {@link com.google.api.services.dfareporting.model.FloodlightConfiguration}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.FloodlightConfiguration content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.FloodlightConfiguration content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.FloodlightConfiguration.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -22924,11 +22972,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id PlacementGroup ID.
      * @param content the {@link com.google.api.services.dfareporting.model.PlacementGroup}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.PlacementGroup content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.PlacementGroup content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -22949,12 +22998,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id PlacementGroup ID.
        * @param content the {@link com.google.api.services.dfareporting.model.PlacementGroup}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.PlacementGroup content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.PlacementGroup content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.PlacementGroup.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -23836,11 +23887,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id PlacementStrategy ID.
      * @param content the {@link com.google.api.services.dfareporting.model.PlacementStrategy}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.PlacementStrategy content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.PlacementStrategy content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -23861,12 +23913,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id PlacementStrategy ID.
        * @param content the {@link com.google.api.services.dfareporting.model.PlacementStrategy}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.PlacementStrategy content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.PlacementStrategy content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.PlacementStrategy.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -25087,11 +25141,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id Placement ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Placement}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Placement content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Placement content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -25112,12 +25167,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id Placement ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Placement}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Placement content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Placement content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Placement.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -26658,19 +26715,19 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param remarketingListId RemarketingList ID.
+     * @param id RemarketingList ID.
      * @param content the {@link com.google.api.services.dfareporting.model.RemarketingListShare}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, java.lang.Long remarketingListId, com.google.api.services.dfareporting.model.RemarketingListShare content) throws java.io.IOException {
-      Patch result = new Patch(profileId, remarketingListId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.RemarketingListShare content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingListShare> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/remarketingLists/{remarketingListId}/remarketingListShares";
+      private static final String REST_PATH = "userprofiles/{profileId}/remarketingListShares";
 
       /**
        * Updates an existing remarketing list share. This method supports patch semantics.
@@ -26684,14 +26741,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param remarketingListId RemarketingList ID.
+       * @param id RemarketingList ID.
        * @param content the {@link com.google.api.services.dfareporting.model.RemarketingListShare}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, java.lang.Long remarketingListId, com.google.api.services.dfareporting.model.RemarketingListShare content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.RemarketingListShare content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.RemarketingListShare.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.remarketingListId = com.google.api.client.util.Preconditions.checkNotNull(remarketingListId, "Required parameter remarketingListId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -26767,31 +26824,15 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
       /** RemarketingList ID. */
       @com.google.api.client.util.Key
-      private java.lang.Long remarketingListId;
-
-      /** RemarketingList ID.
-       */
-      public java.lang.Long getRemarketingListId() {
-        return remarketingListId;
-      }
-
-      /** RemarketingList ID. */
-      public Patch setRemarketingListId(java.lang.Long remarketingListId) {
-        this.remarketingListId = remarketingListId;
-        return this;
-      }
-
-      /** RemarketingListShare ID. */
-      @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** RemarketingListShare ID.
+      /** RemarketingList ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** RemarketingListShare ID. */
+      /** RemarketingList ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -27489,11 +27530,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id RemarketingList ID.
      * @param content the {@link com.google.api.services.dfareporting.model.RemarketingList}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.RemarketingList content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.RemarketingList content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -27514,12 +27556,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id RemarketingList ID.
        * @param content the {@link com.google.api.services.dfareporting.model.RemarketingList}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.RemarketingList content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.RemarketingList content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.RemarketingList.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -30058,11 +30102,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id Site ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Site}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Site content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Site content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -30083,12 +30128,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id Site ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Site}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Site content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Site content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Site.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -31316,11 +31363,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id Subaccount ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Subaccount}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Subaccount content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Subaccount content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -31341,12 +31389,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id Subaccount ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Subaccount}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.Subaccount content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.Subaccount content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.Subaccount.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -32533,11 +32583,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id TargetingTemplate ID.
      * @param content the {@link com.google.api.services.dfareporting.model.TargetingTemplate}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.TargetingTemplate content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.TargetingTemplate content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -32558,12 +32609,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id TargetingTemplate ID.
        * @param content the {@link com.google.api.services.dfareporting.model.TargetingTemplate}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.TargetingTemplate content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.TargetingTemplate content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.TargetingTemplate.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override
@@ -34328,11 +34381,12 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
+     * @param id UserRole ID.
      * @param content the {@link com.google.api.services.dfareporting.model.UserRole}
      * @return the request
      */
-    public Patch patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.UserRole content) throws java.io.IOException {
-      Patch result = new Patch(profileId, content);
+    public Patch patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.UserRole content) throws java.io.IOException {
+      Patch result = new Patch(profileId, id, content);
       initialize(result);
       return result;
     }
@@ -34353,12 +34407,14 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
+       * @param id UserRole ID.
        * @param content the {@link com.google.api.services.dfareporting.model.UserRole}
        * @since 1.13
        */
-      protected Patch(java.lang.Long profileId, com.google.api.services.dfareporting.model.UserRole content) {
+      protected Patch(java.lang.Long profileId, java.lang.Long id, com.google.api.services.dfareporting.model.UserRole content) {
         super(Dfareporting.this, "PATCH", REST_PATH, content, com.google.api.services.dfareporting.model.UserRole.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
       }
 
       @Override

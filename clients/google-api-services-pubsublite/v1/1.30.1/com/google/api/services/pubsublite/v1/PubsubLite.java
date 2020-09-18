@@ -2448,6 +2448,223 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
   }
 
   /**
+   * An accessor for creating requests from the TopicStats collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code PubsubLite pubsublite = new PubsubLite(...);}
+   *   {@code PubsubLite.TopicStats.List request = pubsublite.topicStats().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public TopicStats topicStats() {
+    return new TopicStats();
+  }
+
+  /**
+   * The "topicStats" collection of methods.
+   */
+  public class TopicStats {
+
+    /**
+     * An accessor for creating requests from the Projects collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code PubsubLite pubsublite = new PubsubLite(...);}
+     *   {@code PubsubLite.Projects.List request = pubsublite.projects().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Projects projects() {
+      return new Projects();
+    }
+
+    /**
+     * The "projects" collection of methods.
+     */
+    public class Projects {
+
+      /**
+       * An accessor for creating requests from the Locations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code PubsubLite pubsublite = new PubsubLite(...);}
+       *   {@code PubsubLite.Locations.List request = pubsublite.locations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Locations locations() {
+        return new Locations();
+      }
+
+      /**
+       * The "locations" collection of methods.
+       */
+      public class Locations {
+
+        /**
+         * An accessor for creating requests from the Topics collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code PubsubLite pubsublite = new PubsubLite(...);}
+         *   {@code PubsubLite.Topics.List request = pubsublite.topics().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Topics topics() {
+          return new Topics();
+        }
+
+        /**
+         * The "topics" collection of methods.
+         */
+        public class Topics {
+
+          /**
+           * Compute statistics about a range of messages in a given topic and partition.
+           *
+           * Create a request for the method "topics.computeMessageStats".
+           *
+           * This request holds the parameters needed by the pubsublite server.  After setting any optional
+           * parameters, call the {@link ComputeMessageStats#execute()} method to invoke the remote operation.
+           *
+           * @param topic Required. The topic for which we should compute message stats.
+           * @param content the {@link com.google.api.services.pubsublite.v1.model.ComputeMessageStatsRequest}
+           * @return the request
+           */
+          public ComputeMessageStats computeMessageStats(java.lang.String topic, com.google.api.services.pubsublite.v1.model.ComputeMessageStatsRequest content) throws java.io.IOException {
+            ComputeMessageStats result = new ComputeMessageStats(topic, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ComputeMessageStats extends PubsubLiteRequest<com.google.api.services.pubsublite.v1.model.ComputeMessageStatsResponse> {
+
+            private static final String REST_PATH = "v1/topicStats/{+topic}:computeMessageStats";
+
+            private final java.util.regex.Pattern TOPIC_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/topics/[^/]+$");
+
+            /**
+             * Compute statistics about a range of messages in a given topic and partition.
+             *
+             * Create a request for the method "topics.computeMessageStats".
+             *
+             * This request holds the parameters needed by the the pubsublite server.  After setting any
+             * optional parameters, call the {@link ComputeMessageStats#execute()} method to invoke the remote
+             * operation. <p> {@link ComputeMessageStats#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param topic Required. The topic for which we should compute message stats.
+             * @param content the {@link com.google.api.services.pubsublite.v1.model.ComputeMessageStatsRequest}
+             * @since 1.13
+             */
+            protected ComputeMessageStats(java.lang.String topic, com.google.api.services.pubsublite.v1.model.ComputeMessageStatsRequest content) {
+              super(PubsubLite.this, "POST", REST_PATH, content, com.google.api.services.pubsublite.v1.model.ComputeMessageStatsResponse.class);
+              this.topic = com.google.api.client.util.Preconditions.checkNotNull(topic, "Required parameter topic must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TOPIC_PATTERN.matcher(topic).matches(),
+                    "Parameter topic must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/topics/[^/]+$");
+              }
+            }
+
+            @Override
+            public ComputeMessageStats set$Xgafv(java.lang.String $Xgafv) {
+              return (ComputeMessageStats) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ComputeMessageStats setAccessToken(java.lang.String accessToken) {
+              return (ComputeMessageStats) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ComputeMessageStats setAlt(java.lang.String alt) {
+              return (ComputeMessageStats) super.setAlt(alt);
+            }
+
+            @Override
+            public ComputeMessageStats setCallback(java.lang.String callback) {
+              return (ComputeMessageStats) super.setCallback(callback);
+            }
+
+            @Override
+            public ComputeMessageStats setFields(java.lang.String fields) {
+              return (ComputeMessageStats) super.setFields(fields);
+            }
+
+            @Override
+            public ComputeMessageStats setKey(java.lang.String key) {
+              return (ComputeMessageStats) super.setKey(key);
+            }
+
+            @Override
+            public ComputeMessageStats setOauthToken(java.lang.String oauthToken) {
+              return (ComputeMessageStats) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ComputeMessageStats setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ComputeMessageStats) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ComputeMessageStats setQuotaUser(java.lang.String quotaUser) {
+              return (ComputeMessageStats) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ComputeMessageStats setUploadType(java.lang.String uploadType) {
+              return (ComputeMessageStats) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ComputeMessageStats setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ComputeMessageStats) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The topic for which we should compute message stats. */
+            @com.google.api.client.util.Key
+            private java.lang.String topic;
+
+            /** Required. The topic for which we should compute message stats.
+             */
+            public java.lang.String getTopic() {
+              return topic;
+            }
+
+            /** Required. The topic for which we should compute message stats. */
+            public ComputeMessageStats setTopic(java.lang.String topic) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TOPIC_PATTERN.matcher(topic).matches(),
+                    "Parameter topic must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/topics/[^/]+$");
+              }
+              this.topic = topic;
+              return this;
+            }
+
+            @Override
+            public ComputeMessageStats set(String parameterName, Object value) {
+              return (ComputeMessageStats) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
    * Builder for {@link PubsubLite}.
    *
    * <p>

@@ -5394,6 +5394,152 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           return (Lookup) super.set(parameterName, value);
         }
       }
+      /**
+       * Modifies the `MembershipRole`s of a `Membership`.
+       *
+       * Create a request for the method "memberships.modifyMembershipRoles".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link ModifyMembershipRoles#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        `Membership` whose roles are to be modified. Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`.
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesRequest}
+       * @return the request
+       */
+      public ModifyMembershipRoles modifyMembershipRoles(java.lang.String name, com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesRequest content) throws java.io.IOException {
+        ModifyMembershipRoles result = new ModifyMembershipRoles(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ModifyMembershipRoles extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:modifyMembershipRoles";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^groups/[^/]+/memberships/[^/]+$");
+
+        /**
+         * Modifies the `MembershipRole`s of a `Membership`.
+         *
+         * Create a request for the method "memberships.modifyMembershipRoles".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link ModifyMembershipRoles#execute()} method to invoke the
+         * remote operation. <p> {@link ModifyMembershipRoles#initialize(com.google.api.client.googleapis.
+         * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        `Membership` whose roles are to be modified. Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`.
+         * @param content the {@link com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesRequest}
+         * @since 1.13
+         */
+        protected ModifyMembershipRoles(java.lang.String name, com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesRequest content) {
+          super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^groups/[^/]+/memberships/[^/]+$");
+          }
+        }
+
+        @Override
+        public ModifyMembershipRoles set$Xgafv(java.lang.String $Xgafv) {
+          return (ModifyMembershipRoles) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ModifyMembershipRoles setAccessToken(java.lang.String accessToken) {
+          return (ModifyMembershipRoles) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ModifyMembershipRoles setAlt(java.lang.String alt) {
+          return (ModifyMembershipRoles) super.setAlt(alt);
+        }
+
+        @Override
+        public ModifyMembershipRoles setCallback(java.lang.String callback) {
+          return (ModifyMembershipRoles) super.setCallback(callback);
+        }
+
+        @Override
+        public ModifyMembershipRoles setFields(java.lang.String fields) {
+          return (ModifyMembershipRoles) super.setFields(fields);
+        }
+
+        @Override
+        public ModifyMembershipRoles setKey(java.lang.String key) {
+          return (ModifyMembershipRoles) super.setKey(key);
+        }
+
+        @Override
+        public ModifyMembershipRoles setOauthToken(java.lang.String oauthToken) {
+          return (ModifyMembershipRoles) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ModifyMembershipRoles setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ModifyMembershipRoles) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ModifyMembershipRoles setQuotaUser(java.lang.String quotaUser) {
+          return (ModifyMembershipRoles) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ModifyMembershipRoles setUploadType(java.lang.String uploadType) {
+          return (ModifyMembershipRoles) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ModifyMembershipRoles setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ModifyMembershipRoles) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` whose roles are to be modified. Must be of the form
+         * `groups/{group_id}/memberships/{membership_id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       `Membership` whose roles are to be modified. Must be of the form
+       `groups/{group_id}/memberships/{membership_id}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` whose roles are to be modified. Must be of the form
+         * `groups/{group_id}/memberships/{membership_id}`.
+         */
+        public ModifyMembershipRoles setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^groups/[^/]+/memberships/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ModifyMembershipRoles set(String parameterName, Object value) {
+          return (ModifyMembershipRoles) super.set(parameterName, value);
+        }
+      }
 
     }
   }

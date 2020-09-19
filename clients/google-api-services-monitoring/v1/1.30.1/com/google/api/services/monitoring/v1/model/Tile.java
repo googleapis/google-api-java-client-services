@@ -30,7 +30,7 @@ package com.google.api.services.monitoring.v1.model;
 public final class Tile extends com.google.api.client.json.GenericJson {
 
   /**
-   * The height of the tile, measured in grid squares. Tiles must have a minimum height of 1.
+   * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,14 @@ public final class Tile extends com.google.api.client.json.GenericJson {
   private Widget widget;
 
   /**
-   * The width of the tile, measured in grid squares. Tiles must have a minimum width of 1.
+   * The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer width;
 
   /**
-   * The zero-indexed position of the tile in grid squares relative to the left edge of the grid.
+   * The zero-indexed position of the tile in grid blocks relative to the left edge of the grid.
    * Tiles must be contained within the specified number of columns. x_pos cannot be negative.
    * The value may be {@code null}.
    */
@@ -59,7 +59,7 @@ public final class Tile extends com.google.api.client.json.GenericJson {
   private java.lang.Integer xPos;
 
   /**
-   * The zero-indexed position of the tile in grid squares relative to the top edge of the grid.
+   * The zero-indexed position of the tile in grid blocks relative to the top edge of the grid.
    * y_pos cannot be negative.
    * The value may be {@code null}.
    */
@@ -67,7 +67,7 @@ public final class Tile extends com.google.api.client.json.GenericJson {
   private java.lang.Integer yPos;
 
   /**
-   * The height of the tile, measured in grid squares. Tiles must have a minimum height of 1.
+   * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHeight() {
@@ -75,7 +75,7 @@ public final class Tile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The height of the tile, measured in grid squares. Tiles must have a minimum height of 1.
+   * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
    * @param height height or {@code null} for none
    */
   public Tile setHeight(java.lang.Integer height) {
@@ -101,7 +101,7 @@ public final class Tile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The width of the tile, measured in grid squares. Tiles must have a minimum width of 1.
+   * The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getWidth() {
@@ -109,7 +109,7 @@ public final class Tile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The width of the tile, measured in grid squares. Tiles must have a minimum width of 1.
+   * The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
    * @param width width or {@code null} for none
    */
   public Tile setWidth(java.lang.Integer width) {
@@ -118,7 +118,7 @@ public final class Tile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-indexed position of the tile in grid squares relative to the left edge of the grid.
+   * The zero-indexed position of the tile in grid blocks relative to the left edge of the grid.
    * Tiles must be contained within the specified number of columns. x_pos cannot be negative.
    * @return value or {@code null} for none
    */
@@ -127,7 +127,7 @@ public final class Tile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-indexed position of the tile in grid squares relative to the left edge of the grid.
+   * The zero-indexed position of the tile in grid blocks relative to the left edge of the grid.
    * Tiles must be contained within the specified number of columns. x_pos cannot be negative.
    * @param xPos xPos or {@code null} for none
    */
@@ -137,7 +137,7 @@ public final class Tile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-indexed position of the tile in grid squares relative to the top edge of the grid.
+   * The zero-indexed position of the tile in grid blocks relative to the top edge of the grid.
    * y_pos cannot be negative.
    * @return value or {@code null} for none
    */
@@ -146,7 +146,7 @@ public final class Tile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-indexed position of the tile in grid squares relative to the top edge of the grid.
+   * The zero-indexed position of the tile in grid blocks relative to the top edge of the grid.
    * y_pos cannot be negative.
    * @param yPos yPos or {@code null} for none
    */

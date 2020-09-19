@@ -30,7 +30,7 @@ package com.google.api.services.monitoring.v3.model;
 public final class CollectdValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * The data source for the collectd value. For example there are two data sources for network
+   * The data source for the collectd value. For example, there are two data sources for network
    * measurements: "rx" and "tx".
    * The value may be {@code null}.
    */
@@ -52,7 +52,7 @@ public final class CollectdValue extends com.google.api.client.json.GenericJson 
   private TypedValue value;
 
   /**
-   * The data source for the collectd value. For example there are two data sources for network
+   * The data source for the collectd value. For example, there are two data sources for network
    * measurements: "rx" and "tx".
    * @return value or {@code null} for none
    */
@@ -61,7 +61,7 @@ public final class CollectdValue extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The data source for the collectd value. For example there are two data sources for network
+   * The data source for the collectd value. For example, there are two data sources for network
    * measurements: "rx" and "tx".
    * @param dataSourceName dataSourceName or {@code null} for none
    */

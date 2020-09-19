@@ -17,8 +17,8 @@
 package com.google.api.services.monitoring.v1.model;
 
 /**
- * A mosaic layout divides the available space into a grid of squares, and overlays the grid with
- * tiles. Unlike GridLayout, tiles may span multiple grid squares and can be placed at arbitrary
+ * A mosaic layout divides the available space into a grid of blocks, and overlays the grid with
+ * tiles. Unlike GridLayout, tiles may span multiple grid blocks and can be placed at arbitrary
  * locations in the grid.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

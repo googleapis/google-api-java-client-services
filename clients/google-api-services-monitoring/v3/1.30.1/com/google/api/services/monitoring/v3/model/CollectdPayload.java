@@ -80,7 +80,8 @@ public final class CollectdPayload extends com.google.api.client.json.GenericJso
   private java.lang.String typeInstance;
 
   /**
-   * The measured values during this time interval. Each value must have a different dataSourceName.
+   * The measured values during this time interval. Each value must have a different
+   * data_source_name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,7 +207,8 @@ public final class CollectdPayload extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The measured values during this time interval. Each value must have a different dataSourceName.
+   * The measured values during this time interval. Each value must have a different
+   * data_source_name.
    * @return value or {@code null} for none
    */
   public java.util.List<CollectdValue> getValues() {
@@ -214,7 +216,8 @@ public final class CollectdPayload extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The measured values during this time interval. Each value must have a different dataSourceName.
+   * The measured values during this time interval. Each value must have a different
+   * data_source_name.
    * @param values values or {@code null} for none
    */
   public CollectdPayload setValues(java.util.List<CollectdValue> values) {

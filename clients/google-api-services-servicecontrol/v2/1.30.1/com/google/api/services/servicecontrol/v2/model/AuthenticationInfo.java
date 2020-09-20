@@ -39,8 +39,10 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
 
   /**
    * The email address of the authenticated user (or service account on behalf of third party
-   * principal) making the request. For privacy reasons, the principal email address is redacted for
-   * all read-only operations that fail with a "permission denied" error.
+   * principal) making the request. For third party identity callers, the `principal_subject` field
+   * is populated instead of this field. For privacy reasons, the principal email address is
+   * sometimes redacted. For more information, see [Caller identities in audit
+   * logs](https://cloud.google.com/logging/docs/audit#user-id).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +50,7 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
 
   /**
    * String representation of identity of requesting party. Populated for both first and third party
-   * identities.
+   * identities. Only present for APIs that support third-party identities.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,8 +105,10 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
 
   /**
    * The email address of the authenticated user (or service account on behalf of third party
-   * principal) making the request. For privacy reasons, the principal email address is redacted for
-   * all read-only operations that fail with a "permission denied" error.
+   * principal) making the request. For third party identity callers, the `principal_subject` field
+   * is populated instead of this field. For privacy reasons, the principal email address is
+   * sometimes redacted. For more information, see [Caller identities in audit
+   * logs](https://cloud.google.com/logging/docs/audit#user-id).
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalEmail() {
@@ -113,8 +117,10 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
 
   /**
    * The email address of the authenticated user (or service account on behalf of third party
-   * principal) making the request. For privacy reasons, the principal email address is redacted for
-   * all read-only operations that fail with a "permission denied" error.
+   * principal) making the request. For third party identity callers, the `principal_subject` field
+   * is populated instead of this field. For privacy reasons, the principal email address is
+   * sometimes redacted. For more information, see [Caller identities in audit
+   * logs](https://cloud.google.com/logging/docs/audit#user-id).
    * @param principalEmail principalEmail or {@code null} for none
    */
   public AuthenticationInfo setPrincipalEmail(java.lang.String principalEmail) {
@@ -124,7 +130,7 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
 
   /**
    * String representation of identity of requesting party. Populated for both first and third party
-   * identities.
+   * identities. Only present for APIs that support third-party identities.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalSubject() {
@@ -133,7 +139,7 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
 
   /**
    * String representation of identity of requesting party. Populated for both first and third party
-   * identities.
+   * identities. Only present for APIs that support third-party identities.
    * @param principalSubject principalSubject or {@code null} for none
    */
   public AuthenticationInfo setPrincipalSubject(java.lang.String principalSubject) {

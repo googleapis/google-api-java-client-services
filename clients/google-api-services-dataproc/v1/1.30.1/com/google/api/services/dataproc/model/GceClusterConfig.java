@@ -18,7 +18,7 @@ package com.google.api.services.dataproc.model;
 
 /**
  * Common config settings for resources of Compute Engine cluster instances, applicable to all
- * instances in the cluster. NEXT ID: 13
+ * instances in the cluster. NEXT ID: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

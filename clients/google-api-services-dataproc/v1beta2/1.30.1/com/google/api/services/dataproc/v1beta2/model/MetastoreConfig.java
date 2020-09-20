@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.v1beta2.model;
 
 /**
- * Specifies the metastore configuration.
+ * Specifies a Metastore configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -30,14 +30,16 @@ package com.google.api.services.dataproc.v1beta2.model;
 public final class MetastoreConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Relative resource name of an existing Dataproc Metastore service.
+   * Required. Resource name of an existing Dataproc Metastore service.Example:
+   * projects/[project_id]/locations/[dataproc_region]/services/[service-name]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataprocMetastoreService;
 
   /**
-   * Optional. Relative resource name of an existing Dataproc Metastore service.
+   * Required. Resource name of an existing Dataproc Metastore service.Example:
+   * projects/[project_id]/locations/[dataproc_region]/services/[service-name]
    * @return value or {@code null} for none
    */
   public java.lang.String getDataprocMetastoreService() {
@@ -45,7 +47,8 @@ public final class MetastoreConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Relative resource name of an existing Dataproc Metastore service.
+   * Required. Resource name of an existing Dataproc Metastore service.Example:
+   * projects/[project_id]/locations/[dataproc_region]/services/[service-name]
    * @param dataprocMetastoreService dataprocMetastoreService or {@code null} for none
    */
   public MetastoreConfig setDataprocMetastoreService(java.lang.String dataprocMetastoreService) {

@@ -31,7 +31,7 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The identifier of the parent of this resource instance. Must be in one of the following
-   * formats: - “projects/” - “folders/” - “organizations/”
+   * formats: - `projects/` - `folders/` - `organizations/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The identifier of the parent of this resource instance. Must be in one of the following
-   * formats: - “projects/” - “folders/” - “organizations/”
+   * formats: - `projects/` - `folders/` - `organizations/`
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceContainer() {
@@ -64,7 +64,7 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The identifier of the parent of this resource instance. Must be in one of the following
-   * formats: - “projects/” - “folders/” - “organizations/”
+   * formats: - `projects/` - `folders/` - `organizations/`
    * @param resourceContainer resourceContainer or {@code null} for none
    */
   public ResourceInfo setResourceContainer(java.lang.String resourceContainer) {

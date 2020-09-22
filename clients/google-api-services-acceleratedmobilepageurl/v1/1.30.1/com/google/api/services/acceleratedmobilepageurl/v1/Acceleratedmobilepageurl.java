@@ -20,8 +20,7 @@ package com.google.api.services.acceleratedmobilepageurl.v1;
  * Service definition for Acceleratedmobilepageurl (v1).
  *
  * <p>
- * Retrieves the list of AMP URLs (and equivalent AMP Cache URLs) for a given list of public URL(s).
-
+ * Retrieves the list of AMP URLs (and equivalent AMP Cache URLs) for a given list of public URL(s). 
  * </p>
  *
  * <p>

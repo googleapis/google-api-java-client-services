@@ -52,13 +52,6 @@ public final class GoogleCloudSecuritycenterV1p1beta1NotificationMessage extends
   private GoogleCloudSecuritycenterV1p1beta1Resource resource;
 
   /**
-   * If it's an asset based notification config, this field will be populated.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudSecuritycenterV1p1beta1TemporalAsset temporalAsset;
-
-  /**
    * If it's a Finding based notification config, this field will be populated.
    * @return value or {@code null} for none
    */
@@ -106,23 +99,6 @@ public final class GoogleCloudSecuritycenterV1p1beta1NotificationMessage extends
    */
   public GoogleCloudSecuritycenterV1p1beta1NotificationMessage setResource(GoogleCloudSecuritycenterV1p1beta1Resource resource) {
     this.resource = resource;
-    return this;
-  }
-
-  /**
-   * If it's an asset based notification config, this field will be populated.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudSecuritycenterV1p1beta1TemporalAsset getTemporalAsset() {
-    return temporalAsset;
-  }
-
-  /**
-   * If it's an asset based notification config, this field will be populated.
-   * @param temporalAsset temporalAsset or {@code null} for none
-   */
-  public GoogleCloudSecuritycenterV1p1beta1NotificationMessage setTemporalAsset(GoogleCloudSecuritycenterV1p1beta1TemporalAsset temporalAsset) {
-    this.temporalAsset = temporalAsset;
     return this;
   }
 

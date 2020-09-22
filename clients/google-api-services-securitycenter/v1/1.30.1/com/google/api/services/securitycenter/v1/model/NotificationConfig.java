@@ -49,7 +49,7 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * The PubSub topic to send notifications to. Its format is
+   * The Pub/Sub topic to send notifications to. Its format is
    * "projects/[project_id]/topics/[topic]".
    * The value may be {@code null}.
    */
@@ -58,7 +58,7 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
 
   /**
    * Output only. The service account that needs "pubsub.topics.publish" permission to publish to
-   * the PubSub topic.
+   * the Pub/Sub topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The PubSub topic to send notifications to. Its format is
+   * The Pub/Sub topic to send notifications to. Its format is
    * "projects/[project_id]/topics/[topic]".
    * @return value or {@code null} for none
    */
@@ -119,7 +119,7 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The PubSub topic to send notifications to. Its format is
+   * The Pub/Sub topic to send notifications to. Its format is
    * "projects/[project_id]/topics/[topic]".
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */
@@ -130,7 +130,7 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
 
   /**
    * Output only. The service account that needs "pubsub.topics.publish" permission to publish to
-   * the PubSub topic.
+   * the Pub/Sub topic.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -139,7 +139,7 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
 
   /**
    * Output only. The service account that needs "pubsub.topics.publish" permission to publish to
-   * the PubSub topic.
+   * the Pub/Sub topic.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public NotificationConfig setServiceAccount(java.lang.String serviceAccount) {

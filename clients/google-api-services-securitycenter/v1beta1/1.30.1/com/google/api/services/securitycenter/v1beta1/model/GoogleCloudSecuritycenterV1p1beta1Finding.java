@@ -106,7 +106,7 @@ public final class GoogleCloudSecuritycenterV1p1beta1Finding extends com.google.
   private GoogleCloudSecuritycenterV1p1beta1SecurityMarks securityMarks;
 
   /**
-   * The severity of the finding.
+   * The severity of the finding. This field is managed by the source that writes the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -297,7 +297,7 @@ public final class GoogleCloudSecuritycenterV1p1beta1Finding extends com.google.
   }
 
   /**
-   * The severity of the finding.
+   * The severity of the finding. This field is managed by the source that writes the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -305,7 +305,7 @@ public final class GoogleCloudSecuritycenterV1p1beta1Finding extends com.google.
   }
 
   /**
-   * The severity of the finding.
+   * The severity of the finding. This field is managed by the source that writes the finding.
    * @param severity severity or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1Finding setSeverity(java.lang.String severity) {

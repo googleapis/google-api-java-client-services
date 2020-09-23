@@ -7033,7 +7033,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       public class Filters {
 
         /**
-         * Creates a filter.
+         * Creates a filter. Note: you can only create a maximum of 1,000 filters.
          *
          * Create a request for the method "filters.create".
          *
@@ -7056,7 +7056,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "gmail/v1/users/{userId}/settings/filters";
 
           /**
-           * Creates a filter.
+           * Creates a filter. Note: you can only create a maximum of 1,000 filters.
            *
            * Create a request for the method "filters.create".
            *

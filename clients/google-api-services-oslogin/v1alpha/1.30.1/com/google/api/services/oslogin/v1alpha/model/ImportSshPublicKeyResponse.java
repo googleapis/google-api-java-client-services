@@ -17,7 +17,7 @@
 package com.google.api.services.oslogin.v1alpha.model;
 
 /**
- * A response message from importing an SSH public key.
+ * A response message for importing an SSH public key.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud OS Login API. For a detailed explanation see:

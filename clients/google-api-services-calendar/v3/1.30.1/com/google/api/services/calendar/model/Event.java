@@ -48,7 +48,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
 
   /**
    * The attendees of the event. See the Events with attendees guide for more information on
-   * scheduling events with other calendar users.
+   * scheduling events with other calendar users. Service accounts need to use domain-wide
+   * delegation of authority to populate the attendee list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -435,7 +436,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
 
   /**
    * The attendees of the event. See the Events with attendees guide for more information on
-   * scheduling events with other calendar users.
+   * scheduling events with other calendar users. Service accounts need to use domain-wide
+   * delegation of authority to populate the attendee list.
    * @return value or {@code null} for none
    */
   public java.util.List<EventAttendee> getAttendees() {
@@ -444,7 +446,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
 
   /**
    * The attendees of the event. See the Events with attendees guide for more information on
-   * scheduling events with other calendar users.
+   * scheduling events with other calendar users. Service accounts need to use domain-wide
+   * delegation of authority to populate the attendee list.
    * @param attendees attendees or {@code null} for none
    */
   public Event setAttendees(java.util.List<EventAttendee> attendees) {

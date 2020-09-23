@@ -192,6 +192,7 @@ packages on [Maven Central][maven-search].
 | Service Management API | [v1](clients/google-api-services-servicemanagement/v1) |
 | Service Networking API | [v1](clients/google-api-services-servicenetworking/v1), [v1beta](clients/google-api-services-servicenetworking/v1beta) |
 | Service Usage API | [v1](clients/google-api-services-serviceusage/v1), [v1beta1](clients/google-api-services-serviceusage/v1beta1) |
+| Smart Device Management API | [v1](clients/google-api-services-smartdevicemanagement/v1) |
 | Stackdriver Profiler API | [v2](clients/google-api-services-cloudprofiler/v2) |
 | Storage Transfer API | [v1](clients/google-api-services-storagetransfer/v1) |
 | Street View Publish API | [v1](clients/google-api-services-streetviewpublish/v1) |

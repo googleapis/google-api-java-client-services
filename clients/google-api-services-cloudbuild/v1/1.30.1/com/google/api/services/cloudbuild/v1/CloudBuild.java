@@ -1469,10 +1469,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          *
          * @param parent The parent resource where this build will be created. Format:
          *        `projects/{project}/locations/{location}`
-         * @param content the {@link com.google.api.services.cloudbuild.v1.model.CreateBuildRequest}
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.Build}
          * @return the request
          */
-        public Create create(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.CreateBuildRequest content) throws java.io.IOException {
+        public Create create(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.Build content) throws java.io.IOException {
           Create result = new Create(parent, content);
           initialize(result);
           return result;
@@ -1500,10 +1500,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
            *
            * @param parent The parent resource where this build will be created. Format:
          *        `projects/{project}/locations/{location}`
-           * @param content the {@link com.google.api.services.cloudbuild.v1.model.CreateBuildRequest}
+           * @param content the {@link com.google.api.services.cloudbuild.v1.model.Build}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.CreateBuildRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.Build content) {
             super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Operation.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -1593,6 +1593,22 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
                   "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /** Required. ID of the project. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Required. ID of the project.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** Required. ID of the project. */
+          public Create setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
             return this;
           }
 

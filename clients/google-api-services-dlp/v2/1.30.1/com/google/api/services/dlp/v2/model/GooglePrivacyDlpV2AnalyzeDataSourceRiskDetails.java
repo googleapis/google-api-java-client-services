@@ -73,6 +73,13 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
   private GooglePrivacyDlpV2NumericalStatsResult numericalStatsResult;
 
   /**
+   * The configuration used for this job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2RequestedRiskAnalysisOptions requestedOptions;
+
+  /**
    * Privacy metric to compute.
    * The value may be {@code null}.
    */
@@ -185,6 +192,23 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends com.go
    */
   public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails setNumericalStatsResult(GooglePrivacyDlpV2NumericalStatsResult numericalStatsResult) {
     this.numericalStatsResult = numericalStatsResult;
+    return this;
+  }
+
+  /**
+   * The configuration used for this job.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2RequestedRiskAnalysisOptions getRequestedOptions() {
+    return requestedOptions;
+  }
+
+  /**
+   * The configuration used for this job.
+   * @param requestedOptions requestedOptions or {@code null} for none
+   */
+  public GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails setRequestedOptions(GooglePrivacyDlpV2RequestedRiskAnalysisOptions requestedOptions) {
+    this.requestedOptions = requestedOptions;
     return this;
   }
 

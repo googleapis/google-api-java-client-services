@@ -152,9 +152,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> impressionTrackingUrls;
 
   /**
-   * Output only. Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`,
-   * where `{buyer}` represents the account ID of the buyer who owns the creative, and `{creative}`
-   * is the buyer-specific creative ID that references this creative in the bid response.
+   * Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`, where
+   * `{buyer}` represents the account ID of the buyer who owns the creative, and `{creative}` is the
+   * buyer-specific creative ID that references this creative in the bid response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -477,9 +477,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`,
-   * where `{buyer}` represents the account ID of the buyer who owns the creative, and `{creative}`
-   * is the buyer-specific creative ID that references this creative in the bid response.
+   * Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`, where
+   * `{buyer}` represents the account ID of the buyer who owns the creative, and `{creative}` is the
+   * buyer-specific creative ID that references this creative in the bid response.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -487,9 +487,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`,
-   * where `{buyer}` represents the account ID of the buyer who owns the creative, and `{creative}`
-   * is the buyer-specific creative ID that references this creative in the bid response.
+   * Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`, where
+   * `{buyer}` represents the account ID of the buyer who owns the creative, and `{creative}` is the
+   * buyer-specific creative ID that references this creative in the bid response.
    * @param name name or {@code null} for none
    */
   public Creative setName(java.lang.String name) {

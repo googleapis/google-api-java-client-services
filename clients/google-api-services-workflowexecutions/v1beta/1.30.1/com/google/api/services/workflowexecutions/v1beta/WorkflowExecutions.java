@@ -20,7 +20,7 @@ package com.google.api.services.workflowexecutions.v1beta;
  * Service definition for WorkflowExecutions (v1beta).
  *
  * <p>
- * Manages user-provided workflows.
+ * Execute workflows created with Workflows API.
  * </p>
  *
  * <p>

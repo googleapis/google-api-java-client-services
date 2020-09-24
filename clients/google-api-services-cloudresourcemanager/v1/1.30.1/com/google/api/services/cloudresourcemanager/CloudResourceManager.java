@@ -3488,7 +3488,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * completes, you can check the lifecycle state checked by retrieving the Project with GetProject,
      * and the Project remains visible to ListProjects. However, you cannot update the project. After
      * the deletion completes, the Project is not retrievable by the GetProject and ListProjects
-     * methods. The caller must have modify permissions for this Project.
+     * methods. The caller must have delete permissions for this Project.
      *
      * Create a request for the method "projects.delete".
      *
@@ -3516,7 +3516,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * deletion completes, you can check the lifecycle state checked by retrieving the Project with
        * GetProject, and the Project remains visible to ListProjects. However, you cannot update the
        * project. After the deletion completes, the Project is not retrievable by the GetProject and
-       * ListProjects methods. The caller must have modify permissions for this Project.
+       * ListProjects methods. The caller must have delete permissions for this Project.
        *
        * Create a request for the method "projects.delete".
        *
@@ -5227,8 +5227,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     /**
      * Restores the Project identified by the specified `project_id` (for example, `my-project-123`).
      * You can only use this method for a Project that has a lifecycle state of DELETE_REQUESTED. After
-     * deletion starts, the Project cannot be restored. The caller must have modify permissions for this
-     * Project.
+     * deletion starts, the Project cannot be restored. The caller must have undelete permissions for
+     * this Project.
      *
      * Create a request for the method "projects.undelete".
      *
@@ -5252,8 +5252,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * Restores the Project identified by the specified `project_id` (for example, `my-project-123`).
        * You can only use this method for a Project that has a lifecycle state of DELETE_REQUESTED.
-       * After deletion starts, the Project cannot be restored. The caller must have modify permissions
-       * for this Project.
+       * After deletion starts, the Project cannot be restored. The caller must have undelete
+       * permissions for this Project.
        *
        * Create a request for the method "projects.undelete".
        *

@@ -1,6 +1,6 @@
 # Workflow Executions API Client Library for Java
 
-Manages user-provided workflows.
+Execute workflows created with Workflows API.
 
 This page contains information about getting started with the Workflow Executions API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-workflowexecutions</artifactId>
-      <version>v1beta-rev20200901-1.30.10</version>
+      <version>v1beta-rev20200923-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-workflowexecutions:v1beta-rev20200901-1.30.10'
+  compile 'com.google.apis:google-api-services-workflowexecutions:v1beta-rev20200923-1.30.10'
 }
 ```
 

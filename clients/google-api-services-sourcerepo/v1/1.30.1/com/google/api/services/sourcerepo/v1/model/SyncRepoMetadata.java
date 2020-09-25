@@ -17,9 +17,7 @@
 package com.google.api.services.sourcerepo.v1.model;
 
 /**
- * Metadata of SyncRepo.
- *
- * This message is in the metadata field of Operation.
+ * Metadata of SyncRepo. This message is in the metadata field of Operation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Source Repositories API. For a detailed

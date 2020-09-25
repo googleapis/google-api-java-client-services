@@ -45,8 +45,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowedStringValues;
 
   /**
-   * The database version this flag applies to. Can be *MYSQL_5_5*, *MYSQL_5_6*, or *MYSQL_5_7*.
-   * *MYSQL_5_7* is applicable only to Second Generation instances.
+   * The database version this flag applies to. Can be *MYSQL_8_0*, *MYSQL_5_6*, or *MYSQL_5_7*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,8 +140,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The database version this flag applies to. Can be *MYSQL_5_5*, *MYSQL_5_6*, or *MYSQL_5_7*.
-   * *MYSQL_5_7* is applicable only to Second Generation instances.
+   * The database version this flag applies to. Can be *MYSQL_8_0*, *MYSQL_5_6*, or *MYSQL_5_7*.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAppliesTo() {
@@ -150,8 +148,7 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The database version this flag applies to. Can be *MYSQL_5_5*, *MYSQL_5_6*, or *MYSQL_5_7*.
-   * *MYSQL_5_7* is applicable only to Second Generation instances.
+   * The database version this flag applies to. Can be *MYSQL_8_0*, *MYSQL_5_6*, or *MYSQL_5_7*.
    * @param appliesTo appliesTo or {@code null} for none
    */
   public Flag setAppliesTo(java.util.List<java.lang.String> appliesTo) {

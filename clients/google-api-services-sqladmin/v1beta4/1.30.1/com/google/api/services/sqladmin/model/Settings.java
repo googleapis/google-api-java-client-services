@@ -40,6 +40,13 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String activationPolicy;
 
   /**
+   * Active Directory configuration, for now relevant only for SQL Server
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlActiveDirectoryConfig activeDirectoryConfig;
+
+  /**
    * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation
    * instances only.
    * The value may be {@code null}.
@@ -115,6 +122,19 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean databaseReplicationEnabled;
 
   /**
+   * Deny maintenance periods
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DenyMaintenancePeriod> denyMaintenancePeriods;
+
+  static {
+    // hack to force ProGuard to consider DenyMaintenancePeriod used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DenyMaintenancePeriod.class);
+  }
+
+  /**
    * The settings for IP Management. This allows to enable or disable the instance IP and manage
    * which external networks can connect to the instance. The IPv4 address cannot be disabled for
    * Second Generation instances.
@@ -138,19 +158,6 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private LocationPreference locationPreference;
-
-  /**
-   * Maintenance deny periods
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<MaintenanceDenyPeriod> maintenanceDenyPeriods;
-
-  static {
-    // hack to force ProGuard to consider MaintenanceDenyPeriod used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(MaintenanceDenyPeriod.class);
-  }
 
   /**
    * The maintenance window for this instance. This specifies when the instance can be restarted for
@@ -235,6 +242,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setActivationPolicy(java.lang.String activationPolicy) {
     this.activationPolicy = activationPolicy;
+    return this;
+  }
+
+  /**
+   * Active Directory configuration, for now relevant only for SQL Server
+   * @return value or {@code null} for none
+   */
+  public SqlActiveDirectoryConfig getActiveDirectoryConfig() {
+    return activeDirectoryConfig;
+  }
+
+  /**
+   * Active Directory configuration, for now relevant only for SQL Server
+   * @param activeDirectoryConfig activeDirectoryConfig or {@code null} for none
+   */
+  public Settings setActiveDirectoryConfig(SqlActiveDirectoryConfig activeDirectoryConfig) {
+    this.activeDirectoryConfig = activeDirectoryConfig;
     return this;
   }
 
@@ -404,6 +428,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deny maintenance periods
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DenyMaintenancePeriod> getDenyMaintenancePeriods() {
+    return denyMaintenancePeriods;
+  }
+
+  /**
+   * Deny maintenance periods
+   * @param denyMaintenancePeriods denyMaintenancePeriods or {@code null} for none
+   */
+  public Settings setDenyMaintenancePeriods(java.util.List<DenyMaintenancePeriod> denyMaintenancePeriods) {
+    this.denyMaintenancePeriods = denyMaintenancePeriods;
+    return this;
+  }
+
+  /**
    * The settings for IP Management. This allows to enable or disable the instance IP and manage
    * which external networks can connect to the instance. The IPv4 address cannot be disabled for
    * Second Generation instances.
@@ -459,23 +500,6 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setLocationPreference(LocationPreference locationPreference) {
     this.locationPreference = locationPreference;
-    return this;
-  }
-
-  /**
-   * Maintenance deny periods
-   * @return value or {@code null} for none
-   */
-  public java.util.List<MaintenanceDenyPeriod> getMaintenanceDenyPeriods() {
-    return maintenanceDenyPeriods;
-  }
-
-  /**
-   * Maintenance deny periods
-   * @param maintenanceDenyPeriods maintenanceDenyPeriods or {@code null} for none
-   */
-  public Settings setMaintenanceDenyPeriods(java.util.List<MaintenanceDenyPeriod> maintenanceDenyPeriods) {
-    this.maintenanceDenyPeriods = maintenanceDenyPeriods;
     return this;
   }
 

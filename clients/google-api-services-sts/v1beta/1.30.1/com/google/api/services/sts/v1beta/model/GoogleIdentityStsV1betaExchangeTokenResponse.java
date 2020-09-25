@@ -32,6 +32,9 @@ public final class GoogleIdentityStsV1betaExchangeTokenResponse extends com.goog
 
   /**
    * An OAuth 2.0 security token, issued by Google, in response to the token exchange request.
+   * Tokens can vary in size (mainly depending on the size of mapped claims), currently up to the
+   * 12288 bytes (12 KB) size limit. Google reserves the right to change token size, including
+   * increasing these limits. Your application must support variable token sizes accordingly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("access_token")
@@ -62,6 +65,9 @@ public final class GoogleIdentityStsV1betaExchangeTokenResponse extends com.goog
 
   /**
    * An OAuth 2.0 security token, issued by Google, in response to the token exchange request.
+   * Tokens can vary in size (mainly depending on the size of mapped claims), currently up to the
+   * 12288 bytes (12 KB) size limit. Google reserves the right to change token size, including
+   * increasing these limits. Your application must support variable token sizes accordingly.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessToken() {
@@ -70,6 +76,9 @@ public final class GoogleIdentityStsV1betaExchangeTokenResponse extends com.goog
 
   /**
    * An OAuth 2.0 security token, issued by Google, in response to the token exchange request.
+   * Tokens can vary in size (mainly depending on the size of mapped claims), currently up to the
+   * 12288 bytes (12 KB) size limit. Google reserves the right to change token size, including
+   * increasing these limits. Your application must support variable token sizes accordingly.
    * @param accessToken accessToken or {@code null} for none
    */
   public GoogleIdentityStsV1betaExchangeTokenResponse setAccessToken(java.lang.String accessToken) {

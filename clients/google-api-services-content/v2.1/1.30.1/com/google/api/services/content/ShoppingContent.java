@@ -5350,7 +5350,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Update the local inventory of a product in your Merchant Center account.
+     * Updates the local inventory of a product in your Merchant Center account.
      *
      * Create a request for the method "localinventory.insert".
      *
@@ -5373,7 +5373,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/products/{productId}/localinventory";
 
       /**
-       * Update the local inventory of a product in your Merchant Center account.
+       * Updates the local inventory of a product in your Merchant Center account.
        *
        * Create a request for the method "localinventory.insert".
        *

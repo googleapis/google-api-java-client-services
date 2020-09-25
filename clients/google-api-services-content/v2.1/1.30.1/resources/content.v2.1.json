@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/_eBLgpKz1LB811sd9obCMEhsM9o\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/Q2_CIj64P9k6v3OxXe0zMes4_G8\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20200908",
+ "revision": "20200916",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -9321,7 +9321,7 @@
      "id": "content.localinventory.insert",
      "path": "{merchantId}/products/{productId}/localinventory",
      "httpMethod": "POST",
-     "description": "Update the local inventory of a product in your Merchant Center account.",
+     "description": "Updates the local inventory of a product in your Merchant Center account.",
      "parameters": {
       "merchantId": {
        "type": "string",

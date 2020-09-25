@@ -1684,6 +1684,144 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
           return (Update) super.set(parameterName, value);
         }
       }
+      /**
+       * Returns whether the given Attestation for the given image URI was signed by the given Attestor
+       *
+       * Create a request for the method "attestors.validateAttestationOccurrence".
+       *
+       * This request holds the parameters needed by the binaryauthorization server.  After setting any
+       * optional parameters, call the {@link ValidateAttestationOccurrence#execute()} method to invoke
+       * the remote operation.
+       *
+       * @param attestor Required. The resource name of the Attestor of the occurrence, in the format `projects/attestors`.
+       * @param content the {@link com.google.api.services.binaryauthorization.v1beta1.model.ValidateAttestationOccurrenceRequest}
+       * @return the request
+       */
+      public ValidateAttestationOccurrence validateAttestationOccurrence(java.lang.String attestor, com.google.api.services.binaryauthorization.v1beta1.model.ValidateAttestationOccurrenceRequest content) throws java.io.IOException {
+        ValidateAttestationOccurrence result = new ValidateAttestationOccurrence(attestor, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ValidateAttestationOccurrence extends BinaryAuthorizationRequest<com.google.api.services.binaryauthorization.v1beta1.model.ValidateAttestationOccurrenceResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+attestor}:validateAttestationOccurrence";
+
+        private final java.util.regex.Pattern ATTESTOR_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/attestors/[^/]+$");
+
+        /**
+         * Returns whether the given Attestation for the given image URI was signed by the given Attestor
+         *
+         * Create a request for the method "attestors.validateAttestationOccurrence".
+         *
+         * This request holds the parameters needed by the the binaryauthorization server.  After setting
+         * any optional parameters, call the {@link ValidateAttestationOccurrence#execute()} method to
+         * invoke the remote operation. <p> {@link ValidateAttestationOccurrence#initialize(com.google.api
+         * .client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+         * instance immediately after invoking the constructor. </p>
+         *
+         * @param attestor Required. The resource name of the Attestor of the occurrence, in the format `projects/attestors`.
+         * @param content the {@link com.google.api.services.binaryauthorization.v1beta1.model.ValidateAttestationOccurrenceRequest}
+         * @since 1.13
+         */
+        protected ValidateAttestationOccurrence(java.lang.String attestor, com.google.api.services.binaryauthorization.v1beta1.model.ValidateAttestationOccurrenceRequest content) {
+          super(BinaryAuthorization.this, "POST", REST_PATH, content, com.google.api.services.binaryauthorization.v1beta1.model.ValidateAttestationOccurrenceResponse.class);
+          this.attestor = com.google.api.client.util.Preconditions.checkNotNull(attestor, "Required parameter attestor must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(ATTESTOR_PATTERN.matcher(attestor).matches(),
+                "Parameter attestor must conform to the pattern " +
+                "^projects/[^/]+/attestors/[^/]+$");
+          }
+        }
+
+        @Override
+        public ValidateAttestationOccurrence set$Xgafv(java.lang.String $Xgafv) {
+          return (ValidateAttestationOccurrence) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ValidateAttestationOccurrence setAccessToken(java.lang.String accessToken) {
+          return (ValidateAttestationOccurrence) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ValidateAttestationOccurrence setAlt(java.lang.String alt) {
+          return (ValidateAttestationOccurrence) super.setAlt(alt);
+        }
+
+        @Override
+        public ValidateAttestationOccurrence setCallback(java.lang.String callback) {
+          return (ValidateAttestationOccurrence) super.setCallback(callback);
+        }
+
+        @Override
+        public ValidateAttestationOccurrence setFields(java.lang.String fields) {
+          return (ValidateAttestationOccurrence) super.setFields(fields);
+        }
+
+        @Override
+        public ValidateAttestationOccurrence setKey(java.lang.String key) {
+          return (ValidateAttestationOccurrence) super.setKey(key);
+        }
+
+        @Override
+        public ValidateAttestationOccurrence setOauthToken(java.lang.String oauthToken) {
+          return (ValidateAttestationOccurrence) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ValidateAttestationOccurrence setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ValidateAttestationOccurrence) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ValidateAttestationOccurrence setQuotaUser(java.lang.String quotaUser) {
+          return (ValidateAttestationOccurrence) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ValidateAttestationOccurrence setUploadType(java.lang.String uploadType) {
+          return (ValidateAttestationOccurrence) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ValidateAttestationOccurrence setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ValidateAttestationOccurrence) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the Attestor of the occurrence, in the format
+         * `projects/attestors`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String attestor;
+
+        /** Required. The resource name of the Attestor of the occurrence, in the format `projects/attestors`.
+         */
+        public java.lang.String getAttestor() {
+          return attestor;
+        }
+
+        /**
+         * Required. The resource name of the Attestor of the occurrence, in the format
+         * `projects/attestors`.
+         */
+        public ValidateAttestationOccurrence setAttestor(java.lang.String attestor) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(ATTESTOR_PATTERN.matcher(attestor).matches(),
+                "Parameter attestor must conform to the pattern " +
+                "^projects/[^/]+/attestors/[^/]+$");
+          }
+          this.attestor = attestor;
+          return this;
+        }
+
+        @Override
+        public ValidateAttestationOccurrence set(String parameterName, Object value) {
+          return (ValidateAttestationOccurrence) super.set(parameterName, value);
+        }
+      }
 
     }
     /**

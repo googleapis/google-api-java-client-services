@@ -2481,32 +2481,34 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Required. The resource names of the people to provide information about. - To get
-       * information about the authenticated user, specify `people/me`. - To get information about a
-       * google account, specify `people/{account_id}`. - To get information about a contact,
-       * specify the resource name that identifies the contact as returned by
+       * Required. The resource names of the people to provide information about. It's repeatable.
+       * The URL query parameter should be resourceNames==&... - To get information about the
+       * authenticated user, specify `people/me`. - To get information about a google account,
+       * specify `people/{account_id}`. - To get information about a contact, specify the resource
+       * name that identifies the contact as returned by
        * [`people.connections.list`](/people/api/rest/v1/people.connections/list). You can include
        * up to 50 resource names in one request.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> resourceNames;
 
-      /** Required. The resource names of the people to provide information about. - To get information about
-     the authenticated user, specify `people/me`. - To get information about a google account, specify
-     `people/{account_id}`. - To get information about a contact, specify the resource name that
-     identifies the contact as returned by
-     [`people.connections.list`](/people/api/rest/v1/people.connections/list). You can include up to 50
-     resource names in one request.
+      /** Required. The resource names of the people to provide information about. It's repeatable. The URL
+     query parameter should be resourceNames==&... - To get information about the authenticated user,
+     specify `people/me`. - To get information about a google account, specify `people/{account_id}`. -
+     To get information about a contact, specify the resource name that identifies the contact as
+     returned by [`people.connections.list`](/people/api/rest/v1/people.connections/list). You can
+     include up to 50 resource names in one request.
        */
       public java.util.List<java.lang.String> getResourceNames() {
         return resourceNames;
       }
 
       /**
-       * Required. The resource names of the people to provide information about. - To get
-       * information about the authenticated user, specify `people/me`. - To get information about a
-       * google account, specify `people/{account_id}`. - To get information about a contact,
-       * specify the resource name that identifies the contact as returned by
+       * Required. The resource names of the people to provide information about. It's repeatable.
+       * The URL query parameter should be resourceNames==&... - To get information about the
+       * authenticated user, specify `people/me`. - To get information about a google account,
+       * specify `people/{account_id}`. - To get information about a contact, specify the resource
+       * name that identifies the contact as returned by
        * [`people.connections.list`](/people/api/rest/v1/people.connections/list). You can include
        * up to 50 resource names in one request.
        */

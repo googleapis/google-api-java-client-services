@@ -38,7 +38,7 @@ public final class Repo extends com.google.api.client.json.GenericJson {
   private MirrorConfig mirrorConfig;
 
   /**
-   * Resource name of the repository, of the form `projects//repos/`.  The repo name may contain
+   * Resource name of the repository, of the form `projects//repos/`. The repo name may contain
    * slashes. eg, `projects/myproject/repos/name/with/slash`
    * The value may be {@code null}.
    */
@@ -91,7 +91,7 @@ public final class Repo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the repository, of the form `projects//repos/`.  The repo name may contain
+   * Resource name of the repository, of the form `projects//repos/`. The repo name may contain
    * slashes. eg, `projects/myproject/repos/name/with/slash`
    * @return value or {@code null} for none
    */
@@ -100,7 +100,7 @@ public final class Repo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the repository, of the form `projects//repos/`.  The repo name may contain
+   * Resource name of the repository, of the form `projects//repos/`. The repo name may contain
    * slashes. eg, `projects/myproject/repos/name/with/slash`
    * @param name name or {@code null} for none
    */

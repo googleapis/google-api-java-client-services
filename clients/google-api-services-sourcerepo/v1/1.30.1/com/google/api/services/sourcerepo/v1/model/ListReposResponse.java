@@ -17,7 +17,7 @@
 package com.google.api.services.sourcerepo.v1.model;
 
 /**
- * Response for ListRepos.  The size is not set in the returned repositories.
+ * Response for ListRepos. The size is not set in the returned repositories.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Source Repositories API. For a detailed

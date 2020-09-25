@@ -38,6 +38,13 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.Integer availableMemoryMb;
 
   /**
+   * Build environment variables that shall be available during build time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> buildEnvironmentVariables;
+
+  /**
    * Output only. The Cloud Build ID of the latest successful deployment of the function.
    * The value may be {@code null}.
    */
@@ -97,7 +104,12 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The limit on the maximum number of function instances that may coexist at a given time.
+   * The limit on the maximum number of function instances that may coexist at a given time. In some
+   * cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create
+   * more instances than the specified max instances limit. If your function cannot tolerate this
+   * temporary behavior, you may want to factor in a safety margin and set a lower max instances
+   * value than your function can tolerate. See the [Max
+   * Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,6 +239,23 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   public CloudFunction setAvailableMemoryMb(java.lang.Integer availableMemoryMb) {
     this.availableMemoryMb = availableMemoryMb;
+    return this;
+  }
+
+  /**
+   * Build environment variables that shall be available during build time.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getBuildEnvironmentVariables() {
+    return buildEnvironmentVariables;
+  }
+
+  /**
+   * Build environment variables that shall be available during build time.
+   * @param buildEnvironmentVariables buildEnvironmentVariables or {@code null} for none
+   */
+  public CloudFunction setBuildEnvironmentVariables(java.util.Map<String, java.lang.String> buildEnvironmentVariables) {
+    this.buildEnvironmentVariables = buildEnvironmentVariables;
     return this;
   }
 
@@ -373,7 +402,12 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The limit on the maximum number of function instances that may coexist at a given time.
+   * The limit on the maximum number of function instances that may coexist at a given time. In some
+   * cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create
+   * more instances than the specified max instances limit. If your function cannot tolerate this
+   * temporary behavior, you may want to factor in a safety margin and set a lower max instances
+   * value than your function can tolerate. See the [Max
+   * Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxInstances() {
@@ -381,7 +415,12 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The limit on the maximum number of function instances that may coexist at a given time.
+   * The limit on the maximum number of function instances that may coexist at a given time. In some
+   * cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create
+   * more instances than the specified max instances limit. If your function cannot tolerate this
+   * temporary behavior, you may want to factor in a safety margin and set a lower max instances
+   * value than your function can tolerate. See the [Max
+   * Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.
    * @param maxInstances maxInstances or {@code null} for none
    */
   public CloudFunction setMaxInstances(java.lang.Integer maxInstances) {

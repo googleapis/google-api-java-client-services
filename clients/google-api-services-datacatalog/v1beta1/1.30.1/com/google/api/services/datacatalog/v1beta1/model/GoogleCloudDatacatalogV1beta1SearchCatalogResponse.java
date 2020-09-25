@@ -47,7 +47,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResponse extends co
   /**
    * Unreachable locations. Search result does not include data from those locations. Users can get
    * additional information on the error by repeating the search request with a more restrictive
-   * parameter -- setting the value for `SearchDataCatalogRequest.scope.include_locations`.
+   * parameter -- setting the value for `SearchDataCatalogRequest.scope.restricted_locations`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResponse extends co
   /**
    * Unreachable locations. Search result does not include data from those locations. Users can get
    * additional information on the error by repeating the search request with a more restrictive
-   * parameter -- setting the value for `SearchDataCatalogRequest.scope.include_locations`.
+   * parameter -- setting the value for `SearchDataCatalogRequest.scope.restricted_locations`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -100,7 +100,7 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResponse extends co
   /**
    * Unreachable locations. Search result does not include data from those locations. Users can get
    * additional information on the error by repeating the search request with a more restrictive
-   * parameter -- setting the value for `SearchDataCatalogRequest.scope.include_locations`.
+   * parameter -- setting the value for `SearchDataCatalogRequest.scope.restricted_locations`.
    * @param unreachable unreachable or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

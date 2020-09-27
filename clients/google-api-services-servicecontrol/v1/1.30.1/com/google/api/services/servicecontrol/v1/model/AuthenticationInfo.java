@@ -50,7 +50,7 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
 
   /**
    * String representation of identity of requesting party. Populated for both first and third party
-   * identities. Only present for APIs that support third-party identities.
+   * identities.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +130,7 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
 
   /**
    * String representation of identity of requesting party. Populated for both first and third party
-   * identities. Only present for APIs that support third-party identities.
+   * identities.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalSubject() {
@@ -139,7 +139,7 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
 
   /**
    * String representation of identity of requesting party. Populated for both first and third party
-   * identities. Only present for APIs that support third-party identities.
+   * identities.
    * @param principalSubject principalSubject or {@code null} for none
    */
   public AuthenticationInfo setPrincipalSubject(java.lang.String principalSubject) {

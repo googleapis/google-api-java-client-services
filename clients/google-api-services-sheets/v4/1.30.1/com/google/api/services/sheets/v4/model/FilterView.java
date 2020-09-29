@@ -31,7 +31,7 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
 
   /**
    * The criteria for showing/hiding values per column. The map's key is the column index, and the
-   * value is the criteria for that column.
+   * value is the criteria for that column. This field is deprecated in favor of filter_specs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
 
   /**
    * The criteria for showing/hiding values per column. The map's key is the column index, and the
-   * value is the criteria for that column.
+   * value is the criteria for that column. This field is deprecated in favor of filter_specs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, FilterCriteria> getCriteria() {
@@ -107,7 +107,7 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
 
   /**
    * The criteria for showing/hiding values per column. The map's key is the column index, and the
-   * value is the criteria for that column.
+   * value is the criteria for that column. This field is deprecated in favor of filter_specs.
    * @param criteria criteria or {@code null} for none
    */
   public FilterView setCriteria(java.util.Map<String, FilterCriteria> criteria) {

@@ -17,7 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * The specification of a BigQuery data source.
+ * The specification of a BigQuery data source that's connected to a sheet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

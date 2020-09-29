@@ -17,7 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Additional properties of a SheetType.DATA_SOURCE sheet.
+ * Additional properties of a DATA_SOURCE sheet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -50,7 +50,7 @@ public final class DataSourceSheetProperties extends com.google.api.client.json.
   private DataExecutionStatus dataExecutionStatus;
 
   /**
-   * ID of the DataSource the sheet connected with.
+   * ID of the DataSource the sheet is connected to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class DataSourceSheetProperties extends com.google.api.client.json.
   }
 
   /**
-   * ID of the DataSource the sheet connected with.
+   * ID of the DataSource the sheet is connected to.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSourceId() {
@@ -99,7 +99,7 @@ public final class DataSourceSheetProperties extends com.google.api.client.json.
   }
 
   /**
-   * ID of the DataSource the sheet connected with.
+   * ID of the DataSource the sheet is connected to.
    * @param dataSourceId dataSourceId or {@code null} for none
    */
   public DataSourceSheetProperties setDataSourceId(java.lang.String dataSourceId) {

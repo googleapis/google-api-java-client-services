@@ -17,10 +17,10 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * The data source refresh schedule. All data sources in the spreadsheet are scheduled to refresh in
- * a future time interval. The time interval size defaults to the one defined in the Sheets editor.
- * For example, if a daily schedule at start time of 8am is scheduled, and the time interval is 4
- * hours, the scheduled refresh will happen between 8am and 12pm every day.
+ * Schedule for refreshing the data source. Data sources in the spreadsheet are refreshed within a
+ * time interval. You can specify the start time by clicking the Scheduled Refresh button in the
+ * Sheets editor, but the interval is fixed at 4 hours. For example, if you specify a start time of
+ * 8am , the refresh will take place between 8am and 12pm every day.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -61,7 +61,7 @@ public final class DataSourceRefreshSchedule extends com.google.api.client.json.
   private Interval nextRun;
 
   /**
-   * The scope of the refresh.
+   * The scope of the refresh. Must be ALL_DATA_SOURCES.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class DataSourceRefreshSchedule extends com.google.api.client.json.
   }
 
   /**
-   * The scope of the refresh.
+   * The scope of the refresh. Must be ALL_DATA_SOURCES.
    * @return value or {@code null} for none
    */
   public java.lang.String getRefreshScope() {
@@ -151,7 +151,7 @@ public final class DataSourceRefreshSchedule extends com.google.api.client.json.
   }
 
   /**
-   * The scope of the refresh.
+   * The scope of the refresh. Must be ALL_DATA_SOURCES.
    * @param refreshScope refreshScope or {@code null} for none
    */
   public DataSourceRefreshSchedule setRefreshScope(java.lang.String refreshScope) {

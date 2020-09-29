@@ -31,7 +31,7 @@ public final class CellData extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Information about a data source formula on the cell. The field is set if
-   * user_entered_value is a formula referencing some [SheetType.DATA_SOURCE] sheet, e.g
+   * user_entered_value is a formula referencing some DATA_SOURCE sheet, e.g
    * `=SUM(DataSheet!Column)`.
    * The value may be {@code null}.
    */
@@ -137,7 +137,7 @@ public final class CellData extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Information about a data source formula on the cell. The field is set if
-   * user_entered_value is a formula referencing some [SheetType.DATA_SOURCE] sheet, e.g
+   * user_entered_value is a formula referencing some DATA_SOURCE sheet, e.g
    * `=SUM(DataSheet!Column)`.
    * @return value or {@code null} for none
    */
@@ -147,7 +147,7 @@ public final class CellData extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Information about a data source formula on the cell. The field is set if
-   * user_entered_value is a formula referencing some [SheetType.DATA_SOURCE] sheet, e.g
+   * user_entered_value is a formula referencing some DATA_SOURCE sheet, e.g
    * `=SUM(DataSheet!Column)`.
    * @param dataSourceFormula dataSourceFormula or {@code null} for none
    */

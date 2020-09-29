@@ -17,7 +17,8 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * The specification of a data source.
+ * This specifies the details of the data source. For example, for BigQuery, this specifies
+ * information about the BigQuery source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -37,7 +38,7 @@ public final class DataSourceSpec extends com.google.api.client.json.GenericJson
   private BigQueryDataSourceSpec bigQuery;
 
   /**
-   * The parameters of the data source.
+   * The parameters of the data source, used when querying the data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,7 @@ public final class DataSourceSpec extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The parameters of the data source.
+   * The parameters of the data source, used when querying the data source.
    * @return value or {@code null} for none
    */
   public java.util.List<DataSourceParameter> getParameters() {
@@ -75,7 +76,7 @@ public final class DataSourceSpec extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The parameters of the data source.
+   * The parameters of the data source, used when querying the data source.
    * @param parameters parameters or {@code null} for none
    */
   public DataSourceSpec setParameters(java.util.List<DataSourceParameter> parameters) {

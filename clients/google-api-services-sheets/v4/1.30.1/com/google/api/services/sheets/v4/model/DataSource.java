@@ -37,7 +37,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private java.util.List<DataSourceColumn> calculatedColumns;
 
   /**
-   * The spreadsheet-scoped unique ID that identifies the data source.
+   * The spreadsheet-scoped unique ID that identifies the data source. Example: 1080547365.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,15 +45,15 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the Sheet connected with the data source. The field cannot be changed once set. When
-   * creating a data source, an associated SheetType.DATA_SOURCE sheet is also created, if the field
-   * is not specified, the ID of the created sheet will be randomly generated.
+   * creating a data source, an associated DATA_SOURCE sheet is also created, if the field is not
+   * specified, the ID of the created sheet will be randomly generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sheetId;
 
   /**
-   * The DataSourceSpec.
+   * The DataSourceSpec for the data source connected with this spreadsheet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The spreadsheet-scoped unique ID that identifies the data source.
+   * The spreadsheet-scoped unique ID that identifies the data source. Example: 1080547365.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSourceId() {
@@ -85,7 +85,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The spreadsheet-scoped unique ID that identifies the data source.
+   * The spreadsheet-scoped unique ID that identifies the data source. Example: 1080547365.
    * @param dataSourceId dataSourceId or {@code null} for none
    */
   public DataSource setDataSourceId(java.lang.String dataSourceId) {
@@ -95,8 +95,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the Sheet connected with the data source. The field cannot be changed once set. When
-   * creating a data source, an associated SheetType.DATA_SOURCE sheet is also created, if the field
-   * is not specified, the ID of the created sheet will be randomly generated.
+   * creating a data source, an associated DATA_SOURCE sheet is also created, if the field is not
+   * specified, the ID of the created sheet will be randomly generated.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSheetId() {
@@ -105,8 +105,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the Sheet connected with the data source. The field cannot be changed once set. When
-   * creating a data source, an associated SheetType.DATA_SOURCE sheet is also created, if the field
-   * is not specified, the ID of the created sheet will be randomly generated.
+   * creating a data source, an associated DATA_SOURCE sheet is also created, if the field is not
+   * specified, the ID of the created sheet will be randomly generated.
    * @param sheetId sheetId or {@code null} for none
    */
   public DataSource setSheetId(java.lang.Integer sheetId) {
@@ -115,7 +115,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DataSourceSpec.
+   * The DataSourceSpec for the data source connected with this spreadsheet.
    * @return value or {@code null} for none
    */
   public DataSourceSpec getSpec() {
@@ -123,7 +123,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DataSourceSpec.
+   * The DataSourceSpec for the data source connected with this spreadsheet.
    * @param spec spec or {@code null} for none
    */
   public DataSource setSpec(DataSourceSpec spec) {

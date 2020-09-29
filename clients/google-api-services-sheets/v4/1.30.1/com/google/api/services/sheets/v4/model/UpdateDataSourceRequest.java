@@ -18,8 +18,8 @@ package com.google.api.services.sheets.v4.model;
 
 /**
  * Updates a data source. After the data source is updated successfully, an execution is triggered
- * to refresh the associated DataSource sheet to read data from the updated data source. The request
- * requires an additional bigquery.readonly OAuth scope.
+ * to refresh the associated DATA_SOURCE sheet to read data from the updated data source. The
+ * request requires an additional `bigquery.readonly` OAuth scope.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -39,7 +39,7 @@ public final class UpdateDataSourceRequest extends com.google.api.client.json.Ge
   private DataSource dataSource;
 
   /**
-   * The fields that should be updated. At least one field must be specified. The root 'dataSource'
+   * The fields that should be updated. At least one field must be specified. The root `dataSource`
    * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
    * every field.
    * The value may be {@code null}.
@@ -65,7 +65,7 @@ public final class UpdateDataSourceRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The fields that should be updated. At least one field must be specified. The root 'dataSource'
+   * The fields that should be updated. At least one field must be specified. The root `dataSource`
    * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
    * every field.
    * @return value or {@code null} for none
@@ -75,7 +75,7 @@ public final class UpdateDataSourceRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The fields that should be updated. At least one field must be specified. The root 'dataSource'
+   * The fields that should be updated. At least one field must be specified. The root `dataSource`
    * is implied and should not be specified. A single `"*"` can be used as short-hand for listing
    * every field.
    * @param fields fields or {@code null} for none

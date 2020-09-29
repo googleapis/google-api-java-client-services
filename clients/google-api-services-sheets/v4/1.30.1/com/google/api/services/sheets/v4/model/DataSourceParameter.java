@@ -17,7 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * A parameter in a data source's query. The parameter allows user to pass in values from the
+ * A parameter in a data source's query. The parameter allows the user to pass in values from the
  * spreadsheet into a query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,7 +32,8 @@ public final class DataSourceParameter extends com.google.api.client.json.Generi
 
   /**
    * Named parameter. Must be a legitimate identifier for the DataSource that supports it. For
-   * example, BigQuery identifier
+   * example, [BigQuery identifier](https://cloud.google.com/bigquery/docs/reference/standard-
+   * sql/lexical#identifiers).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +55,8 @@ public final class DataSourceParameter extends com.google.api.client.json.Generi
 
   /**
    * Named parameter. Must be a legitimate identifier for the DataSource that supports it. For
-   * example, BigQuery identifier
+   * example, [BigQuery identifier](https://cloud.google.com/bigquery/docs/reference/standard-
+   * sql/lexical#identifiers).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -63,7 +65,8 @@ public final class DataSourceParameter extends com.google.api.client.json.Generi
 
   /**
    * Named parameter. Must be a legitimate identifier for the DataSource that supports it. For
-   * example, BigQuery identifier
+   * example, [BigQuery identifier](https://cloud.google.com/bigquery/docs/reference/standard-
+   * sql/lexical#identifiers).
    * @param name name or {@code null} for none
    */
   public DataSourceParameter setName(java.lang.String name) {

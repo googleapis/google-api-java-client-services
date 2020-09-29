@@ -93,7 +93,8 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
    * on the number of ranges requested on this sheet. For example, if this is representing `Sheet1`,
    * and the spreadsheet was requested with ranges `Sheet1!A1:C10` and `Sheet1!D15:E20`, then the
    * first GridData will have a startRow/startColumn of `0`, while the second one will have
-   * `startRow 14` (zero-based row 15), and `startColumn 3` (zero-based column D).
+   * `startRow 14` (zero-based row 15), and `startColumn 3` (zero-based column D). For a DATA_SOURCE
+   * sheet, you can not request a specific range, the GridData contains all the values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -274,7 +275,8 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
    * on the number of ranges requested on this sheet. For example, if this is representing `Sheet1`,
    * and the spreadsheet was requested with ranges `Sheet1!A1:C10` and `Sheet1!D15:E20`, then the
    * first GridData will have a startRow/startColumn of `0`, while the second one will have
-   * `startRow 14` (zero-based row 15), and `startColumn 3` (zero-based column D).
+   * `startRow 14` (zero-based row 15), and `startColumn 3` (zero-based column D). For a DATA_SOURCE
+   * sheet, you can not request a specific range, the GridData contains all the values.
    * @return value or {@code null} for none
    */
   public java.util.List<GridData> getData() {
@@ -286,7 +288,8 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
    * on the number of ranges requested on this sheet. For example, if this is representing `Sheet1`,
    * and the spreadsheet was requested with ranges `Sheet1!A1:C10` and `Sheet1!D15:E20`, then the
    * first GridData will have a startRow/startColumn of `0`, while the second one will have
-   * `startRow 14` (zero-based row 15), and `startColumn 3` (zero-based column D).
+   * `startRow 14` (zero-based row 15), and `startColumn 3` (zero-based column D). For a DATA_SOURCE
+   * sheet, you can not request a specific range, the GridData contains all the values.
    * @param data data or {@code null} for none
    */
   public Sheet setData(java.util.List<GridData> data) {

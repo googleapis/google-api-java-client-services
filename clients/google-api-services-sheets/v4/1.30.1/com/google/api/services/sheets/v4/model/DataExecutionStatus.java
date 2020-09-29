@@ -17,7 +17,13 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * The data execution status.
+ * The data execution status. A data execution is created to sync a data source object with the
+ * latest data from a DataSource. It is usually scheduled to run at background, you can check its
+ * state to tell if an execution completes There are several scenarios where a data execution is
+ * triggered to run: * Adding a data source creates an associated data source sheet as well as a
+ * data execution to sync the data from the data source to the sheet. * Updating a data source
+ * creates a data execution to refresh the associated data source sheet similarly. * You can send
+ * refresh request to explicitly refresh one or multiple data source objects.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

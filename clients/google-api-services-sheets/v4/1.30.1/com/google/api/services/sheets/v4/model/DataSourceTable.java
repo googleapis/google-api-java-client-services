@@ -17,8 +17,8 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * A data source table, allowing to import a static table of data from the DataSource into Sheets.
- * This is also known as "Extract" in the Sheets editor.
+ * A data source table, which allows the user to import a static table of data from the DataSource
+ * into Sheets. This is also known as "Extract" in the Sheets editor.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

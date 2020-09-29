@@ -17,7 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Schedule refreshes in a time interval on specified days in a month and repeats monthly.
+ * A monthly schedule for data to refresh on specific days in the month in a given time interval.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

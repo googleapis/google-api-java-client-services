@@ -53,7 +53,10 @@ public final class DuplicateSheetRequest extends com.google.api.client.json.Gene
   private java.lang.String newSheetName;
 
   /**
-   * The sheet to duplicate.
+   * The sheet to duplicate. If the source sheet is of DATA_SOURCE type, its backing DataSource is
+   * also duplicated and associated with the new copy of the sheet. No data execution is triggered,
+   * the grid data of this sheet is also copied over but only available after the batch request
+   * completes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +118,10 @@ public final class DuplicateSheetRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The sheet to duplicate.
+   * The sheet to duplicate. If the source sheet is of DATA_SOURCE type, its backing DataSource is
+   * also duplicated and associated with the new copy of the sheet. No data execution is triggered,
+   * the grid data of this sheet is also copied over but only available after the batch request
+   * completes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSourceSheetId() {
@@ -123,7 +129,10 @@ public final class DuplicateSheetRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The sheet to duplicate.
+   * The sheet to duplicate. If the source sheet is of DATA_SOURCE type, its backing DataSource is
+   * also duplicated and associated with the new copy of the sheet. No data execution is triggered,
+   * the grid data of this sheet is also copied over but only available after the batch request
+   * completes.
    * @param sourceSheetId sourceSheetId or {@code null} for none
    */
   public DuplicateSheetRequest setSourceSheetId(java.lang.Integer sourceSheetId) {

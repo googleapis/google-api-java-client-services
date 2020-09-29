@@ -17,7 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * An unique identifier that references to a data source column.
+ * An unique identifier that references a data source column.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

@@ -18,7 +18,7 @@ package com.google.api.services.sheets.v4.model;
 
 /**
  * Refreshes one or multiple data source objects in the spreadsheet by the specified references. The
- * request requires an additional bigquery.readonly OAuth scope. If there're multiple refresh
+ * request requires an additional `bigquery.readonly` OAuth scope. If there are multiple refresh
  * requests referencing the same data source objects in one batch, only the last refresh request is
  * processed, and all those requests will have the same response accordingly.
  *

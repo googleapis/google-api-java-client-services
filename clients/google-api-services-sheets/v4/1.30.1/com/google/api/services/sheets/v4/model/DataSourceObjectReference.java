@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class DataSourceObjectReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * References to a DataSourceChart.
+   * References to a data source chart.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,14 +58,14 @@ public final class DataSourceObjectReference extends com.google.api.client.json.
   private GridCoordinate dataSourceTableAnchorCell;
 
   /**
-   * References to a SheetType.DATA_SOURCE sheet.
+   * References to a DATA_SOURCE sheet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sheetId;
 
   /**
-   * References to a DataSourceChart.
+   * References to a data source chart.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getChartId() {
@@ -73,7 +73,7 @@ public final class DataSourceObjectReference extends com.google.api.client.json.
   }
 
   /**
-   * References to a DataSourceChart.
+   * References to a data source chart.
    * @param chartId chartId or {@code null} for none
    */
   public DataSourceObjectReference setChartId(java.lang.Integer chartId) {
@@ -133,7 +133,7 @@ public final class DataSourceObjectReference extends com.google.api.client.json.
   }
 
   /**
-   * References to a SheetType.DATA_SOURCE sheet.
+   * References to a DATA_SOURCE sheet.
    * @return value or {@code null} for none
    */
   public java.lang.String getSheetId() {
@@ -141,7 +141,7 @@ public final class DataSourceObjectReference extends com.google.api.client.json.
   }
 
   /**
-   * References to a SheetType.DATA_SOURCE sheet.
+   * References to a DATA_SOURCE sheet.
    * @param sheetId sheetId or {@code null} for none
    */
   public DataSourceObjectReference setSheetId(java.lang.String sheetId) {

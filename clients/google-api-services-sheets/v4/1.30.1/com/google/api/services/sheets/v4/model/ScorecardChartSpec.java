@@ -34,8 +34,9 @@ package com.google.api.services.sheets.v4.model;
 public final class ScorecardChartSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The aggregation type for key and baseline chart data in scorecard chart. This field is
-   * optional.
+   * The aggregation type for key and baseline chart data in scorecard chart. This field is not
+   * supported for data source charts. Use the ChartData.aggregateType field of the key_value_data
+   * or baseline_value_data instead for data source charts. This field is optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,8 +95,9 @@ public final class ScorecardChartSpec extends com.google.api.client.json.Generic
   private java.lang.Double scaleFactor;
 
   /**
-   * The aggregation type for key and baseline chart data in scorecard chart. This field is
-   * optional.
+   * The aggregation type for key and baseline chart data in scorecard chart. This field is not
+   * supported for data source charts. Use the ChartData.aggregateType field of the key_value_data
+   * or baseline_value_data instead for data source charts. This field is optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getAggregateType() {
@@ -103,8 +105,9 @@ public final class ScorecardChartSpec extends com.google.api.client.json.Generic
   }
 
   /**
-   * The aggregation type for key and baseline chart data in scorecard chart. This field is
-   * optional.
+   * The aggregation type for key and baseline chart data in scorecard chart. This field is not
+   * supported for data source charts. Use the ChartData.aggregateType field of the key_value_data
+   * or baseline_value_data instead for data source charts. This field is optional.
    * @param aggregateType aggregateType or {@code null} for none
    */
   public ScorecardChartSpec setAggregateType(java.lang.String aggregateType) {

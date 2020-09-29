@@ -31,16 +31,16 @@ package com.google.api.services.translate.v3.model;
 public final class DetectLanguageResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of detected languages sorted by detection confidence in descending order. The most
-   * probable language first.
+   * The most probable language detected by the Translation API. For each request, the Translation
+   * API will always return only one result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<DetectedLanguage> languages;
 
   /**
-   * A list of detected languages sorted by detection confidence in descending order. The most
-   * probable language first.
+   * The most probable language detected by the Translation API. For each request, the Translation
+   * API will always return only one result.
    * @return value or {@code null} for none
    */
   public java.util.List<DetectedLanguage> getLanguages() {
@@ -48,8 +48,8 @@ public final class DetectLanguageResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of detected languages sorted by detection confidence in descending order. The most
-   * probable language first.
+   * The most probable language detected by the Translation API. For each request, the Translation
+   * API will always return only one result.
    * @param languages languages or {@code null} for none
    */
   public DetectLanguageResponse setLanguages(java.util.List<DetectedLanguage> languages) {

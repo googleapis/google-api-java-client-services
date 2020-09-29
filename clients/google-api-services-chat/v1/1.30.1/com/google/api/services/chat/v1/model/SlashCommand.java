@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * An onclick action (e.g. open a link).
+ * A Slash Command in Hangouts Chat.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Hangouts Chat API. For a detailed explanation see:
@@ -27,64 +27,40 @@ package com.google.api.services.chat.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OnClick extends com.google.api.client.json.GenericJson {
+public final class SlashCommand extends com.google.api.client.json.GenericJson {
 
   /**
-   * A form action will be triggered by this onclick if specified.
+   * The id of the slash command invoked.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private FormAction action;
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long commandId;
 
   /**
-   * This onclick triggers an open link action if specified.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private OpenLink openLink;
-
-  /**
-   * A form action will be triggered by this onclick if specified.
+   * The id of the slash command invoked.
    * @return value or {@code null} for none
    */
-  public FormAction getAction() {
-    return action;
+  public java.lang.Long getCommandId() {
+    return commandId;
   }
 
   /**
-   * A form action will be triggered by this onclick if specified.
-   * @param action action or {@code null} for none
+   * The id of the slash command invoked.
+   * @param commandId commandId or {@code null} for none
    */
-  public OnClick setAction(FormAction action) {
-    this.action = action;
-    return this;
-  }
-
-  /**
-   * This onclick triggers an open link action if specified.
-   * @return value or {@code null} for none
-   */
-  public OpenLink getOpenLink() {
-    return openLink;
-  }
-
-  /**
-   * This onclick triggers an open link action if specified.
-   * @param openLink openLink or {@code null} for none
-   */
-  public OnClick setOpenLink(OpenLink openLink) {
-    this.openLink = openLink;
+  public SlashCommand setCommandId(java.lang.Long commandId) {
+    this.commandId = commandId;
     return this;
   }
 
   @Override
-  public OnClick set(String fieldName, Object value) {
-    return (OnClick) super.set(fieldName, value);
+  public SlashCommand set(String fieldName, Object value) {
+    return (SlashCommand) super.set(fieldName, value);
   }
 
   @Override
-  public OnClick clone() {
-    return (OnClick) super.clone();
+  public SlashCommand clone() {
+    return (SlashCommand) super.clone();
   }
 
 }

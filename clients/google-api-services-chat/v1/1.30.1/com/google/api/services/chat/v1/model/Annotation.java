@@ -41,6 +41,13 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   private java.lang.Integer length;
 
   /**
+   * The metadata for a slash command.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SlashCommandMetadata slashCommand;
+
+  /**
    * Start index (0-based, inclusive) in the plain-text message body this annotation corresponds to.
    * The value may be {@code null}.
    */
@@ -75,6 +82,23 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
    */
   public Annotation setLength(java.lang.Integer length) {
     this.length = length;
+    return this;
+  }
+
+  /**
+   * The metadata for a slash command.
+   * @return value or {@code null} for none
+   */
+  public SlashCommandMetadata getSlashCommand() {
+    return slashCommand;
+  }
+
+  /**
+   * The metadata for a slash command.
+   * @param slashCommand slashCommand or {@code null} for none
+   */
+  public Annotation setSlashCommand(SlashCommandMetadata slashCommand) {
+    this.slashCommand = slashCommand;
     return this;
   }
 

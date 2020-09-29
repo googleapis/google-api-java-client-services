@@ -123,6 +123,13 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private User sender;
 
   /**
+   * Slash command information, if applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SlashCommand slashCommand;
+
+  /**
    * The space the message belongs to.
    * The value may be {@code null}.
    */
@@ -320,6 +327,23 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setSender(User sender) {
     this.sender = sender;
+    return this;
+  }
+
+  /**
+   * Slash command information, if applicable.
+   * @return value or {@code null} for none
+   */
+  public SlashCommand getSlashCommand() {
+    return slashCommand;
+  }
+
+  /**
+   * Slash command information, if applicable.
+   * @param slashCommand slashCommand or {@code null} for none
+   */
+  public Message setSlashCommand(SlashCommand slashCommand) {
+    this.slashCommand = slashCommand;
     return this;
   }
 

@@ -131,6 +131,13 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   private java.lang.Integer quantity;
 
   /**
+   * ISO 3166-1 alpha-2 billing region code of the user at the time the product was granted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String regionCode;
+
+  /**
    * The acknowledgement state of the inapp product. Possible values are: 0. Yet to be acknowledged
    * 1. Acknowledged
    * @return value or {@code null} for none
@@ -366,6 +373,23 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
    */
   public ProductPurchase setQuantity(java.lang.Integer quantity) {
     this.quantity = quantity;
+    return this;
+  }
+
+  /**
+   * ISO 3166-1 alpha-2 billing region code of the user at the time the product was granted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegionCode() {
+    return regionCode;
+  }
+
+  /**
+   * ISO 3166-1 alpha-2 billing region code of the user at the time the product was granted.
+   * @param regionCode regionCode or {@code null} for none
+   */
+  public ProductPurchase setRegionCode(java.lang.String regionCode) {
+    this.regionCode = regionCode;
     return this;
   }
 

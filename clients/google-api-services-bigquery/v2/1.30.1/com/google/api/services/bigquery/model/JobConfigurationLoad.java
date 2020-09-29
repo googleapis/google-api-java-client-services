@@ -75,6 +75,26 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String createDisposition;
 
   /**
+   * [Trusted Tester] Defines the list of possible SQL data types to which the source decimal values
+   * are converted. This list and the precision and the scale parameters of the decimal field
+   * determine the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if
+   * it is in the specified list and if it supports the precision and the scale. STRING supports all
+   * precision and scale values. If none of the listed types supports the precision and the scale,
+   * the type supporting the widest range in the specified list is picked, and if a value exceeds
+   * the supported range when reading the data, an error will be thrown. For example: suppose
+   * decimal_target_type = ["NUMERIC", "BIGNUMERIC"]. Then if (precision,scale) is: * (38,9) ->
+   * NUMERIC; * (39,9) -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) ->
+   * BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) ->
+   * BIGNUMERIC (error if value exeeds supported range). For duplicated types in this field, only
+   * one will be considered and the rest will be ignored. The order of the types in this field is
+   * ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC", "BIGNUMERIC"] and
+   * NUMERIC always takes precedence over BIGNUMERIC.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> decimalTargetTypes;
+
+  /**
    * Custom encryption configuration (e.g., Cloud KMS keys).
    * The value may be {@code null}.
    */
@@ -385,6 +405,49 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setCreateDisposition(java.lang.String createDisposition) {
     this.createDisposition = createDisposition;
+    return this;
+  }
+
+  /**
+   * [Trusted Tester] Defines the list of possible SQL data types to which the source decimal values
+   * are converted. This list and the precision and the scale parameters of the decimal field
+   * determine the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if
+   * it is in the specified list and if it supports the precision and the scale. STRING supports all
+   * precision and scale values. If none of the listed types supports the precision and the scale,
+   * the type supporting the widest range in the specified list is picked, and if a value exceeds
+   * the supported range when reading the data, an error will be thrown. For example: suppose
+   * decimal_target_type = ["NUMERIC", "BIGNUMERIC"]. Then if (precision,scale) is: * (38,9) ->
+   * NUMERIC; * (39,9) -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) ->
+   * BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) ->
+   * BIGNUMERIC (error if value exeeds supported range). For duplicated types in this field, only
+   * one will be considered and the rest will be ignored. The order of the types in this field is
+   * ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC", "BIGNUMERIC"] and
+   * NUMERIC always takes precedence over BIGNUMERIC.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDecimalTargetTypes() {
+    return decimalTargetTypes;
+  }
+
+  /**
+   * [Trusted Tester] Defines the list of possible SQL data types to which the source decimal values
+   * are converted. This list and the precision and the scale parameters of the decimal field
+   * determine the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if
+   * it is in the specified list and if it supports the precision and the scale. STRING supports all
+   * precision and scale values. If none of the listed types supports the precision and the scale,
+   * the type supporting the widest range in the specified list is picked, and if a value exceeds
+   * the supported range when reading the data, an error will be thrown. For example: suppose
+   * decimal_target_type = ["NUMERIC", "BIGNUMERIC"]. Then if (precision,scale) is: * (38,9) ->
+   * NUMERIC; * (39,9) -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) ->
+   * BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) ->
+   * BIGNUMERIC (error if value exeeds supported range). For duplicated types in this field, only
+   * one will be considered and the rest will be ignored. The order of the types in this field is
+   * ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC", "BIGNUMERIC"] and
+   * NUMERIC always takes precedence over BIGNUMERIC.
+   * @param decimalTargetTypes decimalTargetTypes or {@code null} for none
+   */
+  public JobConfigurationLoad setDecimalTargetTypes(java.util.List<java.lang.String> decimalTargetTypes) {
+    this.decimalTargetTypes = decimalTargetTypes;
     return this;
   }
 

@@ -353,7 +353,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            *
            * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
            *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]", LOCATION
-           *        here refers to GCP Locations: https://cloud.google.com/about/locations/
+           *        here refers to GCP Locations: https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID
+           *        refers to supported insight types: https://cloud.google.com/recommender/docs/insights
+           *        /insight-types.)
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -382,7 +384,9 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              *
              * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
            *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]", LOCATION
-           *        here refers to GCP Locations: https://cloud.google.com/about/locations/
+           *        here refers to GCP Locations: https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID
+           *        refers to supported insight types: https://cloud.google.com/recommender/docs/insights
+           *        /insight-types.)
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -464,13 +468,16 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * Required. The container resource on which to execute the request. Acceptable formats:
              * 1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+             * INSIGHT_TYPE_ID refers to supported insight types:
+             * https://cloud.google.com/recommender/docs/insights/insight-types.)
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The container resource on which to execute the request. Acceptable formats: 1.
            "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]", LOCATION here
-           refers to GCP Locations: https://cloud.google.com/about/locations/
+           refers to GCP Locations: https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID refers to
+           supported insight types: https://cloud.google.com/recommender/docs/insights/insight-types.)
              */
             public java.lang.String getParent() {
               return parent;
@@ -480,6 +487,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * Required. The container resource on which to execute the request. Acceptable formats:
              * 1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+             * INSIGHT_TYPE_ID refers to supported insight types:
+             * https://cloud.google.com/recommender/docs/insights/insight-types.)
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -903,7 +912,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            *
            * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
            *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]", LOCATION
-           *        here refers to GCP Locations: https://cloud.google.com/about/locations/
+           *        here refers to GCP Locations: https://cloud.google.com/about/locations/ RECOMMENDER_ID
+           *        refers to supported recommenders: https://cloud.google.com/recommender/docs/recommenders.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -932,7 +942,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              *
              * @param parent Required. The container resource on which to execute the request. Acceptable formats: 1.
            *        "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]", LOCATION
-           *        here refers to GCP Locations: https://cloud.google.com/about/locations/
+           *        here refers to GCP Locations: https://cloud.google.com/about/locations/ RECOMMENDER_ID
+           *        refers to supported recommenders: https://cloud.google.com/recommender/docs/recommenders.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -1014,13 +1025,16 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * Required. The container resource on which to execute the request. Acceptable formats:
              * 1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+             * RECOMMENDER_ID refers to supported recommenders:
+             * https://cloud.google.com/recommender/docs/recommenders.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The container resource on which to execute the request. Acceptable formats: 1.
            "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]", LOCATION here
-           refers to GCP Locations: https://cloud.google.com/about/locations/
+           refers to GCP Locations: https://cloud.google.com/about/locations/ RECOMMENDER_ID refers to
+           supported recommenders: https://cloud.google.com/recommender/docs/recommenders.
              */
             public java.lang.String getParent() {
               return parent;
@@ -1030,6 +1044,8 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
              * Required. The container resource on which to execute the request. Acceptable formats:
              * 1. "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
              * LOCATION here refers to GCP Locations: https://cloud.google.com/about/locations/
+             * RECOMMENDER_ID refers to supported recommenders:
+             * https://cloud.google.com/recommender/docs/recommenders.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {

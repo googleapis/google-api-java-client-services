@@ -508,8 +508,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
       public class Instances {
 
         /**
-         * ApplyParameters will update current set of Parameters to the set of specified nodes of the
-         * Memcached Instance.
+         * ApplyParameters will restart the set of specified nodes in order to update them to the current
+         * set of parameters for the Memcached Instance.
          *
          * Create a request for the method "instances.applyParameters".
          *
@@ -535,8 +535,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * ApplyParameters will update current set of Parameters to the set of specified nodes of the
-           * Memcached Instance.
+           * ApplyParameters will restart the set of specified nodes in order to update them to the current
+           * set of parameters for the Memcached Instance.
            *
            * Create a request for the method "instances.applyParameters".
            *
@@ -650,7 +650,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
         }
         /**
-         * Creates a new Instance in a given project and location.
+         * Creates a new Instance in a given location.
          *
          * Create a request for the method "instances.create".
          *
@@ -676,7 +676,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new Instance in a given project and location.
+           * Creates a new Instance in a given location.
            *
            * Create a request for the method "instances.create".
            *
@@ -790,7 +790,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * Required. The logical name of the Memcached instance in the user project with the
            * following restrictions: * Must contain only lowercase letters, numbers, and hyphens. *
            * Must start with a letter. * Must be between 1-40 characters. * Must end with a number
-           * or a letter. * Must be unique within the user project / location
+           * or a letter. * Must be unique within the user project / location If any of the above
+           * are not met, will raise an invalid argument error.
            */
           @com.google.api.client.util.Key
           private java.lang.String instanceId;
@@ -798,7 +799,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           /** Required. The logical name of the Memcached instance in the user project with the following
          restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
          letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique
-         within the user project / location
+         within the user project / location If any of the above are not met, will raise an invalid argument
+         error.
            */
           public java.lang.String getInstanceId() {
             return instanceId;
@@ -808,7 +810,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * Required. The logical name of the Memcached instance in the user project with the
            * following restrictions: * Must contain only lowercase letters, numbers, and hyphens. *
            * Must start with a letter. * Must be between 1-40 characters. * Must end with a number
-           * or a letter. * Must be unique within the user project / location
+           * or a letter. * Must be unique within the user project / location If any of the above
+           * are not met, will raise an invalid argument error.
            */
           public Create setInstanceId(java.lang.String instanceId) {
             this.instanceId = instanceId;
@@ -1116,7 +1119,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
         }
         /**
-         * Lists Instances in a given project and location.
+         * Lists Instances in a given location.
          *
          * Create a request for the method "instances.list".
          *
@@ -1141,7 +1144,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists Instances in a given project and location.
+           * Lists Instances in a given location.
            *
            * Create a request for the method "instances.list".
            *

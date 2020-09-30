@@ -18,7 +18,7 @@ package com.google.api.services.dataproc.v1beta2.model;
 
 /**
  * Common config settings for resources of Compute Engine cluster instances, applicable to all
- * instances in the cluster. NEXT ID: 14
+ * instances in the cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -62,6 +62,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String networkUri;
+
+  /**
+   * Optional. Node Group Affinity for sole-tenant clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeGroupAffinity nodeGroupAffinity;
 
   /**
    * Optional. The type of IPv6 access for a cluster.
@@ -207,6 +214,23 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   public GceClusterConfig setNetworkUri(java.lang.String networkUri) {
     this.networkUri = networkUri;
+    return this;
+  }
+
+  /**
+   * Optional. Node Group Affinity for sole-tenant clusters.
+   * @return value or {@code null} for none
+   */
+  public NodeGroupAffinity getNodeGroupAffinity() {
+    return nodeGroupAffinity;
+  }
+
+  /**
+   * Optional. Node Group Affinity for sole-tenant clusters.
+   * @param nodeGroupAffinity nodeGroupAffinity or {@code null} for none
+   */
+  public GceClusterConfig setNodeGroupAffinity(NodeGroupAffinity nodeGroupAffinity) {
+    this.nodeGroupAffinity = nodeGroupAffinity;
     return this;
   }
 

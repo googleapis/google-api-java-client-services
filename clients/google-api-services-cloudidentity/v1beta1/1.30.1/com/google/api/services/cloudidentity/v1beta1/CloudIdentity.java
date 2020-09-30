@@ -4229,7 +4229,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
     public class Memberships {
 
       /**
-       * Check a potential member for membership in a group.
+       * Check a potential member for membership in a group. A member has membership to a group as long as
+       * there is a single viewable transitive membership between the group and the member. The actor must
+       * have view permissions to at least one transitive membership between the member and group.
        *
        * Create a request for the method "memberships.checkTransitiveMembership".
        *
@@ -4256,7 +4258,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Check a potential member for membership in a group.
+         * Check a potential member for membership in a group. A member has membership to a group as long
+         * as there is a single viewable transitive membership between the group and the member. The actor
+         * must have view permissions to at least one transitive membership between the member and group.
          *
          * Create a request for the method "memberships.checkTransitiveMembership".
          *
@@ -4381,15 +4385,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. A CEL expression that MUST include member specification. This is a `required`
-         * field. Example query: member_key_id == ‘member_key_id_value’ [ && member_key_namespace ==
-         * ‘member_key_namespace_value’ ]
+         * field. Certain groups are uniquely identified by both a 'member_key_id' and a
+         * 'member_key_namespace', which requires an additional query input: 'member_key_namespace'.
+         * Example query: `member_key_id == 'member_key_id_value'`
          */
         @com.google.api.client.util.Key
         private java.lang.String query;
 
         /** Required. A CEL expression that MUST include member specification. This is a `required` field.
-       Example query: member_key_id == ‘member_key_id_value’ [ && member_key_namespace ==
-       ‘member_key_namespace_value’ ]
+       Certain groups are uniquely identified by both a 'member_key_id' and a 'member_key_namespace',
+       which requires an additional query input: 'member_key_namespace'. Example query: `member_key_id ==
+       'member_key_id_value'`
          */
         public java.lang.String getQuery() {
           return query;
@@ -4397,8 +4403,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. A CEL expression that MUST include member specification. This is a `required`
-         * field. Example query: member_key_id == ‘member_key_id_value’ [ && member_key_namespace ==
-         * ‘member_key_namespace_value’ ]
+         * field. Certain groups are uniquely identified by both a 'member_key_id' and a
+         * 'member_key_namespace', which requires an additional query input: 'member_key_namespace'.
+         * Example query: `member_key_id == 'member_key_id_value'`
          */
         public CheckTransitiveMembership setQuery(java.lang.String query) {
           this.query = query;
@@ -4844,7 +4851,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Get a membership graph of a member or member/group.
+       * Get a membership graph of just a member or both a member and a group. Given a member, the
+       * response will contain all membership paths from the member. Given both a group and a member, the
+       * response will contain all membership paths between the group and the member.
        *
        * Create a request for the method "memberships.getMembershipGraph".
        *
@@ -4874,7 +4883,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Get a membership graph of a member or member/group.
+         * Get a membership graph of just a member or both a member and a group. Given a member, the
+         * response will contain all membership paths from the member. Given both a group and a member,
+         * the response will contain all membership paths between the group and the member.
          *
          * Create a request for the method "memberships.getMembershipGraph".
          *
@@ -5011,25 +5022,28 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Required. A CEL expression that MUST include member specification AND label(s). Example
-         * query: member_key_id == ‘member_key_id_value’ [ && member_key_namespace ==
-         * ‘member_key_namespace_value’ ] && in labels
+         * Required. A CEL expression that MUST include member specification AND label(s). Certain
+         * groups are uniquely identified by both a 'member_key_id' and a 'member_key_namespace',
+         * which requires an additional query input: 'member_key_namespace'. Example query:
+         * `member_key_id == 'member_key_id_value' && in labels`
          */
         @com.google.api.client.util.Key
         private java.lang.String query;
 
-        /** Required. A CEL expression that MUST include member specification AND label(s). Example query:
-       member_key_id == ‘member_key_id_value’ [ && member_key_namespace == ‘member_key_namespace_value’ ]
-       && in labels
+        /** Required. A CEL expression that MUST include member specification AND label(s). Certain groups are
+       uniquely identified by both a 'member_key_id' and a 'member_key_namespace', which requires an
+       additional query input: 'member_key_namespace'. Example query: `member_key_id ==
+       'member_key_id_value' && in labels`
          */
         public java.lang.String getQuery() {
           return query;
         }
 
         /**
-         * Required. A CEL expression that MUST include member specification AND label(s). Example
-         * query: member_key_id == ‘member_key_id_value’ [ && member_key_namespace ==
-         * ‘member_key_namespace_value’ ] && in labels
+         * Required. A CEL expression that MUST include member specification AND label(s). Certain
+         * groups are uniquely identified by both a 'member_key_id' and a 'member_key_namespace',
+         * which requires an additional query input: 'member_key_namespace'. Example query:
+         * `member_key_id == 'member_key_id_value' && in labels`
          */
         public GetMembershipGraph setQuery(java.lang.String query) {
           this.query = query;
@@ -5614,7 +5628,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Search transitive groups of a member.
+       * Search transitive groups of a member. A transitive group is any group that has a direct or
+       * indirect membership to the member. Actor must have view permissions all transitive groups.
        *
        * Create a request for the method "memberships.searchTransitiveGroups".
        *
@@ -5641,7 +5656,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Search transitive groups of a member.
+         * Search transitive groups of a member. A transitive group is any group that has a direct or
+         * indirect membership to the member. Actor must have view permissions all transitive groups.
          *
          * Create a request for the method "memberships.searchTransitiveGroups".
          *
@@ -5799,16 +5815,19 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Required. A CEL expression that MUST include member specification AND label(s). This is a
          * `required` field. Users can search on label attributes of groups. CONTAINS match ('in')
-         * is supported on labels. Example query: member_key_id == ‘member_key_id_value’ [ &&
-         * member_key_namespace == ‘member_key_namespace_value’ ] && in labels
+         * is supported on labels. Certain groups are uniquely identified by both a 'member_key_id'
+         * and a 'member_key_namespace', which requires an additional query input:
+         * 'member_key_namespace'. Example query: `member_key_id == 'member_key_id_value' && in
+         * labels`
          */
         @com.google.api.client.util.Key
         private java.lang.String query;
 
         /** Required. A CEL expression that MUST include member specification AND label(s). This is a
        `required` field. Users can search on label attributes of groups. CONTAINS match ('in') is
-       supported on labels. Example query: member_key_id == ‘member_key_id_value’ [ &&
-       member_key_namespace == ‘member_key_namespace_value’ ] && in labels
+       supported on labels. Certain groups are uniquely identified by both a 'member_key_id' and a
+       'member_key_namespace', which requires an additional query input: 'member_key_namespace'. Example
+       query: `member_key_id == 'member_key_id_value' && in labels`
          */
         public java.lang.String getQuery() {
           return query;
@@ -5817,8 +5836,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /**
          * Required. A CEL expression that MUST include member specification AND label(s). This is a
          * `required` field. Users can search on label attributes of groups. CONTAINS match ('in')
-         * is supported on labels. Example query: member_key_id == ‘member_key_id_value’ [ &&
-         * member_key_namespace == ‘member_key_namespace_value’ ] && in labels
+         * is supported on labels. Certain groups are uniquely identified by both a 'member_key_id'
+         * and a 'member_key_namespace', which requires an additional query input:
+         * 'member_key_namespace'. Example query: `member_key_id == 'member_key_id_value' && in
+         * labels`
          */
         public SearchTransitiveGroups setQuery(java.lang.String query) {
           this.query = query;
@@ -5831,7 +5852,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Search transitive memberships of a group.
+       * Search transitive memberships of a group. A transitive membership is any direct or indirect
+       * membership of a group. Actor must have view permissions to all transitive memberships.
        *
        * Create a request for the method "memberships.searchTransitiveMemberships".
        *
@@ -5858,7 +5880,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Search transitive memberships of a group.
+         * Search transitive memberships of a group. A transitive membership is any direct or indirect
+         * membership of a group. Actor must have view permissions to all transitive memberships.
          *
          * Create a request for the method "memberships.searchTransitiveMemberships".
          *

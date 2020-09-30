@@ -17,7 +17,7 @@
 package com.google.api.services.cloudidentity.v1.model;
 
 /**
- * Model definition for SearchGroupsResponse.
+ * The response message for GroupsService.SearchGroups.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.cloudidentity.v1.model;
 public final class SearchGroupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of Groups satisfying the search query.
+   * The `Group`s that match the search query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,15 +43,15 @@ public final class SearchGroupsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results available for
-   * specified query.
+   * A continuation token to retrieve the next page of results, or empty if there are no more
+   * results available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * List of Groups satisfying the search query.
+   * The `Group`s that match the search query.
    * @return value or {@code null} for none
    */
   public java.util.List<Group> getGroups() {
@@ -59,7 +59,7 @@ public final class SearchGroupsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * List of Groups satisfying the search query.
+   * The `Group`s that match the search query.
    * @param groups groups or {@code null} for none
    */
   public SearchGroupsResponse setGroups(java.util.List<Group> groups) {
@@ -68,8 +68,8 @@ public final class SearchGroupsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results available for
-   * specified query.
+   * A continuation token to retrieve the next page of results, or empty if there are no more
+   * results available.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -77,8 +77,8 @@ public final class SearchGroupsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results available for
-   * specified query.
+   * A continuation token to retrieve the next page of results, or empty if there are no more
+   * results available.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public SearchGroupsResponse setNextPageToken(java.lang.String nextPageToken) {

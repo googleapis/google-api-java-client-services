@@ -17,7 +17,8 @@
 package com.google.api.services.cloudidentity.v1.model;
 
 /**
- * Resource representing a role within a Membership.
+ * A membership role within the Cloud Identity Groups API. A `MembershipRole` defines the privileges
+ * granted to a `Membership`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -30,14 +31,14 @@ package com.google.api.services.cloudidentity.v1.model;
 public final class MembershipRole extends com.google.api.client.json.GenericJson {
 
   /**
-   * MembershipRole in string format. Currently supported MembershipRoles: `"MEMBER"`.
+   * The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * MembershipRole in string format. Currently supported MembershipRoles: `"MEMBER"`.
+   * The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -45,7 +46,7 @@ public final class MembershipRole extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * MembershipRole in string format. Currently supported MembershipRoles: `"MEMBER"`.
+   * The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
    * @param name name or {@code null} for none
    */
   public MembershipRole setName(java.lang.String name) {

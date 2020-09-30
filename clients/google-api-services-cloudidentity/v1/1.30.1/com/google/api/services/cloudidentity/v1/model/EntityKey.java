@@ -17,9 +17,10 @@
 package com.google.api.services.cloudidentity.v1.model;
 
 /**
- * An EntityKey uniquely identifies an Entity. Namespaces are used to provide isolation for IDs. A
- * single ID can be reused across namespaces but the combination of a namespace and an ID must be
- * unique.
+ * A unique identifier for an entity in the Cloud Identity Groups API. An entity can represent
+ * either a group with an optional `namespace` or a user without a `namespace`. The combination of
+ * `id` and `namespace` must be unique; however, the same `id` can be used with different
+ * `namespace`s.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -32,24 +33,29 @@ package com.google.api.services.cloudidentity.v1.model;
 public final class EntityKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the entity within the given namespace. The ID must be unique within its namespace.
+   * The ID of the entity. For Google-managed entities, the `id` should be the email address of an
+   * existing group or user. For external-identity-mapped entities, the `id` must be a string
+   * conforming to the Identity Source's requirements. Must be unique within a `namespace`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace.
-   * Namespaces are currently only created as part of IdentitySource creation from Admin Console. A
-   * namespace `"identitysources/{identity_source_id}"` is created corresponding to every Identity
-   * Source `identity_source_id`.
+   * The namespace in which the entity exists. If not specified, the `EntityKey` represents a
+   * Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey`
+   * represents an external-identity-mapped group. The namespace must correspond to an identity
+   * source created in Admin Console and must be in the form of
+   * `identitysources/{identity_source_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String namespace;
 
   /**
-   * The ID of the entity within the given namespace. The ID must be unique within its namespace.
+   * The ID of the entity. For Google-managed entities, the `id` should be the email address of an
+   * existing group or user. For external-identity-mapped entities, the `id` must be a string
+   * conforming to the Identity Source's requirements. Must be unique within a `namespace`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -57,7 +63,9 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the entity within the given namespace. The ID must be unique within its namespace.
+   * The ID of the entity. For Google-managed entities, the `id` should be the email address of an
+   * existing group or user. For external-identity-mapped entities, the `id` must be a string
+   * conforming to the Identity Source's requirements. Must be unique within a `namespace`.
    * @param id id or {@code null} for none
    */
   public EntityKey setId(java.lang.String id) {
@@ -66,10 +74,11 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace.
-   * Namespaces are currently only created as part of IdentitySource creation from Admin Console. A
-   * namespace `"identitysources/{identity_source_id}"` is created corresponding to every Identity
-   * Source `identity_source_id`.
+   * The namespace in which the entity exists. If not specified, the `EntityKey` represents a
+   * Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey`
+   * represents an external-identity-mapped group. The namespace must correspond to an identity
+   * source created in Admin Console and must be in the form of
+   * `identitysources/{identity_source_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespace() {
@@ -77,10 +86,11 @@ public final class EntityKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace.
-   * Namespaces are currently only created as part of IdentitySource creation from Admin Console. A
-   * namespace `"identitysources/{identity_source_id}"` is created corresponding to every Identity
-   * Source `identity_source_id`.
+   * The namespace in which the entity exists. If not specified, the `EntityKey` represents a
+   * Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey`
+   * represents an external-identity-mapped group. The namespace must correspond to an identity
+   * source created in Admin Console and must be in the form of
+   * `identitysources/{identity_source_id}.
    * @param namespace namespace or {@code null} for none
    */
   public EntityKey setNamespace(java.lang.String namespace) {

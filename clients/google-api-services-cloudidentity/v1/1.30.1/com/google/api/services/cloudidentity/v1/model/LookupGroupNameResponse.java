@@ -17,7 +17,7 @@
 package com.google.api.services.cloudidentity.v1.model;
 
 /**
- * Model definition for LookupGroupNameResponse.
+ * The response message for GroupsService.LookupGroupName.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -30,16 +30,16 @@ package com.google.api.services.cloudidentity.v1.model;
 public final class LookupGroupNameResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-   * format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of the looked-up
+   * `Group`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-   * format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of the looked-up
+   * `Group`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -47,8 +47,8 @@ public final class LookupGroupNameResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-   * format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of the looked-up
+   * `Group`.
    * @param name name or {@code null} for none
    */
   public LookupGroupNameResponse setName(java.lang.String name) {

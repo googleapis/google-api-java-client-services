@@ -54,7 +54,9 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   private java.lang.Boolean requirePartitionFilter;
 
   /**
-   * [Required] The only type supported is DAY, which will generate one partition per day.
+   * [Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one
+   * partition per day, hour, month, and year, respectively. When the type is not specified, the
+   * default behavior is DAY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +120,9 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The only type supported is DAY, which will generate one partition per day.
+   * [Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one
+   * partition per day, hour, month, and year, respectively. When the type is not specified, the
+   * default behavior is DAY.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -126,7 +130,9 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The only type supported is DAY, which will generate one partition per day.
+   * [Required] The supported types are DAY, HOUR, MONTH, and YEAR, which will generate one
+   * partition per day, hour, month, and year, respectively. When the type is not specified, the
+   * default behavior is DAY.
    * @param type type or {@code null} for none
    */
   public TimePartitioning setType(java.lang.String type) {

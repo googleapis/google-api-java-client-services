@@ -21,7 +21,7 @@ packages on [Maven Central][maven-search].
 | --- | -------- |
 | AI Platform Training & Prediction API | [v1](clients/google-api-services-ml/v1) |
 | API Discovery Service | [v1](clients/google-api-services-discovery/v1) |
-| API Gateway API | [v1alpha1](clients/google-api-services-apigateway/v1alpha1), [v1alpha2](clients/google-api-services-apigateway/v1alpha2), [v1beta](clients/google-api-services-apigateway/v1beta) |
+| API Gateway API | [v1beta](clients/google-api-services-apigateway/v1beta) |
 | Abusive Experience Report API | [v1](clients/google-api-services-abusiveexperiencereport/v1) |
 | Accelerated Mobile Pages (AMP) URL API | [v1](clients/google-api-services-acceleratedmobilepageurl/v1) |
 | Access Approval API | [v1](clients/google-api-services-accessapproval/v1) |
@@ -113,7 +113,7 @@ packages on [Maven Central][maven-search].
 | Domains RDAP API | [v1](clients/google-api-services-domainsrdap/v1) |
 | DoubleClick Bid Manager API | [v1](clients/google-api-services-doubleclickbidmanager/v1), [v1.1](clients/google-api-services-doubleclickbidmanager/v1.1) |
 | Drive API | [v2](clients/google-api-services-drive/v2), [v3](clients/google-api-services-drive/v3) |
-| Drive Activity API | [v1](clients/google-api-services-appsactivity/v1), [v2](clients/google-api-services-driveactivity/v2) |
+| Drive Activity API | [v2](clients/google-api-services-driveactivity/v2) |
 | Enterprise Apps Reseller API | [v1](clients/google-api-services-reseller/v1) |
 | Enterprise License Manager API | [v1](clients/google-api-services-licensing/v1) |
 | Error Reporting API | [v1beta1](clients/google-api-services-clouderrorreporting/v1beta1) |

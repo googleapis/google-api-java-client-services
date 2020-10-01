@@ -1048,7 +1048,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
     public class TenancyUnits {
 
       /**
-       * Add a new tenant project to the tenancy unit. There can be a maximum of 512 tenant projects in a
+       * Add a new tenant project to the tenancy unit. There can be a maximum of 1024 tenant projects in a
        * tenancy unit. If there are previously failed `AddTenantProject` calls, you might need to call
        * `RemoveTenantProject` first to resolve them before you can make another call to
        * `AddTenantProject` with the same tag. Operation.
@@ -1078,7 +1078,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
 
         /**
-         * Add a new tenant project to the tenancy unit. There can be a maximum of 512 tenant projects in
+         * Add a new tenant project to the tenancy unit. There can be a maximum of 1024 tenant projects in
          * a tenancy unit. If there are previously failed `AddTenantProject` calls, you might need to call
          * `RemoveTenantProject` first to resolve them before you can make another call to
          * `AddTenantProject` with the same tag. Operation.

@@ -416,7 +416,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the storagetransfer server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param jobName Required. The job to get.
+     * @param jobName " Required. The job to get.
      * @return the request
      */
     public Get get(java.lang.String jobName) throws java.io.IOException {
@@ -442,7 +442,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param jobName Required. The job to get.
+       * @param jobName " Required. The job to get.
        * @since 1.13
        */
       protected Get(java.lang.String jobName) {
@@ -520,17 +520,19 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The job to get. */
+      /** " Required. The job to get. */
       @com.google.api.client.util.Key
       private java.lang.String jobName;
 
-      /** Required. The job to get.
+      /**" Required. The job to get.
+    "
+
        */
       public java.lang.String getJobName() {
         return jobName;
       }
 
-      /** Required. The job to get. */
+      /** " Required. The job to get. */
       public Get setJobName(java.lang.String jobName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(JOB_NAME_PATTERN.matcher(jobName).matches(),

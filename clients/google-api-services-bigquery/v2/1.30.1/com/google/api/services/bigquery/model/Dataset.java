@@ -160,6 +160,13 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
+   * [Output-only] Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPZS;
+
+  /**
    * [Output-only] A URL that can be used to access the resource again. You can use this URL in Get
    * or Update requests to the resource.
    * The value may be {@code null}.
@@ -454,6 +461,23 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * [Output-only] Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPZS() {
+    return satisfiesPZS;
+  }
+
+  /**
+   * [Output-only] Reserved for future use.
+   * @param satisfiesPZS satisfiesPZS or {@code null} for none
+   */
+  public Dataset setSatisfiesPZS(java.lang.Boolean satisfiesPZS) {
+    this.satisfiesPZS = satisfiesPZS;
     return this;
   }
 

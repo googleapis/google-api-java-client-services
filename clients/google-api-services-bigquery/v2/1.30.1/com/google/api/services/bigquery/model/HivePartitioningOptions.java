@@ -30,21 +30,31 @@ package com.google.api.services.bigquery.model;
 public final class HivePartitioningOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Optional, Trusted Tester] When set, what mode of hive partitioning to use when reading data.
-   * Two modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2)
-   * STRINGS: automatically infer partition key name(s). All types are interpreted as strings. Not
-   * all storage formats support hive partitioning. Requesting hive partitioning on an unsupported
-   * format will lead to an error. Currently supported types include: AVRO, CSV, JSON, ORC and
-   * Parquet.
+   * [Optional] When set, what mode of hive partitioning to use when reading data. The following
+   * modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2)
+   * STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3)
+   * CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats
+   * support hive partitioning. Requesting hive partitioning on an unsupported format will lead to
+   * an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mode;
 
   /**
-   * [Optional, Trusted Tester] When hive partition detection is requested, a common prefix for all
-   * source uris should be supplied. The prefix must end immediately before the partition key
-   * encoding begins. For example, consider files following this data layout.
+   * [Optional] If set to true, queries over this table require a partition filter that can be used
+   * for partition elimination to be specified. Note that this field should only be true when
+   * creating a permanent external table or querying a temporary external table. Hive-partitioned
+   * loads with requirePartitionFilter explicitly set to true will fail.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requirePartitionFilter;
+
+  /**
+   * [Optional] When hive partition detection is requested, a common prefix for all source uris
+   * should be supplied. The prefix must end immediately before the partition key encoding begins.
+   * For example, consider files following this data layout.
    * gs://bucket/path_to_table/dt=2019-01-01/country=BR/id=7/file.avro
    * gs://bucket/path_to_table/dt=2018-12-31/country=CA/id=3/file.avro When hive partitioning is
    * requested with either AUTO or STRINGS detection, the common prefix can be either of
@@ -55,12 +65,12 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
   private java.lang.String sourceUriPrefix;
 
   /**
-   * [Optional, Trusted Tester] When set, what mode of hive partitioning to use when reading data.
-   * Two modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2)
-   * STRINGS: automatically infer partition key name(s). All types are interpreted as strings. Not
-   * all storage formats support hive partitioning. Requesting hive partitioning on an unsupported
-   * format will lead to an error. Currently supported types include: AVRO, CSV, JSON, ORC and
-   * Parquet.
+   * [Optional] When set, what mode of hive partitioning to use when reading data. The following
+   * modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2)
+   * STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3)
+   * CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats
+   * support hive partitioning. Requesting hive partitioning on an unsupported format will lead to
+   * an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -68,12 +78,12 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional, Trusted Tester] When set, what mode of hive partitioning to use when reading data.
-   * Two modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2)
-   * STRINGS: automatically infer partition key name(s). All types are interpreted as strings. Not
-   * all storage formats support hive partitioning. Requesting hive partitioning on an unsupported
-   * format will lead to an error. Currently supported types include: AVRO, CSV, JSON, ORC and
-   * Parquet.
+   * [Optional] When set, what mode of hive partitioning to use when reading data. The following
+   * modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2)
+   * STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3)
+   * CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats
+   * support hive partitioning. Requesting hive partitioning on an unsupported format will lead to
+   * an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.
    * @param mode mode or {@code null} for none
    */
   public HivePartitioningOptions setMode(java.lang.String mode) {
@@ -82,9 +92,32 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional, Trusted Tester] When hive partition detection is requested, a common prefix for all
-   * source uris should be supplied. The prefix must end immediately before the partition key
-   * encoding begins. For example, consider files following this data layout.
+   * [Optional] If set to true, queries over this table require a partition filter that can be used
+   * for partition elimination to be specified. Note that this field should only be true when
+   * creating a permanent external table or querying a temporary external table. Hive-partitioned
+   * loads with requirePartitionFilter explicitly set to true will fail.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequirePartitionFilter() {
+    return requirePartitionFilter;
+  }
+
+  /**
+   * [Optional] If set to true, queries over this table require a partition filter that can be used
+   * for partition elimination to be specified. Note that this field should only be true when
+   * creating a permanent external table or querying a temporary external table. Hive-partitioned
+   * loads with requirePartitionFilter explicitly set to true will fail.
+   * @param requirePartitionFilter requirePartitionFilter or {@code null} for none
+   */
+  public HivePartitioningOptions setRequirePartitionFilter(java.lang.Boolean requirePartitionFilter) {
+    this.requirePartitionFilter = requirePartitionFilter;
+    return this;
+  }
+
+  /**
+   * [Optional] When hive partition detection is requested, a common prefix for all source uris
+   * should be supplied. The prefix must end immediately before the partition key encoding begins.
+   * For example, consider files following this data layout.
    * gs://bucket/path_to_table/dt=2019-01-01/country=BR/id=7/file.avro
    * gs://bucket/path_to_table/dt=2018-12-31/country=CA/id=3/file.avro When hive partitioning is
    * requested with either AUTO or STRINGS detection, the common prefix can be either of
@@ -96,9 +129,9 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional, Trusted Tester] When hive partition detection is requested, a common prefix for all
-   * source uris should be supplied. The prefix must end immediately before the partition key
-   * encoding begins. For example, consider files following this data layout.
+   * [Optional] When hive partition detection is requested, a common prefix for all source uris
+   * should be supplied. The prefix must end immediately before the partition key encoding begins.
+   * For example, consider files following this data layout.
    * gs://bucket/path_to_table/dt=2019-01-01/country=BR/id=7/file.avro
    * gs://bucket/path_to_table/dt=2018-12-31/country=CA/id=3/file.avro When hive partitioning is
    * requested with either AUTO or STRINGS detection, the common prefix can be either of

@@ -39,10 +39,10 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   private java.lang.String compression;
 
   /**
-   * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON or
-   * AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default value for
-   * tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The default
-   * value for models is ML_TF_SAVED_MODEL.
+   * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON,
+   * PARQUET or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default
+   * value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The
+   * default value for models is ML_TF_SAVED_MODEL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,10 +126,10 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON or
-   * AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default value for
-   * tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The default
-   * value for models is ML_TF_SAVED_MODEL.
+   * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON,
+   * PARQUET or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default
+   * value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The
+   * default value for models is ML_TF_SAVED_MODEL.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationFormat() {
@@ -137,10 +137,10 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON or
-   * AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default value for
-   * tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The default
-   * value for models is ML_TF_SAVED_MODEL.
+   * [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON,
+   * PARQUET or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default
+   * value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The
+   * default value for models is ML_TF_SAVED_MODEL.
    * @param destinationFormat destinationFormat or {@code null} for none
    */
   public JobConfigurationExtract setDestinationFormat(java.lang.String destinationFormat) {

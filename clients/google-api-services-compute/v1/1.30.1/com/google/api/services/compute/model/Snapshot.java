@@ -154,7 +154,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey snapshotEncryptionKey;
 
   /**
-   * [Output Only] The source disk used to create this snapshot.
+   * The source disk used to create this snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -535,7 +535,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The source disk used to create this snapshot.
+   * The source disk used to create this snapshot.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceDisk() {
@@ -543,7 +543,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The source disk used to create this snapshot.
+   * The source disk used to create this snapshot.
    * @param sourceDisk sourceDisk or {@code null} for none
    */
   public Snapshot setSourceDisk(java.lang.String sourceDisk) {

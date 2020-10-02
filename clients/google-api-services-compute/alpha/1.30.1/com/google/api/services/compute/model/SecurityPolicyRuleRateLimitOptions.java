@@ -30,9 +30,28 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Can only be specified if the action for the rule is "rate_based_blacklist" If specified,
-   * determines the time (in seconds) the traffic will continue to be blocked by the rate limit
-   * after the rate falls below the threshold. The default value is 0 seconds.
+   * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key
+   * will be banned for the configured 'ban_duration' when the number of requests that exceed the
+   * 'rate_limit_threshold' also exceed this 'ban_threshold'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer banDurationSec;
+
+  /**
+   * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key
+   * will be banned for the configured 'ban_duration' when the number of requests that exceed the
+   * 'rate_limit_threshold' also exceed this 'ban_threshold'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyRuleRateLimitOptionsThreshold banThreshold;
+
+  /**
+   * Can only be specified if the action for the rule is "rate_based_ban" If specified, determines
+   * the time (in seconds) the traffic will continue to be blocked by the rate limit after the rate
+   * falls below the threshold. The default value is 0 seconds. [Deprecated] This field is
+   * deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,16 +84,67 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
   private java.lang.String exceedAction;
 
   /**
-   * Rate in requests per second at which to begin ratelimiting.
+   * Threshold at which to begin ratelimiting.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyRuleRateLimitOptionsThreshold rateLimitThreshold;
+
+  /**
+   * Rate in requests per second at which to begin ratelimiting. [Deprecated] This field is
+   * deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer thresholdRps;
 
   /**
-   * Can only be specified if the action for the rule is "rate_based_blacklist" If specified,
-   * determines the time (in seconds) the traffic will continue to be blocked by the rate limit
-   * after the rate falls below the threshold. The default value is 0 seconds.
+   * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key
+   * will be banned for the configured 'ban_duration' when the number of requests that exceed the
+   * 'rate_limit_threshold' also exceed this 'ban_threshold'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getBanDurationSec() {
+    return banDurationSec;
+  }
+
+  /**
+   * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key
+   * will be banned for the configured 'ban_duration' when the number of requests that exceed the
+   * 'rate_limit_threshold' also exceed this 'ban_threshold'.
+   * @param banDurationSec banDurationSec or {@code null} for none
+   */
+  public SecurityPolicyRuleRateLimitOptions setBanDurationSec(java.lang.Integer banDurationSec) {
+    this.banDurationSec = banDurationSec;
+    return this;
+  }
+
+  /**
+   * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key
+   * will be banned for the configured 'ban_duration' when the number of requests that exceed the
+   * 'rate_limit_threshold' also exceed this 'ban_threshold'.
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyRuleRateLimitOptionsThreshold getBanThreshold() {
+    return banThreshold;
+  }
+
+  /**
+   * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key
+   * will be banned for the configured 'ban_duration' when the number of requests that exceed the
+   * 'rate_limit_threshold' also exceed this 'ban_threshold'.
+   * @param banThreshold banThreshold or {@code null} for none
+   */
+  public SecurityPolicyRuleRateLimitOptions setBanThreshold(SecurityPolicyRuleRateLimitOptionsThreshold banThreshold) {
+    this.banThreshold = banThreshold;
+    return this;
+  }
+
+  /**
+   * Can only be specified if the action for the rule is "rate_based_ban" If specified, determines
+   * the time (in seconds) the traffic will continue to be blocked by the rate limit after the rate
+   * falls below the threshold. The default value is 0 seconds. [Deprecated] This field is
+   * deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBlockDuration() {
@@ -82,9 +152,10 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
   }
 
   /**
-   * Can only be specified if the action for the rule is "rate_based_blacklist" If specified,
-   * determines the time (in seconds) the traffic will continue to be blocked by the rate limit
-   * after the rate falls below the threshold. The default value is 0 seconds.
+   * Can only be specified if the action for the rule is "rate_based_ban" If specified, determines
+   * the time (in seconds) the traffic will continue to be blocked by the rate limit after the rate
+   * falls below the threshold. The default value is 0 seconds. [Deprecated] This field is
+   * deprecated.
    * @param blockDuration blockDuration or {@code null} for none
    */
   public SecurityPolicyRuleRateLimitOptions setBlockDuration(java.lang.Integer blockDuration) {
@@ -154,7 +225,25 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
   }
 
   /**
-   * Rate in requests per second at which to begin ratelimiting.
+   * Threshold at which to begin ratelimiting.
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyRuleRateLimitOptionsThreshold getRateLimitThreshold() {
+    return rateLimitThreshold;
+  }
+
+  /**
+   * Threshold at which to begin ratelimiting.
+   * @param rateLimitThreshold rateLimitThreshold or {@code null} for none
+   */
+  public SecurityPolicyRuleRateLimitOptions setRateLimitThreshold(SecurityPolicyRuleRateLimitOptionsThreshold rateLimitThreshold) {
+    this.rateLimitThreshold = rateLimitThreshold;
+    return this;
+  }
+
+  /**
+   * Rate in requests per second at which to begin ratelimiting. [Deprecated] This field is
+   * deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getThresholdRps() {
@@ -162,7 +251,8 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
   }
 
   /**
-   * Rate in requests per second at which to begin ratelimiting.
+   * Rate in requests per second at which to begin ratelimiting. [Deprecated] This field is
+   * deprecated.
    * @param thresholdRps thresholdRps or {@code null} for none
    */
   public SecurityPolicyRuleRateLimitOptions setThresholdRps(java.lang.Integer thresholdRps) {

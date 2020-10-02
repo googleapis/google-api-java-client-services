@@ -46,8 +46,9 @@ package com.google.api.services.compute.model;
 public final class SslCertificate extends com.google.api.client.json.GenericJson {
 
   /**
-   * A local certificate file. The certificate must be in PEM format. The certificate chain must be
-   * no greater than 5 certs long. The chain must include at least one intermediate cert.
+   * A value read into memory from a certificate file. The certificate file must be in PEM format.
+   * The certificate chain must be no greater than 5 certs long. The chain must include at least one
+   * intermediate cert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +108,8 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * A write-only private key in PEM format. Only insert requests will include this field.
+   * A value read into memory from a write-only private key file. The private key file must be in
+   * PEM format. For security, only insert requests include this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +160,9 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.lang.String type;
 
   /**
-   * A local certificate file. The certificate must be in PEM format. The certificate chain must be
-   * no greater than 5 certs long. The chain must include at least one intermediate cert.
+   * A value read into memory from a certificate file. The certificate file must be in PEM format.
+   * The certificate chain must be no greater than 5 certs long. The chain must include at least one
+   * intermediate cert.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertificate() {
@@ -167,8 +170,9 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A local certificate file. The certificate must be in PEM format. The certificate chain must be
-   * no greater than 5 certs long. The chain must include at least one intermediate cert.
+   * A value read into memory from a certificate file. The certificate file must be in PEM format.
+   * The certificate chain must be no greater than 5 certs long. The chain must include at least one
+   * intermediate cert.
    * @param certificate certificate or {@code null} for none
    */
   public SslCertificate setCertificate(java.lang.String certificate) {
@@ -304,7 +308,8 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A write-only private key in PEM format. Only insert requests will include this field.
+   * A value read into memory from a write-only private key file. The private key file must be in
+   * PEM format. For security, only insert requests include this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateKey() {
@@ -312,7 +317,8 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A write-only private key in PEM format. Only insert requests will include this field.
+   * A value read into memory from a write-only private key file. The private key file must be in
+   * PEM format. For security, only insert requests include this field.
    * @param privateKey privateKey or {@code null} for none
    */
   public SslCertificate setPrivateKey(java.lang.String privateKey) {

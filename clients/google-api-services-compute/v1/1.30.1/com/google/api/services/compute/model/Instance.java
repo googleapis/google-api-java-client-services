@@ -42,6 +42,12 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean canIpForward;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfidentialInstanceConfig confidentialInstanceConfig;
+
+  /**
    * [Output Only] The CPU platform used by this instance.
    * The value may be {@code null}.
    */
@@ -331,6 +337,21 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCanIpForward(java.lang.Boolean canIpForward) {
     this.canIpForward = canIpForward;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ConfidentialInstanceConfig getConfidentialInstanceConfig() {
+    return confidentialInstanceConfig;
+  }
+
+  /**
+   * @param confidentialInstanceConfig confidentialInstanceConfig or {@code null} for none
+   */
+  public Instance setConfidentialInstanceConfig(ConfidentialInstanceConfig confidentialInstanceConfig) {
+    this.confidentialInstanceConfig = confidentialInstanceConfig;
     return this;
   }
 

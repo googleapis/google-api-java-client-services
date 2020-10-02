@@ -276,7 +276,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
-   * Specifies whether this instance will be shut down on key revocation.
+   * PostKeyRevocationActionType of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -312,11 +312,11 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
-   * [Output Only] Specifies whether this instance satisfies zone separation.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean satisfiesPhysicalZoneSeparation;
+  private java.lang.Boolean satisfiesPzs;
 
   /**
    * Sets the scheduling options for this instance.
@@ -324,6 +324,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Scheduling scheduling;
+
+  /**
+   * Secure labels to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure labels allowed is 300.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> secureLabels;
 
   /**
    * [Output Only] Server-defined URL for this resource.
@@ -1055,7 +1063,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether this instance will be shut down on key revocation.
+   * PostKeyRevocationActionType of the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostKeyRevocationActionType() {
@@ -1063,7 +1071,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether this instance will be shut down on key revocation.
+   * PostKeyRevocationActionType of the instance.
    * @param postKeyRevocationActionType postKeyRevocationActionType or {@code null} for none
    */
   public Instance setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {
@@ -1142,19 +1150,19 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Specifies whether this instance satisfies zone separation.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getSatisfiesPhysicalZoneSeparation() {
-    return satisfiesPhysicalZoneSeparation;
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
   }
 
   /**
-   * [Output Only] Specifies whether this instance satisfies zone separation.
-   * @param satisfiesPhysicalZoneSeparation satisfiesPhysicalZoneSeparation or {@code null} for none
+   * [Output Only] Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
-  public Instance setSatisfiesPhysicalZoneSeparation(java.lang.Boolean satisfiesPhysicalZoneSeparation) {
-    this.satisfiesPhysicalZoneSeparation = satisfiesPhysicalZoneSeparation;
+  public Instance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 
@@ -1172,6 +1180,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setScheduling(Scheduling scheduling) {
     this.scheduling = scheduling;
+    return this;
+  }
+
+  /**
+   * Secure labels to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure labels allowed is 300.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSecureLabels() {
+    return secureLabels;
+  }
+
+  /**
+   * Secure labels to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure labels allowed is 300.
+   * @param secureLabels secureLabels or {@code null} for none
+   */
+  public Instance setSecureLabels(java.util.List<java.lang.String> secureLabels) {
+    this.secureLabels = secureLabels;
     return this;
   }
 

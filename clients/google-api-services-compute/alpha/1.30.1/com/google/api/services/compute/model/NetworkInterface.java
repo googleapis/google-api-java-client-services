@@ -113,6 +113,16 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String networkIP;
 
   /**
+   * The networking queue count for the network interface. Both Rx and Tx queues will be set to this
+   * number. If it's not specified by the user, a default number of queues will be assigned. For
+   * Virtio-net, each interface will get (min(#vCPU, 32) / #vNIC) queues. For gVNIC, each interface
+   * will get (min(#vCPU / 2, 16) / #vNIC) qeueus.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer queueCount;
+
+  /**
    * The URL of the Subnetwork resource for this instance. If the network resource is in legacy
    * mode, do not specify this field. If the network is in auto subnet mode, specifying the
    * subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is
@@ -322,6 +332,29 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setNetworkIP(java.lang.String networkIP) {
     this.networkIP = networkIP;
+    return this;
+  }
+
+  /**
+   * The networking queue count for the network interface. Both Rx and Tx queues will be set to this
+   * number. If it's not specified by the user, a default number of queues will be assigned. For
+   * Virtio-net, each interface will get (min(#vCPU, 32) / #vNIC) queues. For gVNIC, each interface
+   * will get (min(#vCPU / 2, 16) / #vNIC) qeueus.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getQueueCount() {
+    return queueCount;
+  }
+
+  /**
+   * The networking queue count for the network interface. Both Rx and Tx queues will be set to this
+   * number. If it's not specified by the user, a default number of queues will be assigned. For
+   * Virtio-net, each interface will get (min(#vCPU, 32) / #vNIC) queues. For gVNIC, each interface
+   * will get (min(#vCPU / 2, 16) / #vNIC) qeueus.
+   * @param queueCount queueCount or {@code null} for none
+   */
+  public NetworkInterface setQueueCount(java.lang.Integer queueCount) {
+    this.queueCount = queueCount;
     return this;
   }
 

@@ -138,7 +138,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
-   * Specifies whether instances will be shut down on key revocation.
+   * PostKeyRevocationActionType of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -433,7 +433,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies whether instances will be shut down on key revocation.
+   * PostKeyRevocationActionType of the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostKeyRevocationActionType() {
@@ -441,7 +441,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies whether instances will be shut down on key revocation.
+   * PostKeyRevocationActionType of the instance.
    * @param postKeyRevocationActionType postKeyRevocationActionType or {@code null} for none
    */
   public InstanceProperties setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {

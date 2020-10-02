@@ -69,6 +69,13 @@ public final class AutoscalerAggregatedList extends com.google.api.client.json.G
   private java.lang.String selfLink;
 
   /**
+   * [Output Only] Unreachable resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachables;
+
+  /**
    * [Output Only] Informational warning message.
    * The value may be {@code null}.
    */
@@ -165,6 +172,23 @@ public final class AutoscalerAggregatedList extends com.google.api.client.json.G
    */
   public AutoscalerAggregatedList setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * [Output Only] Unreachable resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachables() {
+    return unreachables;
+  }
+
+  /**
+   * [Output Only] Unreachable resources.
+   * @param unreachables unreachables or {@code null} for none
+   */
+  public AutoscalerAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {
+    this.unreachables = unreachables;
     return this;
   }
 

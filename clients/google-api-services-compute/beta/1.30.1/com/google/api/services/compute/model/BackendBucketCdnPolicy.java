@@ -56,11 +56,10 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
   /**
    * Specifies the default TTL for cached content served by this origin for responses that do not
    * have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always
-   * revalidate" and a value of "-1" disables caching for that status code. The value of defaultTTL
-   * cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is
-   * set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum
-   * allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted
-   * from the cache before the defined TTL.
+   * revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but
+   * can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the
+   * TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that
+   * infrequently accessed objects may be evicted from the cache before the defined TTL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,10 +69,9 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * Specifies the maximum allowed TTL for cached content served by this origin. Cache directives
    * that attempt to set a max-age or s-maxage higher than this, or an Expires header more than
    * maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of
-   * an s-maxage Cache-Control directive. Setting a TTL of "0" means "always revalidate" and a value
-   * of "-1" disables caching for that status code. The maximum allowed value is 31,622,400s (1
-   * year), noting that infrequently accessed objects may be evicted from the cache before the
-   * defined TTL.
+   * an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a
+   * TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting
+   * that infrequently accessed objects may be evicted from the cache before the defined TTL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +83,8 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * experience by reducing response latency. By default, Cloud CDN will apply the following default
    * TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m
    * HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method
-   * Not Found), 414 (URI Too Long), 501 (Not Implemented): 60s These defaults can be overridden in
-   * negative_caching_policy
+   * Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s These defaults can be
+   * overridden in negative_caching_policy
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +108,7 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale
    * responses that exceed the TTL configured here will not be served. The default limit (max-stale)
    * is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-
-   * age (or s-max-age) of a cached response. The maximum allowed value is 604800(1 week). Set this
+   * age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this
    * to zero (0) to disable serve-while-stale.
    * The value may be {@code null}.
    */
@@ -196,11 +194,10 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
   /**
    * Specifies the default TTL for cached content served by this origin for responses that do not
    * have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always
-   * revalidate" and a value of "-1" disables caching for that status code. The value of defaultTTL
-   * cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is
-   * set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum
-   * allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted
-   * from the cache before the defined TTL.
+   * revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but
+   * can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the
+   * TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that
+   * infrequently accessed objects may be evicted from the cache before the defined TTL.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDefaultTtl() {
@@ -210,11 +207,10 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
   /**
    * Specifies the default TTL for cached content served by this origin for responses that do not
    * have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always
-   * revalidate" and a value of "-1" disables caching for that status code. The value of defaultTTL
-   * cannot be set to a value greater than that of maxTTL, but can be equal. When the cacheMode is
-   * set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses. The maximum
-   * allowed value is 31,622,400s (1 year), noting that infrequently accessed objects may be evicted
-   * from the cache before the defined TTL.
+   * revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but
+   * can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the
+   * TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that
+   * infrequently accessed objects may be evicted from the cache before the defined TTL.
    * @param defaultTtl defaultTtl or {@code null} for none
    */
   public BackendBucketCdnPolicy setDefaultTtl(java.lang.Integer defaultTtl) {
@@ -226,10 +222,9 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * Specifies the maximum allowed TTL for cached content served by this origin. Cache directives
    * that attempt to set a max-age or s-maxage higher than this, or an Expires header more than
    * maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of
-   * an s-maxage Cache-Control directive. Setting a TTL of "0" means "always revalidate" and a value
-   * of "-1" disables caching for that status code. The maximum allowed value is 31,622,400s (1
-   * year), noting that infrequently accessed objects may be evicted from the cache before the
-   * defined TTL.
+   * an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a
+   * TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting
+   * that infrequently accessed objects may be evicted from the cache before the defined TTL.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxTtl() {
@@ -240,10 +235,9 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * Specifies the maximum allowed TTL for cached content served by this origin. Cache directives
    * that attempt to set a max-age or s-maxage higher than this, or an Expires header more than
    * maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of
-   * an s-maxage Cache-Control directive. Setting a TTL of "0" means "always revalidate" and a value
-   * of "-1" disables caching for that status code. The maximum allowed value is 31,622,400s (1
-   * year), noting that infrequently accessed objects may be evicted from the cache before the
-   * defined TTL.
+   * an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a
+   * TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting
+   * that infrequently accessed objects may be evicted from the cache before the defined TTL.
    * @param maxTtl maxTtl or {@code null} for none
    */
   public BackendBucketCdnPolicy setMaxTtl(java.lang.Integer maxTtl) {
@@ -257,8 +251,8 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * experience by reducing response latency. By default, Cloud CDN will apply the following default
    * TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m
    * HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method
-   * Not Found), 414 (URI Too Long), 501 (Not Implemented): 60s These defaults can be overridden in
-   * negative_caching_policy
+   * Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s These defaults can be
+   * overridden in negative_caching_policy
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNegativeCaching() {
@@ -271,8 +265,8 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * experience by reducing response latency. By default, Cloud CDN will apply the following default
    * TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m
    * HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method
-   * Not Found), 414 (URI Too Long), 501 (Not Implemented): 60s These defaults can be overridden in
-   * negative_caching_policy
+   * Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s These defaults can be
+   * overridden in negative_caching_policy
    * @param negativeCaching negativeCaching or {@code null} for none
    */
   public BackendBucketCdnPolicy setNegativeCaching(java.lang.Boolean negativeCaching) {
@@ -313,7 +307,7 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale
    * responses that exceed the TTL configured here will not be served. The default limit (max-stale)
    * is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-
-   * age (or s-max-age) of a cached response. The maximum allowed value is 604800(1 week). Set this
+   * age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this
    * to zero (0) to disable serve-while-stale.
    * @return value or {@code null} for none
    */
@@ -327,7 +321,7 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale
    * responses that exceed the TTL configured here will not be served. The default limit (max-stale)
    * is 86400s (1 day), which will allow stale content to be served up to this limit beyond the max-
-   * age (or s-max-age) of a cached response. The maximum allowed value is 604800(1 week). Set this
+   * age (or s-max-age) of a cached response. The maximum allowed value is 604800 (1 week). Set this
    * to zero (0) to disable serve-while-stale.
    * @param serveWhileStale serveWhileStale or {@code null} for none
    */

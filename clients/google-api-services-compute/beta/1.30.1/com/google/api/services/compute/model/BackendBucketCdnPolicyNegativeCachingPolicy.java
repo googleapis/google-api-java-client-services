@@ -31,7 +31,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy extends com.googl
 
   /**
    * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405,
-   * 410, 414, 451 and 501 are can be specified as values, and you cannot specify a status code more
+   * 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more
    * than once.
    * The value may be {@code null}.
    */
@@ -39,10 +39,9 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy extends com.googl
   private java.lang.Integer code;
 
   /**
-   * The TTL (in seconds) to cache responses with the corresponding status code for. A TTL of "0"
-   * means "always revalidate" and a value of "-1" disables caching for that status code. The
-   * maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be
-   * evicted from the cache before the defined TTL.
+   * The TTL (in seconds) to cache responses with the corresponding status code for. The maximum
+   * allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted
+   * from the cache before the defined TTL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +49,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy extends com.googl
 
   /**
    * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405,
-   * 410, 414, 451 and 501 are can be specified as values, and you cannot specify a status code more
+   * 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more
    * than once.
    * @return value or {@code null} for none
    */
@@ -60,7 +59,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy extends com.googl
 
   /**
    * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405,
-   * 410, 414, 451 and 501 are can be specified as values, and you cannot specify a status code more
+   * 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more
    * than once.
    * @param code code or {@code null} for none
    */
@@ -70,10 +69,9 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy extends com.googl
   }
 
   /**
-   * The TTL (in seconds) to cache responses with the corresponding status code for. A TTL of "0"
-   * means "always revalidate" and a value of "-1" disables caching for that status code. The
-   * maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be
-   * evicted from the cache before the defined TTL.
+   * The TTL (in seconds) to cache responses with the corresponding status code for. The maximum
+   * allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted
+   * from the cache before the defined TTL.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTtl() {
@@ -81,10 +79,9 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy extends com.googl
   }
 
   /**
-   * The TTL (in seconds) to cache responses with the corresponding status code for. A TTL of "0"
-   * means "always revalidate" and a value of "-1" disables caching for that status code. The
-   * maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be
-   * evicted from the cache before the defined TTL.
+   * The TTL (in seconds) to cache responses with the corresponding status code for. The maximum
+   * allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted
+   * from the cache before the defined TTL.
    * @param ttl ttl or {@code null} for none
    */
   public BackendBucketCdnPolicyNegativeCachingPolicy setTtl(java.lang.Integer ttl) {

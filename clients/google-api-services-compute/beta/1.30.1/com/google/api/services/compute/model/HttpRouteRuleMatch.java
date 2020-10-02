@@ -56,7 +56,8 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
 
   /**
    * Specifies that prefixMatch and fullPathMatch matches are case sensitive. The default value is
-   * false. ignoreCase must not be used with regexMatch.
+   * false. ignoreCase must not be used with regexMatch. Not supported when the URL map is bound to
+   * target gRPC proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +74,8 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    * of them need to be satisfied in order to be considered a match. metadataFilters specified here
    * will be applied after those specified in ForwardingRule that refers to the UrlMap this
    * HttpRouteRuleMatch belongs to. metadataFilters only applies to Loadbalancers that have their
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. Not supported when the URL map is bound to
+   * target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +92,7 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
 
   /**
    * Specifies a list of query parameter match criteria, all of which must match corresponding query
-   * parameters in the request.
+   * parameters in the request. Not supported when the URL map is bound to target gRPC proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +160,8 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
 
   /**
    * Specifies that prefixMatch and fullPathMatch matches are case sensitive. The default value is
-   * false. ignoreCase must not be used with regexMatch.
+   * false. ignoreCase must not be used with regexMatch. Not supported when the URL map is bound to
+   * target gRPC proxy.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreCase() {
@@ -167,7 +170,8 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
 
   /**
    * Specifies that prefixMatch and fullPathMatch matches are case sensitive. The default value is
-   * false. ignoreCase must not be used with regexMatch.
+   * false. ignoreCase must not be used with regexMatch. Not supported when the URL map is bound to
+   * target gRPC proxy.
    * @param ignoreCase ignoreCase or {@code null} for none
    */
   public HttpRouteRuleMatch setIgnoreCase(java.lang.Boolean ignoreCase) {
@@ -186,7 +190,8 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    * of them need to be satisfied in order to be considered a match. metadataFilters specified here
    * will be applied after those specified in ForwardingRule that refers to the UrlMap this
    * HttpRouteRuleMatch belongs to. metadataFilters only applies to Loadbalancers that have their
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. Not supported when the URL map is bound to
+   * target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.util.List<MetadataFilter> getMetadataFilters() {
@@ -204,7 +209,8 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    * of them need to be satisfied in order to be considered a match. metadataFilters specified here
    * will be applied after those specified in ForwardingRule that refers to the UrlMap this
    * HttpRouteRuleMatch belongs to. metadataFilters only applies to Loadbalancers that have their
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. Not supported when the URL map is bound to
+   * target gRPC proxy that has validateForProxyless field set to true.
    * @param metadataFilters metadataFilters or {@code null} for none
    */
   public HttpRouteRuleMatch setMetadataFilters(java.util.List<MetadataFilter> metadataFilters) {
@@ -235,7 +241,7 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
 
   /**
    * Specifies a list of query parameter match criteria, all of which must match corresponding query
-   * parameters in the request.
+   * parameters in the request. Not supported when the URL map is bound to target gRPC proxy.
    * @return value or {@code null} for none
    */
   public java.util.List<HttpQueryParameterMatch> getQueryParameterMatches() {
@@ -244,7 +250,7 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
 
   /**
    * Specifies a list of query parameter match criteria, all of which must match corresponding query
-   * parameters in the request.
+   * parameters in the request. Not supported when the URL map is bound to target gRPC proxy.
    * @param queryParameterMatches queryParameterMatches or {@code null} for none
    */
   public HttpRouteRuleMatch setQueryParameterMatches(java.util.List<HttpQueryParameterMatch> queryParameterMatches) {

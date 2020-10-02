@@ -58,6 +58,17 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   private java.lang.String description;
 
   /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a TargetHttpProxy. An up-to-
+   * date fingerprint must be provided in order to patch/update the TargetHttpProxy; otherwise, the
+   * request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get()
+   * request to retrieve the TargetHttpProxy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fingerprint;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -135,6 +146,67 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
    */
   public TargetHttpProxy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a TargetHttpProxy. An up-to-
+   * date fingerprint must be provided in order to patch/update the TargetHttpProxy; otherwise, the
+   * request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get()
+   * request to retrieve the TargetHttpProxy.
+   * @see #decodeFingerprint()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFingerprint() {
+    return fingerprint;
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a TargetHttpProxy. An up-to-
+   * date fingerprint must be provided in order to patch/update the TargetHttpProxy; otherwise, the
+   * request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get()
+   * request to retrieve the TargetHttpProxy.
+   * @see #getFingerprint()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeFingerprint() {
+    return com.google.api.client.util.Base64.decodeBase64(fingerprint);
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a TargetHttpProxy. An up-to-
+   * date fingerprint must be provided in order to patch/update the TargetHttpProxy; otherwise, the
+   * request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get()
+   * request to retrieve the TargetHttpProxy.
+   * @see #encodeFingerprint()
+   * @param fingerprint fingerprint or {@code null} for none
+   */
+  public TargetHttpProxy setFingerprint(java.lang.String fingerprint) {
+    this.fingerprint = fingerprint;
+    return this;
+  }
+
+  /**
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. This field will be ignored when inserting a TargetHttpProxy. An up-to-
+   * date fingerprint must be provided in order to patch/update the TargetHttpProxy; otherwise, the
+   * request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get()
+   * request to retrieve the TargetHttpProxy.
+   * @see #setFingerprint()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public TargetHttpProxy encodeFingerprint(byte[] fingerprint) {
+    this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
     return this;
   }
 

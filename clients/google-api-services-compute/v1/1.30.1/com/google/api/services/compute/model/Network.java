@@ -92,6 +92,14 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum
+   * value is 1500 bytes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer mtu;
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
@@ -267,6 +275,25 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum
+   * value is 1500 bytes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMtu() {
+    return mtu;
+  }
+
+  /**
+   * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum
+   * value is 1500 bytes.
+   * @param mtu mtu or {@code null} for none
+   */
+  public Network setMtu(java.lang.Integer mtu) {
+    this.mtu = mtu;
     return this;
   }
 

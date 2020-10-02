@@ -30,30 +30,35 @@ package com.google.api.services.compute.model;
 public final class TestFailure extends com.google.api.client.json.GenericJson {
 
   /**
+   * BackendService or BackendBucket returned by load balancer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String actualService;
 
   /**
+   * Expected BackendService or BackendBucket resource the given URL should be mapped to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String expectedService;
 
   /**
+   * Host portion of the URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String host;
 
   /**
+   * Path portion including query parameters in the URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
+   * BackendService or BackendBucket returned by load balancer.
    * @return value or {@code null} for none
    */
   public java.lang.String getActualService() {
@@ -61,6 +66,7 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * BackendService or BackendBucket returned by load balancer.
    * @param actualService actualService or {@code null} for none
    */
   public TestFailure setActualService(java.lang.String actualService) {
@@ -69,6 +75,7 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Expected BackendService or BackendBucket resource the given URL should be mapped to.
    * @return value or {@code null} for none
    */
   public java.lang.String getExpectedService() {
@@ -76,6 +83,7 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Expected BackendService or BackendBucket resource the given URL should be mapped to.
    * @param expectedService expectedService or {@code null} for none
    */
   public TestFailure setExpectedService(java.lang.String expectedService) {
@@ -84,6 +92,7 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Host portion of the URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -91,6 +100,7 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Host portion of the URL.
    * @param host host or {@code null} for none
    */
   public TestFailure setHost(java.lang.String host) {
@@ -99,6 +109,7 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Path portion including query parameters in the URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -106,6 +117,7 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Path portion including query parameters in the URL.
    * @param path path or {@code null} for none
    */
   public TestFailure setPath(java.lang.String path) {

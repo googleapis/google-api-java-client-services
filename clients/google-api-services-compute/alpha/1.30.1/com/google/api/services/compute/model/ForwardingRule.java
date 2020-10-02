@@ -242,9 +242,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field is not used for external load balancing.
    *
-   * For INTERNAL and INTERNAL_SELF_MANAGED load balancing, this field identifies the network that
-   * the load balanced IP should belong to for this Forwarding Rule. If this field is not specified,
-   * the default network will be used.
+   * For internal load balancing, this field identifies the network that the load balanced IP should
+   * belong to for this Forwarding Rule. If this field is not specified, the default network will be
+   * used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -357,7 +357,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String serviceName;
 
   /**
-   * This field is only used for INTERNAL load balancing.
+   * This field is only used for internal load balancing.
    *
    * For internal load balancing, this field identifies the subnetwork that the load balanced IP
    * should belong to for this Forwarding Rule.
@@ -902,9 +902,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field is not used for external load balancing.
    *
-   * For INTERNAL and INTERNAL_SELF_MANAGED load balancing, this field identifies the network that
-   * the load balanced IP should belong to for this Forwarding Rule. If this field is not specified,
-   * the default network will be used.
+   * For internal load balancing, this field identifies the network that the load balanced IP should
+   * belong to for this Forwarding Rule. If this field is not specified, the default network will be
+   * used.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -914,9 +914,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field is not used for external load balancing.
    *
-   * For INTERNAL and INTERNAL_SELF_MANAGED load balancing, this field identifies the network that
-   * the load balanced IP should belong to for this Forwarding Rule. If this field is not specified,
-   * the default network will be used.
+   * For internal load balancing, this field identifies the network that the load balanced IP should
+   * belong to for this Forwarding Rule. If this field is not specified, the default network will be
+   * used.
    * @param network network or {@code null} for none
    */
   public ForwardingRule setNetwork(java.lang.String network) {
@@ -1164,7 +1164,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field is only used for INTERNAL load balancing.
+   * This field is only used for internal load balancing.
    *
    * For internal load balancing, this field identifies the subnetwork that the load balanced IP
    * should belong to for this Forwarding Rule.
@@ -1178,7 +1178,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field is only used for INTERNAL load balancing.
+   * This field is only used for internal load balancing.
    *
    * For internal load balancing, this field identifies the subnetwork that the load balanced IP
    * should belong to for this Forwarding Rule.

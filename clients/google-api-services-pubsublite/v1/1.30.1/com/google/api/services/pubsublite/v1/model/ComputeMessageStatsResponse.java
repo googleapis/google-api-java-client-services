@@ -54,7 +54,8 @@ public final class ComputeMessageStatsResponse extends com.google.api.client.jso
 
   /**
    * The minimum publish timestamp across these messages. Note that publish timestamps within a
-   * partition are non-decreasing. The timestamp will be unset if there are no messages.
+   * partition are not guaranteed to be non-decreasing. The timestamp will be unset if there are no
+   * messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +118,8 @@ public final class ComputeMessageStatsResponse extends com.google.api.client.jso
 
   /**
    * The minimum publish timestamp across these messages. Note that publish timestamps within a
-   * partition are non-decreasing. The timestamp will be unset if there are no messages.
+   * partition are not guaranteed to be non-decreasing. The timestamp will be unset if there are no
+   * messages.
    * @return value or {@code null} for none
    */
   public String getMinimumPublishTime() {
@@ -126,7 +128,8 @@ public final class ComputeMessageStatsResponse extends com.google.api.client.jso
 
   /**
    * The minimum publish timestamp across these messages. Note that publish timestamps within a
-   * partition are non-decreasing. The timestamp will be unset if there are no messages.
+   * partition are not guaranteed to be non-decreasing. The timestamp will be unset if there are no
+   * messages.
    * @param minimumPublishTime minimumPublishTime or {@code null} for none
    */
   public ComputeMessageStatsResponse setMinimumPublishTime(String minimumPublishTime) {

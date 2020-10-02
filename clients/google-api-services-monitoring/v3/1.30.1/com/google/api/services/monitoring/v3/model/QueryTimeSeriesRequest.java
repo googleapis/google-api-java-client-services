@@ -46,7 +46,8 @@ public final class QueryTimeSeriesRequest extends com.google.api.client.json.Gen
   private java.lang.String pageToken;
 
   /**
-   * Required. The query in the monitoring query language format. The default time zone is in UTC.
+   * Required. The query in the Monitoring Query Language
+   * (https://cloud.google.com/monitoring/mql/reference) format. The default time zone is in UTC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +92,8 @@ public final class QueryTimeSeriesRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The query in the monitoring query language format. The default time zone is in UTC.
+   * Required. The query in the Monitoring Query Language
+   * (https://cloud.google.com/monitoring/mql/reference) format. The default time zone is in UTC.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -99,7 +101,8 @@ public final class QueryTimeSeriesRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The query in the monitoring query language format. The default time zone is in UTC.
+   * Required. The query in the Monitoring Query Language
+   * (https://cloud.google.com/monitoring/mql/reference) format. The default time zone is in UTC.
    * @param query query or {@code null} for none
    */
   public QueryTimeSeriesRequest setQuery(java.lang.String query) {

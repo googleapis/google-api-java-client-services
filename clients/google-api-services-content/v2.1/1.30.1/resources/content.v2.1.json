@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/Q2_CIj64P9k6v3OxXe0zMes4_G8\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/hzL4Pf5JdJer2F_gaxG6dg1Snv0\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20200916",
+ "revision": "20200922",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -318,7 +318,7 @@
     },
     "destination": {
      "type": "string",
-     "description": "The destination the issue applies to."
+     "description": "The destination the issue applies to. If this field is empty then the issue applies to all available destinations."
     },
     "detail": {
      "type": "string",

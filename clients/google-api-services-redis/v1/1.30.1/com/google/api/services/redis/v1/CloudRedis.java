@@ -982,7 +982,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Initiates a failover of the master node to current replica node for a specific STANDARD tier
+         * Initiates a failover of the primary node to current replica node for a specific STANDARD tier
          * Cloud Memorystore for Redis instance.
          *
          * Create a request for the method "instances.failover".
@@ -1010,7 +1010,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Initiates a failover of the master node to current replica node for a specific STANDARD tier
+           * Initiates a failover of the primary node to current replica node for a specific STANDARD tier
            * Cloud Memorystore for Redis instance.
            *
            * Create a request for the method "instances.failover".

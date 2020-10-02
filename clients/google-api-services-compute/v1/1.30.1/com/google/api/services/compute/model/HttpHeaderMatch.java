@@ -40,7 +40,12 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   /**
    * The name of the HTTP header to match. For matching against the HTTP request's authority, use a
    * headerMatch with the header name ":authority". For matching a request's method, use the
-   * headerName ":method".
+   * headerName ":method". When the URL map is bound to target gRPC proxy that has
+   * validateForProxyless field set to true, only non-binary user-specified custom metadata and the
+   * `content-type` header are supported. The following transport-level headers cannot be used in
+   * header matching rules: `:authority`, `:method`, `:path`, `:scheme`, `user-agent`, `accept-
+   * encoding`, `content-encoding`, `grpc-accept-encoding`, `grpc-encoding`, `grpc-previous-rpc-
+   * attempts`, `grpc-tags-bin`, `grpc-timeout` and `grpc-trace-bin.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +132,12 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   /**
    * The name of the HTTP header to match. For matching against the HTTP request's authority, use a
    * headerMatch with the header name ":authority". For matching a request's method, use the
-   * headerName ":method".
+   * headerName ":method". When the URL map is bound to target gRPC proxy that has
+   * validateForProxyless field set to true, only non-binary user-specified custom metadata and the
+   * `content-type` header are supported. The following transport-level headers cannot be used in
+   * header matching rules: `:authority`, `:method`, `:path`, `:scheme`, `user-agent`, `accept-
+   * encoding`, `content-encoding`, `grpc-accept-encoding`, `grpc-encoding`, `grpc-previous-rpc-
+   * attempts`, `grpc-tags-bin`, `grpc-timeout` and `grpc-trace-bin.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeaderName() {
@@ -137,7 +147,12 @@ public final class HttpHeaderMatch extends com.google.api.client.json.GenericJso
   /**
    * The name of the HTTP header to match. For matching against the HTTP request's authority, use a
    * headerMatch with the header name ":authority". For matching a request's method, use the
-   * headerName ":method".
+   * headerName ":method". When the URL map is bound to target gRPC proxy that has
+   * validateForProxyless field set to true, only non-binary user-specified custom metadata and the
+   * `content-type` header are supported. The following transport-level headers cannot be used in
+   * header matching rules: `:authority`, `:method`, `:path`, `:scheme`, `user-agent`, `accept-
+   * encoding`, `content-encoding`, `grpc-accept-encoding`, `grpc-encoding`, `grpc-previous-rpc-
+   * attempts`, `grpc-tags-bin`, `grpc-timeout` and `grpc-trace-bin.
    * @param headerName headerName or {@code null} for none
    */
   public HttpHeaderMatch setHeaderName(java.lang.String headerName) {

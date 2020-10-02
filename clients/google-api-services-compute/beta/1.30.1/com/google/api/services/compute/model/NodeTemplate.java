@@ -33,6 +33,18 @@ package com.google.api.services.compute.model;
 public final class NodeTemplate extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AcceleratorConfig> accelerators;
+
+  static {
+    // hack to force ProGuard to consider AcceleratorConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AcceleratorConfig.class);
+  }
+
+  /**
    * CPU overcommit.
    * The value may be {@code null}.
    */
@@ -52,6 +64,18 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LocalDisk> disks;
+
+  static {
+    // hack to force ProGuard to consider LocalDisk used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LocalDisk.class);
+  }
 
   /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
@@ -144,6 +168,21 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   private java.lang.String statusMessage;
 
   /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AcceleratorConfig> getAccelerators() {
+    return accelerators;
+  }
+
+  /**
+   * @param accelerators accelerators or {@code null} for none
+   */
+  public NodeTemplate setAccelerators(java.util.List<AcceleratorConfig> accelerators) {
+    this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
    * CPU overcommit.
    * @return value or {@code null} for none
    */
@@ -191,6 +230,21 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
    */
   public NodeTemplate setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LocalDisk> getDisks() {
+    return disks;
+  }
+
+  /**
+   * @param disks disks or {@code null} for none
+   */
+  public NodeTemplate setDisks(java.util.List<LocalDisk> disks) {
+    this.disks = disks;
     return this;
   }
 

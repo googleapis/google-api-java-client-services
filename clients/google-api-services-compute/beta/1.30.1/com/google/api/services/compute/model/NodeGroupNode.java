@@ -30,11 +30,37 @@ package com.google.api.services.compute.model;
 public final class NodeGroupNode extends com.google.api.client.json.GenericJson {
 
   /**
+   * Accelerators for this node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AcceleratorConfig> accelerators;
+
+  static {
+    // hack to force ProGuard to consider AcceleratorConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AcceleratorConfig.class);
+  }
+
+  /**
    * CPU overcommit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cpuOvercommitType;
+
+  /**
+   * Local disk configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LocalDisk> disks;
+
+  static {
+    // hack to force ProGuard to consider LocalDisk used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LocalDisk.class);
+  }
 
   /**
    * Instances scheduled on this node.
@@ -78,6 +104,23 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   private java.lang.String status;
 
   /**
+   * Accelerators for this node.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AcceleratorConfig> getAccelerators() {
+    return accelerators;
+  }
+
+  /**
+   * Accelerators for this node.
+   * @param accelerators accelerators or {@code null} for none
+   */
+  public NodeGroupNode setAccelerators(java.util.List<AcceleratorConfig> accelerators) {
+    this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
    * CPU overcommit.
    * @return value or {@code null} for none
    */
@@ -91,6 +134,23 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
    */
   public NodeGroupNode setCpuOvercommitType(java.lang.String cpuOvercommitType) {
     this.cpuOvercommitType = cpuOvercommitType;
+    return this;
+  }
+
+  /**
+   * Local disk configurations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LocalDisk> getDisks() {
+    return disks;
+  }
+
+  /**
+   * Local disk configurations.
+   * @param disks disks or {@code null} for none
+   */
+  public NodeGroupNode setDisks(java.util.List<LocalDisk> disks) {
+    this.disks = disks;
     return this;
   }
 

@@ -65,7 +65,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
 
   /**
    * When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set.
+   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
+   * map is bound to target gRPC proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +149,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
 
   /**
    * When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set.
+   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
+   * map is bound to target gRPC proxy.
    * @return value or {@code null} for none
    */
   public HttpRedirectAction getUrlRedirect() {
@@ -157,7 +159,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
 
   /**
    * When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set.
+   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
+   * map is bound to target gRPC proxy.
    * @param urlRedirect urlRedirect or {@code null} for none
    */
   public PathRule setUrlRedirect(HttpRedirectAction urlRedirect) {

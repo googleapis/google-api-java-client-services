@@ -43,11 +43,45 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
    * rvice.backendServiceWeightAction[].headerAction  Note that headerAction is not supported for
-   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
+   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL
+   * map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HttpHeaderAction headerAction;
+
+  /**
+   * Outbound route specific configuration for networkservices.HttpFilter resources enabled by
+   * Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set
+   * to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. Not supported when the URL map
+   * is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<HttpFilterConfig> httpFilterConfigs;
+
+  static {
+    // hack to force ProGuard to consider HttpFilterConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HttpFilterConfig.class);
+  }
+
+  /**
+   * Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by
+   * Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme
+   * set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. The only configTypeUrl
+   * supported is type.googleapis.com/google.protobuf.Struct  Not supported when the URL map is
+   * bound to target gRPC proxy that has validateForProxyless field set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<HttpFilterConfig> httpFilterMetadata;
+
+  static {
+    // hack to force ProGuard to consider HttpFilterConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HttpFilterConfig.class);
+  }
 
   /**
    * The list of criteria for matching attributes of a request to this routeRule. This list has OR
@@ -100,7 +134,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * When this rule is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set.
+   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
+   * map is bound to target gRPC proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +165,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
    * rvice.backendServiceWeightAction[].headerAction  Note that headerAction is not supported for
-   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
+   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL
+   * map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public HttpHeaderAction getHeaderAction() {
@@ -142,11 +178,60 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
    * rvice.backendServiceWeightAction[].headerAction  Note that headerAction is not supported for
-   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
+   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL
+   * map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @param headerAction headerAction or {@code null} for none
    */
   public HttpRouteRule setHeaderAction(HttpHeaderAction headerAction) {
     this.headerAction = headerAction;
+    return this;
+  }
+
+  /**
+   * Outbound route specific configuration for networkservices.HttpFilter resources enabled by
+   * Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set
+   * to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. Not supported when the URL map
+   * is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<HttpFilterConfig> getHttpFilterConfigs() {
+    return httpFilterConfigs;
+  }
+
+  /**
+   * Outbound route specific configuration for networkservices.HttpFilter resources enabled by
+   * Traffic Director. httpFilterConfigs only applies for Loadbalancers with loadBalancingScheme set
+   * to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. Not supported when the URL map
+   * is bound to target gRPC proxy that has validateForProxyless field set to true.
+   * @param httpFilterConfigs httpFilterConfigs or {@code null} for none
+   */
+  public HttpRouteRule setHttpFilterConfigs(java.util.List<HttpFilterConfig> httpFilterConfigs) {
+    this.httpFilterConfigs = httpFilterConfigs;
+    return this;
+  }
+
+  /**
+   * Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by
+   * Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme
+   * set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. The only configTypeUrl
+   * supported is type.googleapis.com/google.protobuf.Struct  Not supported when the URL map is
+   * bound to target gRPC proxy that has validateForProxyless field set to true.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<HttpFilterConfig> getHttpFilterMetadata() {
+    return httpFilterMetadata;
+  }
+
+  /**
+   * Outbound route specific metadata supplied to networkservices.HttpFilter resources enabled by
+   * Traffic Director. httpFilterMetadata only applies for Loadbalancers with loadBalancingScheme
+   * set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details. The only configTypeUrl
+   * supported is type.googleapis.com/google.protobuf.Struct  Not supported when the URL map is
+   * bound to target gRPC proxy that has validateForProxyless field set to true.
+   * @param httpFilterMetadata httpFilterMetadata or {@code null} for none
+   */
+  public HttpRouteRule setHttpFilterMetadata(java.util.List<HttpFilterConfig> httpFilterMetadata) {
+    this.httpFilterMetadata = httpFilterMetadata;
     return this;
   }
 
@@ -262,7 +347,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * When this rule is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set.
+   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
+   * map is bound to target gRPC proxy.
    * @return value or {@code null} for none
    */
   public HttpRedirectAction getUrlRedirect() {
@@ -271,7 +357,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * When this rule is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set.
+   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
+   * map is bound to target gRPC proxy.
    * @param urlRedirect urlRedirect or {@code null} for none
    */
   public HttpRouteRule setUrlRedirect(HttpRedirectAction urlRedirect) {

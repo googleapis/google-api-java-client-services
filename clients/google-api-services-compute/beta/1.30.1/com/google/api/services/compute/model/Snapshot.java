@@ -76,6 +76,15 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.Long downloadBytes;
 
   /**
+   * [Input Only] Whether to attempt an application consistent snapshot by informing the OS to
+   * prepare for the snapshot process. Currently only supported on Windows instances using the
+   * Volume Shadow Copy Service (VSS).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean guestFlush;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -161,7 +170,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey snapshotEncryptionKey;
 
   /**
-   * [Output Only] The source disk used to create this snapshot.
+   * The source disk used to create this snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -318,6 +327,27 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setDownloadBytes(java.lang.Long downloadBytes) {
     this.downloadBytes = downloadBytes;
+    return this;
+  }
+
+  /**
+   * [Input Only] Whether to attempt an application consistent snapshot by informing the OS to
+   * prepare for the snapshot process. Currently only supported on Windows instances using the
+   * Volume Shadow Copy Service (VSS).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGuestFlush() {
+    return guestFlush;
+  }
+
+  /**
+   * [Input Only] Whether to attempt an application consistent snapshot by informing the OS to
+   * prepare for the snapshot process. Currently only supported on Windows instances using the
+   * Volume Shadow Copy Service (VSS).
+   * @param guestFlush guestFlush or {@code null} for none
+   */
+  public Snapshot setGuestFlush(java.lang.Boolean guestFlush) {
+    this.guestFlush = guestFlush;
     return this;
   }
 
@@ -559,7 +589,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The source disk used to create this snapshot.
+   * The source disk used to create this snapshot.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceDisk() {
@@ -567,7 +597,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The source disk used to create this snapshot.
+   * The source disk used to create this snapshot.
    * @param sourceDisk sourceDisk or {@code null} for none
    */
   public Snapshot setSourceDisk(java.lang.String sourceDisk) {

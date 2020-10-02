@@ -38,9 +38,6 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
    * or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the
    * urlRewrite action within a pathMatcher's defaultRouteAction.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,9 +57,6 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * defaultUrlRedirect  or defaultRouteAction.weightedBackendService must be set. Authorization
    * requires one or more of the following Google IAM permissions on the specified resource
    * default_service:   - compute.backendBuckets.use  - compute.backendServices.use
-   *
-   * pathMatchers[].defaultService is the only option available when the URL map is bound to target
-   * gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,9 +65,7 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * When none of the specified pathRules or routeRules match, the request is redirected to a URL
    * specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-   * defaultRouteAction must not be set.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * defaultRouteAction must not be set. Not supported when the URL map is bound to target gRPC
    * proxy.
    * The value may be {@code null}.
    */
@@ -91,10 +83,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. HeaderAction specified here are applied after the matching HttpRouteRule
    * HeaderAction and before the HeaderAction in the UrlMap  Note that headerAction is not supported
-   * for Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
+   * for Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the
+   * URL map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,9 +103,6 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * Matches are always done on the longest-path-first basis. For example: a pathRule with a path
    * /a/b/c will match before /a/b irrespective of the order in which those paths appear in this
    * list. Within a given pathMatcher, only one of pathRules or routeRules must be set.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,9 +112,6 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * The list of HTTP route rules. Use this list instead of pathRules when advanced route matching
    * and routing actions are desired. routeRules are evaluated in order of priority, from the lowest
    * to highest number. Within a given pathMatcher, you can set only one of pathRules or routeRules.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,9 +131,6 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
    * or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the
    * urlRewrite action within a pathMatcher's defaultRouteAction.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getDefaultRouteAction() {
@@ -164,9 +145,6 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
    * or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the
    * urlRewrite action within a pathMatcher's defaultRouteAction.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
    * @param defaultRouteAction defaultRouteAction or {@code null} for none
    */
   public PathMatcher setDefaultRouteAction(HttpRouteAction defaultRouteAction) {
@@ -188,9 +166,6 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * defaultUrlRedirect  or defaultRouteAction.weightedBackendService must be set. Authorization
    * requires one or more of the following Google IAM permissions on the specified resource
    * default_service:   - compute.backendBuckets.use  - compute.backendServices.use
-   *
-   * pathMatchers[].defaultService is the only option available when the URL map is bound to target
-   * gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultService() {
@@ -211,9 +186,6 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * defaultUrlRedirect  or defaultRouteAction.weightedBackendService must be set. Authorization
    * requires one or more of the following Google IAM permissions on the specified resource
    * default_service:   - compute.backendBuckets.use  - compute.backendServices.use
-   *
-   * pathMatchers[].defaultService is the only option available when the URL map is bound to target
-   * gRPC proxy that has validateForProxyless field set to true.
    * @param defaultService defaultService or {@code null} for none
    */
   public PathMatcher setDefaultService(java.lang.String defaultService) {
@@ -224,9 +196,7 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * When none of the specified pathRules or routeRules match, the request is redirected to a URL
    * specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-   * defaultRouteAction must not be set.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * defaultRouteAction must not be set. Not supported when the URL map is bound to target gRPC
    * proxy.
    * @return value or {@code null} for none
    */
@@ -237,9 +207,7 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * When none of the specified pathRules or routeRules match, the request is redirected to a URL
    * specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-   * defaultRouteAction must not be set.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * defaultRouteAction must not be set. Not supported when the URL map is bound to target gRPC
    * proxy.
    * @param defaultUrlRedirect defaultUrlRedirect or {@code null} for none
    */
@@ -269,10 +237,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. HeaderAction specified here are applied after the matching HttpRouteRule
    * HeaderAction and before the HeaderAction in the UrlMap  Note that headerAction is not supported
-   * for Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
+   * for Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the
+   * URL map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public HttpHeaderAction getHeaderAction() {
@@ -283,10 +249,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. HeaderAction specified here are applied after the matching HttpRouteRule
    * HeaderAction and before the HeaderAction in the UrlMap  Note that headerAction is not supported
-   * for Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
+   * for Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the
+   * URL map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @param headerAction headerAction or {@code null} for none
    */
   public PathMatcher setHeaderAction(HttpHeaderAction headerAction) {
@@ -317,9 +281,6 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * Matches are always done on the longest-path-first basis. For example: a pathRule with a path
    * /a/b/c will match before /a/b irrespective of the order in which those paths appear in this
    * list. Within a given pathMatcher, only one of pathRules or routeRules must be set.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.util.List<PathRule> getPathRules() {
@@ -332,9 +293,6 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * Matches are always done on the longest-path-first basis. For example: a pathRule with a path
    * /a/b/c will match before /a/b irrespective of the order in which those paths appear in this
    * list. Within a given pathMatcher, only one of pathRules or routeRules must be set.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
    * @param pathRules pathRules or {@code null} for none
    */
   public PathMatcher setPathRules(java.util.List<PathRule> pathRules) {
@@ -346,9 +304,6 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * The list of HTTP route rules. Use this list instead of pathRules when advanced route matching
    * and routing actions are desired. routeRules are evaluated in order of priority, from the lowest
    * to highest number. Within a given pathMatcher, you can set only one of pathRules or routeRules.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.util.List<HttpRouteRule> getRouteRules() {
@@ -359,9 +314,6 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * The list of HTTP route rules. Use this list instead of pathRules when advanced route matching
    * and routing actions are desired. routeRules are evaluated in order of priority, from the lowest
    * to highest number. Within a given pathMatcher, you can set only one of pathRules or routeRules.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
    * @param routeRules routeRules or {@code null} for none
    */
   public PathMatcher setRouteRules(java.util.List<HttpRouteRule> routeRules) {

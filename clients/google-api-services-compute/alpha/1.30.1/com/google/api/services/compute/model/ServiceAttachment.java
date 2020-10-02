@@ -87,12 +87,12 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * An array of IP CIDR ranges where each range is the url of the address resource which represents
-   * the range provided by the service producer to use for NAT in this service attachment.
+   * An array of URLs where each entry is the URL of a subnet provided by the service producer to
+   * use for NAT in this service attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> natIpCidrRanges;
+  private java.util.List<java.lang.String> natSubnets;
 
   /**
    * The URL of a forwarding rule with loadBalancingScheme INTERNAL* that is serving the endpoint
@@ -246,21 +246,21 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * An array of IP CIDR ranges where each range is the url of the address resource which represents
-   * the range provided by the service producer to use for NAT in this service attachment.
+   * An array of URLs where each entry is the URL of a subnet provided by the service producer to
+   * use for NAT in this service attachment.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getNatIpCidrRanges() {
-    return natIpCidrRanges;
+  public java.util.List<java.lang.String> getNatSubnets() {
+    return natSubnets;
   }
 
   /**
-   * An array of IP CIDR ranges where each range is the url of the address resource which represents
-   * the range provided by the service producer to use for NAT in this service attachment.
-   * @param natIpCidrRanges natIpCidrRanges or {@code null} for none
+   * An array of URLs where each entry is the URL of a subnet provided by the service producer to
+   * use for NAT in this service attachment.
+   * @param natSubnets natSubnets or {@code null} for none
    */
-  public ServiceAttachment setNatIpCidrRanges(java.util.List<java.lang.String> natIpCidrRanges) {
-    this.natIpCidrRanges = natIpCidrRanges;
+  public ServiceAttachment setNatSubnets(java.util.List<java.lang.String> natSubnets) {
+    this.natSubnets = natSubnets;
     return this;
   }
 

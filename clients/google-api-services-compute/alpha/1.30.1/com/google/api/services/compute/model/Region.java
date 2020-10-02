@@ -109,11 +109,11 @@ public final class Region extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * [Output Only] Specifies whether this region supports physical zone separation.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean supportsPhysicalZoneSeparation;
+  private java.lang.Boolean supportsPzs;
 
   /**
    * [Output Only] A list of zones available in this region, in the form of resource URLs.
@@ -293,19 +293,19 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Specifies whether this region supports physical zone separation.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getSupportsPhysicalZoneSeparation() {
-    return supportsPhysicalZoneSeparation;
+  public java.lang.Boolean getSupportsPzs() {
+    return supportsPzs;
   }
 
   /**
-   * [Output Only] Specifies whether this region supports physical zone separation.
-   * @param supportsPhysicalZoneSeparation supportsPhysicalZoneSeparation or {@code null} for none
+   * [Output Only] Reserved for future use.
+   * @param supportsPzs supportsPzs or {@code null} for none
    */
-  public Region setSupportsPhysicalZoneSeparation(java.lang.Boolean supportsPhysicalZoneSeparation) {
-    this.supportsPhysicalZoneSeparation = supportsPhysicalZoneSeparation;
+  public Region setSupportsPzs(java.lang.Boolean supportsPzs) {
+    this.supportsPzs = supportsPzs;
     return this;
   }
 

@@ -66,10 +66,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
    * or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the
-   * urlRewrite action within defaultRouteAction.
-   *
-   * defaultRouteAction has no effect when the backend service is referenced by a URL map that is
-   * bound to target gRPC proxy that has validateForProxyless field set to true.
+   * urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map
+   * is bound to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,10 +80,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices.
    * Conversely, if routeAction specifies any weightedBackendServices, service must not be
    * specified. Only one of defaultService, defaultUrlRedirect  or
-   * defaultRouteAction.weightedBackendService must be set.
-   *
-   * defaultService has no effect when the backend service is referenced by a URL map that is bound
-   * to target gRPC proxy that has validateForProxyless field set to true.
+   * defaultRouteAction.weightedBackendService must be set. defaultService has no effect when the
+   * URL map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,10 +90,7 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   /**
    * When none of the specified hostRules match, the request is redirected to a URL specified by
    * defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction
-   * must not be set.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy.
+   * must not be set. Not supported when the URL map is bound to target gRPC proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,9 +118,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. The headerAction specified here take effect after headerAction specified under
-   * pathMatcher.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * pathMatcher. Note that headerAction is not supported for Loadbalancers that have their
+   * loadBalancingScheme set to EXTERNAL. Not supported when the URL map is bound to target gRPC
    * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
@@ -203,10 +195,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all
-   * of the test cases pass. You can specify a maximum of 100 tests per UrlMap.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
+   * of the test cases pass. You can specify a maximum of 100 tests per UrlMap. Not supported when
+   * the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,10 +226,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
    * or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the
-   * urlRewrite action within defaultRouteAction.
-   *
-   * defaultRouteAction has no effect when the backend service is referenced by a URL map that is
-   * bound to target gRPC proxy that has validateForProxyless field set to true.
+   * urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map
+   * is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getDefaultRouteAction() {
@@ -253,10 +241,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
    * defaultRouteAction cannot contain any  weightedBackendServices. Only one of defaultRouteAction
    * or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the
-   * urlRewrite action within defaultRouteAction.
-   *
-   * defaultRouteAction has no effect when the backend service is referenced by a URL map that is
-   * bound to target gRPC proxy that has validateForProxyless field set to true.
+   * urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map
+   * is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @param defaultRouteAction defaultRouteAction or {@code null} for none
    */
   public UrlMap setDefaultRouteAction(HttpRouteAction defaultRouteAction) {
@@ -271,10 +257,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices.
    * Conversely, if routeAction specifies any weightedBackendServices, service must not be
    * specified. Only one of defaultService, defaultUrlRedirect  or
-   * defaultRouteAction.weightedBackendService must be set.
-   *
-   * defaultService has no effect when the backend service is referenced by a URL map that is bound
-   * to target gRPC proxy that has validateForProxyless field set to true.
+   * defaultRouteAction.weightedBackendService must be set. defaultService has no effect when the
+   * URL map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultService() {
@@ -288,10 +272,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    * defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices.
    * Conversely, if routeAction specifies any weightedBackendServices, service must not be
    * specified. Only one of defaultService, defaultUrlRedirect  or
-   * defaultRouteAction.weightedBackendService must be set.
-   *
-   * defaultService has no effect when the backend service is referenced by a URL map that is bound
-   * to target gRPC proxy that has validateForProxyless field set to true.
+   * defaultRouteAction.weightedBackendService must be set. defaultService has no effect when the
+   * URL map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @param defaultService defaultService or {@code null} for none
    */
   public UrlMap setDefaultService(java.lang.String defaultService) {
@@ -302,10 +284,7 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   /**
    * When none of the specified hostRules match, the request is redirected to a URL specified by
    * defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction
-   * must not be set.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy.
+   * must not be set. Not supported when the URL map is bound to target gRPC proxy.
    * @return value or {@code null} for none
    */
   public HttpRedirectAction getDefaultUrlRedirect() {
@@ -315,10 +294,7 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   /**
    * When none of the specified hostRules match, the request is redirected to a URL specified by
    * defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction
-   * must not be set.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy.
+   * must not be set. Not supported when the URL map is bound to target gRPC proxy.
    * @param defaultUrlRedirect defaultUrlRedirect or {@code null} for none
    */
   public UrlMap setDefaultUrlRedirect(HttpRedirectAction defaultUrlRedirect) {
@@ -411,9 +387,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. The headerAction specified here take effect after headerAction specified under
-   * pathMatcher.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * pathMatcher. Note that headerAction is not supported for Loadbalancers that have their
+   * loadBalancingScheme set to EXTERNAL. Not supported when the URL map is bound to target gRPC
    * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
@@ -424,9 +399,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   /**
    * Specifies changes to request and response headers that need to take effect for the selected
    * backendService. The headerAction specified here take effect after headerAction specified under
-   * pathMatcher.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * pathMatcher. Note that headerAction is not supported for Loadbalancers that have their
+   * loadBalancingScheme set to EXTERNAL. Not supported when the URL map is bound to target gRPC
    * proxy that has validateForProxyless field set to true.
    * @param headerAction headerAction or {@code null} for none
    */
@@ -568,10 +542,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all
-   * of the test cases pass. You can specify a maximum of 100 tests per UrlMap.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
+   * of the test cases pass. You can specify a maximum of 100 tests per UrlMap. Not supported when
+   * the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.util.List<UrlMapTest> getTests() {
@@ -580,10 +552,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all
-   * of the test cases pass. You can specify a maximum of 100 tests per UrlMap.
-   *
-   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
-   * proxy that has validateForProxyless field set to true.
+   * of the test cases pass. You can specify a maximum of 100 tests per UrlMap. Not supported when
+   * the URL map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @param tests tests or {@code null} for none
    */
   public UrlMap setTests(java.util.List<UrlMapTest> tests) {

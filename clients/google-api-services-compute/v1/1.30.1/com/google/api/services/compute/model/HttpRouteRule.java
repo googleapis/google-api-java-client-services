@@ -43,7 +43,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
    * rvice.backendServiceWeightAction[].headerAction  Note that headerAction is not supported for
-   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
+   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL
+   * map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +101,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * When this rule is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set.
+   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
+   * map is bound to target gRPC proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +132,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
    * rvice.backendServiceWeightAction[].headerAction  Note that headerAction is not supported for
-   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
+   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL
+   * map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public HttpHeaderAction getHeaderAction() {
@@ -142,7 +145,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
    * backendService. The headerAction specified here are applied before the matching
    * pathMatchers[].headerAction and after pathMatchers[].routeRules[].routeAction.weightedBackendSe
    * rvice.backendServiceWeightAction[].headerAction  Note that headerAction is not supported for
-   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL.
+   * Loadbalancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL
+   * map is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @param headerAction headerAction or {@code null} for none
    */
   public HttpRouteRule setHeaderAction(HttpHeaderAction headerAction) {
@@ -262,7 +266,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * When this rule is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set.
+   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
+   * map is bound to target gRPC proxy.
    * @return value or {@code null} for none
    */
   public HttpRedirectAction getUrlRedirect() {
@@ -271,7 +276,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
 
   /**
    * When this rule is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set.
+   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
+   * map is bound to target gRPC proxy.
    * @param urlRedirect urlRedirect or {@code null} for none
    */
   public HttpRouteRule setUrlRedirect(HttpRedirectAction urlRedirect) {

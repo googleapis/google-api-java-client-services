@@ -48,7 +48,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * [Input Only] Specifies to create an application consistent machine image by informing the OS to
+   * [Input Only] Whether to attempt an application consistent machine image by informing the OS to
    * prepare for the snapshot process. Currently only supported on Windows instances using the
    * Volume Shadow Copy Service (VSS).
    * The value may be {@code null}.
@@ -194,7 +194,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Input Only] Specifies to create an application consistent machine image by informing the OS to
+   * [Input Only] Whether to attempt an application consistent machine image by informing the OS to
    * prepare for the snapshot process. Currently only supported on Windows instances using the
    * Volume Shadow Copy Service (VSS).
    * @return value or {@code null} for none
@@ -204,7 +204,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Input Only] Specifies to create an application consistent machine image by informing the OS to
+   * [Input Only] Whether to attempt an application consistent machine image by informing the OS to
    * prepare for the snapshot process. Currently only supported on Windows instances using the
    * Volume Shadow Copy Service (VSS).
    * @param guestFlush guestFlush or {@code null} for none

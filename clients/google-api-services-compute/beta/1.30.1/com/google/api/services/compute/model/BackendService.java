@@ -45,6 +45,10 @@ package com.google.api.services.compute.model;
 public final class BackendService extends com.google.api.client.json.GenericJson {
 
   /**
+   * Lifetime of cookies in seconds. Only applicable if the loadBalancingScheme is EXTERNAL,
+   * INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, the protocol is HTTP or HTTPS, and the
+   * sessionAffinity is GENERATED_COOKIE, or HTTP_COOKIE.
+   *
    * If set to 0, the cookie is non-persistent and lasts only until the end of the browser session
    * (or equivalent). The maximum allowed value is one day (86,400).
    *
@@ -384,6 +388,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.Integer timeoutSec;
 
   /**
+   * Lifetime of cookies in seconds. Only applicable if the loadBalancingScheme is EXTERNAL,
+   * INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, the protocol is HTTP or HTTPS, and the
+   * sessionAffinity is GENERATED_COOKIE, or HTTP_COOKIE.
+   *
    * If set to 0, the cookie is non-persistent and lasts only until the end of the browser session
    * (or equivalent). The maximum allowed value is one day (86,400).
    *
@@ -396,6 +404,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Lifetime of cookies in seconds. Only applicable if the loadBalancingScheme is EXTERNAL,
+   * INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, the protocol is HTTP or HTTPS, and the
+   * sessionAffinity is GENERATED_COOKIE, or HTTP_COOKIE.
+   *
    * If set to 0, the cookie is non-persistent and lasts only until the end of the browser session
    * (or equivalent). The maximum allowed value is one day (86,400).
    *

@@ -105,6 +105,13 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.String network;
 
   /**
+   * Maximum Transmission Unit in bytes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer peerMtu;
+
+  /**
    * [Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE`
    * when there's a matching configuration in the peer network.
    * The value may be {@code null}.
@@ -286,6 +293,23 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
    */
   public NetworkPeering setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Maximum Transmission Unit in bytes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPeerMtu() {
+    return peerMtu;
+  }
+
+  /**
+   * Maximum Transmission Unit in bytes.
+   * @param peerMtu peerMtu or {@code null} for none
+   */
+  public NetworkPeering setPeerMtu(java.lang.Integer peerMtu) {
+    this.peerMtu = peerMtu;
     return this;
   }
 

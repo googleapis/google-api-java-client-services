@@ -77,7 +77,7 @@ packages on [Maven Central][maven-search].
 | Cloud Memorystore for Memcached API | [v1beta2](clients/google-api-services-memcache/v1beta2) |
 | Cloud Monitoring API | [v1](clients/google-api-services-monitoring/v1), [v3](clients/google-api-services-monitoring/v3) |
 | Cloud Natural Language API | [v1](clients/google-api-services-language/v1), [v1beta1](clients/google-api-services-language/v1beta1), [v1beta2](clients/google-api-services-language/v1beta2) |
-| Cloud OS Config API | [v1](clients/google-api-services-osconfig/v1), [v1beta](clients/google-api-services-osconfig/v1beta) |
+| Cloud OS Config API | [v1](clients/google-api-services-osconfig/v1) |
 | Cloud OS Login API | [v1](clients/google-api-services-oslogin/v1), [v1alpha](clients/google-api-services-oslogin/v1alpha), [v1beta](clients/google-api-services-oslogin/v1beta) |
 | Cloud Pub/Sub API | [v1](clients/google-api-services-pubsub/v1), [v1beta1a](clients/google-api-services-pubsub/v1beta1a), [v1beta2](clients/google-api-services-pubsub/v1beta2) |
 | Cloud Resource Manager API | [v1](clients/google-api-services-cloudresourcemanager/v1), [v1beta1](clients/google-api-services-cloudresourcemanager/v1beta1), [v2](clients/google-api-services-cloudresourcemanager/v2), [v2beta1](clients/google-api-services-cloudresourcemanager/v2beta1) |
@@ -168,6 +168,7 @@ packages on [Maven Central][maven-search].
 | Managed Service for Microsoft Active Directory API | [v1](clients/google-api-services-managedidentities/v1), [v1alpha1](clients/google-api-services-managedidentities/v1alpha1), [v1beta1](clients/google-api-services-managedidentities/v1beta1) |
 | Manufacturer Center API | [v1](clients/google-api-services-manufacturers/v1) |
 | Network Management API | [v1](clients/google-api-services-networkmanagement/v1), [v1beta1](clients/google-api-services-networkmanagement/v1beta1) |
+| OS Config API | [v1beta](clients/google-api-services-osconfig/v1beta) |
 | PageSpeed Insights API | [v5](clients/google-api-services-pagespeedonline/v5) |
 | People API | [v1](clients/google-api-services-people/v1) |
 | Playable Locations API | [v3](clients/google-api-services-playablelocations/v3) |

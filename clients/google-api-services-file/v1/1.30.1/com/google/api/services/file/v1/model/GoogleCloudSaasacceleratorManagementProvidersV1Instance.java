@@ -65,7 +65,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   private java.util.Map<String, java.lang.String> maintenancePolicyNames;
 
   /**
-   * The MaintenanceSchedule contains the scheduling information of published maintenance schedule.
+   * The MaintenanceSchedule contains the scheduling information of published maintenance schedule
+   * with same key as software_versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,7 +233,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   }
 
   /**
-   * The MaintenanceSchedule contains the scheduling information of published maintenance schedule.
+   * The MaintenanceSchedule contains the scheduling information of published maintenance schedule
+   * with same key as software_versions.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule> getMaintenanceSchedules() {
@@ -240,7 +242,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   }
 
   /**
-   * The MaintenanceSchedule contains the scheduling information of published maintenance schedule.
+   * The MaintenanceSchedule contains the scheduling information of published maintenance schedule
+   * with same key as software_versions.
    * @param maintenanceSchedules maintenanceSchedules or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1Instance setMaintenanceSchedules(java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule> maintenanceSchedules) {

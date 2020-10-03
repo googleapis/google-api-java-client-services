@@ -53,9 +53,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   private java.util.List<EnrolledService> enrolledServices;
 
   /**
-   * The resource name of the settings. Format is one of: 1.
-   * "projects/{project_id}/accessApprovalSettings" 2. "folders/{folder_id}/accessApprovalSettings"
-   * 3. "organizations/{organization_id}/accessApprovalSettings"
+   * The resource name of the settings. Format is one of: *
+   * "projects/{project}/accessApprovalSettings" * "folders/{folder}/accessApprovalSettings" *
+   * "organizations/{organization}/accessApprovalSettings"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,9 +123,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * The resource name of the settings. Format is one of: 1.
-   * "projects/{project_id}/accessApprovalSettings" 2. "folders/{folder_id}/accessApprovalSettings"
-   * 3. "organizations/{organization_id}/accessApprovalSettings"
+   * The resource name of the settings. Format is one of: *
+   * "projects/{project}/accessApprovalSettings" * "folders/{folder}/accessApprovalSettings" *
+   * "organizations/{organization}/accessApprovalSettings"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -133,9 +133,9 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * The resource name of the settings. Format is one of: 1.
-   * "projects/{project_id}/accessApprovalSettings" 2. "folders/{folder_id}/accessApprovalSettings"
-   * 3. "organizations/{organization_id}/accessApprovalSettings"
+   * The resource name of the settings. Format is one of: *
+   * "projects/{project}/accessApprovalSettings" * "folders/{folder}/accessApprovalSettings" *
+   * "organizations/{organization}/accessApprovalSettings"
    * @param name name or {@code null} for none
    */
   public AccessApprovalSettings setName(java.lang.String name) {

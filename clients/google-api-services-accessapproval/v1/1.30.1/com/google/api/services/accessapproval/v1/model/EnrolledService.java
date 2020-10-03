@@ -31,12 +31,18 @@ public final class EnrolledService extends com.google.api.client.json.GenericJso
 
   /**
    * The product for which Access Approval will be enrolled. Allowed values are listed below (case-
-   * sensitive): 1. all 2. ga-only 3. appengine.googleapis.com 4. bigquery.googleapis.com 5.
-   * bigtable.googleapis.com 6. cloudkms.googleapis.com 7. compute.googleapis.com 8.
-   * dataflow.googleapis.com 9. iam.googleapis.com 10. pubsub.googleapis.com 11.
-   * storage.googleapis.com Note: 'all' will enroll the resource in all products supported at both
-   * 'GA' and 'Preview' levels. 'ga-only' will only enroll the resource in products supported at
-   * 'GA' level.
+   * sensitive): * all * GA * App Engine * BigQuery * Cloud Bigtable * Cloud Key Management Service
+   * * Compute Engine * Cloud Dataflow * Cloud Identity and Access Management * Cloud Pub/Sub *
+   * Cloud Storage * Persistent Disk Note: These values are supported as input for legacy purposes,
+   * but will not be returned from the API. * all * ga-only * appengine.googleapis.com *
+   * bigquery.googleapis.com * bigtable.googleapis.com * cloudkms.googleapis.com *
+   * compute.googleapis.com * dataflow.googleapis.com * iam.googleapis.com * pubsub.googleapis.com *
+   * storage.googleapis.com Calls to UpdateAccessApprovalSettings using 'all', 'ga-only', or any of
+   * the XXX.googleapis.com will be translated to the associated product name ('all', 'GA', 'App
+   * Engine', etc.). Note: 'all' will enroll the resource in all products supported at both 'GA' and
+   * 'Preview' levels. 'ga-only'/'GA' will only enroll the resource in products supported at 'GA'
+   * level. More information about levels of support is available at https://cloud.google.com
+   * /access-approval/docs/supported-services
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,12 +57,18 @@ public final class EnrolledService extends com.google.api.client.json.GenericJso
 
   /**
    * The product for which Access Approval will be enrolled. Allowed values are listed below (case-
-   * sensitive): 1. all 2. ga-only 3. appengine.googleapis.com 4. bigquery.googleapis.com 5.
-   * bigtable.googleapis.com 6. cloudkms.googleapis.com 7. compute.googleapis.com 8.
-   * dataflow.googleapis.com 9. iam.googleapis.com 10. pubsub.googleapis.com 11.
-   * storage.googleapis.com Note: 'all' will enroll the resource in all products supported at both
-   * 'GA' and 'Preview' levels. 'ga-only' will only enroll the resource in products supported at
-   * 'GA' level.
+   * sensitive): * all * GA * App Engine * BigQuery * Cloud Bigtable * Cloud Key Management Service
+   * * Compute Engine * Cloud Dataflow * Cloud Identity and Access Management * Cloud Pub/Sub *
+   * Cloud Storage * Persistent Disk Note: These values are supported as input for legacy purposes,
+   * but will not be returned from the API. * all * ga-only * appengine.googleapis.com *
+   * bigquery.googleapis.com * bigtable.googleapis.com * cloudkms.googleapis.com *
+   * compute.googleapis.com * dataflow.googleapis.com * iam.googleapis.com * pubsub.googleapis.com *
+   * storage.googleapis.com Calls to UpdateAccessApprovalSettings using 'all', 'ga-only', or any of
+   * the XXX.googleapis.com will be translated to the associated product name ('all', 'GA', 'App
+   * Engine', etc.). Note: 'all' will enroll the resource in all products supported at both 'GA' and
+   * 'Preview' levels. 'ga-only'/'GA' will only enroll the resource in products supported at 'GA'
+   * level. More information about levels of support is available at https://cloud.google.com
+   * /access-approval/docs/supported-services
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudProduct() {
@@ -65,12 +77,18 @@ public final class EnrolledService extends com.google.api.client.json.GenericJso
 
   /**
    * The product for which Access Approval will be enrolled. Allowed values are listed below (case-
-   * sensitive): 1. all 2. ga-only 3. appengine.googleapis.com 4. bigquery.googleapis.com 5.
-   * bigtable.googleapis.com 6. cloudkms.googleapis.com 7. compute.googleapis.com 8.
-   * dataflow.googleapis.com 9. iam.googleapis.com 10. pubsub.googleapis.com 11.
-   * storage.googleapis.com Note: 'all' will enroll the resource in all products supported at both
-   * 'GA' and 'Preview' levels. 'ga-only' will only enroll the resource in products supported at
-   * 'GA' level.
+   * sensitive): * all * GA * App Engine * BigQuery * Cloud Bigtable * Cloud Key Management Service
+   * * Compute Engine * Cloud Dataflow * Cloud Identity and Access Management * Cloud Pub/Sub *
+   * Cloud Storage * Persistent Disk Note: These values are supported as input for legacy purposes,
+   * but will not be returned from the API. * all * ga-only * appengine.googleapis.com *
+   * bigquery.googleapis.com * bigtable.googleapis.com * cloudkms.googleapis.com *
+   * compute.googleapis.com * dataflow.googleapis.com * iam.googleapis.com * pubsub.googleapis.com *
+   * storage.googleapis.com Calls to UpdateAccessApprovalSettings using 'all', 'ga-only', or any of
+   * the XXX.googleapis.com will be translated to the associated product name ('all', 'GA', 'App
+   * Engine', etc.). Note: 'all' will enroll the resource in all products supported at both 'GA' and
+   * 'Preview' levels. 'ga-only'/'GA' will only enroll the resource in products supported at 'GA'
+   * level. More information about levels of support is available at https://cloud.google.com
+   * /access-approval/docs/supported-services
    * @param cloudProduct cloudProduct or {@code null} for none
    */
   public EnrolledService setCloudProduct(java.lang.String cloudProduct) {

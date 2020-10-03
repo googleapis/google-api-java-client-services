@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-osconfig</artifactId>
-  <version>v1beta-rev20200903-1.30.10</version>
-  <name>Cloud OS Config API v1beta-rev20200903-1.30.10</name>
+  <version>v1beta-rev20200930-1.30.10</version>
+  <name>OS Config API v1beta-rev20200930-1.30.10</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Cloud OS Config API ${project.version}</doctitle>
-          <windowtitle>Cloud OS Config API ${project.version}</windowtitle>
+          <doctitle>OS Config API ${project.version}</doctitle>
+          <windowtitle>OS Config API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.36.0/</link>

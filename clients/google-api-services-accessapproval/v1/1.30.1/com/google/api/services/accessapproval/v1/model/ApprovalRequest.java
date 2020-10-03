@@ -45,7 +45,7 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
 
   /**
    * The resource name of the request. Format is
-   * "{projects|folders|organizations}/{id}/approvalRequests/{approval_request_id}".
+   * "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +134,7 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
 
   /**
    * The resource name of the request. Format is
-   * "{projects|folders|organizations}/{id}/approvalRequests/{approval_request_id}".
+   * "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -143,7 +143,7 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
 
   /**
    * The resource name of the request. Format is
-   * "{projects|folders|organizations}/{id}/approvalRequests/{approval_request_id}".
+   * "{projects|folders|organizations}/{id}/approvalRequests/{approval_request}".
    * @param name name or {@code null} for none
    */
   public ApprovalRequest setName(java.lang.String name) {

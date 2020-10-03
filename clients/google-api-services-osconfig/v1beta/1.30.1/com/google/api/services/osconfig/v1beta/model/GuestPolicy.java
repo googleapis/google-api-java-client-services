@@ -22,7 +22,7 @@ package com.google.api.services.osconfig.v1beta.model;
  * repository configurations, and software to install.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud OS Config API. For a detailed explanation see:
+ * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -87,7 +87,7 @@ public final class GuestPolicy extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SystemsManagementPackage> packages;
+  private java.util.List<OSConfigPackage> packages;
 
   /**
    * A list of Recipes to install on the VM instance.
@@ -227,7 +227,7 @@ public final class GuestPolicy extends com.google.api.client.json.GenericJson {
    * The software packages to be managed by this policy.
    * @return value or {@code null} for none
    */
-  public java.util.List<SystemsManagementPackage> getPackages() {
+  public java.util.List<OSConfigPackage> getPackages() {
     return packages;
   }
 
@@ -235,7 +235,7 @@ public final class GuestPolicy extends com.google.api.client.json.GenericJson {
    * The software packages to be managed by this policy.
    * @param packages packages or {@code null} for none
    */
-  public GuestPolicy setPackages(java.util.List<SystemsManagementPackage> packages) {
+  public GuestPolicy setPackages(java.util.List<OSConfigPackage> packages) {
     this.packages = packages;
     return this;
   }

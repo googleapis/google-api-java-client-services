@@ -20,7 +20,7 @@ package com.google.api.services.osconfig.v1beta.model;
  * A guest policy package including its source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud OS Config API. For a detailed explanation see:
+ * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -34,7 +34,7 @@ public final class EffectiveGuestPolicySourcedPackage extends com.google.api.cli
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("package")
-  private SystemsManagementPackage package__;
+  private OSConfigPackage package__;
 
   /**
    * Name of the guest policy providing this config.
@@ -47,7 +47,7 @@ public final class EffectiveGuestPolicySourcedPackage extends com.google.api.cli
    * A software package to configure on the VM instance.
    * @return value or {@code null} for none
    */
-  public SystemsManagementPackage getPackage() {
+  public OSConfigPackage getPackage() {
     return package__;
   }
 
@@ -55,7 +55,7 @@ public final class EffectiveGuestPolicySourcedPackage extends com.google.api.cli
    * A software package to configure on the VM instance.
    * @param package__ package__ or {@code null} for none
    */
-  public EffectiveGuestPolicySourcedPackage setPackage(SystemsManagementPackage package__) {
+  public EffectiveGuestPolicySourcedPackage setPackage(OSConfigPackage package__) {
     this.package__ = package__;
     return this;
   }

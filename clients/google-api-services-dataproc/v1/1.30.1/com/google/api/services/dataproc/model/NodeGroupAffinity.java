@@ -30,7 +30,7 @@ package com.google.api.services.dataproc.model;
 public final class NodeGroupAffinity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of a single node group
+   * Required. The name of a single node group
    * (https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups) a cluster will be created
    * on.
    * The value may be {@code null}.
@@ -39,7 +39,7 @@ public final class NodeGroupAffinity extends com.google.api.client.json.GenericJ
   private java.lang.String nodeGroupUri;
 
   /**
-   * Optional. The name of a single node group
+   * Required. The name of a single node group
    * (https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups) a cluster will be created
    * on.
    * @return value or {@code null} for none
@@ -49,7 +49,7 @@ public final class NodeGroupAffinity extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The name of a single node group
+   * Required. The name of a single node group
    * (https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups) a cluster will be created
    * on.
    * @param nodeGroupUri nodeGroupUri or {@code null} for none

@@ -251,13 +251,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> zoneAffinity;
 
   /**
-   * If set, objects placed in this bucket are required to be separated by disaster domain.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean zoneSeparation;
-
-  /**
    * Access controls on the bucket.
    * @return value or {@code null} for none
    */
@@ -763,23 +756,6 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setZoneAffinity(java.util.List<java.lang.String> zoneAffinity) {
     this.zoneAffinity = zoneAffinity;
-    return this;
-  }
-
-  /**
-   * If set, objects placed in this bucket are required to be separated by disaster domain.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getZoneSeparation() {
-    return zoneSeparation;
-  }
-
-  /**
-   * If set, objects placed in this bucket are required to be separated by disaster domain.
-   * @param zoneSeparation zoneSeparation or {@code null} for none
-   */
-  public Bucket setZoneSeparation(java.lang.Boolean zoneSeparation) {
-    this.zoneSeparation = zoneSeparation;
     return this;
   }
 

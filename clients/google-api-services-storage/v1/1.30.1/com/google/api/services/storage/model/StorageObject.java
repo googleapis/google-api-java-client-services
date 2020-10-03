@@ -156,7 +156,8 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   private java.lang.String kind;
 
   /**
-   * Cloud KMS Key used to encrypt this object, if the object is encrypted by such a key.
+   * Not currently supported. Specifying the parameter causes the request to fail with status code
+   * 400 - Bad Request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -578,7 +579,8 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Cloud KMS Key used to encrypt this object, if the object is encrypted by such a key.
+   * Not currently supported. Specifying the parameter causes the request to fail with status code
+   * 400 - Bad Request.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -586,7 +588,8 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Cloud KMS Key used to encrypt this object, if the object is encrypted by such a key.
+   * Not currently supported. Specifying the parameter causes the request to fail with status code
+   * 400 - Bad Request.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public StorageObject setKmsKeyName(java.lang.String kmsKeyName) {

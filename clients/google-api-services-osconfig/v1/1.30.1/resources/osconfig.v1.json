@@ -1,983 +1,48 @@
 {
-  "version_module": true,
-  "description": "OS management tools that can be used for patch management, patch compliance, and configuration management on VM instances.",
-  "protocol": "rest",
-  "canonicalName": "Systems Management",
-  "mtlsRootUrl": "https://osconfig.mtls.googleapis.com/",
-  "name": "osconfig",
-  "parameters": {
-    "prettyPrint": {
-      "location": "query",
-      "description": "Returns response with indentations and line breaks.",
-      "default": "true",
-      "type": "boolean"
-    },
-    "callback": {
-      "description": "JSONP",
-      "type": "string",
-      "location": "query"
-    },
-    "oauth_token": {
-      "description": "OAuth 2.0 token for the current user.",
-      "type": "string",
-      "location": "query"
-    },
-    "fields": {
-      "type": "string",
-      "description": "Selector specifying which fields to include in a partial response.",
-      "location": "query"
-    },
-    "alt": {
-      "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
-      ],
-      "type": "string",
-      "description": "Data format for response.",
-      "enum": [
-        "json",
-        "media",
-        "proto"
-      ],
-      "default": "json",
-      "location": "query"
-    },
-    "key": {
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "location": "query",
-      "type": "string"
-    },
-    "access_token": {
-      "description": "OAuth access token.",
-      "location": "query",
-      "type": "string"
-    },
-    "$.xgafv": {
-      "location": "query",
-      "type": "string",
-      "description": "V1 error format.",
-      "enum": [
-        "1",
-        "2"
-      ],
-      "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
-      ]
-    },
-    "uploadType": {
-      "type": "string",
-      "location": "query",
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
-    },
-    "quotaUser": {
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "type": "string",
-      "location": "query"
-    },
-    "upload_protocol": {
-      "location": "query",
-      "type": "string",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
-    }
-  },
-  "discoveryVersion": "v1",
+  "canonicalName": "OS Config",
   "basePath": "",
-  "auth": {
-    "oauth2": {
-      "scopes": {
-        "https://www.googleapis.com/auth/cloud-platform": {
-          "description": "View and manage your data across Google Cloud Platform services"
-        }
-      }
-    }
-  },
-  "revision": "20200903",
-  "baseUrl": "https://osconfig.googleapis.com/",
-  "servicePath": "",
-  "resources": {
-    "projects": {
-      "resources": {
-        "patchJobs": {
-          "resources": {
-            "instanceDetails": {
-              "methods": {
-                "list": {
-                  "flatPath": "v1/projects/{projectsId}/patchJobs/{patchJobsId}/instanceDetails",
-                  "parameterOrder": [
-                    "parent"
-                  ],
-                  "httpMethod": "GET",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "description": "Get a list of instance details for a given patch job.",
-                  "parameters": {
-                    "filter": {
-                      "type": "string",
-                      "location": "query",
-                      "description": "A filter expression that filters results listed in the response. This field supports filtering results by instance zone, name, state, or `failure_reason`."
-                    },
-                    "parent": {
-                      "description": "Required. The parent for the instances are in the form of `projects/*/patchJobs/*`.",
-                      "required": true,
-                      "location": "path",
-                      "type": "string",
-                      "pattern": "^projects/[^/]+/patchJobs/[^/]+$"
-                    },
-                    "pageToken": {
-                      "location": "query",
-                      "type": "string",
-                      "description": "A pagination token returned from a previous call that indicates where this listing should continue from."
-                    },
-                    "pageSize": {
-                      "type": "integer",
-                      "format": "int32",
-                      "location": "query",
-                      "description": "The maximum number of instance details records to return. Default is 100."
-                    }
-                  },
-                  "response": {
-                    "$ref": "ListPatchJobInstanceDetailsResponse"
-                  },
-                  "path": "v1/{+parent}/instanceDetails",
-                  "id": "osconfig.projects.patchJobs.instanceDetails.list"
-                }
-              }
-            }
-          },
-          "methods": {
-            "execute": {
-              "response": {
-                "$ref": "PatchJob"
-              },
-              "flatPath": "v1/projects/{projectsId}/patchJobs:execute",
-              "description": "Patch VM instances by creating and running a patch job.",
-              "id": "osconfig.projects.patchJobs.execute",
-              "httpMethod": "POST",
-              "path": "v1/{+parent}/patchJobs:execute",
-              "request": {
-                "$ref": "ExecutePatchJobRequest"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "parameters": {
-                "parent": {
-                  "pattern": "^projects/[^/]+$",
-                  "location": "path",
-                  "required": true,
-                  "description": "Required. The project in which to run this patch in the form `projects/*`",
-                  "type": "string"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ]
-            },
-            "cancel": {
-              "flatPath": "v1/projects/{projectsId}/patchJobs/{patchJobsId}:cancel",
-              "description": "Cancel a patch job. The patch job must be active. Canceled patch jobs cannot be restarted.",
-              "parameterOrder": [
-                "name"
-              ],
-              "response": {
-                "$ref": "PatchJob"
-              },
-              "path": "v1/{+name}:cancel",
-              "id": "osconfig.projects.patchJobs.cancel",
-              "parameters": {
-                "name": {
-                  "type": "string",
-                  "description": "Required. Name of the patch in the form `projects/*/patchJobs/*`",
-                  "pattern": "^projects/[^/]+/patchJobs/[^/]+$",
-                  "required": true,
-                  "location": "path"
-                }
-              },
-              "httpMethod": "POST",
-              "request": {
-                "$ref": "CancelPatchJobRequest"
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ]
-            },
-            "get": {
-              "parameterOrder": [
-                "name"
-              ],
-              "response": {
-                "$ref": "PatchJob"
-              },
-              "flatPath": "v1/projects/{projectsId}/patchJobs/{patchJobsId}",
-              "httpMethod": "GET",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "id": "osconfig.projects.patchJobs.get",
-              "path": "v1/{+name}",
-              "parameters": {
-                "name": {
-                  "pattern": "^projects/[^/]+/patchJobs/[^/]+$",
-                  "location": "path",
-                  "required": true,
-                  "description": "Required. Name of the patch in the form `projects/*/patchJobs/*`",
-                  "type": "string"
-                }
-              },
-              "description": "Get the patch job. This can be used to track the progress of an ongoing patch job or review the details of completed jobs."
-            },
-            "list": {
-              "parameters": {
-                "parent": {
-                  "required": true,
-                  "description": "Required. In the form of `projects/*`",
-                  "pattern": "^projects/[^/]+$",
-                  "location": "path",
-                  "type": "string"
-                },
-                "pageToken": {
-                  "type": "string",
-                  "location": "query",
-                  "description": "A pagination token returned from a previous call that indicates where this listing should continue from."
-                },
-                "filter": {
-                  "type": "string",
-                  "description": "If provided, this field specifies the criteria that must be met by patch jobs to be included in the response. Currently, filtering is only available on the patch_deployment field.",
-                  "location": "query"
-                },
-                "pageSize": {
-                  "description": "The maximum number of instance status to return.",
-                  "format": "int32",
-                  "type": "integer",
-                  "location": "query"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "response": {
-                "$ref": "ListPatchJobsResponse"
-              },
-              "httpMethod": "GET",
-              "path": "v1/{+parent}/patchJobs",
-              "description": "Get a list of patch jobs.",
-              "flatPath": "v1/projects/{projectsId}/patchJobs",
-              "parameterOrder": [
-                "parent"
-              ],
-              "id": "osconfig.projects.patchJobs.list"
-            }
-          }
-        },
-        "patchDeployments": {
-          "methods": {
-            "list": {
-              "httpMethod": "GET",
-              "description": "Get a page of OS Config patch deployments.",
-              "response": {
-                "$ref": "ListPatchDeploymentsResponse"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "path": "v1/{+parent}/patchDeployments",
-              "parameters": {
-                "parent": {
-                  "pattern": "^projects/[^/]+$",
-                  "description": "Required. The resource name of the parent in the form `projects/*`.",
-                  "required": true,
-                  "location": "path",
-                  "type": "string"
-                },
-                "pageSize": {
-                  "type": "integer",
-                  "location": "query",
-                  "description": "Optional. The maximum number of patch deployments to return. Default is 100.",
-                  "format": "int32"
-                },
-                "pageToken": {
-                  "description": "Optional. A pagination token returned from a previous call to ListPatchDeployments that indicates where this listing should continue from.",
-                  "location": "query",
-                  "type": "string"
-                }
-              },
-              "id": "osconfig.projects.patchDeployments.list",
-              "flatPath": "v1/projects/{projectsId}/patchDeployments"
-            },
-            "create": {
-              "response": {
-                "$ref": "PatchDeployment"
-              },
-              "request": {
-                "$ref": "PatchDeployment"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "path": "v1/{+parent}/patchDeployments",
-              "id": "osconfig.projects.patchDeployments.create",
-              "httpMethod": "POST",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "parameters": {
-                "parent": {
-                  "description": "Required. The project to apply this patch deployment to in the form `projects/*`.",
-                  "type": "string",
-                  "pattern": "^projects/[^/]+$",
-                  "required": true,
-                  "location": "path"
-                },
-                "patchDeploymentId": {
-                  "type": "string",
-                  "description": "Required. A name for the patch deployment in the project. When creating a name the following rules apply: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.",
-                  "location": "query"
-                }
-              },
-              "description": "Create an OS Config patch deployment.",
-              "flatPath": "v1/projects/{projectsId}/patchDeployments"
-            },
-            "delete": {
-              "parameterOrder": [
-                "name"
-              ],
-              "flatPath": "v1/projects/{projectsId}/patchDeployments/{patchDeploymentsId}",
-              "response": {
-                "$ref": "Empty"
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "description": "Delete an OS Config patch deployment.",
-              "path": "v1/{+name}",
-              "httpMethod": "DELETE",
-              "id": "osconfig.projects.patchDeployments.delete",
-              "parameters": {
-                "name": {
-                  "required": true,
-                  "type": "string",
-                  "location": "path",
-                  "pattern": "^projects/[^/]+/patchDeployments/[^/]+$",
-                  "description": "Required. The resource name of the patch deployment in the form `projects/*/patchDeployments/*`."
-                }
-              }
-            },
-            "get": {
-              "parameterOrder": [
-                "name"
-              ],
-              "id": "osconfig.projects.patchDeployments.get",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "path": "v1/{+name}",
-              "flatPath": "v1/projects/{projectsId}/patchDeployments/{patchDeploymentsId}",
-              "httpMethod": "GET",
-              "description": "Get an OS Config patch deployment.",
-              "response": {
-                "$ref": "PatchDeployment"
-              },
-              "parameters": {
-                "name": {
-                  "pattern": "^projects/[^/]+/patchDeployments/[^/]+$",
-                  "required": true,
-                  "type": "string",
-                  "description": "Required. The resource name of the patch deployment in the form `projects/*/patchDeployments/*`.",
-                  "location": "path"
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  },
-  "documentationLink": "https://cloud.google.com/",
-  "batchPath": "batch",
-  "ownerDomain": "google.com",
-  "fullyEncodeReservedExpansion": true,
+  "version_module": true,
   "schemas": {
-    "RecurringSchedule": {
-      "type": "object",
-      "description": "Sets the time for recurring patch deployments.",
+    "TimeOfDay": {
+      "id": "TimeOfDay",
+      "description": "Represents a time of day. The date and time zone are either not significant or are specified elsewhere. An API may choose to allow leap seconds. Related types are google.type.Date and `google.protobuf.Timestamp`.",
       "properties": {
-        "weekly": {
-          "description": "Required. Schedule with weekly executions.",
-          "$ref": "WeeklySchedule"
+        "seconds": {
+          "description": "Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.",
+          "type": "integer",
+          "format": "int32"
         },
-        "endTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Optional. The end time at which a recurring patch deployment schedule is no longer active."
+        "nanos": {
+          "format": "int32",
+          "description": "Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.",
+          "type": "integer"
         },
-        "startTime": {
-          "format": "google-datetime",
-          "type": "string",
-          "description": "Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment."
+        "minutes": {
+          "format": "int32",
+          "type": "integer",
+          "description": "Minutes of hour of day. Must be from 0 to 59."
         },
-        "lastExecuteTime": {
-          "description": "Output only. The time the last patch job ran successfully.",
-          "format": "google-datetime",
-          "type": "string",
-          "readOnly": true
-        },
-        "timeZone": {
-          "$ref": "TimeZone",
-          "description": "Required. Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone."
-        },
-        "nextExecuteTime": {
-          "type": "string",
-          "description": "Output only. The time the next patch job is scheduled to run.",
-          "format": "google-datetime",
-          "readOnly": true
-        },
-        "timeOfDay": {
-          "description": "Required. Time of the day to run a recurring deployment.",
-          "$ref": "TimeOfDay"
-        },
-        "frequency": {
-          "enum": [
-            "FREQUENCY_UNSPECIFIED",
-            "WEEKLY",
-            "MONTHLY"
-          ],
-          "type": "string",
-          "description": "Required. The frequency unit of this recurring schedule.",
-          "enumDescriptions": [
-            "Invalid. A frequency must be specified.",
-            "Indicates that the frequency should be expressed in terms of weeks.",
-            "Indicates that the frequency should be expressed in terms of months."
-          ]
-        },
-        "monthly": {
-          "description": "Required. Schedule with monthly executions.",
-          "$ref": "MonthlySchedule"
+        "hours": {
+          "format": "int32",
+          "description": "Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value \"24:00:00\" for scenarios like business closing time.",
+          "type": "integer"
         }
       },
-      "id": "RecurringSchedule"
-    },
-    "CancelPatchJobRequest": {
-      "type": "object",
-      "id": "CancelPatchJobRequest",
-      "description": "Message for canceling a patch job.",
-      "properties": {}
-    },
-    "TimeZone": {
-      "type": "object",
-      "description": "Represents a time zone from the [IANA Time Zone Database](https://www.iana.org/time-zones).",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "IANA Time Zone Database time zone, e.g. \"America/New_York\"."
-        },
-        "version": {
-          "description": "Optional. IANA Time Zone Database version number, e.g. \"2019a\".",
-          "type": "string"
-        }
-      },
-      "id": "TimeZone"
+      "type": "object"
     },
     "OneTimeSchedule": {
       "type": "object",
-      "id": "OneTimeSchedule",
-      "description": "Sets the time for a one time patch deployment. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.",
       "properties": {
         "executeTime": {
           "type": "string",
-          "format": "google-datetime",
-          "description": "Required. The desired patch job execution time."
-        }
-      }
-    },
-    "WeekDayOfMonth": {
-      "properties": {
-        "weekOrdinal": {
-          "description": "Required. Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "dayOfWeek": {
-          "enum": [
-            "DAY_OF_WEEK_UNSPECIFIED",
-            "MONDAY",
-            "TUESDAY",
-            "WEDNESDAY",
-            "THURSDAY",
-            "FRIDAY",
-            "SATURDAY",
-            "SUNDAY"
-          ],
-          "enumDescriptions": [
-            "The day of the week is unspecified.",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "type": "string",
-          "description": "Required. A day of the week."
+          "description": "Required. The desired patch job execution time.",
+          "format": "google-datetime"
         }
       },
-      "description": "Represents one week day in a month. An example is \"the 4th Sunday\".",
-      "type": "object",
-      "id": "WeekDayOfMonth"
-    },
-    "ExecStep": {
-      "type": "object",
-      "id": "ExecStep",
-      "properties": {
-        "linuxExecStepConfig": {
-          "description": "The ExecStepConfig for all Linux VMs targeted by the PatchJob.",
-          "$ref": "ExecStepConfig"
-        },
-        "windowsExecStepConfig": {
-          "description": "The ExecStepConfig for all Windows VMs targeted by the PatchJob.",
-          "$ref": "ExecStepConfig"
-        }
-      },
-      "description": "A step that runs an executable for a PatchJob."
-    },
-    "GooSettings": {
-      "id": "GooSettings",
-      "type": "object",
-      "properties": {},
-      "description": "Googet patching is performed by running `googet update`."
-    },
-    "PatchJobInstanceDetails": {
-      "properties": {
-        "attemptCount": {
-          "format": "int64",
-          "type": "string",
-          "description": "The number of times the agent that the agent attempts to apply the patch."
-        },
-        "state": {
-          "enumDescriptions": [
-            "Unspecified.",
-            "The instance is not yet notified.",
-            "Instance is inactive and cannot be patched.",
-            "The instance is notified that it should be patched.",
-            "The instance has started the patching process.",
-            "The instance is downloading patches.",
-            "The instance is applying patches.",
-            "The instance is rebooting.",
-            "The instance has completed applying patches.",
-            "The instance has completed applying patches but a reboot is required.",
-            "The instance has failed to apply the patch.",
-            "The instance acked the notification and will start shortly.",
-            "The instance exceeded the time out while applying the patch.",
-            "The instance is running the pre-patch step.",
-            "The instance is running the post-patch step.",
-            "The service could not detect the presence of the agent. Check to ensure that the agent is installed, running, and able to communicate with the service."
-          ],
-          "type": "string",
-          "description": "Current state of instance patch.",
-          "enum": [
-            "PATCH_STATE_UNSPECIFIED",
-            "PENDING",
-            "INACTIVE",
-            "NOTIFIED",
-            "STARTED",
-            "DOWNLOADING_PATCHES",
-            "APPLYING_PATCHES",
-            "REBOOTING",
-            "SUCCEEDED",
-            "SUCCEEDED_REBOOT_REQUIRED",
-            "FAILED",
-            "ACKED",
-            "TIMED_OUT",
-            "RUNNING_PRE_PATCH_STEP",
-            "RUNNING_POST_PATCH_STEP",
-            "NO_AGENT_DETECTED"
-          ]
-        },
-        "failureReason": {
-          "description": "If the patch fails, this field provides the reason.",
-          "type": "string"
-        },
-        "name": {
-          "description": "The instance name in the form `projects/*/zones/*/instances/*`",
-          "type": "string"
-        },
-        "instanceSystemId": {
-          "description": "The unique identifier for the instance. This identifier is defined by the server.",
-          "type": "string"
-        }
-      },
-      "type": "object",
-      "id": "PatchJobInstanceDetails",
-      "description": "Patch details for a VM instance. For more information about reviewing VM instance details, see [Listing all VM instance details for a specific patch job](https://cloud.google.com/compute/docs/os-patch-management/manage-patch-jobs#list-instance-details)."
-    },
-    "PatchInstanceFilter": {
-      "description": "A filter to target VM instances for patching. The targeted VMs must meet all criteria specified. So if both labels and zones are specified, the patch job targets only VMs with those labels and in those zones.",
-      "type": "object",
-      "properties": {
-        "instances": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array",
-          "description": "Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`"
-        },
-        "instanceNamePrefixes": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=\"prod-\"."
-        },
-        "zones": {
-          "type": "array",
-          "description": "Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.",
-          "items": {
-            "type": "string"
-          }
-        },
-        "groupLabels": {
-          "description": "Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.",
-          "type": "array",
-          "items": {
-            "$ref": "PatchInstanceFilterGroupLabel"
-          }
-        },
-        "all": {
-          "description": "Target all VM instances in the project. If true, no other criteria is permitted.",
-          "type": "boolean"
-        }
-      },
-      "id": "PatchInstanceFilter"
-    },
-    "PatchDeployment": {
-      "description": "Patch deployments are configurations that individual patch jobs use to complete a patch. These configurations include instance filter, package repository settings, and a schedule. For more information about creating and managing patch deployments, see [Scheduling patch jobs](https://cloud.google.com/compute/docs/os-patch-management/schedule-patch-jobs).",
-      "type": "object",
-      "properties": {
-        "oneTimeSchedule": {
-          "description": "Required. Schedule a one-time execution.",
-          "$ref": "OneTimeSchedule"
-        },
-        "name": {
-          "type": "string",
-          "description": "Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment."
-        },
-        "duration": {
-          "description": "Optional. Duration of the patch. After the duration ends, the patch times out.",
-          "type": "string",
-          "format": "google-duration"
-        },
-        "lastExecuteTime": {
-          "readOnly": true,
-          "format": "google-datetime",
-          "type": "string",
-          "description": "Output only. The last time a patch job was started by this deployment. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format."
-        },
-        "createTime": {
-          "format": "google-datetime",
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. Time the patch deployment was created. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format."
-        },
-        "description": {
-          "type": "string",
-          "description": "Optional. Description of the patch deployment. Length of the description is limited to 1024 characters."
-        },
-        "updateTime": {
-          "readOnly": true,
-          "format": "google-datetime",
-          "description": "Output only. Time the patch deployment was last updated. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.",
-          "type": "string"
-        },
-        "recurringSchedule": {
-          "$ref": "RecurringSchedule",
-          "description": "Required. Schedule recurring executions."
-        },
-        "patchConfig": {
-          "$ref": "PatchConfig",
-          "description": "Optional. Patch configuration that is applied."
-        },
-        "instanceFilter": {
-          "$ref": "PatchInstanceFilter",
-          "description": "Required. VM instances to patch."
-        },
-        "rollout": {
-          "description": "Optional. Rollout strategy of the patch job.",
-          "$ref": "PatchRollout"
-        }
-      },
-      "id": "PatchDeployment"
-    },
-    "YumSettings": {
-      "type": "object",
-      "properties": {
-        "minimal": {
-          "description": "Will cause patch to run `yum update-minimal` instead.",
-          "type": "boolean"
-        },
-        "exclusivePackages": {
-          "items": {
-            "type": "string"
-          },
-          "description": "An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.",
-          "type": "array"
-        },
-        "excludes": {
-          "description": "List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.",
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "security": {
-          "description": "Adds the `--security` flag to `yum update`. Not supported on all platforms.",
-          "type": "boolean"
-        }
-      },
-      "id": "YumSettings",
-      "description": "Yum patching is performed by executing `yum update`. Additional options can be set to control how this is executed. Note that not all settings are supported on all platforms."
-    },
-    "PatchConfig": {
-      "id": "PatchConfig",
-      "type": "object",
-      "properties": {
-        "yum": {
-          "description": "Yum update settings. Use this setting to override the default `yum` patch rules.",
-          "$ref": "YumSettings"
-        },
-        "apt": {
-          "$ref": "AptSettings",
-          "description": "Apt update settings. Use this setting to override the default `apt` patch rules."
-        },
-        "windowsUpdate": {
-          "$ref": "WindowsUpdateSettings",
-          "description": "Windows update settings. Use this override the default windows patch rules."
-        },
-        "rebootConfig": {
-          "enum": [
-            "REBOOT_CONFIG_UNSPECIFIED",
-            "DEFAULT",
-            "ALWAYS",
-            "NEVER"
-          ],
-          "enumDescriptions": [
-            "The default behavior is DEFAULT.",
-            "The agent decides if a reboot is necessary by checking signals such as registry keys on Windows or `/var/run/reboot-required` on APT based systems. On RPM based systems, a set of core system package install times are compared with system boot time.",
-            "Always reboot the machine after the update completes.",
-            "Never reboot the machine after the update completes."
-          ],
-          "type": "string",
-          "description": "Post-patch reboot settings."
-        },
-        "goo": {
-          "description": "Goo update settings. Use this setting to override the default `goo` patch rules.",
-          "$ref": "GooSettings"
-        },
-        "zypper": {
-          "$ref": "ZypperSettings",
-          "description": "Zypper update settings. Use this setting to override the default `zypper` patch rules."
-        },
-        "preStep": {
-          "$ref": "ExecStep",
-          "description": "The `ExecStep` to run before the patch update."
-        },
-        "postStep": {
-          "$ref": "ExecStep",
-          "description": "The `ExecStep` to run after the patch update."
-        }
-      },
-      "description": "Patch configuration specifications. Contains details on how to apply the patch(es) to a VM instance."
-    },
-    "MonthlySchedule": {
-      "id": "MonthlySchedule",
-      "properties": {
-        "monthDay": {
-          "format": "int32",
-          "type": "integer",
-          "description": "Required. One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run \"every month on the 31st\" will not run in February, April, June, etc."
-        },
-        "weekDayOfMonth": {
-          "description": "Required. Week day in a month.",
-          "$ref": "WeekDayOfMonth"
-        }
-      },
-      "type": "object",
-      "description": "Represents a monthly schedule. An example of a valid monthly schedule is \"on the third Tuesday of the month\" or \"on the 15th of the month\"."
-    },
-    "Empty": {
-      "id": "Empty",
-      "type": "object",
-      "properties": {},
-      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`."
-    },
-    "AptSettings": {
-      "description": "Apt patching is completed by executing `apt-get update && apt-get upgrade`. Additional options can be set to control how this is executed.",
-      "properties": {
-        "excludes": {
-          "items": {
-            "type": "string"
-          },
-          "description": "List of packages to exclude from update. These packages will be excluded",
-          "type": "array"
-        },
-        "exclusivePackages": {
-          "items": {
-            "type": "string"
-          },
-          "description": "An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.",
-          "type": "array"
-        },
-        "type": {
-          "enum": [
-            "TYPE_UNSPECIFIED",
-            "DIST",
-            "UPGRADE"
-          ],
-          "type": "string",
-          "enumDescriptions": [
-            "By default, upgrade will be performed.",
-            "Runs `apt-get dist-upgrade`.",
-            "Runs `apt-get upgrade`."
-          ],
-          "description": "By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead."
-        }
-      },
-      "id": "AptSettings",
-      "type": "object"
-    },
-    "TimeOfDay": {
-      "description": "Represents a time of day. The date and time zone are either not significant or are specified elsewhere. An API may choose to allow leap seconds. Related types are google.type.Date and `google.protobuf.Timestamp`.",
-      "properties": {
-        "minutes": {
-          "description": "Minutes of hour of day. Must be from 0 to 59.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "seconds": {
-          "type": "integer",
-          "format": "int32",
-          "description": "Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds."
-        },
-        "hours": {
-          "type": "integer",
-          "format": "int32",
-          "description": "Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value \"24:00:00\" for scenarios like business closing time."
-        },
-        "nanos": {
-          "description": "Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.",
-          "type": "integer",
-          "format": "int32"
-        }
-      },
-      "id": "TimeOfDay",
-      "type": "object"
-    },
-    "ZypperSettings": {
-      "properties": {
-        "severities": {
-          "items": {
-            "type": "string"
-          },
-          "description": "Install only patches with these severities. Common severities include critical, important, moderate, and low.",
-          "type": "array"
-        },
-        "excludes": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "List of patches to exclude from update."
-        },
-        "withUpdate": {
-          "description": "Adds the `--with-update` flag, to `zypper patch`.",
-          "type": "boolean"
-        },
-        "exclusivePatches": {
-          "type": "array",
-          "description": "An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command. This field must not be used with any other patch configuration fields.",
-          "items": {
-            "type": "string"
-          }
-        },
-        "categories": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Install only patches with these categories. Common categories include security, recommended, and feature."
-        },
-        "withOptional": {
-          "description": "Adds the `--with-optional` flag to `zypper patch`.",
-          "type": "boolean"
-        }
-      },
-      "description": "Zypper patching is performed by running `zypper patch`. See also https://en.opensuse.org/SDB:Zypper_manual.",
-      "type": "object",
-      "id": "ZypperSettings"
-    },
-    "WeeklySchedule": {
-      "id": "WeeklySchedule",
-      "description": "Represents a weekly schedule.",
-      "type": "object",
-      "properties": {
-        "dayOfWeek": {
-          "enumDescriptions": [
-            "The day of the week is unspecified.",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "description": "Required. Day of the week.",
-          "enum": [
-            "DAY_OF_WEEK_UNSPECIFIED",
-            "MONDAY",
-            "TUESDAY",
-            "WEDNESDAY",
-            "THURSDAY",
-            "FRIDAY",
-            "SATURDAY",
-            "SUNDAY"
-          ],
-          "type": "string"
-        }
-      }
-    },
-    "PatchRollout": {
-      "properties": {
-        "disruptionBudget": {
-          "$ref": "FixedOrPercent",
-          "description": "The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of `10`, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops."
-        },
-        "mode": {
-          "description": "Mode of the patch rollout.",
-          "enum": [
-            "MODE_UNSPECIFIED",
-            "ZONE_BY_ZONE",
-            "CONCURRENT_ZONES"
-          ],
-          "type": "string",
-          "enumDescriptions": [
-            "Mode must be specified.",
-            "Patches are applied one zone at a time. The patch job begins in the region with the lowest number of targeted VMs. Within the region, patching begins in the zone with the lowest number of targeted VMs. If multiple regions (or zones within a region) have the same number of targeted VMs, a tie-breaker is achieved by sorting the regions or zones in alphabetical order.",
-            "Patches are applied to VMs in all zones at the same time."
-          ]
-        }
-      },
-      "description": "Patch rollout configuration specifications. Contains details on the concurrency control when applying patch(es) to all targeted VMs.",
-      "id": "PatchRollout",
-      "type": "object"
+      "id": "OneTimeSchedule",
+      "description": "Sets the time for a one time patch deployment. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format."
     },
     "ListPatchJobsResponse": {
-      "description": "A response message for listing patch jobs.",
       "type": "object",
       "id": "ListPatchJobsResponse",
       "properties": {
@@ -992,77 +57,209 @@
           },
           "description": "The list of patch jobs."
         }
-      }
+      },
+      "description": "A response message for listing patch jobs."
     },
-    "FixedOrPercent": {
-      "description": "Message encapsulating a value that can be either absolute (\"fixed\") or relative (\"percent\") to a value.",
+    "MonthlySchedule": {
+      "type": "object",
+      "id": "MonthlySchedule",
       "properties": {
-        "percent": {
-          "type": "integer",
-          "description": "Specifies the relative value defined as a percentage, which will be multiplied by a reference value.",
-          "format": "int32"
+        "weekDayOfMonth": {
+          "$ref": "WeekDayOfMonth",
+          "description": "Required. Week day in a month."
         },
-        "fixed": {
-          "format": "int32",
+        "monthDay": {
           "type": "integer",
-          "description": "Specifies a fixed value."
+          "description": "Required. One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run \"every month on the 31st\" will not run in February, April, June, etc.",
+          "format": "int32"
         }
       },
-      "type": "object",
-      "id": "FixedOrPercent"
+      "description": "Represents a monthly schedule. An example of a valid monthly schedule is \"on the third Tuesday of the month\" or \"on the 15th of the month\"."
     },
-    "ExecutePatchJobRequest": {
-      "id": "ExecutePatchJobRequest",
+    "AptSettings": {
       "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "TYPE_UNSPECIFIED",
+            "DIST",
+            "UPGRADE"
+          ],
+          "description": "By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.",
+          "enumDescriptions": [
+            "By default, upgrade will be performed.",
+            "Runs `apt-get dist-upgrade`.",
+            "Runs `apt-get upgrade`."
+          ]
+        },
+        "exclusivePackages": {
+          "items": {
+            "type": "string"
+          },
+          "description": "An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.",
+          "type": "array"
+        },
+        "excludes": {
+          "description": "List of packages to exclude from update. These packages will be excluded",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "id": "AptSettings",
+      "description": "Apt patching is completed by executing `apt-get update && apt-get upgrade`. Additional options can be set to control how this is executed.",
+      "type": "object"
+    },
+    "PatchJob": {
+      "description": "A high level representation of a patch job that is either in progress or has completed. Instance details are not included in the job. To paginate through instance details, use ListPatchJobInstanceDetails. For more information about patch jobs, see [Creating patch jobs](https://cloud.google.com/compute/docs/os-patch-management/create-patch-job).",
+      "properties": {
+        "instanceDetailsSummary": {
+          "$ref": "PatchJobInstanceDetailsSummary",
+          "description": "Summary of instance details."
+        },
+        "percentComplete": {
+          "format": "double",
+          "description": "Reflects the overall progress of the patch job in the range of 0.0 being no progress to 100.0 being complete.",
+          "type": "number"
+        },
         "duration": {
           "description": "Duration of the patch job. After the duration ends, the patch job times out.",
           "type": "string",
           "format": "google-duration"
         },
+        "rollout": {
+          "$ref": "PatchRollout",
+          "description": "Rollout strategy being applied."
+        },
         "description": {
           "description": "Description of the patch job. Length of the description is limited to 1024 characters.",
           "type": "string"
         },
-        "displayName": {
-          "description": "Display name for this patch job. This does not have to be unique.",
+        "patchConfig": {
+          "$ref": "PatchConfig",
+          "description": "Patch configuration being applied."
+        },
+        "createTime": {
+          "format": "google-datetime",
+          "description": "Time this patch job was created.",
           "type": "string"
         },
-        "patchConfig": {
-          "description": "Patch configuration being applied. If omitted, instances are patched using the default configurations.",
-          "$ref": "PatchConfig"
+        "displayName": {
+          "description": "Display name for this patch job. This is not a unique identifier.",
+          "type": "string"
         },
-        "rollout": {
-          "$ref": "PatchRollout",
-          "description": "Rollout strategy of the patch job."
+        "errorMessage": {
+          "description": "If this patch job failed, this message provides information about the failure.",
+          "type": "string"
+        },
+        "patchDeployment": {
+          "type": "string",
+          "description": "Output only. Name of the patch deployment that created this patch job.",
+          "readOnly": true
+        },
+        "state": {
+          "enum": [
+            "STATE_UNSPECIFIED",
+            "STARTED",
+            "INSTANCE_LOOKUP",
+            "PATCHING",
+            "SUCCEEDED",
+            "COMPLETED_WITH_ERRORS",
+            "CANCELED",
+            "TIMED_OUT"
+          ],
+          "enumDescriptions": [
+            "State must be specified.",
+            "The patch job was successfully initiated.",
+            "The patch job is looking up instances to run the patch on.",
+            "Instances are being patched.",
+            "Patch job completed successfully.",
+            "Patch job completed but there were errors.",
+            "The patch job was canceled.",
+            "The patch job timed out."
+          ],
+          "description": "The current state of the PatchJob.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Unique identifier for this patch job in the form `projects/*/patchJobs/*`",
+          "type": "string"
+        },
+        "updateTime": {
+          "type": "string",
+          "description": "Last time this patch job was updated.",
+          "format": "google-datetime"
         },
         "instanceFilter": {
-          "$ref": "PatchInstanceFilter",
-          "description": "Required. Instances to patch, either explicitly or filtered by some criteria such as zone or labels."
+          "description": "Instances to patch.",
+          "$ref": "PatchInstanceFilter"
         },
         "dryRun": {
-          "type": "boolean",
-          "description": "If this patch is a dry-run only, instances are contacted but will do nothing."
+          "description": "If this patch job is a dry run, the agent reports that it has finished without running any updates on the VM instance.",
+          "type": "boolean"
         }
       },
       "type": "object",
-      "description": "A request message to initiate patching across Compute Engine instances."
+      "id": "PatchJob"
+    },
+    "ListPatchJobInstanceDetailsResponse": {
+      "properties": {
+        "patchJobInstanceDetails": {
+          "items": {
+            "$ref": "PatchJobInstanceDetails"
+          },
+          "type": "array",
+          "description": "A list of instance status."
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "A pagination token that can be used to get the next page of results."
+        }
+      },
+      "id": "ListPatchJobInstanceDetailsResponse",
+      "type": "object",
+      "description": "A response message for listing the instances details for a patch job."
+    },
+    "FixedOrPercent": {
+      "description": "Message encapsulating a value that can be either absolute (\"fixed\") or relative (\"percent\") to a value.",
+      "id": "FixedOrPercent",
+      "properties": {
+        "percent": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Specifies the relative value defined as a percentage, which will be multiplied by a reference value."
+        },
+        "fixed": {
+          "description": "Specifies a fixed value.",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "type": "object"
     },
     "ExecStepConfig": {
+      "type": "object",
       "id": "ExecStepConfig",
       "properties": {
+        "gcsObject": {
+          "description": "A Cloud Storage object containing the executable.",
+          "$ref": "GcsObject"
+        },
+        "localPath": {
+          "description": "An absolute path to the executable on the VM.",
+          "type": "string"
+        },
         "allowedSuccessCodes": {
+          "type": "array",
           "description": "Defaults to [0]. A list of possible return values that the execution can return to indicate a success.",
           "items": {
-            "format": "int32",
-            "type": "integer"
-          },
-          "type": "array"
-        },
-        "gcsObject": {
-          "$ref": "GcsObject",
-          "description": "A Cloud Storage object containing the executable."
+            "type": "integer",
+            "format": "int32"
+          }
         },
         "interpreter": {
+          "type": "string",
           "enum": [
             "INTERPRETER_UNSPECIFIED",
             "SHELL",
@@ -1073,40 +270,142 @@
             "Indicates that the script is run with `/bin/sh` on Linux and `cmd` on Windows.",
             "Indicates that the file is run with PowerShell flags `-NonInteractive`, `-NoProfile`, and `-ExecutionPolicy Bypass`."
           ],
-          "description": "The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\\(Unix\\)).",
-          "type": "string"
-        },
-        "localPath": {
-          "type": "string",
-          "description": "An absolute path to the executable on the VM."
+          "description": "The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\\(Unix\\))."
         }
       },
-      "description": "Common configurations for an ExecStep.",
-      "type": "object"
+      "description": "Common configurations for an ExecStep."
     },
     "ListPatchDeploymentsResponse": {
-      "description": "A response message for listing patch deployments.",
-      "type": "object",
       "properties": {
         "patchDeployments": {
-          "type": "array",
           "items": {
             "$ref": "PatchDeployment"
           },
-          "description": "The list of patch deployments."
+          "description": "The list of patch deployments.",
+          "type": "array"
         },
         "nextPageToken": {
-          "type": "string",
-          "description": "A pagination token that can be used to get the next page of patch deployments."
+          "description": "A pagination token that can be used to get the next page of patch deployments.",
+          "type": "string"
         }
       },
+      "type": "object",
+      "description": "A response message for listing patch deployments.",
       "id": "ListPatchDeploymentsResponse"
     },
+    "Empty": {
+      "properties": {},
+      "type": "object",
+      "id": "Empty",
+      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`."
+    },
+    "WeekDayOfMonth": {
+      "properties": {
+        "weekOrdinal": {
+          "description": "Required. Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.",
+          "type": "integer",
+          "format": "int32"
+        },
+        "dayOfWeek": {
+          "enumDescriptions": [
+            "The day of the week is unspecified.",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "description": "Required. A day of the week.",
+          "type": "string",
+          "enum": [
+            "DAY_OF_WEEK_UNSPECIFIED",
+            "MONDAY",
+            "TUESDAY",
+            "WEDNESDAY",
+            "THURSDAY",
+            "FRIDAY",
+            "SATURDAY",
+            "SUNDAY"
+          ]
+        }
+      },
+      "description": "Represents one week day in a month. An example is \"the 4th Sunday\".",
+      "type": "object",
+      "id": "WeekDayOfMonth"
+    },
+    "ZypperSettings": {
+      "description": "Zypper patching is performed by running `zypper patch`. See also https://en.opensuse.org/SDB:Zypper_manual.",
+      "id": "ZypperSettings",
+      "type": "object",
+      "properties": {
+        "categories": {
+          "items": {
+            "type": "string"
+          },
+          "description": "Install only patches with these categories. Common categories include security, recommended, and feature.",
+          "type": "array"
+        },
+        "excludes": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "List of patches to exclude from update."
+        },
+        "exclusivePatches": {
+          "type": "array",
+          "description": "An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command. This field must not be used with any other patch configuration fields.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "severities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Install only patches with these severities. Common severities include critical, important, moderate, and low."
+        },
+        "withUpdate": {
+          "description": "Adds the `--with-update` flag, to `zypper patch`.",
+          "type": "boolean"
+        },
+        "withOptional": {
+          "description": "Adds the `--with-optional` flag to `zypper patch`.",
+          "type": "boolean"
+        }
+      }
+    },
+    "TimeZone": {
+      "type": "object",
+      "id": "TimeZone",
+      "description": "Represents a time zone from the [IANA Time Zone Database](https://www.iana.org/time-zones).",
+      "properties": {
+        "version": {
+          "description": "Optional. IANA Time Zone Database version number, e.g. \"2019a\".",
+          "type": "string"
+        },
+        "id": {
+          "description": "IANA Time Zone Database time zone, e.g. \"America/New_York\".",
+          "type": "string"
+        }
+      }
+    },
+    "GooSettings": {
+      "description": "Googet patching is performed by running `googet update`.",
+      "type": "object",
+      "id": "GooSettings",
+      "properties": {}
+    },
     "WindowsUpdateSettings": {
+      "description": "Windows patching is performed using the Windows Update Agent.",
+      "type": "object",
+      "id": "WindowsUpdateSettings",
       "properties": {
         "classifications": {
           "description": "Only apply updates of these windows update classifications. If empty, all updates are applied.",
-          "type": "array",
           "items": {
             "type": "string",
             "enumDescriptions": [
@@ -1133,262 +432,963 @@
               "UPDATE_ROLLUP",
               "UPDATE"
             ]
-          }
+          },
+          "type": "array"
         },
         "exclusivePatches": {
+          "description": "An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "excludes": {
+          "items": {
+            "type": "string"
+          },
+          "description": "List of KBs to exclude from update.",
+          "type": "array"
+        }
+      }
+    },
+    "PatchInstanceFilter": {
+      "description": "A filter to target VM instances for patching. The targeted VMs must meet all criteria specified. So if both labels and zones are specified, the patch job targets only VMs with those labels and in those zones.",
+      "id": "PatchInstanceFilter",
+      "type": "object",
+      "properties": {
+        "groupLabels": {
+          "items": {
+            "$ref": "PatchInstanceFilterGroupLabel"
+          },
+          "description": "Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.",
+          "type": "array"
+        },
+        "zones": {
+          "description": "Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "instances": {
           "items": {
             "type": "string"
           },
           "type": "array",
-          "description": "An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations."
+          "description": "Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`"
         },
-        "excludes": {
+        "instanceNamePrefixes": {
           "type": "array",
-          "description": "List of KBs to exclude from update.",
+          "description": "Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix=\"prod-\".",
           "items": {
             "type": "string"
           }
+        },
+        "all": {
+          "type": "boolean",
+          "description": "Target all VM instances in the project. If true, no other criteria is permitted."
         }
-      },
-      "type": "object",
-      "id": "WindowsUpdateSettings",
-      "description": "Windows patching is performed using the Windows Update Agent."
+      }
     },
     "PatchInstanceFilterGroupLabel": {
+      "id": "PatchInstanceFilterGroupLabel",
       "properties": {
         "labels": {
-          "description": "Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.",
           "additionalProperties": {
             "type": "string"
           },
+          "description": "Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.",
           "type": "object"
         }
       },
       "type": "object",
-      "id": "PatchInstanceFilterGroupLabel",
       "description": "Targets a group of VM instances by using their [assigned labels](https://cloud.google.com/compute/docs/labeling-resources). Labels are key-value pairs. A `GroupLabel` is a combination of labels that is used to target VMs for a patch job. For example, a patch job can target VMs that have the following `GroupLabel`: `{\"env\":\"test\", \"app\":\"web\"}`. This means that the patch job is applied to VMs that have both the labels `env=test` and `app=web`."
     },
-    "ListPatchJobInstanceDetailsResponse": {
-      "id": "ListPatchJobInstanceDetailsResponse",
+    "RecurringSchedule": {
+      "description": "Sets the time for recurring patch deployments.",
       "type": "object",
-      "description": "A response message for listing the instances details for a patch job.",
+      "id": "RecurringSchedule",
       "properties": {
-        "patchJobInstanceDetails": {
-          "items": {
-            "$ref": "PatchJobInstanceDetails"
-          },
-          "type": "array",
-          "description": "A list of instance status."
-        },
-        "nextPageToken": {
+        "startTime": {
+          "description": "Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.",
           "type": "string",
-          "description": "A pagination token that can be used to get the next page of results."
+          "format": "google-datetime"
+        },
+        "frequency": {
+          "type": "string",
+          "description": "Required. The frequency unit of this recurring schedule.",
+          "enum": [
+            "FREQUENCY_UNSPECIFIED",
+            "WEEKLY",
+            "MONTHLY"
+          ],
+          "enumDescriptions": [
+            "Invalid. A frequency must be specified.",
+            "Indicates that the frequency should be expressed in terms of weeks.",
+            "Indicates that the frequency should be expressed in terms of months."
+          ]
+        },
+        "timeZone": {
+          "$ref": "TimeZone",
+          "description": "Required. Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone."
+        },
+        "monthly": {
+          "$ref": "MonthlySchedule",
+          "description": "Required. Schedule with monthly executions."
+        },
+        "weekly": {
+          "$ref": "WeeklySchedule",
+          "description": "Required. Schedule with weekly executions."
+        },
+        "timeOfDay": {
+          "$ref": "TimeOfDay",
+          "description": "Required. Time of the day to run a recurring deployment."
+        },
+        "endTime": {
+          "format": "google-datetime",
+          "description": "Optional. The end time at which a recurring patch deployment schedule is no longer active.",
+          "type": "string"
+        },
+        "lastExecuteTime": {
+          "description": "Output only. The time the last patch job ran successfully.",
+          "readOnly": true,
+          "type": "string",
+          "format": "google-datetime"
+        },
+        "nextExecuteTime": {
+          "format": "google-datetime",
+          "description": "Output only. The time the next patch job is scheduled to run.",
+          "readOnly": true,
+          "type": "string"
         }
       }
     },
-    "GcsObject": {
-      "properties": {
-        "generationNumber": {
-          "type": "string",
-          "format": "int64",
-          "description": "Required. Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change."
-        },
-        "object": {
-          "description": "Required. Name of the Cloud Storage object.",
-          "type": "string"
-        },
-        "bucket": {
-          "description": "Required. Bucket of the Cloud Storage object.",
-          "type": "string"
-        }
-      },
-      "description": "Cloud Storage object representation.",
+    "ExecStep": {
+      "id": "ExecStep",
       "type": "object",
-      "id": "GcsObject"
+      "description": "A step that runs an executable for a PatchJob.",
+      "properties": {
+        "windowsExecStepConfig": {
+          "description": "The ExecStepConfig for all Windows VMs targeted by the PatchJob.",
+          "$ref": "ExecStepConfig"
+        },
+        "linuxExecStepConfig": {
+          "$ref": "ExecStepConfig",
+          "description": "The ExecStepConfig for all Linux VMs targeted by the PatchJob."
+        }
+      }
+    },
+    "CancelPatchJobRequest": {
+      "properties": {},
+      "description": "Message for canceling a patch job.",
+      "type": "object",
+      "id": "CancelPatchJobRequest"
+    },
+    "WeeklySchedule": {
+      "type": "object",
+      "description": "Represents a weekly schedule.",
+      "id": "WeeklySchedule",
+      "properties": {
+        "dayOfWeek": {
+          "type": "string",
+          "description": "Required. Day of the week.",
+          "enumDescriptions": [
+            "The day of the week is unspecified.",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "enum": [
+            "DAY_OF_WEEK_UNSPECIFIED",
+            "MONDAY",
+            "TUESDAY",
+            "WEDNESDAY",
+            "THURSDAY",
+            "FRIDAY",
+            "SATURDAY",
+            "SUNDAY"
+          ]
+        }
+      }
     },
     "PatchJobInstanceDetailsSummary": {
-      "description": "A summary of the current patch state across all instances that this patch job affects. Contains counts of instances in different states. These states map to `InstancePatchState`. List patch job instance details to see the specific states of each instance.",
-      "type": "object",
       "id": "PatchJobInstanceDetailsSummary",
       "properties": {
-        "postPatchStepInstanceCount": {
-          "type": "string",
+        "noAgentDetectedInstanceCount": {
           "format": "int64",
-          "description": "Number of instances that are running the post-patch step."
-        },
-        "succeededRebootRequiredInstanceCount": {
-          "type": "string",
-          "description": "Number of instances that require reboot.",
-          "format": "int64"
-        },
-        "downloadingPatchesInstanceCount": {
-          "format": "int64",
-          "description": "Number of instances that are downloading patches.",
+          "description": "Number of instances that do not appear to be running the agent. Check to ensure that the agent is installed, running, and able to communicate with the service.",
           "type": "string"
-        },
-        "applyingPatchesInstanceCount": {
-          "description": "Number of instances that are applying patches.",
-          "type": "string",
-          "format": "int64"
         },
         "pendingInstanceCount": {
           "type": "string",
           "format": "int64",
           "description": "Number of instances pending patch job."
         },
-        "startedInstanceCount": {
-          "format": "int64",
-          "type": "string",
-          "description": "Number of instances that have started."
-        },
-        "ackedInstanceCount": {
+        "timedOutInstanceCount": {
           "type": "string",
           "format": "int64",
-          "description": "Number of instances that have acked and will start shortly."
-        },
-        "failedInstanceCount": {
-          "type": "string",
-          "format": "int64",
-          "description": "Number of instances that failed."
-        },
-        "notifiedInstanceCount": {
-          "description": "Number of instances notified about patch job.",
-          "format": "int64",
-          "type": "string"
-        },
-        "succeededInstanceCount": {
-          "type": "string",
-          "description": "Number of instances that have completed successfully.",
-          "format": "int64"
-        },
-        "prePatchStepInstanceCount": {
-          "description": "Number of instances that are running the pre-patch step.",
-          "format": "int64",
-          "type": "string"
+          "description": "Number of instances that exceeded the time out while applying the patch."
         },
         "rebootingInstanceCount": {
           "format": "int64",
           "description": "Number of instances rebooting.",
           "type": "string"
         },
+        "postPatchStepInstanceCount": {
+          "format": "int64",
+          "description": "Number of instances that are running the post-patch step.",
+          "type": "string"
+        },
+        "ackedInstanceCount": {
+          "type": "string",
+          "description": "Number of instances that have acked and will start shortly.",
+          "format": "int64"
+        },
+        "downloadingPatchesInstanceCount": {
+          "type": "string",
+          "description": "Number of instances that are downloading patches.",
+          "format": "int64"
+        },
+        "succeededRebootRequiredInstanceCount": {
+          "description": "Number of instances that require reboot.",
+          "format": "int64",
+          "type": "string"
+        },
+        "startedInstanceCount": {
+          "type": "string",
+          "format": "int64",
+          "description": "Number of instances that have started."
+        },
+        "succeededInstanceCount": {
+          "type": "string",
+          "format": "int64",
+          "description": "Number of instances that have completed successfully."
+        },
+        "applyingPatchesInstanceCount": {
+          "description": "Number of instances that are applying patches.",
+          "format": "int64",
+          "type": "string"
+        },
+        "failedInstanceCount": {
+          "description": "Number of instances that failed.",
+          "type": "string",
+          "format": "int64"
+        },
         "inactiveInstanceCount": {
           "description": "Number of instances that are inactive.",
           "format": "int64",
           "type": "string"
         },
-        "noAgentDetectedInstanceCount": {
-          "type": "string",
+        "prePatchStepInstanceCount": {
           "format": "int64",
-          "description": "Number of instances that do not appear to be running the agent. Check to ensure that the agent is installed, running, and able to communicate with the service."
+          "type": "string",
+          "description": "Number of instances that are running the pre-patch step."
         },
-        "timedOutInstanceCount": {
+        "notifiedInstanceCount": {
           "type": "string",
-          "format": "int64",
-          "description": "Number of instances that exceeded the time out while applying the patch."
+          "description": "Number of instances notified about patch job.",
+          "format": "int64"
         }
-      }
+      },
+      "type": "object",
+      "description": "A summary of the current patch state across all instances that this patch job affects. Contains counts of instances in different states. These states map to `InstancePatchState`. List patch job instance details to see the specific states of each instance."
     },
-    "PatchJob": {
+    "GcsObject": {
+      "id": "GcsObject",
+      "description": "Cloud Storage object representation.",
       "properties": {
-        "createTime": {
-          "format": "google-datetime",
-          "type": "string",
-          "description": "Time this patch job was created."
+        "generationNumber": {
+          "description": "Required. Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.",
+          "format": "int64",
+          "type": "string"
         },
-        "displayName": {
+        "bucket": {
           "type": "string",
-          "description": "Display name for this patch job. This is not a unique identifier."
+          "description": "Required. Bucket of the Cloud Storage object."
+        },
+        "object": {
+          "type": "string",
+          "description": "Required. Name of the Cloud Storage object."
+        }
+      },
+      "type": "object"
+    },
+    "PatchRollout": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "MODE_UNSPECIFIED",
+            "ZONE_BY_ZONE",
+            "CONCURRENT_ZONES"
+          ],
+          "enumDescriptions": [
+            "Mode must be specified.",
+            "Patches are applied one zone at a time. The patch job begins in the region with the lowest number of targeted VMs. Within the region, patching begins in the zone with the lowest number of targeted VMs. If multiple regions (or zones within a region) have the same number of targeted VMs, a tie-breaker is achieved by sorting the regions or zones in alphabetical order.",
+            "Patches are applied to VMs in all zones at the same time."
+          ],
+          "description": "Mode of the patch rollout.",
+          "type": "string"
+        },
+        "disruptionBudget": {
+          "description": "The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of `10`, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.",
+          "$ref": "FixedOrPercent"
+        }
+      },
+      "id": "PatchRollout",
+      "description": "Patch rollout configuration specifications. Contains details on the concurrency control when applying patch(es) to all targeted VMs."
+    },
+    "PatchConfig": {
+      "description": "Patch configuration specifications. Contains details on how to apply the patch(es) to a VM instance.",
+      "id": "PatchConfig",
+      "properties": {
+        "zypper": {
+          "$ref": "ZypperSettings",
+          "description": "Zypper update settings. Use this setting to override the default `zypper` patch rules."
+        },
+        "apt": {
+          "$ref": "AptSettings",
+          "description": "Apt update settings. Use this setting to override the default `apt` patch rules."
+        },
+        "preStep": {
+          "$ref": "ExecStep",
+          "description": "The `ExecStep` to run before the patch update."
+        },
+        "windowsUpdate": {
+          "$ref": "WindowsUpdateSettings",
+          "description": "Windows update settings. Use this override the default windows patch rules."
+        },
+        "yum": {
+          "$ref": "YumSettings",
+          "description": "Yum update settings. Use this setting to override the default `yum` patch rules."
+        },
+        "goo": {
+          "description": "Goo update settings. Use this setting to override the default `goo` patch rules.",
+          "$ref": "GooSettings"
+        },
+        "postStep": {
+          "description": "The `ExecStep` to run after the patch update.",
+          "$ref": "ExecStep"
+        },
+        "rebootConfig": {
+          "enumDescriptions": [
+            "The default behavior is DEFAULT.",
+            "The agent decides if a reboot is necessary by checking signals such as registry keys on Windows or `/var/run/reboot-required` on APT based systems. On RPM based systems, a set of core system package install times are compared with system boot time.",
+            "Always reboot the machine after the update completes.",
+            "Never reboot the machine after the update completes."
+          ],
+          "description": "Post-patch reboot settings.",
+          "type": "string",
+          "enum": [
+            "REBOOT_CONFIG_UNSPECIFIED",
+            "DEFAULT",
+            "ALWAYS",
+            "NEVER"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "PatchJobInstanceDetails": {
+      "properties": {
+        "state": {
+          "type": "string",
+          "description": "Current state of instance patch.",
+          "enum": [
+            "PATCH_STATE_UNSPECIFIED",
+            "PENDING",
+            "INACTIVE",
+            "NOTIFIED",
+            "STARTED",
+            "DOWNLOADING_PATCHES",
+            "APPLYING_PATCHES",
+            "REBOOTING",
+            "SUCCEEDED",
+            "SUCCEEDED_REBOOT_REQUIRED",
+            "FAILED",
+            "ACKED",
+            "TIMED_OUT",
+            "RUNNING_PRE_PATCH_STEP",
+            "RUNNING_POST_PATCH_STEP",
+            "NO_AGENT_DETECTED"
+          ],
+          "enumDescriptions": [
+            "Unspecified.",
+            "The instance is not yet notified.",
+            "Instance is inactive and cannot be patched.",
+            "The instance is notified that it should be patched.",
+            "The instance has started the patching process.",
+            "The instance is downloading patches.",
+            "The instance is applying patches.",
+            "The instance is rebooting.",
+            "The instance has completed applying patches.",
+            "The instance has completed applying patches but a reboot is required.",
+            "The instance has failed to apply the patch.",
+            "The instance acked the notification and will start shortly.",
+            "The instance exceeded the time out while applying the patch.",
+            "The instance is running the pre-patch step.",
+            "The instance is running the post-patch step.",
+            "The service could not detect the presence of the agent. Check to ensure that the agent is installed, running, and able to communicate with the service."
+          ]
+        },
+        "failureReason": {
+          "type": "string",
+          "description": "If the patch fails, this field provides the reason."
+        },
+        "instanceSystemId": {
+          "type": "string",
+          "description": "The unique identifier for the instance. This identifier is defined by the server."
+        },
+        "attemptCount": {
+          "type": "string",
+          "description": "The number of times the agent that the agent attempts to apply the patch.",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string",
+          "description": "The instance name in the form `projects/*/zones/*/instances/*`"
+        }
+      },
+      "description": "Patch details for a VM instance. For more information about reviewing VM instance details, see [Listing all VM instance details for a specific patch job](https://cloud.google.com/compute/docs/os-patch-management/manage-patch-jobs#list-instance-details).",
+      "type": "object",
+      "id": "PatchJobInstanceDetails"
+    },
+    "PatchDeployment": {
+      "description": "Patch deployments are configurations that individual patch jobs use to complete a patch. These configurations include instance filter, package repository settings, and a schedule. For more information about creating and managing patch deployments, see [Scheduling patch jobs](https://cloud.google.com/compute/docs/os-patch-management/schedule-patch-jobs).",
+      "type": "object",
+      "properties": {
+        "recurringSchedule": {
+          "description": "Required. Schedule recurring executions.",
+          "$ref": "RecurringSchedule"
+        },
+        "rollout": {
+          "description": "Optional. Rollout strategy of the patch job.",
+          "$ref": "PatchRollout"
+        },
+        "instanceFilter": {
+          "$ref": "PatchInstanceFilter",
+          "description": "Required. VM instances to patch."
+        },
+        "lastExecuteTime": {
+          "type": "string",
+          "description": "Output only. The last time a patch job was started by this deployment. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.",
+          "format": "google-datetime",
+          "readOnly": true
+        },
+        "description": {
+          "type": "string",
+          "description": "Optional. Description of the patch deployment. Length of the description is limited to 1024 characters."
         },
         "updateTime": {
           "format": "google-datetime",
           "type": "string",
-          "description": "Last time this patch job was updated."
+          "readOnly": true,
+          "description": "Output only. Time the patch deployment was last updated. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format."
         },
-        "duration": {
-          "description": "Duration of the patch job. After the duration ends, the patch job times out.",
-          "type": "string",
-          "format": "google-duration"
-        },
-        "dryRun": {
-          "description": "If this patch job is a dry run, the agent reports that it has finished without running any updates on the VM instance.",
-          "type": "boolean"
-        },
-        "errorMessage": {
-          "type": "string",
-          "description": "If this patch job failed, this message provides information about the failure."
-        },
-        "state": {
-          "type": "string",
-          "description": "The current state of the PatchJob.",
-          "enumDescriptions": [
-            "State must be specified.",
-            "The patch job was successfully initiated.",
-            "The patch job is looking up instances to run the patch on.",
-            "Instances are being patched.",
-            "Patch job completed successfully.",
-            "Patch job completed but there were errors.",
-            "The patch job was canceled.",
-            "The patch job timed out."
-          ],
-          "enum": [
-            "STATE_UNSPECIFIED",
-            "STARTED",
-            "INSTANCE_LOOKUP",
-            "PATCHING",
-            "SUCCEEDED",
-            "COMPLETED_WITH_ERRORS",
-            "CANCELED",
-            "TIMED_OUT"
-          ]
-        },
-        "instanceFilter": {
-          "description": "Instances to patch.",
-          "$ref": "PatchInstanceFilter"
-        },
-        "rollout": {
-          "$ref": "PatchRollout",
-          "description": "Rollout strategy being applied."
+        "oneTimeSchedule": {
+          "$ref": "OneTimeSchedule",
+          "description": "Required. Schedule a one-time execution."
         },
         "name": {
           "type": "string",
-          "description": "Unique identifier for this patch job in the form `projects/*/patchJobs/*`"
+          "description": "Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment."
         },
+        "createTime": {
+          "format": "google-datetime",
+          "readOnly": true,
+          "description": "Output only. Time the patch deployment was created. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.",
+          "type": "string"
+        },
+        "duration": {
+          "format": "google-duration",
+          "type": "string",
+          "description": "Optional. Duration of the patch. After the duration ends, the patch times out."
+        },
+        "patchConfig": {
+          "description": "Optional. Patch configuration that is applied.",
+          "$ref": "PatchConfig"
+        }
+      },
+      "id": "PatchDeployment"
+    },
+    "ExecutePatchJobRequest": {
+      "properties": {
         "description": {
           "description": "Description of the patch job. Length of the description is limited to 1024 characters.",
           "type": "string"
         },
-        "instanceDetailsSummary": {
-          "description": "Summary of instance details.",
-          "$ref": "PatchJobInstanceDetailsSummary"
+        "dryRun": {
+          "type": "boolean",
+          "description": "If this patch is a dry-run only, instances are contacted but will do nothing."
         },
         "patchConfig": {
           "$ref": "PatchConfig",
-          "description": "Patch configuration being applied."
+          "description": "Patch configuration being applied. If omitted, instances are patched using the default configurations."
         },
-        "patchDeployment": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. Name of the patch deployment that created this patch job."
+        "rollout": {
+          "$ref": "PatchRollout",
+          "description": "Rollout strategy of the patch job."
         },
-        "percentComplete": {
-          "type": "number",
-          "description": "Reflects the overall progress of the patch job in the range of 0.0 being no progress to 100.0 being complete.",
-          "format": "double"
+        "duration": {
+          "format": "google-duration",
+          "description": "Duration of the patch job. After the duration ends, the patch job times out.",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "Display name for this patch job. This does not have to be unique.",
+          "type": "string"
+        },
+        "instanceFilter": {
+          "$ref": "PatchInstanceFilter",
+          "description": "Required. Instances to patch, either explicitly or filtered by some criteria such as zone or labels."
         }
       },
-      "description": "A high level representation of a patch job that is either in progress or has completed. Instance details are not included in the job. To paginate through instance details, use ListPatchJobInstanceDetails. For more information about patch jobs, see [Creating patch jobs](https://cloud.google.com/compute/docs/os-patch-management/create-patch-job).",
-      "type": "object",
-      "id": "PatchJob"
+      "id": "ExecutePatchJobRequest",
+      "description": "A request message to initiate patching across Compute Engine instances.",
+      "type": "object"
+    },
+    "YumSettings": {
+      "properties": {
+        "security": {
+          "description": "Adds the `--security` flag to `yum update`. Not supported on all platforms.",
+          "type": "boolean"
+        },
+        "excludes": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag."
+        },
+        "exclusivePackages": {
+          "items": {
+            "type": "string"
+          },
+          "description": "An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.",
+          "type": "array"
+        },
+        "minimal": {
+          "description": "Will cause patch to run `yum update-minimal` instead.",
+          "type": "boolean"
+        }
+      },
+      "description": "Yum patching is performed by executing `yum update`. Additional options can be set to control how this is executed. Note that not all settings are supported on all platforms.",
+      "id": "YumSettings",
+      "type": "object"
     }
   },
+  "version": "v1",
   "rootUrl": "https://osconfig.googleapis.com/",
-  "ownerName": "Google",
-  "kind": "discovery#restDescription",
-  "id": "osconfig:v1",
-  "title": "Cloud OS Config API",
   "icons": {
     "x32": "http://www.google.com/images/icons/product/search-32.gif",
     "x16": "http://www.google.com/images/icons/product/search-16.gif"
   },
-  "version": "v1"
+  "kind": "discovery#restDescription",
+  "discoveryVersion": "v1",
+  "ownerName": "Google",
+  "baseUrl": "https://osconfig.googleapis.com/",
+  "id": "osconfig:v1",
+  "title": "OS Config API",
+  "description": "OS management tools that can be used for patch management, patch compliance, and configuration management on VM instances.",
+  "parameters": {
+    "upload_protocol": {
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "location": "query",
+      "type": "string"
+    },
+    "key": {
+      "type": "string",
+      "location": "query",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."
+    },
+    "uploadType": {
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
+      "location": "query",
+      "type": "string"
+    },
+    "callback": {
+      "description": "JSONP",
+      "type": "string",
+      "location": "query"
+    },
+    "quotaUser": {
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "type": "string",
+      "location": "query"
+    },
+    "access_token": {
+      "type": "string",
+      "description": "OAuth access token.",
+      "location": "query"
+    },
+    "$.xgafv": {
+      "type": "string",
+      "enumDescriptions": [
+        "v1 error format",
+        "v2 error format"
+      ],
+      "description": "V1 error format.",
+      "enum": [
+        "1",
+        "2"
+      ],
+      "location": "query"
+    },
+    "fields": {
+      "location": "query",
+      "type": "string",
+      "description": "Selector specifying which fields to include in a partial response."
+    },
+    "oauth_token": {
+      "location": "query",
+      "description": "OAuth 2.0 token for the current user.",
+      "type": "string"
+    },
+    "prettyPrint": {
+      "default": "true",
+      "description": "Returns response with indentations and line breaks.",
+      "location": "query",
+      "type": "boolean"
+    },
+    "alt": {
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ],
+      "description": "Data format for response.",
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ],
+      "location": "query",
+      "type": "string",
+      "default": "json"
+    }
+  },
+  "servicePath": "",
+  "auth": {
+    "oauth2": {
+      "scopes": {
+        "https://www.googleapis.com/auth/cloud-platform": {
+          "description": "View and manage your data across Google Cloud Platform services"
+        }
+      }
+    }
+  },
+  "resources": {
+    "projects": {
+      "resources": {
+        "patchDeployments": {
+          "methods": {
+            "list": {
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1/projects/{projectsId}/patchDeployments",
+              "description": "Get a page of OS Config patch deployments.",
+              "parameters": {
+                "parent": {
+                  "type": "string",
+                  "pattern": "^projects/[^/]+$",
+                  "description": "Required. The resource name of the parent in the form `projects/*`.",
+                  "required": true,
+                  "location": "path"
+                },
+                "pageToken": {
+                  "description": "Optional. A pagination token returned from a previous call to ListPatchDeployments that indicates where this listing should continue from.",
+                  "location": "query",
+                  "type": "string"
+                },
+                "pageSize": {
+                  "description": "Optional. The maximum number of patch deployments to return. Default is 100.",
+                  "location": "query",
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "path": "v1/{+parent}/patchDeployments",
+              "id": "osconfig.projects.patchDeployments.list",
+              "httpMethod": "GET",
+              "response": {
+                "$ref": "ListPatchDeploymentsResponse"
+              },
+              "parameterOrder": [
+                "parent"
+              ]
+            },
+            "create": {
+              "description": "Create an OS Config patch deployment.",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "id": "osconfig.projects.patchDeployments.create",
+              "response": {
+                "$ref": "PatchDeployment"
+              },
+              "parameters": {
+                "patchDeploymentId": {
+                  "description": "Required. A name for the patch deployment in the project. When creating a name the following rules apply: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.",
+                  "type": "string",
+                  "location": "query"
+                },
+                "parent": {
+                  "required": true,
+                  "pattern": "^projects/[^/]+$",
+                  "description": "Required. The project to apply this patch deployment to in the form `projects/*`.",
+                  "type": "string",
+                  "location": "path"
+                }
+              },
+              "parameterOrder": [
+                "parent"
+              ],
+              "request": {
+                "$ref": "PatchDeployment"
+              },
+              "flatPath": "v1/projects/{projectsId}/patchDeployments",
+              "path": "v1/{+parent}/patchDeployments",
+              "httpMethod": "POST"
+            },
+            "delete": {
+              "response": {
+                "$ref": "Empty"
+              },
+              "description": "Delete an OS Config patch deployment.",
+              "id": "osconfig.projects.patchDeployments.delete",
+              "httpMethod": "DELETE",
+              "parameterOrder": [
+                "name"
+              ],
+              "path": "v1/{+name}",
+              "flatPath": "v1/projects/{projectsId}/patchDeployments/{patchDeploymentsId}",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "parameters": {
+                "name": {
+                  "type": "string",
+                  "location": "path",
+                  "description": "Required. The resource name of the patch deployment in the form `projects/*/patchDeployments/*`.",
+                  "required": true,
+                  "pattern": "^projects/[^/]+/patchDeployments/[^/]+$"
+                }
+              }
+            },
+            "get": {
+              "response": {
+                "$ref": "PatchDeployment"
+              },
+              "id": "osconfig.projects.patchDeployments.get",
+              "parameters": {
+                "name": {
+                  "pattern": "^projects/[^/]+/patchDeployments/[^/]+$",
+                  "description": "Required. The resource name of the patch deployment in the form `projects/*/patchDeployments/*`.",
+                  "location": "path",
+                  "type": "string",
+                  "required": true
+                }
+              },
+              "description": "Get an OS Config patch deployment.",
+              "parameterOrder": [
+                "name"
+              ],
+              "path": "v1/{+name}",
+              "flatPath": "v1/projects/{projectsId}/patchDeployments/{patchDeploymentsId}",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "httpMethod": "GET"
+            }
+          }
+        },
+        "patchJobs": {
+          "resources": {
+            "instanceDetails": {
+              "methods": {
+                "list": {
+                  "id": "osconfig.projects.patchJobs.instanceDetails.list",
+                  "httpMethod": "GET",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "response": {
+                    "$ref": "ListPatchJobInstanceDetailsResponse"
+                  },
+                  "description": "Get a list of instance details for a given patch job.",
+                  "flatPath": "v1/projects/{projectsId}/patchJobs/{patchJobsId}/instanceDetails",
+                  "parameters": {
+                    "parent": {
+                      "description": "Required. The parent for the instances are in the form of `projects/*/patchJobs/*`.",
+                      "location": "path",
+                      "required": true,
+                      "type": "string",
+                      "pattern": "^projects/[^/]+/patchJobs/[^/]+$"
+                    },
+                    "filter": {
+                      "location": "query",
+                      "type": "string",
+                      "description": "A filter expression that filters results listed in the response. This field supports filtering results by instance zone, name, state, or `failure_reason`."
+                    },
+                    "pageSize": {
+                      "type": "integer",
+                      "description": "The maximum number of instance details records to return. Default is 100.",
+                      "format": "int32",
+                      "location": "query"
+                    },
+                    "pageToken": {
+                      "description": "A pagination token returned from a previous call that indicates where this listing should continue from.",
+                      "location": "query",
+                      "type": "string"
+                    }
+                  },
+                  "path": "v1/{+parent}/instanceDetails",
+                  "parameterOrder": [
+                    "parent"
+                  ]
+                }
+              }
+            }
+          },
+          "methods": {
+            "list": {
+              "flatPath": "v1/projects/{projectsId}/patchJobs",
+              "response": {
+                "$ref": "ListPatchJobsResponse"
+              },
+              "description": "Get a list of patch jobs.",
+              "id": "osconfig.projects.patchJobs.list",
+              "path": "v1/{+parent}/patchJobs",
+              "parameterOrder": [
+                "parent"
+              ],
+              "httpMethod": "GET",
+              "parameters": {
+                "pageToken": {
+                  "type": "string",
+                  "description": "A pagination token returned from a previous call that indicates where this listing should continue from.",
+                  "location": "query"
+                },
+                "filter": {
+                  "description": "If provided, this field specifies the criteria that must be met by patch jobs to be included in the response. Currently, filtering is only available on the patch_deployment field.",
+                  "location": "query",
+                  "type": "string"
+                },
+                "parent": {
+                  "pattern": "^projects/[^/]+$",
+                  "location": "path",
+                  "required": true,
+                  "description": "Required. In the form of `projects/*`",
+                  "type": "string"
+                },
+                "pageSize": {
+                  "type": "integer",
+                  "location": "query",
+                  "description": "The maximum number of instance status to return.",
+                  "format": "int32"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ]
+            },
+            "execute": {
+              "flatPath": "v1/projects/{projectsId}/patchJobs:execute",
+              "parameterOrder": [
+                "parent"
+              ],
+              "httpMethod": "POST",
+              "response": {
+                "$ref": "PatchJob"
+              },
+              "id": "osconfig.projects.patchJobs.execute",
+              "description": "Patch VM instances by creating and running a patch job.",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "parameters": {
+                "parent": {
+                  "required": true,
+                  "location": "path",
+                  "pattern": "^projects/[^/]+$",
+                  "type": "string",
+                  "description": "Required. The project in which to run this patch in the form `projects/*`"
+                }
+              },
+              "path": "v1/{+parent}/patchJobs:execute",
+              "request": {
+                "$ref": "ExecutePatchJobRequest"
+              }
+            },
+            "cancel": {
+              "httpMethod": "POST",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "description": "Cancel a patch job. The patch job must be active. Canceled patch jobs cannot be restarted.",
+              "parameters": {
+                "name": {
+                  "description": "Required. Name of the patch in the form `projects/*/patchJobs/*`",
+                  "location": "path",
+                  "pattern": "^projects/[^/]+/patchJobs/[^/]+$",
+                  "required": true,
+                  "type": "string"
+                }
+              },
+              "id": "osconfig.projects.patchJobs.cancel",
+              "response": {
+                "$ref": "PatchJob"
+              },
+              "flatPath": "v1/projects/{projectsId}/patchJobs/{patchJobsId}:cancel",
+              "parameterOrder": [
+                "name"
+              ],
+              "request": {
+                "$ref": "CancelPatchJobRequest"
+              },
+              "path": "v1/{+name}:cancel"
+            },
+            "get": {
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "httpMethod": "GET",
+              "description": "Get the patch job. This can be used to track the progress of an ongoing patch job or review the details of completed jobs.",
+              "path": "v1/{+name}",
+              "id": "osconfig.projects.patchJobs.get",
+              "response": {
+                "$ref": "PatchJob"
+              },
+              "flatPath": "v1/projects/{projectsId}/patchJobs/{patchJobsId}",
+              "parameterOrder": [
+                "name"
+              ],
+              "parameters": {
+                "name": {
+                  "pattern": "^projects/[^/]+/patchJobs/[^/]+$",
+                  "type": "string",
+                  "location": "path",
+                  "required": true,
+                  "description": "Required. Name of the patch in the form `projects/*/patchJobs/*`"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "protocol": "rest",
+  "batchPath": "batch",
+  "fullyEncodeReservedExpansion": true,
+  "mtlsRootUrl": "https://osconfig.mtls.googleapis.com/",
+  "ownerDomain": "google.com",
+  "documentationLink": "https://cloud.google.com/compute/docs/manage-os",
+  "name": "osconfig",
+  "revision": "20200930"
 }

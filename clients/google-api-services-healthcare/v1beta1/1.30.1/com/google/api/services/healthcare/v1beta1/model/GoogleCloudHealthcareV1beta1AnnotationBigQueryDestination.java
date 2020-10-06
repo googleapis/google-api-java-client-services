@@ -30,9 +30,9 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * If the destination table already exists and this flag is `TRUE`, the table is overwritten by
-   * the contents of the input store. If the flag is not set and the destination table already
-   * exists, the export call returns an error.
+   * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is
+   * ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
+   * equivalent to write_disposition=WRITE_TRUNCATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +54,17 @@ public final class GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination ext
   private java.lang.String tableUri;
 
   /**
-   * If the destination table already exists and this flag is `TRUE`, the table is overwritten by
-   * the contents of the input store. If the flag is not set and the destination table already
-   * exists, the export call returns an error.
+   * Determines whether existing tables in the destination dataset are overwritten or appended to.
+   * If a write_disposition is specified, the `force` parameter is ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String writeDisposition;
+
+  /**
+   * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is
+   * ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
+   * equivalent to write_disposition=WRITE_TRUNCATE.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForce() {
@@ -64,9 +72,9 @@ public final class GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination ext
   }
 
   /**
-   * If the destination table already exists and this flag is `TRUE`, the table is overwritten by
-   * the contents of the input store. If the flag is not set and the destination table already
-   * exists, the export call returns an error.
+   * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is
+   * ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
+   * equivalent to write_disposition=WRITE_TRUNCATE.
    * @param force force or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination setForce(java.lang.Boolean force) {
@@ -107,6 +115,25 @@ public final class GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination ext
    */
   public GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination setTableUri(java.lang.String tableUri) {
     this.tableUri = tableUri;
+    return this;
+  }
+
+  /**
+   * Determines whether existing tables in the destination dataset are overwritten or appended to.
+   * If a write_disposition is specified, the `force` parameter is ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWriteDisposition() {
+    return writeDisposition;
+  }
+
+  /**
+   * Determines whether existing tables in the destination dataset are overwritten or appended to.
+   * If a write_disposition is specified, the `force` parameter is ignored.
+   * @param writeDisposition writeDisposition or {@code null} for none
+   */
+  public GoogleCloudHealthcareV1beta1AnnotationBigQueryDestination setWriteDisposition(java.lang.String writeDisposition) {
+    this.writeDisposition = writeDisposition;
     return this;
   }
 

@@ -38,15 +38,6 @@ public final class ImportAnnotationsRequest extends com.google.api.client.json.G
   private GoogleCloudHealthcareV1beta1AnnotationGcsSource gcsSource;
 
   /**
-   * The name of the Annotation store to which the server imports annotations, in the format `projec
-   * ts/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_stor
-   * e_id}`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1AnnotationGcsSource getGcsSource() {
@@ -58,27 +49,6 @@ public final class ImportAnnotationsRequest extends com.google.api.client.json.G
    */
   public ImportAnnotationsRequest setGcsSource(GoogleCloudHealthcareV1beta1AnnotationGcsSource gcsSource) {
     this.gcsSource = gcsSource;
-    return this;
-  }
-
-  /**
-   * The name of the Annotation store to which the server imports annotations, in the format `projec
-   * ts/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_stor
-   * e_id}`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * The name of the Annotation store to which the server imports annotations, in the format `projec
-   * ts/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_stor
-   * e_id}`.
-   * @param name name or {@code null} for none
-   */
-  public ImportAnnotationsRequest setName(java.lang.String name) {
-    this.name = name;
     return this;
   }
 

@@ -46,7 +46,7 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudHealthcareV1beta1FhirRestGcsDestination gcsDestination;
+  private GoogleCloudHealthcareV1beta1FhirGcsDestination gcsDestination;
 
   /**
    * The BigQuery output destination. The BigQuery location requires two IAM roles:
@@ -76,7 +76,7 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    * JSON, and each line is a FHIR resource.
    * @return value or {@code null} for none
    */
-  public GoogleCloudHealthcareV1beta1FhirRestGcsDestination getGcsDestination() {
+  public GoogleCloudHealthcareV1beta1FhirGcsDestination getGcsDestination() {
     return gcsDestination;
   }
 
@@ -87,7 +87,7 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    * JSON, and each line is a FHIR resource.
    * @param gcsDestination gcsDestination or {@code null} for none
    */
-  public ExportResourcesRequest setGcsDestination(GoogleCloudHealthcareV1beta1FhirRestGcsDestination gcsDestination) {
+  public ExportResourcesRequest setGcsDestination(GoogleCloudHealthcareV1beta1FhirGcsDestination gcsDestination) {
     this.gcsDestination = gcsDestination;
     return this;
   }

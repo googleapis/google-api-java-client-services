@@ -72,14 +72,6 @@ public final class EvaluateAnnotationStoreRequest extends com.google.api.client.
   private InfoTypeConfig infoTypeConfig;
 
   /**
-   * The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}
-   * /locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
    * The BigQuery table where the server writes the output. BigQueryDestination requires the
    * `roles/bigquery.dataEditor` and `roles/bigquery.jobUser` Cloud IAM roles.
    * @return value or {@code null} for none
@@ -175,25 +167,6 @@ public final class EvaluateAnnotationStoreRequest extends com.google.api.client.
    */
   public EvaluateAnnotationStoreRequest setInfoTypeConfig(InfoTypeConfig infoTypeConfig) {
     this.infoTypeConfig = infoTypeConfig;
-    return this;
-  }
-
-  /**
-   * The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}
-   * /locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}
-   * /locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
-   * @param name name or {@code null} for none
-   */
-  public EvaluateAnnotationStoreRequest setName(java.lang.String name) {
-    this.name = name;
     return this;
   }
 

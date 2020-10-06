@@ -2247,22 +2247,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Evaluate#execute()} method to invoke the remote operation.
            *
-           * @param evalStore The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}/loca
+           * @param name The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}/loca
            *        tions/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest}
            * @return the request
            */
-          public Evaluate evaluate(java.lang.String evalStore, com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest content) throws java.io.IOException {
-            Evaluate result = new Evaluate(evalStore, content);
+          public Evaluate evaluate(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest content) throws java.io.IOException {
+            Evaluate result = new Evaluate(name, content);
             initialize(result);
             return result;
           }
 
           public class Evaluate extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
 
-            private static final String REST_PATH = "v1beta1/{+evalStore}:evaluate";
+            private static final String REST_PATH = "v1beta1/{+name}:evaluate";
 
-            private final java.util.regex.Pattern EVAL_STORE_PATTERN =
+            private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
 
             /**
@@ -2279,17 +2279,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Evaluate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param evalStore The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}/loca
+             * @param name The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}/loca
            *        tions/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest}
              * @since 1.13
              */
-            protected Evaluate(java.lang.String evalStore, com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest content) {
+            protected Evaluate(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest content) {
               super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
-              this.evalStore = com.google.api.client.util.Preconditions.checkNotNull(evalStore, "Required parameter evalStore must be specified.");
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(EVAL_STORE_PATTERN.matcher(evalStore).matches(),
-                    "Parameter evalStore must conform to the pattern " +
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
                     "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
               }
             }
@@ -2355,13 +2355,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * _store_id}`.
              */
             @com.google.api.client.util.Key
-            private java.lang.String evalStore;
+            private java.lang.String name;
 
             /** The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}/loc
            ations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
              */
-            public java.lang.String getEvalStore() {
-              return evalStore;
+            public java.lang.String getName() {
+              return name;
             }
 
             /**
@@ -2369,13 +2369,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation
              * _store_id}`.
              */
-            public Evaluate setEvalStore(java.lang.String evalStore) {
+            public Evaluate setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(EVAL_STORE_PATTERN.matcher(evalStore).matches(),
-                    "Parameter evalStore must conform to the pattern " +
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
                     "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
               }
-              this.evalStore = evalStore;
+              this.name = name;
               return this;
             }
 
@@ -2395,22 +2395,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param annotationStore The name of the Annotation store to export annotations to, in the format of `projects/{project_id}/l
+           * @param name The name of the Annotation store to export annotations to, in the format of `projects/{project_id}/l
            *        ocations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest}
            * @return the request
            */
-          public Export export(java.lang.String annotationStore, com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest content) throws java.io.IOException {
-            Export result = new Export(annotationStore, content);
+          public Export export(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest content) throws java.io.IOException {
+            Export result = new Export(name, content);
             initialize(result);
             return result;
           }
 
           public class Export extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
 
-            private static final String REST_PATH = "v1beta1/{+annotationStore}:export";
+            private static final String REST_PATH = "v1beta1/{+name}:export";
 
-            private final java.util.regex.Pattern ANNOTATION_STORE_PATTERN =
+            private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
 
             /**
@@ -2427,17 +2427,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param annotationStore The name of the Annotation store to export annotations to, in the format of `projects/{project_id}/l
+             * @param name The name of the Annotation store to export annotations to, in the format of `projects/{project_id}/l
            *        ocations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest}
              * @since 1.13
              */
-            protected Export(java.lang.String annotationStore, com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest content) {
+            protected Export(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest content) {
               super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
-              this.annotationStore = com.google.api.client.util.Preconditions.checkNotNull(annotationStore, "Required parameter annotationStore must be specified.");
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(ANNOTATION_STORE_PATTERN.matcher(annotationStore).matches(),
-                    "Parameter annotationStore must conform to the pattern " +
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
                     "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
               }
             }
@@ -2503,13 +2503,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * ion_store_id}`.
              */
             @com.google.api.client.util.Key
-            private java.lang.String annotationStore;
+            private java.lang.String name;
 
             /** The name of the Annotation store to export annotations to, in the format of `projects/{project_id}/
            locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
              */
-            public java.lang.String getAnnotationStore() {
-              return annotationStore;
+            public java.lang.String getName() {
+              return name;
             }
 
             /**
@@ -2517,13 +2517,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * /{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotat
              * ion_store_id}`.
              */
-            public Export setAnnotationStore(java.lang.String annotationStore) {
+            public Export setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(ANNOTATION_STORE_PATTERN.matcher(annotationStore).matches(),
-                    "Parameter annotationStore must conform to the pattern " +
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
                     "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
               }
-              this.annotationStore = annotationStore;
+              this.name = name;
               return this;
             }
 
@@ -2867,23 +2867,23 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the remote
            * operation.
            *
-           * @param annotationStore The name of the Annotation store to which the server imports annotations, in the format `projects/{p
+           * @param name The name of the Annotation store to which the server imports annotations, in the format `projects/{p
            *        roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_stor
            *        e_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest}
            * @return the request
            */
-          public CloudHealthcareImport healthcareImport(java.lang.String annotationStore, com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest content) throws java.io.IOException {
-            CloudHealthcareImport result = new CloudHealthcareImport(annotationStore, content);
+          public CloudHealthcareImport healthcareImport(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest content) throws java.io.IOException {
+            CloudHealthcareImport result = new CloudHealthcareImport(name, content);
             initialize(result);
             return result;
           }
 
           public class CloudHealthcareImport extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
 
-            private static final String REST_PATH = "v1beta1/{+annotationStore}:import";
+            private static final String REST_PATH = "v1beta1/{+name}:import";
 
-            private final java.util.regex.Pattern ANNOTATION_STORE_PATTERN =
+            private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
 
             /**
@@ -2901,18 +2901,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param annotationStore The name of the Annotation store to which the server imports annotations, in the format `projects/{p
+             * @param name The name of the Annotation store to which the server imports annotations, in the format `projects/{p
            *        roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_stor
            *        e_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest}
              * @since 1.13
              */
-            protected CloudHealthcareImport(java.lang.String annotationStore, com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest content) {
+            protected CloudHealthcareImport(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest content) {
               super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
-              this.annotationStore = com.google.api.client.util.Preconditions.checkNotNull(annotationStore, "Required parameter annotationStore must be specified.");
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(ANNOTATION_STORE_PATTERN.matcher(annotationStore).matches(),
-                    "Parameter annotationStore must conform to the pattern " +
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
                     "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
               }
             }
@@ -2978,13 +2978,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * nStores/{annotation_store_id}`.
              */
             @com.google.api.client.util.Key
-            private java.lang.String annotationStore;
+            private java.lang.String name;
 
             /** The name of the Annotation store to which the server imports annotations, in the format `projects/{
            project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
              */
-            public java.lang.String getAnnotationStore() {
-              return annotationStore;
+            public java.lang.String getName() {
+              return name;
             }
 
             /**
@@ -2992,13 +2992,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotatio
              * nStores/{annotation_store_id}`.
              */
-            public CloudHealthcareImport setAnnotationStore(java.lang.String annotationStore) {
+            public CloudHealthcareImport setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(ANNOTATION_STORE_PATTERN.matcher(annotationStore).matches(),
-                    "Parameter annotationStore must conform to the pattern " +
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
                     "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
               }
-              this.annotationStore = annotationStore;
+              this.name = name;
               return this;
             }
 
@@ -7026,18 +7026,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * The update mask that applies to the resource. For the `FieldMask` definition, see
                * https://developers.google.com/protocol-
                * buffers/docs/reference/google.protobuf#fieldmask. The `description`,
-               * `possible_values`, `consent_default_values`, and `data_mapping_default_value`
-               * fields are allowed to be updated. The updated `possible_values` must contain all
-               * values from the previous `possible_values`.
+               * `allowed_values`, `consent_default_values`, and `data_mapping_default_value` fields
+               * are allowed to be updated. The updated `allowed_values` must contain all values
+               * from the previous `allowed_values`.
                */
               @com.google.api.client.util.Key
               private String updateMask;
 
               /** The update mask that applies to the resource. For the `FieldMask` definition, see
              https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. The
-             `description`, `possible_values`, `consent_default_values`, and `data_mapping_default_value` fields
-             are allowed to be updated. The updated `possible_values` must contain all values from the previous
-             `possible_values`.
+             `description`, `allowed_values`, `consent_default_values`, and `data_mapping_default_value` fields
+             are allowed to be updated. The updated `allowed_values` must contain all values from the previous
+             `allowed_values`.
                */
               public String getUpdateMask() {
                 return updateMask;
@@ -7047,9 +7047,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * The update mask that applies to the resource. For the `FieldMask` definition, see
                * https://developers.google.com/protocol-
                * buffers/docs/reference/google.protobuf#fieldmask. The `description`,
-               * `possible_values`, `consent_default_values`, and `data_mapping_default_value`
-               * fields are allowed to be updated. The updated `possible_values` must contain all
-               * values from the previous `possible_values`.
+               * `allowed_values`, `consent_default_values`, and `data_mapping_default_value` fields
+               * are allowed to be updated. The updated `allowed_values` must contain all values
+               * from the previous `allowed_values`.
                */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
@@ -8593,14 +8593,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Restricts the consents returned to those matching a filter. Syntax:
                * https://cloud.google.com/appengine/docs/standard/python/search/query_strings The
                * fields available for filtering are: - user_id - consent_artifact - state -
-               * state_change_time
+               * revision_create_time
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** Restricts the consents returned to those matching a filter. Syntax:
              https://cloud.google.com/appengine/docs/standard/python/search/query_strings The fields available
-             for filtering are: - user_id - consent_artifact - state - state_change_time
+             for filtering are: - user_id - consent_artifact - state - revision_create_time
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -8610,7 +8610,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Restricts the consents returned to those matching a filter. Syntax:
                * https://cloud.google.com/appengine/docs/standard/python/search/query_strings The
                * fields available for filtering are: - user_id - consent_artifact - state -
-               * state_change_time
+               * revision_create_time
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -12829,10 +12829,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           public class Studies {
 
             /**
-             * DeleteStudy deletes all instances within the given study. Delete requests are equivalent to the
-             * GET requests specified in the Retrieve transaction. For samples that show how to call
-             * DeleteStudy, see [Deleting a study, series, or instance](https://cloud.google.com/healthcare/docs
-             * /how-tos/dicomweb#deleting_a_study_series_or_instance).
+             * DeleteStudyAsync deletes all instances within the given study using an operation. Delete requests
+             * are equivalent to the GET requests specified in the Retrieve transaction. The method returns an
+             * Operation which will be marked successful when the deletion is complete. Warning: Inserting
+             * instances into a study while a delete operation is running for that study could result in the new
+             * instances not appearing in search results until the deletion operation finishes.
              *
              * Create a request for the method "studies.delete".
              *
@@ -12849,7 +12850,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return result;
             }
 
-            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
 
               private static final String REST_PATH = "v1beta1/{+parent}/dicomWeb/{+dicomWebPath}";
 
@@ -12860,11 +12861,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^studies/[^/]+$");
 
               /**
-               * DeleteStudy deletes all instances within the given study. Delete requests are equivalent to the
-               * GET requests specified in the Retrieve transaction. For samples that show how to call
-               * DeleteStudy, see [Deleting a study, series, or
-               * instance](https://cloud.google.com/healthcare/docs/how-
-               * tos/dicomweb#deleting_a_study_series_or_instance).
+               * DeleteStudyAsync deletes all instances within the given study using an operation. Delete
+               * requests are equivalent to the GET requests specified in the Retrieve transaction. The method
+               * returns an Operation which will be marked successful when the deletion is complete. Warning:
+               * Inserting instances into a study while a delete operation is running for that study could
+               * result in the new instances not appearing in search results until the deletion operation
+               * finishes.
                *
                * Create a request for the method "studies.delete".
                *
@@ -12879,7 +12881,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @since 1.13
                */
               protected Delete(java.lang.String parent, java.lang.String dicomWebPath) {
-                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Operation.class);
                 this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -14018,11 +14020,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             public class Series {
 
               /**
-               * DeleteSeries deletes all instances within the given study and series. Delete requests are
-               * equivalent to the GET requests specified in the Retrieve transaction. For samples that show how
-               * to call DeleteSeries, see [Deleting a study, series, or
-               * instance](https://cloud.google.com/healthcare/docs/how-
-               * tos/dicomweb#deleting_a_study_series_or_instance).
+               * DeleteSeriesAsync deletes all instances within the given study and series using an operation.
+               * Delete requests are equivalent to the GET requests specified in the Retrieve transaction. The
+               * method returns an Operation which will be marked successful when the deletion is complete.
+               * Warning: Inserting instances into a series while a delete operation is running for that series
+               * could result in the new instances not appearing in search results until the deletion operation
+               * finishes.
                *
                * Create a request for the method "series.delete".
                *
@@ -14041,7 +14044,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return result;
               }
 
-              public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+              public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
 
                 private static final String REST_PATH = "v1beta1/{+parent}/dicomWeb/{+dicomWebPath}";
 
@@ -14052,11 +14055,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     java.util.regex.Pattern.compile("^studies/[^/]+/series/[^/]+$");
 
                 /**
-                 * DeleteSeries deletes all instances within the given study and series. Delete requests are
-                 * equivalent to the GET requests specified in the Retrieve transaction. For samples that show how
-                 * to call DeleteSeries, see [Deleting a study, series, or
-                 * instance](https://cloud.google.com/healthcare/docs/how-
-                 * tos/dicomweb#deleting_a_study_series_or_instance).
+                 * DeleteSeriesAsync deletes all instances within the given study and series using an operation.
+                 * Delete requests are equivalent to the GET requests specified in the Retrieve transaction. The
+                 * method returns an Operation which will be marked successful when the deletion is complete.
+                 * Warning: Inserting instances into a series while a delete operation is running for that series
+                 * could result in the new instances not appearing in search results until the deletion operation
+                 * finishes.
                  *
                  * Create a request for the method "series.delete".
                  *
@@ -14073,7 +14077,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @since 1.13
                  */
                 protected Delete(java.lang.String parent, java.lang.String dicomWebPath) {
-                  super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+                  super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Operation.class);
                   this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -16554,9 +16558,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * Export resources from the FHIR store to the specified destination. This method returns an
            * Operation that can be used to track the status of the export by calling GetOperation. Immediate
            * fatal errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing
-           * logs](/healthcare/docs/how-tos/logging)). Otherwise, when the operation finishes, a detailed
-           * response of type ExportResourcesResponse is returned in the response field. The metadata field
-           * type for this operation is OperationMetadata.
+           * error logs in Cloud Logging](/healthcare/docs/how-tos/logging)). Otherwise, when the operation
+           * finishes, a detailed response of type ExportResourcesResponse is returned in the response field.
+           * The metadata field type for this operation is OperationMetadata.
            *
            * Create a request for the method "fhirStores.export".
            *
@@ -16586,9 +16590,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Export resources from the FHIR store to the specified destination. This method returns an
              * Operation that can be used to track the status of the export by calling GetOperation. Immediate
              * fatal errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing
-             * logs](/healthcare/docs/how-tos/logging)). Otherwise, when the operation finishes, a detailed
-             * response of type ExportResourcesResponse is returned in the response field. The metadata field
-             * type for this operation is OperationMetadata.
+             * error logs in Cloud Logging](/healthcare/docs/how-tos/logging)). Otherwise, when the operation
+             * finishes, a detailed response of type ExportResourcesResponse is returned in the response
+             * field. The metadata field type for this operation is OperationMetadata.
              *
              * Create a request for the method "fhirStores.export".
              *
@@ -17036,9 +17040,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * the import of resources with arbitrary interdependencies without considering grouping or
            * ordering, but if the input data contains invalid references or if some resources fail to be
            * imported, the FHIR store might be left in a state that violates referential integrity. The import
-           * process does not trigger Cloud Pub/Sub notification or BigQuery streaming update, regardless of
-           * how those are configured on the FHIR store. If a resource with the specified ID already exists,
-           * the most recent version of the resource is overwritten without creating a new historical version,
+           * process does not trigger Pub/Sub notification or BigQuery streaming update, regardless of how
+           * those are configured on the FHIR store. If a resource with the specified ID already exists, the
+           * most recent version of the resource is overwritten without creating a new historical version,
            * regardless of the disable_resource_versioning setting on the FHIR store. If transient failures
            * occur during the import, it is possible that successfully imported resources will be overwritten
            * more than once. The import operation is idempotent unless the input data contains multiple valid
@@ -17050,19 +17054,20 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * data organized in bundles produced by Patient-everything where each bundle contains its own copy
            * of a resource such as Practitioner that might be referred to by many patients. If some resources
            * fail to import, for example due to parsing errors, successfully imported resources are not rolled
-           * back. The location and format of the input data is specified by the parameters below. Note that
-           * if no format is specified, this method assumes the `BUNDLE` format. When using the `BUNDLE`
-           * format this method ignores the `Bundle.type` field, except that `history` bundles are rejected,
-           * and does not apply any of the bundle processing semantics for batch or transaction bundles.
-           * Unlike in ExecuteBundle, transaction bundles are not executed as a single transaction and bundle-
-           * internal references are not rewritten. The bundle is treated as a collection of resources to be
-           * written as provided in `Bundle.entry.resource`, ignoring `Bundle.entry.request`. As an example,
-           * this allows the import of `searchset` bundles produced by a FHIR search or Patient-everything
-           * operation. This method returns an Operation that can be used to track the status of the import by
-           * calling GetOperation. Immediate fatal errors appear in the error field, errors are also logged to
-           * Cloud Logging (see [Viewing logs](/healthcare/docs/how-tos/logging)). Otherwise, when the
-           * operation finishes, a detailed response of type ImportResourcesResponse is returned in the
-           * response field. The metadata field type for this operation is OperationMetadata.
+           * back. The location and format of the input data are specified by the parameters in
+           * ImportResourcesRequest. Note that if no format is specified, this method assumes the `BUNDLE`
+           * format. When using the `BUNDLE` format this method ignores the `Bundle.type` field, except that
+           * `history` bundles are rejected, and does not apply any of the bundle processing semantics for
+           * batch or transaction bundles. Unlike in ExecuteBundle, transaction bundles are not executed as a
+           * single transaction and bundle-internal references are not rewritten. The bundle is treated as a
+           * collection of resources to be written as provided in `Bundle.entry.resource`, ignoring
+           * `Bundle.entry.request`. As an example, this allows the import of `searchset` bundles produced by
+           * a FHIR search or Patient-everything operation. This method returns an Operation that can be used
+           * to track the status of the import by calling GetOperation. Immediate fatal errors appear in the
+           * error field, errors are also logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how-
+           * tos/logging)). Otherwise, when the operation finishes, a detailed response of type
+           * ImportResourcesResponse is returned in the response field. The metadata field type for this
+           * operation is OperationMetadata.
            *
            * Create a request for the method "fhirStores.import".
            *
@@ -17101,28 +17106,28 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * FHIR store. This allows the import of resources with arbitrary interdependencies without
              * considering grouping or ordering, but if the input data contains invalid references or if some
              * resources fail to be imported, the FHIR store might be left in a state that violates
-             * referential integrity. The import process does not trigger Cloud Pub/Sub notification or
-             * BigQuery streaming update, regardless of how those are configured on the FHIR store. If a
-             * resource with the specified ID already exists, the most recent version of the resource is
-             * overwritten without creating a new historical version, regardless of the
-             * disable_resource_versioning setting on the FHIR store. If transient failures occur during the
-             * import, it is possible that successfully imported resources will be overwritten more than once.
-             * The import operation is idempotent unless the input data contains multiple valid resources with
-             * the same ID but different contents. In that case, after the import completes, the store
-             * contains exactly one resource with that ID but there is no ordering guarantee on which version
-             * of the contents it will have. The operation result counters do not count duplicate IDs as an
-             * error and count one success for each resource in the input, which might result in a success
-             * count larger than the number of resources in the FHIR store. This often occurs when importing
-             * data organized in bundles produced by Patient-everything where each bundle contains its own
-             * copy of a resource such as Practitioner that might be referred to by many patients. If some
-             * resources fail to import, for example due to parsing errors, successfully imported resources
-             * are not rolled back. The location and format of the input data is specified by the parameters
-             * below. Note that if no format is specified, this method assumes the `BUNDLE` format. When using
-             * the `BUNDLE` format this method ignores the `Bundle.type` field, except that `history` bundles
-             * are rejected, and does not apply any of the bundle processing semantics for batch or
-             * transaction bundles. Unlike in ExecuteBundle, transaction bundles are not executed as a single
-             * transaction and bundle-internal references are not rewritten. The bundle is treated as a
-             * collection of resources to be written as provided in `Bundle.entry.resource`, ignoring
+             * referential integrity. The import process does not trigger Pub/Sub notification or BigQuery
+             * streaming update, regardless of how those are configured on the FHIR store. If a resource with
+             * the specified ID already exists, the most recent version of the resource is overwritten without
+             * creating a new historical version, regardless of the disable_resource_versioning setting on the
+             * FHIR store. If transient failures occur during the import, it is possible that successfully
+             * imported resources will be overwritten more than once. The import operation is idempotent
+             * unless the input data contains multiple valid resources with the same ID but different
+             * contents. In that case, after the import completes, the store contains exactly one resource
+             * with that ID but there is no ordering guarantee on which version of the contents it will have.
+             * The operation result counters do not count duplicate IDs as an error and count one success for
+             * each resource in the input, which might result in a success count larger than the number of
+             * resources in the FHIR store. This often occurs when importing data organized in bundles
+             * produced by Patient-everything where each bundle contains its own copy of a resource such as
+             * Practitioner that might be referred to by many patients. If some resources fail to import, for
+             * example due to parsing errors, successfully imported resources are not rolled back. The
+             * location and format of the input data are specified by the parameters in
+             * ImportResourcesRequest. Note that if no format is specified, this method assumes the `BUNDLE`
+             * format. When using the `BUNDLE` format this method ignores the `Bundle.type` field, except that
+             * `history` bundles are rejected, and does not apply any of the bundle processing semantics for
+             * batch or transaction bundles. Unlike in ExecuteBundle, transaction bundles are not executed as
+             * a single transaction and bundle-internal references are not rewritten. The bundle is treated as
+             * a collection of resources to be written as provided in `Bundle.entry.resource`, ignoring
              * `Bundle.entry.request`. As an example, this allows the import of `searchset` bundles produced
              * by a FHIR search or Patient-everything operation. This method returns an Operation that can be
              * used to track the status of the import by calling GetOperation. Immediate fatal errors appear

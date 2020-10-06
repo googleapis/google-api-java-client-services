@@ -39,12 +39,13 @@ public final class ImportResourcesRequest extends com.google.api.client.json.Gen
 
   /**
    * Cloud Storage source data location and import configuration. The Cloud Storage location
-   * requires the `roles/storage.objectViewer` Cloud IAM role. Each Cloud Storage object should be a
-   * text file that contains the format specified in ContentStructure.
+   * requires the `roles/storage.objectViewer` Cloud IAM role. The Healthcare Service Agent Each
+   * Cloud Storage object should be a text file that contains the format specified in
+   * ContentStructure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudHealthcareV1beta1FhirRestGcsSource gcsSource;
+  private GoogleCloudHealthcareV1beta1FhirGcsSource gcsSource;
 
   /**
    * The content structure in the source location. If not specified, the server treats the input
@@ -67,21 +68,23 @@ public final class ImportResourcesRequest extends com.google.api.client.json.Gen
 
   /**
    * Cloud Storage source data location and import configuration. The Cloud Storage location
-   * requires the `roles/storage.objectViewer` Cloud IAM role. Each Cloud Storage object should be a
-   * text file that contains the format specified in ContentStructure.
+   * requires the `roles/storage.objectViewer` Cloud IAM role. The Healthcare Service Agent Each
+   * Cloud Storage object should be a text file that contains the format specified in
+   * ContentStructure.
    * @return value or {@code null} for none
    */
-  public GoogleCloudHealthcareV1beta1FhirRestGcsSource getGcsSource() {
+  public GoogleCloudHealthcareV1beta1FhirGcsSource getGcsSource() {
     return gcsSource;
   }
 
   /**
    * Cloud Storage source data location and import configuration. The Cloud Storage location
-   * requires the `roles/storage.objectViewer` Cloud IAM role. Each Cloud Storage object should be a
-   * text file that contains the format specified in ContentStructure.
+   * requires the `roles/storage.objectViewer` Cloud IAM role. The Healthcare Service Agent Each
+   * Cloud Storage object should be a text file that contains the format specified in
+   * ContentStructure.
    * @param gcsSource gcsSource or {@code null} for none
    */
-  public ImportResourcesRequest setGcsSource(GoogleCloudHealthcareV1beta1FhirRestGcsSource gcsSource) {
+  public ImportResourcesRequest setGcsSource(GoogleCloudHealthcareV1beta1FhirGcsSource gcsSource) {
     this.gcsSource = gcsSource;
     return this;
   }

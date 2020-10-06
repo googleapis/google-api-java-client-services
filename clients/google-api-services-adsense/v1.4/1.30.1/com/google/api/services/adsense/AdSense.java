@@ -531,6 +531,22 @@ public class AdSense extends com.google.api.client.googleapis.services.json.Abst
           return this;
         }
 
+        /** Tag partner to include in the ad code snippet. */
+        @com.google.api.client.util.Key
+        private java.lang.String tagPartner;
+
+        /** Tag partner to include in the ad code snippet.
+         */
+        public java.lang.String getTagPartner() {
+          return tagPartner;
+        }
+
+        /** Tag partner to include in the ad code snippet. */
+        public GetAdCode setTagPartner(java.lang.String tagPartner) {
+          this.tagPartner = tagPartner;
+          return this;
+        }
+
         @Override
         public GetAdCode set(String parameterName, Object value) {
           return (GetAdCode) super.set(parameterName, value);

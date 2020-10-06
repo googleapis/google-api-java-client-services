@@ -64,6 +64,12 @@ public final class TargetingValue extends com.google.api.client.json.GenericJson
   private java.lang.Long longValue;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TargetingValueRequestPlatformTargeting requestPlatformTargetingValue;
+
+  /**
    * The string value to exclude/include.
    * The value may be {@code null}.
    */
@@ -148,6 +154,21 @@ public final class TargetingValue extends com.google.api.client.json.GenericJson
    */
   public TargetingValue setLongValue(java.lang.Long longValue) {
     this.longValue = longValue;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public TargetingValueRequestPlatformTargeting getRequestPlatformTargetingValue() {
+    return requestPlatformTargetingValue;
+  }
+
+  /**
+   * @param requestPlatformTargetingValue requestPlatformTargetingValue or {@code null} for none
+   */
+  public TargetingValue setRequestPlatformTargetingValue(TargetingValueRequestPlatformTargeting requestPlatformTargetingValue) {
+    this.requestPlatformTargetingValue = requestPlatformTargetingValue;
     return this;
   }
 

@@ -30,57 +30,6 @@ package com.google.api.services.healthcare.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class ExportAnnotationsResponse extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The annotation_store used for the export operation, in the format of `projects/{project_id}/loc
-   * ations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String annotationStore;
-
-  /**
-   * The total number of annotations successfully exported.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long successCount;
-
-  /**
-   * The annotation_store used for the export operation, in the format of `projects/{project_id}/loc
-   * ations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAnnotationStore() {
-    return annotationStore;
-  }
-
-  /**
-   * The annotation_store used for the export operation, in the format of `projects/{project_id}/loc
-   * ations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
-   * @param annotationStore annotationStore or {@code null} for none
-   */
-  public ExportAnnotationsResponse setAnnotationStore(java.lang.String annotationStore) {
-    this.annotationStore = annotationStore;
-    return this;
-  }
-
-  /**
-   * The total number of annotations successfully exported.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getSuccessCount() {
-    return successCount;
-  }
-
-  /**
-   * The total number of annotations successfully exported.
-   * @param successCount successCount or {@code null} for none
-   */
-  public ExportAnnotationsResponse setSuccessCount(java.lang.Long successCount) {
-    this.successCount = successCount;
-    return this;
-  }
-
   @Override
   public ExportAnnotationsResponse set(String fieldName, Object value) {
     return (ExportAnnotationsResponse) super.set(fieldName, value);

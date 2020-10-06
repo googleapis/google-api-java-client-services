@@ -30,57 +30,6 @@ package com.google.api.services.healthcare.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class ImportAnnotationsResponse extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The annotation_store that the annotations were imported to, in the format `projects/{project_id
-   * }/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String annotationStore;
-
-  /**
-   * The number of the input annotations. All input have been imported successfully.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long successCount;
-
-  /**
-   * The annotation_store that the annotations were imported to, in the format `projects/{project_id
-   * }/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAnnotationStore() {
-    return annotationStore;
-  }
-
-  /**
-   * The annotation_store that the annotations were imported to, in the format `projects/{project_id
-   * }/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
-   * @param annotationStore annotationStore or {@code null} for none
-   */
-  public ImportAnnotationsResponse setAnnotationStore(java.lang.String annotationStore) {
-    this.annotationStore = annotationStore;
-    return this;
-  }
-
-  /**
-   * The number of the input annotations. All input have been imported successfully.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getSuccessCount() {
-    return successCount;
-  }
-
-  /**
-   * The number of the input annotations. All input have been imported successfully.
-   * @param successCount successCount or {@code null} for none
-   */
-  public ImportAnnotationsResponse setSuccessCount(java.lang.Long successCount) {
-    this.successCount = successCount;
-    return this;
-  }
-
   @Override
   public ImportAnnotationsResponse set(String fieldName, Object value) {
     return (ImportAnnotationsResponse) super.set(fieldName, value);

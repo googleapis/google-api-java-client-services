@@ -17,8 +17,8 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Response for successful Annotation store evaluation operations. This structure is included in the
- * response upon operation completion.
+ * Response when all resources export successfully. This structure is included in the response to
+ * describe the detailed outcome after the operation finishes successfully.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -28,16 +28,16 @@ package com.google.api.services.healthcare.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EvaluateAnnotationStoreResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudHealthcareV1beta1FhirExportResourcesResponse extends com.google.api.client.json.GenericJson {
 
   @Override
-  public EvaluateAnnotationStoreResponse set(String fieldName, Object value) {
-    return (EvaluateAnnotationStoreResponse) super.set(fieldName, value);
+  public GoogleCloudHealthcareV1beta1FhirExportResourcesResponse set(String fieldName, Object value) {
+    return (GoogleCloudHealthcareV1beta1FhirExportResourcesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public EvaluateAnnotationStoreResponse clone() {
-    return (EvaluateAnnotationStoreResponse) super.clone();
+  public GoogleCloudHealthcareV1beta1FhirExportResourcesResponse clone() {
+    return (GoogleCloudHealthcareV1beta1FhirExportResourcesResponse) super.clone();
   }
 
 }

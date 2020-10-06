@@ -38,9 +38,9 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   private java.lang.String datasetUri;
 
   /**
-   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
-   * tables are written. If the flag is not set and the destination dataset contains tables, the
-   * export call returns an error. This option is not used for the streaming export.
+   * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is
+   * ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
+   * equivalent to write_disposition=WRITE_TRUNCATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,6 +52,14 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
    */
   @com.google.api.client.util.Key
   private SchemaConfig schemaConfig;
+
+  /**
+   * Determines whether existing tables in the destination dataset are overwritten or appended to.
+   * If a write_disposition is specified, the `force` parameter is ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String writeDisposition;
 
   /**
    * BigQuery URI to an existing dataset, up to 2000 characters long, in the format
@@ -73,9 +81,9 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   }
 
   /**
-   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
-   * tables are written. If the flag is not set and the destination dataset contains tables, the
-   * export call returns an error. This option is not used for the streaming export.
+   * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is
+   * ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
+   * equivalent to write_disposition=WRITE_TRUNCATE.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForce() {
@@ -83,9 +91,9 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
   }
 
   /**
-   * If this flag is `TRUE`, all tables will be deleted from the dataset before the new exported
-   * tables are written. If the flag is not set and the destination dataset contains tables, the
-   * export call returns an error. This option is not used for the streaming export.
+   * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is
+   * ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
+   * equivalent to write_disposition=WRITE_TRUNCATE.
    * @param force force or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1FhirBigQueryDestination setForce(java.lang.Boolean force) {
@@ -107,6 +115,25 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends c
    */
   public GoogleCloudHealthcareV1beta1FhirBigQueryDestination setSchemaConfig(SchemaConfig schemaConfig) {
     this.schemaConfig = schemaConfig;
+    return this;
+  }
+
+  /**
+   * Determines whether existing tables in the destination dataset are overwritten or appended to.
+   * If a write_disposition is specified, the `force` parameter is ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWriteDisposition() {
+    return writeDisposition;
+  }
+
+  /**
+   * Determines whether existing tables in the destination dataset are overwritten or appended to.
+   * If a write_disposition is specified, the `force` parameter is ignored.
+   * @param writeDisposition writeDisposition or {@code null} for none
+   */
+  public GoogleCloudHealthcareV1beta1FhirBigQueryDestination setWriteDisposition(java.lang.String writeDisposition) {
+    this.writeDisposition = writeDisposition;
     return this;
   }
 

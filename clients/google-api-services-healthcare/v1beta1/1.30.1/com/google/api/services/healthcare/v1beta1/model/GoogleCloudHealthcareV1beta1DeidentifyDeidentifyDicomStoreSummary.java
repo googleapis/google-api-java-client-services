@@ -29,54 +29,6 @@ package com.google.api.services.healthcare.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudHealthcareV1beta1DeidentifyDeidentifyDicomStoreSummary extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Number of objects that processing failed for.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long failureResourceCount;
-
-  /**
-   * Number of objects successfully processed.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long successResourceCount;
-
-  /**
-   * Number of objects that processing failed for.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getFailureResourceCount() {
-    return failureResourceCount;
-  }
-
-  /**
-   * Number of objects that processing failed for.
-   * @param failureResourceCount failureResourceCount or {@code null} for none
-   */
-  public GoogleCloudHealthcareV1beta1DeidentifyDeidentifyDicomStoreSummary setFailureResourceCount(java.lang.Long failureResourceCount) {
-    this.failureResourceCount = failureResourceCount;
-    return this;
-  }
-
-  /**
-   * Number of objects successfully processed.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getSuccessResourceCount() {
-    return successResourceCount;
-  }
-
-  /**
-   * Number of objects successfully processed.
-   * @param successResourceCount successResourceCount or {@code null} for none
-   */
-  public GoogleCloudHealthcareV1beta1DeidentifyDeidentifyDicomStoreSummary setSuccessResourceCount(java.lang.Long successResourceCount) {
-    this.successResourceCount = successResourceCount;
-    return this;
-  }
-
   @Override
   public GoogleCloudHealthcareV1beta1DeidentifyDeidentifyDicomStoreSummary set(String fieldName, Object value) {
     return (GoogleCloudHealthcareV1beta1DeidentifyDeidentifyDicomStoreSummary) super.set(fieldName, value);

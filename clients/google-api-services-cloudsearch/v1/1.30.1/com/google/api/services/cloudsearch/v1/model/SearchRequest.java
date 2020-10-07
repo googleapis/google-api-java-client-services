@@ -57,7 +57,7 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Maximum number of search results to return in one page. Valid values are between 1 and 100,
-   * inclusive. Default value is 10.
+   * inclusive. Default value is 10. Minimum value is 50 when results beyond 2000 are requested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +135,7 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Maximum number of search results to return in one page. Valid values are between 1 and 100,
-   * inclusive. Default value is 10.
+   * inclusive. Default value is 10. Minimum value is 50 when results beyond 2000 are requested.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -144,7 +144,7 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Maximum number of search results to return in one page. Valid values are between 1 and 100,
-   * inclusive. Default value is 10.
+   * inclusive. Default value is 10. Minimum value is 50 when results beyond 2000 are requested.
    * @param pageSize pageSize or {@code null} for none
    */
   public SearchRequest setPageSize(java.lang.Integer pageSize) {

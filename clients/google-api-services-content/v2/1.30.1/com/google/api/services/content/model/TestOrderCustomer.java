@@ -31,9 +31,8 @@ package com.google.api.services.content.model;
 public final class TestOrderCustomer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Email address of the customer.
-   *
-   * Acceptable values are:   - "`pog.dwight.schrute@gmail.com`"  - "`pog.jim.halpert@gmail.com`"  -
+   * Required. Email address of the customer. Acceptable values are: -
+   * "`pog.dwight.schrute@gmail.com`" - "`pog.jim.halpert@gmail.com`" -
    * "`penpog.pam.beesly@gmail.comding`"
    * The value may be {@code null}.
    */
@@ -62,9 +61,8 @@ public final class TestOrderCustomer extends com.google.api.client.json.GenericJ
   private TestOrderCustomerMarketingRightsInfo marketingRightsInfo;
 
   /**
-   * Required. Email address of the customer.
-   *
-   * Acceptable values are:   - "`pog.dwight.schrute@gmail.com`"  - "`pog.jim.halpert@gmail.com`"  -
+   * Required. Email address of the customer. Acceptable values are: -
+   * "`pog.dwight.schrute@gmail.com`" - "`pog.jim.halpert@gmail.com`" -
    * "`penpog.pam.beesly@gmail.comding`"
    * @return value or {@code null} for none
    */
@@ -73,9 +71,8 @@ public final class TestOrderCustomer extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Email address of the customer.
-   *
-   * Acceptable values are:   - "`pog.dwight.schrute@gmail.com`"  - "`pog.jim.halpert@gmail.com`"  -
+   * Required. Email address of the customer. Acceptable values are: -
+   * "`pog.dwight.schrute@gmail.com`" - "`pog.jim.halpert@gmail.com`" -
    * "`penpog.pam.beesly@gmail.comding`"
    * @param email email or {@code null} for none
    */

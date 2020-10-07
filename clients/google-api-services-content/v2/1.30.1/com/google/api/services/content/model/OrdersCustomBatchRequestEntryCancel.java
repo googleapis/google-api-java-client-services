@@ -31,11 +31,9 @@ package com.google.api.services.content.model;
 public final class OrdersCustomBatchRequestEntryCancel extends com.google.api.client.json.GenericJson {
 
   /**
-   * The reason for the cancellation.
-   *
-   * Acceptable values are:   - "`customerInitiatedCancel`"  - "`invalidCoupon`"  -
-   * "`malformedShippingAddress`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
-   * "`shippingPriceError`"  - "`taxError`"  - "`undeliverableShippingAddress`"  -
+   * The reason for the cancellation. Acceptable values are: - "`customerInitiatedCancel`" -
+   * "`invalidCoupon`" - "`malformedShippingAddress`" - "`noInventory`" - "`other`" - "`priceError`"
+   * - "`shippingPriceError`" - "`taxError`" - "`undeliverableShippingAddress`" -
    * "`unsupportedPoBoxAddress`"
    * The value may be {@code null}.
    */
@@ -50,11 +48,9 @@ public final class OrdersCustomBatchRequestEntryCancel extends com.google.api.cl
   private java.lang.String reasonText;
 
   /**
-   * The reason for the cancellation.
-   *
-   * Acceptable values are:   - "`customerInitiatedCancel`"  - "`invalidCoupon`"  -
-   * "`malformedShippingAddress`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
-   * "`shippingPriceError`"  - "`taxError`"  - "`undeliverableShippingAddress`"  -
+   * The reason for the cancellation. Acceptable values are: - "`customerInitiatedCancel`" -
+   * "`invalidCoupon`" - "`malformedShippingAddress`" - "`noInventory`" - "`other`" - "`priceError`"
+   * - "`shippingPriceError`" - "`taxError`" - "`undeliverableShippingAddress`" -
    * "`unsupportedPoBoxAddress`"
    * @return value or {@code null} for none
    */
@@ -63,11 +59,9 @@ public final class OrdersCustomBatchRequestEntryCancel extends com.google.api.cl
   }
 
   /**
-   * The reason for the cancellation.
-   *
-   * Acceptable values are:   - "`customerInitiatedCancel`"  - "`invalidCoupon`"  -
-   * "`malformedShippingAddress`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
-   * "`shippingPriceError`"  - "`taxError`"  - "`undeliverableShippingAddress`"  -
+   * The reason for the cancellation. Acceptable values are: - "`customerInitiatedCancel`" -
+   * "`invalidCoupon`" - "`malformedShippingAddress`" - "`noInventory`" - "`other`" - "`priceError`"
+   * - "`shippingPriceError`" - "`taxError`" - "`undeliverableShippingAddress`" -
    * "`unsupportedPoBoxAddress`"
    * @param reason reason or {@code null} for none
    */

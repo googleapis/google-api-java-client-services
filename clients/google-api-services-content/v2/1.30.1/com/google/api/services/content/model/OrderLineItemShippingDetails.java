@@ -53,9 +53,7 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
 
   /**
    * Type of shipment. Indicates whether `deliveryDetails` or `pickupDetails` is applicable for this
-   * shipment.
-   *
-   * Acceptable values are:   - "`delivery`"  - "`pickup`"
+   * shipment. Acceptable values are: - "`delivery`" - "`pickup`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,9 +112,7 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
 
   /**
    * Type of shipment. Indicates whether `deliveryDetails` or `pickupDetails` is applicable for this
-   * shipment.
-   *
-   * Acceptable values are:   - "`delivery`"  - "`pickup`"
+   * shipment. Acceptable values are: - "`delivery`" - "`pickup`"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -125,9 +121,7 @@ public final class OrderLineItemShippingDetails extends com.google.api.client.js
 
   /**
    * Type of shipment. Indicates whether `deliveryDetails` or `pickupDetails` is applicable for this
-   * shipment.
-   *
-   * Acceptable values are:   - "`delivery`"  - "`pickup`"
+   * shipment. Acceptable values are: - "`delivery`" - "`pickup`"
    * @param type type or {@code null} for none
    */
   public OrderLineItemShippingDetails setType(java.lang.String type) {

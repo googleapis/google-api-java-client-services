@@ -54,9 +54,8 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
   private java.lang.String shipmentId;
 
   /**
-   * New status for the shipment. Not updated if missing.
-   *
-   * Acceptable values are:   - "`delivered`"  - "`undeliverable`"  - "`readyForPickup`"
+   * New status for the shipment. Not updated if missing. Acceptable values are: - "`delivered`" -
+   * "`undeliverable`" - "`readyForPickup`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,9 +124,8 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
   }
 
   /**
-   * New status for the shipment. Not updated if missing.
-   *
-   * Acceptable values are:   - "`delivered`"  - "`undeliverable`"  - "`readyForPickup`"
+   * New status for the shipment. Not updated if missing. Acceptable values are: - "`delivered`" -
+   * "`undeliverable`" - "`readyForPickup`"
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -135,9 +133,8 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
   }
 
   /**
-   * New status for the shipment. Not updated if missing.
-   *
-   * Acceptable values are:   - "`delivered`"  - "`undeliverable`"  - "`readyForPickup`"
+   * New status for the shipment. Not updated if missing. Acceptable values are: - "`delivered`" -
+   * "`undeliverable`" - "`readyForPickup`"
    * @param status status or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryUpdateShipment setStatus(java.lang.String status) {

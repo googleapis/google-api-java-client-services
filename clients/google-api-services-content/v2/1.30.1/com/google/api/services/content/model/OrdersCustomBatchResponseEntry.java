@@ -45,10 +45,9 @@ public final class OrdersCustomBatchResponseEntry extends com.google.api.client.
   private Errors errors;
 
   /**
-   * The status of the execution. Only defined if - the request was successful; and  - the method is
-   * not `get`, `getByMerchantOrderId`, or one of the test methods.
-   *
-   * Acceptable values are:   - "`duplicate`"  - "`executed`"
+   * The status of the execution. Only defined if 1. the request was successful; and 2. the method
+   * is not `get`, `getByMerchantOrderId`, or one of the test methods. Acceptable values are: -
+   * "`duplicate`" - "`executed`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,10 +103,9 @@ public final class OrdersCustomBatchResponseEntry extends com.google.api.client.
   }
 
   /**
-   * The status of the execution. Only defined if - the request was successful; and  - the method is
-   * not `get`, `getByMerchantOrderId`, or one of the test methods.
-   *
-   * Acceptable values are:   - "`duplicate`"  - "`executed`"
+   * The status of the execution. Only defined if 1. the request was successful; and 2. the method
+   * is not `get`, `getByMerchantOrderId`, or one of the test methods. Acceptable values are: -
+   * "`duplicate`" - "`executed`"
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionStatus() {
@@ -115,10 +113,9 @@ public final class OrdersCustomBatchResponseEntry extends com.google.api.client.
   }
 
   /**
-   * The status of the execution. Only defined if - the request was successful; and  - the method is
-   * not `get`, `getByMerchantOrderId`, or one of the test methods.
-   *
-   * Acceptable values are:   - "`duplicate`"  - "`executed`"
+   * The status of the execution. Only defined if 1. the request was successful; and 2. the method
+   * is not `get`, `getByMerchantOrderId`, or one of the test methods. Acceptable values are: -
+   * "`duplicate`" - "`executed`"
    * @param executionStatus executionStatus or {@code null} for none
    */
   public OrdersCustomBatchResponseEntry setExecutionStatus(java.lang.String executionStatus) {

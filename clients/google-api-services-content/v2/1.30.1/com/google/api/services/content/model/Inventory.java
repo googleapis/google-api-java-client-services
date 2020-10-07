@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * (== resource_for v2.inventory ==)
+ * Model definition for Inventory.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -31,9 +31,8 @@ package com.google.api.services.content.model;
 public final class Inventory extends com.google.api.client.json.GenericJson {
 
   /**
-   * The availability of the product.
-   *
-   * Acceptable values are:   - "`in stock`"  - "`out of stock`"  - "`preorder`"
+   * The availability of the product. Acceptable values are: - "`in stock`" - "`out of stock`" -
+   * "`preorder`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,9 +154,8 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   private java.lang.Long sellOnGoogleQuantity;
 
   /**
-   * The availability of the product.
-   *
-   * Acceptable values are:   - "`in stock`"  - "`out of stock`"  - "`preorder`"
+   * The availability of the product. Acceptable values are: - "`in stock`" - "`out of stock`" -
+   * "`preorder`"
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailability() {
@@ -165,9 +163,8 @@ public final class Inventory extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The availability of the product.
-   *
-   * Acceptable values are:   - "`in stock`"  - "`out of stock`"  - "`preorder`"
+   * The availability of the product. Acceptable values are: - "`in stock`" - "`out of stock`" -
+   * "`preorder`"
    * @param availability availability or {@code null} for none
    */
   public Inventory setAvailability(java.lang.String availability) {

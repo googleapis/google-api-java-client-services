@@ -38,9 +38,7 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
   private java.lang.Boolean approvalPending;
 
   /**
-   * The destination's approval status.
-   *
-   * Acceptable values are:   - "`approved`"  - "`disapproved`"
+   * The destination's approval status. Acceptable values are: - "`approved`" - "`disapproved`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +52,8 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
   private java.lang.String destination;
 
   /**
-   * Provided for backward compatibility only. Always set to "required".
-   *
-   * Acceptable values are:   - "`default`"  - "`excluded`"  - "`optional`"  - "`required`"
+   * Provided for backward compatibility only. Always set to "required". Acceptable values are: -
+   * "`default`" - "`excluded`" - "`optional`" - "`required`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,9 +77,7 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
   }
 
   /**
-   * The destination's approval status.
-   *
-   * Acceptable values are:   - "`approved`"  - "`disapproved`"
+   * The destination's approval status. Acceptable values are: - "`approved`" - "`disapproved`"
    * @return value or {@code null} for none
    */
   public java.lang.String getApprovalStatus() {
@@ -90,9 +85,7 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
   }
 
   /**
-   * The destination's approval status.
-   *
-   * Acceptable values are:   - "`approved`"  - "`disapproved`"
+   * The destination's approval status. Acceptable values are: - "`approved`" - "`disapproved`"
    * @param approvalStatus approvalStatus or {@code null} for none
    */
   public ProductStatusDestinationStatus setApprovalStatus(java.lang.String approvalStatus) {
@@ -118,9 +111,8 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
   }
 
   /**
-   * Provided for backward compatibility only. Always set to "required".
-   *
-   * Acceptable values are:   - "`default`"  - "`excluded`"  - "`optional`"  - "`required`"
+   * Provided for backward compatibility only. Always set to "required". Acceptable values are: -
+   * "`default`" - "`excluded`" - "`optional`" - "`required`"
    * @return value or {@code null} for none
    */
   public java.lang.String getIntention() {
@@ -128,9 +120,8 @@ public final class ProductStatusDestinationStatus extends com.google.api.client.
   }
 
   /**
-   * Provided for backward compatibility only. Always set to "required".
-   *
-   * Acceptable values are:   - "`default`"  - "`excluded`"  - "`optional`"  - "`required`"
+   * Provided for backward compatibility only. Always set to "required". Acceptable values are: -
+   * "`default`" - "`excluded`" - "`optional`" - "`required`"
    * @param intention intention or {@code null} for none
    */
   public ProductStatusDestinationStatus setIntention(java.lang.String intention) {

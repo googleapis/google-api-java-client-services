@@ -18,7 +18,6 @@ package com.google.api.services.content.model;
 
 /**
  * Order. Production access (all methods) requires the order manager role. Sandbox access does not.
- * (== resource_for v2.orders ==) (== resource_for v2.1.orders ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -39,9 +38,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean acknowledged;
 
   /**
-   * Deprecated.
-   *
-   * Acceptable values are:   - "`googleExpress`"  - "`purchasesOnGoogle`"
+   * Deprecated. Acceptable values are: - "`googleExpress`" - "`purchasesOnGoogle`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,10 +108,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private OrderPaymentMethod paymentMethod;
 
   /**
-   * The status of the payment.
-   *
-   * Acceptable values are:   - "`paymentCaptured`"  - "`paymentRejected`"  - "`paymentSecured`"  -
-   * "`pendingAuthorization`"
+   * The status of the payment. Acceptable values are: - "`paymentCaptured`" - "`paymentRejected`" -
+   * "`paymentSecured`" - "`pendingAuthorization`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,25 +130,19 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.lang.String placedDate;
 
   /**
-   * The details of the merchant provided promotions applied to the order.
-   *
-   * To determine which promotions apply to which products, check the
-   * `Promotions[].Benefits[].OfferIds` field against the `LineItems[].Product.OfferId` field for
-   * each promotion. If a promotion is applied to more than 1 `offerId`, divide the discount value
-   * by the number of affected offers to determine how much discount to apply to each `offerId`.
-   *
-   * Examples:   - To calculate the line item level discount for a single specific item: For each
-   * promotion, subtract the `Promotions[].Benefits[].Discount.value` amount from the
-   * `LineItems[].Price.value`.  - To calculate the line item level discount for multiple quantity
-   * of a specific item: For each promotion, divide the `Promotions[].Benefits[].Discount.value` by
-   * the quantity of products and substract it from `LineItems[].Product.Price.value` for each
-   * quantity item.
-   *
-   * Only 1 promotion can be applied to an offerId in a given order. To refund an item which had a
-   * promotion applied to it, make sure to refund the amount after first subtracting the promotion
-   * discount from the item price.
-   *
-   * More details about the program are here.
+   * The details of the merchant provided promotions applied to the order. To determine which
+   * promotions apply to which products, check the `Promotions[].Benefits[].OfferIds` field against
+   * the `LineItems[].Product.OfferId` field for each promotion. If a promotion is applied to more
+   * than 1 `offerId`, divide the discount value by the number of affected offers to determine how
+   * much discount to apply to each `offerId`. Examples: 1. To calculate the line item level
+   * discount for a single specific item: For each promotion, subtract the
+   * `Promotions[].Benefits[].Discount.value` amount from the `LineItems[].Price.value`. 2. To
+   * calculate the line item level discount for multiple quantity of a specific item: For each
+   * promotion, divide the `Promotions[].Benefits[].Discount.value` by the quantity of products and
+   * substract it from `LineItems[].Product.Price.value` for each quantity item. Only 1 promotion
+   * can be applied to an offerId in a given order. To refund an item which had a promotion applied
+   * to it, make sure to refund the amount after first subtracting the promotion discount from the
+   * item price. More details about the program are here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,30 +177,25 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private Price shippingCostTax;
 
   /**
-   * Deprecated. Shipping details are provided with line items instead.
-   *
-   * Acceptable values are:   - "`economy`"  - "`expedited`"  - "`oneDay`"  - "`sameDay`"  -
-   * "`standard`"  - "`twoDay`"
+   * Deprecated. Shipping details are provided with line items instead. Acceptable values are: -
+   * "`economy`" - "`expedited`" - "`oneDay`" - "`sameDay`" - "`standard`" - "`twoDay`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String shippingOption;
 
   /**
-   * The status of the order.
-   *
-   * Acceptable values are:   - "`canceled`"  - "`delivered`"  - "`inProgress`"  -
-   * "`partiallyDelivered`"  - "`partiallyReturned`"  - "`partiallyShipped`"  - "`pendingShipment`"
-   * - "`returned`"  - "`shipped`"
+   * The status of the order. Acceptable values are: - "`canceled`" - "`delivered`" - "`inProgress`"
+   * - "`partiallyDelivered`" - "`partiallyReturned`" - "`partiallyShipped`" - "`pendingShipment`" -
+   * "`returned`" - "`shipped`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * The party responsible for collecting and remitting taxes.
-   *
-   * Acceptable values are:   - "`marketplaceFacilitator`"  - "`merchant`"
+   * The party responsible for collecting and remitting taxes. Acceptable values are: -
+   * "`marketplaceFacilitator`" - "`merchant`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,9 +219,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated.
-   *
-   * Acceptable values are:   - "`googleExpress`"  - "`purchasesOnGoogle`"
+   * Deprecated. Acceptable values are: - "`googleExpress`" - "`purchasesOnGoogle`"
    * @return value or {@code null} for none
    */
   public java.lang.String getChannelType() {
@@ -245,9 +227,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated.
-   *
-   * Acceptable values are:   - "`googleExpress`"  - "`purchasesOnGoogle`"
+   * Deprecated. Acceptable values are: - "`googleExpress`" - "`purchasesOnGoogle`"
    * @param channelType channelType or {@code null} for none
    */
   public Order setChannelType(java.lang.String channelType) {
@@ -409,10 +389,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of the payment.
-   *
-   * Acceptable values are:   - "`paymentCaptured`"  - "`paymentRejected`"  - "`paymentSecured`"  -
-   * "`pendingAuthorization`"
+   * The status of the payment. Acceptable values are: - "`paymentCaptured`" - "`paymentRejected`" -
+   * "`paymentSecured`" - "`pendingAuthorization`"
    * @return value or {@code null} for none
    */
   public java.lang.String getPaymentStatus() {
@@ -420,10 +398,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of the payment.
-   *
-   * Acceptable values are:   - "`paymentCaptured`"  - "`paymentRejected`"  - "`paymentSecured`"  -
-   * "`pendingAuthorization`"
+   * The status of the payment. Acceptable values are: - "`paymentCaptured`" - "`paymentRejected`" -
+   * "`paymentSecured`" - "`pendingAuthorization`"
    * @param paymentStatus paymentStatus or {@code null} for none
    */
   public Order setPaymentStatus(java.lang.String paymentStatus) {
@@ -466,25 +442,19 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The details of the merchant provided promotions applied to the order.
-   *
-   * To determine which promotions apply to which products, check the
-   * `Promotions[].Benefits[].OfferIds` field against the `LineItems[].Product.OfferId` field for
-   * each promotion. If a promotion is applied to more than 1 `offerId`, divide the discount value
-   * by the number of affected offers to determine how much discount to apply to each `offerId`.
-   *
-   * Examples:   - To calculate the line item level discount for a single specific item: For each
-   * promotion, subtract the `Promotions[].Benefits[].Discount.value` amount from the
-   * `LineItems[].Price.value`.  - To calculate the line item level discount for multiple quantity
-   * of a specific item: For each promotion, divide the `Promotions[].Benefits[].Discount.value` by
-   * the quantity of products and substract it from `LineItems[].Product.Price.value` for each
-   * quantity item.
-   *
-   * Only 1 promotion can be applied to an offerId in a given order. To refund an item which had a
-   * promotion applied to it, make sure to refund the amount after first subtracting the promotion
-   * discount from the item price.
-   *
-   * More details about the program are here.
+   * The details of the merchant provided promotions applied to the order. To determine which
+   * promotions apply to which products, check the `Promotions[].Benefits[].OfferIds` field against
+   * the `LineItems[].Product.OfferId` field for each promotion. If a promotion is applied to more
+   * than 1 `offerId`, divide the discount value by the number of affected offers to determine how
+   * much discount to apply to each `offerId`. Examples: 1. To calculate the line item level
+   * discount for a single specific item: For each promotion, subtract the
+   * `Promotions[].Benefits[].Discount.value` amount from the `LineItems[].Price.value`. 2. To
+   * calculate the line item level discount for multiple quantity of a specific item: For each
+   * promotion, divide the `Promotions[].Benefits[].Discount.value` by the quantity of products and
+   * substract it from `LineItems[].Product.Price.value` for each quantity item. Only 1 promotion
+   * can be applied to an offerId in a given order. To refund an item which had a promotion applied
+   * to it, make sure to refund the amount after first subtracting the promotion discount from the
+   * item price. More details about the program are here.
    * @return value or {@code null} for none
    */
   public java.util.List<OrderLegacyPromotion> getPromotions() {
@@ -492,25 +462,19 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The details of the merchant provided promotions applied to the order.
-   *
-   * To determine which promotions apply to which products, check the
-   * `Promotions[].Benefits[].OfferIds` field against the `LineItems[].Product.OfferId` field for
-   * each promotion. If a promotion is applied to more than 1 `offerId`, divide the discount value
-   * by the number of affected offers to determine how much discount to apply to each `offerId`.
-   *
-   * Examples:   - To calculate the line item level discount for a single specific item: For each
-   * promotion, subtract the `Promotions[].Benefits[].Discount.value` amount from the
-   * `LineItems[].Price.value`.  - To calculate the line item level discount for multiple quantity
-   * of a specific item: For each promotion, divide the `Promotions[].Benefits[].Discount.value` by
-   * the quantity of products and substract it from `LineItems[].Product.Price.value` for each
-   * quantity item.
-   *
-   * Only 1 promotion can be applied to an offerId in a given order. To refund an item which had a
-   * promotion applied to it, make sure to refund the amount after first subtracting the promotion
-   * discount from the item price.
-   *
-   * More details about the program are here.
+   * The details of the merchant provided promotions applied to the order. To determine which
+   * promotions apply to which products, check the `Promotions[].Benefits[].OfferIds` field against
+   * the `LineItems[].Product.OfferId` field for each promotion. If a promotion is applied to more
+   * than 1 `offerId`, divide the discount value by the number of affected offers to determine how
+   * much discount to apply to each `offerId`. Examples: 1. To calculate the line item level
+   * discount for a single specific item: For each promotion, subtract the
+   * `Promotions[].Benefits[].Discount.value` amount from the `LineItems[].Price.value`. 2. To
+   * calculate the line item level discount for multiple quantity of a specific item: For each
+   * promotion, divide the `Promotions[].Benefits[].Discount.value` by the quantity of products and
+   * substract it from `LineItems[].Product.Price.value` for each quantity item. Only 1 promotion
+   * can be applied to an offerId in a given order. To refund an item which had a promotion applied
+   * to it, make sure to refund the amount after first subtracting the promotion discount from the
+   * item price. More details about the program are here.
    * @param promotions promotions or {@code null} for none
    */
   public Order setPromotions(java.util.List<OrderLegacyPromotion> promotions) {
@@ -587,10 +551,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Shipping details are provided with line items instead.
-   *
-   * Acceptable values are:   - "`economy`"  - "`expedited`"  - "`oneDay`"  - "`sameDay`"  -
-   * "`standard`"  - "`twoDay`"
+   * Deprecated. Shipping details are provided with line items instead. Acceptable values are: -
+   * "`economy`" - "`expedited`" - "`oneDay`" - "`sameDay`" - "`standard`" - "`twoDay`"
    * @return value or {@code null} for none
    */
   public java.lang.String getShippingOption() {
@@ -598,10 +560,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Shipping details are provided with line items instead.
-   *
-   * Acceptable values are:   - "`economy`"  - "`expedited`"  - "`oneDay`"  - "`sameDay`"  -
-   * "`standard`"  - "`twoDay`"
+   * Deprecated. Shipping details are provided with line items instead. Acceptable values are: -
+   * "`economy`" - "`expedited`" - "`oneDay`" - "`sameDay`" - "`standard`" - "`twoDay`"
    * @param shippingOption shippingOption or {@code null} for none
    */
   public Order setShippingOption(java.lang.String shippingOption) {
@@ -610,11 +570,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of the order.
-   *
-   * Acceptable values are:   - "`canceled`"  - "`delivered`"  - "`inProgress`"  -
-   * "`partiallyDelivered`"  - "`partiallyReturned`"  - "`partiallyShipped`"  - "`pendingShipment`"
-   * - "`returned`"  - "`shipped`"
+   * The status of the order. Acceptable values are: - "`canceled`" - "`delivered`" - "`inProgress`"
+   * - "`partiallyDelivered`" - "`partiallyReturned`" - "`partiallyShipped`" - "`pendingShipment`" -
+   * "`returned`" - "`shipped`"
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -622,11 +580,9 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of the order.
-   *
-   * Acceptable values are:   - "`canceled`"  - "`delivered`"  - "`inProgress`"  -
-   * "`partiallyDelivered`"  - "`partiallyReturned`"  - "`partiallyShipped`"  - "`pendingShipment`"
-   * - "`returned`"  - "`shipped`"
+   * The status of the order. Acceptable values are: - "`canceled`" - "`delivered`" - "`inProgress`"
+   * - "`partiallyDelivered`" - "`partiallyReturned`" - "`partiallyShipped`" - "`pendingShipment`" -
+   * "`returned`" - "`shipped`"
    * @param status status or {@code null} for none
    */
   public Order setStatus(java.lang.String status) {
@@ -635,9 +591,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The party responsible for collecting and remitting taxes.
-   *
-   * Acceptable values are:   - "`marketplaceFacilitator`"  - "`merchant`"
+   * The party responsible for collecting and remitting taxes. Acceptable values are: -
+   * "`marketplaceFacilitator`" - "`merchant`"
    * @return value or {@code null} for none
    */
   public java.lang.String getTaxCollector() {
@@ -645,9 +600,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The party responsible for collecting and remitting taxes.
-   *
-   * Acceptable values are:   - "`marketplaceFacilitator`"  - "`merchant`"
+   * The party responsible for collecting and remitting taxes. Acceptable values are: -
+   * "`marketplaceFacilitator`" - "`merchant`"
    * @param taxCollector taxCollector or {@code null} for none
    */
   public Order setTaxCollector(java.lang.String taxCollector) {

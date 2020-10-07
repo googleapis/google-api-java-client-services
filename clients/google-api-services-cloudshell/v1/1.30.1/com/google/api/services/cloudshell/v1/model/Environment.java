@@ -19,7 +19,7 @@ package com.google.api.services.cloudshell.v1.model;
 /**
  * A Cloud Shell environment, which is defined as the combination of a Docker image specifying what
  * is installed on the environment and a home directory containing the user's data that will remain
- * across sessions. Each user has a single environment with the ID "default".
+ * across sessions. Each user has at least an environment with the ID "default".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Shell API. For a detailed explanation see:
@@ -32,8 +32,8 @@ package com.google.api.services.cloudshell.v1.model;
 public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Full path to the Docker image used to run this environment, e.g. "gcr.io/dev-con
-   * /cloud-devshell:latest".
+   * Required. Immutable. Full path to the Docker image used to run this environment, e.g. "gcr.io
+   * /dev-con/cloud-devshell:latest".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Output only. Full name of this resource, in the format
+   * Immutable. Full name of this resource, in the format
    * `users/{owner_email}/environments/{environment_id}`. `{owner_email}` is the email address of
    * the user to whom this environment belongs, and `{environment_id}` is the identifier of this
    * environment. For example, `users/someone@example.com/environments/default`.
@@ -59,20 +59,12 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Public keys associated with the environment. Clients can connect to this
    * environment via SSH only if they possess a private key corresponding to at least one of these
-   * public keys. Keys can be added to or removed from the environment using the CreatePublicKey and
-   * DeletePublicKey methods.
+   * public keys. Keys can be added to or removed from the environment using the AddPublicKey and
+   * RemovePublicKey methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<PublicKey> publicKeys;
-
-  /**
-   * Indicates the size of the backing VM running the environment.  If set to something other than
-   * DEFAULT, it will be reverted to the default VM size after vm_size_expire_time.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String size;
+  private java.util.List<java.lang.String> publicKeys;
 
   /**
    * Output only. Host to which clients can connect to initiate SSH sessions with the environment.
@@ -104,13 +96,6 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Output only. The time when the Environment will expire back to the default VM size.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String vmSizeExpireTime;
-
-  /**
    * Output only. Host to which clients can connect to initiate HTTPS or WSS connections with the
    * environment.
    * The value may be {@code null}.
@@ -119,16 +104,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String webHost;
 
   /**
-   * Output only. Ports to which clients can connect to initiate HTTPS or WSS connections with the
-   * environment.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.Integer> webPorts;
-
-  /**
-   * Required. Full path to the Docker image used to run this environment, e.g. "gcr.io/dev-con
-   * /cloud-devshell:latest".
+   * Required. Immutable. Full path to the Docker image used to run this environment, e.g. "gcr.io
+   * /dev-con/cloud-devshell:latest".
    * @return value or {@code null} for none
    */
   public java.lang.String getDockerImage() {
@@ -136,8 +113,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Full path to the Docker image used to run this environment, e.g. "gcr.io/dev-con
-   * /cloud-devshell:latest".
+   * Required. Immutable. Full path to the Docker image used to run this environment, e.g. "gcr.io
+   * /dev-con/cloud-devshell:latest".
    * @param dockerImage dockerImage or {@code null} for none
    */
   public Environment setDockerImage(java.lang.String dockerImage) {
@@ -163,7 +140,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Full name of this resource, in the format
+   * Immutable. Full name of this resource, in the format
    * `users/{owner_email}/environments/{environment_id}`. `{owner_email}` is the email address of
    * the user to whom this environment belongs, and `{environment_id}` is the identifier of this
    * environment. For example, `users/someone@example.com/environments/default`.
@@ -174,7 +151,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Full name of this resource, in the format
+   * Immutable. Full name of this resource, in the format
    * `users/{owner_email}/environments/{environment_id}`. `{owner_email}` is the email address of
    * the user to whom this environment belongs, and `{environment_id}` is the identifier of this
    * environment. For example, `users/someone@example.com/environments/default`.
@@ -188,42 +165,23 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Public keys associated with the environment. Clients can connect to this
    * environment via SSH only if they possess a private key corresponding to at least one of these
-   * public keys. Keys can be added to or removed from the environment using the CreatePublicKey and
-   * DeletePublicKey methods.
+   * public keys. Keys can be added to or removed from the environment using the AddPublicKey and
+   * RemovePublicKey methods.
    * @return value or {@code null} for none
    */
-  public java.util.List<PublicKey> getPublicKeys() {
+  public java.util.List<java.lang.String> getPublicKeys() {
     return publicKeys;
   }
 
   /**
    * Output only. Public keys associated with the environment. Clients can connect to this
    * environment via SSH only if they possess a private key corresponding to at least one of these
-   * public keys. Keys can be added to or removed from the environment using the CreatePublicKey and
-   * DeletePublicKey methods.
+   * public keys. Keys can be added to or removed from the environment using the AddPublicKey and
+   * RemovePublicKey methods.
    * @param publicKeys publicKeys or {@code null} for none
    */
-  public Environment setPublicKeys(java.util.List<PublicKey> publicKeys) {
+  public Environment setPublicKeys(java.util.List<java.lang.String> publicKeys) {
     this.publicKeys = publicKeys;
-    return this;
-  }
-
-  /**
-   * Indicates the size of the backing VM running the environment.  If set to something other than
-   * DEFAULT, it will be reverted to the default VM size after vm_size_expire_time.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSize() {
-    return size;
-  }
-
-  /**
-   * Indicates the size of the backing VM running the environment.  If set to something other than
-   * DEFAULT, it will be reverted to the default VM size after vm_size_expire_time.
-   * @param size size or {@code null} for none
-   */
-  public Environment setSize(java.lang.String size) {
-    this.size = size;
     return this;
   }
 
@@ -298,23 +256,6 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when the Environment will expire back to the default VM size.
-   * @return value or {@code null} for none
-   */
-  public String getVmSizeExpireTime() {
-    return vmSizeExpireTime;
-  }
-
-  /**
-   * Output only. The time when the Environment will expire back to the default VM size.
-   * @param vmSizeExpireTime vmSizeExpireTime or {@code null} for none
-   */
-  public Environment setVmSizeExpireTime(String vmSizeExpireTime) {
-    this.vmSizeExpireTime = vmSizeExpireTime;
-    return this;
-  }
-
-  /**
    * Output only. Host to which clients can connect to initiate HTTPS or WSS connections with the
    * environment.
    * @return value or {@code null} for none
@@ -330,25 +271,6 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setWebHost(java.lang.String webHost) {
     this.webHost = webHost;
-    return this;
-  }
-
-  /**
-   * Output only. Ports to which clients can connect to initiate HTTPS or WSS connections with the
-   * environment.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.Integer> getWebPorts() {
-    return webPorts;
-  }
-
-  /**
-   * Output only. Ports to which clients can connect to initiate HTTPS or WSS connections with the
-   * environment.
-   * @param webPorts webPorts or {@code null} for none
-   */
-  public Environment setWebPorts(java.util.List<java.lang.Integer> webPorts) {
-    this.webPorts = webPorts;
     return this;
   }
 

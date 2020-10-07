@@ -38,8 +38,8 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * contain a period ("."). Apache Airflow configuration property names must be written in
    * [snake_case](https://en.wikipedia.org/wiki/Snake_case). Property values can contain any
    * character, and can be written in any lower/upper case format. Certain Apache Airflow
-   * configuration property values are [blacklisted](/composer/docs/how-to/managing/setting-airflow-
-   * configurations#airflow_configuration_blacklists), and cannot be overridden.
+   * configuration property values are [blocked](/composer/docs/concepts/airflow-configurations),
+   * and cannot be overridden.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,8 +104,8 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * contain a period ("."). Apache Airflow configuration property names must be written in
    * [snake_case](https://en.wikipedia.org/wiki/Snake_case). Property values can contain any
    * character, and can be written in any lower/upper case format. Certain Apache Airflow
-   * configuration property values are [blacklisted](/composer/docs/how-to/managing/setting-airflow-
-   * configurations#airflow_configuration_blacklists), and cannot be overridden.
+   * configuration property values are [blocked](/composer/docs/concepts/airflow-configurations),
+   * and cannot be overridden.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAirflowConfigOverrides() {
@@ -121,8 +121,8 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * contain a period ("."). Apache Airflow configuration property names must be written in
    * [snake_case](https://en.wikipedia.org/wiki/Snake_case). Property values can contain any
    * character, and can be written in any lower/upper case format. Certain Apache Airflow
-   * configuration property values are [blacklisted](/composer/docs/how-to/managing/setting-airflow-
-   * configurations#airflow_configuration_blacklists), and cannot be overridden.
+   * configuration property values are [blocked](/composer/docs/concepts/airflow-configurations),
+   * and cannot be overridden.
    * @param airflowConfigOverrides airflowConfigOverrides or {@code null} for none
    */
   public SoftwareConfig setAirflowConfigOverrides(java.util.Map<String, java.lang.String> airflowConfigOverrides) {

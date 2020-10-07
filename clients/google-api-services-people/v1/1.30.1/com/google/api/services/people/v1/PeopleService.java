@@ -3741,27 +3741,27 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. Whether the response should include `next_sync_token`, which can be used to get
-         * all changes since the last request. For subsequent sync requests use the `sync_token`
-         * param instead. Initial sync requests that specify `request_sync_token` have an additional
-         * rate limit.
+         * Optional. Whether the response should include `next_sync_token` on the last page, which
+         * can be used to get all changes since the last request. For subsequent sync requests use
+         * the `sync_token` param instead. Initial sync requests that specify `request_sync_token`
+         * have an additional rate limit.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean requestSyncToken;
 
-        /** Optional. Whether the response should include `next_sync_token`, which can be used to get all
-       changes since the last request. For subsequent sync requests use the `sync_token` param instead.
-       Initial sync requests that specify `request_sync_token` have an additional rate limit.
+        /** Optional. Whether the response should include `next_sync_token` on the last page, which can be used
+       to get all changes since the last request. For subsequent sync requests use the `sync_token` param
+       instead. Initial sync requests that specify `request_sync_token` have an additional rate limit.
          */
         public java.lang.Boolean getRequestSyncToken() {
           return requestSyncToken;
         }
 
         /**
-         * Optional. Whether the response should include `next_sync_token`, which can be used to get
-         * all changes since the last request. For subsequent sync requests use the `sync_token`
-         * param instead. Initial sync requests that specify `request_sync_token` have an additional
-         * rate limit.
+         * Optional. Whether the response should include `next_sync_token` on the last page, which
+         * can be used to get all changes since the last request. For subsequent sync requests use
+         * the `sync_token` param instead. Initial sync requests that specify `request_sync_token`
+         * have an additional rate limit.
          */
         public List setRequestSyncToken(java.lang.Boolean requestSyncToken) {
           this.requestSyncToken = requestSyncToken;

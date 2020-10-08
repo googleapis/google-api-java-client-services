@@ -123,6 +123,194 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
   }
 
   /**
+   * An accessor for creating requests from the Properties collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AnalyticsData analyticsdata = new AnalyticsData(...);}
+   *   {@code AnalyticsData.Properties.List request = analyticsdata.properties().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Properties properties() {
+    return new Properties();
+  }
+
+  /**
+   * The "properties" collection of methods.
+   */
+  public class Properties {
+
+    /**
+     * Returns metadata for dimensions and metrics available in reporting methods. Used to explore the
+     * dimensions and metrics. In this method, a Google Analytics App + Web Property Identifier is
+     * specified in the request, and the metadata response includes Custom dimensions and metrics as
+     * well as Universal metadata. For example if a custom metric with parameter name `levels_unlocked`
+     * is registered to a property, the Metadata response will contain `customEvent:levels_unlocked`.
+     * Universal metadata are dimensions and metrics applicable to any property such as `country` and
+     * `totalUsers`.
+     *
+     * Create a request for the method "properties.getMetadata".
+     *
+     * This request holds the parameters needed by the analyticsdata server.  After setting any optional
+     * parameters, call the {@link GetMetadata#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the metadata to retrieve. This name field is specified in the URL
+     *        path and not URL parameters. Property is a numeric Google Analytics App + Web Property
+     *        identifier. Example: properties/1234/metadata
+     * @return the request
+     */
+    public GetMetadata getMetadata(java.lang.String name) throws java.io.IOException {
+      GetMetadata result = new GetMetadata(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetMetadata extends AnalyticsDataRequest<com.google.api.services.analyticsdata.v1alpha.model.Metadata> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+/metadata$");
+
+      /**
+       * Returns metadata for dimensions and metrics available in reporting methods. Used to explore the
+       * dimensions and metrics. In this method, a Google Analytics App + Web Property Identifier is
+       * specified in the request, and the metadata response includes Custom dimensions and metrics as
+       * well as Universal metadata. For example if a custom metric with parameter name
+       * `levels_unlocked` is registered to a property, the Metadata response will contain
+       * `customEvent:levels_unlocked`. Universal metadata are dimensions and metrics applicable to any
+       * property such as `country` and `totalUsers`.
+       *
+       * Create a request for the method "properties.getMetadata".
+       *
+       * This request holds the parameters needed by the the analyticsdata server.  After setting any
+       * optional parameters, call the {@link GetMetadata#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetMetadata#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the metadata to retrieve. This name field is specified in the URL
+     *        path and not URL parameters. Property is a numeric Google Analytics App + Web Property
+     *        identifier. Example: properties/1234/metadata
+       * @since 1.13
+       */
+      protected GetMetadata(java.lang.String name) {
+        super(AnalyticsData.this, "GET", REST_PATH, null, com.google.api.services.analyticsdata.v1alpha.model.Metadata.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/metadata$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetMetadata set$Xgafv(java.lang.String $Xgafv) {
+        return (GetMetadata) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetMetadata setAccessToken(java.lang.String accessToken) {
+        return (GetMetadata) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetMetadata setAlt(java.lang.String alt) {
+        return (GetMetadata) super.setAlt(alt);
+      }
+
+      @Override
+      public GetMetadata setCallback(java.lang.String callback) {
+        return (GetMetadata) super.setCallback(callback);
+      }
+
+      @Override
+      public GetMetadata setFields(java.lang.String fields) {
+        return (GetMetadata) super.setFields(fields);
+      }
+
+      @Override
+      public GetMetadata setKey(java.lang.String key) {
+        return (GetMetadata) super.setKey(key);
+      }
+
+      @Override
+      public GetMetadata setOauthToken(java.lang.String oauthToken) {
+        return (GetMetadata) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetMetadata) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetMetadata setQuotaUser(java.lang.String quotaUser) {
+        return (GetMetadata) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetMetadata setUploadType(java.lang.String uploadType) {
+        return (GetMetadata) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetMetadata) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the metadata to retrieve. This name field is specified in
+       * the URL path and not URL parameters. Property is a numeric Google Analytics App + Web
+       * Property identifier. Example: properties/1234/metadata
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the metadata to retrieve. This name field is specified in the URL
+     path and not URL parameters. Property is a numeric Google Analytics App + Web Property identifier.
+     Example: properties/1234/metadata
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the metadata to retrieve. This name field is specified in
+       * the URL path and not URL parameters. Property is a numeric Google Analytics App + Web
+       * Property identifier. Example: properties/1234/metadata
+       */
+      public GetMetadata setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/metadata$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetMetadata set(String parameterName, Object value) {
+        return (GetMetadata) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the V1alpha collection.
    *
    * <p>The typical use is:</p>

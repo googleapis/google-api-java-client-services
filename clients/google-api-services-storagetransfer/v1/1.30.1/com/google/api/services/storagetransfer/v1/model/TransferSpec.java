@@ -74,9 +74,8 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private ObjectConditions objectConditions;
 
   /**
-   * If the option delete_objects_unique_in_sink is `true`, object conditions based on objects'
-   * "last modification time" are ignored and do not exclude objects in a data source or a data
-   * sink.
+   * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as
+   * 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -189,9 +188,8 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the option delete_objects_unique_in_sink is `true`, object conditions based on objects'
-   * "last modification time" are ignored and do not exclude objects in a data source or a data
-   * sink.
+   * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as
+   * 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
    * @return value or {@code null} for none
    */
   public TransferOptions getTransferOptions() {
@@ -199,9 +197,8 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the option delete_objects_unique_in_sink is `true`, object conditions based on objects'
-   * "last modification time" are ignored and do not exclude objects in a data source or a data
-   * sink.
+   * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as
+   * 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
    * @param transferOptions transferOptions or {@code null} for none
    */
   public TransferSpec setTransferOptions(TransferOptions transferOptions) {

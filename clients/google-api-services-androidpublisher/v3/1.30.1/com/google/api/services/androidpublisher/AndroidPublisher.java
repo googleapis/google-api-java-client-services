@@ -8188,19 +8188,18 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
-       * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
        * @param token The token provided to the user's device when the subscription was purchased.
        * @return the request
        */
-      public Cancel cancel(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) throws java.io.IOException {
-        Cancel result = new Cancel(packageName, subscriptionId, token);
+      public Cancel cancel(java.lang.String packageName, java.lang.String token) throws java.io.IOException {
+        Cancel result = new Cancel(packageName, token);
         initialize(result);
         return result;
       }
 
       public class Cancel extends AndroidPublisherRequest<Void> {
 
-        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:cancel";
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/tokens/{token}:cancel";
 
         /**
          * Cancels a user's subscription purchase. The subscription remains valid until its expiration
@@ -8216,14 +8215,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
-         * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
          * @param token The token provided to the user's device when the subscription was purchased.
          * @since 1.13
          */
-        protected Cancel(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) {
+        protected Cancel(java.lang.String packageName, java.lang.String token) {
           super(AndroidPublisher.this, "POST", REST_PATH, null, Void.class);
           this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
-          this.subscriptionId = com.google.api.client.util.Preconditions.checkNotNull(subscriptionId, "Required parameter subscriptionId must be specified.");
           this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
         }
 
@@ -8302,22 +8299,6 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          */
         public Cancel setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
-          return this;
-        }
-
-        /** The purchased subscription ID (for example, 'monthly001'). */
-        @com.google.api.client.util.Key
-        private java.lang.String subscriptionId;
-
-        /** The purchased subscription ID (for example, 'monthly001').
-         */
-        public java.lang.String getSubscriptionId() {
-          return subscriptionId;
-        }
-
-        /** The purchased subscription ID (for example, 'monthly001'). */
-        public Cancel setSubscriptionId(java.lang.String subscriptionId) {
-          this.subscriptionId = subscriptionId;
           return this;
         }
 

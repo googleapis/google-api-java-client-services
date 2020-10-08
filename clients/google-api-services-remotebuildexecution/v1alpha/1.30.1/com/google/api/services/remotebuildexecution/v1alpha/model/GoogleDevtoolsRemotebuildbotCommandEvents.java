@@ -40,6 +40,13 @@ public final class GoogleDevtoolsRemotebuildbotCommandEvents extends com.google.
   private java.lang.Boolean dockerCacheHit;
 
   /**
+   * Docker Image name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dockerImageName;
+
+  /**
    * The input cache miss ratio.
    * The value may be {@code null}.
    */
@@ -76,6 +83,23 @@ public final class GoogleDevtoolsRemotebuildbotCommandEvents extends com.google.
    */
   public GoogleDevtoolsRemotebuildbotCommandEvents setDockerCacheHit(java.lang.Boolean dockerCacheHit) {
     this.dockerCacheHit = dockerCacheHit;
+    return this;
+  }
+
+  /**
+   * Docker Image name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDockerImageName() {
+    return dockerImageName;
+  }
+
+  /**
+   * Docker Image name.
+   * @param dockerImageName dockerImageName or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotCommandEvents setDockerImageName(java.lang.String dockerImageName) {
+    this.dockerImageName = dockerImageName;
     return this;
   }
 

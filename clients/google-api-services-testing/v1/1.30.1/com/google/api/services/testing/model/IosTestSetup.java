@@ -52,6 +52,35 @@ public final class IosTestSetup extends com.google.api.client.json.GenericJson {
   private java.lang.String networkProfile;
 
   /**
+   * List of directories on the device to upload to Cloud Storage at the end of the test.
+   * Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within
+   * an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle
+   * id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<IosDeviceFile> pullDirectories;
+
+  static {
+    // hack to force ProGuard to consider IosDeviceFile used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(IosDeviceFile.class);
+  }
+
+  /**
+   * List of files to push to the device before starting the test.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<IosDeviceFile> pushFiles;
+
+  static {
+    // hack to force ProGuard to consider IosDeviceFile used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(IosDeviceFile.class);
+  }
+
+  /**
    * iOS apps to install in addition to those being directly tested.
    * @return value or {@code null} for none
    */
@@ -86,6 +115,46 @@ public final class IosTestSetup extends com.google.api.client.json.GenericJson {
    */
   public IosTestSetup setNetworkProfile(java.lang.String networkProfile) {
     this.networkProfile = networkProfile;
+    return this;
+  }
+
+  /**
+   * List of directories on the device to upload to Cloud Storage at the end of the test.
+   * Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within
+   * an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle
+   * id.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<IosDeviceFile> getPullDirectories() {
+    return pullDirectories;
+  }
+
+  /**
+   * List of directories on the device to upload to Cloud Storage at the end of the test.
+   * Directories should either be in a shared directory (e.g. /private/var/mobile/Media) or within
+   * an accessible directory inside the app's filesystem (e.g. /Documents) by specifying the bundle
+   * id.
+   * @param pullDirectories pullDirectories or {@code null} for none
+   */
+  public IosTestSetup setPullDirectories(java.util.List<IosDeviceFile> pullDirectories) {
+    this.pullDirectories = pullDirectories;
+    return this;
+  }
+
+  /**
+   * List of files to push to the device before starting the test.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<IosDeviceFile> getPushFiles() {
+    return pushFiles;
+  }
+
+  /**
+   * List of files to push to the device before starting the test.
+   * @param pushFiles pushFiles or {@code null} for none
+   */
+  public IosTestSetup setPushFiles(java.util.List<IosDeviceFile> pushFiles) {
+    this.pushFiles = pushFiles;
     return this;
   }
 

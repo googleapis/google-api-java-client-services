@@ -35,7 +35,7 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class AzureBlobStorageData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Credentials used to authenticate API requests to Azure.
+   * Required. Input only. Credentials used to authenticate API requests to Azure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
   private java.lang.String storageAccount;
 
   /**
-   * Required. Credentials used to authenticate API requests to Azure.
+   * Required. Input only. Credentials used to authenticate API requests to Azure.
    * @return value or {@code null} for none
    */
   public AzureCredentials getAzureCredentials() {
@@ -64,7 +64,7 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Credentials used to authenticate API requests to Azure.
+   * Required. Input only. Credentials used to authenticate API requests to Azure.
    * @param azureCredentials azureCredentials or {@code null} for none
    */
   public AzureBlobStorageData setAzureCredentials(AzureCredentials azureCredentials) {

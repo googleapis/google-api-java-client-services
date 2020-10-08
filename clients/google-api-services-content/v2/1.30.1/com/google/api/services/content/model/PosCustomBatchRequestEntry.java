@@ -52,8 +52,9 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   private java.math.BigInteger merchantId;
 
   /**
-   * The method of the batch entry. Acceptable values are: - "`delete`" - "`get`" - "`insert`" -
-   * "`inventory`" - "`sale`"
+   * The method of the batch entry.
+   *
+   * Acceptable values are:   - "`delete`"  - "`get`"  - "`insert`"  - "`inventory`"  - "`sale`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,8 +140,9 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   }
 
   /**
-   * The method of the batch entry. Acceptable values are: - "`delete`" - "`get`" - "`insert`" -
-   * "`inventory`" - "`sale`"
+   * The method of the batch entry.
+   *
+   * Acceptable values are:   - "`delete`"  - "`get`"  - "`insert`"  - "`inventory`"  - "`sale`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -148,8 +150,9 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   }
 
   /**
-   * The method of the batch entry. Acceptable values are: - "`delete`" - "`get`" - "`insert`" -
-   * "`inventory`" - "`sale`"
+   * The method of the batch entry.
+   *
+   * Acceptable values are:   - "`delete`"  - "`get`"  - "`insert`"  - "`inventory`"  - "`sale`"
    * @param method method or {@code null} for none
    */
   public PosCustomBatchRequestEntry setMethod(java.lang.String method) {

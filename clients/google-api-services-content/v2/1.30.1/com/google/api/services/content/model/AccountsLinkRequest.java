@@ -32,15 +32,17 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
 
   /**
    * Action to perform for this link. The `"request"` action is only available to select merchants.
-   * Acceptable values are: - "`approve`" - "`remove`" - "`request`"
+   *
+   * Acceptable values are:   - "`approve`"  - "`remove`"  - "`request`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Type of the link between the two accounts. Acceptable values are: - "`channelPartner`" -
-   * "`eCommercePlatform`"
+   * Type of the link between the two accounts.
+   *
+   * Acceptable values are:   - "`channelPartner`"  - "`eCommercePlatform`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +57,8 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
 
   /**
    * Action to perform for this link. The `"request"` action is only available to select merchants.
-   * Acceptable values are: - "`approve`" - "`remove`" - "`request`"
+   *
+   * Acceptable values are:   - "`approve`"  - "`remove`"  - "`request`"
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -64,7 +67,8 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
 
   /**
    * Action to perform for this link. The `"request"` action is only available to select merchants.
-   * Acceptable values are: - "`approve`" - "`remove`" - "`request`"
+   *
+   * Acceptable values are:   - "`approve`"  - "`remove`"  - "`request`"
    * @param action action or {@code null} for none
    */
   public AccountsLinkRequest setAction(java.lang.String action) {
@@ -73,8 +77,9 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Type of the link between the two accounts. Acceptable values are: - "`channelPartner`" -
-   * "`eCommercePlatform`"
+   * Type of the link between the two accounts.
+   *
+   * Acceptable values are:   - "`channelPartner`"  - "`eCommercePlatform`"
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkType() {
@@ -82,8 +87,9 @@ public final class AccountsLinkRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Type of the link between the two accounts. Acceptable values are: - "`channelPartner`" -
-   * "`eCommercePlatform`"
+   * Type of the link between the two accounts.
+   *
+   * Acceptable values are:   - "`channelPartner`"  - "`eCommercePlatform`"
    * @param linkType linkType or {@code null} for none
    */
   public AccountsLinkRequest setLinkType(java.lang.String linkType) {

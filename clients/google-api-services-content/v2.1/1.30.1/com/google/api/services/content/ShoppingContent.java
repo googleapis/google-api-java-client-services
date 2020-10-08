@@ -6269,6 +6269,104 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
+     * Create return in your Merchant Center account.
+     *
+     * Create a request for the method "orderreturns.createorderreturn".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Createorderreturn#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
+     * @param content the {@link com.google.api.services.content.model.OrderreturnsCreateOrderReturnRequest}
+     * @return the request
+     */
+    public Createorderreturn createorderreturn(java.math.BigInteger merchantId, com.google.api.services.content.model.OrderreturnsCreateOrderReturnRequest content) throws java.io.IOException {
+      Createorderreturn result = new Createorderreturn(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Createorderreturn extends ShoppingContentRequest<com.google.api.services.content.model.OrderreturnsCreateOrderReturnResponse> {
+
+      private static final String REST_PATH = "{merchantId}/orderreturns/createOrderReturn";
+
+      /**
+       * Create return in your Merchant Center account.
+       *
+       * Create a request for the method "orderreturns.createorderreturn".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Createorderreturn#execute()} method to invoke the remote operation.
+       * <p> {@link Createorderreturn#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+       * eClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
+       * @param content the {@link com.google.api.services.content.model.OrderreturnsCreateOrderReturnRequest}
+       * @since 1.13
+       */
+      protected Createorderreturn(java.math.BigInteger merchantId, com.google.api.services.content.model.OrderreturnsCreateOrderReturnRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.OrderreturnsCreateOrderReturnResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Createorderreturn setAlt(java.lang.String alt) {
+        return (Createorderreturn) super.setAlt(alt);
+      }
+
+      @Override
+      public Createorderreturn setFields(java.lang.String fields) {
+        return (Createorderreturn) super.setFields(fields);
+      }
+
+      @Override
+      public Createorderreturn setKey(java.lang.String key) {
+        return (Createorderreturn) super.setKey(key);
+      }
+
+      @Override
+      public Createorderreturn setOauthToken(java.lang.String oauthToken) {
+        return (Createorderreturn) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Createorderreturn setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Createorderreturn) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Createorderreturn setQuotaUser(java.lang.String quotaUser) {
+        return (Createorderreturn) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Createorderreturn setUserIp(java.lang.String userIp) {
+        return (Createorderreturn) super.setUserIp(userIp);
+      }
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /** The ID of the account that manages the order. This cannot be a multi-client account. */
+      public Createorderreturn setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Createorderreturn set(String parameterName, Object value) {
+        return (Createorderreturn) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieves an order return from your Merchant Center account.
      *
      * Create a request for the method "orderreturns.get".

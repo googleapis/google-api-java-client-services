@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Model definition for InvoiceSummaryAdditionalChargeSummary.
+ * Model definition for OrderreturnsLineItem.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -28,70 +28,64 @@ package com.google.api.services.content.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class InvoiceSummaryAdditionalChargeSummary extends com.google.api.client.json.GenericJson {
+public final class OrderreturnsLineItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * [required] Total additional charge for this type.
+   * The ID of the line item. This value is assigned by Google when an order is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Amount totalAmount;
+  private java.lang.String lineItemId;
 
   /**
-   * [required] Type of the additional charge.
-   *
-   * Acceptable values are:   - "`shipping`"
+   * The quantity of this line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private java.lang.Long quantity;
 
   /**
-   * [required] Total additional charge for this type.
+   * The ID of the line item. This value is assigned by Google when an order is created.
    * @return value or {@code null} for none
    */
-  public Amount getTotalAmount() {
-    return totalAmount;
+  public java.lang.String getLineItemId() {
+    return lineItemId;
   }
 
   /**
-   * [required] Total additional charge for this type.
-   * @param totalAmount totalAmount or {@code null} for none
+   * The ID of the line item. This value is assigned by Google when an order is created.
+   * @param lineItemId lineItemId or {@code null} for none
    */
-  public InvoiceSummaryAdditionalChargeSummary setTotalAmount(Amount totalAmount) {
-    this.totalAmount = totalAmount;
+  public OrderreturnsLineItem setLineItemId(java.lang.String lineItemId) {
+    this.lineItemId = lineItemId;
     return this;
   }
 
   /**
-   * [required] Type of the additional charge.
-   *
-   * Acceptable values are:   - "`shipping`"
+   * The quantity of this line item.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.lang.Long getQuantity() {
+    return quantity;
   }
 
   /**
-   * [required] Type of the additional charge.
-   *
-   * Acceptable values are:   - "`shipping`"
-   * @param type type or {@code null} for none
+   * The quantity of this line item.
+   * @param quantity quantity or {@code null} for none
    */
-  public InvoiceSummaryAdditionalChargeSummary setType(java.lang.String type) {
-    this.type = type;
+  public OrderreturnsLineItem setQuantity(java.lang.Long quantity) {
+    this.quantity = quantity;
     return this;
   }
 
   @Override
-  public InvoiceSummaryAdditionalChargeSummary set(String fieldName, Object value) {
-    return (InvoiceSummaryAdditionalChargeSummary) super.set(fieldName, value);
+  public OrderreturnsLineItem set(String fieldName, Object value) {
+    return (OrderreturnsLineItem) super.set(fieldName, value);
   }
 
   @Override
-  public InvoiceSummaryAdditionalChargeSummary clone() {
-    return (InvoiceSummaryAdditionalChargeSummary) super.clone();
+  public OrderreturnsLineItem clone() {
+    return (OrderreturnsLineItem) super.clone();
   }
 
 }

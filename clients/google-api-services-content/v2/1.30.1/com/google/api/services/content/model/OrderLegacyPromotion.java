@@ -71,15 +71,18 @@ public final class OrderLegacyPromotion extends com.google.api.client.json.Gener
   private java.lang.String longTitle;
 
   /**
-   * Whether the promotion is applicable to all products or only specific products. Acceptable
-   * values are: - "`allProducts`" - "`specificProducts`"
+   * Whether the promotion is applicable to all products or only specific products.
+   *
+   * Acceptable values are:   - "`allProducts`"  - "`specificProducts`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productApplicability;
 
   /**
-   * Indicates that the promotion is valid online. Acceptable values are: - "`online`"
+   * Indicates that the promotion is valid online.
+   *
+   * Acceptable values are:   - "`online`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,8 +184,9 @@ public final class OrderLegacyPromotion extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether the promotion is applicable to all products or only specific products. Acceptable
-   * values are: - "`allProducts`" - "`specificProducts`"
+   * Whether the promotion is applicable to all products or only specific products.
+   *
+   * Acceptable values are:   - "`allProducts`"  - "`specificProducts`"
    * @return value or {@code null} for none
    */
   public java.lang.String getProductApplicability() {
@@ -190,8 +194,9 @@ public final class OrderLegacyPromotion extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether the promotion is applicable to all products or only specific products. Acceptable
-   * values are: - "`allProducts`" - "`specificProducts`"
+   * Whether the promotion is applicable to all products or only specific products.
+   *
+   * Acceptable values are:   - "`allProducts`"  - "`specificProducts`"
    * @param productApplicability productApplicability or {@code null} for none
    */
   public OrderLegacyPromotion setProductApplicability(java.lang.String productApplicability) {
@@ -200,7 +205,9 @@ public final class OrderLegacyPromotion extends com.google.api.client.json.Gener
   }
 
   /**
-   * Indicates that the promotion is valid online. Acceptable values are: - "`online`"
+   * Indicates that the promotion is valid online.
+   *
+   * Acceptable values are:   - "`online`"
    * @return value or {@code null} for none
    */
   public java.lang.String getRedemptionChannel() {
@@ -208,7 +215,9 @@ public final class OrderLegacyPromotion extends com.google.api.client.json.Gener
   }
 
   /**
-   * Indicates that the promotion is valid online. Acceptable values are: - "`online`"
+   * Indicates that the promotion is valid online.
+   *
+   * Acceptable values are:   - "`online`"
    * @param redemptionChannel redemptionChannel or {@code null} for none
    */
   public OrderLegacyPromotion setRedemptionChannel(java.lang.String redemptionChannel) {

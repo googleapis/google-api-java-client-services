@@ -77,9 +77,11 @@ public final class OrdersCustomBatchRequestEntryCancelLineItem extends com.googl
   private java.lang.Long quantity;
 
   /**
-   * The reason for the cancellation. Acceptable values are: - "`customerInitiatedCancel`" -
-   * "`invalidCoupon`" - "`malformedShippingAddress`" - "`noInventory`" - "`other`" - "`priceError`"
-   * - "`shippingPriceError`" - "`taxError`" - "`undeliverableShippingAddress`" -
+   * The reason for the cancellation.
+   *
+   * Acceptable values are:   - "`customerInitiatedCancel`"  - "`invalidCoupon`"  -
+   * "`malformedShippingAddress`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
+   * "`shippingPriceError`"  - "`taxError`"  - "`undeliverableShippingAddress`"  -
    * "`unsupportedPoBoxAddress`"
    * The value may be {@code null}.
    */
@@ -204,9 +206,11 @@ public final class OrdersCustomBatchRequestEntryCancelLineItem extends com.googl
   }
 
   /**
-   * The reason for the cancellation. Acceptable values are: - "`customerInitiatedCancel`" -
-   * "`invalidCoupon`" - "`malformedShippingAddress`" - "`noInventory`" - "`other`" - "`priceError`"
-   * - "`shippingPriceError`" - "`taxError`" - "`undeliverableShippingAddress`" -
+   * The reason for the cancellation.
+   *
+   * Acceptable values are:   - "`customerInitiatedCancel`"  - "`invalidCoupon`"  -
+   * "`malformedShippingAddress`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
+   * "`shippingPriceError`"  - "`taxError`"  - "`undeliverableShippingAddress`"  -
    * "`unsupportedPoBoxAddress`"
    * @return value or {@code null} for none
    */
@@ -215,9 +219,11 @@ public final class OrdersCustomBatchRequestEntryCancelLineItem extends com.googl
   }
 
   /**
-   * The reason for the cancellation. Acceptable values are: - "`customerInitiatedCancel`" -
-   * "`invalidCoupon`" - "`malformedShippingAddress`" - "`noInventory`" - "`other`" - "`priceError`"
-   * - "`shippingPriceError`" - "`taxError`" - "`undeliverableShippingAddress`" -
+   * The reason for the cancellation.
+   *
+   * Acceptable values are:   - "`customerInitiatedCancel`"  - "`invalidCoupon`"  -
+   * "`malformedShippingAddress`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
+   * "`shippingPriceError`"  - "`taxError`"  - "`undeliverableShippingAddress`"  -
    * "`unsupportedPoBoxAddress`"
    * @param reason reason or {@code null} for none
    */

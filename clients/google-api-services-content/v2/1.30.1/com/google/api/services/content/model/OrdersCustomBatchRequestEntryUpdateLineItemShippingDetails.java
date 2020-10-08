@@ -32,6 +32,7 @@ public final class OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails ex
 
   /**
    * Updated delivery by date, in ISO 8601 format. If not specified only ship by date is updated.
+   *
    * Provided date should be within 1 year timeframe and can not be a date in the past.
    * The value may be {@code null}.
    */
@@ -55,6 +56,7 @@ public final class OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails ex
 
   /**
    * Updated ship by date, in ISO 8601 format. If not specified only deliver by date is updated.
+   *
    * Provided date should be within 1 year timeframe and can not be a date in the past.
    * The value may be {@code null}.
    */
@@ -63,6 +65,7 @@ public final class OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails ex
 
   /**
    * Updated delivery by date, in ISO 8601 format. If not specified only ship by date is updated.
+   *
    * Provided date should be within 1 year timeframe and can not be a date in the past.
    * @return value or {@code null} for none
    */
@@ -72,6 +75,7 @@ public final class OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails ex
 
   /**
    * Updated delivery by date, in ISO 8601 format. If not specified only ship by date is updated.
+   *
    * Provided date should be within 1 year timeframe and can not be a date in the past.
    * @param deliverByDate deliverByDate or {@code null} for none
    */
@@ -118,6 +122,7 @@ public final class OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails ex
 
   /**
    * Updated ship by date, in ISO 8601 format. If not specified only deliver by date is updated.
+   *
    * Provided date should be within 1 year timeframe and can not be a date in the past.
    * @return value or {@code null} for none
    */
@@ -127,6 +132,7 @@ public final class OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails ex
 
   /**
    * Updated ship by date, in ISO 8601 format. If not specified only deliver by date is updated.
+   *
    * Provided date should be within 1 year timeframe and can not be a date in the past.
    * @param shipByDate shipByDate or {@code null} for none
    */

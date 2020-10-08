@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Model definition for OrdersCancelRequest.
+ * Model definition for OrderreturnsCreateOrderReturnRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -28,7 +28,14 @@ package com.google.api.services.content.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OrdersCancelRequest extends com.google.api.client.json.GenericJson {
+public final class OrderreturnsCreateOrderReturnRequest extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The list of line items to return.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<OrderreturnsLineItem> lineItems;
 
   /**
    * The ID of the operation. Unique across all operations for a given order.
@@ -38,23 +45,35 @@ public final class OrdersCancelRequest extends com.google.api.client.json.Generi
   private java.lang.String operationId;
 
   /**
-   * The reason for the cancellation.
-   *
-   * Acceptable values are:   - "`customerInitiatedCancel`"  - "`invalidCoupon`"  -
-   * "`malformedShippingAddress`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
-   * "`shippingPriceError`"  - "`taxError`"  - "`undeliverableShippingAddress`"  -
-   * "`unsupportedPoBoxAddress`"
+   * The ID of the order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String reason;
+  private java.lang.String orderId;
 
   /**
-   * The explanation of the reason.
+   * The way of the package being returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String reasonText;
+  private java.lang.String returnMethodType;
+
+  /**
+   * The list of line items to return.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<OrderreturnsLineItem> getLineItems() {
+    return lineItems;
+  }
+
+  /**
+   * The list of line items to return.
+   * @param lineItems lineItems or {@code null} for none
+   */
+  public OrderreturnsCreateOrderReturnRequest setLineItems(java.util.List<OrderreturnsLineItem> lineItems) {
+    this.lineItems = lineItems;
+    return this;
+  }
 
   /**
    * The ID of the operation. Unique across all operations for a given order.
@@ -68,63 +87,53 @@ public final class OrdersCancelRequest extends com.google.api.client.json.Generi
    * The ID of the operation. Unique across all operations for a given order.
    * @param operationId operationId or {@code null} for none
    */
-  public OrdersCancelRequest setOperationId(java.lang.String operationId) {
+  public OrderreturnsCreateOrderReturnRequest setOperationId(java.lang.String operationId) {
     this.operationId = operationId;
     return this;
   }
 
   /**
-   * The reason for the cancellation.
-   *
-   * Acceptable values are:   - "`customerInitiatedCancel`"  - "`invalidCoupon`"  -
-   * "`malformedShippingAddress`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
-   * "`shippingPriceError`"  - "`taxError`"  - "`undeliverableShippingAddress`"  -
-   * "`unsupportedPoBoxAddress`"
+   * The ID of the order.
    * @return value or {@code null} for none
    */
-  public java.lang.String getReason() {
-    return reason;
+  public java.lang.String getOrderId() {
+    return orderId;
   }
 
   /**
-   * The reason for the cancellation.
-   *
-   * Acceptable values are:   - "`customerInitiatedCancel`"  - "`invalidCoupon`"  -
-   * "`malformedShippingAddress`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
-   * "`shippingPriceError`"  - "`taxError`"  - "`undeliverableShippingAddress`"  -
-   * "`unsupportedPoBoxAddress`"
-   * @param reason reason or {@code null} for none
+   * The ID of the order.
+   * @param orderId orderId or {@code null} for none
    */
-  public OrdersCancelRequest setReason(java.lang.String reason) {
-    this.reason = reason;
+  public OrderreturnsCreateOrderReturnRequest setOrderId(java.lang.String orderId) {
+    this.orderId = orderId;
     return this;
   }
 
   /**
-   * The explanation of the reason.
+   * The way of the package being returned.
    * @return value or {@code null} for none
    */
-  public java.lang.String getReasonText() {
-    return reasonText;
+  public java.lang.String getReturnMethodType() {
+    return returnMethodType;
   }
 
   /**
-   * The explanation of the reason.
-   * @param reasonText reasonText or {@code null} for none
+   * The way of the package being returned.
+   * @param returnMethodType returnMethodType or {@code null} for none
    */
-  public OrdersCancelRequest setReasonText(java.lang.String reasonText) {
-    this.reasonText = reasonText;
+  public OrderreturnsCreateOrderReturnRequest setReturnMethodType(java.lang.String returnMethodType) {
+    this.returnMethodType = returnMethodType;
     return this;
   }
 
   @Override
-  public OrdersCancelRequest set(String fieldName, Object value) {
-    return (OrdersCancelRequest) super.set(fieldName, value);
+  public OrderreturnsCreateOrderReturnRequest set(String fieldName, Object value) {
+    return (OrderreturnsCreateOrderReturnRequest) super.set(fieldName, value);
   }
 
   @Override
-  public OrdersCancelRequest clone() {
-    return (OrdersCancelRequest) super.clone();
+  public OrderreturnsCreateOrderReturnRequest clone() {
+    return (OrderreturnsCreateOrderReturnRequest) super.clone();
   }
 
 }

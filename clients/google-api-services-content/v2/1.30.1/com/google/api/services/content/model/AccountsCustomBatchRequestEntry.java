@@ -81,8 +81,10 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   private java.math.BigInteger merchantId;
 
   /**
-   * The method of the batch entry. Acceptable values are: - "`claimWebsite`" - "`delete`" - "`get`"
-   * - "`insert`" - "`link`" - "`update`"
+   * The method of the batch entry.
+   *
+   * Acceptable values are:   - "`claimWebsite`"  - "`delete`"  - "`get`"  - "`insert`"  - "`link`"
+   * - "`update`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,8 +220,10 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The method of the batch entry. Acceptable values are: - "`claimWebsite`" - "`delete`" - "`get`"
-   * - "`insert`" - "`link`" - "`update`"
+   * The method of the batch entry.
+   *
+   * Acceptable values are:   - "`claimWebsite`"  - "`delete`"  - "`get`"  - "`insert`"  - "`link`"
+   * - "`update`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -227,8 +231,10 @@ public final class AccountsCustomBatchRequestEntry extends com.google.api.client
   }
 
   /**
-   * The method of the batch entry. Acceptable values are: - "`claimWebsite`" - "`delete`" - "`get`"
-   * - "`insert`" - "`link`" - "`update`"
+   * The method of the batch entry.
+   *
+   * Acceptable values are:   - "`claimWebsite`"  - "`delete`"  - "`get`"  - "`insert`"  - "`link`"
+   * - "`update`"
    * @param method method or {@code null} for none
    */
   public AccountsCustomBatchRequestEntry setMethod(java.lang.String method) {

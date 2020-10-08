@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Model definition for OrdersUpdateShipmentResponse.
+ * Model definition for OrderreturnsCreateOrderReturnResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -28,7 +28,7 @@ package com.google.api.services.content.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OrdersUpdateShipmentResponse extends com.google.api.client.json.GenericJson {
+public final class OrderreturnsCreateOrderReturnResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * The status of the execution.
@@ -41,11 +41,18 @@ public final class OrdersUpdateShipmentResponse extends com.google.api.client.js
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersUpdateShipmentResponse".
+   * "content#orderreturnsCreateOrderReturnResponse".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * Created order return.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MerchantOrderReturn orderReturn;
 
   /**
    * The status of the execution.
@@ -63,14 +70,14 @@ public final class OrdersUpdateShipmentResponse extends com.google.api.client.js
    * Acceptable values are:   - "`duplicate`"  - "`executed`"
    * @param executionStatus executionStatus or {@code null} for none
    */
-  public OrdersUpdateShipmentResponse setExecutionStatus(java.lang.String executionStatus) {
+  public OrderreturnsCreateOrderReturnResponse setExecutionStatus(java.lang.String executionStatus) {
     this.executionStatus = executionStatus;
     return this;
   }
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersUpdateShipmentResponse".
+   * "content#orderreturnsCreateOrderReturnResponse".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -79,22 +86,39 @@ public final class OrdersUpdateShipmentResponse extends com.google.api.client.js
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "content#ordersUpdateShipmentResponse".
+   * "content#orderreturnsCreateOrderReturnResponse".
    * @param kind kind or {@code null} for none
    */
-  public OrdersUpdateShipmentResponse setKind(java.lang.String kind) {
+  public OrderreturnsCreateOrderReturnResponse setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
 
-  @Override
-  public OrdersUpdateShipmentResponse set(String fieldName, Object value) {
-    return (OrdersUpdateShipmentResponse) super.set(fieldName, value);
+  /**
+   * Created order return.
+   * @return value or {@code null} for none
+   */
+  public MerchantOrderReturn getOrderReturn() {
+    return orderReturn;
+  }
+
+  /**
+   * Created order return.
+   * @param orderReturn orderReturn or {@code null} for none
+   */
+  public OrderreturnsCreateOrderReturnResponse setOrderReturn(MerchantOrderReturn orderReturn) {
+    this.orderReturn = orderReturn;
+    return this;
   }
 
   @Override
-  public OrdersUpdateShipmentResponse clone() {
-    return (OrdersUpdateShipmentResponse) super.clone();
+  public OrderreturnsCreateOrderReturnResponse set(String fieldName, Object value) {
+    return (OrderreturnsCreateOrderReturnResponse) super.set(fieldName, value);
+  }
+
+  @Override
+  public OrderreturnsCreateOrderReturnResponse clone() {
+    return (OrderreturnsCreateOrderReturnResponse) super.clone();
   }
 
 }

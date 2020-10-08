@@ -32,7 +32,7 @@ package com.google.api.services.content.model;
 public final class DatafeedStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The country for which the status is reported, represented as a CLDR territory code.
+   * The country for which the status is reported, represented as a  CLDR territory code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,11 +88,13 @@ public final class DatafeedStatus extends com.google.api.client.json.GenericJson
   private java.lang.String lastUploadDate;
 
   /**
-   * The processing status of the feed. Acceptable values are: - "`"`failure`": The feed could not
-   * be processed or all items had errors.`" - "`in progress`": The feed is being processed. -
-   * "`none`": The feed has not yet been processed. For example, a feed that has never been uploaded
-   * will have this processing status. - "`success`": The feed was processed successfully, though
-   * some items might have had errors.
+   * The processing status of the feed.
+   *
+   * Acceptable values are:   - "`"`failure`": The feed could not be processed or all items had
+   * errors.`"  - "`in progress`": The feed is being processed.  - "`none`": The feed has not yet
+   * been processed. For example, a feed that has never been uploaded will have this processing
+   * status.  - "`success`": The feed was processed successfully, though some items might have had
+   * errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +108,7 @@ public final class DatafeedStatus extends com.google.api.client.json.GenericJson
   private java.util.List<DatafeedStatusError> warnings;
 
   /**
-   * The country for which the status is reported, represented as a CLDR territory code.
+   * The country for which the status is reported, represented as a  CLDR territory code.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -114,7 +116,7 @@ public final class DatafeedStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The country for which the status is reported, represented as a CLDR territory code.
+   * The country for which the status is reported, represented as a  CLDR territory code.
    * @param country country or {@code null} for none
    */
   public DatafeedStatus setCountry(java.lang.String country) {
@@ -242,11 +244,13 @@ public final class DatafeedStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The processing status of the feed. Acceptable values are: - "`"`failure`": The feed could not
-   * be processed or all items had errors.`" - "`in progress`": The feed is being processed. -
-   * "`none`": The feed has not yet been processed. For example, a feed that has never been uploaded
-   * will have this processing status. - "`success`": The feed was processed successfully, though
-   * some items might have had errors.
+   * The processing status of the feed.
+   *
+   * Acceptable values are:   - "`"`failure`": The feed could not be processed or all items had
+   * errors.`"  - "`in progress`": The feed is being processed.  - "`none`": The feed has not yet
+   * been processed. For example, a feed that has never been uploaded will have this processing
+   * status.  - "`success`": The feed was processed successfully, though some items might have had
+   * errors.
    * @return value or {@code null} for none
    */
   public java.lang.String getProcessingStatus() {
@@ -254,11 +258,13 @@ public final class DatafeedStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The processing status of the feed. Acceptable values are: - "`"`failure`": The feed could not
-   * be processed or all items had errors.`" - "`in progress`": The feed is being processed. -
-   * "`none`": The feed has not yet been processed. For example, a feed that has never been uploaded
-   * will have this processing status. - "`success`": The feed was processed successfully, though
-   * some items might have had errors.
+   * The processing status of the feed.
+   *
+   * Acceptable values are:   - "`"`failure`": The feed could not be processed or all items had
+   * errors.`"  - "`in progress`": The feed is being processed.  - "`none`": The feed has not yet
+   * been processed. For example, a feed that has never been uploaded will have this processing
+   * status.  - "`success`": The feed was processed successfully, though some items might have had
+   * errors.
    * @param processingStatus processingStatus or {@code null} for none
    */
   public DatafeedStatus setProcessingStatus(java.lang.String processingStatus) {

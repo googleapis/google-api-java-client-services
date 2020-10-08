@@ -32,7 +32,9 @@ public final class TestOrderCustomerMarketingRightsInfo extends com.google.api.c
 
   /**
    * Last know user use selection regards marketing preferences. In certain cases selection might
-   * not be known, so this field would be empty. Acceptable values are: - "`denied`" - "`granted`"
+   * not be known, so this field would be empty.
+   *
+   * Acceptable values are:   - "`denied`"  - "`granted`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +50,9 @@ public final class TestOrderCustomerMarketingRightsInfo extends com.google.api.c
 
   /**
    * Last know user use selection regards marketing preferences. In certain cases selection might
-   * not be known, so this field would be empty. Acceptable values are: - "`denied`" - "`granted`"
+   * not be known, so this field would be empty.
+   *
+   * Acceptable values are:   - "`denied`"  - "`granted`"
    * @return value or {@code null} for none
    */
   public java.lang.String getExplicitMarketingPreference() {
@@ -57,7 +61,9 @@ public final class TestOrderCustomerMarketingRightsInfo extends com.google.api.c
 
   /**
    * Last know user use selection regards marketing preferences. In certain cases selection might
-   * not be known, so this field would be empty. Acceptable values are: - "`denied`" - "`granted`"
+   * not be known, so this field would be empty.
+   *
+   * Acceptable values are:   - "`denied`"  - "`granted`"
    * @param explicitMarketingPreference explicitMarketingPreference or {@code null} for none
    */
   public TestOrderCustomerMarketingRightsInfo setExplicitMarketingPreference(java.lang.String explicitMarketingPreference) {

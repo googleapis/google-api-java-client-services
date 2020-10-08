@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/hzL4Pf5JdJer2F_gaxG6dg1Snv0\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/96PsmIBl7pWUWaNW71Afx7PUvZc\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20200922",
+ "revision": "20201006",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -3759,6 +3759,65 @@
      "type": "string",
      "description": "Identifies what kind of resource this is. Value: the fixed string \"content#orderreturnsAcknowledgeResponse\".",
      "default": "content#orderreturnsAcknowledgeResponse"
+    }
+   }
+  },
+  "OrderreturnsCreateOrderReturnRequest": {
+   "id": "OrderreturnsCreateOrderReturnRequest",
+   "type": "object",
+   "properties": {
+    "lineItems": {
+     "type": "array",
+     "description": "The list of line items to return.",
+     "items": {
+      "$ref": "OrderreturnsLineItem"
+     }
+    },
+    "operationId": {
+     "type": "string",
+     "description": "The ID of the operation. Unique across all operations for a given order."
+    },
+    "orderId": {
+     "type": "string",
+     "description": "The ID of the order."
+    },
+    "returnMethodType": {
+     "type": "string",
+     "description": "The way of the package being returned."
+    }
+   }
+  },
+  "OrderreturnsCreateOrderReturnResponse": {
+   "id": "OrderreturnsCreateOrderReturnResponse",
+   "type": "object",
+   "properties": {
+    "executionStatus": {
+     "type": "string",
+     "description": "The status of the execution.\n\nAcceptable values are:  \n- \"`duplicate`\" \n- \"`executed`\""
+    },
+    "kind": {
+     "type": "string",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"content#orderreturnsCreateOrderReturnResponse\".",
+     "default": "content#orderreturnsCreateOrderReturnResponse"
+    },
+    "orderReturn": {
+     "$ref": "MerchantOrderReturn",
+     "description": "Created order return."
+    }
+   }
+  },
+  "OrderreturnsLineItem": {
+   "id": "OrderreturnsLineItem",
+   "type": "object",
+   "properties": {
+    "lineItemId": {
+     "type": "string",
+     "description": "The ID of the line item. This value is assigned by Google when an order is created."
+    },
+    "quantity": {
+     "type": "integer",
+     "description": "The quantity of this line item.",
+     "format": "uint32"
     }
    }
   },
@@ -9561,6 +9620,33 @@
      },
      "response": {
       "$ref": "OrderreturnsAcknowledgeResponse"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/content"
+     ]
+    },
+    "createorderreturn": {
+     "id": "content.orderreturns.createorderreturn",
+     "path": "{merchantId}/orderreturns/createOrderReturn",
+     "httpMethod": "POST",
+     "description": "Create return in your Merchant Center account.",
+     "parameters": {
+      "merchantId": {
+       "type": "string",
+       "description": "The ID of the account that manages the order. This cannot be a multi-client account.",
+       "required": true,
+       "format": "uint64",
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "merchantId"
+     ],
+     "request": {
+      "$ref": "OrderreturnsCreateOrderReturnRequest"
+     },
+     "response": {
+      "$ref": "OrderreturnsCreateOrderReturnResponse"
      },
      "scopes": [
       "https://www.googleapis.com/auth/content"

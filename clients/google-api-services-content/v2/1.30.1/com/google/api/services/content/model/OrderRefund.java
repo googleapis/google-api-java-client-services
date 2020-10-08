@@ -31,8 +31,10 @@ package com.google.api.services.content.model;
 public final class OrderRefund extends com.google.api.client.json.GenericJson {
 
   /**
-   * The actor that created the refund. Acceptable values are: - "`customer`" - "`googleBot`" -
-   * "`googleCustomerService`" - "`googlePayments`" - "`googleSabre`" - "`merchant`"
+   * The actor that created the refund.
+   *
+   * Acceptable values are:   - "`customer`"  - "`googleBot`"  - "`googleCustomerService`"  -
+   * "`googlePayments`"  - "`googleSabre`"  - "`merchant`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,20 +55,22 @@ public final class OrderRefund extends com.google.api.client.json.GenericJson {
   private java.lang.String creationDate;
 
   /**
-   * The reason for the refund. Acceptable values are: - "`adjustment`" - "`autoPostInternal`" -
-   * "`autoPostInvalidBillingAddress`" - "`autoPostNoInventory`" - "`autoPostPriceError`" -
-   * "`autoPostUndeliverableShippingAddress`" - "`couponAbuse`" - "`courtesyAdjustment`" -
-   * "`customerCanceled`" - "`customerDiscretionaryReturn`" - "`customerInitiatedMerchantCancel`" -
-   * "`customerSupportRequested`" - "`deliveredLateByCarrier`" - "`deliveredTooLate`" -
-   * "`expiredItem`" - "`failToPushOrderGoogleError`" - "`failToPushOrderMerchantError`" -
-   * "`failToPushOrderMerchantFulfillmentError`" - "`failToPushOrderToMerchant`" -
-   * "`failToPushOrderToMerchantOutOfStock`" - "`feeAdjustment`" - "`invalidCoupon`" -
-   * "`lateShipmentCredit`" - "`malformedShippingAddress`" - "`merchantDidNotShipOnTime`" -
-   * "`noInventory`" - "`orderTimeout`" - "`other`" - "`paymentAbuse`" - "`paymentDeclined`" -
-   * "`priceAdjustment`" - "`priceError`" - "`productArrivedDamaged`" - "`productNotAsDescribed`" -
-   * "`promoReallocation`" - "`qualityNotAsExpected`" - "`returnRefundAbuse`" -
-   * "`shippingCostAdjustment`" - "`shippingPriceError`" - "`taxAdjustment`" - "`taxError`" -
-   * "`undeliverableShippingAddress`" - "`unsupportedPoBoxAddress`" - "`wrongProductShipped`"
+   * The reason for the refund.
+   *
+   * Acceptable values are:   - "`adjustment`"  - "`autoPostInternal`"  -
+   * "`autoPostInvalidBillingAddress`"  - "`autoPostNoInventory`"  - "`autoPostPriceError`"  -
+   * "`autoPostUndeliverableShippingAddress`"  - "`couponAbuse`"  - "`courtesyAdjustment`"  -
+   * "`customerCanceled`"  - "`customerDiscretionaryReturn`"  - "`customerInitiatedMerchantCancel`"
+   * - "`customerSupportRequested`"  - "`deliveredLateByCarrier`"  - "`deliveredTooLate`"  -
+   * "`expiredItem`"  - "`failToPushOrderGoogleError`"  - "`failToPushOrderMerchantError`"  -
+   * "`failToPushOrderMerchantFulfillmentError`"  - "`failToPushOrderToMerchant`"  -
+   * "`failToPushOrderToMerchantOutOfStock`"  - "`feeAdjustment`"  - "`invalidCoupon`"  -
+   * "`lateShipmentCredit`"  - "`malformedShippingAddress`"  - "`merchantDidNotShipOnTime`"  -
+   * "`noInventory`"  - "`orderTimeout`"  - "`other`"  - "`paymentAbuse`"  - "`paymentDeclined`"  -
+   * "`priceAdjustment`"  - "`priceError`"  - "`productArrivedDamaged`"  - "`productNotAsDescribed`"
+   * - "`promoReallocation`"  - "`qualityNotAsExpected`"  - "`returnRefundAbuse`"  -
+   * "`shippingCostAdjustment`"  - "`shippingPriceError`"  - "`taxAdjustment`"  - "`taxError`"  -
+   * "`undeliverableShippingAddress`"  - "`unsupportedPoBoxAddress`"  - "`wrongProductShipped`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +84,10 @@ public final class OrderRefund extends com.google.api.client.json.GenericJson {
   private java.lang.String reasonText;
 
   /**
-   * The actor that created the refund. Acceptable values are: - "`customer`" - "`googleBot`" -
-   * "`googleCustomerService`" - "`googlePayments`" - "`googleSabre`" - "`merchant`"
+   * The actor that created the refund.
+   *
+   * Acceptable values are:   - "`customer`"  - "`googleBot`"  - "`googleCustomerService`"  -
+   * "`googlePayments`"  - "`googleSabre`"  - "`merchant`"
    * @return value or {@code null} for none
    */
   public java.lang.String getActor() {
@@ -89,8 +95,10 @@ public final class OrderRefund extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The actor that created the refund. Acceptable values are: - "`customer`" - "`googleBot`" -
-   * "`googleCustomerService`" - "`googlePayments`" - "`googleSabre`" - "`merchant`"
+   * The actor that created the refund.
+   *
+   * Acceptable values are:   - "`customer`"  - "`googleBot`"  - "`googleCustomerService`"  -
+   * "`googlePayments`"  - "`googleSabre`"  - "`merchant`"
    * @param actor actor or {@code null} for none
    */
   public OrderRefund setActor(java.lang.String actor) {
@@ -133,20 +141,22 @@ public final class OrderRefund extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The reason for the refund. Acceptable values are: - "`adjustment`" - "`autoPostInternal`" -
-   * "`autoPostInvalidBillingAddress`" - "`autoPostNoInventory`" - "`autoPostPriceError`" -
-   * "`autoPostUndeliverableShippingAddress`" - "`couponAbuse`" - "`courtesyAdjustment`" -
-   * "`customerCanceled`" - "`customerDiscretionaryReturn`" - "`customerInitiatedMerchantCancel`" -
-   * "`customerSupportRequested`" - "`deliveredLateByCarrier`" - "`deliveredTooLate`" -
-   * "`expiredItem`" - "`failToPushOrderGoogleError`" - "`failToPushOrderMerchantError`" -
-   * "`failToPushOrderMerchantFulfillmentError`" - "`failToPushOrderToMerchant`" -
-   * "`failToPushOrderToMerchantOutOfStock`" - "`feeAdjustment`" - "`invalidCoupon`" -
-   * "`lateShipmentCredit`" - "`malformedShippingAddress`" - "`merchantDidNotShipOnTime`" -
-   * "`noInventory`" - "`orderTimeout`" - "`other`" - "`paymentAbuse`" - "`paymentDeclined`" -
-   * "`priceAdjustment`" - "`priceError`" - "`productArrivedDamaged`" - "`productNotAsDescribed`" -
-   * "`promoReallocation`" - "`qualityNotAsExpected`" - "`returnRefundAbuse`" -
-   * "`shippingCostAdjustment`" - "`shippingPriceError`" - "`taxAdjustment`" - "`taxError`" -
-   * "`undeliverableShippingAddress`" - "`unsupportedPoBoxAddress`" - "`wrongProductShipped`"
+   * The reason for the refund.
+   *
+   * Acceptable values are:   - "`adjustment`"  - "`autoPostInternal`"  -
+   * "`autoPostInvalidBillingAddress`"  - "`autoPostNoInventory`"  - "`autoPostPriceError`"  -
+   * "`autoPostUndeliverableShippingAddress`"  - "`couponAbuse`"  - "`courtesyAdjustment`"  -
+   * "`customerCanceled`"  - "`customerDiscretionaryReturn`"  - "`customerInitiatedMerchantCancel`"
+   * - "`customerSupportRequested`"  - "`deliveredLateByCarrier`"  - "`deliveredTooLate`"  -
+   * "`expiredItem`"  - "`failToPushOrderGoogleError`"  - "`failToPushOrderMerchantError`"  -
+   * "`failToPushOrderMerchantFulfillmentError`"  - "`failToPushOrderToMerchant`"  -
+   * "`failToPushOrderToMerchantOutOfStock`"  - "`feeAdjustment`"  - "`invalidCoupon`"  -
+   * "`lateShipmentCredit`"  - "`malformedShippingAddress`"  - "`merchantDidNotShipOnTime`"  -
+   * "`noInventory`"  - "`orderTimeout`"  - "`other`"  - "`paymentAbuse`"  - "`paymentDeclined`"  -
+   * "`priceAdjustment`"  - "`priceError`"  - "`productArrivedDamaged`"  - "`productNotAsDescribed`"
+   * - "`promoReallocation`"  - "`qualityNotAsExpected`"  - "`returnRefundAbuse`"  -
+   * "`shippingCostAdjustment`"  - "`shippingPriceError`"  - "`taxAdjustment`"  - "`taxError`"  -
+   * "`undeliverableShippingAddress`"  - "`unsupportedPoBoxAddress`"  - "`wrongProductShipped`"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -154,20 +164,22 @@ public final class OrderRefund extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The reason for the refund. Acceptable values are: - "`adjustment`" - "`autoPostInternal`" -
-   * "`autoPostInvalidBillingAddress`" - "`autoPostNoInventory`" - "`autoPostPriceError`" -
-   * "`autoPostUndeliverableShippingAddress`" - "`couponAbuse`" - "`courtesyAdjustment`" -
-   * "`customerCanceled`" - "`customerDiscretionaryReturn`" - "`customerInitiatedMerchantCancel`" -
-   * "`customerSupportRequested`" - "`deliveredLateByCarrier`" - "`deliveredTooLate`" -
-   * "`expiredItem`" - "`failToPushOrderGoogleError`" - "`failToPushOrderMerchantError`" -
-   * "`failToPushOrderMerchantFulfillmentError`" - "`failToPushOrderToMerchant`" -
-   * "`failToPushOrderToMerchantOutOfStock`" - "`feeAdjustment`" - "`invalidCoupon`" -
-   * "`lateShipmentCredit`" - "`malformedShippingAddress`" - "`merchantDidNotShipOnTime`" -
-   * "`noInventory`" - "`orderTimeout`" - "`other`" - "`paymentAbuse`" - "`paymentDeclined`" -
-   * "`priceAdjustment`" - "`priceError`" - "`productArrivedDamaged`" - "`productNotAsDescribed`" -
-   * "`promoReallocation`" - "`qualityNotAsExpected`" - "`returnRefundAbuse`" -
-   * "`shippingCostAdjustment`" - "`shippingPriceError`" - "`taxAdjustment`" - "`taxError`" -
-   * "`undeliverableShippingAddress`" - "`unsupportedPoBoxAddress`" - "`wrongProductShipped`"
+   * The reason for the refund.
+   *
+   * Acceptable values are:   - "`adjustment`"  - "`autoPostInternal`"  -
+   * "`autoPostInvalidBillingAddress`"  - "`autoPostNoInventory`"  - "`autoPostPriceError`"  -
+   * "`autoPostUndeliverableShippingAddress`"  - "`couponAbuse`"  - "`courtesyAdjustment`"  -
+   * "`customerCanceled`"  - "`customerDiscretionaryReturn`"  - "`customerInitiatedMerchantCancel`"
+   * - "`customerSupportRequested`"  - "`deliveredLateByCarrier`"  - "`deliveredTooLate`"  -
+   * "`expiredItem`"  - "`failToPushOrderGoogleError`"  - "`failToPushOrderMerchantError`"  -
+   * "`failToPushOrderMerchantFulfillmentError`"  - "`failToPushOrderToMerchant`"  -
+   * "`failToPushOrderToMerchantOutOfStock`"  - "`feeAdjustment`"  - "`invalidCoupon`"  -
+   * "`lateShipmentCredit`"  - "`malformedShippingAddress`"  - "`merchantDidNotShipOnTime`"  -
+   * "`noInventory`"  - "`orderTimeout`"  - "`other`"  - "`paymentAbuse`"  - "`paymentDeclined`"  -
+   * "`priceAdjustment`"  - "`priceError`"  - "`productArrivedDamaged`"  - "`productNotAsDescribed`"
+   * - "`promoReallocation`"  - "`qualityNotAsExpected`"  - "`returnRefundAbuse`"  -
+   * "`shippingCostAdjustment`"  - "`shippingPriceError`"  - "`taxAdjustment`"  - "`taxError`"  -
+   * "`undeliverableShippingAddress`"  - "`unsupportedPoBoxAddress`"  - "`wrongProductShipped`"
    * @param reason reason or {@code null} for none
    */
   public OrderRefund setReason(java.lang.String reason) {

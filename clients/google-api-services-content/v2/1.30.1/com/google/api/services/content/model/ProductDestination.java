@@ -38,8 +38,9 @@ public final class ProductDestination extends com.google.api.client.json.Generic
   private java.lang.String destinationName;
 
   /**
-   * Whether the destination is required, excluded or should be validated. Acceptable values are: -
-   * "`default`" - "`excluded`" - "`optional`" - "`required`"
+   * Whether the destination is required, excluded or should be validated.
+   *
+   * Acceptable values are:   - "`default`"  - "`excluded`"  - "`optional`"  - "`required`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +64,9 @@ public final class ProductDestination extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether the destination is required, excluded or should be validated. Acceptable values are: -
-   * "`default`" - "`excluded`" - "`optional`" - "`required`"
+   * Whether the destination is required, excluded or should be validated.
+   *
+   * Acceptable values are:   - "`default`"  - "`excluded`"  - "`optional`"  - "`required`"
    * @return value or {@code null} for none
    */
   public java.lang.String getIntention() {
@@ -72,8 +74,9 @@ public final class ProductDestination extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether the destination is required, excluded or should be validated. Acceptable values are: -
-   * "`default`" - "`excluded`" - "`optional`" - "`required`"
+   * Whether the destination is required, excluded or should be validated.
+   *
+   * Acceptable values are:   - "`default`"  - "`excluded`"  - "`optional`"  - "`required`"
    * @param intention intention or {@code null} for none
    */
   public ProductDestination setIntention(java.lang.String intention) {

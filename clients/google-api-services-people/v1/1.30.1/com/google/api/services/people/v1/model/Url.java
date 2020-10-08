@@ -47,7 +47,7 @@ public final class Url extends com.google.api.client.json.GenericJson {
   /**
    * The type of the URL. The type can be custom or one of these predefined values: * `home` *
    * `work` * `blog` * `profile` * `homePage` * `ftp` * `reservations` * `appInstallPage`: website
-   * for a Google+ application. * `other`
+   * for a Currents application. * `other`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class Url extends com.google.api.client.json.GenericJson {
   /**
    * The type of the URL. The type can be custom or one of these predefined values: * `home` *
    * `work` * `blog` * `profile` * `homePage` * `ftp` * `reservations` * `appInstallPage`: website
-   * for a Google+ application. * `other`
+   * for a Currents application. * `other`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -109,7 +109,7 @@ public final class Url extends com.google.api.client.json.GenericJson {
   /**
    * The type of the URL. The type can be custom or one of these predefined values: * `home` *
    * `work` * `blog` * `profile` * `homePage` * `ftp` * `reservations` * `appInstallPage`: website
-   * for a Google+ application. * `other`
+   * for a Currents application. * `other`
    * @param type type or {@code null} for none
    */
   public Url setType(java.lang.String type) {

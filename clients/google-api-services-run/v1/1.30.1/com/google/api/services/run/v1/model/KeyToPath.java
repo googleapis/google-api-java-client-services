@@ -39,9 +39,9 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to
-   * use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode
-   * will be used. This might be in conflict with other options that affect the file mode, like
-   * fsGroup, and the result can be other mode bits set.
+   * use on this file, must be a value between 0000 and 0777. If not specified, the volume
+   * defaultMode will be used. This might be in conflict with other options that affect the file
+   * mode, like fsGroup, and the result can be other mode bits set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,9 +75,9 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to
-   * use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode
-   * will be used. This might be in conflict with other options that affect the file mode, like
-   * fsGroup, and the result can be other mode bits set.
+   * use on this file, must be a value between 0000 and 0777. If not specified, the volume
+   * defaultMode will be used. This might be in conflict with other options that affect the file
+   * mode, like fsGroup, and the result can be other mode bits set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMode() {
@@ -86,9 +86,9 @@ public final class KeyToPath extends com.google.api.client.json.GenericJson {
 
   /**
    * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to
-   * use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode
-   * will be used. This might be in conflict with other options that affect the file mode, like
-   * fsGroup, and the result can be other mode bits set.
+   * use on this file, must be a value between 0000 and 0777. If not specified, the volume
+   * defaultMode will be used. This might be in conflict with other options that affect the file
+   * mode, like fsGroup, and the result can be other mode bits set.
    * @param mode mode or {@code null} for none
    */
   public KeyToPath setMode(java.lang.Integer mode) {

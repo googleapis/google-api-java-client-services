@@ -31,14 +31,6 @@ package com.google.api.services.smartdevicemanagement.v1.model;
 public final class GoogleHomeEnterpriseSdmV1Device extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The name of the structure/room where the device is assigned to. For example:
-   * "enterprises/XYZ/structures/ABC" or "enterprises/XYZ/structures/ABC/rooms/123"
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String assignee;
-
-  /**
    * Required. The resource name of the device. For example: "enterprises/XYZ/devices/123".
    * The value may be {@code null}.
    */
@@ -67,25 +59,6 @@ public final class GoogleHomeEnterpriseSdmV1Device extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
-
-  /**
-   * Output only. The name of the structure/room where the device is assigned to. For example:
-   * "enterprises/XYZ/structures/ABC" or "enterprises/XYZ/structures/ABC/rooms/123"
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAssignee() {
-    return assignee;
-  }
-
-  /**
-   * Output only. The name of the structure/room where the device is assigned to. For example:
-   * "enterprises/XYZ/structures/ABC" or "enterprises/XYZ/structures/ABC/rooms/123"
-   * @param assignee assignee or {@code null} for none
-   */
-  public GoogleHomeEnterpriseSdmV1Device setAssignee(java.lang.String assignee) {
-    this.assignee = assignee;
-    return this;
-  }
 
   /**
    * Required. The resource name of the device. For example: "enterprises/XYZ/devices/123".

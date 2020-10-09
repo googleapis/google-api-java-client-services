@@ -31,7 +31,8 @@ package com.google.api.services.smartdevicemanagement.v1.model;
 public final class GoogleHomeEnterpriseSdmV1ListStructuresResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The pagination token to retrieve the next page of results.
+   * The pagination token to retrieve the next page of results. If this field is omitted, there are
+   * no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,8 @@ public final class GoogleHomeEnterpriseSdmV1ListStructuresResponse extends com.g
   private java.util.List<GoogleHomeEnterpriseSdmV1Structure> structures;
 
   /**
-   * The pagination token to retrieve the next page of results.
+   * The pagination token to retrieve the next page of results. If this field is omitted, there are
+   * no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -53,7 +55,8 @@ public final class GoogleHomeEnterpriseSdmV1ListStructuresResponse extends com.g
   }
 
   /**
-   * The pagination token to retrieve the next page of results.
+   * The pagination token to retrieve the next page of results. If this field is omitted, there are
+   * no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleHomeEnterpriseSdmV1ListStructuresResponse setNextPageToken(java.lang.String nextPageToken) {

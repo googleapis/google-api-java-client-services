@@ -38,6 +38,13 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   private MetricAbsence conditionAbsent;
 
   /**
+   * A condition that uses the Monitoring Query Language to define alerts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MonitoringQueryLanguageCondition conditionMonitoringQueryLanguage;
+
+  /**
    * A condition that compares a time series against a threshold.
    * The value may be {@code null}.
    */
@@ -85,6 +92,23 @@ public final class Condition extends com.google.api.client.json.GenericJson {
    */
   public Condition setConditionAbsent(MetricAbsence conditionAbsent) {
     this.conditionAbsent = conditionAbsent;
+    return this;
+  }
+
+  /**
+   * A condition that uses the Monitoring Query Language to define alerts.
+   * @return value or {@code null} for none
+   */
+  public MonitoringQueryLanguageCondition getConditionMonitoringQueryLanguage() {
+    return conditionMonitoringQueryLanguage;
+  }
+
+  /**
+   * A condition that uses the Monitoring Query Language to define alerts.
+   * @param conditionMonitoringQueryLanguage conditionMonitoringQueryLanguage or {@code null} for none
+   */
+  public Condition setConditionMonitoringQueryLanguage(MonitoringQueryLanguageCondition conditionMonitoringQueryLanguage) {
+    this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
     return this;
   }
 

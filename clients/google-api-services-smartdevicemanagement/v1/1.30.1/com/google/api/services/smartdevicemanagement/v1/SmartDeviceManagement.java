@@ -635,22 +635,6 @@ public class SmartDeviceManagement extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /** Additional details that need to be provided for the device. */
-        @com.google.api.client.util.Key
-        private java.lang.String view;
-
-        /** Additional details that need to be provided for the device.
-         */
-        public java.lang.String getView() {
-          return view;
-        }
-
-        /** Additional details that need to be provided for the device. */
-        public List setView(java.lang.String view) {
-          this.view = view;
-          return this;
-        }
-
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);

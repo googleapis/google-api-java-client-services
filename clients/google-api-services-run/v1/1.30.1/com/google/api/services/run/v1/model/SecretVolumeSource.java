@@ -33,10 +33,12 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
 
   /**
    * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to
-   * use on created files by default. Must be a value between 0 and 0777. Defaults to 0644.
+   * use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644.
    * Directories within the path are not affected by this setting. This might be in conflict with
    * other options that affect the file mode, like fsGroup, and the result can be other mode bits
-   * set.
+   * set. NOTE: This is an integer representation of the mode bits. So, the integer value should
+   * look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the
+   * integer value 777.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,10 +80,12 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
 
   /**
    * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to
-   * use on created files by default. Must be a value between 0 and 0777. Defaults to 0644.
+   * use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644.
    * Directories within the path are not affected by this setting. This might be in conflict with
    * other options that affect the file mode, like fsGroup, and the result can be other mode bits
-   * set.
+   * set. NOTE: This is an integer representation of the mode bits. So, the integer value should
+   * look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the
+   * integer value 777.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDefaultMode() {
@@ -90,10 +94,12 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
 
   /**
    * (Optional) Cloud Run fully managed: not supported Cloud Run for Anthos: supported Mode bits to
-   * use on created files by default. Must be a value between 0 and 0777. Defaults to 0644.
+   * use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644.
    * Directories within the path are not affected by this setting. This might be in conflict with
    * other options that affect the file mode, like fsGroup, and the result can be other mode bits
-   * set.
+   * set. NOTE: This is an integer representation of the mode bits. So, the integer value should
+   * look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the
+   * integer value 777.
    * @param defaultMode defaultMode or {@code null} for none
    */
   public SecretVolumeSource setDefaultMode(java.lang.Integer defaultMode) {

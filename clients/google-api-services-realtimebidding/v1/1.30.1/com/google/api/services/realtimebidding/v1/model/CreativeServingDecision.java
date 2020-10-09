@@ -31,20 +31,21 @@ package com.google.api.services.realtimebidding.v1.model;
 public final class CreativeServingDecision extends com.google.api.client.json.GenericJson {
 
   /**
-   * The serving status of this creative in China. When approved or disapproved, this status applies
-   * to both deals and open auction in China. When pending review, this creative is allowed to serve
+   * The policy compliance of this creative in China. When approved or disapproved, this applies to
+   * both deals and open auction in China. When pending review, this creative is allowed to serve
    * for deals but not for open auction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ServingStatus chinaServingStatus;
+  private PolicyCompliance chinaPolicyCompliance;
 
   /**
-   * Status of this creative when bidding on PG and PD deals (outside of Russia and China).
+   * Policy compliance of this creative when bidding on Programmatic Guaranteed and Preferred Deals
+   * (outside of Russia and China).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ServingStatus dealsServingStatus;
+  private PolicyCompliance dealsPolicyCompliance;
 
   /**
    * Detected advertisers and brands.
@@ -136,57 +137,68 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
   private String lastStatusUpdate;
 
   /**
-   * Status of this creative when bidding in open auction, private auction, or auction packages
-   * (outside of Russia and China).
+   * Policy compliance of this creative when bidding in open auction, private auction, or auction
+   * packages (outside of Russia and China).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ServingStatus openAuctionServingStatus;
+  private PolicyCompliance networkPolicyCompliance;
 
   /**
-   * The serving status of this creative in Russia. When approved or disapproved, this status
-   * applies to both deals and open auction in Russia. When pending review, this creative is allowed
-   * to serve for deals but not for open auction.
+   * Policy compliance of this creative when bidding in Open Bidding (outside of Russia and China).
+   * For the list of platform policies, see:
+   * https://support.google.com/platformspolicy/answer/3013851.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ServingStatus russiaServingStatus;
+  private PolicyCompliance platformPolicyCompliance;
 
   /**
-   * The serving status of this creative in China. When approved or disapproved, this status applies
-   * to both deals and open auction in China. When pending review, this creative is allowed to serve
+   * The policy compliance of this creative in Russia. When approved or disapproved, this applies to
+   * both deals and open auction in Russia. When pending review, this creative is allowed to serve
+   * for deals but not for open auction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyCompliance russiaPolicyCompliance;
+
+  /**
+   * The policy compliance of this creative in China. When approved or disapproved, this applies to
+   * both deals and open auction in China. When pending review, this creative is allowed to serve
    * for deals but not for open auction.
    * @return value or {@code null} for none
    */
-  public ServingStatus getChinaServingStatus() {
-    return chinaServingStatus;
+  public PolicyCompliance getChinaPolicyCompliance() {
+    return chinaPolicyCompliance;
   }
 
   /**
-   * The serving status of this creative in China. When approved or disapproved, this status applies
-   * to both deals and open auction in China. When pending review, this creative is allowed to serve
+   * The policy compliance of this creative in China. When approved or disapproved, this applies to
+   * both deals and open auction in China. When pending review, this creative is allowed to serve
    * for deals but not for open auction.
-   * @param chinaServingStatus chinaServingStatus or {@code null} for none
+   * @param chinaPolicyCompliance chinaPolicyCompliance or {@code null} for none
    */
-  public CreativeServingDecision setChinaServingStatus(ServingStatus chinaServingStatus) {
-    this.chinaServingStatus = chinaServingStatus;
+  public CreativeServingDecision setChinaPolicyCompliance(PolicyCompliance chinaPolicyCompliance) {
+    this.chinaPolicyCompliance = chinaPolicyCompliance;
     return this;
   }
 
   /**
-   * Status of this creative when bidding on PG and PD deals (outside of Russia and China).
+   * Policy compliance of this creative when bidding on Programmatic Guaranteed and Preferred Deals
+   * (outside of Russia and China).
    * @return value or {@code null} for none
    */
-  public ServingStatus getDealsServingStatus() {
-    return dealsServingStatus;
+  public PolicyCompliance getDealsPolicyCompliance() {
+    return dealsPolicyCompliance;
   }
 
   /**
-   * Status of this creative when bidding on PG and PD deals (outside of Russia and China).
-   * @param dealsServingStatus dealsServingStatus or {@code null} for none
+   * Policy compliance of this creative when bidding on Programmatic Guaranteed and Preferred Deals
+   * (outside of Russia and China).
+   * @param dealsPolicyCompliance dealsPolicyCompliance or {@code null} for none
    */
-  public CreativeServingDecision setDealsServingStatus(ServingStatus dealsServingStatus) {
-    this.dealsServingStatus = dealsServingStatus;
+  public CreativeServingDecision setDealsPolicyCompliance(PolicyCompliance dealsPolicyCompliance) {
+    this.dealsPolicyCompliance = dealsPolicyCompliance;
     return this;
   }
 
@@ -384,42 +396,63 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
   }
 
   /**
-   * Status of this creative when bidding in open auction, private auction, or auction packages
-   * (outside of Russia and China).
+   * Policy compliance of this creative when bidding in open auction, private auction, or auction
+   * packages (outside of Russia and China).
    * @return value or {@code null} for none
    */
-  public ServingStatus getOpenAuctionServingStatus() {
-    return openAuctionServingStatus;
+  public PolicyCompliance getNetworkPolicyCompliance() {
+    return networkPolicyCompliance;
   }
 
   /**
-   * Status of this creative when bidding in open auction, private auction, or auction packages
-   * (outside of Russia and China).
-   * @param openAuctionServingStatus openAuctionServingStatus or {@code null} for none
+   * Policy compliance of this creative when bidding in open auction, private auction, or auction
+   * packages (outside of Russia and China).
+   * @param networkPolicyCompliance networkPolicyCompliance or {@code null} for none
    */
-  public CreativeServingDecision setOpenAuctionServingStatus(ServingStatus openAuctionServingStatus) {
-    this.openAuctionServingStatus = openAuctionServingStatus;
+  public CreativeServingDecision setNetworkPolicyCompliance(PolicyCompliance networkPolicyCompliance) {
+    this.networkPolicyCompliance = networkPolicyCompliance;
     return this;
   }
 
   /**
-   * The serving status of this creative in Russia. When approved or disapproved, this status
-   * applies to both deals and open auction in Russia. When pending review, this creative is allowed
-   * to serve for deals but not for open auction.
+   * Policy compliance of this creative when bidding in Open Bidding (outside of Russia and China).
+   * For the list of platform policies, see:
+   * https://support.google.com/platformspolicy/answer/3013851.
    * @return value or {@code null} for none
    */
-  public ServingStatus getRussiaServingStatus() {
-    return russiaServingStatus;
+  public PolicyCompliance getPlatformPolicyCompliance() {
+    return platformPolicyCompliance;
   }
 
   /**
-   * The serving status of this creative in Russia. When approved or disapproved, this status
-   * applies to both deals and open auction in Russia. When pending review, this creative is allowed
-   * to serve for deals but not for open auction.
-   * @param russiaServingStatus russiaServingStatus or {@code null} for none
+   * Policy compliance of this creative when bidding in Open Bidding (outside of Russia and China).
+   * For the list of platform policies, see:
+   * https://support.google.com/platformspolicy/answer/3013851.
+   * @param platformPolicyCompliance platformPolicyCompliance or {@code null} for none
    */
-  public CreativeServingDecision setRussiaServingStatus(ServingStatus russiaServingStatus) {
-    this.russiaServingStatus = russiaServingStatus;
+  public CreativeServingDecision setPlatformPolicyCompliance(PolicyCompliance platformPolicyCompliance) {
+    this.platformPolicyCompliance = platformPolicyCompliance;
+    return this;
+  }
+
+  /**
+   * The policy compliance of this creative in Russia. When approved or disapproved, this applies to
+   * both deals and open auction in Russia. When pending review, this creative is allowed to serve
+   * for deals but not for open auction.
+   * @return value or {@code null} for none
+   */
+  public PolicyCompliance getRussiaPolicyCompliance() {
+    return russiaPolicyCompliance;
+  }
+
+  /**
+   * The policy compliance of this creative in Russia. When approved or disapproved, this applies to
+   * both deals and open auction in Russia. When pending review, this creative is allowed to serve
+   * for deals but not for open auction.
+   * @param russiaPolicyCompliance russiaPolicyCompliance or {@code null} for none
+   */
+  public CreativeServingDecision setRussiaPolicyCompliance(PolicyCompliance russiaPolicyCompliance) {
+    this.russiaPolicyCompliance = russiaPolicyCompliance;
     return this;
   }
 

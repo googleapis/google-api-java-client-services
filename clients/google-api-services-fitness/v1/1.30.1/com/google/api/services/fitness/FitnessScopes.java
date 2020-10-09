@@ -53,6 +53,12 @@ public class FitnessScopes {
   /** See and add to info about your body temperature in Google Fit. I consent to Google sharing my body temperature information with this app.. */
   public static final String FITNESS_BODY_TEMPERATURE_WRITE = "https://www.googleapis.com/auth/fitness.body_temperature.write";
 
+  /** See your heart rate data in Google Fit. I consent to Google sharing my heart rate information with this app.. */
+  public static final String FITNESS_HEART_RATE_READ = "https://www.googleapis.com/auth/fitness.heart_rate.read";
+
+  /** See and add to your heart rate data in Google Fit. I consent to Google sharing my heart rate information with this app.. */
+  public static final String FITNESS_HEART_RATE_WRITE = "https://www.googleapis.com/auth/fitness.heart_rate.write";
+
   /** See your Google Fit speed and distance data. */
   public static final String FITNESS_LOCATION_READ = "https://www.googleapis.com/auth/fitness.location.read";
 
@@ -77,6 +83,12 @@ public class FitnessScopes {
   /** See and add info about your reproductive health in Google Fit. I consent to Google sharing my reproductive health information with this app.. */
   public static final String FITNESS_REPRODUCTIVE_HEALTH_WRITE = "https://www.googleapis.com/auth/fitness.reproductive_health.write";
 
+  /** See your sleep data in Google Fit. I consent to Google sharing my sleep information with this app.. */
+  public static final String FITNESS_SLEEP_READ = "https://www.googleapis.com/auth/fitness.sleep.read";
+
+  /** See and add to your sleep data in Google Fit. I consent to Google sharing my sleep information with this app.. */
+  public static final String FITNESS_SLEEP_WRITE = "https://www.googleapis.com/auth/fitness.sleep.write";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -94,6 +106,8 @@ public class FitnessScopes {
     set.add(FITNESS_BODY_WRITE);
     set.add(FITNESS_BODY_TEMPERATURE_READ);
     set.add(FITNESS_BODY_TEMPERATURE_WRITE);
+    set.add(FITNESS_HEART_RATE_READ);
+    set.add(FITNESS_HEART_RATE_WRITE);
     set.add(FITNESS_LOCATION_READ);
     set.add(FITNESS_LOCATION_WRITE);
     set.add(FITNESS_NUTRITION_READ);
@@ -102,6 +116,8 @@ public class FitnessScopes {
     set.add(FITNESS_OXYGEN_SATURATION_WRITE);
     set.add(FITNESS_REPRODUCTIVE_HEALTH_READ);
     set.add(FITNESS_REPRODUCTIVE_HEALTH_WRITE);
+    set.add(FITNESS_SLEEP_READ);
+    set.add(FITNESS_SLEEP_WRITE);
     return java.util.Collections.unmodifiableSet(set);
   }
 

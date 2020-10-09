@@ -144,7 +144,8 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
 
     /**
      * Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external
-     * identity within a WorkloadIdentityPool, or applies an Access Boundary on a Google access token.
+     * identity within a workload identity pool, or it applies a Credential Access Boundary to a Google
+     * access token.
      *
      * Create a request for the method "v1beta.token".
      *
@@ -166,7 +167,8 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
 
       /**
        * Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external
-       * identity within a WorkloadIdentityPool, or applies an Access Boundary on a Google access token.
+       * identity within a workload identity pool, or it applies a Credential Access Boundary to a
+       * Google access token.
        *
        * Create a request for the method "v1beta.token".
        *

@@ -32,7 +32,7 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * Required. The grant type. Must be `urn:ietf:params:oauth:grant-type:token-exchange`, which
-   * indicates a token exchange is requested.
+   * indicates a token exchange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,10 +55,10 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   private java.lang.String requestedTokenType;
 
   /**
-   * Required. Input subject token. You can use a Google-issued OAuth 2.0 access token with this
-   * field to obtain an access token with new security attributes applied, such as an
-   * AccessBoundary. Applying additional security attributes on access tokens that already contain
-   * security attributes is not allowed.
+   * Required. The input token. You can use a Google-issued OAuth 2.0 access token with this field
+   * to obtain an access token with new security attributes applied, such as a Credential Access
+   * Boundary. If an access token already contains security attributes, you cannot apply additional
+   * security attributes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * Required. The grant type. Must be `urn:ietf:params:oauth:grant-type:token-exchange`, which
-   * indicates a token exchange is requested.
+   * indicates a token exchange.
    * @return value or {@code null} for none
    */
   public java.lang.String getGrantType() {
@@ -83,7 +83,7 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * Required. The grant type. Must be `urn:ietf:params:oauth:grant-type:token-exchange`, which
-   * indicates a token exchange is requested.
+   * indicates a token exchange.
    * @param grantType grantType or {@code null} for none
    */
   public GoogleIdentityStsV1ExchangeTokenRequest setGrantType(java.lang.String grantType) {
@@ -130,10 +130,10 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   }
 
   /**
-   * Required. Input subject token. You can use a Google-issued OAuth 2.0 access token with this
-   * field to obtain an access token with new security attributes applied, such as an
-   * AccessBoundary. Applying additional security attributes on access tokens that already contain
-   * security attributes is not allowed.
+   * Required. The input token. You can use a Google-issued OAuth 2.0 access token with this field
+   * to obtain an access token with new security attributes applied, such as a Credential Access
+   * Boundary. If an access token already contains security attributes, you cannot apply additional
+   * security attributes.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubjectToken() {
@@ -141,10 +141,10 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   }
 
   /**
-   * Required. Input subject token. You can use a Google-issued OAuth 2.0 access token with this
-   * field to obtain an access token with new security attributes applied, such as an
-   * AccessBoundary. Applying additional security attributes on access tokens that already contain
-   * security attributes is not allowed.
+   * Required. The input token. You can use a Google-issued OAuth 2.0 access token with this field
+   * to obtain an access token with new security attributes applied, such as a Credential Access
+   * Boundary. If an access token already contains security attributes, you cannot apply additional
+   * security attributes.
    * @param subjectToken subjectToken or {@code null} for none
    */
   public GoogleIdentityStsV1ExchangeTokenRequest setSubjectToken(java.lang.String subjectToken) {

@@ -30,6 +30,13 @@ package com.google.api.services.sqladmin.model;
 public final class BackupConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
+   * Backup retention settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupRetentionSettings backupRetentionSettings;
+
+  /**
    * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must
    * be disabled as well.
    * The value may be {@code null}.
@@ -78,6 +85,30 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String startTime;
+
+  /**
+   * The number of days of transaction logs we retain for point in time restore, from 1-7.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer transactionLogRetentionDays;
+
+  /**
+   * Backup retention settings.
+   * @return value or {@code null} for none
+   */
+  public BackupRetentionSettings getBackupRetentionSettings() {
+    return backupRetentionSettings;
+  }
+
+  /**
+   * Backup retention settings.
+   * @param backupRetentionSettings backupRetentionSettings or {@code null} for none
+   */
+  public BackupConfiguration setBackupRetentionSettings(BackupRetentionSettings backupRetentionSettings) {
+    this.backupRetentionSettings = backupRetentionSettings;
+    return this;
+  }
 
   /**
    * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must
@@ -197,6 +228,23 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
    */
   public BackupConfiguration setStartTime(java.lang.String startTime) {
     this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * The number of days of transaction logs we retain for point in time restore, from 1-7.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTransactionLogRetentionDays() {
+    return transactionLogRetentionDays;
+  }
+
+  /**
+   * The number of days of transaction logs we retain for point in time restore, from 1-7.
+   * @param transactionLogRetentionDays transactionLogRetentionDays or {@code null} for none
+   */
+  public BackupConfiguration setTransactionLogRetentionDays(java.lang.Integer transactionLogRetentionDays) {
+    this.transactionLogRetentionDays = transactionLogRetentionDays;
     return this;
   }
 

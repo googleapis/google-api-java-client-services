@@ -164,6 +164,13 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   private ServiceAccount serviceAccount;
 
   /**
+   * The list of disks and other storage to create or attach to the VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Volume> volumes;
+
+  /**
    * The list of accelerators to attach to the VM.
    * @return value or {@code null} for none
    */
@@ -441,6 +448,23 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
    */
   public VirtualMachine setServiceAccount(ServiceAccount serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * The list of disks and other storage to create or attach to the VM.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Volume> getVolumes() {
+    return volumes;
+  }
+
+  /**
+   * The list of disks and other storage to create or attach to the VM.
+   * @param volumes volumes or {@code null} for none
+   */
+  public VirtualMachine setVolumes(java.util.List<Volume> volumes) {
+    this.volumes = volumes;
     return this;
   }
 

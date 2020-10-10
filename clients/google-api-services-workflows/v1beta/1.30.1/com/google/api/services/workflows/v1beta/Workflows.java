@@ -20,7 +20,7 @@ package com.google.api.services.workflows.v1beta;
  * Service definition for Workflows (v1beta).
  *
  * <p>
- * 
+ * Orchestrate Workflows consisting of Google Cloud APIs, SaaS APIs or private API endpoints.
  * </p>
  *
  * <p>

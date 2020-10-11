@@ -37,8 +37,8 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy extends c
   private java.lang.Integer maxRetentionDays;
 
   /**
-   * Specifies the behavior to apply to existing, scheduled snapshots snapshots if the policy is
-   * changed.
+   * TODO(b/165626794): Remove this field Specifies the behavior to apply to existing, scheduled
+   * snapshots snapshots if the policy is changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy extends c
   }
 
   /**
-   * Specifies the behavior to apply to existing, scheduled snapshots snapshots if the policy is
-   * changed.
+   * TODO(b/165626794): Remove this field Specifies the behavior to apply to existing, scheduled
+   * snapshots snapshots if the policy is changed.
    * @return value or {@code null} for none
    */
   public java.lang.String getOnPolicySwitch() {
@@ -78,8 +78,8 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy extends c
   }
 
   /**
-   * Specifies the behavior to apply to existing, scheduled snapshots snapshots if the policy is
-   * changed.
+   * TODO(b/165626794): Remove this field Specifies the behavior to apply to existing, scheduled
+   * snapshots snapshots if the policy is changed.
    * @param onPolicySwitch onPolicySwitch or {@code null} for none
    */
   public ResourcePolicySnapshotSchedulePolicyRetentionPolicy setOnPolicySwitch(java.lang.String onPolicySwitch) {

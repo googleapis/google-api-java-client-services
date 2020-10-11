@@ -91,8 +91,8 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
    * decrease proportionally to the metric.
    *
    * For example, a good metric to use as a utilization_target is
-   * compute.googleapis.com/instance/network/received_bytes_count. The autoscaler will work to keep
-   * this value constant for each of the instances.
+   * https://www.googleapis.com/compute/v1/instance/network/received_bytes_count. The autoscaler
+   * will work to keep this value constant for each of the instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -233,8 +233,8 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
    * decrease proportionally to the metric.
    *
    * For example, a good metric to use as a utilization_target is
-   * compute.googleapis.com/instance/network/received_bytes_count. The autoscaler will work to keep
-   * this value constant for each of the instances.
+   * https://www.googleapis.com/compute/v1/instance/network/received_bytes_count. The autoscaler
+   * will work to keep this value constant for each of the instances.
    * @return value or {@code null} for none
    */
   public java.lang.Double getUtilizationTarget() {
@@ -247,8 +247,8 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
    * decrease proportionally to the metric.
    *
    * For example, a good metric to use as a utilization_target is
-   * compute.googleapis.com/instance/network/received_bytes_count. The autoscaler will work to keep
-   * this value constant for each of the instances.
+   * https://www.googleapis.com/compute/v1/instance/network/received_bytes_count. The autoscaler
+   * will work to keep this value constant for each of the instances.
    * @param utilizationTarget utilizationTarget or {@code null} for none
    */
   public AutoscalingPolicyCustomMetricUtilization setUtilizationTarget(java.lang.Double utilizationTarget) {

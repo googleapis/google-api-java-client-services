@@ -428,6 +428,16 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
+   * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
+   * be modified after the disk is created. This includes a list of URLs to the license resource.
+   * For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects
+   * /debian-cloud/global/licenses/debian-9-stretch
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> userLicenses;
+
+  /**
    * [Output Only] Links to the users of the disk (attached instances) in form:
    * projects/project/zones/zone/instances/instance
    * The value may be {@code null}.
@@ -1370,6 +1380,29 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
+   * be modified after the disk is created. This includes a list of URLs to the license resource.
+   * For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects
+   * /debian-cloud/global/licenses/debian-9-stretch
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUserLicenses() {
+    return userLicenses;
+  }
+
+  /**
+   * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
+   * be modified after the disk is created. This includes a list of URLs to the license resource.
+   * For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects
+   * /debian-cloud/global/licenses/debian-9-stretch
+   * @param userLicenses userLicenses or {@code null} for none
+   */
+  public Disk setUserLicenses(java.util.List<java.lang.String> userLicenses) {
+    this.userLicenses = userLicenses;
     return this;
   }
 

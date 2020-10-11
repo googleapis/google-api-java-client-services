@@ -94,6 +94,21 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   private java.lang.String description;
 
   /**
+   * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
+   * For example, https://networkservices.googleapis.com/beta/projects/project/locations/locationhtt
+   * pFilters/httpFilter Only filters that handle outbound connection and stream events may be
+   * specified. These filters work in conjunction with a default set of HTTP filters that may
+   * already be configured by Traffic Director. Traffic Director will determine the final location
+   * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
+   * Director positions multiple filters at the same location, those filters will be in the same
+   * order as specified in this list. httpFilters only applies for loadbalancers with
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> httpFilters;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -311,6 +326,39 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    */
   public TargetHttpsProxy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
+   * For example, https://networkservices.googleapis.com/beta/projects/project/locations/locationhtt
+   * pFilters/httpFilter Only filters that handle outbound connection and stream events may be
+   * specified. These filters work in conjunction with a default set of HTTP filters that may
+   * already be configured by Traffic Director. Traffic Director will determine the final location
+   * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
+   * Director positions multiple filters at the same location, those filters will be in the same
+   * order as specified in this list. httpFilters only applies for loadbalancers with
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getHttpFilters() {
+    return httpFilters;
+  }
+
+  /**
+   * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
+   * For example, https://networkservices.googleapis.com/beta/projects/project/locations/locationhtt
+   * pFilters/httpFilter Only filters that handle outbound connection and stream events may be
+   * specified. These filters work in conjunction with a default set of HTTP filters that may
+   * already be configured by Traffic Director. Traffic Director will determine the final location
+   * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
+   * Director positions multiple filters at the same location, those filters will be in the same
+   * order as specified in this list. httpFilters only applies for loadbalancers with
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
+   * @param httpFilters httpFilters or {@code null} for none
+   */
+  public TargetHttpsProxy setHttpFilters(java.util.List<java.lang.String> httpFilters) {
+    this.httpFilters = httpFilters;
     return this;
   }
 

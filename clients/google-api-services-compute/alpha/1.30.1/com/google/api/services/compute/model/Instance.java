@@ -408,7 +408,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about
+   * the status of the instance, see  Instance life cycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1380,7 +1381,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about
+   * the status of the instance, see  Instance life cycle.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -1389,7 +1391,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about
+   * the status of the instance, see  Instance life cycle.
    * @param status status or {@code null} for none
    */
   public Instance setStatus(java.lang.String status) {

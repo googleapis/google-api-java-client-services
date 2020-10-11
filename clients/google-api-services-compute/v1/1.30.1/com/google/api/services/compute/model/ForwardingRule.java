@@ -335,10 +335,10 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
-   * this target must live in the same region as the forwarding rule. For global forwarding rules,
+   * this target must be in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only
-   * targetHttpProxy and targetGrpcProxy are valid, not targetHttpsProxy.
+   * appropriate to the target object. For more information, see the "Target" column in [Port
+   * specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1034,10 +1034,10 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
-   * this target must live in the same region as the forwarding rule. For global forwarding rules,
+   * this target must be in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only
-   * targetHttpProxy and targetGrpcProxy are valid, not targetHttpsProxy.
+   * appropriate to the target object. For more information, see the "Target" column in [Port
+   * specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -1046,10 +1046,10 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
-   * this target must live in the same region as the forwarding rule. For global forwarding rules,
+   * this target must be in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only
-   * targetHttpProxy and targetGrpcProxy are valid, not targetHttpsProxy.
+   * appropriate to the target object. For more information, see the "Target" column in [Port
+   * specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
    * @param target target or {@code null} for none
    */
   public ForwardingRule setTarget(java.lang.String target) {

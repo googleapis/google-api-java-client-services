@@ -164,6 +164,27 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * [Output Only] Last start timestamp in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastStartTimestamp;
+
+  /**
+   * [Output Only] Last stop timestamp in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastStopTimestamp;
+
+  /**
+   * [Output Only] Last suspended timestamp in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastSuspendedTimestamp;
+
+  /**
    * Full or partial URL of the machine type resource to use for this instance, in the format:
    * zones/zone/machineTypes/machine-type. This is provided by the client when the instance is
    * created. For example, the following is a valid partial url to a predefined machine type: zones
@@ -288,7 +309,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about
+   * the status of the instance, see  Instance life cycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -679,6 +701,57 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] Last start timestamp in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastStartTimestamp() {
+    return lastStartTimestamp;
+  }
+
+  /**
+   * [Output Only] Last start timestamp in RFC3339 text format.
+   * @param lastStartTimestamp lastStartTimestamp or {@code null} for none
+   */
+  public Instance setLastStartTimestamp(java.lang.String lastStartTimestamp) {
+    this.lastStartTimestamp = lastStartTimestamp;
+    return this;
+  }
+
+  /**
+   * [Output Only] Last stop timestamp in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastStopTimestamp() {
+    return lastStopTimestamp;
+  }
+
+  /**
+   * [Output Only] Last stop timestamp in RFC3339 text format.
+   * @param lastStopTimestamp lastStopTimestamp or {@code null} for none
+   */
+  public Instance setLastStopTimestamp(java.lang.String lastStopTimestamp) {
+    this.lastStopTimestamp = lastStopTimestamp;
+    return this;
+  }
+
+  /**
+   * [Output Only] Last suspended timestamp in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastSuspendedTimestamp() {
+    return lastSuspendedTimestamp;
+  }
+
+  /**
+   * [Output Only] Last suspended timestamp in RFC3339 text format.
+   * @param lastSuspendedTimestamp lastSuspendedTimestamp or {@code null} for none
+   */
+  public Instance setLastSuspendedTimestamp(java.lang.String lastSuspendedTimestamp) {
+    this.lastSuspendedTimestamp = lastSuspendedTimestamp;
+    return this;
+  }
+
+  /**
    * Full or partial URL of the machine type resource to use for this instance, in the format:
    * zones/zone/machineTypes/machine-type. This is provided by the client when the instance is
    * created. For example, the following is a valid partial url to a predefined machine type: zones
@@ -968,7 +1041,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about
+   * the status of the instance, see  Instance life cycle.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -977,7 +1051,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about
+   * the status of the instance, see  Instance life cycle.
    * @param status status or {@code null} for none
    */
   public Instance setStatus(java.lang.String status) {

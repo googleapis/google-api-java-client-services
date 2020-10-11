@@ -186,6 +186,15 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
+   * [Output Only] A list of user provided licenses. It represents a list of URLs to the license
+   * resource. Unlike regular licenses, user provided licenses can be modified after the disk is
+   * created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> userLicenses;
+
+  /**
    * Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the
    * disk is detached from the instance).
    * @return value or {@code null} for none
@@ -542,6 +551,27 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   public AttachedDisk setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * [Output Only] A list of user provided licenses. It represents a list of URLs to the license
+   * resource. Unlike regular licenses, user provided licenses can be modified after the disk is
+   * created.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUserLicenses() {
+    return userLicenses;
+  }
+
+  /**
+   * [Output Only] A list of user provided licenses. It represents a list of URLs to the license
+   * resource. Unlike regular licenses, user provided licenses can be modified after the disk is
+   * created.
+   * @param userLicenses userLicenses or {@code null} for none
+   */
+  public AttachedDisk setUserLicenses(java.util.List<java.lang.String> userLicenses) {
+    this.userLicenses = userLicenses;
     return this;
   }
 

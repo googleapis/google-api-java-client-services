@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class NodeGroupAutoscalingPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The maximum number of nodes that the group should have.
+   * The maximum number of nodes that the group should have. Must be set if autoscaling is enabled.
+   * Maximum value allowed is 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,8 @@ public final class NodeGroupAutoscalingPolicy extends com.google.api.client.json
   private java.lang.String mode;
 
   /**
-   * The maximum number of nodes that the group should have.
+   * The maximum number of nodes that the group should have. Must be set if autoscaling is enabled.
+   * Maximum value allowed is 100.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxNodes() {
@@ -60,7 +62,8 @@ public final class NodeGroupAutoscalingPolicy extends com.google.api.client.json
   }
 
   /**
-   * The maximum number of nodes that the group should have.
+   * The maximum number of nodes that the group should have. Must be set if autoscaling is enabled.
+   * Maximum value allowed is 100.
    * @param maxNodes maxNodes or {@code null} for none
    */
   public NodeGroupAutoscalingPolicy setMaxNodes(java.lang.Integer maxNodes) {

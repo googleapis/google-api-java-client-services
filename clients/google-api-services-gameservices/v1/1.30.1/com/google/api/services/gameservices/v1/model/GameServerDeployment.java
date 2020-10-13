@@ -58,7 +58,7 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The resource name of the game server deployment. Uses the form:
+   * The resource name of the game server deployment, in the following form:
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
    * `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
    * The value may be {@code null}.
@@ -142,7 +142,7 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * The resource name of the game server deployment. Uses the form:
+   * The resource name of the game server deployment, in the following form:
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
    * `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
    * @return value or {@code null} for none
@@ -152,7 +152,7 @@ public final class GameServerDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * The resource name of the game server deployment. Uses the form:
+   * The resource name of the game server deployment, in the following form:
    * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
    * `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
    * @param name name or {@code null} for none

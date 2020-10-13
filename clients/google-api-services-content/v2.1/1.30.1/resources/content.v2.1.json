@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/96PsmIBl7pWUWaNW71Afx7PUvZc\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/0S4Zq4Nku8cHHcfOzMZhLoRyEvk\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20201006",
+ "revision": "20201012",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -2306,7 +2306,7 @@
    "properties": {
     "availability": {
      "type": "string",
-     "description": "Availability of the product."
+     "description": "Availability of the product. For accepted attribute values, see the local product inventory feed specification."
     },
     "instoreProductLocation": {
      "type": "string",
@@ -2319,11 +2319,11 @@
     },
     "pickupMethod": {
      "type": "string",
-     "description": "Supported pickup method for this offer. Unless the value is \"not supported\", this field must be submitted together with `pickupSla`."
+     "description": "Supported pickup method for this offer. Unless the value is \"not supported\", this field must be submitted together with `pickupSla`. For accepted attribute values, see the local product inventory feed specification."
     },
     "pickupSla": {
      "type": "string",
-     "description": "Expected date that an order will be ready for pickup relative to the order date. Must be submitted together with `pickupMethod`."
+     "description": "Expected date that an order will be ready for pickup relative to the order date. Must be submitted together with `pickupMethod`. For accepted attribute values, see the local product inventory feed specification."
     },
     "price": {
      "$ref": "Price",

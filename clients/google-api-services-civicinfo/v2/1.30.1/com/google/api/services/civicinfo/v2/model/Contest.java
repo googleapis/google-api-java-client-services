@@ -72,15 +72,6 @@ public final class Contest extends com.google.api.client.json.GenericJson {
   private java.lang.String electorateSpecifications;
 
   /**
-   * An ID for this object. IDs may change in future requests and should not be cached. Access to
-   * this field requires special access that can be requested from the Request more link on the
-   * Quotas page.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String id;
-
-  /**
    * The levels of government of the office for this contest. There may be more than one in cases
    * where a jurisdiction effectively acts at two different levels of government; for example, the
    * mayor of the District of Columbia acts at "locality" level, but also effectively at both
@@ -320,27 +311,6 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    */
   public Contest setElectorateSpecifications(java.lang.String electorateSpecifications) {
     this.electorateSpecifications = electorateSpecifications;
-    return this;
-  }
-
-  /**
-   * An ID for this object. IDs may change in future requests and should not be cached. Access to
-   * this field requires special access that can be requested from the Request more link on the
-   * Quotas page.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getId() {
-    return id;
-  }
-
-  /**
-   * An ID for this object. IDs may change in future requests and should not be cached. Access to
-   * this field requires special access that can be requested from the Request more link on the
-   * Quotas page.
-   * @param id id or {@code null} for none
-   */
-  public Contest setId(java.lang.String id) {
-    this.id = id;
     return this;
   }
 

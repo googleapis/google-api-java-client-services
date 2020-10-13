@@ -47,15 +47,6 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
   private java.lang.String endDate;
 
   /**
-   * An ID for this object. IDs may change in future requests and should not be cached. Access to
-   * this field requires special access that can be requested from the Request more link on the
-   * Quotas page.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String id;
-
-  /**
    * Latitude of the location, in degrees north of the equator. Note this field may not be available
    * for some locations.
    * The value may be {@code null}.
@@ -150,27 +141,6 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    */
   public PollingLocation setEndDate(java.lang.String endDate) {
     this.endDate = endDate;
-    return this;
-  }
-
-  /**
-   * An ID for this object. IDs may change in future requests and should not be cached. Access to
-   * this field requires special access that can be requested from the Request more link on the
-   * Quotas page.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getId() {
-    return id;
-  }
-
-  /**
-   * An ID for this object. IDs may change in future requests and should not be cached. Access to
-   * this field requires special access that can be requested from the Request more link on the
-   * Quotas page.
-   * @param id id or {@code null} for none
-   */
-  public PollingLocation setId(java.lang.String id) {
-    this.id = id;
     return this;
   }
 

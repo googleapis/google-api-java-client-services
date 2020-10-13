@@ -38,15 +38,6 @@ public final class AdministrationRegion extends com.google.api.client.json.Gener
   private AdministrativeBody electionAdministrationBody;
 
   /**
-   * An ID for this object. IDs may change in future requests and should not be cached. Access to
-   * this field requires special access that can be requested from the Request more link on the
-   * Quotas page.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String id;
-
-  /**
    * The city or county that provides election information for this voter. This object can have the
    * same elements as state.
    * The value may be {@code null}.
@@ -83,27 +74,6 @@ public final class AdministrationRegion extends com.google.api.client.json.Gener
    */
   public AdministrationRegion setElectionAdministrationBody(AdministrativeBody electionAdministrationBody) {
     this.electionAdministrationBody = electionAdministrationBody;
-    return this;
-  }
-
-  /**
-   * An ID for this object. IDs may change in future requests and should not be cached. Access to
-   * this field requires special access that can be requested from the Request more link on the
-   * Quotas page.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getId() {
-    return id;
-  }
-
-  /**
-   * An ID for this object. IDs may change in future requests and should not be cached. Access to
-   * this field requires special access that can be requested from the Request more link on the
-   * Quotas page.
-   * @param id id or {@code null} for none
-   */
-  public AdministrationRegion setId(java.lang.String id) {
-    this.id = id;
     return this;
   }
 

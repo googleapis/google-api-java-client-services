@@ -58,7 +58,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The resource name of the realm. Uses the form:
+   * The resource name of the realm, in the following form:
    * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
    * project/locations/{location}/realms/my-realm`.
    * The value may be {@code null}.
@@ -150,7 +150,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the realm. Uses the form:
+   * The resource name of the realm, in the following form:
    * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
    * project/locations/{location}/realms/my-realm`.
    * @return value or {@code null} for none
@@ -160,7 +160,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the realm. Uses the form:
+   * The resource name of the realm, in the following form:
    * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
    * project/locations/{location}/realms/my-realm`.
    * @param name name or {@code null} for none

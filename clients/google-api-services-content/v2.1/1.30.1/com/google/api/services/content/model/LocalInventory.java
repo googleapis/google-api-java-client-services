@@ -32,7 +32,8 @@ package com.google.api.services.content.model;
 public final class LocalInventory extends com.google.api.client.json.GenericJson {
 
   /**
-   * Availability of the product.
+   * Availability of the product. For accepted attribute values, see the local product inventory
+   * feed specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +55,8 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
 
   /**
    * Supported pickup method for this offer. Unless the value is "not supported", this field must be
-   * submitted together with `pickupSla`.
+   * submitted together with `pickupSla`. For accepted attribute values, see the local product
+   * inventory feed specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +64,8 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
 
   /**
    * Expected date that an order will be ready for pickup relative to the order date. Must be
-   * submitted together with `pickupMethod`.
+   * submitted together with `pickupMethod`. For accepted attribute values, see the local product
+   * inventory feed specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +108,8 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   private java.lang.String storeCode;
 
   /**
-   * Availability of the product.
+   * Availability of the product. For accepted attribute values, see the local product inventory
+   * feed specification.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailability() {
@@ -113,7 +117,8 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Availability of the product.
+   * Availability of the product. For accepted attribute values, see the local product inventory
+   * feed specification.
    * @param availability availability or {@code null} for none
    */
   public LocalInventory setAvailability(java.lang.String availability) {
@@ -157,7 +162,8 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
 
   /**
    * Supported pickup method for this offer. Unless the value is "not supported", this field must be
-   * submitted together with `pickupSla`.
+   * submitted together with `pickupSla`. For accepted attribute values, see the local product
+   * inventory feed specification.
    * @return value or {@code null} for none
    */
   public java.lang.String getPickupMethod() {
@@ -166,7 +172,8 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
 
   /**
    * Supported pickup method for this offer. Unless the value is "not supported", this field must be
-   * submitted together with `pickupSla`.
+   * submitted together with `pickupSla`. For accepted attribute values, see the local product
+   * inventory feed specification.
    * @param pickupMethod pickupMethod or {@code null} for none
    */
   public LocalInventory setPickupMethod(java.lang.String pickupMethod) {
@@ -176,7 +183,8 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
 
   /**
    * Expected date that an order will be ready for pickup relative to the order date. Must be
-   * submitted together with `pickupMethod`.
+   * submitted together with `pickupMethod`. For accepted attribute values, see the local product
+   * inventory feed specification.
    * @return value or {@code null} for none
    */
   public java.lang.String getPickupSla() {
@@ -185,7 +193,8 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
 
   /**
    * Expected date that an order will be ready for pickup relative to the order date. Must be
-   * submitted together with `pickupMethod`.
+   * submitted together with `pickupMethod`. For accepted attribute values, see the local product
+   * inventory feed specification.
    * @param pickupSla pickupSla or {@code null} for none
    */
   public LocalInventory setPickupSla(java.lang.String pickupSla) {

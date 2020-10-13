@@ -1589,13 +1589,16 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
           /**
            * If specified, no more than this many data points will be included in the dataset. If
            * there are more data points in the dataset, nextPageToken will be set in the dataset
-           * response.
+           * response. The limit is applied from the end of the time range. That is, if pageToken is
+           * absent, the limit most recent data points will be returned.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer limit;
 
           /** If specified, no more than this many data points will be included in the dataset. If there are more
-         data points in the dataset, nextPageToken will be set in the dataset response.
+         data points in the dataset, nextPageToken will be set in the dataset response. The limit is applied
+         from the end of the time range. That is, if pageToken is absent, the limit most recent data points
+         will be returned.
            */
           public java.lang.Integer getLimit() {
             return limit;
@@ -1604,7 +1607,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
           /**
            * If specified, no more than this many data points will be included in the dataset. If
            * there are more data points in the dataset, nextPageToken will be set in the dataset
-           * response.
+           * response. The limit is applied from the end of the time range. That is, if pageToken is
+           * absent, the limit most recent data points will be returned.
            */
           public Get setLimit(java.lang.Integer limit) {
             this.limit = limit;

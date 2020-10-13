@@ -531,7 +531,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
+         * @param parent Required. The parent resource name, in the following form:
+         *        `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerDeployment}
          * @return the request
          */
@@ -559,7 +560,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
+           * @param parent Required. The parent resource name, in the following form:
+         *        `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerDeployment}
            * @since 1.13
            */
@@ -629,20 +631,21 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The parent resource name. Uses the form:
+           * Required. The parent resource name, in the following form:
            * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
+          /** Required. The parent resource name, in the following form:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name. Uses the form:
+           * Required. The parent resource name, in the following form:
            * `projects/{project}/locations/{location}`.
            */
           public Create setParent(java.lang.String parent) {
@@ -684,7 +687,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the game server delpoyment to delete. Uses the form:
+         * @param name Required. The name of the game server delpoyment to delete, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
          * @return the request
          */
@@ -712,7 +715,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the game server delpoyment to delete. Uses the form:
+           * @param name Required. The name of the game server delpoyment to delete, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            * @since 1.13
            */
@@ -782,13 +785,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The name of the game server delpoyment to delete. Uses the form:
+           * Required. The name of the game server delpoyment to delete, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the game server delpoyment to delete. Uses the form:
+          /** Required. The name of the game server delpoyment to delete, in the following form:
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           public java.lang.String getName() {
@@ -796,7 +799,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The name of the game server delpoyment to delete. Uses the form:
+           * Required. The name of the game server delpoyment to delete, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           public Delete setName(java.lang.String name) {
@@ -825,7 +828,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link FetchDeploymentState#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. The name of the game server delpoyment. Uses the form:
+         * @param name Required. The name of the game server delpoyment, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.FetchDeploymentStateRequest}
          * @return the request
@@ -856,7 +859,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
            * after invoking the constructor. </p>
            *
-           * @param name Required. The name of the game server delpoyment. Uses the form:
+           * @param name Required. The name of the game server delpoyment, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.FetchDeploymentStateRequest}
            * @since 1.13
@@ -927,13 +930,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The name of the game server delpoyment. Uses the form:
+           * Required. The name of the game server delpoyment, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the game server delpoyment. Uses the form:
+          /** Required. The name of the game server delpoyment, in the following form:
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           public java.lang.String getName() {
@@ -941,7 +944,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The name of the game server delpoyment. Uses the form:
+           * Required. The name of the game server delpoyment, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           public FetchDeploymentState setName(java.lang.String name) {
@@ -967,7 +970,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the game server delpoyment to retrieve. Uses the form:
+         * @param name Required. The name of the game server delpoyment to retrieve, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
          * @return the request
          */
@@ -994,7 +997,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the game server delpoyment to retrieve. Uses the form:
+           * @param name Required. The name of the game server delpoyment to retrieve, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            * @since 1.13
            */
@@ -1074,13 +1077,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The name of the game server delpoyment to retrieve. Uses the form:
+           * Required. The name of the game server delpoyment to retrieve, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the game server delpoyment to retrieve. Uses the form:
+          /** Required. The name of the game server delpoyment to retrieve, in the following form:
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           public java.lang.String getName() {
@@ -1088,7 +1091,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The name of the game server delpoyment to retrieve. Uses the form:
+           * Required. The name of the game server delpoyment to retrieve, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
            */
           public Get setName(java.lang.String name) {
@@ -1298,7 +1301,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link GetRollout#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the game server delpoyment to retrieve. Uses the form:
+         * @param name Required. The name of the game server delpoyment to retrieve, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
          * @return the request
          */
@@ -1326,7 +1329,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * GetRollout#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the game server delpoyment to retrieve. Uses the form:
+           * @param name Required. The name of the game server delpoyment to retrieve, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
            * @since 1.13
            */
@@ -1406,13 +1409,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The name of the game server delpoyment to retrieve. Uses the form:
+           * Required. The name of the game server delpoyment to retrieve, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the game server delpoyment to retrieve. Uses the form:
+          /** Required. The name of the game server delpoyment to retrieve, in the following form:
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
            */
           public java.lang.String getName() {
@@ -1420,7 +1423,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The name of the game server delpoyment to retrieve. Uses the form:
+           * Required. The name of the game server delpoyment to retrieve, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
            */
           public GetRollout setName(java.lang.String name) {
@@ -1446,7 +1449,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
+         * @param parent Required. The parent resource name, in the following form:
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1472,7 +1476,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
+           * @param parent Required. The parent resource name, in the following form:
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1551,20 +1556,21 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The parent resource name. Uses the form:
+           * Required. The parent resource name, in the following form:
            * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
+          /** Required. The parent resource name, in the following form:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name. Uses the form:
+           * Required. The parent resource name, in the following form:
            * `projects/{project}/locations/{location}`.
            */
           public List setParent(java.lang.String parent) {
@@ -1673,7 +1679,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the game server deployment. Uses the form:
+         * @param name The resource name of the game server deployment, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
          *        `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerDeployment}
@@ -1703,7 +1709,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the game server deployment. Uses the form:
+           * @param name The resource name of the game server deployment, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
          *        `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerDeployment}
@@ -1775,14 +1781,14 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The resource name of the game server deployment. Uses the form:
+           * The resource name of the game server deployment, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For
            * example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the game server deployment. Uses the form:
+          /** The resource name of the game server deployment, in the following form:
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example,
          `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
            */
@@ -1791,7 +1797,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The resource name of the game server deployment. Uses the form:
+           * The resource name of the game server deployment, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For
            * example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
            */
@@ -1844,7 +1850,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link PreviewRollout#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the game server deployment rollout. Uses the form:
+         * @param name The resource name of the game server deployment rollout, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
          *        example, `projects/my-project/locations/global/gameServerDeployments/my-
          *        deployment/rollout`.
@@ -1875,7 +1881,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name The resource name of the game server deployment rollout. Uses the form:
+           * @param name The resource name of the game server deployment rollout, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
          *        example, `projects/my-project/locations/global/gameServerDeployments/my-
          *        deployment/rollout`.
@@ -1948,7 +1954,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The resource name of the game server deployment rollout. Uses the form:
+           * The resource name of the game server deployment rollout, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
            * For example, `projects/my-project/locations/global/gameServerDeployments/my-
            * deployment/rollout`.
@@ -1956,7 +1962,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the game server deployment rollout. Uses the form:
+          /** The resource name of the game server deployment rollout, in the following form:
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For example,
          `projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout`.
            */
@@ -1965,7 +1971,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The resource name of the game server deployment rollout. Uses the form:
+           * The resource name of the game server deployment rollout, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
            * For example, `projects/my-project/locations/global/gameServerDeployments/my-
            * deployment/rollout`.
@@ -2334,7 +2340,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link UpdateRollout#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the game server deployment rollout. Uses the form:
+         * @param name The resource name of the game server deployment rollout, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
          *        example, `projects/my-project/locations/global/gameServerDeployments/my-
          *        deployment/rollout`.
@@ -2369,7 +2375,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name The resource name of the game server deployment rollout. Uses the form:
+           * @param name The resource name of the game server deployment rollout, in the following form:
          *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For
          *        example, `projects/my-project/locations/global/gameServerDeployments/my-
          *        deployment/rollout`.
@@ -2442,7 +2448,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The resource name of the game server deployment rollout. Uses the form:
+           * The resource name of the game server deployment rollout, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
            * For example, `projects/my-project/locations/global/gameServerDeployments/my-
            * deployment/rollout`.
@@ -2450,7 +2456,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the game server deployment rollout. Uses the form:
+          /** The resource name of the game server deployment rollout, in the following form:
          `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`. For example,
          `projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout`.
            */
@@ -2459,7 +2465,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The resource name of the game server deployment rollout. Uses the form:
+           * The resource name of the game server deployment rollout, in the following form:
            * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
            * For example, `projects/my-project/locations/global/gameServerDeployments/my-
            * deployment/rollout`.
@@ -2536,7 +2542,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource name. Uses the form:
+           * @param parent Required. The parent resource name, in the following form:
            *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerConfig}
            * @return the request
@@ -2567,7 +2573,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource name. Uses the form:
+             * @param parent Required. The parent resource name, in the following form:
            *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/`.
              * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerConfig}
              * @since 1.13
@@ -2638,13 +2644,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The parent resource name. Uses the form:
+             * Required. The parent resource name, in the following form:
              * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource name. Uses the form:
+            /** Required. The parent resource name, in the following form:
            `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/`.
              */
             public java.lang.String getParent() {
@@ -2652,7 +2658,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The parent resource name. Uses the form:
+             * Required. The parent resource name, in the following form:
              * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/`.
              */
             public Create setParent(java.lang.String parent) {
@@ -2695,7 +2701,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the game server config to delete. Uses the form:
+           * @param name Required. The name of the game server config to delete, in the following form:
            *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{confi
            *        g}`.
            * @return the request
@@ -2725,7 +2731,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the game server config to delete. Uses the form:
+             * @param name Required. The name of the game server config to delete, in the following form:
            *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{confi
            *        g}`.
              * @since 1.13
@@ -2796,13 +2802,14 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server config to delete. Uses the form: `projects/{pro
-             * ject}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
+             * Required. The name of the game server config to delete, in the following form: `proje
+             * cts/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config
+             * }`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the game server config to delete. Uses the form:
+            /** Required. The name of the game server config to delete, in the following form:
            `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
              */
             public java.lang.String getName() {
@@ -2810,8 +2817,9 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server config to delete. Uses the form: `projects/{pro
-             * ject}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
+             * Required. The name of the game server config to delete, in the following form: `proje
+             * cts/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config
+             * }`.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2836,7 +2844,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the game server config to retrieve. Uses the form:
+           * @param name Required. The name of the game server config to retrieve, in the following form:
            *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{confi
            *        g}`.
            * @return the request
@@ -2864,7 +2872,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the game server config to retrieve. Uses the form:
+             * @param name Required. The name of the game server config to retrieve, in the following form:
            *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{confi
            *        g}`.
              * @since 1.13
@@ -2945,13 +2953,14 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server config to retrieve. Uses the form: `projects/{p
-             * roject}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
+             * Required. The name of the game server config to retrieve, in the following form: `pro
+             * jects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{conf
+             * ig}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the game server config to retrieve. Uses the form:
+            /** Required. The name of the game server config to retrieve, in the following form:
            `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
              */
             public java.lang.String getName() {
@@ -2959,8 +2968,9 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server config to retrieve. Uses the form: `projects/{p
-             * roject}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
+             * Required. The name of the game server config to retrieve, in the following form: `pro
+             * jects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{conf
+             * ig}`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2985,7 +2995,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource name. Uses the form:
+           * @param parent Required. The parent resource name, in the following form:
            *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs`.
            * @return the request
            */
@@ -3012,7 +3022,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource name. Uses the form:
+             * @param parent Required. The parent resource name, in the following form:
            *        `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs`.
              * @since 1.13
              */
@@ -3092,13 +3102,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The parent resource name. Uses the form:
+             * Required. The parent resource name, in the following form:
              * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource name. Uses the form:
+            /** Required. The parent resource name, in the following form:
            `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs`.
              */
             public java.lang.String getParent() {
@@ -3106,7 +3116,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The parent resource name. Uses the form:
+             * Required. The parent resource name, in the following form:
              * `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs`.
              */
             public List setParent(java.lang.String parent) {
@@ -3878,7 +3888,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
+         * @param parent Required. The parent resource name, in the following form:
+         *        `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.Realm}
          * @return the request
          */
@@ -3906,7 +3917,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
+           * @param parent Required. The parent resource name, in the following form:
+         *        `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.Realm}
            * @since 1.13
            */
@@ -3976,20 +3988,21 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The parent resource name. Uses the form:
+           * Required. The parent resource name, in the following form:
            * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
+          /** Required. The parent resource name, in the following form:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name. Uses the form:
+           * Required. The parent resource name, in the following form:
            * `projects/{project}/locations/{location}`.
            */
           public Create setParent(java.lang.String parent) {
@@ -4031,7 +4044,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the realm to delete. Uses the form:
+         * @param name Required. The name of the realm to delete, in the following form:
          *        `projects/{project}/locations/{location}/realms/{realm}`.
          * @return the request
          */
@@ -4059,7 +4072,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the realm to delete. Uses the form:
+           * @param name Required. The name of the realm to delete, in the following form:
          *        `projects/{project}/locations/{location}/realms/{realm}`.
            * @since 1.13
            */
@@ -4129,13 +4142,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The name of the realm to delete. Uses the form:
+           * Required. The name of the realm to delete, in the following form:
            * `projects/{project}/locations/{location}/realms/{realm}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the realm to delete. Uses the form:
+          /** Required. The name of the realm to delete, in the following form:
          `projects/{project}/locations/{location}/realms/{realm}`.
            */
           public java.lang.String getName() {
@@ -4143,7 +4156,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The name of the realm to delete. Uses the form:
+           * Required. The name of the realm to delete, in the following form:
            * `projects/{project}/locations/{location}/realms/{realm}`.
            */
           public Delete setName(java.lang.String name) {
@@ -4169,7 +4182,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the realm to retrieve. Uses the form:
+         * @param name Required. The name of the realm to retrieve, in the following form:
          *        `projects/{project}/locations/{location}/realms/{realm}`.
          * @return the request
          */
@@ -4196,7 +4209,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the realm to retrieve. Uses the form:
+           * @param name Required. The name of the realm to retrieve, in the following form:
          *        `projects/{project}/locations/{location}/realms/{realm}`.
            * @since 1.13
            */
@@ -4276,13 +4289,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The name of the realm to retrieve. Uses the form:
+           * Required. The name of the realm to retrieve, in the following form:
            * `projects/{project}/locations/{location}/realms/{realm}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the realm to retrieve. Uses the form:
+          /** Required. The name of the realm to retrieve, in the following form:
          `projects/{project}/locations/{location}/realms/{realm}`.
            */
           public java.lang.String getName() {
@@ -4290,7 +4303,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The name of the realm to retrieve. Uses the form:
+           * Required. The name of the realm to retrieve, in the following form:
            * `projects/{project}/locations/{location}/realms/{realm}`.
            */
           public Get setName(java.lang.String name) {
@@ -4316,7 +4329,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
+         * @param parent Required. The parent resource name, in the following form:
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4342,7 +4356,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
+           * @param parent Required. The parent resource name, in the following form:
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4421,20 +4436,21 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. The parent resource name. Uses the form:
+           * Required. The parent resource name, in the following form:
            * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}`.
+          /** Required. The parent resource name, in the following form:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name. Uses the form:
+           * Required. The parent resource name, in the following form:
            * `projects/{project}/locations/{location}`.
            */
           public List setParent(java.lang.String parent) {
@@ -4543,7 +4559,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the realm. Uses the form:
+         * @param name The resource name of the realm, in the following form:
          *        `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
          *        project/locations/{location}/realms/my-realm`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.Realm}
@@ -4573,7 +4589,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the realm. Uses the form:
+           * @param name The resource name of the realm, in the following form:
          *        `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
          *        project/locations/{location}/realms/my-realm`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.Realm}
@@ -4645,14 +4661,14 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The resource name of the realm. Uses the form:
+           * The resource name of the realm, in the following form:
            * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
            * project/locations/{location}/realms/my-realm`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the realm. Uses the form:
+          /** The resource name of the realm, in the following form:
          `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
          project/locations/{location}/realms/my-realm`.
            */
@@ -4661,7 +4677,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The resource name of the realm. Uses the form:
+           * The resource name of the realm, in the following form:
            * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
            * project/locations/{location}/realms/my-realm`.
            */
@@ -4713,7 +4729,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the gameservices server.  After setting any optional
          * parameters, call the {@link PreviewUpdate#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the realm. Uses the form:
+         * @param name The resource name of the realm, in the following form:
          *        `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
          *        project/locations/{location}/realms/my-realm`.
          * @param content the {@link com.google.api.services.gameservices.v1.model.Realm}
@@ -4743,7 +4759,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name The resource name of the realm. Uses the form:
+           * @param name The resource name of the realm, in the following form:
          *        `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
          *        project/locations/{location}/realms/my-realm`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.Realm}
@@ -4815,14 +4831,14 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The resource name of the realm. Uses the form:
+           * The resource name of the realm, in the following form:
            * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
            * project/locations/{location}/realms/my-realm`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the realm. Uses the form:
+          /** The resource name of the realm, in the following form:
          `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
          project/locations/{location}/realms/my-realm`.
            */
@@ -4831,7 +4847,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The resource name of the realm. Uses the form:
+           * The resource name of the realm, in the following form:
            * `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-
            * project/locations/{location}/realms/my-realm`.
            */
@@ -4920,8 +4936,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}/realms
-           *        /{realm-id}`.
+           * @param parent Required. The parent resource name, in the following form:
+           *        `projects/{project}/locations/{location}/realms/{realm-id}`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerCluster}
            * @return the request
            */
@@ -4949,8 +4965,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}/realms
-           *        /{realm-id}`.
+             * @param parent Required. The parent resource name, in the following form:
+           *        `projects/{project}/locations/{location}/realms/{realm-id}`.
              * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerCluster}
              * @since 1.13
              */
@@ -5020,21 +5036,21 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The parent resource name. Uses the form:
+             * Required. The parent resource name, in the following form:
              * `projects/{project}/locations/{location}/realms/{realm-id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource name. Uses the form: `projects/{project}/locations/{location}/realms
-           /{realm-id}`.
+            /** Required. The parent resource name, in the following form:
+           `projects/{project}/locations/{location}/realms/{realm-id}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent resource name. Uses the form:
+             * Required. The parent resource name, in the following form:
              * `projects/{project}/locations/{location}/realms/{realm-id}`.
              */
             public Create setParent(java.lang.String parent) {
@@ -5076,7 +5092,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the game server cluster to delete. Uses the form:
+           * @param name Required. The name of the game server cluster to delete, in the following form:
            *        `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
            * @return the request
            */
@@ -5104,7 +5120,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the game server cluster to delete. Uses the form:
+             * @param name Required. The name of the game server cluster to delete, in the following form:
            *        `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
              * @since 1.13
              */
@@ -5174,13 +5190,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server cluster to delete. Uses the form:
+             * Required. The name of the game server cluster to delete, in the following form:
              * `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the game server cluster to delete. Uses the form:
+            /** Required. The name of the game server cluster to delete, in the following form:
            `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
              */
             public java.lang.String getName() {
@@ -5188,7 +5204,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server cluster to delete. Uses the form:
+             * Required. The name of the game server cluster to delete, in the following form:
              * `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
              */
             public Delete setName(java.lang.String name) {
@@ -5214,7 +5230,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the game server cluster to retrieve. Uses the form:
+           * @param name Required. The name of the game server cluster to retrieve, in the following form:
            *        `projects/{project}/locations/{location}/realms/{realm-id}/gameServerClusters/{cluster}`.
            * @return the request
            */
@@ -5241,7 +5257,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the game server cluster to retrieve. Uses the form:
+             * @param name Required. The name of the game server cluster to retrieve, in the following form:
            *        `projects/{project}/locations/{location}/realms/{realm-id}/gameServerClusters/{cluster}`.
              * @since 1.13
              */
@@ -5321,14 +5337,14 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server cluster to retrieve. Uses the form:
+             * Required. The name of the game server cluster to retrieve, in the following form:
              * `projects/{project}/locations/{location}/realms/{realm-
              * id}/gameServerClusters/{cluster}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the game server cluster to retrieve. Uses the form:
+            /** Required. The name of the game server cluster to retrieve, in the following form:
            `projects/{project}/locations/{location}/realms/{realm-id}/gameServerClusters/{cluster}`.
              */
             public java.lang.String getName() {
@@ -5336,7 +5352,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server cluster to retrieve. Uses the form:
+             * Required. The name of the game server cluster to retrieve, in the following form:
              * `projects/{project}/locations/{location}/realms/{realm-
              * id}/gameServerClusters/{cluster}`.
              */
@@ -5363,7 +5379,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource name. Uses the form:
+           * @param parent Required. The parent resource name, in the following form:
            *        "projects/{project}/locations/{location}/realms/{realm}".
            * @return the request
            */
@@ -5390,7 +5406,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource name. Uses the form:
+             * @param parent Required. The parent resource name, in the following form:
            *        "projects/{project}/locations/{location}/realms/{realm}".
              * @since 1.13
              */
@@ -5470,13 +5486,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The parent resource name. Uses the form:
+             * Required. The parent resource name, in the following form:
              * "projects/{project}/locations/{location}/realms/{realm}".
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource name. Uses the form:
+            /** Required. The parent resource name, in the following form:
            "projects/{project}/locations/{location}/realms/{realm}".
              */
             public java.lang.String getParent() {
@@ -5484,7 +5500,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The parent resource name. Uses the form:
+             * Required. The parent resource name, in the following form:
              * "projects/{project}/locations/{location}/realms/{realm}".
              */
             public List setParent(java.lang.String parent) {
@@ -5597,7 +5613,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the game server cluster. Uses the form:
+           * @param name Required. The resource name of the game server cluster, in the following form:
            *        `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
            *        example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
            *        onprem-cluster`.
@@ -5628,7 +5644,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the game server cluster. Uses the form:
+             * @param name Required. The resource name of the game server cluster, in the following form:
            *        `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
            *        example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
            *        onprem-cluster`.
@@ -5701,15 +5717,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The resource name of the game server cluster. Uses the form: `projects/{pro
-             * ject}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example,
-             * `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
-             * onprem-cluster`.
+             * Required. The resource name of the game server cluster, in the following form: `proje
+             * cts/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
+             * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters
+             * /my-onprem-cluster`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the game server cluster. Uses the form:
+            /** Required. The resource name of the game server cluster, in the following form:
            `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example,
            `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
              */
@@ -5718,10 +5734,10 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The resource name of the game server cluster. Uses the form: `projects/{pro
-             * ject}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example,
-             * `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
-             * onprem-cluster`.
+             * Required. The resource name of the game server cluster, in the following form: `proje
+             * cts/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
+             * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters
+             * /my-onprem-cluster`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5772,7 +5788,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link PreviewCreate#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource name. Uses the form:
+           * @param parent Required. The parent resource name, in the following form:
            *        `projects/{project}/locations/{location}/realms/{realm}`.
            * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerCluster}
            * @return the request
@@ -5801,7 +5817,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param parent Required. The parent resource name. Uses the form:
+             * @param parent Required. The parent resource name, in the following form:
            *        `projects/{project}/locations/{location}/realms/{realm}`.
              * @param content the {@link com.google.api.services.gameservices.v1.model.GameServerCluster}
              * @since 1.13
@@ -5872,13 +5888,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The parent resource name. Uses the form:
+             * Required. The parent resource name, in the following form:
              * `projects/{project}/locations/{location}/realms/{realm}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource name. Uses the form:
+            /** Required. The parent resource name, in the following form:
            `projects/{project}/locations/{location}/realms/{realm}`.
              */
             public java.lang.String getParent() {
@@ -5886,7 +5902,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The parent resource name. Uses the form:
+             * Required. The parent resource name, in the following form:
              * `projects/{project}/locations/{location}/realms/{realm}`.
              */
             public PreviewCreate setParent(java.lang.String parent) {
@@ -5944,7 +5960,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link PreviewDelete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the game server cluster to delete. Uses the form:
+           * @param name Required. The name of the game server cluster to delete, in the following form:
            *        `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
            * @return the request
            */
@@ -5972,7 +5988,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param name Required. The name of the game server cluster to delete. Uses the form:
+             * @param name Required. The name of the game server cluster to delete, in the following form:
            *        `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
              * @since 1.13
              */
@@ -6042,13 +6058,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server cluster to delete. Uses the form:
+             * Required. The name of the game server cluster to delete, in the following form:
              * `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the game server cluster to delete. Uses the form:
+            /** Required. The name of the game server cluster to delete, in the following form:
            `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
              */
             public java.lang.String getName() {
@@ -6056,7 +6072,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The name of the game server cluster to delete. Uses the form:
+             * Required. The name of the game server cluster to delete, in the following form:
              * `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
              */
             public PreviewDelete setName(java.lang.String name) {
@@ -6098,7 +6114,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the gameservices server.  After setting any optional
            * parameters, call the {@link PreviewUpdate#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the game server cluster. Uses the form:
+           * @param name Required. The resource name of the game server cluster, in the following form:
            *        `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
            *        example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
            *        onprem-cluster`.
@@ -6129,7 +6145,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
              * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param name Required. The resource name of the game server cluster. Uses the form:
+             * @param name Required. The resource name of the game server cluster, in the following form:
            *        `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
            *        example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
            *        onprem-cluster`.
@@ -6202,15 +6218,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The resource name of the game server cluster. Uses the form: `projects/{pro
-             * ject}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example,
-             * `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
-             * onprem-cluster`.
+             * Required. The resource name of the game server cluster, in the following form: `proje
+             * cts/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
+             * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters
+             * /my-onprem-cluster`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the game server cluster. Uses the form:
+            /** Required. The resource name of the game server cluster, in the following form:
            `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example,
            `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
              */
@@ -6219,10 +6235,10 @@ public class GameServices extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Required. The resource name of the game server cluster. Uses the form: `projects/{pro
-             * ject}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example,
-             * `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
-             * onprem-cluster`.
+             * Required. The resource name of the game server cluster, in the following form: `proje
+             * cts/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
+             * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters
+             * /my-onprem-cluster`.
              */
             public PreviewUpdate setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

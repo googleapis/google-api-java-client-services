@@ -66,7 +66,7 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. The resource name of the game server cluster. Uses the form:
+   * Required. The resource name of the game server cluster, in the following form:
    * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
    * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
    * onprem-cluster`.
@@ -170,7 +170,7 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The resource name of the game server cluster. Uses the form:
+   * Required. The resource name of the game server cluster, in the following form:
    * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
    * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
    * onprem-cluster`.
@@ -181,7 +181,7 @@ public final class GameServerCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The resource name of the game server cluster. Uses the form:
+   * Required. The resource name of the game server cluster, in the following form:
    * `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For
    * example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-
    * onprem-cluster`.

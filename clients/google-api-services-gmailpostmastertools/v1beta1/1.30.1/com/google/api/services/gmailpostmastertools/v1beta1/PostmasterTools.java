@@ -769,22 +769,22 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
-         * year by itself or a year and month where the day is not significant.
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
          */
         @com.google.api.client.util.Key("endDate.day")
         private java.lang.Integer endDateDay;
 
-        /** Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a year by
-       itself or a year and month where the day is not significant.
+        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+       itself or a year and month where the day isn't significant.
          */
         public java.lang.Integer getEndDateDay() {
           return endDateDay;
         }
 
         /**
-         * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
-         * year by itself or a year and month where the day is not significant.
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
          */
         public List setEndDateDay(java.lang.Integer endDateDay) {
           this.endDateDay = endDateDay;
@@ -792,36 +792,36 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
          */
         @com.google.api.client.util.Key("endDate.month")
         private java.lang.Integer endDateMonth;
 
-        /** Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
          */
         public java.lang.Integer getEndDateMonth() {
           return endDateMonth;
         }
 
         /**
-         * Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
          */
         public List setEndDateMonth(java.lang.Integer endDateMonth) {
           this.endDateMonth = endDateMonth;
           return this;
         }
 
-        /** Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year. */
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
         @com.google.api.client.util.Key("endDate.year")
         private java.lang.Integer endDateYear;
 
-        /** Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
          */
         public java.lang.Integer getEndDateYear() {
           return endDateYear;
         }
 
-        /** Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year. */
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
         public List setEndDateYear(java.lang.Integer endDateYear) {
           this.endDateYear = endDateYear;
           return this;
@@ -877,22 +877,22 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
-         * year by itself or a year and month where the day is not significant.
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
          */
         @com.google.api.client.util.Key("startDate.day")
         private java.lang.Integer startDateDay;
 
-        /** Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a year by
-       itself or a year and month where the day is not significant.
+        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+       itself or a year and month where the day isn't significant.
          */
         public java.lang.Integer getStartDateDay() {
           return startDateDay;
         }
 
         /**
-         * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
-         * year by itself or a year and month where the day is not significant.
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
          */
         public List setStartDateDay(java.lang.Integer startDateDay) {
           this.startDateDay = startDateDay;
@@ -900,36 +900,36 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
          */
         @com.google.api.client.util.Key("startDate.month")
         private java.lang.Integer startDateMonth;
 
-        /** Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
          */
         public java.lang.Integer getStartDateMonth() {
           return startDateMonth;
         }
 
         /**
-         * Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
          */
         public List setStartDateMonth(java.lang.Integer startDateMonth) {
           this.startDateMonth = startDateMonth;
           return this;
         }
 
-        /** Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year. */
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
         @com.google.api.client.util.Key("startDate.year")
         private java.lang.Integer startDateYear;
 
-        /** Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
          */
         public java.lang.Integer getStartDateYear() {
           return startDateYear;
         }
 
-        /** Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year. */
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
         public List setStartDateYear(java.lang.Integer startDateYear) {
           this.startDateYear = startDateYear;
           return this;

@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/l7m-JIhSvmu0HFIAKZgPpq4u-fg\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/4nenIGMgwd-2CPsaz1D6XS0IB-o\"",
  "discoveryVersion": "v1",
  "id": "drive:v3",
  "name": "drive",
  "version": "v3",
- "revision": "20200813",
+ "revision": "20201004",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -1577,7 +1577,7 @@
     },
     "publishedLink": {
      "type": "string",
-     "description": "A link to the published revision."
+     "description": "A link to the published revision. This is only populated for Google Sites files."
     },
     "publishedOutsideDomain": {
      "type": "boolean",

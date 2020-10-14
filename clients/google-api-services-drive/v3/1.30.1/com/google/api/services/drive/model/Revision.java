@@ -113,7 +113,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean published;
 
   /**
-   * A link to the published revision.
+   * A link to the published revision. This is only populated for Google Sites files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -334,7 +334,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A link to the published revision.
+   * A link to the published revision. This is only populated for Google Sites files.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublishedLink() {
@@ -342,7 +342,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A link to the published revision.
+   * A link to the published revision. This is only populated for Google Sites files.
    * @param publishedLink publishedLink or {@code null} for none
    */
   public Revision setPublishedLink(java.lang.String publishedLink) {

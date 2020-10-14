@@ -68,10 +68,9 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * /capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This
    * determines if the client can use an Update operation to create a new resource with a client-
    * specified ID. If false, all IDs are server-assigned through the Create operation and attempts
-   * to update a non-existent resource return errors. Please treat the audit logs with appropriate
-   * levels of care if client-specified resource IDs contain sensitive data such as patient
-   * identifiers, those IDs are part of the FHIR resource path recorded in Cloud audit logs and
-   * Cloud Pub/Sub notifications.
+   * to update a non-existent resource return errors. Be careful with the audit logs if client-
+   * specified resource IDs contain sensitive data such as patient identifiers, those IDs are part
+   * of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,10 +211,9 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * /capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This
    * determines if the client can use an Update operation to create a new resource with a client-
    * specified ID. If false, all IDs are server-assigned through the Create operation and attempts
-   * to update a non-existent resource return errors. Please treat the audit logs with appropriate
-   * levels of care if client-specified resource IDs contain sensitive data such as patient
-   * identifiers, those IDs are part of the FHIR resource path recorded in Cloud audit logs and
-   * Cloud Pub/Sub notifications.
+   * to update a non-existent resource return errors. Be careful with the audit logs if client-
+   * specified resource IDs contain sensitive data such as patient identifiers, those IDs are part
+   * of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableUpdateCreate() {
@@ -227,10 +225,9 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * /capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This
    * determines if the client can use an Update operation to create a new resource with a client-
    * specified ID. If false, all IDs are server-assigned through the Create operation and attempts
-   * to update a non-existent resource return errors. Please treat the audit logs with appropriate
-   * levels of care if client-specified resource IDs contain sensitive data such as patient
-   * identifiers, those IDs are part of the FHIR resource path recorded in Cloud audit logs and
-   * Cloud Pub/Sub notifications.
+   * to update a non-existent resource return errors. Be careful with the audit logs if client-
+   * specified resource IDs contain sensitive data such as patient identifiers, those IDs are part
+   * of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub notifications.
    * @param enableUpdateCreate enableUpdateCreate or {@code null} for none
    */
   public FhirStore setEnableUpdateCreate(java.lang.Boolean enableUpdateCreate) {

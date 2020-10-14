@@ -451,22 +451,6 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
           return this;
         }
 
-        /** If true, the returned list will include locations which are not yet revealed. */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean includeUnrevealedLocations;
-
-        /** If true, the returned list will include locations which are not yet revealed.
-         */
-        public java.lang.Boolean getIncludeUnrevealedLocations() {
-          return includeUnrevealedLocations;
-        }
-
-        /** If true, the returned list will include locations which are not yet revealed. */
-        public List setIncludeUnrevealedLocations(java.lang.Boolean includeUnrevealedLocations) {
-          this.includeUnrevealedLocations = includeUnrevealedLocations;
-          return this;
-        }
-
         /** The standard list page size. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;

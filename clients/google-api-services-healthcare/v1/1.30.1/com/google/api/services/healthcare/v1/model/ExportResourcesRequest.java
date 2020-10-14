@@ -30,9 +30,9 @@ package com.google.api.services.healthcare.v1.model;
 public final class ExportResourcesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The BigQuery output destination. The BigQuery location requires two IAM roles:
-   * `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is one BigQuery table per
-   * resource type.
+   * The BigQuery output destination. The Cloud Healthcare Service Agent requires two IAM roles on
+   * the BigQuery location: `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is
+   * one BigQuery table per resource type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +49,9 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
   private GoogleCloudHealthcareV1FhirGcsDestination gcsDestination;
 
   /**
-   * The BigQuery output destination. The BigQuery location requires two IAM roles:
-   * `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is one BigQuery table per
-   * resource type.
+   * The BigQuery output destination. The Cloud Healthcare Service Agent requires two IAM roles on
+   * the BigQuery location: `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is
+   * one BigQuery table per resource type.
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1FhirBigQueryDestination getBigqueryDestination() {
@@ -59,9 +59,9 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The BigQuery output destination. The BigQuery location requires two IAM roles:
-   * `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is one BigQuery table per
-   * resource type.
+   * The BigQuery output destination. The Cloud Healthcare Service Agent requires two IAM roles on
+   * the BigQuery location: `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is
+   * one BigQuery table per resource type.
    * @param bigqueryDestination bigqueryDestination or {@code null} for none
    */
   public ExportResourcesRequest setBigqueryDestination(GoogleCloudHealthcareV1FhirBigQueryDestination bigqueryDestination) {

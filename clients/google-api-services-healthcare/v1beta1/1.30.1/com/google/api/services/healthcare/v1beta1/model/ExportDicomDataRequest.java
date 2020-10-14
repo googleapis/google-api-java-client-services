@@ -34,16 +34,17 @@ public final class ExportDicomDataRequest extends com.google.api.client.json.Gen
 
   /**
    * The BigQuery output destination. You can only export to a BigQuery dataset that's in the same
-   * project as the DICOM store you're exporting from. The BigQuery location requires two IAM roles:
-   * `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`.
+   * project as the DICOM store you're exporting from. The Cloud Healthcare Service Agent requires
+   * two IAM roles on the BigQuery location: `roles/bigquery.dataEditor` and
+   * `roles/bigquery.jobUser`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudHealthcareV1beta1DicomBigQueryDestination bigqueryDestination;
 
   /**
-   * The Cloud Storage output destination. The Cloud Storage location requires the
-   * `roles/storage.objectAdmin` Cloud IAM role.
+   * The Cloud Storage output destination. The Cloud Healthcare Service Agent requires the
+   * `roles/storage.objectAdmin` Cloud IAM roles on the Cloud Storage location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +52,9 @@ public final class ExportDicomDataRequest extends com.google.api.client.json.Gen
 
   /**
    * The BigQuery output destination. You can only export to a BigQuery dataset that's in the same
-   * project as the DICOM store you're exporting from. The BigQuery location requires two IAM roles:
-   * `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`.
+   * project as the DICOM store you're exporting from. The Cloud Healthcare Service Agent requires
+   * two IAM roles on the BigQuery location: `roles/bigquery.dataEditor` and
+   * `roles/bigquery.jobUser`.
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DicomBigQueryDestination getBigqueryDestination() {
@@ -61,8 +63,9 @@ public final class ExportDicomDataRequest extends com.google.api.client.json.Gen
 
   /**
    * The BigQuery output destination. You can only export to a BigQuery dataset that's in the same
-   * project as the DICOM store you're exporting from. The BigQuery location requires two IAM roles:
-   * `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`.
+   * project as the DICOM store you're exporting from. The Cloud Healthcare Service Agent requires
+   * two IAM roles on the BigQuery location: `roles/bigquery.dataEditor` and
+   * `roles/bigquery.jobUser`.
    * @param bigqueryDestination bigqueryDestination or {@code null} for none
    */
   public ExportDicomDataRequest setBigqueryDestination(GoogleCloudHealthcareV1beta1DicomBigQueryDestination bigqueryDestination) {
@@ -71,8 +74,8 @@ public final class ExportDicomDataRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The Cloud Storage output destination. The Cloud Storage location requires the
-   * `roles/storage.objectAdmin` Cloud IAM role.
+   * The Cloud Storage output destination. The Cloud Healthcare Service Agent requires the
+   * `roles/storage.objectAdmin` Cloud IAM roles on the Cloud Storage location.
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DicomGcsDestination getGcsDestination() {
@@ -80,8 +83,8 @@ public final class ExportDicomDataRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The Cloud Storage output destination. The Cloud Storage location requires the
-   * `roles/storage.objectAdmin` Cloud IAM role.
+   * The Cloud Storage output destination. The Cloud Healthcare Service Agent requires the
+   * `roles/storage.objectAdmin` Cloud IAM roles on the Cloud Storage location.
    * @param gcsDestination gcsDestination or {@code null} for none
    */
   public ExportDicomDataRequest setGcsDestination(GoogleCloudHealthcareV1beta1DicomGcsDestination gcsDestination) {

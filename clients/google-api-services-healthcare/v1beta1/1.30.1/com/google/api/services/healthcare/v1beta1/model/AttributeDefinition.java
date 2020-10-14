@@ -30,8 +30,8 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class AttributeDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Possible values for the attribute. An empty list is invalid. The list can only be
-   * expanded after creation.
+   * Required. Possible values for the attribute. The number of allowed values must not exceed 100.
+   * An empty list is invalid. The list can only be expanded after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +79,8 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   private java.lang.String name;
 
   /**
-   * Required. Possible values for the attribute. An empty list is invalid. The list can only be
-   * expanded after creation.
+   * Required. Possible values for the attribute. The number of allowed values must not exceed 100.
+   * An empty list is invalid. The list can only be expanded after creation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedValues() {
@@ -88,8 +88,8 @@ public final class AttributeDefinition extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Possible values for the attribute. An empty list is invalid. The list can only be
-   * expanded after creation.
+   * Required. Possible values for the attribute. The number of allowed values must not exceed 100.
+   * An empty list is invalid. The list can only be expanded after creation.
    * @param allowedValues allowedValues or {@code null} for none
    */
   public AttributeDefinition setAllowedValues(java.util.List<java.lang.String> allowedValues) {

@@ -1425,9 +1425,9 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the realtimebidding server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`, where `{buyer}`
-       *        represents the account ID of the buyer who owns the creative, and `{creative}` is the
-       *        buyer-specific creative ID that references this creative in the bid response.
+       * @param name Output only. Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`, where
+       *        `{buyer}` represents the account ID of the buyer who owns the creative, and `{creative}`
+       *        is the buyer-specific creative ID that references this creative in the bid response.
        * @param content the {@link com.google.api.services.realtimebidding.v1.model.Creative}
        * @return the request
        */
@@ -1455,9 +1455,9 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`, where `{buyer}`
-       *        represents the account ID of the buyer who owns the creative, and `{creative}` is the
-       *        buyer-specific creative ID that references this creative in the bid response.
+         * @param name Output only. Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`, where
+       *        `{buyer}` represents the account ID of the buyer who owns the creative, and `{creative}`
+       *        is the buyer-specific creative ID that references this creative in the bid response.
          * @param content the {@link com.google.api.services.realtimebidding.v1.model.Creative}
          * @since 1.13
          */
@@ -1527,25 +1527,27 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`, where
-         * `{buyer}` represents the account ID of the buyer who owns the creative, and `{creative}`
-         * is the buyer-specific creative ID that references this creative in the bid response.
+         * Output only. Name of the creative. Follows the pattern
+         * `buyers/{buyer}/creatives/{creative}`, where `{buyer}` represents the account ID of the
+         * buyer who owns the creative, and `{creative}` is the buyer-specific creative ID that
+         * references this creative in the bid response.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`, where `{buyer}`
-       represents the account ID of the buyer who owns the creative, and `{creative}` is the buyer-
-       specific creative ID that references this creative in the bid response.
+        /** Output only. Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`, where
+       `{buyer}` represents the account ID of the buyer who owns the creative, and `{creative}` is the
+       buyer-specific creative ID that references this creative in the bid response.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Name of the creative. Follows the pattern `buyers/{buyer}/creatives/{creative}`, where
-         * `{buyer}` represents the account ID of the buyer who owns the creative, and `{creative}`
-         * is the buyer-specific creative ID that references this creative in the bid response.
+         * Output only. Name of the creative. Follows the pattern
+         * `buyers/{buyer}/creatives/{creative}`, where `{buyer}` represents the account ID of the
+         * buyer who owns the creative, and `{creative}` is the buyer-specific creative ID that
+         * references this creative in the bid response.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

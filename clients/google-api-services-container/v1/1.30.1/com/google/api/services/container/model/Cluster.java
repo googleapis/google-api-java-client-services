@@ -232,7 +232,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * The list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
-   * should be located.
+   * should be located. This field provides a default value if
+   * [NodePool.Locations](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations)
+   * are not specified during node pool creation. Warning: changing cluster locations will update
+   * the [NodePool.Locations](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations)
+   * of all node pools and will result in nodes being added and/or removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -929,7 +935,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * The list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
-   * should be located.
+   * should be located. This field provides a default value if
+   * [NodePool.Locations](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations)
+   * are not specified during node pool creation. Warning: changing cluster locations will update
+   * the [NodePool.Locations](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations)
+   * of all node pools and will result in nodes being added and/or removed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -939,7 +951,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * The list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
-   * should be located.
+   * should be located. This field provides a default value if
+   * [NodePool.Locations](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations)
+   * are not specified during node pool creation. Warning: changing cluster locations will update
+   * the [NodePool.Locations](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations)
+   * of all node pools and will result in nodes being added and/or removed.
    * @param locations locations or {@code null} for none
    */
   public Cluster setLocations(java.util.List<java.lang.String> locations) {

@@ -3949,6 +3949,250 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the RowAccessPolicies collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Bigquery bigquery = new Bigquery(...);}
+   *   {@code Bigquery.RowAccessPolicies.List request = bigquery.rowAccessPolicies().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public RowAccessPolicies rowAccessPolicies() {
+    return new RowAccessPolicies();
+  }
+
+  /**
+   * The "rowAccessPolicies" collection of methods.
+   */
+  public class RowAccessPolicies {
+
+    /**
+     * Lists all row access policies on the specified table.
+     *
+     * Create a request for the method "rowAccessPolicies.list".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Required. Project ID of the row access policies to list.
+     * @param datasetId Required. Dataset ID of row access policies to list.
+     * @param tableId Required. Table ID of the table to list row access policies.
+     * @return the request
+     */
+    public List list(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId) throws java.io.IOException {
+      List result = new List(projectId, datasetId, tableId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends BigqueryRequest<com.google.api.services.bigquery.model.ListRowAccessPoliciesResponse> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables/{+tableId}/rowAccessPolicies";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern TABLE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Lists all row access policies on the specified table.
+       *
+       * Create a request for the method "rowAccessPolicies.list".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Required. Project ID of the row access policies to list.
+       * @param datasetId Required. Dataset ID of row access policies to list.
+       * @param tableId Required. Table ID of the table to list row access policies.
+       * @since 1.13
+       */
+      protected List(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId) {
+        super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.ListRowAccessPoliciesResponse.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.tableId = com.google.api.client.util.Preconditions.checkNotNull(tableId, "Required parameter tableId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Required. Project ID of the row access policies to list. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Required. Project ID of the row access policies to list.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Required. Project ID of the row access policies to list. */
+      public List setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Required. Dataset ID of row access policies to list. */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Required. Dataset ID of row access policies to list.
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Required. Dataset ID of row access policies to list. */
+      public List setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** Required. Table ID of the table to list row access policies. */
+      @com.google.api.client.util.Key
+      private java.lang.String tableId;
+
+      /** Required. Table ID of the table to list row access policies.
+       */
+      public java.lang.String getTableId() {
+        return tableId;
+      }
+
+      /** Required. Table ID of the table to list row access policies. */
+      public List setTableId(java.lang.String tableId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.tableId = tableId;
+        return this;
+      }
+
+      /**
+       * The maximum number of results to return in a single response page. Leverage the page tokens
+       * to iterate through the entire collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of results to return in a single response page. Leverage the page tokens to
+     iterate through the entire collection.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of results to return in a single response page. Leverage the page tokens
+       * to iterate through the entire collection.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** Page token, returned by a previous call, to request the next page of results. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Page token, returned by a previous call, to request the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** Page token, returned by a previous call, to request the next page of results. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Tabledata collection.
    *
    * <p>The typical use is:</p>

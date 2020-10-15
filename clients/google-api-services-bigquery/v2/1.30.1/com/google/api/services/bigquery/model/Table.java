@@ -241,10 +241,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output-only] Describes the table type. The following values are supported: TABLE: A normal
-   * BigQuery table. VIEW: A virtual table defined by a SQL query. [TrustedTester] SNAPSHOT: An
-   * immutable, read-only table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW:
-   * SQL query whose result is persisted. EXTERNAL: A table that references data stored in an
-   * external storage system, such as Google Cloud Storage. The default value is TABLE.
+   * BigQuery table. VIEW: A virtual table defined by a SQL query. SNAPSHOT: An immutable, read-only
+   * table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW: SQL query whose
+   * result is persisted. EXTERNAL: A table that references data stored in an external storage
+   * system, such as Google Cloud Storage. The default value is TABLE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -788,10 +788,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output-only] Describes the table type. The following values are supported: TABLE: A normal
-   * BigQuery table. VIEW: A virtual table defined by a SQL query. [TrustedTester] SNAPSHOT: An
-   * immutable, read-only table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW:
-   * SQL query whose result is persisted. EXTERNAL: A table that references data stored in an
-   * external storage system, such as Google Cloud Storage. The default value is TABLE.
+   * BigQuery table. VIEW: A virtual table defined by a SQL query. SNAPSHOT: An immutable, read-only
+   * table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW: SQL query whose
+   * result is persisted. EXTERNAL: A table that references data stored in an external storage
+   * system, such as Google Cloud Storage. The default value is TABLE.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -800,10 +800,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output-only] Describes the table type. The following values are supported: TABLE: A normal
-   * BigQuery table. VIEW: A virtual table defined by a SQL query. [TrustedTester] SNAPSHOT: An
-   * immutable, read-only table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW:
-   * SQL query whose result is persisted. EXTERNAL: A table that references data stored in an
-   * external storage system, such as Google Cloud Storage. The default value is TABLE.
+   * BigQuery table. VIEW: A virtual table defined by a SQL query. SNAPSHOT: An immutable, read-only
+   * table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW: SQL query whose
+   * result is persisted. EXTERNAL: A table that references data stored in an external storage
+   * system, such as Google Cloud Storage. The default value is TABLE.
    * @param type type or {@code null} for none
    */
   public Table setType(java.lang.String type) {

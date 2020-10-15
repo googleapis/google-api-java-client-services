@@ -83,9 +83,9 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   /**
    * The desired list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
-   * should be located. Changing the locations a cluster is in will result in nodes being either
-   * created or removed from the cluster, depending on whether locations are being added or removed.
-   * This list must always include the cluster's primary zone.
+   * should be located. This list must always include the cluster's primary zone. Warning: changing
+   * cluster locations will update the locations of all node pools and will result in nodes being
+   * added and/or removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -327,9 +327,9 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   /**
    * The desired list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
-   * should be located. Changing the locations a cluster is in will result in nodes being either
-   * created or removed from the cluster, depending on whether locations are being added or removed.
-   * This list must always include the cluster's primary zone.
+   * should be located. This list must always include the cluster's primary zone. Warning: changing
+   * cluster locations will update the locations of all node pools and will result in nodes being
+   * added and/or removed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDesiredLocations() {
@@ -339,9 +339,9 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   /**
    * The desired list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
-   * should be located. Changing the locations a cluster is in will result in nodes being either
-   * created or removed from the cluster, depending on whether locations are being added or removed.
-   * This list must always include the cluster's primary zone.
+   * should be located. This list must always include the cluster's primary zone. Warning: changing
+   * cluster locations will update the locations of all node pools and will result in nodes being
+   * added and/or removed.
    * @param desiredLocations desiredLocations or {@code null} for none
    */
   public ClusterUpdate setDesiredLocations(java.util.List<java.lang.String> desiredLocations) {

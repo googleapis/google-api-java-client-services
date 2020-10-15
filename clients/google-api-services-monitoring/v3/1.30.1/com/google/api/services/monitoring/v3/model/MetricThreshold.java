@@ -106,9 +106,9 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
    * should be compared with the threshold.The filter is similar to the one that is specified in the
    * ListTimeSeries request
    * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is
-   * useful to verify the time series that will be retrieved / processed) and must specify the
-   * metric type and optionally may contain restrictions on resource type, resource labels, and
-   * metric labels. This field may not exceed 2048 Unicode characters in length.
+   * useful to verify the time series that will be retrieved / processed). The filter must specify
+   * the metric type and the resource type. Optionally, it can specify resource labels and metric
+   * labels. This field must not exceed 2048 Unicode characters in length.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -271,9 +271,9 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
    * should be compared with the threshold.The filter is similar to the one that is specified in the
    * ListTimeSeries request
    * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is
-   * useful to verify the time series that will be retrieved / processed) and must specify the
-   * metric type and optionally may contain restrictions on resource type, resource labels, and
-   * metric labels. This field may not exceed 2048 Unicode characters in length.
+   * useful to verify the time series that will be retrieved / processed). The filter must specify
+   * the metric type and the resource type. Optionally, it can specify resource labels and metric
+   * labels. This field must not exceed 2048 Unicode characters in length.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -285,9 +285,9 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
    * should be compared with the threshold.The filter is similar to the one that is specified in the
    * ListTimeSeries request
    * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is
-   * useful to verify the time series that will be retrieved / processed) and must specify the
-   * metric type and optionally may contain restrictions on resource type, resource labels, and
-   * metric labels. This field may not exceed 2048 Unicode characters in length.
+   * useful to verify the time series that will be retrieved / processed). The filter must specify
+   * the metric type and the resource type. Optionally, it can specify resource labels and metric
+   * labels. This field must not exceed 2048 Unicode characters in length.
    * @param filter filter or {@code null} for none
    */
   public MetricThreshold setFilter(java.lang.String filter) {

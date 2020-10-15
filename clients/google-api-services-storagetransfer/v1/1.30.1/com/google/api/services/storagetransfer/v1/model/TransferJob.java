@@ -59,6 +59,14 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private String lastModificationTime;
 
   /**
+   * The name of the most recently started TransferOperation of this JobConfig. Present if and only
+   * if at least one TransferOperation has been created for this JobConfig.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String latestOperationName;
+
+  /**
    * A unique name (within the transfer project) assigned when the job is created. If this field is
    * empty in a CreateTransferJobRequest, Storage Transfer Service will assign a unique name.
    * Otherwise, the specified name is used as the unique name for this job. If the specified name is
@@ -176,6 +184,25 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
    */
   public TransferJob setLastModificationTime(String lastModificationTime) {
     this.lastModificationTime = lastModificationTime;
+    return this;
+  }
+
+  /**
+   * The name of the most recently started TransferOperation of this JobConfig. Present if and only
+   * if at least one TransferOperation has been created for this JobConfig.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLatestOperationName() {
+    return latestOperationName;
+  }
+
+  /**
+   * The name of the most recently started TransferOperation of this JobConfig. Present if and only
+   * if at least one TransferOperation has been created for this JobConfig.
+   * @param latestOperationName latestOperationName or {@code null} for none
+   */
+  public TransferJob setLatestOperationName(java.lang.String latestOperationName) {
+    this.latestOperationName = latestOperationName;
     return this;
   }
 

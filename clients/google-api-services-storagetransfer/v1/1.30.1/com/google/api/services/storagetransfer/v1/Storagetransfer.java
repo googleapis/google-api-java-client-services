@@ -417,10 +417,11 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param jobName Required. " The job to get.
+     * @param projectId Required. The ID of the Google Cloud Platform Console project that owns the job.
      * @return the request
      */
-    public Get get(java.lang.String jobName) throws java.io.IOException {
-      Get result = new Get(jobName);
+    public Get get(java.lang.String jobName, java.lang.String projectId) throws java.io.IOException {
+      Get result = new Get(jobName, projectId);
       initialize(result);
       return result;
     }
@@ -443,9 +444,10 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param jobName Required. " The job to get.
+       * @param projectId Required. The ID of the Google Cloud Platform Console project that owns the job.
        * @since 1.13
        */
-      protected Get(java.lang.String jobName) {
+      protected Get(java.lang.String jobName, java.lang.String projectId) {
         super(Storagetransfer.this, "GET", REST_PATH, null, com.google.api.services.storagetransfer.v1.model.TransferJob.class);
         this.jobName = com.google.api.client.util.Preconditions.checkNotNull(jobName, "Required parameter jobName must be specified.");
         if (!getSuppressPatternChecks()) {
@@ -453,6 +455,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
               "Parameter jobName must conform to the pattern " +
               "^transferJobs/.*$");
         }
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
       }
 
       @Override
@@ -570,10 +573,16 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the storagetransfer server.  After setting any
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
+     * @param filter Required. A list of query parameters specified as JSON text in the form of:
+     *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+     *        "jobStatuses":["status1","status2",...]}` Since `jobNames` and `jobStatuses` support
+     *        multiple values, their values must be specified with array notation. `projectId` is
+     *        required. `jobNames` and `jobStatuses` are optional. The valid values for `jobStatuses`
+     *        are case-insensitive: ENABLED, DISABLED, and DELETED.
      * @return the request
      */
-    public List list() throws java.io.IOException {
-      List result = new List();
+    public List list(java.lang.String filter) throws java.io.IOException {
+      List result = new List(filter);
       initialize(result);
       return result;
     }
@@ -592,10 +601,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
+       * @param filter Required. A list of query parameters specified as JSON text in the form of:
+     *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+     *        "jobStatuses":["status1","status2",...]}` Since `jobNames` and `jobStatuses` support
+     *        multiple values, their values must be specified with array notation. `projectId` is
+     *        required. `jobNames` and `jobStatuses` are optional. The valid values for `jobStatuses`
+     *        are case-insensitive: ENABLED, DISABLED, and DELETED.
        * @since 1.13
        */
-      protected List() {
+      protected List(java.lang.String filter) {
         super(Storagetransfer.this, "GET", REST_PATH, null, com.google.api.services.storagetransfer.v1.model.ListTransferJobsResponse.class);
+        this.filter = com.google.api.client.util.Preconditions.checkNotNull(filter, "Required parameter filter must be specified.");
       }
 
       @Override
@@ -665,21 +681,21 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
 
       /**
        * Required. A list of query parameters specified as JSON text in the form of:
-       * {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
-       * "job_statuses":["status1","status2",...]}. Since `job_names` and `job_statuses` support
-       * multiple values, their values must be specified with array notation. `project``_``id` is
-       * required. `job_names` and `job_statuses` are optional. The valid values for `job_statuses`
-       * are case-insensitive: ENABLED, DISABLED, and DELETED.
+       * `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+       * "jobStatuses":["status1","status2",...]}` Since `jobNames` and `jobStatuses` support
+       * multiple values, their values must be specified with array notation. `projectId` is
+       * required. `jobNames` and `jobStatuses` are optional. The valid values for `jobStatuses` are
+       * case-insensitive: ENABLED, DISABLED, and DELETED.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Required. A list of query parameters specified as JSON text in the form of:
-     {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
-     "job_statuses":["status1","status2",...]}. Since `job_names` and `job_statuses` support multiple
-     values, their values must be specified with array notation. `project``_``id` is required.
-     `job_names` and `job_statuses` are optional. The valid values for `job_statuses` are case-
-     insensitive: ENABLED, DISABLED, and DELETED.
+     `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+     "jobStatuses":["status1","status2",...]}` Since `jobNames` and `jobStatuses` support multiple
+     values, their values must be specified with array notation. `projectId` is required. `jobNames` and
+     `jobStatuses` are optional. The valid values for `jobStatuses` are case-insensitive: ENABLED,
+     DISABLED, and DELETED.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -687,11 +703,11 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
 
       /**
        * Required. A list of query parameters specified as JSON text in the form of:
-       * {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
-       * "job_statuses":["status1","status2",...]}. Since `job_names` and `job_statuses` support
-       * multiple values, their values must be specified with array notation. `project``_``id` is
-       * required. `job_names` and `job_statuses` are optional. The valid values for `job_statuses`
-       * are case-insensitive: ENABLED, DISABLED, and DELETED.
+       * `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+       * "jobStatuses":["status1","status2",...]}` Since `jobNames` and `jobStatuses` support
+       * multiple values, their values must be specified with array notation. `projectId` is
+       * required. `jobNames` and `jobStatuses` are optional. The valid values for `jobStatuses` are
+       * case-insensitive: ENABLED, DISABLED, and DELETED.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1201,10 +1217,18 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param name Required. The value `transferOperations`.
+     * @param filter Required. A list of query parameters specified as JSON text in the form of:
+     *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+     *        "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}`
+     *        Since `jobNames`, `operationNames`, and `transferStatuses` support multiple values, they
+     *        must be specified with array notation. `projectId` is required. `jobNames`,
+     *        `operationNames`, and `transferStatuses` are optional. The valid values for
+     *        `transferStatuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and
+     *        ABORTED.
      * @return the request
      */
-    public List list(java.lang.String name) throws java.io.IOException {
-      List result = new List(name);
+    public List list(java.lang.String name, java.lang.String filter) throws java.io.IOException {
+      List result = new List(name, filter);
       initialize(result);
       return result;
     }
@@ -1227,9 +1251,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. The value `transferOperations`.
+       * @param filter Required. A list of query parameters specified as JSON text in the form of:
+     *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+     *        "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}`
+     *        Since `jobNames`, `operationNames`, and `transferStatuses` support multiple values, they
+     *        must be specified with array notation. `projectId` is required. `jobNames`,
+     *        `operationNames`, and `transferStatuses` are optional. The valid values for
+     *        `transferStatuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and
+     *        ABORTED.
        * @since 1.13
        */
-      protected List(java.lang.String name) {
+      protected List(java.lang.String name, java.lang.String filter) {
         super(Storagetransfer.this, "GET", REST_PATH, null, com.google.api.services.storagetransfer.v1.model.ListOperationsResponse.class);
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
@@ -1237,6 +1269,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
               "Parameter name must conform to the pattern " +
               "^transferOperations$");
         }
+        this.filter = com.google.api.client.util.Preconditions.checkNotNull(filter, "Required parameter filter must be specified.");
       }
 
       @Override
@@ -1327,23 +1360,22 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
 
       /**
        * Required. A list of query parameters specified as JSON text in the form of:
-       * {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
-       * "operation_names":["opid1","opid2",...], "transfer_statuses":["status1","status2",...]}.
-       * Since `job_names`, `operation_names`, and `transfer_statuses` support multiple values, they
-       * must be specified with array notation. `project``_``id` is required. `job_names`,
-       * `operation_names`, and `transfer_statuses` are optional. The valid values for
-       * `transfer_statuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and
-       * ABORTED.
+       * `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+       * "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}`
+       * Since `jobNames`, `operationNames`, and `transferStatuses` support multiple values, they
+       * must be specified with array notation. `projectId` is required. `jobNames`,
+       * `operationNames`, and `transferStatuses` are optional. The valid values for
+       * `transferStatuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and ABORTED.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Required. A list of query parameters specified as JSON text in the form of:
-     {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
-     "operation_names":["opid1","opid2",...], "transfer_statuses":["status1","status2",...]}. Since
-     `job_names`, `operation_names`, and `transfer_statuses` support multiple values, they must be
-     specified with array notation. `project``_``id` is required. `job_names`, `operation_names`, and
-     `transfer_statuses` are optional. The valid values for `transfer_statuses` are case-insensitive:
+     `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+     "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}` Since
+     `jobNames`, `operationNames`, and `transferStatuses` support multiple values, they must be
+     specified with array notation. `projectId` is required. `jobNames`, `operationNames`, and
+     `transferStatuses` are optional. The valid values for `transferStatuses` are case-insensitive:
      IN_PROGRESS, PAUSED, SUCCESS, FAILED, and ABORTED.
        */
       public java.lang.String getFilter() {
@@ -1352,13 +1384,12 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
 
       /**
        * Required. A list of query parameters specified as JSON text in the form of:
-       * {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
-       * "operation_names":["opid1","opid2",...], "transfer_statuses":["status1","status2",...]}.
-       * Since `job_names`, `operation_names`, and `transfer_statuses` support multiple values, they
-       * must be specified with array notation. `project``_``id` is required. `job_names`,
-       * `operation_names`, and `transfer_statuses` are optional. The valid values for
-       * `transfer_statuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and
-       * ABORTED.
+       * `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+       * "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}`
+       * Since `jobNames`, `operationNames`, and `transferStatuses` support multiple values, they
+       * must be specified with array notation. `projectId` is required. `jobNames`,
+       * `operationNames`, and `transferStatuses` are optional. The valid values for
+       * `transferStatuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and ABORTED.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

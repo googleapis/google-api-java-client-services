@@ -64,6 +64,7 @@ packages on [Maven Central][maven-search].
 | Cloud Datastore API | [v1](clients/google-api-services-datastore/v1), [v1beta1](clients/google-api-services-datastore/v1beta1), [v1beta3](clients/google-api-services-datastore/v1beta3) |
 | Cloud Debugger API | [v2](clients/google-api-services-clouddebugger/v2) |
 | Cloud Document AI API | [v1beta2](clients/google-api-services-documentai/v1beta2), [v1beta3](clients/google-api-services-documentai/v1beta3) |
+| Cloud Domains API | [v1alpha2](clients/google-api-services-domains/v1alpha2), [v1beta1](clients/google-api-services-domains/v1beta1) |
 | Cloud Filestore API | [v1](clients/google-api-services-file/v1), [v1beta1](clients/google-api-services-file/v1beta1) |
 | Cloud Firestore API | [v1](clients/google-api-services-firestore/v1), [v1beta1](clients/google-api-services-firestore/v1beta1), [v1beta2](clients/google-api-services-firestore/v1beta2) |
 | Cloud Functions API | [v1](clients/google-api-services-cloudfunctions/v1) |

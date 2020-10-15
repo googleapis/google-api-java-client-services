@@ -144,10 +144,10 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
 
     /**
      * Returns metadata for dimensions and metrics available in reporting methods. Used to explore the
-     * dimensions and metrics. In this method, a Google Analytics App + Web Property Identifier is
-     * specified in the request, and the metadata response includes Custom dimensions and metrics as
-     * well as Universal metadata. For example if a custom metric with parameter name `levels_unlocked`
-     * is registered to a property, the Metadata response will contain `customEvent:levels_unlocked`.
+     * dimensions and metrics. In this method, a Google Analytics GA4 Property Identifier is specified
+     * in the request, and the metadata response includes Custom dimensions and metrics as well as
+     * Universal metadata. For example if a custom metric with parameter name `levels_unlocked` is
+     * registered to a property, the Metadata response will contain `customEvent:levels_unlocked`.
      * Universal metadata are dimensions and metrics applicable to any property such as `country` and
      * `totalUsers`.
      *
@@ -157,7 +157,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link GetMetadata#execute()} method to invoke the remote operation.
      *
      * @param name Required. The resource name of the metadata to retrieve. This name field is specified in the URL
-     *        path and not URL parameters. Property is a numeric Google Analytics App + Web Property
+     *        path and not URL parameters. Property is a numeric Google Analytics GA4 Property
      *        identifier. Example: properties/1234/metadata
      * @return the request
      */
@@ -176,12 +176,12 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
 
       /**
        * Returns metadata for dimensions and metrics available in reporting methods. Used to explore the
-       * dimensions and metrics. In this method, a Google Analytics App + Web Property Identifier is
-       * specified in the request, and the metadata response includes Custom dimensions and metrics as
-       * well as Universal metadata. For example if a custom metric with parameter name
-       * `levels_unlocked` is registered to a property, the Metadata response will contain
-       * `customEvent:levels_unlocked`. Universal metadata are dimensions and metrics applicable to any
-       * property such as `country` and `totalUsers`.
+       * dimensions and metrics. In this method, a Google Analytics GA4 Property Identifier is specified
+       * in the request, and the metadata response includes Custom dimensions and metrics as well as
+       * Universal metadata. For example if a custom metric with parameter name `levels_unlocked` is
+       * registered to a property, the Metadata response will contain `customEvent:levels_unlocked`.
+       * Universal metadata are dimensions and metrics applicable to any property such as `country` and
+       * `totalUsers`.
        *
        * Create a request for the method "properties.getMetadata".
        *
@@ -192,7 +192,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. The resource name of the metadata to retrieve. This name field is specified in the URL
-     *        path and not URL parameters. Property is a numeric Google Analytics App + Web Property
+     *        path and not URL parameters. Property is a numeric Google Analytics GA4 Property
      *        identifier. Example: properties/1234/metadata
        * @since 1.13
        */
@@ -273,14 +273,14 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The resource name of the metadata to retrieve. This name field is specified in
-       * the URL path and not URL parameters. Property is a numeric Google Analytics App + Web
-       * Property identifier. Example: properties/1234/metadata
+       * the URL path and not URL parameters. Property is a numeric Google Analytics GA4 Property
+       * identifier. Example: properties/1234/metadata
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource name of the metadata to retrieve. This name field is specified in the URL
-     path and not URL parameters. Property is a numeric Google Analytics App + Web Property identifier.
+     path and not URL parameters. Property is a numeric Google Analytics GA4 Property identifier.
      Example: properties/1234/metadata
        */
       public java.lang.String getName() {
@@ -289,8 +289,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The resource name of the metadata to retrieve. This name field is specified in
-       * the URL path and not URL parameters. Property is a numeric Google Analytics App + Web
-       * Property identifier. Example: properties/1234/metadata
+       * the URL path and not URL parameters. Property is a numeric Google Analytics GA4 Property
+       * identifier. Example: properties/1234/metadata
        */
       public GetMetadata setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

@@ -31,14 +31,14 @@ package com.google.api.services.analyticsdata.v1alpha.model;
 public final class Entity extends com.google.api.client.json.GenericJson {
 
   /**
-   * A Google Analytics App + Web property id.
+   * A Google Analytics GA4 property id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String propertyId;
 
   /**
-   * A Google Analytics App + Web property id.
+   * A Google Analytics GA4 property id.
    * @return value or {@code null} for none
    */
   public java.lang.String getPropertyId() {
@@ -46,7 +46,7 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Google Analytics App + Web property id.
+   * A Google Analytics GA4 property id.
    * @param propertyId propertyId or {@code null} for none
    */
   public Entity setPropertyId(java.lang.String propertyId) {

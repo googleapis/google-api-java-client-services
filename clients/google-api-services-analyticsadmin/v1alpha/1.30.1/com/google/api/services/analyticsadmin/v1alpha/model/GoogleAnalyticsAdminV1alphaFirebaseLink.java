@@ -17,7 +17,7 @@
 package com.google.api.services.analyticsadmin.v1alpha.model;
 
 /**
- * A link between an App+Web property and a Firebase project.
+ * A link between an GA4 property and a Firebase project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Admin API. For a detailed
@@ -38,7 +38,7 @@ public final class GoogleAnalyticsAdminV1alphaFirebaseLink extends com.google.ap
   private String createTime;
 
   /**
-   * Maximum user access to the App + Web property allowed to admins of the linked Firebase project.
+   * Maximum user access to the GA4 property allowed to admins of the linked Firebase project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class GoogleAnalyticsAdminV1alphaFirebaseLink extends com.google.ap
   }
 
   /**
-   * Maximum user access to the App + Web property allowed to admins of the linked Firebase project.
+   * Maximum user access to the GA4 property allowed to admins of the linked Firebase project.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaximumUserAccess() {
@@ -87,7 +87,7 @@ public final class GoogleAnalyticsAdminV1alphaFirebaseLink extends com.google.ap
   }
 
   /**
-   * Maximum user access to the App + Web property allowed to admins of the linked Firebase project.
+   * Maximum user access to the GA4 property allowed to admins of the linked Firebase project.
    * @param maximumUserAccess maximumUserAccess or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaFirebaseLink setMaximumUserAccess(java.lang.String maximumUserAccess) {

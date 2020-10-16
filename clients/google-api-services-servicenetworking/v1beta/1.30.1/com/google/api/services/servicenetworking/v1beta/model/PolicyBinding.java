@@ -40,7 +40,7 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
   private java.lang.String member;
 
   /**
-   * Required. Role to apply. Only whitelisted roles can be used at the specified granularity. The
+   * Required. Role to apply. Only allowlisted roles can be used at the specified granularity. The
    * role must be one of the following: - 'roles/container.hostServiceAgentUser' applied on the
    * shared VPC host project - 'roles/compute.securityAdmin' applied on the shared VPC host project
    * The value may be {@code null}.
@@ -70,7 +70,7 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Role to apply. Only whitelisted roles can be used at the specified granularity. The
+   * Required. Role to apply. Only allowlisted roles can be used at the specified granularity. The
    * role must be one of the following: - 'roles/container.hostServiceAgentUser' applied on the
    * shared VPC host project - 'roles/compute.securityAdmin' applied on the shared VPC host project
    * @return value or {@code null} for none
@@ -80,7 +80,7 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Role to apply. Only whitelisted roles can be used at the specified granularity. The
+   * Required. Role to apply. Only allowlisted roles can be used at the specified granularity. The
    * role must be one of the following: - 'roles/container.hostServiceAgentUser' applied on the
    * shared VPC host project - 'roles/compute.securityAdmin' applied on the shared VPC host project
    * @param role role or {@code null} for none

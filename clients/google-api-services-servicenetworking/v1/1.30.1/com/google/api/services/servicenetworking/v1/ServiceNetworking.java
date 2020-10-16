@@ -3489,8 +3489,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
 
       /**
        * Service producers can use this method to add roles in the shared VPC host project. Each role is
-       * bound to the provided member. Each role must be selected from within a whitelisted set of roles.
-       * Each role is applied at only the granularity specified in the whitelist.
+       * bound to the provided member. Each role must be selected from within an allowlisted set of roles.
+       * Each role is applied at only the granularity specified in the allowlist.
        *
        * Create a request for the method "roles.add".
        *
@@ -3517,8 +3517,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
 
         /**
          * Service producers can use this method to add roles in the shared VPC host project. Each role is
-         * bound to the provided member. Each role must be selected from within a whitelisted set of
-         * roles. Each role is applied at only the granularity specified in the whitelist.
+         * bound to the provided member. Each role must be selected from within an allowlisted set of
+         * roles. Each role is applied at only the granularity specified in the allowlist.
          *
          * Create a request for the method "roles.add".
          *

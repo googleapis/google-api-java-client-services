@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/ZKU1baDOGm0igI-zPHM7ManUM9I\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/6fuP5JDS7CDwzVsd3cAc59pg_GE\"",
  "discoveryVersion": "v1",
  "id": "drive:v2",
  "name": "drive",
  "version": "v2",
- "revision": "20201004",
+ "revision": "20201012",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -1770,7 +1770,7 @@
     },
     "thumbnailLink": {
      "type": "string",
-     "description": "A short-lived link to the file's thumbnail. Typically lasts on the order of hours. Only populated when the requesting app can access the file's content."
+     "description": "A short-lived link to the file's thumbnail. Typically lasts on the order of hours. Only populated when the requesting app can access the file's content. If the file isn't shared publicly, the URL returned in Files.thumbnailLink must be fetched using a credentialed request."
     },
     "thumbnailVersion": {
      "type": "string",

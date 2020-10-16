@@ -20246,13 +20246,13 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Allows filtering by targeting option properties. Supported syntax: * Filter expressions
          * are made up of one or more restrictions. * Restrictions can be combined by `OR` logical
          * operators. * A restriction has the form of `{field} {operator} {value}`. * The operator
-         * must be "=" (equal sign). * Supported fields: - `carrier_and_isp_details.type` -
-         * `geo_region_details.geo_region_type` - `targetingOptionId` Examples: * All `GEO REGION`
+         * must be "=" (equal sign). * Supported fields: - `carrierAndIspDetails.type` -
+         * `geoRegionDetails.geoRegionType` - `targetingOptionId` Examples: * All `GEO REGION`
          * targeting options that belong to sub type `GEO_REGION_TYPE_COUNTRY` or
-         * `GEO_REGION_TYPE_STATE`: `geo_region_details.geo_region_type="GEO_REGION_TYPE_COUNTRY" OR
-         * geo_region_details.geo_region_type="GEO_REGION_TYPE_STATE"` * All `CARRIER AND ISP`
-         * targeting options that belong to sub type `CARRIER_AND_ISP_TYPE_CARRIER`:
-         * `carrier_and_isp_details.type="CARRIER_AND_ISP_TYPE_CARRIER"`. The length of this field
+         * `GEO_REGION_TYPE_STATE`: `geoRegionDetails.geoRegionType="GEO_REGION_TYPE_COUNTRY" OR
+         * geoRegionDetails.geoRegionType="GEO_REGION_TYPE_STATE"` * All `CARRIER AND ISP` targeting
+         * options that belong to sub type `CARRIER_AND_ISP_TYPE_CARRIER`:
+         * `carrierAndIspDetails.type="CARRIER_AND_ISP_TYPE_CARRIER"`. The length of this field
          * should be no more than 500 characters.
          */
         @com.google.api.client.util.Key
@@ -20261,14 +20261,14 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /** Allows filtering by targeting option properties. Supported syntax: * Filter expressions are made up
        of one or more restrictions. * Restrictions can be combined by `OR` logical operators. * A
        restriction has the form of `{field} {operator} {value}`. * The operator must be "=" (equal sign).
-       * Supported fields: - `carrier_and_isp_details.type` - `geo_region_details.geo_region_type` -
+       * Supported fields: - `carrierAndIspDetails.type` - `geoRegionDetails.geoRegionType` -
        `targetingOptionId` Examples: * All `GEO REGION` targeting options that belong to sub type
        `GEO_REGION_TYPE_COUNTRY` or `GEO_REGION_TYPE_STATE`:
-       `geo_region_details.geo_region_type="GEO_REGION_TYPE_COUNTRY" OR
-       geo_region_details.geo_region_type="GEO_REGION_TYPE_STATE"` * All `CARRIER AND ISP` targeting
-       options that belong to sub type `CARRIER_AND_ISP_TYPE_CARRIER`:
-       `carrier_and_isp_details.type="CARRIER_AND_ISP_TYPE_CARRIER"`. The length of this field should be
-       no more than 500 characters.
+       `geoRegionDetails.geoRegionType="GEO_REGION_TYPE_COUNTRY" OR
+       geoRegionDetails.geoRegionType="GEO_REGION_TYPE_STATE"` * All `CARRIER AND ISP` targeting options
+       that belong to sub type `CARRIER_AND_ISP_TYPE_CARRIER`:
+       `carrierAndIspDetails.type="CARRIER_AND_ISP_TYPE_CARRIER"`. The length of this field should be no
+       more than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -20278,13 +20278,13 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Allows filtering by targeting option properties. Supported syntax: * Filter expressions
          * are made up of one or more restrictions. * Restrictions can be combined by `OR` logical
          * operators. * A restriction has the form of `{field} {operator} {value}`. * The operator
-         * must be "=" (equal sign). * Supported fields: - `carrier_and_isp_details.type` -
-         * `geo_region_details.geo_region_type` - `targetingOptionId` Examples: * All `GEO REGION`
+         * must be "=" (equal sign). * Supported fields: - `carrierAndIspDetails.type` -
+         * `geoRegionDetails.geoRegionType` - `targetingOptionId` Examples: * All `GEO REGION`
          * targeting options that belong to sub type `GEO_REGION_TYPE_COUNTRY` or
-         * `GEO_REGION_TYPE_STATE`: `geo_region_details.geo_region_type="GEO_REGION_TYPE_COUNTRY" OR
-         * geo_region_details.geo_region_type="GEO_REGION_TYPE_STATE"` * All `CARRIER AND ISP`
-         * targeting options that belong to sub type `CARRIER_AND_ISP_TYPE_CARRIER`:
-         * `carrier_and_isp_details.type="CARRIER_AND_ISP_TYPE_CARRIER"`. The length of this field
+         * `GEO_REGION_TYPE_STATE`: `geoRegionDetails.geoRegionType="GEO_REGION_TYPE_COUNTRY" OR
+         * geoRegionDetails.geoRegionType="GEO_REGION_TYPE_STATE"` * All `CARRIER AND ISP` targeting
+         * options that belong to sub type `CARRIER_AND_ISP_TYPE_CARRIER`:
+         * `carrierAndIspDetails.type="CARRIER_AND_ISP_TYPE_CARRIER"`. The length of this field
          * should be no more than 500 characters.
          */
         public List setFilter(java.lang.String filter) {

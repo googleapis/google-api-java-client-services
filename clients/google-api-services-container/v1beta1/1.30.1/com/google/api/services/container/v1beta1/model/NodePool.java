@@ -77,7 +77,11 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   /**
    * The list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
-   * should be located.
+   * should be located. If this value is unspecified during node pool creation, the
+   * [Cluster.Locations](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will
+   * be used, instead. Warning: changing node pool locations will result in nodes being added and/or
+   * removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,7 +250,11 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   /**
    * The list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
-   * should be located.
+   * should be located. If this value is unspecified during node pool creation, the
+   * [Cluster.Locations](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will
+   * be used, instead. Warning: changing node pool locations will result in nodes being added and/or
+   * removed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -256,7 +264,11 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   /**
    * The list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
-   * should be located.
+   * should be located. If this value is unspecified during node pool creation, the
+   * [Cluster.Locations](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will
+   * be used, instead. Warning: changing node pool locations will result in nodes being added and/or
+   * removed.
    * @param locations locations or {@code null} for none
    */
   public NodePool setLocations(java.util.List<java.lang.String> locations) {

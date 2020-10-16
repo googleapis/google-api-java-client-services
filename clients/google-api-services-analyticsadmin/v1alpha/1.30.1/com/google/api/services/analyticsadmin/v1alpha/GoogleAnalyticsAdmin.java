@@ -765,8 +765,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
     }
     /**
      * Returns all accounts accessible by the caller. Note that these accounts might not currently have
-     * App+Web properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns an
-     * empty list if no relevant accounts are found.
+     * GA4 properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns an empty
+     * list if no relevant accounts are found.
      *
      * Create a request for the method "accounts.list".
      *
@@ -787,8 +787,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
       /**
        * Returns all accounts accessible by the caller. Note that these accounts might not currently
-       * have App+Web properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns
-       * an empty list if no relevant accounts are found.
+       * have GA4 properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns an
+       * empty list if no relevant accounts are found.
        *
        * Create a request for the method "accounts.list".
        *
@@ -2742,7 +2742,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
   public class Properties {
 
     /**
-     * Creates an "App+Web" property with the specified location and attributes.
+     * Creates an "GA4" property with the specified location and attributes.
      *
      * Create a request for the method "properties.create".
      *
@@ -2763,7 +2763,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1alpha/properties";
 
       /**
-       * Creates an "App+Web" property with the specified location and attributes.
+       * Creates an "GA4" property with the specified location and attributes.
        *
        * Create a request for the method "properties.create".
        *
@@ -2846,7 +2846,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * If the properties are not restored before the expiration time, the Property and all child
      * resources (eg: GoogleAdsLinks, Streams, UserLinks) will be permanently purged.
      * https://support.google.com/analytics/answer/6154772 Returns an error if the target is not found,
-     * or is not an App+Web Property.
+     * or is not an GA4 Property.
      *
      * Create a request for the method "properties.delete".
      *
@@ -2876,7 +2876,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * UI. If the properties are not restored before the expiration time, the Property and all child
        * resources (eg: GoogleAdsLinks, Streams, UserLinks) will be permanently purged.
        * https://support.google.com/analytics/answer/6154772 Returns an error if the target is not
-       * found, or is not an App+Web Property.
+       * found, or is not an GA4 Property.
        *
        * Create a request for the method "properties.delete".
        *
@@ -2989,8 +2989,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Lookup for a single "App+Web" Property. Throws "Target not found" if no such property found, if
-     * property is not of the type "App+Web", or if caller does not have permissions to access it.
+     * Lookup for a single "GA4" Property. Throws "Target not found" if no such property found, if
+     * property is not of the type "GA4", or if caller does not have permissions to access it.
      *
      * Create a request for the method "properties.get".
      *
@@ -3015,8 +3015,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^properties/[^/]+$");
 
       /**
-       * Lookup for a single "App+Web" Property. Throws "Target not found" if no such property found, if
-       * property is not of the type "App+Web", or if caller does not have permissions to access it.
+       * Lookup for a single "GA4" Property. Throws "Target not found" if no such property found, if
+       * property is not of the type "GA4", or if caller does not have permissions to access it.
        *
        * Create a request for the method "properties.get".
        *
@@ -3138,7 +3138,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Returns child Properties under the specified parent Account. Only "App+Web" properties will be
+     * Returns child Properties under the specified parent Account. Only "GA4" properties will be
      * returned. Properties will be excluded if the caller does not have access. Soft-deleted (ie:
      * "trashed") properties are excluded by default. Returns an empty list if no relevant properties
      * are found.
@@ -3161,7 +3161,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1alpha/properties";
 
       /**
-       * Returns child Properties under the specified parent Account. Only "App+Web" properties will be
+       * Returns child Properties under the specified parent Account. Only "GA4" properties will be
        * returned. Properties will be excluded if the caller does not have access. Soft-deleted (ie:
        * "trashed") properties are excluded by default. Returns an empty list if no relevant properties
        * are found.

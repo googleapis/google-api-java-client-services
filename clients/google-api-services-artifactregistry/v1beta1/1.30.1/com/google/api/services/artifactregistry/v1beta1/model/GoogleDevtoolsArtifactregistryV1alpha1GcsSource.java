@@ -38,6 +38,13 @@ public final class GoogleDevtoolsArtifactregistryV1alpha1GcsSource extends com.g
   private java.util.List<java.lang.String> uris;
 
   /**
+   * Supports URI wildcards for matching multiple objects from a single URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useWildcards;
+
+  /**
    * Cloud Storage paths URI (e.g., gs://my_bucket//my_object).
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class GoogleDevtoolsArtifactregistryV1alpha1GcsSource extends com.g
    */
   public GoogleDevtoolsArtifactregistryV1alpha1GcsSource setUris(java.util.List<java.lang.String> uris) {
     this.uris = uris;
+    return this;
+  }
+
+  /**
+   * Supports URI wildcards for matching multiple objects from a single URI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseWildcards() {
+    return useWildcards;
+  }
+
+  /**
+   * Supports URI wildcards for matching multiple objects from a single URI.
+   * @param useWildcards useWildcards or {@code null} for none
+   */
+  public GoogleDevtoolsArtifactregistryV1alpha1GcsSource setUseWildcards(java.lang.Boolean useWildcards) {
+    this.useWildcards = useWildcards;
     return this;
   }
 

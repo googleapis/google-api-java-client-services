@@ -32,10 +32,13 @@ public final class RevisionTemplate extends com.google.api.client.json.GenericJs
 
   /**
    * Optional metadata for this Revision, including labels and annotations. Name will be generated
-   * by the Configuration. To set minimum instances for this revision, use the
-   * "autoscaling.knative.dev/minScale" annotation key. To set maximum instances for this revision,
-   * use the "autoscaling.knative.dev/maxScale" annotation key. To set Cloud SQL connections for the
-   * revision, use the "run.googleapis.com/cloudsql-instances" annotation key.
+   * by the Configuration. The following annotation keys set properties of the created revision: *
+   * `autoscaling.knative.dev/minScale` sets the minimum number of instances. *
+   * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. * `run.googleapis.com
+   * /cloudsql-instances` sets Cloud SQL connections. Multiple values should be comma separated. *
+   * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access connector. *
+   * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all` and
+   * `private-ranges-only`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,10 +53,13 @@ public final class RevisionTemplate extends com.google.api.client.json.GenericJs
 
   /**
    * Optional metadata for this Revision, including labels and annotations. Name will be generated
-   * by the Configuration. To set minimum instances for this revision, use the
-   * "autoscaling.knative.dev/minScale" annotation key. To set maximum instances for this revision,
-   * use the "autoscaling.knative.dev/maxScale" annotation key. To set Cloud SQL connections for the
-   * revision, use the "run.googleapis.com/cloudsql-instances" annotation key.
+   * by the Configuration. The following annotation keys set properties of the created revision: *
+   * `autoscaling.knative.dev/minScale` sets the minimum number of instances. *
+   * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. * `run.googleapis.com
+   * /cloudsql-instances` sets Cloud SQL connections. Multiple values should be comma separated. *
+   * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access connector. *
+   * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all` and
+   * `private-ranges-only`.
    * @return value or {@code null} for none
    */
   public ObjectMeta getMetadata() {
@@ -62,10 +68,13 @@ public final class RevisionTemplate extends com.google.api.client.json.GenericJs
 
   /**
    * Optional metadata for this Revision, including labels and annotations. Name will be generated
-   * by the Configuration. To set minimum instances for this revision, use the
-   * "autoscaling.knative.dev/minScale" annotation key. To set maximum instances for this revision,
-   * use the "autoscaling.knative.dev/maxScale" annotation key. To set Cloud SQL connections for the
-   * revision, use the "run.googleapis.com/cloudsql-instances" annotation key.
+   * by the Configuration. The following annotation keys set properties of the created revision: *
+   * `autoscaling.knative.dev/minScale` sets the minimum number of instances. *
+   * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. * `run.googleapis.com
+   * /cloudsql-instances` sets Cloud SQL connections. Multiple values should be comma separated. *
+   * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access connector. *
+   * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all` and
+   * `private-ranges-only`.
    * @param metadata metadata or {@code null} for none
    */
   public RevisionTemplate setMetadata(ObjectMeta metadata) {

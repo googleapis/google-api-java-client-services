@@ -68,8 +68,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   private java.lang.String revisionName;
 
   /**
-   * Tag is optionally used to expose a dedicated url for referencing this target exclusively. Not
-   * currently supported in Cloud Run. +optional
+   * Tag is optionally used to expose a dedicated url for referencing this target exclusively.
+   * +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,8 +174,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tag is optionally used to expose a dedicated url for referencing this target exclusively. Not
-   * currently supported in Cloud Run. +optional
+   * Tag is optionally used to expose a dedicated url for referencing this target exclusively.
+   * +optional
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -183,8 +183,8 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tag is optionally used to expose a dedicated url for referencing this target exclusively. Not
-   * currently supported in Cloud Run. +optional
+   * Tag is optionally used to expose a dedicated url for referencing this target exclusively.
+   * +optional
    * @param tag tag or {@code null} for none
    */
   public TrafficTarget setTag(java.lang.String tag) {

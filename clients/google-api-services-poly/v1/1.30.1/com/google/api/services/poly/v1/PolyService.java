@@ -20,8 +20,7 @@ package com.google.api.services.poly.v1;
  * Service definition for PolyService (v1).
  *
  * <p>
- * The Poly API provides read access to assets hosted on poly.google.com to all, and upload access to poly.google.com for whitelisted accounts.
-
+ * The Poly API provides read access to assets hosted on poly.google.com to all, and upload access to poly.google.com for whitelisted accounts. 
  * </p>
  *
  * <p>
@@ -145,7 +144,7 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
 
     /**
      * Returns detailed information about an asset given its name. PRIVATE assets are returned only if
-     * the currently authenticated user (via OAuth token) is the author of the  asset.
+     * the currently authenticated user (via OAuth token) is the author of the asset.
      *
      * Create a request for the method "assets.get".
      *
@@ -170,7 +169,7 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
 
       /**
        * Returns detailed information about an asset given its name. PRIVATE assets are returned only if
-       * the currently authenticated user (via OAuth token) is the author of the  asset.
+       * the currently authenticated user (via OAuth token) is the author of the asset.
        *
        * Create a request for the method "assets.get".
        *
@@ -629,10 +628,8 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the poly server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name A valid user id. Currently, only the special value 'me', representing the
-      currently-authenticated
-       *        user is supported. To use 'me', you must pass
-      an OAuth token with the request.
+       * @param name A valid user id. Currently, only the special value 'me', representing the currently-authenticated
+       *        user is supported. To use 'me', you must pass an OAuth token with the request.
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -660,10 +657,8 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name A valid user id. Currently, only the special value 'me', representing the
-      currently-authenticated
-       *        user is supported. To use 'me', you must pass
-      an OAuth token with the request.
+         * @param name A valid user id. Currently, only the special value 'me', representing the currently-authenticated
+       *        user is supported. To use 'me', you must pass an OAuth token with the request.
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -926,10 +921,8 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the poly server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name A valid user id. Currently, only the special value 'me', representing the
-      currently-authenticated
-       *        user is supported. To use 'me', you must pass
-      an OAuth token with the request.
+       * @param name A valid user id. Currently, only the special value 'me', representing the currently-authenticated
+       *        user is supported. To use 'me', you must pass an OAuth token with the request.
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -956,10 +949,8 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name A valid user id. Currently, only the special value 'me', representing the
-      currently-authenticated
-       *        user is supported. To use 'me', you must pass
-      an OAuth token with the request.
+         * @param name A valid user id. Currently, only the special value 'me', representing the currently-authenticated
+       *        user is supported. To use 'me', you must pass an OAuth token with the request.
          * @since 1.13
          */
         protected List(java.lang.String name) {

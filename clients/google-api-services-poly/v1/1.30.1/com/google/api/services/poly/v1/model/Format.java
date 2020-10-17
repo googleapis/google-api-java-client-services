@@ -64,10 +64,8 @@ public final class Format extends com.google.api.client.json.GenericJson {
 
   /**
    * The root of the file hierarchy. This will always be populated. For some format_types - such as
-   * `TILT`, which are self-contained - this is all of the data.
-   *
-   * Other types - such as `OBJ` - often reference other data elements. These are contained in the
-   * resources field.
+   * `TILT`, which are self-contained - this is all of the data. Other types - such as `OBJ` - often
+   * reference other data elements. These are contained in the resources field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,10 +128,8 @@ public final class Format extends com.google.api.client.json.GenericJson {
 
   /**
    * The root of the file hierarchy. This will always be populated. For some format_types - such as
-   * `TILT`, which are self-contained - this is all of the data.
-   *
-   * Other types - such as `OBJ` - often reference other data elements. These are contained in the
-   * resources field.
+   * `TILT`, which are self-contained - this is all of the data. Other types - such as `OBJ` - often
+   * reference other data elements. These are contained in the resources field.
    * @return value or {@code null} for none
    */
   public File getRoot() {
@@ -142,10 +138,8 @@ public final class Format extends com.google.api.client.json.GenericJson {
 
   /**
    * The root of the file hierarchy. This will always be populated. For some format_types - such as
-   * `TILT`, which are self-contained - this is all of the data.
-   *
-   * Other types - such as `OBJ` - often reference other data elements. These are contained in the
-   * resources field.
+   * `TILT`, which are self-contained - this is all of the data. Other types - such as `OBJ` - often
+   * reference other data elements. These are contained in the resources field.
    * @param root root or {@code null} for none
    */
   public Format setRoot(File root) {

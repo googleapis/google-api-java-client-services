@@ -30,7 +30,7 @@ package com.google.api.services.tpu.v1alpha1.model;
 public final class Node extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of hardware accelerators associated with this node. Required.
+   * Required. The type of hardware accelerators associated with this node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The immutable name of the TPU
+   * Output only. Immutable. The name of the TPU
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,6 +131,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.lang.String port;
 
   /**
+   * The scheduling options for this node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +161,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.util.List<Symptom> symptoms;
 
   /**
-   * The version of Tensorflow running in the Node. Required.
+   * Required. The version of Tensorflow running in the Node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +178,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean useServiceNetworking;
 
   /**
-   * The type of hardware accelerators associated with this node. Required.
+   * Required. The type of hardware accelerators associated with this node.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorType() {
@@ -185,7 +186,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of hardware accelerators associated with this node. Required.
+   * Required. The type of hardware accelerators associated with this node.
    * @param acceleratorType acceleratorType or {@code null} for none
    */
   public Node setAcceleratorType(java.lang.String acceleratorType) {
@@ -327,7 +328,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The immutable name of the TPU
+   * Output only. Immutable. The name of the TPU
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -335,7 +336,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The immutable name of the TPU
+   * Output only. Immutable. The name of the TPU
    * @param name name or {@code null} for none
    */
   public Node setName(java.lang.String name) {
@@ -403,6 +404,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The scheduling options for this node.
    * @return value or {@code null} for none
    */
   public SchedulingConfig getSchedulingConfig() {
@@ -410,6 +412,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The scheduling options for this node.
    * @param schedulingConfig schedulingConfig or {@code null} for none
    */
   public Node setSchedulingConfig(SchedulingConfig schedulingConfig) {
@@ -473,7 +476,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version of Tensorflow running in the Node. Required.
+   * Required. The version of Tensorflow running in the Node.
    * @return value or {@code null} for none
    */
   public java.lang.String getTensorflowVersion() {
@@ -481,7 +484,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version of Tensorflow running in the Node. Required.
+   * Required. The version of Tensorflow running in the Node.
    * @param tensorflowVersion tensorflowVersion or {@code null} for none
    */
   public Node setTensorflowVersion(java.lang.String tensorflowVersion) {

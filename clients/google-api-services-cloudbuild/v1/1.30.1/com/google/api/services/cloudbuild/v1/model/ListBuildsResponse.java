@@ -43,7 +43,8 @@ public final class ListBuildsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Token to receive the next page of results.
+   * Token to receive the next page of results. This will be absent if the end of the response list
+   * has been reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,8 @@ public final class ListBuildsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Token to receive the next page of results.
+   * Token to receive the next page of results. This will be absent if the end of the response list
+   * has been reached.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -75,7 +77,8 @@ public final class ListBuildsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Token to receive the next page of results.
+   * Token to receive the next page of results. This will be absent if the end of the response list
+   * has been reached.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListBuildsResponse setNextPageToken(java.lang.String nextPageToken) {

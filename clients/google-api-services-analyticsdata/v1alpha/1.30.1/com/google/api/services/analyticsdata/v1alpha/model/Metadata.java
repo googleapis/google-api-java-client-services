@@ -31,7 +31,7 @@ package com.google.api.services.analyticsdata.v1alpha.model;
 public final class Metadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The dimensions descriptions.
+   * The dimension descriptions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The dimensions descriptions.
+   * The dimension descriptions.
    * @return value or {@code null} for none
    */
   public java.util.List<DimensionMetadata> getDimensions() {
@@ -66,7 +66,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dimensions descriptions.
+   * The dimension descriptions.
    * @param dimensions dimensions or {@code null} for none
    */
   public Metadata setDimensions(java.util.List<DimensionMetadata> dimensions) {

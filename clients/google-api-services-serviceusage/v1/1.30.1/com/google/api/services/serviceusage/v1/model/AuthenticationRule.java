@@ -33,7 +33,8 @@ package com.google.api.services.serviceusage.v1.model;
 public final class AuthenticationRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, the service accepts API keys without any other credential.
+   * If true, the service accepts API keys without any other credential. This flag only applies to
+   * HTTP and gRPC requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,8 @@ public final class AuthenticationRule extends com.google.api.client.json.Generic
   private java.lang.String selector;
 
   /**
-   * If true, the service accepts API keys without any other credential.
+   * If true, the service accepts API keys without any other credential. This flag only applies to
+   * HTTP and gRPC requests.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowWithoutCredential() {
@@ -75,7 +77,8 @@ public final class AuthenticationRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * If true, the service accepts API keys without any other credential.
+   * If true, the service accepts API keys without any other credential. This flag only applies to
+   * HTTP and gRPC requests.
    * @param allowWithoutCredential allowWithoutCredential or {@code null} for none
    */
   public AuthenticationRule setAllowWithoutCredential(java.lang.Boolean allowWithoutCredential) {

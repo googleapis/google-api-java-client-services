@@ -1073,17 +1073,30 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** Token to provide to skip to a particular spot in the list. */
+        /**
+         * The page token for the next page of Builds. If unspecified, the first page of results is
+         * returned. If the token is rejected for any reason, INVALID_ARGUMENT will be thrown. In
+         * this case, the token should be discarded, and pagination should be restarted from the
+         * first page of results. See https://google.aip.dev/158 for more.
+         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Token to provide to skip to a particular spot in the list.
+        /** The page token for the next page of Builds. If unspecified, the first page of results is returned.
+       If the token is rejected for any reason, INVALID_ARGUMENT will be thrown. In this case, the token
+       should be discarded, and pagination should be restarted from the first page of results. See
+       https://google.aip.dev/158 for more.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** Token to provide to skip to a particular spot in the list. */
+        /**
+         * The page token for the next page of Builds. If unspecified, the first page of results is
+         * returned. If the token is rejected for any reason, INVALID_ARGUMENT will be thrown. In
+         * this case, the token should be discarded, and pagination should be restarted from the
+         * first page of results. See https://google.aip.dev/158 for more.
+         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -1971,17 +1984,30 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Token to provide to skip to a particular spot in the list. */
+          /**
+           * The page token for the next page of Builds. If unspecified, the first page of results
+           * is returned. If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
+           * In this case, the token should be discarded, and pagination should be restarted from
+           * the first page of results. See https://google.aip.dev/158 for more.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Token to provide to skip to a particular spot in the list.
+          /** The page token for the next page of Builds. If unspecified, the first page of results is returned.
+         If the token is rejected for any reason, INVALID_ARGUMENT will be thrown. In this case, the token
+         should be discarded, and pagination should be restarted from the first page of results. See
+         https://google.aip.dev/158 for more.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** Token to provide to skip to a particular spot in the list. */
+          /**
+           * The page token for the next page of Builds. If unspecified, the first page of results
+           * is returned. If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
+           * In this case, the token should be discarded, and pagination should be restarted from
+           * the first page of results. See https://google.aip.dev/158 for more.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;

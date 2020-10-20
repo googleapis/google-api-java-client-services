@@ -38,6 +38,13 @@ public final class GoogleAdsHomeservicesLocalservicesV1AccountReport extends com
   private java.lang.Long accountId;
 
   /**
+   * Aggregator specific information related to the account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsHomeservicesLocalservicesV1AggregatorInfo aggregatorInfo;
+
+  /**
    * Average review rating score from 1-5 stars.
    * The value may be {@code null}.
    */
@@ -153,6 +160,23 @@ public final class GoogleAdsHomeservicesLocalservicesV1AccountReport extends com
    */
   public GoogleAdsHomeservicesLocalservicesV1AccountReport setAccountId(java.lang.Long accountId) {
     this.accountId = accountId;
+    return this;
+  }
+
+  /**
+   * Aggregator specific information related to the account.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsHomeservicesLocalservicesV1AggregatorInfo getAggregatorInfo() {
+    return aggregatorInfo;
+  }
+
+  /**
+   * Aggregator specific information related to the account.
+   * @param aggregatorInfo aggregatorInfo or {@code null} for none
+   */
+  public GoogleAdsHomeservicesLocalservicesV1AccountReport setAggregatorInfo(GoogleAdsHomeservicesLocalservicesV1AggregatorInfo aggregatorInfo) {
+    this.aggregatorInfo = aggregatorInfo;
     return this;
   }
 

@@ -54,6 +54,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private GoogleCloudMlV1AutoScaling autoScaling;
 
   /**
+   * Optional. Specifies a custom container to use for serving predictions. If you specify this
+   * field, then `machineType` is required. If you specify this field, then `deploymentUri` is
+   * optional. If you specify this field, then you must not specify `runtimeVersion`, `packageUris`,
+   * `framework`, `pythonVersion`, or `predictionClass`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,12 +71,15 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private String createTime;
 
   /**
-   * Required. The Cloud Storage location of the trained model used to create the version. See the
-   * [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more information.
-   * When passing Version to projects.models.versions.create the model service uses the specified
-   * location as the source of the model. Once deployed, the model version is hosted by the
-   * prediction service, so this location is useful only as a historical record. The total number of
-   * model files can't exceed 1000.
+   * The Cloud Storage URI of a directory containing trained model artifacts to be used to create
+   * the model version. See the [guide to deploying models](/ai-platform/prediction/docs/deploying-
+   * models) for more information. The total number of files under this directory must not exceed
+   * 1000. During projects.models.versions.create, AI Platform Prediction copies all files from the
+   * specified directory to a location managed by the service. From then on, AI Platform Prediction
+   * uses these copies of the model artifacts to serve predictions, not the original files in Cloud
+   * Storage, so this location is useful only as a historical record. If you specify container, then
+   * this field is optional. Otherwise, it is required. Learn [how to use this field with a custom
+   * container](/ai-platform/prediction/docs/custom-container-requirements#artifacts).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,10 +124,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI
    * Platform will analyze files in the deployment_uri to determine a framework. If you choose
    * `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or
-   * greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
-   * engine/docs/tensorflow/custom-prediction-routines). If you specify a [Compute Engine (N1)
-   * machine type](/ml-engine/docs/machine-types-online-prediction) in the `machineType` field, you
-   * must specify `TENSORFLOW` for the framework.
+   * greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ai-
+   * platform/prediction/docs/custom-prediction-routines) or if you're using a [custom container
+   * ](/ai-platform/prediction/docs/use-custom-container).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +164,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * `n1-standard-2` * `n1-standard-4` * `n1-standard-8` * `n1-standard-16` * `n1-standard-32` *
    * `n1-highmem-2` * `n1-highmem-4` * `n1-highmem-8` * `n1-highmem-16` * `n1-highmem-32` *
    * `n1-highcpu-2` * `n1-highcpu-4` * `n1-highcpu-8` * `n1-highcpu-16` * `n1-highcpu-32`
-   * `mls1-c1-m2` is generally available. All other machine types are available in beta. Learn more
-   * about the [differences between machine types](/ml-engine/docs/machine-types-online-prediction).
+   * `mls1-c4-m2` is in beta. All other machine types are generally available. Learn more about the
+   * [differences between machine types](/ml-engine/docs/machine-types-online-prediction).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,6 +251,12 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private GoogleCloudMlV1RequestLoggingConfig requestLoggingConfig;
 
   /**
+   * Optional. Specifies paths on a custom container's HTTP server where AI Platform Prediction
+   * sends certain requests. If you specify this field, then you must also specify the `container`
+   * field. If you specify the `container` field and do not specify this field, it defaults to the
+   * following: ```json { "predict": "/v1/models/MODEL/versions/VERSION:predict", "health":
+   * "/v1/models/MODEL/versions/VERSION" } ``` See RouteMap for more details about these default
+   * values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,7 +272,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private java.lang.String runtimeVersion;
 
   /**
-   * Optional. Specifies the service account for resource access control.
+   * Optional. Specifies the service account for resource access control. If you specify this field,
+   * then you must also specify either the `containerSpec` or the `predictionClass` field. Learn
+   * more about [using a custom service account](/ai-platform/prediction/docs/custom-service-
+   * account).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -322,6 +337,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
+   * Optional. Specifies a custom container to use for serving predictions. If you specify this
+   * field, then `machineType` is required. If you specify this field, then `deploymentUri` is
+   * optional. If you specify this field, then you must not specify `runtimeVersion`, `packageUris`,
+   * `framework`, `pythonVersion`, or `predictionClass`.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1ContainerSpec getContainer() {
@@ -329,6 +348,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
+   * Optional. Specifies a custom container to use for serving predictions. If you specify this
+   * field, then `machineType` is required. If you specify this field, then `deploymentUri` is
+   * optional. If you specify this field, then you must not specify `runtimeVersion`, `packageUris`,
+   * `framework`, `pythonVersion`, or `predictionClass`.
    * @param container container or {@code null} for none
    */
   public GoogleCloudMlV1Version setContainer(GoogleCloudMlV1ContainerSpec container) {
@@ -354,12 +377,15 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The Cloud Storage location of the trained model used to create the version. See the
-   * [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more information.
-   * When passing Version to projects.models.versions.create the model service uses the specified
-   * location as the source of the model. Once deployed, the model version is hosted by the
-   * prediction service, so this location is useful only as a historical record. The total number of
-   * model files can't exceed 1000.
+   * The Cloud Storage URI of a directory containing trained model artifacts to be used to create
+   * the model version. See the [guide to deploying models](/ai-platform/prediction/docs/deploying-
+   * models) for more information. The total number of files under this directory must not exceed
+   * 1000. During projects.models.versions.create, AI Platform Prediction copies all files from the
+   * specified directory to a location managed by the service. From then on, AI Platform Prediction
+   * uses these copies of the model artifacts to serve predictions, not the original files in Cloud
+   * Storage, so this location is useful only as a historical record. If you specify container, then
+   * this field is optional. Otherwise, it is required. Learn [how to use this field with a custom
+   * container](/ai-platform/prediction/docs/custom-container-requirements#artifacts).
    * @return value or {@code null} for none
    */
   public java.lang.String getDeploymentUri() {
@@ -367,12 +393,15 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The Cloud Storage location of the trained model used to create the version. See the
-   * [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more information.
-   * When passing Version to projects.models.versions.create the model service uses the specified
-   * location as the source of the model. Once deployed, the model version is hosted by the
-   * prediction service, so this location is useful only as a historical record. The total number of
-   * model files can't exceed 1000.
+   * The Cloud Storage URI of a directory containing trained model artifacts to be used to create
+   * the model version. See the [guide to deploying models](/ai-platform/prediction/docs/deploying-
+   * models) for more information. The total number of files under this directory must not exceed
+   * 1000. During projects.models.versions.create, AI Platform Prediction copies all files from the
+   * specified directory to a location managed by the service. From then on, AI Platform Prediction
+   * uses these copies of the model artifacts to serve predictions, not the original files in Cloud
+   * Storage, so this location is useful only as a historical record. If you specify container, then
+   * this field is optional. Otherwise, it is required. Learn [how to use this field with a custom
+   * container](/ai-platform/prediction/docs/custom-container-requirements#artifacts).
    * @param deploymentUri deploymentUri or {@code null} for none
    */
   public GoogleCloudMlV1Version setDeploymentUri(java.lang.String deploymentUri) {
@@ -503,10 +532,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI
    * Platform will analyze files in the deployment_uri to determine a framework. If you choose
    * `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or
-   * greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
-   * engine/docs/tensorflow/custom-prediction-routines). If you specify a [Compute Engine (N1)
-   * machine type](/ml-engine/docs/machine-types-online-prediction) in the `machineType` field, you
-   * must specify `TENSORFLOW` for the framework.
+   * greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ai-
+   * platform/prediction/docs/custom-prediction-routines) or if you're using a [custom container
+   * ](/ai-platform/prediction/docs/use-custom-container).
    * @return value or {@code null} for none
    */
   public java.lang.String getFramework() {
@@ -518,10 +546,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI
    * Platform will analyze files in the deployment_uri to determine a framework. If you choose
    * `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or
-   * greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
-   * engine/docs/tensorflow/custom-prediction-routines). If you specify a [Compute Engine (N1)
-   * machine type](/ml-engine/docs/machine-types-online-prediction) in the `machineType` field, you
-   * must specify `TENSORFLOW` for the framework.
+   * greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ai-
+   * platform/prediction/docs/custom-prediction-routines) or if you're using a [custom container
+   * ](/ai-platform/prediction/docs/use-custom-container).
    * @param framework framework or {@code null} for none
    */
   public GoogleCloudMlV1Version setFramework(java.lang.String framework) {
@@ -595,8 +622,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * `n1-standard-2` * `n1-standard-4` * `n1-standard-8` * `n1-standard-16` * `n1-standard-32` *
    * `n1-highmem-2` * `n1-highmem-4` * `n1-highmem-8` * `n1-highmem-16` * `n1-highmem-32` *
    * `n1-highcpu-2` * `n1-highcpu-4` * `n1-highcpu-8` * `n1-highcpu-16` * `n1-highcpu-32`
-   * `mls1-c1-m2` is generally available. All other machine types are available in beta. Learn more
-   * about the [differences between machine types](/ml-engine/docs/machine-types-online-prediction).
+   * `mls1-c4-m2` is in beta. All other machine types are generally available. Learn more about the
+   * [differences between machine types](/ml-engine/docs/machine-types-online-prediction).
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -610,8 +637,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * `n1-standard-2` * `n1-standard-4` * `n1-standard-8` * `n1-standard-16` * `n1-standard-32` *
    * `n1-highmem-2` * `n1-highmem-4` * `n1-highmem-8` * `n1-highmem-16` * `n1-highmem-32` *
    * `n1-highcpu-2` * `n1-highcpu-4` * `n1-highcpu-8` * `n1-highcpu-16` * `n1-highcpu-32`
-   * `mls1-c1-m2` is generally available. All other machine types are available in beta. Learn more
-   * about the [differences between machine types](/ml-engine/docs/machine-types-online-prediction).
+   * `mls1-c4-m2` is in beta. All other machine types are generally available. Learn more about the
+   * [differences between machine types](/ml-engine/docs/machine-types-online-prediction).
    * @param machineType machineType or {@code null} for none
    */
   public GoogleCloudMlV1Version setMachineType(java.lang.String machineType) {
@@ -796,6 +823,12 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
+   * Optional. Specifies paths on a custom container's HTTP server where AI Platform Prediction
+   * sends certain requests. If you specify this field, then you must also specify the `container`
+   * field. If you specify the `container` field and do not specify this field, it defaults to the
+   * following: ```json { "predict": "/v1/models/MODEL/versions/VERSION:predict", "health":
+   * "/v1/models/MODEL/versions/VERSION" } ``` See RouteMap for more details about these default
+   * values.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1RouteMap getRoutes() {
@@ -803,6 +836,12 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
+   * Optional. Specifies paths on a custom container's HTTP server where AI Platform Prediction
+   * sends certain requests. If you specify this field, then you must also specify the `container`
+   * field. If you specify the `container` field and do not specify this field, it defaults to the
+   * following: ```json { "predict": "/v1/models/MODEL/versions/VERSION:predict", "health":
+   * "/v1/models/MODEL/versions/VERSION" } ``` See RouteMap for more details about these default
+   * values.
    * @param routes routes or {@code null} for none
    */
   public GoogleCloudMlV1Version setRoutes(GoogleCloudMlV1RouteMap routes) {
@@ -832,7 +871,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies the service account for resource access control.
+   * Optional. Specifies the service account for resource access control. If you specify this field,
+   * then you must also specify either the `containerSpec` or the `predictionClass` field. Learn
+   * more about [using a custom service account](/ai-platform/prediction/docs/custom-service-
+   * account).
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -840,7 +882,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies the service account for resource access control.
+   * Optional. Specifies the service account for resource access control. If you specify this field,
+   * then you must also specify either the `containerSpec` or the `predictionClass` field. Learn
+   * more about [using a custom service account](/ai-platform/prediction/docs/custom-service-
+   * account).
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudMlV1Version setServiceAccount(java.lang.String serviceAccount) {

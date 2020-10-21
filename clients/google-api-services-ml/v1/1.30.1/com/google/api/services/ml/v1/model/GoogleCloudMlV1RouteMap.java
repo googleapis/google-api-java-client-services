@@ -17,9 +17,11 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * RouteMap is used to override HTTP paths sent to a Custom Container. If specified, the HTTP server
- * implemented in the ContainerSpec must support the route. If unspecified, standard HTTP paths will
- * be used.
+ * Specifies HTTP paths served by a custom container. AI Platform Prediction sends requests to these
+ * paths on the container; the custom container must run an HTTP server that responds to these
+ * requests with appropriate responses. Read [Custom container requirements](/ai-
+ * platform/prediction/docs/custom-container-requirements) for details on how to create your
+ * container image to meet these requirements.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -33,21 +35,57 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1RouteMap extends com.google.api.client.json.GenericJson {
 
   /**
-   * HTTP path to send health check requests.
+   * HTTP path on the container to send health checkss to. AI Platform Prediction intermittently
+   * sends GET requests to this path on the container's IP address and port to check that the
+   * container is healthy. Read more about [health checks](/ai-platform/prediction/docs/custom-
+   * container-requirements#checks). For example, if you set this field to `/bar`, then AI Platform
+   * Prediction intermittently sends a GET request to the following URL on the container:
+   * localhost:PORT/bar PORT refers to the first value of Version.container.ports. If you don't
+   * specify this field, it defaults to the following value: /v1/models/MODEL/versions/VERSION The
+   * placeholders in this value are replaced as follows: * MODEL: The name of the parent Model. This
+   * does not include the "projects/PROJECT_ID/models/" prefix that the API returns in output; it is
+   * the bare model name, as provided to projects.models.create. * VERSION: The name of the model
+   * version. This does not include the "projects/PROJECT_ID/models/MODEL/versions/" prefix that the
+   * API returns in output; it is the bare version name, as provided to
+   * projects.models.versions.create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String health;
 
   /**
-   * HTTP path to send prediction requests.
+   * HTTP path on the container to send prediction requests to. AI Platform Prediction forwards
+   * requests sent using projects.predict to this path on the container's IP address and port. AI
+   * Platform Prediction then returns the container's response in the API response. For example, if
+   * you set this field to `/foo`, then when AI Platform Prediction receives a prediction request,
+   * it forwards the request body in a POST request to the following URL on the container:
+   * localhost:PORT/foo PORT refers to the first value of Version.container.ports. If you don't
+   * specify this field, it defaults to the following value:
+   * /v1/models/MODEL/versions/VERSION:predict The placeholders in this value are replaced as
+   * follows: * MODEL: The name of the parent Model. This does not include the
+   * "projects/PROJECT_ID/models/" prefix that the API returns in output; it is the bare model name,
+   * as provided to projects.models.create. * VERSION: The name of the model version. This does not
+   * include the "projects/PROJECT_ID/models/MODEL/versions/" prefix that the API returns in output;
+   * it is the bare version name, as provided to projects.models.versions.create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String predict;
 
   /**
-   * HTTP path to send health check requests.
+   * HTTP path on the container to send health checkss to. AI Platform Prediction intermittently
+   * sends GET requests to this path on the container's IP address and port to check that the
+   * container is healthy. Read more about [health checks](/ai-platform/prediction/docs/custom-
+   * container-requirements#checks). For example, if you set this field to `/bar`, then AI Platform
+   * Prediction intermittently sends a GET request to the following URL on the container:
+   * localhost:PORT/bar PORT refers to the first value of Version.container.ports. If you don't
+   * specify this field, it defaults to the following value: /v1/models/MODEL/versions/VERSION The
+   * placeholders in this value are replaced as follows: * MODEL: The name of the parent Model. This
+   * does not include the "projects/PROJECT_ID/models/" prefix that the API returns in output; it is
+   * the bare model name, as provided to projects.models.create. * VERSION: The name of the model
+   * version. This does not include the "projects/PROJECT_ID/models/MODEL/versions/" prefix that the
+   * API returns in output; it is the bare version name, as provided to
+   * projects.models.versions.create.
    * @return value or {@code null} for none
    */
   public java.lang.String getHealth() {
@@ -55,7 +93,19 @@ public final class GoogleCloudMlV1RouteMap extends com.google.api.client.json.Ge
   }
 
   /**
-   * HTTP path to send health check requests.
+   * HTTP path on the container to send health checkss to. AI Platform Prediction intermittently
+   * sends GET requests to this path on the container's IP address and port to check that the
+   * container is healthy. Read more about [health checks](/ai-platform/prediction/docs/custom-
+   * container-requirements#checks). For example, if you set this field to `/bar`, then AI Platform
+   * Prediction intermittently sends a GET request to the following URL on the container:
+   * localhost:PORT/bar PORT refers to the first value of Version.container.ports. If you don't
+   * specify this field, it defaults to the following value: /v1/models/MODEL/versions/VERSION The
+   * placeholders in this value are replaced as follows: * MODEL: The name of the parent Model. This
+   * does not include the "projects/PROJECT_ID/models/" prefix that the API returns in output; it is
+   * the bare model name, as provided to projects.models.create. * VERSION: The name of the model
+   * version. This does not include the "projects/PROJECT_ID/models/MODEL/versions/" prefix that the
+   * API returns in output; it is the bare version name, as provided to
+   * projects.models.versions.create.
    * @param health health or {@code null} for none
    */
   public GoogleCloudMlV1RouteMap setHealth(java.lang.String health) {
@@ -64,7 +114,19 @@ public final class GoogleCloudMlV1RouteMap extends com.google.api.client.json.Ge
   }
 
   /**
-   * HTTP path to send prediction requests.
+   * HTTP path on the container to send prediction requests to. AI Platform Prediction forwards
+   * requests sent using projects.predict to this path on the container's IP address and port. AI
+   * Platform Prediction then returns the container's response in the API response. For example, if
+   * you set this field to `/foo`, then when AI Platform Prediction receives a prediction request,
+   * it forwards the request body in a POST request to the following URL on the container:
+   * localhost:PORT/foo PORT refers to the first value of Version.container.ports. If you don't
+   * specify this field, it defaults to the following value:
+   * /v1/models/MODEL/versions/VERSION:predict The placeholders in this value are replaced as
+   * follows: * MODEL: The name of the parent Model. This does not include the
+   * "projects/PROJECT_ID/models/" prefix that the API returns in output; it is the bare model name,
+   * as provided to projects.models.create. * VERSION: The name of the model version. This does not
+   * include the "projects/PROJECT_ID/models/MODEL/versions/" prefix that the API returns in output;
+   * it is the bare version name, as provided to projects.models.versions.create.
    * @return value or {@code null} for none
    */
   public java.lang.String getPredict() {
@@ -72,7 +134,19 @@ public final class GoogleCloudMlV1RouteMap extends com.google.api.client.json.Ge
   }
 
   /**
-   * HTTP path to send prediction requests.
+   * HTTP path on the container to send prediction requests to. AI Platform Prediction forwards
+   * requests sent using projects.predict to this path on the container's IP address and port. AI
+   * Platform Prediction then returns the container's response in the API response. For example, if
+   * you set this field to `/foo`, then when AI Platform Prediction receives a prediction request,
+   * it forwards the request body in a POST request to the following URL on the container:
+   * localhost:PORT/foo PORT refers to the first value of Version.container.ports. If you don't
+   * specify this field, it defaults to the following value:
+   * /v1/models/MODEL/versions/VERSION:predict The placeholders in this value are replaced as
+   * follows: * MODEL: The name of the parent Model. This does not include the
+   * "projects/PROJECT_ID/models/" prefix that the API returns in output; it is the bare model name,
+   * as provided to projects.models.create. * VERSION: The name of the model version. This does not
+   * include the "projects/PROJECT_ID/models/MODEL/versions/" prefix that the API returns in output;
+   * it is the bare version name, as provided to projects.models.versions.create.
    * @param predict predict or {@code null} for none
    */
   public GoogleCloudMlV1RouteMap setPredict(java.lang.String predict) {

@@ -17,7 +17,9 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * ContainerPort represents a network port in a single container.
+ * Represents a network port in a single container. This message is a subset of the [Kubernetes
+ * ContainerPort v1 core specification](https://kubernetes.io/docs/reference/generated/kubernetes-
+ * api/v1.18/#containerport-v1-core).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -31,16 +33,16 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1ContainerPort extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x <
-   * 65536.
+   * Number of the port to expose on the container. This must be a valid port number: 0 <
+   * PORT_NUMBER < 65536.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer containerPort;
 
   /**
-   * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x <
-   * 65536.
+   * Number of the port to expose on the container. This must be a valid port number: 0 <
+   * PORT_NUMBER < 65536.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContainerPort() {
@@ -48,8 +50,8 @@ public final class GoogleCloudMlV1ContainerPort extends com.google.api.client.js
   }
 
   /**
-   * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x <
-   * 65536.
+   * Number of the port to expose on the container. This must be a valid port number: 0 <
+   * PORT_NUMBER < 65536.
    * @param containerPort containerPort or {@code null} for none
    */
   public GoogleCloudMlV1ContainerPort setContainerPort(java.lang.Integer containerPort) {

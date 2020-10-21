@@ -44,6 +44,13 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String domainId;
 
   /**
+   * Set to true if none of the depending services (Gaia, PeopleApi) returns any info for this user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isAnonymous;
+
+  /**
    * Resource name, in the format "users".
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setDomainId(java.lang.String domainId) {
     this.domainId = domainId;
+    return this;
+  }
+
+  /**
+   * Set to true if none of the depending services (Gaia, PeopleApi) returns any info for this user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsAnonymous() {
+    return isAnonymous;
+  }
+
+  /**
+   * Set to true if none of the depending services (Gaia, PeopleApi) returns any info for this user.
+   * @param isAnonymous isAnonymous or {@code null} for none
+   */
+  public User setIsAnonymous(java.lang.Boolean isAnonymous) {
+    this.isAnonymous = isAnonymous;
     return this;
   }
 

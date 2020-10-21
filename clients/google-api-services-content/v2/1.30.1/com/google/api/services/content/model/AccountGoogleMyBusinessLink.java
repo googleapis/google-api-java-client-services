@@ -39,9 +39,8 @@ public final class AccountGoogleMyBusinessLink extends com.google.api.client.jso
   private java.lang.String gmbEmail;
 
   /**
-   * Status of the link between this Merchant Center account and the GMB account.
-   *
-   * Acceptable values are:   - "`active`"  - "`pending`"
+   * Status of the link between this Merchant Center account and the GMB account. Acceptable values
+   * are: - "`active`" - "`pending`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,9 +66,8 @@ public final class AccountGoogleMyBusinessLink extends com.google.api.client.jso
   }
 
   /**
-   * Status of the link between this Merchant Center account and the GMB account.
-   *
-   * Acceptable values are:   - "`active`"  - "`pending`"
+   * Status of the link between this Merchant Center account and the GMB account. Acceptable values
+   * are: - "`active`" - "`pending`"
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -77,9 +75,8 @@ public final class AccountGoogleMyBusinessLink extends com.google.api.client.jso
   }
 
   /**
-   * Status of the link between this Merchant Center account and the GMB account.
-   *
-   * Acceptable values are:   - "`active`"  - "`pending`"
+   * Status of the link between this Merchant Center account and the GMB account. Acceptable values
+   * are: - "`active`" - "`pending`"
    * @param status status or {@code null} for none
    */
   public AccountGoogleMyBusinessLink setStatus(java.lang.String status) {

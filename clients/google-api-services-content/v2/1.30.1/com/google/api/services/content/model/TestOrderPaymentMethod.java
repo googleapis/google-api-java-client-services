@@ -52,9 +52,7 @@ public final class TestOrderPaymentMethod extends com.google.api.client.json.Gen
   private java.lang.String lastFourDigits;
 
   /**
-   * The billing address.
-   *
-   * Acceptable values are:   - "`dwight`"  - "`jim`"  - "`pam`"
+   * The billing address. Acceptable values are: - "`dwight`" - "`jim`" - "`pam`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,9 +60,8 @@ public final class TestOrderPaymentMethod extends com.google.api.client.json.Gen
 
   /**
    * The type of instrument. Note that real orders might have different values than the four values
-   * accepted by `createTestOrder`.
-   *
-   * Acceptable values are:   - "`AMEX`"  - "`DISCOVER`"  - "`MASTERCARD`"  - "`VISA`"
+   * accepted by `createTestOrder`. Acceptable values are: - "`AMEX`" - "`DISCOVER`" -
+   * "`MASTERCARD`" - "`VISA`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,9 +119,7 @@ public final class TestOrderPaymentMethod extends com.google.api.client.json.Gen
   }
 
   /**
-   * The billing address.
-   *
-   * Acceptable values are:   - "`dwight`"  - "`jim`"  - "`pam`"
+   * The billing address. Acceptable values are: - "`dwight`" - "`jim`" - "`pam`"
    * @return value or {@code null} for none
    */
   public java.lang.String getPredefinedBillingAddress() {
@@ -132,9 +127,7 @@ public final class TestOrderPaymentMethod extends com.google.api.client.json.Gen
   }
 
   /**
-   * The billing address.
-   *
-   * Acceptable values are:   - "`dwight`"  - "`jim`"  - "`pam`"
+   * The billing address. Acceptable values are: - "`dwight`" - "`jim`" - "`pam`"
    * @param predefinedBillingAddress predefinedBillingAddress or {@code null} for none
    */
   public TestOrderPaymentMethod setPredefinedBillingAddress(java.lang.String predefinedBillingAddress) {
@@ -144,9 +137,8 @@ public final class TestOrderPaymentMethod extends com.google.api.client.json.Gen
 
   /**
    * The type of instrument. Note that real orders might have different values than the four values
-   * accepted by `createTestOrder`.
-   *
-   * Acceptable values are:   - "`AMEX`"  - "`DISCOVER`"  - "`MASTERCARD`"  - "`VISA`"
+   * accepted by `createTestOrder`. Acceptable values are: - "`AMEX`" - "`DISCOVER`" -
+   * "`MASTERCARD`" - "`VISA`"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -155,9 +147,8 @@ public final class TestOrderPaymentMethod extends com.google.api.client.json.Gen
 
   /**
    * The type of instrument. Note that real orders might have different values than the four values
-   * accepted by `createTestOrder`.
-   *
-   * Acceptable values are:   - "`AMEX`"  - "`DISCOVER`"  - "`MASTERCARD`"  - "`VISA`"
+   * accepted by `createTestOrder`. Acceptable values are: - "`AMEX`" - "`DISCOVER`" -
+   * "`MASTERCARD`" - "`VISA`"
    * @param type type or {@code null} for none
    */
   public TestOrderPaymentMethod setType(java.lang.String type) {

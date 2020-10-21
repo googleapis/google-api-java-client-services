@@ -38,11 +38,9 @@ public final class OrdersCancelRequest extends com.google.api.client.json.Generi
   private java.lang.String operationId;
 
   /**
-   * The reason for the cancellation.
-   *
-   * Acceptable values are:   - "`customerInitiatedCancel`"  - "`invalidCoupon`"  -
-   * "`malformedShippingAddress`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
-   * "`shippingPriceError`"  - "`taxError`"  - "`undeliverableShippingAddress`"  -
+   * The reason for the cancellation. Acceptable values are: - "`customerInitiatedCancel`" -
+   * "`invalidCoupon`" - "`malformedShippingAddress`" - "`noInventory`" - "`other`" - "`priceError`"
+   * - "`shippingPriceError`" - "`taxError`" - "`undeliverableShippingAddress`" -
    * "`unsupportedPoBoxAddress`"
    * The value may be {@code null}.
    */
@@ -74,11 +72,9 @@ public final class OrdersCancelRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The reason for the cancellation.
-   *
-   * Acceptable values are:   - "`customerInitiatedCancel`"  - "`invalidCoupon`"  -
-   * "`malformedShippingAddress`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
-   * "`shippingPriceError`"  - "`taxError`"  - "`undeliverableShippingAddress`"  -
+   * The reason for the cancellation. Acceptable values are: - "`customerInitiatedCancel`" -
+   * "`invalidCoupon`" - "`malformedShippingAddress`" - "`noInventory`" - "`other`" - "`priceError`"
+   * - "`shippingPriceError`" - "`taxError`" - "`undeliverableShippingAddress`" -
    * "`unsupportedPoBoxAddress`"
    * @return value or {@code null} for none
    */
@@ -87,11 +83,9 @@ public final class OrdersCancelRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The reason for the cancellation.
-   *
-   * Acceptable values are:   - "`customerInitiatedCancel`"  - "`invalidCoupon`"  -
-   * "`malformedShippingAddress`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
-   * "`shippingPriceError`"  - "`taxError`"  - "`undeliverableShippingAddress`"  -
+   * The reason for the cancellation. Acceptable values are: - "`customerInitiatedCancel`" -
+   * "`invalidCoupon`" - "`malformedShippingAddress`" - "`noInventory`" - "`other`" - "`priceError`"
+   * - "`shippingPriceError`" - "`taxError`" - "`undeliverableShippingAddress`" -
    * "`unsupportedPoBoxAddress`"
    * @param reason reason or {@code null} for none
    */

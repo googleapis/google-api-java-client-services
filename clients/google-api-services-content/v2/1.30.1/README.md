@@ -1,6 +1,6 @@
 # Content API for Shopping Client Library for Java
 
-Manages product items, inventory, and Merchant Center accounts for Google Shopping.
+Manage your product listings and accounts for Google Shopping
 
 This page contains information about getting started with the Content API for Shopping
 using the Google API Client Library for Java. In addition, you may be interested

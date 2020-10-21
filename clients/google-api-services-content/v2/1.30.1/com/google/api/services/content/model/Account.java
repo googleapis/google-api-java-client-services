@@ -41,7 +41,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   /**
    * List of linked AdWords accounts that are active or pending approval. To create a new link
    * request, add a new link with status `active` to the list. It will remain in a `pending` state
-   * until approved or rejected either in the AdWords interface or through the  AdWords API. To
+   * until approved or rejected either in the AdWords interface or through the AdWords API. To
    * delete an active link, or to cancel a link request, remove it from the list.
    * The value may be {@code null}.
    */
@@ -143,7 +143,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   /**
    * List of linked AdWords accounts that are active or pending approval. To create a new link
    * request, add a new link with status `active` to the list. It will remain in a `pending` state
-   * until approved or rejected either in the AdWords interface or through the  AdWords API. To
+   * until approved or rejected either in the AdWords interface or through the AdWords API. To
    * delete an active link, or to cancel a link request, remove it from the list.
    * @return value or {@code null} for none
    */
@@ -154,7 +154,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   /**
    * List of linked AdWords accounts that are active or pending approval. To create a new link
    * request, add a new link with status `active` to the list. It will remain in a `pending` state
-   * until approved or rejected either in the AdWords interface or through the  AdWords API. To
+   * until approved or rejected either in the AdWords interface or through the AdWords API. To
    * delete an active link, or to cancel a link request, remove it from the list.
    * @param adwordsLinks adwordsLinks or {@code null} for none
    */

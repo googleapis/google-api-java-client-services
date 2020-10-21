@@ -47,13 +47,10 @@ public final class OrderLegacyPromotionBenefit extends com.google.api.client.jso
 
   /**
    * Further describes the benefit of the promotion. Note that we will expand on this enumeration as
-   * we support new promotion sub-types.
-   *
-   * Acceptable values are:   - "`buyMGetMoneyOff`"  - "`buyMGetNMoneyOff`"  -
-   * "`buyMGetNPercentOff`"  - "`buyMGetPercentOff`"  - "`freeGift`"  - "`freeGiftWithItemId`"  -
-   * "`freeGiftWithValue`"  - "`freeOvernightShipping`"  - "`freeShipping`"  -
-   * "`freeTwoDayShipping`"  - "`moneyOff`"  - "`percentageOff`"  - "`rewardPoints`"  -
-   * "`salePrice`"
+   * we support new promotion sub-types. Acceptable values are: - "`buyMGetMoneyOff`" -
+   * "`buyMGetNMoneyOff`" - "`buyMGetNPercentOff`" - "`buyMGetPercentOff`" - "`freeGift`" -
+   * "`freeGiftWithItemId`" - "`freeGiftWithValue`" - "`freeOvernightShipping`" - "`freeShipping`" -
+   * "`freeTwoDayShipping`" - "`moneyOff`" - "`percentageOff`" - "`rewardPoints`" - "`salePrice`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +65,7 @@ public final class OrderLegacyPromotionBenefit extends com.google.api.client.jso
 
   /**
    * Describes whether the promotion applies to products (e.g. 20% off) or to shipping (e.g. Free
-   * Shipping).
-   *
-   * Acceptable values are:   - "`product`"  - "`shipping`"
+   * Shipping). Acceptable values are: - "`product`" - "`shipping`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,13 +109,10 @@ public final class OrderLegacyPromotionBenefit extends com.google.api.client.jso
 
   /**
    * Further describes the benefit of the promotion. Note that we will expand on this enumeration as
-   * we support new promotion sub-types.
-   *
-   * Acceptable values are:   - "`buyMGetMoneyOff`"  - "`buyMGetNMoneyOff`"  -
-   * "`buyMGetNPercentOff`"  - "`buyMGetPercentOff`"  - "`freeGift`"  - "`freeGiftWithItemId`"  -
-   * "`freeGiftWithValue`"  - "`freeOvernightShipping`"  - "`freeShipping`"  -
-   * "`freeTwoDayShipping`"  - "`moneyOff`"  - "`percentageOff`"  - "`rewardPoints`"  -
-   * "`salePrice`"
+   * we support new promotion sub-types. Acceptable values are: - "`buyMGetMoneyOff`" -
+   * "`buyMGetNMoneyOff`" - "`buyMGetNPercentOff`" - "`buyMGetPercentOff`" - "`freeGift`" -
+   * "`freeGiftWithItemId`" - "`freeGiftWithValue`" - "`freeOvernightShipping`" - "`freeShipping`" -
+   * "`freeTwoDayShipping`" - "`moneyOff`" - "`percentageOff`" - "`rewardPoints`" - "`salePrice`"
    * @return value or {@code null} for none
    */
   public java.lang.String getSubType() {
@@ -129,13 +121,10 @@ public final class OrderLegacyPromotionBenefit extends com.google.api.client.jso
 
   /**
    * Further describes the benefit of the promotion. Note that we will expand on this enumeration as
-   * we support new promotion sub-types.
-   *
-   * Acceptable values are:   - "`buyMGetMoneyOff`"  - "`buyMGetNMoneyOff`"  -
-   * "`buyMGetNPercentOff`"  - "`buyMGetPercentOff`"  - "`freeGift`"  - "`freeGiftWithItemId`"  -
-   * "`freeGiftWithValue`"  - "`freeOvernightShipping`"  - "`freeShipping`"  -
-   * "`freeTwoDayShipping`"  - "`moneyOff`"  - "`percentageOff`"  - "`rewardPoints`"  -
-   * "`salePrice`"
+   * we support new promotion sub-types. Acceptable values are: - "`buyMGetMoneyOff`" -
+   * "`buyMGetNMoneyOff`" - "`buyMGetNPercentOff`" - "`buyMGetPercentOff`" - "`freeGift`" -
+   * "`freeGiftWithItemId`" - "`freeGiftWithValue`" - "`freeOvernightShipping`" - "`freeShipping`" -
+   * "`freeTwoDayShipping`" - "`moneyOff`" - "`percentageOff`" - "`rewardPoints`" - "`salePrice`"
    * @param subType subType or {@code null} for none
    */
   public OrderLegacyPromotionBenefit setSubType(java.lang.String subType) {
@@ -162,9 +151,7 @@ public final class OrderLegacyPromotionBenefit extends com.google.api.client.jso
 
   /**
    * Describes whether the promotion applies to products (e.g. 20% off) or to shipping (e.g. Free
-   * Shipping).
-   *
-   * Acceptable values are:   - "`product`"  - "`shipping`"
+   * Shipping). Acceptable values are: - "`product`" - "`shipping`"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -173,9 +160,7 @@ public final class OrderLegacyPromotionBenefit extends com.google.api.client.jso
 
   /**
    * Describes whether the promotion applies to products (e.g. 20% off) or to shipping (e.g. Free
-   * Shipping).
-   *
-   * Acceptable values are:   - "`product`"  - "`shipping`"
+   * Shipping). Acceptable values are: - "`product`" - "`shipping`"
    * @param type type or {@code null} for none
    */
   public OrderLegacyPromotionBenefit setType(java.lang.String type) {

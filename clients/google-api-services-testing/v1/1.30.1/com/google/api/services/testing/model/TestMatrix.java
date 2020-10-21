@@ -45,6 +45,17 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
   private EnvironmentMatrix environmentMatrix;
 
   /**
+   * If true, only a single attempt at most will be made to run each execution/shard in the matrix.
+   * Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential
+   * infrastructure issue is detected. This feature is for latency sensitive workloads. The
+   * incidence of execution failures may be significantly greater for fail-fast matrices and support
+   * is more limited because of that expectation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean failFast;
+
+  /**
    * The number of times a TestExecution should be re-attempted if one or more of its test cases
    * fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no
    * reruns.
@@ -154,6 +165,31 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
    */
   public TestMatrix setEnvironmentMatrix(EnvironmentMatrix environmentMatrix) {
     this.environmentMatrix = environmentMatrix;
+    return this;
+  }
+
+  /**
+   * If true, only a single attempt at most will be made to run each execution/shard in the matrix.
+   * Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential
+   * infrastructure issue is detected. This feature is for latency sensitive workloads. The
+   * incidence of execution failures may be significantly greater for fail-fast matrices and support
+   * is more limited because of that expectation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFailFast() {
+    return failFast;
+  }
+
+  /**
+   * If true, only a single attempt at most will be made to run each execution/shard in the matrix.
+   * Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential
+   * infrastructure issue is detected. This feature is for latency sensitive workloads. The
+   * incidence of execution failures may be significantly greater for fail-fast matrices and support
+   * is more limited because of that expectation.
+   * @param failFast failFast or {@code null} for none
+   */
+  public TestMatrix setFailFast(java.lang.Boolean failFast) {
+    this.failFast = failFast;
     return this;
   }
 

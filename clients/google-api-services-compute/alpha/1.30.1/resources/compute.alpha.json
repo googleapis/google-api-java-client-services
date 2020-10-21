@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/P8MoXM68pkNOBgwDFCH_3k_cHb8\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/XD27oxKM8_o-p7tt2_RX1-WnTjg\"",
  "discoveryVersion": "v1",
  "id": "compute:alpha",
  "name": "compute",
  "version": "alpha",
- "revision": "20200910",
+ "revision": "20201005",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -494,6 +494,15 @@
    "type": "object",
    "description": "An access configuration attached to an instance's network interface. Only one access config per instance is supported.",
    "properties": {
+    "externalIpv6": {
+     "type": "string",
+     "description": "[Output Only] The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. The field is output only, an IPv6 address from a subnetwork associated with the instance will be allocated dynamically."
+    },
+    "externalIpv6PrefixLength": {
+     "type": "integer",
+     "description": "[Output Only] The prefix length of the external IPv6 range.",
+     "format": "int32"
+    },
     "kind": {
      "type": "string",
      "description": "[Output Only] Type of the resource. Always compute#accessConfig for access configs.",
@@ -542,9 +551,11 @@
      "description": "The type of configuration. The default and only option is ONE_TO_ONE_NAT.",
      "default": "ONE_TO_ONE_NAT",
      "enum": [
+      "DIRECT_IPV6",
       "ONE_TO_ONE_NAT"
      ],
      "enumDescriptions": [
+      "",
       ""
      ]
     }
@@ -654,7 +665,7 @@
     },
     "purpose": {
      "type": "string",
-     "description": "The purpose of this resource, which can be one of the following values:  \n- `GCE_ENDPOINT` for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources. \n- `DNS_RESOLVER` for a DNS resolver address in a subnetwork \n- `VPC_PEERING` for addresses that are reserved for VPC peer networks. \n- `NAT_AUTO` for addresses that are external IP addresses automatically reserved for Cloud NAT.",
+     "description": "The purpose of this resource, which can be one of the following values:  \n- `GCE_ENDPOINT` for addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar resources. \n- `DNS_RESOLVER` for a DNS resolver address in a subnetwork \n- `VPC_PEERING` for addresses that are reserved for VPC peer networks. \n- `NAT_AUTO` for addresses that are external IP addresses automatically reserved for Cloud NAT. \n- `IPSEC_INTERCONNECT` for addresses created from a private IP range reserved for a VLAN attachment in an IPsec over Interconnect configuration. These addresses are regional resources.",
      "enum": [
       "DNS_RESOLVER",
       "GCE_ENDPOINT",
@@ -1133,6 +1144,16 @@
      "type": "integer",
      "description": "Specifies the number of hours after reservation creation where instances using the reservation won't be scheduled for maintenance.",
      "format": "int32"
+    },
+    "maintenanceInterval": {
+     "type": "string",
+     "description": "Specifies whether this VM may be a stable fleet VM. Setting this to \"Periodic\" designates this VM as a Stable Fleet VM.\n\nSee go/stable-fleet-ug for more details.",
+     "enum": [
+      "PERIODIC"
+     ],
+     "enumDescriptions": [
+      ""
+     ]
     },
     "minCpuPlatform": {
      "type": "string",
@@ -6678,6 +6699,13 @@
       "type": "string"
      }
     },
+    "targetSecureLabels": {
+     "type": "array",
+     "description": "A list of secure labels that controls which instances the firewall rule applies to. If targetSecureLabel are specified, then the firewall rule applies only to instances in the VPC network that have one of those secure labels. targetSecureLabel may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureLabel are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label values allowed is 256.",
+     "items": {
+      "type": "string"
+     }
+    },
     "targetServiceAccounts": {
      "type": "array",
      "description": "A list of service accounts indicating the sets of instances that are applied with this rule.",
@@ -6709,6 +6737,13 @@
     "srcIpRanges": {
      "type": "array",
      "description": "CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.",
+     "items": {
+      "type": "string"
+     }
+    },
+    "srcSecureLabels": {
+     "type": "array",
+     "description": "List of firewall label values, which should be matched at the source of the traffic. Maximum number of source label values allowed is 256.",
      "items": {
       "type": "string"
      }
@@ -7689,7 +7724,7 @@
   "HealthCheck": {
    "id": "HealthCheck",
    "type": "object",
-   "description": "Represents a Health Check resource.\n\nGoogle Compute Engine has two Health Check resources:\n\n* [Global](/compute/docs/reference/rest/{$api_version}/healthChecks) * [Regional](/compute/docs/reference/rest/{$api_version}/regionHealthChecks)\n\nInternal HTTP(S) load balancers must use regional health checks. Internal TCP/UDP load balancers can use either regional or global health checks. All other types of GCP load balancers and managed instance group auto-healing must use global health checks. For more information, read Health Check Concepts.\n\nTo perform health checks on network load balancers, you must use either httpHealthChecks or httpsHealthChecks.",
+   "description": "Represents a Health Check resource.\n\nGoogle Compute Engine has two Health Check resources:\n\n* [Global](/compute/docs/reference/rest/{$api_version}/healthChecks) * [Regional](/compute/docs/reference/rest/{$api_version}/regionHealthChecks)\n\nInternal HTTP(S) load balancers must use regional health checks (`compute.v1.regionHealthChecks`).\n\nTraffic Director must use global health checks (`compute.v1.HealthChecks`).\n\nInternal TCP/UDP load balancers can use either regional or global health checks (`compute.v1.regionHealthChecks` or `compute.v1.HealthChecks`).\n\nExternal HTTP(S), TCP proxy, and SSL proxy load balancers as well as managed instance group auto-healing must use global health checks (`compute.v1.HealthChecks`).\n\nNetwork load balancers must use legacy HTTP health checks (httpHealthChecks).\n\nFor more information, see Health checks overview.",
    "properties": {
     "checkIntervalSec": {
      "type": "integer",
@@ -13253,7 +13288,7 @@
     },
     "encryption": {
      "type": "string",
-     "description": "Indicates the user-supplied encryption option of this interconnect attachment.",
+     "description": "Indicates the user-supplied encryption option of this interconnect attachment: \n- NONE is the default value, which means that the attachment carries unencrypted traffic. VMs can send traffic to, or receive traffic from, this type of attachment. \n- IPSEC indicates that the attachment carries only traffic encrypted by an IPsec device such as an HA VPN gateway. VMs cannot directly send traffic to, or receive traffic from, such an attachment. To use IPsec over Interconnect, create the attachment using this option.",
      "enum": [
       "IPSEC",
       "NONE"
@@ -16430,7 +16465,7 @@
    "properties": {
     "service": {
      "type": "string",
-     "description": "Optional serving service.\n\nThe service name must be 1-63 characters long, and comply with RFC1035.\n\nExample value: \"default\", \"my-service\"."
+     "description": "Optional serving service.\n\nThe service name is case-sensitive and must be 1-63 characters long.\n\nExample value: \"default\", \"my-service\"."
     },
     "urlMask": {
      "type": "string",
@@ -16438,7 +16473,7 @@
     },
     "version": {
      "type": "string",
-     "description": "Optional serving version.\n\nThe version must be 1-63 characters long, and comply with RFC1035.\n\nExample value: \"v1\", \"v2\"."
+     "description": "Optional serving version.\n\nThe version name is case-sensitive and must be 1-100 characters long.\n\nExample value: \"v1\", \"v2\"."
     }
    }
   },
@@ -16919,6 +16954,18 @@
      "description": "Fingerprint hash of contents stored in this network interface. This field will be ignored when inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided in order to update the NetworkInterface, otherwise the request will fail with error 412 conditionNotMet.",
      "format": "byte"
     },
+    "internalIpv6PrefixLength": {
+     "type": "integer",
+     "description": "[Output Only] The prefix length of the primary internal IPv6 range.",
+     "format": "int32"
+    },
+    "ipv6AccessConfigs": {
+     "type": "array",
+     "description": "An array of IPv6 access configurations for this interface. Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this instance will have no external IPv6 Internet access.",
+     "items": {
+      "$ref": "AccessConfig"
+     }
+    },
     "ipv6Address": {
      "type": "string",
      "description": "[Output Only] An IPv6 internal network address for this network interface."
@@ -16940,10 +16987,38 @@
      "type": "string",
      "description": "An IPv4 internal IP address to assign to the instance for this network interface. If not specified by the user, an unused internal IP is assigned by the system."
     },
+    "nicType": {
+     "type": "string",
+     "description": "The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.",
+     "enum": [
+      "GVNIC",
+      "UNSPECIFIED_NIC_TYPE",
+      "VIRTIO_NET"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
+    },
     "queueCount": {
      "type": "integer",
      "description": "The networking queue count for the network interface. Both Rx and Tx queues will be set to this number. If it's not specified by the user, a default number of queues will be assigned. For Virtio-net, each interface will get (min(#vCPU, 32) / #vNIC) queues. For gVNIC, each interface will get (min(#vCPU / 2, 16) / #vNIC) qeueus.",
      "format": "int32"
+    },
+    "stackType": {
+     "type": "string",
+     "description": "The stack type for this network interface to identify whether the IPv6 feature is enabled or not. If not specified, IPV4_ONLY will be used.\n\nThis field can be both set at instance creation and update network interface operations.",
+     "enum": [
+      "IPV4_IPV6",
+      "IPV4_ONLY",
+      "UNSPECIFIED_STACK_TYPE"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
     },
     "subnetwork": {
      "type": "string",
@@ -24596,6 +24671,10 @@
      "type": "string",
      "description": "An optional description of this resource. Provide this property when you create the resource."
     },
+    "encryptedInterconnectRouter": {
+     "type": "boolean",
+     "description": "Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (Encrypted Interconnect feature)."
+    },
     "id": {
      "type": "string",
      "description": "[Output Only] The unique identifier for the resource. This identifier is defined by the server.",
@@ -25990,6 +26069,16 @@
      "type": "integer",
      "description": "Specifies the number of hours after instance creation where the instance won't be scheduled for maintenance.",
      "format": "int32"
+    },
+    "maintenanceInterval": {
+     "type": "string",
+     "description": "Specifies whether this VM may be a stable fleet VM. Setting this to \"Periodic\" designates this VM as a Stable Fleet VM.\n\nSee go/stable-fleet-ug for more details.",
+     "enum": [
+      "PERIODIC"
+     ],
+     "enumDescriptions": [
+      ""
+     ]
     },
     "minNodeCpus": {
      "type": "integer",
@@ -28333,6 +28422,10 @@
      "type": "boolean",
      "description": "Deprecated in favor of enable in PrivateIpv6GoogleAccess. Whether the VMs in this subnet can directly access Google services via internal IPv6 addresses. This field can be both set at resource creation time and updated using patch."
     },
+    "externalIpv6Prefix": {
+     "type": "string",
+     "description": "[Output Only] The range of external IPv6 addresses that are owned by this subnetwork."
+    },
     "fingerprint": {
      "type": "string",
      "description": "Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a Subnetwork. An up-to-date fingerprint must be provided in order to update the Subnetwork, otherwise the request will fail with error 412 conditionNotMet.\n\nTo see the latest fingerprint, make a get() request to retrieve a Subnetwork.",
@@ -28355,6 +28448,20 @@
     "ipCidrRange": {
      "type": "string",
      "description": "The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and non-overlapping within a network. Only IPv4 is supported. This field is set at resource creation time. This may be a RFC 1918 IP range, or a privately routed, non-RFC 1918 IP range, not belonging to Google. The range can be expanded after creation using expandIpCidrRange."
+    },
+    "ipv6AccessType": {
+     "type": "string",
+     "description": "The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.",
+     "enum": [
+      "EXTERNAL",
+      "INTERNAL",
+      "UNSPECIFIED_IPV6_ACCESS_TYPE"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
     },
     "ipv6CidrRange": {
      "type": "string",
@@ -28465,6 +28572,20 @@
     "selfLinkWithId": {
      "type": "string",
      "description": "[Output Only] Server-defined URL for this resource with the resource id."
+    },
+    "stackType": {
+     "type": "string",
+     "description": "The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not specified IPV4_ONLY will be used.\n\nThis field can be both set at resource creation time and updated using patch.",
+     "enum": [
+      "IPV4_IPV6",
+      "IPV4_ONLY",
+      "UNSPECIFIED_STACK_TYPE"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
     },
     "state": {
      "type": "string",
@@ -43500,7 +43621,7 @@
       },
       "sourceMachineImage": {
        "type": "string",
-       "description": "Specifies instance machine to create the instance.\n\nThis field is optional. It can be a full or partial URL. For example, the following are all valid URLs to an instance template:  \n- https://www.googleapis.com/compute/v1/projects/project/global/global/machineImages/machineImage \n- projects/project/global/global/machineImages/machineImage \n- global/machineImages/machineImage",
+       "description": "Specifies the machine image to use to create the instance.\n\nThis field is optional. It can be a full or partial URL. For example, the following are all valid URLs to a machine image:  \n- https://www.googleapis.com/compute/v1/projects/project/global/global/machineImages/machineImage \n- projects/project/global/global/machineImages/machineImage \n- global/machineImages/machineImage",
        "location": "query"
       },
       "zone": {

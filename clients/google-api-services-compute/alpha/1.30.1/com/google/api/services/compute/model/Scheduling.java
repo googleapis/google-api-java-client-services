@@ -67,6 +67,16 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maintenanceFreezeDurationHours;
 
   /**
+   * Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this
+   * VM as a Stable Fleet VM.
+   *
+   * See go/stable-fleet-ug for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceInterval;
+
+  /**
    * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant
    * node.
    * The value may be {@code null}.
@@ -183,6 +193,29 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setMaintenanceFreezeDurationHours(java.lang.Integer maintenanceFreezeDurationHours) {
     this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
+    return this;
+  }
+
+  /**
+   * Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this
+   * VM as a Stable Fleet VM.
+   *
+   * See go/stable-fleet-ug for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceInterval() {
+    return maintenanceInterval;
+  }
+
+  /**
+   * Specifies whether this VM may be a stable fleet VM. Setting this to "Periodic" designates this
+   * VM as a Stable Fleet VM.
+   *
+   * See go/stable-fleet-ug for more details.
+   * @param maintenanceInterval maintenanceInterval or {@code null} for none
+   */
+  public Scheduling setMaintenanceInterval(java.lang.String maintenanceInterval) {
+    this.maintenanceInterval = maintenanceInterval;
     return this;
   }
 

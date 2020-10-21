@@ -37,7 +37,7 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
   /**
    * Optional serving service.
    *
-   * The service name must be 1-63 characters long, and comply with RFC1035.
+   * The service name is case-sensitive and must be 1-63 characters long.
    *
    * Example value: "default", "my-service".
    * The value may be {@code null}.
@@ -62,7 +62,7 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
   /**
    * Optional serving version.
    *
-   * The version must be 1-63 characters long, and comply with RFC1035.
+   * The version name is case-sensitive and must be 1-100 characters long.
    *
    * Example value: "v1", "v2".
    * The value may be {@code null}.
@@ -73,7 +73,7 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
   /**
    * Optional serving service.
    *
-   * The service name must be 1-63 characters long, and comply with RFC1035.
+   * The service name is case-sensitive and must be 1-63 characters long.
    *
    * Example value: "default", "my-service".
    * @return value or {@code null} for none
@@ -85,7 +85,7 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
   /**
    * Optional serving service.
    *
-   * The service name must be 1-63 characters long, and comply with RFC1035.
+   * The service name is case-sensitive and must be 1-63 characters long.
    *
    * Example value: "default", "my-service".
    * @param service service or {@code null} for none
@@ -129,7 +129,7 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
   /**
    * Optional serving version.
    *
-   * The version must be 1-63 characters long, and comply with RFC1035.
+   * The version name is case-sensitive and must be 1-100 characters long.
    *
    * Example value: "v1", "v2".
    * @return value or {@code null} for none
@@ -141,7 +141,7 @@ public final class NetworkEndpointGroupAppEngine extends com.google.api.client.j
   /**
    * Optional serving version.
    *
-   * The version must be 1-63 characters long, and comply with RFC1035.
+   * The version name is case-sensitive and must be 1-100 characters long.
    *
    * Example value: "v1", "v2".
    * @param version version or {@code null} for none

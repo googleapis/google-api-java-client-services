@@ -142,7 +142,9 @@ public final class Address extends com.google.api.client.json.GenericJson {
    * addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar
    * resources.  - `DNS_RESOLVER` for a DNS resolver address in a subnetwork  - `VPC_PEERING` for
    * addresses that are reserved for VPC peer networks.  - `NAT_AUTO` for addresses that are
-   * external IP addresses automatically reserved for Cloud NAT.
+   * external IP addresses automatically reserved for Cloud NAT.  - `IPSEC_INTERCONNECT` for
+   * addresses created from a private IP range reserved for a VLAN attachment in an IPsec over
+   * Interconnect configuration. These addresses are regional resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -407,7 +409,9 @@ public final class Address extends com.google.api.client.json.GenericJson {
    * addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar
    * resources.  - `DNS_RESOLVER` for a DNS resolver address in a subnetwork  - `VPC_PEERING` for
    * addresses that are reserved for VPC peer networks.  - `NAT_AUTO` for addresses that are
-   * external IP addresses automatically reserved for Cloud NAT.
+   * external IP addresses automatically reserved for Cloud NAT.  - `IPSEC_INTERCONNECT` for
+   * addresses created from a private IP range reserved for a VLAN attachment in an IPsec over
+   * Interconnect configuration. These addresses are regional resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurpose() {
@@ -419,7 +423,9 @@ public final class Address extends com.google.api.client.json.GenericJson {
    * addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar
    * resources.  - `DNS_RESOLVER` for a DNS resolver address in a subnetwork  - `VPC_PEERING` for
    * addresses that are reserved for VPC peer networks.  - `NAT_AUTO` for addresses that are
-   * external IP addresses automatically reserved for Cloud NAT.
+   * external IP addresses automatically reserved for Cloud NAT.  - `IPSEC_INTERCONNECT` for
+   * addresses created from a private IP range reserved for a VLAN attachment in an IPsec over
+   * Interconnect configuration. These addresses are regional resources.
    * @param purpose purpose or {@code null} for none
    */
   public Address setPurpose(java.lang.String purpose) {

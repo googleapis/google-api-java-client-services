@@ -17,7 +17,9 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * EnvVar represents an environment variable present in a Container.
+ * Represents an environment variable to be made available in a container. This message is a subset
+ * of the [Kubernetes EnvVar v1 core specification](https://kubernetes.io/docs/reference/generated
+ * /kubernetes-api/v1.18/#envvar-v1-core).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -31,25 +33,33 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1EnvVar extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the environment variable. Must be a C_IDENTIFIER.
+   * Name of the environment variable. Must be a [valid C identifier](https://github.com/kubernetes/
+   * kubernetes/blob/v1.18.8/staging/src/k8s.io/apimachinery/pkg/util/validation/validation.go#L258)
+   * and must not begin with the prefix `AIP_`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Variable references $(VAR_NAME) are expanded using the previous defined environment variables
-   * in the container and any service environment variables. If a variable cannot be resolved, the
-   * reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether
-   * the variable exists or not. Defaults to "".
+   * Value of the environment variable. Defaults to an empty string. In this field, you can
+   * reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs
+   * /custom-container-requirements#aip-variables) and environment variables set earlier in the same
+   * env field as where this message occurs. You cannot reference environment variables set in the
+   * Docker image. In order for environment variables to be expanded, reference them by using the
+   * following syntax: $(VARIABLE_NAME) Note that this differs from Bash variable expansion, which
+   * does not use parentheses. If a variable cannot be resolved, the reference in the input string
+   * is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for
+   * example: $$(VARIABLE_NAME)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Name of the environment variable. Must be a C_IDENTIFIER.
+   * Name of the environment variable. Must be a [valid C identifier](https://github.com/kubernetes/
+   * kubernetes/blob/v1.18.8/staging/src/k8s.io/apimachinery/pkg/util/validation/validation.go#L258)
+   * and must not begin with the prefix `AIP_`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -57,7 +67,9 @@ public final class GoogleCloudMlV1EnvVar extends com.google.api.client.json.Gene
   }
 
   /**
-   * Name of the environment variable. Must be a C_IDENTIFIER.
+   * Name of the environment variable. Must be a [valid C identifier](https://github.com/kubernetes/
+   * kubernetes/blob/v1.18.8/staging/src/k8s.io/apimachinery/pkg/util/validation/validation.go#L258)
+   * and must not begin with the prefix `AIP_`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudMlV1EnvVar setName(java.lang.String name) {
@@ -66,11 +78,15 @@ public final class GoogleCloudMlV1EnvVar extends com.google.api.client.json.Gene
   }
 
   /**
-   * Variable references $(VAR_NAME) are expanded using the previous defined environment variables
-   * in the container and any service environment variables. If a variable cannot be resolved, the
-   * reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether
-   * the variable exists or not. Defaults to "".
+   * Value of the environment variable. Defaults to an empty string. In this field, you can
+   * reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs
+   * /custom-container-requirements#aip-variables) and environment variables set earlier in the same
+   * env field as where this message occurs. You cannot reference environment variables set in the
+   * Docker image. In order for environment variables to be expanded, reference them by using the
+   * following syntax: $(VARIABLE_NAME) Note that this differs from Bash variable expansion, which
+   * does not use parentheses. If a variable cannot be resolved, the reference in the input string
+   * is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for
+   * example: $$(VARIABLE_NAME)
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -78,11 +94,15 @@ public final class GoogleCloudMlV1EnvVar extends com.google.api.client.json.Gene
   }
 
   /**
-   * Variable references $(VAR_NAME) are expanded using the previous defined environment variables
-   * in the container and any service environment variables. If a variable cannot be resolved, the
-   * reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-   * double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether
-   * the variable exists or not. Defaults to "".
+   * Value of the environment variable. Defaults to an empty string. In this field, you can
+   * reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs
+   * /custom-container-requirements#aip-variables) and environment variables set earlier in the same
+   * env field as where this message occurs. You cannot reference environment variables set in the
+   * Docker image. In order for environment variables to be expanded, reference them by using the
+   * following syntax: $(VARIABLE_NAME) Note that this differs from Bash variable expansion, which
+   * does not use parentheses. If a variable cannot be resolved, the reference in the input string
+   * is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for
+   * example: $$(VARIABLE_NAME)
    * @param value value or {@code null} for none
    */
   public GoogleCloudMlV1EnvVar setValue(java.lang.String value) {

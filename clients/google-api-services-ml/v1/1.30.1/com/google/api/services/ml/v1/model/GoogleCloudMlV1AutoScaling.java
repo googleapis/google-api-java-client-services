@@ -31,6 +31,21 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1AutoScaling extends com.google.api.client.json.GenericJson {
 
   /**
+   * The maximum number of nodes to scale this model under load. The actual value will depend on
+   * resource quota and availability.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxNodes;
+
+  /**
+   * MetricSpec contains the specifications to use to calculate the desired nodes count.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudMlV1MetricSpec> metrics;
+
+  /**
    * Optional. The minimum number of nodes to allocate for this model. These nodes are always up,
    * starting from the time the model is deployed. Therefore, the cost of operating this model will
    * be at least `rate` * `min_nodes` * number of hours since last billing cycle, where `rate` is
@@ -56,6 +71,42 @@ public final class GoogleCloudMlV1AutoScaling extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minNodes;
+
+  /**
+   * The maximum number of nodes to scale this model under load. The actual value will depend on
+   * resource quota and availability.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxNodes() {
+    return maxNodes;
+  }
+
+  /**
+   * The maximum number of nodes to scale this model under load. The actual value will depend on
+   * resource quota and availability.
+   * @param maxNodes maxNodes or {@code null} for none
+   */
+  public GoogleCloudMlV1AutoScaling setMaxNodes(java.lang.Integer maxNodes) {
+    this.maxNodes = maxNodes;
+    return this;
+  }
+
+  /**
+   * MetricSpec contains the specifications to use to calculate the desired nodes count.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudMlV1MetricSpec> getMetrics() {
+    return metrics;
+  }
+
+  /**
+   * MetricSpec contains the specifications to use to calculate the desired nodes count.
+   * @param metrics metrics or {@code null} for none
+   */
+  public GoogleCloudMlV1AutoScaling setMetrics(java.util.List<GoogleCloudMlV1MetricSpec> metrics) {
+    this.metrics = metrics;
+    return this;
+  }
 
   /**
    * Optional. The minimum number of nodes to allocate for this model. These nodes are always up,

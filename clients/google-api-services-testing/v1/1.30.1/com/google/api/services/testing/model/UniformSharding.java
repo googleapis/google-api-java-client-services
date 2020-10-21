@@ -33,7 +33,7 @@ public final class UniformSharding extends com.google.api.client.json.GenericJso
 
   /**
    * Required. Total number of shards. When any physical devices are selected, the number must be >=
-   * 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 250.
+   * 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 500.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class UniformSharding extends com.google.api.client.json.GenericJso
 
   /**
    * Required. Total number of shards. When any physical devices are selected, the number must be >=
-   * 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 250.
+   * 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 500.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumShards() {
@@ -50,7 +50,7 @@ public final class UniformSharding extends com.google.api.client.json.GenericJso
 
   /**
    * Required. Total number of shards. When any physical devices are selected, the number must be >=
-   * 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 250.
+   * 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 500.
    * @param numShards numShards or {@code null} for none
    */
   public UniformSharding setNumShards(java.lang.Integer numShards) {

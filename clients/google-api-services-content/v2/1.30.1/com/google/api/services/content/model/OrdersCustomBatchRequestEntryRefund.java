@@ -53,13 +53,11 @@ public final class OrdersCustomBatchRequestEntryRefund extends com.google.api.cl
   private Price amountTax;
 
   /**
-   * The reason for the refund.
-   *
-   * Acceptable values are:   - "`adjustment`"  - "`courtesyAdjustment`"  - "`customerCanceled`"  -
-   * "`customerDiscretionaryReturn`"  - "`deliveredLateByCarrier`"  - "`feeAdjustment`"  -
-   * "`lateShipmentCredit`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
-   * "`productArrivedDamaged`"  - "`productNotAsDescribed`"  - "`shippingCostAdjustment`"  -
-   * "`taxAdjustment`"  - "`undeliverableShippingAddress`"  - "`wrongProductShipped`"
+   * The reason for the refund. Acceptable values are: - "`adjustment`" - "`courtesyAdjustment`" -
+   * "`customerCanceled`" - "`customerDiscretionaryReturn`" - "`deliveredLateByCarrier`" -
+   * "`feeAdjustment`" - "`lateShipmentCredit`" - "`noInventory`" - "`other`" - "`priceError`" -
+   * "`productArrivedDamaged`" - "`productNotAsDescribed`" - "`shippingCostAdjustment`" -
+   * "`taxAdjustment`" - "`undeliverableShippingAddress`" - "`wrongProductShipped`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,13 +124,11 @@ public final class OrdersCustomBatchRequestEntryRefund extends com.google.api.cl
   }
 
   /**
-   * The reason for the refund.
-   *
-   * Acceptable values are:   - "`adjustment`"  - "`courtesyAdjustment`"  - "`customerCanceled`"  -
-   * "`customerDiscretionaryReturn`"  - "`deliveredLateByCarrier`"  - "`feeAdjustment`"  -
-   * "`lateShipmentCredit`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
-   * "`productArrivedDamaged`"  - "`productNotAsDescribed`"  - "`shippingCostAdjustment`"  -
-   * "`taxAdjustment`"  - "`undeliverableShippingAddress`"  - "`wrongProductShipped`"
+   * The reason for the refund. Acceptable values are: - "`adjustment`" - "`courtesyAdjustment`" -
+   * "`customerCanceled`" - "`customerDiscretionaryReturn`" - "`deliveredLateByCarrier`" -
+   * "`feeAdjustment`" - "`lateShipmentCredit`" - "`noInventory`" - "`other`" - "`priceError`" -
+   * "`productArrivedDamaged`" - "`productNotAsDescribed`" - "`shippingCostAdjustment`" -
+   * "`taxAdjustment`" - "`undeliverableShippingAddress`" - "`wrongProductShipped`"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -140,13 +136,11 @@ public final class OrdersCustomBatchRequestEntryRefund extends com.google.api.cl
   }
 
   /**
-   * The reason for the refund.
-   *
-   * Acceptable values are:   - "`adjustment`"  - "`courtesyAdjustment`"  - "`customerCanceled`"  -
-   * "`customerDiscretionaryReturn`"  - "`deliveredLateByCarrier`"  - "`feeAdjustment`"  -
-   * "`lateShipmentCredit`"  - "`noInventory`"  - "`other`"  - "`priceError`"  -
-   * "`productArrivedDamaged`"  - "`productNotAsDescribed`"  - "`shippingCostAdjustment`"  -
-   * "`taxAdjustment`"  - "`undeliverableShippingAddress`"  - "`wrongProductShipped`"
+   * The reason for the refund. Acceptable values are: - "`adjustment`" - "`courtesyAdjustment`" -
+   * "`customerCanceled`" - "`customerDiscretionaryReturn`" - "`deliveredLateByCarrier`" -
+   * "`feeAdjustment`" - "`lateShipmentCredit`" - "`noInventory`" - "`other`" - "`priceError`" -
+   * "`productArrivedDamaged`" - "`productNotAsDescribed`" - "`shippingCostAdjustment`" -
+   * "`taxAdjustment`" - "`undeliverableShippingAddress`" - "`wrongProductShipped`"
    * @param reason reason or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryRefund setReason(java.lang.String reason) {

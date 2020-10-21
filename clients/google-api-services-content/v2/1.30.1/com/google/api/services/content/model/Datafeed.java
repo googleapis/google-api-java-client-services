@@ -47,9 +47,8 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The type of data feed. For product inventory feeds, only feeds for local stores, not
-   * online stores, are supported.
-   *
-   * Acceptable values are:   - "`local products`"  - "`product inventory`"  - "`products`"
+   * online stores, are supported. Acceptable values are: - "`local products`" - "`product
+   * inventory`" - "`products`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +83,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   private java.lang.Long id;
 
   /**
-   * [DEPRECATED] Please use  targets[].includedDestinations instead. The list of intended
+   * [DEPRECATED] Please use targets[].includedDestinations instead. The list of intended
    * destinations (corresponds to checked check boxes in Merchant Center).
    * The value may be {@code null}.
    */
@@ -158,9 +157,8 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The type of data feed. For product inventory feeds, only feeds for local stores, not
-   * online stores, are supported.
-   *
-   * Acceptable values are:   - "`local products`"  - "`product inventory`"  - "`products`"
+   * online stores, are supported. Acceptable values are: - "`local products`" - "`product
+   * inventory`" - "`products`"
    * @return value or {@code null} for none
    */
   public java.lang.String getContentType() {
@@ -169,9 +167,8 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The type of data feed. For product inventory feeds, only feeds for local stores, not
-   * online stores, are supported.
-   *
-   * Acceptable values are:   - "`local products`"  - "`product inventory`"  - "`products`"
+   * online stores, are supported. Acceptable values are: - "`local products`" - "`product
+   * inventory`" - "`products`"
    * @param contentType contentType or {@code null} for none
    */
   public Datafeed setContentType(java.lang.String contentType) {
@@ -248,7 +245,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [DEPRECATED] Please use  targets[].includedDestinations instead. The list of intended
+   * [DEPRECATED] Please use targets[].includedDestinations instead. The list of intended
    * destinations (corresponds to checked check boxes in Merchant Center).
    * @return value or {@code null} for none
    */
@@ -257,7 +254,7 @@ public final class Datafeed extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [DEPRECATED] Please use  targets[].includedDestinations instead. The list of intended
+   * [DEPRECATED] Please use targets[].includedDestinations instead. The list of intended
    * destinations (corresponds to checked check boxes in Merchant Center).
    * @param intendedDestinations intendedDestinations or {@code null} for none
    */

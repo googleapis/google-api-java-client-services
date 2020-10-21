@@ -38,10 +38,8 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * The type of the attribute.
-   *
-   * Acceptable values are:   - "`boolean`"  - "`datetimerange`"  - "`float`"  - "`group`"  -
-   * "`int`"  - "`price`"  - "`text`"  - "`time`"  - "`url`"
+   * The type of the attribute. Acceptable values are: - "`boolean`" - "`datetimerange`" - "`float`"
+   * - "`group`" - "`int`" - "`price`" - "`text`" - "`time`" - "`url`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,10 +77,8 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of the attribute.
-   *
-   * Acceptable values are:   - "`boolean`"  - "`datetimerange`"  - "`float`"  - "`group`"  -
-   * "`int`"  - "`price`"  - "`text`"  - "`time`"  - "`url`"
+   * The type of the attribute. Acceptable values are: - "`boolean`" - "`datetimerange`" - "`float`"
+   * - "`group`" - "`int`" - "`price`" - "`text`" - "`time`" - "`url`"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -90,10 +86,8 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of the attribute.
-   *
-   * Acceptable values are:   - "`boolean`"  - "`datetimerange`"  - "`float`"  - "`group`"  -
-   * "`int`"  - "`price`"  - "`text`"  - "`time`"  - "`url`"
+   * The type of the attribute. Acceptable values are: - "`boolean`" - "`datetimerange`" - "`float`"
+   * - "`group`" - "`int`" - "`price`" - "`text`" - "`time`" - "`url`"
    * @param type type or {@code null} for none
    */
   public CustomAttribute setType(java.lang.String type) {

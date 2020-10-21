@@ -51,9 +51,7 @@ public final class UnitInvoiceAdditionalCharge extends com.google.api.client.jso
   }
 
   /**
-   * [required] Type of the additional charge.
-   *
-   * Acceptable values are:   - "`shipping`"
+   * [required] Type of the additional charge. Acceptable values are: - "`shipping`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,9 +92,7 @@ public final class UnitInvoiceAdditionalCharge extends com.google.api.client.jso
   }
 
   /**
-   * [required] Type of the additional charge.
-   *
-   * Acceptable values are:   - "`shipping`"
+   * [required] Type of the additional charge. Acceptable values are: - "`shipping`"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -104,9 +100,7 @@ public final class UnitInvoiceAdditionalCharge extends com.google.api.client.jso
   }
 
   /**
-   * [required] Type of the additional charge.
-   *
-   * Acceptable values are:   - "`shipping`"
+   * [required] Type of the additional charge. Acceptable values are: - "`shipping`"
    * @param type type or {@code null} for none
    */
   public UnitInvoiceAdditionalCharge setType(java.lang.String type) {

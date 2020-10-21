@@ -40,8 +40,8 @@ public final class Headers extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of inclusive number of items upper bounds. The last value can be `"infinity"`. For
-   * example `["10", "50", "infinity"]` represents the headers "<= 10 items", " 50 items". Must be
-   * non-empty. Can only be set if all other fields are not set.
+   * example `["10", "50", "infinity"]` represents the headers "<= 10 items", "<= 50 items", and ">
+   * 50 items". Must be non-empty. Can only be set if all other fields are not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,9 +59,9 @@ public final class Headers extends com.google.api.client.json.GenericJson {
   /**
    * A list of inclusive order price upper bounds. The last price's value can be `"infinity"`. For
    * example `[{"value": "10", "currency": "USD"}, {"value": "500", "currency": "USD"}, {"value":
-   * "infinity", "currency": "USD"}]` represents the headers "<= $10", " $500". All prices within a
-   * service must have the same currency. Must be non-empty. Can only be set if all other fields are
-   * not set.
+   * "infinity", "currency": "USD"}]` represents the headers "<= $10", "<= $500", and "> $500". All
+   * prices within a service must have the same currency. Must be non-empty. Can only be set if all
+   * other fields are not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +70,9 @@ public final class Headers extends com.google.api.client.json.GenericJson {
   /**
    * A list of inclusive order weight upper bounds. The last weight's value can be `"infinity"`. For
    * example `[{"value": "10", "unit": "kg"}, {"value": "50", "unit": "kg"}, {"value": "infinity",
-   * "unit": "kg"}]` represents the headers "<= 10kg", " 50kg". All weights within a service must
-   * have the same unit. Must be non-empty. Can only be set if all other fields are not set.
+   * "unit": "kg"}]` represents the headers "<= 10kg", "<= 50kg", and "> 50kg". All weights within a
+   * service must have the same unit. Must be non-empty. Can only be set if all other fields are not
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +97,8 @@ public final class Headers extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of inclusive number of items upper bounds. The last value can be `"infinity"`. For
-   * example `["10", "50", "infinity"]` represents the headers "<= 10 items", " 50 items". Must be
-   * non-empty. Can only be set if all other fields are not set.
+   * example `["10", "50", "infinity"]` represents the headers "<= 10 items", "<= 50 items", and ">
+   * 50 items". Must be non-empty. Can only be set if all other fields are not set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNumberOfItems() {
@@ -106,8 +107,8 @@ public final class Headers extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of inclusive number of items upper bounds. The last value can be `"infinity"`. For
-   * example `["10", "50", "infinity"]` represents the headers "<= 10 items", " 50 items". Must be
-   * non-empty. Can only be set if all other fields are not set.
+   * example `["10", "50", "infinity"]` represents the headers "<= 10 items", "<= 50 items", and ">
+   * 50 items". Must be non-empty. Can only be set if all other fields are not set.
    * @param numberOfItems numberOfItems or {@code null} for none
    */
   public Headers setNumberOfItems(java.util.List<java.lang.String> numberOfItems) {
@@ -139,9 +140,9 @@ public final class Headers extends com.google.api.client.json.GenericJson {
   /**
    * A list of inclusive order price upper bounds. The last price's value can be `"infinity"`. For
    * example `[{"value": "10", "currency": "USD"}, {"value": "500", "currency": "USD"}, {"value":
-   * "infinity", "currency": "USD"}]` represents the headers "<= $10", " $500". All prices within a
-   * service must have the same currency. Must be non-empty. Can only be set if all other fields are
-   * not set.
+   * "infinity", "currency": "USD"}]` represents the headers "<= $10", "<= $500", and "> $500". All
+   * prices within a service must have the same currency. Must be non-empty. Can only be set if all
+   * other fields are not set.
    * @return value or {@code null} for none
    */
   public java.util.List<Price> getPrices() {
@@ -151,9 +152,9 @@ public final class Headers extends com.google.api.client.json.GenericJson {
   /**
    * A list of inclusive order price upper bounds. The last price's value can be `"infinity"`. For
    * example `[{"value": "10", "currency": "USD"}, {"value": "500", "currency": "USD"}, {"value":
-   * "infinity", "currency": "USD"}]` represents the headers "<= $10", " $500". All prices within a
-   * service must have the same currency. Must be non-empty. Can only be set if all other fields are
-   * not set.
+   * "infinity", "currency": "USD"}]` represents the headers "<= $10", "<= $500", and "> $500". All
+   * prices within a service must have the same currency. Must be non-empty. Can only be set if all
+   * other fields are not set.
    * @param prices prices or {@code null} for none
    */
   public Headers setPrices(java.util.List<Price> prices) {
@@ -164,8 +165,9 @@ public final class Headers extends com.google.api.client.json.GenericJson {
   /**
    * A list of inclusive order weight upper bounds. The last weight's value can be `"infinity"`. For
    * example `[{"value": "10", "unit": "kg"}, {"value": "50", "unit": "kg"}, {"value": "infinity",
-   * "unit": "kg"}]` represents the headers "<= 10kg", " 50kg". All weights within a service must
-   * have the same unit. Must be non-empty. Can only be set if all other fields are not set.
+   * "unit": "kg"}]` represents the headers "<= 10kg", "<= 50kg", and "> 50kg". All weights within a
+   * service must have the same unit. Must be non-empty. Can only be set if all other fields are not
+   * set.
    * @return value or {@code null} for none
    */
   public java.util.List<Weight> getWeights() {
@@ -175,8 +177,9 @@ public final class Headers extends com.google.api.client.json.GenericJson {
   /**
    * A list of inclusive order weight upper bounds. The last weight's value can be `"infinity"`. For
    * example `[{"value": "10", "unit": "kg"}, {"value": "50", "unit": "kg"}, {"value": "infinity",
-   * "unit": "kg"}]` represents the headers "<= 10kg", " 50kg". All weights within a service must
-   * have the same unit. Must be non-empty. Can only be set if all other fields are not set.
+   * "unit": "kg"}]` represents the headers "<= 10kg", "<= 50kg", and "> 50kg". All weights within a
+   * service must have the same unit. Must be non-empty. Can only be set if all other fields are not
+   * set.
    * @param weights weights or {@code null} for none
    */
   public Headers setWeights(java.util.List<Weight> weights) {

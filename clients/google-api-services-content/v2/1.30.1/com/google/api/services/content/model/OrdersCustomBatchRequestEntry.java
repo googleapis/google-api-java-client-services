@@ -73,13 +73,11 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   private java.lang.String merchantOrderId;
 
   /**
-   * The method of the batch entry.
-   *
-   * Acceptable values are:   - "`acknowledge`"  - "`cancel`"  - "`cancelLineItem`"  - "`get`"  -
-   * "`getByMerchantOrderId`"  - "`inStoreRefundLineItem`"  - "`refund`"  - "`rejectReturnLineItem`"
-   * - "`returnLineItem`"  - "`returnRefundLineItem`"  - "`setLineItemMetadata`"  -
-   * "`shipLineItems`"  - "`updateLineItemShippingDetails`"  - "`updateMerchantOrderId`"  -
-   * "`updateShipment`"
+   * The method of the batch entry. Acceptable values are: - "`acknowledge`" - "`cancel`" -
+   * "`cancelLineItem`" - "`get`" - "`getByMerchantOrderId`" - "`inStoreRefundLineItem`" -
+   * "`refund`" - "`rejectReturnLineItem`" - "`returnLineItem`" - "`returnRefundLineItem`" -
+   * "`setLineItemMetadata`" - "`shipLineItems`" - "`updateLineItemShippingDetails`" -
+   * "`updateMerchantOrderId`" - "`updateShipment`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -259,13 +257,11 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * The method of the batch entry.
-   *
-   * Acceptable values are:   - "`acknowledge`"  - "`cancel`"  - "`cancelLineItem`"  - "`get`"  -
-   * "`getByMerchantOrderId`"  - "`inStoreRefundLineItem`"  - "`refund`"  - "`rejectReturnLineItem`"
-   * - "`returnLineItem`"  - "`returnRefundLineItem`"  - "`setLineItemMetadata`"  -
-   * "`shipLineItems`"  - "`updateLineItemShippingDetails`"  - "`updateMerchantOrderId`"  -
-   * "`updateShipment`"
+   * The method of the batch entry. Acceptable values are: - "`acknowledge`" - "`cancel`" -
+   * "`cancelLineItem`" - "`get`" - "`getByMerchantOrderId`" - "`inStoreRefundLineItem`" -
+   * "`refund`" - "`rejectReturnLineItem`" - "`returnLineItem`" - "`returnRefundLineItem`" -
+   * "`setLineItemMetadata`" - "`shipLineItems`" - "`updateLineItemShippingDetails`" -
+   * "`updateMerchantOrderId`" - "`updateShipment`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -273,13 +269,11 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * The method of the batch entry.
-   *
-   * Acceptable values are:   - "`acknowledge`"  - "`cancel`"  - "`cancelLineItem`"  - "`get`"  -
-   * "`getByMerchantOrderId`"  - "`inStoreRefundLineItem`"  - "`refund`"  - "`rejectReturnLineItem`"
-   * - "`returnLineItem`"  - "`returnRefundLineItem`"  - "`setLineItemMetadata`"  -
-   * "`shipLineItems`"  - "`updateLineItemShippingDetails`"  - "`updateMerchantOrderId`"  -
-   * "`updateShipment`"
+   * The method of the batch entry. Acceptable values are: - "`acknowledge`" - "`cancel`" -
+   * "`cancelLineItem`" - "`get`" - "`getByMerchantOrderId`" - "`inStoreRefundLineItem`" -
+   * "`refund`" - "`rejectReturnLineItem`" - "`returnLineItem`" - "`returnRefundLineItem`" -
+   * "`setLineItemMetadata`" - "`shipLineItems`" - "`updateLineItemShippingDetails`" -
+   * "`updateMerchantOrderId`" - "`updateShipment`"
    * @param method method or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setMethod(java.lang.String method) {

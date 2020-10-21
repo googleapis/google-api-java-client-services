@@ -148,10 +148,10 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * populated with the created Folder. In order to succeed, the addition of this new Folder must not
      * violate the Folder naming, height or fanout constraints. + The Folder's display_name must be
      * distinct from all other Folder's that share its parent. + The addition of the Folder must not
-     * cause the active Folder hierarchy to exceed a height of 4. Note, the full active + deleted Folder
-     * hierarchy is allowed to reach a height of 8; this provides additional headroom when moving
-     * folders that contain deleted folders. + The addition of the Folder must not cause the total
-     * number of Folders under its parent to exceed 100. If the operation fails due to a folder
+     * cause the active Folder hierarchy to exceed a height of 10. Note, the full active + deleted
+     * Folder hierarchy is allowed to reach a height of 20; this provides additional headroom when
+     * moving folders that contain deleted folders. + The addition of the Folder must not cause the
+     * total number of Folders under its parent to exceed 300. If the operation fails due to a folder
      * constraint violation, some errors may be returned by the CreateFolder request, with status code
      * FAILED_PRECONDITION and an error description. Other folder constraint violations will be
      * communicated in the Operation, with the specific PreconditionFailure returned via the details
@@ -182,10 +182,10 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * populated with the created Folder. In order to succeed, the addition of this new Folder must
        * not violate the Folder naming, height or fanout constraints. + The Folder's display_name must
        * be distinct from all other Folder's that share its parent. + The addition of the Folder must
-       * not cause the active Folder hierarchy to exceed a height of 4. Note, the full active + deleted
-       * Folder hierarchy is allowed to reach a height of 8; this provides additional headroom when
+       * not cause the active Folder hierarchy to exceed a height of 10. Note, the full active + deleted
+       * Folder hierarchy is allowed to reach a height of 20; this provides additional headroom when
        * moving folders that contain deleted folders. + The addition of the Folder must not cause the
-       * total number of Folders under its parent to exceed 100. If the operation fails due to a folder
+       * total number of Folders under its parent to exceed 300. If the operation fails due to a folder
        * constraint violation, some errors may be returned by the CreateFolder request, with status code
        * FAILED_PRECONDITION and an error description. Other folder constraint violations will be
        * communicated in the Operation, with the specific PreconditionFailure returned via the details

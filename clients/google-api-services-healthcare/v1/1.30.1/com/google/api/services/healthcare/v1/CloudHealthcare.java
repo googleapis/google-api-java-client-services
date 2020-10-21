@@ -10920,17 +10920,23 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** The maximum number of search results on a page. Defaults to 1000. */
+              /**
+               * The maximum number of search results on a page. Default value is 100. Maximum value
+               * is 1,000.
+               */
               @com.google.api.client.util.Key("_count")
               private java.lang.Integer count;
 
-              /** The maximum number of search results on a page. Defaults to 1000.
+              /** The maximum number of search results on a page. Default value is 100. Maximum value is 1,000.
                */
               public java.lang.Integer getCount() {
                 return count;
               }
 
-              /** The maximum number of search results on a page. Defaults to 1000. */
+              /**
+               * The maximum number of search results on a page. Default value is 100. Maximum value
+               * is 1,000.
+               */
               public History setCount(java.lang.Integer count) {
                 this.count = count;
                 return this;

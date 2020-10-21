@@ -18208,7 +18208,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Translates a code from one value set to another using a concept map. Implements the FHIR standard
+             * Translates a code from one value set to another using a concept map. You can provide your own
+             * concept maps to translate any code system to another code system. Implements the FHIR standard
              * $translate operation ([DSTU2](https://www.hl7.org/fhir/DSTU2/operation-conceptmap-
              * translate.html), [STU3](https://www.hl7.org/fhir/STU3/operation-conceptmap-translate.html),
              * [R4](https://www.hl7.org/fhir/R4/operation-conceptmap-translate.html)). On success, the response
@@ -18239,8 +18240,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/ConceptMap/[^/]+$");
 
               /**
-               * Translates a code from one value set to another using a concept map. Implements the FHIR
-               * standard $translate operation ([DSTU2](https://www.hl7.org/fhir/DSTU2/operation-conceptmap-
+               * Translates a code from one value set to another using a concept map. You can provide your own
+               * concept maps to translate any code system to another code system. Implements the FHIR standard
+               * $translate operation ([DSTU2](https://www.hl7.org/fhir/DSTU2/operation-conceptmap-
                * translate.html), [STU3](https://www.hl7.org/fhir/STU3/operation-conceptmap-translate.html),
                * [R4](https://www.hl7.org/fhir/R4/operation-conceptmap-translate.html)). On success, the
                * response body contains a JSON-encoded representation of a FHIR Parameters resource, which
@@ -20587,17 +20589,23 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** The maximum number of search results on a page. Defaults to 1000. */
+              /**
+               * The maximum number of search results on a page. Default value is 100. Maximum value
+               * is 1,000.
+               */
               @com.google.api.client.util.Key("_count")
               private java.lang.Integer count;
 
-              /** The maximum number of search results on a page. Defaults to 1000.
+              /** The maximum number of search results on a page. Default value is 100. Maximum value is 1,000.
                */
               public java.lang.Integer getCount() {
                 return count;
               }
 
-              /** The maximum number of search results on a page. Defaults to 1000. */
+              /**
+               * The maximum number of search results on a page. Default value is 100. Maximum value
+               * is 1,000.
+               */
               public History setCount(java.lang.Integer count) {
                 this.count = count;
                 return this;
@@ -21803,6 +21811,158 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Exports the messages to a destination. To filter messages to be exported, define a filter using
+           * the start and end time, relative to the message generation time (MSH.7). This API returns an
+           * Operation that can be used to track the status of the job by calling GetOperation. Immediate
+           * fatal errors appear in the error field. Otherwise, when the operation finishes, a detailed
+           * response of type ExportMessagesResponse is returned in the response field. The metadata field
+           * type for this operation is OperationMetadata.
+           *
+           * Create a request for the method "hl7V2Stores.export".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the source HL7v2 store, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
+           *        ore_id}`
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportMessagesRequest}
+           * @return the request
+           */
+          public Export export(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ExportMessagesRequest content) throws java.io.IOException {
+            Export result = new Export(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Export extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:export";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+
+            /**
+             * Exports the messages to a destination. To filter messages to be exported, define a filter using
+             * the start and end time, relative to the message generation time (MSH.7). This API returns an
+             * Operation that can be used to track the status of the job by calling GetOperation. Immediate
+             * fatal errors appear in the error field. Otherwise, when the operation finishes, a detailed
+             * response of type ExportMessagesResponse is returned in the response field. The metadata field
+             * type for this operation is OperationMetadata.
+             *
+             * Create a request for the method "hl7V2Stores.export".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the source HL7v2 store, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
+           *        ore_id}`
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportMessagesRequest}
+             * @since 1.13
+             */
+            protected Export(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ExportMessagesRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Export set$Xgafv(java.lang.String $Xgafv) {
+              return (Export) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Export setAccessToken(java.lang.String accessToken) {
+              return (Export) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Export setAlt(java.lang.String alt) {
+              return (Export) super.setAlt(alt);
+            }
+
+            @Override
+            public Export setCallback(java.lang.String callback) {
+              return (Export) super.setCallback(callback);
+            }
+
+            @Override
+            public Export setFields(java.lang.String fields) {
+              return (Export) super.setFields(fields);
+            }
+
+            @Override
+            public Export setKey(java.lang.String key) {
+              return (Export) super.setKey(key);
+            }
+
+            @Override
+            public Export setOauthToken(java.lang.String oauthToken) {
+              return (Export) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Export) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Export setQuotaUser(java.lang.String quotaUser) {
+              return (Export) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Export setUploadType(java.lang.String uploadType) {
+              return (Export) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Export setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Export) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the source HL7v2 store, in the format `projects/{project_id}/locations/{l
+             * ocation_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the source HL7v2 store, in the format
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The name of the source HL7v2 store, in the format `projects/{project_id}/locations/{l
+             * ocation_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             */
+            public Export setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Export set(String parameterName, Object value) {
+              return (Export) super.set(parameterName, value);
             }
           }
           /**

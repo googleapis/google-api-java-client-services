@@ -1,7 +1,0 @@
-{
-  "maven": {
-    "groupId": "com.google.apis",
-    "artifactId": "google-api-services-safebrowsing",
-    "version": "v4-rev20200901-1.30.10"
-  }
-}

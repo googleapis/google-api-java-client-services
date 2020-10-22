@@ -553,6 +553,16 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     private java.lang.String role;
 
     /**
+     * [Pick one] A routine from a different dataset to grant access to. Queries executed against that
+     * routine will have read access to views/tables/routines in this dataset. Only UDF is supported
+     * for now. The role field is not required when this field is set. If that routine is updated by
+     * any user, access to the routine needs to be granted again via an update operation.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private RoutineReference routine;
+
+    /**
      * [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners
      * of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters:
      * Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps
@@ -663,6 +673,29 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
      */
     public Access setRole(java.lang.String role) {
       this.role = role;
+      return this;
+    }
+
+    /**
+     * [Pick one] A routine from a different dataset to grant access to. Queries executed against that
+     * routine will have read access to views/tables/routines in this dataset. Only UDF is supported
+     * for now. The role field is not required when this field is set. If that routine is updated by
+     * any user, access to the routine needs to be granted again via an update operation.
+     * @return value or {@code null} for none
+     */
+    public RoutineReference getRoutine() {
+      return routine;
+    }
+
+    /**
+     * [Pick one] A routine from a different dataset to grant access to. Queries executed against that
+     * routine will have read access to views/tables/routines in this dataset. Only UDF is supported
+     * for now. The role field is not required when this field is set. If that routine is updated by
+     * any user, access to the routine needs to be granted again via an update operation.
+     * @param routine routine or {@code null} for none
+     */
+    public Access setRoutine(RoutineReference routine) {
+      this.routine = routine;
       return this;
     }
 

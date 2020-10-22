@@ -48,7 +48,7 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. The duration to keep the cluster alive while idling (when no jobs are running).
-   * Passing this threshold will cause the cluster to be deleted. Minimum value is 10 minutes;
+   * Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes;
    * maximum value is 14 days (see JSON representation of Duration (https://developers.google.com
    * /protocol-buffers/docs/proto3#json).
    * The value may be {@code null}.
@@ -107,7 +107,7 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. The duration to keep the cluster alive while idling (when no jobs are running).
-   * Passing this threshold will cause the cluster to be deleted. Minimum value is 10 minutes;
+   * Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes;
    * maximum value is 14 days (see JSON representation of Duration (https://developers.google.com
    * /protocol-buffers/docs/proto3#json).
    * @return value or {@code null} for none
@@ -118,7 +118,7 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. The duration to keep the cluster alive while idling (when no jobs are running).
-   * Passing this threshold will cause the cluster to be deleted. Minimum value is 10 minutes;
+   * Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes;
    * maximum value is 14 days (see JSON representation of Duration (https://developers.google.com
    * /protocol-buffers/docs/proto3#json).
    * @param idleDeleteTtl idleDeleteTtl or {@code null} for none

@@ -5876,6 +5876,182 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
+        /**
+         * The alignment_period specifies a time interval, in seconds, that is used to divide the
+         * data in all the time series into consistent blocks of time. This will be done before the
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
+         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
+         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.alignmentPeriod")
+        private String secondaryAggregationAlignmentPeriod;
+
+        /** The alignment_period specifies a time interval, in seconds, that is used to divide the data in all
+       the time series into consistent blocks of time. This will be done before the per-series aligner can
+       be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than
+       ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner
+       is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value
+       of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for
+       alerting policies.
+         */
+        public String getSecondaryAggregationAlignmentPeriod() {
+          return secondaryAggregationAlignmentPeriod;
+        }
+
+        /**
+         * The alignment_period specifies a time interval, in seconds, that is used to divide the
+         * data in all the time series into consistent blocks of time. This will be done before the
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
+         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
+         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+         */
+        public List setSecondaryAggregationAlignmentPeriod(String secondaryAggregationAlignmentPeriod) {
+          this.secondaryAggregationAlignmentPeriod = secondaryAggregationAlignmentPeriod;
+          return this;
+        }
+
+        /**
+         * The reduction operation to be used to combine time series into a single time series,
+         * where the value of each data point in the resulting series is a function of all the
+         * already aligned values in the input time series.Not all reducer operations can be applied
+         * to all time series. The valid choices depend on the metric_kind and the value_type of the
+         * original time series. Reduction can yield a time series with a different metric_kind or
+         * value_type than the input time series.Time series data must first be aligned (see
+         * per_series_aligner) in order to perform cross-time series reduction. If
+         * cross_series_reducer is specified, then per_series_aligner must be specified, and must
+         * not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+         * returned.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.crossSeriesReducer")
+        private java.lang.String secondaryAggregationCrossSeriesReducer;
+
+        /** The reduction operation to be used to combine time series into a single time series, where the
+       value of each data point in the resulting series is a function of all the already aligned values in
+       the input time series.Not all reducer operations can be applied to all time series. The valid
+       choices depend on the metric_kind and the value_type of the original time series. Reduction can
+       yield a time series with a different metric_kind or value_type than the input time series.Time
+       series data must first be aligned (see per_series_aligner) in order to perform cross-time series
+       reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and
+       must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+       returned.
+         */
+        public java.lang.String getSecondaryAggregationCrossSeriesReducer() {
+          return secondaryAggregationCrossSeriesReducer;
+        }
+
+        /**
+         * The reduction operation to be used to combine time series into a single time series,
+         * where the value of each data point in the resulting series is a function of all the
+         * already aligned values in the input time series.Not all reducer operations can be applied
+         * to all time series. The valid choices depend on the metric_kind and the value_type of the
+         * original time series. Reduction can yield a time series with a different metric_kind or
+         * value_type than the input time series.Time series data must first be aligned (see
+         * per_series_aligner) in order to perform cross-time series reduction. If
+         * cross_series_reducer is specified, then per_series_aligner must be specified, and must
+         * not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+         * returned.
+         */
+        public List setSecondaryAggregationCrossSeriesReducer(java.lang.String secondaryAggregationCrossSeriesReducer) {
+          this.secondaryAggregationCrossSeriesReducer = secondaryAggregationCrossSeriesReducer;
+          return this;
+        }
+
+        /**
+         * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields
+         * determine how the time series are partitioned into subsets prior to applying the
+         * aggregation operation. Each subset contains time series that have the same value for each
+         * of the grouping fields. Each individual time series is a member of exactly one subset.
+         * The cross_series_reducer is applied to each subset of time series. It is not possible to
+         * reduce across different resource types, so this field implicitly contains resource.type.
+         * Fields not specified in group_by_fields are aggregated away. If group_by_fields is not
+         * specified and all the time series have the same resource type, then the time series are
+         * aggregated into a single output time series. If cross_series_reducer is not defined, this
+         * field is ignored.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.groupByFields")
+        private java.util.List<java.lang.String> secondaryAggregationGroupByFields;
+
+        /** The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine
+       how the time series are partitioned into subsets prior to applying the aggregation operation. Each
+       subset contains time series that have the same value for each of the grouping fields. Each
+       individual time series is a member of exactly one subset. The cross_series_reducer is applied to
+       each subset of time series. It is not possible to reduce across different resource types, so this
+       field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated
+       away. If group_by_fields is not specified and all the time series have the same resource type, then
+       the time series are aggregated into a single output time series. If cross_series_reducer is not
+       defined, this field is ignored.
+         */
+        public java.util.List<java.lang.String> getSecondaryAggregationGroupByFields() {
+          return secondaryAggregationGroupByFields;
+        }
+
+        /**
+         * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields
+         * determine how the time series are partitioned into subsets prior to applying the
+         * aggregation operation. Each subset contains time series that have the same value for each
+         * of the grouping fields. Each individual time series is a member of exactly one subset.
+         * The cross_series_reducer is applied to each subset of time series. It is not possible to
+         * reduce across different resource types, so this field implicitly contains resource.type.
+         * Fields not specified in group_by_fields are aggregated away. If group_by_fields is not
+         * specified and all the time series have the same resource type, then the time series are
+         * aggregated into a single output time series. If cross_series_reducer is not defined, this
+         * field is ignored.
+         */
+        public List setSecondaryAggregationGroupByFields(java.util.List<java.lang.String> secondaryAggregationGroupByFields) {
+          this.secondaryAggregationGroupByFields = secondaryAggregationGroupByFields;
+          return this;
+        }
+
+        /**
+         * An Aligner describes how to bring the data points in a single time series into temporal
+         * alignment. Except for ALIGN_NONE, all alignments cause all the data points in an
+         * alignment_period to be mathematically grouped together, resulting in a single data point
+         * for each alignment_period with end timestamp at the end of the period.Not all alignment
+         * operations may be applied to all time series. The valid choices depend on the metric_kind
+         * and value_type of the original time series. Alignment can change the metric_kind or the
+         * value_type of the time series.Time series data must be aligned in order to perform cross-
+         * time series reduction. If cross_series_reducer is specified, then per_series_aligner must
+         * be specified and not equal to ALIGN_NONE and alignment_period must be specified;
+         * otherwise, an error is returned.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.perSeriesAligner")
+        private java.lang.String secondaryAggregationPerSeriesAligner;
+
+        /** An Aligner describes how to bring the data points in a single time series into temporal alignment.
+       Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be
+       mathematically grouped together, resulting in a single data point for each alignment_period with
+       end timestamp at the end of the period.Not all alignment operations may be applied to all time
+       series. The valid choices depend on the metric_kind and value_type of the original time series.
+       Alignment can change the metric_kind or the value_type of the time series.Time series data must be
+       aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then
+       per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be
+       specified; otherwise, an error is returned.
+         */
+        public java.lang.String getSecondaryAggregationPerSeriesAligner() {
+          return secondaryAggregationPerSeriesAligner;
+        }
+
+        /**
+         * An Aligner describes how to bring the data points in a single time series into temporal
+         * alignment. Except for ALIGN_NONE, all alignments cause all the data points in an
+         * alignment_period to be mathematically grouped together, resulting in a single data point
+         * for each alignment_period with end timestamp at the end of the period.Not all alignment
+         * operations may be applied to all time series. The valid choices depend on the metric_kind
+         * and value_type of the original time series. Alignment can change the metric_kind or the
+         * value_type of the time series.Time series data must be aligned in order to perform cross-
+         * time series reduction. If cross_series_reducer is specified, then per_series_aligner must
+         * be specified and not equal to ALIGN_NONE and alignment_period must be specified;
+         * otherwise, an error is returned.
+         */
+        public List setSecondaryAggregationPerSeriesAligner(java.lang.String secondaryAggregationPerSeriesAligner) {
+          this.secondaryAggregationPerSeriesAligner = secondaryAggregationPerSeriesAligner;
+          return this;
+        }
+
         /** Required. Specifies which information is returned about the time series. */
         @com.google.api.client.util.Key
         private java.lang.String view;

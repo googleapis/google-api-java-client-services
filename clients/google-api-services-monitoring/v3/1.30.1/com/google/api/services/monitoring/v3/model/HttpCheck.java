@@ -40,7 +40,7 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    * The request body associated with the HTTP POST request. If content_type is URL_ENCODED, the
    * body passed in must be URL-encoded. Users can provide a Content-Length header via the headers
    * field or the API will do so. If the request_method is GET and body is not empty, the API will
-   * return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields JSON
+   * return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields, JSON
    * representations are base64 encoded. e.g.: "foo=bar" in URL-encoded form is "foo%3Dbar" and in
    * base64 encoding is "Zm9vJTI1M0RiYXI=".
    * The value may be {@code null}.
@@ -49,7 +49,11 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   private java.lang.String body;
 
   /**
-   * The content type to use for the check.
+   * The content type header to use for the check. The following configurations result in errors: 1.
+   * Content type is specified in both the headers field and the content_type field. 2. Request
+   * method is GET and content_type is not TYPE_UNSPECIFIED 3. Request method is POST and
+   * content_type is TYPE_UNSPECIFIED. 4. Request method is POST and a "Content-Type" header is
+   * provided via headers field. The content_type field should be used instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +144,7 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    * The request body associated with the HTTP POST request. If content_type is URL_ENCODED, the
    * body passed in must be URL-encoded. Users can provide a Content-Length header via the headers
    * field or the API will do so. If the request_method is GET and body is not empty, the API will
-   * return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields JSON
+   * return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields, JSON
    * representations are base64 encoded. e.g.: "foo=bar" in URL-encoded form is "foo%3Dbar" and in
    * base64 encoding is "Zm9vJTI1M0RiYXI=".
    * @see #decodeBody()
@@ -154,7 +158,7 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    * The request body associated with the HTTP POST request. If content_type is URL_ENCODED, the
    * body passed in must be URL-encoded. Users can provide a Content-Length header via the headers
    * field or the API will do so. If the request_method is GET and body is not empty, the API will
-   * return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields JSON
+   * return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields, JSON
    * representations are base64 encoded. e.g.: "foo=bar" in URL-encoded form is "foo%3Dbar" and in
    * base64 encoding is "Zm9vJTI1M0RiYXI=".
    * @see #getBody()
@@ -170,7 +174,7 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    * The request body associated with the HTTP POST request. If content_type is URL_ENCODED, the
    * body passed in must be URL-encoded. Users can provide a Content-Length header via the headers
    * field or the API will do so. If the request_method is GET and body is not empty, the API will
-   * return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields JSON
+   * return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields, JSON
    * representations are base64 encoded. e.g.: "foo=bar" in URL-encoded form is "foo%3Dbar" and in
    * base64 encoding is "Zm9vJTI1M0RiYXI=".
    * @see #encodeBody()
@@ -185,7 +189,7 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    * The request body associated with the HTTP POST request. If content_type is URL_ENCODED, the
    * body passed in must be URL-encoded. Users can provide a Content-Length header via the headers
    * field or the API will do so. If the request_method is GET and body is not empty, the API will
-   * return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields JSON
+   * return an error. The maximum byte size is 1 megabyte. Note: As with all bytes fields, JSON
    * representations are base64 encoded. e.g.: "foo=bar" in URL-encoded form is "foo%3Dbar" and in
    * base64 encoding is "Zm9vJTI1M0RiYXI=".
    * @see #setBody()
@@ -202,7 +206,11 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content type to use for the check.
+   * The content type header to use for the check. The following configurations result in errors: 1.
+   * Content type is specified in both the headers field and the content_type field. 2. Request
+   * method is GET and content_type is not TYPE_UNSPECIFIED 3. Request method is POST and
+   * content_type is TYPE_UNSPECIFIED. 4. Request method is POST and a "Content-Type" header is
+   * provided via headers field. The content_type field should be used instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentType() {
@@ -210,7 +218,11 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content type to use for the check.
+   * The content type header to use for the check. The following configurations result in errors: 1.
+   * Content type is specified in both the headers field and the content_type field. 2. Request
+   * method is GET and content_type is not TYPE_UNSPECIFIED 3. Request method is POST and
+   * content_type is TYPE_UNSPECIFIED. 4. Request method is POST and a "Content-Type" header is
+   * provided via headers field. The content_type field should be used instead.
    * @param contentType contentType or {@code null} for none
    */
   public HttpCheck setContentType(java.lang.String contentType) {

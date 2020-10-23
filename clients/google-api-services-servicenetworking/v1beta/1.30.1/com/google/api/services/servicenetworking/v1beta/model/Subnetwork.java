@@ -60,6 +60,19 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean outsideAllocation;
 
   /**
+   * List of secondary IP ranges in this subnetwork.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecondaryIpRange> secondaryIpRanges;
+
+  static {
+    // hack to force ProGuard to consider SecondaryIpRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SecondaryIpRange.class);
+  }
+
+  /**
    * Subnetwork CIDR range in `10.x.x.x/y` format.
    * @return value or {@code null} for none
    */
@@ -126,6 +139,23 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setOutsideAllocation(java.lang.Boolean outsideAllocation) {
     this.outsideAllocation = outsideAllocation;
+    return this;
+  }
+
+  /**
+   * List of secondary IP ranges in this subnetwork.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecondaryIpRange> getSecondaryIpRanges() {
+    return secondaryIpRanges;
+  }
+
+  /**
+   * List of secondary IP ranges in this subnetwork.
+   * @param secondaryIpRanges secondaryIpRanges or {@code null} for none
+   */
+  public Subnetwork setSecondaryIpRanges(java.util.List<SecondaryIpRange> secondaryIpRanges) {
+    this.secondaryIpRanges = secondaryIpRanges;
     return this;
   }
 

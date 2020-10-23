@@ -85,6 +85,13 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.String requestedAddress;
 
   /**
+   * Optional. A list of secondary IP ranges to be created within the new subnetwork.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecondaryIpRangeSpec> secondaryIpRangeSpecs;
+
+  /**
    * Required. A name for the new subnet. For information about the naming requirements, see
    * [subnetwork](/compute/docs/reference/rest/v1/subnetworks) in the Compute API documentation.
    * The value may be {@code null}.
@@ -222,6 +229,23 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   public AddSubnetworkRequest setRequestedAddress(java.lang.String requestedAddress) {
     this.requestedAddress = requestedAddress;
+    return this;
+  }
+
+  /**
+   * Optional. A list of secondary IP ranges to be created within the new subnetwork.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecondaryIpRangeSpec> getSecondaryIpRangeSpecs() {
+    return secondaryIpRangeSpecs;
+  }
+
+  /**
+   * Optional. A list of secondary IP ranges to be created within the new subnetwork.
+   * @param secondaryIpRangeSpecs secondaryIpRangeSpecs or {@code null} for none
+   */
+  public AddSubnetworkRequest setSecondaryIpRangeSpecs(java.util.List<SecondaryIpRangeSpec> secondaryIpRangeSpecs) {
+    this.secondaryIpRangeSpecs = secondaryIpRangeSpecs;
     return this;
   }
 

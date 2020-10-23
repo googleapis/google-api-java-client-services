@@ -37,6 +37,14 @@ public final class ServiceAccountDelegationInfo extends com.google.api.client.js
   private FirstPartyPrincipal firstPartyPrincipal;
 
   /**
+   * A string representing the principal_subject associated with the identity. See go/3pical for
+   * more info on how principal_subject is formatted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String principalSubject;
+
+  /**
    * Third party identity as the real authority.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class ServiceAccountDelegationInfo extends com.google.api.client.js
    */
   public ServiceAccountDelegationInfo setFirstPartyPrincipal(FirstPartyPrincipal firstPartyPrincipal) {
     this.firstPartyPrincipal = firstPartyPrincipal;
+    return this;
+  }
+
+  /**
+   * A string representing the principal_subject associated with the identity. See go/3pical for
+   * more info on how principal_subject is formatted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrincipalSubject() {
+    return principalSubject;
+  }
+
+  /**
+   * A string representing the principal_subject associated with the identity. See go/3pical for
+   * more info on how principal_subject is formatted.
+   * @param principalSubject principalSubject or {@code null} for none
+   */
+  public ServiceAccountDelegationInfo setPrincipalSubject(java.lang.String principalSubject) {
+    this.principalSubject = principalSubject;
     return this;
   }
 

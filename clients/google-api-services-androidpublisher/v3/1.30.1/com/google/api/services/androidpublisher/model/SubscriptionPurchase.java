@@ -184,7 +184,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The payment state of the subscription. Possible values are: 0. Payment pending 1. Payment
-   * received 2. Free trial 3. Pending deferred upgrade/downgrade
+   * received 2. Free trial 3. Pending deferred upgrade/downgrade Not present for canceled, expired
+   * subscriptions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -633,7 +634,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The payment state of the subscription. Possible values are: 0. Payment pending 1. Payment
-   * received 2. Free trial 3. Pending deferred upgrade/downgrade
+   * received 2. Free trial 3. Pending deferred upgrade/downgrade Not present for canceled, expired
+   * subscriptions.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPaymentState() {
@@ -642,7 +644,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
 
   /**
    * The payment state of the subscription. Possible values are: 0. Payment pending 1. Payment
-   * received 2. Free trial 3. Pending deferred upgrade/downgrade
+   * received 2. Free trial 3. Pending deferred upgrade/downgrade Not present for canceled, expired
+   * subscriptions.
    * @param paymentState paymentState or {@code null} for none
    */
   public SubscriptionPurchase setPaymentState(java.lang.Integer paymentState) {

@@ -31,7 +31,7 @@ package com.google.api.services.binaryauthorization.v1.model;
 public final class AdmissionWhitelistPattern extends com.google.api.client.json.GenericJson {
 
   /**
-   * An image name pattern to whitelist, in the form `registry/path/to/image`. This supports a
+   * An image name pattern to allowlist, in the form `registry/path/to/image`. This supports a
    * trailing `*` as a wildcard, but this is allowed only in text after the `registry/` part.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class AdmissionWhitelistPattern extends com.google.api.client.json.
   private java.lang.String namePattern;
 
   /**
-   * An image name pattern to whitelist, in the form `registry/path/to/image`. This supports a
+   * An image name pattern to allowlist, in the form `registry/path/to/image`. This supports a
    * trailing `*` as a wildcard, but this is allowed only in text after the `registry/` part.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class AdmissionWhitelistPattern extends com.google.api.client.json.
   }
 
   /**
-   * An image name pattern to whitelist, in the form `registry/path/to/image`. This supports a
+   * An image name pattern to allowlist, in the form `registry/path/to/image`. This supports a
    * trailing `*` as a wildcard, but this is allowed only in text after the `registry/` part.
    * @param namePattern namePattern or {@code null} for none
    */

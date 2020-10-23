@@ -31,7 +31,7 @@ package com.google.api.services.binaryauthorization.v1.model;
 public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Admission policy whitelisting. A matching admission request will always be permitted.
+   * Optional. Admission policy allowlisting. A matching admission request will always be permitted.
    * This feature is typically used to exclude Google or third-party infrastructure images from
    * Binary Authorization policies.
    * The value may be {@code null}.
@@ -101,7 +101,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Optional. Admission policy whitelisting. A matching admission request will always be permitted.
+   * Optional. Admission policy allowlisting. A matching admission request will always be permitted.
    * This feature is typically used to exclude Google or third-party infrastructure images from
    * Binary Authorization policies.
    * @return value or {@code null} for none
@@ -111,7 +111,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Admission policy whitelisting. A matching admission request will always be permitted.
+   * Optional. Admission policy allowlisting. A matching admission request will always be permitted.
    * This feature is typically used to exclude Google or third-party infrastructure images from
    * Binary Authorization policies.
    * @param admissionWhitelistPatterns admissionWhitelistPatterns or {@code null} for none

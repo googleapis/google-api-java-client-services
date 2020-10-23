@@ -3135,7 +3135,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       }
       /**
        * Seeks an existing subscription to a point in time or to a given snapshot, whichever is provided
-       * in the request. Snapshots are used in [Seek]( https://cloud.google.com/pubsub/docs/replay-
+       * in the request. Snapshots are used in [Seek] (https://cloud.google.com/pubsub/docs/replay-
        * overview) operations, which allow you to manage message acknowledgments in bulk. That is, you can
        * set the acknowledgment state of messages in an existing subscription to the state captured by a
        * snapshot. Note that both the subscription and the snapshot must be on the same topic.
@@ -3164,7 +3164,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Seeks an existing subscription to a point in time or to a given snapshot, whichever is provided
-         * in the request. Snapshots are used in [Seek]( https://cloud.google.com/pubsub/docs/replay-
+         * in the request. Snapshots are used in [Seek] (https://cloud.google.com/pubsub/docs/replay-
          * overview) operations, which allow you to manage message acknowledgments in bulk. That is, you
          * can set the acknowledgment state of messages in an existing subscription to the state captured
          * by a snapshot. Note that both the subscription and the snapshot must be on the same topic.
@@ -3582,8 +3582,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
     public class Topics {
 
       /**
-       * Creates the given topic with the given name. See the [resource name rules](
-       * https://cloud.google.com/pubsub/docs/admin#resource_names).
+       * Creates the given topic with the given name. See the [resource name rules]
+       * (https://cloud.google.com/pubsub/docs/admin#resource_names).
        *
        * Create a request for the method "topics.create".
        *
@@ -3612,8 +3612,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^projects/[^/]+/topics/[^/]+$");
 
         /**
-         * Creates the given topic with the given name. See the [resource name rules](
-         * https://cloud.google.com/pubsub/docs/admin#resource_names).
+         * Creates the given topic with the given name. See the [resource name rules]
+         * (https://cloud.google.com/pubsub/docs/admin#resource_names).
          *
          * Create a request for the method "topics.create".
          *

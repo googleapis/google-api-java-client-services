@@ -608,6 +608,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         private java.lang.Long maxResults;
 
         /** Maximum number of results to return
+
+       [minimum: 0]
          */
         public java.lang.Long getMaxResults() {
           return maxResults;
@@ -656,6 +658,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         private java.lang.Long startIndex;
 
         /** Index of the first element to return (starts at 0)
+
+       [minimum: 0]
          */
         public java.lang.Long getStartIndex() {
           return startIndex;
@@ -865,10 +869,11 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the books server.  After setting any optional
      * parameters, call the {@link DeleteBook#execute()} method to invoke the remote operation.
      *
+     * @param volumeId The id of the book to be removed.
      * @return the request
      */
-    public DeleteBook deleteBook() throws java.io.IOException {
-      DeleteBook result = new DeleteBook();
+    public DeleteBook deleteBook(java.lang.String volumeId) throws java.io.IOException {
+      DeleteBook result = new DeleteBook(volumeId);
       initialize(result);
       return result;
     }
@@ -888,10 +893,12 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * DeleteBook#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
+       * @param volumeId The id of the book to be removed.
        * @since 1.13
        */
-      protected DeleteBook() {
+      protected DeleteBook(java.lang.String volumeId) {
         super(Books.this, "POST", REST_PATH, null, com.google.api.services.books.v1.model.Empty.class);
+        this.volumeId = com.google.api.client.util.Preconditions.checkNotNull(volumeId, "Required parameter volumeId must be specified.");
       }
 
       @Override
@@ -1100,10 +1107,11 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the books server.  After setting any optional
      * parameters, call the {@link ListOfflineMetadata#execute()} method to invoke the remote operation.
      *
+     * @param cpksver The device/version ID from which to request the data.
      * @return the request
      */
-    public ListOfflineMetadata listOfflineMetadata() throws java.io.IOException {
-      ListOfflineMetadata result = new ListOfflineMetadata();
+    public ListOfflineMetadata listOfflineMetadata(java.lang.String cpksver) throws java.io.IOException {
+      ListOfflineMetadata result = new ListOfflineMetadata(cpksver);
       initialize(result);
       return result;
     }
@@ -1123,10 +1131,12 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
+       * @param cpksver The device/version ID from which to request the data.
        * @since 1.13
        */
-      protected ListOfflineMetadata() {
+      protected ListOfflineMetadata(java.lang.String cpksver) {
         super(Books.this, "GET", REST_PATH, null, com.google.api.services.books.v1.model.Metadata.class);
+        this.cpksver = com.google.api.client.util.Preconditions.checkNotNull(cpksver, "Required parameter cpksver must be specified.");
       }
 
       @Override
@@ -1992,6 +2002,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       private java.lang.Long maxResults;
 
       /** Maximum number of results to return
+
+     [minimum: 0] [maximum: 200]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -2072,10 +2084,11 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * @param volumeId The volume to retrieve annotations for.
        * @param layerId The ID for the layer to get the annotations.
        * @param annotationDataId The ID of the annotation data to retrieve.
+       * @param contentVersion The content version for the volume you are trying to retrieve.
        * @return the request
        */
-      public Get get(java.lang.String volumeId, java.lang.String layerId, java.lang.String annotationDataId) throws java.io.IOException {
-        Get result = new Get(volumeId, layerId, annotationDataId);
+      public Get get(java.lang.String volumeId, java.lang.String layerId, java.lang.String annotationDataId, java.lang.String contentVersion) throws java.io.IOException {
+        Get result = new Get(volumeId, layerId, annotationDataId, contentVersion);
         initialize(result);
         return result;
       }
@@ -2097,13 +2110,15 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
          * @param volumeId The volume to retrieve annotations for.
          * @param layerId The ID for the layer to get the annotations.
          * @param annotationDataId The ID of the annotation data to retrieve.
+         * @param contentVersion The content version for the volume you are trying to retrieve.
          * @since 1.13
          */
-        protected Get(java.lang.String volumeId, java.lang.String layerId, java.lang.String annotationDataId) {
+        protected Get(java.lang.String volumeId, java.lang.String layerId, java.lang.String annotationDataId, java.lang.String contentVersion) {
           super(Books.this, "GET", REST_PATH, null, com.google.api.services.books.v1.model.DictionaryAnnotationdata.class);
           this.volumeId = com.google.api.client.util.Preconditions.checkNotNull(volumeId, "Required parameter volumeId must be specified.");
           this.layerId = com.google.api.client.util.Preconditions.checkNotNull(layerId, "Required parameter layerId must be specified.");
           this.annotationDataId = com.google.api.client.util.Preconditions.checkNotNull(annotationDataId, "Required parameter annotationDataId must be specified.");
+          this.contentVersion = com.google.api.client.util.Preconditions.checkNotNull(contentVersion, "Required parameter contentVersion must be specified.");
         }
 
         @Override
@@ -2219,22 +2234,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** For the dictionary layer. Whether or not to allow web definitions. */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean allowWebDefinitions;
-
-        /** For the dictionary layer. Whether or not to allow web definitions.
-         */
-        public java.lang.Boolean getAllowWebDefinitions() {
-          return allowWebDefinitions;
-        }
-
-        /** For the dictionary layer. Whether or not to allow web definitions. */
-        public Get setAllowWebDefinitions(java.lang.Boolean allowWebDefinitions) {
-          this.allowWebDefinitions = allowWebDefinitions;
-          return this;
-        }
-
         /** The content version for the volume you are trying to retrieve. */
         @com.google.api.client.util.Key
         private java.lang.String contentVersion;
@@ -2248,6 +2247,22 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         /** The content version for the volume you are trying to retrieve. */
         public Get setContentVersion(java.lang.String contentVersion) {
           this.contentVersion = contentVersion;
+          return this;
+        }
+
+        /** For the dictionary layer. Whether or not to allow web definitions. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean allowWebDefinitions;
+
+        /** For the dictionary layer. Whether or not to allow web definitions.
+         */
+        public java.lang.Boolean getAllowWebDefinitions() {
+          return allowWebDefinitions;
+        }
+
+        /** For the dictionary layer. Whether or not to allow web definitions. */
+        public Get setAllowWebDefinitions(java.lang.Boolean allowWebDefinitions) {
+          this.allowWebDefinitions = allowWebDefinitions;
           return this;
         }
 
@@ -2300,6 +2315,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         private java.lang.Integer scale;
 
         /** The requested scale for the image.
+
+       [minimum: 0]
          */
         public java.lang.Integer getScale() {
           return scale;
@@ -2364,10 +2381,11 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        *
        * @param volumeId The volume to retrieve annotation data for.
        * @param layerId The ID for the layer to get the annotation data.
+       * @param contentVersion The content version for the requested volume.
        * @return the request
        */
-      public List list(java.lang.String volumeId, java.lang.String layerId) throws java.io.IOException {
-        List result = new List(volumeId, layerId);
+      public List list(java.lang.String volumeId, java.lang.String layerId, java.lang.String contentVersion) throws java.io.IOException {
+        List result = new List(volumeId, layerId, contentVersion);
         initialize(result);
         return result;
       }
@@ -2388,12 +2406,14 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
          *
          * @param volumeId The volume to retrieve annotation data for.
          * @param layerId The ID for the layer to get the annotation data.
+         * @param contentVersion The content version for the requested volume.
          * @since 1.13
          */
-        protected List(java.lang.String volumeId, java.lang.String layerId) {
+        protected List(java.lang.String volumeId, java.lang.String layerId, java.lang.String contentVersion) {
           super(Books.this, "GET", REST_PATH, null, com.google.api.services.books.v1.model.Annotationsdata.class);
           this.volumeId = com.google.api.client.util.Preconditions.checkNotNull(volumeId, "Required parameter volumeId must be specified.");
           this.layerId = com.google.api.client.util.Preconditions.checkNotNull(layerId, "Required parameter layerId must be specified.");
+          this.contentVersion = com.google.api.client.util.Preconditions.checkNotNull(contentVersion, "Required parameter contentVersion must be specified.");
         }
 
         @Override
@@ -2493,22 +2513,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** The list of Annotation Data Ids to retrieve. Pagination is ignored if this is set. */
-        @com.google.api.client.util.Key
-        private java.util.List<java.lang.String> annotationDataId;
-
-        /** The list of Annotation Data Ids to retrieve. Pagination is ignored if this is set.
-         */
-        public java.util.List<java.lang.String> getAnnotationDataId() {
-          return annotationDataId;
-        }
-
-        /** The list of Annotation Data Ids to retrieve. Pagination is ignored if this is set. */
-        public List setAnnotationDataId(java.util.List<java.lang.String> annotationDataId) {
-          this.annotationDataId = annotationDataId;
-          return this;
-        }
-
         /** The content version for the requested volume. */
         @com.google.api.client.util.Key
         private java.lang.String contentVersion;
@@ -2522,6 +2526,22 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         /** The content version for the requested volume. */
         public List setContentVersion(java.lang.String contentVersion) {
           this.contentVersion = contentVersion;
+          return this;
+        }
+
+        /** The list of Annotation Data Ids to retrieve. Pagination is ignored if this is set. */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> annotationDataId;
+
+        /** The list of Annotation Data Ids to retrieve. Pagination is ignored if this is set.
+         */
+        public java.util.List<java.lang.String> getAnnotationDataId() {
+          return annotationDataId;
+        }
+
+        /** The list of Annotation Data Ids to retrieve. Pagination is ignored if this is set. */
+        public List setAnnotationDataId(java.util.List<java.lang.String> annotationDataId) {
+          this.annotationDataId = annotationDataId;
           return this;
         }
 
@@ -2574,6 +2594,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         private java.lang.Long maxResults;
 
         /** Maximum number of results to return
+
+       [minimum: 0] [maximum: 200]
          */
         public java.lang.Long getMaxResults() {
           return maxResults;
@@ -2606,6 +2628,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         private java.lang.Integer scale;
 
         /** The requested scale for the image.
+
+       [minimum: 0]
          */
         public java.lang.Integer getScale() {
           return scale;
@@ -2925,10 +2949,11 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        *
        * @param volumeId The volume to retrieve annotations for.
        * @param layerId The ID for the layer to get the annotations.
+       * @param contentVersion The content version for the requested volume.
        * @return the request
        */
-      public List list(java.lang.String volumeId, java.lang.String layerId) throws java.io.IOException {
-        List result = new List(volumeId, layerId);
+      public List list(java.lang.String volumeId, java.lang.String layerId, java.lang.String contentVersion) throws java.io.IOException {
+        List result = new List(volumeId, layerId, contentVersion);
         initialize(result);
         return result;
       }
@@ -2949,12 +2974,14 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
          *
          * @param volumeId The volume to retrieve annotations for.
          * @param layerId The ID for the layer to get the annotations.
+         * @param contentVersion The content version for the requested volume.
          * @since 1.13
          */
-        protected List(java.lang.String volumeId, java.lang.String layerId) {
+        protected List(java.lang.String volumeId, java.lang.String layerId, java.lang.String contentVersion) {
           super(Books.this, "GET", REST_PATH, null, com.google.api.services.books.v1.model.Volumeannotations.class);
           this.volumeId = com.google.api.client.util.Preconditions.checkNotNull(volumeId, "Required parameter volumeId must be specified.");
           this.layerId = com.google.api.client.util.Preconditions.checkNotNull(layerId, "Required parameter layerId must be specified.");
+          this.contentVersion = com.google.api.client.util.Preconditions.checkNotNull(contentVersion, "Required parameter contentVersion must be specified.");
         }
 
         @Override
@@ -3129,6 +3156,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         private java.lang.Long maxResults;
 
         /** Maximum number of results to return
+
+       [minimum: 0] [maximum: 200]
          */
         public java.lang.Long getMaxResults() {
           return maxResults;
@@ -3436,10 +3465,12 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
      * parameters, call the {@link ReleaseDownloadAccess#execute()} method to invoke the remote
      * operation.
      *
+     * @param cpksver The device/version ID from which to release the restriction.
+     * @param volumeIds The volume(s) to release restrictions for.
      * @return the request
      */
-    public ReleaseDownloadAccess releaseDownloadAccess() throws java.io.IOException {
-      ReleaseDownloadAccess result = new ReleaseDownloadAccess();
+    public ReleaseDownloadAccess releaseDownloadAccess(java.lang.String cpksver, java.util.List<java.lang.String> volumeIds) throws java.io.IOException {
+      ReleaseDownloadAccess result = new ReleaseDownloadAccess(cpksver, volumeIds);
       initialize(result);
       return result;
     }
@@ -3459,10 +3490,14 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
+       * @param cpksver The device/version ID from which to release the restriction.
+       * @param volumeIds The volume(s) to release restrictions for.
        * @since 1.13
        */
-      protected ReleaseDownloadAccess() {
+      protected ReleaseDownloadAccess(java.lang.String cpksver, java.util.List<java.lang.String> volumeIds) {
         super(Books.this, "POST", REST_PATH, null, com.google.api.services.books.v1.model.DownloadAccesses.class);
+        this.cpksver = com.google.api.client.util.Preconditions.checkNotNull(cpksver, "Required parameter cpksver must be specified.");
+        this.volumeIds = com.google.api.client.util.Preconditions.checkNotNull(volumeIds, "Required parameter volumeIds must be specified.");
       }
 
       @Override
@@ -3536,6 +3571,22 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      /** The volume(s) to release restrictions for. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> volumeIds;
+
+      /** The volume(s) to release restrictions for.
+       */
+      public java.util.List<java.lang.String> getVolumeIds() {
+        return volumeIds;
+      }
+
+      /** The volume(s) to release restrictions for. */
+      public ReleaseDownloadAccess setVolumeIds(java.util.List<java.lang.String> volumeIds) {
+        this.volumeIds = volumeIds;
+        return this;
+      }
+
       /** ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US. */
       @com.google.api.client.util.Key
       private java.lang.String locale;
@@ -3568,22 +3619,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** The volume(s) to release restrictions for. */
-      @com.google.api.client.util.Key
-      private java.util.List<java.lang.String> volumeIds;
-
-      /** The volume(s) to release restrictions for.
-       */
-      public java.util.List<java.lang.String> getVolumeIds() {
-        return volumeIds;
-      }
-
-      /** The volume(s) to release restrictions for. */
-      public ReleaseDownloadAccess setVolumeIds(java.util.List<java.lang.String> volumeIds) {
-        this.volumeIds = volumeIds;
-        return this;
-      }
-
       @Override
       public ReleaseDownloadAccess set(String parameterName, Object value) {
         return (ReleaseDownloadAccess) super.set(parameterName, value);
@@ -3597,10 +3632,14 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the books server.  After setting any optional
      * parameters, call the {@link RequestAccess#execute()} method to invoke the remote operation.
      *
+     * @param cpksver The device/version ID from which to request the restrictions.
+     * @param nonce The client nonce value.
+     * @param source String to identify the originator of this request.
+     * @param volumeId The volume to request concurrent/download restrictions for.
      * @return the request
      */
-    public RequestAccess requestAccess() throws java.io.IOException {
-      RequestAccess result = new RequestAccess();
+    public RequestAccess requestAccess(java.lang.String cpksver, java.lang.String nonce, java.lang.String source, java.lang.String volumeId) throws java.io.IOException {
+      RequestAccess result = new RequestAccess(cpksver, nonce, source, volumeId);
       initialize(result);
       return result;
     }
@@ -3620,10 +3659,18 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * equest)} must be called to initialize this instance immediately after invoking the constructor.
        * </p>
        *
+       * @param cpksver The device/version ID from which to request the restrictions.
+       * @param nonce The client nonce value.
+       * @param source String to identify the originator of this request.
+       * @param volumeId The volume to request concurrent/download restrictions for.
        * @since 1.13
        */
-      protected RequestAccess() {
+      protected RequestAccess(java.lang.String cpksver, java.lang.String nonce, java.lang.String source, java.lang.String volumeId) {
         super(Books.this, "POST", REST_PATH, null, com.google.api.services.books.v1.model.RequestAccessData.class);
+        this.cpksver = com.google.api.client.util.Preconditions.checkNotNull(cpksver, "Required parameter cpksver must be specified.");
+        this.nonce = com.google.api.client.util.Preconditions.checkNotNull(nonce, "Required parameter nonce must be specified.");
+        this.source = com.google.api.client.util.Preconditions.checkNotNull(source, "Required parameter source must be specified.");
+        this.volumeId = com.google.api.client.util.Preconditions.checkNotNull(volumeId, "Required parameter volumeId must be specified.");
       }
 
       @Override
@@ -3697,38 +3744,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** The type of access license to request. If not specified, the default is BOTH. */
-      @com.google.api.client.util.Key
-      private java.lang.String licenseTypes;
-
-      /** The type of access license to request. If not specified, the default is BOTH.
-       */
-      public java.lang.String getLicenseTypes() {
-        return licenseTypes;
-      }
-
-      /** The type of access license to request. If not specified, the default is BOTH. */
-      public RequestAccess setLicenseTypes(java.lang.String licenseTypes) {
-        this.licenseTypes = licenseTypes;
-        return this;
-      }
-
-      /** ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US. */
-      @com.google.api.client.util.Key
-      private java.lang.String locale;
-
-      /** ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US.
-       */
-      public java.lang.String getLocale() {
-        return locale;
-      }
-
-      /** ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US. */
-      public RequestAccess setLocale(java.lang.String locale) {
-        this.locale = locale;
-        return this;
-      }
-
       /** The client nonce value. */
       @com.google.api.client.util.Key
       private java.lang.String nonce;
@@ -3777,6 +3792,38 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      /** The type of access license to request. If not specified, the default is BOTH. */
+      @com.google.api.client.util.Key
+      private java.lang.String licenseTypes;
+
+      /** The type of access license to request. If not specified, the default is BOTH.
+       */
+      public java.lang.String getLicenseTypes() {
+        return licenseTypes;
+      }
+
+      /** The type of access license to request. If not specified, the default is BOTH. */
+      public RequestAccess setLicenseTypes(java.lang.String licenseTypes) {
+        this.licenseTypes = licenseTypes;
+        return this;
+      }
+
+      /** ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US. */
+      @com.google.api.client.util.Key
+      private java.lang.String locale;
+
+      /** ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US.
+       */
+      public java.lang.String getLocale() {
+        return locale;
+      }
+
+      /** ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US. */
+      public RequestAccess setLocale(java.lang.String locale) {
+        this.locale = locale;
+        return this;
+      }
+
       @Override
       public RequestAccess set(String parameterName, Object value) {
         return (RequestAccess) super.set(parameterName, value);
@@ -3790,10 +3837,13 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the books server.  After setting any optional
      * parameters, call the {@link SyncVolumeLicenses#execute()} method to invoke the remote operation.
      *
+     * @param cpksver The device/version ID from which to release the restriction.
+     * @param nonce The client nonce value.
+     * @param source String to identify the originator of this request.
      * @return the request
      */
-    public SyncVolumeLicenses syncVolumeLicenses() throws java.io.IOException {
-      SyncVolumeLicenses result = new SyncVolumeLicenses();
+    public SyncVolumeLicenses syncVolumeLicenses(java.lang.String cpksver, java.lang.String nonce, java.lang.String source) throws java.io.IOException {
+      SyncVolumeLicenses result = new SyncVolumeLicenses(cpksver, nonce, source);
       initialize(result);
       return result;
     }
@@ -3813,10 +3863,16 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
+       * @param cpksver The device/version ID from which to release the restriction.
+       * @param nonce The client nonce value.
+       * @param source String to identify the originator of this request.
        * @since 1.13
        */
-      protected SyncVolumeLicenses() {
+      protected SyncVolumeLicenses(java.lang.String cpksver, java.lang.String nonce, java.lang.String source) {
         super(Books.this, "POST", REST_PATH, null, com.google.api.services.books.v1.model.Volumes.class);
+        this.cpksver = com.google.api.client.util.Preconditions.checkNotNull(cpksver, "Required parameter cpksver must be specified.");
+        this.nonce = com.google.api.client.util.Preconditions.checkNotNull(nonce, "Required parameter nonce must be specified.");
+        this.source = com.google.api.client.util.Preconditions.checkNotNull(source, "Required parameter source must be specified.");
       }
 
       @Override
@@ -3890,6 +3946,38 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      /** The client nonce value. */
+      @com.google.api.client.util.Key
+      private java.lang.String nonce;
+
+      /** The client nonce value.
+       */
+      public java.lang.String getNonce() {
+        return nonce;
+      }
+
+      /** The client nonce value. */
+      public SyncVolumeLicenses setNonce(java.lang.String nonce) {
+        this.nonce = nonce;
+        return this;
+      }
+
+      /** String to identify the originator of this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String source;
+
+      /** String to identify the originator of this request.
+       */
+      public java.lang.String getSource() {
+        return source;
+      }
+
+      /** String to identify the originator of this request. */
+      public SyncVolumeLicenses setSource(java.lang.String source) {
+        this.source = source;
+        return this;
+      }
+
       /** List of features supported by the client, i.e., 'RENTALS' */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> features;
@@ -3938,22 +4026,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** The client nonce value. */
-      @com.google.api.client.util.Key
-      private java.lang.String nonce;
-
-      /** The client nonce value.
-       */
-      public java.lang.String getNonce() {
-        return nonce;
-      }
-
-      /** The client nonce value. */
-      public SyncVolumeLicenses setNonce(java.lang.String nonce) {
-        this.nonce = nonce;
-        return this;
-      }
-
       /** Set to true to show pre-ordered books. Defaults to false. */
       @com.google.api.client.util.Key
       private java.lang.Boolean showPreorders;
@@ -3967,22 +4039,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       /** Set to true to show pre-ordered books. Defaults to false. */
       public SyncVolumeLicenses setShowPreorders(java.lang.Boolean showPreorders) {
         this.showPreorders = showPreorders;
-        return this;
-      }
-
-      /** String to identify the originator of this request. */
-      @com.google.api.client.util.Key
-      private java.lang.String source;
-
-      /** String to identify the originator of this request.
-       */
-      public java.lang.String getSource() {
-        return source;
-      }
-
-      /** String to identify the originator of this request. */
-      public SyncVolumeLicenses setSource(java.lang.String source) {
-        this.source = source;
         return this;
       }
 
@@ -4598,6 +4654,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         private java.lang.Long maxResults;
 
         /** Maximum number of results to return
+
+       [minimum: 0] [maximum: 40]
          */
         public java.lang.Long getMaxResults() {
           return maxResults;
@@ -4725,10 +4783,12 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the books server.  After setting any optional
        * parameters, call the {@link Summary#execute()} method to invoke the remote operation.
        *
+       * @param layerIds Array of layer IDs to get the summary for.
+       * @param volumeId Volume id to get the summary for.
        * @return the request
        */
-      public Summary summary() throws java.io.IOException {
-        Summary result = new Summary();
+      public Summary summary(java.util.List<java.lang.String> layerIds, java.lang.String volumeId) throws java.io.IOException {
+        Summary result = new Summary(layerIds, volumeId);
         initialize(result);
         return result;
       }
@@ -4748,10 +4808,14 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
          * Summary#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
+         * @param layerIds Array of layer IDs to get the summary for.
+         * @param volumeId Volume id to get the summary for.
          * @since 1.13
          */
-        protected Summary() {
+        protected Summary(java.util.List<java.lang.String> layerIds, java.lang.String volumeId) {
           super(Books.this, "POST", REST_PATH, null, com.google.api.services.books.v1.model.AnnotationsSummary.class);
+          this.layerIds = com.google.api.client.util.Preconditions.checkNotNull(layerIds, "Required parameter layerIds must be specified.");
+          this.volumeId = com.google.api.client.util.Preconditions.checkNotNull(volumeId, "Required parameter volumeId must be specified.");
         }
 
         @Override
@@ -5010,10 +5074,11 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * parameters, call the {@link AddVolume#execute()} method to invoke the remote operation.
        *
        * @param shelf ID of bookshelf to which to add a volume.
+       * @param volumeId ID of volume to add.
        * @return the request
        */
-      public AddVolume addVolume(java.lang.String shelf) throws java.io.IOException {
-        AddVolume result = new AddVolume(shelf);
+      public AddVolume addVolume(java.lang.String shelf, java.lang.String volumeId) throws java.io.IOException {
+        AddVolume result = new AddVolume(shelf, volumeId);
         initialize(result);
         return result;
       }
@@ -5034,11 +5099,13 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param shelf ID of bookshelf to which to add a volume.
+         * @param volumeId ID of volume to add.
          * @since 1.13
          */
-        protected AddVolume(java.lang.String shelf) {
+        protected AddVolume(java.lang.String shelf, java.lang.String volumeId) {
           super(Books.this, "POST", REST_PATH, null, com.google.api.services.books.v1.model.Empty.class);
           this.shelf = com.google.api.client.util.Preconditions.checkNotNull(shelf, "Required parameter shelf must be specified.");
+          this.volumeId = com.google.api.client.util.Preconditions.checkNotNull(volumeId, "Required parameter volumeId must be specified.");
         }
 
         @Override
@@ -5112,6 +5179,22 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
+        /** ID of volume to add. */
+        @com.google.api.client.util.Key
+        private java.lang.String volumeId;
+
+        /** ID of volume to add.
+         */
+        public java.lang.String getVolumeId() {
+          return volumeId;
+        }
+
+        /** ID of volume to add. */
+        public AddVolume setVolumeId(java.lang.String volumeId) {
+          this.volumeId = volumeId;
+          return this;
+        }
+
         /** The reason for which the book is added to the library. */
         @com.google.api.client.util.Key
         private java.lang.String reason;
@@ -5141,22 +5224,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         /** String to identify the originator of this request. */
         public AddVolume setSource(java.lang.String source) {
           this.source = source;
-          return this;
-        }
-
-        /** ID of volume to add. */
-        @com.google.api.client.util.Key
-        private java.lang.String volumeId;
-
-        /** ID of volume to add.
-         */
-        public java.lang.String getVolumeId() {
-          return volumeId;
-        }
-
-        /** ID of volume to add. */
-        public AddVolume setVolumeId(java.lang.String volumeId) {
-          this.volumeId = volumeId;
           return this;
         }
 
@@ -5569,10 +5636,13 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * parameters, call the {@link MoveVolume#execute()} method to invoke the remote operation.
        *
        * @param shelf ID of bookshelf with the volume.
+       * @param volumeId ID of volume to move.
+       * @param volumePosition Position on shelf to move the item (0 puts the item before the current first item, 1 puts it between
+       *        the first and the second and so on.)
        * @return the request
        */
-      public MoveVolume moveVolume(java.lang.String shelf) throws java.io.IOException {
-        MoveVolume result = new MoveVolume(shelf);
+      public MoveVolume moveVolume(java.lang.String shelf, java.lang.String volumeId, java.lang.Integer volumePosition) throws java.io.IOException {
+        MoveVolume result = new MoveVolume(shelf, volumeId, volumePosition);
         initialize(result);
         return result;
       }
@@ -5593,11 +5663,16 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param shelf ID of bookshelf with the volume.
+         * @param volumeId ID of volume to move.
+         * @param volumePosition Position on shelf to move the item (0 puts the item before the current first item, 1 puts it between
+       *        the first and the second and so on.)
          * @since 1.13
          */
-        protected MoveVolume(java.lang.String shelf) {
+        protected MoveVolume(java.lang.String shelf, java.lang.String volumeId, java.lang.Integer volumePosition) {
           super(Books.this, "POST", REST_PATH, null, com.google.api.services.books.v1.model.Empty.class);
           this.shelf = com.google.api.client.util.Preconditions.checkNotNull(shelf, "Required parameter shelf must be specified.");
+          this.volumeId = com.google.api.client.util.Preconditions.checkNotNull(volumeId, "Required parameter volumeId must be specified.");
+          this.volumePosition = com.google.api.client.util.Preconditions.checkNotNull(volumePosition, "Required parameter volumePosition must be specified.");
         }
 
         @Override
@@ -5671,22 +5746,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** String to identify the originator of this request. */
-        @com.google.api.client.util.Key
-        private java.lang.String source;
-
-        /** String to identify the originator of this request.
-         */
-        public java.lang.String getSource() {
-          return source;
-        }
-
-        /** String to identify the originator of this request. */
-        public MoveVolume setSource(java.lang.String source) {
-          this.source = source;
-          return this;
-        }
-
         /** ID of volume to move. */
         @com.google.api.client.util.Key
         private java.lang.String volumeId;
@@ -5726,6 +5785,22 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
+        /** String to identify the originator of this request. */
+        @com.google.api.client.util.Key
+        private java.lang.String source;
+
+        /** String to identify the originator of this request.
+         */
+        public java.lang.String getSource() {
+          return source;
+        }
+
+        /** String to identify the originator of this request. */
+        public MoveVolume setSource(java.lang.String source) {
+          this.source = source;
+          return this;
+        }
+
         @Override
         public MoveVolume set(String parameterName, Object value) {
           return (MoveVolume) super.set(parameterName, value);
@@ -5740,10 +5815,11 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * parameters, call the {@link RemoveVolume#execute()} method to invoke the remote operation.
        *
        * @param shelf ID of bookshelf from which to remove a volume.
+       * @param volumeId ID of volume to remove.
        * @return the request
        */
-      public RemoveVolume removeVolume(java.lang.String shelf) throws java.io.IOException {
-        RemoveVolume result = new RemoveVolume(shelf);
+      public RemoveVolume removeVolume(java.lang.String shelf, java.lang.String volumeId) throws java.io.IOException {
+        RemoveVolume result = new RemoveVolume(shelf, volumeId);
         initialize(result);
         return result;
       }
@@ -5764,11 +5840,13 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param shelf ID of bookshelf from which to remove a volume.
+         * @param volumeId ID of volume to remove.
          * @since 1.13
          */
-        protected RemoveVolume(java.lang.String shelf) {
+        protected RemoveVolume(java.lang.String shelf, java.lang.String volumeId) {
           super(Books.this, "POST", REST_PATH, null, com.google.api.services.books.v1.model.Empty.class);
           this.shelf = com.google.api.client.util.Preconditions.checkNotNull(shelf, "Required parameter shelf must be specified.");
+          this.volumeId = com.google.api.client.util.Preconditions.checkNotNull(volumeId, "Required parameter volumeId must be specified.");
         }
 
         @Override
@@ -5842,6 +5920,22 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
+        /** ID of volume to remove. */
+        @com.google.api.client.util.Key
+        private java.lang.String volumeId;
+
+        /** ID of volume to remove.
+         */
+        public java.lang.String getVolumeId() {
+          return volumeId;
+        }
+
+        /** ID of volume to remove. */
+        public RemoveVolume setVolumeId(java.lang.String volumeId) {
+          this.volumeId = volumeId;
+          return this;
+        }
+
         /** The reason for which the book is removed from the library. */
         @com.google.api.client.util.Key
         private java.lang.String reason;
@@ -5871,22 +5965,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         /** String to identify the originator of this request. */
         public RemoveVolume setSource(java.lang.String source) {
           this.source = source;
-          return this;
-        }
-
-        /** ID of volume to remove. */
-        @com.google.api.client.util.Key
-        private java.lang.String volumeId;
-
-        /** ID of volume to remove.
-         */
-        public java.lang.String getVolumeId() {
-          return volumeId;
-        }
-
-        /** ID of volume to remove. */
-        public RemoveVolume setVolumeId(java.lang.String volumeId) {
-          this.volumeId = volumeId;
           return this;
         }
 
@@ -6057,6 +6135,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           private java.lang.Long maxResults;
 
           /** Maximum number of results to return
+
+         [minimum: 0]
            */
           public java.lang.Long getMaxResults() {
             return maxResults;
@@ -6137,6 +6217,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           private java.lang.Long startIndex;
 
           /** Index of the first element to return (starts at 0)
+
+         [minimum: 0]
            */
           public java.lang.Long getStartIndex() {
             return startIndex;
@@ -6342,10 +6424,12 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * parameters, call the {@link SetPosition#execute()} method to invoke the remote operation.
        *
        * @param volumeId ID of volume for which to update the reading position.
+       * @param position Position string for the new volume reading position.
+       * @param timestamp RFC 3339 UTC format timestamp associated with this reading position.
        * @return the request
        */
-      public SetPosition setPosition(java.lang.String volumeId) throws java.io.IOException {
-        SetPosition result = new SetPosition(volumeId);
+      public SetPosition setPosition(java.lang.String volumeId, java.lang.String position, java.lang.String timestamp) throws java.io.IOException {
+        SetPosition result = new SetPosition(volumeId, position, timestamp);
         initialize(result);
         return result;
       }
@@ -6366,11 +6450,15 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param volumeId ID of volume for which to update the reading position.
+         * @param position Position string for the new volume reading position.
+         * @param timestamp RFC 3339 UTC format timestamp associated with this reading position.
          * @since 1.13
          */
-        protected SetPosition(java.lang.String volumeId) {
+        protected SetPosition(java.lang.String volumeId, java.lang.String position, java.lang.String timestamp) {
           super(Books.this, "POST", REST_PATH, null, com.google.api.services.books.v1.model.Empty.class);
           this.volumeId = com.google.api.client.util.Preconditions.checkNotNull(volumeId, "Required parameter volumeId must be specified.");
+          this.position = com.google.api.client.util.Preconditions.checkNotNull(position, "Required parameter position must be specified.");
+          this.timestamp = com.google.api.client.util.Preconditions.checkNotNull(timestamp, "Required parameter timestamp must be specified.");
         }
 
         @Override
@@ -6444,6 +6532,38 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
+        /** Position string for the new volume reading position. */
+        @com.google.api.client.util.Key
+        private java.lang.String position;
+
+        /** Position string for the new volume reading position.
+         */
+        public java.lang.String getPosition() {
+          return position;
+        }
+
+        /** Position string for the new volume reading position. */
+        public SetPosition setPosition(java.lang.String position) {
+          this.position = position;
+          return this;
+        }
+
+        /** RFC 3339 UTC format timestamp associated with this reading position. */
+        @com.google.api.client.util.Key
+        private java.lang.String timestamp;
+
+        /** RFC 3339 UTC format timestamp associated with this reading position.
+         */
+        public java.lang.String getTimestamp() {
+          return timestamp;
+        }
+
+        /** RFC 3339 UTC format timestamp associated with this reading position. */
+        public SetPosition setTimestamp(java.lang.String timestamp) {
+          this.timestamp = timestamp;
+          return this;
+        }
+
         /** Action that caused this reading position to be set. */
         @com.google.api.client.util.Key
         private java.lang.String action;
@@ -6492,22 +6612,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** Position string for the new volume reading position. */
-        @com.google.api.client.util.Key
-        private java.lang.String position;
-
-        /** Position string for the new volume reading position.
-         */
-        public java.lang.String getPosition() {
-          return position;
-        }
-
-        /** Position string for the new volume reading position. */
-        public SetPosition setPosition(java.lang.String position) {
-          this.position = position;
-          return this;
-        }
-
         /** String to identify the originator of this request. */
         @com.google.api.client.util.Key
         private java.lang.String source;
@@ -6521,22 +6625,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         /** String to identify the originator of this request. */
         public SetPosition setSource(java.lang.String source) {
           this.source = source;
-          return this;
-        }
-
-        /** RFC 3339 UTC format timestamp associated with this reading position. */
-        @com.google.api.client.util.Key
-        private java.lang.String timestamp;
-
-        /** RFC 3339 UTC format timestamp associated with this reading position.
-         */
-        public java.lang.String getTimestamp() {
-          return timestamp;
-        }
-
-        /** RFC 3339 UTC format timestamp associated with this reading position. */
-        public SetPosition setTimestamp(java.lang.String timestamp) {
-          this.timestamp = timestamp;
           return this;
         }
 
@@ -6577,10 +6665,11 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the books server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
+     * @param notificationId String to identify the notification.
      * @return the request
      */
-    public Get get() throws java.io.IOException {
-      Get result = new Get();
+    public Get get(java.lang.String notificationId) throws java.io.IOException {
+      Get result = new Get(notificationId);
       initialize(result);
       return result;
     }
@@ -6599,10 +6688,12 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
+       * @param notificationId String to identify the notification.
        * @since 1.13
        */
-      protected Get() {
+      protected Get(java.lang.String notificationId) {
         super(Books.this, "GET", REST_PATH, null, com.google.api.services.books.v1.model.Notification.class);
+        this.notificationId = com.google.api.client.util.Preconditions.checkNotNull(notificationId, "Required parameter notificationId must be specified.");
       }
 
       @Override
@@ -6670,6 +6761,22 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** String to identify the notification. */
+      @com.google.api.client.util.Key("notification_id")
+      private java.lang.String notificationId;
+
+      /** String to identify the notification.
+       */
+      public java.lang.String getNotificationId() {
+        return notificationId;
+      }
+
+      /** String to identify the notification. */
+      public Get setNotificationId(java.lang.String notificationId) {
+        this.notificationId = notificationId;
+        return this;
+      }
+
       /**
        * ISO-639-1 language and ISO-3166-1 country code. Ex: 'en_US'. Used for generating
        * notification title and body.
@@ -6690,22 +6797,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        */
       public Get setLocale(java.lang.String locale) {
         this.locale = locale;
-        return this;
-      }
-
-      /** String to identify the notification. */
-      @com.google.api.client.util.Key("notification_id")
-      private java.lang.String notificationId;
-
-      /** String to identify the notification.
-       */
-      public java.lang.String getNotificationId() {
-        return notificationId;
-      }
-
-      /** String to identify the notification. */
-      public Get setNotificationId(java.lang.String notificationId) {
-        this.notificationId = notificationId;
         return this;
       }
 
@@ -7948,10 +8039,11 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the books server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
+     * @param seriesId String that identifies the series
      * @return the request
      */
-    public Get get() throws java.io.IOException {
-      Get result = new Get();
+    public Get get(java.util.List<java.lang.String> seriesId) throws java.io.IOException {
+      Get result = new Get(seriesId);
       initialize(result);
       return result;
     }
@@ -7970,10 +8062,12 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
+       * @param seriesId String that identifies the series
        * @since 1.13
        */
-      protected Get() {
+      protected Get(java.util.List<java.lang.String> seriesId) {
         super(Books.this, "GET", REST_PATH, null, com.google.api.services.books.v1.model.Series.class);
+        this.seriesId = com.google.api.client.util.Preconditions.checkNotNull(seriesId, "Required parameter seriesId must be specified.");
       }
 
       @Override
@@ -8091,10 +8185,11 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the books server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
+       * @param seriesId String that identifies the series
        * @return the request
        */
-      public Get get() throws java.io.IOException {
-        Get result = new Get();
+      public Get get(java.lang.String seriesId) throws java.io.IOException {
+        Get result = new Get(seriesId);
         initialize(result);
         return result;
       }
@@ -8113,10 +8208,12 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
+         * @param seriesId String that identifies the series
          * @since 1.13
          */
-        protected Get() {
+        protected Get(java.lang.String seriesId) {
           super(Books.this, "GET", REST_PATH, null, com.google.api.services.books.v1.model.Seriesmembership.class);
+          this.seriesId = com.google.api.client.util.Preconditions.checkNotNull(seriesId, "Required parameter seriesId must be specified.");
         }
 
         @Override
@@ -8184,6 +8281,22 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
+        /** String that identifies the series */
+        @com.google.api.client.util.Key("series_id")
+        private java.lang.String seriesId;
+
+        /** String that identifies the series
+         */
+        public java.lang.String getSeriesId() {
+          return seriesId;
+        }
+
+        /** String that identifies the series */
+        public Get setSeriesId(java.lang.String seriesId) {
+          this.seriesId = seriesId;
+          return this;
+        }
+
         /** Number of maximum results per page to be included in the response. */
         @com.google.api.client.util.Key("page_size")
         private java.lang.Long pageSize;
@@ -8213,22 +8326,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         /** The value of the nextToken from the previous page. */
         public Get setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /** String that identifies the series */
-        @com.google.api.client.util.Key("series_id")
-        private java.lang.String seriesId;
-
-        /** String that identifies the series
-         */
-        public java.lang.String getSeriesId() {
-          return seriesId;
-        }
-
-        /** String that identifies the series */
-        public Get setSeriesId(java.lang.String seriesId) {
-          this.seriesId = seriesId;
           return this;
         }
 
@@ -8489,10 +8586,11 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the books server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
+     * @param q Full-text search query string.
      * @return the request
      */
-    public List list() throws java.io.IOException {
-      List result = new List();
+    public List list(java.lang.String q) throws java.io.IOException {
+      List result = new List(q);
       initialize(result);
       return result;
     }
@@ -8511,10 +8609,12 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
+       * @param q Full-text search query string.
        * @since 1.13
        */
-      protected List() {
+      protected List(java.lang.String q) {
         super(Books.this, "GET", REST_PATH, null, com.google.api.services.books.v1.model.Volumes.class);
+        this.q = com.google.api.client.util.Preconditions.checkNotNull(q, "Required parameter q must be specified.");
       }
 
       @Override
@@ -8580,6 +8680,22 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public List setUploadProtocol(java.lang.String uploadProtocol) {
         return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Full-text search query string. */
+      @com.google.api.client.util.Key
+      private java.lang.String q;
+
+      /** Full-text search query string.
+       */
+      public java.lang.String getQ() {
+        return q;
+      }
+
+      /** Full-text search query string. */
+      public List setQ(java.lang.String q) {
+        this.q = q;
+        return this;
       }
 
       /** Restrict to volumes by download availability. */
@@ -8674,6 +8790,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       private java.lang.Long maxResults;
 
       /** Maximum number of results to return.
+
+     [minimum: 0] [maximum: 40]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -8749,22 +8867,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Full-text search query string. */
-      @com.google.api.client.util.Key
-      private java.lang.String q;
-
-      /** Full-text search query string.
-       */
-      public java.lang.String getQ() {
-        return q;
-      }
-
-      /** Full-text search query string. */
-      public List setQ(java.lang.String q) {
-        this.q = q;
-        return this;
-      }
-
       /** Set to true to show books available for preorder. Defaults to false. */
       @com.google.api.client.util.Key
       private java.lang.Boolean showPreorders;
@@ -8802,6 +8904,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
       private java.lang.Long startIndex;
 
       /** Index of the first result to return (starts at 0)
+
+     [minimum: 0]
        */
       public java.lang.Long getStartIndex() {
         return startIndex;
@@ -9223,6 +9327,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         private java.lang.Long maxResults;
 
         /** Maximum number of results to return.
+
+       [minimum: 0] [maximum: 100]
          */
         public java.lang.Long getMaxResults() {
           return maxResults;
@@ -9278,6 +9384,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         private java.lang.Long startIndex;
 
         /** Index of the first result to return (starts at 0)
+
+       [minimum: 0]
          */
         public java.lang.Long getStartIndex() {
           return startIndex;
@@ -9491,10 +9599,12 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the books server.  After setting any optional
        * parameters, call the {@link Rate#execute()} method to invoke the remote operation.
        *
+       * @param rating Rating to be given to the volume.
+       * @param volumeId ID of the source volume.
        * @return the request
        */
-      public Rate rate() throws java.io.IOException {
-        Rate result = new Rate();
+      public Rate rate(java.lang.String rating, java.lang.String volumeId) throws java.io.IOException {
+        Rate result = new Rate(rating, volumeId);
         initialize(result);
         return result;
       }
@@ -9513,10 +9623,14 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
          * Rate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
+         * @param rating Rating to be given to the volume.
+         * @param volumeId ID of the source volume.
          * @since 1.13
          */
-        protected Rate() {
+        protected Rate(java.lang.String rating, java.lang.String volumeId) {
           super(Books.this, "POST", REST_PATH, null, com.google.api.services.books.v1.model.BooksVolumesRecommendedRateResponse.class);
+          this.rating = com.google.api.client.util.Preconditions.checkNotNull(rating, "Required parameter rating must be specified.");
+          this.volumeId = com.google.api.client.util.Preconditions.checkNotNull(volumeId, "Required parameter volumeId must be specified.");
         }
 
         @Override
@@ -9574,6 +9688,38 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return (Rate) super.setUploadProtocol(uploadProtocol);
         }
 
+        /** Rating to be given to the volume. */
+        @com.google.api.client.util.Key
+        private java.lang.String rating;
+
+        /** Rating to be given to the volume.
+         */
+        public java.lang.String getRating() {
+          return rating;
+        }
+
+        /** Rating to be given to the volume. */
+        public Rate setRating(java.lang.String rating) {
+          this.rating = rating;
+          return this;
+        }
+
+        /** ID of the source volume. */
+        @com.google.api.client.util.Key
+        private java.lang.String volumeId;
+
+        /** ID of the source volume.
+         */
+        public java.lang.String getVolumeId() {
+          return volumeId;
+        }
+
+        /** ID of the source volume. */
+        public Rate setVolumeId(java.lang.String volumeId) {
+          this.volumeId = volumeId;
+          return this;
+        }
+
         /**
          * ISO-639-1 language and ISO-3166-1 country code. Ex: 'en_US'. Used for generating
          * recommendations.
@@ -9596,22 +9742,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** Rating to be given to the volume. */
-        @com.google.api.client.util.Key
-        private java.lang.String rating;
-
-        /** Rating to be given to the volume.
-         */
-        public java.lang.String getRating() {
-          return rating;
-        }
-
-        /** Rating to be given to the volume. */
-        public Rate setRating(java.lang.String rating) {
-          this.rating = rating;
-          return this;
-        }
-
         /** String to identify the originator of this request. */
         @com.google.api.client.util.Key
         private java.lang.String source;
@@ -9625,22 +9755,6 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         /** String to identify the originator of this request. */
         public Rate setSource(java.lang.String source) {
           this.source = source;
-          return this;
-        }
-
-        /** ID of the source volume. */
-        @com.google.api.client.util.Key
-        private java.lang.String volumeId;
-
-        /** ID of the source volume.
-         */
-        public java.lang.String getVolumeId() {
-          return volumeId;
-        }
-
-        /** ID of the source volume. */
-        public Rate setVolumeId(java.lang.String volumeId) {
-          this.volumeId = volumeId;
           return this;
         }
 
@@ -9799,6 +9913,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         private java.lang.Long maxResults;
 
         /** Maximum number of results to return.
+
+       [minimum: 0] [maximum: 40]
          */
         public java.lang.Long getMaxResults() {
           return maxResults;
@@ -9847,6 +9963,8 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
         private java.lang.Long startIndex;
 
         /** Index of the first result to return (starts at 0)
+
+       [minimum: 0]
          */
         public java.lang.Long getStartIndex() {
           return startIndex;

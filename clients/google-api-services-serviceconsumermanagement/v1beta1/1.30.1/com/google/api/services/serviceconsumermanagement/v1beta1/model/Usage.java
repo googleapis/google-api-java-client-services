@@ -58,13 +58,6 @@ public final class Usage extends com.google.api.client.json.GenericJson {
   private java.util.List<UsageRule> rules;
 
   /**
-   * The configuration of a per-product per-project service identity.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ServiceIdentity serviceIdentity;
-
-  /**
    * The full resource name of a channel used for sending notifications to the service producer.
    * Google Service Management currently only supports [Google Cloud
    * Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud
@@ -124,23 +117,6 @@ public final class Usage extends com.google.api.client.json.GenericJson {
    */
   public Usage setRules(java.util.List<UsageRule> rules) {
     this.rules = rules;
-    return this;
-  }
-
-  /**
-   * The configuration of a per-product per-project service identity.
-   * @return value or {@code null} for none
-   */
-  public ServiceIdentity getServiceIdentity() {
-    return serviceIdentity;
-  }
-
-  /**
-   * The configuration of a per-product per-project service identity.
-   * @param serviceIdentity serviceIdentity or {@code null} for none
-   */
-  public Usage setServiceIdentity(ServiceIdentity serviceIdentity) {
-    this.serviceIdentity = serviceIdentity;
     return this;
   }
 

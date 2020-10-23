@@ -44,6 +44,14 @@ public final class QuotaError extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Contains additional information about the quota error. If available, `status.code` will be non
+   * zero.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Status status;
+
+  /**
    * Subject to whom this error applies. See the specific enum for more details on this field. For
    * example, "clientip:" or "project:".
    * The value may be {@code null}.
@@ -82,6 +90,25 @@ public final class QuotaError extends com.google.api.client.json.GenericJson {
    */
   public QuotaError setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Contains additional information about the quota error. If available, `status.code` will be non
+   * zero.
+   * @return value or {@code null} for none
+   */
+  public Status getStatus() {
+    return status;
+  }
+
+  /**
+   * Contains additional information about the quota error. If available, `status.code` will be non
+   * zero.
+   * @param status status or {@code null} for none
+   */
+  public QuotaError setStatus(Status status) {
+    this.status = status;
     return this;
   }
 

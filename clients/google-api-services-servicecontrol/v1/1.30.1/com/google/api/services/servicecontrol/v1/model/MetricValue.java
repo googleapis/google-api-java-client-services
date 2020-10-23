@@ -51,7 +51,8 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
   private java.lang.Double doubleValue;
 
   /**
-   * The end of the time period over which this metric value's measurement applies.
+   * The end of the time period over which this metric value's measurement applies. If not
+   * specified, google.api.servicecontrol.v1.Operation.end_time will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +84,8 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
   /**
    * The start of the time period over which this metric value's measurement applies. The time
    * period has different semantics for different metric types (cumulative, delta, and gauge). See
-   * the metric definition documentation in the service configuration for details.
+   * the metric definition documentation in the service configuration for details. If not specified,
+   * google.api.servicecontrol.v1.Operation.start_time will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +150,8 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end of the time period over which this metric value's measurement applies.
+   * The end of the time period over which this metric value's measurement applies. If not
+   * specified, google.api.servicecontrol.v1.Operation.end_time will be used.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -156,7 +159,8 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end of the time period over which this metric value's measurement applies.
+   * The end of the time period over which this metric value's measurement applies. If not
+   * specified, google.api.servicecontrol.v1.Operation.end_time will be used.
    * @param endTime endTime or {@code null} for none
    */
   public MetricValue setEndTime(String endTime) {
@@ -222,7 +226,8 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
   /**
    * The start of the time period over which this metric value's measurement applies. The time
    * period has different semantics for different metric types (cumulative, delta, and gauge). See
-   * the metric definition documentation in the service configuration for details.
+   * the metric definition documentation in the service configuration for details. If not specified,
+   * google.api.servicecontrol.v1.Operation.start_time will be used.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -232,7 +237,8 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
   /**
    * The start of the time period over which this metric value's measurement applies. The time
    * period has different semantics for different metric types (cumulative, delta, and gauge). See
-   * the metric definition documentation in the service configuration for details.
+   * the metric definition documentation in the service configuration for details. If not specified,
+   * google.api.servicecontrol.v1.Operation.start_time will be used.
    * @param startTime startTime or {@code null} for none
    */
   public MetricValue setStartTime(String startTime) {

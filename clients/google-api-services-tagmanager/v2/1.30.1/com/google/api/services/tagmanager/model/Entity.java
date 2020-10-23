@@ -38,7 +38,14 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   private java.lang.String changeStatus;
 
   /**
-   * The Folder being represented by the entity.
+   * The client being represented by the entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Client client;
+
+  /**
+   * The folder being represented by the entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +90,24 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Folder being represented by the entity.
+   * The client being represented by the entity.
+   * @return value or {@code null} for none
+   */
+  public Client getClient() {
+    return client;
+  }
+
+  /**
+   * The client being represented by the entity.
+   * @param client client or {@code null} for none
+   */
+  public Entity setClient(Client client) {
+    this.client = client;
+    return this;
+  }
+
+  /**
+   * The folder being represented by the entity.
    * @return value or {@code null} for none
    */
   public Folder getFolder() {
@@ -91,7 +115,7 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Folder being represented by the entity.
+   * The folder being represented by the entity.
    * @param folder folder or {@code null} for none
    */
   public Entity setFolder(Folder folder) {

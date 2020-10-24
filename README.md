@@ -39,6 +39,7 @@ packages on [Maven Central][maven-search].
 | Apigee API | [v1](clients/google-api-services-apigee/v1) |
 | App Engine Admin API | [v1](clients/google-api-services-appengine/v1), [v1alpha](clients/google-api-services-appengine/v1alpha), [v1beta](clients/google-api-services-appengine/v1beta), [v1beta4](clients/google-api-services-appengine/v1beta4), [v1beta5](clients/google-api-services-appengine/v1beta5) |
 | Apps Script API | [v1](clients/google-api-services-script/v1) |
+| Area120 Tables API | [v1alpha1](clients/google-api-services-area120tables/v1alpha1) |
 | Artifact Registry API | [v1beta1](clients/google-api-services-artifactregistry/v1beta1) |
 | Assured Workloads API | [v1beta1](clients/google-api-services-assuredworkloads/v1beta1) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
@@ -117,6 +118,7 @@ packages on [Maven Central][maven-search].
 | Enterprise Apps Reseller API | [v1](clients/google-api-services-reseller/v1) |
 | Enterprise License Manager API | [v1](clients/google-api-services-licensing/v1) |
 | Error Reporting API | [v1beta1](clients/google-api-services-clouderrorreporting/v1beta1) |
+| Eventarc API | [v1beta1](clients/google-api-services-eventarc/v1beta1) |
 | Fact Check Tools API | [v1alpha1](clients/google-api-services-factchecktools/v1alpha1) |
 | Firebase Cloud Messaging API | [v1](clients/google-api-services-fcm/v1) |
 | Firebase Dynamic Links API | [v1](clients/google-api-services-firebasedynamiclinks/v1) |

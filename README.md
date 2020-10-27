@@ -50,6 +50,7 @@ packages on [Maven Central][maven-search].
 | Blogger API v3 | [v2](clients/google-api-services-blogger/v2), [v3](clients/google-api-services-blogger/v3) |
 | Books API | [v1](clients/google-api-services-books/v1) |
 | Calendar API | [v3](clients/google-api-services-calendar/v3) |
+| Certificate Authority API | [v1beta1](clients/google-api-services-privateca/v1beta1) |
 | Chrome UX Report API | [v1](clients/google-api-services-chromeuxreport/v1) |
 | Chrome Verified Access API | [v1](clients/google-api-services-verifiedaccess/v1) |
 | Cloud Asset API | [v1](clients/google-api-services-cloudasset/v1), [v1beta1](clients/google-api-services-cloudasset/v1beta1), [v1p1beta1](clients/google-api-services-cloudasset/v1p1beta1), [v1p4beta1](clients/google-api-services-cloudasset/v1p4beta1), [v1p5beta1](clients/google-api-services-cloudasset/v1p5beta1) |
@@ -184,6 +185,7 @@ packages on [Maven Central][maven-search].
 | Remote Build Execution API | [v1](clients/google-api-services-remotebuildexecution/v1), [v1alpha](clients/google-api-services-remotebuildexecution/v1alpha), [v2](clients/google-api-services-remotebuildexecution/v2) |
 | SAS Portal API | [v1alpha1](clients/google-api-services-sasportal/v1alpha1) |
 | SAS Portal API (Testing) | [v1alpha1](clients/google-api-services-prod_tt_sasportal/v1alpha1) |
+| Safe Browsing API | [v4](clients/google-api-services-safebrowsing/v4) |
 | Search Ads 360 API | [v2](clients/google-api-services-doubleclicksearch/v2) |
 | Search Console API | [v3](clients/google-api-services-webmasters/v3) |
 | Secret Manager API | [v1](clients/google-api-services-secretmanager/v1), [v1beta1](clients/google-api-services-secretmanager/v1beta1) |

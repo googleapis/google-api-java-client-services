@@ -158,7 +158,9 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      *
      * @param name Required. The resource name of the metadata to retrieve. This name field is specified in the URL
      *        path and not URL parameters. Property is a numeric Google Analytics GA4 Property
-     *        identifier. Example: properties/1234/metadata
+     *        identifier. To learn more, see [where to find your Property
+     *        ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+     *        Example: properties/1234/metadata
      * @return the request
      */
     public GetMetadata getMetadata(java.lang.String name) throws java.io.IOException {
@@ -193,7 +195,9 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        *
        * @param name Required. The resource name of the metadata to retrieve. This name field is specified in the URL
      *        path and not URL parameters. Property is a numeric Google Analytics GA4 Property
-     *        identifier. Example: properties/1234/metadata
+     *        identifier. To learn more, see [where to find your Property
+     *        ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+     *        Example: properties/1234/metadata
        * @since 1.13
        */
       protected GetMetadata(java.lang.String name) {
@@ -274,14 +278,17 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       /**
        * Required. The resource name of the metadata to retrieve. This name field is specified in
        * the URL path and not URL parameters. Property is a numeric Google Analytics GA4 Property
-       * identifier. Example: properties/1234/metadata
+       * identifier. To learn more, see [where to find your Property
+       * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+       * Example: properties/1234/metadata
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource name of the metadata to retrieve. This name field is specified in the URL
-     path and not URL parameters. Property is a numeric Google Analytics GA4 Property identifier.
-     Example: properties/1234/metadata
+     path and not URL parameters. Property is a numeric Google Analytics GA4 Property identifier. To
+     learn more, see [where to find your Property ID](https://developers.google.com/analytics/trusted-
+     testing/analytics-data/property-id). Example: properties/1234/metadata
        */
       public java.lang.String getName() {
         return name;
@@ -290,7 +297,9 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       /**
        * Required. The resource name of the metadata to retrieve. This name field is specified in
        * the URL path and not URL parameters. Property is a numeric Google Analytics GA4 Property
-       * identifier. Example: properties/1234/metadata
+       * identifier. To learn more, see [where to find your Property
+       * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+       * Example: properties/1234/metadata
        */
       public GetMetadata setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

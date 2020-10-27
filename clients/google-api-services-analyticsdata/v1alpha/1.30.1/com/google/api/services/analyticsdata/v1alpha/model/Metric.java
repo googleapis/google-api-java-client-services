@@ -17,8 +17,8 @@
 package com.google.api.services.analyticsdata.v1alpha.model;
 
 /**
- * The quantitative measurements of a report. For example, the metric eventCount is the total number
- * of events. Requests are allowed up to 10 metrics.
+ * The quantitative measurements of a report. For example, the metric `eventCount` is the total
+ * number of events. Requests are allowed up to 10 metrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Data API. For a detailed explanation
@@ -33,22 +33,27 @@ public final class Metric extends com.google.api.client.json.GenericJson {
 
   /**
    * A mathematical expression for derived metrics. For example, the metric Event count per user is
-   * eventCount/totalUsers.
+   * `eventCount/totalUsers`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String expression;
 
   /**
-   * Indicates if a metric is invisible. If a metric is invisible, the metric is not in the
-   * response, but can be used in filters, order_bys or being referred to in a metric expression.
+   * Indicates if a metric is invisible in the report response. If a metric is invisible, the metric
+   * will not produce a column in the response, but can be used in `metricFilter`, `orderBys`, or a
+   * metric `expression`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean invisible;
 
   /**
-   * The name of the metric.
+   * The name of the metric. See the [API Metrics](https://developers.google.com/analytics/trusted-
+   * testing/analytics-data/api-schema#metrics) for the list of metric names. If `expression` is
+   * specified, `name` can be any string that you would like. For example if `expression` is
+   * `screenPageViews/sessions`, you could call that metric's name = `viewsPerSession`. Metrics are
+   * referenced by `name` in `metricFilter`, `orderBys`, and metric `expression`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +61,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
 
   /**
    * A mathematical expression for derived metrics. For example, the metric Event count per user is
-   * eventCount/totalUsers.
+   * `eventCount/totalUsers`.
    * @return value or {@code null} for none
    */
   public java.lang.String getExpression() {
@@ -65,7 +70,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
 
   /**
    * A mathematical expression for derived metrics. For example, the metric Event count per user is
-   * eventCount/totalUsers.
+   * `eventCount/totalUsers`.
    * @param expression expression or {@code null} for none
    */
   public Metric setExpression(java.lang.String expression) {
@@ -74,8 +79,9 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates if a metric is invisible. If a metric is invisible, the metric is not in the
-   * response, but can be used in filters, order_bys or being referred to in a metric expression.
+   * Indicates if a metric is invisible in the report response. If a metric is invisible, the metric
+   * will not produce a column in the response, but can be used in `metricFilter`, `orderBys`, or a
+   * metric `expression`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInvisible() {
@@ -83,8 +89,9 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates if a metric is invisible. If a metric is invisible, the metric is not in the
-   * response, but can be used in filters, order_bys or being referred to in a metric expression.
+   * Indicates if a metric is invisible in the report response. If a metric is invisible, the metric
+   * will not produce a column in the response, but can be used in `metricFilter`, `orderBys`, or a
+   * metric `expression`.
    * @param invisible invisible or {@code null} for none
    */
   public Metric setInvisible(java.lang.Boolean invisible) {
@@ -93,7 +100,11 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the metric.
+   * The name of the metric. See the [API Metrics](https://developers.google.com/analytics/trusted-
+   * testing/analytics-data/api-schema#metrics) for the list of metric names. If `expression` is
+   * specified, `name` can be any string that you would like. For example if `expression` is
+   * `screenPageViews/sessions`, you could call that metric's name = `viewsPerSession`. Metrics are
+   * referenced by `name` in `metricFilter`, `orderBys`, and metric `expression`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -101,7 +112,11 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the metric.
+   * The name of the metric. See the [API Metrics](https://developers.google.com/analytics/trusted-
+   * testing/analytics-data/api-schema#metrics) for the list of metric names. If `expression` is
+   * specified, `name` can be any string that you would like. For example if `expression` is
+   * `screenPageViews/sessions`, you could call that metric's name = `viewsPerSession`. Metrics are
+   * referenced by `name` in `metricFilter`, `orderBys`, and metric `expression`.
    * @param name name or {@code null} for none
    */
   public Metric setName(java.lang.String name) {

@@ -17,9 +17,9 @@
 package com.google.api.services.analyticsdata.v1alpha.model;
 
 /**
- * Dimensions are attributes of your data. For example, the dimension City indicates the city, for
- * example, "Paris" or "New York", from which an event originates. Requests are allowed up to 8
- * dimensions.
+ * Dimensions are attributes of your data. For example, the dimension city indicates the city from
+ * which an event originates. Dimension values in report responses are strings; for example, city
+ * could be "Paris" or "New York". Requests are allowed up to 8 dimensions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Data API. For a detailed explanation
@@ -41,7 +41,12 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   private DimensionExpression dimensionExpression;
 
   /**
-   * The name of the dimension.
+   * The name of the dimension. See the [API Dimensions](https://developers.google.com/analytics
+   * /trusted-testing/analytics-data/api-schema#dimensions) for the list of dimension names. If
+   * `dimensionExpression` is specified, `name` can be any string that you would like. For example
+   * if a `dimensionExpression` concatenates `country` and `city`, you could call that dimension
+   * `countryAndCity`. Dimensions are referenced by `name` in `dimensionFilter`, `orderBys`,
+   * `dimensionExpression`, and `pivots`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +72,12 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the dimension.
+   * The name of the dimension. See the [API Dimensions](https://developers.google.com/analytics
+   * /trusted-testing/analytics-data/api-schema#dimensions) for the list of dimension names. If
+   * `dimensionExpression` is specified, `name` can be any string that you would like. For example
+   * if a `dimensionExpression` concatenates `country` and `city`, you could call that dimension
+   * `countryAndCity`. Dimensions are referenced by `name` in `dimensionFilter`, `orderBys`,
+   * `dimensionExpression`, and `pivots`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -75,7 +85,12 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the dimension.
+   * The name of the dimension. See the [API Dimensions](https://developers.google.com/analytics
+   * /trusted-testing/analytics-data/api-schema#dimensions) for the list of dimension names. If
+   * `dimensionExpression` is specified, `name` can be any string that you would like. For example
+   * if a `dimensionExpression` concatenates `country` and `city`, you could call that dimension
+   * `countryAndCity`. Dimensions are referenced by `name` in `dimensionFilter`, `orderBys`,
+   * `dimensionExpression`, and `pivots`.
    * @param name name or {@code null} for none
    */
   public Dimension setName(java.lang.String name) {

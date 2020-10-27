@@ -32,7 +32,8 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. The content of the input in string format. We recommend the total content be less
-   * than 30k codepoints. Use BatchTranslateText for larger text.
+   * than 30k codepoints. The max length of this field is 1024. Use BatchTranslateText for larger
+   * text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +99,8 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. The content of the input in string format. We recommend the total content be less
-   * than 30k codepoints. Use BatchTranslateText for larger text.
+   * than 30k codepoints. The max length of this field is 1024. Use BatchTranslateText for larger
+   * text.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getContents() {
@@ -107,7 +109,8 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. The content of the input in string format. We recommend the total content be less
-   * than 30k codepoints. Use BatchTranslateText for larger text.
+   * than 30k codepoints. The max length of this field is 1024. Use BatchTranslateText for larger
+   * text.
    * @param contents contents or {@code null} for none
    */
   public TranslateTextRequest setContents(java.util.List<java.lang.String> contents) {

@@ -39,8 +39,7 @@ public final class CloudRunService extends com.google.api.client.json.GenericJso
   private java.lang.String path;
 
   /**
-   * Optional. The region the Cloud Run service is deployed in. If not set, the location of the
-   * trigger is used. For triggers in the "global" location, setting this field is mandatory.
+   * Required. The region the Cloud Run service is deployed in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +76,7 @@ public final class CloudRunService extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The region the Cloud Run service is deployed in. If not set, the location of the
-   * trigger is used. For triggers in the "global" location, setting this field is mandatory.
+   * Required. The region the Cloud Run service is deployed in.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -86,8 +84,7 @@ public final class CloudRunService extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The region the Cloud Run service is deployed in. If not set, the location of the
-   * trigger is used. For triggers in the "global" location, setting this field is mandatory.
+   * Required. The region the Cloud Run service is deployed in.
    * @param region region or {@code null} for none
    */
   public CloudRunService setRegion(java.lang.String region) {

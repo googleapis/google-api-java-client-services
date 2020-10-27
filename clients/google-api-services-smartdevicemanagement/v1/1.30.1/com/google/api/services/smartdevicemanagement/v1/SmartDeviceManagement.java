@@ -568,17 +568,13 @@ public class SmartDeviceManagement extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Optional filter to list devices. Filters can match the exact assignee (could be a
-         * structure or a room). E.g. 'assignee=enterprises/XYZ/structures/abc' Also could filter by
-         * parent (group): 'parent=enterprises/XYZ/groups/jkl' or filter by device custom name
-         * (substring match): 'customName=wing'
+         * Optional filter to list devices. Filters can be done on: Device custom name (substring
+         * match): 'customName=wing'
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional filter to list devices. Filters can match the exact assignee (could be a structure or a
-       room). E.g. 'assignee=enterprises/XYZ/structures/abc' Also could filter by parent (group):
-       'parent=enterprises/XYZ/groups/jkl' or filter by device custom name (substring match):
+        /** Optional filter to list devices. Filters can be done on: Device custom name (substring match):
        'customName=wing'
          */
         public java.lang.String getFilter() {
@@ -586,10 +582,8 @@ public class SmartDeviceManagement extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Optional filter to list devices. Filters can match the exact assignee (could be a
-         * structure or a room). E.g. 'assignee=enterprises/XYZ/structures/abc' Also could filter by
-         * parent (group): 'parent=enterprises/XYZ/groups/jkl' or filter by device custom name
-         * (substring match): 'customName=wing'
+         * Optional filter to list devices. Filters can be done on: Device custom name (substring
+         * match): 'customName=wing'
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -935,27 +929,17 @@ public class SmartDeviceManagement extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional filter to list structures. Filters can match the exact album assigned to the
-         * structure. E.g. 'album=enterprises/XYZ/albums/abc' It also support filtering by parent
-         * (only groups for now): E.g. 'parent=enterprises/XYZ/groups/124'
-         */
+        /** Optional filter to list structures. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional filter to list structures. Filters can match the exact album assigned to the structure.
-       E.g. 'album=enterprises/XYZ/albums/abc' It also support filtering by parent (only groups for now):
-       E.g. 'parent=enterprises/XYZ/groups/124'
+        /** Optional filter to list structures.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /**
-         * Optional filter to list structures. Filters can match the exact album assigned to the
-         * structure. E.g. 'album=enterprises/XYZ/albums/abc' It also support filtering by parent
-         * (only groups for now): E.g. 'parent=enterprises/XYZ/groups/124'
-         */
+        /** Optional filter to list structures. */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;

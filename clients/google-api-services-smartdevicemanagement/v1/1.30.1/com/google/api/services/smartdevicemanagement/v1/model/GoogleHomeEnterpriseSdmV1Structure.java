@@ -38,13 +38,6 @@ public final class GoogleHomeEnterpriseSdmV1Structure extends com.google.api.cli
   private java.lang.String name;
 
   /**
-   * Assignee details of the structure.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleHomeEnterpriseSdmV1StructureParentRelation> parentRelations;
-
-  /**
    * Structure traits.
    * The value may be {@code null}.
    */
@@ -65,23 +58,6 @@ public final class GoogleHomeEnterpriseSdmV1Structure extends com.google.api.cli
    */
   public GoogleHomeEnterpriseSdmV1Structure setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Assignee details of the structure.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleHomeEnterpriseSdmV1StructureParentRelation> getParentRelations() {
-    return parentRelations;
-  }
-
-  /**
-   * Assignee details of the structure.
-   * @param parentRelations parentRelations or {@code null} for none
-   */
-  public GoogleHomeEnterpriseSdmV1Structure setParentRelations(java.util.List<GoogleHomeEnterpriseSdmV1StructureParentRelation> parentRelations) {
-    this.parentRelations = parentRelations;
     return this;
   }
 

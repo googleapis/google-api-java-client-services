@@ -39,9 +39,9 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy extends com.googl
   private java.lang.Integer code;
 
   /**
-   * The TTL (in seconds) to cache responses with the corresponding status code for. The maximum
-   * allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted
-   * from the cache before the defined TTL.
+   * The TTL (in seconds) for which to cache responses with the corresponding status code. The
+   * maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be
+   * evicted from the cache before the defined TTL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,9 +69,9 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy extends com.googl
   }
 
   /**
-   * The TTL (in seconds) to cache responses with the corresponding status code for. The maximum
-   * allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted
-   * from the cache before the defined TTL.
+   * The TTL (in seconds) for which to cache responses with the corresponding status code. The
+   * maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be
+   * evicted from the cache before the defined TTL.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTtl() {
@@ -79,9 +79,9 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy extends com.googl
   }
 
   /**
-   * The TTL (in seconds) to cache responses with the corresponding status code for. The maximum
-   * allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted
-   * from the cache before the defined TTL.
+   * The TTL (in seconds) for which to cache responses with the corresponding status code. The
+   * maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be
+   * evicted from the cache before the defined TTL.
    * @param ttl ttl or {@code null} for none
    */
   public BackendBucketCdnPolicyNegativeCachingPolicy setTtl(java.lang.Integer ttl) {

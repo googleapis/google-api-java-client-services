@@ -117,6 +117,13 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * Configure logging on this health check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HealthCheckLogConfig logConfig;
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -339,6 +346,23 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    */
   public HealthCheck setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Configure logging on this health check.
+   * @return value or {@code null} for none
+   */
+  public HealthCheckLogConfig getLogConfig() {
+    return logConfig;
+  }
+
+  /**
+   * Configure logging on this health check.
+   * @param logConfig logConfig or {@code null} for none
+   */
+  public HealthCheck setLogConfig(HealthCheckLogConfig logConfig) {
+    this.logConfig = logConfig;
     return this;
   }
 

@@ -94,11 +94,15 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
   /**
    * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching
    * for common errors or redirects. This can reduce the load on your origin and improve end-user
-   * experience by reducing response latency. By default, Cloud CDN will apply the following default
-   * TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m
-   * HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method
-   * Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s These defaults can be
-   * overridden in negative_caching_policy
+   * experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or
+   * USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that
+   * lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to
+   * FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code,
+   * and override any caching headers. By default, Cloud CDN will apply the following default TTLs
+   * to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404
+   * (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found),
+   * 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in
+   * negative_caching_policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -298,11 +302,15 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
   /**
    * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching
    * for common errors or redirects. This can reduce the load on your origin and improve end-user
-   * experience by reducing response latency. By default, Cloud CDN will apply the following default
-   * TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m
-   * HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method
-   * Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s These defaults can be
-   * overridden in negative_caching_policy
+   * experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or
+   * USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that
+   * lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to
+   * FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code,
+   * and override any caching headers. By default, Cloud CDN will apply the following default TTLs
+   * to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404
+   * (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found),
+   * 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in
+   * negative_caching_policy.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNegativeCaching() {
@@ -312,11 +320,15 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
   /**
    * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching
    * for common errors or redirects. This can reduce the load on your origin and improve end-user
-   * experience by reducing response latency. By default, Cloud CDN will apply the following default
-   * TTLs to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m
-   * HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method
-   * Not Found), 421 (Misdirected Request), 501 (Not Implemented): 60s These defaults can be
-   * overridden in negative_caching_policy
+   * experience by reducing response latency. When the cache mode is set to CACHE_ALL_STATIC or
+   * USE_ORIGIN_HEADERS, negative caching applies to responses with the specified response code that
+   * lack any Cache-Control, Expires, or Pragma: no-cache directives. When the cache mode is set to
+   * FORCE_CACHE_ALL, negative caching applies to all responses with the specified response code,
+   * and override any caching headers. By default, Cloud CDN will apply the following default TTLs
+   * to these status codes: HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m HTTP 404
+   * (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s HTTP 405 (Method Not Found),
+   * 421 (Misdirected Request), 501 (Not Implemented): 60s. These defaults can be overridden in
+   * negative_caching_policy.
    * @param negativeCaching negativeCaching or {@code null} for none
    */
   public BackendBucketCdnPolicy setNegativeCaching(java.lang.Boolean negativeCaching) {

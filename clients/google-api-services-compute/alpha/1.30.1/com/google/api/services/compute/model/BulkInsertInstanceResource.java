@@ -50,12 +50,32 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private InstanceProperties instanceProperties;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LocationPolicy locationPolicy;
+
+  /**
    * The minimum number of instances to create. If no min_count is specified then count is used as
    * the default value. If min_count instances cannot be created, then no instances will be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long minCount;
+
+  /**
+   * Instance name pattern. Name pattern includes a parameter to specify the auto-incrementing
+   * portion of the name, in a form of consecutive hash (#) chars, each of them corresponding to one
+   * digit of an instance name. For example: name_pattern = inst-####-prod will generate names
+   * starting with inst-0001-prod, inst-0002-prod, up to required count. If there exist instances
+   * matching the name pattern in the same project and zone, the initial instance number will be
+   * equal to the maximum existing instance number + 1 (e.g. if there exists an instance with name
+   * inst-0030-prod, then the generated names will start with inst-0031-prod). The name pattern
+   * placeholder #...# can contain up to 18 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String namePattern;
 
   /**
    * List of predefined names. The number of names provided must be equal to count.
@@ -130,6 +150,21 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public LocationPolicy getLocationPolicy() {
+    return locationPolicy;
+  }
+
+  /**
+   * @param locationPolicy locationPolicy or {@code null} for none
+   */
+  public BulkInsertInstanceResource setLocationPolicy(LocationPolicy locationPolicy) {
+    this.locationPolicy = locationPolicy;
+    return this;
+  }
+
+  /**
    * The minimum number of instances to create. If no min_count is specified then count is used as
    * the default value. If min_count instances cannot be created, then no instances will be created.
    * @return value or {@code null} for none
@@ -145,6 +180,37 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
    */
   public BulkInsertInstanceResource setMinCount(java.lang.Long minCount) {
     this.minCount = minCount;
+    return this;
+  }
+
+  /**
+   * Instance name pattern. Name pattern includes a parameter to specify the auto-incrementing
+   * portion of the name, in a form of consecutive hash (#) chars, each of them corresponding to one
+   * digit of an instance name. For example: name_pattern = inst-####-prod will generate names
+   * starting with inst-0001-prod, inst-0002-prod, up to required count. If there exist instances
+   * matching the name pattern in the same project and zone, the initial instance number will be
+   * equal to the maximum existing instance number + 1 (e.g. if there exists an instance with name
+   * inst-0030-prod, then the generated names will start with inst-0031-prod). The name pattern
+   * placeholder #...# can contain up to 18 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNamePattern() {
+    return namePattern;
+  }
+
+  /**
+   * Instance name pattern. Name pattern includes a parameter to specify the auto-incrementing
+   * portion of the name, in a form of consecutive hash (#) chars, each of them corresponding to one
+   * digit of an instance name. For example: name_pattern = inst-####-prod will generate names
+   * starting with inst-0001-prod, inst-0002-prod, up to required count. If there exist instances
+   * matching the name pattern in the same project and zone, the initial instance number will be
+   * equal to the maximum existing instance number + 1 (e.g. if there exists an instance with name
+   * inst-0030-prod, then the generated names will start with inst-0031-prod). The name pattern
+   * placeholder #...# can contain up to 18 characters.
+   * @param namePattern namePattern or {@code null} for none
+   */
+  public BulkInsertInstanceResource setNamePattern(java.lang.String namePattern) {
+    this.namePattern = namePattern;
     return this;
   }
 

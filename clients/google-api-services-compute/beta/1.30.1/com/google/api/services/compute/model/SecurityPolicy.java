@@ -17,10 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Cloud Armor Security Policy resource.
+ * Represents a Google Cloud Armor security policy resource.
  *
- * Only external backend services that use load balancers can reference a Security Policy. For more
- * information, read  Cloud Armor Security Policy Concepts. (== resource_for
+ * Only external backend services that use load balancers can reference a security policy. For more
+ * information, see  Google Cloud Armor security policy overview. (== resource_for
  * {$api_version}.securityPolicies ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

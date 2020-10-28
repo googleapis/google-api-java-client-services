@@ -45,6 +45,18 @@ package com.google.api.services.compute.model;
 public final class TargetHttpsProxy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how
+   * the proxy should authorize inbound traffic. If left blank, access will not be restricted by an
+   * authorization policy. Refer to the AuthorizationPolicy resource for additional details.
+   * authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules
+   * with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no
+   * impact.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String authorizationPolicy;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -84,6 +96,22 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * This field only applies when the forwarding rule that references this target proxy has a
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   *
+   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
+   * the IP address and port specified in the forwarding rule. This is generally useful when using
+   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
+   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
+   * them.
+   *
+   * The default is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean proxyBind;
+
+  /**
    * Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines
    * whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE,
    * ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used.
@@ -111,6 +139,17 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   private java.lang.String selfLink;
 
   /**
+   * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
+   * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
+   * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
+   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field
+   * currently has no impact.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serverTlsPolicy;
+
+  /**
    * URLs to SslCertificate resources that are used to authenticate connections between users and
    * the load balancer. At least one SSL certificate must be specified. Currently, you may specify
    * up to 15 SSL certificates.
@@ -136,6 +175,33 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String urlMap;
+
+  /**
+   * Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how
+   * the proxy should authorize inbound traffic. If left blank, access will not be restricted by an
+   * authorization policy. Refer to the AuthorizationPolicy resource for additional details.
+   * authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules
+   * with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no
+   * impact.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthorizationPolicy() {
+    return authorizationPolicy;
+  }
+
+  /**
+   * Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how
+   * the proxy should authorize inbound traffic. If left blank, access will not be restricted by an
+   * authorization policy. Refer to the AuthorizationPolicy resource for additional details.
+   * authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules
+   * with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no
+   * impact.
+   * @param authorizationPolicy authorizationPolicy or {@code null} for none
+   */
+  public TargetHttpsProxy setAuthorizationPolicy(java.lang.String authorizationPolicy) {
+    this.authorizationPolicy = authorizationPolicy;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -231,6 +297,41 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * This field only applies when the forwarding rule that references this target proxy has a
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   *
+   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
+   * the IP address and port specified in the forwarding rule. This is generally useful when using
+   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
+   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
+   * them.
+   *
+   * The default is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getProxyBind() {
+    return proxyBind;
+  }
+
+  /**
+   * This field only applies when the forwarding rule that references this target proxy has a
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   *
+   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
+   * the IP address and port specified in the forwarding rule. This is generally useful when using
+   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
+   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
+   * them.
+   *
+   * The default is false.
+   * @param proxyBind proxyBind or {@code null} for none
+   */
+  public TargetHttpsProxy setProxyBind(java.lang.Boolean proxyBind) {
+    this.proxyBind = proxyBind;
+    return this;
+  }
+
+  /**
    * Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines
    * whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE,
    * ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used.
@@ -290,6 +391,31 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    */
   public TargetHttpsProxy setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
+   * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
+   * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
+   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field
+   * currently has no impact.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServerTlsPolicy() {
+    return serverTlsPolicy;
+  }
+
+  /**
+   * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
+   * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
+   * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
+   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field
+   * currently has no impact.
+   * @param serverTlsPolicy serverTlsPolicy or {@code null} for none
+   */
+  public TargetHttpsProxy setServerTlsPolicy(java.lang.String serverTlsPolicy) {
+    this.serverTlsPolicy = serverTlsPolicy;
     return this;
   }
 

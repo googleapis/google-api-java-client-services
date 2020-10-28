@@ -68,6 +68,20 @@ public final class GoogleCloudDatacatalogV1beta1Taxonomy extends com.google.api.
   private java.lang.String name;
 
   /**
+   * Output only. Number of policy tags contained in this taxonomy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer policyTagCount;
+
+  /**
+   * Output only. Timestamps about this taxonomy. Only create_time and update_time are used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1beta1SystemTimestamps taxonomyTimestamps;
+
+  /**
    * Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to
    * an empty list.
    * @return value or {@code null} for none
@@ -144,6 +158,40 @@ public final class GoogleCloudDatacatalogV1beta1Taxonomy extends com.google.api.
    */
   public GoogleCloudDatacatalogV1beta1Taxonomy setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Number of policy tags contained in this taxonomy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPolicyTagCount() {
+    return policyTagCount;
+  }
+
+  /**
+   * Output only. Number of policy tags contained in this taxonomy.
+   * @param policyTagCount policyTagCount or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1Taxonomy setPolicyTagCount(java.lang.Integer policyTagCount) {
+    this.policyTagCount = policyTagCount;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamps about this taxonomy. Only create_time and update_time are used.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1SystemTimestamps getTaxonomyTimestamps() {
+    return taxonomyTimestamps;
+  }
+
+  /**
+   * Output only. Timestamps about this taxonomy. Only create_time and update_time are used.
+   * @param taxonomyTimestamps taxonomyTimestamps or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1Taxonomy setTaxonomyTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestamps taxonomyTimestamps) {
+    this.taxonomyTimestamps = taxonomyTimestamps;
     return this;
   }
 

@@ -32,6 +32,13 @@ package com.google.api.services.datacatalog.v1beta1.model;
 public final class GoogleCloudDatacatalogV1beta1SerializedTaxonomy extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of policy types that are activated for a taxonomy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> activatedPolicyTypes;
+
+  /**
    * Description of the serialized taxonomy. The length of the description is limited to 2000 bytes
    * when encoded in UTF-8. If not set, defaults to an empty description.
    * The value may be {@code null}.
@@ -57,6 +64,23 @@ public final class GoogleCloudDatacatalogV1beta1SerializedTaxonomy extends com.g
     // hack to force ProGuard to consider GoogleCloudDatacatalogV1beta1SerializedPolicyTag used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudDatacatalogV1beta1SerializedPolicyTag.class);
+  }
+
+  /**
+   * A list of policy types that are activated for a taxonomy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getActivatedPolicyTypes() {
+    return activatedPolicyTypes;
+  }
+
+  /**
+   * A list of policy types that are activated for a taxonomy.
+   * @param activatedPolicyTypes activatedPolicyTypes or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1SerializedTaxonomy setActivatedPolicyTypes(java.util.List<java.lang.String> activatedPolicyTypes) {
+    this.activatedPolicyTypes = activatedPolicyTypes;
+    return this;
   }
 
   /**

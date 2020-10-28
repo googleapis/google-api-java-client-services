@@ -31,6 +31,13 @@ package com.google.api.services.datacatalog.v1beta1.model;
 public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.google.api.client.json.GenericJson {
 
   /**
+   * The description for this field. Defaults to an empty string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * The display name for this field. Defaults to an empty string.
    * The value may be {@code null}.
    */
@@ -68,6 +75,23 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogV1beta1FieldType type;
+
+  /**
+   * The description for this field. Defaults to an empty string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * The description for this field. Defaults to an empty string.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1TagTemplateField setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
 
   /**
    * The display name for this field. Defaults to an empty string.

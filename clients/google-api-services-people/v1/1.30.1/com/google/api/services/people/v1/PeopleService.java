@@ -1724,22 +1724,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-       * ReadSourceType.PROFILE if not set.
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> sources;
 
-      /** Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-     ReadSourceType.PROFILE if not set.
+      /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+     READ_SOURCE_TYPE_PROFILE if not set.
        */
       public java.util.List<java.lang.String> getSources() {
         return sources;
       }
 
       /**
-       * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-       * ReadSourceType.PROFILE if not set.
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
        */
       public CreateContact setSources(java.util.List<java.lang.String> sources) {
         this.sources = sources;
@@ -2042,22 +2042,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-       * ReadSourceType.PROFILE if not set.
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> sources;
 
-      /** Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-     ReadSourceType.PROFILE if not set.
+      /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+     READ_SOURCE_TYPE_PROFILE if not set.
        */
       public java.util.List<java.lang.String> getSources() {
         return sources;
       }
 
       /**
-       * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-       * ReadSourceType.PROFILE if not set.
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
        */
       public DeleteContactPhoto setSources(java.util.List<java.lang.String> sources) {
         this.sources = sources;
@@ -2287,22 +2287,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. A mask of what source types to return. Defaults to ReadSourceType.PROFILE and
-       * ReadSourceType.CONTACT if not set.
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_PROFILE and
+       * READ_SOURCE_TYPE_CONTACT if not set.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> sources;
 
-      /** Optional. A mask of what source types to return. Defaults to ReadSourceType.PROFILE and
-     ReadSourceType.CONTACT if not set.
+      /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_PROFILE and
+     READ_SOURCE_TYPE_CONTACT if not set.
        */
       public java.util.List<java.lang.String> getSources() {
         return sources;
       }
 
       /**
-       * Optional. A mask of what source types to return. Defaults to ReadSourceType.PROFILE and
-       * ReadSourceType.CONTACT if not set.
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_PROFILE and
+       * READ_SOURCE_TYPE_CONTACT if not set.
        */
       public Get setSources(java.util.List<java.lang.String> sources) {
         this.sources = sources;
@@ -2518,22 +2518,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-       * ReadSourceType.PROFILE if not set.
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> sources;
 
-      /** Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-     ReadSourceType.PROFILE if not set.
+      /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+     READ_SOURCE_TYPE_PROFILE if not set.
        */
       public java.util.List<java.lang.String> getSources() {
         return sources;
       }
 
       /**
-       * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-       * ReadSourceType.PROFILE if not set.
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
        */
       public GetBatchGet setSources(java.util.List<java.lang.String> sources) {
         this.sources = sources;
@@ -3282,22 +3282,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-       * ReadSourceType.PROFILE if not set.
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> sources;
 
-      /** Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-     ReadSourceType.PROFILE if not set.
+      /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+     READ_SOURCE_TYPE_PROFILE if not set.
        */
       public java.util.List<java.lang.String> getSources() {
         return sources;
       }
 
       /**
-       * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-       * ReadSourceType.PROFILE if not set.
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
        */
       public UpdateContact setSources(java.util.List<java.lang.String> sources) {
         this.sources = sources;
@@ -3792,22 +3792,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-         * ReadSourceType.PROFILE if not set.
+         * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+         * READ_SOURCE_TYPE_PROFILE if not set.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> sources;
 
-        /** Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-       ReadSourceType.PROFILE if not set.
+        /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       READ_SOURCE_TYPE_PROFILE if not set.
          */
         public java.util.List<java.lang.String> getSources() {
           return sources;
         }
 
         /**
-         * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-         * ReadSourceType.PROFILE if not set.
+         * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+         * READ_SOURCE_TYPE_PROFILE if not set.
          */
         public List setSources(java.util.List<java.lang.String> sources) {
           this.sources = sources;

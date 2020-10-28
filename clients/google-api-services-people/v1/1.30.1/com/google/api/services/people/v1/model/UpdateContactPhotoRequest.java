@@ -51,8 +51,8 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
   private java.lang.String photoBytes;
 
   /**
-   * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-   * ReadSourceType.PROFILE if not set.
+   * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+   * READ_SOURCE_TYPE_PROFILE if not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,8 +133,8 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
   }
 
   /**
-   * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-   * ReadSourceType.PROFILE if not set.
+   * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+   * READ_SOURCE_TYPE_PROFILE if not set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSources() {
@@ -142,8 +142,8 @@ public final class UpdateContactPhotoRequest extends com.google.api.client.json.
   }
 
   /**
-   * Optional. A mask of what source types to return. Defaults to ReadSourceType.CONTACT and
-   * ReadSourceType.PROFILE if not set.
+   * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+   * READ_SOURCE_TYPE_PROFILE if not set.
    * @param sources sources or {@code null} for none
    */
   public UpdateContactPhotoRequest setSources(java.util.List<java.lang.String> sources) {

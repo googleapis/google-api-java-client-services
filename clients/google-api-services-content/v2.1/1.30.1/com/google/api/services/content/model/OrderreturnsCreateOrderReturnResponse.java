@@ -31,9 +31,7 @@ package com.google.api.services.content.model;
 public final class OrderreturnsCreateOrderReturnResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status of the execution.
-   *
-   * Acceptable values are:   - "`duplicate`"  - "`executed`"
+   * The status of the execution. Acceptable values are: - "`duplicate`" - "`executed`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +53,7 @@ public final class OrderreturnsCreateOrderReturnResponse extends com.google.api.
   private MerchantOrderReturn orderReturn;
 
   /**
-   * The status of the execution.
-   *
-   * Acceptable values are:   - "`duplicate`"  - "`executed`"
+   * The status of the execution. Acceptable values are: - "`duplicate`" - "`executed`"
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionStatus() {
@@ -65,9 +61,7 @@ public final class OrderreturnsCreateOrderReturnResponse extends com.google.api.
   }
 
   /**
-   * The status of the execution.
-   *
-   * Acceptable values are:   - "`duplicate`"  - "`executed`"
+   * The status of the execution. Acceptable values are: - "`duplicate`" - "`executed`"
    * @param executionStatus executionStatus or {@code null} for none
    */
   public OrderreturnsCreateOrderReturnResponse setExecutionStatus(java.lang.String executionStatus) {

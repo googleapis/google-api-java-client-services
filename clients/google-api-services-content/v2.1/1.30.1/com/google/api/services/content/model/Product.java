@@ -18,13 +18,10 @@ package com.google.api.services.content.model;
 
 /**
  * Required product attributes are primarily defined by the products data specification. See the
- * Products Data Specification Help Center article for information.
- *
- * Some attributes are country-specific, so make sure you select the appropriate country in the
- * drop-down selector at the top of the page.
- *
- * Product data. After inserting, updating, or deleting a product, it may take several minutes
- * before changes take effect.
+ * Products Data Specification Help Center article for information. Some attributes are country-
+ * specific, so make sure you select the appropriate country in the drop-down selector at the top of
+ * the page. Product data. After inserting, updating, or deleting a product, it may take several
+ * minutes before changes take effect.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -109,9 +106,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String canonicalLink;
 
   /**
-   * Required. The item's channel (online or local).
-   *
-   * Acceptable values are:   - "`local`"  - "`online`"
+   * Required. The item's channel (online or local). Acceptable values are: - "`local`" - "`online`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,8 +280,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The REST ID of the product. Content API methods that operate on products take this as their
-   * `productId` parameter. The REST ID for a product is of the form
-   * channel:contentLanguage:targetCountry: offerId.
+   * `productId` parameter. The REST ID for a product is of the form channel:contentLanguage:
+   * targetCountry: offerId.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -419,8 +414,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   /**
    * Required. A unique identifier for the item. Leading and trailing whitespaces are stripped and
    * multiple whitespaces are replaced by a single whitespace upon submission. Only valid unicode
-   * characters are accepted. See the products feed specification for details. Note: Content API
-   * methods that operate on products take the REST ID of the product, not this identifier.
+   * characters are accepted. See the products feed specification for details. *Note:* Content API
+   * methods that operate on products take the REST ID of the product, *not* this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -476,7 +471,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private Price salePrice;
 
   /**
-   * Date range during which the item is on sale (see products data specification).
+   * Date range during which the item is on sale (see products data specification ).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -563,9 +558,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> sizes;
 
   /**
-   * The source of the offer, i.e., how the offer was created.
-   *
-   * Acceptable values are:   - "`api`"  - "`crawl`"  - "`feed`"
+   * The source of the offer, i.e., how the offer was created. Acceptable values are: - "`api`" -
+   * "`crawl`" - "`feed`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -803,9 +797,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The item's channel (online or local).
-   *
-   * Acceptable values are:   - "`local`"  - "`online`"
+   * Required. The item's channel (online or local). Acceptable values are: - "`local`" - "`online`"
    * @return value or {@code null} for none
    */
   public java.lang.String getChannel() {
@@ -813,9 +805,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The item's channel (online or local).
-   *
-   * Acceptable values are:   - "`local`"  - "`online`"
+   * Required. The item's channel (online or local). Acceptable values are: - "`local`" - "`online`"
    * @param channel channel or {@code null} for none
    */
   public Product setChannel(java.lang.String channel) {
@@ -1211,8 +1201,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The REST ID of the product. Content API methods that operate on products take this as their
-   * `productId` parameter. The REST ID for a product is of the form
-   * channel:contentLanguage:targetCountry: offerId.
+   * `productId` parameter. The REST ID for a product is of the form channel:contentLanguage:
+   * targetCountry: offerId.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -1221,8 +1211,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The REST ID of the product. Content API methods that operate on products take this as their
-   * `productId` parameter. The REST ID for a product is of the form
-   * channel:contentLanguage:targetCountry: offerId.
+   * `productId` parameter. The REST ID for a product is of the form channel:contentLanguage:
+   * targetCountry: offerId.
    * @param id id or {@code null} for none
    */
   public Product setId(java.lang.String id) {
@@ -1532,8 +1522,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   /**
    * Required. A unique identifier for the item. Leading and trailing whitespaces are stripped and
    * multiple whitespaces are replaced by a single whitespace upon submission. Only valid unicode
-   * characters are accepted. See the products feed specification for details. Note: Content API
-   * methods that operate on products take the REST ID of the product, not this identifier.
+   * characters are accepted. See the products feed specification for details. *Note:* Content API
+   * methods that operate on products take the REST ID of the product, *not* this identifier.
    * @return value or {@code null} for none
    */
   public java.lang.String getOfferId() {
@@ -1543,8 +1533,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   /**
    * Required. A unique identifier for the item. Leading and trailing whitespaces are stripped and
    * multiple whitespaces are replaced by a single whitespace upon submission. Only valid unicode
-   * characters are accepted. See the products feed specification for details. Note: Content API
-   * methods that operate on products take the REST ID of the product, not this identifier.
+   * characters are accepted. See the products feed specification for details. *Note:* Content API
+   * methods that operate on products take the REST ID of the product, *not* this identifier.
    * @param offerId offerId or {@code null} for none
    */
   public Product setOfferId(java.lang.String offerId) {
@@ -1672,7 +1662,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date range during which the item is on sale (see products data specification).
+   * Date range during which the item is on sale (see products data specification ).
    * @return value or {@code null} for none
    */
   public java.lang.String getSalePriceEffectiveDate() {
@@ -1680,7 +1670,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date range during which the item is on sale (see products data specification).
+   * Date range during which the item is on sale (see products data specification ).
    * @param salePriceEffectiveDate salePriceEffectiveDate or {@code null} for none
    */
   public Product setSalePriceEffectiveDate(java.lang.String salePriceEffectiveDate) {
@@ -1882,9 +1872,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source of the offer, i.e., how the offer was created.
-   *
-   * Acceptable values are:   - "`api`"  - "`crawl`"  - "`feed`"
+   * The source of the offer, i.e., how the offer was created. Acceptable values are: - "`api`" -
+   * "`crawl`" - "`feed`"
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -1892,9 +1881,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source of the offer, i.e., how the offer was created.
-   *
-   * Acceptable values are:   - "`api`"  - "`crawl`"  - "`feed`"
+   * The source of the offer, i.e., how the offer was created. Acceptable values are: - "`api`" -
+   * "`crawl`" - "`feed`"
    * @param source source or {@code null} for none
    */
   public Product setSource(java.lang.String source) {

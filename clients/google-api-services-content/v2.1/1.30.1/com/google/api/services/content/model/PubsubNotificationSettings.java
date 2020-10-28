@@ -18,7 +18,7 @@ package com.google.api.services.content.model;
 
 /**
  * Settings for Pub/Sub notifications, all methods require that the caller is a direct user of the
- * merchant center account. (== resource_for v2.1.pubsubnotificationsettings ==)
+ * merchant center account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -47,9 +47,7 @@ public final class PubsubNotificationSettings extends com.google.api.client.json
   private java.lang.String kind;
 
   /**
-   * List of event types.
-   *
-   * Acceptable values are:   - "`orderPendingShipment`"
+   * List of event types. Acceptable values are: - "`orderPendingShipment`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,9 +90,7 @@ public final class PubsubNotificationSettings extends com.google.api.client.json
   }
 
   /**
-   * List of event types.
-   *
-   * Acceptable values are:   - "`orderPendingShipment`"
+   * List of event types. Acceptable values are: - "`orderPendingShipment`"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegisteredEvents() {
@@ -102,9 +98,7 @@ public final class PubsubNotificationSettings extends com.google.api.client.json
   }
 
   /**
-   * List of event types.
-   *
-   * Acceptable values are:   - "`orderPendingShipment`"
+   * List of event types. Acceptable values are: - "`orderPendingShipment`"
    * @param registeredEvents registeredEvents or {@code null} for none
    */
   public PubsubNotificationSettings setRegisteredEvents(java.util.List<java.lang.String> registeredEvents) {

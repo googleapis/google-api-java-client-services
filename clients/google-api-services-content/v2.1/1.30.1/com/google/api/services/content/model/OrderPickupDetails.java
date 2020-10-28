@@ -53,10 +53,9 @@ public final class OrderPickupDetails extends com.google.api.client.json.Generic
   private java.lang.String locationId;
 
   /**
-   * The pickup type of this order.
-   *
-   * Acceptable values are:   - "`merchantStore`"  - "`merchantStoreCurbside`"  -
-   * "`merchantStoreLocker`"  - "`thirdPartyPickupPoint`"  - "`thirdPartyLocker`"
+   * The pickup type of this order. Acceptable values are: - "`merchantStore`" -
+   * "`merchantStoreCurbside`" - "`merchantStoreLocker`" - "`thirdPartyPickupPoint`" -
+   * "`thirdPartyLocker`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,10 +115,9 @@ public final class OrderPickupDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * The pickup type of this order.
-   *
-   * Acceptable values are:   - "`merchantStore`"  - "`merchantStoreCurbside`"  -
-   * "`merchantStoreLocker`"  - "`thirdPartyPickupPoint`"  - "`thirdPartyLocker`"
+   * The pickup type of this order. Acceptable values are: - "`merchantStore`" -
+   * "`merchantStoreCurbside`" - "`merchantStoreLocker`" - "`thirdPartyPickupPoint`" -
+   * "`thirdPartyLocker`"
    * @return value or {@code null} for none
    */
   public java.lang.String getPickupType() {
@@ -127,10 +125,9 @@ public final class OrderPickupDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * The pickup type of this order.
-   *
-   * Acceptable values are:   - "`merchantStore`"  - "`merchantStoreCurbside`"  -
-   * "`merchantStoreLocker`"  - "`thirdPartyPickupPoint`"  - "`thirdPartyLocker`"
+   * The pickup type of this order. Acceptable values are: - "`merchantStore`" -
+   * "`merchantStoreCurbside`" - "`merchantStoreLocker`" - "`thirdPartyPickupPoint`" -
+   * "`thirdPartyLocker`"
    * @param pickupType pickupType or {@code null} for none
    */
   public OrderPickupDetails setPickupType(java.lang.String pickupType) {

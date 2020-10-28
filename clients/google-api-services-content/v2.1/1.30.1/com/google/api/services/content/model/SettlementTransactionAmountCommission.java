@@ -31,21 +31,19 @@ package com.google.api.services.content.model;
 public final class SettlementTransactionAmountCommission extends com.google.api.client.json.GenericJson {
 
   /**
-   * The category of the commission.
-   *
-   * Acceptable values are:   - "`animalsAndPetSupplies`"  - "`dogCatFoodAndCatLitter`"  -
-   * "`apparelAndAccessories`"  - "`shoesHandbagsAndSunglasses`"  - "`costumesAndAccessories`"  -
-   * "`jewelry`"  - "`watches`"  - "`hobbiesArtsAndCrafts`"  - "`homeAndGarden`"  -
-   * "`entertainmentCollectibles`"  - "`collectibleCoins`"  - "`sportsCollectibles`"  -
-   * "`sportingGoods`"  - "`toysAndGames`"  - "`musicalInstruments`"  - "`giftCards`"  -
-   * "`babyAndToddler`"  - "`babyFoodWipesAndDiapers`"  - "`businessAndIndustrial`"  -
-   * "`camerasOpticsAndPhotography`"  - "`consumerElectronics`"  - "`electronicsAccessories`"  -
-   * "`personalComputers`"  - "`videoGameConsoles`"  - "`foodAndGrocery`"  - "`beverages`"  -
-   * "`tobaccoProducts`"  - "`furniture`"  - "`hardware`"  - "`buildingMaterials`"  - "`tools`"  -
-   * "`healthAndPersonalCare`"  - "`beauty`"  - "`householdSupplies`"  - "`kitchenAndDining`"  -
-   * "`majorAppliances`"  - "`luggageAndBags`"  - "`media`"  - "`officeSupplies`"  -
-   * "`softwareAndVideoGames`"  - "`vehiclePartsAndAccessories`"  - "`vehicleTiresAndWheels`"  -
-   * "`vehicles`"  - "`everythingElse`"
+   * The category of the commission. Acceptable values are: - "`animalsAndPetSupplies`" -
+   * "`dogCatFoodAndCatLitter`" - "`apparelAndAccessories`" - "`shoesHandbagsAndSunglasses`" -
+   * "`costumesAndAccessories`" - "`jewelry`" - "`watches`" - "`hobbiesArtsAndCrafts`" -
+   * "`homeAndGarden`" - "`entertainmentCollectibles`" - "`collectibleCoins`" -
+   * "`sportsCollectibles`" - "`sportingGoods`" - "`toysAndGames`" - "`musicalInstruments`" -
+   * "`giftCards`" - "`babyAndToddler`" - "`babyFoodWipesAndDiapers`" - "`businessAndIndustrial`" -
+   * "`camerasOpticsAndPhotography`" - "`consumerElectronics`" - "`electronicsAccessories`" -
+   * "`personalComputers`" - "`videoGameConsoles`" - "`foodAndGrocery`" - "`beverages`" -
+   * "`tobaccoProducts`" - "`furniture`" - "`hardware`" - "`buildingMaterials`" - "`tools`" -
+   * "`healthAndPersonalCare`" - "`beauty`" - "`householdSupplies`" - "`kitchenAndDining`" -
+   * "`majorAppliances`" - "`luggageAndBags`" - "`media`" - "`officeSupplies`" -
+   * "`softwareAndVideoGames`" - "`vehiclePartsAndAccessories`" - "`vehicleTiresAndWheels`" -
+   * "`vehicles`" - "`everythingElse`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,21 +57,19 @@ public final class SettlementTransactionAmountCommission extends com.google.api.
   private java.lang.String rate;
 
   /**
-   * The category of the commission.
-   *
-   * Acceptable values are:   - "`animalsAndPetSupplies`"  - "`dogCatFoodAndCatLitter`"  -
-   * "`apparelAndAccessories`"  - "`shoesHandbagsAndSunglasses`"  - "`costumesAndAccessories`"  -
-   * "`jewelry`"  - "`watches`"  - "`hobbiesArtsAndCrafts`"  - "`homeAndGarden`"  -
-   * "`entertainmentCollectibles`"  - "`collectibleCoins`"  - "`sportsCollectibles`"  -
-   * "`sportingGoods`"  - "`toysAndGames`"  - "`musicalInstruments`"  - "`giftCards`"  -
-   * "`babyAndToddler`"  - "`babyFoodWipesAndDiapers`"  - "`businessAndIndustrial`"  -
-   * "`camerasOpticsAndPhotography`"  - "`consumerElectronics`"  - "`electronicsAccessories`"  -
-   * "`personalComputers`"  - "`videoGameConsoles`"  - "`foodAndGrocery`"  - "`beverages`"  -
-   * "`tobaccoProducts`"  - "`furniture`"  - "`hardware`"  - "`buildingMaterials`"  - "`tools`"  -
-   * "`healthAndPersonalCare`"  - "`beauty`"  - "`householdSupplies`"  - "`kitchenAndDining`"  -
-   * "`majorAppliances`"  - "`luggageAndBags`"  - "`media`"  - "`officeSupplies`"  -
-   * "`softwareAndVideoGames`"  - "`vehiclePartsAndAccessories`"  - "`vehicleTiresAndWheels`"  -
-   * "`vehicles`"  - "`everythingElse`"
+   * The category of the commission. Acceptable values are: - "`animalsAndPetSupplies`" -
+   * "`dogCatFoodAndCatLitter`" - "`apparelAndAccessories`" - "`shoesHandbagsAndSunglasses`" -
+   * "`costumesAndAccessories`" - "`jewelry`" - "`watches`" - "`hobbiesArtsAndCrafts`" -
+   * "`homeAndGarden`" - "`entertainmentCollectibles`" - "`collectibleCoins`" -
+   * "`sportsCollectibles`" - "`sportingGoods`" - "`toysAndGames`" - "`musicalInstruments`" -
+   * "`giftCards`" - "`babyAndToddler`" - "`babyFoodWipesAndDiapers`" - "`businessAndIndustrial`" -
+   * "`camerasOpticsAndPhotography`" - "`consumerElectronics`" - "`electronicsAccessories`" -
+   * "`personalComputers`" - "`videoGameConsoles`" - "`foodAndGrocery`" - "`beverages`" -
+   * "`tobaccoProducts`" - "`furniture`" - "`hardware`" - "`buildingMaterials`" - "`tools`" -
+   * "`healthAndPersonalCare`" - "`beauty`" - "`householdSupplies`" - "`kitchenAndDining`" -
+   * "`majorAppliances`" - "`luggageAndBags`" - "`media`" - "`officeSupplies`" -
+   * "`softwareAndVideoGames`" - "`vehiclePartsAndAccessories`" - "`vehicleTiresAndWheels`" -
+   * "`vehicles`" - "`everythingElse`"
    * @return value or {@code null} for none
    */
   public java.lang.String getCategory() {
@@ -81,21 +77,19 @@ public final class SettlementTransactionAmountCommission extends com.google.api.
   }
 
   /**
-   * The category of the commission.
-   *
-   * Acceptable values are:   - "`animalsAndPetSupplies`"  - "`dogCatFoodAndCatLitter`"  -
-   * "`apparelAndAccessories`"  - "`shoesHandbagsAndSunglasses`"  - "`costumesAndAccessories`"  -
-   * "`jewelry`"  - "`watches`"  - "`hobbiesArtsAndCrafts`"  - "`homeAndGarden`"  -
-   * "`entertainmentCollectibles`"  - "`collectibleCoins`"  - "`sportsCollectibles`"  -
-   * "`sportingGoods`"  - "`toysAndGames`"  - "`musicalInstruments`"  - "`giftCards`"  -
-   * "`babyAndToddler`"  - "`babyFoodWipesAndDiapers`"  - "`businessAndIndustrial`"  -
-   * "`camerasOpticsAndPhotography`"  - "`consumerElectronics`"  - "`electronicsAccessories`"  -
-   * "`personalComputers`"  - "`videoGameConsoles`"  - "`foodAndGrocery`"  - "`beverages`"  -
-   * "`tobaccoProducts`"  - "`furniture`"  - "`hardware`"  - "`buildingMaterials`"  - "`tools`"  -
-   * "`healthAndPersonalCare`"  - "`beauty`"  - "`householdSupplies`"  - "`kitchenAndDining`"  -
-   * "`majorAppliances`"  - "`luggageAndBags`"  - "`media`"  - "`officeSupplies`"  -
-   * "`softwareAndVideoGames`"  - "`vehiclePartsAndAccessories`"  - "`vehicleTiresAndWheels`"  -
-   * "`vehicles`"  - "`everythingElse`"
+   * The category of the commission. Acceptable values are: - "`animalsAndPetSupplies`" -
+   * "`dogCatFoodAndCatLitter`" - "`apparelAndAccessories`" - "`shoesHandbagsAndSunglasses`" -
+   * "`costumesAndAccessories`" - "`jewelry`" - "`watches`" - "`hobbiesArtsAndCrafts`" -
+   * "`homeAndGarden`" - "`entertainmentCollectibles`" - "`collectibleCoins`" -
+   * "`sportsCollectibles`" - "`sportingGoods`" - "`toysAndGames`" - "`musicalInstruments`" -
+   * "`giftCards`" - "`babyAndToddler`" - "`babyFoodWipesAndDiapers`" - "`businessAndIndustrial`" -
+   * "`camerasOpticsAndPhotography`" - "`consumerElectronics`" - "`electronicsAccessories`" -
+   * "`personalComputers`" - "`videoGameConsoles`" - "`foodAndGrocery`" - "`beverages`" -
+   * "`tobaccoProducts`" - "`furniture`" - "`hardware`" - "`buildingMaterials`" - "`tools`" -
+   * "`healthAndPersonalCare`" - "`beauty`" - "`householdSupplies`" - "`kitchenAndDining`" -
+   * "`majorAppliances`" - "`luggageAndBags`" - "`media`" - "`officeSupplies`" -
+   * "`softwareAndVideoGames`" - "`vehiclePartsAndAccessories`" - "`vehicleTiresAndWheels`" -
+   * "`vehicles`" - "`everythingElse`"
    * @param category category or {@code null} for none
    */
   public SettlementTransactionAmountCommission setCategory(java.lang.String category) {

@@ -55,10 +55,8 @@ public final class ReturnPolicyPolicy extends com.google.api.client.json.Generic
    * Policy type. Use "lastReturnDate" for seasonal overrides only. Note that for most items a
    * minimum of 30 days is required for returns. Exceptions may be made for electronics or non-
    * returnable items such as food, perishables, and living things. A policy of less than 30 days
-   * can only be applied to those items.
-   *
-   * Acceptable values are:   - "`lastReturnDate`"  - "`lifetimeReturns`"  - "`noReturns`"  -
-   * "`numberOfDaysAfterDelivery`"
+   * can only be applied to those items. Acceptable values are: - "`lastReturnDate`" -
+   * "`lifetimeReturns`" - "`noReturns`" - "`numberOfDaysAfterDelivery`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,10 +114,8 @@ public final class ReturnPolicyPolicy extends com.google.api.client.json.Generic
    * Policy type. Use "lastReturnDate" for seasonal overrides only. Note that for most items a
    * minimum of 30 days is required for returns. Exceptions may be made for electronics or non-
    * returnable items such as food, perishables, and living things. A policy of less than 30 days
-   * can only be applied to those items.
-   *
-   * Acceptable values are:   - "`lastReturnDate`"  - "`lifetimeReturns`"  - "`noReturns`"  -
-   * "`numberOfDaysAfterDelivery`"
+   * can only be applied to those items. Acceptable values are: - "`lastReturnDate`" -
+   * "`lifetimeReturns`" - "`noReturns`" - "`numberOfDaysAfterDelivery`"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -130,10 +126,8 @@ public final class ReturnPolicyPolicy extends com.google.api.client.json.Generic
    * Policy type. Use "lastReturnDate" for seasonal overrides only. Note that for most items a
    * minimum of 30 days is required for returns. Exceptions may be made for electronics or non-
    * returnable items such as food, perishables, and living things. A policy of less than 30 days
-   * can only be applied to those items.
-   *
-   * Acceptable values are:   - "`lastReturnDate`"  - "`lifetimeReturns`"  - "`noReturns`"  -
-   * "`numberOfDaysAfterDelivery`"
+   * can only be applied to those items. Acceptable values are: - "`lastReturnDate`" -
+   * "`lifetimeReturns`" - "`noReturns`" - "`numberOfDaysAfterDelivery`"
    * @param type type or {@code null} for none
    */
   public ReturnPolicyPolicy setType(java.lang.String type) {

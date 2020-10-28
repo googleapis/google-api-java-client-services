@@ -54,9 +54,7 @@ public final class OrdersRefundOrderRequest extends com.google.api.client.json.G
   private java.lang.String operationId;
 
   /**
-   * The reason for the refund.
-   *
-   * Acceptable values are:   - "`courtesyAdjustment`"  - "`other`"
+   * The reason for the refund. Acceptable values are: - "`courtesyAdjustment`" - "`other`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,9 +123,7 @@ public final class OrdersRefundOrderRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The reason for the refund.
-   *
-   * Acceptable values are:   - "`courtesyAdjustment`"  - "`other`"
+   * The reason for the refund. Acceptable values are: - "`courtesyAdjustment`" - "`other`"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -135,9 +131,7 @@ public final class OrdersRefundOrderRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The reason for the refund.
-   *
-   * Acceptable values are:   - "`courtesyAdjustment`"  - "`other`"
+   * The reason for the refund. Acceptable values are: - "`courtesyAdjustment`" - "`other`"
    * @param reason reason or {@code null} for none
    */
   public OrdersRefundOrderRequest setReason(java.lang.String reason) {

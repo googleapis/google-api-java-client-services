@@ -20,12 +20,12 @@ package com.google.api.services.content;
  * Service definition for ShoppingContent (v2.1).
  *
  * <p>
- * Manages product items, inventory, and Merchant Center accounts for Google Shopping.
+ * Manage your product listings and accounts for Google Shopping
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/shopping-content" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/shopping-content/v2/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -55,7 +55,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://shoppingcontent.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -63,7 +63,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "content/v2.1/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/content/v2.1";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -160,7 +160,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Authinfo extends ShoppingContentRequest<com.google.api.services.content.model.AccountsAuthInfoResponse> {
 
-      private static final String REST_PATH = "accounts/authinfo";
+      private static final String REST_PATH = "content/v2.1/accounts/authinfo";
 
       /**
        * Returns information about the authenticated user.
@@ -190,8 +190,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Authinfo set$Xgafv(java.lang.String $Xgafv) {
+        return (Authinfo) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Authinfo setAccessToken(java.lang.String accessToken) {
+        return (Authinfo) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Authinfo setAlt(java.lang.String alt) {
         return (Authinfo) super.setAlt(alt);
+      }
+
+      @Override
+      public Authinfo setCallback(java.lang.String callback) {
+        return (Authinfo) super.setCallback(callback);
       }
 
       @Override
@@ -220,8 +235,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Authinfo setUserIp(java.lang.String userIp) {
-        return (Authinfo) super.setUserIp(userIp);
+      public Authinfo setUploadType(java.lang.String uploadType) {
+        return (Authinfo) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Authinfo setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Authinfo) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -251,7 +271,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Claimwebsite extends ShoppingContentRequest<com.google.api.services.content.model.AccountsClaimWebsiteResponse> {
 
-      private static final String REST_PATH = "{merchantId}/accounts/{accountId}/claimwebsite";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}/claimwebsite";
 
       /**
        * Claims the website of a Merchant Center sub-account.
@@ -277,8 +297,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Claimwebsite set$Xgafv(java.lang.String $Xgafv) {
+        return (Claimwebsite) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Claimwebsite setAccessToken(java.lang.String accessToken) {
+        return (Claimwebsite) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Claimwebsite setAlt(java.lang.String alt) {
         return (Claimwebsite) super.setAlt(alt);
+      }
+
+      @Override
+      public Claimwebsite setCallback(java.lang.String callback) {
+        return (Claimwebsite) super.setCallback(callback);
       }
 
       @Override
@@ -307,8 +342,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Claimwebsite setUserIp(java.lang.String userIp) {
-        return (Claimwebsite) super.setUserIp(userIp);
+      public Claimwebsite setUploadType(java.lang.String uploadType) {
+        return (Claimwebsite) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Claimwebsite setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Claimwebsite) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -402,7 +442,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.AccountsCustomBatchResponse> {
 
-      private static final String REST_PATH = "accounts/batch";
+      private static final String REST_PATH = "content/v2.1/accounts/batch";
 
       /**
        * Retrieves, inserts, updates, and deletes multiple Merchant Center (sub-)accounts in a single
@@ -424,8 +464,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -454,8 +509,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -484,7 +544,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "{merchantId}/accounts/{accountId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}";
 
       /**
        * Deletes a Merchant Center sub-account.
@@ -508,8 +568,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -538,8 +613,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -651,7 +731,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Account> {
 
-      private static final String REST_PATH = "{merchantId}/accounts/{accountId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}";
 
       /**
        * Retrieves a Merchant Center account.
@@ -686,8 +766,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -716,8 +811,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -809,7 +909,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.Account> {
 
-      private static final String REST_PATH = "{merchantId}/accounts";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts";
 
       /**
        * Creates a Merchant Center sub-account.
@@ -828,13 +928,26 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       protected Insert(java.math.BigInteger merchantId, com.google.api.services.content.model.Account content) {
         super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.Account.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getName(), "Account.getName()");
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
       }
 
       @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -863,8 +976,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the managing account. This must be a multi-client account. */
@@ -912,7 +1030,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Link extends ShoppingContentRequest<com.google.api.services.content.model.AccountsLinkResponse> {
 
-      private static final String REST_PATH = "{merchantId}/accounts/{accountId}/link";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}/link";
 
       /**
        * Performs an action on a link between two Merchant Center accounts, namely accountId and
@@ -939,8 +1057,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Link set$Xgafv(java.lang.String $Xgafv) {
+        return (Link) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Link setAccessToken(java.lang.String accessToken) {
+        return (Link) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Link setAlt(java.lang.String alt) {
         return (Link) super.setAlt(alt);
+      }
+
+      @Override
+      public Link setCallback(java.lang.String callback) {
+        return (Link) super.setCallback(callback);
       }
 
       @Override
@@ -969,8 +1102,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Link setUserIp(java.lang.String userIp) {
-        return (Link) super.setUserIp(userIp);
+      public Link setUploadType(java.lang.String uploadType) {
+        return (Link) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Link setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Link) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -1038,7 +1176,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.AccountsListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/accounts";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts";
 
       /**
        * Lists the sub-accounts in your Merchant Center account.
@@ -1069,8 +1207,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1099,8 +1252,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the managing account. This must be a multi-client account. */
@@ -1217,7 +1375,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Listlinks extends ShoppingContentRequest<com.google.api.services.content.model.AccountsListLinksResponse> {
 
-      private static final String REST_PATH = "{merchantId}/accounts/{accountId}/listlinks";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}/listlinks";
 
       /**
        * Returns the list of accounts linked to your Merchant Center account.
@@ -1253,8 +1411,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Listlinks set$Xgafv(java.lang.String $Xgafv) {
+        return (Listlinks) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Listlinks setAccessToken(java.lang.String accessToken) {
+        return (Listlinks) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Listlinks setAlt(java.lang.String alt) {
         return (Listlinks) super.setAlt(alt);
+      }
+
+      @Override
+      public Listlinks setCallback(java.lang.String callback) {
+        return (Listlinks) super.setCallback(callback);
       }
 
       @Override
@@ -1283,8 +1456,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Listlinks setUserIp(java.lang.String userIp) {
-        return (Listlinks) super.setUserIp(userIp);
+      public Listlinks setUploadType(java.lang.String uploadType) {
+        return (Listlinks) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Listlinks setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Listlinks) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -1389,7 +1567,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Update extends ShoppingContentRequest<com.google.api.services.content.model.Account> {
 
-      private static final String REST_PATH = "{merchantId}/accounts/{accountId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}";
 
       /**
        * Updates a Merchant Center account. Any fields that are not provided are deleted from the
@@ -1413,15 +1591,26 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         super(ShoppingContent.this, "PUT", REST_PATH, content, com.google.api.services.content.model.Account.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getId(), "Account.getId()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getName(), "Account.getName()");
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
       }
 
       @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -1450,8 +1639,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -1521,7 +1715,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Updatelabels extends ShoppingContentRequest<com.google.api.services.content.model.AccountsUpdateLabelsResponse> {
 
-      private static final String REST_PATH = "{merchantId}/accounts/{accountId}/updatelabels";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accounts/{accountId}/updatelabels";
 
       /**
        * Updates labels that are assigned to the Merchant Center account by CSS user.
@@ -1546,8 +1740,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Updatelabels set$Xgafv(java.lang.String $Xgafv) {
+        return (Updatelabels) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Updatelabels setAccessToken(java.lang.String accessToken) {
+        return (Updatelabels) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Updatelabels setAlt(java.lang.String alt) {
         return (Updatelabels) super.setAlt(alt);
+      }
+
+      @Override
+      public Updatelabels setCallback(java.lang.String callback) {
+        return (Updatelabels) super.setCallback(callback);
       }
 
       @Override
@@ -1576,8 +1785,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Updatelabels setUserIp(java.lang.String userIp) {
-        return (Updatelabels) super.setUserIp(userIp);
+      public Updatelabels setUploadType(java.lang.String uploadType) {
+        return (Updatelabels) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Updatelabels setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Updatelabels) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the managing account. */
@@ -1618,6 +1832,592 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
 
+    /**
+     * An accessor for creating requests from the Labels collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ShoppingContent content = new ShoppingContent(...);}
+     *   {@code ShoppingContent.Labels.List request = content.labels().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Labels labels() {
+      return new Labels();
+    }
+
+    /**
+     * The "labels" collection of methods.
+     */
+    public class Labels {
+
+      /**
+       * Creates a new label, not assigned to any account.
+       *
+       * Create a request for the method "labels.create".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Required. The id of the account this label belongs to.
+       * @param content the {@link com.google.api.services.content.model.AccountLabel}
+       * @return the request
+       */
+      public Create create(java.lang.Long accountId, com.google.api.services.content.model.AccountLabel content) throws java.io.IOException {
+        Create result = new Create(accountId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ShoppingContentRequest<com.google.api.services.content.model.AccountLabel> {
+
+        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/labels";
+
+        /**
+         * Creates a new label, not assigned to any account.
+         *
+         * Create a request for the method "labels.create".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Required. The id of the account this label belongs to.
+         * @param content the {@link com.google.api.services.content.model.AccountLabel}
+         * @since 1.13
+         */
+        protected Create(java.lang.Long accountId, com.google.api.services.content.model.AccountLabel content) {
+          super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.AccountLabel.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The id of the account this label belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long accountId;
+
+        /** Required. The id of the account this label belongs to.
+         */
+        public java.lang.Long getAccountId() {
+          return accountId;
+        }
+
+        /** Required. The id of the account this label belongs to. */
+        public Create setAccountId(java.lang.Long accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a label and removes it from all accounts to which it was assigned.
+       *
+       * Create a request for the method "labels.delete".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Required. The id of the account that owns the label.
+       * @param labelId Required. The id of the label to delete.
+       * @return the request
+       */
+      public Delete delete(java.lang.Long accountId, java.lang.Long labelId) throws java.io.IOException {
+        Delete result = new Delete(accountId, labelId);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ShoppingContentRequest<Void> {
+
+        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/labels/{labelId}";
+
+        /**
+         * Deletes a label and removes it from all accounts to which it was assigned.
+         *
+         * Create a request for the method "labels.delete".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Required. The id of the account that owns the label.
+         * @param labelId Required. The id of the label to delete.
+         * @since 1.13
+         */
+        protected Delete(java.lang.Long accountId, java.lang.Long labelId) {
+          super(ShoppingContent.this, "DELETE", REST_PATH, null, Void.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.labelId = com.google.api.client.util.Preconditions.checkNotNull(labelId, "Required parameter labelId must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The id of the account that owns the label. */
+        @com.google.api.client.util.Key
+        private java.lang.Long accountId;
+
+        /** Required. The id of the account that owns the label.
+         */
+        public java.lang.Long getAccountId() {
+          return accountId;
+        }
+
+        /** Required. The id of the account that owns the label. */
+        public Delete setAccountId(java.lang.Long accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** Required. The id of the label to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.Long labelId;
+
+        /** Required. The id of the label to delete.
+         */
+        public java.lang.Long getLabelId() {
+          return labelId;
+        }
+
+        /** Required. The id of the label to delete. */
+        public Delete setLabelId(java.lang.Long labelId) {
+          this.labelId = labelId;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists the labels assigned to an account.
+       *
+       * Create a request for the method "labels.list".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Required. The account id for whose labels are to be listed.
+       * @return the request
+       */
+      public List list(java.lang.Long accountId) throws java.io.IOException {
+        List result = new List(accountId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListAccountLabelsResponse> {
+
+        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/labels";
+
+        /**
+         * Lists the labels assigned to an account.
+         *
+         * Create a request for the method "labels.list".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Required. The account id for whose labels are to be listed.
+         * @since 1.13
+         */
+        protected List(java.lang.Long accountId) {
+          super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ListAccountLabelsResponse.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The account id for whose labels are to be listed. */
+        @com.google.api.client.util.Key
+        private java.lang.Long accountId;
+
+        /** Required. The account id for whose labels are to be listed.
+         */
+        public java.lang.Long getAccountId() {
+          return accountId;
+        }
+
+        /** Required. The account id for whose labels are to be listed. */
+        public List setAccountId(java.lang.Long accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /**
+         * The maximum number of labels to return. The service may return fewer than this value. If
+         * unspecified, at most 50 labels will be returned. The maximum value is 1000; values above
+         * 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of labels to return. The service may return fewer than this value. If
+       unspecified, at most 50 labels will be returned. The maximum value is 1000; values above 1000 will
+       be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of labels to return. The service may return fewer than this value. If
+         * unspecified, at most 50 labels will be returned. The maximum value is 1000; values above
+         * 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListAccountLabels` call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to
+         * `ListAccountLabels` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListAccountLabels` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListAccountLabels` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListAccountLabels` call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to
+         * `ListAccountLabels` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a label.
+       *
+       * Create a request for the method "labels.patch".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Required. The id of the account this label belongs to.
+       * @param labelId Required. The id of the label to update.
+       * @param content the {@link com.google.api.services.content.model.AccountLabel}
+       * @return the request
+       */
+      public Patch patch(java.lang.Long accountId, java.lang.Long labelId, com.google.api.services.content.model.AccountLabel content) throws java.io.IOException {
+        Patch result = new Patch(accountId, labelId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends ShoppingContentRequest<com.google.api.services.content.model.AccountLabel> {
+
+        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/labels/{labelId}";
+
+        /**
+         * Updates a label.
+         *
+         * Create a request for the method "labels.patch".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Required. The id of the account this label belongs to.
+         * @param labelId Required. The id of the label to update.
+         * @param content the {@link com.google.api.services.content.model.AccountLabel}
+         * @since 1.13
+         */
+        protected Patch(java.lang.Long accountId, java.lang.Long labelId, com.google.api.services.content.model.AccountLabel content) {
+          super(ShoppingContent.this, "PATCH", REST_PATH, content, com.google.api.services.content.model.AccountLabel.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.labelId = com.google.api.client.util.Preconditions.checkNotNull(labelId, "Required parameter labelId must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The id of the account this label belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long accountId;
+
+        /** Required. The id of the account this label belongs to.
+         */
+        public java.lang.Long getAccountId() {
+          return accountId;
+        }
+
+        /** Required. The id of the account this label belongs to. */
+        public Patch setAccountId(java.lang.Long accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** Required. The id of the label to update. */
+        @com.google.api.client.util.Key
+        private java.lang.Long labelId;
+
+        /** Required. The id of the label to update.
+         */
+        public java.lang.Long getLabelId() {
+          return labelId;
+        }
+
+        /** Required. The id of the label to update. */
+        public Patch setLabelId(java.lang.Long labelId) {
+          this.labelId = labelId;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**
@@ -1659,7 +2459,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.AccountstatusesCustomBatchResponse> {
 
-      private static final String REST_PATH = "accountstatuses/batch";
+      private static final String REST_PATH = "content/v2.1/accountstatuses/batch";
 
       /**
        * Retrieves multiple Merchant Center account statuses in a single request.
@@ -1680,8 +2480,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -1710,8 +2525,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -1742,7 +2562,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.AccountStatus> {
 
-      private static final String REST_PATH = "{merchantId}/accountstatuses/{accountId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accountstatuses/{accountId}";
 
       /**
        * Retrieves the status of a Merchant Center account. No itemLevelIssues are returned for multi-
@@ -1778,8 +2598,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -1808,8 +2643,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -1900,7 +2740,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.AccountstatusesListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/accountstatuses";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accountstatuses";
 
       /**
        * Lists the statuses of the sub-accounts in your Merchant Center account.
@@ -1931,8 +2771,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1961,8 +2816,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the managing account. This must be a multi-client account. */
@@ -2083,7 +2943,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.AccounttaxCustomBatchResponse> {
 
-      private static final String REST_PATH = "accounttax/batch";
+      private static final String REST_PATH = "content/v2.1/accounttax/batch";
 
       /**
        * Retrieves and updates tax settings of multiple accounts in a single request.
@@ -2104,8 +2964,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -2134,8 +3009,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -2165,7 +3045,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.AccountTax> {
 
-      private static final String REST_PATH = "{merchantId}/accounttax/{accountId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accounttax/{accountId}";
 
       /**
        * Retrieves the tax settings of the account.
@@ -2200,8 +3080,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -2230,8 +3125,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -2299,7 +3199,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.AccounttaxListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/accounttax";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accounttax";
 
       /**
        * Lists the tax settings of the sub-accounts in your Merchant Center account.
@@ -2330,8 +3230,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -2360,8 +3275,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the managing account. This must be a multi-client account. */
@@ -2441,7 +3361,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Update extends ShoppingContentRequest<com.google.api.services.content.model.AccountTax> {
 
-      private static final String REST_PATH = "{merchantId}/accounttax/{accountId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/accounttax/{accountId}";
 
       /**
        * Updates the tax settings of the account. Any fields that are not provided are deleted from the
@@ -2465,13 +3385,26 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         super(ShoppingContent.this, "PUT", REST_PATH, content, com.google.api.services.content.model.AccountTax.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getAccountId(), "AccountTax.getAccountId()");
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
       }
 
       @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -2500,8 +3433,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -2554,6 +3492,501 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Csses collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Csses.List request = content.csses().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Csses csses() {
+    return new Csses();
+  }
+
+  /**
+   * The "csses" collection of methods.
+   */
+  public class Csses {
+
+    /**
+     * Retrieves a single CSS domain by ID.
+     *
+     * Create a request for the method "csses.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param cssGroupId Required. The ID of the managing account. If this parameter is not the same as
+     *        [cssDomainId](#cssDomainId), then this ID must be a CSS group ID and `cssDomainId` must be
+     *        the ID of a CSS domain affiliated with this group.
+     * @param cssDomainId Required. The ID of the CSS domain to return.
+     * @return the request
+     */
+    public Get get(java.lang.Long cssGroupId, java.lang.Long cssDomainId) throws java.io.IOException {
+      Get result = new Get(cssGroupId, cssDomainId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Css> {
+
+      private static final String REST_PATH = "content/v2.1/{cssGroupId}/csses/{cssDomainId}";
+
+      /**
+       * Retrieves a single CSS domain by ID.
+       *
+       * Create a request for the method "csses.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param cssGroupId Required. The ID of the managing account. If this parameter is not the same as
+     *        [cssDomainId](#cssDomainId), then this ID must be a CSS group ID and `cssDomainId` must be
+     *        the ID of a CSS domain affiliated with this group.
+       * @param cssDomainId Required. The ID of the CSS domain to return.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long cssGroupId, java.lang.Long cssDomainId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.Css.class);
+        this.cssGroupId = com.google.api.client.util.Preconditions.checkNotNull(cssGroupId, "Required parameter cssGroupId must be specified.");
+        this.cssDomainId = com.google.api.client.util.Preconditions.checkNotNull(cssDomainId, "Required parameter cssDomainId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the managing account. If this parameter is not the same as
+       * [cssDomainId](#cssDomainId), then this ID must be a CSS group ID and `cssDomainId` must be
+       * the ID of a CSS domain affiliated with this group.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long cssGroupId;
+
+      /** Required. The ID of the managing account. If this parameter is not the same as
+     [cssDomainId](#cssDomainId), then this ID must be a CSS group ID and `cssDomainId` must be the ID
+     of a CSS domain affiliated with this group.
+       */
+      public java.lang.Long getCssGroupId() {
+        return cssGroupId;
+      }
+
+      /**
+       * Required. The ID of the managing account. If this parameter is not the same as
+       * [cssDomainId](#cssDomainId), then this ID must be a CSS group ID and `cssDomainId` must be
+       * the ID of a CSS domain affiliated with this group.
+       */
+      public Get setCssGroupId(java.lang.Long cssGroupId) {
+        this.cssGroupId = cssGroupId;
+        return this;
+      }
+
+      /** Required. The ID of the CSS domain to return. */
+      @com.google.api.client.util.Key
+      private java.lang.Long cssDomainId;
+
+      /** Required. The ID of the CSS domain to return.
+       */
+      public java.lang.Long getCssDomainId() {
+        return cssDomainId;
+      }
+
+      /** Required. The ID of the CSS domain to return. */
+      public Get setCssDomainId(java.lang.Long cssDomainId) {
+        this.cssDomainId = cssDomainId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists CSS domains affiliated with a CSS group.
+     *
+     * Create a request for the method "csses.list".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param cssGroupId Required. The CSS group ID of CSS domains to be listed.
+     * @return the request
+     */
+    public List list(java.lang.Long cssGroupId) throws java.io.IOException {
+      List result = new List(cssGroupId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListCssesResponse> {
+
+      private static final String REST_PATH = "content/v2.1/{cssGroupId}/csses";
+
+      /**
+       * Lists CSS domains affiliated with a CSS group.
+       *
+       * Create a request for the method "csses.list".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param cssGroupId Required. The CSS group ID of CSS domains to be listed.
+       * @since 1.13
+       */
+      protected List(java.lang.Long cssGroupId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ListCssesResponse.class);
+        this.cssGroupId = com.google.api.client.util.Preconditions.checkNotNull(cssGroupId, "Required parameter cssGroupId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The CSS group ID of CSS domains to be listed. */
+      @com.google.api.client.util.Key
+      private java.lang.Long cssGroupId;
+
+      /** Required. The CSS group ID of CSS domains to be listed.
+       */
+      public java.lang.Long getCssGroupId() {
+        return cssGroupId;
+      }
+
+      /** Required. The CSS group ID of CSS domains to be listed. */
+      public List setCssGroupId(java.lang.Long cssGroupId) {
+        this.cssGroupId = cssGroupId;
+        return this;
+      }
+
+      /**
+       * The maximum number of CSS domains to return. The service may return fewer than this value.
+       * If unspecified, at most 50 CSS domains will be returned. The maximum value is 1000; values
+       * above 1000 will be coerced to 1000.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of CSS domains to return. The service may return fewer than this value. If
+     unspecified, at most 50 CSS domains will be returned. The maximum value is 1000; values above 1000
+     will be coerced to 1000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of CSS domains to return. The service may return fewer than this value.
+       * If unspecified, at most 50 CSS domains will be returned. The maximum value is 1000; values
+       * above 1000 will be coerced to 1000.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A page token, received from a previous `ListCsses` call. Provide this to retrieve the
+       * subsequent page. When paginating, all other parameters provided to `ListCsses` must match
+       * the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A page token, received from a previous `ListCsses` call. Provide this to retrieve the subsequent
+     page. When paginating, all other parameters provided to `ListCsses` must match the call that
+     provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A page token, received from a previous `ListCsses` call. Provide this to retrieve the
+       * subsequent page. When paginating, all other parameters provided to `ListCsses` must match
+       * the call that provided the page token.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates labels that are assigned to a CSS domain by its CSS group.
+     *
+     * Create a request for the method "csses.updatelabels".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Updatelabels#execute()} method to invoke the remote operation.
+     *
+     * @param cssGroupId Required. The CSS group ID of the updated CSS domain.
+     * @param cssDomainId Required. The ID of the updated CSS domain.
+     * @param content the {@link com.google.api.services.content.model.LabelIds}
+     * @return the request
+     */
+    public Updatelabels updatelabels(java.lang.Long cssGroupId, java.lang.Long cssDomainId, com.google.api.services.content.model.LabelIds content) throws java.io.IOException {
+      Updatelabels result = new Updatelabels(cssGroupId, cssDomainId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Updatelabels extends ShoppingContentRequest<com.google.api.services.content.model.Css> {
+
+      private static final String REST_PATH = "content/v2.1/{cssGroupId}/csses/{cssDomainId}/updatelabels";
+
+      /**
+       * Updates labels that are assigned to a CSS domain by its CSS group.
+       *
+       * Create a request for the method "csses.updatelabels".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Updatelabels#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Updatelabels#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param cssGroupId Required. The CSS group ID of the updated CSS domain.
+       * @param cssDomainId Required. The ID of the updated CSS domain.
+       * @param content the {@link com.google.api.services.content.model.LabelIds}
+       * @since 1.13
+       */
+      protected Updatelabels(java.lang.Long cssGroupId, java.lang.Long cssDomainId, com.google.api.services.content.model.LabelIds content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.Css.class);
+        this.cssGroupId = com.google.api.client.util.Preconditions.checkNotNull(cssGroupId, "Required parameter cssGroupId must be specified.");
+        this.cssDomainId = com.google.api.client.util.Preconditions.checkNotNull(cssDomainId, "Required parameter cssDomainId must be specified.");
+      }
+
+      @Override
+      public Updatelabels set$Xgafv(java.lang.String $Xgafv) {
+        return (Updatelabels) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Updatelabels setAccessToken(java.lang.String accessToken) {
+        return (Updatelabels) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Updatelabels setAlt(java.lang.String alt) {
+        return (Updatelabels) super.setAlt(alt);
+      }
+
+      @Override
+      public Updatelabels setCallback(java.lang.String callback) {
+        return (Updatelabels) super.setCallback(callback);
+      }
+
+      @Override
+      public Updatelabels setFields(java.lang.String fields) {
+        return (Updatelabels) super.setFields(fields);
+      }
+
+      @Override
+      public Updatelabels setKey(java.lang.String key) {
+        return (Updatelabels) super.setKey(key);
+      }
+
+      @Override
+      public Updatelabels setOauthToken(java.lang.String oauthToken) {
+        return (Updatelabels) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Updatelabels setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Updatelabels) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Updatelabels setQuotaUser(java.lang.String quotaUser) {
+        return (Updatelabels) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Updatelabels setUploadType(java.lang.String uploadType) {
+        return (Updatelabels) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Updatelabels setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Updatelabels) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The CSS group ID of the updated CSS domain. */
+      @com.google.api.client.util.Key
+      private java.lang.Long cssGroupId;
+
+      /** Required. The CSS group ID of the updated CSS domain.
+       */
+      public java.lang.Long getCssGroupId() {
+        return cssGroupId;
+      }
+
+      /** Required. The CSS group ID of the updated CSS domain. */
+      public Updatelabels setCssGroupId(java.lang.Long cssGroupId) {
+        this.cssGroupId = cssGroupId;
+        return this;
+      }
+
+      /** Required. The ID of the updated CSS domain. */
+      @com.google.api.client.util.Key
+      private java.lang.Long cssDomainId;
+
+      /** Required. The ID of the updated CSS domain.
+       */
+      public java.lang.Long getCssDomainId() {
+        return cssDomainId;
+      }
+
+      /** Required. The ID of the updated CSS domain. */
+      public Updatelabels setCssDomainId(java.lang.Long cssDomainId) {
+        this.cssDomainId = cssDomainId;
+        return this;
+      }
+
+      @Override
+      public Updatelabels set(String parameterName, Object value) {
+        return (Updatelabels) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Datafeeds collection.
    *
    * <p>The typical use is:</p>
@@ -2592,7 +4025,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.DatafeedsCustomBatchResponse> {
 
-      private static final String REST_PATH = "datafeeds/batch";
+      private static final String REST_PATH = "content/v2.1/datafeeds/batch";
 
       /**
        * Deletes, fetches, gets, inserts and updates multiple datafeeds in a single request.
@@ -2613,8 +4046,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -2643,8 +4091,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -2672,7 +4125,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "{merchantId}/datafeeds/{datafeedId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds/{datafeedId}";
 
       /**
        * Deletes a datafeed configuration from your Merchant Center account.
@@ -2695,8 +4148,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -2725,8 +4193,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -2792,7 +4265,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Fetchnow extends ShoppingContentRequest<com.google.api.services.content.model.DatafeedsFetchNowResponse> {
 
-      private static final String REST_PATH = "{merchantId}/datafeeds/{datafeedId}/fetchNow";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds/{datafeedId}/fetchNow";
 
       /**
        * Invokes a fetch for the datafeed in your Merchant Center account.
@@ -2816,8 +4289,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Fetchnow set$Xgafv(java.lang.String $Xgafv) {
+        return (Fetchnow) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Fetchnow setAccessToken(java.lang.String accessToken) {
+        return (Fetchnow) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Fetchnow setAlt(java.lang.String alt) {
         return (Fetchnow) super.setAlt(alt);
+      }
+
+      @Override
+      public Fetchnow setCallback(java.lang.String callback) {
+        return (Fetchnow) super.setCallback(callback);
       }
 
       @Override
@@ -2846,8 +4334,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Fetchnow setUserIp(java.lang.String userIp) {
-        return (Fetchnow) super.setUserIp(userIp);
+      public Fetchnow setUploadType(java.lang.String uploadType) {
+        return (Fetchnow) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Fetchnow setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Fetchnow) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -2913,7 +4406,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Datafeed> {
 
-      private static final String REST_PATH = "{merchantId}/datafeeds/{datafeedId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds/{datafeedId}";
 
       /**
        * Retrieves a datafeed configuration from your Merchant Center account.
@@ -2946,8 +4439,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -2976,8 +4484,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -3043,7 +4556,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.Datafeed> {
 
-      private static final String REST_PATH = "{merchantId}/datafeeds";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds";
 
       /**
        * Registers a datafeed configuration with your Merchant Center account.
@@ -3062,17 +4575,26 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       protected Insert(java.math.BigInteger merchantId, com.google.api.services.content.model.Datafeed content) {
         super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.Datafeed.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getContentType(), "Datafeed.getContentType()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getFileName(), "Datafeed.getFileName()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getName(), "Datafeed.getName()");
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
       }
 
       @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -3101,8 +4623,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -3151,7 +4678,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.DatafeedsListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/datafeeds";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds";
 
       /**
        * Lists the configurations for datafeeds in your Merchant Center account.
@@ -3182,8 +4709,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -3212,8 +4754,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -3297,7 +4844,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Update extends ShoppingContentRequest<com.google.api.services.content.model.Datafeed> {
 
-      private static final String REST_PATH = "{merchantId}/datafeeds/{datafeedId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds/{datafeedId}";
 
       /**
        * Updates a datafeed configuration of your Merchant Center account. Any fields that are not
@@ -3319,17 +4866,26 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         super(ShoppingContent.this, "PUT", REST_PATH, content, com.google.api.services.content.model.Datafeed.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.datafeedId = com.google.api.client.util.Preconditions.checkNotNull(datafeedId, "Required parameter datafeedId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getContentType(), "Datafeed.getContentType()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getFileName(), "Datafeed.getFileName()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getId(), "Datafeed.getId()");
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
       }
 
       @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -3358,8 +4914,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -3447,7 +5008,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.DatafeedstatusesCustomBatchResponse> {
 
-      private static final String REST_PATH = "datafeedstatuses/batch";
+      private static final String REST_PATH = "content/v2.1/datafeedstatuses/batch";
 
       /**
        * Gets multiple Merchant Center datafeed statuses in a single request.
@@ -3468,8 +5029,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -3498,8 +5074,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -3527,7 +5108,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.DatafeedStatus> {
 
-      private static final String REST_PATH = "{merchantId}/datafeedstatuses/{datafeedId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeedstatuses/{datafeedId}";
 
       /**
        * Retrieves the status of a datafeed from your Merchant Center account.
@@ -3560,8 +5141,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -3590,8 +5186,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -3708,7 +5309,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.DatafeedstatusesListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/datafeedstatuses";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/datafeedstatuses";
 
       /**
        * Lists the statuses of the datafeeds in your Merchant Center account.
@@ -3739,8 +5340,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -3769,8 +5385,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -3874,7 +5495,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsCustomBatchResponse> {
 
-      private static final String REST_PATH = "liasettings/batch";
+      private static final String REST_PATH = "content/v2.1/liasettings/batch";
 
       /**
        * Retrieves and/or updates the LIA settings of multiple accounts in a single request.
@@ -3895,8 +5516,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -3925,8 +5561,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -3956,7 +5597,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.LiaSettings> {
 
-      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}";
 
       /**
        * Retrieves the LIA settings of the account.
@@ -3991,8 +5632,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -4021,8 +5677,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -4094,7 +5755,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Getaccessiblegmbaccounts extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsGetAccessibleGmbAccountsResponse> {
 
-      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/accessiblegmbaccounts";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}/accessiblegmbaccounts";
 
       /**
        * Retrieves the list of accessible Google My Business accounts.
@@ -4130,8 +5791,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Getaccessiblegmbaccounts set$Xgafv(java.lang.String $Xgafv) {
+        return (Getaccessiblegmbaccounts) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Getaccessiblegmbaccounts setAccessToken(java.lang.String accessToken) {
+        return (Getaccessiblegmbaccounts) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Getaccessiblegmbaccounts setAlt(java.lang.String alt) {
         return (Getaccessiblegmbaccounts) super.setAlt(alt);
+      }
+
+      @Override
+      public Getaccessiblegmbaccounts setCallback(java.lang.String callback) {
+        return (Getaccessiblegmbaccounts) super.setCallback(callback);
       }
 
       @Override
@@ -4160,8 +5836,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Getaccessiblegmbaccounts setUserIp(java.lang.String userIp) {
-        return (Getaccessiblegmbaccounts) super.setUserIp(userIp);
+      public Getaccessiblegmbaccounts setUploadType(java.lang.String uploadType) {
+        return (Getaccessiblegmbaccounts) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Getaccessiblegmbaccounts setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Getaccessiblegmbaccounts) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -4229,7 +5910,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/liasettings";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings";
 
       /**
        * Lists the LIA settings of the sub-accounts in your Merchant Center account.
@@ -4260,8 +5941,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -4290,8 +5986,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the managing account. This must be a multi-client account. */
@@ -4367,7 +6068,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Listposdataproviders extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsListPosDataProvidersResponse> {
 
-      private static final String REST_PATH = "liasettings/posdataproviders";
+      private static final String REST_PATH = "content/v2.1/liasettings/posdataproviders";
 
       /**
        * Retrieves the list of POS data providers that have active settings for the all eiligible
@@ -4398,8 +6099,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Listposdataproviders set$Xgafv(java.lang.String $Xgafv) {
+        return (Listposdataproviders) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Listposdataproviders setAccessToken(java.lang.String accessToken) {
+        return (Listposdataproviders) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Listposdataproviders setAlt(java.lang.String alt) {
         return (Listposdataproviders) super.setAlt(alt);
+      }
+
+      @Override
+      public Listposdataproviders setCallback(java.lang.String callback) {
+        return (Listposdataproviders) super.setCallback(callback);
       }
 
       @Override
@@ -4428,8 +6144,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Listposdataproviders setUserIp(java.lang.String userIp) {
-        return (Listposdataproviders) super.setUserIp(userIp);
+      public Listposdataproviders setUploadType(java.lang.String uploadType) {
+        return (Listposdataproviders) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Listposdataproviders setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Listposdataproviders) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -4449,18 +6170,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which GMB access is requested.
-     * @param gmbEmail The email of the Google My Business account.
      * @return the request
      */
-    public Requestgmbaccess requestgmbaccess(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String gmbEmail) throws java.io.IOException {
-      Requestgmbaccess result = new Requestgmbaccess(merchantId, accountId, gmbEmail);
+    public Requestgmbaccess requestgmbaccess(java.math.BigInteger merchantId, java.math.BigInteger accountId) throws java.io.IOException {
+      Requestgmbaccess result = new Requestgmbaccess(merchantId, accountId);
       initialize(result);
       return result;
     }
 
     public class Requestgmbaccess extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsRequestGmbAccessResponse> {
 
-      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/requestgmbaccess";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}/requestgmbaccess";
 
       /**
        * Requests access to a specified Google My Business account.
@@ -4477,19 +6197,32 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which GMB access is requested.
-       * @param gmbEmail The email of the Google My Business account.
        * @since 1.13
        */
-      protected Requestgmbaccess(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String gmbEmail) {
+      protected Requestgmbaccess(java.math.BigInteger merchantId, java.math.BigInteger accountId) {
         super(ShoppingContent.this, "POST", REST_PATH, null, com.google.api.services.content.model.LiasettingsRequestGmbAccessResponse.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
-        this.gmbEmail = com.google.api.client.util.Preconditions.checkNotNull(gmbEmail, "Required parameter gmbEmail must be specified.");
+      }
+
+      @Override
+      public Requestgmbaccess set$Xgafv(java.lang.String $Xgafv) {
+        return (Requestgmbaccess) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Requestgmbaccess setAccessToken(java.lang.String accessToken) {
+        return (Requestgmbaccess) super.setAccessToken(accessToken);
       }
 
       @Override
       public Requestgmbaccess setAlt(java.lang.String alt) {
         return (Requestgmbaccess) super.setAlt(alt);
+      }
+
+      @Override
+      public Requestgmbaccess setCallback(java.lang.String callback) {
+        return (Requestgmbaccess) super.setCallback(callback);
       }
 
       @Override
@@ -4518,8 +6251,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Requestgmbaccess setUserIp(java.lang.String userIp) {
-        return (Requestgmbaccess) super.setUserIp(userIp);
+      public Requestgmbaccess setUploadType(java.lang.String uploadType) {
+        return (Requestgmbaccess) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Requestgmbaccess setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Requestgmbaccess) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -4608,7 +6346,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Requestinventoryverification extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsRequestInventoryVerificationResponse> {
 
-      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/requestinventoryverification/{country}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}/requestinventoryverification/{country}";
 
       /**
        * Requests inventory validation for the specified country.
@@ -4636,8 +6374,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Requestinventoryverification set$Xgafv(java.lang.String $Xgafv) {
+        return (Requestinventoryverification) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Requestinventoryverification setAccessToken(java.lang.String accessToken) {
+        return (Requestinventoryverification) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Requestinventoryverification setAlt(java.lang.String alt) {
         return (Requestinventoryverification) super.setAlt(alt);
+      }
+
+      @Override
+      public Requestinventoryverification setCallback(java.lang.String callback) {
+        return (Requestinventoryverification) super.setCallback(callback);
       }
 
       @Override
@@ -4666,8 +6419,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Requestinventoryverification setUserIp(java.lang.String userIp) {
-        return (Requestinventoryverification) super.setUserIp(userIp);
+      public Requestinventoryverification setUploadType(java.lang.String uploadType) {
+        return (Requestinventoryverification) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Requestinventoryverification setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Requestinventoryverification) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -4745,21 +6503,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account that manages the order. This cannot be a multi-client account.
-     * @param contactEmail The email of the inventory verification contact.
-     * @param contactName The name of the inventory verification contact.
-     * @param country The country for which inventory verification is requested.
-     * @param language The language for which inventory verification is requested.
      * @return the request
      */
-    public Setinventoryverificationcontact setinventoryverificationcontact(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String contactEmail, java.lang.String contactName, java.lang.String country, java.lang.String language) throws java.io.IOException {
-      Setinventoryverificationcontact result = new Setinventoryverificationcontact(merchantId, accountId, contactEmail, contactName, country, language);
+    public Setinventoryverificationcontact setinventoryverificationcontact(java.math.BigInteger merchantId, java.math.BigInteger accountId) throws java.io.IOException {
+      Setinventoryverificationcontact result = new Setinventoryverificationcontact(merchantId, accountId);
       initialize(result);
       return result;
     }
 
     public class Setinventoryverificationcontact extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsSetInventoryVerificationContactResponse> {
 
-      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/setinventoryverificationcontact";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}/setinventoryverificationcontact";
 
       /**
        * Sets the inventory verification contract for the specified country.
@@ -4776,25 +6530,32 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account that manages the order. This cannot be a multi-client account.
-       * @param contactEmail The email of the inventory verification contact.
-       * @param contactName The name of the inventory verification contact.
-       * @param country The country for which inventory verification is requested.
-       * @param language The language for which inventory verification is requested.
        * @since 1.13
        */
-      protected Setinventoryverificationcontact(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String contactEmail, java.lang.String contactName, java.lang.String country, java.lang.String language) {
+      protected Setinventoryverificationcontact(java.math.BigInteger merchantId, java.math.BigInteger accountId) {
         super(ShoppingContent.this, "POST", REST_PATH, null, com.google.api.services.content.model.LiasettingsSetInventoryVerificationContactResponse.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
-        this.contactEmail = com.google.api.client.util.Preconditions.checkNotNull(contactEmail, "Required parameter contactEmail must be specified.");
-        this.contactName = com.google.api.client.util.Preconditions.checkNotNull(contactName, "Required parameter contactName must be specified.");
-        this.country = com.google.api.client.util.Preconditions.checkNotNull(country, "Required parameter country must be specified.");
-        this.language = com.google.api.client.util.Preconditions.checkNotNull(language, "Required parameter language must be specified.");
+      }
+
+      @Override
+      public Setinventoryverificationcontact set$Xgafv(java.lang.String $Xgafv) {
+        return (Setinventoryverificationcontact) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Setinventoryverificationcontact setAccessToken(java.lang.String accessToken) {
+        return (Setinventoryverificationcontact) super.setAccessToken(accessToken);
       }
 
       @Override
       public Setinventoryverificationcontact setAlt(java.lang.String alt) {
         return (Setinventoryverificationcontact) super.setAlt(alt);
+      }
+
+      @Override
+      public Setinventoryverificationcontact setCallback(java.lang.String callback) {
+        return (Setinventoryverificationcontact) super.setCallback(callback);
       }
 
       @Override
@@ -4823,8 +6584,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Setinventoryverificationcontact setUserIp(java.lang.String userIp) {
-        return (Setinventoryverificationcontact) super.setUserIp(userIp);
+      public Setinventoryverificationcontact setUploadType(java.lang.String uploadType) {
+        return (Setinventoryverificationcontact) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Setinventoryverificationcontact setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Setinventoryverificationcontact) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -4949,18 +6715,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which to retrieve accessible Google My Business accounts.
-     * @param country The country for which the POS data provider is selected.
      * @return the request
      */
-    public Setposdataprovider setposdataprovider(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String country) throws java.io.IOException {
-      Setposdataprovider result = new Setposdataprovider(merchantId, accountId, country);
+    public Setposdataprovider setposdataprovider(java.math.BigInteger merchantId, java.math.BigInteger accountId) throws java.io.IOException {
+      Setposdataprovider result = new Setposdataprovider(merchantId, accountId);
       initialize(result);
       return result;
     }
 
     public class Setposdataprovider extends ShoppingContentRequest<com.google.api.services.content.model.LiasettingsSetPosDataProviderResponse> {
 
-      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/setposdataprovider";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}/setposdataprovider";
 
       /**
        * Sets the POS data provider for the specified country.
@@ -4977,19 +6742,32 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *        must be a multi-client account and `accountId` must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which to retrieve accessible Google My Business accounts.
-       * @param country The country for which the POS data provider is selected.
        * @since 1.13
        */
-      protected Setposdataprovider(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String country) {
+      protected Setposdataprovider(java.math.BigInteger merchantId, java.math.BigInteger accountId) {
         super(ShoppingContent.this, "POST", REST_PATH, null, com.google.api.services.content.model.LiasettingsSetPosDataProviderResponse.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
-        this.country = com.google.api.client.util.Preconditions.checkNotNull(country, "Required parameter country must be specified.");
+      }
+
+      @Override
+      public Setposdataprovider set$Xgafv(java.lang.String $Xgafv) {
+        return (Setposdataprovider) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Setposdataprovider setAccessToken(java.lang.String accessToken) {
+        return (Setposdataprovider) super.setAccessToken(accessToken);
       }
 
       @Override
       public Setposdataprovider setAlt(java.lang.String alt) {
         return (Setposdataprovider) super.setAlt(alt);
+      }
+
+      @Override
+      public Setposdataprovider setCallback(java.lang.String callback) {
+        return (Setposdataprovider) super.setCallback(callback);
       }
 
       @Override
@@ -5018,8 +6796,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Setposdataprovider setUserIp(java.lang.String userIp) {
-        return (Setposdataprovider) super.setUserIp(userIp);
+      public Setposdataprovider setUploadType(java.lang.String uploadType) {
+        return (Setposdataprovider) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Setposdataprovider setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Setposdataprovider) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -5140,7 +6923,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Update extends ShoppingContentRequest<com.google.api.services.content.model.LiaSettings> {
 
-      private static final String REST_PATH = "{merchantId}/liasettings/{accountId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/liasettings/{accountId}";
 
       /**
        * Updates the LIA settings of the account. Any fields that are not provided are deleted from the
@@ -5167,8 +6950,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -5197,8 +6995,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -5289,7 +7092,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.LocalinventoryCustomBatchResponse> {
 
-      private static final String REST_PATH = "localinventory/batch";
+      private static final String REST_PATH = "content/v2.1/localinventory/batch";
 
       /**
        * Updates local inventory for multiple products or stores in a single request.
@@ -5310,8 +7113,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -5340,8 +7158,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -5370,7 +7193,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.LocalInventory> {
 
-      private static final String REST_PATH = "{merchantId}/products/{productId}/localinventory";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/products/{productId}/localinventory";
 
       /**
        * Updates the local inventory of a product in your Merchant Center account.
@@ -5394,8 +7217,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -5424,8 +7262,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -5516,7 +7359,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Createchargeinvoice extends ShoppingContentRequest<com.google.api.services.content.model.OrderinvoicesCreateChargeInvoiceResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orderinvoices/{orderId}/createChargeInvoice";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orderinvoices/{orderId}/createChargeInvoice";
 
       /**
        * Creates a charge invoice for a shipment group, and triggers a charge capture for orderinvoice
@@ -5542,8 +7385,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Createchargeinvoice set$Xgafv(java.lang.String $Xgafv) {
+        return (Createchargeinvoice) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Createchargeinvoice setAccessToken(java.lang.String accessToken) {
+        return (Createchargeinvoice) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Createchargeinvoice setAlt(java.lang.String alt) {
         return (Createchargeinvoice) super.setAlt(alt);
+      }
+
+      @Override
+      public Createchargeinvoice setCallback(java.lang.String callback) {
+        return (Createchargeinvoice) super.setCallback(callback);
       }
 
       @Override
@@ -5572,8 +7430,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Createchargeinvoice setUserIp(java.lang.String userIp) {
-        return (Createchargeinvoice) super.setUserIp(userIp);
+      public Createchargeinvoice setUploadType(java.lang.String uploadType) {
+        return (Createchargeinvoice) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Createchargeinvoice setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Createchargeinvoice) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -5637,7 +7500,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Createrefundinvoice extends ShoppingContentRequest<com.google.api.services.content.model.OrderinvoicesCreateRefundInvoiceResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orderinvoices/{orderId}/createRefundInvoice";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orderinvoices/{orderId}/createRefundInvoice";
 
       /**
        * Creates a refund invoice for one or more shipment groups, and triggers a refund for
@@ -5665,8 +7528,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Createrefundinvoice set$Xgafv(java.lang.String $Xgafv) {
+        return (Createrefundinvoice) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Createrefundinvoice setAccessToken(java.lang.String accessToken) {
+        return (Createrefundinvoice) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Createrefundinvoice setAlt(java.lang.String alt) {
         return (Createrefundinvoice) super.setAlt(alt);
+      }
+
+      @Override
+      public Createrefundinvoice setCallback(java.lang.String callback) {
+        return (Createrefundinvoice) super.setCallback(callback);
       }
 
       @Override
@@ -5695,8 +7573,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Createrefundinvoice setUserIp(java.lang.String userIp) {
-        return (Createrefundinvoice) super.setUserIp(userIp);
+      public Createrefundinvoice setUploadType(java.lang.String uploadType) {
+        return (Createrefundinvoice) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Createrefundinvoice setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Createrefundinvoice) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -5768,18 +7651,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Listdisbursements#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
-     * @param disbursementStartDate The first date which disbursements occurred. In ISO 8601 format.
      * @return the request
      */
-    public Listdisbursements listdisbursements(java.math.BigInteger merchantId, java.lang.String disbursementStartDate) throws java.io.IOException {
-      Listdisbursements result = new Listdisbursements(merchantId, disbursementStartDate);
+    public Listdisbursements listdisbursements(java.math.BigInteger merchantId) throws java.io.IOException {
+      Listdisbursements result = new Listdisbursements(merchantId);
       initialize(result);
       return result;
     }
 
     public class Listdisbursements extends ShoppingContentRequest<com.google.api.services.content.model.OrderreportsListDisbursementsResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orderreports/disbursements";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreports/disbursements";
 
       /**
        * Retrieves a report for disbursements from your Merchant Center account.
@@ -5793,13 +7675,11 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * constructor. </p>
        *
        * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
-       * @param disbursementStartDate The first date which disbursements occurred. In ISO 8601 format.
        * @since 1.13
        */
-      protected Listdisbursements(java.math.BigInteger merchantId, java.lang.String disbursementStartDate) {
+      protected Listdisbursements(java.math.BigInteger merchantId) {
         super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.OrderreportsListDisbursementsResponse.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
-        this.disbursementStartDate = com.google.api.client.util.Preconditions.checkNotNull(disbursementStartDate, "Required parameter disbursementStartDate must be specified.");
       }
 
       @Override
@@ -5813,8 +7693,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Listdisbursements set$Xgafv(java.lang.String $Xgafv) {
+        return (Listdisbursements) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Listdisbursements setAccessToken(java.lang.String accessToken) {
+        return (Listdisbursements) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Listdisbursements setAlt(java.lang.String alt) {
         return (Listdisbursements) super.setAlt(alt);
+      }
+
+      @Override
+      public Listdisbursements setCallback(java.lang.String callback) {
+        return (Listdisbursements) super.setCallback(callback);
       }
 
       @Override
@@ -5843,8 +7738,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Listdisbursements setUserIp(java.lang.String userIp) {
-        return (Listdisbursements) super.setUserIp(userIp);
+      public Listdisbursements setUploadType(java.lang.String uploadType) {
+        return (Listdisbursements) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Listdisbursements setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Listdisbursements) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -5863,22 +7763,6 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The first date which disbursements occurred. In ISO 8601 format. */
-      @com.google.api.client.util.Key
-      private java.lang.String disbursementStartDate;
-
-      /** The first date which disbursements occurred. In ISO 8601 format.
-       */
-      public java.lang.String getDisbursementStartDate() {
-        return disbursementStartDate;
-      }
-
-      /** The first date which disbursements occurred. In ISO 8601 format. */
-      public Listdisbursements setDisbursementStartDate(java.lang.String disbursementStartDate) {
-        this.disbursementStartDate = disbursementStartDate;
-        return this;
-      }
-
       /** The last date which disbursements occurred. In ISO 8601 format. Default: current date. */
       @com.google.api.client.util.Key
       private java.lang.String disbursementEndDate;
@@ -5892,6 +7776,22 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /** The last date which disbursements occurred. In ISO 8601 format. Default: current date. */
       public Listdisbursements setDisbursementEndDate(java.lang.String disbursementEndDate) {
         this.disbursementEndDate = disbursementEndDate;
+        return this;
+      }
+
+      /** The first date which disbursements occurred. In ISO 8601 format. */
+      @com.google.api.client.util.Key
+      private java.lang.String disbursementStartDate;
+
+      /** The first date which disbursements occurred. In ISO 8601 format.
+       */
+      public java.lang.String getDisbursementStartDate() {
+        return disbursementStartDate;
+      }
+
+      /** The first date which disbursements occurred. In ISO 8601 format. */
+      public Listdisbursements setDisbursementStartDate(java.lang.String disbursementStartDate) {
+        this.disbursementStartDate = disbursementStartDate;
         return this;
       }
 
@@ -5942,18 +7842,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *
      * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
      * @param disbursementId The Google-provided ID of the disbursement (found in Wallet).
-     * @param transactionStartDate The first date in which transaction occurred. In ISO 8601 format.
      * @return the request
      */
-    public Listtransactions listtransactions(java.math.BigInteger merchantId, java.lang.String disbursementId, java.lang.String transactionStartDate) throws java.io.IOException {
-      Listtransactions result = new Listtransactions(merchantId, disbursementId, transactionStartDate);
+    public Listtransactions listtransactions(java.math.BigInteger merchantId, java.lang.String disbursementId) throws java.io.IOException {
+      Listtransactions result = new Listtransactions(merchantId, disbursementId);
       initialize(result);
       return result;
     }
 
     public class Listtransactions extends ShoppingContentRequest<com.google.api.services.content.model.OrderreportsListTransactionsResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orderreports/disbursements/{disbursementId}/transactions";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreports/disbursements/{disbursementId}/transactions";
 
       /**
        * Retrieves a list of transactions for a disbursement from your Merchant Center account.
@@ -5968,14 +7867,12 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        *
        * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
        * @param disbursementId The Google-provided ID of the disbursement (found in Wallet).
-       * @param transactionStartDate The first date in which transaction occurred. In ISO 8601 format.
        * @since 1.13
        */
-      protected Listtransactions(java.math.BigInteger merchantId, java.lang.String disbursementId, java.lang.String transactionStartDate) {
+      protected Listtransactions(java.math.BigInteger merchantId, java.lang.String disbursementId) {
         super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.OrderreportsListTransactionsResponse.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.disbursementId = com.google.api.client.util.Preconditions.checkNotNull(disbursementId, "Required parameter disbursementId must be specified.");
-        this.transactionStartDate = com.google.api.client.util.Preconditions.checkNotNull(transactionStartDate, "Required parameter transactionStartDate must be specified.");
       }
 
       @Override
@@ -5989,8 +7886,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Listtransactions set$Xgafv(java.lang.String $Xgafv) {
+        return (Listtransactions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Listtransactions setAccessToken(java.lang.String accessToken) {
+        return (Listtransactions) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Listtransactions setAlt(java.lang.String alt) {
         return (Listtransactions) super.setAlt(alt);
+      }
+
+      @Override
+      public Listtransactions setCallback(java.lang.String callback) {
+        return (Listtransactions) super.setCallback(callback);
       }
 
       @Override
@@ -6019,8 +7931,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Listtransactions setUserIp(java.lang.String userIp) {
-        return (Listtransactions) super.setUserIp(userIp);
+      public Listtransactions setUploadType(java.lang.String uploadType) {
+        return (Listtransactions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Listtransactions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Listtransactions) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -6052,22 +7969,6 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /** The Google-provided ID of the disbursement (found in Wallet). */
       public Listtransactions setDisbursementId(java.lang.String disbursementId) {
         this.disbursementId = disbursementId;
-        return this;
-      }
-
-      /** The first date in which transaction occurred. In ISO 8601 format. */
-      @com.google.api.client.util.Key
-      private java.lang.String transactionStartDate;
-
-      /** The first date in which transaction occurred. In ISO 8601 format.
-       */
-      public java.lang.String getTransactionStartDate() {
-        return transactionStartDate;
-      }
-
-      /** The first date in which transaction occurred. In ISO 8601 format. */
-      public Listtransactions setTransactionStartDate(java.lang.String transactionStartDate) {
-        this.transactionStartDate = transactionStartDate;
         return this;
       }
 
@@ -6123,6 +8024,22 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
+      /** The first date in which transaction occurred. In ISO 8601 format. */
+      @com.google.api.client.util.Key
+      private java.lang.String transactionStartDate;
+
+      /** The first date in which transaction occurred. In ISO 8601 format.
+       */
+      public java.lang.String getTransactionStartDate() {
+        return transactionStartDate;
+      }
+
+      /** The first date in which transaction occurred. In ISO 8601 format. */
+      public Listtransactions setTransactionStartDate(java.lang.String transactionStartDate) {
+        this.transactionStartDate = transactionStartDate;
+        return this;
+      }
+
       @Override
       public Listtransactions set(String parameterName, Object value) {
         return (Listtransactions) super.set(parameterName, value);
@@ -6172,7 +8089,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Acknowledge extends ShoppingContentRequest<com.google.api.services.content.model.OrderreturnsAcknowledgeResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orderreturns/{returnId}/acknowledge";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreturns/{returnId}/acknowledge";
 
       /**
        * Acks an order return in your Merchant Center account.
@@ -6197,8 +8114,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Acknowledge set$Xgafv(java.lang.String $Xgafv) {
+        return (Acknowledge) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Acknowledge setAccessToken(java.lang.String accessToken) {
+        return (Acknowledge) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Acknowledge setAlt(java.lang.String alt) {
         return (Acknowledge) super.setAlt(alt);
+      }
+
+      @Override
+      public Acknowledge setCallback(java.lang.String callback) {
+        return (Acknowledge) super.setCallback(callback);
       }
 
       @Override
@@ -6227,8 +8159,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Acknowledge setUserIp(java.lang.String userIp) {
-        return (Acknowledge) super.setUserIp(userIp);
+      public Acknowledge setUploadType(java.lang.String uploadType) {
+        return (Acknowledge) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Acknowledge setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Acknowledge) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -6288,7 +8225,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Createorderreturn extends ShoppingContentRequest<com.google.api.services.content.model.OrderreturnsCreateOrderReturnResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orderreturns/createOrderReturn";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreturns/createOrderReturn";
 
       /**
        * Create return in your Merchant Center account.
@@ -6311,8 +8248,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Createorderreturn set$Xgafv(java.lang.String $Xgafv) {
+        return (Createorderreturn) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Createorderreturn setAccessToken(java.lang.String accessToken) {
+        return (Createorderreturn) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Createorderreturn setAlt(java.lang.String alt) {
         return (Createorderreturn) super.setAlt(alt);
+      }
+
+      @Override
+      public Createorderreturn setCallback(java.lang.String callback) {
+        return (Createorderreturn) super.setCallback(callback);
       }
 
       @Override
@@ -6341,8 +8293,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Createorderreturn setUserIp(java.lang.String userIp) {
-        return (Createorderreturn) super.setUserIp(userIp);
+      public Createorderreturn setUploadType(java.lang.String uploadType) {
+        return (Createorderreturn) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Createorderreturn setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Createorderreturn) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -6386,7 +8343,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.MerchantOrderReturn> {
 
-      private static final String REST_PATH = "{merchantId}/orderreturns/{returnId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreturns/{returnId}";
 
       /**
        * Retrieves an order return from your Merchant Center account.
@@ -6419,8 +8376,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -6449,8 +8421,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -6509,7 +8486,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.OrderreturnsListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orderreturns";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreturns";
 
       /**
        * Lists order returns in your Merchant Center account.
@@ -6540,8 +8517,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -6570,8 +8562,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -6870,7 +8867,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Process extends ShoppingContentRequest<com.google.api.services.content.model.OrderreturnsProcessResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orderreturns/{returnId}/process";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orderreturns/{returnId}/process";
 
       /**
        * Processes return in your Merchant Center account.
@@ -6895,8 +8892,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Process set$Xgafv(java.lang.String $Xgafv) {
+        return (Process) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Process setAccessToken(java.lang.String accessToken) {
+        return (Process) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Process setAlt(java.lang.String alt) {
         return (Process) super.setAlt(alt);
+      }
+
+      @Override
+      public Process setCallback(java.lang.String callback) {
+        return (Process) super.setCallback(callback);
       }
 
       @Override
@@ -6925,8 +8937,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Process setUserIp(java.lang.String userIp) {
-        return (Process) super.setUserIp(userIp);
+      public Process setUploadType(java.lang.String uploadType) {
+        return (Process) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Process setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Process) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -7010,7 +9027,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Acknowledge extends ShoppingContentRequest<com.google.api.services.content.model.OrdersAcknowledgeResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/acknowledge";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/acknowledge";
 
       /**
        * Marks an order as acknowledged.
@@ -7035,8 +9052,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Acknowledge set$Xgafv(java.lang.String $Xgafv) {
+        return (Acknowledge) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Acknowledge setAccessToken(java.lang.String accessToken) {
+        return (Acknowledge) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Acknowledge setAlt(java.lang.String alt) {
         return (Acknowledge) super.setAlt(alt);
+      }
+
+      @Override
+      public Acknowledge setCallback(java.lang.String callback) {
+        return (Acknowledge) super.setCallback(callback);
       }
 
       @Override
@@ -7065,8 +9097,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Acknowledge setUserIp(java.lang.String userIp) {
-        return (Acknowledge) super.setUserIp(userIp);
+      public Acknowledge setUploadType(java.lang.String uploadType) {
+        return (Acknowledge) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Acknowledge setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Acknowledge) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -7126,7 +9163,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Advancetestorder extends ShoppingContentRequest<com.google.api.services.content.model.OrdersAdvanceTestOrderResponse> {
 
-      private static final String REST_PATH = "{merchantId}/testorders/{orderId}/advance";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/testorders/{orderId}/advance";
 
       /**
        * Sandbox only. Moves a test order from state "`inProgress`" to state "`pendingShipment`".
@@ -7150,8 +9187,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Advancetestorder set$Xgafv(java.lang.String $Xgafv) {
+        return (Advancetestorder) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Advancetestorder setAccessToken(java.lang.String accessToken) {
+        return (Advancetestorder) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Advancetestorder setAlt(java.lang.String alt) {
         return (Advancetestorder) super.setAlt(alt);
+      }
+
+      @Override
+      public Advancetestorder setCallback(java.lang.String callback) {
+        return (Advancetestorder) super.setCallback(callback);
       }
 
       @Override
@@ -7180,8 +9232,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Advancetestorder setUserIp(java.lang.String userIp) {
-        return (Advancetestorder) super.setUserIp(userIp);
+      public Advancetestorder setUploadType(java.lang.String uploadType) {
+        return (Advancetestorder) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Advancetestorder setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Advancetestorder) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -7242,7 +9299,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Cancel extends ShoppingContentRequest<com.google.api.services.content.model.OrdersCancelResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/cancel";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/cancel";
 
       /**
        * Cancels all line items in an order, making a full refund.
@@ -7266,8 +9323,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Cancel set$Xgafv(java.lang.String $Xgafv) {
+        return (Cancel) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Cancel setAccessToken(java.lang.String accessToken) {
+        return (Cancel) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Cancel setAlt(java.lang.String alt) {
         return (Cancel) super.setAlt(alt);
+      }
+
+      @Override
+      public Cancel setCallback(java.lang.String callback) {
+        return (Cancel) super.setCallback(callback);
       }
 
       @Override
@@ -7296,8 +9368,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Cancel setUserIp(java.lang.String userIp) {
-        return (Cancel) super.setUserIp(userIp);
+      public Cancel setUploadType(java.lang.String uploadType) {
+        return (Cancel) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Cancel) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -7358,7 +9435,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Cancellineitem extends ShoppingContentRequest<com.google.api.services.content.model.OrdersCancelLineItemResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/cancelLineItem";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/cancelLineItem";
 
       /**
        * Cancels a line item, making a full refund.
@@ -7383,8 +9460,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Cancellineitem set$Xgafv(java.lang.String $Xgafv) {
+        return (Cancellineitem) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Cancellineitem setAccessToken(java.lang.String accessToken) {
+        return (Cancellineitem) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Cancellineitem setAlt(java.lang.String alt) {
         return (Cancellineitem) super.setAlt(alt);
+      }
+
+      @Override
+      public Cancellineitem setCallback(java.lang.String callback) {
+        return (Cancellineitem) super.setCallback(callback);
       }
 
       @Override
@@ -7413,8 +9505,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Cancellineitem setUserIp(java.lang.String userIp) {
-        return (Cancellineitem) super.setUserIp(userIp);
+      public Cancellineitem setUploadType(java.lang.String uploadType) {
+        return (Cancellineitem) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Cancellineitem setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Cancellineitem) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -7476,7 +9573,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Canceltestorderbycustomer extends ShoppingContentRequest<com.google.api.services.content.model.OrdersCancelTestOrderByCustomerResponse> {
 
-      private static final String REST_PATH = "{merchantId}/testorders/{orderId}/cancelByCustomer";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/testorders/{orderId}/cancelByCustomer";
 
       /**
        * Sandbox only. Cancels a test order for customer-initiated cancellation.
@@ -7501,8 +9598,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Canceltestorderbycustomer set$Xgafv(java.lang.String $Xgafv) {
+        return (Canceltestorderbycustomer) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Canceltestorderbycustomer setAccessToken(java.lang.String accessToken) {
+        return (Canceltestorderbycustomer) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Canceltestorderbycustomer setAlt(java.lang.String alt) {
         return (Canceltestorderbycustomer) super.setAlt(alt);
+      }
+
+      @Override
+      public Canceltestorderbycustomer setCallback(java.lang.String callback) {
+        return (Canceltestorderbycustomer) super.setCallback(callback);
       }
 
       @Override
@@ -7531,8 +9643,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Canceltestorderbycustomer setUserIp(java.lang.String userIp) {
-        return (Canceltestorderbycustomer) super.setUserIp(userIp);
+      public Canceltestorderbycustomer setUploadType(java.lang.String uploadType) {
+        return (Canceltestorderbycustomer) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Canceltestorderbycustomer setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Canceltestorderbycustomer) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -7592,7 +9709,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Createtestorder extends ShoppingContentRequest<com.google.api.services.content.model.OrdersCreateTestOrderResponse> {
 
-      private static final String REST_PATH = "{merchantId}/testorders";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/testorders";
 
       /**
        * Sandbox only. Creates a test order.
@@ -7615,8 +9732,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Createtestorder set$Xgafv(java.lang.String $Xgafv) {
+        return (Createtestorder) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Createtestorder setAccessToken(java.lang.String accessToken) {
+        return (Createtestorder) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Createtestorder setAlt(java.lang.String alt) {
         return (Createtestorder) super.setAlt(alt);
+      }
+
+      @Override
+      public Createtestorder setCallback(java.lang.String callback) {
+        return (Createtestorder) super.setCallback(callback);
       }
 
       @Override
@@ -7645,8 +9777,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Createtestorder setUserIp(java.lang.String userIp) {
-        return (Createtestorder) super.setUserIp(userIp);
+      public Createtestorder setUploadType(java.lang.String uploadType) {
+        return (Createtestorder) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Createtestorder setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Createtestorder) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -7695,7 +9832,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Createtestreturn extends ShoppingContentRequest<com.google.api.services.content.model.OrdersCreateTestReturnResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/testreturn";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/testreturn";
 
       /**
        * Sandbox only. Creates a test return.
@@ -7720,8 +9857,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Createtestreturn set$Xgafv(java.lang.String $Xgafv) {
+        return (Createtestreturn) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Createtestreturn setAccessToken(java.lang.String accessToken) {
+        return (Createtestreturn) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Createtestreturn setAlt(java.lang.String alt) {
         return (Createtestreturn) super.setAlt(alt);
+      }
+
+      @Override
+      public Createtestreturn setCallback(java.lang.String callback) {
+        return (Createtestreturn) super.setCallback(callback);
       }
 
       @Override
@@ -7750,8 +9902,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Createtestreturn setUserIp(java.lang.String userIp) {
-        return (Createtestreturn) super.setUserIp(userIp);
+      public Createtestreturn setUploadType(java.lang.String uploadType) {
+        return (Createtestreturn) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Createtestreturn setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Createtestreturn) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -7811,7 +9968,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Order> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}";
 
       /**
        * Retrieves an order from your Merchant Center account.
@@ -7844,8 +10001,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -7874,8 +10046,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -7936,7 +10113,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Getbymerchantorderid extends ShoppingContentRequest<com.google.api.services.content.model.OrdersGetByMerchantOrderIdResponse> {
 
-      private static final String REST_PATH = "{merchantId}/ordersbymerchantid/{merchantOrderId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/ordersbymerchantid/{merchantOrderId}";
 
       /**
        * Retrieves an order using merchant order ID.
@@ -7970,8 +10147,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Getbymerchantorderid set$Xgafv(java.lang.String $Xgafv) {
+        return (Getbymerchantorderid) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Getbymerchantorderid setAccessToken(java.lang.String accessToken) {
+        return (Getbymerchantorderid) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Getbymerchantorderid setAlt(java.lang.String alt) {
         return (Getbymerchantorderid) super.setAlt(alt);
+      }
+
+      @Override
+      public Getbymerchantorderid setCallback(java.lang.String callback) {
+        return (Getbymerchantorderid) super.setCallback(callback);
       }
 
       @Override
@@ -8000,8 +10192,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Getbymerchantorderid setUserIp(java.lang.String userIp) {
-        return (Getbymerchantorderid) super.setUserIp(userIp);
+      public Getbymerchantorderid setUploadType(java.lang.String uploadType) {
+        return (Getbymerchantorderid) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Getbymerchantorderid setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Getbymerchantorderid) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -8063,7 +10260,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Gettestordertemplate extends ShoppingContentRequest<com.google.api.services.content.model.OrdersGetTestOrderTemplateResponse> {
 
-      private static final String REST_PATH = "{merchantId}/testordertemplates/{templateName}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/testordertemplates/{templateName}";
 
       /**
        * Sandbox only. Retrieves an order template that can be used to quickly create a new order in
@@ -8098,8 +10295,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Gettestordertemplate set$Xgafv(java.lang.String $Xgafv) {
+        return (Gettestordertemplate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Gettestordertemplate setAccessToken(java.lang.String accessToken) {
+        return (Gettestordertemplate) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Gettestordertemplate setAlt(java.lang.String alt) {
         return (Gettestordertemplate) super.setAlt(alt);
+      }
+
+      @Override
+      public Gettestordertemplate setCallback(java.lang.String callback) {
+        return (Gettestordertemplate) super.setCallback(callback);
       }
 
       @Override
@@ -8128,8 +10340,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Gettestordertemplate setUserIp(java.lang.String userIp) {
-        return (Gettestordertemplate) super.setUserIp(userIp);
+      public Gettestordertemplate setUploadType(java.lang.String uploadType) {
+        return (Gettestordertemplate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Gettestordertemplate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Gettestordertemplate) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -8217,7 +10434,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Instorerefundlineitem extends ShoppingContentRequest<com.google.api.services.content.model.OrdersInStoreRefundLineItemResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/inStoreRefundLineItem";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/inStoreRefundLineItem";
 
       /**
        * Deprecated. Notifies that item return and refund was handled directly by merchant outside of
@@ -8248,8 +10465,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Instorerefundlineitem set$Xgafv(java.lang.String $Xgafv) {
+        return (Instorerefundlineitem) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Instorerefundlineitem setAccessToken(java.lang.String accessToken) {
+        return (Instorerefundlineitem) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Instorerefundlineitem setAlt(java.lang.String alt) {
         return (Instorerefundlineitem) super.setAlt(alt);
+      }
+
+      @Override
+      public Instorerefundlineitem setCallback(java.lang.String callback) {
+        return (Instorerefundlineitem) super.setCallback(callback);
       }
 
       @Override
@@ -8278,8 +10510,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Instorerefundlineitem setUserIp(java.lang.String userIp) {
-        return (Instorerefundlineitem) super.setUserIp(userIp);
+      public Instorerefundlineitem setUploadType(java.lang.String uploadType) {
+        return (Instorerefundlineitem) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Instorerefundlineitem setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Instorerefundlineitem) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -8338,7 +10575,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.OrdersListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders";
 
       /**
        * Lists the orders in your Merchant Center account.
@@ -8369,8 +10606,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -8399,8 +10651,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -8472,25 +10729,22 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Order results by placement date in descending or ascending order.
-       *
-       * Acceptable values are: - placedDateAsc - placedDateDesc
+       * Order results by placement date in descending or ascending order. Acceptable values are: -
+       * placedDateAsc - placedDateDesc
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Order results by placement date in descending or ascending order.
-
-     Acceptable values are: - placedDateAsc - placedDateDesc
+      /** Order results by placement date in descending or ascending order. Acceptable values are: -
+     placedDateAsc - placedDateDesc
        */
       public java.lang.String getOrderBy() {
         return orderBy;
       }
 
       /**
-       * Order results by placement date in descending or ascending order.
-       *
-       * Acceptable values are: - placedDateAsc - placedDateDesc
+       * Order results by placement date in descending or ascending order. Acceptable values are: -
+       * placedDateAsc - placedDateDesc
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -8599,7 +10853,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Refunditem extends ShoppingContentRequest<com.google.api.services.content.model.OrdersRefundItemResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/refunditem";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/refunditem";
 
       /**
        * Issues a partial or total refund for items and shipment.
@@ -8624,8 +10878,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Refunditem set$Xgafv(java.lang.String $Xgafv) {
+        return (Refunditem) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Refunditem setAccessToken(java.lang.String accessToken) {
+        return (Refunditem) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Refunditem setAlt(java.lang.String alt) {
         return (Refunditem) super.setAlt(alt);
+      }
+
+      @Override
+      public Refunditem setCallback(java.lang.String callback) {
+        return (Refunditem) super.setCallback(callback);
       }
 
       @Override
@@ -8654,8 +10923,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Refunditem setUserIp(java.lang.String userIp) {
-        return (Refunditem) super.setUserIp(userIp);
+      public Refunditem setUploadType(java.lang.String uploadType) {
+        return (Refunditem) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Refunditem setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Refunditem) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -8716,7 +10990,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Refundorder extends ShoppingContentRequest<com.google.api.services.content.model.OrdersRefundOrderResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/refundorder";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/refundorder";
 
       /**
        * Issues a partial or total refund for an order.
@@ -8741,8 +11015,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Refundorder set$Xgafv(java.lang.String $Xgafv) {
+        return (Refundorder) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Refundorder setAccessToken(java.lang.String accessToken) {
+        return (Refundorder) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Refundorder setAlt(java.lang.String alt) {
         return (Refundorder) super.setAlt(alt);
+      }
+
+      @Override
+      public Refundorder setCallback(java.lang.String callback) {
+        return (Refundorder) super.setCallback(callback);
       }
 
       @Override
@@ -8771,8 +11060,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Refundorder setUserIp(java.lang.String userIp) {
-        return (Refundorder) super.setUserIp(userIp);
+      public Refundorder setUploadType(java.lang.String uploadType) {
+        return (Refundorder) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Refundorder setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Refundorder) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -8834,7 +11128,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Rejectreturnlineitem extends ShoppingContentRequest<com.google.api.services.content.model.OrdersRejectReturnLineItemResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/rejectReturnLineItem";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/rejectReturnLineItem";
 
       /**
        * Rejects return on an line item.
@@ -8859,8 +11153,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Rejectreturnlineitem set$Xgafv(java.lang.String $Xgafv) {
+        return (Rejectreturnlineitem) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Rejectreturnlineitem setAccessToken(java.lang.String accessToken) {
+        return (Rejectreturnlineitem) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Rejectreturnlineitem setAlt(java.lang.String alt) {
         return (Rejectreturnlineitem) super.setAlt(alt);
+      }
+
+      @Override
+      public Rejectreturnlineitem setCallback(java.lang.String callback) {
+        return (Rejectreturnlineitem) super.setCallback(callback);
       }
 
       @Override
@@ -8889,8 +11198,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Rejectreturnlineitem setUserIp(java.lang.String userIp) {
-        return (Rejectreturnlineitem) super.setUserIp(userIp);
+      public Rejectreturnlineitem setUploadType(java.lang.String uploadType) {
+        return (Rejectreturnlineitem) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Rejectreturnlineitem setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Rejectreturnlineitem) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -8956,7 +11270,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Returnrefundlineitem extends ShoppingContentRequest<com.google.api.services.content.model.OrdersReturnRefundLineItemResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/returnRefundLineItem";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/returnRefundLineItem";
 
       /**
        * Returns and refunds a line item. Note that this method can only be called on fully shipped
@@ -8985,8 +11299,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Returnrefundlineitem set$Xgafv(java.lang.String $Xgafv) {
+        return (Returnrefundlineitem) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Returnrefundlineitem setAccessToken(java.lang.String accessToken) {
+        return (Returnrefundlineitem) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Returnrefundlineitem setAlt(java.lang.String alt) {
         return (Returnrefundlineitem) super.setAlt(alt);
+      }
+
+      @Override
+      public Returnrefundlineitem setCallback(java.lang.String callback) {
+        return (Returnrefundlineitem) super.setCallback(callback);
       }
 
       @Override
@@ -9015,8 +11344,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Returnrefundlineitem setUserIp(java.lang.String userIp) {
-        return (Returnrefundlineitem) super.setUserIp(userIp);
+      public Returnrefundlineitem setUploadType(java.lang.String uploadType) {
+        return (Returnrefundlineitem) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Returnrefundlineitem setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Returnrefundlineitem) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -9080,7 +11414,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Setlineitemmetadata extends ShoppingContentRequest<com.google.api.services.content.model.OrdersSetLineItemMetadataResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/setLineItemMetadata";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/setLineItemMetadata";
 
       /**
        * Sets (or overrides if it already exists) merchant provided annotations in the form of key-value
@@ -9108,8 +11442,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Setlineitemmetadata set$Xgafv(java.lang.String $Xgafv) {
+        return (Setlineitemmetadata) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Setlineitemmetadata setAccessToken(java.lang.String accessToken) {
+        return (Setlineitemmetadata) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Setlineitemmetadata setAlt(java.lang.String alt) {
         return (Setlineitemmetadata) super.setAlt(alt);
+      }
+
+      @Override
+      public Setlineitemmetadata setCallback(java.lang.String callback) {
+        return (Setlineitemmetadata) super.setCallback(callback);
       }
 
       @Override
@@ -9138,8 +11487,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Setlineitemmetadata setUserIp(java.lang.String userIp) {
-        return (Setlineitemmetadata) super.setUserIp(userIp);
+      public Setlineitemmetadata setUploadType(java.lang.String uploadType) {
+        return (Setlineitemmetadata) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Setlineitemmetadata setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Setlineitemmetadata) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -9200,7 +11554,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Shiplineitems extends ShoppingContentRequest<com.google.api.services.content.model.OrdersShipLineItemsResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/shipLineItems";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/shipLineItems";
 
       /**
        * Marks line item(s) as shipped.
@@ -9225,8 +11579,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Shiplineitems set$Xgafv(java.lang.String $Xgafv) {
+        return (Shiplineitems) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Shiplineitems setAccessToken(java.lang.String accessToken) {
+        return (Shiplineitems) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Shiplineitems setAlt(java.lang.String alt) {
         return (Shiplineitems) super.setAlt(alt);
+      }
+
+      @Override
+      public Shiplineitems setCallback(java.lang.String callback) {
+        return (Shiplineitems) super.setCallback(callback);
       }
 
       @Override
@@ -9255,8 +11624,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Shiplineitems setUserIp(java.lang.String userIp) {
-        return (Shiplineitems) super.setUserIp(userIp);
+      public Shiplineitems setUploadType(java.lang.String uploadType) {
+        return (Shiplineitems) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Shiplineitems setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Shiplineitems) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -9318,7 +11692,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Updatelineitemshippingdetails extends ShoppingContentRequest<com.google.api.services.content.model.OrdersUpdateLineItemShippingDetailsResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/updateLineItemShippingDetails";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/updateLineItemShippingDetails";
 
       /**
        * Updates ship by and delivery by dates for a line item.
@@ -9343,8 +11717,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Updatelineitemshippingdetails set$Xgafv(java.lang.String $Xgafv) {
+        return (Updatelineitemshippingdetails) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Updatelineitemshippingdetails setAccessToken(java.lang.String accessToken) {
+        return (Updatelineitemshippingdetails) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Updatelineitemshippingdetails setAlt(java.lang.String alt) {
         return (Updatelineitemshippingdetails) super.setAlt(alt);
+      }
+
+      @Override
+      public Updatelineitemshippingdetails setCallback(java.lang.String callback) {
+        return (Updatelineitemshippingdetails) super.setCallback(callback);
       }
 
       @Override
@@ -9373,8 +11762,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Updatelineitemshippingdetails setUserIp(java.lang.String userIp) {
-        return (Updatelineitemshippingdetails) super.setUserIp(userIp);
+      public Updatelineitemshippingdetails setUploadType(java.lang.String uploadType) {
+        return (Updatelineitemshippingdetails) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Updatelineitemshippingdetails setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Updatelineitemshippingdetails) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -9436,7 +11830,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Updatemerchantorderid extends ShoppingContentRequest<com.google.api.services.content.model.OrdersUpdateMerchantOrderIdResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/updateMerchantOrderId";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/updateMerchantOrderId";
 
       /**
        * Updates the merchant order ID for a given order.
@@ -9461,8 +11855,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Updatemerchantorderid set$Xgafv(java.lang.String $Xgafv) {
+        return (Updatemerchantorderid) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Updatemerchantorderid setAccessToken(java.lang.String accessToken) {
+        return (Updatemerchantorderid) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Updatemerchantorderid setAlt(java.lang.String alt) {
         return (Updatemerchantorderid) super.setAlt(alt);
+      }
+
+      @Override
+      public Updatemerchantorderid setCallback(java.lang.String callback) {
+        return (Updatemerchantorderid) super.setCallback(callback);
       }
 
       @Override
@@ -9491,8 +11900,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Updatemerchantorderid setUserIp(java.lang.String userIp) {
-        return (Updatemerchantorderid) super.setUserIp(userIp);
+      public Updatemerchantorderid setUploadType(java.lang.String uploadType) {
+        return (Updatemerchantorderid) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Updatemerchantorderid setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Updatemerchantorderid) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -9553,7 +11967,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Updateshipment extends ShoppingContentRequest<com.google.api.services.content.model.OrdersUpdateShipmentResponse> {
 
-      private static final String REST_PATH = "{merchantId}/orders/{orderId}/updateShipment";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/orders/{orderId}/updateShipment";
 
       /**
        * Updates a shipment's status, carrier, and/or tracking ID.
@@ -9578,8 +11992,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Updateshipment set$Xgafv(java.lang.String $Xgafv) {
+        return (Updateshipment) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Updateshipment setAccessToken(java.lang.String accessToken) {
+        return (Updateshipment) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Updateshipment setAlt(java.lang.String alt) {
         return (Updateshipment) super.setAlt(alt);
+      }
+
+      @Override
+      public Updateshipment setCallback(java.lang.String callback) {
+        return (Updateshipment) super.setCallback(callback);
       }
 
       @Override
@@ -9608,8 +12037,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Updateshipment setUserIp(java.lang.String userIp) {
-        return (Updateshipment) super.setUserIp(userIp);
+      public Updateshipment setUploadType(java.lang.String uploadType) {
+        return (Updateshipment) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Updateshipment setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Updateshipment) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account that manages the order. This cannot be a multi-client account. */
@@ -9691,7 +12125,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.PosCustomBatchResponse> {
 
-      private static final String REST_PATH = "pos/batch";
+      private static final String REST_PATH = "content/v2.1/pos/batch";
 
       /**
        * Batches multiple POS-related calls in a single request.
@@ -9712,8 +12146,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -9742,8 +12191,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -9772,7 +12226,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "{merchantId}/pos/{targetMerchantId}/store/{storeCode}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/pos/{targetMerchantId}/store/{storeCode}";
 
       /**
        * Deletes a store for the given merchant.
@@ -9797,8 +12251,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -9827,8 +12296,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the POS or inventory data provider. */
@@ -9905,7 +12379,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.PosStore> {
 
-      private static final String REST_PATH = "{merchantId}/pos/{targetMerchantId}/store/{storeCode}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/pos/{targetMerchantId}/store/{storeCode}";
 
       /**
        * Retrieves information about the given store.
@@ -9940,8 +12414,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -9970,8 +12459,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the POS or inventory data provider. */
@@ -10048,7 +12542,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.PosStore> {
 
-      private static final String REST_PATH = "{merchantId}/pos/{targetMerchantId}/store";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/pos/{targetMerchantId}/store";
 
       /**
        * Creates a store for the given merchant.
@@ -10069,15 +12563,26 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.PosStore.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.targetMerchantId = com.google.api.client.util.Preconditions.checkNotNull(targetMerchantId, "Required parameter targetMerchantId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getStoreAddress(), "PosStore.getStoreAddress()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getStoreCode(), "PosStore.getStoreCode()");
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
       }
 
       @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -10106,8 +12611,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the POS or inventory data provider. */
@@ -10168,7 +12678,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Inventory extends ShoppingContentRequest<com.google.api.services.content.model.PosInventoryResponse> {
 
-      private static final String REST_PATH = "{merchantId}/pos/{targetMerchantId}/inventory";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/pos/{targetMerchantId}/inventory";
 
       /**
        * Submit inventory for the given merchant.
@@ -10190,23 +12700,26 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.PosInventoryResponse.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.targetMerchantId = com.google.api.client.util.Preconditions.checkNotNull(targetMerchantId, "Required parameter targetMerchantId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getContentLanguage(), "PosInventoryRequest.getContentLanguage()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getItemId(), "PosInventoryRequest.getItemId()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getQuantity(), "PosInventoryRequest.getQuantity()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getStoreCode(), "PosInventoryRequest.getStoreCode()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getTargetCountry(), "PosInventoryRequest.getTargetCountry()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getTimestamp(), "PosInventoryRequest.getTimestamp()");
+      }
+
+      @Override
+      public Inventory set$Xgafv(java.lang.String $Xgafv) {
+        return (Inventory) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Inventory setAccessToken(java.lang.String accessToken) {
+        return (Inventory) super.setAccessToken(accessToken);
       }
 
       @Override
       public Inventory setAlt(java.lang.String alt) {
         return (Inventory) super.setAlt(alt);
+      }
+
+      @Override
+      public Inventory setCallback(java.lang.String callback) {
+        return (Inventory) super.setCallback(callback);
       }
 
       @Override
@@ -10235,8 +12748,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Inventory setUserIp(java.lang.String userIp) {
-        return (Inventory) super.setUserIp(userIp);
+      public Inventory setUploadType(java.lang.String uploadType) {
+        return (Inventory) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Inventory setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Inventory) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the POS or inventory data provider. */
@@ -10296,7 +12814,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.PosListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/pos/{targetMerchantId}/store";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/pos/{targetMerchantId}/store";
 
       /**
        * Lists the stores of the target merchant.
@@ -10329,8 +12847,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -10359,8 +12892,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the POS or inventory data provider. */
@@ -10421,7 +12959,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Sale extends ShoppingContentRequest<com.google.api.services.content.model.PosSaleResponse> {
 
-      private static final String REST_PATH = "{merchantId}/pos/{targetMerchantId}/sale";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/pos/{targetMerchantId}/sale";
 
       /**
        * Submit a sale event for the given merchant.
@@ -10442,23 +12980,26 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.PosSaleResponse.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.targetMerchantId = com.google.api.client.util.Preconditions.checkNotNull(targetMerchantId, "Required parameter targetMerchantId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getContentLanguage(), "PosSaleRequest.getContentLanguage()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getItemId(), "PosSaleRequest.getItemId()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getQuantity(), "PosSaleRequest.getQuantity()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getStoreCode(), "PosSaleRequest.getStoreCode()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getTargetCountry(), "PosSaleRequest.getTargetCountry()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getTimestamp(), "PosSaleRequest.getTimestamp()");
+      }
+
+      @Override
+      public Sale set$Xgafv(java.lang.String $Xgafv) {
+        return (Sale) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Sale setAccessToken(java.lang.String accessToken) {
+        return (Sale) super.setAccessToken(accessToken);
       }
 
       @Override
       public Sale setAlt(java.lang.String alt) {
         return (Sale) super.setAlt(alt);
+      }
+
+      @Override
+      public Sale setCallback(java.lang.String callback) {
+        return (Sale) super.setCallback(callback);
       }
 
       @Override
@@ -10487,8 +13028,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Sale setUserIp(java.lang.String userIp) {
-        return (Sale) super.setUserIp(userIp);
+      public Sale setUploadType(java.lang.String uploadType) {
+        return (Sale) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Sale setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Sale) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the POS or inventory data provider. */
@@ -10570,7 +13116,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.ProductsCustomBatchResponse> {
 
-      private static final String REST_PATH = "products/batch";
+      private static final String REST_PATH = "content/v2.1/products/batch";
 
       /**
        * Retrieves, inserts, and deletes multiple products in a single request.
@@ -10591,8 +13137,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -10621,8 +13182,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -10650,7 +13216,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "{merchantId}/products/{productId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/products/{productId}";
 
       /**
        * Deletes a product from your Merchant Center account.
@@ -10673,8 +13239,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -10703,8 +13284,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -10786,7 +13372,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Product> {
 
-      private static final String REST_PATH = "{merchantId}/products/{productId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/products/{productId}";
 
       /**
        * Retrieves a product from your Merchant Center account.
@@ -10819,8 +13405,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -10849,8 +13450,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -10917,7 +13523,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.Product> {
 
-      private static final String REST_PATH = "{merchantId}/products";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/products";
 
       /**
        * Uploads a product to your Merchant Center account. If an item with the same channel,
@@ -10937,19 +13543,26 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       protected Insert(java.math.BigInteger merchantId, com.google.api.services.content.model.Product content) {
         super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.Product.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getChannel(), "Product.getChannel()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getContentLanguage(), "Product.getContentLanguage()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getOfferId(), "Product.getOfferId()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getTargetCountry(), "Product.getTargetCountry()");
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
       }
 
       @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -10978,8 +13591,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -11046,7 +13664,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ProductsListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/products";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/products";
 
       /**
        * Lists the products in your Merchant Center account. The response might contain fewer items than
@@ -11079,8 +13697,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -11109,8 +13742,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -11214,7 +13852,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.ProductstatusesCustomBatchResponse> {
 
-      private static final String REST_PATH = "productstatuses/batch";
+      private static final String REST_PATH = "content/v2.1/productstatuses/batch";
 
       /**
        * Gets the statuses of multiple products in a single request.
@@ -11235,8 +13873,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -11265,8 +13918,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -11294,7 +13952,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.ProductStatus> {
 
-      private static final String REST_PATH = "{merchantId}/productstatuses/{productId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/productstatuses/{productId}";
 
       /**
        * Gets the status of a product from your Merchant Center account.
@@ -11327,8 +13985,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -11357,8 +14030,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -11446,7 +14124,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ProductstatusesListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/productstatuses";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/productstatuses";
 
       /**
        * Lists the statuses of the products in your Merchant Center account.
@@ -11477,8 +14155,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -11507,8 +14200,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -11635,7 +14333,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.PubsubNotificationSettings> {
 
-      private static final String REST_PATH = "{merchantId}/pubsubnotificationsettings";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/pubsubnotificationsettings";
 
       /**
        * Retrieves a Merchant Center account's pubsub notification settings.
@@ -11666,8 +14364,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -11696,8 +14409,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account for which to get pubsub notification settings. */
@@ -11742,7 +14460,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Update extends ShoppingContentRequest<com.google.api.services.content.model.PubsubNotificationSettings> {
 
-      private static final String REST_PATH = "{merchantId}/pubsubnotificationsettings";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/pubsubnotificationsettings";
 
       /**
        * Register a Merchant Center account for pubsub notifications. Note that cloud topic name should
@@ -11765,8 +14483,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -11795,8 +14528,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account. */
@@ -11862,7 +14600,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.RegionalinventoryCustomBatchResponse> {
 
-      private static final String REST_PATH = "regionalinventory/batch";
+      private static final String REST_PATH = "content/v2.1/regionalinventory/batch";
 
       /**
        * Updates regional inventory for multiple products or regions in a single request.
@@ -11883,8 +14621,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -11913,8 +14666,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -11944,7 +14702,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.RegionalInventory> {
 
-      private static final String REST_PATH = "{merchantId}/products/{productId}/regionalinventory";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/products/{productId}/regionalinventory";
 
       /**
        * Update the regional inventory of a product in your Merchant Center account. If a regional
@@ -11969,8 +14727,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -11999,8 +14772,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -12050,6 +14828,797 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Repricingrules collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Repricingrules.List request = content.repricingrules().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Repricingrules repricingrules() {
+    return new Repricingrules();
+  }
+
+  /**
+   * The "repricingrules" collection of methods.
+   */
+  public class Repricingrules {
+
+    /**
+     * Creates a repricing rule for your Merchant Center account.
+     *
+     * Create a request for the method "repricingrules.create".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The id of the merchant who owns the repricing rule.
+     * @param content the {@link com.google.api.services.content.model.RepricingRule}
+     * @return the request
+     */
+    public Create create(java.lang.Long merchantId, com.google.api.services.content.model.RepricingRule content) throws java.io.IOException {
+      Create result = new Create(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends ShoppingContentRequest<com.google.api.services.content.model.RepricingRule> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules";
+
+      /**
+       * Creates a repricing rule for your Merchant Center account.
+       *
+       * Create a request for the method "repricingrules.create".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The id of the merchant who owns the repricing rule.
+       * @param content the {@link com.google.api.services.content.model.RepricingRule}
+       * @since 1.13
+       */
+      protected Create(java.lang.Long merchantId, com.google.api.services.content.model.RepricingRule content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.RepricingRule.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The id of the merchant who owns the repricing rule. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The id of the merchant who owns the repricing rule.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The id of the merchant who owns the repricing rule. */
+      public Create setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The id of the rule to create. */
+      @com.google.api.client.util.Key
+      private java.lang.String ruleId;
+
+      /** Required. The id of the rule to create.
+       */
+      public java.lang.String getRuleId() {
+        return ruleId;
+      }
+
+      /** Required. The id of the rule to create. */
+      public Create setRuleId(java.lang.String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a repricing rule in your Merchant Center account.
+     *
+     * Create a request for the method "repricingrules.delete".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The id of the merchant who owns the repricing rule.
+     * @param ruleId Required. The id of the rule to Delete.
+     * @return the request
+     */
+    public Delete delete(java.lang.Long merchantId, java.lang.String ruleId) throws java.io.IOException {
+      Delete result = new Delete(merchantId, ruleId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules/{ruleId}";
+
+      /**
+       * Deletes a repricing rule in your Merchant Center account.
+       *
+       * Create a request for the method "repricingrules.delete".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The id of the merchant who owns the repricing rule.
+       * @param ruleId Required. The id of the rule to Delete.
+       * @since 1.13
+       */
+      protected Delete(java.lang.Long merchantId, java.lang.String ruleId) {
+        super(ShoppingContent.this, "DELETE", REST_PATH, null, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.ruleId = com.google.api.client.util.Preconditions.checkNotNull(ruleId, "Required parameter ruleId must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The id of the merchant who owns the repricing rule. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The id of the merchant who owns the repricing rule.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The id of the merchant who owns the repricing rule. */
+      public Delete setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The id of the rule to Delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String ruleId;
+
+      /** Required. The id of the rule to Delete.
+       */
+      public java.lang.String getRuleId() {
+        return ruleId;
+      }
+
+      /** Required. The id of the rule to Delete. */
+      public Delete setRuleId(java.lang.String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a repricing rule from your Merchant Center account.
+     *
+     * Create a request for the method "repricingrules.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The id of the merchant who owns the repricing rule.
+     * @param ruleId Required. The id of the rule to retrieve.
+     * @return the request
+     */
+    public Get get(java.lang.Long merchantId, java.lang.String ruleId) throws java.io.IOException {
+      Get result = new Get(merchantId, ruleId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.RepricingRule> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules/{ruleId}";
+
+      /**
+       * Retrieves a repricing rule from your Merchant Center account.
+       *
+       * Create a request for the method "repricingrules.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The id of the merchant who owns the repricing rule.
+       * @param ruleId Required. The id of the rule to retrieve.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long merchantId, java.lang.String ruleId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.RepricingRule.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.ruleId = com.google.api.client.util.Preconditions.checkNotNull(ruleId, "Required parameter ruleId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The id of the merchant who owns the repricing rule. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The id of the merchant who owns the repricing rule.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The id of the merchant who owns the repricing rule. */
+      public Get setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The id of the rule to retrieve. */
+      @com.google.api.client.util.Key
+      private java.lang.String ruleId;
+
+      /** Required. The id of the rule to retrieve.
+       */
+      public java.lang.String getRuleId() {
+        return ruleId;
+      }
+
+      /** Required. The id of the rule to retrieve. */
+      public Get setRuleId(java.lang.String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the repricing rules in your Merchant Center account.
+     *
+     * Create a request for the method "repricingrules.list".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The id of the merchant who owns the repricing rule.
+     * @return the request
+     */
+    public List list(java.lang.Long merchantId) throws java.io.IOException {
+      List result = new List(merchantId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListRepricingRulesResponse> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules";
+
+      /**
+       * Lists the repricing rules in your Merchant Center account.
+       *
+       * Create a request for the method "repricingrules.list".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The id of the merchant who owns the repricing rule.
+       * @since 1.13
+       */
+      protected List(java.lang.Long merchantId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ListRepricingRulesResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The id of the merchant who owns the repricing rule. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The id of the merchant who owns the repricing rule.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The id of the merchant who owns the repricing rule. */
+      public List setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** CLDR country code (e.g. "US"), used as a filter on repricing rules. */
+      @com.google.api.client.util.Key
+      private java.lang.String countryCode;
+
+      /** CLDR country code (e.g. "US"), used as a filter on repricing rules.
+       */
+      public java.lang.String getCountryCode() {
+        return countryCode;
+      }
+
+      /** CLDR country code (e.g. "US"), used as a filter on repricing rules. */
+      public List setCountryCode(java.lang.String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+      }
+
+      /**
+       * The two-letter ISO 639-1 language code associated with the repricing rule, used as a
+       * filter.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** The two-letter ISO 639-1 language code associated with the repricing rule, used as a filter.
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * The two-letter ISO 639-1 language code associated with the repricing rule, used as a
+       * filter.
+       */
+      public List setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+      }
+
+      /**
+       * The maximum number of repricing rules to return. The service may return fewer than this
+       * value. If unspecified, at most 50 rules will be returned. The maximum value is 1000; values
+       * above 1000 will be coerced to 1000.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of repricing rules to return. The service may return fewer than this value. If
+     unspecified, at most 50 rules will be returned. The maximum value is 1000; values above 1000 will
+     be coerced to 1000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of repricing rules to return. The service may return fewer than this
+       * value. If unspecified, at most 50 rules will be returned. The maximum value is 1000; values
+       * above 1000 will be coerced to 1000.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A page token, received from a previous `ListRepricingRules` call. Provide this to retrieve
+       * the subsequent page. When paginating, all other parameters provided to `ListRepricingRules`
+       * must match the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A page token, received from a previous `ListRepricingRules` call. Provide this to retrieve the
+     subsequent page. When paginating, all other parameters provided to `ListRepricingRules` must match
+     the call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A page token, received from a previous `ListRepricingRules` call. Provide this to retrieve
+       * the subsequent page. When paginating, all other parameters provided to `ListRepricingRules`
+       * must match the call that provided the page token.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates a repricing rule in your Merchant Center account. All mutable fields will be overwritten
+     * in each update request. In each update, you must provide all required mutable fields, or an error
+     * will be thrown. If you do not provide an optional field in the update request, if that field
+     * currently exists, it will be deleted from the rule.
+     *
+     * Create a request for the method "repricingrules.patch".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The id of the merchant who owns the repricing rule.
+     * @param ruleId Required. The id of the rule to update.
+     * @param content the {@link com.google.api.services.content.model.RepricingRule}
+     * @return the request
+     */
+    public Patch patch(java.lang.Long merchantId, java.lang.String ruleId, com.google.api.services.content.model.RepricingRule content) throws java.io.IOException {
+      Patch result = new Patch(merchantId, ruleId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends ShoppingContentRequest<com.google.api.services.content.model.RepricingRule> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules/{ruleId}";
+
+      /**
+       * Updates a repricing rule in your Merchant Center account. All mutable fields will be
+       * overwritten in each update request. In each update, you must provide all required mutable
+       * fields, or an error will be thrown. If you do not provide an optional field in the update
+       * request, if that field currently exists, it will be deleted from the rule.
+       *
+       * Create a request for the method "repricingrules.patch".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The id of the merchant who owns the repricing rule.
+       * @param ruleId Required. The id of the rule to update.
+       * @param content the {@link com.google.api.services.content.model.RepricingRule}
+       * @since 1.13
+       */
+      protected Patch(java.lang.Long merchantId, java.lang.String ruleId, com.google.api.services.content.model.RepricingRule content) {
+        super(ShoppingContent.this, "PATCH", REST_PATH, content, com.google.api.services.content.model.RepricingRule.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.ruleId = com.google.api.client.util.Preconditions.checkNotNull(ruleId, "Required parameter ruleId must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The id of the merchant who owns the repricing rule. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The id of the merchant who owns the repricing rule.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The id of the merchant who owns the repricing rule. */
+      public Patch setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The id of the rule to update. */
+      @com.google.api.client.util.Key
+      private java.lang.String ruleId;
+
+      /** Required. The id of the rule to update.
+       */
+      public java.lang.String getRuleId() {
+        return ruleId;
+      }
+
+      /** Required. The id of the rule to update. */
+      public Patch setRuleId(java.lang.String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Returnaddress collection.
    *
    * <p>The typical use is:</p>
@@ -12088,7 +15657,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.ReturnaddressCustomBatchResponse> {
 
-      private static final String REST_PATH = "returnaddress/batch";
+      private static final String REST_PATH = "content/v2.1/returnaddress/batch";
 
       /**
        * Batches multiple return address related calls in a single request.
@@ -12109,8 +15678,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -12139,8 +15723,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -12168,7 +15757,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "{merchantId}/returnaddress/{returnAddressId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/returnaddress/{returnAddressId}";
 
       /**
        * Deletes a return address for the given Merchant Center account.
@@ -12191,8 +15780,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -12221,8 +15825,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The Merchant Center account from which to delete the given return address. */
@@ -12282,7 +15891,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.ReturnAddress> {
 
-      private static final String REST_PATH = "{merchantId}/returnaddress/{returnAddressId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/returnaddress/{returnAddressId}";
 
       /**
        * Gets a return address of the Merchant Center account.
@@ -12315,8 +15924,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -12345,8 +15969,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The Merchant Center account to get a return address for. */
@@ -12406,7 +16035,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.ReturnAddress> {
 
-      private static final String REST_PATH = "{merchantId}/returnaddress";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/returnaddress";
 
       /**
        * Inserts a return address for the Merchant Center account.
@@ -12425,17 +16054,26 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       protected Insert(java.math.BigInteger merchantId, com.google.api.services.content.model.ReturnAddress content) {
         super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.ReturnAddress.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getCountry(), "ReturnAddress.getCountry()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getLabel(), "ReturnAddress.getLabel()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getPhoneNumber(), "ReturnAddress.getPhoneNumber()");
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
       }
 
       @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -12464,8 +16102,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The Merchant Center account to insert a return address for. */
@@ -12508,7 +16151,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ReturnaddressListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/returnaddress";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/returnaddress";
 
       /**
        * Lists the return addresses of the Merchant Center account.
@@ -12539,8 +16182,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -12569,8 +16227,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The Merchant Center account to list return addresses for. */
@@ -12691,7 +16354,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.ReturnpolicyCustomBatchResponse> {
 
-      private static final String REST_PATH = "returnpolicy/batch";
+      private static final String REST_PATH = "content/v2.1/returnpolicy/batch";
 
       /**
        * Batches multiple return policy related calls in a single request.
@@ -12712,8 +16375,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -12742,8 +16420,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -12771,7 +16454,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Delete extends ShoppingContentRequest<Void> {
 
-      private static final String REST_PATH = "{merchantId}/returnpolicy/{returnPolicyId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicy/{returnPolicyId}";
 
       /**
        * Deletes a return policy for the given Merchant Center account.
@@ -12794,8 +16477,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -12824,8 +16522,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The Merchant Center account from which to delete the given return policy. */
@@ -12885,7 +16588,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.ReturnPolicy> {
 
-      private static final String REST_PATH = "{merchantId}/returnpolicy/{returnPolicyId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicy/{returnPolicyId}";
 
       /**
        * Gets a return policy of the Merchant Center account.
@@ -12918,8 +16621,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -12948,8 +16666,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The Merchant Center account to get a return policy for. */
@@ -13009,7 +16732,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.ReturnPolicy> {
 
-      private static final String REST_PATH = "{merchantId}/returnpolicy";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicy";
 
       /**
        * Inserts a return policy for the Merchant Center account.
@@ -13028,17 +16751,26 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       protected Insert(java.math.BigInteger merchantId, com.google.api.services.content.model.ReturnPolicy content) {
         super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.ReturnPolicy.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getCountry(), "ReturnPolicy.getCountry()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getLabel(), "ReturnPolicy.getLabel()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getName(), "ReturnPolicy.getName()");
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
       }
 
       @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -13067,8 +16799,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The Merchant Center account to insert a return policy for. */
@@ -13111,7 +16848,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ReturnpolicyListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/returnpolicy";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/returnpolicy";
 
       /**
        * Lists the return policies of the Merchant Center account.
@@ -13142,8 +16879,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -13172,8 +16924,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The Merchant Center account to list return policies for. */
@@ -13240,7 +16997,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.SettlementReport> {
 
-      private static final String REST_PATH = "{merchantId}/settlementreports/{settlementId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/settlementreports/{settlementId}";
 
       /**
        * Retrieves a settlement report from your Merchant Center account.
@@ -13273,8 +17030,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -13303,8 +17075,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The Merchant Center account of the settlement report. */
@@ -13363,7 +17140,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.SettlementreportsListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/settlementreports";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/settlementreports";
 
       /**
        * Retrieves a list of settlement reports from your Merchant Center account.
@@ -13394,8 +17171,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -13424,8 +17216,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The Merchant Center account to list settlements for. */
@@ -13575,7 +17372,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.SettlementtransactionsListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/settlementreports/{settlementId}/transactions";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/settlementreports/{settlementId}/transactions";
 
       /**
        * Retrieves a list of transactions for the settlement.
@@ -13608,8 +17405,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -13638,8 +17450,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The Merchant Center account to list transactions for. */
@@ -13778,7 +17595,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.ShippingsettingsCustomBatchResponse> {
 
-      private static final String REST_PATH = "shippingsettings/batch";
+      private static final String REST_PATH = "content/v2.1/shippingsettings/batch";
 
       /**
        * Retrieves and updates the shipping settings of multiple accounts in a single request.
@@ -13799,8 +17616,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Custombatch set$Xgafv(java.lang.String $Xgafv) {
+        return (Custombatch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Custombatch setAccessToken(java.lang.String accessToken) {
+        return (Custombatch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Custombatch setAlt(java.lang.String alt) {
         return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setCallback(java.lang.String callback) {
+        return (Custombatch) super.setCallback(callback);
       }
 
       @Override
@@ -13829,8 +17661,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Custombatch setUserIp(java.lang.String userIp) {
-        return (Custombatch) super.setUserIp(userIp);
+      public Custombatch setUploadType(java.lang.String uploadType) {
+        return (Custombatch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Custombatch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Custombatch) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -13860,7 +17697,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Get extends ShoppingContentRequest<com.google.api.services.content.model.ShippingSettings> {
 
-      private static final String REST_PATH = "{merchantId}/shippingsettings/{accountId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/shippingsettings/{accountId}";
 
       /**
        * Retrieves the shipping settings of the account.
@@ -13895,8 +17732,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -13925,8 +17777,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -13995,7 +17852,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Getsupportedcarriers extends ShoppingContentRequest<com.google.api.services.content.model.ShippingsettingsGetSupportedCarriersResponse> {
 
-      private static final String REST_PATH = "{merchantId}/supportedCarriers";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/supportedCarriers";
 
       /**
        * Retrieves supported carriers and carrier services for an account.
@@ -14027,8 +17884,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Getsupportedcarriers set$Xgafv(java.lang.String $Xgafv) {
+        return (Getsupportedcarriers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Getsupportedcarriers setAccessToken(java.lang.String accessToken) {
+        return (Getsupportedcarriers) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Getsupportedcarriers setAlt(java.lang.String alt) {
         return (Getsupportedcarriers) super.setAlt(alt);
+      }
+
+      @Override
+      public Getsupportedcarriers setCallback(java.lang.String callback) {
+        return (Getsupportedcarriers) super.setCallback(callback);
       }
 
       @Override
@@ -14057,8 +17929,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Getsupportedcarriers setUserIp(java.lang.String userIp) {
-        return (Getsupportedcarriers) super.setUserIp(userIp);
+      public Getsupportedcarriers setUploadType(java.lang.String uploadType) {
+        return (Getsupportedcarriers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Getsupportedcarriers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Getsupportedcarriers) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account for which to retrieve the supported carriers. */
@@ -14102,7 +17979,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Getsupportedholidays extends ShoppingContentRequest<com.google.api.services.content.model.ShippingsettingsGetSupportedHolidaysResponse> {
 
-      private static final String REST_PATH = "{merchantId}/supportedHolidays";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/supportedHolidays";
 
       /**
        * Retrieves supported holidays for an account.
@@ -14134,8 +18011,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Getsupportedholidays set$Xgafv(java.lang.String $Xgafv) {
+        return (Getsupportedholidays) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Getsupportedholidays setAccessToken(java.lang.String accessToken) {
+        return (Getsupportedholidays) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Getsupportedholidays setAlt(java.lang.String alt) {
         return (Getsupportedholidays) super.setAlt(alt);
+      }
+
+      @Override
+      public Getsupportedholidays setCallback(java.lang.String callback) {
+        return (Getsupportedholidays) super.setCallback(callback);
       }
 
       @Override
@@ -14164,8 +18056,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Getsupportedholidays setUserIp(java.lang.String userIp) {
-        return (Getsupportedholidays) super.setUserIp(userIp);
+      public Getsupportedholidays setUploadType(java.lang.String uploadType) {
+        return (Getsupportedholidays) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Getsupportedholidays setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Getsupportedholidays) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account for which to retrieve the supported holidays. */
@@ -14209,7 +18106,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Getsupportedpickupservices extends ShoppingContentRequest<com.google.api.services.content.model.ShippingsettingsGetSupportedPickupServicesResponse> {
 
-      private static final String REST_PATH = "{merchantId}/supportedPickupServices";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/supportedPickupServices";
 
       /**
        * Retrieves supported pickup services for an account.
@@ -14241,8 +18138,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Getsupportedpickupservices set$Xgafv(java.lang.String $Xgafv) {
+        return (Getsupportedpickupservices) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Getsupportedpickupservices setAccessToken(java.lang.String accessToken) {
+        return (Getsupportedpickupservices) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Getsupportedpickupservices setAlt(java.lang.String alt) {
         return (Getsupportedpickupservices) super.setAlt(alt);
+      }
+
+      @Override
+      public Getsupportedpickupservices setCallback(java.lang.String callback) {
+        return (Getsupportedpickupservices) super.setCallback(callback);
       }
 
       @Override
@@ -14271,8 +18183,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Getsupportedpickupservices setUserIp(java.lang.String userIp) {
-        return (Getsupportedpickupservices) super.setUserIp(userIp);
+      public Getsupportedpickupservices setUploadType(java.lang.String uploadType) {
+        return (Getsupportedpickupservices) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Getsupportedpickupservices setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Getsupportedpickupservices) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the account for which to retrieve the supported pickup services. */
@@ -14315,7 +18232,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class List extends ShoppingContentRequest<com.google.api.services.content.model.ShippingsettingsListResponse> {
 
-      private static final String REST_PATH = "{merchantId}/shippingsettings";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/shippingsettings";
 
       /**
        * Lists the shipping settings of the sub-accounts in your Merchant Center account.
@@ -14346,8 +18263,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -14376,8 +18308,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the managing account. This must be a multi-client account. */
@@ -14457,7 +18394,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
     public class Update extends ShoppingContentRequest<com.google.api.services.content.model.ShippingSettings> {
 
-      private static final String REST_PATH = "{merchantId}/shippingsettings/{accountId}";
+      private static final String REST_PATH = "content/v2.1/{merchantId}/shippingsettings/{accountId}";
 
       /**
        * Updates the shipping settings of the account. Any fields that are not provided are deleted from
@@ -14484,8 +18421,23 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -14514,8 +18466,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /**

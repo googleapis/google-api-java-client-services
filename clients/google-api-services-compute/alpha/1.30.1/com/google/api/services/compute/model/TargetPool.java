@@ -34,8 +34,9 @@ package com.google.api.services.compute.model;
 public final class TargetPool extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field is applicable only when the containing target pool is serving a forwarding rule as
-   * the primary pool, and its failoverRatio field is properly set to a value between [0, 1].
+   * The server-defined URL for the resource. This field is applicable only when the containing
+   * target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is
+   * properly set to a value between [0, 1].
    *
    * backupPool and failoverRatio together define the fallback behavior of the primary target pool:
    * if the ratio of the healthy instances in the primary pool is at or below failoverRatio, traffic
@@ -158,8 +159,9 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   private java.lang.String sessionAffinity;
 
   /**
-   * This field is applicable only when the containing target pool is serving a forwarding rule as
-   * the primary pool, and its failoverRatio field is properly set to a value between [0, 1].
+   * The server-defined URL for the resource. This field is applicable only when the containing
+   * target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is
+   * properly set to a value between [0, 1].
    *
    * backupPool and failoverRatio together define the fallback behavior of the primary target pool:
    * if the ratio of the healthy instances in the primary pool is at or below failoverRatio, traffic
@@ -176,8 +178,9 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field is applicable only when the containing target pool is serving a forwarding rule as
-   * the primary pool, and its failoverRatio field is properly set to a value between [0, 1].
+   * The server-defined URL for the resource. This field is applicable only when the containing
+   * target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is
+   * properly set to a value between [0, 1].
    *
    * backupPool and failoverRatio together define the fallback behavior of the primary target pool:
    * if the ratio of the healthy instances in the primary pool is at or below failoverRatio, traffic

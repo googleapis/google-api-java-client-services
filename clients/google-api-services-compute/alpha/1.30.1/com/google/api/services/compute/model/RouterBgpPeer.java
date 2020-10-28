@@ -141,9 +141,10 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.String peerIpAddress;
 
   /**
-   * URI of the VM instance that is used as third party router appliances such as Next Gen
-   * Firewalls, Virtual Routers, SD-WAN. The VM instance must live in zones contained in the same
-   * region as this Cloud Router. The VM instance is the peer side of the BGP session.
+   * URI of the VM instance that is used as third-party router appliances such as Next Gen
+   * Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones
+   * contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP
+   * session.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -396,9 +397,10 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of the VM instance that is used as third party router appliances such as Next Gen
-   * Firewalls, Virtual Routers, SD-WAN. The VM instance must live in zones contained in the same
-   * region as this Cloud Router. The VM instance is the peer side of the BGP session.
+   * URI of the VM instance that is used as third-party router appliances such as Next Gen
+   * Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones
+   * contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP
+   * session.
    * @return value or {@code null} for none
    */
   public java.lang.String getRouterApplianceInstance() {
@@ -406,9 +408,10 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of the VM instance that is used as third party router appliances such as Next Gen
-   * Firewalls, Virtual Routers, SD-WAN. The VM instance must live in zones contained in the same
-   * region as this Cloud Router. The VM instance is the peer side of the BGP session.
+   * URI of the VM instance that is used as third-party router appliances such as Next Gen
+   * Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones
+   * contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP
+   * session.
    * @param routerApplianceInstance routerApplianceInstance or {@code null} for none
    */
   public RouterBgpPeer setRouterApplianceInstance(java.lang.String routerApplianceInstance) {

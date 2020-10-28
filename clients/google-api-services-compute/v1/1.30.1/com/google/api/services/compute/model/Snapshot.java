@@ -41,6 +41,17 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean autoCreated;
 
   /**
+   * Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name
+   * must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for
+   * advanced service owners who needs to create separate snapshot chains, for example, for
+   * chargeback tracking. When you describe your snapshot resource, this field is visible only if it
+   * has a non-empty value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String chainName;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -226,6 +237,31 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setAutoCreated(java.lang.Boolean autoCreated) {
     this.autoCreated = autoCreated;
+    return this;
+  }
+
+  /**
+   * Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name
+   * must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for
+   * advanced service owners who needs to create separate snapshot chains, for example, for
+   * chargeback tracking. When you describe your snapshot resource, this field is visible only if it
+   * has a non-empty value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChainName() {
+    return chainName;
+  }
+
+  /**
+   * Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name
+   * must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for
+   * advanced service owners who needs to create separate snapshot chains, for example, for
+   * chargeback tracking. When you describe your snapshot resource, this field is visible only if it
+   * has a non-empty value.
+   * @param chainName chainName or {@code null} for none
+   */
+  public Snapshot setChainName(java.lang.String chainName) {
+    this.chainName = chainName;
     return this;
   }
 

@@ -45,9 +45,7 @@ public final class TestOrderPickupDetails extends com.google.api.client.json.Gen
   private TestOrderAddress pickupLocationAddress;
 
   /**
-   * Pickup location type.
-   *
-   * Acceptable values are:   - "`locker`"  - "`store`"  - "`curbside`"
+   * Pickup location type. Acceptable values are: - "`locker`" - "`store`" - "`curbside`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,9 +93,7 @@ public final class TestOrderPickupDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * Pickup location type.
-   *
-   * Acceptable values are:   - "`locker`"  - "`store`"  - "`curbside`"
+   * Pickup location type. Acceptable values are: - "`locker`" - "`store`" - "`curbside`"
    * @return value or {@code null} for none
    */
   public java.lang.String getPickupLocationType() {
@@ -105,9 +101,7 @@ public final class TestOrderPickupDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * Pickup location type.
-   *
-   * Acceptable values are:   - "`locker`"  - "`store`"  - "`curbside`"
+   * Pickup location type. Acceptable values are: - "`locker`" - "`store`" - "`curbside`"
    * @param pickupLocationType pickupLocationType or {@code null} for none
    */
   public TestOrderPickupDetails setPickupLocationType(java.lang.String pickupLocationType) {

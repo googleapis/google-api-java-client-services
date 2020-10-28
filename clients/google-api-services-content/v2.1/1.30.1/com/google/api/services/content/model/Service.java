@@ -60,10 +60,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private DeliveryTime deliveryTime;
 
   /**
-   * Eligibility for this service.
-   *
-   * Acceptable values are:   - "`All scenarios`"  - "`All scenarios except Shopping Actions`"  -
-   * "`Shopping Actions`"
+   * Eligibility for this service. Acceptable values are: - "`All scenarios`" - "`All scenarios
+   * except Shopping Actions`" - "`Shopping Actions`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,9 +116,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of locations this service ships orders to.
-   *
-   * Acceptable values are:   - "`delivery`"  - "`pickup`"
+   * Type of locations this service ships orders to. Acceptable values are: - "`delivery`" -
+   * "`pickup`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,10 +194,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Eligibility for this service.
-   *
-   * Acceptable values are:   - "`All scenarios`"  - "`All scenarios except Shopping Actions`"  -
-   * "`Shopping Actions`"
+   * Eligibility for this service. Acceptable values are: - "`All scenarios`" - "`All scenarios
+   * except Shopping Actions`" - "`Shopping Actions`"
    * @return value or {@code null} for none
    */
   public java.lang.String getEligibility() {
@@ -208,10 +203,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Eligibility for this service.
-   *
-   * Acceptable values are:   - "`All scenarios`"  - "`All scenarios except Shopping Actions`"  -
-   * "`Shopping Actions`"
+   * Eligibility for this service. Acceptable values are: - "`All scenarios`" - "`All scenarios
+   * except Shopping Actions`" - "`Shopping Actions`"
    * @param eligibility eligibility or {@code null} for none
    */
   public Service setEligibility(java.lang.String eligibility) {
@@ -319,9 +312,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of locations this service ships orders to.
-   *
-   * Acceptable values are:   - "`delivery`"  - "`pickup`"
+   * Type of locations this service ships orders to. Acceptable values are: - "`delivery`" -
+   * "`pickup`"
    * @return value or {@code null} for none
    */
   public java.lang.String getShipmentType() {
@@ -329,9 +321,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of locations this service ships orders to.
-   *
-   * Acceptable values are:   - "`delivery`"  - "`pickup`"
+   * Type of locations this service ships orders to. Acceptable values are: - "`delivery`" -
+   * "`pickup`"
    * @param shipmentType shipmentType or {@code null} for none
    */
   public Service setShipmentType(java.lang.String shipmentType) {

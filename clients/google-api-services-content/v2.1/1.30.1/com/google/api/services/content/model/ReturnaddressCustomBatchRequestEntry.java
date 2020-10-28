@@ -45,9 +45,7 @@ public final class ReturnaddressCustomBatchRequestEntry extends com.google.api.c
   private java.math.BigInteger merchantId;
 
   /**
-   * Method of the batch request entry.
-   *
-   * Acceptable values are:   - "`delete`"  - "`get`"  - "`insert`"
+   * Method of the batch request entry. Acceptable values are: - "`delete`" - "`get`" - "`insert`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,9 +100,7 @@ public final class ReturnaddressCustomBatchRequestEntry extends com.google.api.c
   }
 
   /**
-   * Method of the batch request entry.
-   *
-   * Acceptable values are:   - "`delete`"  - "`get`"  - "`insert`"
+   * Method of the batch request entry. Acceptable values are: - "`delete`" - "`get`" - "`insert`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -112,9 +108,7 @@ public final class ReturnaddressCustomBatchRequestEntry extends com.google.api.c
   }
 
   /**
-   * Method of the batch request entry.
-   *
-   * Acceptable values are:   - "`delete`"  - "`get`"  - "`insert`"
+   * Method of the batch request entry. Acceptable values are: - "`delete`" - "`get`" - "`insert`"
    * @param method method or {@code null} for none
    */
   public ReturnaddressCustomBatchRequestEntry setMethod(java.lang.String method) {

@@ -39,7 +39,7 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
 
   /**
    * Email address for the merchant to send value-added tax or invoice documentation of the order.
-   * Only the last document sent is made available to the customer. For more information, see  About
+   * Only the last document sent is made available to the customer. For more information, see About
    * automated VAT invoicing for Shopping Actions.
    * The value may be {@code null}.
    */
@@ -81,7 +81,7 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
 
   /**
    * Email address for the merchant to send value-added tax or invoice documentation of the order.
-   * Only the last document sent is made available to the customer. For more information, see  About
+   * Only the last document sent is made available to the customer. For more information, see About
    * automated VAT invoicing for Shopping Actions.
    * @return value or {@code null} for none
    */
@@ -91,7 +91,7 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
 
   /**
    * Email address for the merchant to send value-added tax or invoice documentation of the order.
-   * Only the last document sent is made available to the customer. For more information, see  About
+   * Only the last document sent is made available to the customer. For more information, see About
    * automated VAT invoicing for Shopping Actions.
    * @param invoiceReceivingEmail invoiceReceivingEmail or {@code null} for none
    */

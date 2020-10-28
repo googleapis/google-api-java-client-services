@@ -51,13 +51,11 @@ public final class OrdersRefundItemRequest extends com.google.api.client.json.Ge
   private java.lang.String operationId;
 
   /**
-   * The reason for the refund.
-   *
-   * Acceptable values are:   - "`shippingCostAdjustment`"  - "`priceAdjustment`"  -
-   * "`taxAdjustment`"  - "`feeAdjustment`"  - "`courtesyAdjustment`"  - "`adjustment`"  -
-   * "`customerCancelled`"  - "`noInventory`"  - "`productNotAsDescribed`"  -
-   * "`undeliverableShippingAddress`"  - "`wrongProductShipped`"  - "`lateShipmentCredit`"  -
-   * "`deliveredLateByCarrier`"  - "`productArrivedDamaged`"
+   * The reason for the refund. Acceptable values are: - "`shippingCostAdjustment`" -
+   * "`priceAdjustment`" - "`taxAdjustment`" - "`feeAdjustment`" - "`courtesyAdjustment`" -
+   * "`adjustment`" - "`customerCancelled`" - "`noInventory`" - "`productNotAsDescribed`" -
+   * "`undeliverableShippingAddress`" - "`wrongProductShipped`" - "`lateShipmentCredit`" -
+   * "`deliveredLateByCarrier`" - "`productArrivedDamaged`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,13 +110,11 @@ public final class OrdersRefundItemRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The reason for the refund.
-   *
-   * Acceptable values are:   - "`shippingCostAdjustment`"  - "`priceAdjustment`"  -
-   * "`taxAdjustment`"  - "`feeAdjustment`"  - "`courtesyAdjustment`"  - "`adjustment`"  -
-   * "`customerCancelled`"  - "`noInventory`"  - "`productNotAsDescribed`"  -
-   * "`undeliverableShippingAddress`"  - "`wrongProductShipped`"  - "`lateShipmentCredit`"  -
-   * "`deliveredLateByCarrier`"  - "`productArrivedDamaged`"
+   * The reason for the refund. Acceptable values are: - "`shippingCostAdjustment`" -
+   * "`priceAdjustment`" - "`taxAdjustment`" - "`feeAdjustment`" - "`courtesyAdjustment`" -
+   * "`adjustment`" - "`customerCancelled`" - "`noInventory`" - "`productNotAsDescribed`" -
+   * "`undeliverableShippingAddress`" - "`wrongProductShipped`" - "`lateShipmentCredit`" -
+   * "`deliveredLateByCarrier`" - "`productArrivedDamaged`"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -126,13 +122,11 @@ public final class OrdersRefundItemRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The reason for the refund.
-   *
-   * Acceptable values are:   - "`shippingCostAdjustment`"  - "`priceAdjustment`"  -
-   * "`taxAdjustment`"  - "`feeAdjustment`"  - "`courtesyAdjustment`"  - "`adjustment`"  -
-   * "`customerCancelled`"  - "`noInventory`"  - "`productNotAsDescribed`"  -
-   * "`undeliverableShippingAddress`"  - "`wrongProductShipped`"  - "`lateShipmentCredit`"  -
-   * "`deliveredLateByCarrier`"  - "`productArrivedDamaged`"
+   * The reason for the refund. Acceptable values are: - "`shippingCostAdjustment`" -
+   * "`priceAdjustment`" - "`taxAdjustment`" - "`feeAdjustment`" - "`courtesyAdjustment`" -
+   * "`adjustment`" - "`customerCancelled`" - "`noInventory`" - "`productNotAsDescribed`" -
+   * "`undeliverableShippingAddress`" - "`wrongProductShipped`" - "`lateShipmentCredit`" -
+   * "`deliveredLateByCarrier`" - "`productArrivedDamaged`"
    * @param reason reason or {@code null} for none
    */
   public OrdersRefundItemRequest setReason(java.lang.String reason) {

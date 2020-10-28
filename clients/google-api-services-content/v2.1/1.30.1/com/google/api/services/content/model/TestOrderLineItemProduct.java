@@ -38,18 +38,15 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   private java.lang.String brand;
 
   /**
-   * Required. Condition or state of the item.
-   *
-   * Acceptable values are:   - "`new`"
+   * Required. Condition or state of the item. Acceptable values are: - "`new`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String condition;
 
   /**
-   * Required. The two-letter ISO 639-1 language code for the item.
-   *
-   * Acceptable values are:   - "`en`"  - "`fr`"
+   * Required. The two-letter ISO 639-1 language code for the item. Acceptable values are: - "`en`"
+   * - "`fr`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +110,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   private Price price;
 
   /**
-   * Required. The CLDR territory code of the target country of the product.
+   * Required. The CLDR territory // code of the target country of the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,9 +154,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Condition or state of the item.
-   *
-   * Acceptable values are:   - "`new`"
+   * Required. Condition or state of the item. Acceptable values are: - "`new`"
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -167,9 +162,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Condition or state of the item.
-   *
-   * Acceptable values are:   - "`new`"
+   * Required. Condition or state of the item. Acceptable values are: - "`new`"
    * @param condition condition or {@code null} for none
    */
   public TestOrderLineItemProduct setCondition(java.lang.String condition) {
@@ -178,9 +171,8 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The two-letter ISO 639-1 language code for the item.
-   *
-   * Acceptable values are:   - "`en`"  - "`fr`"
+   * Required. The two-letter ISO 639-1 language code for the item. Acceptable values are: - "`en`"
+   * - "`fr`"
    * @return value or {@code null} for none
    */
   public java.lang.String getContentLanguage() {
@@ -188,9 +180,8 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The two-letter ISO 639-1 language code for the item.
-   *
-   * Acceptable values are:   - "`en`"  - "`fr`"
+   * Required. The two-letter ISO 639-1 language code for the item. Acceptable values are: - "`en`"
+   * - "`fr`"
    * @param contentLanguage contentLanguage or {@code null} for none
    */
   public TestOrderLineItemProduct setContentLanguage(java.lang.String contentLanguage) {
@@ -322,7 +313,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The CLDR territory code of the target country of the product.
+   * Required. The CLDR territory // code of the target country of the product.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetCountry() {
@@ -330,7 +321,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The CLDR territory code of the target country of the product.
+   * Required. The CLDR territory // code of the target country of the product.
    * @param targetCountry targetCountry or {@code null} for none
    */
   public TestOrderLineItemProduct setTargetCountry(java.lang.String targetCountry) {

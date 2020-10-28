@@ -34,9 +34,8 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
    * Last known customer selection regarding marketing preferences. In certain cases this selection
    * might not be known, so this field would be empty. If a customer selected `granted` in their
    * most recent order, they can be subscribed to marketing emails. Customers who have chosen
-   * `denied` must not be subscribed, or must be unsubscribed if already opted-in.
-   *
-   * Acceptable values are:   - "`denied`"  - "`granted`"
+   * `denied` must not be subscribed, or must be unsubscribed if already opted-in. Acceptable values
+   * are: - "`denied`" - "`granted`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +62,8 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
    * Last known customer selection regarding marketing preferences. In certain cases this selection
    * might not be known, so this field would be empty. If a customer selected `granted` in their
    * most recent order, they can be subscribed to marketing emails. Customers who have chosen
-   * `denied` must not be subscribed, or must be unsubscribed if already opted-in.
-   *
-   * Acceptable values are:   - "`denied`"  - "`granted`"
+   * `denied` must not be subscribed, or must be unsubscribed if already opted-in. Acceptable values
+   * are: - "`denied`" - "`granted`"
    * @return value or {@code null} for none
    */
   public java.lang.String getExplicitMarketingPreference() {
@@ -76,9 +74,8 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
    * Last known customer selection regarding marketing preferences. In certain cases this selection
    * might not be known, so this field would be empty. If a customer selected `granted` in their
    * most recent order, they can be subscribed to marketing emails. Customers who have chosen
-   * `denied` must not be subscribed, or must be unsubscribed if already opted-in.
-   *
-   * Acceptable values are:   - "`denied`"  - "`granted`"
+   * `denied` must not be subscribed, or must be unsubscribed if already opted-in. Acceptable values
+   * are: - "`denied`" - "`granted`"
    * @param explicitMarketingPreference explicitMarketingPreference or {@code null} for none
    */
   public OrderCustomerMarketingRightsInfo setExplicitMarketingPreference(java.lang.String explicitMarketingPreference) {

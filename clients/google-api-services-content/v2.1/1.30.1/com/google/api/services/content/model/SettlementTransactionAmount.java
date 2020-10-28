@@ -37,20 +37,19 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
   private SettlementTransactionAmountCommission commission;
 
   /**
-   * The description of the event.
-   *
-   * Acceptable values are:   - "`taxWithhold`"  - "`principal`"  - "`principalAdjustment`"  -
-   * "`shippingFee`"  - "`merchantRemittedSalesTax`"  - "`googleRemittedSalesTax`"  -
-   * "`merchantCoupon`"  - "`merchantCouponTax`"  - "`merchantRemittedDisposalTax`"  -
-   * "`googleRemittedDisposalTax`"  - "`merchantRemittedRedemptionFee`"  -
-   * "`googleRemittedRedemptionFee`"  - "`eeeEcoFee`"  - "`furnitureEcoFee`"  - "`copyPrivateFee`"
-   * - "`eeeEcoFeeCommission`"  - "`furnitureEcoFeeCommission`"  - "`copyPrivateFeeCommission`"  -
-   * "`principalRefund`"  - "`principalRefundTax`"  - "`itemCommission`"  - "`adjustmentCommission`"
-   * - "`shippingFeeCommission`"  - "`commissionRefund`"  - "`damaged`"  -
-   * "`damagedOrDefectiveItem`"  - "`expiredItem`"  - "`faultyItem`"  - "`incorrectItemReceived`"  -
-   * "`itemMissing`"  - "`qualityNotExpected`"  - "`receivedTooLate`"  - "`storePackageMissing`"  -
-   * "`transitPackageMissing`"  - "`unsuccessfulDeliveryUndeliverable`"  - "`wrongChargeInStore`"  -
-   * "`wrongItem`"  - "`returns`"  - "`undeliverable`"  - "`refundFromMerchant`"  -
+   * The description of the event. Acceptable values are: - "`taxWithhold`" - "`principal`" -
+   * "`principalAdjustment`" - "`shippingFee`" - "`merchantRemittedSalesTax`" -
+   * "`googleRemittedSalesTax`" - "`merchantCoupon`" - "`merchantCouponTax`" -
+   * "`merchantRemittedDisposalTax`" - "`googleRemittedDisposalTax`" -
+   * "`merchantRemittedRedemptionFee`" - "`googleRemittedRedemptionFee`" - "`eeeEcoFee`" -
+   * "`furnitureEcoFee`" - "`copyPrivateFee`" - "`eeeEcoFeeCommission`" -
+   * "`furnitureEcoFeeCommission`" - "`copyPrivateFeeCommission`" - "`principalRefund`" -
+   * "`principalRefundTax`" - "`itemCommission`" - "`adjustmentCommission`" -
+   * "`shippingFeeCommission`" - "`commissionRefund`" - "`damaged`" - "`damagedOrDefectiveItem`" -
+   * "`expiredItem`" - "`faultyItem`" - "`incorrectItemReceived`" - "`itemMissing`" -
+   * "`qualityNotExpected`" - "`receivedTooLate`" - "`storePackageMissing`" -
+   * "`transitPackageMissing`" - "`unsuccessfulDeliveryUndeliverable`" - "`wrongChargeInStore`" -
+   * "`wrongItem`" - "`returns`" - "`undeliverable`" - "`refundFromMerchant`" -
    * "`returnLabelShippingFee`"
    * The value may be {@code null}.
    */
@@ -65,10 +64,8 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
   private Price transactionAmount;
 
   /**
-   * The type of the amount.
-   *
-   * Acceptable values are:   - "`itemPrice`"  - "`orderPrice`"  - "`refund`"  - "`earlyRefund`"  -
-   * "`courtesyRefund`"  - "`returnRefund`"  - "`returnLabelShippingFeeAmount`"
+   * The type of the amount. Acceptable values are: - "`itemPrice`" - "`orderPrice`" - "`refund`" -
+   * "`earlyRefund`" - "`courtesyRefund`" - "`returnRefund`" - "`returnLabelShippingFeeAmount`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,20 +87,19 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
   }
 
   /**
-   * The description of the event.
-   *
-   * Acceptable values are:   - "`taxWithhold`"  - "`principal`"  - "`principalAdjustment`"  -
-   * "`shippingFee`"  - "`merchantRemittedSalesTax`"  - "`googleRemittedSalesTax`"  -
-   * "`merchantCoupon`"  - "`merchantCouponTax`"  - "`merchantRemittedDisposalTax`"  -
-   * "`googleRemittedDisposalTax`"  - "`merchantRemittedRedemptionFee`"  -
-   * "`googleRemittedRedemptionFee`"  - "`eeeEcoFee`"  - "`furnitureEcoFee`"  - "`copyPrivateFee`"
-   * - "`eeeEcoFeeCommission`"  - "`furnitureEcoFeeCommission`"  - "`copyPrivateFeeCommission`"  -
-   * "`principalRefund`"  - "`principalRefundTax`"  - "`itemCommission`"  - "`adjustmentCommission`"
-   * - "`shippingFeeCommission`"  - "`commissionRefund`"  - "`damaged`"  -
-   * "`damagedOrDefectiveItem`"  - "`expiredItem`"  - "`faultyItem`"  - "`incorrectItemReceived`"  -
-   * "`itemMissing`"  - "`qualityNotExpected`"  - "`receivedTooLate`"  - "`storePackageMissing`"  -
-   * "`transitPackageMissing`"  - "`unsuccessfulDeliveryUndeliverable`"  - "`wrongChargeInStore`"  -
-   * "`wrongItem`"  - "`returns`"  - "`undeliverable`"  - "`refundFromMerchant`"  -
+   * The description of the event. Acceptable values are: - "`taxWithhold`" - "`principal`" -
+   * "`principalAdjustment`" - "`shippingFee`" - "`merchantRemittedSalesTax`" -
+   * "`googleRemittedSalesTax`" - "`merchantCoupon`" - "`merchantCouponTax`" -
+   * "`merchantRemittedDisposalTax`" - "`googleRemittedDisposalTax`" -
+   * "`merchantRemittedRedemptionFee`" - "`googleRemittedRedemptionFee`" - "`eeeEcoFee`" -
+   * "`furnitureEcoFee`" - "`copyPrivateFee`" - "`eeeEcoFeeCommission`" -
+   * "`furnitureEcoFeeCommission`" - "`copyPrivateFeeCommission`" - "`principalRefund`" -
+   * "`principalRefundTax`" - "`itemCommission`" - "`adjustmentCommission`" -
+   * "`shippingFeeCommission`" - "`commissionRefund`" - "`damaged`" - "`damagedOrDefectiveItem`" -
+   * "`expiredItem`" - "`faultyItem`" - "`incorrectItemReceived`" - "`itemMissing`" -
+   * "`qualityNotExpected`" - "`receivedTooLate`" - "`storePackageMissing`" -
+   * "`transitPackageMissing`" - "`unsuccessfulDeliveryUndeliverable`" - "`wrongChargeInStore`" -
+   * "`wrongItem`" - "`returns`" - "`undeliverable`" - "`refundFromMerchant`" -
    * "`returnLabelShippingFee`"
    * @return value or {@code null} for none
    */
@@ -112,20 +108,19 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
   }
 
   /**
-   * The description of the event.
-   *
-   * Acceptable values are:   - "`taxWithhold`"  - "`principal`"  - "`principalAdjustment`"  -
-   * "`shippingFee`"  - "`merchantRemittedSalesTax`"  - "`googleRemittedSalesTax`"  -
-   * "`merchantCoupon`"  - "`merchantCouponTax`"  - "`merchantRemittedDisposalTax`"  -
-   * "`googleRemittedDisposalTax`"  - "`merchantRemittedRedemptionFee`"  -
-   * "`googleRemittedRedemptionFee`"  - "`eeeEcoFee`"  - "`furnitureEcoFee`"  - "`copyPrivateFee`"
-   * - "`eeeEcoFeeCommission`"  - "`furnitureEcoFeeCommission`"  - "`copyPrivateFeeCommission`"  -
-   * "`principalRefund`"  - "`principalRefundTax`"  - "`itemCommission`"  - "`adjustmentCommission`"
-   * - "`shippingFeeCommission`"  - "`commissionRefund`"  - "`damaged`"  -
-   * "`damagedOrDefectiveItem`"  - "`expiredItem`"  - "`faultyItem`"  - "`incorrectItemReceived`"  -
-   * "`itemMissing`"  - "`qualityNotExpected`"  - "`receivedTooLate`"  - "`storePackageMissing`"  -
-   * "`transitPackageMissing`"  - "`unsuccessfulDeliveryUndeliverable`"  - "`wrongChargeInStore`"  -
-   * "`wrongItem`"  - "`returns`"  - "`undeliverable`"  - "`refundFromMerchant`"  -
+   * The description of the event. Acceptable values are: - "`taxWithhold`" - "`principal`" -
+   * "`principalAdjustment`" - "`shippingFee`" - "`merchantRemittedSalesTax`" -
+   * "`googleRemittedSalesTax`" - "`merchantCoupon`" - "`merchantCouponTax`" -
+   * "`merchantRemittedDisposalTax`" - "`googleRemittedDisposalTax`" -
+   * "`merchantRemittedRedemptionFee`" - "`googleRemittedRedemptionFee`" - "`eeeEcoFee`" -
+   * "`furnitureEcoFee`" - "`copyPrivateFee`" - "`eeeEcoFeeCommission`" -
+   * "`furnitureEcoFeeCommission`" - "`copyPrivateFeeCommission`" - "`principalRefund`" -
+   * "`principalRefundTax`" - "`itemCommission`" - "`adjustmentCommission`" -
+   * "`shippingFeeCommission`" - "`commissionRefund`" - "`damaged`" - "`damagedOrDefectiveItem`" -
+   * "`expiredItem`" - "`faultyItem`" - "`incorrectItemReceived`" - "`itemMissing`" -
+   * "`qualityNotExpected`" - "`receivedTooLate`" - "`storePackageMissing`" -
+   * "`transitPackageMissing`" - "`unsuccessfulDeliveryUndeliverable`" - "`wrongChargeInStore`" -
+   * "`wrongItem`" - "`returns`" - "`undeliverable`" - "`refundFromMerchant`" -
    * "`returnLabelShippingFee`"
    * @param description description or {@code null} for none
    */
@@ -152,10 +147,8 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
   }
 
   /**
-   * The type of the amount.
-   *
-   * Acceptable values are:   - "`itemPrice`"  - "`orderPrice`"  - "`refund`"  - "`earlyRefund`"  -
-   * "`courtesyRefund`"  - "`returnRefund`"  - "`returnLabelShippingFeeAmount`"
+   * The type of the amount. Acceptable values are: - "`itemPrice`" - "`orderPrice`" - "`refund`" -
+   * "`earlyRefund`" - "`courtesyRefund`" - "`returnRefund`" - "`returnLabelShippingFeeAmount`"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -163,10 +156,8 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
   }
 
   /**
-   * The type of the amount.
-   *
-   * Acceptable values are:   - "`itemPrice`"  - "`orderPrice`"  - "`refund`"  - "`earlyRefund`"  -
-   * "`courtesyRefund`"  - "`returnRefund`"  - "`returnLabelShippingFeeAmount`"
+   * The type of the amount. Acceptable values are: - "`itemPrice`" - "`orderPrice`" - "`refund`" -
+   * "`earlyRefund`" - "`courtesyRefund`" - "`returnRefund`" - "`returnLabelShippingFeeAmount`"
    * @param type type or {@code null} for none
    */
   public SettlementTransactionAmount setType(java.lang.String type) {

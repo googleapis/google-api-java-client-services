@@ -102,10 +102,8 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   private java.lang.String shipmentUnitId;
 
   /**
-   * State of the item.
-   *
-   * Acceptable values are:   - "`canceled`"  - "`new`"  - "`received`"  - "`refunded`"  -
-   * "`rejected`"
+   * State of the item. Acceptable values are: - "`canceled`" - "`new`" - "`received`" -
+   * "`refunded`" - "`rejected`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,10 +282,8 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
-   * State of the item.
-   *
-   * Acceptable values are:   - "`canceled`"  - "`new`"  - "`received`"  - "`refunded`"  -
-   * "`rejected`"
+   * State of the item. Acceptable values are: - "`canceled`" - "`new`" - "`received`" -
+   * "`refunded`" - "`rejected`"
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -295,10 +291,8 @@ public final class MerchantOrderReturnItem extends com.google.api.client.json.Ge
   }
 
   /**
-   * State of the item.
-   *
-   * Acceptable values are:   - "`canceled`"  - "`new`"  - "`received`"  - "`refunded`"  -
-   * "`rejected`"
+   * State of the item. Acceptable values are: - "`canceled`" - "`new`" - "`received`" -
+   * "`refunded`" - "`rejected`"
    * @param state state or {@code null} for none
    */
   public MerchantOrderReturnItem setState(java.lang.String state) {

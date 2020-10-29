@@ -31,6 +31,47 @@ package com.google.api.services.servicecontrol.v2.model;
 public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Annotations is an unstructured key-value map stored with a resource that may be set by external
+   * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
+   * when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
+   * Output only. The timestamp when the resource was created. This may be either the time creation
+   * was initiated or when it was completed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
+   * Output only. The timestamp when the resource was deleted. If the resource is not deleted, this
+   * must be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String deleteTime;
+
+  /**
+   * Mutable. The display name set by clients. Must be <= 63 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
+   * Output only. An opaque value that uniquely identifies a version or generation of a resource. It
+   * can be used to confirm that the client and server agree on the ordering of a resource being
+   * written.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * The labels or tags on the resource, such as AWS resource tags and Kubernetes resource labels.
    * The value may be {@code null}.
    */
@@ -75,6 +116,112 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
+
+  /**
+   * Output only. The timestamp when the resource was last updated. Any change to the resource made
+   * by users must refresh this value. Changes to a resource made by the service should refresh this
+   * value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
+   * Annotations is an unstructured key-value map stored with a resource that may be set by external
+   * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
+   * when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Annotations is an unstructured key-value map stored with a resource that may be set by external
+   * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
+   * when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+   * @param annotations annotations or {@code null} for none
+   */
+  public Resource setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was created. This may be either the time creation
+   * was initiated or when it was completed.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was created. This may be either the time creation
+   * was initiated or when it was completed.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Resource setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was deleted. If the resource is not deleted, this
+   * must be empty.
+   * @return value or {@code null} for none
+   */
+  public String getDeleteTime() {
+    return deleteTime;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was deleted. If the resource is not deleted, this
+   * must be empty.
+   * @param deleteTime deleteTime or {@code null} for none
+   */
+  public Resource setDeleteTime(String deleteTime) {
+    this.deleteTime = deleteTime;
+    return this;
+  }
+
+  /**
+   * Mutable. The display name set by clients. Must be <= 63 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Mutable. The display name set by clients. Must be <= 63 characters.
+   * @param displayName displayName or {@code null} for none
+   */
+  public Resource setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. An opaque value that uniquely identifies a version or generation of a resource. It
+   * can be used to confirm that the client and server agree on the ordering of a resource being
+   * written.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Output only. An opaque value that uniquely identifies a version or generation of a resource. It
+   * can be used to confirm that the client and server agree on the ordering of a resource being
+   * written.
+   * @param etag etag or {@code null} for none
+   */
+  public Resource setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
 
   /**
    * The labels or tags on the resource, such as AWS resource tags and Kubernetes resource labels.
@@ -180,6 +327,27 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    */
   public Resource setUid(java.lang.String uid) {
     this.uid = uid;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was last updated. Any change to the resource made
+   * by users must refresh this value. Changes to a resource made by the service should refresh this
+   * value.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was last updated. Any change to the resource made
+   * by users must refresh this value. Changes to a resource made by the service should refresh this
+   * value.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Resource setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

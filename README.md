@@ -65,6 +65,7 @@ packages on [Maven Central][maven-search].
 | Cloud Dataproc API | [v1](clients/google-api-services-dataproc/v1), [v1beta2](clients/google-api-services-dataproc/v1beta2) |
 | Cloud Datastore API | [v1](clients/google-api-services-datastore/v1), [v1beta1](clients/google-api-services-datastore/v1beta1), [v1beta3](clients/google-api-services-datastore/v1beta3) |
 | Cloud Debugger API | [v2](clients/google-api-services-clouddebugger/v2) |
+| Cloud Deployment Manager V2 API | [alpha](clients/google-api-services-deploymentmanager/alpha), [v2](clients/google-api-services-deploymentmanager/v2), [v2beta](clients/google-api-services-deploymentmanager/v2beta) |
 | Cloud Document AI API | [v1beta2](clients/google-api-services-documentai/v1beta2), [v1beta3](clients/google-api-services-documentai/v1beta3) |
 | Cloud Domains API | [v1alpha2](clients/google-api-services-domains/v1alpha2), [v1beta1](clients/google-api-services-domains/v1beta1) |
 | Cloud Filestore API | [v1](clients/google-api-services-file/v1), [v1beta1](clients/google-api-services-file/v1beta1) |
@@ -108,6 +109,7 @@ packages on [Maven Central][maven-search].
 | Content API for Shopping | [v2](clients/google-api-services-content/v2), [v2.1](clients/google-api-services-content/v2.1) |
 | Custom Search API | [v1](clients/google-api-services-customsearch/v1) |
 | DCM/DFA Reporting And Trafficking API | [v3.3](clients/google-api-services-dfareporting/v3.3), [v3.4](clients/google-api-services-dfareporting/v3.4) |
+| Data Labeling API | [v1beta1](clients/google-api-services-datalabeling/v1beta1) |
 | Dataflow API | [v1b3](clients/google-api-services-dataflow/v1b3) |
 | Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1), [v3beta1](clients/google-api-services-dialogflow/v3beta1) |
 | Digital Asset Links API | [v1](clients/google-api-services-digitalassetlinks/v1) |
@@ -140,9 +142,6 @@ packages on [Maven Central][maven-search].
 | Google Civic Information API | [v2](clients/google-api-services-civicinfo/v2) |
 | Google Classroom API | [v1](clients/google-api-services-classroom/v1) |
 | Google Cloud Data Catalog API | [v1beta1](clients/google-api-services-datacatalog/v1beta1) |
-| Google Cloud Deployment Manager API | [v2](clients/google-api-services-deploymentmanager/v2) |
-| Google Cloud Deployment Manager API V2Beta Methods | [v2beta](clients/google-api-services-deploymentmanager/v2beta) |
-| Google Cloud Deployment Manager Alpha API | [alpha](clients/google-api-services-deploymentmanager/alpha) |
 | Google Cloud Memorystore for Redis API | [v1](clients/google-api-services-redis/v1), [v1beta1](clients/google-api-services-redis/v1beta1) |
 | Google Cloud Translation API | [v2](clients/google-api-services-translate/v2) |
 | Google Docs API | [v1](clients/google-api-services-docs/v1) |

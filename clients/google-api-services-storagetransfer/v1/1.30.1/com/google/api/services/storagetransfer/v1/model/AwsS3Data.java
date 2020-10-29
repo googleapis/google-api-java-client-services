@@ -32,7 +32,9 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Input only. AWS access key used to sign the API requests to the AWS S3 bucket.
-   * Permissions on the bucket must be granted to the access ID of the AWS access key.
+   * Permissions on the bucket must be granted to the access ID of the AWS access key. For
+   * information on our data retention policy for user credentials, see [User credentials](data-
+   * retention#user-credentials).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +51,9 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Input only. AWS access key used to sign the API requests to the AWS S3 bucket.
-   * Permissions on the bucket must be granted to the access ID of the AWS access key.
+   * Permissions on the bucket must be granted to the access ID of the AWS access key. For
+   * information on our data retention policy for user credentials, see [User credentials](data-
+   * retention#user-credentials).
    * @return value or {@code null} for none
    */
   public AwsAccessKey getAwsAccessKey() {
@@ -58,7 +62,9 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Input only. AWS access key used to sign the API requests to the AWS S3 bucket.
-   * Permissions on the bucket must be granted to the access ID of the AWS access key.
+   * Permissions on the bucket must be granted to the access ID of the AWS access key. For
+   * information on our data retention policy for user credentials, see [User credentials](data-
+   * retention#user-credentials).
    * @param awsAccessKey awsAccessKey or {@code null} for none
    */
   public AwsS3Data setAwsAccessKey(AwsAccessKey awsAccessKey) {

@@ -30,6 +30,13 @@ package com.google.api.services.dataflow.model;
 public final class ContainerSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Default runtime environment for the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FlexTemplateRuntimeEnvironment defaultEnvironment;
+
+  /**
    * Name of the docker container image. E.g., gcr.io/project/some-image
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class ContainerSpec extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private SDKInfo sdkInfo;
+
+  /**
+   * Default runtime environment for the job.
+   * @return value or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment getDefaultEnvironment() {
+    return defaultEnvironment;
+  }
+
+  /**
+   * Default runtime environment for the job.
+   * @param defaultEnvironment defaultEnvironment or {@code null} for none
+   */
+  public ContainerSpec setDefaultEnvironment(FlexTemplateRuntimeEnvironment defaultEnvironment) {
+    this.defaultEnvironment = defaultEnvironment;
+    return this;
+  }
 
   /**
    * Name of the docker container image. E.g., gcr.io/project/some-image

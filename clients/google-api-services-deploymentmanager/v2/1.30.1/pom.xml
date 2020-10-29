@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-deploymentmanager</artifactId>
-  <version>v2-rev20200519-1.30.10</version>
-  <name>Google Cloud Deployment Manager API v2-rev20200519-1.30.10</name>
+  <version>v2-rev20201022-1.30.10</version>
+  <name>Cloud Deployment Manager V2 API v2-rev20201022-1.30.10</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Google Cloud Deployment Manager API ${project.version}</doctitle>
-          <windowtitle>Google Cloud Deployment Manager API ${project.version}</windowtitle>
+          <doctitle>Cloud Deployment Manager V2 API ${project.version}</doctitle>
+          <windowtitle>Cloud Deployment Manager V2 API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.36.0/</link>

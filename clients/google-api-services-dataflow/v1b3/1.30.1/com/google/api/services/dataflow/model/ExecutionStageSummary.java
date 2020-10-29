@@ -93,6 +93,13 @@ public final class ExecutionStageSummary extends com.google.api.client.json.Gene
   private java.util.List<StageSource> outputSource;
 
   /**
+   * Other stages that must complete before this stage can run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> prerequisiteStage;
+
+  /**
    * Collections produced and consumed by component transforms of this stage.
    * @return value or {@code null} for none
    */
@@ -208,6 +215,23 @@ public final class ExecutionStageSummary extends com.google.api.client.json.Gene
    */
   public ExecutionStageSummary setOutputSource(java.util.List<StageSource> outputSource) {
     this.outputSource = outputSource;
+    return this;
+  }
+
+  /**
+   * Other stages that must complete before this stage can run.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPrerequisiteStage() {
+    return prerequisiteStage;
+  }
+
+  /**
+   * Other stages that must complete before this stage can run.
+   * @param prerequisiteStage prerequisiteStage or {@code null} for none
+   */
+  public ExecutionStageSummary setPrerequisiteStage(java.util.List<java.lang.String> prerequisiteStage) {
+    this.prerequisiteStage = prerequisiteStage;
     return this;
   }
 

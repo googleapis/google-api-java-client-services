@@ -40,7 +40,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String activationPolicy;
 
   /**
-   * Active Directory configuration, for now relevant only for SQL Server
+   * Active Directory configuration, relevant only for Cloud SQL for SQL Server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,7 +246,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Active Directory configuration, for now relevant only for SQL Server
+   * Active Directory configuration, relevant only for Cloud SQL for SQL Server.
    * @return value or {@code null} for none
    */
   public SqlActiveDirectoryConfig getActiveDirectoryConfig() {
@@ -254,7 +254,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Active Directory configuration, for now relevant only for SQL Server
+   * Active Directory configuration, relevant only for Cloud SQL for SQL Server.
    * @param activeDirectoryConfig activeDirectoryConfig or {@code null} for none
    */
   public Settings setActiveDirectoryConfig(SqlActiveDirectoryConfig activeDirectoryConfig) {

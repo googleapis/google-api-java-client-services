@@ -47,6 +47,14 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   private java.lang.String kind;
 
   /**
+   * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-
+   * central1-b, etc.). Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secondaryZone;
+
+  /**
    * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.).
    * The value may be {@code null}.
    */
@@ -84,6 +92,25 @@ public final class LocationPreference extends com.google.api.client.json.Generic
    */
   public LocationPreference setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-
+   * central1-b, etc.). Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecondaryZone() {
+    return secondaryZone;
+  }
+
+  /**
+   * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-
+   * central1-b, etc.). Reserved for future use.
+   * @param secondaryZone secondaryZone or {@code null} for none
+   */
+  public LocationPreference setSecondaryZone(java.lang.String secondaryZone) {
+    this.secondaryZone = secondaryZone;
     return this;
   }
 

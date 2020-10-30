@@ -204,11 +204,28 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String rootPassword;
 
   /**
+   * The status indicating if instance satisfies physical zone separation. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * The start time of any upcoming scheduled maintenance for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SqlScheduledMaintenance scheduledMaintenance;
+
+  /**
+   * The Compute Engine zone that the failover instance is currently serving from for a regional
+   * instance. This value could be different from the zone that was specified when the instance was
+   * created if the instance has failed over to its secondary/failover zone. Reserved for future
+   * use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secondaryGceZone;
 
   /**
    * The URI of this resource.
@@ -674,6 +691,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * The status indicating if instance satisfies physical zone separation. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * The status indicating if instance satisfies physical zone separation. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public DatabaseInstance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
    * The start time of any upcoming scheduled maintenance for this instance.
    * @return value or {@code null} for none
    */
@@ -687,6 +721,29 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setScheduledMaintenance(SqlScheduledMaintenance scheduledMaintenance) {
     this.scheduledMaintenance = scheduledMaintenance;
+    return this;
+  }
+
+  /**
+   * The Compute Engine zone that the failover instance is currently serving from for a regional
+   * instance. This value could be different from the zone that was specified when the instance was
+   * created if the instance has failed over to its secondary/failover zone. Reserved for future
+   * use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecondaryGceZone() {
+    return secondaryGceZone;
+  }
+
+  /**
+   * The Compute Engine zone that the failover instance is currently serving from for a regional
+   * instance. This value could be different from the zone that was specified when the instance was
+   * created if the instance has failed over to its secondary/failover zone. Reserved for future
+   * use.
+   * @param secondaryGceZone secondaryGceZone or {@code null} for none
+   */
+  public DatabaseInstance setSecondaryGceZone(java.lang.String secondaryGceZone) {
+    this.secondaryGceZone = secondaryGceZone;
     return this;
   }
 

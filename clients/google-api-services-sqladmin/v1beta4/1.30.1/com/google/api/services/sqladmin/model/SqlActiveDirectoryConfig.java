@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Active Directory configuration, for now relevant only for SQL Server
+ * Active Directory configuration, relevant only for Cloud SQL for SQL Server.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.sqladmin.model;
 public final class SqlActiveDirectoryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Domain name
+   * The name of the domain (e.g., mydomain.com).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domain;
 
   /**
-   * This will be always sql#activeDirectoryConfig.
+   * This is always sql#activeDirectoryConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Domain name
+   * The name of the domain (e.g., mydomain.com).
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -52,7 +52,7 @@ public final class SqlActiveDirectoryConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Domain name
+   * The name of the domain (e.g., mydomain.com).
    * @param domain domain or {@code null} for none
    */
   public SqlActiveDirectoryConfig setDomain(java.lang.String domain) {
@@ -61,7 +61,7 @@ public final class SqlActiveDirectoryConfig extends com.google.api.client.json.G
   }
 
   /**
-   * This will be always sql#activeDirectoryConfig.
+   * This is always sql#activeDirectoryConfig.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -69,7 +69,7 @@ public final class SqlActiveDirectoryConfig extends com.google.api.client.json.G
   }
 
   /**
-   * This will be always sql#activeDirectoryConfig.
+   * This is always sql#activeDirectoryConfig.
    * @param kind kind or {@code null} for none
    */
   public SqlActiveDirectoryConfig setKind(java.lang.String kind) {

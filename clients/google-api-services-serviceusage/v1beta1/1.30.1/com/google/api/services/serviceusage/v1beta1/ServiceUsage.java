@@ -1646,6 +1646,149 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         }
       }
       /**
+       * Create or update multiple admin overrides atomically, all on the same consumer, but on many
+       * different metrics or limits. The name field in the quota override message should not be set.
+       *
+       * Create a request for the method "consumerQuotaMetrics.importAdminOverrides".
+       *
+       * This request holds the parameters needed by the serviceusage server.  After setting any optional
+       * parameters, call the {@link ImportAdminOverrides#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent The resource name of the consumer. An example name would be:
+       *        `projects/123/services/compute.googleapis.com`
+       * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.ImportAdminOverridesRequest}
+       * @return the request
+       */
+      public ImportAdminOverrides importAdminOverrides(java.lang.String parent, com.google.api.services.serviceusage.v1beta1.model.ImportAdminOverridesRequest content) throws java.io.IOException {
+        ImportAdminOverrides result = new ImportAdminOverrides(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ImportAdminOverrides extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/consumerQuotaMetrics:importAdminOverrides";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
+
+        /**
+         * Create or update multiple admin overrides atomically, all on the same consumer, but on many
+         * different metrics or limits. The name field in the quota override message should not be set.
+         *
+         * Create a request for the method "consumerQuotaMetrics.importAdminOverrides".
+         *
+         * This request holds the parameters needed by the the serviceusage server.  After setting any
+         * optional parameters, call the {@link ImportAdminOverrides#execute()} method to invoke the
+         * remote operation. <p> {@link ImportAdminOverrides#initialize(com.google.api.client.googleapis.s
+         * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param parent The resource name of the consumer. An example name would be:
+       *        `projects/123/services/compute.googleapis.com`
+         * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.ImportAdminOverridesRequest}
+         * @since 1.13
+         */
+        protected ImportAdminOverrides(java.lang.String parent, com.google.api.services.serviceusage.v1beta1.model.ImportAdminOverridesRequest content) {
+          super(ServiceUsage.this, "POST", REST_PATH, content, com.google.api.services.serviceusage.v1beta1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+        }
+
+        @Override
+        public ImportAdminOverrides set$Xgafv(java.lang.String $Xgafv) {
+          return (ImportAdminOverrides) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ImportAdminOverrides setAccessToken(java.lang.String accessToken) {
+          return (ImportAdminOverrides) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ImportAdminOverrides setAlt(java.lang.String alt) {
+          return (ImportAdminOverrides) super.setAlt(alt);
+        }
+
+        @Override
+        public ImportAdminOverrides setCallback(java.lang.String callback) {
+          return (ImportAdminOverrides) super.setCallback(callback);
+        }
+
+        @Override
+        public ImportAdminOverrides setFields(java.lang.String fields) {
+          return (ImportAdminOverrides) super.setFields(fields);
+        }
+
+        @Override
+        public ImportAdminOverrides setKey(java.lang.String key) {
+          return (ImportAdminOverrides) super.setKey(key);
+        }
+
+        @Override
+        public ImportAdminOverrides setOauthToken(java.lang.String oauthToken) {
+          return (ImportAdminOverrides) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ImportAdminOverrides setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ImportAdminOverrides) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ImportAdminOverrides setQuotaUser(java.lang.String quotaUser) {
+          return (ImportAdminOverrides) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ImportAdminOverrides setUploadType(java.lang.String uploadType) {
+          return (ImportAdminOverrides) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ImportAdminOverrides setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ImportAdminOverrides) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the consumer. An example name would be:
+         * `projects/123/services/compute.googleapis.com`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The resource name of the consumer. An example name would be:
+       `projects/123/services/compute.googleapis.com`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The resource name of the consumer. An example name would be:
+         * `projects/123/services/compute.googleapis.com`
+         */
+        public ImportAdminOverrides setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public ImportAdminOverrides set(String parameterName, Object value) {
+          return (ImportAdminOverrides) super.set(parameterName, value);
+        }
+      }
+      /**
        * Create or update multiple consumer overrides atomically, all on the same consumer, but on many
        * different metrics or limits. The name field in the quota override message should not be set.
        *

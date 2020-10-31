@@ -6729,9 +6729,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * operators used on all other fields must be `EQUALS (=)`. * Supported fields: -
          * `campaignId` - `displayName` - `insertionOrderId` - `entityStatus` - `lineItemId` -
          * `lineItemType` - `flight.dateRange.endDate` (input formatted as YYYY-MM-DD) -
-         * `warningMessages` Examples: * All line items under an insertion order:
-         * `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and
-         * `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
+         * `warningMessages` - `flight.triggerId` Examples: * All line items under an insertion
+         * order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
+         * and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
          * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
          * lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` * All line items whose flight dates end
          * before March 28, 2019: `flight.dateRange.endDate<"2019-03-28"` * All line items that have
@@ -6748,8 +6748,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        used on `warningMessages` must be `HAS (:)`. * The operators used on all other fields must be
        `EQUALS (=)`. * Supported fields: - `campaignId` - `displayName` - `insertionOrderId` -
        `entityStatus` - `lineItemId` - `lineItemType` - `flight.dateRange.endDate` (input formatted as
-       YYYY-MM-DD) - `warningMessages` Examples: * All line items under an insertion order:
-       `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and
+       YYYY-MM-DD) - `warningMessages` - `flight.triggerId` Examples: * All line items under an insertion
+       order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and
        `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
        `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
        lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` * All line items whose flight dates end before March
@@ -6770,9 +6770,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * operators used on all other fields must be `EQUALS (=)`. * Supported fields: -
          * `campaignId` - `displayName` - `insertionOrderId` - `entityStatus` - `lineItemId` -
          * `lineItemType` - `flight.dateRange.endDate` (input formatted as YYYY-MM-DD) -
-         * `warningMessages` Examples: * All line items under an insertion order:
-         * `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and
-         * `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
+         * `warningMessages` - `flight.triggerId` Examples: * All line items under an insertion
+         * order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
+         * and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
          * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
          * lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` * All line items whose flight dates end
          * before March 28, 2019: `flight.dateRange.endDate<"2019-03-28"` * All line items that have
@@ -9382,6 +9382,993 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
       }
+    }
+    /**
+     * An accessor for creating requests from the ManualTriggers collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+     *   {@code DisplayVideo.ManualTriggers.List request = displayvideo.manualTriggers().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ManualTriggers manualTriggers() {
+      return new ManualTriggers();
+    }
+
+    /**
+     * The "manualTriggers" collection of methods.
+     */
+    public class ManualTriggers {
+
+      /**
+       * Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes
+       * apart, otherwise an error will be returned.
+       *
+       * Create a request for the method "manualTriggers.activate".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser that the manual trigger belongs.
+       * @param triggerId Required. The ID of the manual trigger to activate.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.ActivateManualTriggerRequest}
+       * @return the request
+       */
+      public Activate activate(java.lang.Long advertiserId, java.lang.Long triggerId, com.google.api.services.displayvideo.v1.model.ActivateManualTriggerRequest content) throws java.io.IOException {
+        Activate result = new Activate(advertiserId, triggerId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Activate extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ManualTrigger> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/manualTriggers/{+triggerId}:activate";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern TRIGGER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes
+         * apart, otherwise an error will be returned.
+         *
+         * Create a request for the method "manualTriggers.activate".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser that the manual trigger belongs.
+         * @param triggerId Required. The ID of the manual trigger to activate.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.ActivateManualTriggerRequest}
+         * @since 1.13
+         */
+        protected Activate(java.lang.Long advertiserId, java.lang.Long triggerId, com.google.api.services.displayvideo.v1.model.ActivateManualTriggerRequest content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.ManualTrigger.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.triggerId = com.google.api.client.util.Preconditions.checkNotNull(triggerId, "Required parameter triggerId must be specified.");
+        }
+
+        @Override
+        public Activate set$Xgafv(java.lang.String $Xgafv) {
+          return (Activate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Activate setAccessToken(java.lang.String accessToken) {
+          return (Activate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Activate setAlt(java.lang.String alt) {
+          return (Activate) super.setAlt(alt);
+        }
+
+        @Override
+        public Activate setCallback(java.lang.String callback) {
+          return (Activate) super.setCallback(callback);
+        }
+
+        @Override
+        public Activate setFields(java.lang.String fields) {
+          return (Activate) super.setFields(fields);
+        }
+
+        @Override
+        public Activate setKey(java.lang.String key) {
+          return (Activate) super.setKey(key);
+        }
+
+        @Override
+        public Activate setOauthToken(java.lang.String oauthToken) {
+          return (Activate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Activate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Activate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Activate setQuotaUser(java.lang.String quotaUser) {
+          return (Activate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Activate setUploadType(java.lang.String uploadType) {
+          return (Activate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Activate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Activate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser that the manual trigger belongs. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser that the manual trigger belongs.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser that the manual trigger belongs. */
+        public Activate setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the manual trigger to activate. */
+        @com.google.api.client.util.Key
+        private java.lang.Long triggerId;
+
+        /** Required. The ID of the manual trigger to activate.
+         */
+        public java.lang.Long getTriggerId() {
+          return triggerId;
+        }
+
+        /** Required. The ID of the manual trigger to activate. */
+        public Activate setTriggerId(java.lang.Long triggerId) {
+          this.triggerId = triggerId;
+          return this;
+        }
+
+        @Override
+        public Activate set(String parameterName, Object value) {
+          return (Activate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates a new manual trigger. Returns the newly created manual trigger if successful.
+       *
+       * Create a request for the method "manualTriggers.create".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. Immutable. The unique ID of the advertiser that the manual trigger belongs to.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.ManualTrigger}
+       * @return the request
+       */
+      public Create create(java.lang.Long advertiserId, com.google.api.services.displayvideo.v1.model.ManualTrigger content) throws java.io.IOException {
+        Create result = new Create(advertiserId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ManualTrigger> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/manualTriggers";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Creates a new manual trigger. Returns the newly created manual trigger if successful.
+         *
+         * Create a request for the method "manualTriggers.create".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. Immutable. The unique ID of the advertiser that the manual trigger belongs to.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.ManualTrigger}
+         * @since 1.13
+         */
+        protected Create(java.lang.Long advertiserId, com.google.api.services.displayvideo.v1.model.ManualTrigger content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.ManualTrigger.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Immutable. The unique ID of the advertiser that the manual trigger belongs to.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. Immutable. The unique ID of the advertiser that the manual trigger belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /**
+         * Required. Immutable. The unique ID of the advertiser that the manual trigger belongs to.
+         */
+        public Create setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deactivates a manual trigger.
+       *
+       * Create a request for the method "manualTriggers.deactivate".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Deactivate#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser that the manual trigger belongs.
+       * @param triggerId Required. The ID of the manual trigger to deactivate.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.DeactivateManualTriggerRequest}
+       * @return the request
+       */
+      public Deactivate deactivate(java.lang.Long advertiserId, java.lang.Long triggerId, com.google.api.services.displayvideo.v1.model.DeactivateManualTriggerRequest content) throws java.io.IOException {
+        Deactivate result = new Deactivate(advertiserId, triggerId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Deactivate extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ManualTrigger> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/manualTriggers/{+triggerId}:deactivate";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern TRIGGER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Deactivates a manual trigger.
+         *
+         * Create a request for the method "manualTriggers.deactivate".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Deactivate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Deactivate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser that the manual trigger belongs.
+         * @param triggerId Required. The ID of the manual trigger to deactivate.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.DeactivateManualTriggerRequest}
+         * @since 1.13
+         */
+        protected Deactivate(java.lang.Long advertiserId, java.lang.Long triggerId, com.google.api.services.displayvideo.v1.model.DeactivateManualTriggerRequest content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.ManualTrigger.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.triggerId = com.google.api.client.util.Preconditions.checkNotNull(triggerId, "Required parameter triggerId must be specified.");
+        }
+
+        @Override
+        public Deactivate set$Xgafv(java.lang.String $Xgafv) {
+          return (Deactivate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Deactivate setAccessToken(java.lang.String accessToken) {
+          return (Deactivate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Deactivate setAlt(java.lang.String alt) {
+          return (Deactivate) super.setAlt(alt);
+        }
+
+        @Override
+        public Deactivate setCallback(java.lang.String callback) {
+          return (Deactivate) super.setCallback(callback);
+        }
+
+        @Override
+        public Deactivate setFields(java.lang.String fields) {
+          return (Deactivate) super.setFields(fields);
+        }
+
+        @Override
+        public Deactivate setKey(java.lang.String key) {
+          return (Deactivate) super.setKey(key);
+        }
+
+        @Override
+        public Deactivate setOauthToken(java.lang.String oauthToken) {
+          return (Deactivate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Deactivate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Deactivate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Deactivate setQuotaUser(java.lang.String quotaUser) {
+          return (Deactivate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Deactivate setUploadType(java.lang.String uploadType) {
+          return (Deactivate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Deactivate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Deactivate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser that the manual trigger belongs. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser that the manual trigger belongs.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser that the manual trigger belongs. */
+        public Deactivate setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the manual trigger to deactivate. */
+        @com.google.api.client.util.Key
+        private java.lang.Long triggerId;
+
+        /** Required. The ID of the manual trigger to deactivate.
+         */
+        public java.lang.Long getTriggerId() {
+          return triggerId;
+        }
+
+        /** Required. The ID of the manual trigger to deactivate. */
+        public Deactivate setTriggerId(java.lang.Long triggerId) {
+          this.triggerId = triggerId;
+          return this;
+        }
+
+        @Override
+        public Deactivate set(String parameterName, Object value) {
+          return (Deactivate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a manual trigger.
+       *
+       * Create a request for the method "manualTriggers.get".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser this manual trigger belongs to.
+       * @param triggerId Required. The ID of the manual trigger to fetch.
+       * @return the request
+       */
+      public Get get(java.lang.Long advertiserId, java.lang.Long triggerId) throws java.io.IOException {
+        Get result = new Get(advertiserId, triggerId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ManualTrigger> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/manualTriggers/{+triggerId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern TRIGGER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Gets a manual trigger.
+         *
+         * Create a request for the method "manualTriggers.get".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser this manual trigger belongs to.
+         * @param triggerId Required. The ID of the manual trigger to fetch.
+         * @since 1.13
+         */
+        protected Get(java.lang.Long advertiserId, java.lang.Long triggerId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ManualTrigger.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.triggerId = com.google.api.client.util.Preconditions.checkNotNull(triggerId, "Required parameter triggerId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser this manual trigger belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser this manual trigger belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser this manual trigger belongs to. */
+        public Get setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the manual trigger to fetch. */
+        @com.google.api.client.util.Key
+        private java.lang.Long triggerId;
+
+        /** Required. The ID of the manual trigger to fetch.
+         */
+        public java.lang.Long getTriggerId() {
+          return triggerId;
+        }
+
+        /** Required. The ID of the manual trigger to fetch. */
+        public Get setTriggerId(java.lang.Long triggerId) {
+          this.triggerId = triggerId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists manual triggers that are accessible to the current user for a given advertiser id. The
+       * order is defined by the order_by parameter. A single advertiser_id is required.
+       *
+       * Create a request for the method "manualTriggers.list".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser that the fetched manual triggers belong to.
+       * @return the request
+       */
+      public List list(java.lang.Long advertiserId) throws java.io.IOException {
+        List result = new List(advertiserId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListManualTriggersResponse> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/manualTriggers";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Lists manual triggers that are accessible to the current user for a given advertiser id. The
+         * order is defined by the order_by parameter. A single advertiser_id is required.
+         *
+         * Create a request for the method "manualTriggers.list".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser that the fetched manual triggers belong to.
+         * @since 1.13
+         */
+        protected List(java.lang.Long advertiserId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListManualTriggersResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser that the fetched manual triggers belong to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser that the fetched manual triggers belong to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser that the fetched manual triggers belong to. */
+        public List setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * Allows filtering by manual trigger properties. Supported syntax: * Filter expressions are
+         * made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
+         * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
+         * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. *
+         * Supported fields: - `displayName` - `state` Examples: * All active manual triggers under
+         * an advertiser: `state="ACTIVE"` The length of this field should be no more than 500
+         * characters.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Allows filtering by manual trigger properties. Supported syntax: * Filter expressions are made up
+       of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+       sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
+       {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `displayName` - `state`
+       Examples: * All active manual triggers under an advertiser: `state="ACTIVE"` The length of this
+       field should be no more than 500 characters.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Allows filtering by manual trigger properties. Supported syntax: * Filter expressions are
+         * made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
+         * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
+         * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. *
+         * Supported fields: - `displayName` - `state` Examples: * All active manual triggers under
+         * an advertiser: `state="ACTIVE"` The length of this field should be no more than 500
+         * characters.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `state` The default sorting order is ascending. To specify descending order for a field,
+         * a suffix "desc" should be added to the field name. For example, `displayName desc`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Field by which to sort the list. Acceptable values are: * `displayName` (default) * `state` The
+       default sorting order is ascending. To specify descending order for a field, a suffix "desc" should
+       be added to the field name. For example, `displayName desc`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
+         * `state` The default sorting order is ascending. To specify descending order for a field,
+         * a suffix "desc" should be added to the field name. For example, `displayName desc`.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. Must be between `1` and `100`. If unspecified will default to `100`.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to `ListManualTriggers` method.
+         * If not specified, the first page of results will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results the server should return. Typically, this is the value of
+       next_page_token returned from the previous call to `ListManualTriggers` method. If not specified,
+       the first page of results will be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of next_page_token returned from the previous call to `ListManualTriggers` method.
+         * If not specified, the first page of results will be returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a manual trigger. Returns the updated manual trigger if successful.
+       *
+       * Create a request for the method "manualTriggers.patch".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. Immutable. The unique ID of the advertiser that the manual trigger belongs to.
+       * @param triggerId Output only. The unique ID of the manual trigger.
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.ManualTrigger}
+       * @return the request
+       */
+      public Patch patch(java.lang.Long advertiserId, java.lang.Long triggerId, com.google.api.services.displayvideo.v1.model.ManualTrigger content) throws java.io.IOException {
+        Patch result = new Patch(advertiserId, triggerId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ManualTrigger> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/manualTriggers/{+triggerId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern TRIGGER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Updates a manual trigger. Returns the updated manual trigger if successful.
+         *
+         * Create a request for the method "manualTriggers.patch".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. Immutable. The unique ID of the advertiser that the manual trigger belongs to.
+         * @param triggerId Output only. The unique ID of the manual trigger.
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.ManualTrigger}
+         * @since 1.13
+         */
+        protected Patch(java.lang.Long advertiserId, java.lang.Long triggerId, com.google.api.services.displayvideo.v1.model.ManualTrigger content) {
+          super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v1.model.ManualTrigger.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.triggerId = com.google.api.client.util.Preconditions.checkNotNull(triggerId, "Required parameter triggerId must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Immutable. The unique ID of the advertiser that the manual trigger belongs to.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. Immutable. The unique ID of the advertiser that the manual trigger belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /**
+         * Required. Immutable. The unique ID of the advertiser that the manual trigger belongs to.
+         */
+        public Patch setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Output only. The unique ID of the manual trigger. */
+        @com.google.api.client.util.Key
+        private java.lang.Long triggerId;
+
+        /** Output only. The unique ID of the manual trigger.
+         */
+        public java.lang.Long getTriggerId() {
+          return triggerId;
+        }
+
+        /** Output only. The unique ID of the manual trigger. */
+        public Patch setTriggerId(java.lang.Long triggerId) {
+          this.triggerId = triggerId;
+          return this;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The mask to control which fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
     }
     /**
      * An accessor for creating requests from the NegativeKeywordLists collection.

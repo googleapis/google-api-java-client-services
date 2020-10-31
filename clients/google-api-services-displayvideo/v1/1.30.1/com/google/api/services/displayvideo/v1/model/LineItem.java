@@ -171,6 +171,13 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private PartnerRevenueModel partnerRevenueModel;
 
   /**
+   * The targeting expansion settings of the line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TargetingExpansionConfig targetingExpansion;
+
+  /**
    * Output only. The timestamp when the line item was last updated. Assigned by the system.
    * The value may be {@code null}.
    */
@@ -519,6 +526,23 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
    */
   public LineItem setPartnerRevenueModel(PartnerRevenueModel partnerRevenueModel) {
     this.partnerRevenueModel = partnerRevenueModel;
+    return this;
+  }
+
+  /**
+   * The targeting expansion settings of the line item.
+   * @return value or {@code null} for none
+   */
+  public TargetingExpansionConfig getTargetingExpansion() {
+    return targetingExpansion;
+  }
+
+  /**
+   * The targeting expansion settings of the line item.
+   * @param targetingExpansion targetingExpansion or {@code null} for none
+   */
+  public LineItem setTargetingExpansion(TargetingExpansionConfig targetingExpansion) {
+    this.targetingExpansion = targetingExpansion;
     return this;
   }
 

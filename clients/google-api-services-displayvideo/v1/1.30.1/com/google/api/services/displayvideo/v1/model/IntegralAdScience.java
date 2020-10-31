@@ -31,6 +31,14 @@ package com.google.api.services.displayvideo.v1.model;
 public final class IntegralAdScience extends com.google.api.client.json.GenericJson {
 
   /**
+   * The custom segment ID provided by Integral Ad Science. The ID must be between `1000001` and
+   * `1999999`, inclusive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> customSegmentId;
+
+  /**
    * Display Viewability section (applicable to display line items only).
    * The value may be {@code null}.
    */
@@ -120,6 +128,25 @@ public final class IntegralAdScience extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String videoViewability;
+
+  /**
+   * The custom segment ID provided by Integral Ad Science. The ID must be between `1000001` and
+   * `1999999`, inclusive.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getCustomSegmentId() {
+    return customSegmentId;
+  }
+
+  /**
+   * The custom segment ID provided by Integral Ad Science. The ID must be between `1000001` and
+   * `1999999`, inclusive.
+   * @param customSegmentId customSegmentId or {@code null} for none
+   */
+  public IntegralAdScience setCustomSegmentId(java.util.List<java.lang.Long> customSegmentId) {
+    this.customSegmentId = customSegmentId;
+    return this;
+  }
 
   /**
    * Display Viewability section (applicable to display line items only).

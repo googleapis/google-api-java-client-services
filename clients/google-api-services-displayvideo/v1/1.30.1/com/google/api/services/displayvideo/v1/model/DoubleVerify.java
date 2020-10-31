@@ -52,6 +52,15 @@ public final class DoubleVerify extends com.google.api.client.json.GenericJson {
   private DoubleVerifyBrandSafetyCategories brandSafetyCategories;
 
   /**
+   * The custom segment ID provided by DoubleVerify. The ID must start with "51" and consist of
+   * eight digits. Custom segment id cannot be specified along with any of the following fields: *
+   * brand_safety_categories * avoided_age_ratings * app_star_rating * fraud_invalid_traffic
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long customSegmentId;
+
+  /**
    * Display viewability settings (applicable to display line items only).
    * The value may be {@code null}.
    */
@@ -120,6 +129,27 @@ public final class DoubleVerify extends com.google.api.client.json.GenericJson {
    */
   public DoubleVerify setBrandSafetyCategories(DoubleVerifyBrandSafetyCategories brandSafetyCategories) {
     this.brandSafetyCategories = brandSafetyCategories;
+    return this;
+  }
+
+  /**
+   * The custom segment ID provided by DoubleVerify. The ID must start with "51" and consist of
+   * eight digits. Custom segment id cannot be specified along with any of the following fields: *
+   * brand_safety_categories * avoided_age_ratings * app_star_rating * fraud_invalid_traffic
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCustomSegmentId() {
+    return customSegmentId;
+  }
+
+  /**
+   * The custom segment ID provided by DoubleVerify. The ID must start with "51" and consist of
+   * eight digits. Custom segment id cannot be specified along with any of the following fields: *
+   * brand_safety_categories * avoided_age_ratings * app_star_rating * fraud_invalid_traffic
+   * @param customSegmentId customSegmentId or {@code null} for none
+   */
+  public DoubleVerify setCustomSegmentId(java.lang.Long customSegmentId) {
+    this.customSegmentId = customSegmentId;
     return this;
   }
 

@@ -52,14 +52,14 @@ public final class ReturnaddressCustomBatchRequestEntry extends com.google.api.c
   private java.lang.String method;
 
   /**
-   * The return address to submit. Set this only if the method is `insert`.
+   * The return address to submit. This should be set only if the method is `insert`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ReturnAddress returnAddress;
 
   /**
-   * The return address ID. Set this only if the method is `delete` or `get`.
+   * The return address ID. This should be set only if the method is `delete` or `get`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class ReturnaddressCustomBatchRequestEntry extends com.google.api.c
   }
 
   /**
-   * The return address to submit. Set this only if the method is `insert`.
+   * The return address to submit. This should be set only if the method is `insert`.
    * @return value or {@code null} for none
    */
   public ReturnAddress getReturnAddress() {
@@ -125,7 +125,7 @@ public final class ReturnaddressCustomBatchRequestEntry extends com.google.api.c
   }
 
   /**
-   * The return address to submit. Set this only if the method is `insert`.
+   * The return address to submit. This should be set only if the method is `insert`.
    * @param returnAddress returnAddress or {@code null} for none
    */
   public ReturnaddressCustomBatchRequestEntry setReturnAddress(ReturnAddress returnAddress) {
@@ -134,7 +134,7 @@ public final class ReturnaddressCustomBatchRequestEntry extends com.google.api.c
   }
 
   /**
-   * The return address ID. Set this only if the method is `delete` or `get`.
+   * The return address ID. This should be set only if the method is `delete` or `get`.
    * @return value or {@code null} for none
    */
   public java.lang.String getReturnAddressId() {
@@ -142,7 +142,7 @@ public final class ReturnaddressCustomBatchRequestEntry extends com.google.api.c
   }
 
   /**
-   * The return address ID. Set this only if the method is `delete` or `get`.
+   * The return address ID. This should be set only if the method is `delete` or `get`.
    * @param returnAddressId returnAddressId or {@code null} for none
    */
   public ReturnaddressCustomBatchRequestEntry setReturnAddressId(java.lang.String returnAddressId) {

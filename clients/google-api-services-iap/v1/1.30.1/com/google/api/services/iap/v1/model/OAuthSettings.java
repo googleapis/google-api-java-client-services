@@ -31,18 +31,6 @@ package com.google.api.services.iap.v1.model;
 public final class OAuthSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * OAuth 2.0 client ID used in the OAuth flow to generate an access token. If this field is set,
-   * you can skip obtaining the OAuth credentials in this step:
-   * https://developers.google.com/identity/protocols/OAuth2?hl=en_US#1.-obtain-oauth-2.0
-   * -credentials-from-the-google-api-console. However, this could allow for client sharing. The
-   * risks of client sharing are outlined here: https://cloud.google.com/iap/docs/sharing-oauth-
-   * clients#risks.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String clientId;
-
-  /**
    * Domain hint to send as hd=? parameter in OAuth request flow. Enables redirect to primary IDP by
    * skipping Google's login screen. https://developers.google.com/identity/protocols/OpenIDConnect
    * #hd-param Note: IAP does not verify that the id token's hd claim matches this value since
@@ -51,33 +39,6 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String loginHint;
-
-  /**
-   * OAuth 2.0 client ID used in the OAuth flow to generate an access token. If this field is set,
-   * you can skip obtaining the OAuth credentials in this step:
-   * https://developers.google.com/identity/protocols/OAuth2?hl=en_US#1.-obtain-oauth-2.0
-   * -credentials-from-the-google-api-console. However, this could allow for client sharing. The
-   * risks of client sharing are outlined here: https://cloud.google.com/iap/docs/sharing-oauth-
-   * clients#risks.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getClientId() {
-    return clientId;
-  }
-
-  /**
-   * OAuth 2.0 client ID used in the OAuth flow to generate an access token. If this field is set,
-   * you can skip obtaining the OAuth credentials in this step:
-   * https://developers.google.com/identity/protocols/OAuth2?hl=en_US#1.-obtain-oauth-2.0
-   * -credentials-from-the-google-api-console. However, this could allow for client sharing. The
-   * risks of client sharing are outlined here: https://cloud.google.com/iap/docs/sharing-oauth-
-   * clients#risks.
-   * @param clientId clientId or {@code null} for none
-   */
-  public OAuthSettings setClientId(java.lang.String clientId) {
-    this.clientId = clientId;
-    return this;
-  }
 
   /**
    * Domain hint to send as hd=? parameter in OAuth request flow. Enables redirect to primary IDP by

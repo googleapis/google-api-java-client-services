@@ -109,7 +109,11 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
 
   /**
    * Optional. The resource name of the workload. Format:
-   * organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
+   * organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The UI
+   * extracts the location and workload name from this string, since they aren't set directly on the
+   * workload object. If the format of this field changes, the UI should likely be updated.
+   * LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/compliance/assurant/common/work
+   * load_helper.ts)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -310,7 +314,11 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
 
   /**
    * Optional. The resource name of the workload. Format:
-   * organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
+   * organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The UI
+   * extracts the location and workload name from this string, since they aren't set directly on the
+   * workload object. If the format of this field changes, the UI should likely be updated.
+   * LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/compliance/assurant/common/work
+   * load_helper.ts)
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -319,7 +327,11 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
 
   /**
    * Optional. The resource name of the workload. Format:
-   * organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
+   * organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The UI
+   * extracts the location and workload name from this string, since they aren't set directly on the
+   * workload object. If the format of this field changes, the UI should likely be updated.
+   * LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/compliance/assurant/common/work
+   * load_helper.ts)
    * @param name name or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setName(java.lang.String name) {

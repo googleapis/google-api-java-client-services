@@ -1,773 +1,12 @@
 {
-  "discoveryVersion": "v1",
-  "id": "assuredworkloads:v1beta1",
-  "resources": {
-    "organizations": {
-      "resources": {
-        "locations": {
-          "resources": {
-            "workloads": {
-              "methods": {
-                "get": {
-                  "response": {
-                    "$ref": "GoogleCloudAssuredworkloadsV1beta1Workload"
-                  },
-                  "description": "Gets Assured Workload associated with a CRM Node",
-                  "parameters": {
-                    "name": {
-                      "location": "path",
-                      "required": true,
-                      "type": "string",
-                      "description": "Required. The resource name of the Workload to fetch. This is the workloads's relative path in the API, formatted as \"organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}\". For example, \"organizations/123/locations/us-east1/workloads/assured-workload-1\".",
-                      "pattern": "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$"
-                    }
-                  },
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "id": "assuredworkloads.organizations.locations.workloads.get",
-                  "httpMethod": "GET",
-                  "path": "v1beta1/{+name}",
-                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/workloads/{workloadsId}",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ]
-                },
-                "list": {
-                  "parameterOrder": [
-                    "parent"
-                  ],
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "id": "assuredworkloads.organizations.locations.workloads.list",
-                  "response": {
-                    "$ref": "GoogleCloudAssuredworkloadsV1beta1ListWorkloadsResponse"
-                  },
-                  "path": "v1beta1/{+parent}/workloads",
-                  "httpMethod": "GET",
-                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/workloads",
-                  "parameters": {
-                    "pageSize": {
-                      "type": "integer",
-                      "format": "int32",
-                      "description": "Page size.",
-                      "location": "query"
-                    },
-                    "filter": {
-                      "location": "query",
-                      "description": "A custom filter for filtering by properties of a workload. At this time, only filtering by labels is supported.",
-                      "type": "string"
-                    },
-                    "pageToken": {
-                      "type": "string",
-                      "description": "Page token returned from previous request. Page token contains context from previous request. Page token needs to be passed in the second and following requests.",
-                      "location": "query"
-                    },
-                    "parent": {
-                      "pattern": "^organizations/[^/]+/locations/[^/]+$",
-                      "description": "Required. Parent Resource to list workloads from. Must be of the form `organizations/{org_id}/locations/{location}`.",
-                      "required": true,
-                      "type": "string",
-                      "location": "path"
-                    }
-                  },
-                  "description": "Lists Assured Workloads under a CRM Node."
-                },
-                "patch": {
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "httpMethod": "PATCH",
-                  "request": {
-                    "$ref": "GoogleCloudAssuredworkloadsV1beta1Workload"
-                  },
-                  "path": "v1beta1/{+name}",
-                  "description": "Updates an existing workload. Currently allows updating of workload display_name and labels. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.",
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "id": "assuredworkloads.organizations.locations.workloads.patch",
-                  "parameters": {
-                    "name": {
-                      "type": "string",
-                      "required": true,
-                      "description": "Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only.",
-                      "pattern": "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$",
-                      "location": "path"
-                    },
-                    "updateMask": {
-                      "location": "query",
-                      "format": "google-fieldmask",
-                      "type": "string",
-                      "description": "Required. The list of fields to be updated."
-                    }
-                  },
-                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/workloads/{workloadsId}",
-                  "response": {
-                    "$ref": "GoogleCloudAssuredworkloadsV1beta1Workload"
-                  }
-                },
-                "create": {
-                  "response": {
-                    "$ref": "GoogleLongrunningOperation"
-                  },
-                  "request": {
-                    "$ref": "GoogleCloudAssuredworkloadsV1beta1Workload"
-                  },
-                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/workloads",
-                  "description": "Creates Assured Workload.",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "path": "v1beta1/{+parent}/workloads",
-                  "parameterOrder": [
-                    "parent"
-                  ],
-                  "parameters": {
-                    "parent": {
-                      "type": "string",
-                      "description": "Required. The resource name of the new Workload's parent. Must be of the form `organizations/{org_id}/locations/{location_id}`.",
-                      "pattern": "^organizations/[^/]+/locations/[^/]+$",
-                      "location": "path",
-                      "required": true
-                    },
-                    "externalId": {
-                      "type": "string",
-                      "location": "query",
-                      "description": "Optional. A identifier associated with the workload and underlying projects which allows for the break down of billing costs for a workload. The value provided for the identifier will add a label to the workload and contained projects with the identifier as the value."
-                    }
-                  },
-                  "httpMethod": "POST",
-                  "id": "assuredworkloads.organizations.locations.workloads.create"
-                },
-                "delete": {
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "response": {
-                    "$ref": "GoogleProtobufEmpty"
-                  },
-                  "id": "assuredworkloads.organizations.locations.workloads.delete",
-                  "parameters": {
-                    "etag": {
-                      "type": "string",
-                      "description": "Optional. The etag of the workload. If this is provided, it must match the server's etag.",
-                      "location": "query"
-                    },
-                    "name": {
-                      "pattern": "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$",
-                      "location": "path",
-                      "required": true,
-                      "type": "string",
-                      "description": "Required. The `name` field is used to identify the workload. Format: organizations/{org_id}/locations/{location_id}/workloads/{workload_id}"
-                    }
-                  },
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "httpMethod": "DELETE",
-                  "path": "v1beta1/{+name}",
-                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/workloads/{workloadsId}",
-                  "description": "Deletes the workload. Make sure that workload's direct children are already in a deleted state, otherwise the request will fail with a FAILED_PRECONDITION error."
-                }
-              }
-            },
-            "operations": {
-              "methods": {
-                "list": {
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "parameters": {
-                    "name": {
-                      "location": "path",
-                      "description": "The name of the operation's parent resource.",
-                      "required": true,
-                      "pattern": "^organizations/[^/]+/locations/[^/]+$",
-                      "type": "string"
-                    },
-                    "filter": {
-                      "type": "string",
-                      "location": "query",
-                      "description": "The standard list filter."
-                    },
-                    "pageToken": {
-                      "description": "The standard list page token.",
-                      "location": "query",
-                      "type": "string"
-                    },
-                    "pageSize": {
-                      "description": "The standard list page size.",
-                      "location": "query",
-                      "type": "integer",
-                      "format": "int32"
-                    }
-                  },
-                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/operations",
-                  "httpMethod": "GET",
-                  "description": "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `\"/v1/{name=users/*}/operations\"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "path": "v1beta1/{+name}/operations",
-                  "response": {
-                    "$ref": "GoogleLongrunningListOperationsResponse"
-                  },
-                  "id": "assuredworkloads.organizations.locations.operations.list"
-                },
-                "get": {
-                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/operations/{operationsId}",
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "parameters": {
-                    "name": {
-                      "type": "string",
-                      "location": "path",
-                      "pattern": "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$",
-                      "description": "The name of the operation resource.",
-                      "required": true
-                    }
-                  },
-                  "description": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.",
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "response": {
-                    "$ref": "GoogleLongrunningOperation"
-                  },
-                  "id": "assuredworkloads.organizations.locations.operations.get",
-                  "httpMethod": "GET",
-                  "path": "v1beta1/{+name}"
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  },
-  "fullyEncodeReservedExpansion": true,
-  "revision": "20200924",
-  "ownerDomain": "google.com",
-  "version_module": true,
-  "mtlsRootUrl": "https://assuredworkloads.mtls.googleapis.com/",
-  "batchPath": "batch",
-  "schemas": {
-    "GoogleCloudAssuredworkloadsV1beta1CreateWorkloadOperationMetadata": {
-      "properties": {
-        "complianceRegime": {
-          "enum": [
-            "COMPLIANCE_REGIME_UNSPECIFIED",
-            "IL4",
-            "CJIS",
-            "FEDRAMP_HIGH",
-            "FEDRAMP_MODERATE"
-          ],
-          "enumDescriptions": [
-            "Unknown compliance regime.",
-            "Information protection as per DoD IL4 requirements.",
-            "Criminal Justice Information Services (CJIS) Security policies.",
-            "FedRAMP High data protection controls",
-            "FedRAMP Moderate data protection controls"
-          ],
-          "description": "Optional. Compliance controls that should be applied to the resources managed by the workload.",
-          "type": "string"
-        },
-        "createTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Optional. Time when the operation was created."
-        },
-        "parent": {
-          "description": "Optional. The parent of the workload.",
-          "type": "string"
-        },
-        "displayName": {
-          "type": "string",
-          "description": "Optional. The display name of the workload."
-        }
-      },
-      "type": "object",
-      "id": "GoogleCloudAssuredworkloadsV1beta1CreateWorkloadOperationMetadata",
-      "description": "Operation metadata to give request details of CreateWorkload."
-    },
-    "GoogleCloudAssuredworkloadsV1CreateWorkloadOperationMetadata": {
-      "type": "object",
-      "id": "GoogleCloudAssuredworkloadsV1CreateWorkloadOperationMetadata",
-      "properties": {
-        "parent": {
-          "description": "Optional. The parent of the workload.",
-          "type": "string"
-        },
-        "displayName": {
-          "type": "string",
-          "description": "Optional. The display name of the workload."
-        },
-        "createTime": {
-          "type": "string",
-          "description": "Optional. Time when the operation was created.",
-          "format": "google-datetime"
-        },
-        "complianceRegime": {
-          "description": "Optional. Compliance controls that should be applied to the resources managed by the workload.",
-          "enum": [
-            "COMPLIANCE_REGIME_UNSPECIFIED",
-            "IL4",
-            "CJIS",
-            "FEDRAMP_HIGH",
-            "FEDRAMP_MODERATE"
-          ],
-          "type": "string",
-          "enumDescriptions": [
-            "Unknown compliance regime.",
-            "Information protection as per DoD IL4 requirements.",
-            "Criminal Justice Information Services (CJIS) Security policies.",
-            "FedRAMP High data protection controls",
-            "FedRAMP Moderate data protection controls"
-          ]
-        }
-      },
-      "description": "Operation metadata to give request details of CreateWorkload."
-    },
-    "GoogleLongrunningListOperationsResponse": {
-      "properties": {
-        "nextPageToken": {
-          "type": "string",
-          "description": "The standard List next-page token."
-        },
-        "operations": {
-          "type": "array",
-          "items": {
-            "$ref": "GoogleLongrunningOperation"
-          },
-          "description": "A list of operations that matches the specified filter in the request."
-        }
-      },
-      "id": "GoogleLongrunningListOperationsResponse",
-      "description": "The response message for Operations.ListOperations.",
-      "type": "object"
-    },
-    "GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampHighSettings": {
-      "properties": {
-        "kmsSettings": {
-          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings",
-          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key."
-        }
-      },
-      "type": "object",
-      "id": "GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampHighSettings",
-      "description": "Settings specific to resources needed for FedRAMP High."
-    },
-    "GoogleRpcStatus": {
-      "type": "object",
-      "description": "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).",
-      "id": "GoogleRpcStatus",
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32",
-          "description": "The status code, which should be an enum value of google.rpc.Code."
-        },
-        "message": {
-          "type": "string",
-          "description": "A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client."
-        },
-        "details": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "any",
-              "description": "Properties of the object. Contains field @type with type URL."
-            }
-          },
-          "description": "A list of messages that carry the error details. There is a common set of message types for APIs to use."
-        }
-      }
-    },
-    "GoogleCloudAssuredworkloadsV1WorkloadFedrampModerateSettings": {
-      "description": "Settings specific to resources needed for FedRAMP Moderate.",
-      "properties": {
-        "kmsSettings": {
-          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key.",
-          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadKMSSettings"
-        }
-      },
-      "id": "GoogleCloudAssuredworkloadsV1WorkloadFedrampModerateSettings",
-      "type": "object"
-    },
-    "GoogleCloudAssuredworkloadsV1WorkloadKMSSettings": {
-      "id": "GoogleCloudAssuredworkloadsV1WorkloadKMSSettings",
-      "type": "object",
-      "description": "Settings specific to the Key Management Service.",
-      "properties": {
-        "nextRotationTime": {
-          "description": "Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.",
-          "format": "google-datetime",
-          "type": "string"
-        },
-        "rotationPeriod": {
-          "format": "google-duration",
-          "description": "Required. Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.",
-          "type": "string"
-        }
-      }
-    },
-    "GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampModerateSettings": {
-      "id": "GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampModerateSettings",
-      "properties": {
-        "kmsSettings": {
-          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings",
-          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key."
-        }
-      },
-      "description": "Settings specific to resources needed for FedRAMP Moderate.",
-      "type": "object"
-    },
-    "GoogleCloudAssuredworkloadsV1WorkloadFedrampHighSettings": {
-      "type": "object",
-      "description": "Settings specific to resources needed for FedRAMP High.",
-      "id": "GoogleCloudAssuredworkloadsV1WorkloadFedrampHighSettings",
-      "properties": {
-        "kmsSettings": {
-          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key.",
-          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadKMSSettings"
-        }
-      }
-    },
-    "GoogleProtobufEmpty": {
-      "properties": {},
-      "type": "object",
-      "id": "GoogleProtobufEmpty",
-      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`."
-    },
-    "GoogleLongrunningOperation": {
-      "description": "This resource represents a long-running operation that is the result of a network API call.",
-      "properties": {
-        "done": {
-          "description": "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.",
-          "type": "boolean"
-        },
-        "error": {
-          "description": "The error result of the operation in case of failure or cancellation.",
-          "$ref": "GoogleRpcStatus"
-        },
-        "metadata": {
-          "additionalProperties": {
-            "description": "Properties of the object. Contains field @type with type URL.",
-            "type": "any"
-          },
-          "description": "Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.",
-          "type": "object"
-        },
-        "response": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "any",
-            "description": "Properties of the object. Contains field @type with type URL."
-          },
-          "description": "The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`."
-        },
-        "name": {
-          "type": "string",
-          "description": "The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`."
-        }
-      },
-      "id": "GoogleLongrunningOperation",
-      "type": "object"
-    },
-    "GoogleCloudAssuredworkloadsV1Workload": {
-      "properties": {
-        "complianceRegime": {
-          "enum": [
-            "COMPLIANCE_REGIME_UNSPECIFIED",
-            "IL4",
-            "CJIS",
-            "FEDRAMP_HIGH",
-            "FEDRAMP_MODERATE"
-          ],
-          "type": "string",
-          "description": "Required. Immutable. Compliance Regime associated with this workload.",
-          "enumDescriptions": [
-            "Unknown compliance regime.",
-            "Information protection as per DoD IL4 requirements.",
-            "Criminal Justice Information Services (CJIS) Security policies.",
-            "FedRAMP High data protection controls",
-            "FedRAMP Moderate data protection controls"
-          ]
-        },
-        "labels": {
-          "type": "object",
-          "description": "Optional. Labels applied to the workload.",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "cjisSettings": {
-          "description": "Required. Input only. Immutable. Settings specific to resources needed for CJIS.",
-          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadCJISSettings"
-        },
-        "billingAccount": {
-          "description": "Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.",
-          "type": "string"
-        },
-        "fedrampModerateSettings": {
-          "description": "Required. Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate.",
-          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadFedrampModerateSettings"
-        },
-        "il4Settings": {
-          "description": "Required. Input only. Immutable. Settings specific to resources needed for IL4.",
-          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadIL4Settings"
-        },
-        "resources": {
-          "readOnly": true,
-          "description": "Output only. The resources associated with this workload. These resources will be created when creating the workload. If any of the projects already exist, the workload creation will fail. Always read only.",
-          "type": "array",
-          "items": {
-            "$ref": "GoogleCloudAssuredworkloadsV1WorkloadResourceInfo"
-          }
-        },
-        "etag": {
-          "type": "string",
-          "description": "Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations."
-        },
-        "fedrampHighSettings": {
-          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadFedrampHighSettings",
-          "description": "Required. Input only. Immutable. Settings specific to resources needed for FedRAMP High."
-        },
-        "createTime": {
-          "format": "google-datetime",
-          "readOnly": true,
-          "type": "string",
-          "description": "Output only. Immutable. The Workload creation timestamp."
-        },
-        "displayName": {
-          "description": "Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload",
-          "type": "string"
-        },
-        "name": {
-          "type": "string",
-          "description": "Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only."
-        }
-      },
-      "type": "object",
-      "description": "An Workload object for managing highly regulated workloads of cloud customers.",
-      "id": "GoogleCloudAssuredworkloadsV1Workload"
-    },
-    "GoogleCloudAssuredworkloadsV1WorkloadIL4Settings": {
-      "properties": {
-        "kmsSettings": {
-          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key.",
-          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadKMSSettings"
-        }
-      },
-      "type": "object",
-      "id": "GoogleCloudAssuredworkloadsV1WorkloadIL4Settings",
-      "description": "Settings specific to resources needed for IL4."
-    },
-    "GoogleCloudAssuredworkloadsV1WorkloadCJISSettings": {
-      "type": "object",
-      "id": "GoogleCloudAssuredworkloadsV1WorkloadCJISSettings",
-      "properties": {
-        "kmsSettings": {
-          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadKMSSettings",
-          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key."
-        }
-      },
-      "description": "Settings specific to resources needed for CJIS."
-    },
-    "GoogleCloudAssuredworkloadsV1beta1Workload": {
-      "description": "An Workload object for managing highly regulated workloads of cloud customers.",
-      "id": "GoogleCloudAssuredworkloadsV1beta1Workload",
-      "type": "object",
-      "properties": {
-        "createTime": {
-          "readOnly": true,
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Output only. Immutable. The Workload creation timestamp."
-        },
-        "fedrampModerateSettings": {
-          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampModerateSettings",
-          "description": "Required. Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate."
-        },
-        "fedrampHighSettings": {
-          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampHighSettings",
-          "description": "Required. Input only. Immutable. Settings specific to resources needed for FedRAMP High."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo"
-          },
-          "description": "Output only. The resources associated with this workload. These resources will be created when creating the workload. If any of the projects already exist, the workload creation will fail. Always read only.",
-          "readOnly": true
-        },
-        "etag": {
-          "description": "Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.",
-          "type": "string"
-        },
-        "complianceRegime": {
-          "type": "string",
-          "enumDescriptions": [
-            "Unknown compliance regime.",
-            "Information protection as per DoD IL4 requirements.",
-            "Criminal Justice Information Services (CJIS) Security policies.",
-            "FedRAMP High data protection controls",
-            "FedRAMP Moderate data protection controls"
-          ],
-          "enum": [
-            "COMPLIANCE_REGIME_UNSPECIFIED",
-            "IL4",
-            "CJIS",
-            "FEDRAMP_HIGH",
-            "FEDRAMP_MODERATE"
-          ],
-          "description": "Required. Immutable. Compliance Regime associated with this workload."
-        },
-        "cjisSettings": {
-          "description": "Required. Input only. Immutable. Settings specific to resources needed for CJIS.",
-          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadCJISSettings"
-        },
-        "labels": {
-          "description": "Optional. Labels applied to the workload.",
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "displayName": {
-          "description": "Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload",
-          "type": "string"
-        },
-        "name": {
-          "type": "string",
-          "description": "Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only."
-        },
-        "il4Settings": {
-          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings",
-          "description": "Required. Input only. Immutable. Settings specific to resources needed for IL4."
-        },
-        "billingAccount": {
-          "type": "string",
-          "description": "Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`."
-        }
-      }
-    },
-    "GoogleCloudAssuredworkloadsV1WorkloadResourceInfo": {
-      "properties": {
-        "resourceType": {
-          "enumDescriptions": [
-            "Unknown resource type.",
-            "Consumer project.",
-            "Consumer project containing encryption keys."
-          ],
-          "enum": [
-            "RESOURCE_TYPE_UNSPECIFIED",
-            "CONSUMER_PROJECT",
-            "ENCRYPTION_KEYS_PROJECT"
-          ],
-          "type": "string",
-          "description": "Indicates the type of resource."
-        },
-        "resourceId": {
-          "description": "Resource identifier. For a project this represents project_number.",
-          "format": "int64",
-          "type": "string"
-        }
-      },
-      "type": "object",
-      "description": "Represent the resources that are children of this Workload.",
-      "id": "GoogleCloudAssuredworkloadsV1WorkloadResourceInfo"
-    },
-    "GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings": {
-      "type": "object",
-      "properties": {
-        "kmsSettings": {
-          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key.",
-          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings"
-        }
-      },
-      "id": "GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings",
-      "description": "Settings specific to resources needed for IL4."
-    },
-    "GoogleCloudAssuredworkloadsV1beta1ListWorkloadsResponse": {
-      "id": "GoogleCloudAssuredworkloadsV1beta1ListWorkloadsResponse",
-      "type": "object",
-      "description": "Response of ListWorkloads endpoint.",
-      "properties": {
-        "workloads": {
-          "items": {
-            "$ref": "GoogleCloudAssuredworkloadsV1beta1Workload"
-          },
-          "description": "List of Workloads under a given parent.",
-          "type": "array"
-        },
-        "nextPageToken": {
-          "description": "The next page token. Return empty if reached the last page.",
-          "type": "string"
-        }
-      }
-    },
-    "GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings": {
-      "id": "GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings",
-      "type": "object",
-      "description": "Settings specific to the Key Management Service.",
-      "properties": {
-        "rotationPeriod": {
-          "type": "string",
-          "description": "Required. Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.",
-          "format": "google-duration"
-        },
-        "nextRotationTime": {
-          "description": "Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.",
-          "type": "string",
-          "format": "google-datetime"
-        }
-      }
-    },
-    "GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo": {
-      "description": "Represent the resources that are children of this Workload.",
-      "id": "GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo",
-      "type": "object",
-      "properties": {
-        "resourceId": {
-          "type": "string",
-          "format": "int64",
-          "description": "Resource identifier. For a project this represents project_number."
-        },
-        "resourceType": {
-          "description": "Indicates the type of resource.",
-          "enum": [
-            "RESOURCE_TYPE_UNSPECIFIED",
-            "CONSUMER_PROJECT",
-            "ENCRYPTION_KEYS_PROJECT"
-          ],
-          "type": "string",
-          "enumDescriptions": [
-            "Unknown resource type.",
-            "Consumer project.",
-            "Consumer project containing encryption keys."
-          ]
-        }
-      }
-    },
-    "GoogleCloudAssuredworkloadsV1beta1WorkloadCJISSettings": {
-      "properties": {
-        "kmsSettings": {
-          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key.",
-          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings"
-        }
-      },
-      "description": "Settings specific to resources needed for CJIS.",
-      "id": "GoogleCloudAssuredworkloadsV1beta1WorkloadCJISSettings",
-      "type": "object"
-    }
-  },
   "title": "Assured Workloads API",
-  "documentationLink": "https://cloud.google.com",
+  "icons": {
+    "x32": "http://www.google.com/images/icons/product/search-32.gif",
+    "x16": "http://www.google.com/images/icons/product/search-16.gif"
+  },
+  "id": "assuredworkloads:v1beta1",
+  "baseUrl": "https://assuredworkloads.googleapis.com/",
+  "mtlsRootUrl": "https://assuredworkloads.mtls.googleapis.com/",
   "auth": {
     "oauth2": {
       "scopes": {
@@ -777,26 +16,257 @@
       }
     }
   },
-  "ownerName": "Google",
+  "discoveryVersion": "v1",
+  "fullyEncodeReservedExpansion": true,
+  "resources": {
+    "organizations": {
+      "resources": {
+        "locations": {
+          "resources": {
+            "workloads": {
+              "methods": {
+                "delete": {
+                  "parameters": {
+                    "etag": {
+                      "description": "Optional. The etag of the workload. If this is provided, it must match the server's etag.",
+                      "type": "string",
+                      "location": "query"
+                    },
+                    "name": {
+                      "description": "Required. The `name` field is used to identify the workload. Format: organizations/{org_id}/locations/{location_id}/workloads/{workload_id}",
+                      "type": "string",
+                      "location": "path",
+                      "pattern": "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$",
+                      "required": true
+                    }
+                  },
+                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/workloads/{workloadsId}",
+                  "description": "Deletes the workload. Make sure that workload's direct children are already in a deleted state, otherwise the request will fail with a FAILED_PRECONDITION error.",
+                  "response": {
+                    "$ref": "GoogleProtobufEmpty"
+                  },
+                  "path": "v1beta1/{+name}",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "id": "assuredworkloads.organizations.locations.workloads.delete",
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "httpMethod": "DELETE"
+                },
+                "patch": {
+                  "id": "assuredworkloads.organizations.locations.workloads.patch",
+                  "description": "Updates an existing workload. Currently allows updating of workload display_name and labels. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.",
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "request": {
+                    "$ref": "GoogleCloudAssuredworkloadsV1beta1Workload"
+                  },
+                  "response": {
+                    "$ref": "GoogleCloudAssuredworkloadsV1beta1Workload"
+                  },
+                  "path": "v1beta1/{+name}",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/workloads/{workloadsId}",
+                  "httpMethod": "PATCH",
+                  "parameters": {
+                    "updateMask": {
+                      "format": "google-fieldmask",
+                      "type": "string",
+                      "location": "query",
+                      "description": "Required. The list of fields to be updated."
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The UI extracts the location and workload name from this string, since they aren't set directly on the workload object. If the format of this field changes, the UI should likely be updated. LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/compliance/assurant/common/workload_helper.ts)",
+                      "pattern": "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$",
+                      "required": true,
+                      "location": "path"
+                    }
+                  }
+                },
+                "create": {
+                  "response": {
+                    "$ref": "GoogleLongrunningOperation"
+                  },
+                  "httpMethod": "POST",
+                  "id": "assuredworkloads.organizations.locations.workloads.create",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "parameters": {
+                    "externalId": {
+                      "type": "string",
+                      "location": "query",
+                      "description": "Optional. A identifier associated with the workload and underlying projects which allows for the break down of billing costs for a workload. The value provided for the identifier will add a label to the workload and contained projects with the identifier as the value."
+                    },
+                    "parent": {
+                      "description": "Required. The resource name of the new Workload's parent. Must be of the form `organizations/{org_id}/locations/{location_id}`.",
+                      "type": "string",
+                      "location": "path",
+                      "required": true,
+                      "pattern": "^organizations/[^/]+/locations/[^/]+$"
+                    }
+                  },
+                  "parameterOrder": [
+                    "parent"
+                  ],
+                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/workloads",
+                  "request": {
+                    "$ref": "GoogleCloudAssuredworkloadsV1beta1Workload"
+                  },
+                  "path": "v1beta1/{+parent}/workloads",
+                  "description": "Creates Assured Workload."
+                },
+                "list": {
+                  "httpMethod": "GET",
+                  "description": "Lists Assured Workloads under a CRM Node.",
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "id": "assuredworkloads.organizations.locations.workloads.list",
+                  "path": "v1beta1/{+parent}/workloads",
+                  "parameters": {
+                    "pageSize": {
+                      "description": "Page size.",
+                      "format": "int32",
+                      "type": "integer",
+                      "location": "query"
+                    },
+                    "filter": {
+                      "type": "string",
+                      "description": "A custom filter for filtering by properties of a workload. At this time, only filtering by labels is supported.",
+                      "location": "query"
+                    },
+                    "pageToken": {
+                      "type": "string",
+                      "description": "Page token returned from previous request. Page token contains context from previous request. Page token needs to be passed in the second and following requests.",
+                      "location": "query"
+                    },
+                    "parent": {
+                      "required": true,
+                      "description": "Required. Parent Resource to list workloads from. Must be of the form `organizations/{org_id}/locations/{location}`.",
+                      "pattern": "^organizations/[^/]+/locations/[^/]+$",
+                      "location": "path",
+                      "type": "string"
+                    }
+                  },
+                  "response": {
+                    "$ref": "GoogleCloudAssuredworkloadsV1beta1ListWorkloadsResponse"
+                  },
+                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/workloads",
+                  "parameterOrder": [
+                    "parent"
+                  ]
+                },
+                "get": {
+                  "description": "Gets Assured Workload associated with a CRM Node",
+                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/workloads/{workloadsId}",
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "httpMethod": "GET",
+                  "response": {
+                    "$ref": "GoogleCloudAssuredworkloadsV1beta1Workload"
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "parameters": {
+                    "name": {
+                      "type": "string",
+                      "pattern": "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$",
+                      "description": "Required. The resource name of the Workload to fetch. This is the workloads's relative path in the API, formatted as \"organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}\". For example, \"organizations/123/locations/us-east1/workloads/assured-workload-1\".",
+                      "location": "path",
+                      "required": true
+                    }
+                  },
+                  "id": "assuredworkloads.organizations.locations.workloads.get",
+                  "path": "v1beta1/{+name}"
+                }
+              }
+            },
+            "operations": {
+              "methods": {
+                "list": {
+                  "path": "v1beta1/{+name}/operations",
+                  "parameters": {
+                    "filter": {
+                      "type": "string",
+                      "description": "The standard list filter.",
+                      "location": "query"
+                    },
+                    "name": {
+                      "location": "path",
+                      "pattern": "^organizations/[^/]+/locations/[^/]+$",
+                      "type": "string",
+                      "description": "The name of the operation's parent resource.",
+                      "required": true
+                    },
+                    "pageToken": {
+                      "location": "query",
+                      "description": "The standard list page token.",
+                      "type": "string"
+                    },
+                    "pageSize": {
+                      "location": "query",
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "The standard list page size."
+                    }
+                  },
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "httpMethod": "GET",
+                  "id": "assuredworkloads.organizations.locations.operations.list",
+                  "description": "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `\"/v1/{name=users/*}/operations\"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.",
+                  "response": {
+                    "$ref": "GoogleLongrunningListOperationsResponse"
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/operations"
+                },
+                "get": {
+                  "httpMethod": "GET",
+                  "path": "v1beta1/{+name}",
+                  "parameters": {
+                    "name": {
+                      "location": "path",
+                      "type": "string",
+                      "required": true,
+                      "description": "The name of the operation resource.",
+                      "pattern": "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$"
+                    }
+                  },
+                  "response": {
+                    "$ref": "GoogleLongrunningOperation"
+                  },
+                  "flatPath": "v1beta1/organizations/{organizationsId}/locations/{locationsId}/operations/{operationsId}",
+                  "id": "assuredworkloads.organizations.locations.operations.get",
+                  "description": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.",
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "kind": "discovery#restDescription",
-  "name": "assuredworkloads",
   "parameters": {
-    "prettyPrint": {
-      "type": "boolean",
-      "location": "query",
-      "description": "Returns response with indentations and line breaks.",
-      "default": "true"
-    },
-    "access_token": {
-      "location": "query",
-      "description": "OAuth access token.",
-      "type": "string"
-    },
-    "quotaUser": {
-      "type": "string",
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
-      "location": "query"
-    },
     "key": {
       "location": "query",
       "type": "string",
@@ -807,66 +277,596 @@
       "location": "query",
       "description": "Upload protocol for media (e.g. \"raw\", \"multipart\")."
     },
-    "callback": {
-      "type": "string",
-      "location": "query",
-      "description": "JSONP"
-    },
-    "$.xgafv": {
-      "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
-      ],
-      "location": "query",
-      "description": "V1 error format.",
-      "enum": [
-        "1",
-        "2"
-      ],
-      "type": "string"
-    },
-    "oauth_token": {
-      "location": "query",
-      "type": "string",
-      "description": "OAuth 2.0 token for the current user."
-    },
-    "uploadType": {
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
-      "type": "string",
-      "location": "query"
-    },
     "alt": {
-      "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
-      ],
-      "type": "string",
+      "description": "Data format for response.",
       "enum": [
         "json",
         "media",
         "proto"
       ],
-      "location": "query",
+      "type": "string",
       "default": "json",
-      "description": "Data format for response."
+      "location": "query",
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ]
+    },
+    "oauth_token": {
+      "type": "string",
+      "description": "OAuth 2.0 token for the current user.",
+      "location": "query"
+    },
+    "$.xgafv": {
+      "enum": [
+        "1",
+        "2"
+      ],
+      "description": "V1 error format.",
+      "location": "query",
+      "enumDescriptions": [
+        "v1 error format",
+        "v2 error format"
+      ],
+      "type": "string"
+    },
+    "quotaUser": {
+      "type": "string",
+      "location": "query",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."
+    },
+    "access_token": {
+      "type": "string",
+      "location": "query",
+      "description": "OAuth access token."
+    },
+    "prettyPrint": {
+      "type": "boolean",
+      "location": "query",
+      "default": "true",
+      "description": "Returns response with indentations and line breaks."
     },
     "fields": {
       "location": "query",
-      "description": "Selector specifying which fields to include in a partial response.",
+      "type": "string",
+      "description": "Selector specifying which fields to include in a partial response."
+    },
+    "callback": {
+      "description": "JSONP",
+      "location": "query",
+      "type": "string"
+    },
+    "uploadType": {
+      "location": "query",
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
       "type": "string"
     }
   },
-  "servicePath": "",
-  "basePath": "",
-  "canonicalName": "Assuredworkloads",
-  "description": "",
-  "protocol": "rest",
-  "version": "v1beta1",
-  "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+  "schemas": {
+    "GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo": {
+      "id": "GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo",
+      "description": "Represent the resources that are children of this Workload.",
+      "properties": {
+        "resourceId": {
+          "format": "int64",
+          "type": "string",
+          "description": "Resource identifier. For a project this represents project_number."
+        },
+        "resourceType": {
+          "description": "Indicates the type of resource.",
+          "type": "string",
+          "enumDescriptions": [
+            "Unknown resource type.",
+            "Consumer project.",
+            "Consumer project containing encryption keys."
+          ],
+          "enum": [
+            "RESOURCE_TYPE_UNSPECIFIED",
+            "CONSUMER_PROJECT",
+            "ENCRYPTION_KEYS_PROJECT"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampModerateSettings": {
+      "id": "GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampModerateSettings",
+      "description": "Settings specific to resources needed for FedRAMP Moderate.",
+      "type": "object",
+      "properties": {
+        "kmsSettings": {
+          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings",
+          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key."
+        }
+      }
+    },
+    "GoogleCloudAssuredworkloadsV1beta1CreateWorkloadOperationMetadata": {
+      "id": "GoogleCloudAssuredworkloadsV1beta1CreateWorkloadOperationMetadata",
+      "type": "object",
+      "properties": {
+        "displayName": {
+          "description": "Optional. The display name of the workload.",
+          "type": "string"
+        },
+        "parent": {
+          "description": "Optional. The parent of the workload.",
+          "type": "string"
+        },
+        "createTime": {
+          "description": "Optional. Time when the operation was created.",
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "complianceRegime": {
+          "enumDescriptions": [
+            "Unknown compliance regime.",
+            "Information protection as per DoD IL4 requirements.",
+            "Criminal Justice Information Services (CJIS) Security policies.",
+            "FedRAMP High data protection controls",
+            "FedRAMP Moderate data protection controls"
+          ],
+          "enum": [
+            "COMPLIANCE_REGIME_UNSPECIFIED",
+            "IL4",
+            "CJIS",
+            "FEDRAMP_HIGH",
+            "FEDRAMP_MODERATE"
+          ],
+          "description": "Optional. Compliance controls that should be applied to the resources managed by the workload.",
+          "type": "string"
+        }
+      },
+      "description": "Operation metadata to give request details of CreateWorkload."
+    },
+    "GoogleCloudAssuredworkloadsV1beta1ListWorkloadsResponse": {
+      "id": "GoogleCloudAssuredworkloadsV1beta1ListWorkloadsResponse",
+      "properties": {
+        "workloads": {
+          "description": "List of Workloads under a given parent.",
+          "type": "array",
+          "items": {
+            "$ref": "GoogleCloudAssuredworkloadsV1beta1Workload"
+          }
+        },
+        "nextPageToken": {
+          "description": "The next page token. Return empty if reached the last page.",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "description": "Response of ListWorkloads endpoint."
+    },
+    "GoogleCloudAssuredworkloadsV1WorkloadCJISSettings": {
+      "description": "Settings specific to resources needed for CJIS.",
+      "id": "GoogleCloudAssuredworkloadsV1WorkloadCJISSettings",
+      "properties": {
+        "kmsSettings": {
+          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key.",
+          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadKMSSettings"
+        }
+      },
+      "type": "object"
+    },
+    "GoogleCloudAssuredworkloadsV1WorkloadFedrampHighSettings": {
+      "type": "object",
+      "description": "Settings specific to resources needed for FedRAMP High.",
+      "properties": {
+        "kmsSettings": {
+          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key.",
+          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadKMSSettings"
+        }
+      },
+      "id": "GoogleCloudAssuredworkloadsV1WorkloadFedrampHighSettings"
+    },
+    "GoogleProtobufEmpty": {
+      "properties": {},
+      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`.",
+      "type": "object",
+      "id": "GoogleProtobufEmpty"
+    },
+    "GoogleCloudAssuredworkloadsV1beta1WorkloadCJISSettings": {
+      "properties": {
+        "kmsSettings": {
+          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key.",
+          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings"
+        }
+      },
+      "id": "GoogleCloudAssuredworkloadsV1beta1WorkloadCJISSettings",
+      "type": "object",
+      "description": "Settings specific to resources needed for CJIS."
+    },
+    "GoogleCloudAssuredworkloadsV1WorkloadKMSSettings": {
+      "type": "object",
+      "description": "Settings specific to the Key Management Service.",
+      "properties": {
+        "rotationPeriod": {
+          "format": "google-duration",
+          "description": "Required. Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.",
+          "type": "string"
+        },
+        "nextRotationTime": {
+          "description": "Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.",
+          "type": "string",
+          "format": "google-datetime"
+        }
+      },
+      "id": "GoogleCloudAssuredworkloadsV1WorkloadKMSSettings"
+    },
+    "GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings": {
+      "type": "object",
+      "properties": {
+        "rotationPeriod": {
+          "description": "Required. Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.",
+          "type": "string",
+          "format": "google-duration"
+        },
+        "nextRotationTime": {
+          "type": "string",
+          "format": "google-datetime",
+          "description": "Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary."
+        }
+      },
+      "id": "GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings",
+      "description": "Settings specific to the Key Management Service."
+    },
+    "GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampHighSettings": {
+      "properties": {
+        "kmsSettings": {
+          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key.",
+          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings"
+        }
+      },
+      "description": "Settings specific to resources needed for FedRAMP High.",
+      "id": "GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampHighSettings",
+      "type": "object"
+    },
+    "GoogleLongrunningListOperationsResponse": {
+      "properties": {
+        "operations": {
+          "description": "A list of operations that matches the specified filter in the request.",
+          "items": {
+            "$ref": "GoogleLongrunningOperation"
+          },
+          "type": "array"
+        },
+        "nextPageToken": {
+          "description": "The standard List next-page token.",
+          "type": "string"
+        }
+      },
+      "description": "The response message for Operations.ListOperations.",
+      "id": "GoogleLongrunningListOperationsResponse",
+      "type": "object"
+    },
+    "GoogleCloudAssuredworkloadsV1CreateWorkloadOperationMetadata": {
+      "type": "object",
+      "description": "Operation metadata to give request details of CreateWorkload.",
+      "id": "GoogleCloudAssuredworkloadsV1CreateWorkloadOperationMetadata",
+      "properties": {
+        "parent": {
+          "description": "Optional. The parent of the workload.",
+          "type": "string"
+        },
+        "createTime": {
+          "description": "Optional. Time when the operation was created.",
+          "type": "string",
+          "format": "google-datetime"
+        },
+        "complianceRegime": {
+          "enum": [
+            "COMPLIANCE_REGIME_UNSPECIFIED",
+            "IL4",
+            "CJIS",
+            "FEDRAMP_HIGH",
+            "FEDRAMP_MODERATE"
+          ],
+          "type": "string",
+          "enumDescriptions": [
+            "Unknown compliance regime.",
+            "Information protection as per DoD IL4 requirements.",
+            "Criminal Justice Information Services (CJIS) Security policies.",
+            "FedRAMP High data protection controls",
+            "FedRAMP Moderate data protection controls"
+          ],
+          "description": "Optional. Compliance controls that should be applied to the resources managed by the workload."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Optional. The display name of the workload."
+        }
+      }
+    },
+    "GoogleCloudAssuredworkloadsV1WorkloadIL4Settings": {
+      "type": "object",
+      "properties": {
+        "kmsSettings": {
+          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadKMSSettings",
+          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key."
+        }
+      },
+      "id": "GoogleCloudAssuredworkloadsV1WorkloadIL4Settings",
+      "description": "Settings specific to resources needed for IL4."
+    },
+    "GoogleCloudAssuredworkloadsV1Workload": {
+      "properties": {
+        "fedrampHighSettings": {
+          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadFedrampHighSettings",
+          "description": "Required. Input only. Immutable. Settings specific to resources needed for FedRAMP High."
+        },
+        "etag": {
+          "type": "string",
+          "description": "Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations."
+        },
+        "createTime": {
+          "format": "google-datetime",
+          "description": "Output only. Immutable. The Workload creation timestamp.",
+          "type": "string",
+          "readOnly": true
+        },
+        "il4Settings": {
+          "description": "Required. Input only. Immutable. Settings specific to resources needed for IL4.",
+          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadIL4Settings"
+        },
+        "cjisSettings": {
+          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadCJISSettings",
+          "description": "Required. Input only. Immutable. Settings specific to resources needed for CJIS."
+        },
+        "fedrampModerateSettings": {
+          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadFedrampModerateSettings",
+          "description": "Required. Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate."
+        },
+        "complianceRegime": {
+          "enumDescriptions": [
+            "Unknown compliance regime.",
+            "Information protection as per DoD IL4 requirements.",
+            "Criminal Justice Information Services (CJIS) Security policies.",
+            "FedRAMP High data protection controls",
+            "FedRAMP Moderate data protection controls"
+          ],
+          "description": "Required. Immutable. Compliance Regime associated with this workload.",
+          "enum": [
+            "COMPLIANCE_REGIME_UNSPECIFIED",
+            "IL4",
+            "CJIS",
+            "FEDRAMP_HIGH",
+            "FEDRAMP_MODERATE"
+          ],
+          "type": "string"
+        },
+        "billingAccount": {
+          "type": "string",
+          "description": "Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`."
+        },
+        "name": {
+          "type": "string",
+          "description": "Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The UI extracts the location and workload name from this string, since they aren't set directly on the workload object. If the format of this field changes, the UI should likely be updated. LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/compliance/assurant/common/workload_helper.ts)"
+        },
+        "resources": {
+          "description": "Output only. The resources associated with this workload. These resources will be created when creating the workload. If any of the projects already exist, the workload creation will fail. Always read only.",
+          "type": "array",
+          "items": {
+            "$ref": "GoogleCloudAssuredworkloadsV1WorkloadResourceInfo"
+          },
+          "readOnly": true
+        },
+        "labels": {
+          "description": "Optional. Labels applied to the workload.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "displayName": {
+          "description": "Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "description": "An Workload object for managing highly regulated workloads of cloud customers.",
+      "id": "GoogleCloudAssuredworkloadsV1Workload"
+    },
+    "GoogleRpcStatus": {
+      "id": "GoogleRpcStatus",
+      "properties": {
+        "message": {
+          "type": "string",
+          "description": "A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client."
+        },
+        "code": {
+          "format": "int32",
+          "type": "integer",
+          "description": "The status code, which should be an enum value of google.rpc.Code."
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": {
+              "description": "Properties of the object. Contains field @type with type URL.",
+              "type": "any"
+            }
+          },
+          "description": "A list of messages that carry the error details. There is a common set of message types for APIs to use."
+        }
+      },
+      "description": "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).",
+      "type": "object"
+    },
+    "GoogleLongrunningOperation": {
+      "description": "This resource represents a long-running operation that is the result of a network API call.",
+      "type": "object",
+      "id": "GoogleLongrunningOperation",
+      "properties": {
+        "error": {
+          "$ref": "GoogleRpcStatus",
+          "description": "The error result of the operation in case of failure or cancellation."
+        },
+        "done": {
+          "type": "boolean",
+          "description": "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available."
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
+          },
+          "description": "Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any."
+        },
+        "response": {
+          "description": "The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.",
+          "type": "object",
+          "additionalProperties": {
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
+          }
+        },
+        "name": {
+          "description": "The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.",
+          "type": "string"
+        }
+      }
+    },
+    "GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings": {
+      "type": "object",
+      "description": "Settings specific to resources needed for IL4.",
+      "id": "GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings",
+      "properties": {
+        "kmsSettings": {
+          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key.",
+          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings"
+        }
+      }
+    },
+    "GoogleCloudAssuredworkloadsV1beta1Workload": {
+      "description": "An Workload object for managing highly regulated workloads of cloud customers.",
+      "id": "GoogleCloudAssuredworkloadsV1beta1Workload",
+      "properties": {
+        "displayName": {
+          "description": "Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload",
+          "type": "string"
+        },
+        "createTime": {
+          "description": "Output only. Immutable. The Workload creation timestamp.",
+          "readOnly": true,
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "fedrampHighSettings": {
+          "description": "Required. Input only. Immutable. Settings specific to resources needed for FedRAMP High.",
+          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampHighSettings"
+        },
+        "il4Settings": {
+          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings",
+          "description": "Required. Input only. Immutable. Settings specific to resources needed for IL4."
+        },
+        "resources": {
+          "readOnly": true,
+          "description": "Output only. The resources associated with this workload. These resources will be created when creating the workload. If any of the projects already exist, the workload creation will fail. Always read only.",
+          "items": {
+            "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo"
+          },
+          "type": "array"
+        },
+        "etag": {
+          "type": "string",
+          "description": "Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations."
+        },
+        "fedrampModerateSettings": {
+          "description": "Required. Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate.",
+          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadFedrampModerateSettings"
+        },
+        "labels": {
+          "type": "object",
+          "description": "Optional. Labels applied to the workload.",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "billingAccount": {
+          "description": "Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.",
+          "type": "string"
+        },
+        "cjisSettings": {
+          "description": "Required. Input only. Immutable. Settings specific to resources needed for CJIS.",
+          "$ref": "GoogleCloudAssuredworkloadsV1beta1WorkloadCJISSettings"
+        },
+        "complianceRegime": {
+          "description": "Required. Immutable. Compliance Regime associated with this workload.",
+          "enumDescriptions": [
+            "Unknown compliance regime.",
+            "Information protection as per DoD IL4 requirements.",
+            "Criminal Justice Information Services (CJIS) Security policies.",
+            "FedRAMP High data protection controls",
+            "FedRAMP Moderate data protection controls"
+          ],
+          "enum": [
+            "COMPLIANCE_REGIME_UNSPECIFIED",
+            "IL4",
+            "CJIS",
+            "FEDRAMP_HIGH",
+            "FEDRAMP_MODERATE"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "description": "Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The UI extracts the location and workload name from this string, since they aren't set directly on the workload object. If the format of this field changes, the UI should likely be updated. LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/compliance/assurant/common/workload_helper.ts)"
+        }
+      },
+      "type": "object"
+    },
+    "GoogleCloudAssuredworkloadsV1WorkloadFedrampModerateSettings": {
+      "properties": {
+        "kmsSettings": {
+          "$ref": "GoogleCloudAssuredworkloadsV1WorkloadKMSSettings",
+          "description": "Required. Input only. Immutable. Settings used to create a CMEK crypto key."
+        }
+      },
+      "id": "GoogleCloudAssuredworkloadsV1WorkloadFedrampModerateSettings",
+      "description": "Settings specific to resources needed for FedRAMP Moderate.",
+      "type": "object"
+    },
+    "GoogleCloudAssuredworkloadsV1WorkloadResourceInfo": {
+      "id": "GoogleCloudAssuredworkloadsV1WorkloadResourceInfo",
+      "type": "object",
+      "description": "Represent the resources that are children of this Workload.",
+      "properties": {
+        "resourceId": {
+          "type": "string",
+          "description": "Resource identifier. For a project this represents project_number.",
+          "format": "int64"
+        },
+        "resourceType": {
+          "description": "Indicates the type of resource.",
+          "enumDescriptions": [
+            "Unknown resource type.",
+            "Consumer project.",
+            "Consumer project containing encryption keys."
+          ],
+          "enum": [
+            "RESOURCE_TYPE_UNSPECIFIED",
+            "CONSUMER_PROJECT",
+            "ENCRYPTION_KEYS_PROJECT"
+          ],
+          "type": "string"
+        }
+      }
+    }
   },
-  "baseUrl": "https://assuredworkloads.googleapis.com/",
-  "rootUrl": "https://assuredworkloads.googleapis.com/"
+  "canonicalName": "Assuredworkloads",
+  "documentationLink": "https://cloud.google.com",
+  "basePath": "",
+  "rootUrl": "https://assuredworkloads.googleapis.com/",
+  "description": "",
+  "revision": "20201029",
+  "servicePath": "",
+  "version_module": true,
+  "protocol": "rest",
+  "batchPath": "batch",
+  "name": "assuredworkloads",
+  "version": "v1beta1",
+  "ownerName": "Google",
+  "ownerDomain": "google.com"
 }

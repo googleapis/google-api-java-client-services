@@ -64,7 +64,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String adsRedirect;
 
   /**
-   * Set to true if the item is targeted towards adults.
+   * Should be set to true if the item is targeted towards adults.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -695,7 +695,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set to true if the item is targeted towards adults.
+   * Should be set to true if the item is targeted towards adults.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAdult() {
@@ -703,7 +703,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set to true if the item is targeted towards adults.
+   * Should be set to true if the item is targeted towards adults.
    * @param adult adult or {@code null} for none
    */
   public Product setAdult(java.lang.Boolean adult) {

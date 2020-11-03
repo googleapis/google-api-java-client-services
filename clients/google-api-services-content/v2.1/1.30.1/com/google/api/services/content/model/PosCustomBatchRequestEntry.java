@@ -38,7 +38,7 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   private java.lang.Long batchId;
 
   /**
-   * The inventory to submit. Set this only if the method is `inventory`.
+   * The inventory to submit. This should be set only if the method is `inventory`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,21 +60,21 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   private java.lang.String method;
 
   /**
-   * The sale information to submit. Set this only if the method is `sale`.
+   * The sale information to submit. This should be set only if the method is `sale`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PosSale sale;
 
   /**
-   * The store information to submit. Set this only if the method is `insert`.
+   * The store information to submit. This should be set only if the method is `insert`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PosStore store;
 
   /**
-   * The store code. Set this only if the method is `delete` or `get`.
+   * The store code. This should be set only if the method is `delete` or `get`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   }
 
   /**
-   * The inventory to submit. Set this only if the method is `inventory`.
+   * The inventory to submit. This should be set only if the method is `inventory`.
    * @return value or {@code null} for none
    */
   public PosInventory getInventory() {
@@ -113,7 +113,7 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   }
 
   /**
-   * The inventory to submit. Set this only if the method is `inventory`.
+   * The inventory to submit. This should be set only if the method is `inventory`.
    * @param inventory inventory or {@code null} for none
    */
   public PosCustomBatchRequestEntry setInventory(PosInventory inventory) {
@@ -158,7 +158,7 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   }
 
   /**
-   * The sale information to submit. Set this only if the method is `sale`.
+   * The sale information to submit. This should be set only if the method is `sale`.
    * @return value or {@code null} for none
    */
   public PosSale getSale() {
@@ -166,7 +166,7 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   }
 
   /**
-   * The sale information to submit. Set this only if the method is `sale`.
+   * The sale information to submit. This should be set only if the method is `sale`.
    * @param sale sale or {@code null} for none
    */
   public PosCustomBatchRequestEntry setSale(PosSale sale) {
@@ -175,7 +175,7 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   }
 
   /**
-   * The store information to submit. Set this only if the method is `insert`.
+   * The store information to submit. This should be set only if the method is `insert`.
    * @return value or {@code null} for none
    */
   public PosStore getStore() {
@@ -183,7 +183,7 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   }
 
   /**
-   * The store information to submit. Set this only if the method is `insert`.
+   * The store information to submit. This should be set only if the method is `insert`.
    * @param store store or {@code null} for none
    */
   public PosCustomBatchRequestEntry setStore(PosStore store) {
@@ -192,7 +192,7 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   }
 
   /**
-   * The store code. Set this only if the method is `delete` or `get`.
+   * The store code. This should be set only if the method is `delete` or `get`.
    * @return value or {@code null} for none
    */
   public java.lang.String getStoreCode() {
@@ -200,7 +200,7 @@ public final class PosCustomBatchRequestEntry extends com.google.api.client.json
   }
 
   /**
-   * The store code. Set this only if the method is `delete` or `get`.
+   * The store code. This should be set only if the method is `delete` or `get`.
    * @param storeCode storeCode or {@code null} for none
    */
   public PosCustomBatchRequestEntry setStoreCode(java.lang.String storeCode) {

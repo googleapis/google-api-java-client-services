@@ -52,14 +52,14 @@ public final class ReturnpolicyCustomBatchRequestEntry extends com.google.api.cl
   private java.lang.String method;
 
   /**
-   * The return policy to submit. Set this only if the method is `insert`.
+   * The return policy to submit. This should be set only if the method is `insert`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ReturnPolicy returnPolicy;
 
   /**
-   * The return policy ID. Set this only if the method is `delete` or `get`.
+   * The return policy ID. This should be set only if the method is `delete` or `get`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class ReturnpolicyCustomBatchRequestEntry extends com.google.api.cl
   }
 
   /**
-   * The return policy to submit. Set this only if the method is `insert`.
+   * The return policy to submit. This should be set only if the method is `insert`.
    * @return value or {@code null} for none
    */
   public ReturnPolicy getReturnPolicy() {
@@ -125,7 +125,7 @@ public final class ReturnpolicyCustomBatchRequestEntry extends com.google.api.cl
   }
 
   /**
-   * The return policy to submit. Set this only if the method is `insert`.
+   * The return policy to submit. This should be set only if the method is `insert`.
    * @param returnPolicy returnPolicy or {@code null} for none
    */
   public ReturnpolicyCustomBatchRequestEntry setReturnPolicy(ReturnPolicy returnPolicy) {
@@ -134,7 +134,7 @@ public final class ReturnpolicyCustomBatchRequestEntry extends com.google.api.cl
   }
 
   /**
-   * The return policy ID. Set this only if the method is `delete` or `get`.
+   * The return policy ID. This should be set only if the method is `delete` or `get`.
    * @return value or {@code null} for none
    */
   public java.lang.String getReturnPolicyId() {
@@ -142,7 +142,7 @@ public final class ReturnpolicyCustomBatchRequestEntry extends com.google.api.cl
   }
 
   /**
-   * The return policy ID. Set this only if the method is `delete` or `get`.
+   * The return policy ID. This should be set only if the method is `delete` or `get`.
    * @param returnPolicyId returnPolicyId or {@code null} for none
    */
   public ReturnpolicyCustomBatchRequestEntry setReturnPolicyId(java.lang.String returnPolicyId) {

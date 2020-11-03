@@ -31,16 +31,16 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaBatchUpdateUserLinksRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The requests specifying the user links to update. A maximum of 1000 user links can be updated
-   * in a batch.
+   * Required. The requests specifying the user links to update. A maximum of 1000 user links can be
+   * updated in a batch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleAnalyticsAdminV1alphaUpdateUserLinkRequest> requests;
 
   /**
-   * The requests specifying the user links to update. A maximum of 1000 user links can be updated
-   * in a batch.
+   * Required. The requests specifying the user links to update. A maximum of 1000 user links can be
+   * updated in a batch.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAnalyticsAdminV1alphaUpdateUserLinkRequest> getRequests() {
@@ -48,8 +48,8 @@ public final class GoogleAnalyticsAdminV1alphaBatchUpdateUserLinksRequest extend
   }
 
   /**
-   * The requests specifying the user links to update. A maximum of 1000 user links can be updated
-   * in a batch.
+   * Required. The requests specifying the user links to update. A maximum of 1000 user links can be
+   * updated in a batch.
    * @param requests requests or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaBatchUpdateUserLinksRequest setRequests(java.util.List<GoogleAnalyticsAdminV1alphaUpdateUserLinkRequest> requests) {

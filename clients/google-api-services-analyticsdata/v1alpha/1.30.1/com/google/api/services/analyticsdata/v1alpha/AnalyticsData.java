@@ -316,6 +316,158 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
         return (GetMetadata) super.set(parameterName, value);
       }
     }
+    /**
+     * The Google Analytics Realtime API returns a customized report of realtime event data for your
+     * property. These reports show events and usage from the last 30 minutes.
+     *
+     * Create a request for the method "properties.runRealtimeReport".
+     *
+     * This request holds the parameters needed by the analyticsdata server.  After setting any optional
+     * parameters, call the {@link RunRealtimeReport#execute()} method to invoke the remote operation.
+     *
+     * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
+     *        not the body. To learn more, see [where to find your Property
+     *        ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+     *        Example: properties/1234
+     * @param content the {@link com.google.api.services.analyticsdata.v1alpha.model.RunRealtimeReportRequest}
+     * @return the request
+     */
+    public RunRealtimeReport runRealtimeReport(java.lang.String property, com.google.api.services.analyticsdata.v1alpha.model.RunRealtimeReportRequest content) throws java.io.IOException {
+      RunRealtimeReport result = new RunRealtimeReport(property, content);
+      initialize(result);
+      return result;
+    }
+
+    public class RunRealtimeReport extends AnalyticsDataRequest<com.google.api.services.analyticsdata.v1alpha.model.RunRealtimeReportResponse> {
+
+      private static final String REST_PATH = "v1alpha/{+property}:runRealtimeReport";
+
+      private final java.util.regex.Pattern PROPERTY_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+      /**
+       * The Google Analytics Realtime API returns a customized report of realtime event data for your
+       * property. These reports show events and usage from the last 30 minutes.
+       *
+       * Create a request for the method "properties.runRealtimeReport".
+       *
+       * This request holds the parameters needed by the the analyticsdata server.  After setting any
+       * optional parameters, call the {@link RunRealtimeReport#execute()} method to invoke the remote
+       * operation. <p> {@link RunRealtimeReport#initialize(com.google.api.client.googleapis.services.Ab
+       * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
+     *        not the body. To learn more, see [where to find your Property
+     *        ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+     *        Example: properties/1234
+       * @param content the {@link com.google.api.services.analyticsdata.v1alpha.model.RunRealtimeReportRequest}
+       * @since 1.13
+       */
+      protected RunRealtimeReport(java.lang.String property, com.google.api.services.analyticsdata.v1alpha.model.RunRealtimeReportRequest content) {
+        super(AnalyticsData.this, "POST", REST_PATH, content, com.google.api.services.analyticsdata.v1alpha.model.RunRealtimeReportResponse.class);
+        this.property = com.google.api.client.util.Preconditions.checkNotNull(property, "Required parameter property must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROPERTY_PATTERN.matcher(property).matches(),
+              "Parameter property must conform to the pattern " +
+              "^properties/[^/]+$");
+        }
+      }
+
+      @Override
+      public RunRealtimeReport set$Xgafv(java.lang.String $Xgafv) {
+        return (RunRealtimeReport) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RunRealtimeReport setAccessToken(java.lang.String accessToken) {
+        return (RunRealtimeReport) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RunRealtimeReport setAlt(java.lang.String alt) {
+        return (RunRealtimeReport) super.setAlt(alt);
+      }
+
+      @Override
+      public RunRealtimeReport setCallback(java.lang.String callback) {
+        return (RunRealtimeReport) super.setCallback(callback);
+      }
+
+      @Override
+      public RunRealtimeReport setFields(java.lang.String fields) {
+        return (RunRealtimeReport) super.setFields(fields);
+      }
+
+      @Override
+      public RunRealtimeReport setKey(java.lang.String key) {
+        return (RunRealtimeReport) super.setKey(key);
+      }
+
+      @Override
+      public RunRealtimeReport setOauthToken(java.lang.String oauthToken) {
+        return (RunRealtimeReport) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RunRealtimeReport setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RunRealtimeReport) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RunRealtimeReport setQuotaUser(java.lang.String quotaUser) {
+        return (RunRealtimeReport) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RunRealtimeReport setUploadType(java.lang.String uploadType) {
+        return (RunRealtimeReport) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RunRealtimeReport setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RunRealtimeReport) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
+       * path and not the body. To learn more, see [where to find your Property
+       * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+       * Example: properties/1234
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String property;
+
+      /** A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
+     not the body. To learn more, see [where to find your Property
+     ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id). Example:
+     properties/1234
+       */
+      public java.lang.String getProperty() {
+        return property;
+      }
+
+      /**
+       * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
+       * path and not the body. To learn more, see [where to find your Property
+       * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+       * Example: properties/1234
+       */
+      public RunRealtimeReport setProperty(java.lang.String property) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROPERTY_PATTERN.matcher(property).matches(),
+              "Parameter property must conform to the pattern " +
+              "^properties/[^/]+$");
+        }
+        this.property = property;
+        return this;
+      }
+
+      @Override
+      public RunRealtimeReport set(String parameterName, Object value) {
+        return (RunRealtimeReport) super.set(parameterName, value);
+      }
+    }
 
   }
 

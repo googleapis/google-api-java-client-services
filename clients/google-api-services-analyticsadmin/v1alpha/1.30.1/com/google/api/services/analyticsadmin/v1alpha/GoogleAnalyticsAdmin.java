@@ -2102,22 +2102,22 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Optional. If notify_new_user is set, then email new user that they've been given
-         * permissions on the resource.
+         * Optional. If set, then email the new user notifying them that they've been granted
+         * permissions to the resource.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean notifyNewUser;
 
-        /** Optional. If notify_new_user is set, then email new user that they've been given permissions on the
-       resource.
+        /** Optional. If set, then email the new user notifying them that they've been granted permissions to
+       the resource.
          */
         public java.lang.Boolean getNotifyNewUser() {
           return notifyNewUser;
         }
 
         /**
-         * Optional. If notify_new_user is set, then email new user that they've been given
-         * permissions on the resource.
+         * Optional. If set, then email the new user notifying them that they've been granted
+         * permissions to the resource.
          */
         public Create setNotifyNewUser(java.lang.Boolean notifyNewUser) {
           this.notifyNewUser = notifyNewUser;
@@ -7259,22 +7259,22 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Optional. If notify_new_user is set, then email new user that they've been given
-         * permissions on the resource.
+         * Optional. If set, then email the new user notifying them that they've been granted
+         * permissions to the resource.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean notifyNewUser;
 
-        /** Optional. If notify_new_user is set, then email new user that they've been given permissions on the
-       resource.
+        /** Optional. If set, then email the new user notifying them that they've been granted permissions to
+       the resource.
          */
         public java.lang.Boolean getNotifyNewUser() {
           return notifyNewUser;
         }
 
         /**
-         * Optional. If notify_new_user is set, then email new user that they've been given
-         * permissions on the resource.
+         * Optional. If set, then email the new user notifying them that they've been granted
+         * permissions to the resource.
          */
         public Create setNotifyNewUser(java.lang.Boolean notifyNewUser) {
           this.notifyNewUser = notifyNewUser;

@@ -17,11 +17,11 @@
 package com.google.api.services.analyticsdata.v1alpha.model;
 
 /**
- * Report data for each row. For example if RunReportRequest contains: ```none dimensions { name:
- * "eventName" } dimensions { name: "countryId" } metrics { name: "eventCount" } ``` One row with
- * 'in_app_purchase' as the eventName, 'us' as the countryId, and 15 as the eventCount, would be:
- * ```none dimension_values { name: 'in_app_purchase' name: 'us' } metric_values { int64_value: 15 }
- * ```
+ * Report data for each row. For example if RunReportRequest contains: ```none "dimensions": [ {
+ * "name": "eventName" }, { "name": "countryId" } ], "metrics": [ { "name": "eventCount" } ] ``` One
+ * row with 'in_app_purchase' as the eventName, 'JP' as the countryId, and 15 as the eventCount,
+ * would be: ```none "dimensionValues": [ { "value": "in_app_purchase" }, { "value": "JP" } ],
+ * "metricValues": [ { "value": "15" } ] ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Data API. For a detailed explanation

@@ -31,24 +31,26 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaBatchCreateUserLinksRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If notify_new_users is set, then email new users that they've been given permissions
-   * on the resource.
+   * Optional. If set, then email the new users notifying them that they've been granted permissions
+   * to the resource. Regardless of whether this is set or not, notify_new_user field inside each
+   * individual request is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean notifyNewUsers;
 
   /**
-   * The requests specifying the user links to create. A maximum of 1000 user links can be created
-   * in a batch.
+   * Required. The requests specifying the user links to create. A maximum of 1000 user links can be
+   * created in a batch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleAnalyticsAdminV1alphaCreateUserLinkRequest> requests;
 
   /**
-   * Optional. If notify_new_users is set, then email new users that they've been given permissions
-   * on the resource.
+   * Optional. If set, then email the new users notifying them that they've been granted permissions
+   * to the resource. Regardless of whether this is set or not, notify_new_user field inside each
+   * individual request is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNotifyNewUsers() {
@@ -56,8 +58,9 @@ public final class GoogleAnalyticsAdminV1alphaBatchCreateUserLinksRequest extend
   }
 
   /**
-   * Optional. If notify_new_users is set, then email new users that they've been given permissions
-   * on the resource.
+   * Optional. If set, then email the new users notifying them that they've been granted permissions
+   * to the resource. Regardless of whether this is set or not, notify_new_user field inside each
+   * individual request is ignored.
    * @param notifyNewUsers notifyNewUsers or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaBatchCreateUserLinksRequest setNotifyNewUsers(java.lang.Boolean notifyNewUsers) {
@@ -66,8 +69,8 @@ public final class GoogleAnalyticsAdminV1alphaBatchCreateUserLinksRequest extend
   }
 
   /**
-   * The requests specifying the user links to create. A maximum of 1000 user links can be created
-   * in a batch.
+   * Required. The requests specifying the user links to create. A maximum of 1000 user links can be
+   * created in a batch.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAnalyticsAdminV1alphaCreateUserLinkRequest> getRequests() {
@@ -75,8 +78,8 @@ public final class GoogleAnalyticsAdminV1alphaBatchCreateUserLinksRequest extend
   }
 
   /**
-   * The requests specifying the user links to create. A maximum of 1000 user links can be created
-   * in a batch.
+   * Required. The requests specifying the user links to create. A maximum of 1000 user links can be
+   * created in a batch.
    * @param requests requests or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaBatchCreateUserLinksRequest setRequests(java.util.List<GoogleAnalyticsAdminV1alphaCreateUserLinkRequest> requests) {

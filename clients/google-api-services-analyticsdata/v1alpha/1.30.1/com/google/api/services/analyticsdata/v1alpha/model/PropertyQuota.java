@@ -32,37 +32,41 @@ package com.google.api.services.analyticsdata.v1alpha.model;
 public final class PropertyQuota extends com.google.api.client.json.GenericJson {
 
   /**
-   * Analytics Properties can send up to 10 concurrent requests.
+   * Standard Analytics Properties can send up to 10 concurrent requests; Analytics 360 Properties
+   * can use up to 50 concurrent requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QuotaStatus concurrentRequests;
 
   /**
-   * Analytics Properties and cloud project pairs can have up to 10 server errors per hour.
+   * Standard Analytics Properties and cloud project pairs can have up to 10 server errors per hour;
+   * Analytics 360 Properties and cloud project pairs can have up to 50 server errors per hour.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QuotaStatus serverErrorsPerProjectPerHour;
 
   /**
-   * Analytics Properties can use up to 25,000 tokens per day. Most requests consume fewer than 10
-   * tokens.
+   * Standard Analytics Properties can use up to 25,000 tokens per day; Analytics 360 Properties can
+   * use 250,000 tokens per day. Most requests consume fewer than 10 tokens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QuotaStatus tokensPerDay;
 
   /**
-   * Analytics Properties can use up to 5,000 tokens per day. An API request consumes a single
-   * number of tokens, and that number is deducted from both the hourly and daily quotas.
+   * Standard Analytics Properties can use up to 5,000 tokens per day; Analytics 360 Properties can
+   * use 50,000 tokens per day. An API request consumes a single number of tokens, and that number
+   * is deducted from both the hourly and daily quotas.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QuotaStatus tokensPerHour;
 
   /**
-   * Analytics Properties can send up to 10 concurrent requests.
+   * Standard Analytics Properties can send up to 10 concurrent requests; Analytics 360 Properties
+   * can use up to 50 concurrent requests.
    * @return value or {@code null} for none
    */
   public QuotaStatus getConcurrentRequests() {
@@ -70,7 +74,8 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Analytics Properties can send up to 10 concurrent requests.
+   * Standard Analytics Properties can send up to 10 concurrent requests; Analytics 360 Properties
+   * can use up to 50 concurrent requests.
    * @param concurrentRequests concurrentRequests or {@code null} for none
    */
   public PropertyQuota setConcurrentRequests(QuotaStatus concurrentRequests) {
@@ -79,7 +84,8 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Analytics Properties and cloud project pairs can have up to 10 server errors per hour.
+   * Standard Analytics Properties and cloud project pairs can have up to 10 server errors per hour;
+   * Analytics 360 Properties and cloud project pairs can have up to 50 server errors per hour.
    * @return value or {@code null} for none
    */
   public QuotaStatus getServerErrorsPerProjectPerHour() {
@@ -87,7 +93,8 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Analytics Properties and cloud project pairs can have up to 10 server errors per hour.
+   * Standard Analytics Properties and cloud project pairs can have up to 10 server errors per hour;
+   * Analytics 360 Properties and cloud project pairs can have up to 50 server errors per hour.
    * @param serverErrorsPerProjectPerHour serverErrorsPerProjectPerHour or {@code null} for none
    */
   public PropertyQuota setServerErrorsPerProjectPerHour(QuotaStatus serverErrorsPerProjectPerHour) {
@@ -96,8 +103,8 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Analytics Properties can use up to 25,000 tokens per day. Most requests consume fewer than 10
-   * tokens.
+   * Standard Analytics Properties can use up to 25,000 tokens per day; Analytics 360 Properties can
+   * use 250,000 tokens per day. Most requests consume fewer than 10 tokens.
    * @return value or {@code null} for none
    */
   public QuotaStatus getTokensPerDay() {
@@ -105,8 +112,8 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Analytics Properties can use up to 25,000 tokens per day. Most requests consume fewer than 10
-   * tokens.
+   * Standard Analytics Properties can use up to 25,000 tokens per day; Analytics 360 Properties can
+   * use 250,000 tokens per day. Most requests consume fewer than 10 tokens.
    * @param tokensPerDay tokensPerDay or {@code null} for none
    */
   public PropertyQuota setTokensPerDay(QuotaStatus tokensPerDay) {
@@ -115,8 +122,9 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Analytics Properties can use up to 5,000 tokens per day. An API request consumes a single
-   * number of tokens, and that number is deducted from both the hourly and daily quotas.
+   * Standard Analytics Properties can use up to 5,000 tokens per day; Analytics 360 Properties can
+   * use 50,000 tokens per day. An API request consumes a single number of tokens, and that number
+   * is deducted from both the hourly and daily quotas.
    * @return value or {@code null} for none
    */
   public QuotaStatus getTokensPerHour() {
@@ -124,8 +132,9 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Analytics Properties can use up to 5,000 tokens per day. An API request consumes a single
-   * number of tokens, and that number is deducted from both the hourly and daily quotas.
+   * Standard Analytics Properties can use up to 5,000 tokens per day; Analytics 360 Properties can
+   * use 50,000 tokens per day. An API request consumes a single number of tokens, and that number
+   * is deducted from both the hourly and daily quotas.
    * @param tokensPerHour tokensPerHour or {@code null} for none
    */
   public PropertyQuota setTokensPerHour(QuotaStatus tokensPerHour) {

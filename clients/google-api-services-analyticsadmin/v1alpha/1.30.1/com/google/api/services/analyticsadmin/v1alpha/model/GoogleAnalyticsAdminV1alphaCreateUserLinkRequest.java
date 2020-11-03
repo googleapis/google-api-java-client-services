@@ -35,8 +35,8 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaCreateUserLinkRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If notify_new_user is set, then email new user that they've been given permissions on
-   * the resource.
+   * Optional. If set, then email the new user notifying them that they've been granted permissions
+   * to the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +57,8 @@ public final class GoogleAnalyticsAdminV1alphaCreateUserLinkRequest extends com.
   private GoogleAnalyticsAdminV1alphaUserLink userLink;
 
   /**
-   * Optional. If notify_new_user is set, then email new user that they've been given permissions on
-   * the resource.
+   * Optional. If set, then email the new user notifying them that they've been granted permissions
+   * to the resource.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNotifyNewUser() {
@@ -66,8 +66,8 @@ public final class GoogleAnalyticsAdminV1alphaCreateUserLinkRequest extends com.
   }
 
   /**
-   * Optional. If notify_new_user is set, then email new user that they've been given permissions on
-   * the resource.
+   * Optional. If set, then email the new user notifying them that they've been granted permissions
+   * to the resource.
    * @param notifyNewUser notifyNewUser or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaCreateUserLinkRequest setNotifyNewUser(java.lang.Boolean notifyNewUser) {

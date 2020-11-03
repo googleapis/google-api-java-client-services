@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Contains properties of a placement.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -186,7 +186,8 @@ public final class Placement extends com.google.api.client.json.GenericJson {
   private LookbackConfiguration lookbackConfiguration;
 
   /**
-   * Name of this placement.This is a required field and must be less than 256 characters long.
+   * Name of this placement.This is a required field and must be less than or equal to 256
+   * characters long.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -724,7 +725,8 @@ public final class Placement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of this placement.This is a required field and must be less than 256 characters long.
+   * Name of this placement.This is a required field and must be less than or equal to 256
+   * characters long.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -732,7 +734,8 @@ public final class Placement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of this placement.This is a required field and must be less than 256 characters long.
+   * Name of this placement.This is a required field and must be less than or equal to 256
+   * characters long.
    * @param name name or {@code null} for none
    */
   public Placement setName(java.lang.String name) {

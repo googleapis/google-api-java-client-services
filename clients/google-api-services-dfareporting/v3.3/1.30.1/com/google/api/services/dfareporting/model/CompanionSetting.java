@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Companion Settings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -38,7 +38,7 @@ public final class CompanionSetting extends com.google.api.client.json.GenericJs
   private java.lang.Boolean companionsDisabled;
 
   /**
-   * Whitelist of companion sizes to be served to this placement. Set this list to null or empty to
+   * Allowlist of companion sizes to be served to this placement. Set this list to null or empty to
    * serve all companion sizes.
    * The value may be {@code null}.
    */
@@ -78,7 +78,7 @@ public final class CompanionSetting extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whitelist of companion sizes to be served to this placement. Set this list to null or empty to
+   * Allowlist of companion sizes to be served to this placement. Set this list to null or empty to
    * serve all companion sizes.
    * @return value or {@code null} for none
    */
@@ -87,7 +87,7 @@ public final class CompanionSetting extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whitelist of companion sizes to be served to this placement. Set this list to null or empty to
+   * Allowlist of companion sizes to be served to this placement. Set this list to null or empty to
    * serve all companion sizes.
    * @param enabledSizes enabledSizes or {@code null} for none
    */

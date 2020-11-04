@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-networkmanagement</artifactId>
-  <version>v1-rev20200820-1.30.10</version>
-  <name>Network Management API v1-rev20200820-1.30.10</name>
+  <version>v1-rev20201029-1.30.10</version>
+  <name>Network Management API v1-rev20201029-1.30.10</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

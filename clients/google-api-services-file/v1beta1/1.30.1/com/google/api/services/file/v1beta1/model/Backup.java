@@ -30,8 +30,7 @@ package com.google.api.services.file.v1beta1.model;
 public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Capacity of the backup. This would be the size of the file share when the backup
-   * is restored.
+   * Output only. Capacity of the source file share when the backup was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -114,8 +113,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Long storageBytes;
 
   /**
-   * Output only. Capacity of the backup. This would be the size of the file share when the backup
-   * is restored.
+   * Output only. Capacity of the source file share when the backup was created.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCapacityGb() {
@@ -123,8 +121,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Capacity of the backup. This would be the size of the file share when the backup
-   * is restored.
+   * Output only. Capacity of the source file share when the backup was created.
    * @param capacityGb capacityGb or {@code null} for none
    */
   public Backup setCapacityGb(java.lang.Long capacityGb) {

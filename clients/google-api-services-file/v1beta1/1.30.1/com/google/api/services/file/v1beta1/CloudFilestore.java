@@ -1386,7 +1386,9 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
       public class Instances {
 
         /**
-         * Creates an instance.
+         * Creates an instance. When creating from a backup, the capacity of the new instance needs to be
+         * equal to or larger than the capacity of the backup (and also equal to or larger than the minimum
+         * capacity of the tier).
          *
          * Create a request for the method "instances.create".
          *
@@ -1413,7 +1415,9 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates an instance.
+           * Creates an instance. When creating from a backup, the capacity of the new instance needs to be
+           * equal to or larger than the capacity of the backup (and also equal to or larger than the
+           * minimum capacity of the tier).
            *
            * Create a request for the method "instances.create".
            *
@@ -2232,7 +2236,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * Restores an existing instance's file share from a snapshot or backup.
+         * Restores an existing instance's file share from a backup. The instance's file share capacity will
+         * be set to the backup's capacity or the minimum capacity of the tier, whichever is larger.
          *
          * Create a request for the method "instances.restore".
          *
@@ -2258,7 +2263,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Restores an existing instance's file share from a snapshot or backup.
+           * Restores an existing instance's file share from a backup. The instance's file share capacity
+           * will be set to the backup's capacity or the minimum capacity of the tier, whichever is larger.
            *
            * Create a request for the method "instances.restore".
            *

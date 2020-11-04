@@ -17,10 +17,8 @@
 package com.google.api.services.apigateway.v1beta.model;
 
 /**
- * An API Configuration is an association of an API Controller Config and a Gateway Config. For APIs
- * with a Managed Service API Controller, this resource is associated with one or more Service
- * Configs and a Service Rollout. Initially, this resource will extract the Gateway Config from the
- * API Controller Config.
+ * An API Configuration is a combination of settings for both the Managed Service and Gateways
+ * serving this API Config.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the API Gateway API. For a detailed explanation see:

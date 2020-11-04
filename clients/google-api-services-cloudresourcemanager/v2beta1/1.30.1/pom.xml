@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudresourcemanager</artifactId>
-  <version>v2beta1-rev20201019-1.30.10</version>
-  <name>Cloud Resource Manager API v2beta1-rev20201019-1.30.10</name>
+  <version>v2beta1-rev20201027-1.30.10</version>
+  <name>Cloud Resource Manager API v2beta1-rev20201027-1.30.10</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

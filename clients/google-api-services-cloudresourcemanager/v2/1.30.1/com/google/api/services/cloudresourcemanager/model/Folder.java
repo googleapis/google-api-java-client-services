@@ -38,11 +38,11 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * The folder’s display name. A folder’s display name must be unique amongst its siblings, e.g. no
+   * The folder's display name. A folder's display name must be unique amongst its siblings, e.g. no
    * two folders with the same parent can share the same display name. The display name must start
    * and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores
    * and can be no longer than 30 characters. This is captured by the regular expression:
-   * [\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?.
+   * `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. The Folder’s parent's resource name. Updates to the folder's parent must be performed
+   * Required. The Folder's parent's resource name. Updates to the folder's parent must be performed
    * via MoveFolder.
    * The value may be {@code null}.
    */
@@ -90,11 +90,11 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The folder’s display name. A folder’s display name must be unique amongst its siblings, e.g. no
+   * The folder's display name. A folder's display name must be unique amongst its siblings, e.g. no
    * two folders with the same parent can share the same display name. The display name must start
    * and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores
    * and can be no longer than 30 characters. This is captured by the regular expression:
-   * [\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?.
+   * `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -102,11 +102,11 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The folder’s display name. A folder’s display name must be unique amongst its siblings, e.g. no
+   * The folder's display name. A folder's display name must be unique amongst its siblings, e.g. no
    * two folders with the same parent can share the same display name. The display name must start
    * and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores
    * and can be no longer than 30 characters. This is captured by the regular expression:
-   * [\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?.
+   * `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
    * @param displayName displayName or {@code null} for none
    */
   public Folder setDisplayName(java.lang.String displayName) {
@@ -153,7 +153,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The Folder’s parent's resource name. Updates to the folder's parent must be performed
+   * Required. The Folder's parent's resource name. Updates to the folder's parent must be performed
    * via MoveFolder.
    * @return value or {@code null} for none
    */
@@ -162,7 +162,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The Folder’s parent's resource name. Updates to the folder's parent must be performed
+   * Required. The Folder's parent's resource name. Updates to the folder's parent must be performed
    * via MoveFolder.
    * @param parent parent or {@code null} for none
    */

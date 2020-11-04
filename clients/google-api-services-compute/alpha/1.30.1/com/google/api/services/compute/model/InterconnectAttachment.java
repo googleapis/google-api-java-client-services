@@ -89,6 +89,13 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String customerRouterIpAddress;
 
   /**
+   * [Output Only] Dataplane version for this InterconnectAttachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer dataplaneVersion;
+
+  /**
    * An optional description of this resource.
    * The value may be {@code null}.
    */
@@ -443,6 +450,23 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   public InterconnectAttachment setCustomerRouterIpAddress(java.lang.String customerRouterIpAddress) {
     this.customerRouterIpAddress = customerRouterIpAddress;
+    return this;
+  }
+
+  /**
+   * [Output Only] Dataplane version for this InterconnectAttachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDataplaneVersion() {
+    return dataplaneVersion;
+  }
+
+  /**
+   * [Output Only] Dataplane version for this InterconnectAttachment.
+   * @param dataplaneVersion dataplaneVersion or {@code null} for none
+   */
+  public InterconnectAttachment setDataplaneVersion(java.lang.Integer dataplaneVersion) {
+    this.dataplaneVersion = dataplaneVersion;
     return this;
   }
 

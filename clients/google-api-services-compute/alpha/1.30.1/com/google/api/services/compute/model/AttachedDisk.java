@@ -88,6 +88,15 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.lang.Long diskSizeGb;
 
   /**
+   * [Input Only] Whether to force attach the regional disk even if it's currently attached to
+   * another instance. If you try to force attach a zonal disk to an instance, you will receive an
+   * error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean forceAttach;
+
+  /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
    * images. Read  Enabling guest operating system features to see a list of available options.
    * The value may be {@code null}.
@@ -322,6 +331,27 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   public AttachedDisk setDiskSizeGb(java.lang.Long diskSizeGb) {
     this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
+   * [Input Only] Whether to force attach the regional disk even if it's currently attached to
+   * another instance. If you try to force attach a zonal disk to an instance, you will receive an
+   * error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getForceAttach() {
+    return forceAttach;
+  }
+
+  /**
+   * [Input Only] Whether to force attach the regional disk even if it's currently attached to
+   * another instance. If you try to force attach a zonal disk to an instance, you will receive an
+   * error.
+   * @param forceAttach forceAttach or {@code null} for none
+   */
+  public AttachedDisk setForceAttach(java.lang.Boolean forceAttach) {
+    this.forceAttach = forceAttach;
     return this;
   }
 

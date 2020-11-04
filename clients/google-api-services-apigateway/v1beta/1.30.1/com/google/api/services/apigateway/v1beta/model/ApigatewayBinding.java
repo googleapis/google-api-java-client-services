@@ -30,6 +30,12 @@ package com.google.api.services.apigateway.v1beta.model;
 public final class ApigatewayBinding extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bindingId;
+
+  /**
    * The condition that is associated with this binding. If the condition evaluates to `true`, then
    * this binding applies to the current request. If the condition evaluates to `false`, then this
    * binding does not apply to the current request. However, a different role binding might grant
@@ -76,6 +82,21 @@ public final class ApigatewayBinding extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String role;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBindingId() {
+    return bindingId;
+  }
+
+  /**
+   * @param bindingId bindingId or {@code null} for none
+   */
+  public ApigatewayBinding setBindingId(java.lang.String bindingId) {
+    this.bindingId = bindingId;
+    return this;
+  }
 
   /**
    * The condition that is associated with this binding. If the condition evaluates to `true`, then

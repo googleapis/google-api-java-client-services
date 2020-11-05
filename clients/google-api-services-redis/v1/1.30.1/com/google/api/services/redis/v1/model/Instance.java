@@ -40,6 +40,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String alternativeLocationId;
 
   /**
+   * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH
+   * is enabled on the instance. Default value is "false" meaning AUTH is disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean authEnabled;
+
+  /**
    * Optional. The full name of the Google Compute Engine
    * [network](https://cloud.google.com/vpc/docs/vpc) to which the instance is connected. If left
    * unspecified, the `default` network will be used.
@@ -209,6 +217,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setAlternativeLocationId(java.lang.String alternativeLocationId) {
     this.alternativeLocationId = alternativeLocationId;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH
+   * is enabled on the instance. Default value is "false" meaning AUTH is disabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAuthEnabled() {
+    return authEnabled;
+  }
+
+  /**
+   * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH
+   * is enabled on the instance. Default value is "false" meaning AUTH is disabled.
+   * @param authEnabled authEnabled or {@code null} for none
+   */
+  public Instance setAuthEnabled(java.lang.Boolean authEnabled) {
+    this.authEnabled = authEnabled;
     return this;
   }
 

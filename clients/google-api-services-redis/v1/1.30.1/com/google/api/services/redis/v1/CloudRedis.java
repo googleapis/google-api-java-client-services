@@ -1281,6 +1281,161 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Gets the AUTH string for a Redis instance. If AUTH is not enabled for the instance the response
+         * will be empty. This information is not included in the details returned to GetInstance.
+         *
+         * Create a request for the method "instances.getAuthString".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link GetAuthString#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Redis instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+         *        `location_id` refers to a GCP region.
+         * @return the request
+         */
+        public GetAuthString getAuthString(java.lang.String name) throws java.io.IOException {
+          GetAuthString result = new GetAuthString(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetAuthString extends CloudRedisRequest<com.google.api.services.redis.v1.model.InstanceAuthString> {
+
+          private static final String REST_PATH = "v1/{+name}/authString";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Gets the AUTH string for a Redis instance. If AUTH is not enabled for the instance the response
+           * will be empty. This information is not included in the details returned to GetInstance.
+           *
+           * Create a request for the method "instances.getAuthString".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link GetAuthString#execute()} method to invoke the remote operation. <p>
+           * {@link GetAuthString#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+           * equest)} must be called to initialize this instance immediately after invoking the constructor.
+           * </p>
+           *
+           * @param name Required. Redis instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+         *        `location_id` refers to a GCP region.
+           * @since 1.13
+           */
+          protected GetAuthString(java.lang.String name) {
+            super(CloudRedis.this, "GET", REST_PATH, null, com.google.api.services.redis.v1.model.InstanceAuthString.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetAuthString set$Xgafv(java.lang.String $Xgafv) {
+            return (GetAuthString) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetAuthString setAccessToken(java.lang.String accessToken) {
+            return (GetAuthString) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetAuthString setAlt(java.lang.String alt) {
+            return (GetAuthString) super.setAlt(alt);
+          }
+
+          @Override
+          public GetAuthString setCallback(java.lang.String callback) {
+            return (GetAuthString) super.setCallback(callback);
+          }
+
+          @Override
+          public GetAuthString setFields(java.lang.String fields) {
+            return (GetAuthString) super.setFields(fields);
+          }
+
+          @Override
+          public GetAuthString setKey(java.lang.String key) {
+            return (GetAuthString) super.setKey(key);
+          }
+
+          @Override
+          public GetAuthString setOauthToken(java.lang.String oauthToken) {
+            return (GetAuthString) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetAuthString setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetAuthString) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetAuthString setQuotaUser(java.lang.String quotaUser) {
+            return (GetAuthString) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetAuthString setUploadType(java.lang.String uploadType) {
+            return (GetAuthString) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetAuthString setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetAuthString) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Redis instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Redis instance resource name using the form:
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where `location_id` refers
+         to a GCP region.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Redis instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          public GetAuthString setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetAuthString set(String parameterName, Object value) {
+            return (GetAuthString) super.set(parameterName, value);
+          }
+        }
+        /**
          * Import a Redis RDB snapshot file from Cloud Storage into a Redis instance. Redis may stop serving
          * during this operation. Instance state will be IMPORTING for entire operation. When complete, the
          * instance will contain only data from the imported file. The returned operation is automatically

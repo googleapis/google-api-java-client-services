@@ -53,6 +53,14 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   private Status error;
 
   /**
+   * One way probing latency distribution. The latency is measured as duration of packet traversal
+   * of Google Cloud network, from source to destination endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LatencyDistribution probingLatency;
+
+  /**
    * The overall reachability result of the test.
    * The value may be {@code null}.
    */
@@ -130,6 +138,25 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
    */
   public ProbingDetails setError(Status error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * One way probing latency distribution. The latency is measured as duration of packet traversal
+   * of Google Cloud network, from source to destination endpoint.
+   * @return value or {@code null} for none
+   */
+  public LatencyDistribution getProbingLatency() {
+    return probingLatency;
+  }
+
+  /**
+   * One way probing latency distribution. The latency is measured as duration of packet traversal
+   * of Google Cloud network, from source to destination endpoint.
+   * @param probingLatency probingLatency or {@code null} for none
+   */
+  public ProbingDetails setProbingLatency(LatencyDistribution probingLatency) {
+    this.probingLatency = probingLatency;
     return this;
   }
 

@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class AdvertiserAdServerConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The configuration for advertisers that use both Campaign Manager (CM) and third-party ad
+   * The configuration for advertisers that use both Campaign Manager 360 (CM360) and third-party ad
    * servers.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class AdvertiserAdServerConfig extends com.google.api.client.json.G
   private ThirdPartyOnlyConfig thirdPartyOnlyConfig;
 
   /**
-   * The configuration for advertisers that use both Campaign Manager (CM) and third-party ad
+   * The configuration for advertisers that use both Campaign Manager 360 (CM360) and third-party ad
    * servers.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class AdvertiserAdServerConfig extends com.google.api.client.json.G
   }
 
   /**
-   * The configuration for advertisers that use both Campaign Manager (CM) and third-party ad
+   * The configuration for advertisers that use both Campaign Manager 360 (CM360) and third-party ad
    * servers.
    * @param cmHybridConfig cmHybridConfig or {@code null} for none
    */

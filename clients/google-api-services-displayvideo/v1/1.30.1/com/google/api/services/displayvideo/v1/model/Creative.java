@@ -72,17 +72,17 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique ID of the Campaign Manager placement associated with the creative. This
-   * field is only applicable for creatives that are synced from Campaign Manager.
+   * Output only. The unique ID of the Campaign Manager 360 placement associated with the creative.
+   * This field is only applicable for creatives that are synced from Campaign Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long cmPlacementId;
 
   /**
-   * The Campaign Manager tracking ad associated with the creative. Optional for the following
-   * creative_type when created by an advertiser that uses both Campaign Manager and third-party ad
-   * serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
+   * The Campaign Manager 360 tracking ad associated with the creative. Optional for the following
+   * creative_type when created by an advertiser that uses both Campaign Manager 360 and third-party
+   * ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
    * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` Output only for
    * other cases.
    * The value may be {@code null}.
@@ -327,7 +327,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Indicates that the creative will wait for a return ping for attribution. Only valid
-   * when using a Campaign Manager tracking ad with a third-party ad server parameter and the
+   * when using a Campaign Manager 360 tracking ad with a third-party ad server parameter and the
    * ${DC_DBM_TOKEN} macro. Optional and only valid for third-party tag creatives or third-party
    * VAST tag creatives. Third-party tag creatives are creatives with following hosting_source: *
    * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: * `CREATIVE_TYPE_STANDARD`
@@ -537,8 +537,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique ID of the Campaign Manager placement associated with the creative. This
-   * field is only applicable for creatives that are synced from Campaign Manager.
+   * Output only. The unique ID of the Campaign Manager 360 placement associated with the creative.
+   * This field is only applicable for creatives that are synced from Campaign Manager.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCmPlacementId() {
@@ -546,8 +546,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique ID of the Campaign Manager placement associated with the creative. This
-   * field is only applicable for creatives that are synced from Campaign Manager.
+   * Output only. The unique ID of the Campaign Manager 360 placement associated with the creative.
+   * This field is only applicable for creatives that are synced from Campaign Manager.
    * @param cmPlacementId cmPlacementId or {@code null} for none
    */
   public Creative setCmPlacementId(java.lang.Long cmPlacementId) {
@@ -556,9 +556,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Campaign Manager tracking ad associated with the creative. Optional for the following
-   * creative_type when created by an advertiser that uses both Campaign Manager and third-party ad
-   * serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
+   * The Campaign Manager 360 tracking ad associated with the creative. Optional for the following
+   * creative_type when created by an advertiser that uses both Campaign Manager 360 and third-party
+   * ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
    * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` Output only for
    * other cases.
    * @return value or {@code null} for none
@@ -568,9 +568,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Campaign Manager tracking ad associated with the creative. Optional for the following
-   * creative_type when created by an advertiser that uses both Campaign Manager and third-party ad
-   * serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
+   * The Campaign Manager 360 tracking ad associated with the creative. Optional for the following
+   * creative_type when created by an advertiser that uses both Campaign Manager 360 and third-party
+   * ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
    * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` Output only for
    * other cases.
    * @param cmTrackingAd cmTrackingAd or {@code null} for none
@@ -1118,7 +1118,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Indicates that the creative will wait for a return ping for attribution. Only valid
-   * when using a Campaign Manager tracking ad with a third-party ad server parameter and the
+   * when using a Campaign Manager 360 tracking ad with a third-party ad server parameter and the
    * ${DC_DBM_TOKEN} macro. Optional and only valid for third-party tag creatives or third-party
    * VAST tag creatives. Third-party tag creatives are creatives with following hosting_source: *
    * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: * `CREATIVE_TYPE_STANDARD`
@@ -1133,7 +1133,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Indicates that the creative will wait for a return ping for attribution. Only valid
-   * when using a Campaign Manager tracking ad with a third-party ad server parameter and the
+   * when using a Campaign Manager 360 tracking ad with a third-party ad server parameter and the
    * ${DC_DBM_TOKEN} macro. Optional and only valid for third-party tag creatives or third-party
    * VAST tag creatives. Third-party tag creatives are creatives with following hosting_source: *
    * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: * `CREATIVE_TYPE_STANDARD`

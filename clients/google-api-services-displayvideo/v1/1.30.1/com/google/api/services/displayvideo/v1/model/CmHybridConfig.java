@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * Settings for advertisers that use both Campaign Manager (CM) and third-party ad servers.
+ * Settings for advertisers that use both Campaign Manager 360 (CM360) and third-party ad servers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class CmHybridConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. Account ID of the CM Floodlight configuration linked with the DV360
+   * Required. Immutable. Account ID of the CM360 Floodlight configuration linked with the DV360
    * advertiser.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   private java.lang.Long cmAccountId;
 
   /**
-   * Required. Immutable. ID of the CM Floodlight configuration linked with the DV360 advertiser.
+   * Required. Immutable. ID of the CM360 Floodlight configuration linked with the DV360 advertiser.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -55,31 +55,31 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean cmFloodlightLinkingAuthorized;
 
   /**
-   * A list of CM sites whose placements will be synced to DV360 as creatives. If absent or empty in
-   * CreateAdvertiser method, the system will automatically create a CM site. Removing sites from
-   * this list may cause DV360 creatives synced from CM to be deleted. At least one site must be
-   * specified.
+   * A list of CM360 sites whose placements will be synced to DV360 as creatives. If absent or empty
+   * in CreateAdvertiser method, the system will automatically create a CM360 site. Removing sites
+   * from this list may cause DV360 creatives synced from CM360 to be deleted. At least one site
+   * must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> cmSyncableSiteIds;
 
   /**
-   * Whether or not to report DV360 cost to CM.
+   * Whether or not to report DV360 cost to CM360.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dv360ToCmCostReportingEnabled;
 
   /**
-   * Whether or not to include DV360 data in CM data transfer reports.
+   * Whether or not to include DV360 data in CM360 data transfer reports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dv360ToCmDataSharingEnabled;
 
   /**
-   * Required. Immutable. Account ID of the CM Floodlight configuration linked with the DV360
+   * Required. Immutable. Account ID of the CM360 Floodlight configuration linked with the DV360
    * advertiser.
    * @return value or {@code null} for none
    */
@@ -88,7 +88,7 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Immutable. Account ID of the CM Floodlight configuration linked with the DV360
+   * Required. Immutable. Account ID of the CM360 Floodlight configuration linked with the DV360
    * advertiser.
    * @param cmAccountId cmAccountId or {@code null} for none
    */
@@ -98,7 +98,7 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Immutable. ID of the CM Floodlight configuration linked with the DV360 advertiser.
+   * Required. Immutable. ID of the CM360 Floodlight configuration linked with the DV360 advertiser.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCmFloodlightConfigId() {
@@ -106,7 +106,7 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Immutable. ID of the CM Floodlight configuration linked with the DV360 advertiser.
+   * Required. Immutable. ID of the CM360 Floodlight configuration linked with the DV360 advertiser.
    * @param cmFloodlightConfigId cmFloodlightConfigId or {@code null} for none
    */
   public CmHybridConfig setCmFloodlightConfigId(java.lang.Long cmFloodlightConfigId) {
@@ -136,10 +136,10 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of CM sites whose placements will be synced to DV360 as creatives. If absent or empty in
-   * CreateAdvertiser method, the system will automatically create a CM site. Removing sites from
-   * this list may cause DV360 creatives synced from CM to be deleted. At least one site must be
-   * specified.
+   * A list of CM360 sites whose placements will be synced to DV360 as creatives. If absent or empty
+   * in CreateAdvertiser method, the system will automatically create a CM360 site. Removing sites
+   * from this list may cause DV360 creatives synced from CM360 to be deleted. At least one site
+   * must be specified.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getCmSyncableSiteIds() {
@@ -147,10 +147,10 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of CM sites whose placements will be synced to DV360 as creatives. If absent or empty in
-   * CreateAdvertiser method, the system will automatically create a CM site. Removing sites from
-   * this list may cause DV360 creatives synced from CM to be deleted. At least one site must be
-   * specified.
+   * A list of CM360 sites whose placements will be synced to DV360 as creatives. If absent or empty
+   * in CreateAdvertiser method, the system will automatically create a CM360 site. Removing sites
+   * from this list may cause DV360 creatives synced from CM360 to be deleted. At least one site
+   * must be specified.
    * @param cmSyncableSiteIds cmSyncableSiteIds or {@code null} for none
    */
   public CmHybridConfig setCmSyncableSiteIds(java.util.List<java.lang.Long> cmSyncableSiteIds) {
@@ -159,7 +159,7 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether or not to report DV360 cost to CM.
+   * Whether or not to report DV360 cost to CM360.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDv360ToCmCostReportingEnabled() {
@@ -167,7 +167,7 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether or not to report DV360 cost to CM.
+   * Whether or not to report DV360 cost to CM360.
    * @param dv360ToCmCostReportingEnabled dv360ToCmCostReportingEnabled or {@code null} for none
    */
   public CmHybridConfig setDv360ToCmCostReportingEnabled(java.lang.Boolean dv360ToCmCostReportingEnabled) {
@@ -176,7 +176,7 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether or not to include DV360 data in CM data transfer reports.
+   * Whether or not to include DV360 data in CM360 data transfer reports.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDv360ToCmDataSharingEnabled() {
@@ -184,7 +184,7 @@ public final class CmHybridConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether or not to include DV360 data in CM data transfer reports.
+   * Whether or not to include DV360 data in CM360 data transfer reports.
    * @param dv360ToCmDataSharingEnabled dv360ToCmDataSharingEnabled or {@code null} for none
    */
   public CmHybridConfig setDv360ToCmDataSharingEnabled(java.lang.Boolean dv360ToCmDataSharingEnabled) {

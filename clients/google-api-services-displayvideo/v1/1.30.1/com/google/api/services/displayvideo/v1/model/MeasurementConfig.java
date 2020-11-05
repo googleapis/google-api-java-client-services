@@ -31,21 +31,21 @@ package com.google.api.services.displayvideo.v1.model;
 public final class MeasurementConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether or not to report DV360 cost to CM.
+   * Whether or not to report DV360 cost to CM360.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dv360ToCmCostReportingEnabled;
 
   /**
-   * Whether or not to include DV360 data in CM data transfer reports.
+   * Whether or not to include DV360 data in CM360 data transfer reports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dv360ToCmDataSharingEnabled;
 
   /**
-   * Whether or not to report DV360 cost to CM.
+   * Whether or not to report DV360 cost to CM360.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDv360ToCmCostReportingEnabled() {
@@ -53,7 +53,7 @@ public final class MeasurementConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether or not to report DV360 cost to CM.
+   * Whether or not to report DV360 cost to CM360.
    * @param dv360ToCmCostReportingEnabled dv360ToCmCostReportingEnabled or {@code null} for none
    */
   public MeasurementConfig setDv360ToCmCostReportingEnabled(java.lang.Boolean dv360ToCmCostReportingEnabled) {
@@ -62,7 +62,7 @@ public final class MeasurementConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether or not to include DV360 data in CM data transfer reports.
+   * Whether or not to include DV360 data in CM360 data transfer reports.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDv360ToCmDataSharingEnabled() {
@@ -70,7 +70,7 @@ public final class MeasurementConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether or not to include DV360 data in CM data transfer reports.
+   * Whether or not to include DV360 data in CM360 data transfer reports.
    * @param dv360ToCmDataSharingEnabled dv360ToCmDataSharingEnabled or {@code null} for none
    */
   public MeasurementConfig setDv360ToCmDataSharingEnabled(java.lang.Boolean dv360ToCmDataSharingEnabled) {

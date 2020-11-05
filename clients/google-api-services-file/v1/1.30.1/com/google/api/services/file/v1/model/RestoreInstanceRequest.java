@@ -17,7 +17,7 @@
 package com.google.api.services.file.v1.model;
 
 /**
- * File share configuration for the instance.
+ * RestoreInstanceRequest restores an existing instances's file share from a backup.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Filestore API. For a detailed explanation see:
@@ -27,69 +27,46 @@ package com.google.api.services.file.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FileShareConfig extends com.google.api.client.json.GenericJson {
+public final class RestoreInstanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long capacityGb;
-
-  /**
-   * The name of the file share (must be 16 characters or less).
+   * Required. Name of the file share in the Cloud Filestore instance that the backup is being
+   * restored to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private java.lang.String fileShare;
 
   /**
    * The resource name of the backup, in the format
-   * projects/{project_number}/locations/{location_id}/backups/{backup_id}, that this file share has
-   * been restored from.
+   * projects/{project_number}/locations/{location_id}/backups/{backup_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceBackup;
 
   /**
-   * File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
+   * Required. Name of the file share in the Cloud Filestore instance that the backup is being
+   * restored to.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getCapacityGb() {
-    return capacityGb;
+  public java.lang.String getFileShare() {
+    return fileShare;
   }
 
   /**
-   * File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
-   * @param capacityGb capacityGb or {@code null} for none
+   * Required. Name of the file share in the Cloud Filestore instance that the backup is being
+   * restored to.
+   * @param fileShare fileShare or {@code null} for none
    */
-  public FileShareConfig setCapacityGb(java.lang.Long capacityGb) {
-    this.capacityGb = capacityGb;
-    return this;
-  }
-
-  /**
-   * The name of the file share (must be 16 characters or less).
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * The name of the file share (must be 16 characters or less).
-   * @param name name or {@code null} for none
-   */
-  public FileShareConfig setName(java.lang.String name) {
-    this.name = name;
+  public RestoreInstanceRequest setFileShare(java.lang.String fileShare) {
+    this.fileShare = fileShare;
     return this;
   }
 
   /**
    * The resource name of the backup, in the format
-   * projects/{project_number}/locations/{location_id}/backups/{backup_id}, that this file share has
-   * been restored from.
+   * projects/{project_number}/locations/{location_id}/backups/{backup_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceBackup() {
@@ -98,23 +75,22 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
 
   /**
    * The resource name of the backup, in the format
-   * projects/{project_number}/locations/{location_id}/backups/{backup_id}, that this file share has
-   * been restored from.
+   * projects/{project_number}/locations/{location_id}/backups/{backup_id}.
    * @param sourceBackup sourceBackup or {@code null} for none
    */
-  public FileShareConfig setSourceBackup(java.lang.String sourceBackup) {
+  public RestoreInstanceRequest setSourceBackup(java.lang.String sourceBackup) {
     this.sourceBackup = sourceBackup;
     return this;
   }
 
   @Override
-  public FileShareConfig set(String fieldName, Object value) {
-    return (FileShareConfig) super.set(fieldName, value);
+  public RestoreInstanceRequest set(String fieldName, Object value) {
+    return (RestoreInstanceRequest) super.set(fieldName, value);
   }
 
   @Override
-  public FileShareConfig clone() {
-    return (FileShareConfig) super.clone();
+  public RestoreInstanceRequest clone() {
+    return (RestoreInstanceRequest) super.clone();
   }
 
 }

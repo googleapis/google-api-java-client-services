@@ -30,7 +30,7 @@ package com.google.api.services.drive.model;
 public final class Revision extends com.google.api.client.json.GenericJson {
 
   /**
-   * Links for exporting Google Docs to specific formats.
+   * Links for exporting Docs Editors files to specific formats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,15 +98,15 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   private java.lang.String originalFilename;
 
   /**
-   * Whether subsequent revisions will be automatically republished. This is only applicable to
-   * Google Docs.
+   * Whether subsequent revisions will be automatically republished. This is only applicable to Docs
+   * Editors files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean publishAuto;
 
   /**
-   * Whether this revision is published. This is only applicable to Google Docs.
+   * Whether this revision is published. This is only applicable to Docs Editors files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +120,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   private java.lang.String publishedLink;
 
   /**
-   * Whether this revision is published outside the domain. This is only applicable to Google Docs.
+   * Whether this revision is published outside the domain. This is only applicable to Docs Editors
+   * files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +136,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   private java.lang.Long size;
 
   /**
-   * Links for exporting Google Docs to specific formats.
+   * Links for exporting Docs Editors files to specific formats.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getExportLinks() {
@@ -143,7 +144,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Links for exporting Google Docs to specific formats.
+   * Links for exporting Docs Editors files to specific formats.
    * @param exportLinks exportLinks or {@code null} for none
    */
   public Revision setExportLinks(java.util.Map<String, java.lang.String> exportLinks) {
@@ -298,8 +299,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether subsequent revisions will be automatically republished. This is only applicable to
-   * Google Docs.
+   * Whether subsequent revisions will be automatically republished. This is only applicable to Docs
+   * Editors files.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPublishAuto() {
@@ -307,8 +308,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether subsequent revisions will be automatically republished. This is only applicable to
-   * Google Docs.
+   * Whether subsequent revisions will be automatically republished. This is only applicable to Docs
+   * Editors files.
    * @param publishAuto publishAuto or {@code null} for none
    */
   public Revision setPublishAuto(java.lang.Boolean publishAuto) {
@@ -317,7 +318,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this revision is published. This is only applicable to Google Docs.
+   * Whether this revision is published. This is only applicable to Docs Editors files.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPublished() {
@@ -325,7 +326,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this revision is published. This is only applicable to Google Docs.
+   * Whether this revision is published. This is only applicable to Docs Editors files.
    * @param published published or {@code null} for none
    */
   public Revision setPublished(java.lang.Boolean published) {
@@ -351,7 +352,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this revision is published outside the domain. This is only applicable to Google Docs.
+   * Whether this revision is published outside the domain. This is only applicable to Docs Editors
+   * files.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPublishedOutsideDomain() {
@@ -359,7 +361,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this revision is published outside the domain. This is only applicable to Google Docs.
+   * Whether this revision is published outside the domain. This is only applicable to Docs Editors
+   * files.
    * @param publishedOutsideDomain publishedOutsideDomain or {@code null} for none
    */
   public Revision setPublishedOutsideDomain(java.lang.Boolean publishedOutsideDomain) {

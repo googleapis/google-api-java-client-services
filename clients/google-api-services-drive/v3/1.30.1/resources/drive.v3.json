@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/_4ojy4QxfvTPR9kgosczqy5b6UE\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/-5f4JITqQCh5VuAJ_W3YhyHUYa8\"",
  "discoveryVersion": "v1",
  "id": "drive:v3",
  "name": "drive",
  "version": "v3",
- "revision": "20201012",
+ "revision": "20201101",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -892,7 +892,7 @@
     },
     "exportLinks": {
      "type": "object",
-     "description": "Links for exporting Google Docs to specific formats.",
+     "description": "Links for exporting Docs Editors files to specific formats.",
      "additionalProperties": {
       "type": "string",
       "description": "A mapping from export format to URL"
@@ -1527,7 +1527,7 @@
    "properties": {
     "exportLinks": {
      "type": "object",
-     "description": "Links for exporting Google Docs to specific formats.",
+     "description": "Links for exporting Docs Editors files to specific formats.",
      "additionalProperties": {
       "type": "string",
       "description": "A mapping from export format to URL"
@@ -1569,11 +1569,11 @@
     },
     "publishAuto": {
      "type": "boolean",
-     "description": "Whether subsequent revisions will be automatically republished. This is only applicable to Google Docs."
+     "description": "Whether subsequent revisions will be automatically republished. This is only applicable to Docs Editors files."
     },
     "published": {
      "type": "boolean",
-     "description": "Whether this revision is published. This is only applicable to Google Docs."
+     "description": "Whether this revision is published. This is only applicable to Docs Editors files."
     },
     "publishedLink": {
      "type": "string",
@@ -1581,7 +1581,7 @@
     },
     "publishedOutsideDomain": {
      "type": "boolean",
-     "description": "Whether this revision is published outside the domain. This is only applicable to Google Docs."
+     "description": "Whether this revision is published outside the domain. This is only applicable to Docs Editors files."
     },
     "size": {
      "type": "string",

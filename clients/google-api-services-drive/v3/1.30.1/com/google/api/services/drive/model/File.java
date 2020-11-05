@@ -105,7 +105,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean explicitlyTrashed;
 
   /**
-   * Links for exporting Google Docs to specific formats.
+   * Links for exporting Docs Editors files to specific formats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -646,7 +646,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Links for exporting Google Docs to specific formats.
+   * Links for exporting Docs Editors files to specific formats.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getExportLinks() {
@@ -654,7 +654,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Links for exporting Google Docs to specific formats.
+   * Links for exporting Docs Editors files to specific formats.
    * @param exportLinks exportLinks or {@code null} for none
    */
   public File setExportLinks(java.util.Map<String, java.lang.String> exportLinks) {

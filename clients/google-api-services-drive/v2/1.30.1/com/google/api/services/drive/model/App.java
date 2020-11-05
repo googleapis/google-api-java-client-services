@@ -181,7 +181,7 @@ public final class App extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean supportsCreate;
 
   /**
-   * Whether this app supports importing Google Docs.
+   * Whether this app supports importing from Docs Editors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -557,7 +557,7 @@ public final class App extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this app supports importing Google Docs.
+   * Whether this app supports importing from Docs Editors.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSupportsImport() {
@@ -565,7 +565,7 @@ public final class App extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this app supports importing Google Docs.
+   * Whether this app supports importing from Docs Editors.
    * @param supportsImport supportsImport or {@code null} for none
    */
   public App setSupportsImport(java.lang.Boolean supportsImport) {

@@ -947,22 +947,28 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Optional. Read mask is used for a more granular control over what the API returns. By
-           * it includes all fields in Queue except for stats.
+           * Optional. Read mask is used for a more granular control over what the API returns. If
+           * the mask is not present all fields will be returned except [Queue.stats], if the mask
+           * is set to "*" all fields including [Queue.stats] will be returned, otherwise only the
+           * fields explicitly specified in the mask will be returned.
            */
           @com.google.api.client.util.Key
           private String readMask;
 
-          /** Optional. Read mask is used for a more granular control over what the API returns. By it includes
-         all fields in Queue except for stats.
+          /** Optional. Read mask is used for a more granular control over what the API returns. If the mask is
+         not present all fields will be returned except [Queue.stats], if the mask is set to "*" all fields
+         including [Queue.stats] will be returned, otherwise only the fields explicitly specified in the
+         mask will be returned.
            */
           public String getReadMask() {
             return readMask;
           }
 
           /**
-           * Optional. Read mask is used for a more granular control over what the API returns. By
-           * it includes all fields in Queue except for stats.
+           * Optional. Read mask is used for a more granular control over what the API returns. If
+           * the mask is not present all fields will be returned except [Queue.stats], if the mask
+           * is set to "*" all fields including [Queue.stats] will be returned, otherwise only the
+           * fields explicitly specified in the mask will be returned.
            */
           public Get setReadMask(String readMask) {
             this.readMask = readMask;
@@ -1346,6 +1352,35 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. Read mask is used for a more granular control over what the API returns. If
+           * the mask is not present all fields will be returned except [Queue.stats], if the mask
+           * is set to "*" all fields including [Queue.stats] will be returned, otherwise only the
+           * fields explicitly specified in the mask will be returned.
+           */
+          @com.google.api.client.util.Key
+          private String readMask;
+
+          /** Optional. Read mask is used for a more granular control over what the API returns. If the mask is
+         not present all fields will be returned except [Queue.stats], if the mask is set to "*" all fields
+         including [Queue.stats] will be returned, otherwise only the fields explicitly specified in the
+         mask will be returned.
+           */
+          public String getReadMask() {
+            return readMask;
+          }
+
+          /**
+           * Optional. Read mask is used for a more granular control over what the API returns. If
+           * the mask is not present all fields will be returned except [Queue.stats], if the mask
+           * is set to "*" all fields including [Queue.stats] will be returned, otherwise only the
+           * fields explicitly specified in the mask will be returned.
+           */
+          public List setReadMask(String readMask) {
+            this.readMask = readMask;
             return this;
           }
 

@@ -1,525 +1,675 @@
 {
-  "mtlsRootUrl": "https://managedidentities.mtls.googleapis.com/",
-  "parameters": {
-    "prettyPrint": {
-      "location": "query",
-      "description": "Returns response with indentations and line breaks.",
-      "type": "boolean",
-      "default": "true"
-    },
-    "key": {
-      "location": "query",
-      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "type": "string"
-    },
-    "alt": {
-      "type": "string",
-      "description": "Data format for response.",
-      "enumDescriptions": [
-        "Responses with Content-Type of application/json",
-        "Media download with context-dependent Content-Type",
-        "Responses with Content-Type of application/x-protobuf"
-      ],
-      "default": "json",
-      "location": "query",
-      "enum": [
-        "json",
-        "media",
-        "proto"
-      ]
-    },
-    "callback": {
-      "type": "string",
-      "location": "query",
-      "description": "JSONP"
-    },
-    "upload_protocol": {
-      "type": "string",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
-      "location": "query"
-    },
-    "access_token": {
-      "location": "query",
-      "type": "string",
-      "description": "OAuth access token."
-    },
-    "uploadType": {
-      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
-      "type": "string",
-      "location": "query"
-    },
-    "oauth_token": {
-      "location": "query",
-      "description": "OAuth 2.0 token for the current user.",
-      "type": "string"
-    },
-    "fields": {
-      "description": "Selector specifying which fields to include in a partial response.",
-      "type": "string",
-      "location": "query"
-    },
-    "quotaUser": {
-      "location": "query",
-      "type": "string",
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."
-    },
-    "$.xgafv": {
-      "enumDescriptions": [
-        "v1 error format",
-        "v2 error format"
-      ],
-      "location": "query",
-      "description": "V1 error format.",
-      "type": "string",
-      "enum": [
-        "1",
-        "2"
-      ]
+  "title": "Managed Service for Microsoft Active Directory API",
+  "rootUrl": "https://managedidentities.googleapis.com/",
+  "id": "managedidentities:v1",
+  "icons": {
+    "x16": "http://www.google.com/images/icons/product/search-16.gif",
+    "x32": "http://www.google.com/images/icons/product/search-32.gif"
+  },
+  "resources": {
+    "projects": {
+      "resources": {
+        "locations": {
+          "resources": {
+            "global": {
+              "resources": {
+                "domains": {
+                  "methods": {
+                    "getIamPolicy": {
+                      "path": "v1/{+resource}:getIamPolicy",
+                      "parameters": {
+                        "resource": {
+                          "type": "string",
+                          "description": "REQUIRED: The resource for which the policy is being requested. See the operation documentation for the appropriate value for this field.",
+                          "required": true,
+                          "location": "path",
+                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$"
+                        },
+                        "options.requestedPolicyVersion": {
+                          "description": "Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests for policies with any conditional bindings must specify version 3. Policies without any conditional bindings may specify any valid value or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
+                          "location": "query",
+                          "type": "integer",
+                          "format": "int32"
+                        }
+                      },
+                      "parameterOrder": [
+                        "resource"
+                      ],
+                      "description": "Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "id": "managedidentities.projects.locations.global.domains.getIamPolicy",
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:getIamPolicy",
+                      "response": {
+                        "$ref": "Policy"
+                      },
+                      "httpMethod": "GET"
+                    },
+                    "create": {
+                      "response": {
+                        "$ref": "Operation"
+                      },
+                      "id": "managedidentities.projects.locations.global.domains.create",
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains",
+                      "parameters": {
+                        "parent": {
+                          "location": "path",
+                          "required": true,
+                          "description": "Required. The resource project name and location using the form: `projects/{project_id}/locations/global`",
+                          "pattern": "^projects/[^/]+/locations/global$",
+                          "type": "string"
+                        },
+                        "domainName": {
+                          "description": "Required. The fully qualified domain name. e.g. mydomain.myorganization.com, with the following restrictions: * Must contain only lowercase letters, numbers, periods and hyphens. * Must start with a letter. * Must contain between 2-64 characters. * Must end with a number or a letter. * Must not start with period. * First segement length (mydomain form example above) shouldn't exceed 15 chars. * The last segment cannot be fully numeric. * Must be unique within the customer project.",
+                          "location": "query",
+                          "type": "string"
+                        }
+                      },
+                      "description": "Creates a Microsoft AD domain.",
+                      "httpMethod": "POST",
+                      "parameterOrder": [
+                        "parent"
+                      ],
+                      "request": {
+                        "$ref": "Domain"
+                      },
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "path": "v1/{+parent}/domains"
+                    },
+                    "resetAdminPassword": {
+                      "id": "managedidentities.projects.locations.global.domains.resetAdminPassword",
+                      "request": {
+                        "$ref": "ResetAdminPasswordRequest"
+                      },
+                      "description": "Resets a domain's administrator password.",
+                      "httpMethod": "POST",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:resetAdminPassword",
+                      "path": "v1/{+name}:resetAdminPassword",
+                      "parameters": {
+                        "name": {
+                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
+                          "location": "path",
+                          "required": true,
+                          "description": "Required. The domain resource name using the form: `projects/{project_id}/locations/global/domains/{domain_name}`",
+                          "type": "string"
+                        }
+                      },
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "response": {
+                        "$ref": "ResetAdminPasswordResponse"
+                      }
+                    },
+                    "delete": {
+                      "parameters": {
+                        "name": {
+                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
+                          "required": true,
+                          "location": "path",
+                          "description": "Required. The domain resource name using the form: `projects/{project_id}/locations/global/domains/{domain_name}`",
+                          "type": "string"
+                        }
+                      },
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "path": "v1/{+name}",
+                      "id": "managedidentities.projects.locations.global.domains.delete",
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "description": "Deletes a domain.",
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}",
+                      "response": {
+                        "$ref": "Operation"
+                      },
+                      "httpMethod": "DELETE"
+                    },
+                    "detachTrust": {
+                      "httpMethod": "POST",
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "id": "managedidentities.projects.locations.global.domains.detachTrust",
+                      "description": "Removes an AD trust.",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "parameters": {
+                        "name": {
+                          "location": "path",
+                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
+                          "description": "Required. The resource domain name, project name, and location using the form: `projects/{project_id}/locations/global/domains/{domain_name}`",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "response": {
+                        "$ref": "Operation"
+                      },
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:detachTrust",
+                      "request": {
+                        "$ref": "DetachTrustRequest"
+                      },
+                      "path": "v1/{+name}:detachTrust"
+                    },
+                    "patch": {
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}",
+                      "request": {
+                        "$ref": "Domain"
+                      },
+                      "httpMethod": "PATCH",
+                      "description": "Updates the metadata and configuration of a domain.",
+                      "id": "managedidentities.projects.locations.global.domains.patch",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "response": {
+                        "$ref": "Operation"
+                      },
+                      "parameters": {
+                        "name": {
+                          "required": true,
+                          "description": "Required. The unique name of the domain using the form: `projects/{project_id}/locations/global/domains/{domain_name}`.",
+                          "type": "string",
+                          "location": "path",
+                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$"
+                        },
+                        "updateMask": {
+                          "type": "string",
+                          "description": "Required. Mask of fields to update. At least one path must be supplied in this field. The elements of the repeated paths field may only include fields from Domain: * `labels` * `locations` * `authorized_networks`",
+                          "location": "query",
+                          "format": "google-fieldmask"
+                        }
+                      },
+                      "path": "v1/{+name}"
+                    },
+                    "reconfigureTrust": {
+                      "path": "v1/{+name}:reconfigureTrust",
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:reconfigureTrust",
+                      "id": "managedidentities.projects.locations.global.domains.reconfigureTrust",
+                      "description": "Updates the DNS conditional forwarder.",
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "response": {
+                        "$ref": "Operation"
+                      },
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "parameters": {
+                        "name": {
+                          "description": "Required. The resource domain name, project name and location using the form: `projects/{project_id}/locations/global/domains/{domain_name}`",
+                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
+                          "required": true,
+                          "location": "path",
+                          "type": "string"
+                        }
+                      },
+                      "request": {
+                        "$ref": "ReconfigureTrustRequest"
+                      },
+                      "httpMethod": "POST"
+                    },
+                    "testIamPermissions": {
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "id": "managedidentities.projects.locations.global.domains.testIamPermissions",
+                      "parameterOrder": [
+                        "resource"
+                      ],
+                      "response": {
+                        "$ref": "TestIamPermissionsResponse"
+                      },
+                      "parameters": {
+                        "resource": {
+                          "location": "path",
+                          "description": "REQUIRED: The resource for which the policy detail is being requested. See the operation documentation for the appropriate value for this field.",
+                          "type": "string",
+                          "required": true,
+                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$"
+                        }
+                      },
+                      "path": "v1/{+resource}:testIamPermissions",
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:testIamPermissions",
+                      "httpMethod": "POST",
+                      "request": {
+                        "$ref": "TestIamPermissionsRequest"
+                      },
+                      "description": "Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may \"fail open\" without warning."
+                    },
+                    "validateTrust": {
+                      "response": {
+                        "$ref": "Operation"
+                      },
+                      "httpMethod": "POST",
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "request": {
+                        "$ref": "ValidateTrustRequest"
+                      },
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "id": "managedidentities.projects.locations.global.domains.validateTrust",
+                      "parameters": {
+                        "name": {
+                          "description": "Required. The resource domain name, project name, and location using the form: `projects/{project_id}/locations/global/domains/{domain_name}`",
+                          "location": "path",
+                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
+                          "required": true,
+                          "type": "string"
+                        }
+                      },
+                      "description": "Validates a trust state, that the target domain is reachable, and that the target domain is able to accept incoming trust requests.",
+                      "path": "v1/{+name}:validateTrust",
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:validateTrust"
+                    },
+                    "attachTrust": {
+                      "httpMethod": "POST",
+                      "request": {
+                        "$ref": "AttachTrustRequest"
+                      },
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "response": {
+                        "$ref": "Operation"
+                      },
+                      "path": "v1/{+name}:attachTrust",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "id": "managedidentities.projects.locations.global.domains.attachTrust",
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:attachTrust",
+                      "parameters": {
+                        "name": {
+                          "required": true,
+                          "description": "Required. The resource domain name, project name and location using the form: `projects/{project_id}/locations/global/domains/{domain_name}`",
+                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
+                          "location": "path",
+                          "type": "string"
+                        }
+                      },
+                      "description": "Adds an AD trust to a domain."
+                    },
+                    "get": {
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "description": "Gets information about a domain.",
+                      "id": "managedidentities.projects.locations.global.domains.get",
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}",
+                      "response": {
+                        "$ref": "Domain"
+                      },
+                      "httpMethod": "GET",
+                      "parameters": {
+                        "name": {
+                          "required": true,
+                          "description": "Required. The domain resource name using the form: `projects/{project_id}/locations/global/domains/{domain_name}`",
+                          "location": "path",
+                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
+                          "type": "string"
+                        }
+                      },
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "path": "v1/{+name}"
+                    },
+                    "setIamPolicy": {
+                      "description": "Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.",
+                      "request": {
+                        "$ref": "SetIamPolicyRequest"
+                      },
+                      "parameters": {
+                        "resource": {
+                          "type": "string",
+                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
+                          "location": "path",
+                          "description": "REQUIRED: The resource for which the policy is being specified. See the operation documentation for the appropriate value for this field.",
+                          "required": true
+                        }
+                      },
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:setIamPolicy",
+                      "parameterOrder": [
+                        "resource"
+                      ],
+                      "response": {
+                        "$ref": "Policy"
+                      },
+                      "httpMethod": "POST",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "path": "v1/{+resource}:setIamPolicy",
+                      "id": "managedidentities.projects.locations.global.domains.setIamPolicy"
+                    },
+                    "list": {
+                      "httpMethod": "GET",
+                      "response": {
+                        "$ref": "ListDomainsResponse"
+                      },
+                      "description": "Lists domains in a project.",
+                      "parameters": {
+                        "pageSize": {
+                          "location": "query",
+                          "format": "int32",
+                          "description": "Optional. The maximum number of items to return. If not specified, a default value of 1000 will be used. Regardless of the page_size value, the response may include a partial list. Callers should rely on a response's next_page_token to determine if there are additional results to list.",
+                          "type": "integer"
+                        },
+                        "pageToken": {
+                          "location": "query",
+                          "type": "string",
+                          "description": "Optional. The `next_page_token` value returned from a previous ListDomainsRequest request, if any."
+                        },
+                        "parent": {
+                          "required": true,
+                          "pattern": "^projects/[^/]+/locations/global$",
+                          "description": "Required. The resource name of the domain location using the form: `projects/{project_id}/locations/global`",
+                          "type": "string",
+                          "location": "path"
+                        },
+                        "orderBy": {
+                          "type": "string",
+                          "location": "query",
+                          "description": "Optional. Specifies the ordering of results. See [Sorting order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more information."
+                        },
+                        "filter": {
+                          "location": "query",
+                          "type": "string",
+                          "description": "Optional. A filter specifying constraints of a list operation. For example, `Domain.fqdn=\"mydomain.myorginization\"`."
+                        }
+                      },
+                      "flatPath": "v1/projects/{projectsId}/locations/global/domains",
+                      "parameterOrder": [
+                        "parent"
+                      ],
+                      "id": "managedidentities.projects.locations.global.domains.list",
+                      "path": "v1/{+parent}/domains",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ]
+                    }
+                  }
+                },
+                "operations": {
+                  "methods": {
+                    "cancel": {
+                      "httpMethod": "POST",
+                      "response": {
+                        "$ref": "Empty"
+                      },
+                      "id": "managedidentities.projects.locations.global.operations.cancel",
+                      "flatPath": "v1/projects/{projectsId}/locations/global/operations/{operationsId}:cancel",
+                      "parameters": {
+                        "name": {
+                          "required": true,
+                          "pattern": "^projects/[^/]+/locations/global/operations/[^/]+$",
+                          "type": "string",
+                          "description": "The name of the operation resource to be cancelled.",
+                          "location": "path"
+                        }
+                      },
+                      "description": "Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "path": "v1/{+name}:cancel",
+                      "request": {
+                        "$ref": "CancelOperationRequest"
+                      },
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ]
+                    },
+                    "list": {
+                      "response": {
+                        "$ref": "ListOperationsResponse"
+                      },
+                      "httpMethod": "GET",
+                      "flatPath": "v1/projects/{projectsId}/locations/global/operations",
+                      "path": "v1/{+name}",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "parameters": {
+                        "filter": {
+                          "description": "The standard list filter.",
+                          "type": "string",
+                          "location": "query"
+                        },
+                        "name": {
+                          "location": "path",
+                          "type": "string",
+                          "pattern": "^projects/[^/]+/locations/global/operations$",
+                          "required": true,
+                          "description": "The name of the operation's parent resource."
+                        },
+                        "pageToken": {
+                          "type": "string",
+                          "description": "The standard list page token.",
+                          "location": "query"
+                        },
+                        "pageSize": {
+                          "description": "The standard list page size.",
+                          "format": "int32",
+                          "location": "query",
+                          "type": "integer"
+                        }
+                      },
+                      "id": "managedidentities.projects.locations.global.operations.list",
+                      "description": "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `\"/v1/{name=users/*}/operations\"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.",
+                      "parameterOrder": [
+                        "name"
+                      ]
+                    },
+                    "get": {
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "parameters": {
+                        "name": {
+                          "location": "path",
+                          "pattern": "^projects/[^/]+/locations/global/operations/[^/]+$",
+                          "required": true,
+                          "type": "string",
+                          "description": "The name of the operation resource."
+                        }
+                      },
+                      "description": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.",
+                      "flatPath": "v1/projects/{projectsId}/locations/global/operations/{operationsId}",
+                      "response": {
+                        "$ref": "Operation"
+                      },
+                      "id": "managedidentities.projects.locations.global.operations.get",
+                      "httpMethod": "GET",
+                      "path": "v1/{+name}"
+                    },
+                    "delete": {
+                      "parameters": {
+                        "name": {
+                          "description": "The name of the operation resource to be deleted.",
+                          "location": "path",
+                          "type": "string",
+                          "pattern": "^projects/[^/]+/locations/global/operations/[^/]+$",
+                          "required": true
+                        }
+                      },
+                      "response": {
+                        "$ref": "Empty"
+                      },
+                      "path": "v1/{+name}",
+                      "parameterOrder": [
+                        "name"
+                      ],
+                      "description": "Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.",
+                      "scopes": [
+                        "https://www.googleapis.com/auth/cloud-platform"
+                      ],
+                      "flatPath": "v1/projects/{projectsId}/locations/global/operations/{operationsId}",
+                      "id": "managedidentities.projects.locations.global.operations.delete",
+                      "httpMethod": "DELETE"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "methods": {
+            "get": {
+              "description": "Gets information about a location.",
+              "flatPath": "v1/projects/{projectsId}/locations/{locationsId}",
+              "httpMethod": "GET",
+              "parameters": {
+                "name": {
+                  "pattern": "^projects/[^/]+/locations/[^/]+$",
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "description": "Resource name for the location."
+                }
+              },
+              "response": {
+                "$ref": "Location"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "path": "v1/{+name}",
+              "id": "managedidentities.projects.locations.get",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ]
+            },
+            "list": {
+              "path": "v1/{+name}/locations",
+              "description": "Lists information about the supported locations for this service.",
+              "httpMethod": "GET",
+              "parameters": {
+                "filter": {
+                  "type": "string",
+                  "description": "The standard list filter.",
+                  "location": "query"
+                },
+                "pageToken": {
+                  "location": "query",
+                  "description": "The standard list page token.",
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string",
+                  "location": "path",
+                  "description": "The resource that owns the locations collection, if applicable.",
+                  "required": true,
+                  "pattern": "^projects/[^/]+$"
+                },
+                "pageSize": {
+                  "format": "int32",
+                  "description": "The standard list page size.",
+                  "type": "integer",
+                  "location": "query"
+                }
+              },
+              "id": "managedidentities.projects.locations.list",
+              "response": {
+                "$ref": "ListLocationsResponse"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "flatPath": "v1/projects/{projectsId}/locations",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ]
+            }
+          }
+        }
+      }
     }
   },
+  "basePath": "",
+  "protocol": "rest",
+  "description": "The Managed Service for Microsoft Active Directory API is used for managing a highly available, hardened service running Microsoft Active Directory (AD).",
   "schemas": {
-    "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings": {
-      "description": "Maintenance settings associated with instance. Allows service producers and end users to assign settings that controls maintenance on this instance.",
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings",
+    "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility": {
       "type": "object",
+      "description": "SloEligibility is a tuple containing eligibility value: true if an instance is eligible for SLO calculation or false if it should be excluded from all SLO-related calculations along with a user-defined reason.",
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility",
       "properties": {
-        "exclude": {
-          "description": "Optional. Exclude instance from maintenance. When true, rollout service will not attempt maintenance on the instance. Rollout service will include the instance in reported rollout progress as not attempted.",
-          "type": "boolean"
-        }
-      }
-    },
-    "ValidateTrustRequest": {
-      "description": "Request message for ValidateTrust",
-      "properties": {
-        "trust": {
-          "description": "Required. The domain trust to validate trust state for.",
-          "$ref": "Trust"
-        }
-      },
-      "id": "ValidateTrustRequest",
-      "type": "object"
-    },
-    "Policy": {
-      "id": "Policy",
-      "properties": {
-        "etag": {
-          "description": "`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected to put that etag in the request to `setIamPolicy` to ensure that their change will be applied to the same version of the policy. **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost.",
-          "format": "byte",
-          "type": "string"
+        "eligible": {
+          "type": "boolean",
+          "description": "Whether an instance is eligible or ineligible."
         },
-        "bindings": {
-          "description": "Associates a list of `members` to a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one member.",
-          "items": {
-            "$ref": "Binding"
-          },
-          "type": "array"
-        },
-        "version": {
-          "description": "Specifies the format of the policy. Valid values are `0`, `1`, and `3`. Requests that specify an invalid value are rejected. Any operation that affects conditional role bindings must specify version `3`. This requirement applies to the following operations: * Getting a policy that includes a conditional role binding * Adding a conditional role binding to a policy * Changing a conditional role binding in a policy * Removing any role binding, with or without a condition, from a policy that includes conditions **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost. If a policy does not include any conditions, operations on that policy may specify any valid version or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
-          "type": "integer",
-          "format": "int32"
-        }
-      },
-      "type": "object",
-      "description": "An Identity and Access Management (IAM) policy, which specifies access controls for Google Cloud resources. A `Policy` is a collection of `bindings`. A `binding` binds one or more `members` to a single `role`. Members can be user accounts, service accounts, Google groups, and domains (such as G Suite). A `role` is a named list of permissions; each `role` can be an IAM predefined role or a user-created custom role. For some types of Google Cloud resources, a `binding` can also specify a `condition`, which is a logical expression that allows access to a resource only if the expression evaluates to `true`. A condition can add constraints based on attributes of the request, the resource, or both. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies). **JSON example:** { \"bindings\": [ { \"role\": \"roles/resourcemanager.organizationAdmin\", \"members\": [ \"user:mike@example.com\", \"group:admins@example.com\", \"domain:google.com\", \"serviceAccount:my-project-id@appspot.gserviceaccount.com\" ] }, { \"role\": \"roles/resourcemanager.organizationViewer\", \"members\": [ \"user:eve@example.com\" ], \"condition\": { \"title\": \"expirable access\", \"description\": \"Does not grant access after Sep 2020\", \"expression\": \"request.time \u003c timestamp('2020-10-01T00:00:00.000Z')\", } } ], \"etag\": \"BwWWja0YfJA=\", \"version\": 3 } **YAML example:** bindings: - members: - user:mike@example.com - group:admins@example.com - domain:google.com - serviceAccount:my-project-id@appspot.gserviceaccount.com role: roles/resourcemanager.organizationAdmin - members: - user:eve@example.com role: roles/resourcemanager.organizationViewer condition: title: expirable access description: Does not grant access after Sep 2020 expression: request.time \u003c timestamp('2020-10-01T00:00:00.000Z') - etag: BwWWja0YfJA= - version: 3 For a description of IAM and its features, see the [IAM documentation](https://cloud.google.com/iam/docs/)."
-    },
-    "Location": {
-      "id": "Location",
-      "description": "A resource that represents Google Cloud Platform location.",
-      "properties": {
-        "locationId": {
-          "description": "The canonical id for this location. For example: `\"us-east1\"`.",
-          "type": "string"
-        },
-        "displayName": {
+        "reason": {
           "type": "string",
-          "description": "The friendly name for this location, typically a nearby city name. For example, \"Tokyo\"."
-        },
-        "labels": {
-          "description": "Cross-service attributes for the location. For example {\"cloud.googleapis.com/region\": \"us-east1\"}",
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "metadata": {
-          "type": "object",
-          "description": "Service-specific metadata. For example the available capacity at the given location.",
-          "additionalProperties": {
-            "type": "any",
-            "description": "Properties of the object. Contains field @type with type URL."
-          }
-        },
-        "name": {
-          "type": "string",
-          "description": "Resource name for the location, which may vary between implementations. For example: `\"projects/example-project/locations/us-east1\"`"
-        }
-      },
-      "type": "object"
-    },
-    "AttachTrustRequest": {
-      "id": "AttachTrustRequest",
-      "description": "Request message for AttachTrust",
-      "type": "object",
-      "properties": {
-        "trust": {
-          "$ref": "Trust",
-          "description": "Required. The domain trust resource."
-        }
-      }
-    },
-    "TestIamPermissionsResponse": {
-      "description": "Response message for `TestIamPermissions` method.",
-      "id": "TestIamPermissionsResponse",
-      "properties": {
-        "permissions": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "A subset of `TestPermissionsRequest.permissions` that the caller is allowed."
-        }
-      },
-      "type": "object"
-    },
-    "ReconfigureTrustRequest": {
-      "description": "Request message for ReconfigureTrust",
-      "type": "object",
-      "id": "ReconfigureTrustRequest",
-      "properties": {
-        "targetDnsIpAddresses": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array",
-          "description": "Required. The target DNS server IP addresses to resolve the remote domain involved in the trust."
-        },
-        "targetDomainName": {
-          "type": "string",
-          "description": "Required. The fully-qualified target domain name which will be in trust with current domain."
-        }
-      }
-    },
-    "GoogleCloudManagedidentitiesV1alpha1OpMetadata": {
-      "properties": {
-        "verb": {
-          "description": "Output only. Name of the verb executed by the operation.",
-          "readOnly": true,
-          "type": "string"
-        },
-        "createTime": {
-          "type": "string",
-          "readOnly": true,
-          "format": "google-datetime",
-          "description": "Output only. The time the operation was created."
-        },
-        "endTime": {
-          "description": "Output only. The time the operation finished running.",
-          "format": "google-datetime",
-          "readOnly": true,
-          "type": "string"
-        },
-        "requestedCancellation": {
-          "description": "Output only. Identifies whether the user has requested cancellation of the operation. Operations that have successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
-          "readOnly": true,
-          "type": "boolean"
-        },
-        "target": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. Server-defined resource path for the target of the operation."
-        },
-        "apiVersion": {
-          "type": "string",
-          "description": "Output only. API version used to start the operation.",
-          "readOnly": true
-        }
-      },
-      "description": "Represents the metadata of the long-running operation.",
-      "type": "object",
-      "id": "GoogleCloudManagedidentitiesV1alpha1OpMetadata"
-    },
-    "CancelOperationRequest": {
-      "id": "CancelOperationRequest",
-      "description": "The request message for Operations.CancelOperation.",
-      "properties": {},
-      "type": "object"
-    },
-    "Empty": {
-      "id": "Empty",
-      "type": "object",
-      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`.",
-      "properties": {}
-    },
-    "ListLocationsResponse": {
-      "id": "ListLocationsResponse",
-      "type": "object",
-      "description": "The response message for Locations.ListLocations.",
-      "properties": {
-        "nextPageToken": {
-          "description": "The standard List next-page token.",
-          "type": "string"
-        },
-        "locations": {
-          "description": "A list of locations that matches the specified filter in the request.",
-          "type": "array",
-          "items": {
-            "$ref": "Location"
-          }
+          "description": "User-defined reason for the current value of instance eligibility. Usually, this can be directly mapped to the internal state. An empty reason is allowed."
         }
       }
     },
     "GoogleCloudManagedidentitiesV1OpMetadata": {
       "description": "Represents the metadata of the long-running operation.",
       "properties": {
-        "endTime": {
-          "readOnly": true,
-          "format": "google-datetime",
-          "type": "string",
-          "description": "Output only. The time the operation finished running."
-        },
-        "target": {
-          "readOnly": true,
-          "description": "Output only. Server-defined resource path for the target of the operation.",
-          "type": "string"
-        },
-        "verb": {
-          "readOnly": true,
-          "description": "Output only. Name of the verb executed by the operation.",
-          "type": "string"
-        },
-        "apiVersion": {
-          "readOnly": true,
-          "description": "Output only. API version used to start the operation.",
-          "type": "string"
-        },
-        "requestedCancellation": {
-          "readOnly": true,
-          "type": "boolean",
-          "description": "Output only. Identifies whether the user has requested cancellation of the operation. Operations that have successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`."
-        },
         "createTime": {
+          "readOnly": true,
           "format": "google-datetime",
           "type": "string",
-          "readOnly": true,
           "description": "Output only. The time the operation was created."
-        }
-      },
-      "id": "GoogleCloudManagedidentitiesV1OpMetadata",
-      "type": "object"
-    },
-    "GoogleCloudManagedidentitiesV1beta1OpMetadata": {
-      "properties": {
-        "target": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. Server-defined resource path for the target of the operation."
-        },
-        "createTime": {
-          "format": "google-datetime",
-          "readOnly": true,
-          "description": "Output only. The time the operation was created.",
-          "type": "string"
-        },
-        "apiVersion": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. API version used to start the operation."
         },
         "requestedCancellation": {
-          "readOnly": true,
           "description": "Output only. Identifies whether the user has requested cancellation of the operation. Operations that have successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
-          "type": "boolean"
-        },
-        "verb": {
-          "description": "Output only. Name of the verb executed by the operation.",
-          "type": "string",
+          "type": "boolean",
           "readOnly": true
         },
-        "endTime": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. The time the operation finished running.",
-          "format": "google-datetime"
-        }
-      },
-      "type": "object",
-      "id": "GoogleCloudManagedidentitiesV1beta1OpMetadata",
-      "description": "Represents the metadata of the long-running operation."
-    },
-    "ListDomainsResponse": {
-      "properties": {
-        "domains": {
-          "items": {
-            "$ref": "Domain"
-          },
-          "type": "array",
-          "description": "A list of Managed Identities Service domains in the project."
-        },
-        "nextPageToken": {
-          "description": "A token to retrieve the next page of results, or empty if there are no more results in the list.",
-          "type": "string"
-        },
-        "unreachable": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "A list of locations that could not be reached."
-        }
-      },
-      "id": "ListDomainsResponse",
-      "type": "object",
-      "description": "Response message for ListDomains"
-    },
-    "TestIamPermissionsRequest": {
-      "id": "TestIamPermissionsRequest",
-      "type": "object",
-      "description": "Request message for `TestIamPermissions` method.",
-      "properties": {
-        "permissions": {
-          "items": {
-            "type": "string"
-          },
-          "description": "The set of permissions to check for the `resource`. Permissions with wildcards (such as '*' or 'storage.*') are not allowed. For more information see [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).",
-          "type": "array"
-        }
-      }
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion": {
-      "properties": {
-        "duration": {
-          "type": "string",
-          "format": "google-duration",
-          "description": "Exclusion duration. No restrictions on the possible values. When an ongoing operation is taking longer than initially expected, an existing entry in the exclusion list can be updated by extending the duration. This is supported by the subsystem exporting eligibility data as long as such extension is committed at least 10 minutes before the original exclusion expiration - otherwise it is possible that there will be \"gaps\" in the exclusion application in the exported timeseries."
-        },
-        "sliName": {
-          "description": "Name of an SLI that this exclusion applies to. Can be left empty, signaling that the instance should be excluded from all SLIs defined in the service SLO configuration.",
-          "type": "string"
-        },
-        "reason": {
-          "type": "string",
-          "description": "Human-readable reason for the exclusion. This should be a static string (e.g. \"Disruptive update in progress\") and should not contain dynamically generated data (e.g. instance name). Can be left empty."
-        },
-        "startTime": {
-          "format": "google-datetime",
-          "type": "string",
-          "description": "Start time of the exclusion. No alignment (e.g. to a full minute) needed."
-        }
-      },
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion",
-      "description": "SloExclusion represents an exclusion in SLI calculation applies to all SLOs.",
-      "type": "object"
-    },
-    "ResetAdminPasswordResponse": {
-      "description": "Response message for ResetAdminPassword",
-      "type": "object",
-      "id": "ResetAdminPasswordResponse",
-      "properties": {
-        "password": {
-          "description": "A random password. See admin for more information.",
-          "type": "string"
-        }
-      }
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata": {
-      "description": "SloMetadata contains resources required for proper SLO classification of the instance.",
-      "properties": {
-        "eligibility": {
-          "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility",
-          "description": "Optional. User-defined instance eligibility."
-        },
-        "nodes": {
-          "type": "array",
-          "description": "Optional. List of nodes. Some producers need to use per-node metadata to calculate SLO. This field allows such producers to publish per-node SLO meta data, which will be consumed by SSA Eligibility Exporter and published in the form of per node metric to Monarch.",
-          "items": {
-            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata"
-          }
-        },
-        "tier": {
-          "type": "string",
-          "description": "Name of the SLO tier the Instance belongs to. This name will be expected to match the tiers specified in the service SLO configuration. Field is mandatory and must not be empty."
-        },
-        "exclusions": {
-          "description": "List of SLO exclusion windows. When multiple entries in the list match (matching the exclusion time-window against current time point) the exclusion reason used in the first matching entry will be published. It is not needed to include expired exclusion in this list, as only the currently applicable exclusions are taken into account by the eligibility exporting subsystem (the historical state of exclusions will be reflected in the historically produced timeseries regardless of the current state). This field can be used to mark the instance as temporary ineligible for the purpose of SLO calculation. For permanent instance SLO exclusion, use of custom instance eligibility is recommended. See 'eligibility' field below.",
-          "type": "array",
-          "items": {
-            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion"
-          }
-        }
-      },
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata",
-      "type": "object"
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule": {
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule",
-      "description": "Maintenance schedule which is exposed to customer and potentially end user, indicating published upcoming future maintenance schedule",
-      "properties": {
-        "endTime": {
-          "type": "string",
-          "description": "The scheduled end time for the maintenance.",
-          "format": "google-datetime"
-        },
-        "startTime": {
-          "type": "string",
-          "description": "The scheduled start time for the maintenance.",
-          "format": "google-datetime"
-        },
-        "rolloutManagementPolicy": {
-          "type": "string",
-          "description": "The rollout management policy this maintenance schedule is associated with. When doing reschedule update request, the reschedule should be against this given policy."
-        },
-        "canReschedule": {
-          "type": "boolean",
-          "description": "Can this scheduled update be rescheduled? By default, it's true and API needs to do explicitly check whether it's set, if it's set as false explicitly, it's false"
-        }
-      },
-      "type": "object"
-    },
-    "OperationMetadata": {
-      "type": "object",
-      "id": "OperationMetadata",
-      "description": "Represents the metadata of the long-running operation.",
-      "properties": {
-        "statusDetail": {
-          "type": "string",
-          "description": "[Output only] Human-readable status of the operation, if any."
-        },
-        "verb": {
-          "description": "[Output only] Name of the verb executed by the operation.",
-          "type": "string"
-        },
-        "cancelRequested": {
-          "type": "boolean",
-          "description": "[Output only] Identifies whether the user has requested cancellation of the operation. Operations that have successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`."
-        },
         "target": {
+          "readOnly": true,
           "type": "string",
-          "description": "[Output only] Server-defined resource path for the target of the operation."
+          "description": "Output only. Server-defined resource path for the target of the operation."
+        },
+        "endTime": {
+          "description": "Output only. The time the operation finished running.",
+          "readOnly": true,
+          "type": "string",
+          "format": "google-datetime"
         },
         "apiVersion": {
-          "description": "[Output only] API version used to start the operation.",
+          "description": "Output only. API version used to start the operation.",
+          "readOnly": true,
           "type": "string"
         },
-        "createTime": {
-          "description": "[Output only] The time the operation was created.",
+        "verb": {
+          "readOnly": true,
           "type": "string",
-          "format": "google-datetime"
-        },
-        "endTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "[Output only] The time the operation finished running."
+          "description": "Output only. Name of the verb executed by the operation."
         }
-      }
+      },
+      "type": "object",
+      "id": "GoogleCloudManagedidentitiesV1OpMetadata"
     },
-    "Domain": {
-      "id": "Domain",
+    "Trust": {
+      "type": "object",
+      "id": "Trust",
       "properties": {
-        "admin": {
-          "type": "string",
-          "description": "Optional. The name of delegated administrator account used to perform Active Directory operations. If not specified, `setupadmin` will be used."
+        "selectiveAuthentication": {
+          "type": "boolean",
+          "description": "Optional. The trust authentication type, which decides whether the trusted side has forest/domain wide access or selective access to an approved set of resources."
         },
         "createTime": {
           "type": "string",
@@ -527,27 +677,198 @@
           "description": "Output only. The time the instance was created.",
           "format": "google-datetime"
         },
-        "authorizedNetworks": {
+        "lastTrustHeartbeatTime": {
+          "readOnly": true,
+          "format": "google-datetime",
+          "type": "string",
+          "description": "Output only. The last heartbeat time when the trust was known to be connected."
+        },
+        "state": {
+          "enumDescriptions": [
+            "Not set.",
+            "The domain trust is being created.",
+            "The domain trust is being updated.",
+            "The domain trust is being deleted.",
+            "The domain trust is connected.",
+            "The domain trust is disconnected."
+          ],
+          "description": "Output only. The current state of the trust.",
+          "readOnly": true,
+          "enum": [
+            "STATE_UNSPECIFIED",
+            "CREATING",
+            "UPDATING",
+            "DELETING",
+            "CONNECTED",
+            "DISCONNECTED"
+          ],
+          "type": "string"
+        },
+        "targetDomainName": {
+          "description": "Required. The fully qualified target domain name which will be in trust with the current domain.",
+          "type": "string"
+        },
+        "targetDnsIpAddresses": {
+          "type": "array",
+          "description": "Required. The target DNS server IP addresses which can resolve the remote domain involved in the trust.",
           "items": {
             "type": "string"
+          }
+        },
+        "trustType": {
+          "description": "Required. The type of trust represented by the trust resource.",
+          "enumDescriptions": [
+            "Not set.",
+            "The forest trust.",
+            "The external domain trust."
+          ],
+          "enum": [
+            "TRUST_TYPE_UNSPECIFIED",
+            "FOREST",
+            "EXTERNAL"
+          ],
+          "type": "string"
+        },
+        "trustDirection": {
+          "enum": [
+            "TRUST_DIRECTION_UNSPECIFIED",
+            "INBOUND",
+            "OUTBOUND",
+            "BIDIRECTIONAL"
+          ],
+          "enumDescriptions": [
+            "Not set.",
+            "The inbound direction represents the trusting side.",
+            "The outboud direction represents the trusted side.",
+            "The bidirectional direction represents the trusted / trusting side."
+          ],
+          "type": "string",
+          "description": "Required. The trust direction, which decides if the current domain is trusted, trusting, or both."
+        },
+        "updateTime": {
+          "type": "string",
+          "description": "Output only. The last update time.",
+          "readOnly": true,
+          "format": "google-datetime"
+        },
+        "trustHandshakeSecret": {
+          "description": "Required. The trust secret used for the handshake with the target domain. This will not be stored.",
+          "type": "string"
+        },
+        "stateDescription": {
+          "readOnly": true,
+          "description": "Output only. Additional information about the current state of the trust, if available.",
+          "type": "string"
+        }
+      },
+      "description": "Represents a relationship between two domains. This allows a controller in one domain to authenticate a user in another domain."
+    },
+    "Empty": {
+      "description": "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); } The JSON representation for `Empty` is empty JSON object `{}`.",
+      "properties": {},
+      "type": "object",
+      "id": "Empty"
+    },
+    "Location": {
+      "properties": {
+        "metadata": {
+          "additionalProperties": {
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
           },
-          "description": "Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) the domain instance is connected to. Networks can be added using UpdateDomain. The domain is only available on networks listed in `authorized_networks`. If CIDR subnets overlap between networks, domain creation will fail.",
-          "type": "array"
+          "type": "object",
+          "description": "Service-specific metadata. For example the available capacity at the given location."
+        },
+        "name": {
+          "description": "Resource name for the location, which may vary between implementations. For example: `\"projects/example-project/locations/us-east1\"`",
+          "type": "string"
+        },
+        "displayName": {
+          "description": "The friendly name for this location, typically a nearby city name. For example, \"Tokyo\".",
+          "type": "string"
+        },
+        "locationId": {
+          "type": "string",
+          "description": "The canonical id for this location. For example: `\"us-east1\"`."
+        },
+        "labels": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object",
+          "description": "Cross-service attributes for the location. For example {\"cloud.googleapis.com/region\": \"us-east1\"}"
+        }
+      },
+      "description": "A resource that represents Google Cloud Platform location.",
+      "type": "object",
+      "id": "Location"
+    },
+    "ListLocationsResponse": {
+      "id": "ListLocationsResponse",
+      "description": "The response message for Locations.ListLocations.",
+      "type": "object",
+      "properties": {
+        "nextPageToken": {
+          "description": "The standard List next-page token.",
+          "type": "string"
         },
         "locations": {
+          "description": "A list of locations that matches the specified filter in the request.",
           "items": {
-            "type": "string"
+            "$ref": "Location"
           },
-          "description": "Required. Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.",
           "type": "array"
+        }
+      }
+    },
+    "GoogleCloudManagedidentitiesV1alpha1OpMetadata": {
+      "properties": {
+        "endTime": {
+          "format": "google-datetime",
+          "description": "Output only. The time the operation finished running.",
+          "type": "string",
+          "readOnly": true
         },
-        "trusts": {
-          "items": {
-            "$ref": "Trust"
-          },
+        "apiVersion": {
+          "type": "string",
+          "description": "Output only. API version used to start the operation.",
+          "readOnly": true
+        },
+        "target": {
+          "type": "string",
+          "description": "Output only. Server-defined resource path for the target of the operation.",
+          "readOnly": true
+        },
+        "requestedCancellation": {
           "readOnly": true,
-          "type": "array",
-          "description": "Output only. The current trusts associated with the domain."
+          "description": "Output only. Identifies whether the user has requested cancellation of the operation. Operations that have successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
+          "type": "boolean"
+        },
+        "verb": {
+          "description": "Output only. Name of the verb executed by the operation.",
+          "readOnly": true,
+          "type": "string"
+        },
+        "createTime": {
+          "description": "Output only. The time the operation was created.",
+          "format": "google-datetime",
+          "type": "string",
+          "readOnly": true
+        }
+      },
+      "description": "Represents the metadata of the long-running operation.",
+      "type": "object",
+      "id": "GoogleCloudManagedidentitiesV1alpha1OpMetadata"
+    },
+    "Domain": {
+      "id": "Domain",
+      "description": "Represents a managed Microsoft Active Directory domain.",
+      "properties": {
+        "createTime": {
+          "description": "Output only. The time the instance was created.",
+          "type": "string",
+          "format": "google-datetime",
+          "readOnly": true
         },
         "state": {
           "type": "string",
@@ -571,305 +892,609 @@
             "PERFORMING_MAINTENANCE",
             "UNAVAILABLE"
           ],
-          "description": "Output only. The current state of this domain.",
-          "readOnly": true
+          "readOnly": true,
+          "description": "Output only. The current state of this domain."
         },
-        "name": {
-          "description": "Required. The unique name of the domain using the form: `projects/{project_id}/locations/global/domains/{domain_name}`.",
+        "fqdn": {
+          "readOnly": true,
+          "description": "Output only. The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would be chosen for an Active Directory set up on an internal network.",
           "type": "string"
         },
-        "updateTime": {
-          "type": "string",
-          "description": "Output only. The last update time.",
-          "readOnly": true,
-          "format": "google-datetime"
+        "authorizedNetworks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) the domain instance is connected to. Networks can be added using UpdateDomain. The domain is only available on networks listed in `authorized_networks`. If CIDR subnets overlap between networks, domain creation will fail."
         },
         "labels": {
-          "description": "Optional. Resource labels that can contain user-provided metadata.",
+          "type": "object",
           "additionalProperties": {
             "type": "string"
           },
-          "type": "object"
+          "description": "Optional. Resource labels that can contain user-provided metadata."
+        },
+        "reservedIpRange": {
+          "type": "string",
+          "description": "Required. The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks]."
         },
         "statusMessage": {
           "type": "string",
           "readOnly": true,
           "description": "Output only. Additional information about the current status of this domain, if available."
         },
-        "fqdn": {
-          "type": "string",
-          "readOnly": true,
-          "description": "Output only. The fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would be chosen for an Active Directory set up on an internal network."
-        },
-        "reservedIpRange": {
-          "description": "Required. The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].",
-          "type": "string"
-        }
-      },
-      "description": "Represents a managed Microsoft Active Directory domain.",
-      "type": "object"
-    },
-    "Status": {
-      "id": "Status",
-      "properties": {
-        "code": {
-          "description": "The status code, which should be an enum value of google.rpc.Code.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "details": {
-          "description": "A list of messages that carry the error details. There is a common set of message types for APIs to use.",
+        "locations": {
+          "description": "Required. Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.",
+          "type": "array",
           "items": {
-            "type": "object",
-            "additionalProperties": {
-              "description": "Properties of the object. Contains field @type with type URL.",
-              "type": "any"
-            }
-          },
-          "type": "array"
+            "type": "string"
+          }
         },
-        "message": {
-          "description": "A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.",
+        "name": {
+          "description": "Required. The unique name of the domain using the form: `projects/{project_id}/locations/global/domains/{domain_name}`.",
           "type": "string"
-        }
-      },
-      "description": "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).",
-      "type": "object"
-    },
-    "ResetAdminPasswordRequest": {
-      "type": "object",
-      "id": "ResetAdminPasswordRequest",
-      "properties": {},
-      "description": "Request message for ResetAdminPassword"
-    },
-    "Trust": {
-      "type": "object",
-      "id": "Trust",
-      "properties": {
-        "stateDescription": {
+        },
+        "trusts": {
           "readOnly": true,
-          "description": "Output only. Additional information about the current state of the trust, if available.",
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "Trust"
+          },
+          "description": "Output only. The current trusts associated with the domain."
         },
         "updateTime": {
-          "type": "string",
+          "readOnly": true,
           "description": "Output only. The last update time.",
+          "type": "string",
+          "format": "google-datetime"
+        },
+        "admin": {
+          "type": "string",
+          "description": "Optional. The name of delegated administrator account used to perform Active Directory operations. If not specified, `setupadmin` will be used."
+        }
+      },
+      "type": "object"
+    },
+    "CancelOperationRequest": {
+      "description": "The request message for Operations.CancelOperation.",
+      "type": "object",
+      "properties": {},
+      "id": "CancelOperationRequest"
+    },
+    "AttachTrustRequest": {
+      "description": "Request message for AttachTrust",
+      "properties": {
+        "trust": {
+          "description": "Required. The domain trust resource.",
+          "$ref": "Trust"
+        }
+      },
+      "id": "AttachTrustRequest",
+      "type": "object"
+    },
+    "SetIamPolicyRequest": {
+      "id": "SetIamPolicyRequest",
+      "description": "Request message for `SetIamPolicy` method.",
+      "type": "object",
+      "properties": {
+        "policy": {
+          "description": "REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is limited to a few 10s of KB. An empty policy is a valid policy but certain Cloud Platform services (such as Projects) might reject them.",
+          "$ref": "Policy"
+        }
+      }
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule": {
+      "description": "Maintenance schedule which is exposed to customer and potentially end user, indicating published upcoming future maintenance schedule",
+      "properties": {
+        "canReschedule": {
+          "type": "boolean",
+          "description": "Can this scheduled update be rescheduled? By default, it's true and API needs to do explicitly check whether it's set, if it's set as false explicitly, it's false"
+        },
+        "rolloutManagementPolicy": {
+          "description": "The rollout management policy this maintenance schedule is associated with. When doing reschedule update request, the reschedule should be against this given policy.",
+          "type": "string"
+        },
+        "endTime": {
+          "type": "string",
           "format": "google-datetime",
-          "readOnly": true
+          "description": "The scheduled end time for the maintenance."
+        },
+        "startTime": {
+          "format": "google-datetime",
+          "type": "string",
+          "description": "The scheduled start time for the maintenance."
+        }
+      },
+      "type": "object",
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule"
+    },
+    "GoogleCloudManagedidentitiesV1beta1OpMetadata": {
+      "description": "Represents the metadata of the long-running operation.",
+      "id": "GoogleCloudManagedidentitiesV1beta1OpMetadata",
+      "type": "object",
+      "properties": {
+        "endTime": {
+          "description": "Output only. The time the operation finished running.",
+          "format": "google-datetime",
+          "readOnly": true,
+          "type": "string"
+        },
+        "apiVersion": {
+          "description": "Output only. API version used to start the operation.",
+          "readOnly": true,
+          "type": "string"
         },
         "createTime": {
-          "description": "Output only. The time the instance was created.",
           "format": "google-datetime",
           "type": "string",
-          "readOnly": true
-        },
-        "lastTrustHeartbeatTime": {
-          "type": "string",
           "readOnly": true,
-          "format": "google-datetime",
-          "description": "Output only. The last heartbeat time when the trust was known to be connected."
+          "description": "Output only. The time the operation was created."
         },
-        "trustDirection": {
-          "type": "string",
-          "description": "Required. The trust direction, which decides if the current domain is trusted, trusting, or both.",
-          "enum": [
-            "TRUST_DIRECTION_UNSPECIFIED",
-            "INBOUND",
-            "OUTBOUND",
-            "BIDIRECTIONAL"
-          ],
-          "enumDescriptions": [
-            "Not set.",
-            "The inbound direction represents the trusting side.",
-            "The outboud direction represents the trusted side.",
-            "The bidirectional direction represents the trusted / trusting side."
-          ]
-        },
-        "state": {
-          "enum": [
-            "STATE_UNSPECIFIED",
-            "CREATING",
-            "UPDATING",
-            "DELETING",
-            "CONNECTED",
-            "DISCONNECTED"
-          ],
-          "type": "string",
-          "enumDescriptions": [
-            "Not set.",
-            "The domain trust is being created.",
-            "The domain trust is being updated.",
-            "The domain trust is being deleted.",
-            "The domain trust is connected.",
-            "The domain trust is disconnected."
-          ],
+        "verb": {
           "readOnly": true,
-          "description": "Output only. The current state of the trust."
+          "description": "Output only. Name of the verb executed by the operation.",
+          "type": "string"
+        },
+        "requestedCancellation": {
+          "description": "Output only. Identifies whether the user has requested cancellation of the operation. Operations that have successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
+          "readOnly": true,
+          "type": "boolean"
+        },
+        "target": {
+          "readOnly": true,
+          "description": "Output only. Server-defined resource path for the target of the operation.",
+          "type": "string"
+        }
+      }
+    },
+    "ReconfigureTrustRequest": {
+      "description": "Request message for ReconfigureTrust",
+      "id": "ReconfigureTrustRequest",
+      "properties": {
+        "targetDomainName": {
+          "description": "Required. The fully-qualified target domain name which will be in trust with current domain.",
+          "type": "string"
         },
         "targetDnsIpAddresses": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Required. The target DNS server IP addresses which can resolve the remote domain involved in the trust."
-        },
-        "targetDomainName": {
-          "description": "Required. The fully qualified target domain name which will be in trust with the current domain.",
-          "type": "string"
-        },
-        "trustHandshakeSecret": {
-          "description": "Required. The trust secret used for the handshake with the target domain. This will not be stored.",
-          "type": "string"
-        },
-        "selectiveAuthentication": {
-          "type": "boolean",
-          "description": "Optional. The trust authentication type, which decides whether the trusted side has forest/domain wide access or selective access to an approved set of resources."
-        },
-        "trustType": {
-          "description": "Required. The type of trust represented by the trust resource.",
-          "type": "string",
-          "enum": [
-            "TRUST_TYPE_UNSPECIFIED",
-            "FOREST",
-            "EXTERNAL"
-          ],
-          "enumDescriptions": [
-            "Not set.",
-            "The forest trust.",
-            "The external domain trust."
-          ]
+          "description": "Required. The target DNS server IP addresses to resolve the remote domain involved in the trust."
         }
       },
-      "description": "Represents a relationship between two domains. This allows a controller in one domain to authenticate a user in another domain."
-    },
-    "SetIamPolicyRequest": {
-      "id": "SetIamPolicyRequest",
-      "properties": {
-        "policy": {
-          "description": "REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is limited to a few 10s of KB. An empty policy is a valid policy but certain Cloud Platform services (such as Projects) might reject them.",
-          "$ref": "Policy"
-        }
-      },
-      "type": "object",
-      "description": "Request message for `SetIamPolicy` method."
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility": {
-      "description": "SloEligibility is a tuple containing eligibility value: true if an instance is eligible for SLO calculation or false if it should be excluded from all SLO-related calculations along with a user-defined reason.",
-      "type": "object",
-      "properties": {
-        "reason": {
-          "type": "string",
-          "description": "User-defined reason for the current value of instance eligibility. Usually, this can be directly mapped to the internal state. An empty reason is allowed."
-        },
-        "eligible": {
-          "type": "boolean",
-          "description": "Whether an instance is eligible or ineligible."
-        }
-      },
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility"
-    },
-    "Expr": {
-      "description": "Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. The syntax and semantics of CEL are documented at https://github.com/google/cel-spec. Example (Comparison): title: \"Summary size limit\" description: \"Determines if a summary is less than 100 chars\" expression: \"document.summary.size() \u003c 100\" Example (Equality): title: \"Requestor is owner\" description: \"Determines if requestor is the document owner\" expression: \"document.owner == request.auth.claims.email\" Example (Logic): title: \"Public documents\" description: \"Determine whether the document should be publicly visible\" expression: \"document.type != 'private' && document.type != 'internal'\" Example (Data Manipulation): title: \"Notification string\" description: \"Create a notification string with a timestamp.\" expression: \"'New message received at ' + string(document.create_time)\" The exact variables and functions that may be referenced within an expression are determined by the service that evaluates it. See the service documentation for additional information.",
-      "properties": {
-        "title": {
-          "type": "string",
-          "description": "Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression."
-        },
-        "expression": {
-          "type": "string",
-          "description": "Textual representation of an expression in Common Expression Language syntax."
-        },
-        "location": {
-          "description": "Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.",
-          "type": "string"
-        },
-        "description": {
-          "description": "Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.",
-          "type": "string"
-        }
-      },
-      "id": "Expr",
       "type": "object"
     },
-    "DetachTrustRequest": {
-      "type": "object",
-      "description": "Request message for DetachTrust",
-      "properties": {
-        "trust": {
-          "$ref": "Trust",
-          "description": "Required. The domain trust resource to removed."
-        }
-      },
-      "id": "DetachTrustRequest"
-    },
     "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource": {
-      "description": "Describes provisioned dataplane resources.",
       "type": "object",
       "id": "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource",
       "properties": {
         "resourceUrl": {
-          "type": "string",
-          "description": "URL identifying the resource, e.g. \"https://www.googleapis.com/compute/v1/projects/...)\"."
+          "description": "URL identifying the resource, e.g. \"https://www.googleapis.com/compute/v1/projects/...)\".",
+          "type": "string"
         },
         "resourceType": {
           "type": "string",
           "description": "Type of the resource. This can be either a GCP resource or a custom one (e.g. another cloud provider's VM). For GCP compute resources use singular form of the names listed in GCP compute API documentation (https://cloud.google.com/compute/docs/reference/rest/v1/), prefixed with 'compute-', for example: 'compute-instance', 'compute-disk', 'compute-autoscaler'."
         }
+      },
+      "description": "Describes provisioned dataplane resources."
+    },
+    "TestIamPermissionsResponse": {
+      "properties": {
+        "permissions": {
+          "type": "array",
+          "description": "A subset of `TestPermissionsRequest.permissions` that the caller is allowed.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Response message for `TestIamPermissions` method.",
+      "id": "TestIamPermissionsResponse",
+      "type": "object"
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings": {
+      "description": "Maintenance settings associated with instance. Allows service producers and end users to assign settings that controls maintenance on this instance.",
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings",
+      "type": "object",
+      "properties": {
+        "exclude": {
+          "description": "Optional. Exclude instance from maintenance. When true, rollout service will not attempt maintenance on the instance. Rollout service will include the instance in reported rollout progress as not attempted.",
+          "type": "boolean"
+        }
       }
     },
-    "GoogleCloudSaasacceleratorManagementProvidersV1Instance": {
-      "type": "object",
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1Instance",
+    "ResetAdminPasswordResponse": {
       "properties": {
+        "password": {
+          "description": "A random password. See admin for more information.",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "description": "Response message for ResetAdminPassword",
+      "id": "ResetAdminPasswordResponse"
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata": {
+      "description": "Node information for custom per-node SLO implementations. SSA does not support per-node SLO, but producers can populate per-node information in SloMetadata for custom precomputations. SSA Eligibility Exporter will emit per-node metric based on this information.",
+      "properties": {
+        "location": {
+          "description": "The location of the node, if different from instance location.",
+          "type": "string"
+        },
+        "nodeId": {
+          "description": "The id of the node. This should be equal to SaasInstanceNode.node_id.",
+          "type": "string"
+        },
+        "exclusions": {
+          "items": {
+            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion"
+          },
+          "type": "array",
+          "description": "By default node is eligible if instance is eligible. But individual node might be excluded from SLO by adding entry here. For semantic see SloMetadata.exclusions. If both instance and node level exclusions are present for time period, the node level's reason will be reported by Eligibility Exporter."
+        }
+      },
+      "type": "object",
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata"
+    },
+    "OperationMetadata": {
+      "properties": {
+        "endTime": {
+          "format": "google-datetime",
+          "description": "[Output only] The time the operation finished running.",
+          "type": "string"
+        },
+        "statusDetail": {
+          "type": "string",
+          "description": "[Output only] Human-readable status of the operation, if any."
+        },
+        "apiVersion": {
+          "type": "string",
+          "description": "[Output only] API version used to start the operation."
+        },
+        "target": {
+          "type": "string",
+          "description": "[Output only] Server-defined resource path for the target of the operation."
+        },
+        "cancelRequested": {
+          "type": "boolean",
+          "description": "[Output only] Identifies whether the user has requested cancellation of the operation. Operations that have successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`."
+        },
+        "verb": {
+          "type": "string",
+          "description": "[Output only] Name of the verb executed by the operation."
+        },
+        "createTime": {
+          "type": "string",
+          "format": "google-datetime",
+          "description": "[Output only] The time the operation was created."
+        }
+      },
+      "description": "Represents the metadata of the long-running operation.",
+      "type": "object",
+      "id": "OperationMetadata"
+    },
+    "ListOperationsResponse": {
+      "properties": {
+        "operations": {
+          "items": {
+            "$ref": "Operation"
+          },
+          "type": "array",
+          "description": "A list of operations that matches the specified filter in the request."
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "The standard List next-page token."
+        }
+      },
+      "description": "The response message for Operations.ListOperations.",
+      "id": "ListOperationsResponse",
+      "type": "object"
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata": {
+      "type": "object",
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata",
+      "description": "SloMetadata contains resources required for proper SLO classification of the instance.",
+      "properties": {
+        "eligibility": {
+          "description": "Optional. User-defined instance eligibility.",
+          "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility"
+        },
+        "exclusions": {
+          "items": {
+            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion"
+          },
+          "type": "array",
+          "description": "List of SLO exclusion windows. When multiple entries in the list match (matching the exclusion time-window against current time point) the exclusion reason used in the first matching entry will be published. It is not needed to include expired exclusion in this list, as only the currently applicable exclusions are taken into account by the eligibility exporting subsystem (the historical state of exclusions will be reflected in the historically produced timeseries regardless of the current state). This field can be used to mark the instance as temporary ineligible for the purpose of SLO calculation. For permanent instance SLO exclusion, use of custom instance eligibility is recommended. See 'eligibility' field below."
+        },
+        "tier": {
+          "type": "string",
+          "description": "Name of the SLO tier the Instance belongs to. This name will be expected to match the tiers specified in the service SLO configuration. Field is mandatory and must not be empty."
+        },
+        "nodes": {
+          "description": "Optional. List of nodes. Some producers need to use per-node metadata to calculate SLO. This field allows such producers to publish per-node SLO meta data, which will be consumed by SSA Eligibility Exporter and published in the form of per node metric to Monarch.",
+          "type": "array",
+          "items": {
+            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata"
+          }
+        }
+      }
+    },
+    "DetachTrustRequest": {
+      "description": "Request message for DetachTrust",
+      "type": "object",
+      "id": "DetachTrustRequest",
+      "properties": {
+        "trust": {
+          "$ref": "Trust",
+          "description": "Required. The domain trust resource to removed."
+        }
+      }
+    },
+    "TestIamPermissionsRequest": {
+      "type": "object",
+      "properties": {
+        "permissions": {
+          "items": {
+            "type": "string"
+          },
+          "description": "The set of permissions to check for the `resource`. Permissions with wildcards (such as '*' or 'storage.*') are not allowed. For more information see [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).",
+          "type": "array"
+        }
+      },
+      "id": "TestIamPermissionsRequest",
+      "description": "Request message for `TestIamPermissions` method."
+    },
+    "Binding": {
+      "properties": {
+        "bindingId": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "description": "Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`."
+        },
+        "condition": {
+          "$ref": "Expr",
+          "description": "The condition that is associated with this binding. If the condition evaluates to `true`, then this binding applies to the current request. If the condition evaluates to `false`, then this binding does not apply to the current request. However, a different role binding might grant the same role to one or more of the members in this binding. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies)."
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values: * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account. * `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`. * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`. * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a user that has been recently deleted. For example, `alice@example.com?uid=123456789012345678901`. If the user is recovered, this value reverts to `user:{emailid}` and the recovered user retains the role in the binding. * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a service account that has been recently deleted. For example, `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. If the service account is undeleted, this value reverts to `serviceAccount:{emailid}` and the undeleted service account retains the role in the binding. * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a Google group that has been recently deleted. For example, `admins@example.com?uid=123456789012345678901`. If the group is recovered, this value reverts to `group:{emailid}` and the recovered group retains the role in the binding. * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`. "
+        }
+      },
+      "description": "Associates `members` with a `role`.",
+      "type": "object",
+      "id": "Binding"
+    },
+    "ValidateTrustRequest": {
+      "description": "Request message for ValidateTrust",
+      "type": "object",
+      "id": "ValidateTrustRequest",
+      "properties": {
+        "trust": {
+          "description": "Required. The domain trust to validate trust state for.",
+          "$ref": "Trust"
+        }
+      }
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion": {
+      "type": "object",
+      "properties": {
+        "startTime": {
+          "type": "string",
+          "format": "google-datetime",
+          "description": "Start time of the exclusion. No alignment (e.g. to a full minute) needed."
+        },
+        "reason": {
+          "description": "Human-readable reason for the exclusion. This should be a static string (e.g. \"Disruptive update in progress\") and should not contain dynamically generated data (e.g. instance name). Can be left empty.",
+          "type": "string"
+        },
+        "sliName": {
+          "description": "Name of an SLI that this exclusion applies to. Can be left empty, signaling that the instance should be excluded from all SLIs defined in the service SLO configuration.",
+          "type": "string"
+        },
+        "duration": {
+          "description": "Exclusion duration. No restrictions on the possible values. When an ongoing operation is taking longer than initially expected, an existing entry in the exclusion list can be updated by extending the duration. This is supported by the subsystem exporting eligibility data as long as such extension is committed at least 10 minutes before the original exclusion expiration - otherwise it is possible that there will be \"gaps\" in the exclusion application in the exported timeseries.",
+          "format": "google-duration",
+          "type": "string"
+        }
+      },
+      "description": "SloExclusion represents an exclusion in SLI calculation applies to all SLOs.",
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion"
+    },
+    "Policy": {
+      "id": "Policy",
+      "description": "An Identity and Access Management (IAM) policy, which specifies access controls for Google Cloud resources. A `Policy` is a collection of `bindings`. A `binding` binds one or more `members` to a single `role`. Members can be user accounts, service accounts, Google groups, and domains (such as G Suite). A `role` is a named list of permissions; each `role` can be an IAM predefined role or a user-created custom role. For some types of Google Cloud resources, a `binding` can also specify a `condition`, which is a logical expression that allows access to a resource only if the expression evaluates to `true`. A condition can add constraints based on attributes of the request, the resource, or both. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies). **JSON example:** { \"bindings\": [ { \"role\": \"roles/resourcemanager.organizationAdmin\", \"members\": [ \"user:mike@example.com\", \"group:admins@example.com\", \"domain:google.com\", \"serviceAccount:my-project-id@appspot.gserviceaccount.com\" ] }, { \"role\": \"roles/resourcemanager.organizationViewer\", \"members\": [ \"user:eve@example.com\" ], \"condition\": { \"title\": \"expirable access\", \"description\": \"Does not grant access after Sep 2020\", \"expression\": \"request.time \u003c timestamp('2020-10-01T00:00:00.000Z')\", } } ], \"etag\": \"BwWWja0YfJA=\", \"version\": 3 } **YAML example:** bindings: - members: - user:mike@example.com - group:admins@example.com - domain:google.com - serviceAccount:my-project-id@appspot.gserviceaccount.com role: roles/resourcemanager.organizationAdmin - members: - user:eve@example.com role: roles/resourcemanager.organizationViewer condition: title: expirable access description: Does not grant access after Sep 2020 expression: request.time \u003c timestamp('2020-10-01T00:00:00.000Z') - etag: BwWWja0YfJA= - version: 3 For a description of IAM and its features, see the [IAM documentation](https://cloud.google.com/iam/docs/).",
+      "properties": {
+        "etag": {
+          "format": "byte",
+          "description": "`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected to put that etag in the request to `setIamPolicy` to ensure that their change will be applied to the same version of the policy. **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost.",
+          "type": "string"
+        },
+        "version": {
+          "type": "integer",
+          "description": "Specifies the format of the policy. Valid values are `0`, `1`, and `3`. Requests that specify an invalid value are rejected. Any operation that affects conditional role bindings must specify version `3`. This requirement applies to the following operations: * Getting a policy that includes a conditional role binding * Adding a conditional role binding to a policy * Changing a conditional role binding in a policy * Removing any role binding, with or without a condition, from a policy that includes conditions **Important:** If you use IAM Conditions, you must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the version `3` policy are lost. If a policy does not include any conditions, operations on that policy may specify any valid version or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
+          "format": "int32"
+        },
+        "bindings": {
+          "items": {
+            "$ref": "Binding"
+          },
+          "description": "Associates a list of `members` to a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one member.",
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "Operation": {
+      "description": "This resource represents a long-running operation that is the result of a network API call.",
+      "type": "object",
+      "properties": {
+        "response": {
+          "additionalProperties": {
+            "type": "any",
+            "description": "Properties of the object. Contains field @type with type URL."
+          },
+          "description": "The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.",
+          "type": "object"
+        },
+        "done": {
+          "type": "boolean",
+          "description": "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available."
+        },
+        "metadata": {
+          "description": "Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.",
+          "additionalProperties": {
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
+          },
+          "type": "object"
+        },
+        "error": {
+          "description": "The error result of the operation in case of failure or cancellation.",
+          "$ref": "Status"
+        },
+        "name": {
+          "type": "string",
+          "description": "The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`."
+        }
+      },
+      "id": "Operation"
+    },
+    "ResetAdminPasswordRequest": {
+      "description": "Request message for ResetAdminPassword",
+      "properties": {},
+      "type": "object",
+      "id": "ResetAdminPasswordRequest"
+    },
+    "Expr": {
+      "description": "Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. The syntax and semantics of CEL are documented at https://github.com/google/cel-spec. Example (Comparison): title: \"Summary size limit\" description: \"Determines if a summary is less than 100 chars\" expression: \"document.summary.size() \u003c 100\" Example (Equality): title: \"Requestor is owner\" description: \"Determines if requestor is the document owner\" expression: \"document.owner == request.auth.claims.email\" Example (Logic): title: \"Public documents\" description: \"Determine whether the document should be publicly visible\" expression: \"document.type != 'private' && document.type != 'internal'\" Example (Data Manipulation): title: \"Notification string\" description: \"Create a notification string with a timestamp.\" expression: \"'New message received at ' + string(document.create_time)\" The exact variables and functions that may be referenced within an expression are determined by the service that evaluates it. See the service documentation for additional information.",
+      "properties": {
+        "title": {
+          "description": "Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.",
+          "type": "string"
+        },
+        "location": {
+          "type": "string",
+          "description": "Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file."
+        },
+        "description": {
+          "type": "string",
+          "description": "Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI."
+        },
+        "expression": {
+          "description": "Textual representation of an expression in Common Expression Language syntax.",
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "id": "Expr"
+    },
+    "ListDomainsResponse": {
+      "type": "object",
+      "id": "ListDomainsResponse",
+      "properties": {
+        "unreachable": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "description": "A list of locations that could not be reached."
+        },
+        "domains": {
+          "description": "A list of Managed Identities Service domains in the project.",
+          "type": "array",
+          "items": {
+            "$ref": "Domain"
+          }
+        },
+        "nextPageToken": {
+          "type": "string",
+          "description": "A token to retrieve the next page of results, or empty if there are no more results in the list."
+        }
+      },
+      "description": "Response message for ListDomains"
+    },
+    "GoogleCloudSaasacceleratorManagementProvidersV1Instance": {
+      "properties": {
+        "sloMetadata": {
+          "readOnly": true,
+          "description": "Output only. SLO metadata for instance classification in the Standardized dataplane SLO platform. See go/cloud-ssa-standard-slo for feature description.",
+          "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata"
+        },
+        "updateTime": {
+          "description": "Output only. Timestamp when the resource was last modified.",
+          "readOnly": true,
+          "format": "google-datetime",
+          "type": "string"
+        },
+        "maintenanceSchedules": {
+          "description": "The MaintenanceSchedule contains the scheduling information of published maintenance schedule with same key as software_versions.",
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule"
+          }
+        },
         "tenantProjectId": {
           "readOnly": true,
           "description": "Output only. ID of the associated GCP tenant project. See go/get-instance-metadata.",
           "type": "string"
         },
-        "softwareVersions": {
-          "type": "object",
-          "description": "Software versions that are used to deploy this instance. This can be mutated by rollout services.",
-          "additionalProperties": {
-            "type": "string"
-          }
+        "slmInstanceTemplate": {
+          "description": "Link to the SLM instance template. Only populated when updating SLM instances via SSA's Actuation service adaptor. Service producers with custom control plane (e.g. Cloud SQL) doesn't need to populate this field. Instead they should use software_versions.",
+          "type": "string"
         },
-        "producerMetadata": {
+        "maintenanceSettings": {
+          "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings",
+          "description": "Optional. The MaintenanceSettings associated with instance."
+        },
+        "name": {
+          "type": "string",
+          "description": "Unique name of the resource. It uses the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}`"
+        },
+        "provisionedResources": {
+          "readOnly": true,
+          "items": {
+            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource"
+          },
+          "type": "array",
+          "description": "Output only. The list of data plane resources provisioned for this instance, e.g. compute VMs. See go/get-instance-metadata."
+        },
+        "maintenancePolicyNames": {
+          "description": "The MaintenancePolicies that have been attached to the instance. The key must be of the type name of the oneof policy name defined in MaintenancePolicy, and the referenced policy must define the same policy type. For complete details of MaintenancePolicy, please refer to go/cloud-saas-mw-ug.",
           "additionalProperties": {
             "type": "string"
           },
-          "description": "Output only. Custom string attributes used primarily to expose producer-specific information in monitoring dashboards. See go/get-instance-metadata.",
-          "readOnly": true,
           "type": "object"
         },
-        "slmInstanceTemplate": {
-          "type": "string",
-          "description": "Link to the SLM instance template. Only populated when updating SLM instances via SSA's Actuation service adaptor. Service producers with custom control plane (e.g. Cloud SQL) doesn't need to populate this field. Instead they should use software_versions."
-        },
-        "createTime": {
-          "format": "google-datetime",
-          "description": "Output only. Timestamp when the resource was created.",
-          "readOnly": true,
-          "type": "string"
+        "softwareVersions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Software versions that are used to deploy this instance. This can be mutated by rollout services."
         },
         "consumerDefinedName": {
           "description": "consumer_defined_name is the name that is set by the consumer. On the other hand Name field represents system-assigned id of an instance so consumers are not necessarily aware of it. consumer_defined_name is used for notification/UI purposes for consumer to recognize their instances.",
           "type": "string"
         },
-        "provisionedResources": {
-          "items": {
-            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource"
-          },
-          "readOnly": true,
-          "type": "array",
-          "description": "Output only. The list of data plane resources provisioned for this instance, e.g. compute VMs. See go/get-instance-metadata."
-        },
-        "updateTime": {
-          "type": "string",
-          "format": "google-datetime",
-          "description": "Output only. Timestamp when the resource was last modified.",
-          "readOnly": true
+        "labels": {
+          "type": "object",
+          "description": "Optional. Resource labels to represent user provided metadata. Each label is a key-value pair, where both the key and the value are arbitrary strings provided by the user.",
+          "additionalProperties": {
+            "type": "string"
+          }
         },
         "state": {
+          "description": "Output only. Current lifecycle state of the resource (e.g. if it's being created or ready to use).",
+          "type": "string",
+          "readOnly": true,
           "enum": [
             "STATE_UNSPECIFIED",
             "CREATING",
@@ -879,8 +1504,6 @@
             "DELETING",
             "ERROR"
           ],
-          "type": "string",
-          "description": "Output only. Current lifecycle state of the resource (e.g. if it's being created or ready to use).",
           "enumDescriptions": [
             "Unspecified state.",
             "Instance is being created.",
@@ -889,755 +1512,141 @@
             "Instance is unheathy and under repair.",
             "Instance is being deleted.",
             "Instance encountered an error and is in indeterministic state."
-          ],
-          "readOnly": true
+          ]
         },
-        "maintenanceSchedules": {
-          "type": "object",
-          "description": "The MaintenanceSchedule contains the scheduling information of published maintenance schedule with same key as software_versions.",
-          "additionalProperties": {
-            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule"
-          }
-        },
-        "name": {
-          "description": "Unique name of the resource. It uses the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}`",
+        "createTime": {
+          "description": "Output only. Timestamp when the resource was created.",
+          "format": "google-datetime",
+          "readOnly": true,
           "type": "string"
         },
-        "maintenancePolicyNames": {
-          "description": "The MaintenancePolicies that have been attached to the instance. The key must be of the type name of the oneof policy name defined in MaintenancePolicy, and the referenced policy must define the same policy type. For complete details of MaintenancePolicy, please refer to go/cloud-saas-mw-ug.",
+        "producerMetadata": {
           "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "maintenanceSettings": {
-          "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings",
-          "description": "Optional. The MaintenanceSettings associated with instance."
-        },
-        "sloMetadata": {
-          "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata",
           "readOnly": true,
-          "description": "Output only. SLO metadata for instance classification in the Standardized dataplane SLO platform. See go/cloud-ssa-standard-slo for feature description."
-        },
-        "labels": {
           "additionalProperties": {
             "type": "string"
           },
-          "description": "Optional. Resource labels to represent user provided metadata. Each label is a key-value pair, where both the key and the value are arbitrary strings provided by the user.",
-          "type": "object"
-        }
-      }
-    },
-    "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata": {
-      "description": "Node information for custom per-node SLO implementations. SSA does not support per-node SLO, but producers can populate per-node information in SloMetadata for custom precomputations. SSA Eligibility Exporter will emit per-node metric based on this information.",
-      "type": "object",
-      "id": "GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata",
-      "properties": {
-        "location": {
-          "type": "string",
-          "description": "The location of the node, if different from instance location."
-        },
-        "nodeId": {
-          "type": "string",
-          "description": "The id of the node. This should be equal to SaasInstanceNode.node_id."
-        },
-        "exclusions": {
-          "items": {
-            "$ref": "GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion"
-          },
-          "description": "By default node is eligible if instance is eligible. But individual node might be excluded from SLO by adding entry here. For semantic see SloMetadata.exclusions. If both instance and node level exclusions are present for time period, the node level's reason will be reported by Eligibility Exporter.",
-          "type": "array"
-        }
-      }
-    },
-    "Binding": {
-      "description": "Associates `members` with a `role`.",
-      "properties": {
-        "bindingId": {
-          "type": "string",
-          "description": "A client-specified ID for this binding. Expected to be globally unique to support the internal bindings-by-ID API."
-        },
-        "role": {
-          "type": "string",
-          "description": "Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`."
-        },
-        "members": {
-          "items": {
-            "type": "string"
-          },
-          "description": "Specifies the identities requesting access for a Cloud Platform resource. `members` can have the following values: * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google account. * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google account or a service account. * `user:{emailid}`: An email address that represents a specific Google account. For example, `alice@example.com` . * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-app@appspot.gserviceaccount.com`. * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`. * `deleted:user:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a user that has been recently deleted. For example, `alice@example.com?uid=123456789012345678901`. If the user is recovered, this value reverts to `user:{emailid}` and the recovered user retains the role in the binding. * `deleted:serviceAccount:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a service account that has been recently deleted. For example, `my-other-app@appspot.gserviceaccount.com?uid=123456789012345678901`. If the service account is undeleted, this value reverts to `serviceAccount:{emailid}` and the undeleted service account retains the role in the binding. * `deleted:group:{emailid}?uid={uniqueid}`: An email address (plus unique identifier) representing a Google group that has been recently deleted. For example, `admins@example.com?uid=123456789012345678901`. If the group is recovered, this value reverts to `group:{emailid}` and the recovered group retains the role in the binding. * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain. For example, `google.com` or `example.com`. ",
-          "type": "array"
-        },
-        "condition": {
-          "description": "The condition that is associated with this binding. If the condition evaluates to `true`, then this binding applies to the current request. If the condition evaluates to `false`, then this binding does not apply to the current request. However, a different role binding might grant the same role to one or more of the members in this binding. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
-          "$ref": "Expr"
+          "description": "Output only. Custom string attributes used primarily to expose producer-specific information in monitoring dashboards. See go/get-instance-metadata."
         }
       },
       "type": "object",
-      "id": "Binding"
+      "id": "GoogleCloudSaasacceleratorManagementProvidersV1Instance"
     },
-    "ListOperationsResponse": {
-      "description": "The response message for Operations.ListOperations.",
+    "Status": {
       "type": "object",
-      "id": "ListOperationsResponse",
+      "description": "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).",
+      "id": "Status",
       "properties": {
-        "operations": {
+        "details": {
           "type": "array",
+          "description": "A list of messages that carry the error details. There is a common set of message types for APIs to use.",
           "items": {
-            "$ref": "Operation"
-          },
-          "description": "A list of operations that matches the specified filter in the request."
-        },
-        "nextPageToken": {
-          "type": "string",
-          "description": "The standard List next-page token."
-        }
-      }
-    },
-    "Operation": {
-      "description": "This resource represents a long-running operation that is the result of a network API call.",
-      "type": "object",
-      "id": "Operation",
-      "properties": {
-        "response": {
-          "description": "The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.",
-          "additionalProperties": {
-            "type": "any",
-            "description": "Properties of the object. Contains field @type with type URL."
-          },
-          "type": "object"
-        },
-        "name": {
-          "type": "string",
-          "description": "The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`."
-        },
-        "metadata": {
-          "description": "Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.",
-          "type": "object",
-          "additionalProperties": {
-            "type": "any",
-            "description": "Properties of the object. Contains field @type with type URL."
-          }
-        },
-        "error": {
-          "$ref": "Status",
-          "description": "The error result of the operation in case of failure or cancellation."
-        },
-        "done": {
-          "type": "boolean",
-          "description": "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available."
-        }
-      }
-    }
-  },
-  "title": "Managed Service for Microsoft Active Directory API",
-  "fullyEncodeReservedExpansion": true,
-  "protocol": "rest",
-  "name": "managedidentities",
-  "id": "managedidentities:v1",
-  "canonicalName": "Managed Service for Microsoft Active Directory Consumer API",
-  "resources": {
-    "projects": {
-      "resources": {
-        "locations": {
-          "resources": {
-            "global": {
-              "resources": {
-                "domains": {
-                  "methods": {
-                    "delete": {
-                      "parameters": {
-                        "name": {
-                          "description": "Required. The domain resource name using the form: `projects/{project_id}/locations/global/domains/{domain_name}`",
-                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
-                          "location": "path",
-                          "type": "string",
-                          "required": true
-                        }
-                      },
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}",
-                      "httpMethod": "DELETE",
-                      "path": "v1/{+name}",
-                      "id": "managedidentities.projects.locations.global.domains.delete",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "description": "Deletes a domain.",
-                      "response": {
-                        "$ref": "Operation"
-                      }
-                    },
-                    "create": {
-                      "id": "managedidentities.projects.locations.global.domains.create",
-                      "parameters": {
-                        "parent": {
-                          "required": true,
-                          "description": "Required. The resource project name and location using the form: `projects/{project_id}/locations/global`",
-                          "pattern": "^projects/[^/]+/locations/global$",
-                          "type": "string",
-                          "location": "path"
-                        },
-                        "domainName": {
-                          "type": "string",
-                          "description": "Required. The fully qualified domain name. e.g. mydomain.myorganization.com, with the following restrictions: * Must contain only lowercase letters, numbers, periods and hyphens. * Must start with a letter. * Must contain between 2-64 characters. * Must end with a number or a letter. * Must not start with period. * First segement length (mydomain form example above) shouldn't exceed 15 chars. * The last segment cannot be fully numeric. * Must be unique within the customer project.",
-                          "location": "query"
-                        }
-                      },
-                      "description": "Creates a Microsoft AD domain.",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "response": {
-                        "$ref": "Operation"
-                      },
-                      "request": {
-                        "$ref": "Domain"
-                      },
-                      "httpMethod": "POST",
-                      "parameterOrder": [
-                        "parent"
-                      ],
-                      "path": "v1/{+parent}/domains",
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains"
-                    },
-                    "resetAdminPassword": {
-                      "parameters": {
-                        "name": {
-                          "location": "path",
-                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
-                          "type": "string",
-                          "required": true,
-                          "description": "Required. The domain resource name using the form: `projects/{project_id}/locations/global/domains/{domain_name}`"
-                        }
-                      },
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:resetAdminPassword",
-                      "path": "v1/{+name}:resetAdminPassword",
-                      "response": {
-                        "$ref": "ResetAdminPasswordResponse"
-                      },
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "request": {
-                        "$ref": "ResetAdminPasswordRequest"
-                      },
-                      "httpMethod": "POST",
-                      "description": "Resets a domain's administrator password.",
-                      "id": "managedidentities.projects.locations.global.domains.resetAdminPassword"
-                    },
-                    "validateTrust": {
-                      "path": "v1/{+name}:validateTrust",
-                      "id": "managedidentities.projects.locations.global.domains.validateTrust",
-                      "response": {
-                        "$ref": "Operation"
-                      },
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "description": "Validates a trust state, that the target domain is reachable, and that the target domain is able to accept incoming trust requests.",
-                      "request": {
-                        "$ref": "ValidateTrustRequest"
-                      },
-                      "parameters": {
-                        "name": {
-                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
-                          "description": "Required. The resource domain name, project name, and location using the form: `projects/{project_id}/locations/global/domains/{domain_name}`",
-                          "required": true,
-                          "location": "path",
-                          "type": "string"
-                        }
-                      },
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:validateTrust",
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "httpMethod": "POST"
-                    },
-                    "detachTrust": {
-                      "description": "Removes an AD trust.",
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "path": "v1/{+name}:detachTrust",
-                      "response": {
-                        "$ref": "Operation"
-                      },
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:detachTrust",
-                      "id": "managedidentities.projects.locations.global.domains.detachTrust",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "parameters": {
-                        "name": {
-                          "description": "Required. The resource domain name, project name, and location using the form: `projects/{project_id}/locations/global/domains/{domain_name}`",
-                          "required": true,
-                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
-                          "type": "string",
-                          "location": "path"
-                        }
-                      },
-                      "request": {
-                        "$ref": "DetachTrustRequest"
-                      },
-                      "httpMethod": "POST"
-                    },
-                    "testIamPermissions": {
-                      "httpMethod": "POST",
-                      "description": "Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may \"fail open\" without warning.",
-                      "parameters": {
-                        "resource": {
-                          "type": "string",
-                          "description": "REQUIRED: The resource for which the policy detail is being requested. See the operation documentation for the appropriate value for this field.",
-                          "location": "path",
-                          "required": true,
-                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$"
-                        }
-                      },
-                      "request": {
-                        "$ref": "TestIamPermissionsRequest"
-                      },
-                      "id": "managedidentities.projects.locations.global.domains.testIamPermissions",
-                      "parameterOrder": [
-                        "resource"
-                      ],
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "response": {
-                        "$ref": "TestIamPermissionsResponse"
-                      },
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:testIamPermissions",
-                      "path": "v1/{+resource}:testIamPermissions"
-                    },
-                    "attachTrust": {
-                      "parameters": {
-                        "name": {
-                          "description": "Required. The resource domain name, project name and location using the form: `projects/{project_id}/locations/global/domains/{domain_name}`",
-                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
-                          "location": "path",
-                          "required": true,
-                          "type": "string"
-                        }
-                      },
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:attachTrust",
-                      "response": {
-                        "$ref": "Operation"
-                      },
-                      "id": "managedidentities.projects.locations.global.domains.attachTrust",
-                      "path": "v1/{+name}:attachTrust",
-                      "description": "Adds an AD trust to a domain.",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "httpMethod": "POST",
-                      "request": {
-                        "$ref": "AttachTrustRequest"
-                      }
-                    },
-                    "patch": {
-                      "request": {
-                        "$ref": "Domain"
-                      },
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}",
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "path": "v1/{+name}",
-                      "parameters": {
-                        "name": {
-                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
-                          "type": "string",
-                          "location": "path",
-                          "description": "Required. The unique name of the domain using the form: `projects/{project_id}/locations/global/domains/{domain_name}`.",
-                          "required": true
-                        },
-                        "updateMask": {
-                          "location": "query",
-                          "description": "Required. Mask of fields to update. At least one path must be supplied in this field. The elements of the repeated paths field may only include fields from Domain: * `labels` * `locations` * `authorized_networks`",
-                          "type": "string",
-                          "format": "google-fieldmask"
-                        }
-                      },
-                      "description": "Updates the metadata and configuration of a domain.",
-                      "response": {
-                        "$ref": "Operation"
-                      },
-                      "httpMethod": "PATCH",
-                      "id": "managedidentities.projects.locations.global.domains.patch",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ]
-                    },
-                    "setIamPolicy": {
-                      "httpMethod": "POST",
-                      "description": "Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.",
-                      "parameters": {
-                        "resource": {
-                          "location": "path",
-                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
-                          "required": true,
-                          "description": "REQUIRED: The resource for which the policy is being specified. See the operation documentation for the appropriate value for this field.",
-                          "type": "string"
-                        }
-                      },
-                      "response": {
-                        "$ref": "Policy"
-                      },
-                      "parameterOrder": [
-                        "resource"
-                      ],
-                      "id": "managedidentities.projects.locations.global.domains.setIamPolicy",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "path": "v1/{+resource}:setIamPolicy",
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:setIamPolicy",
-                      "request": {
-                        "$ref": "SetIamPolicyRequest"
-                      }
-                    },
-                    "reconfigureTrust": {
-                      "httpMethod": "POST",
-                      "response": {
-                        "$ref": "Operation"
-                      },
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:reconfigureTrust",
-                      "path": "v1/{+name}:reconfigureTrust",
-                      "id": "managedidentities.projects.locations.global.domains.reconfigureTrust",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "description": "Updates the DNS conditional forwarder.",
-                      "request": {
-                        "$ref": "ReconfigureTrustRequest"
-                      },
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "parameters": {
-                        "name": {
-                          "location": "path",
-                          "required": true,
-                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
-                          "type": "string",
-                          "description": "Required. The resource domain name, project name and location using the form: `projects/{project_id}/locations/global/domains/{domain_name}`"
-                        }
-                      }
-                    },
-                    "list": {
-                      "httpMethod": "GET",
-                      "path": "v1/{+parent}/domains",
-                      "response": {
-                        "$ref": "ListDomainsResponse"
-                      },
-                      "parameters": {
-                        "parent": {
-                          "pattern": "^projects/[^/]+/locations/global$",
-                          "description": "Required. The resource name of the domain location using the form: `projects/{project_id}/locations/global`",
-                          "required": true,
-                          "type": "string",
-                          "location": "path"
-                        },
-                        "filter": {
-                          "description": "Optional. A filter specifying constraints of a list operation. For example, `Domain.fqdn=\"mydomain.myorginization\"`.",
-                          "location": "query",
-                          "type": "string"
-                        },
-                        "pageSize": {
-                          "type": "integer",
-                          "format": "int32",
-                          "description": "Optional. The maximum number of items to return. If not specified, a default value of 1000 will be used. Regardless of the page_size value, the response may include a partial list. Callers should rely on a response's next_page_token to determine if there are additional results to list.",
-                          "location": "query"
-                        },
-                        "pageToken": {
-                          "location": "query",
-                          "description": "Optional. The `next_page_token` value returned from a previous ListDomainsRequest request, if any.",
-                          "type": "string"
-                        },
-                        "orderBy": {
-                          "type": "string",
-                          "location": "query",
-                          "description": "Optional. Specifies the ordering of results. See [Sorting order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more information."
-                        }
-                      },
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "parameterOrder": [
-                        "parent"
-                      ],
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains",
-                      "description": "Lists domains in a project.",
-                      "id": "managedidentities.projects.locations.global.domains.list"
-                    },
-                    "get": {
-                      "description": "Gets information about a domain.",
-                      "path": "v1/{+name}",
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}",
-                      "id": "managedidentities.projects.locations.global.domains.get",
-                      "response": {
-                        "$ref": "Domain"
-                      },
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "parameters": {
-                        "name": {
-                          "location": "path",
-                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
-                          "required": true,
-                          "description": "Required. The domain resource name using the form: `projects/{project_id}/locations/global/domains/{domain_name}`",
-                          "type": "string"
-                        }
-                      },
-                      "httpMethod": "GET"
-                    },
-                    "getIamPolicy": {
-                      "description": "Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.",
-                      "parameters": {
-                        "options.requestedPolicyVersion": {
-                          "type": "integer",
-                          "description": "Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests for policies with any conditional bindings must specify version 3. Policies without any conditional bindings may specify any valid value or leave the field unset. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).",
-                          "location": "query",
-                          "format": "int32"
-                        },
-                        "resource": {
-                          "pattern": "^projects/[^/]+/locations/global/domains/[^/]+$",
-                          "type": "string",
-                          "required": true,
-                          "description": "REQUIRED: The resource for which the policy is being requested. See the operation documentation for the appropriate value for this field.",
-                          "location": "path"
-                        }
-                      },
-                      "path": "v1/{+resource}:getIamPolicy",
-                      "flatPath": "v1/projects/{projectsId}/locations/global/domains/{domainsId}:getIamPolicy",
-                      "parameterOrder": [
-                        "resource"
-                      ],
-                      "httpMethod": "GET",
-                      "response": {
-                        "$ref": "Policy"
-                      },
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "id": "managedidentities.projects.locations.global.domains.getIamPolicy"
-                    }
-                  }
-                },
-                "operations": {
-                  "methods": {
-                    "cancel": {
-                      "request": {
-                        "$ref": "CancelOperationRequest"
-                      },
-                      "description": "Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "id": "managedidentities.projects.locations.global.operations.cancel",
-                      "path": "v1/{+name}:cancel",
-                      "response": {
-                        "$ref": "Empty"
-                      },
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "flatPath": "v1/projects/{projectsId}/locations/global/operations/{operationsId}:cancel",
-                      "parameters": {
-                        "name": {
-                          "required": true,
-                          "pattern": "^projects/[^/]+/locations/global/operations/[^/]+$",
-                          "description": "The name of the operation resource to be cancelled.",
-                          "location": "path",
-                          "type": "string"
-                        }
-                      },
-                      "httpMethod": "POST"
-                    },
-                    "get": {
-                      "id": "managedidentities.projects.locations.global.operations.get",
-                      "path": "v1/{+name}",
-                      "httpMethod": "GET",
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "response": {
-                        "$ref": "Operation"
-                      },
-                      "description": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "flatPath": "v1/projects/{projectsId}/locations/global/operations/{operationsId}",
-                      "parameters": {
-                        "name": {
-                          "required": true,
-                          "location": "path",
-                          "pattern": "^projects/[^/]+/locations/global/operations/[^/]+$",
-                          "type": "string",
-                          "description": "The name of the operation resource."
-                        }
-                      }
-                    },
-                    "delete": {
-                      "description": "Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.",
-                      "response": {
-                        "$ref": "Empty"
-                      },
-                      "flatPath": "v1/projects/{projectsId}/locations/global/operations/{operationsId}",
-                      "parameters": {
-                        "name": {
-                          "type": "string",
-                          "required": true,
-                          "location": "path",
-                          "description": "The name of the operation resource to be deleted.",
-                          "pattern": "^projects/[^/]+/locations/global/operations/[^/]+$"
-                        }
-                      },
-                      "httpMethod": "DELETE",
-                      "path": "v1/{+name}",
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "id": "managedidentities.projects.locations.global.operations.delete",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ]
-                    },
-                    "list": {
-                      "path": "v1/{+name}",
-                      "httpMethod": "GET",
-                      "scopes": [
-                        "https://www.googleapis.com/auth/cloud-platform"
-                      ],
-                      "response": {
-                        "$ref": "ListOperationsResponse"
-                      },
-                      "parameters": {
-                        "pageToken": {
-                          "description": "The standard list page token.",
-                          "type": "string",
-                          "location": "query"
-                        },
-                        "filter": {
-                          "location": "query",
-                          "type": "string",
-                          "description": "The standard list filter."
-                        },
-                        "pageSize": {
-                          "location": "query",
-                          "description": "The standard list page size.",
-                          "format": "int32",
-                          "type": "integer"
-                        },
-                        "name": {
-                          "pattern": "^projects/[^/]+/locations/global/operations$",
-                          "location": "path",
-                          "required": true,
-                          "description": "The name of the operation's parent resource.",
-                          "type": "string"
-                        }
-                      },
-                      "parameterOrder": [
-                        "name"
-                      ],
-                      "id": "managedidentities.projects.locations.global.operations.list",
-                      "description": "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `\"/v1/{name=users/*}/operations\"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.",
-                      "flatPath": "v1/projects/{projectsId}/locations/global/operations"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "methods": {
-            "get": {
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "path": "v1/{+name}",
-              "parameterOrder": [
-                "name"
-              ],
-              "parameters": {
-                "name": {
-                  "type": "string",
-                  "location": "path",
-                  "pattern": "^projects/[^/]+/locations/[^/]+$",
-                  "required": true,
-                  "description": "Resource name for the location."
-                }
-              },
-              "flatPath": "v1/projects/{projectsId}/locations/{locationsId}",
-              "description": "Gets information about a location.",
-              "id": "managedidentities.projects.locations.get",
-              "httpMethod": "GET",
-              "response": {
-                "$ref": "Location"
-              }
+            "additionalProperties": {
+              "type": "any",
+              "description": "Properties of the object. Contains field @type with type URL."
             },
-            "list": {
-              "parameterOrder": [
-                "name"
-              ],
-              "id": "managedidentities.projects.locations.list",
-              "description": "Lists information about the supported locations for this service.",
-              "parameters": {
-                "pageSize": {
-                  "description": "The standard list page size.",
-                  "type": "integer",
-                  "location": "query",
-                  "format": "int32"
-                },
-                "filter": {
-                  "type": "string",
-                  "description": "The standard list filter.",
-                  "location": "query"
-                },
-                "name": {
-                  "description": "The resource that owns the locations collection, if applicable.",
-                  "pattern": "^projects/[^/]+$",
-                  "type": "string",
-                  "location": "path",
-                  "required": true
-                },
-                "pageToken": {
-                  "location": "query",
-                  "type": "string",
-                  "description": "The standard list page token."
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "flatPath": "v1/projects/{projectsId}/locations",
-              "response": {
-                "$ref": "ListLocationsResponse"
-              },
-              "httpMethod": "GET",
-              "path": "v1/{+name}/locations"
-            }
+            "type": "object"
           }
+        },
+        "message": {
+          "description": "A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.",
+          "type": "string"
+        },
+        "code": {
+          "format": "int32",
+          "type": "integer",
+          "description": "The status code, which should be an enum value of google.rpc.Code."
         }
       }
     }
   },
-  "revision": "20201007",
   "baseUrl": "https://managedidentities.googleapis.com/",
-  "version_module": true,
+  "name": "managedidentities",
+  "parameters": {
+    "callback": {
+      "type": "string",
+      "description": "JSONP",
+      "location": "query"
+    },
+    "access_token": {
+      "location": "query",
+      "type": "string",
+      "description": "OAuth access token."
+    },
+    "oauth_token": {
+      "location": "query",
+      "description": "OAuth 2.0 token for the current user.",
+      "type": "string"
+    },
+    "$.xgafv": {
+      "enumDescriptions": [
+        "v1 error format",
+        "v2 error format"
+      ],
+      "type": "string",
+      "description": "V1 error format.",
+      "enum": [
+        "1",
+        "2"
+      ],
+      "location": "query"
+    },
+    "prettyPrint": {
+      "default": "true",
+      "location": "query",
+      "type": "boolean",
+      "description": "Returns response with indentations and line breaks."
+    },
+    "quotaUser": {
+      "type": "string",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "location": "query"
+    },
+    "key": {
+      "type": "string",
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "location": "query"
+    },
+    "upload_protocol": {
+      "location": "query",
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "type": "string"
+    },
+    "alt": {
+      "enum": [
+        "json",
+        "media",
+        "proto"
+      ],
+      "default": "json",
+      "location": "query",
+      "description": "Data format for response.",
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json",
+        "Media download with context-dependent Content-Type",
+        "Responses with Content-Type of application/x-protobuf"
+      ],
+      "type": "string"
+    },
+    "fields": {
+      "type": "string",
+      "location": "query",
+      "description": "Selector specifying which fields to include in a partial response."
+    },
+    "uploadType": {
+      "type": "string",
+      "location": "query",
+      "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\")."
+    }
+  },
+  "ownerDomain": "google.com",
+  "kind": "discovery#restDescription",
+  "fullyEncodeReservedExpansion": true,
+  "mtlsRootUrl": "https://managedidentities.mtls.googleapis.com/",
+  "ownerName": "Google",
+  "servicePath": "",
+  "batchPath": "batch",
+  "version": "v1",
   "auth": {
     "oauth2": {
       "scopes": {
@@ -1647,19 +1656,9 @@
       }
     }
   },
-  "rootUrl": "https://managedidentities.googleapis.com/",
-  "ownerDomain": "google.com",
-  "servicePath": "",
-  "description": "The Managed Service for Microsoft Active Directory API is used for managing a highly available, hardened service running Microsoft Active Directory (AD).",
-  "documentationLink": "https://cloud.google.com/managed-microsoft-ad/",
+  "canonicalName": "Managed Service for Microsoft Active Directory Consumer API",
+  "version_module": true,
   "discoveryVersion": "v1",
-  "icons": {
-    "x16": "http://www.google.com/images/icons/product/search-16.gif",
-    "x32": "http://www.google.com/images/icons/product/search-32.gif"
-  },
-  "batchPath": "batch",
-  "kind": "discovery#restDescription",
-  "basePath": "",
-  "version": "v1",
-  "ownerName": "Google"
+  "documentationLink": "https://cloud.google.com/managed-microsoft-ad/",
+  "revision": "20201027"
 }

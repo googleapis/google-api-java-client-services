@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-drive",
-    "version": "v3-rev20201012-1.30.10"
+    "version": "v3-rev20201101-1.30.10"
   }
 }

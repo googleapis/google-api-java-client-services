@@ -4937,17 +4937,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether to convert this file to the corresponding Google Docs format. */
+      /** Whether to convert this file to the corresponding Docs Editors format. */
       @com.google.api.client.util.Key
       private java.lang.Boolean convert;
 
-      /** Whether to convert this file to the corresponding Google Docs format. [default: false]
+      /** Whether to convert this file to the corresponding Docs Editors format. [default: false]
        */
       public java.lang.Boolean getConvert() {
         return convert;
       }
 
-      /** Whether to convert this file to the corresponding Google Docs format. */
+      /** Whether to convert this file to the corresponding Docs Editors format. */
       public Copy setConvert(java.lang.Boolean convert) {
         this.convert = convert;
         return this;
@@ -4970,7 +4970,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether to convert this file to the corresponding Google Docs format.
+       * Whether to convert this file to the corresponding Docs Editors format.
        * </p>
        */
       public boolean isConvert() {
@@ -6454,17 +6454,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (Insert) super.setUserIp(userIp);
       }
 
-      /** Whether to convert this file to the corresponding Google Docs format. */
+      /** Whether to convert this file to the corresponding Docs Editors format. */
       @com.google.api.client.util.Key
       private java.lang.Boolean convert;
 
-      /** Whether to convert this file to the corresponding Google Docs format. [default: false]
+      /** Whether to convert this file to the corresponding Docs Editors format. [default: false]
        */
       public java.lang.Boolean getConvert() {
         return convert;
       }
 
-      /** Whether to convert this file to the corresponding Google Docs format. */
+      /** Whether to convert this file to the corresponding Docs Editors format. */
       public Insert setConvert(java.lang.Boolean convert) {
         this.convert = convert;
         return this;
@@ -6487,7 +6487,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether to convert this file to the corresponding Google Docs format.
+       * Whether to convert this file to the corresponding Docs Editors format.
        * </p>
        */
       public boolean isConvert() {

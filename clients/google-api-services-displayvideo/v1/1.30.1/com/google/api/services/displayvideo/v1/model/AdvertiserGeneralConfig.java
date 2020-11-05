@@ -60,8 +60,9 @@ public final class AdvertiserGeneralConfig extends com.google.api.client.json.Ge
   /**
    * Output only. The standard TZ database name of the advertiser's time zone. For example,
    * `America/New_York`. See more at: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-   * For CM hybrid advertisers, the time zone is the same as that of the associated CM account; for
-   * third-party only advertisers, the time zone is the same as that of the parent partner.
+   * For CM360 hybrid advertisers, the time zone is the same as that of the associated CM360
+   * account; for third-party only advertisers, the time zone is the same as that of the parent
+   * partner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,8 +131,9 @@ public final class AdvertiserGeneralConfig extends com.google.api.client.json.Ge
   /**
    * Output only. The standard TZ database name of the advertiser's time zone. For example,
    * `America/New_York`. See more at: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-   * For CM hybrid advertisers, the time zone is the same as that of the associated CM account; for
-   * third-party only advertisers, the time zone is the same as that of the parent partner.
+   * For CM360 hybrid advertisers, the time zone is the same as that of the associated CM360
+   * account; for third-party only advertisers, the time zone is the same as that of the parent
+   * partner.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -141,8 +143,9 @@ public final class AdvertiserGeneralConfig extends com.google.api.client.json.Ge
   /**
    * Output only. The standard TZ database name of the advertiser's time zone. For example,
    * `America/New_York`. See more at: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-   * For CM hybrid advertisers, the time zone is the same as that of the associated CM account; for
-   * third-party only advertisers, the time zone is the same as that of the parent partner.
+   * For CM360 hybrid advertisers, the time zone is the same as that of the associated CM360
+   * account; for third-party only advertisers, the time zone is the same as that of the parent
+   * partner.
    * @param timeZone timeZone or {@code null} for none
    */
   public AdvertiserGeneralConfig setTimeZone(java.lang.String timeZone) {

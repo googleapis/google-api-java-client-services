@@ -57,8 +57,8 @@ public final class AdvertiserCreativeConfig extends com.google.api.client.json.G
   /**
    * By setting this field to `true`, you, on behalf of your company, authorize Google to use video
    * creatives associated with this Display & Video 360 advertiser to provide reporting and features
-   * related to the advertiser's television campaigns. Applicable only when the advertiser has a CM
-   * hybrid ad server configuration.
+   * related to the advertiser's television campaigns. Applicable only when the advertiser has a
+   * CM360 hybrid ad server configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,8 +124,8 @@ public final class AdvertiserCreativeConfig extends com.google.api.client.json.G
   /**
    * By setting this field to `true`, you, on behalf of your company, authorize Google to use video
    * creatives associated with this Display & Video 360 advertiser to provide reporting and features
-   * related to the advertiser's television campaigns. Applicable only when the advertiser has a CM
-   * hybrid ad server configuration.
+   * related to the advertiser's television campaigns. Applicable only when the advertiser has a
+   * CM360 hybrid ad server configuration.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVideoCreativeDataSharingAuthorized() {
@@ -135,8 +135,8 @@ public final class AdvertiserCreativeConfig extends com.google.api.client.json.G
   /**
    * By setting this field to `true`, you, on behalf of your company, authorize Google to use video
    * creatives associated with this Display & Video 360 advertiser to provide reporting and features
-   * related to the advertiser's television campaigns. Applicable only when the advertiser has a CM
-   * hybrid ad server configuration.
+   * related to the advertiser's television campaigns. Applicable only when the advertiser has a
+   * CM360 hybrid ad server configuration.
    * @param videoCreativeDataSharingAuthorized videoCreativeDataSharingAuthorized or {@code null} for none
    */
   public AdvertiserCreativeConfig setVideoCreativeDataSharingAuthorized(java.lang.Boolean videoCreativeDataSharingAuthorized) {

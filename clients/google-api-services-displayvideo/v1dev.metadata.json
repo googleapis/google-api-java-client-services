@@ -1,7 +1,0 @@
-{
-  "maven": {
-    "groupId": "com.google.apis",
-    "artifactId": "google-api-services-displayvideo",
-    "version": "v1dev-rev20200825-1.30.10"
-  }
-}

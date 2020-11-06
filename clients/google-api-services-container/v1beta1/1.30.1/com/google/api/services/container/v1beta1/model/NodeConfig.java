@@ -72,6 +72,14 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String diskType;
 
   /**
+   * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by
+   * the boot disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EphemeralStorageConfig ephemeralStorageConfig;
+
+  /**
    * The image type to use for this node. Note that for a given image type, the latest version of it
    * will be used.
    * The value may be {@code null}.
@@ -317,6 +325,25 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by
+   * the boot disk.
+   * @return value or {@code null} for none
+   */
+  public EphemeralStorageConfig getEphemeralStorageConfig() {
+    return ephemeralStorageConfig;
+  }
+
+  /**
+   * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by
+   * the boot disk.
+   * @param ephemeralStorageConfig ephemeralStorageConfig or {@code null} for none
+   */
+  public NodeConfig setEphemeralStorageConfig(EphemeralStorageConfig ephemeralStorageConfig) {
+    this.ephemeralStorageConfig = ephemeralStorageConfig;
     return this;
   }
 

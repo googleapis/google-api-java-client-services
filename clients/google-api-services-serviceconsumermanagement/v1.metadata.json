@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-serviceconsumermanagement",
-    "version": "v1-rev20201021-1.30.10"
+    "version": "v1-rev20201104-1.30.10"
   }
 }

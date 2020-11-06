@@ -114,7 +114,7 @@ packages on [Maven Central][maven-search].
 | Dataflow API | [v1b3](clients/google-api-services-dataflow/v1b3) |
 | Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1), [v3beta1](clients/google-api-services-dialogflow/v3beta1) |
 | Digital Asset Links API | [v1](clients/google-api-services-digitalassetlinks/v1) |
-| Display & Video 360 API | [v1](clients/google-api-services-displayvideo/v1), [v1beta](clients/google-api-services-displayvideo/v1beta), [v1beta2](clients/google-api-services-displayvideo/v1beta2), [v1dev](clients/google-api-services-displayvideo/v1dev) |
+| Display & Video 360 API | [v1](clients/google-api-services-displayvideo/v1) |
 | Domains RDAP API | [v1](clients/google-api-services-domainsrdap/v1) |
 | DoubleClick Bid Manager API | [v1](clients/google-api-services-doubleclickbidmanager/v1), [v1.1](clients/google-api-services-doubleclickbidmanager/v1.1) |
 | Drive API | [v2](clients/google-api-services-drive/v2), [v3](clients/google-api-services-drive/v3) |

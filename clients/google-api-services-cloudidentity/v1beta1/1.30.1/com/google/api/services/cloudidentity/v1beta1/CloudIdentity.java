@@ -4229,9 +4229,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
     public class Memberships {
 
       /**
-       * Check a potential member for membership in a group. A member has membership to a group as long as
-       * there is a single viewable transitive membership between the group and the member. The actor must
-       * have view permissions to at least one transitive membership between the member and group.
+       * Check a potential member for membership in a group. **Note:** This feature is only available to
+       * Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud
+       * Identity Premium accounts. A member has membership to a group as long as there is a single
+       * viewable transitive membership between the group and the member. The actor must have view
+       * permissions to at least one transitive membership between the member and group.
        *
        * Create a request for the method "memberships.checkTransitiveMembership".
        *
@@ -4258,9 +4260,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Check a potential member for membership in a group. A member has membership to a group as long
-         * as there is a single viewable transitive membership between the group and the member. The actor
-         * must have view permissions to at least one transitive membership between the member and group.
+         * Check a potential member for membership in a group. **Note:** This feature is only available to
+         * Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud
+         * Identity Premium accounts. A member has membership to a group as long as there is a single
+         * viewable transitive membership between the group and the member. The actor must have view
+         * permissions to at least one transitive membership between the member and group.
          *
          * Create a request for the method "memberships.checkTransitiveMembership".
          *
@@ -4851,9 +4855,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Get a membership graph of just a member or both a member and a group. Given a member, the
-       * response will contain all membership paths from the member. Given both a group and a member, the
-       * response will contain all membership paths between the group and the member.
+       * Get a membership graph of just a member or both a member and a group. **Note:** This feature is
+       * only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for
+       * Education; and Cloud Identity Premium accounts. Given a member, the response will contain all
+       * membership paths from the member. Given both a group and a member, the response will contain all
+       * membership paths between the group and the member.
        *
        * Create a request for the method "memberships.getMembershipGraph".
        *
@@ -4883,9 +4889,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Get a membership graph of just a member or both a member and a group. Given a member, the
-         * response will contain all membership paths from the member. Given both a group and a member,
-         * the response will contain all membership paths between the group and the member.
+         * Get a membership graph of just a member or both a member and a group. **Note:** This feature is
+         * only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for
+         * Education; and Cloud Identity Premium accounts. Given a member, the response will contain all
+         * membership paths from the member. Given both a group and a member, the response will contain
+         * all membership paths between the group and the member.
          *
          * Create a request for the method "memberships.getMembershipGraph".
          *
@@ -5628,8 +5636,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Search transitive groups of a member. A transitive group is any group that has a direct or
-       * indirect membership to the member. Actor must have view permissions all transitive groups.
+       * Search transitive groups of a member. **Note:** This feature is only available to Google
+       * Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity
+       * Premium accounts. A transitive group is any group that has a direct or indirect membership to the
+       * member. Actor must have view permissions all transitive groups.
        *
        * Create a request for the method "memberships.searchTransitiveGroups".
        *
@@ -5656,8 +5666,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Search transitive groups of a member. A transitive group is any group that has a direct or
-         * indirect membership to the member. Actor must have view permissions all transitive groups.
+         * Search transitive groups of a member. **Note:** This feature is only available to Google
+         * Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud
+         * Identity Premium accounts. A transitive group is any group that has a direct or indirect
+         * membership to the member. Actor must have view permissions all transitive groups.
          *
          * Create a request for the method "memberships.searchTransitiveGroups".
          *
@@ -5852,8 +5864,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Search transitive memberships of a group. A transitive membership is any direct or indirect
-       * membership of a group. Actor must have view permissions to all transitive memberships.
+       * Search transitive memberships of a group. **Note:** This feature is only available to Google
+       * Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity
+       * Premium accounts. A transitive membership is any direct or indirect membership of a group. Actor
+       * must have view permissions to all transitive memberships.
        *
        * Create a request for the method "memberships.searchTransitiveMemberships".
        *
@@ -5880,8 +5894,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Search transitive memberships of a group. A transitive membership is any direct or indirect
-         * membership of a group. Actor must have view permissions to all transitive memberships.
+         * Search transitive memberships of a group. **Note:** This feature is only available to Google
+         * Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud
+         * Identity Premium accounts. A transitive membership is any direct or indirect membership of a
+         * group. Actor must have view permissions to all transitive memberships.
          *
          * Create a request for the method "memberships.searchTransitiveMemberships".
          *

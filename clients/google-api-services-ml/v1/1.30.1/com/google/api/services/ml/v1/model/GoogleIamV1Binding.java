@@ -31,8 +31,6 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleIamV1Binding extends com.google.api.client.json.GenericJson {
 
   /**
-   * A client-specified ID for this binding. Expected to be globally unique to support the internal
-   * bindings-by-ID API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +85,6 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
   private java.lang.String role;
 
   /**
-   * A client-specified ID for this binding. Expected to be globally unique to support the internal
-   * bindings-by-ID API.
    * @return value or {@code null} for none
    */
   public java.lang.String getBindingId() {
@@ -96,8 +92,6 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
   }
 
   /**
-   * A client-specified ID for this binding. Expected to be globally unique to support the internal
-   * bindings-by-ID API.
    * @param bindingId bindingId or {@code null} for none
    */
   public GoogleIamV1Binding setBindingId(java.lang.String bindingId) {

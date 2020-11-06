@@ -4063,6 +4063,141 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
+           * Lists the pareto-optimal trials for multi-objective study or the optimal trials for single-
+           * objective study. The definition of pareto-optimal can be checked in wiki page.
+           * https://en.wikipedia.org/wiki/Pareto_efficiency
+           *
+           * Create a request for the method "trials.listOptimalTrials".
+           *
+           * This request holds the parameters needed by the ml server.  After setting any optional
+           * parameters, call the {@link ListOptimalTrials#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the study that the pareto-optimal trial belongs to.
+           * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1ListOptimalTrialsRequest}
+           * @return the request
+           */
+          public ListOptimalTrials listOptimalTrials(java.lang.String parent, com.google.api.services.ml.v1.model.GoogleCloudMlV1ListOptimalTrialsRequest content) throws java.io.IOException {
+            ListOptimalTrials result = new ListOptimalTrials(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ListOptimalTrials extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleCloudMlV1ListOptimalTrialsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/trials:listOptimalTrials";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+
+            /**
+             * Lists the pareto-optimal trials for multi-objective study or the optimal trials for single-
+             * objective study. The definition of pareto-optimal can be checked in wiki page.
+             * https://en.wikipedia.org/wiki/Pareto_efficiency
+             *
+             * Create a request for the method "trials.listOptimalTrials".
+             *
+             * This request holds the parameters needed by the the ml server.  After setting any optional
+             * parameters, call the {@link ListOptimalTrials#execute()} method to invoke the remote operation.
+             * <p> {@link ListOptimalTrials#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+             * eClientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param parent Required. The name of the study that the pareto-optimal trial belongs to.
+             * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1ListOptimalTrialsRequest}
+             * @since 1.13
+             */
+            protected ListOptimalTrials(java.lang.String parent, com.google.api.services.ml.v1.model.GoogleCloudMlV1ListOptimalTrialsRequest content) {
+              super(CloudMachineLearningEngine.this, "POST", REST_PATH, content, com.google.api.services.ml.v1.model.GoogleCloudMlV1ListOptimalTrialsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+              }
+            }
+
+            @Override
+            public ListOptimalTrials set$Xgafv(java.lang.String $Xgafv) {
+              return (ListOptimalTrials) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ListOptimalTrials setAccessToken(java.lang.String accessToken) {
+              return (ListOptimalTrials) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ListOptimalTrials setAlt(java.lang.String alt) {
+              return (ListOptimalTrials) super.setAlt(alt);
+            }
+
+            @Override
+            public ListOptimalTrials setCallback(java.lang.String callback) {
+              return (ListOptimalTrials) super.setCallback(callback);
+            }
+
+            @Override
+            public ListOptimalTrials setFields(java.lang.String fields) {
+              return (ListOptimalTrials) super.setFields(fields);
+            }
+
+            @Override
+            public ListOptimalTrials setKey(java.lang.String key) {
+              return (ListOptimalTrials) super.setKey(key);
+            }
+
+            @Override
+            public ListOptimalTrials setOauthToken(java.lang.String oauthToken) {
+              return (ListOptimalTrials) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ListOptimalTrials setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ListOptimalTrials) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ListOptimalTrials setQuotaUser(java.lang.String quotaUser) {
+              return (ListOptimalTrials) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ListOptimalTrials setUploadType(java.lang.String uploadType) {
+              return (ListOptimalTrials) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ListOptimalTrials setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ListOptimalTrials) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the study that the pareto-optimal trial belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the study that the pareto-optimal trial belongs to.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The name of the study that the pareto-optimal trial belongs to. */
+            public ListOptimalTrials setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public ListOptimalTrials set(String parameterName, Object value) {
+              return (ListOptimalTrials) super.set(parameterName, value);
+            }
+          }
+          /**
            * Stops a trial.
            *
            * Create a request for the method "trials.stop".

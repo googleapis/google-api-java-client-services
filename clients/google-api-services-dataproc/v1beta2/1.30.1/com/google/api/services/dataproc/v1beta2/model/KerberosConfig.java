@@ -103,7 +103,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   private java.lang.String keystoreUri;
 
   /**
-   * Required. The uri of the KMS key used to encrypt various sensitive files.
+   * Optional. The uri of the KMS key used to encrypt various sensitive files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   private java.lang.String realm;
 
   /**
-   * Required. The Cloud Storage URI of a KMS encrypted file containing the root principal password.
+   * Optional. The Cloud Storage URI of a KMS encrypted file containing the root principal password.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -322,7 +322,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The uri of the KMS key used to encrypt various sensitive files.
+   * Optional. The uri of the KMS key used to encrypt various sensitive files.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyUri() {
@@ -330,7 +330,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The uri of the KMS key used to encrypt various sensitive files.
+   * Optional. The uri of the KMS key used to encrypt various sensitive files.
    * @param kmsKeyUri kmsKeyUri or {@code null} for none
    */
   public KerberosConfig setKmsKeyUri(java.lang.String kmsKeyUri) {
@@ -358,7 +358,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The Cloud Storage URI of a KMS encrypted file containing the root principal password.
+   * Optional. The Cloud Storage URI of a KMS encrypted file containing the root principal password.
    * @return value or {@code null} for none
    */
   public java.lang.String getRootPrincipalPasswordUri() {
@@ -366,7 +366,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The Cloud Storage URI of a KMS encrypted file containing the root principal password.
+   * Optional. The Cloud Storage URI of a KMS encrypted file containing the root principal password.
    * @param rootPrincipalPasswordUri rootPrincipalPasswordUri or {@code null} for none
    */
   public KerberosConfig setRootPrincipalPasswordUri(java.lang.String rootPrincipalPasswordUri) {

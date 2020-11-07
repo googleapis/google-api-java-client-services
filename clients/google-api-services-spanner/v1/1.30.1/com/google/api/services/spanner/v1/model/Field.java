@@ -33,7 +33,7 @@ public final class Field extends com.google.api.client.json.GenericJson {
    * The name of the field. For reads, this is the column name. For SQL queries, it is the column
    * alias (e.g., `"Word"` in the query `"SELECT 'hello' AS Word"`), or the column name (e.g.,
    * `"ColName"` in the query `"SELECT ColName FROM Table"`). Some columns might have an empty name
-   * (e.g., !"SELECT UPPER(ColName)"`). Note that a query result can contain multiple fields with
+   * (e.g., `"SELECT UPPER(ColName)"`). Note that a query result can contain multiple fields with
    * the same name.
    * The value may be {@code null}.
    */
@@ -51,7 +51,7 @@ public final class Field extends com.google.api.client.json.GenericJson {
    * The name of the field. For reads, this is the column name. For SQL queries, it is the column
    * alias (e.g., `"Word"` in the query `"SELECT 'hello' AS Word"`), or the column name (e.g.,
    * `"ColName"` in the query `"SELECT ColName FROM Table"`). Some columns might have an empty name
-   * (e.g., !"SELECT UPPER(ColName)"`). Note that a query result can contain multiple fields with
+   * (e.g., `"SELECT UPPER(ColName)"`). Note that a query result can contain multiple fields with
    * the same name.
    * @return value or {@code null} for none
    */
@@ -63,7 +63,7 @@ public final class Field extends com.google.api.client.json.GenericJson {
    * The name of the field. For reads, this is the column name. For SQL queries, it is the column
    * alias (e.g., `"Word"` in the query `"SELECT 'hello' AS Word"`), or the column name (e.g.,
    * `"ColName"` in the query `"SELECT ColName FROM Table"`). Some columns might have an empty name
-   * (e.g., !"SELECT UPPER(ColName)"`). Note that a query result can contain multiple fields with
+   * (e.g., `"SELECT UPPER(ColName)"`). Note that a query result can contain multiple fields with
    * the same name.
    * @param name name or {@code null} for none
    */

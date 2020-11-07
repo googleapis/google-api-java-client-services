@@ -84,8 +84,8 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String referer;
 
   /**
-   * The IP address (IPv4 or IPv6) of the client that issued the HTTP request. Examples:
-   * "192.168.1.1", "FE80::0202:B3FF:FE1E:8329".
+   * The IP address (IPv4 or IPv6) of the client that issued the HTTP request. This field can
+   * include port information. Examples: "192.168.1.1", "10.0.0.1:80", "FE80::0202:B3FF:FE1E:8329".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,8 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Long responseSize;
 
   /**
-   * The IP address (IPv4 or IPv6) of the origin server that the request was sent to.
+   * The IP address (IPv4 or IPv6) of the origin server that the request was sent to. This field can
+   * include port information. Examples: "192.168.1.1", "10.0.0.1:80", "FE80::0202:B3FF:FE1E:8329".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -272,8 +273,8 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP address (IPv4 or IPv6) of the client that issued the HTTP request. Examples:
-   * "192.168.1.1", "FE80::0202:B3FF:FE1E:8329".
+   * The IP address (IPv4 or IPv6) of the client that issued the HTTP request. This field can
+   * include port information. Examples: "192.168.1.1", "10.0.0.1:80", "FE80::0202:B3FF:FE1E:8329".
    * @return value or {@code null} for none
    */
   public java.lang.String getRemoteIp() {
@@ -281,8 +282,8 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP address (IPv4 or IPv6) of the client that issued the HTTP request. Examples:
-   * "192.168.1.1", "FE80::0202:B3FF:FE1E:8329".
+   * The IP address (IPv4 or IPv6) of the client that issued the HTTP request. This field can
+   * include port information. Examples: "192.168.1.1", "10.0.0.1:80", "FE80::0202:B3FF:FE1E:8329".
    * @param remoteIp remoteIp or {@code null} for none
    */
   public HttpRequest setRemoteIp(java.lang.String remoteIp) {
@@ -365,7 +366,8 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP address (IPv4 or IPv6) of the origin server that the request was sent to.
+   * The IP address (IPv4 or IPv6) of the origin server that the request was sent to. This field can
+   * include port information. Examples: "192.168.1.1", "10.0.0.1:80", "FE80::0202:B3FF:FE1E:8329".
    * @return value or {@code null} for none
    */
   public java.lang.String getServerIp() {
@@ -373,7 +375,8 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP address (IPv4 or IPv6) of the origin server that the request was sent to.
+   * The IP address (IPv4 or IPv6) of the origin server that the request was sent to. This field can
+   * include port information. Examples: "192.168.1.1", "10.0.0.1:80", "FE80::0202:B3FF:FE1E:8329".
    * @param serverIp serverIp or {@code null} for none
    */
   public HttpRequest setServerIp(java.lang.String serverIp) {

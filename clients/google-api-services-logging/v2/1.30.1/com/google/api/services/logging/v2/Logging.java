@@ -3775,6 +3775,44 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return this;
         }
 
+        /**
+         * Optional. The resource name that owns the logs:
+         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
+         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> resourceNames;
+
+        /** Optional. The resource name that owns the logs:
+       projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy queries,
+       it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+       "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         */
+        public java.util.List<java.lang.String> getResourceNames() {
+          return resourceNames;
+        }
+
+        /**
+         * Optional. The resource name that owns the logs:
+         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
+         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         */
+        public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+          this.resourceNames = resourceNames;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -5098,6 +5136,106 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Streaming read of log entries as they are ingested. Until the stream is terminated, it will
+     * continue reading logs.
+     *
+     * Create a request for the method "entries.tail".
+     *
+     * This request holds the parameters needed by the logging server.  After setting any optional
+     * parameters, call the {@link Tail#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.logging.v2.model.TailLogEntriesRequest}
+     * @return the request
+     */
+    public Tail tail(com.google.api.services.logging.v2.model.TailLogEntriesRequest content) throws java.io.IOException {
+      Tail result = new Tail(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Tail extends LoggingRequest<com.google.api.services.logging.v2.model.TailLogEntriesResponse> {
+
+      private static final String REST_PATH = "v2/entries:tail";
+
+      /**
+       * Streaming read of log entries as they are ingested. Until the stream is terminated, it will
+       * continue reading logs.
+       *
+       * Create a request for the method "entries.tail".
+       *
+       * This request holds the parameters needed by the the logging server.  After setting any optional
+       * parameters, call the {@link Tail#execute()} method to invoke the remote operation. <p> {@link
+       * Tail#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.logging.v2.model.TailLogEntriesRequest}
+       * @since 1.13
+       */
+      protected Tail(com.google.api.services.logging.v2.model.TailLogEntriesRequest content) {
+        super(Logging.this, "POST", REST_PATH, content, com.google.api.services.logging.v2.model.TailLogEntriesResponse.class);
+      }
+
+      @Override
+      public Tail set$Xgafv(java.lang.String $Xgafv) {
+        return (Tail) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Tail setAccessToken(java.lang.String accessToken) {
+        return (Tail) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Tail setAlt(java.lang.String alt) {
+        return (Tail) super.setAlt(alt);
+      }
+
+      @Override
+      public Tail setCallback(java.lang.String callback) {
+        return (Tail) super.setCallback(callback);
+      }
+
+      @Override
+      public Tail setFields(java.lang.String fields) {
+        return (Tail) super.setFields(fields);
+      }
+
+      @Override
+      public Tail setKey(java.lang.String key) {
+        return (Tail) super.setKey(key);
+      }
+
+      @Override
+      public Tail setOauthToken(java.lang.String oauthToken) {
+        return (Tail) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Tail setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Tail) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Tail setQuotaUser(java.lang.String quotaUser) {
+        return (Tail) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Tail setUploadType(java.lang.String uploadType) {
+        return (Tail) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Tail setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Tail) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Tail set(String parameterName, Object value) {
+        return (Tail) super.set(parameterName, value);
       }
     }
     /**
@@ -9702,6 +9840,44 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           return this;
         }
 
+        /**
+         * Optional. The resource name that owns the logs:
+         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
+         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> resourceNames;
+
+        /** Optional. The resource name that owns the logs:
+       projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy queries,
+       it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+       "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         */
+        public java.util.List<java.lang.String> getResourceNames() {
+          return resourceNames;
+        }
+
+        /**
+         * Optional. The resource name that owns the logs:
+         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
+         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         */
+        public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+          this.resourceNames = resourceNames;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -13605,6 +13781,44 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Optional. The resource name that owns the logs:
+       * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
+       * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+       * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> resourceNames;
+
+      /** Optional. The resource name that owns the logs:
+     projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+     organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+     billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+     folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy queries,
+     it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+     "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+       */
+      public java.util.List<java.lang.String> getResourceNames() {
+        return resourceNames;
+      }
+
+      /**
+       * Optional. The resource name that owns the logs:
+       * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
+       * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+       * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+       */
+      public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+        this.resourceNames = resourceNames;
         return this;
       }
 
@@ -17774,6 +17988,44 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Optional. The resource name that owns the logs:
+         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
+         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> resourceNames;
+
+        /** Optional. The resource name that owns the logs:
+       projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy queries,
+       it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+       "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         */
+        public java.util.List<java.lang.String> getResourceNames() {
+          return resourceNames;
+        }
+
+        /**
+         * Optional. The resource name that owns the logs:
+         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
+         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         */
+        public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+          this.resourceNames = resourceNames;
           return this;
         }
 
@@ -22586,6 +22838,44 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Optional. The resource name that owns the logs:
+         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
+         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> resourceNames;
+
+        /** Optional. The resource name that owns the logs:
+       projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+       folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy queries,
+       it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+       "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         */
+        public java.util.List<java.lang.String> getResourceNames() {
+          return resourceNames;
+        }
+
+        /**
+         * Optional. The resource name that owns the logs:
+         * projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * organization/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_ID
+         * folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/views/VIEW_IDTo support legacy
+         * queries, it could also be: "projects/PROJECT_ID" "organizations/ORGANIZATION_ID"
+         * "billingAccounts/BILLING_ACCOUNT_ID" "folders/FOLDER_ID"
+         */
+        public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
+          this.resourceNames = resourceNames;
           return this;
         }
 

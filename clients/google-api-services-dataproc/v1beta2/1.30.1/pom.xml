@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-dataproc</artifactId>
-  <version>v1beta2-rev20201015-1.30.10</version>
-  <name>Cloud Dataproc API v1beta2-rev20201015-1.30.10</name>
+  <version>v1beta2-rev20201029-1.30.10</version>
+  <name>Cloud Dataproc API v1beta2-rev20201029-1.30.10</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

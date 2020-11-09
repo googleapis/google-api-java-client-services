@@ -32,9 +32,9 @@ public final class RepricingRuleRestrictionBoundary extends com.google.api.clien
 
   /**
    * The percentage delta relative to the offer selling price. This field is signed. It must be
-   * negative in floor. When it is used in floor, it should be > -100. If an offer is selling at $10
-   * and this field is -30 in floor, the repricing rule only applies if the calculated new price is
-   * >= $7.
+   * negative in floor. When it is used in floor, it should be > -100. For example, if an offer is
+   * selling at $10 and this field is -30 in floor, the repricing rule only applies if the
+   * calculated new price is >= $7.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +42,8 @@ public final class RepricingRuleRestrictionBoundary extends com.google.api.clien
 
   /**
    * The price micros relative to the offer selling price. This field is signed. It must be negative
-   * in floor. If an offer is selling at $10 and this field is -$2 in floor, the repricing rule only
-   * applies if the calculated new price is >= $8.
+   * in floor. For example, if an offer is selling at $10 and this field is -$2 in floor, the
+   * repricing rule only applies if the calculated new price is >= $8.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,9 +51,9 @@ public final class RepricingRuleRestrictionBoundary extends com.google.api.clien
 
   /**
    * The percentage delta relative to the offer selling price. This field is signed. It must be
-   * negative in floor. When it is used in floor, it should be > -100. If an offer is selling at $10
-   * and this field is -30 in floor, the repricing rule only applies if the calculated new price is
-   * >= $7.
+   * negative in floor. When it is used in floor, it should be > -100. For example, if an offer is
+   * selling at $10 and this field is -30 in floor, the repricing rule only applies if the
+   * calculated new price is >= $7.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPercentageDelta() {
@@ -62,9 +62,9 @@ public final class RepricingRuleRestrictionBoundary extends com.google.api.clien
 
   /**
    * The percentage delta relative to the offer selling price. This field is signed. It must be
-   * negative in floor. When it is used in floor, it should be > -100. If an offer is selling at $10
-   * and this field is -30 in floor, the repricing rule only applies if the calculated new price is
-   * >= $7.
+   * negative in floor. When it is used in floor, it should be > -100. For example, if an offer is
+   * selling at $10 and this field is -30 in floor, the repricing rule only applies if the
+   * calculated new price is >= $7.
    * @param percentageDelta percentageDelta or {@code null} for none
    */
   public RepricingRuleRestrictionBoundary setPercentageDelta(java.lang.Integer percentageDelta) {
@@ -74,8 +74,8 @@ public final class RepricingRuleRestrictionBoundary extends com.google.api.clien
 
   /**
    * The price micros relative to the offer selling price. This field is signed. It must be negative
-   * in floor. If an offer is selling at $10 and this field is -$2 in floor, the repricing rule only
-   * applies if the calculated new price is >= $8.
+   * in floor. For example, if an offer is selling at $10 and this field is -$2 in floor, the
+   * repricing rule only applies if the calculated new price is >= $8.
    * @return value or {@code null} for none
    */
   public java.lang.String getPriceDelta() {
@@ -84,8 +84,8 @@ public final class RepricingRuleRestrictionBoundary extends com.google.api.clien
 
   /**
    * The price micros relative to the offer selling price. This field is signed. It must be negative
-   * in floor. If an offer is selling at $10 and this field is -$2 in floor, the repricing rule only
-   * applies if the calculated new price is >= $8.
+   * in floor. For example, if an offer is selling at $10 and this field is -$2 in floor, the
+   * repricing rule only applies if the calculated new price is >= $8.
    * @param priceDelta priceDelta or {@code null} for none
    */
   public RepricingRuleRestrictionBoundary setPriceDelta(java.lang.String priceDelta) {

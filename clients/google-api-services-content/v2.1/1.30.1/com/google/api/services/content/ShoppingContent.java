@@ -4246,7 +4246,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Invokes a fetch for the datafeed in your Merchant Center account.
+     * Invokes a fetch for the datafeed in your Merchant Center account. If you need to call this method
+     * more than once per day, we recommend you use the Products service to update your product data.
      *
      * Create a request for the method "datafeeds.fetchnow".
      *
@@ -4268,7 +4269,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "content/v2.1/{merchantId}/datafeeds/{datafeedId}/fetchNow";
 
       /**
-       * Invokes a fetch for the datafeed in your Merchant Center account.
+       * Invokes a fetch for the datafeed in your Merchant Center account. If you need to call this
+       * method more than once per day, we recommend you use the Products service to update your product
+       * data.
        *
        * Create a request for the method "datafeeds.fetchnow".
        *
@@ -12099,6 +12102,146 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       @Override
       public Updateshipment set(String parameterName, Object value) {
         return (Updateshipment) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Ordertrackingsignals collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Ordertrackingsignals.List request = content.ordertrackingsignals().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Ordertrackingsignals ordertrackingsignals() {
+    return new Ordertrackingsignals();
+  }
+
+  /**
+   * The "ordertrackingsignals" collection of methods.
+   */
+  public class Ordertrackingsignals {
+
+    /**
+     * Creates new order tracking signal.
+     *
+     * Create a request for the method "ordertrackingsignals.create".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the merchant for which the order signal is created.
+     * @param content the {@link com.google.api.services.content.model.OrderTrackingSignal}
+     * @return the request
+     */
+    public Create create(java.lang.Long merchantId, com.google.api.services.content.model.OrderTrackingSignal content) throws java.io.IOException {
+      Create result = new Create(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends ShoppingContentRequest<com.google.api.services.content.model.OrderTrackingSignal> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/ordertrackingsignals";
+
+      /**
+       * Creates new order tracking signal.
+       *
+       * Create a request for the method "ordertrackingsignals.create".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the merchant for which the order signal is created.
+       * @param content the {@link com.google.api.services.content.model.OrderTrackingSignal}
+       * @since 1.13
+       */
+      protected Create(java.lang.Long merchantId, com.google.api.services.content.model.OrderTrackingSignal content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.OrderTrackingSignal.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The ID of the merchant for which the order signal is created. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** The ID of the merchant for which the order signal is created.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** The ID of the merchant for which the order signal is created. */
+      public Create setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
       }
     }
 

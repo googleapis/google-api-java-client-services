@@ -31,11 +31,11 @@ package com.google.api.services.billingbudgets.v1.model;
 public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A list of credit types to be subtracted from gross cost to determine the spend for
-   * threshold calculations if and only if credit_types_treatment is INCLUDE_SPECIFIED_CREDITS. If
-   * credit_types_treatment is not INCLUDE_SPECIFIED_CREDITS, this field must be empty. See
-   * credits.type on https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#data-
-   * schema for a list of acceptable credit type values in this field.
+   * Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of
+   * credit types to be subtracted from gross cost to determine the spend for threshold
+   * calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field
+   * must be empty. See [a list of acceptable credit type
+   * values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,11 +89,11 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
   private java.util.List<java.lang.String> subaccounts;
 
   /**
-   * Optional. A list of credit types to be subtracted from gross cost to determine the spend for
-   * threshold calculations if and only if credit_types_treatment is INCLUDE_SPECIFIED_CREDITS. If
-   * credit_types_treatment is not INCLUDE_SPECIFIED_CREDITS, this field must be empty. See
-   * credits.type on https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#data-
-   * schema for a list of acceptable credit type values in this field.
+   * Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of
+   * credit types to be subtracted from gross cost to determine the spend for threshold
+   * calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field
+   * must be empty. See [a list of acceptable credit type
+   * values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCreditTypes() {
@@ -101,11 +101,11 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
   }
 
   /**
-   * Optional. A list of credit types to be subtracted from gross cost to determine the spend for
-   * threshold calculations if and only if credit_types_treatment is INCLUDE_SPECIFIED_CREDITS. If
-   * credit_types_treatment is not INCLUDE_SPECIFIED_CREDITS, this field must be empty. See
-   * credits.type on https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#data-
-   * schema for a list of acceptable credit type values in this field.
+   * Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of
+   * credit types to be subtracted from gross cost to determine the spend for threshold
+   * calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field
+   * must be empty. See [a list of acceptable credit type
+   * values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).
    * @param creditTypes creditTypes or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter setCreditTypes(java.util.List<java.lang.String> creditTypes) {

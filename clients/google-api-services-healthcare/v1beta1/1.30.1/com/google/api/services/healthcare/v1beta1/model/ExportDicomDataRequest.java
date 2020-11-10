@@ -43,6 +43,13 @@ public final class ExportDicomDataRequest extends com.google.api.client.json.Gen
   private GoogleCloudHealthcareV1beta1DicomBigQueryDestination bigqueryDestination;
 
   /**
+   * Specifies the filter configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DicomFilterConfig filterConfig;
+
+  /**
    * The Cloud Storage output destination. The Cloud Healthcare Service Agent requires the
    * `roles/storage.objectAdmin` Cloud IAM roles on the Cloud Storage location.
    * The value may be {@code null}.
@@ -70,6 +77,23 @@ public final class ExportDicomDataRequest extends com.google.api.client.json.Gen
    */
   public ExportDicomDataRequest setBigqueryDestination(GoogleCloudHealthcareV1beta1DicomBigQueryDestination bigqueryDestination) {
     this.bigqueryDestination = bigqueryDestination;
+    return this;
+  }
+
+  /**
+   * Specifies the filter configuration.
+   * @return value or {@code null} for none
+   */
+  public DicomFilterConfig getFilterConfig() {
+    return filterConfig;
+  }
+
+  /**
+   * Specifies the filter configuration.
+   * @param filterConfig filterConfig or {@code null} for none
+   */
+  public ExportDicomDataRequest setFilterConfig(DicomFilterConfig filterConfig) {
+    this.filterConfig = filterConfig;
     return this;
   }
 

@@ -601,6 +601,1939 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
       }
 
     }
+    /**
+     * An accessor for creating requests from the PretargetingConfigs collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code RealTimeBidding realtimebidding = new RealTimeBidding(...);}
+     *   {@code RealTimeBidding.PretargetingConfigs.List request = realtimebidding.pretargetingConfigs().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public PretargetingConfigs pretargetingConfigs() {
+      return new PretargetingConfigs();
+    }
+
+    /**
+     * The "pretargetingConfigs" collection of methods.
+     */
+    public class PretargetingConfigs {
+
+      /**
+       * Activates a pretargeting configuration.
+       *
+       * Create a request for the method "pretargetingConfigs.activate".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.ActivatePretargetingConfigRequest}
+       * @return the request
+       */
+      public Activate activate(java.lang.String name, com.google.api.services.realtimebidding.v1.model.ActivatePretargetingConfigRequest content) throws java.io.IOException {
+        Activate result = new Activate(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Activate extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.PretargetingConfig> {
+
+        private static final String REST_PATH = "v1/{+name}:activate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+
+        /**
+         * Activates a pretargeting configuration.
+         *
+         * Create a request for the method "pretargetingConfigs.activate".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.ActivatePretargetingConfigRequest}
+         * @since 1.13
+         */
+        protected Activate(java.lang.String name, com.google.api.services.realtimebidding.v1.model.ActivatePretargetingConfigRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.PretargetingConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Activate set$Xgafv(java.lang.String $Xgafv) {
+          return (Activate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Activate setAccessToken(java.lang.String accessToken) {
+          return (Activate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Activate setAlt(java.lang.String alt) {
+          return (Activate) super.setAlt(alt);
+        }
+
+        @Override
+        public Activate setCallback(java.lang.String callback) {
+          return (Activate) super.setCallback(callback);
+        }
+
+        @Override
+        public Activate setFields(java.lang.String fields) {
+          return (Activate) super.setFields(fields);
+        }
+
+        @Override
+        public Activate setKey(java.lang.String key) {
+          return (Activate) super.setKey(key);
+        }
+
+        @Override
+        public Activate setOauthToken(java.lang.String oauthToken) {
+          return (Activate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Activate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Activate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Activate setQuotaUser(java.lang.String quotaUser) {
+          return (Activate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Activate setUploadType(java.lang.String uploadType) {
+          return (Activate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Activate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Activate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the pretargeting configuration. Format:
+       bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public Activate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Activate set(String parameterName, Object value) {
+          return (Activate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Adds targeted apps to the pretargeting configuration.
+       *
+       * Create a request for the method "pretargetingConfigs.addTargetedApps".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link AddTargetedApps#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param pretargetingConfig Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.AddTargetedAppsRequest}
+       * @return the request
+       */
+      public AddTargetedApps addTargetedApps(java.lang.String pretargetingConfig, com.google.api.services.realtimebidding.v1.model.AddTargetedAppsRequest content) throws java.io.IOException {
+        AddTargetedApps result = new AddTargetedApps(pretargetingConfig, content);
+        initialize(result);
+        return result;
+      }
+
+      public class AddTargetedApps extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.PretargetingConfig> {
+
+        private static final String REST_PATH = "v1/{+pretargetingConfig}:addTargetedApps";
+
+        private final java.util.regex.Pattern PRETARGETING_CONFIG_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+
+        /**
+         * Adds targeted apps to the pretargeting configuration.
+         *
+         * Create a request for the method "pretargetingConfigs.addTargetedApps".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link AddTargetedApps#execute()} method to invoke the remote
+         * operation. <p> {@link AddTargetedApps#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param pretargetingConfig Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.AddTargetedAppsRequest}
+         * @since 1.13
+         */
+        protected AddTargetedApps(java.lang.String pretargetingConfig, com.google.api.services.realtimebidding.v1.model.AddTargetedAppsRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.PretargetingConfig.class);
+          this.pretargetingConfig = com.google.api.client.util.Preconditions.checkNotNull(pretargetingConfig, "Required parameter pretargetingConfig must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PRETARGETING_CONFIG_PATTERN.matcher(pretargetingConfig).matches(),
+                "Parameter pretargetingConfig must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public AddTargetedApps set$Xgafv(java.lang.String $Xgafv) {
+          return (AddTargetedApps) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public AddTargetedApps setAccessToken(java.lang.String accessToken) {
+          return (AddTargetedApps) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public AddTargetedApps setAlt(java.lang.String alt) {
+          return (AddTargetedApps) super.setAlt(alt);
+        }
+
+        @Override
+        public AddTargetedApps setCallback(java.lang.String callback) {
+          return (AddTargetedApps) super.setCallback(callback);
+        }
+
+        @Override
+        public AddTargetedApps setFields(java.lang.String fields) {
+          return (AddTargetedApps) super.setFields(fields);
+        }
+
+        @Override
+        public AddTargetedApps setKey(java.lang.String key) {
+          return (AddTargetedApps) super.setKey(key);
+        }
+
+        @Override
+        public AddTargetedApps setOauthToken(java.lang.String oauthToken) {
+          return (AddTargetedApps) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public AddTargetedApps setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AddTargetedApps) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public AddTargetedApps setQuotaUser(java.lang.String quotaUser) {
+          return (AddTargetedApps) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public AddTargetedApps setUploadType(java.lang.String uploadType) {
+          return (AddTargetedApps) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public AddTargetedApps setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AddTargetedApps) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pretargetingConfig;
+
+        /** Required. The name of the pretargeting configuration. Format:
+       bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public java.lang.String getPretargetingConfig() {
+          return pretargetingConfig;
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public AddTargetedApps setPretargetingConfig(java.lang.String pretargetingConfig) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PRETARGETING_CONFIG_PATTERN.matcher(pretargetingConfig).matches(),
+                "Parameter pretargetingConfig must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+          this.pretargetingConfig = pretargetingConfig;
+          return this;
+        }
+
+        @Override
+        public AddTargetedApps set(String parameterName, Object value) {
+          return (AddTargetedApps) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Adds targeted publishers to the pretargeting config.
+       *
+       * Create a request for the method "pretargetingConfigs.addTargetedPublishers".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link AddTargetedPublishers#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param pretargetingConfig Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.AddTargetedPublishersRequest}
+       * @return the request
+       */
+      public AddTargetedPublishers addTargetedPublishers(java.lang.String pretargetingConfig, com.google.api.services.realtimebidding.v1.model.AddTargetedPublishersRequest content) throws java.io.IOException {
+        AddTargetedPublishers result = new AddTargetedPublishers(pretargetingConfig, content);
+        initialize(result);
+        return result;
+      }
+
+      public class AddTargetedPublishers extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.PretargetingConfig> {
+
+        private static final String REST_PATH = "v1/{+pretargetingConfig}:addTargetedPublishers";
+
+        private final java.util.regex.Pattern PRETARGETING_CONFIG_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+
+        /**
+         * Adds targeted publishers to the pretargeting config.
+         *
+         * Create a request for the method "pretargetingConfigs.addTargetedPublishers".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link AddTargetedPublishers#execute()} method to invoke the
+         * remote operation. <p> {@link AddTargetedPublishers#initialize(com.google.api.client.googleapis.
+         * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param pretargetingConfig Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.AddTargetedPublishersRequest}
+         * @since 1.13
+         */
+        protected AddTargetedPublishers(java.lang.String pretargetingConfig, com.google.api.services.realtimebidding.v1.model.AddTargetedPublishersRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.PretargetingConfig.class);
+          this.pretargetingConfig = com.google.api.client.util.Preconditions.checkNotNull(pretargetingConfig, "Required parameter pretargetingConfig must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PRETARGETING_CONFIG_PATTERN.matcher(pretargetingConfig).matches(),
+                "Parameter pretargetingConfig must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public AddTargetedPublishers set$Xgafv(java.lang.String $Xgafv) {
+          return (AddTargetedPublishers) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public AddTargetedPublishers setAccessToken(java.lang.String accessToken) {
+          return (AddTargetedPublishers) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public AddTargetedPublishers setAlt(java.lang.String alt) {
+          return (AddTargetedPublishers) super.setAlt(alt);
+        }
+
+        @Override
+        public AddTargetedPublishers setCallback(java.lang.String callback) {
+          return (AddTargetedPublishers) super.setCallback(callback);
+        }
+
+        @Override
+        public AddTargetedPublishers setFields(java.lang.String fields) {
+          return (AddTargetedPublishers) super.setFields(fields);
+        }
+
+        @Override
+        public AddTargetedPublishers setKey(java.lang.String key) {
+          return (AddTargetedPublishers) super.setKey(key);
+        }
+
+        @Override
+        public AddTargetedPublishers setOauthToken(java.lang.String oauthToken) {
+          return (AddTargetedPublishers) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public AddTargetedPublishers setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AddTargetedPublishers) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public AddTargetedPublishers setQuotaUser(java.lang.String quotaUser) {
+          return (AddTargetedPublishers) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public AddTargetedPublishers setUploadType(java.lang.String uploadType) {
+          return (AddTargetedPublishers) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public AddTargetedPublishers setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AddTargetedPublishers) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pretargetingConfig;
+
+        /** Required. The name of the pretargeting configuration. Format:
+       bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public java.lang.String getPretargetingConfig() {
+          return pretargetingConfig;
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public AddTargetedPublishers setPretargetingConfig(java.lang.String pretargetingConfig) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PRETARGETING_CONFIG_PATTERN.matcher(pretargetingConfig).matches(),
+                "Parameter pretargetingConfig must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+          this.pretargetingConfig = pretargetingConfig;
+          return this;
+        }
+
+        @Override
+        public AddTargetedPublishers set(String parameterName, Object value) {
+          return (AddTargetedPublishers) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Adds targeted sites to the pretargeting configuration.
+       *
+       * Create a request for the method "pretargetingConfigs.addTargetedSites".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link AddTargetedSites#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param pretargetingConfig Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.AddTargetedSitesRequest}
+       * @return the request
+       */
+      public AddTargetedSites addTargetedSites(java.lang.String pretargetingConfig, com.google.api.services.realtimebidding.v1.model.AddTargetedSitesRequest content) throws java.io.IOException {
+        AddTargetedSites result = new AddTargetedSites(pretargetingConfig, content);
+        initialize(result);
+        return result;
+      }
+
+      public class AddTargetedSites extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.PretargetingConfig> {
+
+        private static final String REST_PATH = "v1/{+pretargetingConfig}:addTargetedSites";
+
+        private final java.util.regex.Pattern PRETARGETING_CONFIG_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+
+        /**
+         * Adds targeted sites to the pretargeting configuration.
+         *
+         * Create a request for the method "pretargetingConfigs.addTargetedSites".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link AddTargetedSites#execute()} method to invoke the remote
+         * operation. <p> {@link AddTargetedSites#initialize(com.google.api.client.googleapis.services.Abs
+         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param pretargetingConfig Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.AddTargetedSitesRequest}
+         * @since 1.13
+         */
+        protected AddTargetedSites(java.lang.String pretargetingConfig, com.google.api.services.realtimebidding.v1.model.AddTargetedSitesRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.PretargetingConfig.class);
+          this.pretargetingConfig = com.google.api.client.util.Preconditions.checkNotNull(pretargetingConfig, "Required parameter pretargetingConfig must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PRETARGETING_CONFIG_PATTERN.matcher(pretargetingConfig).matches(),
+                "Parameter pretargetingConfig must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public AddTargetedSites set$Xgafv(java.lang.String $Xgafv) {
+          return (AddTargetedSites) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public AddTargetedSites setAccessToken(java.lang.String accessToken) {
+          return (AddTargetedSites) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public AddTargetedSites setAlt(java.lang.String alt) {
+          return (AddTargetedSites) super.setAlt(alt);
+        }
+
+        @Override
+        public AddTargetedSites setCallback(java.lang.String callback) {
+          return (AddTargetedSites) super.setCallback(callback);
+        }
+
+        @Override
+        public AddTargetedSites setFields(java.lang.String fields) {
+          return (AddTargetedSites) super.setFields(fields);
+        }
+
+        @Override
+        public AddTargetedSites setKey(java.lang.String key) {
+          return (AddTargetedSites) super.setKey(key);
+        }
+
+        @Override
+        public AddTargetedSites setOauthToken(java.lang.String oauthToken) {
+          return (AddTargetedSites) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public AddTargetedSites setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AddTargetedSites) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public AddTargetedSites setQuotaUser(java.lang.String quotaUser) {
+          return (AddTargetedSites) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public AddTargetedSites setUploadType(java.lang.String uploadType) {
+          return (AddTargetedSites) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public AddTargetedSites setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AddTargetedSites) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pretargetingConfig;
+
+        /** Required. The name of the pretargeting configuration. Format:
+       bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public java.lang.String getPretargetingConfig() {
+          return pretargetingConfig;
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public AddTargetedSites setPretargetingConfig(java.lang.String pretargetingConfig) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PRETARGETING_CONFIG_PATTERN.matcher(pretargetingConfig).matches(),
+                "Parameter pretargetingConfig must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+          this.pretargetingConfig = pretargetingConfig;
+          return this;
+        }
+
+        @Override
+        public AddTargetedSites set(String parameterName, Object value) {
+          return (AddTargetedSites) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates a pretargeting configuration. A pretargeting configuration's state
+       * (PretargetingConfig.state) is active upon creation, and it will start to affect traffic shortly
+       * after. A bidder may create a maximum of 10 pretargeting configurations. Attempts to exceed this
+       * maximum results in a 400 bad request error.
+       *
+       * Create a request for the method "pretargetingConfigs.create".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the bidder to create the pretargeting configuration for. Format:
+       *        bidders/{bidderAccountId}
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.PretargetingConfig}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.realtimebidding.v1.model.PretargetingConfig content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.PretargetingConfig> {
+
+        private static final String REST_PATH = "v1/{+parent}/pretargetingConfigs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+$");
+
+        /**
+         * Creates a pretargeting configuration. A pretargeting configuration's state
+         * (PretargetingConfig.state) is active upon creation, and it will start to affect traffic shortly
+         * after. A bidder may create a maximum of 10 pretargeting configurations. Attempts to exceed this
+         * maximum results in a 400 bad request error.
+         *
+         * Create a request for the method "pretargetingConfigs.create".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the bidder to create the pretargeting configuration for. Format:
+       *        bidders/{bidderAccountId}
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.PretargetingConfig}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.realtimebidding.v1.model.PretargetingConfig content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.PretargetingConfig.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the bidder to create the pretargeting configuration for. Format:
+         * bidders/{bidderAccountId}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the bidder to create the pretargeting configuration for. Format:
+       bidders/{bidderAccountId}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the bidder to create the pretargeting configuration for. Format:
+         * bidders/{bidderAccountId}
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a pretargeting configuration.
+       *
+       * Create a request for the method "pretargetingConfigs.delete".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the pretargeting configuration to delete. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+
+        /**
+         * Deletes a pretargeting configuration.
+         *
+         * Create a request for the method "pretargetingConfigs.delete".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the pretargeting configuration to delete. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(RealTimeBidding.this, "DELETE", REST_PATH, null, com.google.api.services.realtimebidding.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration to delete. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the pretargeting configuration to delete. Format:
+       bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration to delete. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a pretargeting configuration.
+       *
+       * Create a request for the method "pretargetingConfigs.get".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the pretargeting configuration to get. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.PretargetingConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+
+        /**
+         * Gets a pretargeting configuration.
+         *
+         * Create a request for the method "pretargetingConfigs.get".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the pretargeting configuration to get. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(RealTimeBidding.this, "GET", REST_PATH, null, com.google.api.services.realtimebidding.v1.model.PretargetingConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the pretargeting configuration to get. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the pretargeting configuration to get. Format:
+       bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the pretargeting configuration to get. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all pretargeting configurations for a single bidder.
+       *
+       * Create a request for the method "pretargetingConfigs.list".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the bidder whose pretargeting configurations will be listed. Format:
+       *        bidders/{bidderAccountId}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.ListPretargetingConfigsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/pretargetingConfigs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+$");
+
+        /**
+         * Lists all pretargeting configurations for a single bidder.
+         *
+         * Create a request for the method "pretargetingConfigs.list".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the bidder whose pretargeting configurations will be listed. Format:
+       *        bidders/{bidderAccountId}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(RealTimeBidding.this, "GET", REST_PATH, null, com.google.api.services.realtimebidding.v1.model.ListPretargetingConfigsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the bidder whose pretargeting configurations will be listed. Format:
+         * bidders/{bidderAccountId}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the bidder whose pretargeting configurations will be listed. Format:
+       bidders/{bidderAccountId}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the bidder whose pretargeting configurations will be listed. Format:
+         * bidders/{bidderAccountId}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of pretargeting configurations to return. If unspecified, at most 10
+         * pretargeting configurations will be returned. The maximum value is 100; values above 100
+         * will be coerced to 100.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of pretargeting configurations to return. If unspecified, at most 10
+       pretargeting configurations will be returned. The maximum value is 100; values above 100 will be
+       coerced to 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of pretargeting configurations to return. If unspecified, at most 10
+         * pretargeting configurations will be returned. The maximum value is 100; values above 100
+         * will be coerced to 100.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. This value is received
+         * from a previous `ListPretargetingConfigs` call in
+         * ListPretargetingConfigsResponse.nextPageToken.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results the server should return. This value is received from a
+       previous `ListPretargetingConfigs` call in ListPretargetingConfigsResponse.nextPageToken.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. This value is received
+         * from a previous `ListPretargetingConfigs` call in
+         * ListPretargetingConfigsResponse.nextPageToken.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a pretargeting configuration.
+       *
+       * Create a request for the method "pretargetingConfigs.patch".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. Name of the pretargeting configuration that must follow the pattern
+       *        `bidders/{bidder_account_id}/pretargetingConfigs/{config_id}`
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.PretargetingConfig}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.realtimebidding.v1.model.PretargetingConfig content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.PretargetingConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+
+        /**
+         * Updates a pretargeting configuration.
+         *
+         * Create a request for the method "pretargetingConfigs.patch".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Name of the pretargeting configuration that must follow the pattern
+       *        `bidders/{bidder_account_id}/pretargetingConfigs/{config_id}`
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.PretargetingConfig}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.realtimebidding.v1.model.PretargetingConfig content) {
+          super(RealTimeBidding.this, "PATCH", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.PretargetingConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Name of the pretargeting configuration that must follow the pattern
+         * `bidders/{bidder_account_id}/pretargetingConfigs/{config_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Name of the pretargeting configuration that must follow the pattern
+       `bidders/{bidder_account_id}/pretargetingConfigs/{config_id}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Name of the pretargeting configuration that must follow the pattern
+         * `bidders/{bidder_account_id}/pretargetingConfigs/{config_id}`
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Field mask to use for partial in-place updates. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Field mask to use for partial in-place updates.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Field mask to use for partial in-place updates. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Removes targeted apps from the pretargeting configuration.
+       *
+       * Create a request for the method "pretargetingConfigs.removeTargetedApps".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link RemoveTargetedApps#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param pretargetingConfig Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.RemoveTargetedAppsRequest}
+       * @return the request
+       */
+      public RemoveTargetedApps removeTargetedApps(java.lang.String pretargetingConfig, com.google.api.services.realtimebidding.v1.model.RemoveTargetedAppsRequest content) throws java.io.IOException {
+        RemoveTargetedApps result = new RemoveTargetedApps(pretargetingConfig, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RemoveTargetedApps extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.PretargetingConfig> {
+
+        private static final String REST_PATH = "v1/{+pretargetingConfig}:removeTargetedApps";
+
+        private final java.util.regex.Pattern PRETARGETING_CONFIG_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+
+        /**
+         * Removes targeted apps from the pretargeting configuration.
+         *
+         * Create a request for the method "pretargetingConfigs.removeTargetedApps".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link RemoveTargetedApps#execute()} method to invoke the remote
+         * operation. <p> {@link RemoveTargetedApps#initialize(com.google.api.client.googleapis.services.A
+         * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param pretargetingConfig Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.RemoveTargetedAppsRequest}
+         * @since 1.13
+         */
+        protected RemoveTargetedApps(java.lang.String pretargetingConfig, com.google.api.services.realtimebidding.v1.model.RemoveTargetedAppsRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.PretargetingConfig.class);
+          this.pretargetingConfig = com.google.api.client.util.Preconditions.checkNotNull(pretargetingConfig, "Required parameter pretargetingConfig must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PRETARGETING_CONFIG_PATTERN.matcher(pretargetingConfig).matches(),
+                "Parameter pretargetingConfig must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public RemoveTargetedApps set$Xgafv(java.lang.String $Xgafv) {
+          return (RemoveTargetedApps) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RemoveTargetedApps setAccessToken(java.lang.String accessToken) {
+          return (RemoveTargetedApps) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RemoveTargetedApps setAlt(java.lang.String alt) {
+          return (RemoveTargetedApps) super.setAlt(alt);
+        }
+
+        @Override
+        public RemoveTargetedApps setCallback(java.lang.String callback) {
+          return (RemoveTargetedApps) super.setCallback(callback);
+        }
+
+        @Override
+        public RemoveTargetedApps setFields(java.lang.String fields) {
+          return (RemoveTargetedApps) super.setFields(fields);
+        }
+
+        @Override
+        public RemoveTargetedApps setKey(java.lang.String key) {
+          return (RemoveTargetedApps) super.setKey(key);
+        }
+
+        @Override
+        public RemoveTargetedApps setOauthToken(java.lang.String oauthToken) {
+          return (RemoveTargetedApps) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RemoveTargetedApps setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RemoveTargetedApps) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RemoveTargetedApps setQuotaUser(java.lang.String quotaUser) {
+          return (RemoveTargetedApps) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RemoveTargetedApps setUploadType(java.lang.String uploadType) {
+          return (RemoveTargetedApps) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RemoveTargetedApps setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RemoveTargetedApps) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pretargetingConfig;
+
+        /** Required. The name of the pretargeting configuration. Format:
+       bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public java.lang.String getPretargetingConfig() {
+          return pretargetingConfig;
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public RemoveTargetedApps setPretargetingConfig(java.lang.String pretargetingConfig) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PRETARGETING_CONFIG_PATTERN.matcher(pretargetingConfig).matches(),
+                "Parameter pretargetingConfig must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+          this.pretargetingConfig = pretargetingConfig;
+          return this;
+        }
+
+        @Override
+        public RemoveTargetedApps set(String parameterName, Object value) {
+          return (RemoveTargetedApps) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Removes targeted publishers from the pretargeting config.
+       *
+       * Create a request for the method "pretargetingConfigs.removeTargetedPublishers".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link RemoveTargetedPublishers#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param pretargetingConfig Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.RemoveTargetedPublishersRequest}
+       * @return the request
+       */
+      public RemoveTargetedPublishers removeTargetedPublishers(java.lang.String pretargetingConfig, com.google.api.services.realtimebidding.v1.model.RemoveTargetedPublishersRequest content) throws java.io.IOException {
+        RemoveTargetedPublishers result = new RemoveTargetedPublishers(pretargetingConfig, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RemoveTargetedPublishers extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.PretargetingConfig> {
+
+        private static final String REST_PATH = "v1/{+pretargetingConfig}:removeTargetedPublishers";
+
+        private final java.util.regex.Pattern PRETARGETING_CONFIG_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+
+        /**
+         * Removes targeted publishers from the pretargeting config.
+         *
+         * Create a request for the method "pretargetingConfigs.removeTargetedPublishers".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link RemoveTargetedPublishers#execute()} method to invoke the
+         * remote operation. <p> {@link RemoveTargetedPublishers#initialize(com.google.api.client.googleap
+         * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param pretargetingConfig Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.RemoveTargetedPublishersRequest}
+         * @since 1.13
+         */
+        protected RemoveTargetedPublishers(java.lang.String pretargetingConfig, com.google.api.services.realtimebidding.v1.model.RemoveTargetedPublishersRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.PretargetingConfig.class);
+          this.pretargetingConfig = com.google.api.client.util.Preconditions.checkNotNull(pretargetingConfig, "Required parameter pretargetingConfig must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PRETARGETING_CONFIG_PATTERN.matcher(pretargetingConfig).matches(),
+                "Parameter pretargetingConfig must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public RemoveTargetedPublishers set$Xgafv(java.lang.String $Xgafv) {
+          return (RemoveTargetedPublishers) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RemoveTargetedPublishers setAccessToken(java.lang.String accessToken) {
+          return (RemoveTargetedPublishers) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RemoveTargetedPublishers setAlt(java.lang.String alt) {
+          return (RemoveTargetedPublishers) super.setAlt(alt);
+        }
+
+        @Override
+        public RemoveTargetedPublishers setCallback(java.lang.String callback) {
+          return (RemoveTargetedPublishers) super.setCallback(callback);
+        }
+
+        @Override
+        public RemoveTargetedPublishers setFields(java.lang.String fields) {
+          return (RemoveTargetedPublishers) super.setFields(fields);
+        }
+
+        @Override
+        public RemoveTargetedPublishers setKey(java.lang.String key) {
+          return (RemoveTargetedPublishers) super.setKey(key);
+        }
+
+        @Override
+        public RemoveTargetedPublishers setOauthToken(java.lang.String oauthToken) {
+          return (RemoveTargetedPublishers) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RemoveTargetedPublishers setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RemoveTargetedPublishers) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RemoveTargetedPublishers setQuotaUser(java.lang.String quotaUser) {
+          return (RemoveTargetedPublishers) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RemoveTargetedPublishers setUploadType(java.lang.String uploadType) {
+          return (RemoveTargetedPublishers) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RemoveTargetedPublishers setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RemoveTargetedPublishers) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pretargetingConfig;
+
+        /** Required. The name of the pretargeting configuration. Format:
+       bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public java.lang.String getPretargetingConfig() {
+          return pretargetingConfig;
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public RemoveTargetedPublishers setPretargetingConfig(java.lang.String pretargetingConfig) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PRETARGETING_CONFIG_PATTERN.matcher(pretargetingConfig).matches(),
+                "Parameter pretargetingConfig must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+          this.pretargetingConfig = pretargetingConfig;
+          return this;
+        }
+
+        @Override
+        public RemoveTargetedPublishers set(String parameterName, Object value) {
+          return (RemoveTargetedPublishers) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Removes targeted sites from the pretargeting configuration.
+       *
+       * Create a request for the method "pretargetingConfigs.removeTargetedSites".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link RemoveTargetedSites#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param pretargetingConfig Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.RemoveTargetedSitesRequest}
+       * @return the request
+       */
+      public RemoveTargetedSites removeTargetedSites(java.lang.String pretargetingConfig, com.google.api.services.realtimebidding.v1.model.RemoveTargetedSitesRequest content) throws java.io.IOException {
+        RemoveTargetedSites result = new RemoveTargetedSites(pretargetingConfig, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RemoveTargetedSites extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.PretargetingConfig> {
+
+        private static final String REST_PATH = "v1/{+pretargetingConfig}:removeTargetedSites";
+
+        private final java.util.regex.Pattern PRETARGETING_CONFIG_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+
+        /**
+         * Removes targeted sites from the pretargeting configuration.
+         *
+         * Create a request for the method "pretargetingConfigs.removeTargetedSites".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link RemoveTargetedSites#execute()} method to invoke the remote
+         * operation. <p> {@link RemoveTargetedSites#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param pretargetingConfig Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.RemoveTargetedSitesRequest}
+         * @since 1.13
+         */
+        protected RemoveTargetedSites(java.lang.String pretargetingConfig, com.google.api.services.realtimebidding.v1.model.RemoveTargetedSitesRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.PretargetingConfig.class);
+          this.pretargetingConfig = com.google.api.client.util.Preconditions.checkNotNull(pretargetingConfig, "Required parameter pretargetingConfig must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PRETARGETING_CONFIG_PATTERN.matcher(pretargetingConfig).matches(),
+                "Parameter pretargetingConfig must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public RemoveTargetedSites set$Xgafv(java.lang.String $Xgafv) {
+          return (RemoveTargetedSites) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RemoveTargetedSites setAccessToken(java.lang.String accessToken) {
+          return (RemoveTargetedSites) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RemoveTargetedSites setAlt(java.lang.String alt) {
+          return (RemoveTargetedSites) super.setAlt(alt);
+        }
+
+        @Override
+        public RemoveTargetedSites setCallback(java.lang.String callback) {
+          return (RemoveTargetedSites) super.setCallback(callback);
+        }
+
+        @Override
+        public RemoveTargetedSites setFields(java.lang.String fields) {
+          return (RemoveTargetedSites) super.setFields(fields);
+        }
+
+        @Override
+        public RemoveTargetedSites setKey(java.lang.String key) {
+          return (RemoveTargetedSites) super.setKey(key);
+        }
+
+        @Override
+        public RemoveTargetedSites setOauthToken(java.lang.String oauthToken) {
+          return (RemoveTargetedSites) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RemoveTargetedSites setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RemoveTargetedSites) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RemoveTargetedSites setQuotaUser(java.lang.String quotaUser) {
+          return (RemoveTargetedSites) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RemoveTargetedSites setUploadType(java.lang.String uploadType) {
+          return (RemoveTargetedSites) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RemoveTargetedSites setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RemoveTargetedSites) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pretargetingConfig;
+
+        /** Required. The name of the pretargeting configuration. Format:
+       bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public java.lang.String getPretargetingConfig() {
+          return pretargetingConfig;
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public RemoveTargetedSites setPretargetingConfig(java.lang.String pretargetingConfig) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PRETARGETING_CONFIG_PATTERN.matcher(pretargetingConfig).matches(),
+                "Parameter pretargetingConfig must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+          this.pretargetingConfig = pretargetingConfig;
+          return this;
+        }
+
+        @Override
+        public RemoveTargetedSites set(String parameterName, Object value) {
+          return (RemoveTargetedSites) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Suspends a pretargeting configuration.
+       *
+       * Create a request for the method "pretargetingConfigs.suspend".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link Suspend#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.SuspendPretargetingConfigRequest}
+       * @return the request
+       */
+      public Suspend suspend(java.lang.String name, com.google.api.services.realtimebidding.v1.model.SuspendPretargetingConfigRequest content) throws java.io.IOException {
+        Suspend result = new Suspend(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Suspend extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.PretargetingConfig> {
+
+        private static final String REST_PATH = "v1/{+name}:suspend";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+
+        /**
+         * Suspends a pretargeting configuration.
+         *
+         * Create a request for the method "pretargetingConfigs.suspend".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link Suspend#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Suspend#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the pretargeting configuration. Format:
+       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.SuspendPretargetingConfigRequest}
+         * @since 1.13
+         */
+        protected Suspend(java.lang.String name, com.google.api.services.realtimebidding.v1.model.SuspendPretargetingConfigRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.PretargetingConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Suspend set$Xgafv(java.lang.String $Xgafv) {
+          return (Suspend) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Suspend setAccessToken(java.lang.String accessToken) {
+          return (Suspend) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Suspend setAlt(java.lang.String alt) {
+          return (Suspend) super.setAlt(alt);
+        }
+
+        @Override
+        public Suspend setCallback(java.lang.String callback) {
+          return (Suspend) super.setCallback(callback);
+        }
+
+        @Override
+        public Suspend setFields(java.lang.String fields) {
+          return (Suspend) super.setFields(fields);
+        }
+
+        @Override
+        public Suspend setKey(java.lang.String key) {
+          return (Suspend) super.setKey(key);
+        }
+
+        @Override
+        public Suspend setOauthToken(java.lang.String oauthToken) {
+          return (Suspend) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Suspend setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Suspend) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Suspend setQuotaUser(java.lang.String quotaUser) {
+          return (Suspend) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Suspend setUploadType(java.lang.String uploadType) {
+          return (Suspend) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Suspend setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Suspend) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the pretargeting configuration. Format:
+       bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the pretargeting configuration. Format:
+         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         */
+        public Suspend setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^bidders/[^/]+/pretargetingConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Suspend set(String parameterName, Object value) {
+          return (Suspend) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

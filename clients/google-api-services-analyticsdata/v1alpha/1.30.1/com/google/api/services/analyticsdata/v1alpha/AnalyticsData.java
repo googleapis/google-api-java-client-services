@@ -160,7 +160,9 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      *        path and not URL parameters. Property is a numeric Google Analytics GA4 Property
      *        identifier. To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
-     *        Example: properties/1234/metadata
+     *        Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
+     *        common to all properties. In this special mode, this method will not return custom
+     *        dimensions and metrics.
      * @return the request
      */
     public GetMetadata getMetadata(java.lang.String name) throws java.io.IOException {
@@ -197,7 +199,9 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      *        path and not URL parameters. Property is a numeric Google Analytics GA4 Property
      *        identifier. To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
-     *        Example: properties/1234/metadata
+     *        Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
+     *        common to all properties. In this special mode, this method will not return custom
+     *        dimensions and metrics.
        * @since 1.13
        */
       protected GetMetadata(java.lang.String name) {
@@ -280,7 +284,9 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * the URL path and not URL parameters. Property is a numeric Google Analytics GA4 Property
        * identifier. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
-       * Example: properties/1234/metadata
+       * Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
+       * common to all properties. In this special mode, this method will not return custom
+       * dimensions and metrics.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -288,7 +294,9 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       /** Required. The resource name of the metadata to retrieve. This name field is specified in the URL
      path and not URL parameters. Property is a numeric Google Analytics GA4 Property identifier. To
      learn more, see [where to find your Property ID](https://developers.google.com/analytics/trusted-
-     testing/analytics-data/property-id). Example: properties/1234/metadata
+     testing/analytics-data/property-id). Example: properties/1234/metadata Set the Property ID to 0 for
+     dimensions and metrics common to all properties. In this special mode, this method will not return
+     custom dimensions and metrics.
        */
       public java.lang.String getName() {
         return name;
@@ -299,7 +307,9 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * the URL path and not URL parameters. Property is a numeric Google Analytics GA4 Property
        * identifier. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
-       * Example: properties/1234/metadata
+       * Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
+       * common to all properties. In this special mode, this method will not return custom
+       * dimensions and metrics.
        */
       public GetMetadata setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -688,120 +698,6 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       @Override
       public BatchRunReports set(String parameterName, Object value) {
         return (BatchRunReports) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Returns metadata for dimensions and metrics available in reporting methods. Used to explore the
-     * dimensions and metrics. Dimensions and metrics will be mostly added over time, but renames and
-     * deletions may occur. This method returns Universal Metadata. Universal Metadata are dimensions
-     * and metrics applicable to any property such as `country` and `totalUsers`.
-     *
-     * Create a request for the method "v1alpha.getUniversalMetadata".
-     *
-     * This request holds the parameters needed by the analyticsdata server.  After setting any optional
-     * parameters, call the {@link GetUniversalMetadata#execute()} method to invoke the remote
-     * operation.
-     *
-     * @return the request
-     */
-    public GetUniversalMetadata getUniversalMetadata() throws java.io.IOException {
-      GetUniversalMetadata result = new GetUniversalMetadata();
-      initialize(result);
-      return result;
-    }
-
-    public class GetUniversalMetadata extends AnalyticsDataRequest<com.google.api.services.analyticsdata.v1alpha.model.UniversalMetadata> {
-
-      private static final String REST_PATH = "v1alpha/universalMetadata";
-
-      /**
-       * Returns metadata for dimensions and metrics available in reporting methods. Used to explore the
-       * dimensions and metrics. Dimensions and metrics will be mostly added over time, but renames and
-       * deletions may occur. This method returns Universal Metadata. Universal Metadata are dimensions
-       * and metrics applicable to any property such as `country` and `totalUsers`.
-       *
-       * Create a request for the method "v1alpha.getUniversalMetadata".
-       *
-       * This request holds the parameters needed by the the analyticsdata server.  After setting any
-       * optional parameters, call the {@link GetUniversalMetadata#execute()} method to invoke the
-       * remote operation. <p> {@link GetUniversalMetadata#initialize(com.google.api.client.googleapis.s
-       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-       * after invoking the constructor. </p>
-       *
-       * @since 1.13
-       */
-      protected GetUniversalMetadata() {
-        super(AnalyticsData.this, "GET", REST_PATH, null, com.google.api.services.analyticsdata.v1alpha.model.UniversalMetadata.class);
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public GetUniversalMetadata set$Xgafv(java.lang.String $Xgafv) {
-        return (GetUniversalMetadata) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public GetUniversalMetadata setAccessToken(java.lang.String accessToken) {
-        return (GetUniversalMetadata) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public GetUniversalMetadata setAlt(java.lang.String alt) {
-        return (GetUniversalMetadata) super.setAlt(alt);
-      }
-
-      @Override
-      public GetUniversalMetadata setCallback(java.lang.String callback) {
-        return (GetUniversalMetadata) super.setCallback(callback);
-      }
-
-      @Override
-      public GetUniversalMetadata setFields(java.lang.String fields) {
-        return (GetUniversalMetadata) super.setFields(fields);
-      }
-
-      @Override
-      public GetUniversalMetadata setKey(java.lang.String key) {
-        return (GetUniversalMetadata) super.setKey(key);
-      }
-
-      @Override
-      public GetUniversalMetadata setOauthToken(java.lang.String oauthToken) {
-        return (GetUniversalMetadata) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public GetUniversalMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (GetUniversalMetadata) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public GetUniversalMetadata setQuotaUser(java.lang.String quotaUser) {
-        return (GetUniversalMetadata) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public GetUniversalMetadata setUploadType(java.lang.String uploadType) {
-        return (GetUniversalMetadata) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public GetUniversalMetadata setUploadProtocol(java.lang.String uploadProtocol) {
-        return (GetUniversalMetadata) super.setUploadProtocol(uploadProtocol);
-      }
-
-      @Override
-      public GetUniversalMetadata set(String parameterName, Object value) {
-        return (GetUniversalMetadata) super.set(parameterName, value);
       }
     }
     /**

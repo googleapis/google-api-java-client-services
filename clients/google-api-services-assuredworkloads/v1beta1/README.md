@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-assuredworkloads</artifactId>
-      <version>v1beta1-rev20201029-1.30.10</version>
+      <version>v1beta1-rev20201105-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-assuredworkloads:v1beta1-rev20201029-1.30.10'
+  compile 'com.google.apis:google-api-services-assuredworkloads:v1beta1-rev20201105-1.30.10'
 }
 ```
 

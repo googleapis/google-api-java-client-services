@@ -1249,11 +1249,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Optional. The resource name of the workload. Format:
-         *        organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The UI
-         *        extracts the location and workload name from this string, since they aren't set directly
-         *        on the workload object. If the format of this field changes, the UI should likely be
-         *        updated. LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/compliance/assura
-         *        nt/common/workload_helper.ts)
+         *        organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
          * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload}
          * @return the request
          */
@@ -1284,11 +1280,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Optional. The resource name of the workload. Format:
-         *        organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The UI
-         *        extracts the location and workload name from this string, since they aren't set directly
-         *        on the workload object. If the format of this field changes, the UI should likely be
-         *        updated. LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/compliance/assura
-         *        nt/common/workload_helper.ts)
+         *        organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
            * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1Workload}
            * @since 1.13
            */
@@ -1359,20 +1351,13 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. The resource name of the workload. Format:
-           * organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The
-           * UI extracts the location and workload name from this string, since they aren't set
-           * directly on the workload object. If the format of this field changes, the UI should
-           * likely be updated. LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/comp
-           * liance/assurant/common/workload_helper.ts)
+           * organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Optional. The resource name of the workload. Format:
-         organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The UI extracts
-         the location and workload name from this string, since they aren't set directly on the workload
-         object. If the format of this field changes, the UI should likely be updated. LINT.IfChange
-         LINT.ThenChange(//depot/google3/cloud/console/web/compliance/assurant/common/workload_helper.ts)
+         organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
            */
           public java.lang.String getName() {
             return name;
@@ -1380,11 +1365,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. The resource name of the workload. Format:
-           * organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The
-           * UI extracts the location and workload name from this string, since they aren't set
-           * directly on the workload object. If the format of this field changes, the UI should
-           * likely be updated. LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/comp
-           * liance/assurant/common/workload_helper.ts)
+           * organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

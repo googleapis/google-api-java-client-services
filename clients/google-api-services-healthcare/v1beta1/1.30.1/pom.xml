@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-healthcare</artifactId>
-  <version>v1beta1-rev20201028-1.30.10</version>
-  <name>Cloud Healthcare API v1beta1-rev20201028-1.30.10</name>
+  <version>v1beta1-rev20201104-1.30.10</version>
+  <name>Cloud Healthcare API v1beta1-rev20201104-1.30.10</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

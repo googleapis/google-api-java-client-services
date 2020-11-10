@@ -37,6 +37,13 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   private AutoInstallPolicy autoInstallPolicy;
 
   /**
+   * The auto-update mode for the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoUpdateMode;
+
+  /**
    * The managed configuration for the product.
    * The value may be {@code null}.
    */
@@ -79,6 +86,23 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
    */
   public ProductPolicy setAutoInstallPolicy(AutoInstallPolicy autoInstallPolicy) {
     this.autoInstallPolicy = autoInstallPolicy;
+    return this;
+  }
+
+  /**
+   * The auto-update mode for the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoUpdateMode() {
+    return autoUpdateMode;
+  }
+
+  /**
+   * The auto-update mode for the product.
+   * @param autoUpdateMode autoUpdateMode or {@code null} for none
+   */
+  public ProductPolicy setAutoUpdateMode(java.lang.String autoUpdateMode) {
+    this.autoUpdateMode = autoUpdateMode;
     return this;
   }
 

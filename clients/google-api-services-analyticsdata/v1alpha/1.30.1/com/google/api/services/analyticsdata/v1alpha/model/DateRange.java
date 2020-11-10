@@ -18,7 +18,7 @@ package com.google.api.services.analyticsdata.v1alpha.model;
 
 /**
  * A contiguous set of days: startDate, startDate + 1, ..., endDate. Requests are allowed up to 4
- * date ranges, and the union of the ranges can cover up to 1 year.
+ * date ranges.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Data API. For a detailed explanation

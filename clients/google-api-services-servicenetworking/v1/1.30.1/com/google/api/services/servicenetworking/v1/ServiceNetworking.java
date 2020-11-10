@@ -2936,6 +2936,180 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         public class Networks {
 
           /**
+           * Service producers use this method to get the configuration of their connection including the
+           * import/export of custom routes and subnetwork routes with public IP.
+           *
+           * Create a request for the method "networks.get".
+           *
+           * This request holds the parameters needed by the servicenetworking server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the consumer config to retrieve in the format:
+           *        `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+           *        peering service that is managing connectivity for the service producer's organization. For
+           *        Google services that support this functionality, this value is
+           *        `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+           *        contains the service consumer's VPC network. {network} is the name of the service
+           *        consumer's VPC network.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.ConsumerConfig> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+
+            /**
+             * Service producers use this method to get the configuration of their connection including the
+             * import/export of custom routes and subnetwork routes with public IP.
+             *
+             * Create a request for the method "networks.get".
+             *
+             * This request holds the parameters needed by the the servicenetworking server.  After setting
+             * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the consumer config to retrieve in the format:
+           *        `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+           *        peering service that is managing connectivity for the service producer's organization. For
+           *        Google services that support this functionality, this value is
+           *        `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+           *        contains the service consumer's VPC network. {network} is the name of the service
+           *        consumer's VPC network.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(ServiceNetworking.this, "GET", REST_PATH, null, com.google.api.services.servicenetworking.v1.model.ConsumerConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the consumer config to retrieve in the format:
+             * `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+             * peering service that is managing connectivity for the service producer's
+             * organization. For Google services that support this functionality, this value is
+             * `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+             * contains the service consumer's VPC network. {network} is the name of the service
+             * consumer's VPC network.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the consumer config to retrieve in the format:
+           `services/{service}/projects/{project}/global/networks/{network}`. {service} is the peering service
+           that is managing connectivity for the service producer's organization. For Google services that
+           support this functionality, this value is `servicenetworking.googleapis.com`. {project} is a
+           project number e.g. `12345` that contains the service consumer's VPC network. {network} is the name
+           of the service consumer's VPC network.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the consumer config to retrieve in the format:
+             * `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+             * peering service that is managing connectivity for the service producer's
+             * organization. For Google services that support this functionality, this value is
+             * `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+             * contains the service consumer's VPC network. {network} is the name of the service
+             * consumer's VPC network.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Service producers use this method to update the configuration of their connection including the
            * import/export of custom routes and subnetwork routes with public IP.
            *

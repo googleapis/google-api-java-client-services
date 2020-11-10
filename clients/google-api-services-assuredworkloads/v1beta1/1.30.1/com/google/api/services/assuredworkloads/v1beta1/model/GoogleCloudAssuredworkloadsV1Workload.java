@@ -109,15 +109,21 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
 
   /**
    * Optional. The resource name of the workload. Format:
-   * organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The UI
-   * extracts the location and workload name from this string, since they aren't set directly on the
-   * workload object. If the format of this field changes, the UI should likely be updated.
-   * LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/compliance/assurant/common/work
-   * load_helper.ts)
+   * organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Input only. The parent resource for the resources managed by this Assured Workload. May be
+   * either an organization or a folder. Must be the same or a child of the Workload parent. If not
+   * specified all resources are created under the Workload parent. Formats: folders/{folder_id}
+   * organizations/{organization_id}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String provisionedResourcesParent;
 
   /**
    * Output only. The resources associated with this workload. These resources will be created when
@@ -314,11 +320,7 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
 
   /**
    * Optional. The resource name of the workload. Format:
-   * organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The UI
-   * extracts the location and workload name from this string, since they aren't set directly on the
-   * workload object. If the format of this field changes, the UI should likely be updated.
-   * LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/compliance/assurant/common/work
-   * load_helper.ts)
+   * organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -327,15 +329,34 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
 
   /**
    * Optional. The resource name of the workload. Format:
-   * organizations/{organization}/locations/{location}/workloads/{workload} Read-only. The UI
-   * extracts the location and workload name from this string, since they aren't set directly on the
-   * workload object. If the format of this field changes, the UI should likely be updated.
-   * LINT.IfChange LINT.ThenChange(//depot/google3/cloud/console/web/compliance/assurant/common/work
-   * load_helper.ts)
+   * organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1Workload setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Input only. The parent resource for the resources managed by this Assured Workload. May be
+   * either an organization or a folder. Must be the same or a child of the Workload parent. If not
+   * specified all resources are created under the Workload parent. Formats: folders/{folder_id}
+   * organizations/{organization_id}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProvisionedResourcesParent() {
+    return provisionedResourcesParent;
+  }
+
+  /**
+   * Input only. The parent resource for the resources managed by this Assured Workload. May be
+   * either an organization or a folder. Must be the same or a child of the Workload parent. If not
+   * specified all resources are created under the Workload parent. Formats: folders/{folder_id}
+   * organizations/{organization_id}
+   * @param provisionedResourcesParent provisionedResourcesParent or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1Workload setProvisionedResourcesParent(java.lang.String provisionedResourcesParent) {
+    this.provisionedResourcesParent = provisionedResourcesParent;
     return this;
   }
 

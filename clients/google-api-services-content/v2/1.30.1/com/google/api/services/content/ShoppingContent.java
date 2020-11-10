@@ -2960,7 +2960,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Invokes a fetch for the datafeed in your Merchant Center account.
+     * Invokes a fetch for the datafeed in your Merchant Center account. If you need to call this method
+     * more than once per day, we recommend you use the Products service to update your product data.
      *
      * Create a request for the method "datafeeds.fetchnow".
      *
@@ -2982,7 +2983,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "content/v2/{merchantId}/datafeeds/{datafeedId}/fetchNow";
 
       /**
-       * Invokes a fetch for the datafeed in your Merchant Center account.
+       * Invokes a fetch for the datafeed in your Merchant Center account. If you need to call this
+       * method more than once per day, we recommend you use the Products service to update your product
+       * data.
        *
        * Create a request for the method "datafeeds.fetchnow".
        *

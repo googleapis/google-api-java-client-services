@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.admob.v1;
+package com.google.api.services.admob.v1beta;
 
 /**
  * Available OAuth 2.0 scopes for use with the AdMob API.

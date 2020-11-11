@@ -38,6 +38,13 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
   private String createTime;
 
   /**
+   * The unique finding id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String findingId;
+
+  /**
    * The type of content that might have been found. Provided if `excluded_types` is false.
    * The value may be {@code null}.
    */
@@ -137,6 +144,23 @@ public final class GooglePrivacyDlpV2Finding extends com.google.api.client.json.
    */
   public GooglePrivacyDlpV2Finding setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * The unique finding id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFindingId() {
+    return findingId;
+  }
+
+  /**
+   * The unique finding id.
+   * @param findingId findingId or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Finding setFindingId(java.lang.String findingId) {
+    this.findingId = findingId;
     return this;
   }
 

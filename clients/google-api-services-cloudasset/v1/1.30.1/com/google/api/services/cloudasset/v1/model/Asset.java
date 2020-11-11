@@ -101,6 +101,15 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private java.util.List<GoogleCloudOrgpolicyV1Policy> orgPolicy;
 
   /**
+   * A representation of runtime OS Inventory information. See [this
+   * topic](https://cloud.google.com/compute/docs/instances/os-inventory-management) for more
+   * information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Inventory osInventory;
+
+  /**
    * A representation of the resource.
    * The value may be {@code null}.
    */
@@ -275,6 +284,27 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setOrgPolicy(java.util.List<GoogleCloudOrgpolicyV1Policy> orgPolicy) {
     this.orgPolicy = orgPolicy;
+    return this;
+  }
+
+  /**
+   * A representation of runtime OS Inventory information. See [this
+   * topic](https://cloud.google.com/compute/docs/instances/os-inventory-management) for more
+   * information.
+   * @return value or {@code null} for none
+   */
+  public Inventory getOsInventory() {
+    return osInventory;
+  }
+
+  /**
+   * A representation of runtime OS Inventory information. See [this
+   * topic](https://cloud.google.com/compute/docs/instances/os-inventory-management) for more
+   * information.
+   * @param osInventory osInventory or {@code null} for none
+   */
+  public Asset setOsInventory(Inventory osInventory) {
+    this.osInventory = osInventory;
     return this;
   }
 

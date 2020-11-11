@@ -2675,7 +2675,12 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in
          *        format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`,
          *        where device_id is the unique ID assigned to the Device, device_user_id is the unique ID
-         *        assigned to the User and partner_id identifies the partner storing the data.
+         *        assigned to the User and partner_id identifies the partner storing the data. To get the
+         *        client state for devices belonging to your own organization, the `partnerId` is in the
+         *        format: `customerId-*anystring*`. Where the `customerId` is your organization's customer
+         *        ID and `anystring` is any suffix. This suffix is used in setting up Custom Access Levels
+         *        in Context-Aware Access. You may use `my_customer` instead of the customer ID for devices
+         *        managed by your own organization.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2704,7 +2709,12 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in
          *        format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`,
          *        where device_id is the unique ID assigned to the Device, device_user_id is the unique ID
-         *        assigned to the User and partner_id identifies the partner storing the data.
+         *        assigned to the User and partner_id identifies the partner storing the data. To get the
+         *        client state for devices belonging to your own organization, the `partnerId` is in the
+         *        format: `customerId-*anystring*`. Where the `customerId` is your organization's customer
+         *        ID and `anystring` is any suffix. This suffix is used in setting up Custom Access Levels
+         *        in Context-Aware Access. You may use `my_customer` instead of the customer ID for devices
+         *        managed by your own organization.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2787,7 +2797,12 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * ClientState in format:
            * `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where
            * device_id is the unique ID assigned to the Device, device_user_id is the unique ID
-           * assigned to the User and partner_id identifies the partner storing the data.
+           * assigned to the User and partner_id identifies the partner storing the data. To get the
+           * client state for devices belonging to your own organization, the `partnerId` is in the
+           * format: `customerId-*anystring*`. Where the `customerId` is your organization's
+           * customer ID and `anystring` is any suffix. This suffix is used in setting up Custom
+           * Access Levels in Context-Aware Access. You may use `my_customer` instead of the
+           * customer ID for devices managed by your own organization.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -2795,7 +2810,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState
          in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where
          device_id is the unique ID assigned to the Device, device_user_id is the unique ID assigned to the
-         User and partner_id identifies the partner storing the data.
+         User and partner_id identifies the partner storing the data. To get the client state for devices
+         belonging to your own organization, the `partnerId` is in the format: `customerId-*anystring*`.
+         Where the `customerId` is your organization's customer ID and `anystring` is any suffix. This
+         suffix is used in setting up Custom Access Levels in Context-Aware Access. You may use
+         `my_customer` instead of the customer ID for devices managed by your own organization.
            */
           public java.lang.String getName() {
             return name;
@@ -2806,7 +2825,12 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
            * ClientState in format:
            * `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where
            * device_id is the unique ID assigned to the Device, device_user_id is the unique ID
-           * assigned to the User and partner_id identifies the partner storing the data.
+           * assigned to the User and partner_id identifies the partner storing the data. To get the
+           * client state for devices belonging to your own organization, the `partnerId` is in the
+           * format: `customerId-*anystring*`. Where the `customerId` is your organization's
+           * customer ID and `anystring` is any suffix. This suffix is used in setting up Custom
+           * Access Levels in Context-Aware Access. You may use `my_customer` instead of the
+           * customer ID for devices managed by your own organization.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

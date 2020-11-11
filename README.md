@@ -29,7 +29,7 @@ packages on [Maven Central][maven-search].
 | Ad Exchange Buyer API | [v1.2](clients/google-api-services-adexchangebuyer/v1.2), [v1.3](clients/google-api-services-adexchangebuyer/v1.3), [v1.4](clients/google-api-services-adexchangebuyer/v1.4) |
 | Ad Exchange Buyer API II | [v2beta1](clients/google-api-services-adexchangebuyer2/v2beta1) |
 | Ad Experience Report API | [v1](clients/google-api-services-adexperiencereport/v1) |
-| AdMob API | [v1](clients/google-api-services-admob/v1) |
+| AdMob API | [v1](clients/google-api-services-admob/v1), [v1beta](clients/google-api-services-admob/v1beta) |
 | AdSense Host API | [v4.1](clients/google-api-services-adsensehost/v4.1) |
 | AdSense Management API | [v1.4](clients/google-api-services-adsense/v1.4) |
 | Admin SDK | [datatransfer_v1](clients/google-api-services-admin/datatransfer_v1), [directory_v1](clients/google-api-services-admin/directory_v1), [reports_v1](clients/google-api-services-admin/reports_v1) |
@@ -206,6 +206,7 @@ packages on [Maven Central][maven-search].
 | Tag Manager API | [v1](clients/google-api-services-tagmanager/v1), [v2](clients/google-api-services-tagmanager/v2) |
 | Tasks API | [v1](clients/google-api-services-tasks/v1) |
 | Traffic Director API | [v2](clients/google-api-services-trafficdirector/v2) |
+| Transcoder API | [v1beta1](clients/google-api-services-transcoder/v1beta1) |
 | Web Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
 | Web Security Scanner API | [v1](clients/google-api-services-websecurityscanner/v1), [v1alpha](clients/google-api-services-websecurityscanner/v1alpha), [v1beta](clients/google-api-services-websecurityscanner/v1beta) |
 | Workflow Executions API | [v1beta](clients/google-api-services-workflowexecutions/v1beta) |

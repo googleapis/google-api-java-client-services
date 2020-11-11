@@ -1,5 +1,13 @@
 {
  "kind": "discovery#restDescription",
+ "version": "v1",
+ "id": "storage:v1",
+ "rootUrl": "https://storage.googleapis.com/",
+ "mtlsRootUrl": "https://storage.mtls.googleapis.com/",
+ "baseUrl": "https://storage.googleapis.com/storage/v1/",
+ "basePath": "/storage/v1/",
+ "servicePath": "storage/v1/",
+ "batchPath": "batch/storage/v1",
  "discoveryVersion": "v1",
  "name": "storage",
  "title": "Cloud Storage JSON API",
@@ -4443,13 +4451,6 @@
    }
   }
  },
- "version": "v1",
- "id": "storage:v1",
- "revision": "20200927",
- "rootUrl": "https://storage.googleapis.com/",
- "baseUrl": "https://storage.googleapis.com/storage/v1/",
- "basePath": "/storage/v1/",
- "servicePath": "storage/v1/",
- "batchPath": "batch/storage/v1",
- "etag": "\"3133373531323239383338313531333236393038\""
+ "revision": "20201106",
+ "etag": "\"343633363836393231343833333835333032\""
 }

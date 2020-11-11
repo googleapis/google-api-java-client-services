@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-transcoder",
+    "version": "v1beta1-rev20201111-1.30.10"
+  }
+}

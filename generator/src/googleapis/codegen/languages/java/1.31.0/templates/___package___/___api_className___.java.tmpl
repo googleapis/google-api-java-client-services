@@ -44,6 +44,14 @@ public class {{ api.className }} extends com.google.api.client.googleapis.servic
   public static final String DEFAULT_ROOT_URL = "{{ api.rootUrl }}";
 
   /**
+   * The default encoded mTLS root URL of the service. This is determined when the library is generated
+   * and normally should not be changed.
+   *
+   * @since 1.31
+   */
+  public static final String DEFAULT_MTLS_ROOT_URL = "{{ api.mtlsRootUrl }}";
+
+  /**
    * The default encoded service path of the service. This is determined when the library is
    * generated and normally should not be changed.
    *
@@ -127,6 +135,18 @@ public class {{ api.className }} extends com.google.api.client.googleapis.servic
    */
   public static final class Builder extends com.google.api.client.googleapis.services.json.AbstractGoogleJsonClient.Builder {
 
+    private static String chooseEndpoint(com.google.api.client.http.HttpTransport transport) {
+      // If the GOOGLE_API_USE_MTLS_ENDPOINT environment variable value is "always", use mTLS endpoint.
+      // If the env variable is "auto", use mTLS endpoint if and only if the transport is mTLS.
+      // Use the regular endpoint for all other cases.
+      String useMtlsEndpoint = System.getenv("GOOGLE_API_USE_MTLS_ENDPOINT");
+      useMtlsEndpoint = useMtlsEndpoint == null ? "auto" : useMtlsEndpoint;
+      if ("always".equals(useMtlsEndpoint) || ("auto".equals(useMtlsEndpoint) && transport != null && transport.isMtls())) {
+        return DEFAULT_MTLS_ROOT_URL;
+      }
+      return DEFAULT_ROOT_URL;
+    }
+
     /**
      * Returns an instance of a new builder.
      *
@@ -155,7 +175,7 @@ public class {{ api.className }} extends com.google.api.client.googleapis.servic
       super(
           transport,
           jsonFactory,
-          DEFAULT_ROOT_URL,
+          Builder.chooseEndpoint(transport),
           DEFAULT_SERVICE_PATH,
           httpRequestInitializer,
           {% if api.dataWrapper %}true{% else %}false{% endif %});

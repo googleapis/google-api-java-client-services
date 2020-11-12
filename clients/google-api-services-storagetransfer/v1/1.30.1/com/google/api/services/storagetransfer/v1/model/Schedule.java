@@ -30,6 +30,27 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class Schedule extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time in UTC that no further transfer operations are scheduled. Combined with
+   * schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer
+   * operations. This field must be greater than or equal to the timestamp corresponding to the
+   * combintation of schedule_start_date and start_time_of_day, and is subject to the following: *
+   * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of
+   * `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date`
+   * is not set, then INVALID_ARGUMENT is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimeOfDay endTimeOfDay;
+
+  /**
+   * Interval between the start of each scheduled TransferOperation. If unspecified, the default
+   * value is 24 hours. This value may not be less than 1 hour.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String repeatInterval;
+
+  /**
    * The last day a transfer runs. Date boundaries are determined relative to UTC time. A job will
    * run once per 24 hours within the following guidelines: * If `schedule_end_date` and
    * schedule_start_date are the same and in the future relative to UTC, the transfer is executed
@@ -65,6 +86,54 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TimeOfDay startTimeOfDay;
+
+  /**
+   * The time in UTC that no further transfer operations are scheduled. Combined with
+   * schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer
+   * operations. This field must be greater than or equal to the timestamp corresponding to the
+   * combintation of schedule_start_date and start_time_of_day, and is subject to the following: *
+   * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of
+   * `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date`
+   * is not set, then INVALID_ARGUMENT is returned.
+   * @return value or {@code null} for none
+   */
+  public TimeOfDay getEndTimeOfDay() {
+    return endTimeOfDay;
+  }
+
+  /**
+   * The time in UTC that no further transfer operations are scheduled. Combined with
+   * schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer
+   * operations. This field must be greater than or equal to the timestamp corresponding to the
+   * combintation of schedule_start_date and start_time_of_day, and is subject to the following: *
+   * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of
+   * `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date`
+   * is not set, then INVALID_ARGUMENT is returned.
+   * @param endTimeOfDay endTimeOfDay or {@code null} for none
+   */
+  public Schedule setEndTimeOfDay(TimeOfDay endTimeOfDay) {
+    this.endTimeOfDay = endTimeOfDay;
+    return this;
+  }
+
+  /**
+   * Interval between the start of each scheduled TransferOperation. If unspecified, the default
+   * value is 24 hours. This value may not be less than 1 hour.
+   * @return value or {@code null} for none
+   */
+  public String getRepeatInterval() {
+    return repeatInterval;
+  }
+
+  /**
+   * Interval between the start of each scheduled TransferOperation. If unspecified, the default
+   * value is 24 hours. This value may not be less than 1 hour.
+   * @param repeatInterval repeatInterval or {@code null} for none
+   */
+  public Schedule setRepeatInterval(String repeatInterval) {
+    this.repeatInterval = repeatInterval;
+    return this;
+  }
 
   /**
    * The last day a transfer runs. Date boundaries are determined relative to UTC time. A job will

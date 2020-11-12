@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-doubleclickbidmanager",
-    "version": "v1.1-rev20201016-1.30.10"
+    "version": "v1.1-rev20201105-1.30.10"
   }
 }

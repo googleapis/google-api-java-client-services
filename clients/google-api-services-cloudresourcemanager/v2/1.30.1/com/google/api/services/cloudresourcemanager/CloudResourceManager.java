@@ -1089,11 +1089,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * Updates a Folder, changing its display_name. Changes to the folder display_name will be rejected
      * if they violate either the display_name formatting rules or naming constraints described in the
      * CreateFolder documentation. The Folder's display name must start and end with a letter or digit,
-     * may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30
-     * characters. This is captured by the regular expression: `[\p{L}\p{N}]([\p{L}\p{N}_-
-     * ]{0,28}[\p{L}\p{N}])?`. The caller must have `resourcemanager.folders.update` permission on the
-     * identified folder. If the update fails due to the unique name constraint then a
-     * PreconditionFailure explaining this violation will be returned in the Status.details field.
+     * may contain letters, digits, spaces, hyphens and underscores and can be between 3 and 30
+     * characters. This is captured by the regular expression: `\p{L}\p{N}{1,28}[\p{L}\p{N}]`. The
+     * caller must have `resourcemanager.folders.update` permission on the identified folder. If the
+     * update fails due to the unique name constraint then a PreconditionFailure explaining this
+     * violation will be returned in the Status.details field.
      *
      * Create a request for the method "folders.patch".
      *
@@ -1122,12 +1122,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Updates a Folder, changing its display_name. Changes to the folder display_name will be
        * rejected if they violate either the display_name formatting rules or naming constraints
        * described in the CreateFolder documentation. The Folder's display name must start and end with
-       * a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no
-       * longer than 30 characters. This is captured by the regular expression:
-       * `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`. The caller must have
-       * `resourcemanager.folders.update` permission on the identified folder. If the update fails due
-       * to the unique name constraint then a PreconditionFailure explaining this violation will be
-       * returned in the Status.details field.
+       * a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be
+       * between 3 and 30 characters. This is captured by the regular expression:
+       * `\p{L}\p{N}{1,28}[\p{L}\p{N}]`. The caller must have `resourcemanager.folders.update`
+       * permission on the identified folder. If the update fails due to the unique name constraint then
+       * a PreconditionFailure explaining this violation will be returned in the Status.details field.
        *
        * Create a request for the method "folders.patch".
        *

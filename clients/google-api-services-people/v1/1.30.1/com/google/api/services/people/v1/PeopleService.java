@@ -1589,7 +1589,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
   public class People {
 
     /**
-     * Create a new contact and return the person resource for that contact. The request throws a 400
+     * Create a new contact and return the person resource for that contact. The request returns a 400
      * error if more than one field is specified on a field that is a singleton for contact sources: *
      * biographies * birthdays * genders * names
      *
@@ -1612,7 +1612,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/people:createContact";
 
       /**
-       * Create a new contact and return the person resource for that contact. The request throws a 400
+       * Create a new contact and return the person resource for that contact. The request returns a 400
        * error if more than one field is specified on a field that is a singleton for contact sources: *
        * biographies * birthdays * genders * names
        *
@@ -2071,7 +2071,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     }
     /**
      * Provides information about a person by specifying a resource name. Use `people/me` to indicate
-     * the authenticated user. The request throws a 400 error if 'personFields' is not specified.
+     * the authenticated user. The request returns a 400 error if 'personFields' is not specified.
      *
      * Create a request for the method "people.get".
      *
@@ -2100,7 +2100,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Provides information about a person by specifying a resource name. Use `people/me` to indicate
-       * the authenticated user. The request throws a 400 error if 'personFields' is not specified.
+       * the authenticated user. The request returns a 400 error if 'personFields' is not specified.
        *
        * Create a request for the method "people.get".
        *
@@ -2316,7 +2316,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     }
     /**
      * Provides information about a list of specific people by specifying a list of requested resource
-     * names. Use `people/me` to indicate the authenticated user. The request throws a 400 error if
+     * names. Use `people/me` to indicate the authenticated user. The request returns a 400 error if
      * 'personFields' is not specified.
      *
      * Create a request for the method "people.getBatchGet".
@@ -2338,7 +2338,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Provides information about a list of specific people by specifying a list of requested resource
-       * names. Use `people/me` to indicate the authenticated user. The request throws a 400 error if
+       * names. Use `people/me` to indicate the authenticated user. The request returns a 400 error if
        * 'personFields' is not specified.
        *
        * Create a request for the method "people.getBatchGet".
@@ -3497,8 +3497,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     public class Connections {
 
       /**
-       * Provides a list of the authenticated user's contacts. The request throws a 400 error if
-       * 'personFields' is not specified.
+       * Provides a list of the authenticated user's contacts. The request returns a 400 error if
+       * `personFields` is not specified. The request returns a 410 error if `sync_token` is specified and
+       * is expired. Sync tokens expire after 7 days. A request without `sync_token` should be made and
+       * all contacts should be synced.
        *
        * Create a request for the method "connections.list".
        *
@@ -3522,8 +3524,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^people/[^/]+$");
 
         /**
-         * Provides a list of the authenticated user's contacts. The request throws a 400 error if
-         * 'personFields' is not specified.
+         * Provides a list of the authenticated user's contacts. The request returns a 400 error if
+         * `personFields` is not specified. The request returns a 410 error if `sync_token` is specified
+         * and is expired. Sync tokens expire after 7 days. A request without `sync_token` should be made
+         * and all contacts should be synced.
          *
          * Create a request for the method "connections.list".
          *

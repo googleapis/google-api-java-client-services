@@ -179,6 +179,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String reservedIpRange;
 
   /**
+   * Output only. List of server CA certificates for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TlsCertificate> serverCaCerts;
+
+  /**
    * Output only. The current state of this instance.
    * The value may be {@code null}.
    */
@@ -198,6 +205,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String tier;
+
+  /**
+   * Optional. The In-transit encryption mode of Redis instance. If not provided, in-transit
+   * encryption is disabled for instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transitEncryptionMode;
 
   /**
    * Optional. Only applicable to STANDARD_HA tier which protects the instance against zonal
@@ -547,6 +562,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. List of server CA certificates for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TlsCertificate> getServerCaCerts() {
+    return serverCaCerts;
+  }
+
+  /**
+   * Output only. List of server CA certificates for the instance.
+   * @param serverCaCerts serverCaCerts or {@code null} for none
+   */
+  public Instance setServerCaCerts(java.util.List<TlsCertificate> serverCaCerts) {
+    this.serverCaCerts = serverCaCerts;
+    return this;
+  }
+
+  /**
    * Output only. The current state of this instance.
    * @return value or {@code null} for none
    */
@@ -594,6 +626,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setTier(java.lang.String tier) {
     this.tier = tier;
+    return this;
+  }
+
+  /**
+   * Optional. The In-transit encryption mode of Redis instance. If not provided, in-transit
+   * encryption is disabled for instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransitEncryptionMode() {
+    return transitEncryptionMode;
+  }
+
+  /**
+   * Optional. The In-transit encryption mode of Redis instance. If not provided, in-transit
+   * encryption is disabled for instance.
+   * @param transitEncryptionMode transitEncryptionMode or {@code null} for none
+   */
+  public Instance setTransitEncryptionMode(java.lang.String transitEncryptionMode) {
+    this.transitEncryptionMode = transitEncryptionMode;
     return this;
   }
 

@@ -176,8 +176,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.String fileExtension;
 
   /**
-   * The size of the file in bytes. This field is only populated for files with content stored in
-   * Google Drive; it is not populated for Docs Editors or shortcut files.
+   * The size of the file in bytes. This field is populated for files with content stored in Google
+   * Drive and for files in Docs Editors; it is not populated for shortcut files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -906,8 +906,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the file in bytes. This field is only populated for files with content stored in
-   * Google Drive; it is not populated for Docs Editors or shortcut files.
+   * The size of the file in bytes. This field is populated for files with content stored in Google
+   * Drive and for files in Docs Editors; it is not populated for shortcut files.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFileSize() {
@@ -915,8 +915,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the file in bytes. This field is only populated for files with content stored in
-   * Google Drive; it is not populated for Docs Editors or shortcut files.
+   * The size of the file in bytes. This field is populated for files with content stored in Google
+   * Drive and for files in Docs Editors; it is not populated for shortcut files.
    * @param fileSize fileSize or {@code null} for none
    */
   public File setFileSize(java.lang.Long fileSize) {

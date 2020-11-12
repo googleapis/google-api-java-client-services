@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/fcv4OojYDxxlAuyFQjV4FQ5X7aI\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/6ohqf_UZVcfD3dkqBiiMsIBdm74\"",
  "discoveryVersion": "v1",
  "id": "drive:v2",
  "name": "drive",
  "version": "v2",
- "revision": "20201101",
+ "revision": "20201108",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -1412,7 +1412,7 @@
     },
     "fileSize": {
      "type": "string",
-     "description": "The size of the file in bytes. This field is only populated for files with content stored in Google Drive; it is not populated for Docs Editors or shortcut files.",
+     "description": "The size of the file in bytes. This field is populated for files with content stored in Google Drive and for files in Docs Editors; it is not populated for shortcut files.",
      "format": "int64"
     },
     "folderColorRgb": {

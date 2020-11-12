@@ -101,7 +101,7 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
 
   /**
    * The number of rows to return. If unspecified, 10 rows are returned. If -1, all rows are
-   * returned.
+   * returned. To learn more about this pagination parameter, see [Pagination](basics#pagination).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -137,7 +137,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The row count of the start row. The first row is counted as row 0.
+   * The row count of the start row. The first row is counted as row 0. To learn more about this
+   * pagination parameter, see [Pagination](basics#pagination).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -301,7 +302,7 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
 
   /**
    * The number of rows to return. If unspecified, 10 rows are returned. If -1, all rows are
-   * returned.
+   * returned. To learn more about this pagination parameter, see [Pagination](basics#pagination).
    * @return value or {@code null} for none
    */
   public java.lang.Long getLimit() {
@@ -310,7 +311,7 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
 
   /**
    * The number of rows to return. If unspecified, 10 rows are returned. If -1, all rows are
-   * returned.
+   * returned. To learn more about this pagination parameter, see [Pagination](basics#pagination).
    * @param limit limit or {@code null} for none
    */
   public RunReportRequest setLimit(java.lang.Long limit) {
@@ -374,7 +375,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The row count of the start row. The first row is counted as row 0.
+   * The row count of the start row. The first row is counted as row 0. To learn more about this
+   * pagination parameter, see [Pagination](basics#pagination).
    * @return value or {@code null} for none
    */
   public java.lang.Long getOffset() {
@@ -382,7 +384,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The row count of the start row. The first row is counted as row 0.
+   * The row count of the start row. The first row is counted as row 0. To learn more about this
+   * pagination parameter, see [Pagination](basics#pagination).
    * @param offset offset or {@code null} for none
    */
   public RunReportRequest setOffset(java.lang.Long offset) {

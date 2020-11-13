@@ -25,7 +25,7 @@ package com.google.api.services.deploymentmanager;
  *
  * <p>
  * For more information about this service, see the
- * <a href="http://cloud.google.com/deployment-manager" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/deployment-manager" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

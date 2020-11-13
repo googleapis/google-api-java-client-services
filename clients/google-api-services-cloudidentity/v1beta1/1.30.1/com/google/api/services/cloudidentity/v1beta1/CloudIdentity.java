@@ -152,8 +152,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link CancelWipe#execute()} method to invoke the remote operation.
      *
      * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device,
-     *        and device_user_id is the unique ID assigned to the User.
+     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
      * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.CancelWipeDeviceRequest}
      * @return the request
      */
@@ -183,8 +182,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device,
-     *        and device_user_id is the unique ID assigned to the User.
+     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
        * @param content the {@link com.google.api.services.cloudidentity.v1beta1.model.CancelWipeDeviceRequest}
        * @since 1.13
        */
@@ -256,14 +254,13 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
        * Device in format: `devices/{device_id}`, where device_id is the unique ID assigned to the
-       * Device, and device_user_id is the unique ID assigned to the User.
+       * Device.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
-     format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device, and
-     device_user_id is the unique ID assigned to the User.
+     format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
        */
       public java.lang.String getName() {
         return name;
@@ -272,7 +269,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
        * Device in format: `devices/{device_id}`, where device_id is the unique ID assigned to the
-       * Device, and device_user_id is the unique ID assigned to the User.
+       * Device.
        */
       public CancelWipe setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

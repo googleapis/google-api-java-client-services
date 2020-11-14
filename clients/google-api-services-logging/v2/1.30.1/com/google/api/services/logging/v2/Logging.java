@@ -163,7 +163,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Buckets {
 
       /**
-       * Gets a bucket (Beta).
+       * Gets a bucket.
        *
        * Create a request for the method "buckets.get".
        *
@@ -192,7 +192,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+/buckets/[^/]+$");
 
         /**
-         * Gets a bucket (Beta).
+         * Gets a bucket.
          *
          * Create a request for the method "buckets.get".
          *
@@ -2088,7 +2088,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Lists buckets (Beta).
+         * Lists buckets.
          *
          * Create a request for the method "buckets.list".
          *
@@ -2118,7 +2118,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists buckets (Beta).
+           * Lists buckets.
            *
            * Create a request for the method "buckets.list".
            *
@@ -2317,7 +2317,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
          * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
          * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified after
-         * it is created. This method is in Beta.
+         * it is created.
          *
          * Create a request for the method "buckets.patch".
          *
@@ -2352,7 +2352,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
            * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
            * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified
-           * after it is created. This method is in Beta.
+           * after it is created.
            *
            * Create a request for the method "buckets.patch".
            *
@@ -3007,7 +3007,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Lists views on a bucket..
+           * Lists views on a bucket.
            *
            * Create a request for the method "views.list".
            *
@@ -3032,7 +3032,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
             /**
-             * Lists views on a bucket..
+             * Lists views on a bucket.
              *
              * Create a request for the method "views.list".
              *
@@ -7830,7 +7830,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Gets a bucket (Beta).
+         * Gets a bucket.
          *
          * Create a request for the method "buckets.get".
          *
@@ -7859,7 +7859,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
           /**
-           * Gets a bucket (Beta).
+           * Gets a bucket.
            *
            * Create a request for the method "buckets.get".
            *
@@ -7997,7 +7997,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Lists buckets (Beta).
+         * Lists buckets.
          *
          * Create a request for the method "buckets.list".
          *
@@ -8027,7 +8027,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists buckets (Beta).
+           * Lists buckets.
            *
            * Create a request for the method "buckets.list".
            *
@@ -8226,7 +8226,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
          * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
          * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified after
-         * it is created. This method is in Beta.
+         * it is created.
          *
          * Create a request for the method "buckets.patch".
          *
@@ -8261,7 +8261,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
            * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
            * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified
-           * after it is created. This method is in Beta.
+           * after it is created.
            *
            * Create a request for the method "buckets.patch".
            *
@@ -9072,7 +9072,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Lists views on a bucket..
+           * Lists views on a bucket.
            *
            * Create a request for the method "views.list".
            *
@@ -9097,7 +9097,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
             /**
-             * Lists views on a bucket..
+             * Lists views on a bucket.
              *
              * Create a request for the method "views.list".
              *
@@ -11775,7 +11775,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Gets a bucket (Beta).
+       * Gets a bucket.
        *
        * Create a request for the method "buckets.get".
        *
@@ -11804,7 +11804,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
         /**
-         * Gets a bucket (Beta).
+         * Gets a bucket.
          *
          * Create a request for the method "buckets.get".
          *
@@ -11942,7 +11942,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Lists buckets (Beta).
+       * Lists buckets.
        *
        * Create a request for the method "buckets.list".
        *
@@ -11972,7 +11972,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+$");
 
         /**
-         * Lists buckets (Beta).
+         * Lists buckets.
          *
          * Create a request for the method "buckets.list".
          *
@@ -12169,7 +12169,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
        * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
        * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified after
-       * it is created. This method is in Beta.
+       * it is created.
        *
        * Create a request for the method "buckets.patch".
        *
@@ -12204,7 +12204,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
          * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
          * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified
-         * after it is created. This method is in Beta.
+         * after it is created.
          *
          * Create a request for the method "buckets.patch".
          *
@@ -13015,7 +13015,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Lists views on a bucket..
+         * Lists views on a bucket.
          *
          * Create a request for the method "views.list".
          *
@@ -13040,7 +13040,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
           /**
-           * Lists views on a bucket..
+           * Lists views on a bucket.
            *
            * Create a request for the method "views.list".
            *
@@ -15981,7 +15981,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Gets a bucket (Beta).
+         * Gets a bucket.
          *
          * Create a request for the method "buckets.get".
          *
@@ -16010,7 +16010,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
           /**
-           * Gets a bucket (Beta).
+           * Gets a bucket.
            *
            * Create a request for the method "buckets.get".
            *
@@ -16148,7 +16148,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Lists buckets (Beta).
+         * Lists buckets.
          *
          * Create a request for the method "buckets.list".
          *
@@ -16178,7 +16178,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists buckets (Beta).
+           * Lists buckets.
            *
            * Create a request for the method "buckets.list".
            *
@@ -16377,7 +16377,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
          * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
          * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified after
-         * it is created. This method is in Beta.
+         * it is created.
          *
          * Create a request for the method "buckets.patch".
          *
@@ -16412,7 +16412,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
            * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
            * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified
-           * after it is created. This method is in Beta.
+           * after it is created.
            *
            * Create a request for the method "buckets.patch".
            *
@@ -17223,7 +17223,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Lists views on a bucket..
+           * Lists views on a bucket.
            *
            * Create a request for the method "views.list".
            *
@@ -17248,7 +17248,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
             /**
-             * Lists views on a bucket..
+             * Lists views on a bucket.
              *
              * Create a request for the method "views.list".
              *
@@ -20831,7 +20831,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Gets a bucket (Beta).
+         * Gets a bucket.
          *
          * Create a request for the method "buckets.get".
          *
@@ -20860,7 +20860,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
           /**
-           * Gets a bucket (Beta).
+           * Gets a bucket.
            *
            * Create a request for the method "buckets.get".
            *
@@ -20998,7 +20998,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Lists buckets (Beta).
+         * Lists buckets.
          *
          * Create a request for the method "buckets.list".
          *
@@ -21028,7 +21028,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists buckets (Beta).
+           * Lists buckets.
            *
            * Create a request for the method "buckets.list".
            *
@@ -21227,7 +21227,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
          * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
          * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified after
-         * it is created. This method is in Beta.
+         * it is created.
          *
          * Create a request for the method "buckets.patch".
          *
@@ -21262,7 +21262,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * from the new bucket: retention_periodIf the retention period is decreased and the bucket is
            * locked, FAILED_PRECONDITION will be returned.If the bucket has a LifecycleState of
            * DELETE_REQUESTED, FAILED_PRECONDITION will be returned.A buckets region may not be modified
-           * after it is created. This method is in Beta.
+           * after it is created.
            *
            * Create a request for the method "buckets.patch".
            *
@@ -22073,7 +22073,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Lists views on a bucket..
+           * Lists views on a bucket.
            *
            * Create a request for the method "views.list".
            *
@@ -22098,7 +22098,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
             /**
-             * Lists views on a bucket..
+             * Lists views on a bucket.
              *
              * Create a request for the method "views.list".
              *

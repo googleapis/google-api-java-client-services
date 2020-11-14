@@ -46,7 +46,8 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   /**
    * Filter that restricts which log entries in a bucket are visible in this view. Filters are
    * restricted to be a logical AND of ==/!= of any of the following: originating
-   * project/folder/organization/billing account. resource type log id
+   * project/folder/organization/billing account. resource type log id Example:
+   * SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +105,8 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   /**
    * Filter that restricts which log entries in a bucket are visible in this view. Filters are
    * restricted to be a logical AND of ==/!= of any of the following: originating
-   * project/folder/organization/billing account. resource type log id
+   * project/folder/organization/billing account. resource type log id Example:
+   * SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -114,7 +116,8 @@ public final class LogView extends com.google.api.client.json.GenericJson {
   /**
    * Filter that restricts which log entries in a bucket are visible in this view. Filters are
    * restricted to be a logical AND of ==/!= of any of the following: originating
-   * project/folder/organization/billing account. resource type log id
+   * project/folder/organization/billing account. resource type log id Example:
+   * SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
    * @param filter filter or {@code null} for none
    */
   public LogView setFilter(java.lang.String filter) {

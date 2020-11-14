@@ -53,7 +53,7 @@ public final class DoubleVerify extends com.google.api.client.json.GenericJson {
 
   /**
    * The custom segment ID provided by DoubleVerify. The ID must start with "51" and consist of
-   * eight digits. Custom segment id cannot be specified along with any of the following fields: *
+   * eight digits. Custom segment ID cannot be specified along with any of the following fields: *
    * brand_safety_categories * avoided_age_ratings * app_star_rating * fraud_invalid_traffic
    * The value may be {@code null}.
    */
@@ -134,7 +134,7 @@ public final class DoubleVerify extends com.google.api.client.json.GenericJson {
 
   /**
    * The custom segment ID provided by DoubleVerify. The ID must start with "51" and consist of
-   * eight digits. Custom segment id cannot be specified along with any of the following fields: *
+   * eight digits. Custom segment ID cannot be specified along with any of the following fields: *
    * brand_safety_categories * avoided_age_ratings * app_star_rating * fraud_invalid_traffic
    * @return value or {@code null} for none
    */
@@ -144,7 +144,7 @@ public final class DoubleVerify extends com.google.api.client.json.GenericJson {
 
   /**
    * The custom segment ID provided by DoubleVerify. The ID must start with "51" and consist of
-   * eight digits. Custom segment id cannot be specified along with any of the following fields: *
+   * eight digits. Custom segment ID cannot be specified along with any of the following fields: *
    * brand_safety_categories * avoided_age_ratings * app_star_rating * fraud_invalid_traffic
    * @param customSegmentId customSegmentId or {@code null} for none
    */

@@ -38,7 +38,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private java.lang.Long advertiserId;
 
   /**
-   * Optional. The bidding strategy of the insertion order. By default, fixed_bid is set.
+   * The bidding strategy of the insertion order. By default, fixed_bid is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +154,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The bidding strategy of the insertion order. By default, fixed_bid is set.
+   * The bidding strategy of the insertion order. By default, fixed_bid is set.
    * @return value or {@code null} for none
    */
   public BiddingStrategy getBidStrategy() {
@@ -162,7 +162,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The bidding strategy of the insertion order. By default, fixed_bid is set.
+   * The bidding strategy of the insertion order. By default, fixed_bid is set.
    * @param bidStrategy bidStrategy or {@code null} for none
    */
   public InsertionOrder setBidStrategy(BiddingStrategy bidStrategy) {

@@ -51,9 +51,9 @@ public final class LineItemFlight extends com.google.api.client.json.GenericJson
 
   /**
    * The ID of the manual trigger associated with the line item. * Required when flight_date_type is
-   * `LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER`. Must not be set otherwise. * A line item's flight dates
-   * are inherited from its parent insertion order. * Active line items will spend when the selected
-   * trigger is activated within the parent insertion order's flight dates.
+   * `LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER`. Must not be set otherwise. * When set, the line item's
+   * flight dates are inherited from its parent insertion order. * Active line items will spend when
+   * the selected trigger is activated within the parent insertion order's flight dates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -105,9 +105,9 @@ public final class LineItemFlight extends com.google.api.client.json.GenericJson
 
   /**
    * The ID of the manual trigger associated with the line item. * Required when flight_date_type is
-   * `LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER`. Must not be set otherwise. * A line item's flight dates
-   * are inherited from its parent insertion order. * Active line items will spend when the selected
-   * trigger is activated within the parent insertion order's flight dates.
+   * `LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER`. Must not be set otherwise. * When set, the line item's
+   * flight dates are inherited from its parent insertion order. * Active line items will spend when
+   * the selected trigger is activated within the parent insertion order's flight dates.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTriggerId() {
@@ -116,9 +116,9 @@ public final class LineItemFlight extends com.google.api.client.json.GenericJson
 
   /**
    * The ID of the manual trigger associated with the line item. * Required when flight_date_type is
-   * `LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER`. Must not be set otherwise. * A line item's flight dates
-   * are inherited from its parent insertion order. * Active line items will spend when the selected
-   * trigger is activated within the parent insertion order's flight dates.
+   * `LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER`. Must not be set otherwise. * When set, the line item's
+   * flight dates are inherited from its parent insertion order. * Active line items will spend when
+   * the selected trigger is activated within the parent insertion order's flight dates.
    * @param triggerId triggerId or {@code null} for none
    */
   public LineItemFlight setTriggerId(java.lang.Long triggerId) {

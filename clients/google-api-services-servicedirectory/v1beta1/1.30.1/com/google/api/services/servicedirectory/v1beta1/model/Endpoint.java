@@ -40,9 +40,18 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String address;
 
   /**
-   * Optional. Metadata for the endpoint. This data can be consumed by service clients. The entire
-   * metadata dictionary may contain up to 512 characters, spread accoss all key-value pairs.
-   * Metadata that goes beyond any these limits will be rejected.
+   * Optional. Metadata for the endpoint. This data can be consumed by service clients.
+   * Restrictions: - The entire metadata dictionary may contain up to 512 characters, spread accoss
+   * all key-value pairs. Metadata that goes beyond any these limits will be rejected. - Valid
+   * metadata keys have two segments: an optional prefix and name, separated by a slash (/). The
+   * name segment is required and must be 63 characters or less, beginning and ending with an
+   * alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and
+   * alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS
+   * subdomain: a series of DNS labels separated by dots (.), not longer than 253 characters in
+   * total, followed by a slash (/). Metadata that fails to meet these requirements will be
+   * rejected. - The '(*.)google.com/' and '(*.)googleapis.com/' prefixes are reserved for system
+   * metadata managed by Service Directory. If the user tries to write to these keyspaces, those
+   * entries will be silently ignored by the system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,9 +92,18 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Metadata for the endpoint. This data can be consumed by service clients. The entire
-   * metadata dictionary may contain up to 512 characters, spread accoss all key-value pairs.
-   * Metadata that goes beyond any these limits will be rejected.
+   * Optional. Metadata for the endpoint. This data can be consumed by service clients.
+   * Restrictions: - The entire metadata dictionary may contain up to 512 characters, spread accoss
+   * all key-value pairs. Metadata that goes beyond any these limits will be rejected. - Valid
+   * metadata keys have two segments: an optional prefix and name, separated by a slash (/). The
+   * name segment is required and must be 63 characters or less, beginning and ending with an
+   * alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and
+   * alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS
+   * subdomain: a series of DNS labels separated by dots (.), not longer than 253 characters in
+   * total, followed by a slash (/). Metadata that fails to meet these requirements will be
+   * rejected. - The '(*.)google.com/' and '(*.)googleapis.com/' prefixes are reserved for system
+   * metadata managed by Service Directory. If the user tries to write to these keyspaces, those
+   * entries will be silently ignored by the system.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -93,9 +111,18 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Metadata for the endpoint. This data can be consumed by service clients. The entire
-   * metadata dictionary may contain up to 512 characters, spread accoss all key-value pairs.
-   * Metadata that goes beyond any these limits will be rejected.
+   * Optional. Metadata for the endpoint. This data can be consumed by service clients.
+   * Restrictions: - The entire metadata dictionary may contain up to 512 characters, spread accoss
+   * all key-value pairs. Metadata that goes beyond any these limits will be rejected. - Valid
+   * metadata keys have two segments: an optional prefix and name, separated by a slash (/). The
+   * name segment is required and must be 63 characters or less, beginning and ending with an
+   * alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and
+   * alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS
+   * subdomain: a series of DNS labels separated by dots (.), not longer than 253 characters in
+   * total, followed by a slash (/). Metadata that fails to meet these requirements will be
+   * rejected. - The '(*.)google.com/' and '(*.)googleapis.com/' prefixes are reserved for system
+   * metadata managed by Service Directory. If the user tries to write to these keyspaces, those
+   * entries will be silently ignored by the system.
    * @param metadata metadata or {@code null} for none
    */
   public Endpoint setMetadata(java.util.Map<String, java.lang.String> metadata) {

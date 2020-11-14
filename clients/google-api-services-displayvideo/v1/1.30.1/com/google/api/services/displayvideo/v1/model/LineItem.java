@@ -171,7 +171,9 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private PartnerRevenueModel partnerRevenueModel;
 
   /**
-   * The targeting expansion settings of the line item.
+   * The [targeting expansion](https://support.google.com/displayvideo/answer/10191558) settings of
+   * the line item. This config is only applicable when eligible audience list targeting is assigned
+   * to the line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -530,7 +532,9 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The targeting expansion settings of the line item.
+   * The [targeting expansion](https://support.google.com/displayvideo/answer/10191558) settings of
+   * the line item. This config is only applicable when eligible audience list targeting is assigned
+   * to the line item.
    * @return value or {@code null} for none
    */
   public TargetingExpansionConfig getTargetingExpansion() {
@@ -538,7 +542,9 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The targeting expansion settings of the line item.
+   * The [targeting expansion](https://support.google.com/displayvideo/answer/10191558) settings of
+   * the line item. This config is only applicable when eligible audience list targeting is assigned
+   * to the line item.
    * @param targetingExpansion targetingExpansion or {@code null} for none
    */
   public LineItem setTargetingExpansion(TargetingExpansionConfig targetingExpansion) {

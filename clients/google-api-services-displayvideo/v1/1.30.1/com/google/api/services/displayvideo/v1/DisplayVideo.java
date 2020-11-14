@@ -9967,7 +9967,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Lists manual triggers that are accessible to the current user for a given advertiser id. The
+       * Lists manual triggers that are accessible to the current user for a given advertiser ID. The
        * order is defined by the order_by parameter. A single advertiser_id is required.
        *
        * Create a request for the method "manualTriggers.list".
@@ -9992,7 +9992,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Lists manual triggers that are accessible to the current user for a given advertiser id. The
+         * Lists manual triggers that are accessible to the current user for a given advertiser ID. The
          * order is defined by the order_by parameter. A single advertiser_id is required.
          *
          * Create a request for the method "manualTriggers.list".

@@ -14989,6 +14989,769 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Regions collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Regions.List request = content.regions().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Regions regions() {
+    return new Regions();
+  }
+
+  /**
+   * The "regions" collection of methods.
+   */
+  public class Regions {
+
+    /**
+     * Creates a region definition in your Merchant Center account.
+     *
+     * Create a request for the method "regions.create".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The id of the merchant for which to create region definition.
+     * @param content the {@link com.google.api.services.content.model.Region}
+     * @return the request
+     */
+    public Create create(java.lang.Long merchantId, com.google.api.services.content.model.Region content) throws java.io.IOException {
+      Create result = new Create(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends ShoppingContentRequest<com.google.api.services.content.model.Region> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/regions";
+
+      /**
+       * Creates a region definition in your Merchant Center account.
+       *
+       * Create a request for the method "regions.create".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The id of the merchant for which to create region definition.
+       * @param content the {@link com.google.api.services.content.model.Region}
+       * @since 1.13
+       */
+      protected Create(java.lang.Long merchantId, com.google.api.services.content.model.Region content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.Region.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The id of the merchant for which to create region definition. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The id of the merchant for which to create region definition.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The id of the merchant for which to create region definition. */
+      public Create setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The id of the region to create. */
+      @com.google.api.client.util.Key
+      private java.lang.String regionId;
+
+      /** Required. The id of the region to create.
+       */
+      public java.lang.String getRegionId() {
+        return regionId;
+      }
+
+      /** Required. The id of the region to create. */
+      public Create setRegionId(java.lang.String regionId) {
+        this.regionId = regionId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a region definition from your Merchant Center account.
+     *
+     * Create a request for the method "regions.delete".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The id of the merchant for which to delete region definition.
+     * @param regionId Required. The id of the region to delete.
+     * @return the request
+     */
+    public Delete delete(java.lang.Long merchantId, java.lang.String regionId) throws java.io.IOException {
+      Delete result = new Delete(merchantId, regionId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/regions/{regionId}";
+
+      /**
+       * Deletes a region definition from your Merchant Center account.
+       *
+       * Create a request for the method "regions.delete".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The id of the merchant for which to delete region definition.
+       * @param regionId Required. The id of the region to delete.
+       * @since 1.13
+       */
+      protected Delete(java.lang.Long merchantId, java.lang.String regionId) {
+        super(ShoppingContent.this, "DELETE", REST_PATH, null, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.regionId = com.google.api.client.util.Preconditions.checkNotNull(regionId, "Required parameter regionId must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The id of the merchant for which to delete region definition. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The id of the merchant for which to delete region definition.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The id of the merchant for which to delete region definition. */
+      public Delete setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The id of the region to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String regionId;
+
+      /** Required. The id of the region to delete.
+       */
+      public java.lang.String getRegionId() {
+        return regionId;
+      }
+
+      /** Required. The id of the region to delete. */
+      public Delete setRegionId(java.lang.String regionId) {
+        this.regionId = regionId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a region defined in your Merchant Center account.
+     *
+     * Create a request for the method "regions.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The id of the merchant for which to retrieve region definition.
+     * @param regionId Required. The id of the region to retrieve.
+     * @return the request
+     */
+    public Get get(java.lang.Long merchantId, java.lang.String regionId) throws java.io.IOException {
+      Get result = new Get(merchantId, regionId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Region> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/regions/{regionId}";
+
+      /**
+       * Retrieves a region defined in your Merchant Center account.
+       *
+       * Create a request for the method "regions.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The id of the merchant for which to retrieve region definition.
+       * @param regionId Required. The id of the region to retrieve.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long merchantId, java.lang.String regionId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.Region.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.regionId = com.google.api.client.util.Preconditions.checkNotNull(regionId, "Required parameter regionId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The id of the merchant for which to retrieve region definition. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The id of the merchant for which to retrieve region definition.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The id of the merchant for which to retrieve region definition. */
+      public Get setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The id of the region to retrieve. */
+      @com.google.api.client.util.Key
+      private java.lang.String regionId;
+
+      /** Required. The id of the region to retrieve.
+       */
+      public java.lang.String getRegionId() {
+        return regionId;
+      }
+
+      /** Required. The id of the region to retrieve. */
+      public Get setRegionId(java.lang.String regionId) {
+        this.regionId = regionId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the regions in your Merchant Center account.
+     *
+     * Create a request for the method "regions.list".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The id of the merchant for which to list region definitions.
+     * @return the request
+     */
+    public List list(java.lang.Long merchantId) throws java.io.IOException {
+      List result = new List(merchantId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListRegionsResponse> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/regions";
+
+      /**
+       * Lists the regions in your Merchant Center account.
+       *
+       * Create a request for the method "regions.list".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The id of the merchant for which to list region definitions.
+       * @since 1.13
+       */
+      protected List(java.lang.Long merchantId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ListRegionsResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The id of the merchant for which to list region definitions. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The id of the merchant for which to list region definitions.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The id of the merchant for which to list region definitions. */
+      public List setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * The maximum number of regions to return. The service may return fewer than this value. If
+       * unspecified, at most 50 rules will be returned. The maximum value is 1000; values above
+       * 1000 will be coerced to 1000.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of regions to return. The service may return fewer than this value. If
+     unspecified, at most 50 rules will be returned. The maximum value is 1000; values above 1000 will
+     be coerced to 1000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of regions to return. The service may return fewer than this value. If
+       * unspecified, at most 50 rules will be returned. The maximum value is 1000; values above
+       * 1000 will be coerced to 1000.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A page token, received from a previous `ListRegions` call. Provide this to retrieve the
+       * subsequent page. When paginating, all other parameters provided to `ListRegions` must match
+       * the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A page token, received from a previous `ListRegions` call. Provide this to retrieve the subsequent
+     page. When paginating, all other parameters provided to `ListRegions` must match the call that
+     provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A page token, received from a previous `ListRegions` call. Provide this to retrieve the
+       * subsequent page. When paginating, all other parameters provided to `ListRegions` must match
+       * the call that provided the page token.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates a region definition in your Merchant Center account.
+     *
+     * Create a request for the method "regions.patch".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The id of the merchant for which to update region definition.
+     * @param regionId Required. The id of the region to update.
+     * @param content the {@link com.google.api.services.content.model.Region}
+     * @return the request
+     */
+    public Patch patch(java.lang.Long merchantId, java.lang.String regionId, com.google.api.services.content.model.Region content) throws java.io.IOException {
+      Patch result = new Patch(merchantId, regionId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends ShoppingContentRequest<com.google.api.services.content.model.Region> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/regions/{regionId}";
+
+      /**
+       * Updates a region definition in your Merchant Center account.
+       *
+       * Create a request for the method "regions.patch".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The id of the merchant for which to update region definition.
+       * @param regionId Required. The id of the region to update.
+       * @param content the {@link com.google.api.services.content.model.Region}
+       * @since 1.13
+       */
+      protected Patch(java.lang.Long merchantId, java.lang.String regionId, com.google.api.services.content.model.Region content) {
+        super(ShoppingContent.this, "PATCH", REST_PATH, content, com.google.api.services.content.model.Region.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.regionId = com.google.api.client.util.Preconditions.checkNotNull(regionId, "Required parameter regionId must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The id of the merchant for which to update region definition. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The id of the merchant for which to update region definition.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The id of the merchant for which to update region definition. */
+      public Patch setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The id of the region to update. */
+      @com.google.api.client.util.Key
+      private java.lang.String regionId;
+
+      /** Required. The id of the region to update.
+       */
+      public java.lang.String getRegionId() {
+        return regionId;
+      }
+
+      /** Required. The id of the region to update. */
+      public Patch setRegionId(java.lang.String regionId) {
+        this.regionId = regionId;
+        return this;
+      }
+
+      /** Optional. The field mask indicating the fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The field mask indicating the fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Optional. The field mask indicating the fields to update. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Repricingrules collection.
    *
    * <p>The typical use is:</p>

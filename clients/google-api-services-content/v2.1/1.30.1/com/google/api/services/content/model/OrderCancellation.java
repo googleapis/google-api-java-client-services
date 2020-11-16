@@ -54,8 +54,8 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
 
   /**
    * The reason for the cancellation. Orders that are canceled with a noInventory reason will lead
-   * to the removal of the product from Shopping Actions until you make an update to that product.
-   * This will not affect your Shopping ads. Acceptable values are: - "`autoPostInternal`" -
+   * to the removal of the product from Buy on Google until you make an update to that product. This
+   * will not affect your Shopping ads. Acceptable values are: - "`autoPostInternal`" -
    * "`autoPostInvalidBillingAddress`" - "`autoPostNoInventory`" - "`autoPostPriceError`" -
    * "`autoPostUndeliverableShippingAddress`" - "`couponAbuse`" - "`customerCanceled`" -
    * "`customerInitiatedCancel`" - "`customerSupportRequested`" - "`failToPushOrderGoogleError`" -
@@ -132,8 +132,8 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
 
   /**
    * The reason for the cancellation. Orders that are canceled with a noInventory reason will lead
-   * to the removal of the product from Shopping Actions until you make an update to that product.
-   * This will not affect your Shopping ads. Acceptable values are: - "`autoPostInternal`" -
+   * to the removal of the product from Buy on Google until you make an update to that product. This
+   * will not affect your Shopping ads. Acceptable values are: - "`autoPostInternal`" -
    * "`autoPostInvalidBillingAddress`" - "`autoPostNoInventory`" - "`autoPostPriceError`" -
    * "`autoPostUndeliverableShippingAddress`" - "`couponAbuse`" - "`customerCanceled`" -
    * "`customerInitiatedCancel`" - "`customerSupportRequested`" - "`failToPushOrderGoogleError`" -
@@ -151,8 +151,8 @@ public final class OrderCancellation extends com.google.api.client.json.GenericJ
 
   /**
    * The reason for the cancellation. Orders that are canceled with a noInventory reason will lead
-   * to the removal of the product from Shopping Actions until you make an update to that product.
-   * This will not affect your Shopping ads. Acceptable values are: - "`autoPostInternal`" -
+   * to the removal of the product from Buy on Google until you make an update to that product. This
+   * will not affect your Shopping ads. Acceptable values are: - "`autoPostInternal`" -
    * "`autoPostInvalidBillingAddress`" - "`autoPostNoInventory`" - "`autoPostPriceError`" -
    * "`autoPostUndeliverableShippingAddress`" - "`couponAbuse`" - "`customerCanceled`" -
    * "`customerInitiatedCancel`" - "`customerSupportRequested`" - "`failToPushOrderGoogleError`" -

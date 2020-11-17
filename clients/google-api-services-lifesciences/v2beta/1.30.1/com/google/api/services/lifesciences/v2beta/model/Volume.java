@@ -38,6 +38,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private ExistingDisk existingDisk;
 
   /**
+   * Configuration for an NFS mount.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NFSMount nfsMount;
+
+  /**
    * Configuration for a persistent disk.
    * The value may be {@code null}.
    */
@@ -67,6 +74,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setExistingDisk(ExistingDisk existingDisk) {
     this.existingDisk = existingDisk;
+    return this;
+  }
+
+  /**
+   * Configuration for an NFS mount.
+   * @return value or {@code null} for none
+   */
+  public NFSMount getNfsMount() {
+    return nfsMount;
+  }
+
+  /**
+   * Configuration for an NFS mount.
+   * @param nfsMount nfsMount or {@code null} for none
+   */
+  public Volume setNfsMount(NFSMount nfsMount) {
+    this.nfsMount = nfsMount;
     return this;
   }
 

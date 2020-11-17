@@ -38,6 +38,13 @@ public final class MetricMetadata extends com.google.api.client.json.GenericJson
   private java.lang.String apiName;
 
   /**
+   * True if the metric is a custom metric for this property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean customDefinition;
+
+  /**
    * Still usable but deprecated names for this metric. If populated, this metric is available by
    * either `apiName` or one of `deprecatedApiNames` for a period of time. After the deprecation
    * period, the metric will be available only by `apiName`.
@@ -90,6 +97,23 @@ public final class MetricMetadata extends com.google.api.client.json.GenericJson
    */
   public MetricMetadata setApiName(java.lang.String apiName) {
     this.apiName = apiName;
+    return this;
+  }
+
+  /**
+   * True if the metric is a custom metric for this property.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCustomDefinition() {
+    return customDefinition;
+  }
+
+  /**
+   * True if the metric is a custom metric for this property.
+   * @param customDefinition customDefinition or {@code null} for none
+   */
+  public MetricMetadata setCustomDefinition(java.lang.Boolean customDefinition) {
+    this.customDefinition = customDefinition;
     return this;
   }
 

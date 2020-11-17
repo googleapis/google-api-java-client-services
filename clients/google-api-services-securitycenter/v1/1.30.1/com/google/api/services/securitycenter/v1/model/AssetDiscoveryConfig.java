@@ -31,6 +31,14 @@ package com.google.api.services.securitycenter.v1.model;
 public final class AssetDiscoveryConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The folder ids to use for filtering asset discovery. It consists of only digits, e.g.,
+   * 756619654966.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> folderIds;
+
+  /**
    * The mode to use for filtering asset discovery.
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class AssetDiscoveryConfig extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> projectIds;
+
+  /**
+   * The folder ids to use for filtering asset discovery. It consists of only digits, e.g.,
+   * 756619654966.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFolderIds() {
+    return folderIds;
+  }
+
+  /**
+   * The folder ids to use for filtering asset discovery. It consists of only digits, e.g.,
+   * 756619654966.
+   * @param folderIds folderIds or {@code null} for none
+   */
+  public AssetDiscoveryConfig setFolderIds(java.util.List<java.lang.String> folderIds) {
+    this.folderIds = folderIds;
+    return this;
+  }
 
   /**
    * The mode to use for filtering asset discovery.

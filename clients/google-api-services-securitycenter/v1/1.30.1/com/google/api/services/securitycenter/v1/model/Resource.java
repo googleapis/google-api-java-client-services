@@ -32,6 +32,20 @@ package com.google.api.services.securitycenter.v1.model;
 public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Contains a Folder message for each folder in the assets ancestry. The first folder is the
+   * deepest nested folder, and the last folder is the folder directly under the Organization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Folder> folders;
+
+  static {
+    // hack to force ProGuard to consider Folder used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Folder.class);
+  }
+
+  /**
    * The full resource name of the resource. See:
    * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
@@ -66,6 +80,25 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String projectName;
+
+  /**
+   * Contains a Folder message for each folder in the assets ancestry. The first folder is the
+   * deepest nested folder, and the last folder is the folder directly under the Organization.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Folder> getFolders() {
+    return folders;
+  }
+
+  /**
+   * Contains a Folder message for each folder in the assets ancestry. The first folder is the
+   * deepest nested folder, and the last folder is the folder directly under the Organization.
+   * @param folders folders or {@code null} for none
+   */
+  public Resource setFolders(java.util.List<Folder> folders) {
+    this.folders = folders;
+    return this;
+  }
 
   /**
    * The full resource name of the resource. See:

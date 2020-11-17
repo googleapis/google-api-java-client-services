@@ -38,6 +38,13 @@ public final class DimensionMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String apiName;
 
   /**
+   * True if the dimension is a custom dimension for this property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean customDefinition;
+
+  /**
    * Still usable but deprecated names for this dimension. If populated, this dimension is available
    * by either `apiName` or one of `deprecatedApiNames` for a period of time. After the deprecation
    * period, the dimension will be available only by `apiName`.
@@ -74,6 +81,23 @@ public final class DimensionMetadata extends com.google.api.client.json.GenericJ
    */
   public DimensionMetadata setApiName(java.lang.String apiName) {
     this.apiName = apiName;
+    return this;
+  }
+
+  /**
+   * True if the dimension is a custom dimension for this property.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCustomDefinition() {
+    return customDefinition;
+  }
+
+  /**
+   * True if the dimension is a custom dimension for this property.
+   * @param customDefinition customDefinition or {@code null} for none
+   */
+  public DimensionMetadata setCustomDefinition(java.lang.Boolean customDefinition) {
+    this.customDefinition = customDefinition;
     return this;
   }
 

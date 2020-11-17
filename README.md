@@ -40,8 +40,8 @@ packages on [Maven Central][maven-search].
 | App Engine Admin API | [v1](clients/google-api-services-appengine/v1), [v1alpha](clients/google-api-services-appengine/v1alpha), [v1beta](clients/google-api-services-appengine/v1beta), [v1beta4](clients/google-api-services-appengine/v1beta4), [v1beta5](clients/google-api-services-appengine/v1beta5) |
 | Apps Script API | [v1](clients/google-api-services-script/v1) |
 | Area120 Tables API | [v1alpha1](clients/google-api-services-area120tables/v1alpha1) |
-| Artifact Registry API | [v1beta1](clients/google-api-services-artifactregistry/v1beta1) |
-| Assured Workloads API | [v1beta1](clients/google-api-services-assuredworkloads/v1beta1) |
+| Artifact Registry API | [v1beta1](clients/google-api-services-artifactregistry/v1beta1), [v1beta2](clients/google-api-services-artifactregistry/v1beta2) |
+| Assured Workloads API | [v1](clients/google-api-services-assuredworkloads/v1), [v1beta1](clients/google-api-services-assuredworkloads/v1beta1) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
 | BigQuery Connection API | [v1beta1](clients/google-api-services-bigqueryconnection/v1beta1) |
 | BigQuery Data Transfer API | [v1](clients/google-api-services-bigquerydatatransfer/v1) |
@@ -129,6 +129,7 @@ packages on [Maven Central][maven-search].
 | Firebase Hosting API | [v1](clients/google-api-services-firebasehosting/v1), [v1beta1](clients/google-api-services-firebasehosting/v1beta1) |
 | Firebase ML API | [v1](clients/google-api-services-firebaseml/v1), [v1beta2](clients/google-api-services-firebaseml/v1beta2) |
 | Firebase Management API | [v1beta1](clients/google-api-services-firebase/v1beta1) |
+| Firebase Realtime Database Management API | [v1beta](clients/google-api-services-firebasedatabase/v1beta) |
 | Firebase Rules API | [v1](clients/google-api-services-firebaserules/v1) |
 | Fitness API | [v1](clients/google-api-services-fitness/v1) |
 | G Suite Alert Center API | [v1beta1](clients/google-api-services-alertcenter/v1beta1) |

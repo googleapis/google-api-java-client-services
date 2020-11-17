@@ -123,6 +123,2221 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
   }
 
   /**
+   * An accessor for creating requests from the Folders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+   *   {@code SecurityCommandCenter.Folders.List request = securitycenter.folders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Folders folders() {
+    return new Folders();
+  }
+
+  /**
+   * The "folders" collection of methods.
+   */
+  public class Folders {
+
+    /**
+     * An accessor for creating requests from the Assets collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.Assets.List request = securitycenter.assets().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Assets assets() {
+      return new Assets();
+    }
+
+    /**
+     * The "assets" collection of methods.
+     */
+    public class Assets {
+
+      /**
+       * Filters an organization's assets and groups them by their specified properties.
+       *
+       * Create a request for the method "assets.group".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+       *        folders/[folder_id], or projects/[project_id]".
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
+       * @return the request
+       */
+      public Group group(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GroupAssetsRequest content) throws java.io.IOException {
+        Group result = new Group(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Group extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GroupAssetsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/assets:group";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+        /**
+         * Filters an organization's assets and groups them by their specified properties.
+         *
+         * Create a request for the method "assets.group".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+       *        folders/[folder_id], or projects/[project_id]".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
+         * @since 1.13
+         */
+        protected Group(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GroupAssetsRequest content) {
+          super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GroupAssetsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+        }
+
+        @Override
+        public Group set$Xgafv(java.lang.String $Xgafv) {
+          return (Group) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Group setAccessToken(java.lang.String accessToken) {
+          return (Group) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Group setAlt(java.lang.String alt) {
+          return (Group) super.setAlt(alt);
+        }
+
+        @Override
+        public Group setCallback(java.lang.String callback) {
+          return (Group) super.setCallback(callback);
+        }
+
+        @Override
+        public Group setFields(java.lang.String fields) {
+          return (Group) super.setFields(fields);
+        }
+
+        @Override
+        public Group setKey(java.lang.String key) {
+          return (Group) super.setKey(key);
+        }
+
+        @Override
+        public Group setOauthToken(java.lang.String oauthToken) {
+          return (Group) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Group setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Group) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Group setQuotaUser(java.lang.String quotaUser) {
+          return (Group) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Group setUploadType(java.lang.String uploadType) {
+          return (Group) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Group setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Group) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the organization to groupBy. Its format is
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+       folders/[folder_id], or projects/[project_id]".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the organization to groupBy. Its format is
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        public Group setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Group set(String parameterName, Object value) {
+          return (Group) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists an organization's assets.
+       *
+       * Create a request for the method "assets.list".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the organization assets should belong to. Its format is
+       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListAssetsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/assets";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+        /**
+         * Lists an organization's assets.
+         *
+         * Create a request for the method "assets.list".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the organization assets should belong to. Its format is
+       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListAssetsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the organization assets should belong to. Its format is
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the organization assets should belong to. Its format is
+       "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the organization assets should belong to. Its format is
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated
+         * to indicate whether the asset was added, removed, or remained present during the
+         * compare_duration period of time that precedes the read_time. This is the time between
+         * (read_time - compare_duration) and read_time. The state_change value is derived based on
+         * the presence of the asset at the two points in time. Intermediate state changes between
+         * the two times don't affect the result. For example, the results aren't affected if the
+         * asset is removed and re-created again. Possible "state_change" values when
+         * compare_duration is specified: * "ADDED": indicates that the asset was not present at the
+         * start of compare_duration, but present at read_time. * "REMOVED": indicates that the
+         * asset was present at the start of compare_duration, but not present at read_time. *
+         * "ACTIVE": indicates that the asset was present at both the start and the end of the time
+         * period defined by compare_duration and read_time. If compare_duration is not specified,
+         * then the only possible state_change is "UNUSED", which will be the state_change set for
+         * all assets present at read_time.
+         */
+        @com.google.api.client.util.Key
+        private String compareDuration;
+
+        /** When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated to
+       indicate whether the asset was added, removed, or remained present during the compare_duration
+       period of time that precedes the read_time. This is the time between (read_time - compare_duration)
+       and read_time. The state_change value is derived based on the presence of the asset at the two
+       points in time. Intermediate state changes between the two times don't affect the result. For
+       example, the results aren't affected if the asset is removed and re-created again. Possible
+       "state_change" values when compare_duration is specified: * "ADDED": indicates that the asset was
+       not present at the start of compare_duration, but present at read_time. * "REMOVED": indicates that
+       the asset was present at the start of compare_duration, but not present at read_time. * "ACTIVE":
+       indicates that the asset was present at both the start and the end of the time period defined by
+       compare_duration and read_time. If compare_duration is not specified, then the only possible
+       state_change is "UNUSED", which will be the state_change set for all assets present at read_time.
+         */
+        public String getCompareDuration() {
+          return compareDuration;
+        }
+
+        /**
+         * When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated
+         * to indicate whether the asset was added, removed, or remained present during the
+         * compare_duration period of time that precedes the read_time. This is the time between
+         * (read_time - compare_duration) and read_time. The state_change value is derived based on
+         * the presence of the asset at the two points in time. Intermediate state changes between
+         * the two times don't affect the result. For example, the results aren't affected if the
+         * asset is removed and re-created again. Possible "state_change" values when
+         * compare_duration is specified: * "ADDED": indicates that the asset was not present at the
+         * start of compare_duration, but present at read_time. * "REMOVED": indicates that the
+         * asset was present at the start of compare_duration, but not present at read_time. *
+         * "ACTIVE": indicates that the asset was present at both the start and the end of the time
+         * period defined by compare_duration and read_time. If compare_duration is not specified,
+         * then the only possible state_change is "UNUSED", which will be the state_change set for
+         * all assets present at read_time.
+         */
+        public List setCompareDuration(String compareDuration) {
+          this.compareDuration = compareDuration;
+          return this;
+        }
+
+        /**
+         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
+         * empty field mask will list all fields.
+         */
+        @com.google.api.client.util.Key
+        private String fieldMask;
+
+        /** A field mask to specify the ListAssetsResult fields to be listed in the response. An empty field
+       mask will list all fields.
+         */
+        public String getFieldMask() {
+          return fieldMask;
+        }
+
+        /**
+         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
+         * empty field mask will list all fields.
+         */
+        public List setFieldMask(String fieldMask) {
+          this.fieldMask = fieldMask;
+          return this;
+        }
+
+        /**
+         * Expression that defines the filter to apply across assets. The expression is a list of
+         * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
+         * supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and
+         * may have a `-` character in front of them to indicate negation. The fields map to those
+         * defined in the Asset resource. Examples include: * name *
+         * security_center_properties.resource_name * resource_properties.a_property *
+         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
+         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
+         * supported value types are: * string literals in quotes. * integer literals without
+         * quotes. * boolean literals `true` and `false` without quotes. The following are the
+         * allowed field and operator combinations: * name: `=` * update_time: `=`, `>`, `<`, `>=`,
+         * `<=` Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
+         * `update_time = "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000` * create_time:
+         * `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339
+         * string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
+         * 1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`,
+         * `<`, `>=`, `<=` * security_marks.marks: `=`, `:` *
+         * security_center_properties.resource_name: `=`, `:` *
+         * security_center_properties.resource_display_name: `=`, `:` *
+         * security_center_properties.resource_type: `=`, `:` *
+         * security_center_properties.resource_parent: `=`, `:` *
+         * security_center_properties.resource_parent_display_name: `=`, `:` *
+         * security_center_properties.resource_project: `=`, `:` *
+         * security_center_properties.resource_project_display_name: `=`, `:` *
+         * security_center_properties.resource_owners: `=`, `:` For example,
+         * `resource_properties.size = 100` is a valid filter string. Use a partial match on the
+         * empty string to filter based on a property existing: `resource_properties.my_property :
+         * ""` Use a negated partial match on the empty string to filter based on a property not
+         * existing: `-resource_properties.my_property : ""`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Expression that defines the filter to apply across assets. The expression is a list of zero or more
+       restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and `OR` has
+       higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character in front
+       of them to indicate negation. The fields map to those defined in the Asset resource. Examples
+       include: * name * security_center_properties.resource_name * resource_properties.a_property *
+       security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
+       `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
+       types are: * string literals in quotes. * integer literals without quotes. * boolean literals
+       `true` and `false` without quotes. The following are the allowed field and operator combinations: *
+       name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch
+       or an RFC3339 string. Examples: `update_time = "2019-06-10T16:07:18-07:00"` `update_time =
+       1560208038000` * create_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since
+       epoch or an RFC3339 string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
+       1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`,
+       `<=` * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
+       security_center_properties.resource_display_name: `=`, `:` *
+       security_center_properties.resource_type: `=`, `:` * security_center_properties.resource_parent:
+       `=`, `:` * security_center_properties.resource_parent_display_name: `=`, `:` *
+       security_center_properties.resource_project: `=`, `:` *
+       security_center_properties.resource_project_display_name: `=`, `:` *
+       security_center_properties.resource_owners: `=`, `:` For example, `resource_properties.size = 100`
+       is a valid filter string. Use a partial match on the empty string to filter based on a property
+       existing: `resource_properties.my_property : ""` Use a negated partial match on the empty string to
+       filter based on a property not existing: `-resource_properties.my_property : ""`
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Expression that defines the filter to apply across assets. The expression is a list of
+         * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
+         * supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and
+         * may have a `-` character in front of them to indicate negation. The fields map to those
+         * defined in the Asset resource. Examples include: * name *
+         * security_center_properties.resource_name * resource_properties.a_property *
+         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
+         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
+         * supported value types are: * string literals in quotes. * integer literals without
+         * quotes. * boolean literals `true` and `false` without quotes. The following are the
+         * allowed field and operator combinations: * name: `=` * update_time: `=`, `>`, `<`, `>=`,
+         * `<=` Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
+         * `update_time = "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000` * create_time:
+         * `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339
+         * string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
+         * 1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`,
+         * `<`, `>=`, `<=` * security_marks.marks: `=`, `:` *
+         * security_center_properties.resource_name: `=`, `:` *
+         * security_center_properties.resource_display_name: `=`, `:` *
+         * security_center_properties.resource_type: `=`, `:` *
+         * security_center_properties.resource_parent: `=`, `:` *
+         * security_center_properties.resource_parent_display_name: `=`, `:` *
+         * security_center_properties.resource_project: `=`, `:` *
+         * security_center_properties.resource_project_display_name: `=`, `:` *
+         * security_center_properties.resource_owners: `=`, `:` For example,
+         * `resource_properties.size = 100` is a valid filter string. Use a partial match on the
+         * empty string to filter based on a property existing: `resource_properties.my_property :
+         * ""` Use a negated partial match on the empty string to filter based on a property not
+         * existing: `-resource_properties.my_property : ""`
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Expression that defines what fields and order to use for sorting. The string value should
+         * follow SQL syntax: comma separated list of fields. For example:
+         * "name,resource_properties.a_property". The default sorting order is ascending. To specify
+         * descending order for a field, a suffix " desc" should be appended to the field name. For
+         * example: "name desc,resource_properties.a_property". Redundant space characters in the
+         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
+         * resource_properties.a_property " are equivalent. The following fields are supported: name
+         * update_time resource_properties security_marks.marks
+         * security_center_properties.resource_name security_center_properties.resource_display_name
+         * security_center_properties.resource_parent
+         * security_center_properties.resource_parent_display_name
+         * security_center_properties.resource_project
+         * security_center_properties.resource_project_display_name
+         * security_center_properties.resource_type
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Expression that defines what fields and order to use for sorting. The string value should follow
+       SQL syntax: comma separated list of fields. For example: "name,resource_properties.a_property". The
+       default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+       should be appended to the field name. For example: "name desc,resource_properties.a_property".
+       Redundant space characters in the syntax are insignificant. "name
+       desc,resource_properties.a_property" and " name desc , resource_properties.a_property " are
+       equivalent. The following fields are supported: name update_time resource_properties
+       security_marks.marks security_center_properties.resource_name
+       security_center_properties.resource_display_name security_center_properties.resource_parent
+       security_center_properties.resource_parent_display_name security_center_properties.resource_project
+       security_center_properties.resource_project_display_name security_center_properties.resource_type
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Expression that defines what fields and order to use for sorting. The string value should
+         * follow SQL syntax: comma separated list of fields. For example:
+         * "name,resource_properties.a_property". The default sorting order is ascending. To specify
+         * descending order for a field, a suffix " desc" should be appended to the field name. For
+         * example: "name desc,resource_properties.a_property". Redundant space characters in the
+         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
+         * resource_properties.a_property " are equivalent. The following fields are supported: name
+         * update_time resource_properties security_marks.marks
+         * security_center_properties.resource_name security_center_properties.resource_display_name
+         * security_center_properties.resource_parent
+         * security_center_properties.resource_parent_display_name
+         * security_center_properties.resource_project
+         * security_center_properties.resource_project_display_name
+         * security_center_properties.resource_type
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * The maximum number of results to return in a single response. Default is 10, minimum is
+         * 1, maximum is 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+       is 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of results to return in a single response. Default is 10, minimum is
+         * 1, maximum is 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The value returned by the last `ListAssetsResponse`; indicates that this is a
+         * continuation of a prior `ListAssets` call, and that the system should return the next
+         * page of data.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The value returned by the last `ListAssetsResponse`; indicates that this is a continuation of a
+       prior `ListAssets` call, and that the system should return the next page of data.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The value returned by the last `ListAssetsResponse`; indicates that this is a
+         * continuation of a prior `ListAssets` call, and that the system should return the next
+         * page of data.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Time used as a reference point when filtering assets. The filter is limited to assets
+         * existing at the supplied time and their values are those at that specific time. Absence
+         * of this field will default to the API's version of NOW.
+         */
+        @com.google.api.client.util.Key
+        private String readTime;
+
+        /** Time used as a reference point when filtering assets. The filter is limited to assets existing at
+       the supplied time and their values are those at that specific time. Absence of this field will
+       default to the API's version of NOW.
+         */
+        public String getReadTime() {
+          return readTime;
+        }
+
+        /**
+         * Time used as a reference point when filtering assets. The filter is limited to assets
+         * existing at the supplied time and their values are those at that specific time. Absence
+         * of this field will default to the API's version of NOW.
+         */
+        public List setReadTime(String readTime) {
+          this.readTime = readTime;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates security marks.
+       *
+       * Create a request for the method "assets.updateSecurityMarks".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name The relative resource name of the SecurityMarks. See:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
+       * @return the request
+       */
+      public UpdateSecurityMarks updateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1.model.SecurityMarks content) throws java.io.IOException {
+        UpdateSecurityMarks result = new UpdateSecurityMarks(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateSecurityMarks extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.SecurityMarks> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+/assets/[^/]+/securityMarks$");
+
+        /**
+         * Updates security marks.
+         *
+         * Create a request for the method "assets.updateSecurityMarks".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateSecurityMarks#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name The relative resource name of the SecurityMarks. See:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
+         * @since 1.13
+         */
+        protected UpdateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1.model.SecurityMarks content) {
+          super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.SecurityMarks.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/assets/[^/]+/securityMarks$");
+          }
+        }
+
+        @Override
+        public UpdateSecurityMarks set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateSecurityMarks) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateSecurityMarks setAccessToken(java.lang.String accessToken) {
+          return (UpdateSecurityMarks) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateSecurityMarks setAlt(java.lang.String alt) {
+          return (UpdateSecurityMarks) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateSecurityMarks setCallback(java.lang.String callback) {
+          return (UpdateSecurityMarks) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateSecurityMarks setFields(java.lang.String fields) {
+          return (UpdateSecurityMarks) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateSecurityMarks setKey(java.lang.String key) {
+          return (UpdateSecurityMarks) super.setKey(key);
+        }
+
+        @Override
+        public UpdateSecurityMarks setOauthToken(java.lang.String oauthToken) {
+          return (UpdateSecurityMarks) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateSecurityMarks setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateSecurityMarks) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateSecurityMarks setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateSecurityMarks) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateSecurityMarks setUploadType(java.lang.String uploadType) {
+          return (UpdateSecurityMarks) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateSecurityMarks setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateSecurityMarks) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The relative resource name of the SecurityMarks. See:
+         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
+         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The relative resource name of the SecurityMarks. See:
+       https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+       "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+       "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The relative resource name of the SecurityMarks. See:
+         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
+         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         */
+        public UpdateSecurityMarks setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/assets/[^/]+/securityMarks$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * The time at which the updated SecurityMarks take effect. If not set uses current server
+         * time. Updates will be applied to the SecurityMarks that are active immediately preceding
+         * this time.
+         */
+        @com.google.api.client.util.Key
+        private String startTime;
+
+        /** The time at which the updated SecurityMarks take effect. If not set uses current server time.
+       Updates will be applied to the SecurityMarks that are active immediately preceding this time.
+         */
+        public String getStartTime() {
+          return startTime;
+        }
+
+        /**
+         * The time at which the updated SecurityMarks take effect. If not set uses current server
+         * time. Updates will be applied to the SecurityMarks that are active immediately preceding
+         * this time.
+         */
+        public UpdateSecurityMarks setStartTime(String startTime) {
+          this.startTime = startTime;
+          return this;
+        }
+
+        /**
+         * The FieldMask to use when updating the security marks resource. The field mask must not
+         * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
+         * Individual marks can be updated using "marks.".
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The FieldMask to use when updating the security marks resource. The field mask must not contain
+       duplicate fields. If empty or set to "marks", all marks will be replaced. Individual marks can be
+       updated using "marks.".
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * The FieldMask to use when updating the security marks resource. The field mask must not
+         * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
+         * Individual marks can be updated using "marks.".
+         */
+        public UpdateSecurityMarks setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateSecurityMarks set(String parameterName, Object value) {
+          return (UpdateSecurityMarks) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Sources collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.Sources.List request = securitycenter.sources().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Sources sources() {
+      return new Sources();
+    }
+
+    /**
+     * The "sources" collection of methods.
+     */
+    public class Sources {
+
+      /**
+       * Lists all sources belonging to an organization.
+       *
+       * Create a request for the method "sources.list".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name of the parent of sources to list. Its format should be
+       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListSourcesResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/sources";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+        /**
+         * Lists all sources belonging to an organization.
+         *
+         * Create a request for the method "sources.list".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the parent of sources to list. Its format should be
+       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListSourcesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the parent of sources to list. Its format should be
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the parent of sources to list. Its format should be
+       "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the parent of sources to list. Its format should be
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of results to return in a single response. Default is 10, minimum is
+         * 1, maximum is 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+       is 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of results to return in a single response. Default is 10, minimum is
+         * 1, maximum is 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The value returned by the last `ListSourcesResponse`; indicates that this is a
+         * continuation of a prior `ListSources` call, and that the system should return the next
+         * page of data.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The value returned by the last `ListSourcesResponse`; indicates that this is a continuation of a
+       prior `ListSources` call, and that the system should return the next page of data.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The value returned by the last `ListSourcesResponse`; indicates that this is a
+         * continuation of a prior `ListSources` call, and that the system should return the next
+         * page of data.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Findings collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+       *   {@code SecurityCommandCenter.Findings.List request = securitycenter.findings().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Findings findings() {
+        return new Findings();
+      }
+
+      /**
+       * The "findings" collection of methods.
+       */
+      public class Findings {
+
+        /**
+         * Filters an organization or source's findings and groups them by their specified properties. To
+         * group across all sources provide a `-` as the source id. Example:
+         * /v1/organizations/{organization_id}/sources/-/findings,
+         * /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
+         *
+         * Create a request for the method "findings.group".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the source to groupBy. Its format is
+         *        "organizations/[organization_id]/sources/[source_id]",
+         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]. To
+         *        groupBy across all sources provide a source_id of `-`. For example:
+         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+         *        projects/{project_id}/sources/-
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
+         * @return the request
+         */
+        public Group group(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GroupFindingsRequest content) throws java.io.IOException {
+          Group result = new Group(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Group extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GroupFindingsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/findings:group";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/sources/[^/]+$");
+
+          /**
+           * Filters an organization or source's findings and groups them by their specified properties. To
+           * group across all sources provide a `-` as the source id. Example:
+           * /v1/organizations/{organization_id}/sources/-/findings,
+           * /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
+           *
+           * Create a request for the method "findings.group".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the source to groupBy. Its format is
+         *        "organizations/[organization_id]/sources/[source_id]",
+         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]. To
+         *        groupBy across all sources provide a source_id of `-`. For example:
+         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+         *        projects/{project_id}/sources/-
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
+           * @since 1.13
+           */
+          protected Group(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GroupFindingsRequest content) {
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GroupFindingsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/sources/[^/]+$");
+            }
+          }
+
+          @Override
+          public Group set$Xgafv(java.lang.String $Xgafv) {
+            return (Group) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Group setAccessToken(java.lang.String accessToken) {
+            return (Group) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Group setAlt(java.lang.String alt) {
+            return (Group) super.setAlt(alt);
+          }
+
+          @Override
+          public Group setCallback(java.lang.String callback) {
+            return (Group) super.setCallback(callback);
+          }
+
+          @Override
+          public Group setFields(java.lang.String fields) {
+            return (Group) super.setFields(fields);
+          }
+
+          @Override
+          public Group setKey(java.lang.String key) {
+            return (Group) super.setKey(key);
+          }
+
+          @Override
+          public Group setOauthToken(java.lang.String oauthToken) {
+            return (Group) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Group setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Group) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Group setQuotaUser(java.lang.String quotaUser) {
+            return (Group) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Group setUploadType(java.lang.String uploadType) {
+            return (Group) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Group setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Group) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the source to groupBy. Its format is
+           * "organizations/[organization_id]/sources/[source_id]",
+           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id].
+           * To groupBy across all sources provide a source_id of `-`. For example:
+           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+           * projects/{project_id}/sources/-
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the source to groupBy. Its format is
+         "organizations/[organization_id]/sources/[source_id]", folders/[folder_id]/sources/[source_id], or
+         projects/[project_id]/sources/[source_id]. To groupBy across all sources provide a source_id of
+         `-`. For example: organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+         projects/{project_id}/sources/-
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the source to groupBy. Its format is
+           * "organizations/[organization_id]/sources/[source_id]",
+           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id].
+           * To groupBy across all sources provide a source_id of `-`. For example:
+           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+           * projects/{project_id}/sources/-
+           */
+          public Group setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/sources/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Group set(String parameterName, Object value) {
+            return (Group) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists an organization or source's findings. To list across all sources provide a `-` as the
+         * source id. Example: /v1/organizations/{organization_id}/sources/-/findings
+         *
+         * Create a request for the method "findings.list".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the source the findings belong to. Its format is
+         *        "organizations/[organization_id]/sources/[source_id],
+         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]". To
+         *        list across all sources provide a source_id of `-`. For example:
+         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+         *        projects/{projects_id}/sources/-
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListFindingsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/findings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/sources/[^/]+$");
+
+          /**
+           * Lists an organization or source's findings. To list across all sources provide a `-` as the
+           * source id. Example: /v1/organizations/{organization_id}/sources/-/findings
+           *
+           * Create a request for the method "findings.list".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the source the findings belong to. Its format is
+         *        "organizations/[organization_id]/sources/[source_id],
+         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]". To
+         *        list across all sources provide a source_id of `-`. For example:
+         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+         *        projects/{projects_id}/sources/-
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListFindingsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/sources/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the source the findings belong to. Its format is
+           * "organizations/[organization_id]/sources/[source_id],
+           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]".
+           * To list across all sources provide a source_id of `-`. For example:
+           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+           * projects/{projects_id}/sources/-
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the source the findings belong to. Its format is
+         "organizations/[organization_id]/sources/[source_id], folders/[folder_id]/sources/[source_id], or
+         projects/[project_id]/sources/[source_id]". To list across all sources provide a source_id of `-`.
+         For example: organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+         projects/{projects_id}/sources/-
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the source the findings belong to. Its format is
+           * "organizations/[organization_id]/sources/[source_id],
+           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]".
+           * To list across all sources provide a source_id of `-`. For example:
+           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+           * projects/{projects_id}/sources/-
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/sources/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * When compare_duration is set, the ListFindingsResult's "state_change" attribute is
+           * updated to indicate whether the finding had its state changed, the finding's state
+           * remained unchanged, or if the finding was added in any state during the
+           * compare_duration period of time that precedes the read_time. This is the time between
+           * (read_time - compare_duration) and read_time. The state_change value is derived based
+           * on the presence and state of the finding at the two points in time. Intermediate state
+           * changes between the two times don't affect the result. For example, the results aren't
+           * affected if the finding is made inactive and then active again. Possible "state_change"
+           * values when compare_duration is specified: * "CHANGED": indicates that the finding was
+           * present and matched the given filter at the start of compare_duration, but changed its
+           * state at read_time. * "UNCHANGED": indicates that the finding was present and matched
+           * the given filter at the start of compare_duration and did not change state at
+           * read_time. * "ADDED": indicates that the finding did not match the given filter or was
+           * not present at the start of compare_duration, but was present at read_time. *
+           * "REMOVED": indicates that the finding was present and matched the filter at the start
+           * of compare_duration, but did not match the filter at read_time. If compare_duration is
+           * not specified, then the only possible state_change is "UNUSED", which will be the
+           * state_change set for all findings present at read_time.
+           */
+          @com.google.api.client.util.Key
+          private String compareDuration;
+
+          /** When compare_duration is set, the ListFindingsResult's "state_change" attribute is updated to
+         indicate whether the finding had its state changed, the finding's state remained unchanged, or if
+         the finding was added in any state during the compare_duration period of time that precedes the
+         read_time. This is the time between (read_time - compare_duration) and read_time. The state_change
+         value is derived based on the presence and state of the finding at the two points in time.
+         Intermediate state changes between the two times don't affect the result. For example, the results
+         aren't affected if the finding is made inactive and then active again. Possible "state_change"
+         values when compare_duration is specified: * "CHANGED": indicates that the finding was present and
+         matched the given filter at the start of compare_duration, but changed its state at read_time. *
+         "UNCHANGED": indicates that the finding was present and matched the given filter at the start of
+         compare_duration and did not change state at read_time. * "ADDED": indicates that the finding did
+         not match the given filter or was not present at the start of compare_duration, but was present at
+         read_time. * "REMOVED": indicates that the finding was present and matched the filter at the start
+         of compare_duration, but did not match the filter at read_time. If compare_duration is not
+         specified, then the only possible state_change is "UNUSED", which will be the state_change set for
+         all findings present at read_time.
+           */
+          public String getCompareDuration() {
+            return compareDuration;
+          }
+
+          /**
+           * When compare_duration is set, the ListFindingsResult's "state_change" attribute is
+           * updated to indicate whether the finding had its state changed, the finding's state
+           * remained unchanged, or if the finding was added in any state during the
+           * compare_duration period of time that precedes the read_time. This is the time between
+           * (read_time - compare_duration) and read_time. The state_change value is derived based
+           * on the presence and state of the finding at the two points in time. Intermediate state
+           * changes between the two times don't affect the result. For example, the results aren't
+           * affected if the finding is made inactive and then active again. Possible "state_change"
+           * values when compare_duration is specified: * "CHANGED": indicates that the finding was
+           * present and matched the given filter at the start of compare_duration, but changed its
+           * state at read_time. * "UNCHANGED": indicates that the finding was present and matched
+           * the given filter at the start of compare_duration and did not change state at
+           * read_time. * "ADDED": indicates that the finding did not match the given filter or was
+           * not present at the start of compare_duration, but was present at read_time. *
+           * "REMOVED": indicates that the finding was present and matched the filter at the start
+           * of compare_duration, but did not match the filter at read_time. If compare_duration is
+           * not specified, then the only possible state_change is "UNUSED", which will be the
+           * state_change set for all findings present at read_time.
+           */
+          public List setCompareDuration(String compareDuration) {
+            this.compareDuration = compareDuration;
+            return this;
+          }
+
+          /**
+           * A field mask to specify the Finding fields to be listed in the response. An empty field
+           * mask will list all fields.
+           */
+          @com.google.api.client.util.Key
+          private String fieldMask;
+
+          /** A field mask to specify the Finding fields to be listed in the response. An empty field mask will
+         list all fields.
+           */
+          public String getFieldMask() {
+            return fieldMask;
+          }
+
+          /**
+           * A field mask to specify the Finding fields to be listed in the response. An empty field
+           * mask will list all fields.
+           */
+          public List setFieldMask(String fieldMask) {
+            this.fieldMask = fieldMask;
+            return this;
+          }
+
+          /**
+           * Expression that defines the filter to apply across findings. The expression is a list
+           * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
+           * are supported, and `OR` has higher precedence than `AND`. Restrictions have the form `
+           * ` and may have a `-` character in front of them to indicate negation. Examples include:
+           * * name * source_properties.a_property * security_marks.marks.marka The supported
+           * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. *
+           * `:`, meaning substring matching, for strings. The supported value types are: * string
+           * literals in quotes. * integer literals without quotes. * boolean literals `true` and
+           * `false` without quotes. The following field and operator combinations are supported:
+           * name: `=` parent: `=`, `:` resource_name: `=`, `:` state: `=`, `:` category: `=`, `:`
+           * external_uri: `=`, `:` event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be
+           * milliseconds since epoch or an RFC3339 string. Examples: `event_time =
+           * "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` security_marks.marks: `=`,
+           * `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=` For example,
+           * `source_properties.size = 100` is a valid filter string. Use a partial match on the
+           * empty string to filter based on a property existing: `source_properties.my_property :
+           * ""` Use a negated partial match on the empty string to filter based on a property not
+           * existing: `-source_properties.my_property : ""`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Expression that defines the filter to apply across findings. The expression is a list of one or
+         more restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and
+         `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character
+         in front of them to indicate negation. Examples include: * name * source_properties.a_property *
+         security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
+         `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
+         types are: * string literals in quotes. * integer literals without quotes. * boolean literals
+         `true` and `false` without quotes. The following field and operator combinations are supported:
+         name: `=` parent: `=`, `:` resource_name: `=`, `:` state: `=`, `:` category: `=`, `:` external_uri:
+         `=`, `:` event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an
+         RFC3339 string. Examples: `event_time = "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000`
+         security_marks.marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=` For example,
+         `source_properties.size = 100` is a valid filter string. Use a partial match on the empty string to
+         filter based on a property existing: `source_properties.my_property : ""` Use a negated partial
+         match on the empty string to filter based on a property not existing:
+         `-source_properties.my_property : ""`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Expression that defines the filter to apply across findings. The expression is a list
+           * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
+           * are supported, and `OR` has higher precedence than `AND`. Restrictions have the form `
+           * ` and may have a `-` character in front of them to indicate negation. Examples include:
+           * * name * source_properties.a_property * security_marks.marks.marka The supported
+           * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. *
+           * `:`, meaning substring matching, for strings. The supported value types are: * string
+           * literals in quotes. * integer literals without quotes. * boolean literals `true` and
+           * `false` without quotes. The following field and operator combinations are supported:
+           * name: `=` parent: `=`, `:` resource_name: `=`, `:` state: `=`, `:` category: `=`, `:`
+           * external_uri: `=`, `:` event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be
+           * milliseconds since epoch or an RFC3339 string. Examples: `event_time =
+           * "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` security_marks.marks: `=`,
+           * `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=` For example,
+           * `source_properties.size = 100` is a valid filter string. Use a partial match on the
+           * empty string to filter based on a property existing: `source_properties.my_property :
+           * ""` Use a negated partial match on the empty string to filter based on a property not
+           * existing: `-source_properties.my_property : ""`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Expression that defines what fields and order to use for sorting. The string value
+           * should follow SQL syntax: comma separated list of fields. For example:
+           * "name,resource_properties.a_property". The default sorting order is ascending. To
+           * specify descending order for a field, a suffix " desc" should be appended to the field
+           * name. For example: "name desc,source_properties.a_property". Redundant space characters
+           * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
+           * desc , source_properties.a_property " are equivalent. The following fields are
+           * supported: name parent state category resource_name event_time source_properties
+           * security_marks.marks
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Expression that defines what fields and order to use for sorting. The string value should follow
+         SQL syntax: comma separated list of fields. For example: "name,resource_properties.a_property". The
+         default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+         should be appended to the field name. For example: "name desc,source_properties.a_property".
+         Redundant space characters in the syntax are insignificant. "name
+         desc,source_properties.a_property" and " name desc , source_properties.a_property " are equivalent.
+         The following fields are supported: name parent state category resource_name event_time
+         source_properties security_marks.marks
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Expression that defines what fields and order to use for sorting. The string value
+           * should follow SQL syntax: comma separated list of fields. For example:
+           * "name,resource_properties.a_property". The default sorting order is ascending. To
+           * specify descending order for a field, a suffix " desc" should be appended to the field
+           * name. For example: "name desc,source_properties.a_property". Redundant space characters
+           * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
+           * desc , source_properties.a_property " are equivalent. The following fields are
+           * supported: name parent state category resource_name event_time source_properties
+           * security_marks.marks
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * The maximum number of results to return in a single response. Default is 10, minimum is
+           * 1, maximum is 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+         is 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of results to return in a single response. Default is 10, minimum is
+           * 1, maximum is 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The value returned by the last `ListFindingsResponse`; indicates that this is a
+           * continuation of a prior `ListFindings` call, and that the system should return the next
+           * page of data.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The value returned by the last `ListFindingsResponse`; indicates that this is a continuation of a
+         prior `ListFindings` call, and that the system should return the next page of data.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The value returned by the last `ListFindingsResponse`; indicates that this is a
+           * continuation of a prior `ListFindings` call, and that the system should return the next
+           * page of data.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Time used as a reference point when filtering findings. The filter is limited to
+           * findings existing at the supplied time and their values are those at that specific
+           * time. Absence of this field will default to the API's version of NOW.
+           */
+          @com.google.api.client.util.Key
+          private String readTime;
+
+          /** Time used as a reference point when filtering findings. The filter is limited to findings existing
+         at the supplied time and their values are those at that specific time. Absence of this field will
+         default to the API's version of NOW.
+           */
+          public String getReadTime() {
+            return readTime;
+          }
+
+          /**
+           * Time used as a reference point when filtering findings. The filter is limited to
+           * findings existing at the supplied time and their values are those at that specific
+           * time. Absence of this field will default to the API's version of NOW.
+           */
+          public List setReadTime(String readTime) {
+            this.readTime = readTime;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates or updates a finding. The corresponding source must exist for a finding creation to
+         * succeed.
+         *
+         * Create a request for the method "findings.patch".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The relative resource name of this finding. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.Finding content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Finding> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/sources/[^/]+/findings/[^/]+$");
+
+          /**
+           * Creates or updates a finding. The corresponding source must exist for a finding creation to
+           * succeed.
+           *
+           * Create a request for the method "findings.patch".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The relative resource name of this finding. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.Finding content) {
+            super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.Finding.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/sources/[^/]+/findings/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The relative resource name of this finding. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The relative resource name of this finding. See:
+         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The relative resource name of this finding. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/sources/[^/]+/findings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The FieldMask to use when updating the finding resource. This field should not be
+           * specified when creating a finding. When updating a finding, an empty mask is treated as
+           * updating all mutable fields and replacing source_properties. Individual
+           * source_properties can be added/updated by using "source_properties." in the field mask.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The FieldMask to use when updating the finding resource. This field should not be specified when
+         creating a finding. When updating a finding, an empty mask is treated as updating all mutable
+         fields and replacing source_properties. Individual source_properties can be added/updated by using
+         "source_properties." in the field mask.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The FieldMask to use when updating the finding resource. This field should not be
+           * specified when creating a finding. When updating a finding, an empty mask is treated as
+           * updating all mutable fields and replacing source_properties. Individual
+           * source_properties can be added/updated by using "source_properties." in the field mask.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the state of a finding.
+         *
+         * Create a request for the method "findings.setState".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The relative resource name of the finding. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
+         * @return the request
+         */
+        public SetState setState(java.lang.String name, com.google.api.services.securitycenter.v1.model.SetFindingStateRequest content) throws java.io.IOException {
+          SetState result = new SetState(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetState extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Finding> {
+
+          private static final String REST_PATH = "v1/{+name}:setState";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/sources/[^/]+/findings/[^/]+$");
+
+          /**
+           * Updates the state of a finding.
+           *
+           * Create a request for the method "findings.setState".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The relative resource name of the finding. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
+           * @since 1.13
+           */
+          protected SetState(java.lang.String name, com.google.api.services.securitycenter.v1.model.SetFindingStateRequest content) {
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.Finding.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/sources/[^/]+/findings/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetState set$Xgafv(java.lang.String $Xgafv) {
+            return (SetState) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetState setAccessToken(java.lang.String accessToken) {
+            return (SetState) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetState setAlt(java.lang.String alt) {
+            return (SetState) super.setAlt(alt);
+          }
+
+          @Override
+          public SetState setCallback(java.lang.String callback) {
+            return (SetState) super.setCallback(callback);
+          }
+
+          @Override
+          public SetState setFields(java.lang.String fields) {
+            return (SetState) super.setFields(fields);
+          }
+
+          @Override
+          public SetState setKey(java.lang.String key) {
+            return (SetState) super.setKey(key);
+          }
+
+          @Override
+          public SetState setOauthToken(java.lang.String oauthToken) {
+            return (SetState) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetState setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetState) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetState setQuotaUser(java.lang.String quotaUser) {
+            return (SetState) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetState setUploadType(java.lang.String uploadType) {
+            return (SetState) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetState setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetState) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the finding. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative resource name of the finding. See:
+         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative resource name of the finding. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           */
+          public SetState setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/sources/[^/]+/findings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public SetState set(String parameterName, Object value) {
+            return (SetState) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates security marks.
+         *
+         * Create a request for the method "findings.updateSecurityMarks".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name The relative resource name of the SecurityMarks. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
+         * @return the request
+         */
+        public UpdateSecurityMarks updateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1.model.SecurityMarks content) throws java.io.IOException {
+          UpdateSecurityMarks result = new UpdateSecurityMarks(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateSecurityMarks extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.SecurityMarks> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/sources/[^/]+/findings/[^/]+/securityMarks$");
+
+          /**
+           * Updates security marks.
+           *
+           * Create a request for the method "findings.updateSecurityMarks".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateSecurityMarks#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name The relative resource name of the SecurityMarks. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
+           * @since 1.13
+           */
+          protected UpdateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1.model.SecurityMarks content) {
+            super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.SecurityMarks.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/sources/[^/]+/findings/[^/]+/securityMarks$");
+            }
+          }
+
+          @Override
+          public UpdateSecurityMarks set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateSecurityMarks) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateSecurityMarks setAccessToken(java.lang.String accessToken) {
+            return (UpdateSecurityMarks) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateSecurityMarks setAlt(java.lang.String alt) {
+            return (UpdateSecurityMarks) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateSecurityMarks setCallback(java.lang.String callback) {
+            return (UpdateSecurityMarks) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateSecurityMarks setFields(java.lang.String fields) {
+            return (UpdateSecurityMarks) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateSecurityMarks setKey(java.lang.String key) {
+            return (UpdateSecurityMarks) super.setKey(key);
+          }
+
+          @Override
+          public UpdateSecurityMarks setOauthToken(java.lang.String oauthToken) {
+            return (UpdateSecurityMarks) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateSecurityMarks setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateSecurityMarks) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateSecurityMarks setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateSecurityMarks) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateSecurityMarks setUploadType(java.lang.String uploadType) {
+            return (UpdateSecurityMarks) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateSecurityMarks setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateSecurityMarks) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The relative resource name of the SecurityMarks. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
+           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The relative resource name of the SecurityMarks. See:
+         https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+         "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The relative resource name of the SecurityMarks. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
+           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+           */
+          public UpdateSecurityMarks setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/sources/[^/]+/findings/[^/]+/securityMarks$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The time at which the updated SecurityMarks take effect. If not set uses current server
+           * time. Updates will be applied to the SecurityMarks that are active immediately
+           * preceding this time.
+           */
+          @com.google.api.client.util.Key
+          private String startTime;
+
+          /** The time at which the updated SecurityMarks take effect. If not set uses current server time.
+         Updates will be applied to the SecurityMarks that are active immediately preceding this time.
+           */
+          public String getStartTime() {
+            return startTime;
+          }
+
+          /**
+           * The time at which the updated SecurityMarks take effect. If not set uses current server
+           * time. Updates will be applied to the SecurityMarks that are active immediately
+           * preceding this time.
+           */
+          public UpdateSecurityMarks setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+          }
+
+          /**
+           * The FieldMask to use when updating the security marks resource. The field mask must not
+           * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
+           * Individual marks can be updated using "marks.".
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The FieldMask to use when updating the security marks resource. The field mask must not contain
+         duplicate fields. If empty or set to "marks", all marks will be replaced. Individual marks can be
+         updated using "marks.".
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The FieldMask to use when updating the security marks resource. The field mask must not
+           * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
+           * Individual marks can be updated using "marks.".
+           */
+          public UpdateSecurityMarks setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateSecurityMarks set(String parameterName, Object value) {
+            return (UpdateSecurityMarks) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Organizations collection.
    *
    * <p>The typical use is:</p>
@@ -489,7 +2704,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id]".
+       * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+       *        folders/[folder_id], or projects/[project_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
        */
@@ -517,7 +2733,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id]".
+         * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+       *        folders/[folder_id], or projects/[project_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
          */
@@ -588,12 +2805,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the organization to groupBy. Its format is
-         * "organizations/[organization_id]".
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization to groupBy. Its format is "organizations/[organization_id]".
+        /** Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+       folders/[folder_id], or projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
@@ -601,7 +2819,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the organization to groupBy. Its format is
-         * "organizations/[organization_id]".
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -627,7 +2845,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Name of the organization assets should belong to. Its format is
-       *        "organizations/[organization_id]".
+       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -654,7 +2872,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Name of the organization assets should belong to. Its format is
-       *        "organizations/[organization_id]".
+       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -734,13 +2952,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the organization assets should belong to. Its format is
-         * "organizations/[organization_id]".
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Name of the organization assets should belong to. Its format is
-       "organizations/[organization_id]".
+       "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
@@ -748,7 +2966,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the organization assets should belong to. Its format is
-         * "organizations/[organization_id]".
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3352,7 +5570,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id]".
+       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3379,7 +5597,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id]".
+       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3459,13 +5677,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id]".
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent of sources to list. Its format should be
-       "organizations/[organization_id]".
+       "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         public java.lang.String getParent() {
           return parent;
@@ -3473,7 +5691,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id]".
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4177,7 +6395,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Filters an organization or source's findings and groups them by their specified properties. To
          * group across all sources provide a `-` as the source id. Example:
-         * /v1/organizations/{organization_id}/sources/-/findings
+         * /v1/organizations/{organization_id}/sources/-/findings,
+         * /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
          *
          * Create a request for the method "findings.group".
          *
@@ -4185,8 +6404,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the source to groupBy. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
-         *        provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
+         *        "organizations/[organization_id]/sources/[source_id]",
+         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]. To
+         *        groupBy across all sources provide a source_id of `-`. For example:
+         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+         *        projects/{project_id}/sources/-
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
          * @return the request
          */
@@ -4206,7 +6428,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Filters an organization or source's findings and groups them by their specified properties. To
            * group across all sources provide a `-` as the source id. Example:
-           * /v1/organizations/{organization_id}/sources/-/findings
+           * /v1/organizations/{organization_id}/sources/-/findings,
+           * /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
            *
            * Create a request for the method "findings.group".
            *
@@ -4217,8 +6440,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the source to groupBy. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
-         *        provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
+         *        "organizations/[organization_id]/sources/[source_id]",
+         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]. To
+         *        groupBy across all sources provide a source_id of `-`. For example:
+         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+         *        projects/{project_id}/sources/-
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
            * @since 1.13
            */
@@ -4289,15 +6515,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source to groupBy. Its format is
-           * "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
-           * provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
+           * "organizations/[organization_id]/sources/[source_id]",
+           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id].
+           * To groupBy across all sources provide a source_id of `-`. For example:
+           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+           * projects/{project_id}/sources/-
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the source to groupBy. Its format is
-         "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources provide a
-         source_id of `-`. For example: organizations/{organization_id}/sources/-
+         "organizations/[organization_id]/sources/[source_id]", folders/[folder_id]/sources/[source_id], or
+         projects/[project_id]/sources/[source_id]. To groupBy across all sources provide a source_id of
+         `-`. For example: organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+         projects/{project_id}/sources/-
            */
           public java.lang.String getParent() {
             return parent;
@@ -4305,8 +6536,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source to groupBy. Its format is
-           * "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
-           * provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
+           * "organizations/[organization_id]/sources/[source_id]",
+           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id].
+           * To groupBy across all sources provide a source_id of `-`. For example:
+           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+           * projects/{project_id}/sources/-
            */
           public Group setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4333,8 +6567,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the source the findings belong to. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]". To list across all sources provide
-         *        a source_id of `-`. For example: organizations/{organization_id}/sources/-
+         *        "organizations/[organization_id]/sources/[source_id],
+         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]". To
+         *        list across all sources provide a source_id of `-`. For example:
+         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+         *        projects/{projects_id}/sources/-
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4362,8 +6599,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the source the findings belong to. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]". To list across all sources provide
-         *        a source_id of `-`. For example: organizations/{organization_id}/sources/-
+         *        "organizations/[organization_id]/sources/[source_id],
+         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]". To
+         *        list across all sources provide a source_id of `-`. For example:
+         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+         *        projects/{projects_id}/sources/-
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4443,15 +6683,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source the findings belong to. Its format is
-           * "organizations/[organization_id]/sources/[source_id]". To list across all sources
-           * provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
+           * "organizations/[organization_id]/sources/[source_id],
+           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]".
+           * To list across all sources provide a source_id of `-`. For example:
+           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+           * projects/{projects_id}/sources/-
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the source the findings belong to. Its format is
-         "organizations/[organization_id]/sources/[source_id]". To list across all sources provide a
-         source_id of `-`. For example: organizations/{organization_id}/sources/-
+         "organizations/[organization_id]/sources/[source_id], folders/[folder_id]/sources/[source_id], or
+         projects/[project_id]/sources/[source_id]". To list across all sources provide a source_id of `-`.
+         For example: organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+         projects/{projects_id}/sources/-
            */
           public java.lang.String getParent() {
             return parent;
@@ -4459,8 +6704,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source the findings belong to. Its format is
-           * "organizations/[organization_id]/sources/[source_id]". To list across all sources
-           * provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
+           * "organizations/[organization_id]/sources/[source_id],
+           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]".
+           * To list across all sources provide a source_id of `-`. For example:
+           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+           * projects/{projects_id}/sources/-
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5217,6 +7465,2221 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
                   "^organizations/[^/]+/sources/[^/]+/findings/[^/]+/securityMarks$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The time at which the updated SecurityMarks take effect. If not set uses current server
+           * time. Updates will be applied to the SecurityMarks that are active immediately
+           * preceding this time.
+           */
+          @com.google.api.client.util.Key
+          private String startTime;
+
+          /** The time at which the updated SecurityMarks take effect. If not set uses current server time.
+         Updates will be applied to the SecurityMarks that are active immediately preceding this time.
+           */
+          public String getStartTime() {
+            return startTime;
+          }
+
+          /**
+           * The time at which the updated SecurityMarks take effect. If not set uses current server
+           * time. Updates will be applied to the SecurityMarks that are active immediately
+           * preceding this time.
+           */
+          public UpdateSecurityMarks setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+          }
+
+          /**
+           * The FieldMask to use when updating the security marks resource. The field mask must not
+           * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
+           * Individual marks can be updated using "marks.".
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The FieldMask to use when updating the security marks resource. The field mask must not contain
+         duplicate fields. If empty or set to "marks", all marks will be replaced. Individual marks can be
+         updated using "marks.".
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The FieldMask to use when updating the security marks resource. The field mask must not
+           * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
+           * Individual marks can be updated using "marks.".
+           */
+          public UpdateSecurityMarks setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateSecurityMarks set(String parameterName, Object value) {
+            return (UpdateSecurityMarks) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+   *   {@code SecurityCommandCenter.Projects.List request = securitycenter.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Assets collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.Assets.List request = securitycenter.assets().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Assets assets() {
+      return new Assets();
+    }
+
+    /**
+     * The "assets" collection of methods.
+     */
+    public class Assets {
+
+      /**
+       * Filters an organization's assets and groups them by their specified properties.
+       *
+       * Create a request for the method "assets.group".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+       *        folders/[folder_id], or projects/[project_id]".
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
+       * @return the request
+       */
+      public Group group(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GroupAssetsRequest content) throws java.io.IOException {
+        Group result = new Group(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Group extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GroupAssetsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/assets:group";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Filters an organization's assets and groups them by their specified properties.
+         *
+         * Create a request for the method "assets.group".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+       *        folders/[folder_id], or projects/[project_id]".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
+         * @since 1.13
+         */
+        protected Group(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GroupAssetsRequest content) {
+          super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GroupAssetsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Group set$Xgafv(java.lang.String $Xgafv) {
+          return (Group) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Group setAccessToken(java.lang.String accessToken) {
+          return (Group) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Group setAlt(java.lang.String alt) {
+          return (Group) super.setAlt(alt);
+        }
+
+        @Override
+        public Group setCallback(java.lang.String callback) {
+          return (Group) super.setCallback(callback);
+        }
+
+        @Override
+        public Group setFields(java.lang.String fields) {
+          return (Group) super.setFields(fields);
+        }
+
+        @Override
+        public Group setKey(java.lang.String key) {
+          return (Group) super.setKey(key);
+        }
+
+        @Override
+        public Group setOauthToken(java.lang.String oauthToken) {
+          return (Group) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Group setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Group) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Group setQuotaUser(java.lang.String quotaUser) {
+          return (Group) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Group setUploadType(java.lang.String uploadType) {
+          return (Group) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Group setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Group) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the organization to groupBy. Its format is
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the organization to groupBy. Its format is "organizations/[organization_id],
+       folders/[folder_id], or projects/[project_id]".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the organization to groupBy. Its format is
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        public Group setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Group set(String parameterName, Object value) {
+          return (Group) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists an organization's assets.
+       *
+       * Create a request for the method "assets.list".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the organization assets should belong to. Its format is
+       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListAssetsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/assets";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists an organization's assets.
+         *
+         * Create a request for the method "assets.list".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the organization assets should belong to. Its format is
+       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListAssetsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the organization assets should belong to. Its format is
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the organization assets should belong to. Its format is
+       "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the organization assets should belong to. Its format is
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated
+         * to indicate whether the asset was added, removed, or remained present during the
+         * compare_duration period of time that precedes the read_time. This is the time between
+         * (read_time - compare_duration) and read_time. The state_change value is derived based on
+         * the presence of the asset at the two points in time. Intermediate state changes between
+         * the two times don't affect the result. For example, the results aren't affected if the
+         * asset is removed and re-created again. Possible "state_change" values when
+         * compare_duration is specified: * "ADDED": indicates that the asset was not present at the
+         * start of compare_duration, but present at read_time. * "REMOVED": indicates that the
+         * asset was present at the start of compare_duration, but not present at read_time. *
+         * "ACTIVE": indicates that the asset was present at both the start and the end of the time
+         * period defined by compare_duration and read_time. If compare_duration is not specified,
+         * then the only possible state_change is "UNUSED", which will be the state_change set for
+         * all assets present at read_time.
+         */
+        @com.google.api.client.util.Key
+        private String compareDuration;
+
+        /** When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated to
+       indicate whether the asset was added, removed, or remained present during the compare_duration
+       period of time that precedes the read_time. This is the time between (read_time - compare_duration)
+       and read_time. The state_change value is derived based on the presence of the asset at the two
+       points in time. Intermediate state changes between the two times don't affect the result. For
+       example, the results aren't affected if the asset is removed and re-created again. Possible
+       "state_change" values when compare_duration is specified: * "ADDED": indicates that the asset was
+       not present at the start of compare_duration, but present at read_time. * "REMOVED": indicates that
+       the asset was present at the start of compare_duration, but not present at read_time. * "ACTIVE":
+       indicates that the asset was present at both the start and the end of the time period defined by
+       compare_duration and read_time. If compare_duration is not specified, then the only possible
+       state_change is "UNUSED", which will be the state_change set for all assets present at read_time.
+         */
+        public String getCompareDuration() {
+          return compareDuration;
+        }
+
+        /**
+         * When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated
+         * to indicate whether the asset was added, removed, or remained present during the
+         * compare_duration period of time that precedes the read_time. This is the time between
+         * (read_time - compare_duration) and read_time. The state_change value is derived based on
+         * the presence of the asset at the two points in time. Intermediate state changes between
+         * the two times don't affect the result. For example, the results aren't affected if the
+         * asset is removed and re-created again. Possible "state_change" values when
+         * compare_duration is specified: * "ADDED": indicates that the asset was not present at the
+         * start of compare_duration, but present at read_time. * "REMOVED": indicates that the
+         * asset was present at the start of compare_duration, but not present at read_time. *
+         * "ACTIVE": indicates that the asset was present at both the start and the end of the time
+         * period defined by compare_duration and read_time. If compare_duration is not specified,
+         * then the only possible state_change is "UNUSED", which will be the state_change set for
+         * all assets present at read_time.
+         */
+        public List setCompareDuration(String compareDuration) {
+          this.compareDuration = compareDuration;
+          return this;
+        }
+
+        /**
+         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
+         * empty field mask will list all fields.
+         */
+        @com.google.api.client.util.Key
+        private String fieldMask;
+
+        /** A field mask to specify the ListAssetsResult fields to be listed in the response. An empty field
+       mask will list all fields.
+         */
+        public String getFieldMask() {
+          return fieldMask;
+        }
+
+        /**
+         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
+         * empty field mask will list all fields.
+         */
+        public List setFieldMask(String fieldMask) {
+          this.fieldMask = fieldMask;
+          return this;
+        }
+
+        /**
+         * Expression that defines the filter to apply across assets. The expression is a list of
+         * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
+         * supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and
+         * may have a `-` character in front of them to indicate negation. The fields map to those
+         * defined in the Asset resource. Examples include: * name *
+         * security_center_properties.resource_name * resource_properties.a_property *
+         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
+         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
+         * supported value types are: * string literals in quotes. * integer literals without
+         * quotes. * boolean literals `true` and `false` without quotes. The following are the
+         * allowed field and operator combinations: * name: `=` * update_time: `=`, `>`, `<`, `>=`,
+         * `<=` Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
+         * `update_time = "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000` * create_time:
+         * `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339
+         * string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
+         * 1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`,
+         * `<`, `>=`, `<=` * security_marks.marks: `=`, `:` *
+         * security_center_properties.resource_name: `=`, `:` *
+         * security_center_properties.resource_display_name: `=`, `:` *
+         * security_center_properties.resource_type: `=`, `:` *
+         * security_center_properties.resource_parent: `=`, `:` *
+         * security_center_properties.resource_parent_display_name: `=`, `:` *
+         * security_center_properties.resource_project: `=`, `:` *
+         * security_center_properties.resource_project_display_name: `=`, `:` *
+         * security_center_properties.resource_owners: `=`, `:` For example,
+         * `resource_properties.size = 100` is a valid filter string. Use a partial match on the
+         * empty string to filter based on a property existing: `resource_properties.my_property :
+         * ""` Use a negated partial match on the empty string to filter based on a property not
+         * existing: `-resource_properties.my_property : ""`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Expression that defines the filter to apply across assets. The expression is a list of zero or more
+       restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and `OR` has
+       higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character in front
+       of them to indicate negation. The fields map to those defined in the Asset resource. Examples
+       include: * name * security_center_properties.resource_name * resource_properties.a_property *
+       security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
+       `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
+       types are: * string literals in quotes. * integer literals without quotes. * boolean literals
+       `true` and `false` without quotes. The following are the allowed field and operator combinations: *
+       name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch
+       or an RFC3339 string. Examples: `update_time = "2019-06-10T16:07:18-07:00"` `update_time =
+       1560208038000` * create_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since
+       epoch or an RFC3339 string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
+       1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`,
+       `<=` * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
+       security_center_properties.resource_display_name: `=`, `:` *
+       security_center_properties.resource_type: `=`, `:` * security_center_properties.resource_parent:
+       `=`, `:` * security_center_properties.resource_parent_display_name: `=`, `:` *
+       security_center_properties.resource_project: `=`, `:` *
+       security_center_properties.resource_project_display_name: `=`, `:` *
+       security_center_properties.resource_owners: `=`, `:` For example, `resource_properties.size = 100`
+       is a valid filter string. Use a partial match on the empty string to filter based on a property
+       existing: `resource_properties.my_property : ""` Use a negated partial match on the empty string to
+       filter based on a property not existing: `-resource_properties.my_property : ""`
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Expression that defines the filter to apply across assets. The expression is a list of
+         * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
+         * supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and
+         * may have a `-` character in front of them to indicate negation. The fields map to those
+         * defined in the Asset resource. Examples include: * name *
+         * security_center_properties.resource_name * resource_properties.a_property *
+         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
+         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
+         * supported value types are: * string literals in quotes. * integer literals without
+         * quotes. * boolean literals `true` and `false` without quotes. The following are the
+         * allowed field and operator combinations: * name: `=` * update_time: `=`, `>`, `<`, `>=`,
+         * `<=` Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
+         * `update_time = "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000` * create_time:
+         * `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339
+         * string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
+         * 1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`,
+         * `<`, `>=`, `<=` * security_marks.marks: `=`, `:` *
+         * security_center_properties.resource_name: `=`, `:` *
+         * security_center_properties.resource_display_name: `=`, `:` *
+         * security_center_properties.resource_type: `=`, `:` *
+         * security_center_properties.resource_parent: `=`, `:` *
+         * security_center_properties.resource_parent_display_name: `=`, `:` *
+         * security_center_properties.resource_project: `=`, `:` *
+         * security_center_properties.resource_project_display_name: `=`, `:` *
+         * security_center_properties.resource_owners: `=`, `:` For example,
+         * `resource_properties.size = 100` is a valid filter string. Use a partial match on the
+         * empty string to filter based on a property existing: `resource_properties.my_property :
+         * ""` Use a negated partial match on the empty string to filter based on a property not
+         * existing: `-resource_properties.my_property : ""`
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Expression that defines what fields and order to use for sorting. The string value should
+         * follow SQL syntax: comma separated list of fields. For example:
+         * "name,resource_properties.a_property". The default sorting order is ascending. To specify
+         * descending order for a field, a suffix " desc" should be appended to the field name. For
+         * example: "name desc,resource_properties.a_property". Redundant space characters in the
+         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
+         * resource_properties.a_property " are equivalent. The following fields are supported: name
+         * update_time resource_properties security_marks.marks
+         * security_center_properties.resource_name security_center_properties.resource_display_name
+         * security_center_properties.resource_parent
+         * security_center_properties.resource_parent_display_name
+         * security_center_properties.resource_project
+         * security_center_properties.resource_project_display_name
+         * security_center_properties.resource_type
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Expression that defines what fields and order to use for sorting. The string value should follow
+       SQL syntax: comma separated list of fields. For example: "name,resource_properties.a_property". The
+       default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+       should be appended to the field name. For example: "name desc,resource_properties.a_property".
+       Redundant space characters in the syntax are insignificant. "name
+       desc,resource_properties.a_property" and " name desc , resource_properties.a_property " are
+       equivalent. The following fields are supported: name update_time resource_properties
+       security_marks.marks security_center_properties.resource_name
+       security_center_properties.resource_display_name security_center_properties.resource_parent
+       security_center_properties.resource_parent_display_name security_center_properties.resource_project
+       security_center_properties.resource_project_display_name security_center_properties.resource_type
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Expression that defines what fields and order to use for sorting. The string value should
+         * follow SQL syntax: comma separated list of fields. For example:
+         * "name,resource_properties.a_property". The default sorting order is ascending. To specify
+         * descending order for a field, a suffix " desc" should be appended to the field name. For
+         * example: "name desc,resource_properties.a_property". Redundant space characters in the
+         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
+         * resource_properties.a_property " are equivalent. The following fields are supported: name
+         * update_time resource_properties security_marks.marks
+         * security_center_properties.resource_name security_center_properties.resource_display_name
+         * security_center_properties.resource_parent
+         * security_center_properties.resource_parent_display_name
+         * security_center_properties.resource_project
+         * security_center_properties.resource_project_display_name
+         * security_center_properties.resource_type
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * The maximum number of results to return in a single response. Default is 10, minimum is
+         * 1, maximum is 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+       is 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of results to return in a single response. Default is 10, minimum is
+         * 1, maximum is 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The value returned by the last `ListAssetsResponse`; indicates that this is a
+         * continuation of a prior `ListAssets` call, and that the system should return the next
+         * page of data.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The value returned by the last `ListAssetsResponse`; indicates that this is a continuation of a
+       prior `ListAssets` call, and that the system should return the next page of data.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The value returned by the last `ListAssetsResponse`; indicates that this is a
+         * continuation of a prior `ListAssets` call, and that the system should return the next
+         * page of data.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Time used as a reference point when filtering assets. The filter is limited to assets
+         * existing at the supplied time and their values are those at that specific time. Absence
+         * of this field will default to the API's version of NOW.
+         */
+        @com.google.api.client.util.Key
+        private String readTime;
+
+        /** Time used as a reference point when filtering assets. The filter is limited to assets existing at
+       the supplied time and their values are those at that specific time. Absence of this field will
+       default to the API's version of NOW.
+         */
+        public String getReadTime() {
+          return readTime;
+        }
+
+        /**
+         * Time used as a reference point when filtering assets. The filter is limited to assets
+         * existing at the supplied time and their values are those at that specific time. Absence
+         * of this field will default to the API's version of NOW.
+         */
+        public List setReadTime(String readTime) {
+          this.readTime = readTime;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates security marks.
+       *
+       * Create a request for the method "assets.updateSecurityMarks".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name The relative resource name of the SecurityMarks. See:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
+       * @return the request
+       */
+      public UpdateSecurityMarks updateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1.model.SecurityMarks content) throws java.io.IOException {
+        UpdateSecurityMarks result = new UpdateSecurityMarks(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateSecurityMarks extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.SecurityMarks> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/assets/[^/]+/securityMarks$");
+
+        /**
+         * Updates security marks.
+         *
+         * Create a request for the method "assets.updateSecurityMarks".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateSecurityMarks#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name The relative resource name of the SecurityMarks. See:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
+         * @since 1.13
+         */
+        protected UpdateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1.model.SecurityMarks content) {
+          super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.SecurityMarks.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/assets/[^/]+/securityMarks$");
+          }
+        }
+
+        @Override
+        public UpdateSecurityMarks set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateSecurityMarks) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateSecurityMarks setAccessToken(java.lang.String accessToken) {
+          return (UpdateSecurityMarks) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateSecurityMarks setAlt(java.lang.String alt) {
+          return (UpdateSecurityMarks) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateSecurityMarks setCallback(java.lang.String callback) {
+          return (UpdateSecurityMarks) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateSecurityMarks setFields(java.lang.String fields) {
+          return (UpdateSecurityMarks) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateSecurityMarks setKey(java.lang.String key) {
+          return (UpdateSecurityMarks) super.setKey(key);
+        }
+
+        @Override
+        public UpdateSecurityMarks setOauthToken(java.lang.String oauthToken) {
+          return (UpdateSecurityMarks) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateSecurityMarks setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateSecurityMarks) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateSecurityMarks setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateSecurityMarks) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateSecurityMarks setUploadType(java.lang.String uploadType) {
+          return (UpdateSecurityMarks) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateSecurityMarks setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateSecurityMarks) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The relative resource name of the SecurityMarks. See:
+         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
+         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The relative resource name of the SecurityMarks. See:
+       https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+       "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+       "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The relative resource name of the SecurityMarks. See:
+         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
+         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         */
+        public UpdateSecurityMarks setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/assets/[^/]+/securityMarks$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * The time at which the updated SecurityMarks take effect. If not set uses current server
+         * time. Updates will be applied to the SecurityMarks that are active immediately preceding
+         * this time.
+         */
+        @com.google.api.client.util.Key
+        private String startTime;
+
+        /** The time at which the updated SecurityMarks take effect. If not set uses current server time.
+       Updates will be applied to the SecurityMarks that are active immediately preceding this time.
+         */
+        public String getStartTime() {
+          return startTime;
+        }
+
+        /**
+         * The time at which the updated SecurityMarks take effect. If not set uses current server
+         * time. Updates will be applied to the SecurityMarks that are active immediately preceding
+         * this time.
+         */
+        public UpdateSecurityMarks setStartTime(String startTime) {
+          this.startTime = startTime;
+          return this;
+        }
+
+        /**
+         * The FieldMask to use when updating the security marks resource. The field mask must not
+         * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
+         * Individual marks can be updated using "marks.".
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The FieldMask to use when updating the security marks resource. The field mask must not contain
+       duplicate fields. If empty or set to "marks", all marks will be replaced. Individual marks can be
+       updated using "marks.".
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * The FieldMask to use when updating the security marks resource. The field mask must not
+         * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
+         * Individual marks can be updated using "marks.".
+         */
+        public UpdateSecurityMarks setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateSecurityMarks set(String parameterName, Object value) {
+          return (UpdateSecurityMarks) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Sources collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.Sources.List request = securitycenter.sources().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Sources sources() {
+      return new Sources();
+    }
+
+    /**
+     * The "sources" collection of methods.
+     */
+    public class Sources {
+
+      /**
+       * Lists all sources belonging to an organization.
+       *
+       * Create a request for the method "sources.list".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name of the parent of sources to list. Its format should be
+       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListSourcesResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/sources";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists all sources belonging to an organization.
+         *
+         * Create a request for the method "sources.list".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the parent of sources to list. Its format should be
+       *        "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListSourcesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the parent of sources to list. Its format should be
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the parent of sources to list. Its format should be
+       "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the parent of sources to list. Its format should be
+         * "organizations/[organization_id], folders/[folder_id], or projects/[project_id]".
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of results to return in a single response. Default is 10, minimum is
+         * 1, maximum is 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+       is 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of results to return in a single response. Default is 10, minimum is
+         * 1, maximum is 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The value returned by the last `ListSourcesResponse`; indicates that this is a
+         * continuation of a prior `ListSources` call, and that the system should return the next
+         * page of data.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The value returned by the last `ListSourcesResponse`; indicates that this is a continuation of a
+       prior `ListSources` call, and that the system should return the next page of data.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The value returned by the last `ListSourcesResponse`; indicates that this is a
+         * continuation of a prior `ListSources` call, and that the system should return the next
+         * page of data.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Findings collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+       *   {@code SecurityCommandCenter.Findings.List request = securitycenter.findings().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Findings findings() {
+        return new Findings();
+      }
+
+      /**
+       * The "findings" collection of methods.
+       */
+      public class Findings {
+
+        /**
+         * Filters an organization or source's findings and groups them by their specified properties. To
+         * group across all sources provide a `-` as the source id. Example:
+         * /v1/organizations/{organization_id}/sources/-/findings,
+         * /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
+         *
+         * Create a request for the method "findings.group".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the source to groupBy. Its format is
+         *        "organizations/[organization_id]/sources/[source_id]",
+         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]. To
+         *        groupBy across all sources provide a source_id of `-`. For example:
+         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+         *        projects/{project_id}/sources/-
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
+         * @return the request
+         */
+        public Group group(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GroupFindingsRequest content) throws java.io.IOException {
+          Group result = new Group(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Group extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GroupFindingsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/findings:group";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sources/[^/]+$");
+
+          /**
+           * Filters an organization or source's findings and groups them by their specified properties. To
+           * group across all sources provide a `-` as the source id. Example:
+           * /v1/organizations/{organization_id}/sources/-/findings,
+           * /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
+           *
+           * Create a request for the method "findings.group".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the source to groupBy. Its format is
+         *        "organizations/[organization_id]/sources/[source_id]",
+         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]. To
+         *        groupBy across all sources provide a source_id of `-`. For example:
+         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+         *        projects/{project_id}/sources/-
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
+           * @since 1.13
+           */
+          protected Group(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GroupFindingsRequest content) {
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GroupFindingsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sources/[^/]+$");
+            }
+          }
+
+          @Override
+          public Group set$Xgafv(java.lang.String $Xgafv) {
+            return (Group) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Group setAccessToken(java.lang.String accessToken) {
+            return (Group) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Group setAlt(java.lang.String alt) {
+            return (Group) super.setAlt(alt);
+          }
+
+          @Override
+          public Group setCallback(java.lang.String callback) {
+            return (Group) super.setCallback(callback);
+          }
+
+          @Override
+          public Group setFields(java.lang.String fields) {
+            return (Group) super.setFields(fields);
+          }
+
+          @Override
+          public Group setKey(java.lang.String key) {
+            return (Group) super.setKey(key);
+          }
+
+          @Override
+          public Group setOauthToken(java.lang.String oauthToken) {
+            return (Group) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Group setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Group) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Group setQuotaUser(java.lang.String quotaUser) {
+            return (Group) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Group setUploadType(java.lang.String uploadType) {
+            return (Group) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Group setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Group) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the source to groupBy. Its format is
+           * "organizations/[organization_id]/sources/[source_id]",
+           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id].
+           * To groupBy across all sources provide a source_id of `-`. For example:
+           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+           * projects/{project_id}/sources/-
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the source to groupBy. Its format is
+         "organizations/[organization_id]/sources/[source_id]", folders/[folder_id]/sources/[source_id], or
+         projects/[project_id]/sources/[source_id]. To groupBy across all sources provide a source_id of
+         `-`. For example: organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+         projects/{project_id}/sources/-
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the source to groupBy. Its format is
+           * "organizations/[organization_id]/sources/[source_id]",
+           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id].
+           * To groupBy across all sources provide a source_id of `-`. For example:
+           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
+           * projects/{project_id}/sources/-
+           */
+          public Group setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sources/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Group set(String parameterName, Object value) {
+            return (Group) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists an organization or source's findings. To list across all sources provide a `-` as the
+         * source id. Example: /v1/organizations/{organization_id}/sources/-/findings
+         *
+         * Create a request for the method "findings.list".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the source the findings belong to. Its format is
+         *        "organizations/[organization_id]/sources/[source_id],
+         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]". To
+         *        list across all sources provide a source_id of `-`. For example:
+         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+         *        projects/{projects_id}/sources/-
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListFindingsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/findings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sources/[^/]+$");
+
+          /**
+           * Lists an organization or source's findings. To list across all sources provide a `-` as the
+           * source id. Example: /v1/organizations/{organization_id}/sources/-/findings
+           *
+           * Create a request for the method "findings.list".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the source the findings belong to. Its format is
+         *        "organizations/[organization_id]/sources/[source_id],
+         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]". To
+         *        list across all sources provide a source_id of `-`. For example:
+         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+         *        projects/{projects_id}/sources/-
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListFindingsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sources/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the source the findings belong to. Its format is
+           * "organizations/[organization_id]/sources/[source_id],
+           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]".
+           * To list across all sources provide a source_id of `-`. For example:
+           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+           * projects/{projects_id}/sources/-
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the source the findings belong to. Its format is
+         "organizations/[organization_id]/sources/[source_id], folders/[folder_id]/sources/[source_id], or
+         projects/[project_id]/sources/[source_id]". To list across all sources provide a source_id of `-`.
+         For example: organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+         projects/{projects_id}/sources/-
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the source the findings belong to. Its format is
+           * "organizations/[organization_id]/sources/[source_id],
+           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]".
+           * To list across all sources provide a source_id of `-`. For example:
+           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
+           * projects/{projects_id}/sources/-
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sources/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * When compare_duration is set, the ListFindingsResult's "state_change" attribute is
+           * updated to indicate whether the finding had its state changed, the finding's state
+           * remained unchanged, or if the finding was added in any state during the
+           * compare_duration period of time that precedes the read_time. This is the time between
+           * (read_time - compare_duration) and read_time. The state_change value is derived based
+           * on the presence and state of the finding at the two points in time. Intermediate state
+           * changes between the two times don't affect the result. For example, the results aren't
+           * affected if the finding is made inactive and then active again. Possible "state_change"
+           * values when compare_duration is specified: * "CHANGED": indicates that the finding was
+           * present and matched the given filter at the start of compare_duration, but changed its
+           * state at read_time. * "UNCHANGED": indicates that the finding was present and matched
+           * the given filter at the start of compare_duration and did not change state at
+           * read_time. * "ADDED": indicates that the finding did not match the given filter or was
+           * not present at the start of compare_duration, but was present at read_time. *
+           * "REMOVED": indicates that the finding was present and matched the filter at the start
+           * of compare_duration, but did not match the filter at read_time. If compare_duration is
+           * not specified, then the only possible state_change is "UNUSED", which will be the
+           * state_change set for all findings present at read_time.
+           */
+          @com.google.api.client.util.Key
+          private String compareDuration;
+
+          /** When compare_duration is set, the ListFindingsResult's "state_change" attribute is updated to
+         indicate whether the finding had its state changed, the finding's state remained unchanged, or if
+         the finding was added in any state during the compare_duration period of time that precedes the
+         read_time. This is the time between (read_time - compare_duration) and read_time. The state_change
+         value is derived based on the presence and state of the finding at the two points in time.
+         Intermediate state changes between the two times don't affect the result. For example, the results
+         aren't affected if the finding is made inactive and then active again. Possible "state_change"
+         values when compare_duration is specified: * "CHANGED": indicates that the finding was present and
+         matched the given filter at the start of compare_duration, but changed its state at read_time. *
+         "UNCHANGED": indicates that the finding was present and matched the given filter at the start of
+         compare_duration and did not change state at read_time. * "ADDED": indicates that the finding did
+         not match the given filter or was not present at the start of compare_duration, but was present at
+         read_time. * "REMOVED": indicates that the finding was present and matched the filter at the start
+         of compare_duration, but did not match the filter at read_time. If compare_duration is not
+         specified, then the only possible state_change is "UNUSED", which will be the state_change set for
+         all findings present at read_time.
+           */
+          public String getCompareDuration() {
+            return compareDuration;
+          }
+
+          /**
+           * When compare_duration is set, the ListFindingsResult's "state_change" attribute is
+           * updated to indicate whether the finding had its state changed, the finding's state
+           * remained unchanged, or if the finding was added in any state during the
+           * compare_duration period of time that precedes the read_time. This is the time between
+           * (read_time - compare_duration) and read_time. The state_change value is derived based
+           * on the presence and state of the finding at the two points in time. Intermediate state
+           * changes between the two times don't affect the result. For example, the results aren't
+           * affected if the finding is made inactive and then active again. Possible "state_change"
+           * values when compare_duration is specified: * "CHANGED": indicates that the finding was
+           * present and matched the given filter at the start of compare_duration, but changed its
+           * state at read_time. * "UNCHANGED": indicates that the finding was present and matched
+           * the given filter at the start of compare_duration and did not change state at
+           * read_time. * "ADDED": indicates that the finding did not match the given filter or was
+           * not present at the start of compare_duration, but was present at read_time. *
+           * "REMOVED": indicates that the finding was present and matched the filter at the start
+           * of compare_duration, but did not match the filter at read_time. If compare_duration is
+           * not specified, then the only possible state_change is "UNUSED", which will be the
+           * state_change set for all findings present at read_time.
+           */
+          public List setCompareDuration(String compareDuration) {
+            this.compareDuration = compareDuration;
+            return this;
+          }
+
+          /**
+           * A field mask to specify the Finding fields to be listed in the response. An empty field
+           * mask will list all fields.
+           */
+          @com.google.api.client.util.Key
+          private String fieldMask;
+
+          /** A field mask to specify the Finding fields to be listed in the response. An empty field mask will
+         list all fields.
+           */
+          public String getFieldMask() {
+            return fieldMask;
+          }
+
+          /**
+           * A field mask to specify the Finding fields to be listed in the response. An empty field
+           * mask will list all fields.
+           */
+          public List setFieldMask(String fieldMask) {
+            this.fieldMask = fieldMask;
+            return this;
+          }
+
+          /**
+           * Expression that defines the filter to apply across findings. The expression is a list
+           * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
+           * are supported, and `OR` has higher precedence than `AND`. Restrictions have the form `
+           * ` and may have a `-` character in front of them to indicate negation. Examples include:
+           * * name * source_properties.a_property * security_marks.marks.marka The supported
+           * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. *
+           * `:`, meaning substring matching, for strings. The supported value types are: * string
+           * literals in quotes. * integer literals without quotes. * boolean literals `true` and
+           * `false` without quotes. The following field and operator combinations are supported:
+           * name: `=` parent: `=`, `:` resource_name: `=`, `:` state: `=`, `:` category: `=`, `:`
+           * external_uri: `=`, `:` event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be
+           * milliseconds since epoch or an RFC3339 string. Examples: `event_time =
+           * "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` security_marks.marks: `=`,
+           * `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=` For example,
+           * `source_properties.size = 100` is a valid filter string. Use a partial match on the
+           * empty string to filter based on a property existing: `source_properties.my_property :
+           * ""` Use a negated partial match on the empty string to filter based on a property not
+           * existing: `-source_properties.my_property : ""`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Expression that defines the filter to apply across findings. The expression is a list of one or
+         more restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and
+         `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character
+         in front of them to indicate negation. Examples include: * name * source_properties.a_property *
+         security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
+         `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
+         types are: * string literals in quotes. * integer literals without quotes. * boolean literals
+         `true` and `false` without quotes. The following field and operator combinations are supported:
+         name: `=` parent: `=`, `:` resource_name: `=`, `:` state: `=`, `:` category: `=`, `:` external_uri:
+         `=`, `:` event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an
+         RFC3339 string. Examples: `event_time = "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000`
+         security_marks.marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=` For example,
+         `source_properties.size = 100` is a valid filter string. Use a partial match on the empty string to
+         filter based on a property existing: `source_properties.my_property : ""` Use a negated partial
+         match on the empty string to filter based on a property not existing:
+         `-source_properties.my_property : ""`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Expression that defines the filter to apply across findings. The expression is a list
+           * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
+           * are supported, and `OR` has higher precedence than `AND`. Restrictions have the form `
+           * ` and may have a `-` character in front of them to indicate negation. Examples include:
+           * * name * source_properties.a_property * security_marks.marks.marka The supported
+           * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. *
+           * `:`, meaning substring matching, for strings. The supported value types are: * string
+           * literals in quotes. * integer literals without quotes. * boolean literals `true` and
+           * `false` without quotes. The following field and operator combinations are supported:
+           * name: `=` parent: `=`, `:` resource_name: `=`, `:` state: `=`, `:` category: `=`, `:`
+           * external_uri: `=`, `:` event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be
+           * milliseconds since epoch or an RFC3339 string. Examples: `event_time =
+           * "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` security_marks.marks: `=`,
+           * `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=` For example,
+           * `source_properties.size = 100` is a valid filter string. Use a partial match on the
+           * empty string to filter based on a property existing: `source_properties.my_property :
+           * ""` Use a negated partial match on the empty string to filter based on a property not
+           * existing: `-source_properties.my_property : ""`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Expression that defines what fields and order to use for sorting. The string value
+           * should follow SQL syntax: comma separated list of fields. For example:
+           * "name,resource_properties.a_property". The default sorting order is ascending. To
+           * specify descending order for a field, a suffix " desc" should be appended to the field
+           * name. For example: "name desc,source_properties.a_property". Redundant space characters
+           * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
+           * desc , source_properties.a_property " are equivalent. The following fields are
+           * supported: name parent state category resource_name event_time source_properties
+           * security_marks.marks
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Expression that defines what fields and order to use for sorting. The string value should follow
+         SQL syntax: comma separated list of fields. For example: "name,resource_properties.a_property". The
+         default sorting order is ascending. To specify descending order for a field, a suffix " desc"
+         should be appended to the field name. For example: "name desc,source_properties.a_property".
+         Redundant space characters in the syntax are insignificant. "name
+         desc,source_properties.a_property" and " name desc , source_properties.a_property " are equivalent.
+         The following fields are supported: name parent state category resource_name event_time
+         source_properties security_marks.marks
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Expression that defines what fields and order to use for sorting. The string value
+           * should follow SQL syntax: comma separated list of fields. For example:
+           * "name,resource_properties.a_property". The default sorting order is ascending. To
+           * specify descending order for a field, a suffix " desc" should be appended to the field
+           * name. For example: "name desc,source_properties.a_property". Redundant space characters
+           * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
+           * desc , source_properties.a_property " are equivalent. The following fields are
+           * supported: name parent state category resource_name event_time source_properties
+           * security_marks.marks
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * The maximum number of results to return in a single response. Default is 10, minimum is
+           * 1, maximum is 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+         is 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of results to return in a single response. Default is 10, minimum is
+           * 1, maximum is 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The value returned by the last `ListFindingsResponse`; indicates that this is a
+           * continuation of a prior `ListFindings` call, and that the system should return the next
+           * page of data.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The value returned by the last `ListFindingsResponse`; indicates that this is a continuation of a
+         prior `ListFindings` call, and that the system should return the next page of data.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The value returned by the last `ListFindingsResponse`; indicates that this is a
+           * continuation of a prior `ListFindings` call, and that the system should return the next
+           * page of data.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Time used as a reference point when filtering findings. The filter is limited to
+           * findings existing at the supplied time and their values are those at that specific
+           * time. Absence of this field will default to the API's version of NOW.
+           */
+          @com.google.api.client.util.Key
+          private String readTime;
+
+          /** Time used as a reference point when filtering findings. The filter is limited to findings existing
+         at the supplied time and their values are those at that specific time. Absence of this field will
+         default to the API's version of NOW.
+           */
+          public String getReadTime() {
+            return readTime;
+          }
+
+          /**
+           * Time used as a reference point when filtering findings. The filter is limited to
+           * findings existing at the supplied time and their values are those at that specific
+           * time. Absence of this field will default to the API's version of NOW.
+           */
+          public List setReadTime(String readTime) {
+            this.readTime = readTime;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates or updates a finding. The corresponding source must exist for a finding creation to
+         * succeed.
+         *
+         * Create a request for the method "findings.patch".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The relative resource name of this finding. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.Finding content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Finding> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sources/[^/]+/findings/[^/]+$");
+
+          /**
+           * Creates or updates a finding. The corresponding source must exist for a finding creation to
+           * succeed.
+           *
+           * Create a request for the method "findings.patch".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The relative resource name of this finding. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.Finding content) {
+            super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.Finding.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sources/[^/]+/findings/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The relative resource name of this finding. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The relative resource name of this finding. See:
+         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The relative resource name of this finding. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sources/[^/]+/findings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The FieldMask to use when updating the finding resource. This field should not be
+           * specified when creating a finding. When updating a finding, an empty mask is treated as
+           * updating all mutable fields and replacing source_properties. Individual
+           * source_properties can be added/updated by using "source_properties." in the field mask.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The FieldMask to use when updating the finding resource. This field should not be specified when
+         creating a finding. When updating a finding, an empty mask is treated as updating all mutable
+         fields and replacing source_properties. Individual source_properties can be added/updated by using
+         "source_properties." in the field mask.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The FieldMask to use when updating the finding resource. This field should not be
+           * specified when creating a finding. When updating a finding, an empty mask is treated as
+           * updating all mutable fields and replacing source_properties. Individual
+           * source_properties can be added/updated by using "source_properties." in the field mask.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the state of a finding.
+         *
+         * Create a request for the method "findings.setState".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The relative resource name of the finding. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
+         * @return the request
+         */
+        public SetState setState(java.lang.String name, com.google.api.services.securitycenter.v1.model.SetFindingStateRequest content) throws java.io.IOException {
+          SetState result = new SetState(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetState extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Finding> {
+
+          private static final String REST_PATH = "v1/{+name}:setState";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sources/[^/]+/findings/[^/]+$");
+
+          /**
+           * Updates the state of a finding.
+           *
+           * Create a request for the method "findings.setState".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The relative resource name of the finding. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
+           * @since 1.13
+           */
+          protected SetState(java.lang.String name, com.google.api.services.securitycenter.v1.model.SetFindingStateRequest content) {
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.Finding.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sources/[^/]+/findings/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetState set$Xgafv(java.lang.String $Xgafv) {
+            return (SetState) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetState setAccessToken(java.lang.String accessToken) {
+            return (SetState) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetState setAlt(java.lang.String alt) {
+            return (SetState) super.setAlt(alt);
+          }
+
+          @Override
+          public SetState setCallback(java.lang.String callback) {
+            return (SetState) super.setCallback(callback);
+          }
+
+          @Override
+          public SetState setFields(java.lang.String fields) {
+            return (SetState) super.setFields(fields);
+          }
+
+          @Override
+          public SetState setKey(java.lang.String key) {
+            return (SetState) super.setKey(key);
+          }
+
+          @Override
+          public SetState setOauthToken(java.lang.String oauthToken) {
+            return (SetState) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetState setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetState) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetState setQuotaUser(java.lang.String quotaUser) {
+            return (SetState) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetState setUploadType(java.lang.String uploadType) {
+            return (SetState) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetState setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetState) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the finding. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative resource name of the finding. See:
+         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+         "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative resource name of the finding. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
+           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           */
+          public SetState setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sources/[^/]+/findings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public SetState set(String parameterName, Object value) {
+            return (SetState) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates security marks.
+         *
+         * Create a request for the method "findings.updateSecurityMarks".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name The relative resource name of the SecurityMarks. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
+         * @return the request
+         */
+        public UpdateSecurityMarks updateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1.model.SecurityMarks content) throws java.io.IOException {
+          UpdateSecurityMarks result = new UpdateSecurityMarks(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateSecurityMarks extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.SecurityMarks> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sources/[^/]+/findings/[^/]+/securityMarks$");
+
+          /**
+           * Updates security marks.
+           *
+           * Create a request for the method "findings.updateSecurityMarks".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateSecurityMarks#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name The relative resource name of the SecurityMarks. See:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
+           * @since 1.13
+           */
+          protected UpdateSecurityMarks(java.lang.String name, com.google.api.services.securitycenter.v1.model.SecurityMarks content) {
+            super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.SecurityMarks.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sources/[^/]+/findings/[^/]+/securityMarks$");
+            }
+          }
+
+          @Override
+          public UpdateSecurityMarks set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateSecurityMarks) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateSecurityMarks setAccessToken(java.lang.String accessToken) {
+            return (UpdateSecurityMarks) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateSecurityMarks setAlt(java.lang.String alt) {
+            return (UpdateSecurityMarks) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateSecurityMarks setCallback(java.lang.String callback) {
+            return (UpdateSecurityMarks) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateSecurityMarks setFields(java.lang.String fields) {
+            return (UpdateSecurityMarks) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateSecurityMarks setKey(java.lang.String key) {
+            return (UpdateSecurityMarks) super.setKey(key);
+          }
+
+          @Override
+          public UpdateSecurityMarks setOauthToken(java.lang.String oauthToken) {
+            return (UpdateSecurityMarks) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateSecurityMarks setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateSecurityMarks) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateSecurityMarks setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateSecurityMarks) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateSecurityMarks setUploadType(java.lang.String uploadType) {
+            return (UpdateSecurityMarks) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateSecurityMarks setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateSecurityMarks) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The relative resource name of the SecurityMarks. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
+           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The relative resource name of the SecurityMarks. See:
+         https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+         "organizations/{organization_id}/assets/{asset_id}/securityMarks"
+         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The relative resource name of the SecurityMarks. See:
+           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
+           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
+           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+           */
+          public UpdateSecurityMarks setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sources/[^/]+/findings/[^/]+/securityMarks$");
             }
             this.name = name;
             return this;

@@ -31,6 +31,21 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV1p1beta1Resource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Contains a Folder message for each folder in the assets ancestry. The first folder
+   * is the deepest nested folder, and the last folder is the folder directly under the
+   * Organization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudSecuritycenterV1p1beta1Folder> folders;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudSecuritycenterV1p1beta1Folder used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudSecuritycenterV1p1beta1Folder.class);
+  }
+
+  /**
    * The full resource name of the resource. See:
    * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
@@ -65,6 +80,27 @@ public final class GoogleCloudSecuritycenterV1p1beta1Resource extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.String projectDisplayName;
+
+  /**
+   * Output only. Contains a Folder message for each folder in the assets ancestry. The first folder
+   * is the deepest nested folder, and the last folder is the folder directly under the
+   * Organization.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudSecuritycenterV1p1beta1Folder> getFolders() {
+    return folders;
+  }
+
+  /**
+   * Output only. Contains a Folder message for each folder in the assets ancestry. The first folder
+   * is the deepest nested folder, and the last folder is the folder directly under the
+   * Organization.
+   * @param folders folders or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1p1beta1Resource setFolders(java.util.List<GoogleCloudSecuritycenterV1p1beta1Folder> folders) {
+    this.folders = folders;
+    return this;
+  }
 
   /**
    * The full resource name of the resource. See:

@@ -148,6 +148,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edgeSecurityPolicy;
+
+  /**
    * If true, enables Cloud CDN for the backend service. Only applicable if the loadBalancingScheme
    * is EXTERNAL and the protocol is HTTP or HTTPS.
    * The value may be {@code null}.
@@ -621,6 +629,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdgeSecurityPolicy() {
+    return edgeSecurityPolicy;
+  }
+
+  /**
+   * [Output Only] The resource URL for the edge security policy associated with this backend
+   * service.
+   * @param edgeSecurityPolicy edgeSecurityPolicy or {@code null} for none
+   */
+  public BackendService setEdgeSecurityPolicy(java.lang.String edgeSecurityPolicy) {
+    this.edgeSecurityPolicy = edgeSecurityPolicy;
     return this;
   }
 

@@ -41,23 +41,24 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean defaultSearchHandlingStrict;
 
   /**
-   * Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR
-   * store creation. The default value is false, meaning that the API enforces referential integrity
-   * and fails the requests that result in inconsistent state in the FHIR store. When this field is
-   * set to true, the API skips referential integrity checks. Consequently, operations that rely on
-   * references, such as GetPatientEverything, do not return all the results if broken references
-   * exist.
+   * Immutable. Whether to disable referential integrity in this FHIR store. This field is immutable
+   * after FHIR store creation. The default value is false, meaning that the API enforces
+   * referential integrity and fails the requests that result in inconsistent state in the FHIR
+   * store. When this field is set to true, the API skips referential integrity checks.
+   * Consequently, operations that rely on references, such as GetPatientEverything, do not return
+   * all the results if broken references exist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableReferentialIntegrity;
 
   /**
-   * Whether to disable resource versioning for this FHIR store. This field can not be changed after
-   * the creation of FHIR store. If set to false, which is the default behavior, all write
-   * operations cause historical versions to be recorded automatically. The historical versions can
-   * be fetched through the history APIs, but cannot be updated. If set to true, no historical
-   * versions are kept. The server sends errors for attempts to read the historical versions.
+   * Immutable. Whether to disable resource versioning for this FHIR store. This field can not be
+   * changed after the creation of FHIR store. If set to false, which is the default behavior, all
+   * write operations cause historical versions to be recorded automatically. The historical
+   * versions can be fetched through the history APIs, but cannot be updated. If set to true, no
+   * historical versions are kept. The server sends errors for attempts to read the historical
+   * versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,9 +122,9 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private java.util.List<StreamConfig> streamConfigs;
 
   /**
-   * The FHIR specification version that this FHIR store supports natively. This field is immutable
-   * after store creation. Requests are rejected if they contain FHIR resources of a different
-   * version. Version is required for every FHIR store.
+   * Immutable. The FHIR specification version that this FHIR store supports natively. This field is
+   * immutable after store creation. Requests are rejected if they contain FHIR resources of a
+   * different version. Version is required for every FHIR store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,12 +156,12 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR
-   * store creation. The default value is false, meaning that the API enforces referential integrity
-   * and fails the requests that result in inconsistent state in the FHIR store. When this field is
-   * set to true, the API skips referential integrity checks. Consequently, operations that rely on
-   * references, such as GetPatientEverything, do not return all the results if broken references
-   * exist.
+   * Immutable. Whether to disable referential integrity in this FHIR store. This field is immutable
+   * after FHIR store creation. The default value is false, meaning that the API enforces
+   * referential integrity and fails the requests that result in inconsistent state in the FHIR
+   * store. When this field is set to true, the API skips referential integrity checks.
+   * Consequently, operations that rely on references, such as GetPatientEverything, do not return
+   * all the results if broken references exist.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableReferentialIntegrity() {
@@ -168,12 +169,12 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR
-   * store creation. The default value is false, meaning that the API enforces referential integrity
-   * and fails the requests that result in inconsistent state in the FHIR store. When this field is
-   * set to true, the API skips referential integrity checks. Consequently, operations that rely on
-   * references, such as GetPatientEverything, do not return all the results if broken references
-   * exist.
+   * Immutable. Whether to disable referential integrity in this FHIR store. This field is immutable
+   * after FHIR store creation. The default value is false, meaning that the API enforces
+   * referential integrity and fails the requests that result in inconsistent state in the FHIR
+   * store. When this field is set to true, the API skips referential integrity checks.
+   * Consequently, operations that rely on references, such as GetPatientEverything, do not return
+   * all the results if broken references exist.
    * @param disableReferentialIntegrity disableReferentialIntegrity or {@code null} for none
    */
   public FhirStore setDisableReferentialIntegrity(java.lang.Boolean disableReferentialIntegrity) {
@@ -182,11 +183,12 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to disable resource versioning for this FHIR store. This field can not be changed after
-   * the creation of FHIR store. If set to false, which is the default behavior, all write
-   * operations cause historical versions to be recorded automatically. The historical versions can
-   * be fetched through the history APIs, but cannot be updated. If set to true, no historical
-   * versions are kept. The server sends errors for attempts to read the historical versions.
+   * Immutable. Whether to disable resource versioning for this FHIR store. This field can not be
+   * changed after the creation of FHIR store. If set to false, which is the default behavior, all
+   * write operations cause historical versions to be recorded automatically. The historical
+   * versions can be fetched through the history APIs, but cannot be updated. If set to true, no
+   * historical versions are kept. The server sends errors for attempts to read the historical
+   * versions.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableResourceVersioning() {
@@ -194,11 +196,12 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to disable resource versioning for this FHIR store. This field can not be changed after
-   * the creation of FHIR store. If set to false, which is the default behavior, all write
-   * operations cause historical versions to be recorded automatically. The historical versions can
-   * be fetched through the history APIs, but cannot be updated. If set to true, no historical
-   * versions are kept. The server sends errors for attempts to read the historical versions.
+   * Immutable. Whether to disable resource versioning for this FHIR store. This field can not be
+   * changed after the creation of FHIR store. If set to false, which is the default behavior, all
+   * write operations cause historical versions to be recorded automatically. The historical
+   * versions can be fetched through the history APIs, but cannot be updated. If set to true, no
+   * historical versions are kept. The server sends errors for attempts to read the historical
+   * versions.
    * @param disableResourceVersioning disableResourceVersioning or {@code null} for none
    */
   public FhirStore setDisableResourceVersioning(java.lang.Boolean disableResourceVersioning) {
@@ -336,9 +339,9 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The FHIR specification version that this FHIR store supports natively. This field is immutable
-   * after store creation. Requests are rejected if they contain FHIR resources of a different
-   * version. Version is required for every FHIR store.
+   * Immutable. The FHIR specification version that this FHIR store supports natively. This field is
+   * immutable after store creation. Requests are rejected if they contain FHIR resources of a
+   * different version. Version is required for every FHIR store.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -346,9 +349,9 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The FHIR specification version that this FHIR store supports natively. This field is immutable
-   * after store creation. Requests are rejected if they contain FHIR resources of a different
-   * version. Version is required for every FHIR store.
+   * Immutable. The FHIR specification version that this FHIR store supports natively. This field is
+   * immutable after store creation. Requests are rejected if they contain FHIR resources of a
+   * different version. Version is required for every FHIR store.
    * @param version version or {@code null} for none
    */
   public FhirStore setVersion(java.lang.String version) {

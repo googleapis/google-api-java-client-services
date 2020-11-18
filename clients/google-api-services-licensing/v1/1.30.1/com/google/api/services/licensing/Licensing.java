@@ -155,9 +155,9 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
      * @param skuId A product SKU's unique identifier. For more information about available SKUs in this version of the
      *        API, see Products and SKUs.
      * @param userId The user's current primary email address. If the user's email address changes, use the new email
-     *        address in your API requests. Since a userId is subject to change, do not use a userId
+     *        address in your API requests. Since a `userId` is subject to change, do not use a `userId`
      *        value as a key for persistent data. This key could break if the current user's email
-     *        address changes. If the userId is suspended, the license status changes.
+     *        address changes. If the `userId` is suspended, the license status changes.
      * @return the request
      */
     public Delete delete(java.lang.String productId, java.lang.String skuId, java.lang.String userId) throws java.io.IOException {
@@ -166,7 +166,7 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       return result;
     }
 
-    public class Delete extends LicensingRequest<Void> {
+    public class Delete extends LicensingRequest<com.google.api.services.licensing.model.Empty> {
 
       private static final String REST_PATH = "apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}";
 
@@ -186,13 +186,13 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
        * @param skuId A product SKU's unique identifier. For more information about available SKUs in this version of the
      *        API, see Products and SKUs.
        * @param userId The user's current primary email address. If the user's email address changes, use the new email
-     *        address in your API requests. Since a userId is subject to change, do not use a userId
+     *        address in your API requests. Since a `userId` is subject to change, do not use a `userId`
      *        value as a key for persistent data. This key could break if the current user's email
-     *        address changes. If the userId is suspended, the license status changes.
+     *        address changes. If the `userId` is suspended, the license status changes.
        * @since 1.13
        */
       protected Delete(java.lang.String productId, java.lang.String skuId, java.lang.String userId) {
-        super(Licensing.this, "DELETE", REST_PATH, null, Void.class);
+        super(Licensing.this, "DELETE", REST_PATH, null, com.google.api.services.licensing.model.Empty.class);
         this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
         this.skuId = com.google.api.client.util.Preconditions.checkNotNull(skuId, "Required parameter skuId must be specified.");
         this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
@@ -301,17 +301,17 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The user's current primary email address. If the user's email address changes, use the new
-       * email address in your API requests. Since a userId is subject to change, do not use a
-       * userId value as a key for persistent data. This key could break if the current user's email
-       * address changes. If the userId is suspended, the license status changes.
+       * email address in your API requests. Since a `userId` is subject to change, do not use a
+       * `userId` value as a key for persistent data. This key could break if the current user's
+       * email address changes. If the `userId` is suspended, the license status changes.
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
       /** The user's current primary email address. If the user's email address changes, use the new email
-     address in your API requests. Since a userId is subject to change, do not use a userId value as a
-     key for persistent data. This key could break if the current user's email address changes. If the
-     userId is suspended, the license status changes.
+     address in your API requests. Since a `userId` is subject to change, do not use a `userId` value as
+     a key for persistent data. This key could break if the current user's email address changes. If the
+     `userId` is suspended, the license status changes.
        */
       public java.lang.String getUserId() {
         return userId;
@@ -319,9 +319,9 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The user's current primary email address. If the user's email address changes, use the new
-       * email address in your API requests. Since a userId is subject to change, do not use a
-       * userId value as a key for persistent data. This key could break if the current user's email
-       * address changes. If the userId is suspended, the license status changes.
+       * email address in your API requests. Since a `userId` is subject to change, do not use a
+       * `userId` value as a key for persistent data. This key could break if the current user's
+       * email address changes. If the `userId` is suspended, the license status changes.
        */
       public Delete setUserId(java.lang.String userId) {
         this.userId = userId;
@@ -346,9 +346,9 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
      * @param skuId A product SKU's unique identifier. For more information about available SKUs in this version of the
      *        API, see Products and SKUs.
      * @param userId The user's current primary email address. If the user's email address changes, use the new email
-     *        address in your API requests. Since a userId is subject to change, do not use a userId
+     *        address in your API requests. Since a `userId` is subject to change, do not use a `userId`
      *        value as a key for persistent data. This key could break if the current user's email
-     *        address changes. If the userId is suspended, the license status changes.
+     *        address changes. If the `userId` is suspended, the license status changes.
      * @return the request
      */
     public Get get(java.lang.String productId, java.lang.String skuId, java.lang.String userId) throws java.io.IOException {
@@ -376,9 +376,9 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
        * @param skuId A product SKU's unique identifier. For more information about available SKUs in this version of the
      *        API, see Products and SKUs.
        * @param userId The user's current primary email address. If the user's email address changes, use the new email
-     *        address in your API requests. Since a userId is subject to change, do not use a userId
+     *        address in your API requests. Since a `userId` is subject to change, do not use a `userId`
      *        value as a key for persistent data. This key could break if the current user's email
-     *        address changes. If the userId is suspended, the license status changes.
+     *        address changes. If the `userId` is suspended, the license status changes.
        * @since 1.13
        */
       protected Get(java.lang.String productId, java.lang.String skuId, java.lang.String userId) {
@@ -501,17 +501,17 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The user's current primary email address. If the user's email address changes, use the new
-       * email address in your API requests. Since a userId is subject to change, do not use a
-       * userId value as a key for persistent data. This key could break if the current user's email
-       * address changes. If the userId is suspended, the license status changes.
+       * email address in your API requests. Since a `userId` is subject to change, do not use a
+       * `userId` value as a key for persistent data. This key could break if the current user's
+       * email address changes. If the `userId` is suspended, the license status changes.
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
       /** The user's current primary email address. If the user's email address changes, use the new email
-     address in your API requests. Since a userId is subject to change, do not use a userId value as a
-     key for persistent data. This key could break if the current user's email address changes. If the
-     userId is suspended, the license status changes.
+     address in your API requests. Since a `userId` is subject to change, do not use a `userId` value as
+     a key for persistent data. This key could break if the current user's email address changes. If the
+     `userId` is suspended, the license status changes.
        */
       public java.lang.String getUserId() {
         return userId;
@@ -519,9 +519,9 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The user's current primary email address. If the user's email address changes, use the new
-       * email address in your API requests. Since a userId is subject to change, do not use a
-       * userId value as a key for persistent data. This key could break if the current user's email
-       * address changes. If the userId is suspended, the license status changes.
+       * email address in your API requests. Since a `userId` is subject to change, do not use a
+       * `userId` value as a key for persistent data. This key could break if the current user's
+       * email address changes. If the `userId` is suspended, the license status changes.
        */
       public Get setUserId(java.lang.String userId) {
         this.userId = userId;
@@ -698,7 +698,7 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param productId A product's unique identifier. For more information about products in this version of the API, see
      *        Products and SKUs.
-     * @param customerId Customer's customerId. A previous version of this API accepted the primary domain name as a value
+     * @param customerId Customer's `customerId`. A previous version of this API accepted the primary domain name as a value
      *        for this field. If the customer is suspended, the server returns an error.
      * @return the request
      */
@@ -725,7 +725,7 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param productId A product's unique identifier. For more information about products in this version of the API, see
      *        Products and SKUs.
-       * @param customerId Customer's customerId. A previous version of this API accepted the primary domain name as a value
+       * @param customerId Customer's `customerId`. A previous version of this API accepted the primary domain name as a value
      *        for this field. If the customer is suspended, the server returns an error.
        * @since 1.13
        */
@@ -824,13 +824,13 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Customer's customerId. A previous version of this API accepted the primary domain name as a
-       * value for this field. If the customer is suspended, the server returns an error.
+       * Customer's `customerId`. A previous version of this API accepted the primary domain name as
+       * a value for this field. If the customer is suspended, the server returns an error.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Customer's customerId. A previous version of this API accepted the primary domain name as a value
+      /** Customer's `customerId`. A previous version of this API accepted the primary domain name as a value
      for this field. If the customer is suspended, the server returns an error.
        */
       public java.lang.String getCustomerId() {
@@ -838,8 +838,8 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Customer's customerId. A previous version of this API accepted the primary domain name as a
-       * value for this field. If the customer is suspended, the server returns an error.
+       * Customer's `customerId`. A previous version of this API accepted the primary domain name as
+       * a value for this field. If the customer is suspended, the server returns an error.
        */
       public ListForProduct setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -847,13 +847,13 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The maxResults query string determines how many entries are returned on each page of a
+       * The `maxResults` query string determines how many entries are returned on each page of a
        * large response. This is an optional parameter. The value must be a positive number.
        */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** The maxResults query string determines how many entries are returned on each page of a large
+      /** The `maxResults` query string determines how many entries are returned on each page of a large
      response. This is an optional parameter. The value must be a positive number. [default: 100]
      [minimum: 1] [maximum: 1000]
        */
@@ -862,7 +862,7 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The maxResults query string determines how many entries are returned on each page of a
+       * The `maxResults` query string determines how many entries are returned on each page of a
        * large response. This is an optional parameter. The value must be a positive number.
        */
       public ListForProduct setMaxResults(java.lang.Long maxResults) {
@@ -871,25 +871,25 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Token to fetch the next page of data. The maxResults query string is related to the
-       * pageToken since maxResults determines how many entries are returned on each page. This is
-       * an optional query string. If not specified, the server returns the first page.
+       * Token to fetch the next page of data. The `maxResults` query string is related to the
+       * `pageToken` since `maxResults` determines how many entries are returned on each page. This
+       * is an optional query string. If not specified, the server returns the first page.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Token to fetch the next page of data. The maxResults query string is related to the pageToken since
-     maxResults determines how many entries are returned on each page. This is an optional query string.
-     If not specified, the server returns the first page.
+      /** Token to fetch the next page of data. The `maxResults` query string is related to the `pageToken`
+     since `maxResults` determines how many entries are returned on each page. This is an optional query
+     string. If not specified, the server returns the first page.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * Token to fetch the next page of data. The maxResults query string is related to the
-       * pageToken since maxResults determines how many entries are returned on each page. This is
-       * an optional query string. If not specified, the server returns the first page.
+       * Token to fetch the next page of data. The `maxResults` query string is related to the
+       * `pageToken` since `maxResults` determines how many entries are returned on each page. This
+       * is an optional query string. If not specified, the server returns the first page.
        */
       public ListForProduct setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -914,7 +914,7 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
      *        Products and SKUs.
      * @param skuId A product SKU's unique identifier. For more information about available SKUs in this version of the
      *        API, see Products and SKUs.
-     * @param customerId Customer's customerId. A previous version of this API accepted the primary domain name as a value
+     * @param customerId Customer's `customerId`. A previous version of this API accepted the primary domain name as a value
      *        for this field. If the customer is suspended, the server returns an error.
      * @return the request
      */
@@ -943,7 +943,7 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
      *        Products and SKUs.
        * @param skuId A product SKU's unique identifier. For more information about available SKUs in this version of the
      *        API, see Products and SKUs.
-       * @param customerId Customer's customerId. A previous version of this API accepted the primary domain name as a value
+       * @param customerId Customer's `customerId`. A previous version of this API accepted the primary domain name as a value
      *        for this field. If the customer is suspended, the server returns an error.
        * @since 1.13
        */
@@ -1066,13 +1066,13 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Customer's customerId. A previous version of this API accepted the primary domain name as a
-       * value for this field. If the customer is suspended, the server returns an error.
+       * Customer's `customerId`. A previous version of this API accepted the primary domain name as
+       * a value for this field. If the customer is suspended, the server returns an error.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Customer's customerId. A previous version of this API accepted the primary domain name as a value
+      /** Customer's `customerId`. A previous version of this API accepted the primary domain name as a value
      for this field. If the customer is suspended, the server returns an error.
        */
       public java.lang.String getCustomerId() {
@@ -1080,8 +1080,8 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Customer's customerId. A previous version of this API accepted the primary domain name as a
-       * value for this field. If the customer is suspended, the server returns an error.
+       * Customer's `customerId`. A previous version of this API accepted the primary domain name as
+       * a value for this field. If the customer is suspended, the server returns an error.
        */
       public ListForProductAndSku setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1089,13 +1089,13 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The maxResults query string determines how many entries are returned on each page of a
+       * The `maxResults` query string determines how many entries are returned on each page of a
        * large response. This is an optional parameter. The value must be a positive number.
        */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** The maxResults query string determines how many entries are returned on each page of a large
+      /** The `maxResults` query string determines how many entries are returned on each page of a large
      response. This is an optional parameter. The value must be a positive number. [default: 100]
      [minimum: 1] [maximum: 1000]
        */
@@ -1104,7 +1104,7 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The maxResults query string determines how many entries are returned on each page of a
+       * The `maxResults` query string determines how many entries are returned on each page of a
        * large response. This is an optional parameter. The value must be a positive number.
        */
       public ListForProductAndSku setMaxResults(java.lang.Long maxResults) {
@@ -1113,25 +1113,25 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Token to fetch the next page of data. The maxResults query string is related to the
-       * pageToken since maxResults determines how many entries are returned on each page. This is
-       * an optional query string. If not specified, the server returns the first page.
+       * Token to fetch the next page of data. The `maxResults` query string is related to the
+       * `pageToken` since `maxResults` determines how many entries are returned on each page. This
+       * is an optional query string. If not specified, the server returns the first page.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Token to fetch the next page of data. The maxResults query string is related to the pageToken since
-     maxResults determines how many entries are returned on each page. This is an optional query string.
-     If not specified, the server returns the first page.
+      /** Token to fetch the next page of data. The `maxResults` query string is related to the `pageToken`
+     since `maxResults` determines how many entries are returned on each page. This is an optional query
+     string. If not specified, the server returns the first page.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * Token to fetch the next page of data. The maxResults query string is related to the
-       * pageToken since maxResults determines how many entries are returned on each page. This is
-       * an optional query string. If not specified, the server returns the first page.
+       * Token to fetch the next page of data. The `maxResults` query string is related to the
+       * `pageToken` since `maxResults` determines how many entries are returned on each page. This
+       * is an optional query string. If not specified, the server returns the first page.
        */
       public ListForProductAndSku setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -1144,7 +1144,8 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Patch a Licensing info via Apiary Patch Orchestration
+     * Reassign a user's product SKU with a different SKU in the same product. This method supports
+     * patch semantics.
      *
      * Create a request for the method "licenseAssignments.patch".
      *
@@ -1156,9 +1157,9 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
      * @param skuId A product SKU's unique identifier. For more information about available SKUs in this version of the
      *        API, see Products and SKUs.
      * @param userId The user's current primary email address. If the user's email address changes, use the new email
-     *        address in your API requests. Since a userId is subject to change, do not use a userId
+     *        address in your API requests. Since a `userId` is subject to change, do not use a `userId`
      *        value as a key for persistent data. This key could break if the current user's email
-     *        address changes. If the userId is suspended, the license status changes.
+     *        address changes. If the `userId` is suspended, the license status changes.
      * @param content the {@link com.google.api.services.licensing.model.LicenseAssignment}
      * @return the request
      */
@@ -1173,7 +1174,8 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}";
 
       /**
-       * Patch a Licensing info via Apiary Patch Orchestration
+       * Reassign a user's product SKU with a different SKU in the same product. This method supports
+       * patch semantics.
        *
        * Create a request for the method "licenseAssignments.patch".
        *
@@ -1188,9 +1190,9 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
        * @param skuId A product SKU's unique identifier. For more information about available SKUs in this version of the
      *        API, see Products and SKUs.
        * @param userId The user's current primary email address. If the user's email address changes, use the new email
-     *        address in your API requests. Since a userId is subject to change, do not use a userId
+     *        address in your API requests. Since a `userId` is subject to change, do not use a `userId`
      *        value as a key for persistent data. This key could break if the current user's email
-     *        address changes. If the userId is suspended, the license status changes.
+     *        address changes. If the `userId` is suspended, the license status changes.
        * @param content the {@link com.google.api.services.licensing.model.LicenseAssignment}
        * @since 1.13
        */
@@ -1304,17 +1306,17 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The user's current primary email address. If the user's email address changes, use the new
-       * email address in your API requests. Since a userId is subject to change, do not use a
-       * userId value as a key for persistent data. This key could break if the current user's email
-       * address changes. If the userId is suspended, the license status changes.
+       * email address in your API requests. Since a `userId` is subject to change, do not use a
+       * `userId` value as a key for persistent data. This key could break if the current user's
+       * email address changes. If the `userId` is suspended, the license status changes.
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
       /** The user's current primary email address. If the user's email address changes, use the new email
-     address in your API requests. Since a userId is subject to change, do not use a userId value as a
-     key for persistent data. This key could break if the current user's email address changes. If the
-     userId is suspended, the license status changes.
+     address in your API requests. Since a `userId` is subject to change, do not use a `userId` value as
+     a key for persistent data. This key could break if the current user's email address changes. If the
+     `userId` is suspended, the license status changes.
        */
       public java.lang.String getUserId() {
         return userId;
@@ -1322,9 +1324,9 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The user's current primary email address. If the user's email address changes, use the new
-       * email address in your API requests. Since a userId is subject to change, do not use a
-       * userId value as a key for persistent data. This key could break if the current user's email
-       * address changes. If the userId is suspended, the license status changes.
+       * email address in your API requests. Since a `userId` is subject to change, do not use a
+       * `userId` value as a key for persistent data. This key could break if the current user's
+       * email address changes. If the `userId` is suspended, the license status changes.
        */
       public Patch setUserId(java.lang.String userId) {
         this.userId = userId;
@@ -1349,9 +1351,9 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
      * @param skuId A product SKU's unique identifier. For more information about available SKUs in this version of the
      *        API, see Products and SKUs.
      * @param userId The user's current primary email address. If the user's email address changes, use the new email
-     *        address in your API requests. Since a userId is subject to change, do not use a userId
+     *        address in your API requests. Since a `userId` is subject to change, do not use a `userId`
      *        value as a key for persistent data. This key could break if the current user's email
-     *        address changes. If the userId is suspended, the license status changes.
+     *        address changes. If the `userId` is suspended, the license status changes.
      * @param content the {@link com.google.api.services.licensing.model.LicenseAssignment}
      * @return the request
      */
@@ -1381,9 +1383,9 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
        * @param skuId A product SKU's unique identifier. For more information about available SKUs in this version of the
      *        API, see Products and SKUs.
        * @param userId The user's current primary email address. If the user's email address changes, use the new email
-     *        address in your API requests. Since a userId is subject to change, do not use a userId
+     *        address in your API requests. Since a `userId` is subject to change, do not use a `userId`
      *        value as a key for persistent data. This key could break if the current user's email
-     *        address changes. If the userId is suspended, the license status changes.
+     *        address changes. If the `userId` is suspended, the license status changes.
        * @param content the {@link com.google.api.services.licensing.model.LicenseAssignment}
        * @since 1.13
        */
@@ -1503,17 +1505,17 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The user's current primary email address. If the user's email address changes, use the new
-       * email address in your API requests. Since a userId is subject to change, do not use a
-       * userId value as a key for persistent data. This key could break if the current user's email
-       * address changes. If the userId is suspended, the license status changes.
+       * email address in your API requests. Since a `userId` is subject to change, do not use a
+       * `userId` value as a key for persistent data. This key could break if the current user's
+       * email address changes. If the `userId` is suspended, the license status changes.
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
       /** The user's current primary email address. If the user's email address changes, use the new email
-     address in your API requests. Since a userId is subject to change, do not use a userId value as a
-     key for persistent data. This key could break if the current user's email address changes. If the
-     userId is suspended, the license status changes.
+     address in your API requests. Since a `userId` is subject to change, do not use a `userId` value as
+     a key for persistent data. This key could break if the current user's email address changes. If the
+     `userId` is suspended, the license status changes.
        */
       public java.lang.String getUserId() {
         return userId;
@@ -1521,9 +1523,9 @@ public class Licensing extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The user's current primary email address. If the user's email address changes, use the new
-       * email address in your API requests. Since a userId is subject to change, do not use a
-       * userId value as a key for persistent data. This key could break if the current user's email
-       * address changes. If the userId is suspended, the license status changes.
+       * email address in your API requests. Since a `userId` is subject to change, do not use a
+       * `userId` value as a key for persistent data. This key could break if the current user's
+       * email address changes. If the `userId` is suspended, the license status changes.
        */
       public Update setUserId(java.lang.String userId) {
         this.userId = userId;

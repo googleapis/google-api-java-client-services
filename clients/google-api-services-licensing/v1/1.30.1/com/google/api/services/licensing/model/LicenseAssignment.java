@@ -38,7 +38,7 @@ public final class LicenseAssignment extends com.google.api.client.json.GenericJ
   private java.lang.String etags;
 
   /**
-   * Identifies the resource as a LicenseAssignment.
+   * Identifies the resource as a LicenseAssignment, which is `licensing#licenseAssignment`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,9 +83,9 @@ public final class LicenseAssignment extends com.google.api.client.json.GenericJ
 
   /**
    * The user's current primary email address. If the user's email address changes, use the new
-   * email address in your API requests. Since a userId is subject to change, do not use a userId
-   * value as a key for persistent data. This key could break if the current user's email address
-   * changes. If the userId is suspended, the license status changes.
+   * email address in your API requests. Since a `userId` is subject to change, do not use a
+   * `userId` value as a key for persistent data. This key could break if the current user's email
+   * address changes. If the `userId` is suspended, the license status changes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class LicenseAssignment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies the resource as a LicenseAssignment.
+   * Identifies the resource as a LicenseAssignment, which is `licensing#licenseAssignment`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -117,7 +117,7 @@ public final class LicenseAssignment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies the resource as a LicenseAssignment.
+   * Identifies the resource as a LicenseAssignment, which is `licensing#licenseAssignment`.
    * @param kind kind or {@code null} for none
    */
   public LicenseAssignment setKind(java.lang.String kind) {
@@ -216,9 +216,9 @@ public final class LicenseAssignment extends com.google.api.client.json.GenericJ
 
   /**
    * The user's current primary email address. If the user's email address changes, use the new
-   * email address in your API requests. Since a userId is subject to change, do not use a userId
-   * value as a key for persistent data. This key could break if the current user's email address
-   * changes. If the userId is suspended, the license status changes.
+   * email address in your API requests. Since a `userId` is subject to change, do not use a
+   * `userId` value as a key for persistent data. This key could break if the current user's email
+   * address changes. If the `userId` is suspended, the license status changes.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -227,9 +227,9 @@ public final class LicenseAssignment extends com.google.api.client.json.GenericJ
 
   /**
    * The user's current primary email address. If the user's email address changes, use the new
-   * email address in your API requests. Since a userId is subject to change, do not use a userId
-   * value as a key for persistent data. This key could break if the current user's email address
-   * changes. If the userId is suspended, the license status changes.
+   * email address in your API requests. Since a `userId` is subject to change, do not use a
+   * `userId` value as a key for persistent data. This key could break if the current user's email
+   * address changes. If the `userId` is suspended, the license status changes.
    * @param userId userId or {@code null} for none
    */
   public LicenseAssignment setUserId(java.lang.String userId) {

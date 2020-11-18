@@ -443,6 +443,17 @@ class ApiTest(basetest.TestCase):
                       api.values['rootUrl'])
     self.assertEquals('fake/v1/', api.values['servicePath'])
 
+    # Test mTLS endpoint
+    api = LoadApi({'mtlsRootUrl': 'https://foo.mtls.com'})
+    self.assertEquals('https://foo.mtls.com', api.values['mtlsRootUrl'])
+
+    # Test if mtlsRootUrl is missing, then regex is used to create a mTLS endpoint
+    api = LoadApi({
+        'rootUrl': 'https://foo.googleapis.com',
+        'servicePath': 'fake/v1/',
+    })
+    self.assertEquals('https://foo.mtls.googleapis.com', api.values['mtlsRootUrl'])
+
     # .. in path
     self.assertRaises(ValueError, LoadApi, {'basePath': '/do/not/../go/up'})
 

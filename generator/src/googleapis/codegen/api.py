@@ -330,6 +330,10 @@ class Api(template_objects.CodeObject):
       self._api.SetTemplateValue('rootUrl', '%s://%s/' % (scheme, service_host))
     if service_path is None:
       self._api.SetTemplateValue('servicePath', base_path[1:])
+    
+    if not self.values.get('mtlsRootUrl') and root_url:
+      mtls_root_url = root_url.replace('googleapis.com', 'mtls.googleapis.com')
+      self._api.SetTemplateValue('mtlsRootUrl', mtls_root_url)
 
     # Make sure template writers do not revert
     self._api.DeleteTemplateValue('baseUrl')

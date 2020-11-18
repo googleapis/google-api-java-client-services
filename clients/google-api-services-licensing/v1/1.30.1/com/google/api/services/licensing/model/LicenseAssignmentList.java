@@ -59,8 +59,8 @@ public final class LicenseAssignmentList extends com.google.api.client.json.Gene
 
   /**
    * The token that you must submit in a subsequent request to retrieve additional license results
-   * matching your query parameters. The maxResults query string is related to the nextPageToken
-   * since maxResults determines how many entries are returned on each next page.
+   * matching your query parameters. The `maxResults` query string is related to the `nextPageToken`
+   * since `maxResults` determines how many entries are returned on each next page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,8 +119,8 @@ public final class LicenseAssignmentList extends com.google.api.client.json.Gene
 
   /**
    * The token that you must submit in a subsequent request to retrieve additional license results
-   * matching your query parameters. The maxResults query string is related to the nextPageToken
-   * since maxResults determines how many entries are returned on each next page.
+   * matching your query parameters. The `maxResults` query string is related to the `nextPageToken`
+   * since `maxResults` determines how many entries are returned on each next page.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -129,8 +129,8 @@ public final class LicenseAssignmentList extends com.google.api.client.json.Gene
 
   /**
    * The token that you must submit in a subsequent request to retrieve additional license results
-   * matching your query parameters. The maxResults query string is related to the nextPageToken
-   * since maxResults determines how many entries are returned on each next page.
+   * matching your query parameters. The `maxResults` query string is related to the `nextPageToken`
+   * since `maxResults` determines how many entries are returned on each next page.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public LicenseAssignmentList setNextPageToken(java.lang.String nextPageToken) {

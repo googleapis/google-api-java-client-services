@@ -54,8 +54,8 @@ public final class GoogleCloudRecommenderV1Operation extends com.google.api.clie
    * narrow down to a single unique element that is being tested/modified. This is intended to be an
    * exact match per filter. To perform advanced matching, use path_value_matchers. * Example: {
    * "/versions/name" : "it-123" "/versions/targetSize/percent": 20 } * Example: { "/bindings/role":
-   * "roles/admin" "/bindings/condition" : null } * Example: { "/bindings/role": "roles/admin"
-   * "/bindings/members" : ["x@google.com", "y@google.com"] } When both path_filters and
+   * "roles/owner" "/bindings/condition" : null } * Example: { "/bindings/role": "roles/owner"
+   * "/bindings/members" : ["x@example.com", "y@example.com"] } When both path_filters and
    * path_value_matchers are set, an implicit AND must be performed.
    * The value may be {@code null}.
    */
@@ -165,8 +165,8 @@ public final class GoogleCloudRecommenderV1Operation extends com.google.api.clie
    * narrow down to a single unique element that is being tested/modified. This is intended to be an
    * exact match per filter. To perform advanced matching, use path_value_matchers. * Example: {
    * "/versions/name" : "it-123" "/versions/targetSize/percent": 20 } * Example: { "/bindings/role":
-   * "roles/admin" "/bindings/condition" : null } * Example: { "/bindings/role": "roles/admin"
-   * "/bindings/members" : ["x@google.com", "y@google.com"] } When both path_filters and
+   * "roles/owner" "/bindings/condition" : null } * Example: { "/bindings/role": "roles/owner"
+   * "/bindings/members" : ["x@example.com", "y@example.com"] } When both path_filters and
    * path_value_matchers are set, an implicit AND must be performed.
    * @return value or {@code null} for none
    */
@@ -179,8 +179,8 @@ public final class GoogleCloudRecommenderV1Operation extends com.google.api.clie
    * narrow down to a single unique element that is being tested/modified. This is intended to be an
    * exact match per filter. To perform advanced matching, use path_value_matchers. * Example: {
    * "/versions/name" : "it-123" "/versions/targetSize/percent": 20 } * Example: { "/bindings/role":
-   * "roles/admin" "/bindings/condition" : null } * Example: { "/bindings/role": "roles/admin"
-   * "/bindings/members" : ["x@google.com", "y@google.com"] } When both path_filters and
+   * "roles/owner" "/bindings/condition" : null } * Example: { "/bindings/role": "roles/owner"
+   * "/bindings/members" : ["x@example.com", "y@example.com"] } When both path_filters and
    * path_value_matchers are set, an implicit AND must be performed.
    * @param pathFilters pathFilters or {@code null} for none
    */

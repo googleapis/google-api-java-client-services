@@ -101,6 +101,14 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings il4Settings;
 
   /**
+   * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
+   * is provisioned. This field is mandatory for a subset of Compliance Regimes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings kmsSettings;
+
+  /**
    * Optional. Labels applied to the workload.
    * The value may be {@code null}.
    */
@@ -298,6 +306,25 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setIl4Settings(GoogleCloudAssuredworkloadsV1beta1WorkloadIL4Settings il4Settings) {
     this.il4Settings = il4Settings;
+    return this;
+  }
+
+  /**
+   * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
+   * is provisioned. This field is mandatory for a subset of Compliance Regimes.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings getKmsSettings() {
+    return kmsSettings;
+  }
+
+  /**
+   * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
+   * is provisioned. This field is mandatory for a subset of Compliance Regimes.
+   * @param kmsSettings kmsSettings or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Workload setKmsSettings(GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings kmsSettings) {
+    this.kmsSettings = kmsSettings;
     return this;
   }
 

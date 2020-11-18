@@ -30,11 +30,89 @@ package com.google.api.services.sheets.v4.model;
 public final class PivotFilterCriteria extends com.google.api.client.json.GenericJson {
 
   /**
+   * A condition that must be true for values to be shown. (`visibleValues` does not override this
+   * -- even if a value is listed there, it is still hidden if it does not meet the condition.)
+   * Condition values that refer to ranges in A1-notation are evaluated relative to the pivot table
+   * sheet. References are treated absolutely, so are not filled down the pivot table. For example,
+   * a condition value of `=A1` on "Pivot Table 1" is treated as `'Pivot Table 1'!$A$1`. The source
+   * data of the pivot table can be referenced by column header name. For example, if the source
+   * data has columns named "Revenue" and "Cost" and a condition is applied to the "Revenue" column
+   * with type `NUMBER_GREATER` and value `=Cost`, then only columns where "Revenue" > "Cost" are
+   * included.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BooleanCondition condition;
+
+  /**
+   * Whether values are visible by default. If true, the visible_values are ignored, all values that
+   * meet condition (if specified) are shown. If false, values that are both in visible_values and
+   * meet condition are shown.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean visibleByDefault;
+
+  /**
    * Values that should be included. Values not listed here are excluded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> visibleValues;
+
+  /**
+   * A condition that must be true for values to be shown. (`visibleValues` does not override this
+   * -- even if a value is listed there, it is still hidden if it does not meet the condition.)
+   * Condition values that refer to ranges in A1-notation are evaluated relative to the pivot table
+   * sheet. References are treated absolutely, so are not filled down the pivot table. For example,
+   * a condition value of `=A1` on "Pivot Table 1" is treated as `'Pivot Table 1'!$A$1`. The source
+   * data of the pivot table can be referenced by column header name. For example, if the source
+   * data has columns named "Revenue" and "Cost" and a condition is applied to the "Revenue" column
+   * with type `NUMBER_GREATER` and value `=Cost`, then only columns where "Revenue" > "Cost" are
+   * included.
+   * @return value or {@code null} for none
+   */
+  public BooleanCondition getCondition() {
+    return condition;
+  }
+
+  /**
+   * A condition that must be true for values to be shown. (`visibleValues` does not override this
+   * -- even if a value is listed there, it is still hidden if it does not meet the condition.)
+   * Condition values that refer to ranges in A1-notation are evaluated relative to the pivot table
+   * sheet. References are treated absolutely, so are not filled down the pivot table. For example,
+   * a condition value of `=A1` on "Pivot Table 1" is treated as `'Pivot Table 1'!$A$1`. The source
+   * data of the pivot table can be referenced by column header name. For example, if the source
+   * data has columns named "Revenue" and "Cost" and a condition is applied to the "Revenue" column
+   * with type `NUMBER_GREATER` and value `=Cost`, then only columns where "Revenue" > "Cost" are
+   * included.
+   * @param condition condition or {@code null} for none
+   */
+  public PivotFilterCriteria setCondition(BooleanCondition condition) {
+    this.condition = condition;
+    return this;
+  }
+
+  /**
+   * Whether values are visible by default. If true, the visible_values are ignored, all values that
+   * meet condition (if specified) are shown. If false, values that are both in visible_values and
+   * meet condition are shown.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVisibleByDefault() {
+    return visibleByDefault;
+  }
+
+  /**
+   * Whether values are visible by default. If true, the visible_values are ignored, all values that
+   * meet condition (if specified) are shown. If false, values that are both in visible_values and
+   * meet condition are shown.
+   * @param visibleByDefault visibleByDefault or {@code null} for none
+   */
+  public PivotFilterCriteria setVisibleByDefault(java.lang.Boolean visibleByDefault) {
+    this.visibleByDefault = visibleByDefault;
+    return this;
+  }
 
   /**
    * Values that should be included. Values not listed here are excluded.

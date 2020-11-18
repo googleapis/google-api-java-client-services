@@ -83,8 +83,9 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   private java.lang.String formattedValue;
 
   /**
-   * A hyperlink this cell points to, if any. This field is read-only. (To set it, use a
-   * `=HYPERLINK` formula in the userEnteredValue.formulaValue field.)
+   * A hyperlink this cell points to, if any. If the cell contains multiple hyperlinks, this field
+   * will be empty. This field is read-only. To set it, use a `=HYPERLINK` formula in the
+   * userEnteredValue.formulaValue field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,10 +110,9 @@ public final class CellData extends com.google.api.client.json.GenericJson {
 
   /**
    * Runs of rich text applied to subsections of the cell. Runs are only valid on user entered
-   * strings, not formulas, bools, or numbers. Runs start at specific indexes in the text and
-   * continue until the next run. Properties of a run will continue unless explicitly changed in a
-   * subsequent run (and properties of the first run will continue the properties of the cell unless
-   * explicitly changed). When writing, the new runs will overwrite any prior runs. When writing a
+   * strings, not formulas, bools, or numbers. Properties of a run start at a specific index in the
+   * text and continue until the next run. Runs will inherit the properties of the cell unless
+   * explicitly changed. When writing, the new runs will overwrite any prior runs. When writing a
    * new user_entered_value, previous runs are erased.
    * The value may be {@code null}.
    */
@@ -260,8 +260,9 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A hyperlink this cell points to, if any. This field is read-only. (To set it, use a
-   * `=HYPERLINK` formula in the userEnteredValue.formulaValue field.)
+   * A hyperlink this cell points to, if any. If the cell contains multiple hyperlinks, this field
+   * will be empty. This field is read-only. To set it, use a `=HYPERLINK` formula in the
+   * userEnteredValue.formulaValue field.
    * @return value or {@code null} for none
    */
   public java.lang.String getHyperlink() {
@@ -269,8 +270,9 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A hyperlink this cell points to, if any. This field is read-only. (To set it, use a
-   * `=HYPERLINK` formula in the userEnteredValue.formulaValue field.)
+   * A hyperlink this cell points to, if any. If the cell contains multiple hyperlinks, this field
+   * will be empty. This field is read-only. To set it, use a `=HYPERLINK` formula in the
+   * userEnteredValue.formulaValue field.
    * @param hyperlink hyperlink or {@code null} for none
    */
   public CellData setHyperlink(java.lang.String hyperlink) {
@@ -320,10 +322,9 @@ public final class CellData extends com.google.api.client.json.GenericJson {
 
   /**
    * Runs of rich text applied to subsections of the cell. Runs are only valid on user entered
-   * strings, not formulas, bools, or numbers. Runs start at specific indexes in the text and
-   * continue until the next run. Properties of a run will continue unless explicitly changed in a
-   * subsequent run (and properties of the first run will continue the properties of the cell unless
-   * explicitly changed). When writing, the new runs will overwrite any prior runs. When writing a
+   * strings, not formulas, bools, or numbers. Properties of a run start at a specific index in the
+   * text and continue until the next run. Runs will inherit the properties of the cell unless
+   * explicitly changed. When writing, the new runs will overwrite any prior runs. When writing a
    * new user_entered_value, previous runs are erased.
    * @return value or {@code null} for none
    */
@@ -333,10 +334,9 @@ public final class CellData extends com.google.api.client.json.GenericJson {
 
   /**
    * Runs of rich text applied to subsections of the cell. Runs are only valid on user entered
-   * strings, not formulas, bools, or numbers. Runs start at specific indexes in the text and
-   * continue until the next run. Properties of a run will continue unless explicitly changed in a
-   * subsequent run (and properties of the first run will continue the properties of the cell unless
-   * explicitly changed). When writing, the new runs will overwrite any prior runs. When writing a
+   * strings, not formulas, bools, or numbers. Properties of a run start at a specific index in the
+   * text and continue until the next run. Runs will inherit the properties of the cell unless
+   * explicitly changed. When writing, the new runs will overwrite any prior runs. When writing a
    * new user_entered_value, previous runs are erased.
    * @param textFormatRuns textFormatRuns or {@code null} for none
    */

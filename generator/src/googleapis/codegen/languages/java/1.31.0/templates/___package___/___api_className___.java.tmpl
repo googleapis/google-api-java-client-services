@@ -144,7 +144,11 @@ public class {{ api.className }} extends com.google.api.client.googleapis.servic
       String useMtlsEndpoint = System.getenv("GOOGLE_API_USE_MTLS_ENDPOINT");
       useMtlsEndpoint = useMtlsEndpoint == null ? "auto" : useMtlsEndpoint;
       if ("always".equals(useMtlsEndpoint) || ("auto".equals(useMtlsEndpoint) && transport != null && transport.isMtls())) {
-        return DEFAULT_MTLS_ROOT_URL;
+        // Use regex to create the mtls endpoint in case it's missing from the discovery doc.
+        if (!DEFAULT_MTLS_ROOT_URL.isEmpty()) {
+          return DEFAULT_MTLS_ROOT_URL;
+        }
+        return DEFAULT_ROOT_URL.replace("googleapis.com", "mtls.googleapis.com");
       }
       return DEFAULT_ROOT_URL;
     }

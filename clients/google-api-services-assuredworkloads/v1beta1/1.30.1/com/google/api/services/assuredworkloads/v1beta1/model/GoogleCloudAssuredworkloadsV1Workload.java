@@ -42,13 +42,6 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   private java.lang.String billingAccount;
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for CJIS.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAssuredworkloadsV1WorkloadCJISSettings cjisSettings;
-
-  /**
    * Required. Immutable. Compliance Regime associated with this workload.
    * The value may be {@code null}.
    */
@@ -80,25 +73,12 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   private java.lang.String etag;
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for FedRAMP High.
+   * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
+   * is provisioned. This field is mandatory for a subset of Compliance Regimes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAssuredworkloadsV1WorkloadFedrampHighSettings fedrampHighSettings;
-
-  /**
-   * Required. Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAssuredworkloadsV1WorkloadFedrampModerateSettings fedrampModerateSettings;
-
-  /**
-   * Required. Input only. Immutable. Settings specific to resources needed for IL4.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAssuredworkloadsV1WorkloadIL4Settings il4Settings;
+  private GoogleCloudAssuredworkloadsV1WorkloadKMSSettings kmsSettings;
 
   /**
    * Optional. Labels applied to the workload.
@@ -156,23 +136,6 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
    */
   public GoogleCloudAssuredworkloadsV1Workload setBillingAccount(java.lang.String billingAccount) {
     this.billingAccount = billingAccount;
-    return this;
-  }
-
-  /**
-   * Required. Input only. Immutable. Settings specific to resources needed for CJIS.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAssuredworkloadsV1WorkloadCJISSettings getCjisSettings() {
-    return cjisSettings;
-  }
-
-  /**
-   * Required. Input only. Immutable. Settings specific to resources needed for CJIS.
-   * @param cjisSettings cjisSettings or {@code null} for none
-   */
-  public GoogleCloudAssuredworkloadsV1Workload setCjisSettings(GoogleCloudAssuredworkloadsV1WorkloadCJISSettings cjisSettings) {
-    this.cjisSettings = cjisSettings;
     return this;
   }
 
@@ -251,53 +214,21 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   }
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for FedRAMP High.
+   * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
+   * is provisioned. This field is mandatory for a subset of Compliance Regimes.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAssuredworkloadsV1WorkloadFedrampHighSettings getFedrampHighSettings() {
-    return fedrampHighSettings;
+  public GoogleCloudAssuredworkloadsV1WorkloadKMSSettings getKmsSettings() {
+    return kmsSettings;
   }
 
   /**
-   * Required. Input only. Immutable. Settings specific to resources needed for FedRAMP High.
-   * @param fedrampHighSettings fedrampHighSettings or {@code null} for none
+   * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key
+   * is provisioned. This field is mandatory for a subset of Compliance Regimes.
+   * @param kmsSettings kmsSettings or {@code null} for none
    */
-  public GoogleCloudAssuredworkloadsV1Workload setFedrampHighSettings(GoogleCloudAssuredworkloadsV1WorkloadFedrampHighSettings fedrampHighSettings) {
-    this.fedrampHighSettings = fedrampHighSettings;
-    return this;
-  }
-
-  /**
-   * Required. Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAssuredworkloadsV1WorkloadFedrampModerateSettings getFedrampModerateSettings() {
-    return fedrampModerateSettings;
-  }
-
-  /**
-   * Required. Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate.
-   * @param fedrampModerateSettings fedrampModerateSettings or {@code null} for none
-   */
-  public GoogleCloudAssuredworkloadsV1Workload setFedrampModerateSettings(GoogleCloudAssuredworkloadsV1WorkloadFedrampModerateSettings fedrampModerateSettings) {
-    this.fedrampModerateSettings = fedrampModerateSettings;
-    return this;
-  }
-
-  /**
-   * Required. Input only. Immutable. Settings specific to resources needed for IL4.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAssuredworkloadsV1WorkloadIL4Settings getIl4Settings() {
-    return il4Settings;
-  }
-
-  /**
-   * Required. Input only. Immutable. Settings specific to resources needed for IL4.
-   * @param il4Settings il4Settings or {@code null} for none
-   */
-  public GoogleCloudAssuredworkloadsV1Workload setIl4Settings(GoogleCloudAssuredworkloadsV1WorkloadIL4Settings il4Settings) {
-    this.il4Settings = il4Settings;
+  public GoogleCloudAssuredworkloadsV1Workload setKmsSettings(GoogleCloudAssuredworkloadsV1WorkloadKMSSettings kmsSettings) {
+    this.kmsSettings = kmsSettings;
     return this;
   }
 

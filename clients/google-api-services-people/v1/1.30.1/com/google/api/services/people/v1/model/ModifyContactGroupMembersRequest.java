@@ -32,6 +32,8 @@ public final class ModifyContactGroupMembersRequest extends com.google.api.clien
 
   /**
    * Optional. The resource names of the contact people to add in the form of `people/{person_id}`.
+   * The total number of resource names in `resource_names_to_add` and `resource_names_to_remove`
+   * must be less than or equal to 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +41,8 @@ public final class ModifyContactGroupMembersRequest extends com.google.api.clien
 
   /**
    * Optional. The resource names of the contact people to remove in the form of
-   * `people/{person_id}`.
+   * `people/{person_id}`. The total number of resource names in `resource_names_to_add` and
+   * `resource_names_to_remove` must be less than or equal to 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,6 +50,8 @@ public final class ModifyContactGroupMembersRequest extends com.google.api.clien
 
   /**
    * Optional. The resource names of the contact people to add in the form of `people/{person_id}`.
+   * The total number of resource names in `resource_names_to_add` and `resource_names_to_remove`
+   * must be less than or equal to 1000.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceNamesToAdd() {
@@ -55,6 +60,8 @@ public final class ModifyContactGroupMembersRequest extends com.google.api.clien
 
   /**
    * Optional. The resource names of the contact people to add in the form of `people/{person_id}`.
+   * The total number of resource names in `resource_names_to_add` and `resource_names_to_remove`
+   * must be less than or equal to 1000.
    * @param resourceNamesToAdd resourceNamesToAdd or {@code null} for none
    */
   public ModifyContactGroupMembersRequest setResourceNamesToAdd(java.util.List<java.lang.String> resourceNamesToAdd) {
@@ -64,7 +71,8 @@ public final class ModifyContactGroupMembersRequest extends com.google.api.clien
 
   /**
    * Optional. The resource names of the contact people to remove in the form of
-   * `people/{person_id}`.
+   * `people/{person_id}`. The total number of resource names in `resource_names_to_add` and
+   * `resource_names_to_remove` must be less than or equal to 1000.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceNamesToRemove() {
@@ -73,7 +81,8 @@ public final class ModifyContactGroupMembersRequest extends com.google.api.clien
 
   /**
    * Optional. The resource names of the contact people to remove in the form of
-   * `people/{person_id}`.
+   * `people/{person_id}`. The total number of resource names in `resource_names_to_add` and
+   * `resource_names_to_remove` must be less than or equal to 1000.
    * @param resourceNamesToRemove resourceNamesToRemove or {@code null} for none
    */
   public ModifyContactGroupMembersRequest setResourceNamesToRemove(java.util.List<java.lang.String> resourceNamesToRemove) {

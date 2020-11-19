@@ -93,6 +93,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
+   * Share-settings for shared-reservation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AllocationShareSettings shareSettings;
+
+  /**
    * Reservation for instances with specific machine shapes.
    * The value may be {@code null}.
    */
@@ -266,6 +273,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * Share-settings for shared-reservation
+   * @return value or {@code null} for none
+   */
+  public AllocationShareSettings getShareSettings() {
+    return shareSettings;
+  }
+
+  /**
+   * Share-settings for shared-reservation
+   * @param shareSettings shareSettings or {@code null} for none
+   */
+  public Reservation setShareSettings(AllocationShareSettings shareSettings) {
+    this.shareSettings = shareSettings;
     return this;
   }
 

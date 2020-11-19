@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/AubvcHOOmrHBNbxRjSZ8CR3OwJo\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/IzoQxjVawMYvYrbRbXalwXGvUZI\"",
  "discoveryVersion": "v1",
  "id": "compute:v1",
  "name": "compute",
  "version": "v1",
- "revision": "20201007",
+ "revision": "20201022",
  "title": "Compute Engine API",
  "description": "Creates and runs virtual machines on Google Cloud Platform.",
  "ownerDomain": "google.com",
@@ -1361,7 +1361,7 @@
   "Autoscaler": {
    "id": "Autoscaler",
    "type": "object",
-   "description": "Represents an Autoscaler resource.\n\nGoogle Compute Engine has two Autoscaler resources:\n\n* [Global](/compute/docs/reference/rest/{$api_version}/autoscalers) * [Regional](/compute/docs/reference/rest/{$api_version}/regionAutoscalers)\n\nUse autoscalers to automatically add or delete instances from a managed instance group according to your defined autoscaling policy. For more information, read Autoscaling Groups of Instances.\n\nFor zonal managed instance groups resource, use the autoscaler resource.\n\nFor regional managed instance groups, use the regionAutoscalers resource. (== resource_for {$api_version}.autoscalers ==) (== resource_for {$api_version}.regionAutoscalers ==)",
+   "description": "Represents an Autoscaler resource.\n\nGoogle Compute Engine has two Autoscaler resources:\n\n* [Zonal](/compute/docs/reference/rest/{$api_version}/autoscalers) * [Regional](/compute/docs/reference/rest/{$api_version}/regionAutoscalers)\n\nUse autoscalers to automatically add or delete instances from a managed instance group according to your defined autoscaling policy. For more information, read Autoscaling Groups of Instances.\n\nFor zonal managed instance groups resource, use the autoscaler resource.\n\nFor regional managed instance groups, use the regionAutoscalers resource. (== resource_for {$api_version}.autoscalers ==) (== resource_for {$api_version}.regionAutoscalers ==)",
    "properties": {
     "autoscalingPolicy": {
      "$ref": "AutoscalingPolicy",
@@ -4734,7 +4734,7 @@
    "properties": {
     "zones": {
      "type": "array",
-     "description": "Zones where the regional managed instance group will create and manage instances.",
+     "description": "Zones where the regional managed instance group will create and manage its instances.",
      "items": {
       "$ref": "DistributionPolicyZoneConfiguration"
      }
@@ -8864,7 +8864,7 @@
     },
     "distributionPolicy": {
      "$ref": "DistributionPolicy",
-     "description": "Policy specifying intended distribution of instances in regional managed instance group."
+     "description": "Policy specifying the intended distribution of managed instances across zones in a regional managed instance group."
     },
     "fingerprint": {
      "type": "string",
@@ -8882,7 +8882,7 @@
     },
     "instanceTemplate": {
      "type": "string",
-     "description": "The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group."
+     "description": "The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE."
     },
     "kind": {
      "type": "string",
@@ -8954,7 +8954,7 @@
     },
     "zone": {
      "type": "string",
-     "description": "[Output Only] The URL of the zone where the managed instance group is located (for zonal resources)."
+     "description": "[Output Only] The URL of a zone where the managed instance group is located (for zonal resources)."
     }
    }
   },
@@ -9392,7 +9392,7 @@
    "properties": {
     "instanceTemplate": {
      "type": "string",
-     "description": "The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached."
+     "description": "The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE; in those cases, existing instances are updated until the `targetSize` for this version is reached."
     },
     "name": {
      "type": "string",
@@ -9775,7 +9775,7 @@
    "properties": {
     "instanceTemplate": {
      "type": "string",
-     "description": "The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group."
+     "description": "The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE."
     }
    }
   },
@@ -16938,6 +16938,20 @@
      "items": {
       "type": "string"
      }
+    },
+    "direction": {
+     "type": "string",
+     "description": "Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.",
+     "enum": [
+      "BOTH",
+      "EGRESS",
+      "INGRESS"
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      ""
+     ]
     }
    }
   },
@@ -17730,9 +17744,11 @@
       "TARGET_VPN_GATEWAYS",
       "URL_MAPS",
       "VPN_GATEWAYS",
-      "VPN_TUNNELS"
+      "VPN_TUNNELS",
+      "XPN_SERVICE_PROJECTS"
      ],
      "enumDescriptions": [
+      "",
       "",
       "",
       "",
@@ -21038,6 +21054,9 @@
       "type": "string"
      }
     },
+    "enableEndpointIndependentMapping": {
+     "type": "boolean"
+    },
     "icmpIdleTimeoutSec": {
      "type": "integer",
      "description": "Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.",
@@ -22958,7 +22977,7 @@
   "SslPolicy": {
    "id": "SslPolicy",
    "type": "object",
-   "description": "Represents a Google Cloud Armor security policy resource.\n\nOnly external backend services used by HTTP or HTTPS load balancers can reference a security policy. For more information, see  Google Cloud Armor security policy overview. (== resource_for {$api_version}.sslPolicies ==)",
+   "description": "Represents an SSL Policy resource.\n\nUse SSL policies to control the SSL features, such as versions and cipher suites, offered by an HTTPS or SSL Proxy load balancer. For more information, read  SSL Policy Concepts. (== resource_for {$api_version}.sslPolicies ==)",
    "properties": {
     "creationTimestamp": {
      "type": "string",
@@ -34994,7 +35013,7 @@
      "id": "compute.instanceGroupManagers.setInstanceTemplate",
      "path": "{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/setInstanceTemplate",
      "httpMethod": "POST",
-     "description": "Specifies the instance template to use when creating new instances in this group. The templates for existing instances in the group do not change unless you recreate them.",
+     "description": "Specifies the instance template to use when creating new instances in this group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.",
      "parameters": {
       "instanceGroupManager": {
        "type": "string",

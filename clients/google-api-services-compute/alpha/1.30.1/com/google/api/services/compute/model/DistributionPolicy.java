@@ -42,7 +42,7 @@ public final class DistributionPolicy extends com.google.api.client.json.Generic
   private java.lang.String targetShape;
 
   /**
-   * Zones where the regional managed instance group will create and manage instances.
+   * Zones where the regional managed instance group will create and manage its instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class DistributionPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Zones where the regional managed instance group will create and manage instances.
+   * Zones where the regional managed instance group will create and manage its instances.
    * @return value or {@code null} for none
    */
   public java.util.List<DistributionPolicyZoneConfiguration> getZones() {
@@ -84,7 +84,7 @@ public final class DistributionPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Zones where the regional managed instance group will create and manage instances.
+   * Zones where the regional managed instance group will create and manage its instances.
    * @param zones zones or {@code null} for none
    */
   public DistributionPolicy setZones(java.util.List<DistributionPolicyZoneConfiguration> zones) {

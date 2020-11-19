@@ -30,14 +30,53 @@ package com.google.api.services.compute.model;
 public final class DistributionPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Zones where the regional managed instance group will create and manage instances.
+   * The shape to which the group converges either proactively or on resize events (depending on the
+   * value set in updatePolicy.instanceRedistributionType). The possible values are EVEN and ANY.
+   * For EVEN the group attempts to preserve a balanced number of instances across zones. For ANY
+   * the group creates new instances where resources are available to fulfill the request; as a
+   * result, instances may be distributed unevenly across zones in this mode. The default value is
+   * EVEN.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetShape;
+
+  /**
+   * Zones where the regional managed instance group will create and manage its instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<DistributionPolicyZoneConfiguration> zones;
 
   /**
-   * Zones where the regional managed instance group will create and manage instances.
+   * The shape to which the group converges either proactively or on resize events (depending on the
+   * value set in updatePolicy.instanceRedistributionType). The possible values are EVEN and ANY.
+   * For EVEN the group attempts to preserve a balanced number of instances across zones. For ANY
+   * the group creates new instances where resources are available to fulfill the request; as a
+   * result, instances may be distributed unevenly across zones in this mode. The default value is
+   * EVEN.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetShape() {
+    return targetShape;
+  }
+
+  /**
+   * The shape to which the group converges either proactively or on resize events (depending on the
+   * value set in updatePolicy.instanceRedistributionType). The possible values are EVEN and ANY.
+   * For EVEN the group attempts to preserve a balanced number of instances across zones. For ANY
+   * the group creates new instances where resources are available to fulfill the request; as a
+   * result, instances may be distributed unevenly across zones in this mode. The default value is
+   * EVEN.
+   * @param targetShape targetShape or {@code null} for none
+   */
+  public DistributionPolicy setTargetShape(java.lang.String targetShape) {
+    this.targetShape = targetShape;
+    return this;
+  }
+
+  /**
+   * Zones where the regional managed instance group will create and manage its instances.
    * @return value or {@code null} for none
    */
   public java.util.List<DistributionPolicyZoneConfiguration> getZones() {
@@ -45,7 +84,7 @@ public final class DistributionPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Zones where the regional managed instance group will create and manage instances.
+   * Zones where the regional managed instance group will create and manage its instances.
    * @param zones zones or {@code null} for none
    */
   public DistributionPolicy setZones(java.util.List<DistributionPolicyZoneConfiguration> zones) {

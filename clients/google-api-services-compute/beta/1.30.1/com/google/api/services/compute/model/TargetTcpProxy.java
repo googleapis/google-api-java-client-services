@@ -74,6 +74,22 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * This field only applies when the forwarding rule that references this target proxy has a
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   *
+   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
+   * the IP address and port specified in the forwarding rule. This is generally useful when using
+   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
+   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
+   * them.
+   *
+   * The default is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean proxyBind;
+
+  /**
    * Specifies the type of proxy header to append before sending data to the backend, either NONE or
    * PROXY_V1. The default is NONE.
    * The value may be {@code null}.
@@ -185,6 +201,41 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
    */
   public TargetTcpProxy setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * This field only applies when the forwarding rule that references this target proxy has a
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   *
+   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
+   * the IP address and port specified in the forwarding rule. This is generally useful when using
+   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
+   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
+   * them.
+   *
+   * The default is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getProxyBind() {
+    return proxyBind;
+  }
+
+  /**
+   * This field only applies when the forwarding rule that references this target proxy has a
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   *
+   * When this field is set to true, Envoy proxies set up inbound traffic interception and bind to
+   * the IP address and port specified in the forwarding rule. This is generally useful when using
+   * Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar
+   * proxy). The Envoy proxy listens for inbound requests and handles requests when it receives
+   * them.
+   *
+   * The default is false.
+   * @param proxyBind proxyBind or {@code null} for none
+   */
+  public TargetTcpProxy setProxyBind(java.lang.Boolean proxyBind) {
+    this.proxyBind = proxyBind;
     return this;
   }
 

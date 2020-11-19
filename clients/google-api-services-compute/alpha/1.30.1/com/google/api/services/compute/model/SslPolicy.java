@@ -17,11 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Google Cloud Armor security policy resource.
+ * Represents an SSL Policy resource.
  *
- * Only external backend services used by HTTP or HTTPS load balancers can reference a security
- * policy. For more information, see  Google Cloud Armor security policy overview. (== resource_for
- * {$api_version}.sslPolicies ==)
+ * Use SSL policies to control the SSL features, such as versions and cipher suites, offered by an
+ * HTTPS or SSL Proxy load balancer. For more information, read  SSL Policy Concepts. (==
+ * resource_for {$api_version}.sslPolicies ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

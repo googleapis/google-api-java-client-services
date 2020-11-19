@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/6ohqf_UZVcfD3dkqBiiMsIBdm74\"",
+ "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/Bbkqvt0S850AmVe1JApOfKsd5Ng\"",
  "discoveryVersion": "v1",
  "id": "drive:v2",
  "name": "drive",
  "version": "v2",
- "revision": "20201108",
+ "revision": "20201115",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -3042,7 +3042,7 @@
       },
       "enforceSingleParent": {
        "type": "boolean",
-       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter only takes effect if the item is not in a shared drive. If the item's last parent is removed, the item is placed under its owner's root.",
+       "description": "Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself is not, the item will be placed under its owner's root.",
        "default": "false",
        "location": "query"
       },
@@ -3106,7 +3106,7 @@
      "parameters": {
       "enforceSingleParent": {
        "type": "boolean",
-       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter only takes effect if the item is not in a shared drive. If the child's owner makes the request, the child is removed from all current folders and placed in the requested folder. Any other requests that increase the number of the child's parents fail, except when the canAddMyDriveParent file capability is true and a single parent is being added.",
+       "description": "Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.",
        "default": "false",
        "location": "query"
       },
@@ -3627,7 +3627,7 @@
       },
       "enforceSingleParent": {
        "type": "boolean",
-       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter only takes effect if the item is not in a shared drive. Requests that specify more than one parent fail.",
+       "description": "Deprecated. Copying files into multiple folders is no longer supported. Use shortcuts instead.",
        "default": "false",
        "location": "query"
       },
@@ -3721,7 +3721,7 @@
      "parameters": {
       "enforceSingleParent": {
        "type": "boolean",
-       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter will only take effect if the item is not in a shared drive. If an item's last parent is deleted but the item itself is not, the item will be placed under its owner's root.",
+       "description": "Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself is not, the item will be placed under its owner's root.",
        "default": "false",
        "location": "query"
       },
@@ -3761,7 +3761,7 @@
      "parameters": {
       "enforceSingleParent": {
        "type": "boolean",
-       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter will only take effect if the item is not in a shared drive. If an item's last parent is deleted but the item itself is not, the item will be placed under its owner's root.",
+       "description": "Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself is not, the item will be placed under its owner's root.",
        "default": "false",
        "location": "query"
       }
@@ -3924,7 +3924,7 @@
       },
       "enforceSingleParent": {
        "type": "boolean",
-       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter only takes effect if the item is not in a shared drive. Requests that specify more than one parent fail.",
+       "description": "Deprecated. Creating files in multiple folders is no longer supported.",
        "default": "false",
        "location": "query"
       },
@@ -4162,7 +4162,7 @@
       },
       "enforceSingleParent": {
        "type": "boolean",
-       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter only takes effect if the item is not in a shared drive. If the item's owner makes a request to add a single parent, the item is removed from all current folders and placed in the requested folder. Other requests that increase the number of parents fail, except when the canAddMyDriveParent file capability is true and a single parent is being added.",
+       "description": "Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.",
        "default": "false",
        "location": "query"
       },
@@ -4434,7 +4434,7 @@
       },
       "enforceSingleParent": {
        "type": "boolean",
-       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter only takes effect if the item is not in a shared drive. If the item's owner makes a request to add a single parent, the item is removed from all current folders and placed in the requested folder. Other requests that increase the number of parents fail, except when the canAddMyDriveParent file capability is true and a single parent is being added.",
+       "description": "Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.",
        "default": "false",
        "location": "query"
       },
@@ -4669,7 +4669,7 @@
      "parameters": {
       "enforceSingleParent": {
        "type": "boolean",
-       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter only takes effect if the item is not in a shared drive. If the item's last parent is removed, the item is placed under its owner's root.",
+       "description": "Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself is not, the item will be placed under its owner's root.",
        "default": "false",
        "location": "query"
       },
@@ -4739,7 +4739,7 @@
      "parameters": {
       "enforceSingleParent": {
        "type": "boolean",
-       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter only takes effect if the item is not in a shared drive. If the child's owner makes the request, the child is removed from all current folders and placed in the requested folder. Any other requests that increase the number of the child's parents fail, except when the canAddMyDriveParent file capability is true and a single parent is being added.",
+       "description": "Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.",
        "default": "false",
        "location": "query"
       },
@@ -4952,7 +4952,7 @@
       },
       "enforceSingleParent": {
        "type": "boolean",
-       "description": "Set to true to opt in to API behavior that aims for all items to have exactly one parent. This parameter only takes effect if the item is not in a shared drive. See moveToNewOwnersRoot for details.",
+       "description": "Deprecated. See moveToNewOwnersRoot for details.",
        "default": "false",
        "location": "query"
       },
@@ -4964,7 +4964,7 @@
       },
       "moveToNewOwnersRoot": {
        "type": "boolean",
-       "description": "This parameter only takes effect if the item is not in a shared drive and the request is attempting to transfer the ownership of the item. When set to true, the item will be moved to the new owner's My Drive root folder and all prior parents removed. If set to false, when enforceSingleParent=true, parents are not changed. If set to false, when enforceSingleParent=false, existing parents are not changed; however, the file will be added to the new owner's My Drive root folder, unless it is already in the new owner's My Drive.",
+       "description": "This parameter will only take effect if the item is not in a shared drive and the request is attempting to transfer the ownership of the item. If set to true, the item will be moved to the new owner's My Drive root folder and all prior parents removed. If set to false, parents are not changed.",
        "default": "false",
        "location": "query"
       },

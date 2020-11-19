@@ -37,13 +37,15 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.lang.Long count;
 
   /**
+   * The instance defining the VM instances to be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Instance instance;
 
   /**
-   * The instance properties for the request. Required if sourceInstanceTemplate is not provided.
+   * The instance properties defining the VM instances to be created. Required if
+   * sourceInstanceTemplate is not provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,6 +120,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
+   * The instance defining the VM instances to be created.
    * @return value or {@code null} for none
    */
   public Instance getInstance() {
@@ -125,6 +128,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
+   * The instance defining the VM instances to be created.
    * @param instance instance or {@code null} for none
    */
   public BulkInsertInstanceResource setInstance(Instance instance) {
@@ -133,7 +137,8 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * The instance properties for the request. Required if sourceInstanceTemplate is not provided.
+   * The instance properties defining the VM instances to be created. Required if
+   * sourceInstanceTemplate is not provided.
    * @return value or {@code null} for none
    */
   public InstanceProperties getInstanceProperties() {
@@ -141,7 +146,8 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * The instance properties for the request. Required if sourceInstanceTemplate is not provided.
+   * The instance properties defining the VM instances to be created. Required if
+   * sourceInstanceTemplate is not provided.
    * @param instanceProperties instanceProperties or {@code null} for none
    */
   public BulkInsertInstanceResource setInstanceProperties(InstanceProperties instanceProperties) {

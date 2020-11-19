@@ -77,7 +77,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String description;
 
   /**
-   * Policy specifying intended distribution of instances in regional managed instance group.
+   * Policy specifying the intended distribution of managed instances across zones in a regional
+   * managed instance group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +120,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
 
   /**
    * The URL of the instance template that is specified for this managed instance group. The group
-   * uses this template to create all new instances in the managed instance group.
+   * uses this template to create all new instances in the managed instance group. The templates for
+   * existing instances in the group do not change unless you run recreateInstances, run
+   * applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -242,7 +245,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.util.List<InstanceGroupManagerVersion> versions;
 
   /**
-   * [Output Only] The URL of the zone where the managed instance group is located (for zonal
+   * [Output Only] The URL of a zone where the managed instance group is located (for zonal
    * resources).
    * The value may be {@code null}.
    */
@@ -341,7 +344,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Policy specifying intended distribution of instances in regional managed instance group.
+   * Policy specifying the intended distribution of managed instances across zones in a regional
+   * managed instance group.
    * @return value or {@code null} for none
    */
   public DistributionPolicy getDistributionPolicy() {
@@ -349,7 +353,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Policy specifying intended distribution of instances in regional managed instance group.
+   * Policy specifying the intended distribution of managed instances across zones in a regional
+   * managed instance group.
    * @param distributionPolicy distributionPolicy or {@code null} for none
    */
   public InstanceGroupManager setDistributionPolicy(DistributionPolicy distributionPolicy) {
@@ -477,7 +482,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
 
   /**
    * The URL of the instance template that is specified for this managed instance group. The group
-   * uses this template to create all new instances in the managed instance group.
+   * uses this template to create all new instances in the managed instance group. The templates for
+   * existing instances in the group do not change unless you run recreateInstances, run
+   * applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceTemplate() {
@@ -486,7 +493,9 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
 
   /**
    * The URL of the instance template that is specified for this managed instance group. The group
-   * uses this template to create all new instances in the managed instance group.
+   * uses this template to create all new instances in the managed instance group. The templates for
+   * existing instances in the group do not change unless you run recreateInstances, run
+   * applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
    * @param instanceTemplate instanceTemplate or {@code null} for none
    */
   public InstanceGroupManager setInstanceTemplate(java.lang.String instanceTemplate) {
@@ -769,7 +778,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of the zone where the managed instance group is located (for zonal
+   * [Output Only] The URL of a zone where the managed instance group is located (for zonal
    * resources).
    * @return value or {@code null} for none
    */
@@ -778,7 +787,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of the zone where the managed instance group is located (for zonal
+   * [Output Only] The URL of a zone where the managed instance group is located (for zonal
    * resources).
    * @param zone zone or {@code null} for none
    */

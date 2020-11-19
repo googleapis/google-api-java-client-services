@@ -49,6 +49,13 @@ public final class PacketMirroringFilter extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> cidrRanges;
 
   /**
+   * Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String direction;
+
+  /**
    * Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic
    * that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is
    * specified, all traffic is mirrored.
@@ -89,6 +96,23 @@ public final class PacketMirroringFilter extends com.google.api.client.json.Gene
    */
   public PacketMirroringFilter setCidrRanges(java.util.List<java.lang.String> cidrRanges) {
     this.cidrRanges = cidrRanges;
+    return this;
+  }
+
+  /**
+   * Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDirection() {
+    return direction;
+  }
+
+  /**
+   * Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
+   * @param direction direction or {@code null} for none
+   */
+  public PacketMirroringFilter setDirection(java.lang.String direction) {
+    this.direction = direction;
     return this;
   }
 

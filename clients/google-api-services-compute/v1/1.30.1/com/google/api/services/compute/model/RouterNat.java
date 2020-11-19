@@ -41,6 +41,12 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> drainNatIps;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableEndpointIndependentMapping;
+
+  /**
    * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
    * The value may be {@code null}.
    */
@@ -148,6 +154,21 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    */
   public RouterNat setDrainNatIps(java.util.List<java.lang.String> drainNatIps) {
     this.drainNatIps = drainNatIps;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableEndpointIndependentMapping() {
+    return enableEndpointIndependentMapping;
+  }
+
+  /**
+   * @param enableEndpointIndependentMapping enableEndpointIndependentMapping or {@code null} for none
+   */
+  public RouterNat setEnableEndpointIndependentMapping(java.lang.Boolean enableEndpointIndependentMapping) {
+    this.enableEndpointIndependentMapping = enableEndpointIndependentMapping;
     return this;
   }
 

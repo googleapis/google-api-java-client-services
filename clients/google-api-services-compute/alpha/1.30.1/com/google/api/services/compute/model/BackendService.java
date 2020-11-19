@@ -101,6 +101,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private ConnectionDraining connectionDraining;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceConnectionTrackingPolicy connectionTrackingPolicy;
+
+  /**
    * Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP
    * headers, cookies or other properties. This load balancing policy is applicable only for HTTP
    * connections. The affinity to a particular destination host will be lost when one or more hosts
@@ -520,6 +526,21 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setConnectionDraining(ConnectionDraining connectionDraining) {
     this.connectionDraining = connectionDraining;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public BackendServiceConnectionTrackingPolicy getConnectionTrackingPolicy() {
+    return connectionTrackingPolicy;
+  }
+
+  /**
+   * @param connectionTrackingPolicy connectionTrackingPolicy or {@code null} for none
+   */
+  public BackendService setConnectionTrackingPolicy(BackendServiceConnectionTrackingPolicy connectionTrackingPolicy) {
+    this.connectionTrackingPolicy = connectionTrackingPolicy;
     return this;
   }
 

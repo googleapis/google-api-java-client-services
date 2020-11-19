@@ -142,10 +142,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String nicType;
 
   /**
-   * The networking queue count for the network interface. Both Rx and Tx queues will be set to this
-   * number. If it's not specified by the user, a default number of queues will be assigned. For
-   * Virtio-net, each interface will get (min(#vCPU, 32) / #vNIC) queues. For gVNIC, each interface
-   * will get (min(#vCPU / 2, 16) / #vNIC) qeueus.
+   * The networking queue count that's specified by users for the network interface. Both Rx and Tx
+   * queues will be set to this number. It'll be empty if not specified by the users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -430,10 +428,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The networking queue count for the network interface. Both Rx and Tx queues will be set to this
-   * number. If it's not specified by the user, a default number of queues will be assigned. For
-   * Virtio-net, each interface will get (min(#vCPU, 32) / #vNIC) queues. For gVNIC, each interface
-   * will get (min(#vCPU / 2, 16) / #vNIC) qeueus.
+   * The networking queue count that's specified by users for the network interface. Both Rx and Tx
+   * queues will be set to this number. It'll be empty if not specified by the users.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getQueueCount() {
@@ -441,10 +437,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The networking queue count for the network interface. Both Rx and Tx queues will be set to this
-   * number. If it's not specified by the user, a default number of queues will be assigned. For
-   * Virtio-net, each interface will get (min(#vCPU, 32) / #vNIC) queues. For gVNIC, each interface
-   * will get (min(#vCPU / 2, 16) / #vNIC) qeueus.
+   * The networking queue count that's specified by users for the network interface. Both Rx and Tx
+   * queues will be set to this number. It'll be empty if not specified by the users.
    * @param queueCount queueCount or {@code null} for none
    */
   public NetworkInterface setQueueCount(java.lang.Integer queueCount) {

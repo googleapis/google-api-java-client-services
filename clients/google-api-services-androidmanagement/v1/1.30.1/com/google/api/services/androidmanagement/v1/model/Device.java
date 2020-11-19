@@ -74,6 +74,16 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String appliedState;
 
   /**
+   * Information about Common Criteria Mode—security standards defined in the Common Criteria for
+   * Information Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC).This
+   * information is only available if statusReportingSettings.commonCriteriaModeEnabled is true in
+   * the device's policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CommonCriteriaModeInfo commonCriteriaModeInfo;
+
+  /**
    * Device settings information. This information is only available if deviceSettingsEnabled is
    * true in the device's policy.
    * The value may be {@code null}.
@@ -374,6 +384,29 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setAppliedState(java.lang.String appliedState) {
     this.appliedState = appliedState;
+    return this;
+  }
+
+  /**
+   * Information about Common Criteria Mode—security standards defined in the Common Criteria for
+   * Information Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC).This
+   * information is only available if statusReportingSettings.commonCriteriaModeEnabled is true in
+   * the device's policy.
+   * @return value or {@code null} for none
+   */
+  public CommonCriteriaModeInfo getCommonCriteriaModeInfo() {
+    return commonCriteriaModeInfo;
+  }
+
+  /**
+   * Information about Common Criteria Mode—security standards defined in the Common Criteria for
+   * Information Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC).This
+   * information is only available if statusReportingSettings.commonCriteriaModeEnabled is true in
+   * the device's policy.
+   * @param commonCriteriaModeInfo commonCriteriaModeInfo or {@code null} for none
+   */
+  public Device setCommonCriteriaModeInfo(CommonCriteriaModeInfo commonCriteriaModeInfo) {
+    this.commonCriteriaModeInfo = commonCriteriaModeInfo;
     return this;
   }
 

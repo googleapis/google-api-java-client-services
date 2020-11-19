@@ -32,12 +32,54 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class AdvancedSecurityOverrides extends com.google.api.client.json.GenericJson {
 
   /**
+   * Controls Common Criteria Mode—security standards defined in the Common Criteria for Information
+   * Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC). Enabling Common
+   * Criteria Mode increases certain security components on a device, including AES-GCM encryption
+   * of Bluetooth Long Term Keys, and Wi-Fi configuration stores.Warning: Common Criteria Mode
+   * enforces a strict security model typically only required for IT products used in national
+   * security systems and other highly sensitive organizations. Standard device use may be affected.
+   * Only enabled if required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String commonCriteriaMode;
+
+  /**
    * The policy for untrusted apps (apps from unknown sources) enforced on the device. Replaces
    * install_unknown_sources_allowed (deprecated).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String untrustedAppsPolicy;
+
+  /**
+   * Controls Common Criteria Mode—security standards defined in the Common Criteria for Information
+   * Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC). Enabling Common
+   * Criteria Mode increases certain security components on a device, including AES-GCM encryption
+   * of Bluetooth Long Term Keys, and Wi-Fi configuration stores.Warning: Common Criteria Mode
+   * enforces a strict security model typically only required for IT products used in national
+   * security systems and other highly sensitive organizations. Standard device use may be affected.
+   * Only enabled if required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCommonCriteriaMode() {
+    return commonCriteriaMode;
+  }
+
+  /**
+   * Controls Common Criteria Mode—security standards defined in the Common Criteria for Information
+   * Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC). Enabling Common
+   * Criteria Mode increases certain security components on a device, including AES-GCM encryption
+   * of Bluetooth Long Term Keys, and Wi-Fi configuration stores.Warning: Common Criteria Mode
+   * enforces a strict security model typically only required for IT products used in national
+   * security systems and other highly sensitive organizations. Standard device use may be affected.
+   * Only enabled if required.
+   * @param commonCriteriaMode commonCriteriaMode or {@code null} for none
+   */
+  public AdvancedSecurityOverrides setCommonCriteriaMode(java.lang.String commonCriteriaMode) {
+    this.commonCriteriaMode = commonCriteriaMode;
+    return this;
+  }
 
   /**
    * The policy for untrusted apps (apps from unknown sources) enforced on the device. Replaces

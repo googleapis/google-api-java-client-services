@@ -31,8 +31,9 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class DataSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, Indexing API rejects any modification calls to this datasource such as create, update,
-   * and delete. Disabling this does not imply halting process of previously accepted data.
+   * If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any
+   * requests to index or delete items in this source. Enabling read-only mode does not stop the
+   * processing of previously accepted data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +99,9 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private java.lang.String shortName;
 
   /**
-   * If true, Indexing API rejects any modification calls to this datasource such as create, update,
-   * and delete. Disabling this does not imply halting process of previously accepted data.
+   * If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any
+   * requests to index or delete items in this source. Enabling read-only mode does not stop the
+   * processing of previously accepted data.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableModifications() {
@@ -107,8 +109,9 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, Indexing API rejects any modification calls to this datasource such as create, update,
-   * and delete. Disabling this does not imply halting process of previously accepted data.
+   * If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any
+   * requests to index or delete items in this source. Enabling read-only mode does not stop the
+   * processing of previously accepted data.
    * @param disableModifications disableModifications or {@code null} for none
    */
   public DataSource setDisableModifications(java.lang.Boolean disableModifications) {

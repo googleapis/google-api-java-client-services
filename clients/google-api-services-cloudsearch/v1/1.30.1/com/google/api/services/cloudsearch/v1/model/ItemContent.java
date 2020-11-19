@@ -17,7 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Content of an item to be indexed and surfaced by Cloud Search.
+ * Content of an item to be indexed and surfaced by Cloud Search. Only UTF-8 encoded strings are
+ * allowed as inlineContent. If the content is uploaded and not binary, it must be UTF-8 encoded.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:

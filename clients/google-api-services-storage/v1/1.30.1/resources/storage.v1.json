@@ -210,6 +210,10 @@
          "format": "date-time"
         }
        }
+      },
+      "publicAccessPrevention": {
+       "type": "string",
+       "description": "The bucket's Public Access Prevention configuration. Currently, 'unspecified' and 'enforced' are supported."
       }
      }
     },
@@ -4451,6 +4455,6 @@
    }
   }
  },
- "revision": "20201106",
- "etag": "\"343633363836393231343833333835333032\""
+ "revision": "20201112",
+ "etag": "\"32313837343738383335383432353737343034\""
 }

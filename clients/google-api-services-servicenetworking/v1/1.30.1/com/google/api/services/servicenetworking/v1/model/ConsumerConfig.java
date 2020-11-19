@@ -96,12 +96,11 @@ public final class ConsumerConfig extends com.google.api.client.json.GenericJson
   private java.lang.String producerNetwork;
 
   /**
-   * Output only. The name of the allocated IP address ranges for this private service access
-   * connection.
+   * Output only. The reserved ranges associated with this private service access connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> reservedRanges;
+  private java.util.List<GoogleCloudServicenetworkingV1ConsumerConfigReservedRange> reservedRanges;
 
   /**
    * Export custom routes flag value for peering from consumer to producer.
@@ -261,20 +260,18 @@ public final class ConsumerConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The name of the allocated IP address ranges for this private service access
-   * connection.
+   * Output only. The reserved ranges associated with this private service access connection.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getReservedRanges() {
+  public java.util.List<GoogleCloudServicenetworkingV1ConsumerConfigReservedRange> getReservedRanges() {
     return reservedRanges;
   }
 
   /**
-   * Output only. The name of the allocated IP address ranges for this private service access
-   * connection.
+   * Output only. The reserved ranges associated with this private service access connection.
    * @param reservedRanges reservedRanges or {@code null} for none
    */
-  public ConsumerConfig setReservedRanges(java.util.List<java.lang.String> reservedRanges) {
+  public ConsumerConfig setReservedRanges(java.util.List<GoogleCloudServicenetworkingV1ConsumerConfigReservedRange> reservedRanges) {
     this.reservedRanges = reservedRanges;
     return this;
   }

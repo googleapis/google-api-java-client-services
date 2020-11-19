@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-containeranalysis</artifactId>
-  <version>v1beta1-rev20201030-1.30.10</version>
-  <name>Container Analysis API v1beta1-rev20201030-1.30.10</name>
+  <version>v1beta1-rev20201112-1.30.10</version>
+  <name>Container Analysis API v1beta1-rev20201112-1.30.10</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

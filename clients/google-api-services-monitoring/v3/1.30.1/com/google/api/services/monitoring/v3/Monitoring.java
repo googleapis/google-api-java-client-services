@@ -6876,9 +6876,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name A unique resource name for this Uptime check configuration. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] This field should be
-       *        omitted when creating the Uptime check configuration; on create, the resource name is
-       *        assigned by the server and included in the response.
+       *        projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
+       *        [PROJECT_ID_OR_NUMBER] is the Workspace host project associated with the Uptime check.This
+       *        field should be omitted when creating the Uptime check configuration; on create, the
+       *        resource name is assigned by the server and included in the response.
        * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
        * @return the request
        */
@@ -6909,9 +6910,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name A unique resource name for this Uptime check configuration. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] This field should be
-       *        omitted when creating the Uptime check configuration; on create, the resource name is
-       *        assigned by the server and included in the response.
+       *        projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
+       *        [PROJECT_ID_OR_NUMBER] is the Workspace host project associated with the Uptime check.This
+       *        field should be omitted when creating the Uptime check configuration; on create, the
+       *        resource name is assigned by the server and included in the response.
          * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
          * @since 1.13
          */
@@ -6982,17 +6984,19 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * A unique resource name for this Uptime check configuration. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] This field should be
-         * omitted when creating the Uptime check configuration; on create, the resource name is
-         * assigned by the server and included in the response.
+         * projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
+         * [PROJECT_ID_OR_NUMBER] is the Workspace host project associated with the Uptime
+         * check.This field should be omitted when creating the Uptime check configuration; on
+         * create, the resource name is assigned by the server and included in the response.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** A unique resource name for this Uptime check configuration. The format is:
-       projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] This field should be omitted
-       when creating the Uptime check configuration; on create, the resource name is assigned by the
-       server and included in the response.
+       projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] [PROJECT_ID_OR_NUMBER] is the
+       Workspace host project associated with the Uptime check.This field should be omitted when creating
+       the Uptime check configuration; on create, the resource name is assigned by the server and included
+       in the response.
          */
         public java.lang.String getName() {
           return name;
@@ -7000,9 +7004,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * A unique resource name for this Uptime check configuration. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] This field should be
-         * omitted when creating the Uptime check configuration; on create, the resource name is
-         * assigned by the server and included in the response.
+         * projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
+         * [PROJECT_ID_OR_NUMBER] is the Workspace host project associated with the Uptime
+         * check.This field should be omitted when creating the Uptime check configuration; on
+         * create, the resource name is assigned by the server and included in the response.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

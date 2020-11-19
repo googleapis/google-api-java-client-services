@@ -107,6 +107,13 @@ public final class PublisherProfile extends com.google.api.client.json.GenericJs
   private java.lang.String mediaKitUrl;
 
   /**
+   * The list of apps represented in this publisher profile. Empty if this is a parent profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PublisherProfileMobileApplication> mobileApps;
+
+  /**
    * Overview of the publisher.
    * The value may be {@code null}.
    */
@@ -327,6 +334,23 @@ public final class PublisherProfile extends com.google.api.client.json.GenericJs
    */
   public PublisherProfile setMediaKitUrl(java.lang.String mediaKitUrl) {
     this.mediaKitUrl = mediaKitUrl;
+    return this;
+  }
+
+  /**
+   * The list of apps represented in this publisher profile. Empty if this is a parent profile.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PublisherProfileMobileApplication> getMobileApps() {
+    return mobileApps;
+  }
+
+  /**
+   * The list of apps represented in this publisher profile. Empty if this is a parent profile.
+   * @param mobileApps mobileApps or {@code null} for none
+   */
+  public PublisherProfile setMobileApps(java.util.List<PublisherProfileMobileApplication> mobileApps) {
+    this.mobileApps = mobileApps;
     return this;
   }
 

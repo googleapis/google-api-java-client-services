@@ -904,22 +904,27 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. Additional restrictions when fetching list of devices. [Help Center article
-       * link](https://support.google.com/a/answer/7549103)
+       * Optional. Additional restrictions when fetching list of devices. For a list of search
+       * fields, refer to [Mobile device search fields](https://developers.google.com/admin-
+       * sdk/directory/v1/search-operators). Multiple search fields are separated by the space
+       * character.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Optional. Additional restrictions when fetching list of devices. [Help Center article
-     link](https://support.google.com/a/answer/7549103)
+      /** Optional. Additional restrictions when fetching list of devices. For a list of search fields, refer
+     to [Mobile device search fields](https://developers.google.com/admin-sdk/directory/v1/search-
+     operators). Multiple search fields are separated by the space character.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Optional. Additional restrictions when fetching list of devices. [Help Center article
-       * link](https://support.google.com/a/answer/7549103)
+       * Optional. Additional restrictions when fetching list of devices. For a list of search
+       * fields, refer to [Mobile device search fields](https://developers.google.com/admin-
+       * sdk/directory/v1/search-operators). Multiple search fields are separated by the space
+       * character.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -2164,22 +2169,27 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. Additional restrictions when fetching list of devices. [HC
-         * article](https://support.google.com/a/answer/7549103)
+         * Optional. Additional restrictions when fetching list of devices. For a list of search
+         * fields, refer to [Mobile device search fields](https://developers.google.com/admin-
+         * sdk/directory/v1/search-operators). Multiple search fields are separated by the space
+         * character.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. Additional restrictions when fetching list of devices. [HC
-       article](https://support.google.com/a/answer/7549103)
+        /** Optional. Additional restrictions when fetching list of devices. For a list of search fields, refer
+       to [Mobile device search fields](https://developers.google.com/admin-sdk/directory/v1/search-
+       operators). Multiple search fields are separated by the space character.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Optional. Additional restrictions when fetching list of devices. [HC
-         * article](https://support.google.com/a/answer/7549103)
+         * Optional. Additional restrictions when fetching list of devices. For a list of search
+         * fields, refer to [Mobile device search fields](https://developers.google.com/admin-
+         * sdk/directory/v1/search-operators). Multiple search fields are separated by the space
+         * character.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

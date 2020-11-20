@@ -49,11 +49,12 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean invisible;
 
   /**
-   * The name of the metric. See the [API Metrics](https://developers.google.com/analytics/trusted-
-   * testing/analytics-data/api-schema#metrics) for the list of metric names. If `expression` is
-   * specified, `name` can be any string that you would like. For example if `expression` is
-   * `screenPageViews/sessions`, you could call that metric's name = `viewsPerSession`. Metrics are
-   * referenced by `name` in `metricFilter`, `orderBys`, and metric `expression`.
+   * The name of the metric. See the [API
+   * Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/api-
+   * schema#metrics) for the list of metric names. If `expression` is specified, `name` can be any
+   * string that you would like. For example if `expression` is `screenPageViews/sessions`, you
+   * could call that metric's name = `viewsPerSession`. Metrics are referenced by `name` in
+   * `metricFilter`, `orderBys`, and metric `expression`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,11 +101,12 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the metric. See the [API Metrics](https://developers.google.com/analytics/trusted-
-   * testing/analytics-data/api-schema#metrics) for the list of metric names. If `expression` is
-   * specified, `name` can be any string that you would like. For example if `expression` is
-   * `screenPageViews/sessions`, you could call that metric's name = `viewsPerSession`. Metrics are
-   * referenced by `name` in `metricFilter`, `orderBys`, and metric `expression`.
+   * The name of the metric. See the [API
+   * Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/api-
+   * schema#metrics) for the list of metric names. If `expression` is specified, `name` can be any
+   * string that you would like. For example if `expression` is `screenPageViews/sessions`, you
+   * could call that metric's name = `viewsPerSession`. Metrics are referenced by `name` in
+   * `metricFilter`, `orderBys`, and metric `expression`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -112,11 +114,12 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the metric. See the [API Metrics](https://developers.google.com/analytics/trusted-
-   * testing/analytics-data/api-schema#metrics) for the list of metric names. If `expression` is
-   * specified, `name` can be any string that you would like. For example if `expression` is
-   * `screenPageViews/sessions`, you could call that metric's name = `viewsPerSession`. Metrics are
-   * referenced by `name` in `metricFilter`, `orderBys`, and metric `expression`.
+   * The name of the metric. See the [API
+   * Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/api-
+   * schema#metrics) for the list of metric names. If `expression` is specified, `name` can be any
+   * string that you would like. For example if `expression` is `screenPageViews/sessions`, you
+   * could call that metric's name = `viewsPerSession`. Metrics are referenced by `name` in
+   * `metricFilter`, `orderBys`, and metric `expression`.
    * @param name name or {@code null} for none
    */
   public Metric setName(java.lang.String name) {

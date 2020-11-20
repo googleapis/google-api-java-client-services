@@ -17,6 +17,8 @@
 package com.google.api.services.managedidentities.v1beta1.model;
 
 /**
+ * If the domain is being changed, it will be placed into the UPDATING state, which indicates that
+ * the resource is being reconciled. At this point, Get will reflect an intermediate state.
  * Represents a managed Microsoft Active Directory domain.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

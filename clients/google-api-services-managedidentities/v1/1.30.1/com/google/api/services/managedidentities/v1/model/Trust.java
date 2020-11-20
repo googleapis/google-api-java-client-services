@@ -18,7 +18,9 @@ package com.google.api.services.managedidentities.v1.model;
 
 /**
  * Represents a relationship between two domains. This allows a controller in one domain to
- * authenticate a user in another domain.
+ * authenticate a user in another domain. If the trust is being changed, it will be placed into the
+ * UPDATING state, which indicates that the resource is being reconciled. At this point, Get will
+ * reflect an intermediate state.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Managed Service for Microsoft Active Directory API.

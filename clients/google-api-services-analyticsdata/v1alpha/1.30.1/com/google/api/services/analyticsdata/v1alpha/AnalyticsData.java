@@ -25,7 +25,7 @@ package com.google.api.services.analyticsdata.v1alpha;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/analytics/trusted-testing/analytics-data/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/analytics/devguides/reporting/data/v1/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -159,7 +159,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      * @param name Required. The resource name of the metadata to retrieve. This name field is specified in the URL
      *        path and not URL parameters. Property is a numeric Google Analytics GA4 Property
      *        identifier. To learn more, see [where to find your Property
-     *        ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+     *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
      *        common to all properties. In this special mode, this method will not return custom
      *        dimensions and metrics.
@@ -198,7 +198,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * @param name Required. The resource name of the metadata to retrieve. This name field is specified in the URL
      *        path and not URL parameters. Property is a numeric Google Analytics GA4 Property
      *        identifier. To learn more, see [where to find your Property
-     *        ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+     *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
      *        common to all properties. In this special mode, this method will not return custom
      *        dimensions and metrics.
@@ -283,7 +283,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * Required. The resource name of the metadata to retrieve. This name field is specified in
        * the URL path and not URL parameters. Property is a numeric Google Analytics GA4 Property
        * identifier. To learn more, see [where to find your Property
-       * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+       * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
        * common to all properties. In this special mode, this method will not return custom
        * dimensions and metrics.
@@ -293,10 +293,10 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
 
       /** Required. The resource name of the metadata to retrieve. This name field is specified in the URL
      path and not URL parameters. Property is a numeric Google Analytics GA4 Property identifier. To
-     learn more, see [where to find your Property ID](https://developers.google.com/analytics/trusted-
-     testing/analytics-data/property-id). Example: properties/1234/metadata Set the Property ID to 0 for
-     dimensions and metrics common to all properties. In this special mode, this method will not return
-     custom dimensions and metrics.
+     learn more, see [where to find your Property
+     ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Example:
+     properties/1234/metadata Set the Property ID to 0 for dimensions and metrics common to all
+     properties. In this special mode, this method will not return custom dimensions and metrics.
        */
       public java.lang.String getName() {
         return name;
@@ -306,7 +306,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * Required. The resource name of the metadata to retrieve. This name field is specified in
        * the URL path and not URL parameters. Property is a numeric Google Analytics GA4 Property
        * identifier. To learn more, see [where to find your Property
-       * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+       * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
        * common to all properties. In this special mode, this method will not return custom
        * dimensions and metrics.
@@ -337,7 +337,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      *
      * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
      *        not the body. To learn more, see [where to find your Property
-     *        ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+     *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        Example: properties/1234
      * @param content the {@link com.google.api.services.analyticsdata.v1alpha.model.RunRealtimeReportRequest}
      * @return the request
@@ -369,7 +369,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        *
        * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
      *        not the body. To learn more, see [where to find your Property
-     *        ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+     *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        Example: properties/1234
        * @param content the {@link com.google.api.services.analyticsdata.v1alpha.model.RunRealtimeReportRequest}
        * @since 1.13
@@ -442,7 +442,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       /**
        * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
        * path and not the body. To learn more, see [where to find your Property
-       * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+       * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * Example: properties/1234
        */
       @com.google.api.client.util.Key
@@ -450,7 +450,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
 
       /** A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
      not the body. To learn more, see [where to find your Property
-     ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id). Example:
+     ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Example:
      properties/1234
        */
       public java.lang.String getProperty() {
@@ -460,7 +460,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       /**
        * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
        * path and not the body. To learn more, see [where to find your Property
-       * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+       * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * Example: properties/1234
        */
       public RunRealtimeReport setProperty(java.lang.String property) {

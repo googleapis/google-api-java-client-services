@@ -32,7 +32,7 @@ public final class Entity extends com.google.api.client.json.GenericJson {
 
   /**
    * A Google Analytics GA4 property id. To learn more, see [where to find your Property
-   * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+   * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class Entity extends com.google.api.client.json.GenericJson {
 
   /**
    * A Google Analytics GA4 property id. To learn more, see [where to find your Property
-   * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+   * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
    * @return value or {@code null} for none
    */
   public java.lang.String getPropertyId() {
@@ -49,7 +49,7 @@ public final class Entity extends com.google.api.client.json.GenericJson {
 
   /**
    * A Google Analytics GA4 property id. To learn more, see [where to find your Property
-   * ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+   * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
    * @param propertyId propertyId or {@code null} for none
    */
   public Entity setPropertyId(java.lang.String propertyId) {

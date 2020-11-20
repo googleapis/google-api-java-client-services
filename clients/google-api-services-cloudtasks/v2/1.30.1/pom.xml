@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudtasks</artifactId>
-  <version>v2-rev20201030-1.30.10</version>
-  <name>Cloud Tasks API v2-rev20201030-1.30.10</name>
+  <version>v2-rev20201111-1.30.10</version>
+  <name>Cloud Tasks API v2-rev20201111-1.30.10</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

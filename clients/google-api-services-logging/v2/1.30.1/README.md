@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-logging</artifactId>
-      <version>v2-rev20201105-1.30.10</version>
+      <version>v2-rev20201114-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-logging:v2-rev20201105-1.30.10'
+  compile 'com.google.apis:google-api-services-logging:v2-rev20201114-1.30.10'
 }
 ```
 

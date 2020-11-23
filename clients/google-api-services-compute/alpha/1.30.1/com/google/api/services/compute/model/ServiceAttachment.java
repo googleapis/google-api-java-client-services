@@ -34,13 +34,17 @@ package com.google.api.services.compute.model;
 public final class ServiceAttachment extends com.google.api.client.json.GenericJson {
 
   /**
+   * The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An
+   * ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer
+   * forwarding rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String connectionPreference;
 
   /**
-   * An array of forwarding rules for all the consumers connected to this service attachment.
+   * [Output Only] An array of forwarding rules for all the consumers connected to this service
+   * attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,6 +123,9 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String selfLink;
 
   /**
+   * The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An
+   * ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer
+   * forwarding rules.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectionPreference() {
@@ -126,6 +133,9 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An
+   * ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer
+   * forwarding rules.
    * @param connectionPreference connectionPreference or {@code null} for none
    */
   public ServiceAttachment setConnectionPreference(java.lang.String connectionPreference) {
@@ -134,7 +144,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * An array of forwarding rules for all the consumers connected to this service attachment.
+   * [Output Only] An array of forwarding rules for all the consumers connected to this service
+   * attachment.
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceAttachmentConsumerForwardingRule> getConsumerForwardingRules() {
@@ -142,7 +153,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * An array of forwarding rules for all the consumers connected to this service attachment.
+   * [Output Only] An array of forwarding rules for all the consumers connected to this service
+   * attachment.
    * @param consumerForwardingRules consumerForwardingRules or {@code null} for none
    */
   public ServiceAttachment setConsumerForwardingRules(java.util.List<ServiceAttachmentConsumerForwardingRule> consumerForwardingRules) {

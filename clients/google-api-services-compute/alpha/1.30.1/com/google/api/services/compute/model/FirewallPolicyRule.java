@@ -53,6 +53,15 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.lang.String direction;
 
   /**
+   * Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy
+   * rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the
+   * firewall policy rule will be enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disabled;
+
+  /**
    * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be
    * exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery
    * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
@@ -75,13 +84,6 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private FirewallPolicyRuleMatcher match;
-
-  /**
-   * If set to true, the specified action is not enforced.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean preview;
 
   /**
    * An integer indicating the priority of a rule in the list. The priority must be a positive value
@@ -181,6 +183,27 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
+   * Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy
+   * rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the
+   * firewall policy rule will be enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisabled() {
+    return disabled;
+  }
+
+  /**
+   * Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy
+   * rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the
+   * firewall policy rule will be enabled.
+   * @param disabled disabled or {@code null} for none
+   */
+  public FirewallPolicyRule setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
+    return this;
+  }
+
+  /**
    * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be
    * exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery
    * or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
@@ -234,23 +257,6 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    */
   public FirewallPolicyRule setMatch(FirewallPolicyRuleMatcher match) {
     this.match = match;
-    return this;
-  }
-
-  /**
-   * If set to true, the specified action is not enforced.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getPreview() {
-    return preview;
-  }
-
-  /**
-   * If set to true, the specified action is not enforced.
-   * @param preview preview or {@code null} for none
-   */
-  public FirewallPolicyRule setPreview(java.lang.Boolean preview) {
-    this.preview = preview;
     return this;
   }
 

@@ -34,6 +34,12 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyAdaptiveProtectionConfig adaptiveProtectionConfig;
+
+  /**
    * A list of associations that belong to this policy.
    * The value may be {@code null}.
    */
@@ -176,6 +182,21 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyAdaptiveProtectionConfig getAdaptiveProtectionConfig() {
+    return adaptiveProtectionConfig;
+  }
+
+  /**
+   * @param adaptiveProtectionConfig adaptiveProtectionConfig or {@code null} for none
+   */
+  public SecurityPolicy setAdaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfig adaptiveProtectionConfig) {
+    this.adaptiveProtectionConfig = adaptiveProtectionConfig;
+    return this;
+  }
 
   /**
    * A list of associations that belong to this policy.

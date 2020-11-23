@@ -334,6 +334,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> secureLabels;
 
   /**
+   * Secure tags to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure tags allowed is 300.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> secureTags;
+
+  /**
    * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
@@ -1200,6 +1208,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setSecureLabels(java.util.List<java.lang.String> secureLabels) {
     this.secureLabels = secureLabels;
+    return this;
+  }
+
+  /**
+   * Secure tags to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure tags allowed is 300.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSecureTags() {
+    return secureTags;
+  }
+
+  /**
+   * Secure tags to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure tags allowed is 300.
+   * @param secureTags secureTags or {@code null} for none
+   */
+  public Instance setSecureTags(java.util.List<java.lang.String> secureTags) {
+    this.secureTags = secureTags;
     return this;
   }
 

@@ -51,7 +51,8 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
   private FlexTemplateRuntimeEnvironment environment;
 
   /**
-   * Required. The job name to use for the created job.
+   * Required. The job name to use for the created job. For update job request, job name should be
+   * same as the existing running job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,6 +72,21 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> parameters;
+
+  /**
+   * Users need to set transform_name_mappings Ex:{"oldTransformName":"newTransformName",...}'
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> transformNameMappings;
+
+  /**
+   * Set this to true if you are sending a request to update a running streaming job. When set, the
+   * job name should be the same as the running job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean update;
 
   /**
    * Spec about the container image to launch.
@@ -124,7 +140,8 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
   }
 
   /**
-   * Required. The job name to use for the created job.
+   * Required. The job name to use for the created job. For update job request, job name should be
+   * same as the existing running job.
    * @return value or {@code null} for none
    */
   public java.lang.String getJobName() {
@@ -132,7 +149,8 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
   }
 
   /**
-   * Required. The job name to use for the created job.
+   * Required. The job name to use for the created job. For update job request, job name should be
+   * same as the existing running job.
    * @param jobName jobName or {@code null} for none
    */
   public LaunchFlexTemplateParameter setJobName(java.lang.String jobName) {
@@ -173,6 +191,42 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
    */
   public LaunchFlexTemplateParameter setParameters(java.util.Map<String, java.lang.String> parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Users need to set transform_name_mappings Ex:{"oldTransformName":"newTransformName",...}'
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTransformNameMappings() {
+    return transformNameMappings;
+  }
+
+  /**
+   * Users need to set transform_name_mappings Ex:{"oldTransformName":"newTransformName",...}'
+   * @param transformNameMappings transformNameMappings or {@code null} for none
+   */
+  public LaunchFlexTemplateParameter setTransformNameMappings(java.util.Map<String, java.lang.String> transformNameMappings) {
+    this.transformNameMappings = transformNameMappings;
+    return this;
+  }
+
+  /**
+   * Set this to true if you are sending a request to update a running streaming job. When set, the
+   * job name should be the same as the running job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUpdate() {
+    return update;
+  }
+
+  /**
+   * Set this to true if you are sending a request to update a running streaming job. When set, the
+   * job name should be the same as the running job.
+   * @param update update or {@code null} for none
+   */
+  public LaunchFlexTemplateParameter setUpdate(java.lang.Boolean update) {
+    this.update = update;
     return this;
   }
 

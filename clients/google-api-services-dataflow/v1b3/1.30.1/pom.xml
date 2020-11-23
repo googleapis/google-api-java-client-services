@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-dataflow</artifactId>
-  <version>v1b3-rev20201023-1.30.10</version>
-  <name>Dataflow API v1b3-rev20201023-1.30.10</name>
+  <version>v1b3-rev20201117-1.30.10</version>
+  <name>Dataflow API v1b3-rev20201117-1.30.10</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -331,6 +331,7 @@ class Api(template_objects.CodeObject):
     if service_path is None:
       self._api.SetTemplateValue('servicePath', base_path[1:])
     
+    # TODO(sijunliu): remove this once mtlsRootUrl is available in all services.
     if not self.values.get('mtlsRootUrl') and root_url:
       mtls_root_url = root_url.replace('googleapis.com', 'mtls.googleapis.com')
       self._api.SetTemplateValue('mtlsRootUrl', mtls_root_url)

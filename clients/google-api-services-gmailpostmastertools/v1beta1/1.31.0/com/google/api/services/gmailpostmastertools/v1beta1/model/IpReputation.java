@@ -36,6 +36,15 @@ public final class IpReputation extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long ipCount;
+
+  /**
+   * Total number of unique IPs in this reputation category. This metric only pertains to traffic
+   * that passed [SPF](http://www.openspf.org/) or [DKIM](http://www.dkim.org/). Deprecated to be
+   * complied with ApiLinter for Quantities. Use ip_count instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numIps;
 
   /**
@@ -57,13 +66,34 @@ public final class IpReputation extends com.google.api.client.json.GenericJson {
    * that passed [SPF](http://www.openspf.org/) or [DKIM](http://www.dkim.org/).
    * @return value or {@code null} for none
    */
+  public java.lang.Long getIpCount() {
+    return ipCount;
+  }
+
+  /**
+   * Total number of unique IPs in this reputation category. This metric only pertains to traffic
+   * that passed [SPF](http://www.openspf.org/) or [DKIM](http://www.dkim.org/).
+   * @param ipCount ipCount or {@code null} for none
+   */
+  public IpReputation setIpCount(java.lang.Long ipCount) {
+    this.ipCount = ipCount;
+    return this;
+  }
+
+  /**
+   * Total number of unique IPs in this reputation category. This metric only pertains to traffic
+   * that passed [SPF](http://www.openspf.org/) or [DKIM](http://www.dkim.org/). Deprecated to be
+   * complied with ApiLinter for Quantities. Use ip_count instead.
+   * @return value or {@code null} for none
+   */
   public java.lang.Long getNumIps() {
     return numIps;
   }
 
   /**
    * Total number of unique IPs in this reputation category. This metric only pertains to traffic
-   * that passed [SPF](http://www.openspf.org/) or [DKIM](http://www.dkim.org/).
+   * that passed [SPF](http://www.openspf.org/) or [DKIM](http://www.dkim.org/). Deprecated to be
+   * complied with ApiLinter for Quantities. Use ip_count instead.
    * @param numIps numIps or {@code null} for none
    */
   public IpReputation setNumIps(java.lang.Long numIps) {

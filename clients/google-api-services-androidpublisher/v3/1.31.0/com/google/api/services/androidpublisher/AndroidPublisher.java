@@ -9912,7 +9912,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier of the Android app.
+       * @param packageName Package name of the app.
        * @param versionCode The version code of the App Bundle.
        * @param content the {@link com.google.api.services.androidpublisher.model.Variant}
        * @return the request
@@ -9939,7 +9939,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier of the Android app.
+         * @param packageName Package name of the app.
          * @param versionCode The version code of the App Bundle.
          * @param content the {@link com.google.api.services.androidpublisher.model.Variant}
          * @since 1.13
@@ -10005,17 +10005,17 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Unique identifier of the Android app. */
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier of the Android app.
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /** Unique identifier of the Android app. */
+        /** Package name of the app. */
         public Create setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
@@ -10050,7 +10050,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier of the Android app.
+       * @param packageName Package name of the app.
        * @param versionCode The version code of the App Bundle.
        * @param variantId The ID of a previously created system APK variant.
        * @return the request
@@ -10076,7 +10076,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier of the Android app.
+         * @param packageName Package name of the app.
          * @param versionCode The version code of the App Bundle.
          * @param variantId The ID of a previously created system APK variant.
          * @since 1.13
@@ -10177,17 +10177,17 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return (Download) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Unique identifier of the Android app. */
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier of the Android app.
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /** Unique identifier of the Android app. */
+        /** Package name of the app. */
         public Download setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
@@ -10238,7 +10238,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier of the Android app.
+       * @param packageName Package name of the app.
        * @param versionCode The version code of the App Bundle.
        * @param variantId The ID of a previously created system APK variant.
        * @return the request
@@ -10263,7 +10263,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier of the Android app.
+         * @param packageName Package name of the app.
          * @param versionCode The version code of the App Bundle.
          * @param variantId The ID of a previously created system APK variant.
          * @since 1.13
@@ -10340,17 +10340,17 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Unique identifier of the Android app. */
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier of the Android app.
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /** Unique identifier of the Android app. */
+        /** Package name of the app. */
         public Get setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
@@ -10401,7 +10401,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param packageName Unique identifier of the Android app.
+       * @param packageName Package name of the app.
        * @param versionCode The version code of the App Bundle.
        * @return the request
        */
@@ -10425,7 +10425,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Unique identifier of the Android app.
+         * @param packageName Package name of the app.
          * @param versionCode The version code of the App Bundle.
          * @since 1.13
          */
@@ -10500,17 +10500,17 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Unique identifier of the Android app. */
+        /** Package name of the app. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Unique identifier of the Android app.
+        /** Package name of the app.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /** Unique identifier of the Android app. */
+        /** Package name of the app. */
         public List setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;

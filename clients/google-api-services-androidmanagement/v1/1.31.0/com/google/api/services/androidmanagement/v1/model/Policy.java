@@ -98,7 +98,16 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Whether auto date, time, and time zone are enabled on a company-owned device. If this is set,
+   * then autoTimeRequired is ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoDateAndTimeZone;
+
+  /**
    * Whether auto time is required, which prevents the user from manually setting the date and time.
+   * If autoDateAndTimeZone is set, this field is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -309,8 +318,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private KioskCustomization kioskCustomization;
 
   /**
-   * The degree of location detection enabled. The user may change the value unless the user is
-   * otherwise blocked from accessing device settings.
+   * The degree of location detection enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -828,7 +836,27 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Whether auto date, time, and time zone are enabled on a company-owned device. If this is set,
+   * then autoTimeRequired is ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoDateAndTimeZone() {
+    return autoDateAndTimeZone;
+  }
+
+  /**
+   * Whether auto date, time, and time zone are enabled on a company-owned device. If this is set,
+   * then autoTimeRequired is ignored.
+   * @param autoDateAndTimeZone autoDateAndTimeZone or {@code null} for none
+   */
+  public Policy setAutoDateAndTimeZone(java.lang.String autoDateAndTimeZone) {
+    this.autoDateAndTimeZone = autoDateAndTimeZone;
+    return this;
+  }
+
+  /**
    * Whether auto time is required, which prevents the user from manually setting the date and time.
+   * If autoDateAndTimeZone is set, this field is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoTimeRequired() {
@@ -837,6 +865,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether auto time is required, which prevents the user from manually setting the date and time.
+   * If autoDateAndTimeZone is set, this field is ignored.
    * @param autoTimeRequired autoTimeRequired or {@code null} for none
    */
   public Policy setAutoTimeRequired(java.lang.Boolean autoTimeRequired) {
@@ -1304,8 +1333,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The degree of location detection enabled. The user may change the value unless the user is
-   * otherwise blocked from accessing device settings.
+   * The degree of location detection enabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationMode() {
@@ -1313,8 +1341,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The degree of location detection enabled. The user may change the value unless the user is
-   * otherwise blocked from accessing device settings.
+   * The degree of location detection enabled.
    * @param locationMode locationMode or {@code null} for none
    */
   public Policy setLocationMode(java.lang.String locationMode) {

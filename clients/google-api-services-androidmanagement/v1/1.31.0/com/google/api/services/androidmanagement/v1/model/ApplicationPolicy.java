@@ -41,6 +41,13 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> accessibleTrackIds;
 
   /**
+   * This feature is not generally available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoUpdateMode;
+
+  /**
    * Controls whether the app can communicate with itself across a device’s work and personal
    * profiles, subject to user consent.
    * The value may be {@code null}.
@@ -151,6 +158,23 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   public ApplicationPolicy setAccessibleTrackIds(java.util.List<java.lang.String> accessibleTrackIds) {
     this.accessibleTrackIds = accessibleTrackIds;
+    return this;
+  }
+
+  /**
+   * This feature is not generally available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoUpdateMode() {
+    return autoUpdateMode;
+  }
+
+  /**
+   * This feature is not generally available.
+   * @param autoUpdateMode autoUpdateMode or {@code null} for none
+   */
+  public ApplicationPolicy setAutoUpdateMode(java.lang.String autoUpdateMode) {
+    this.autoUpdateMode = autoUpdateMode;
     return this;
   }
 

@@ -953,7 +953,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Updates the device policy
+     * Updates the device policy. To ensure the policy is properly enforced, you need to prevent
+     * unmanaged accounts from accessing Google Play by setting the allowed_accounts in the managed
+     * configuration for the Google Play package. See restrict accounts in Google Play.
      *
      * Create a request for the method "devices.update".
      *
@@ -977,7 +979,9 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}";
 
       /**
-       * Updates the device policy
+       * Updates the device policy. To ensure the policy is properly enforced, you need to prevent
+       * unmanaged accounts from accessing Google Play by setting the allowed_accounts in the managed
+       * configuration for the Google Play package. See restrict accounts in Google Play.
        *
        * Create a request for the method "devices.update".
        *

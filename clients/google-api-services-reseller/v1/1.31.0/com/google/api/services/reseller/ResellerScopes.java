@@ -17,7 +17,7 @@
 package com.google.api.services.reseller;
 
 /**
- * Available OAuth 2.0 scopes for use with the Enterprise Apps Reseller API.
+ * Available OAuth 2.0 scopes for use with the Google Workspace Reseller API.
  *
  * @since 1.4
  */

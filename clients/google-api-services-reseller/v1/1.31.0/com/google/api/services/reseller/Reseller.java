@@ -20,7 +20,7 @@ package com.google.api.services.reseller;
  * Service definition for Reseller (v1).
  *
  * <p>
- * Perform common functions that are available on the Google Apps Reseller Console at scale like placing orders and viewing customer information
+ * Perform common functions that are available on the Channel Services console at scale, like placing orders and viewing customer information
  * </p>
  *
  * <p>
@@ -48,7 +48,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.0 of the Enterprise Apps Reseller API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.31.0 of the Google Workspace Reseller API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -57,7 +57,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://reseller.googleapis.com/";
 
   /**
    * The default encoded mTLS root URL of the service. This is determined when the library is generated
@@ -65,7 +65,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.31
    */
-  public static final String DEFAULT_MTLS_ROOT_URL = "https://www.mtls.googleapis.com/";
+  public static final String DEFAULT_MTLS_ROOT_URL = "https://reseller.mtls.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -81,7 +81,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/reseller/v1";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated

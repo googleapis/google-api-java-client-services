@@ -1,14 +1,14 @@
-# Enterprise Apps Reseller API Client Library for Java
+# Google Workspace Reseller API Client Library for Java
 
-Perform common functions that are available on the Google Apps Reseller Console at scale like placing orders and viewing customer information
+Perform common functions that are available on the Channel Services console at scale, like placing orders and viewing customer information
 
-This page contains information about getting started with the Enterprise Apps Reseller API
+This page contains information about getting started with the Google Workspace Reseller API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Enterprise Apps Reseller API][javadoc]
+* Browse the [Javadoc reference for the Google Workspace Reseller API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Enterprise Apps Reseller API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Google Workspace Reseller API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-reseller</artifactId>
-      <version>v1-rev20200911-1.31.0</version>
+      <version>v1-rev20201129-1.31.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-reseller:v1-rev20200911-1.31.0'
+  compile 'com.google.apis:google-api-services-reseller:v1-rev20201129-1.31.0'
 }
 ```
 

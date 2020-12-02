@@ -119,7 +119,6 @@ packages on [Maven Central][maven-search].
 | DoubleClick Bid Manager API | [v1](clients/google-api-services-doubleclickbidmanager/v1), [v1.1](clients/google-api-services-doubleclickbidmanager/v1.1) |
 | Drive API | [v2](clients/google-api-services-drive/v2), [v3](clients/google-api-services-drive/v3) |
 | Drive Activity API | [v2](clients/google-api-services-driveactivity/v2) |
-| Enterprise Apps Reseller API | [v1](clients/google-api-services-reseller/v1) |
 | Enterprise License Manager API | [v1](clients/google-api-services-licensing/v1) |
 | Error Reporting API | [v1beta1](clients/google-api-services-clouderrorreporting/v1beta1) |
 | Eventarc API | [v1beta1](clients/google-api-services-eventarc/v1beta1) |
@@ -159,6 +158,7 @@ packages on [Maven Central][maven-search].
 | Google Sheets API | [v4](clients/google-api-services-sheets/v4) |
 | Google Site Verification API | [v1](clients/google-api-services-siteVerification/v1) |
 | Google Slides API | [v1](clients/google-api-services-slides/v1) |
+| Google Workspace Reseller API | [v1](clients/google-api-services-reseller/v1) |
 | Groups Migration API | [v1](clients/google-api-services-groupsmigration/v1) |
 | Groups Settings API | [v1](clients/google-api-services-groupssettings/v1) |
 | Hangouts Chat API | [v1](clients/google-api-services-chat/v1) |

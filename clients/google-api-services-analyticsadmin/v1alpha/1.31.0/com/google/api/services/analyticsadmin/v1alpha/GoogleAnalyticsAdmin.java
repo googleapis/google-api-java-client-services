@@ -1090,17 +1090,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         return this;
       }
 
-      /** The list of fields to be updated. Omitted fields will not be updated. */
+      /**
+       * Required. The list of fields to be updated. Omitted fields will not be updated. To replace
+       * the entire entity, use one path with the string "*" to match all fields.
+       */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated. Omitted fields will not be updated.
+      /** Required. The list of fields to be updated. Omitted fields will not be updated. To replace the
+     entire entity, use one path with the string "*" to match all fields.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. Omitted fields will not be updated. */
+      /**
+       * Required. The list of fields to be updated. Omitted fields will not be updated. To replace
+       * the entire entity, use one path with the string "*" to match all fields.
+       */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -3508,17 +3515,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         return this;
       }
 
-      /** The list of fields to be updated. Omitted fields will not be updated. */
+      /**
+       * Required. The list of fields to be updated. Omitted fields will not be updated. To replace
+       * the entire entity, use one path with the string "*" to match all fields.
+       */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated. Omitted fields will not be updated.
+      /** Required. The list of fields to be updated. Omitted fields will not be updated. To replace the
+     entire entity, use one path with the string "*" to match all fields.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. Omitted fields will not be updated. */
+      /**
+       * Required. The list of fields to be updated. Omitted fields will not be updated. To replace
+       * the entire entity, use one path with the string "*" to match all fields.
+       */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -4327,17 +4341,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           return this;
         }
 
-        /** The list of fields to be updated. Omitted fields will not be updated. */
+        /**
+         * Required. The list of fields to be updated. Omitted fields will not be updated. To
+         * replace the entire entity, use one path with the string "*" to match all fields.
+         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. Omitted fields will not be updated.
+        /** Required. The list of fields to be updated. Omitted fields will not be updated. To replace the
+       entire entity, use one path with the string "*" to match all fields.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. Omitted fields will not be updated. */
+        /**
+         * Required. The list of fields to be updated. Omitted fields will not be updated. To
+         * replace the entire entity, use one path with the string "*" to match all fields.
+         */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -4903,17 +4924,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           return this;
         }
 
-        /** The list of fields to be updated. Omitted fields will not be updated. */
+        /**
+         * Required. The list of fields to be updated. Omitted fields will not be updated. To
+         * replace the entire entity, use one path with the string "*" to match all fields.
+         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. Omitted fields will not be updated.
+        /** Required. The list of fields to be updated. Omitted fields will not be updated. To replace the
+       entire entity, use one path with the string "*" to match all fields.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. Omitted fields will not be updated. */
+        /**
+         * Required. The list of fields to be updated. Omitted fields will not be updated. To
+         * replace the entire entity, use one path with the string "*" to match all fields.
+         */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -5528,17 +5556,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           return this;
         }
 
-        /** The list of fields to be updated. Omitted fields will not be updated. */
+        /**
+         * Required. The list of fields to be updated. Omitted fields will not be updated. To
+         * replace the entire entity, use one path with the string "*" to match all fields.
+         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. Omitted fields will not be updated.
+        /** Required. The list of fields to be updated. Omitted fields will not be updated. To replace the
+       entire entity, use one path with the string "*" to match all fields.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. Omitted fields will not be updated. */
+        /**
+         * Required. The list of fields to be updated. Omitted fields will not be updated. To
+         * replace the entire entity, use one path with the string "*" to match all fields.
+         */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -6346,17 +6381,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           return this;
         }
 
-        /** The list of fields to be updated. Omitted fields will not be updated. */
+        /**
+         * Required. The list of fields to be updated. Omitted fields will not be updated. To
+         * replace the entire entity, use one path with the string "*" to match all fields.
+         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. Omitted fields will not be updated.
+        /** Required. The list of fields to be updated. Omitted fields will not be updated. To replace the
+       entire entity, use one path with the string "*" to match all fields.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. Omitted fields will not be updated. */
+        /**
+         * Required. The list of fields to be updated. Omitted fields will not be updated. To
+         * replace the entire entity, use one path with the string "*" to match all fields.
+         */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -8989,17 +9031,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           return this;
         }
 
-        /** The list of fields to be updated. Omitted fields will not be updated. */
+        /**
+         * Required. The list of fields to be updated. Omitted fields will not be updated. To
+         * replace the entire entity, use one path with the string "*" to match all fields.
+         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. Omitted fields will not be updated.
+        /** Required. The list of fields to be updated. Omitted fields will not be updated. To replace the
+       entire entity, use one path with the string "*" to match all fields.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. Omitted fields will not be updated. */
+        /**
+         * Required. The list of fields to be updated. Omitted fields will not be updated. To
+         * replace the entire entity, use one path with the string "*" to match all fields.
+         */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -9153,17 +9202,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           return this;
         }
 
-        /** The list of fields to be updated. Omitted fields will not be updated. */
+        /**
+         * Required. The list of fields to be updated. Omitted fields will not be updated. To
+         * replace the entire entity, use one path with the string "*" to match all fields.
+         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. Omitted fields will not be updated.
+        /** Required. The list of fields to be updated. Omitted fields will not be updated. To replace the
+       entire entity, use one path with the string "*" to match all fields.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. Omitted fields will not be updated. */
+        /**
+         * Required. The list of fields to be updated. Omitted fields will not be updated. To
+         * replace the entire entity, use one path with the string "*" to match all fields.
+         */
         public UpdateEnhancedMeasurementSettings setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;

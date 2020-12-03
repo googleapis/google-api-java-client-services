@@ -38,6 +38,9 @@ public class Area120TablesScopes {
   /** View your Google Spreadsheets. */
   public static final String SPREADSHEETS_READONLY = "https://www.googleapis.com/auth/spreadsheets.readonly";
 
+  /** See, edit, create, and delete your tables in Tables by Area 120. */
+  public static final String TABLES = "https://www.googleapis.com/auth/tables";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -50,6 +53,7 @@ public class Area120TablesScopes {
     set.add(DRIVE_READONLY);
     set.add(SPREADSHEETS);
     set.add(SPREADSHEETS_READONLY);
+    set.add(TABLES);
     return java.util.Collections.unmodifiableSet(set);
   }
 

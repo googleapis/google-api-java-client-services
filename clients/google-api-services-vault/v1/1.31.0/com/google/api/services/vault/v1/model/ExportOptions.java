@@ -65,6 +65,13 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   private java.lang.String region;
 
   /**
+   * Option available for voice export.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VoiceExportOptions voiceOptions;
+
+  /**
    * Option available for Drive export.
    * @return value or {@code null} for none
    */
@@ -146,6 +153,23 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
    */
   public ExportOptions setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * Option available for voice export.
+   * @return value or {@code null} for none
+   */
+  public VoiceExportOptions getVoiceOptions() {
+    return voiceOptions;
+  }
+
+  /**
+   * Option available for voice export.
+   * @param voiceOptions voiceOptions or {@code null} for none
+   */
+  public ExportOptions setVoiceOptions(VoiceExportOptions voiceOptions) {
+    this.voiceOptions = voiceOptions;
     return this;
   }
 

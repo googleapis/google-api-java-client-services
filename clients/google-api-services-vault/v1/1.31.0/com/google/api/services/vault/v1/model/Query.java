@@ -147,6 +147,13 @@ public final class Query extends com.google.api.client.json.GenericJson {
   private java.lang.String timeZone;
 
   /**
+   * For voice search, specify more options in this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VoiceOptions voiceOptions;
+
+  /**
    * When 'ACCOUNT' is chosen as search method, account_info needs to be specified.
    * @return value or {@code null} for none
    */
@@ -425,6 +432,23 @@ public final class Query extends com.google.api.client.json.GenericJson {
    */
   public Query setTimeZone(java.lang.String timeZone) {
     this.timeZone = timeZone;
+    return this;
+  }
+
+  /**
+   * For voice search, specify more options in this field.
+   * @return value or {@code null} for none
+   */
+  public VoiceOptions getVoiceOptions() {
+    return voiceOptions;
+  }
+
+  /**
+   * For voice search, specify more options in this field.
+   * @param voiceOptions voiceOptions or {@code null} for none
+   */
+  public Query setVoiceOptions(VoiceOptions voiceOptions) {
+    this.voiceOptions = voiceOptions;
     return this;
   }
 

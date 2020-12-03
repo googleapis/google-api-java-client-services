@@ -58,6 +58,13 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   private HeldMailQuery mailQuery;
 
   /**
+   * Details pertaining to Voice holds. If set, corpus must be Voice.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HeldVoiceQuery voiceQuery;
+
+  /**
    * Details pertaining to Drive holds. If set, corpus must be Drive.
    * @return value or {@code null} for none
    */
@@ -122,6 +129,23 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
    */
   public CorpusQuery setMailQuery(HeldMailQuery mailQuery) {
     this.mailQuery = mailQuery;
+    return this;
+  }
+
+  /**
+   * Details pertaining to Voice holds. If set, corpus must be Voice.
+   * @return value or {@code null} for none
+   */
+  public HeldVoiceQuery getVoiceQuery() {
+    return voiceQuery;
+  }
+
+  /**
+   * Details pertaining to Voice holds. If set, corpus must be Voice.
+   * @param voiceQuery voiceQuery or {@code null} for none
+   */
+  public CorpusQuery setVoiceQuery(HeldVoiceQuery voiceQuery) {
+    this.voiceQuery = voiceQuery;
     return this;
   }
 

@@ -108,11 +108,11 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   private java.lang.Boolean reserved;
 
   /**
-   * Sole-tenant node information for pools hosted on STNs.
+   * The node type name to be used for sole-tenant nodes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleDevtoolsRemotebuildexecutionAdminV1alphaSoleTenancyConfig soleTenancy;
+  private java.lang.String soleTenantNodeType;
 
   /**
    * The name of the image used by each VM.
@@ -303,19 +303,19 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   }
 
   /**
-   * Sole-tenant node information for pools hosted on STNs.
+   * The node type name to be used for sole-tenant nodes.
    * @return value or {@code null} for none
    */
-  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaSoleTenancyConfig getSoleTenancy() {
-    return soleTenancy;
+  public java.lang.String getSoleTenantNodeType() {
+    return soleTenantNodeType;
   }
 
   /**
-   * Sole-tenant node information for pools hosted on STNs.
-   * @param soleTenancy soleTenancy or {@code null} for none
+   * The node type name to be used for sole-tenant nodes.
+   * @param soleTenantNodeType soleTenantNodeType or {@code null} for none
    */
-  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setSoleTenancy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaSoleTenancyConfig soleTenancy) {
-    this.soleTenancy = soleTenancy;
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setSoleTenantNodeType(java.lang.String soleTenantNodeType) {
+    this.soleTenantNodeType = soleTenantNodeType;
     return this;
   }
 

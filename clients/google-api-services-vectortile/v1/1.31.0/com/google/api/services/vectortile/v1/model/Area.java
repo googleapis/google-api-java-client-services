@@ -17,7 +17,7 @@
 package com.google.api.services.vectortile.v1.model;
 
 /**
- * Represents an area. Used to represent regions such as water, parks, etc.
+ * Represents an area. Used to represent regions such as water, parks, etc. Next ID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Semantic Tile API. For a detailed explanation see:
@@ -28,6 +28,17 @@ package com.google.api.services.vectortile.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class Area extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The z-order of this geometry when rendered on a flat basemap. Geometry with a lower z-order
+   * should be rendered beneath geometry with a higher z-order. This z-ordering does not imply
+   * anything about the altitude of the area relative to the ground, but it can be used to prevent
+   * z-fighting. Unlike Area.z_order this can be used to compare with Line.basemap_z_order, and in
+   * fact may yield more accurate rendering (where a line may be rendered beneath an area).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BasemapZOrder basemapZOrder;
 
   /**
    * True if the polygon is not entirely internal to the feature that it belongs to: that is, some
@@ -92,11 +103,36 @@ public final class Area extends com.google.api.client.json.GenericJson {
    * higher z-order. This z-ordering does not imply anything about the altitude of the line relative
    * to the ground, but it can be used to prevent z-fighting during rendering on the client. This
    * z-ordering can only be used to compare areas, and cannot be compared with the z_order field in
-   * the Line message. The z-order may be negative or zero.
+   * the Line message. The z-order may be negative or zero. Prefer Area.basemap_z_order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer zOrder;
+
+  /**
+   * The z-order of this geometry when rendered on a flat basemap. Geometry with a lower z-order
+   * should be rendered beneath geometry with a higher z-order. This z-ordering does not imply
+   * anything about the altitude of the area relative to the ground, but it can be used to prevent
+   * z-fighting. Unlike Area.z_order this can be used to compare with Line.basemap_z_order, and in
+   * fact may yield more accurate rendering (where a line may be rendered beneath an area).
+   * @return value or {@code null} for none
+   */
+  public BasemapZOrder getBasemapZOrder() {
+    return basemapZOrder;
+  }
+
+  /**
+   * The z-order of this geometry when rendered on a flat basemap. Geometry with a lower z-order
+   * should be rendered beneath geometry with a higher z-order. This z-ordering does not imply
+   * anything about the altitude of the area relative to the ground, but it can be used to prevent
+   * z-fighting. Unlike Area.z_order this can be used to compare with Line.basemap_z_order, and in
+   * fact may yield more accurate rendering (where a line may be rendered beneath an area).
+   * @param basemapZOrder basemapZOrder or {@code null} for none
+   */
+  public Area setBasemapZOrder(BasemapZOrder basemapZOrder) {
+    this.basemapZOrder = basemapZOrder;
+    return this;
+  }
 
   /**
    * True if the polygon is not entirely internal to the feature that it belongs to: that is, some
@@ -237,7 +273,7 @@ public final class Area extends com.google.api.client.json.GenericJson {
    * higher z-order. This z-ordering does not imply anything about the altitude of the line relative
    * to the ground, but it can be used to prevent z-fighting during rendering on the client. This
    * z-ordering can only be used to compare areas, and cannot be compared with the z_order field in
-   * the Line message. The z-order may be negative or zero.
+   * the Line message. The z-order may be negative or zero. Prefer Area.basemap_z_order.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getZOrder() {
@@ -249,7 +285,7 @@ public final class Area extends com.google.api.client.json.GenericJson {
    * higher z-order. This z-ordering does not imply anything about the altitude of the line relative
    * to the ground, but it can be used to prevent z-fighting during rendering on the client. This
    * z-ordering can only be used to compare areas, and cannot be compared with the z_order field in
-   * the Line message. The z-order may be negative or zero.
+   * the Line message. The z-order may be negative or zero. Prefer Area.basemap_z_order.
    * @param zOrder zOrder or {@code null} for none
    */
   public Area setZOrder(java.lang.Integer zOrder) {

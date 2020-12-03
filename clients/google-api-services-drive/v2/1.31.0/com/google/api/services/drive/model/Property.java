@@ -68,7 +68,10 @@ public final class Property extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * The visibility of this property. Allowed values are PRIVATE and PUBLIC. (Default: PRIVATE)
+   * The visibility of this property. Allowed values are PRIVATE and PUBLIC. (Default: PRIVATE).
+   * Private properties can only be retrieved using an authenticated request. An authenticated
+   * request uses an access token obtained with a OAuth 2 client ID. You cannot use an API key to
+   * retrieve private properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +163,10 @@ public final class Property extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The visibility of this property. Allowed values are PRIVATE and PUBLIC. (Default: PRIVATE)
+   * The visibility of this property. Allowed values are PRIVATE and PUBLIC. (Default: PRIVATE).
+   * Private properties can only be retrieved using an authenticated request. An authenticated
+   * request uses an access token obtained with a OAuth 2 client ID. You cannot use an API key to
+   * retrieve private properties.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisibility() {
@@ -168,7 +174,10 @@ public final class Property extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The visibility of this property. Allowed values are PRIVATE and PUBLIC. (Default: PRIVATE)
+   * The visibility of this property. Allowed values are PRIVATE and PUBLIC. (Default: PRIVATE).
+   * Private properties can only be retrieved using an authenticated request. An authenticated
+   * request uses an access token obtained with a OAuth 2 client ID. You cannot use an API key to
+   * retrieve private properties.
    * @param visibility visibility or {@code null} for none
    */
   public Property setVisibility(java.lang.String visibility) {

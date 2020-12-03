@@ -31,7 +31,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * A collection of arbitrary key-value pairs which are private to the requesting app. Entries with
-   * null values are cleared in update and copy requests.
+   * null values are cleared in update and copy requests. These properties can only be retrieved
+   * using an authenticated request. An authenticated request uses an access token obtained with a
+   * OAuth 2 client ID. You cannot use an API key to retrieve private properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -482,7 +484,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * A collection of arbitrary key-value pairs which are private to the requesting app. Entries with
-   * null values are cleared in update and copy requests.
+   * null values are cleared in update and copy requests. These properties can only be retrieved
+   * using an authenticated request. An authenticated request uses an access token obtained with a
+   * OAuth 2 client ID. You cannot use an API key to retrieve private properties.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAppProperties() {
@@ -491,7 +495,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * A collection of arbitrary key-value pairs which are private to the requesting app. Entries with
-   * null values are cleared in update and copy requests.
+   * null values are cleared in update and copy requests. These properties can only be retrieved
+   * using an authenticated request. An authenticated request uses an access token obtained with a
+   * OAuth 2 client ID. You cannot use an API key to retrieve private properties.
    * @param appProperties appProperties or {@code null} for none
    */
   public File setAppProperties(java.util.Map<String, java.lang.String> appProperties) {

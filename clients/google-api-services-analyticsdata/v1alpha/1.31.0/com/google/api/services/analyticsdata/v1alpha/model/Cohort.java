@@ -17,8 +17,8 @@
 package com.google.api.services.analyticsdata.v1alpha.model;
 
 /**
- * Defines a cohort. A cohort is a group of users who share a common characteristic. For example,
- * all users with the same acquisition date belong to the same cohort.
+ * Defines a cohort selection criteria. A cohort is a group of users who share a common
+ * characteristic. For example, users with the same `firstTouchDate` belong to the same cohort.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Data API. For a detailed explanation
@@ -32,21 +32,24 @@ package com.google.api.services.analyticsdata.v1alpha.model;
 public final class Cohort extends com.google.api.client.json.GenericJson {
 
   /**
-   * The cohort selects users whose first visit date is between start date and end date defined in
-   * the `dateRange`. In a cohort request, this `dateRange` is required and the `dateRanges` in the
-   * `RunReportRequest` or `RunPivotReportRequest` must be unspecified. The date range should be
-   * aligned with the cohort's granularity. If CohortsRange uses daily granularity, the date range
-   * can be aligned to any day. If CohortsRange uses weekly granularity, the date range should be
-   * aligned to the week boundary, starting at Sunday and ending Saturday. If CohortsRange uses
-   * monthly granularity, the date range should be aligned to the month, starting at the first and
-   * ending on the last day of the month.
+   * The cohort selects users whose first touch date is between start date and end date defined in
+   * the `dateRange`. This `dateRange` does not specify the full date range of event data that is
+   * present in a cohort report. In a cohort report, this `dateRange` is extended by the granularity
+   * and offset present in the `cohortsRange`; event data for the extended reporting date range is
+   * present in a cohort report. In a cohort request, this `dateRange` is required and the
+   * `dateRanges` in the `RunReportRequest` or `RunPivotReportRequest` must be unspecified. This
+   * `dateRange` should generally be aligned with the cohort's granularity. If `CohortsRange` uses
+   * daily granularity, this `dateRange` can be a single day. If `CohortsRange` uses weekly
+   * granularity, this `dateRange` can be aligned to a week boundary, starting at Sunday and ending
+   * Saturday. If `CohortsRange` uses monthly granularity, this `dateRange` can be aligned to a
+   * month, starting at the first and ending on the last day of the month.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DateRange dateRange;
 
   /**
-   * The dimension used by cohort. Only supports `firstTouchDate` for retention report.
+   * Dimension used by the cohort. Required and only supports `firstTouchDate`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,14 +65,17 @@ public final class Cohort extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The cohort selects users whose first visit date is between start date and end date defined in
-   * the `dateRange`. In a cohort request, this `dateRange` is required and the `dateRanges` in the
-   * `RunReportRequest` or `RunPivotReportRequest` must be unspecified. The date range should be
-   * aligned with the cohort's granularity. If CohortsRange uses daily granularity, the date range
-   * can be aligned to any day. If CohortsRange uses weekly granularity, the date range should be
-   * aligned to the week boundary, starting at Sunday and ending Saturday. If CohortsRange uses
-   * monthly granularity, the date range should be aligned to the month, starting at the first and
-   * ending on the last day of the month.
+   * The cohort selects users whose first touch date is between start date and end date defined in
+   * the `dateRange`. This `dateRange` does not specify the full date range of event data that is
+   * present in a cohort report. In a cohort report, this `dateRange` is extended by the granularity
+   * and offset present in the `cohortsRange`; event data for the extended reporting date range is
+   * present in a cohort report. In a cohort request, this `dateRange` is required and the
+   * `dateRanges` in the `RunReportRequest` or `RunPivotReportRequest` must be unspecified. This
+   * `dateRange` should generally be aligned with the cohort's granularity. If `CohortsRange` uses
+   * daily granularity, this `dateRange` can be a single day. If `CohortsRange` uses weekly
+   * granularity, this `dateRange` can be aligned to a week boundary, starting at Sunday and ending
+   * Saturday. If `CohortsRange` uses monthly granularity, this `dateRange` can be aligned to a
+   * month, starting at the first and ending on the last day of the month.
    * @return value or {@code null} for none
    */
   public DateRange getDateRange() {
@@ -77,14 +83,17 @@ public final class Cohort extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The cohort selects users whose first visit date is between start date and end date defined in
-   * the `dateRange`. In a cohort request, this `dateRange` is required and the `dateRanges` in the
-   * `RunReportRequest` or `RunPivotReportRequest` must be unspecified. The date range should be
-   * aligned with the cohort's granularity. If CohortsRange uses daily granularity, the date range
-   * can be aligned to any day. If CohortsRange uses weekly granularity, the date range should be
-   * aligned to the week boundary, starting at Sunday and ending Saturday. If CohortsRange uses
-   * monthly granularity, the date range should be aligned to the month, starting at the first and
-   * ending on the last day of the month.
+   * The cohort selects users whose first touch date is between start date and end date defined in
+   * the `dateRange`. This `dateRange` does not specify the full date range of event data that is
+   * present in a cohort report. In a cohort report, this `dateRange` is extended by the granularity
+   * and offset present in the `cohortsRange`; event data for the extended reporting date range is
+   * present in a cohort report. In a cohort request, this `dateRange` is required and the
+   * `dateRanges` in the `RunReportRequest` or `RunPivotReportRequest` must be unspecified. This
+   * `dateRange` should generally be aligned with the cohort's granularity. If `CohortsRange` uses
+   * daily granularity, this `dateRange` can be a single day. If `CohortsRange` uses weekly
+   * granularity, this `dateRange` can be aligned to a week boundary, starting at Sunday and ending
+   * Saturday. If `CohortsRange` uses monthly granularity, this `dateRange` can be aligned to a
+   * month, starting at the first and ending on the last day of the month.
    * @param dateRange dateRange or {@code null} for none
    */
   public Cohort setDateRange(DateRange dateRange) {
@@ -93,7 +102,7 @@ public final class Cohort extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dimension used by cohort. Only supports `firstTouchDate` for retention report.
+   * Dimension used by the cohort. Required and only supports `firstTouchDate`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDimension() {
@@ -101,7 +110,7 @@ public final class Cohort extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dimension used by cohort. Only supports `firstTouchDate` for retention report.
+   * Dimension used by the cohort. Required and only supports `firstTouchDate`.
    * @param dimension dimension or {@code null} for none
    */
   public Cohort setDimension(java.lang.String dimension) {

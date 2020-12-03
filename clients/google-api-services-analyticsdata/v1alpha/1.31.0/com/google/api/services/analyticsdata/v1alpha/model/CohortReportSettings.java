@@ -17,7 +17,7 @@
 package com.google.api.services.analyticsdata.v1alpha.model;
 
 /**
- * Settings of a cohort report.
+ * Optional settings of a cohort report.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Data API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.analyticsdata.v1alpha.model;
 public final class CohortReportSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, accumulates the result from first visit day to the end day. Not supported in
+   * If true, accumulates the result from first touch day to the end day. Not supported in
    * `RunReportRequest`.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class CohortReportSettings extends com.google.api.client.json.Gener
   private java.lang.Boolean accumulate;
 
   /**
-   * If true, accumulates the result from first visit day to the end day. Not supported in
+   * If true, accumulates the result from first touch day to the end day. Not supported in
    * `RunReportRequest`.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class CohortReportSettings extends com.google.api.client.json.Gener
   }
 
   /**
-   * If true, accumulates the result from first visit day to the end day. Not supported in
+   * If true, accumulates the result from first touch day to the end day. Not supported in
    * `RunReportRequest`.
    * @param accumulate accumulate or {@code null} for none
    */

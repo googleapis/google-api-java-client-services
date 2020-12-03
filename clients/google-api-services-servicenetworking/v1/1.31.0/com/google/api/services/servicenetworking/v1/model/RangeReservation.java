@@ -40,6 +40,16 @@ public final class RangeReservation extends com.google.api.client.json.GenericJs
   private java.lang.Integer ipPrefixLength;
 
   /**
+   * Optional. The name of one or more allocated IP address ranges associated with this private
+   * service access connection. If no range names are provided all ranges associated with this
+   * connection will be considered. If a CIDR range with the specified IP prefix length is not
+   * available within these ranges the validation fails.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> requestedRanges;
+
+  /**
    * Optional. DO NOT USE - Under development. The size of the desired secondary ranges for the
    * subnet. Use usual CIDR range notation. For example, '30' to find unused x.x.x.x/30 CIDR range.
    * The goal is to determine that the allocated ranges have enough free space for all the requested
@@ -67,6 +77,29 @@ public final class RangeReservation extends com.google.api.client.json.GenericJs
    */
   public RangeReservation setIpPrefixLength(java.lang.Integer ipPrefixLength) {
     this.ipPrefixLength = ipPrefixLength;
+    return this;
+  }
+
+  /**
+   * Optional. The name of one or more allocated IP address ranges associated with this private
+   * service access connection. If no range names are provided all ranges associated with this
+   * connection will be considered. If a CIDR range with the specified IP prefix length is not
+   * available within these ranges the validation fails.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRequestedRanges() {
+    return requestedRanges;
+  }
+
+  /**
+   * Optional. The name of one or more allocated IP address ranges associated with this private
+   * service access connection. If no range names are provided all ranges associated with this
+   * connection will be considered. If a CIDR range with the specified IP prefix length is not
+   * available within these ranges the validation fails.
+   * @param requestedRanges requestedRanges or {@code null} for none
+   */
+  public RangeReservation setRequestedRanges(java.util.List<java.lang.String> requestedRanges) {
+    this.requestedRanges = requestedRanges;
     return this;
   }
 

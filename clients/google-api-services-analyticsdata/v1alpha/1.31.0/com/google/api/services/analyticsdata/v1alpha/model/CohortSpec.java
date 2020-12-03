@@ -17,7 +17,15 @@
 package com.google.api.services.analyticsdata.v1alpha.model;
 
 /**
- * Specification for a cohort report.
+ * Specification of cohorts for a cohort report. Cohort reports can be used for example to create a
+ * time series of user retention for the cohort. For example, you could select the cohort of users
+ * that were acquired in the first week of September and follow that cohort for the next six weeks.
+ * Selecting the users acquired in the first week of September cohort is specified in the `cohort`
+ * object. Following that cohort for the next six weeks is specified in the `cohortsRange` object.
+ * The report response could show a weekly time series where say your app has retained 60% of this
+ * cohort after three weeks and 25% of this cohort after six weeks. These two percentages can be
+ * calculated by the metric `cohortActiveUsers/cohortTotalUsers` and will be separate rows in the
+ * report.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Data API. For a detailed explanation
@@ -31,14 +39,16 @@ package com.google.api.services.analyticsdata.v1alpha.model;
 public final class CohortSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Settings of a cohort report.
+   * Optional settings for a cohort report.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CohortReportSettings cohortReportSettings;
 
   /**
-   * The definition for the cohorts.
+   * Defines the selection criteria to group users into cohorts. Most cohort reports define only a
+   * single cohort. If multiple cohorts are specified, each cohort can be recognized in the report
+   * by their name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,14 +61,15 @@ public final class CohortSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The data ranges of cohorts.
+   * Cohort reports follow cohorts over an extended reporting date range. This range specifies an
+   * offset duration to follow the cohorts over.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CohortsRange cohortsRange;
 
   /**
-   * Settings of a cohort report.
+   * Optional settings for a cohort report.
    * @return value or {@code null} for none
    */
   public CohortReportSettings getCohortReportSettings() {
@@ -66,7 +77,7 @@ public final class CohortSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Settings of a cohort report.
+   * Optional settings for a cohort report.
    * @param cohortReportSettings cohortReportSettings or {@code null} for none
    */
   public CohortSpec setCohortReportSettings(CohortReportSettings cohortReportSettings) {
@@ -75,7 +86,9 @@ public final class CohortSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The definition for the cohorts.
+   * Defines the selection criteria to group users into cohorts. Most cohort reports define only a
+   * single cohort. If multiple cohorts are specified, each cohort can be recognized in the report
+   * by their name.
    * @return value or {@code null} for none
    */
   public java.util.List<Cohort> getCohorts() {
@@ -83,7 +96,9 @@ public final class CohortSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The definition for the cohorts.
+   * Defines the selection criteria to group users into cohorts. Most cohort reports define only a
+   * single cohort. If multiple cohorts are specified, each cohort can be recognized in the report
+   * by their name.
    * @param cohorts cohorts or {@code null} for none
    */
   public CohortSpec setCohorts(java.util.List<Cohort> cohorts) {
@@ -92,7 +107,8 @@ public final class CohortSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The data ranges of cohorts.
+   * Cohort reports follow cohorts over an extended reporting date range. This range specifies an
+   * offset duration to follow the cohorts over.
    * @return value or {@code null} for none
    */
   public CohortsRange getCohortsRange() {
@@ -100,7 +116,8 @@ public final class CohortSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The data ranges of cohorts.
+   * Cohort reports follow cohorts over an extended reporting date range. This range specifies an
+   * offset duration to follow the cohorts over.
    * @param cohortsRange cohortsRange or {@code null} for none
    */
   public CohortSpec setCohortsRange(CohortsRange cohortsRange) {

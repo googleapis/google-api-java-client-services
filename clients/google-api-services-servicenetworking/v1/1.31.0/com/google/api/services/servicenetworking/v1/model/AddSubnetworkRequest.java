@@ -85,6 +85,16 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.String requestedAddress;
 
   /**
+   * Optional. The name of one or more allocated IP address ranges associated with this private
+   * service access connection. If no range names are provided all ranges associated with this
+   * connection will be considered. If a CIDR range with the specified IP prefix length is not
+   * available within these ranges, the call fails.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> requestedRanges;
+
+  /**
    * Optional. A list of secondary IP ranges to be created within the new subnetwork.
    * The value may be {@code null}.
    */
@@ -229,6 +239,29 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   public AddSubnetworkRequest setRequestedAddress(java.lang.String requestedAddress) {
     this.requestedAddress = requestedAddress;
+    return this;
+  }
+
+  /**
+   * Optional. The name of one or more allocated IP address ranges associated with this private
+   * service access connection. If no range names are provided all ranges associated with this
+   * connection will be considered. If a CIDR range with the specified IP prefix length is not
+   * available within these ranges, the call fails.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRequestedRanges() {
+    return requestedRanges;
+  }
+
+  /**
+   * Optional. The name of one or more allocated IP address ranges associated with this private
+   * service access connection. If no range names are provided all ranges associated with this
+   * connection will be considered. If a CIDR range with the specified IP prefix length is not
+   * available within these ranges, the call fails.
+   * @param requestedRanges requestedRanges or {@code null} for none
+   */
+  public AddSubnetworkRequest setRequestedRanges(java.util.List<java.lang.String> requestedRanges) {
+    this.requestedRanges = requestedRanges;
     return this;
   }
 

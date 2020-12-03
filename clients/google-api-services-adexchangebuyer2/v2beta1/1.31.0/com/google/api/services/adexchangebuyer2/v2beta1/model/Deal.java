@@ -40,7 +40,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   private String availableEndTime;
 
   /**
-   * Optional proposed flight start time of the deal. This will generally be stored in the
+   * Optional. Proposed flight start time of the deal. This will generally be stored in the
    * granularity of one second since deal serving starts at seconds boundary. Any time specified
    * with more granularity (e.g., in milliseconds) will be truncated towards the start of time in
    * seconds.
@@ -65,8 +65,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   private java.lang.String createProductId;
 
   /**
-   * Optional revision number of the product that the deal was created from. If present on create,
-   * and the server `product_revision` has advanced sinced the passed-in `create_product_revision`,
+   * Optional. Revision number of the product that the deal was created from. If present on create,
+   * and the server `product_revision` has advanced since the passed-in `create_product_revision`,
    * an `ABORTED` error will be returned. Note: This field may be set only when creating the
    * resource. Modifying this field while updating the resource will result in an error.
    * The value may be {@code null}.
@@ -247,7 +247,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional proposed flight start time of the deal. This will generally be stored in the
+   * Optional. Proposed flight start time of the deal. This will generally be stored in the
    * granularity of one second since deal serving starts at seconds boundary. Any time specified
    * with more granularity (e.g., in milliseconds) will be truncated towards the start of time in
    * seconds.
@@ -258,7 +258,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional proposed flight start time of the deal. This will generally be stored in the
+   * Optional. Proposed flight start time of the deal. This will generally be stored in the
    * granularity of one second since deal serving starts at seconds boundary. Any time specified
    * with more granularity (e.g., in milliseconds) will be truncated towards the start of time in
    * seconds.
@@ -306,8 +306,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional revision number of the product that the deal was created from. If present on create,
-   * and the server `product_revision` has advanced sinced the passed-in `create_product_revision`,
+   * Optional. Revision number of the product that the deal was created from. If present on create,
+   * and the server `product_revision` has advanced since the passed-in `create_product_revision`,
    * an `ABORTED` error will be returned. Note: This field may be set only when creating the
    * resource. Modifying this field while updating the resource will result in an error.
    * @return value or {@code null} for none
@@ -317,8 +317,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional revision number of the product that the deal was created from. If present on create,
-   * and the server `product_revision` has advanced sinced the passed-in `create_product_revision`,
+   * Optional. Revision number of the product that the deal was created from. If present on create,
+   * and the server `product_revision` has advanced since the passed-in `create_product_revision`,
    * an `ABORTED` error will be returned. Note: This field may be set only when creating the
    * resource. Modifying this field while updating the resource will result in an error.
    * @param createProductRevision createProductRevision or {@code null} for none

@@ -185,6 +185,13 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The terms and conditions set by the publisher for this proposal.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String termsAndConditions;
+
+  /**
    * Output only. The time when the proposal was last revised.
    * The value may be {@code null}.
    */
@@ -491,6 +498,23 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
    */
   public Proposal setSellerContacts(java.util.List<ContactInformation> sellerContacts) {
     this.sellerContacts = sellerContacts;
+    return this;
+  }
+
+  /**
+   * Output only. The terms and conditions set by the publisher for this proposal.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTermsAndConditions() {
+    return termsAndConditions;
+  }
+
+  /**
+   * Output only. The terms and conditions set by the publisher for this proposal.
+   * @param termsAndConditions termsAndConditions or {@code null} for none
+   */
+  public Proposal setTermsAndConditions(java.lang.String termsAndConditions) {
+    this.termsAndConditions = termsAndConditions;
     return this;
   }
 

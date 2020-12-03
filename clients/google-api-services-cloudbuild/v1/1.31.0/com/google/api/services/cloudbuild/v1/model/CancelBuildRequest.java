@@ -37,7 +37,7 @@ public final class CancelBuildRequest extends com.google.api.client.json.Generic
   private java.lang.String id;
 
   /**
-   * The name of the `Build` to retrieve. Format:
+   * The name of the `Build` to cancel. Format:
    * `projects/{project}/locations/{location}/builds/{build}`
    * The value may be {@code null}.
    */
@@ -69,7 +69,7 @@ public final class CancelBuildRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the `Build` to retrieve. Format:
+   * The name of the `Build` to cancel. Format:
    * `projects/{project}/locations/{location}/builds/{build}`
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class CancelBuildRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the `Build` to retrieve. Format:
+   * The name of the `Build` to cancel. Format:
    * `projects/{project}/locations/{location}/builds/{build}`
    * @param name name or {@code null} for none
    */

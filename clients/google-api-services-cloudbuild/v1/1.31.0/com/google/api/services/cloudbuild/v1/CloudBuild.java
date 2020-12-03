@@ -1348,8 +1348,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudbuild server.  After setting any optional
          * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the `Build` to retrieve. Format:
-         *        `projects/{project}/locations/{location}/builds/{build}`
+         * @param name The name of the `Build` to cancel. Format: `projects/{project}/locations/{location}/builds/{build}`
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.CancelBuildRequest}
          * @return the request
          */
@@ -1377,8 +1376,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
            * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the `Build` to retrieve. Format:
-         *        `projects/{project}/locations/{location}/builds/{build}`
+           * @param name The name of the `Build` to cancel. Format: `projects/{project}/locations/{location}/builds/{build}`
            * @param content the {@link com.google.api.services.cloudbuild.v1.model.CancelBuildRequest}
            * @since 1.13
            */
@@ -1448,21 +1446,20 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The name of the `Build` to retrieve. Format:
+           * The name of the `Build` to cancel. Format:
            * `projects/{project}/locations/{location}/builds/{build}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the `Build` to retrieve. Format:
-         `projects/{project}/locations/{location}/builds/{build}`
+          /** The name of the `Build` to cancel. Format: `projects/{project}/locations/{location}/builds/{build}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The name of the `Build` to retrieve. Format:
+           * The name of the `Build` to cancel. Format:
            * `projects/{project}/locations/{location}/builds/{build}`
            */
           public Cancel setName(java.lang.String name) {

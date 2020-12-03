@@ -133,6 +133,383 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the Dms collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code HangoutsChat chat = new HangoutsChat(...);}
+   *   {@code HangoutsChat.Dms.List request = chat.dms().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Dms dms() {
+    return new Dms();
+  }
+
+  /**
+   * The "dms" collection of methods.
+   */
+  public class Dms {
+
+    /**
+     * Legacy path for creating message. Calling these will result in a BadRequest response.
+     *
+     * Create a request for the method "dms.messages".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Messages#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+     * @param content the {@link com.google.api.services.chat.v1.model.Message}
+     * @return the request
+     */
+    public Messages messages(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) throws java.io.IOException {
+      Messages result = new Messages(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Messages extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Message> {
+
+      private static final String REST_PATH = "v1/{+parent}/messages";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^dms/[^/]+$");
+
+      /**
+       * Legacy path for creating message. Calling these will result in a BadRequest response.
+       *
+       * Create a request for the method "dms.messages".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Messages#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Messages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param content the {@link com.google.api.services.chat.v1.model.Message}
+       * @since 1.13
+       */
+      protected Messages(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) {
+        super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Message.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^dms/[^/]+$");
+        }
+      }
+
+      @Override
+      public Messages set$Xgafv(java.lang.String $Xgafv) {
+        return (Messages) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Messages setAccessToken(java.lang.String accessToken) {
+        return (Messages) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Messages setAlt(java.lang.String alt) {
+        return (Messages) super.setAlt(alt);
+      }
+
+      @Override
+      public Messages setCallback(java.lang.String callback) {
+        return (Messages) super.setCallback(callback);
+      }
+
+      @Override
+      public Messages setFields(java.lang.String fields) {
+        return (Messages) super.setFields(fields);
+      }
+
+      @Override
+      public Messages setKey(java.lang.String key) {
+        return (Messages) super.setKey(key);
+      }
+
+      @Override
+      public Messages setOauthToken(java.lang.String oauthToken) {
+        return (Messages) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Messages setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Messages) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Messages setQuotaUser(java.lang.String quotaUser) {
+        return (Messages) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Messages setUploadType(java.lang.String uploadType) {
+        return (Messages) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Messages setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Messages) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      public Messages setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^dms/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Opaque thread identifier string that can be specified to group messages into a single
+       * thread. If this is the first message with a given thread identifier, a new thread is
+       * created. Subsequent messages with the same thread identifier will be posted into the same
+       * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
+       * a thread (created earlier by them) to post further updates to it. Has no effect if thread
+       * field, corresponding to an existing thread, is set in message.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String threadKey;
+
+      /** Opaque thread identifier string that can be specified to group messages into a single thread. If
+     this is the first message with a given thread identifier, a new thread is created. Subsequent
+     messages with the same thread identifier will be posted into the same thread. This relieves bots
+     and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
+     to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
+     is set in message.
+       */
+      public java.lang.String getThreadKey() {
+        return threadKey;
+      }
+
+      /**
+       * Opaque thread identifier string that can be specified to group messages into a single
+       * thread. If this is the first message with a given thread identifier, a new thread is
+       * created. Subsequent messages with the same thread identifier will be posted into the same
+       * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
+       * a thread (created earlier by them) to post further updates to it. Has no effect if thread
+       * field, corresponding to an existing thread, is set in message.
+       */
+      public Messages setThreadKey(java.lang.String threadKey) {
+        this.threadKey = threadKey;
+        return this;
+      }
+
+      @Override
+      public Messages set(String parameterName, Object value) {
+        return (Messages) super.set(parameterName, value);
+      }
+    }
+
+    /**
+     * An accessor for creating requests from the Conversations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code HangoutsChat chat = new HangoutsChat(...);}
+     *   {@code HangoutsChat.Conversations.List request = chat.conversations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Conversations conversations() {
+      return new Conversations();
+    }
+
+    /**
+     * The "conversations" collection of methods.
+     */
+    public class Conversations {
+
+      /**
+       * Legacy path for creating message. Calling these will result in a BadRequest response.
+       *
+       * Create a request for the method "conversations.messages".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Messages#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param content the {@link com.google.api.services.chat.v1.model.Message}
+       * @return the request
+       */
+      public Messages messages(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) throws java.io.IOException {
+        Messages result = new Messages(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Messages extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Message> {
+
+        private static final String REST_PATH = "v1/{+parent}/messages";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^dms/[^/]+/conversations/[^/]+$");
+
+        /**
+         * Legacy path for creating message. Calling these will result in a BadRequest response.
+         *
+         * Create a request for the method "conversations.messages".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Messages#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * Messages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+         * @param content the {@link com.google.api.services.chat.v1.model.Message}
+         * @since 1.13
+         */
+        protected Messages(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) {
+          super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Message.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^dms/[^/]+/conversations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Messages set$Xgafv(java.lang.String $Xgafv) {
+          return (Messages) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Messages setAccessToken(java.lang.String accessToken) {
+          return (Messages) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Messages setAlt(java.lang.String alt) {
+          return (Messages) super.setAlt(alt);
+        }
+
+        @Override
+        public Messages setCallback(java.lang.String callback) {
+          return (Messages) super.setCallback(callback);
+        }
+
+        @Override
+        public Messages setFields(java.lang.String fields) {
+          return (Messages) super.setFields(fields);
+        }
+
+        @Override
+        public Messages setKey(java.lang.String key) {
+          return (Messages) super.setKey(key);
+        }
+
+        @Override
+        public Messages setOauthToken(java.lang.String oauthToken) {
+          return (Messages) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Messages setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Messages) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Messages setQuotaUser(java.lang.String quotaUser) {
+          return (Messages) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Messages setUploadType(java.lang.String uploadType) {
+          return (Messages) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Messages setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Messages) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+        public Messages setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^dms/[^/]+/conversations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Opaque thread identifier string that can be specified to group messages into a single
+         * thread. If this is the first message with a given thread identifier, a new thread is
+         * created. Subsequent messages with the same thread identifier will be posted into the same
+         * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID
+         * of a thread (created earlier by them) to post further updates to it. Has no effect if
+         * thread field, corresponding to an existing thread, is set in message.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String threadKey;
+
+        /** Opaque thread identifier string that can be specified to group messages into a single thread. If
+       this is the first message with a given thread identifier, a new thread is created. Subsequent
+       messages with the same thread identifier will be posted into the same thread. This relieves bots
+       and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
+       to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
+       is set in message.
+         */
+        public java.lang.String getThreadKey() {
+          return threadKey;
+        }
+
+        /**
+         * Opaque thread identifier string that can be specified to group messages into a single
+         * thread. If this is the first message with a given thread identifier, a new thread is
+         * created. Subsequent messages with the same thread identifier will be posted into the same
+         * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID
+         * of a thread (created earlier by them) to post further updates to it. Has no effect if
+         * thread field, corresponding to an existing thread, is set in message.
+         */
+        public Messages setThreadKey(java.lang.String threadKey) {
+          this.threadKey = threadKey;
+          return this;
+        }
+
+        @Override
+        public Messages set(String parameterName, Object value) {
+          return (Messages) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Media collection.
    *
    * <p>The typical use is:</p>
@@ -308,6 +685,383 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
     }
 
+  }
+
+  /**
+   * An accessor for creating requests from the Rooms collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code HangoutsChat chat = new HangoutsChat(...);}
+   *   {@code HangoutsChat.Rooms.List request = chat.rooms().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Rooms rooms() {
+    return new Rooms();
+  }
+
+  /**
+   * The "rooms" collection of methods.
+   */
+  public class Rooms {
+
+    /**
+     * Legacy path for creating message. Calling these will result in a BadRequest response.
+     *
+     * Create a request for the method "rooms.messages".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Messages#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+     * @param content the {@link com.google.api.services.chat.v1.model.Message}
+     * @return the request
+     */
+    public Messages messages(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) throws java.io.IOException {
+      Messages result = new Messages(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Messages extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Message> {
+
+      private static final String REST_PATH = "v1/{+parent}/messages";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^rooms/[^/]+$");
+
+      /**
+       * Legacy path for creating message. Calling these will result in a BadRequest response.
+       *
+       * Create a request for the method "rooms.messages".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Messages#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Messages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param content the {@link com.google.api.services.chat.v1.model.Message}
+       * @since 1.13
+       */
+      protected Messages(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) {
+        super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Message.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^rooms/[^/]+$");
+        }
+      }
+
+      @Override
+      public Messages set$Xgafv(java.lang.String $Xgafv) {
+        return (Messages) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Messages setAccessToken(java.lang.String accessToken) {
+        return (Messages) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Messages setAlt(java.lang.String alt) {
+        return (Messages) super.setAlt(alt);
+      }
+
+      @Override
+      public Messages setCallback(java.lang.String callback) {
+        return (Messages) super.setCallback(callback);
+      }
+
+      @Override
+      public Messages setFields(java.lang.String fields) {
+        return (Messages) super.setFields(fields);
+      }
+
+      @Override
+      public Messages setKey(java.lang.String key) {
+        return (Messages) super.setKey(key);
+      }
+
+      @Override
+      public Messages setOauthToken(java.lang.String oauthToken) {
+        return (Messages) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Messages setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Messages) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Messages setQuotaUser(java.lang.String quotaUser) {
+        return (Messages) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Messages setUploadType(java.lang.String uploadType) {
+        return (Messages) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Messages setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Messages) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      public Messages setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^rooms/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Opaque thread identifier string that can be specified to group messages into a single
+       * thread. If this is the first message with a given thread identifier, a new thread is
+       * created. Subsequent messages with the same thread identifier will be posted into the same
+       * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
+       * a thread (created earlier by them) to post further updates to it. Has no effect if thread
+       * field, corresponding to an existing thread, is set in message.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String threadKey;
+
+      /** Opaque thread identifier string that can be specified to group messages into a single thread. If
+     this is the first message with a given thread identifier, a new thread is created. Subsequent
+     messages with the same thread identifier will be posted into the same thread. This relieves bots
+     and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
+     to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
+     is set in message.
+       */
+      public java.lang.String getThreadKey() {
+        return threadKey;
+      }
+
+      /**
+       * Opaque thread identifier string that can be specified to group messages into a single
+       * thread. If this is the first message with a given thread identifier, a new thread is
+       * created. Subsequent messages with the same thread identifier will be posted into the same
+       * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
+       * a thread (created earlier by them) to post further updates to it. Has no effect if thread
+       * field, corresponding to an existing thread, is set in message.
+       */
+      public Messages setThreadKey(java.lang.String threadKey) {
+        this.threadKey = threadKey;
+        return this;
+      }
+
+      @Override
+      public Messages set(String parameterName, Object value) {
+        return (Messages) super.set(parameterName, value);
+      }
+    }
+
+    /**
+     * An accessor for creating requests from the Conversations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code HangoutsChat chat = new HangoutsChat(...);}
+     *   {@code HangoutsChat.Conversations.List request = chat.conversations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Conversations conversations() {
+      return new Conversations();
+    }
+
+    /**
+     * The "conversations" collection of methods.
+     */
+    public class Conversations {
+
+      /**
+       * Legacy path for creating message. Calling these will result in a BadRequest response.
+       *
+       * Create a request for the method "conversations.messages".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Messages#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param content the {@link com.google.api.services.chat.v1.model.Message}
+       * @return the request
+       */
+      public Messages messages(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) throws java.io.IOException {
+        Messages result = new Messages(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Messages extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Message> {
+
+        private static final String REST_PATH = "v1/{+parent}/messages";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^rooms/[^/]+/conversations/[^/]+$");
+
+        /**
+         * Legacy path for creating message. Calling these will result in a BadRequest response.
+         *
+         * Create a request for the method "conversations.messages".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Messages#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * Messages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+         * @param content the {@link com.google.api.services.chat.v1.model.Message}
+         * @since 1.13
+         */
+        protected Messages(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) {
+          super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Message.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^rooms/[^/]+/conversations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Messages set$Xgafv(java.lang.String $Xgafv) {
+          return (Messages) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Messages setAccessToken(java.lang.String accessToken) {
+          return (Messages) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Messages setAlt(java.lang.String alt) {
+          return (Messages) super.setAlt(alt);
+        }
+
+        @Override
+        public Messages setCallback(java.lang.String callback) {
+          return (Messages) super.setCallback(callback);
+        }
+
+        @Override
+        public Messages setFields(java.lang.String fields) {
+          return (Messages) super.setFields(fields);
+        }
+
+        @Override
+        public Messages setKey(java.lang.String key) {
+          return (Messages) super.setKey(key);
+        }
+
+        @Override
+        public Messages setOauthToken(java.lang.String oauthToken) {
+          return (Messages) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Messages setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Messages) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Messages setQuotaUser(java.lang.String quotaUser) {
+          return (Messages) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Messages setUploadType(java.lang.String uploadType) {
+          return (Messages) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Messages setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Messages) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+        public Messages setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^rooms/[^/]+/conversations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Opaque thread identifier string that can be specified to group messages into a single
+         * thread. If this is the first message with a given thread identifier, a new thread is
+         * created. Subsequent messages with the same thread identifier will be posted into the same
+         * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID
+         * of a thread (created earlier by them) to post further updates to it. Has no effect if
+         * thread field, corresponding to an existing thread, is set in message.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String threadKey;
+
+        /** Opaque thread identifier string that can be specified to group messages into a single thread. If
+       this is the first message with a given thread identifier, a new thread is created. Subsequent
+       messages with the same thread identifier will be posted into the same thread. This relieves bots
+       and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
+       to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
+       is set in message.
+         */
+        public java.lang.String getThreadKey() {
+          return threadKey;
+        }
+
+        /**
+         * Opaque thread identifier string that can be specified to group messages into a single
+         * thread. If this is the first message with a given thread identifier, a new thread is
+         * created. Subsequent messages with the same thread identifier will be posted into the same
+         * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID
+         * of a thread (created earlier by them) to post further updates to it. Has no effect if
+         * thread field, corresponding to an existing thread, is set in message.
+         */
+        public Messages setThreadKey(java.lang.String threadKey) {
+          this.threadKey = threadKey;
+          return this;
+        }
+
+        @Override
+        public Messages set(String parameterName, Object value) {
+          return (Messages) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

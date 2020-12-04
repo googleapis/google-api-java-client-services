@@ -162,10 +162,11 @@ public class PagespeedInsights extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link Runpagespeed#execute()} method to invoke the remote
      * operation.
      *
+     * @param url Required. The URL to fetch and analyze
      * @return the request
      */
-    public Runpagespeed runpagespeed() throws java.io.IOException {
-      Runpagespeed result = new Runpagespeed();
+    public Runpagespeed runpagespeed(java.lang.String url) throws java.io.IOException {
+      Runpagespeed result = new Runpagespeed(url);
       initialize(result);
       return result;
     }
@@ -173,6 +174,12 @@ public class PagespeedInsights extends com.google.api.client.googleapis.services
     public class Runpagespeed extends PagespeedInsightsRequest<com.google.api.services.pagespeedonline.v5.model.PagespeedApiPagespeedResponseV5> {
 
       private static final String REST_PATH = "pagespeedonline/v5/runPagespeed";
+
+      private final java.util.regex.Pattern URL_PATTERN =
+          java.util.regex.Pattern.compile("(?i)(url:|origin:)?http(s)?://.*");
+
+      private final java.util.regex.Pattern LOCALE_PATTERN =
+          java.util.regex.Pattern.compile("[a-zA-Z]+((_|-)[a-zA-Z]+)?");
 
       /**
        * Runs PageSpeed analysis on the page at the specified URL, and returns PageSpeed scores, a list
@@ -186,10 +193,17 @@ public class PagespeedInsights extends com.google.api.client.googleapis.services
        * Runpagespeed#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
+       * @param url Required. The URL to fetch and analyze
        * @since 1.13
        */
-      protected Runpagespeed() {
+      protected Runpagespeed(java.lang.String url) {
         super(PagespeedInsights.this, "GET", REST_PATH, null, com.google.api.services.pagespeedonline.v5.model.PagespeedApiPagespeedResponseV5.class);
+        this.url = com.google.api.client.util.Preconditions.checkNotNull(url, "Required parameter url must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(URL_PATTERN.matcher(url).matches(),
+              "Parameter url must conform to the pattern " +
+              "(?i)(url:|origin:)?http(s)?://.*");
+        }
       }
 
       @Override
@@ -257,6 +271,27 @@ public class PagespeedInsights extends com.google.api.client.googleapis.services
         return (Runpagespeed) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Required. The URL to fetch and analyze */
+      @com.google.api.client.util.Key
+      private java.lang.String url;
+
+      /** Required. The URL to fetch and analyze
+       */
+      public java.lang.String getUrl() {
+        return url;
+      }
+
+      /** Required. The URL to fetch and analyze */
+      public Runpagespeed setUrl(java.lang.String url) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(URL_PATTERN.matcher(url).matches(),
+              "Parameter url must conform to the pattern " +
+              "(?i)(url:|origin:)?http(s)?://.*");
+        }
+        this.url = url;
+        return this;
+      }
+
       /** The captcha token passed when filling out a captcha. */
       @com.google.api.client.util.Key
       private java.lang.String captchaToken;
@@ -301,6 +336,11 @@ public class PagespeedInsights extends com.google.api.client.googleapis.services
 
       /** The locale used to localize formatted results */
       public Runpagespeed setLocale(java.lang.String locale) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(LOCALE_PATTERN.matcher(locale).matches(),
+              "Parameter locale must conform to the pattern " +
+              "[a-zA-Z]+((_|-)[a-zA-Z]+)?");
+        }
         this.locale = locale;
         return this;
       }
@@ -318,22 +358,6 @@ public class PagespeedInsights extends com.google.api.client.googleapis.services
       /** The analysis strategy (desktop or mobile) to use, and desktop is the default */
       public Runpagespeed setStrategy(java.lang.String strategy) {
         this.strategy = strategy;
-        return this;
-      }
-
-      /** Required. The URL to fetch and analyze */
-      @com.google.api.client.util.Key
-      private java.lang.String url;
-
-      /** Required. The URL to fetch and analyze
-       */
-      public java.lang.String getUrl() {
-        return url;
-      }
-
-      /** Required. The URL to fetch and analyze */
-      public Runpagespeed setUrl(java.lang.String url) {
-        this.url = url;
         return this;
       }
 

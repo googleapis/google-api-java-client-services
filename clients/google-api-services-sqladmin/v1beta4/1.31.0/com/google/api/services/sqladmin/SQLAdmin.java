@@ -5509,17 +5509,17 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** External sync mode */
+        /** External sync mode. */
         @com.google.api.client.util.Key
         private java.lang.String syncMode;
 
-        /** External sync mode
+        /** External sync mode.
          */
         public java.lang.String getSyncMode() {
           return syncMode;
         }
 
-        /** External sync mode */
+        /** External sync mode. */
         public StartExternalSync setSyncMode(java.lang.String syncMode) {
           this.syncMode = syncMode;
           return this;

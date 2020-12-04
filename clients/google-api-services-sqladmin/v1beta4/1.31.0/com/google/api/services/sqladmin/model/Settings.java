@@ -135,6 +135,13 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Insights configuration, for now relevant only for Postgres.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsightsConfig insightsConfig;
+
+  /**
    * The settings for IP Management. This allows to enable or disable the instance IP and manage
    * which external networks can connect to the instance. The IPv4 address cannot be disabled for
    * Second Generation instances.
@@ -441,6 +448,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setDenyMaintenancePeriods(java.util.List<DenyMaintenancePeriod> denyMaintenancePeriods) {
     this.denyMaintenancePeriods = denyMaintenancePeriods;
+    return this;
+  }
+
+  /**
+   * Insights configuration, for now relevant only for Postgres.
+   * @return value or {@code null} for none
+   */
+  public InsightsConfig getInsightsConfig() {
+    return insightsConfig;
+  }
+
+  /**
+   * Insights configuration, for now relevant only for Postgres.
+   * @param insightsConfig insightsConfig or {@code null} for none
+   */
+  public Settings setInsightsConfig(InsightsConfig insightsConfig) {
+    this.insightsConfig = insightsConfig;
     return this;
   }
 

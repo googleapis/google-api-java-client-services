@@ -18,7 +18,7 @@ package com.google.api.services.sqladmin.model;
 
 /**
  * An Operation resource. For successful operations that return an Operation resource, only the
- * fields relevant to the operation are populated in the resource.
+ * fields relevant to the operation are populated in the resource. Next field: 18
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -29,6 +29,13 @@ package com.google.api.services.sqladmin.model;
  */
 @SuppressWarnings("javadoc")
 public final class Operation extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The context for backup operation, if applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupContext backupContext;
 
   /**
    * The time this operation finished in UTC timezone in RFC 3339 format, for example
@@ -140,6 +147,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String user;
+
+  /**
+   * The context for backup operation, if applicable.
+   * @return value or {@code null} for none
+   */
+  public BackupContext getBackupContext() {
+    return backupContext;
+  }
+
+  /**
+   * The context for backup operation, if applicable.
+   * @param backupContext backupContext or {@code null} for none
+   */
+  public Operation setBackupContext(BackupContext backupContext) {
+    this.backupContext = backupContext;
+    return this;
+  }
 
   /**
    * The time this operation finished in UTC timezone in RFC 3339 format, for example

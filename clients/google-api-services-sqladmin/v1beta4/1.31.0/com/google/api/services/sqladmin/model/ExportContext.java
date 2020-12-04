@@ -30,7 +30,7 @@ package com.google.api.services.sqladmin.model;
 public final class ExportContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Options for exporting data as CSV.
+   * Options for exporting data as CSV. *MySQL* and *PostgreSQL* instances only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The file type for the specified uri. *SQL*: The file contains SQL statements. *CSV*: The file
-   * contains CSV data.
+   * contains CSV data. *BAK*: The file contains backup data for a SQL Server instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   private java.lang.String uri;
 
   /**
-   * Options for exporting data as CSV.
+   * Options for exporting data as CSV. *MySQL* and *PostgreSQL* instances only.
    * @return value or {@code null} for none
    */
   public CsvExportOptions getCsvExportOptions() {
@@ -96,7 +96,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Options for exporting data as CSV.
+   * Options for exporting data as CSV. *MySQL* and *PostgreSQL* instances only.
    * @param csvExportOptions csvExportOptions or {@code null} for none
    */
   public ExportContext setCsvExportOptions(CsvExportOptions csvExportOptions) {
@@ -133,7 +133,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The file type for the specified uri. *SQL*: The file contains SQL statements. *CSV*: The file
-   * contains CSV data.
+   * contains CSV data. *BAK*: The file contains backup data for a SQL Server instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileType() {
@@ -142,7 +142,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The file type for the specified uri. *SQL*: The file contains SQL statements. *CSV*: The file
-   * contains CSV data.
+   * contains CSV data. *BAK*: The file contains backup data for a SQL Server instance.
    * @param fileType fileType or {@code null} for none
    */
   public ExportContext setFileType(java.lang.String fileType) {
@@ -235,7 +235,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Options for exporting data as CSV.
+   * Options for exporting data as CSV. *MySQL* and *PostgreSQL* instances only.
    */
   public static final class CsvExportOptions extends com.google.api.client.json.GenericJson {
 
@@ -372,9 +372,9 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
       /**
        * Option to include SQL statement required to set up replication. If set to *1*, the dump file
-       * includes a CHANGE MASTER TO statement with the binary log coordinates. If set to *2*, the
-       * CHANGE MASTER TO statement is written as a SQL comment, and has no effect. All other values are
-       * ignored.
+       * includes a CHANGE MASTER TO statement with the binary log coordinates, and --set-gtid-purged is
+       * set to ON. If set to *2*, the CHANGE MASTER TO statement is written as a SQL comment and has no
+       * effect. If set to any value other than *1*, --set-gtid-purged is set to OFF.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -382,9 +382,9 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
       /**
        * Option to include SQL statement required to set up replication. If set to *1*, the dump file
-       * includes a CHANGE MASTER TO statement with the binary log coordinates. If set to *2*, the
-       * CHANGE MASTER TO statement is written as a SQL comment, and has no effect. All other values are
-       * ignored.
+       * includes a CHANGE MASTER TO statement with the binary log coordinates, and --set-gtid-purged is
+       * set to ON. If set to *2*, the CHANGE MASTER TO statement is written as a SQL comment and has no
+       * effect. If set to any value other than *1*, --set-gtid-purged is set to OFF.
        * @return value or {@code null} for none
        */
       public java.lang.Integer getMasterData() {
@@ -393,9 +393,9 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
       /**
        * Option to include SQL statement required to set up replication. If set to *1*, the dump file
-       * includes a CHANGE MASTER TO statement with the binary log coordinates. If set to *2*, the
-       * CHANGE MASTER TO statement is written as a SQL comment, and has no effect. All other values are
-       * ignored.
+       * includes a CHANGE MASTER TO statement with the binary log coordinates, and --set-gtid-purged is
+       * set to ON. If set to *2*, the CHANGE MASTER TO statement is written as a SQL comment and has no
+       * effect. If set to any value other than *1*, --set-gtid-purged is set to OFF.
        * @param masterData masterData or {@code null} for none
        */
       public MysqlExportOptions setMasterData(java.lang.Integer masterData) {

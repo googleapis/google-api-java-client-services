@@ -53,6 +53,15 @@ public final class UpdateDatabaseDdlMetadata extends com.google.api.client.json.
   private java.util.List<java.lang.String> statements;
 
   /**
+   * Output only. When true, indicates that the operation is throttled e.g due to resource
+   * constraints. When resources become available the operation will resume and this field will be
+   * false again.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean throttled;
+
+  /**
    * Reports the commit timestamps of all statements that have succeeded so far, where
    * `commit_timestamps[i]` is the commit timestamp for the statement `statements[i]`.
    * @return value or {@code null} for none
@@ -104,6 +113,27 @@ public final class UpdateDatabaseDdlMetadata extends com.google.api.client.json.
    */
   public UpdateDatabaseDdlMetadata setStatements(java.util.List<java.lang.String> statements) {
     this.statements = statements;
+    return this;
+  }
+
+  /**
+   * Output only. When true, indicates that the operation is throttled e.g due to resource
+   * constraints. When resources become available the operation will resume and this field will be
+   * false again.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getThrottled() {
+    return throttled;
+  }
+
+  /**
+   * Output only. When true, indicates that the operation is throttled e.g due to resource
+   * constraints. When resources become available the operation will resume and this field will be
+   * false again.
+   * @param throttled throttled or {@code null} for none
+   */
+  public UpdateDatabaseDdlMetadata setThrottled(java.lang.Boolean throttled) {
+    this.throttled = throttled;
     return this;
   }
 

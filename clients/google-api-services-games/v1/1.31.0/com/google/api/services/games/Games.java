@@ -1361,6 +1361,135 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
+     * Returns a URL for the requested end point type.
+     *
+     * Create a request for the method "applications.getEndPoint".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link GetEndPoint#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public GetEndPoint getEndPoint() throws java.io.IOException {
+      GetEndPoint result = new GetEndPoint();
+      initialize(result);
+      return result;
+    }
+
+    public class GetEndPoint extends GamesRequest<com.google.api.services.games.model.EndPoint> {
+
+      private static final String REST_PATH = "games/v1/applications/getEndPoint";
+
+      /**
+       * Returns a URL for the requested end point type.
+       *
+       * Create a request for the method "applications.getEndPoint".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link GetEndPoint#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetEndPoint#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetEndPoint() {
+        super(Games.this, "POST", REST_PATH, null, com.google.api.services.games.model.EndPoint.class);
+      }
+
+      @Override
+      public GetEndPoint set$Xgafv(java.lang.String $Xgafv) {
+        return (GetEndPoint) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetEndPoint setAccessToken(java.lang.String accessToken) {
+        return (GetEndPoint) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetEndPoint setAlt(java.lang.String alt) {
+        return (GetEndPoint) super.setAlt(alt);
+      }
+
+      @Override
+      public GetEndPoint setCallback(java.lang.String callback) {
+        return (GetEndPoint) super.setCallback(callback);
+      }
+
+      @Override
+      public GetEndPoint setFields(java.lang.String fields) {
+        return (GetEndPoint) super.setFields(fields);
+      }
+
+      @Override
+      public GetEndPoint setKey(java.lang.String key) {
+        return (GetEndPoint) super.setKey(key);
+      }
+
+      @Override
+      public GetEndPoint setOauthToken(java.lang.String oauthToken) {
+        return (GetEndPoint) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetEndPoint setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetEndPoint) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetEndPoint setQuotaUser(java.lang.String quotaUser) {
+        return (GetEndPoint) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetEndPoint setUploadType(java.lang.String uploadType) {
+        return (GetEndPoint) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetEndPoint setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetEndPoint) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The application ID from the Google Play developer console. */
+      @com.google.api.client.util.Key
+      private java.lang.String applicationId;
+
+      /** The application ID from the Google Play developer console.
+       */
+      public java.lang.String getApplicationId() {
+        return applicationId;
+      }
+
+      /** The application ID from the Google Play developer console. */
+      public GetEndPoint setApplicationId(java.lang.String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+      }
+
+      /** Type of endpoint being requested. */
+      @com.google.api.client.util.Key
+      private java.lang.String endPointType;
+
+      /** Type of endpoint being requested.
+       */
+      public java.lang.String getEndPointType() {
+        return endPointType;
+      }
+
+      /** Type of endpoint being requested. */
+      public GetEndPoint setEndPointType(java.lang.String endPointType) {
+        this.endPointType = endPointType;
+        return this;
+      }
+
+      @Override
+      public GetEndPoint set(String parameterName, Object value) {
+        return (GetEndPoint) super.set(parameterName, value);
+      }
+    }
+    /**
      * Indicate that the currently authenticated user is playing your application.
      *
      * Create a request for the method "applications.played".

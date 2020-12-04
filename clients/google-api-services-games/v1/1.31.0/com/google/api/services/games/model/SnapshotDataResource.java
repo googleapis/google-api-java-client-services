@@ -32,14 +32,21 @@ public final class SnapshotDataResource extends com.google.api.client.json.Gener
 
   /**
    * Output only. Hash-like weak identifier of the uploaded blob, consistent per player per
-   * application. Within the context of a single player/application, it's guaranteed that two
-   * identical blobs coming from two different uploads will have the same content hash. It's
-   * extremely likely, though not guaranteed, that if two content hashes are equal, the blobs are
-   * identical.
+   * application per hash version. Within the context of a single player/application, it's
+   * guaranteed that two identical blobs coming from two different uploads will have the same
+   * content hash for the same hash algorithm version. It's extremely likely, though not guaranteed,
+   * that if two content hashes are equal, the blobs are identical. More than one content hash can
+   * be returned if more than one hash versions are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String contentHash;
+  private java.util.List<ContentHash> contentHash;
+
+  static {
+    // hack to force ProGuard to consider ContentHash used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ContentHash.class);
+  }
 
   /**
    * Output only. A URL that the client can use to download the blob. May vary across requests, and
@@ -62,7 +69,7 @@ public final class SnapshotDataResource extends com.google.api.client.json.Gener
   private java.lang.String resourceId;
 
   /**
-   * Size of the saved game blob in bytes.
+   * Output only. Size of the saved game blob in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -70,25 +77,27 @@ public final class SnapshotDataResource extends com.google.api.client.json.Gener
 
   /**
    * Output only. Hash-like weak identifier of the uploaded blob, consistent per player per
-   * application. Within the context of a single player/application, it's guaranteed that two
-   * identical blobs coming from two different uploads will have the same content hash. It's
-   * extremely likely, though not guaranteed, that if two content hashes are equal, the blobs are
-   * identical.
+   * application per hash version. Within the context of a single player/application, it's
+   * guaranteed that two identical blobs coming from two different uploads will have the same
+   * content hash for the same hash algorithm version. It's extremely likely, though not guaranteed,
+   * that if two content hashes are equal, the blobs are identical. More than one content hash can
+   * be returned if more than one hash versions are supported.
    * @return value or {@code null} for none
    */
-  public java.lang.String getContentHash() {
+  public java.util.List<ContentHash> getContentHash() {
     return contentHash;
   }
 
   /**
    * Output only. Hash-like weak identifier of the uploaded blob, consistent per player per
-   * application. Within the context of a single player/application, it's guaranteed that two
-   * identical blobs coming from two different uploads will have the same content hash. It's
-   * extremely likely, though not guaranteed, that if two content hashes are equal, the blobs are
-   * identical.
+   * application per hash version. Within the context of a single player/application, it's
+   * guaranteed that two identical blobs coming from two different uploads will have the same
+   * content hash for the same hash algorithm version. It's extremely likely, though not guaranteed,
+   * that if two content hashes are equal, the blobs are identical. More than one content hash can
+   * be returned if more than one hash versions are supported.
    * @param contentHash contentHash or {@code null} for none
    */
-  public SnapshotDataResource setContentHash(java.lang.String contentHash) {
+  public SnapshotDataResource setContentHash(java.util.List<ContentHash> contentHash) {
     this.contentHash = contentHash;
     return this;
   }
@@ -140,7 +149,7 @@ public final class SnapshotDataResource extends com.google.api.client.json.Gener
   }
 
   /**
-   * Size of the saved game blob in bytes.
+   * Output only. Size of the saved game blob in bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSize() {
@@ -148,7 +157,7 @@ public final class SnapshotDataResource extends com.google.api.client.json.Gener
   }
 
   /**
-   * Size of the saved game blob in bytes.
+   * Output only. Size of the saved game blob in bytes.
    * @param size size or {@code null} for none
    */
   public SnapshotDataResource setSize(java.lang.Long size) {

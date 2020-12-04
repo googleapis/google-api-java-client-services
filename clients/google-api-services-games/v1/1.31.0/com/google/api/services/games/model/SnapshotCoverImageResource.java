@@ -32,14 +32,21 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
 
   /**
    * Output only. Hash-like weak identifier of the uploaded image bytes, consistent per player per
-   * application. Within the context of a single player/application, it's guaranteed that two
-   * identical blobs coming from two different uploads will have the same content hash. It's
-   * extremely likely, though not guaranteed, that if two content hashes are equal, the images are
-   * identical.
+   * application per hash version. Within the context of a single player/application, it's
+   * guaranteed that two identical images coming from two different uploads will have the same
+   * content hash for the same hash algorithm version. It's extremely likely, though not guaranteed,
+   * that if two content hashes are equal, the images are identical. More than one content hash can
+   * be returned if more than one hash versions are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String contentHash;
+  private java.util.List<ContentHash> contentHash;
+
+  static {
+    // hack to force ProGuard to consider ContentHash used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ContentHash.class);
+  }
 
   /**
    * Output only. A URL the client can use to download the image. May vary across requests, and only
@@ -50,14 +57,14 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
   private java.lang.String downloadUrl;
 
   /**
-   * Output only. The height of the image in pixels.
+   * The height of the image in pixels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer height;
 
   /**
-   * Output only. The MIME type of the image.
+   * The MIME type of the image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +83,7 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
   private java.lang.String resourceId;
 
   /**
-   * Output only. The width of the image in pixels.
+   * The width of the image in pixels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,25 +91,27 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
 
   /**
    * Output only. Hash-like weak identifier of the uploaded image bytes, consistent per player per
-   * application. Within the context of a single player/application, it's guaranteed that two
-   * identical blobs coming from two different uploads will have the same content hash. It's
-   * extremely likely, though not guaranteed, that if two content hashes are equal, the images are
-   * identical.
+   * application per hash version. Within the context of a single player/application, it's
+   * guaranteed that two identical images coming from two different uploads will have the same
+   * content hash for the same hash algorithm version. It's extremely likely, though not guaranteed,
+   * that if two content hashes are equal, the images are identical. More than one content hash can
+   * be returned if more than one hash versions are supported.
    * @return value or {@code null} for none
    */
-  public java.lang.String getContentHash() {
+  public java.util.List<ContentHash> getContentHash() {
     return contentHash;
   }
 
   /**
    * Output only. Hash-like weak identifier of the uploaded image bytes, consistent per player per
-   * application. Within the context of a single player/application, it's guaranteed that two
-   * identical blobs coming from two different uploads will have the same content hash. It's
-   * extremely likely, though not guaranteed, that if two content hashes are equal, the images are
-   * identical.
+   * application per hash version. Within the context of a single player/application, it's
+   * guaranteed that two identical images coming from two different uploads will have the same
+   * content hash for the same hash algorithm version. It's extremely likely, though not guaranteed,
+   * that if two content hashes are equal, the images are identical. More than one content hash can
+   * be returned if more than one hash versions are supported.
    * @param contentHash contentHash or {@code null} for none
    */
-  public SnapshotCoverImageResource setContentHash(java.lang.String contentHash) {
+  public SnapshotCoverImageResource setContentHash(java.util.List<ContentHash> contentHash) {
     this.contentHash = contentHash;
     return this;
   }
@@ -127,7 +136,7 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
   }
 
   /**
-   * Output only. The height of the image in pixels.
+   * The height of the image in pixels.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHeight() {
@@ -135,7 +144,7 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
   }
 
   /**
-   * Output only. The height of the image in pixels.
+   * The height of the image in pixels.
    * @param height height or {@code null} for none
    */
   public SnapshotCoverImageResource setHeight(java.lang.Integer height) {
@@ -144,7 +153,7 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
   }
 
   /**
-   * Output only. The MIME type of the image.
+   * The MIME type of the image.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -152,7 +161,7 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
   }
 
   /**
-   * Output only. The MIME type of the image.
+   * The MIME type of the image.
    * @param mimeType mimeType or {@code null} for none
    */
   public SnapshotCoverImageResource setMimeType(java.lang.String mimeType) {
@@ -188,7 +197,7 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
   }
 
   /**
-   * Output only. The width of the image in pixels.
+   * The width of the image in pixels.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getWidth() {
@@ -196,7 +205,7 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
   }
 
   /**
-   * Output only. The width of the image in pixels.
+   * The width of the image in pixels.
    * @param width width or {@code null} for none
    */
   public SnapshotCoverImageResource setWidth(java.lang.Integer width) {

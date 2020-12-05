@@ -83,6 +83,14 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private SoftwareConfig softwareConfig;
 
   /**
+   * Optional. The network-level access control policy for the Airflow web server. If unspecified,
+   * no network-level access restrictions will be applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WebServerNetworkAccessControl webServerNetworkAccessControl;
+
+  /**
    * Output only. The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow
    * web interface](/composer/docs/how-to/accessing/airflow-web-interface)).
    * @return value or {@code null} for none
@@ -206,6 +214,25 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setSoftwareConfig(SoftwareConfig softwareConfig) {
     this.softwareConfig = softwareConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The network-level access control policy for the Airflow web server. If unspecified,
+   * no network-level access restrictions will be applied.
+   * @return value or {@code null} for none
+   */
+  public WebServerNetworkAccessControl getWebServerNetworkAccessControl() {
+    return webServerNetworkAccessControl;
+  }
+
+  /**
+   * Optional. The network-level access control policy for the Airflow web server. If unspecified,
+   * no network-level access restrictions will be applied.
+   * @param webServerNetworkAccessControl webServerNetworkAccessControl or {@code null} for none
+   */
+  public EnvironmentConfig setWebServerNetworkAccessControl(WebServerNetworkAccessControl webServerNetworkAccessControl) {
+    this.webServerNetworkAccessControl = webServerNetworkAccessControl;
     return this;
   }
 

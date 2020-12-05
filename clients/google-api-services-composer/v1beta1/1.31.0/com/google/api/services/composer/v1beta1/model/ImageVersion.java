@@ -30,6 +30,13 @@ package com.google.api.services.composer.v1beta1.model;
 public final class ImageVersion extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether it is impossible to create an environment with the image version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean creationDisabled;
+
+  /**
    * The string identifier of the ImageVersion, in the form: "composer-x.y.z-airflow-a.b(.c)"
    * The value may be {@code null}.
    */
@@ -45,11 +52,42 @@ public final class ImageVersion extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isDefault;
 
   /**
+   * The date of the version release.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Date releaseDate;
+
+  /**
    * supported python versions
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedPythonVersions;
+
+  /**
+   * Whether it is impossible to upgrade an environment running with the image version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean upgradeDisabled;
+
+  /**
+   * Whether it is impossible to create an environment with the image version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCreationDisabled() {
+    return creationDisabled;
+  }
+
+  /**
+   * Whether it is impossible to create an environment with the image version.
+   * @param creationDisabled creationDisabled or {@code null} for none
+   */
+  public ImageVersion setCreationDisabled(java.lang.Boolean creationDisabled) {
+    this.creationDisabled = creationDisabled;
+    return this;
+  }
 
   /**
    * The string identifier of the ImageVersion, in the form: "composer-x.y.z-airflow-a.b(.c)"
@@ -88,6 +126,23 @@ public final class ImageVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The date of the version release.
+   * @return value or {@code null} for none
+   */
+  public Date getReleaseDate() {
+    return releaseDate;
+  }
+
+  /**
+   * The date of the version release.
+   * @param releaseDate releaseDate or {@code null} for none
+   */
+  public ImageVersion setReleaseDate(Date releaseDate) {
+    this.releaseDate = releaseDate;
+    return this;
+  }
+
+  /**
    * supported python versions
    * @return value or {@code null} for none
    */
@@ -101,6 +156,23 @@ public final class ImageVersion extends com.google.api.client.json.GenericJson {
    */
   public ImageVersion setSupportedPythonVersions(java.util.List<java.lang.String> supportedPythonVersions) {
     this.supportedPythonVersions = supportedPythonVersions;
+    return this;
+  }
+
+  /**
+   * Whether it is impossible to upgrade an environment running with the image version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUpgradeDisabled() {
+    return upgradeDisabled;
+  }
+
+  /**
+   * Whether it is impossible to upgrade an environment running with the image version.
+   * @param upgradeDisabled upgradeDisabled or {@code null} for none
+   */
+  public ImageVersion setUpgradeDisabled(java.lang.Boolean upgradeDisabled) {
+    this.upgradeDisabled = upgradeDisabled;
     return this;
   }
 

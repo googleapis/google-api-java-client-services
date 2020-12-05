@@ -961,10 +961,12 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * mapping in `environment.labels`. It is an error to provide both a mask of this form and
            * the "labels" mask. config.nodeCount Horizontally scale the number of nodes in the
            * environment. An integer greater than or equal to 3 must be provided in the
-           * `config.nodeCount` field. config.softwareConfig.airflowConfigOverrides Replace all
-           * Apache Airflow config overrides. If a replacement config overrides map is not included
-           * in `environment`, all config overrides are cleared. It is an error to provide both this
-           * mask and a mask specifying one or more individual config overrides.
+           * `config.nodeCount` field. config.webServerNetworkAccessControl Replace the
+           * environment's current WebServerNetworkAccessControl.
+           * config.softwareConfig.airflowConfigOverrides Replace all Apache Airflow config
+           * overrides. If a replacement config overrides map is not included in `environment`, all
+           * config overrides are cleared. It is an error to provide both this mask and a mask
+           * specifying one or more individual config overrides.
            * config.softwareConfig.airflowConfigOverrides.section-name Override the Apache Airflow
            * config property name in the section named section, preserving other properties. To
            * delete the property override, include it in `updateMask` and omit its mapping in
@@ -1011,10 +1013,11 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
          the label, include it in `updateMask` and omit its mapping in `environment.labels`. It is an error
          to provide both a mask of this form and the "labels" mask. config.nodeCount Horizontally scale the
          number of nodes in the environment. An integer greater than or equal to 3 must be provided in the
-         `config.nodeCount` field. config.softwareConfig.airflowConfigOverrides Replace all Apache Airflow
-         config overrides. If a replacement config overrides map is not included in `environment`, all
-         config overrides are cleared. It is an error to provide both this mask and a mask specifying one or
-         more individual config overrides. config.softwareConfig.airflowConfigOverrides.section-name
+         `config.nodeCount` field. config.webServerNetworkAccessControl Replace the environment's current
+         WebServerNetworkAccessControl. config.softwareConfig.airflowConfigOverrides Replace all Apache
+         Airflow config overrides. If a replacement config overrides map is not included in `environment`,
+         all config overrides are cleared. It is an error to provide both this mask and a mask specifying
+         one or more individual config overrides. config.softwareConfig.airflowConfigOverrides.section-name
          Override the Apache Airflow config property name in the section named section, preserving other
          properties. To delete the property override, include it in `updateMask` and omit its mapping in
          `environment.config.softwareConfig.airflowConfigOverrides`. It is an error to provide both a mask
@@ -1067,10 +1070,12 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * mapping in `environment.labels`. It is an error to provide both a mask of this form and
            * the "labels" mask. config.nodeCount Horizontally scale the number of nodes in the
            * environment. An integer greater than or equal to 3 must be provided in the
-           * `config.nodeCount` field. config.softwareConfig.airflowConfigOverrides Replace all
-           * Apache Airflow config overrides. If a replacement config overrides map is not included
-           * in `environment`, all config overrides are cleared. It is an error to provide both this
-           * mask and a mask specifying one or more individual config overrides.
+           * `config.nodeCount` field. config.webServerNetworkAccessControl Replace the
+           * environment's current WebServerNetworkAccessControl.
+           * config.softwareConfig.airflowConfigOverrides Replace all Apache Airflow config
+           * overrides. If a replacement config overrides map is not included in `environment`, all
+           * config overrides are cleared. It is an error to provide both this mask and a mask
+           * specifying one or more individual config overrides.
            * config.softwareConfig.airflowConfigOverrides.section-name Override the Apache Airflow
            * config property name in the section named section, preserving other properties. To
            * delete the property override, include it in `updateMask` and omit its mapping in
@@ -1252,6 +1257,22 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
                   "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /** Whether or not image versions from old releases should be included. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean includePastReleases;
+
+          /** Whether or not image versions from old releases should be included.
+           */
+          public java.lang.Boolean getIncludePastReleases() {
+            return includePastReleases;
+          }
+
+          /** Whether or not image versions from old releases should be included. */
+          public List setIncludePastReleases(java.lang.Boolean includePastReleases) {
+            this.includePastReleases = includePastReleases;
             return this;
           }
 

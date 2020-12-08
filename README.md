@@ -112,7 +112,7 @@ packages on [Maven Central][maven-search].
 | Data Labeling API | [v1beta1](clients/google-api-services-datalabeling/v1beta1) |
 | Database Migration API | [v1beta1](clients/google-api-services-datamigration/v1beta1) |
 | Dataflow API | [v1b3](clients/google-api-services-dataflow/v1b3) |
-| Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1), [v3beta1](clients/google-api-services-dialogflow/v3beta1) |
+| Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1), [v3](clients/google-api-services-dialogflow/v3), [v3beta1](clients/google-api-services-dialogflow/v3beta1) |
 | Digital Asset Links API | [v1](clients/google-api-services-digitalassetlinks/v1) |
 | Display & Video 360 API | [v1](clients/google-api-services-displayvideo/v1) |
 | Domains RDAP API | [v1](clients/google-api-services-domainsrdap/v1) |

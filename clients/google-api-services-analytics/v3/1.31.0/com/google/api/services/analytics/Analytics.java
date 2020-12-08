@@ -57,7 +57,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://analytics.googleapis.com/";
 
   /**
    * The default encoded mTLS root URL of the service. This is determined when the library is generated
@@ -65,7 +65,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
    *
    * @since 1.31
    */
-  public static final String DEFAULT_MTLS_ROOT_URL = "https://www.mtls.googleapis.com/";
+  public static final String DEFAULT_MTLS_ROOT_URL = "https://analytics.mtls.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is

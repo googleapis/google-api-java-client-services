@@ -51,11 +51,11 @@ public final class SnapshotMetadata extends com.google.api.client.json.GenericJs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String duration;
+  private String gameplayDuration;
 
   /**
-   * The timestamp of the last modification to this snapshot. Values with sub-millisecond precision
-   * can be rounded or trimmed to the closest millisecond.
+   * The timestamp of the last modification to this snapshot as provided by the client. Values with
+   * sub-millisecond precision can be rounded or trimmed to the closest millisecond.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,13 +67,6 @@ public final class SnapshotMetadata extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long progressValue;
-
-  /**
-   * The title of this snapshot.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String title;
 
   /**
    * The description of this snapshot.
@@ -114,23 +107,23 @@ public final class SnapshotMetadata extends com.google.api.client.json.GenericJs
    * rounded or trimmed to the closest millisecond.
    * @return value or {@code null} for none
    */
-  public String getDuration() {
-    return duration;
+  public String getGameplayDuration() {
+    return gameplayDuration;
   }
 
   /**
    * The duration associated with this snapshot. Values with sub-millisecond precision can be
    * rounded or trimmed to the closest millisecond.
-   * @param duration duration or {@code null} for none
+   * @param gameplayDuration gameplayDuration or {@code null} for none
    */
-  public SnapshotMetadata setDuration(String duration) {
-    this.duration = duration;
+  public SnapshotMetadata setGameplayDuration(String gameplayDuration) {
+    this.gameplayDuration = gameplayDuration;
     return this;
   }
 
   /**
-   * The timestamp of the last modification to this snapshot. Values with sub-millisecond precision
-   * can be rounded or trimmed to the closest millisecond.
+   * The timestamp of the last modification to this snapshot as provided by the client. Values with
+   * sub-millisecond precision can be rounded or trimmed to the closest millisecond.
    * @return value or {@code null} for none
    */
   public String getLastModifyTime() {
@@ -138,8 +131,8 @@ public final class SnapshotMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The timestamp of the last modification to this snapshot. Values with sub-millisecond precision
-   * can be rounded or trimmed to the closest millisecond.
+   * The timestamp of the last modification to this snapshot as provided by the client. Values with
+   * sub-millisecond precision can be rounded or trimmed to the closest millisecond.
    * @param lastModifyTime lastModifyTime or {@code null} for none
    */
   public SnapshotMetadata setLastModifyTime(String lastModifyTime) {
@@ -161,23 +154,6 @@ public final class SnapshotMetadata extends com.google.api.client.json.GenericJs
    */
   public SnapshotMetadata setProgressValue(java.lang.Long progressValue) {
     this.progressValue = progressValue;
-    return this;
-  }
-
-  /**
-   * The title of this snapshot.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTitle() {
-    return title;
-  }
-
-  /**
-   * The title of this snapshot.
-   * @param title title or {@code null} for none
-   */
-  public SnapshotMetadata setTitle(java.lang.String title) {
-    this.title = title;
     return this;
   }
 

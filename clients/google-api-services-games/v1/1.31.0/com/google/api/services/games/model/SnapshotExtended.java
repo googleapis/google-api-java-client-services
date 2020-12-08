@@ -17,13 +17,12 @@
 package com.google.api.services.games.model;
 
 /**
- * A snapshot represents a saved game state referred to using the developer-provided snapshot_id
- * (think of it as a file's path). The set of attributes and binary data for a specific state is
- * called a revision. Each revision is itself immutable, and referred to by a snapshot_revision_id.
- * At any time, a snapshot has a "head" revision, and updates are made against that revision. If a
- * snapshot update is received that isn't against the current head revision, then instead of
- * changing the head revision it will result in a conflicting revision that must be specifically
- * resolved.
+ * A snapshot represents a saved game state referred to using the developer-provided snapshot_name.
+ * The set of attributes and binary data for a specific state is called a revision. Each revision is
+ * itself immutable, and referred to by a snapshot revision id. At any time, a snapshot has a "head"
+ * revision, and updates are made against that revision. If a snapshot update is received that isn't
+ * against the current head revision, then instead of changing the head revision it will result in a
+ * conflicting revision that must be specifically resolved.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Game Services. For a detailed explanation
@@ -63,11 +62,12 @@ public final class SnapshotExtended extends com.google.api.client.json.GenericJs
   private SnapshotRevision headRevision;
 
   /**
-   * An identifier of the snapshot,developer-specified.
+   * An identifier of the snapshot, developer-specified. It must match the pattern [0-9a-
+   * zA-Z-._~]{1,100}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private java.lang.String snapshotName;
 
   /**
    * A list of conflicting revisions. Only set if explicitly requested (e.g. using a field mask or a
@@ -131,19 +131,21 @@ public final class SnapshotExtended extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * An identifier of the snapshot,developer-specified.
+   * An identifier of the snapshot, developer-specified. It must match the pattern [0-9a-
+   * zA-Z-._~]{1,100}.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public java.lang.String getSnapshotName() {
+    return snapshotName;
   }
 
   /**
-   * An identifier of the snapshot,developer-specified.
-   * @param name name or {@code null} for none
+   * An identifier of the snapshot, developer-specified. It must match the pattern [0-9a-
+   * zA-Z-._~]{1,100}.
+   * @param snapshotName snapshotName or {@code null} for none
    */
-  public SnapshotExtended setName(java.lang.String name) {
-    this.name = name;
+  public SnapshotExtended setSnapshotName(java.lang.String snapshotName) {
+    this.snapshotName = snapshotName;
     return this;
   }
 

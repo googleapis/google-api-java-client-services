@@ -89,7 +89,7 @@ public final class ApigatewayApiConfig extends com.google.api.client.json.Generi
 
   /**
    * Optional. OpenAPI specification documents. If specified, grpc_services and
-   * managed_service_config must not be included.
+   * managed_service_configs must not be included.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,7 +254,7 @@ public final class ApigatewayApiConfig extends com.google.api.client.json.Generi
 
   /**
    * Optional. OpenAPI specification documents. If specified, grpc_services and
-   * managed_service_config must not be included.
+   * managed_service_configs must not be included.
    * @return value or {@code null} for none
    */
   public java.util.List<ApigatewayApiConfigOpenApiDocument> getOpenapiDocuments() {
@@ -263,7 +263,7 @@ public final class ApigatewayApiConfig extends com.google.api.client.json.Generi
 
   /**
    * Optional. OpenAPI specification documents. If specified, grpc_services and
-   * managed_service_config must not be included.
+   * managed_service_configs must not be included.
    * @param openapiDocuments openapiDocuments or {@code null} for none
    */
   public ApigatewayApiConfig setOpenapiDocuments(java.util.List<ApigatewayApiConfigOpenApiDocument> openapiDocuments) {

@@ -138,6 +138,14 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   private ManagedZoneReverseLookupConfig reverseLookupConfig;
 
   /**
+   * This field links to the associated service directory namespace. This field should not be set
+   * for public zones or forwarding zones.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedZoneServiceDirectoryConfig serviceDirectoryConfig;
+
+  /**
    * The zone's visibility: public zones are exposed to the Internet, while private zones are
    * visible only to Virtual Private Cloud resources.
    * The value may be {@code null}.
@@ -398,6 +406,25 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
    */
   public ManagedZone setReverseLookupConfig(ManagedZoneReverseLookupConfig reverseLookupConfig) {
     this.reverseLookupConfig = reverseLookupConfig;
+    return this;
+  }
+
+  /**
+   * This field links to the associated service directory namespace. This field should not be set
+   * for public zones or forwarding zones.
+   * @return value or {@code null} for none
+   */
+  public ManagedZoneServiceDirectoryConfig getServiceDirectoryConfig() {
+    return serviceDirectoryConfig;
+  }
+
+  /**
+   * This field links to the associated service directory namespace. This field should not be set
+   * for public zones or forwarding zones.
+   * @param serviceDirectoryConfig serviceDirectoryConfig or {@code null} for none
+   */
+  public ManagedZone setServiceDirectoryConfig(ManagedZoneServiceDirectoryConfig serviceDirectoryConfig) {
+    this.serviceDirectoryConfig = serviceDirectoryConfig;
     return this;
   }
 

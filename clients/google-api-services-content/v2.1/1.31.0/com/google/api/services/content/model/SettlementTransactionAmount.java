@@ -50,7 +50,7 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
    * "`qualityNotExpected`" - "`receivedTooLate`" - "`storePackageMissing`" -
    * "`transitPackageMissing`" - "`unsuccessfulDeliveryUndeliverable`" - "`wrongChargeInStore`" -
    * "`wrongItem`" - "`returns`" - "`undeliverable`" - "`refundFromMerchant`" -
-   * "`returnLabelShippingFee`"
+   * "`returnLabelShippingFee`" - "`pspFee`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
    * "`qualityNotExpected`" - "`receivedTooLate`" - "`storePackageMissing`" -
    * "`transitPackageMissing`" - "`unsuccessfulDeliveryUndeliverable`" - "`wrongChargeInStore`" -
    * "`wrongItem`" - "`returns`" - "`undeliverable`" - "`refundFromMerchant`" -
-   * "`returnLabelShippingFee`"
+   * "`returnLabelShippingFee`" - "`pspFee`"
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -121,7 +121,7 @@ public final class SettlementTransactionAmount extends com.google.api.client.jso
    * "`qualityNotExpected`" - "`receivedTooLate`" - "`storePackageMissing`" -
    * "`transitPackageMissing`" - "`unsuccessfulDeliveryUndeliverable`" - "`wrongChargeInStore`" -
    * "`wrongItem`" - "`returns`" - "`undeliverable`" - "`refundFromMerchant`" -
-   * "`returnLabelShippingFee`"
+   * "`returnLabelShippingFee`" - "`pspFee`"
    * @param description description or {@code null} for none
    */
   public SettlementTransactionAmount setDescription(java.lang.String description) {

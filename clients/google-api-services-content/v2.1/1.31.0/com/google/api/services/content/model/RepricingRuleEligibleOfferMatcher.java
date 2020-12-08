@@ -66,6 +66,13 @@ public final class RepricingRuleEligibleOfferMatcher extends com.google.api.clie
   private RepricingRuleEligibleOfferMatcherStringMatcher offerIdMatcher;
 
   /**
+   * When true, the rule won't be applied to offers with active promotions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipWhenOnPromotion;
+
+  /**
    * Filter by the brand.
    * @return value or {@code null} for none
    */
@@ -132,6 +139,23 @@ public final class RepricingRuleEligibleOfferMatcher extends com.google.api.clie
    */
   public RepricingRuleEligibleOfferMatcher setOfferIdMatcher(RepricingRuleEligibleOfferMatcherStringMatcher offerIdMatcher) {
     this.offerIdMatcher = offerIdMatcher;
+    return this;
+  }
+
+  /**
+   * When true, the rule won't be applied to offers with active promotions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipWhenOnPromotion() {
+    return skipWhenOnPromotion;
+  }
+
+  /**
+   * When true, the rule won't be applied to offers with active promotions.
+   * @param skipWhenOnPromotion skipWhenOnPromotion or {@code null} for none
+   */
+  public RepricingRuleEligibleOfferMatcher setSkipWhenOnPromotion(java.lang.Boolean skipWhenOnPromotion) {
+    this.skipWhenOnPromotion = skipWhenOnPromotion;
     return this;
   }
 

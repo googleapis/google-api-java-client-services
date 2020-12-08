@@ -46,7 +46,7 @@ public final class ReturnShipment extends com.google.api.client.json.GenericJson
 
   /**
    * Type of the return method. Acceptable values are: - "`byMail`" - "`contactCustomerSupport`" -
-   * "`returnless`"
+   * "`returnless`" - "`inStore`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class ReturnShipment extends com.google.api.client.json.GenericJson
 
   /**
    * Type of the return method. Acceptable values are: - "`byMail`" - "`contactCustomerSupport`" -
-   * "`returnless`"
+   * "`returnless`" - "`inStore`"
    * @return value or {@code null} for none
    */
   public java.lang.String getReturnMethodType() {
@@ -127,7 +127,7 @@ public final class ReturnShipment extends com.google.api.client.json.GenericJson
 
   /**
    * Type of the return method. Acceptable values are: - "`byMail`" - "`contactCustomerSupport`" -
-   * "`returnless`"
+   * "`returnless`" - "`inStore`"
    * @param returnMethodType returnMethodType or {@code null} for none
    */
   public ReturnShipment setReturnMethodType(java.lang.String returnMethodType) {

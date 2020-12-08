@@ -45,6 +45,13 @@ public final class OperationMetadataV1 extends com.google.api.client.json.Generi
   private java.util.Map<String, java.lang.Object> request;
 
   /**
+   * A field for Firebase function deployments
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceToken;
+
+  /**
    * Target of the operation - for example
    * projects/project-1/locations/region-1/functions/function-1
    * The value may be {@code null}.
@@ -107,6 +114,23 @@ public final class OperationMetadataV1 extends com.google.api.client.json.Generi
    */
   public OperationMetadataV1 setRequest(java.util.Map<String, java.lang.Object> request) {
     this.request = request;
+    return this;
+  }
+
+  /**
+   * A field for Firebase function deployments
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceToken() {
+    return sourceToken;
+  }
+
+  /**
+   * A field for Firebase function deployments
+   * @param sourceToken sourceToken or {@code null} for none
+   */
+  public OperationMetadataV1 setSourceToken(java.lang.String sourceToken) {
+    this.sourceToken = sourceToken;
     return this;
   }
 

@@ -38,7 +38,7 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
   private java.util.Map<String, TranslateTextGlossaryConfig> glossaries;
 
   /**
-   * Required. Input configurations. The total number of files matched should be <= 1000. The total
+   * Required. Input configurations. The total number of files matched should be <= 100. The total
    * content size should be <= 100M Unicode codepoints. The files must use UTF-8 encoding.
    * The value may be {@code null}.
    */
@@ -109,7 +109,7 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. Input configurations. The total number of files matched should be <= 1000. The total
+   * Required. Input configurations. The total number of files matched should be <= 100. The total
    * content size should be <= 100M Unicode codepoints. The files must use UTF-8 encoding.
    * @return value or {@code null} for none
    */
@@ -118,7 +118,7 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. Input configurations. The total number of files matched should be <= 1000. The total
+   * Required. Input configurations. The total number of files matched should be <= 100. The total
    * content size should be <= 100M Unicode codepoints. The files must use UTF-8 encoding.
    * @param inputConfigs inputConfigs or {@code null} for none
    */

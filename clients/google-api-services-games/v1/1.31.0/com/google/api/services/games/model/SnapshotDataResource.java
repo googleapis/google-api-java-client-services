@@ -31,22 +31,14 @@ package com.google.api.services.games.model;
 public final class SnapshotDataResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Hash-like weak identifier of the uploaded blob, consistent per player per
-   * application per hash version. Within the context of a single player/application, it's
-   * guaranteed that two identical blobs coming from two different uploads will have the same
-   * content hash for the same hash algorithm version. It's extremely likely, though not guaranteed,
-   * that if two content hashes are equal, the blobs are identical. More than one content hash can
-   * be returned if more than one hash versions are supported.
+   * Output only. Hash-like weak identifier of the uploaded blob bytes, consistent per player per
+   * application. The content hash for a given resource will not change if the binary data hasn't
+   * changed. Except in very rare circumstances, the content_hash for matching binary data will be
+   * the same within a given player and application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ContentHash> contentHash;
-
-  static {
-    // hack to force ProGuard to consider ContentHash used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ContentHash.class);
-  }
+  private java.lang.String contentHash;
 
   /**
    * Output only. A URL that the client can use to download the blob. May vary across requests, and
@@ -76,28 +68,24 @@ public final class SnapshotDataResource extends com.google.api.client.json.Gener
   private java.lang.Long size;
 
   /**
-   * Output only. Hash-like weak identifier of the uploaded blob, consistent per player per
-   * application per hash version. Within the context of a single player/application, it's
-   * guaranteed that two identical blobs coming from two different uploads will have the same
-   * content hash for the same hash algorithm version. It's extremely likely, though not guaranteed,
-   * that if two content hashes are equal, the blobs are identical. More than one content hash can
-   * be returned if more than one hash versions are supported.
+   * Output only. Hash-like weak identifier of the uploaded blob bytes, consistent per player per
+   * application. The content hash for a given resource will not change if the binary data hasn't
+   * changed. Except in very rare circumstances, the content_hash for matching binary data will be
+   * the same within a given player and application.
    * @return value or {@code null} for none
    */
-  public java.util.List<ContentHash> getContentHash() {
+  public java.lang.String getContentHash() {
     return contentHash;
   }
 
   /**
-   * Output only. Hash-like weak identifier of the uploaded blob, consistent per player per
-   * application per hash version. Within the context of a single player/application, it's
-   * guaranteed that two identical blobs coming from two different uploads will have the same
-   * content hash for the same hash algorithm version. It's extremely likely, though not guaranteed,
-   * that if two content hashes are equal, the blobs are identical. More than one content hash can
-   * be returned if more than one hash versions are supported.
+   * Output only. Hash-like weak identifier of the uploaded blob bytes, consistent per player per
+   * application. The content hash for a given resource will not change if the binary data hasn't
+   * changed. Except in very rare circumstances, the content_hash for matching binary data will be
+   * the same within a given player and application.
    * @param contentHash contentHash or {@code null} for none
    */
-  public SnapshotDataResource setContentHash(java.util.List<ContentHash> contentHash) {
+  public SnapshotDataResource setContentHash(java.lang.String contentHash) {
     this.contentHash = contentHash;
     return this;
   }

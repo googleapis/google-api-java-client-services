@@ -32,21 +32,13 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
 
   /**
    * Output only. Hash-like weak identifier of the uploaded image bytes, consistent per player per
-   * application per hash version. Within the context of a single player/application, it's
-   * guaranteed that two identical images coming from two different uploads will have the same
-   * content hash for the same hash algorithm version. It's extremely likely, though not guaranteed,
-   * that if two content hashes are equal, the images are identical. More than one content hash can
-   * be returned if more than one hash versions are supported.
+   * application. The content hash for a given resource will not change if the binary data hasn't
+   * changed. Except in very rare circumstances, the content_hash for matching binary data will be
+   * the same within a given player and application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ContentHash> contentHash;
-
-  static {
-    // hack to force ProGuard to consider ContentHash used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ContentHash.class);
-  }
+  private java.lang.String contentHash;
 
   /**
    * Output only. A URL the client can use to download the image. May vary across requests, and only
@@ -91,27 +83,23 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
 
   /**
    * Output only. Hash-like weak identifier of the uploaded image bytes, consistent per player per
-   * application per hash version. Within the context of a single player/application, it's
-   * guaranteed that two identical images coming from two different uploads will have the same
-   * content hash for the same hash algorithm version. It's extremely likely, though not guaranteed,
-   * that if two content hashes are equal, the images are identical. More than one content hash can
-   * be returned if more than one hash versions are supported.
+   * application. The content hash for a given resource will not change if the binary data hasn't
+   * changed. Except in very rare circumstances, the content_hash for matching binary data will be
+   * the same within a given player and application.
    * @return value or {@code null} for none
    */
-  public java.util.List<ContentHash> getContentHash() {
+  public java.lang.String getContentHash() {
     return contentHash;
   }
 
   /**
    * Output only. Hash-like weak identifier of the uploaded image bytes, consistent per player per
-   * application per hash version. Within the context of a single player/application, it's
-   * guaranteed that two identical images coming from two different uploads will have the same
-   * content hash for the same hash algorithm version. It's extremely likely, though not guaranteed,
-   * that if two content hashes are equal, the images are identical. More than one content hash can
-   * be returned if more than one hash versions are supported.
+   * application. The content hash for a given resource will not change if the binary data hasn't
+   * changed. Except in very rare circumstances, the content_hash for matching binary data will be
+   * the same within a given player and application.
    * @param contentHash contentHash or {@code null} for none
    */
-  public SnapshotCoverImageResource setContentHash(java.util.List<ContentHash> contentHash) {
+  public SnapshotCoverImageResource setContentHash(java.lang.String contentHash) {
     this.contentHash = contentHash;
     return this;
   }

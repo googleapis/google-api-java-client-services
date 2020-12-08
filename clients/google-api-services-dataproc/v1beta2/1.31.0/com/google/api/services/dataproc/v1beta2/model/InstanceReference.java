@@ -44,6 +44,13 @@ public final class InstanceReference extends com.google.api.client.json.GenericJ
   private java.lang.String instanceName;
 
   /**
+   * The public key used for sharing data with this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publicKey;
+
+  /**
    * The unique identifier of the Compute Engine instance.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class InstanceReference extends com.google.api.client.json.GenericJ
    */
   public InstanceReference setInstanceName(java.lang.String instanceName) {
     this.instanceName = instanceName;
+    return this;
+  }
+
+  /**
+   * The public key used for sharing data with this instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublicKey() {
+    return publicKey;
+  }
+
+  /**
+   * The public key used for sharing data with this instance.
+   * @param publicKey publicKey or {@code null} for none
+   */
+  public InstanceReference setPublicKey(java.lang.String publicKey) {
+    this.publicKey = publicKey;
     return this;
   }
 

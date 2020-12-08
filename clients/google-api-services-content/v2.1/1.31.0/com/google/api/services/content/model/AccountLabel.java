@@ -31,21 +31,21 @@ package com.google.api.services.content.model;
 public final class AccountLabel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Immutable. The ID of account this label belongs to.
+   * Immutable. The ID of account this label belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long accountId;
 
   /**
-   * Description for this label.
+   * The description of this label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Output only. Immutable. The ID of the label.
+   * Output only. The ID of the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -59,7 +59,7 @@ public final class AccountLabel extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. Immutable. The ID of account this label belongs to.
+   * Immutable. The ID of account this label belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAccountId() {
@@ -67,7 +67,7 @@ public final class AccountLabel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Immutable. The ID of account this label belongs to.
+   * Immutable. The ID of account this label belongs to.
    * @param accountId accountId or {@code null} for none
    */
   public AccountLabel setAccountId(java.lang.Long accountId) {
@@ -76,7 +76,7 @@ public final class AccountLabel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description for this label.
+   * The description of this label.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -84,7 +84,7 @@ public final class AccountLabel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description for this label.
+   * The description of this label.
    * @param description description or {@code null} for none
    */
   public AccountLabel setDescription(java.lang.String description) {
@@ -93,7 +93,7 @@ public final class AccountLabel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Immutable. The ID of the label.
+   * Output only. The ID of the label.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLabelId() {
@@ -101,7 +101,7 @@ public final class AccountLabel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Immutable. The ID of the label.
+   * Output only. The ID of the label.
    * @param labelId labelId or {@code null} for none
    */
   public AccountLabel setLabelId(java.lang.Long labelId) {

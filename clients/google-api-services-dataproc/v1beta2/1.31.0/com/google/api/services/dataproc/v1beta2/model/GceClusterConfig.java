@@ -113,6 +113,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> serviceAccountScopes;
 
   /**
+   * Optional. Shielded Instance Config for clusters using shielded VMs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedInstanceConfig shieldedInstanceConfig;
+
+  /**
    * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be
    * specified with network_uri.A full URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0
@@ -327,6 +334,23 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   public GceClusterConfig setServiceAccountScopes(java.util.List<java.lang.String> serviceAccountScopes) {
     this.serviceAccountScopes = serviceAccountScopes;
+    return this;
+  }
+
+  /**
+   * Optional. Shielded Instance Config for clusters using shielded VMs.
+   * @return value or {@code null} for none
+   */
+  public ShieldedInstanceConfig getShieldedInstanceConfig() {
+    return shieldedInstanceConfig;
+  }
+
+  /**
+   * Optional. Shielded Instance Config for clusters using shielded VMs.
+   * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
+   */
+  public GceClusterConfig setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
+    this.shieldedInstanceConfig = shieldedInstanceConfig;
     return this;
   }
 

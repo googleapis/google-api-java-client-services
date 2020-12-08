@@ -51,6 +51,27 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   private ClusterOperation createCluster;
 
   /**
+   * Output only. DAG end time, only set for workflows with dag_timeout when DAG ends.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String dagEndTime;
+
+  /**
+   * Output only. DAG start time, only set for workflows with dag_timeout when DAG begins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String dagStartTime;
+
+  /**
+   * Output only. The timeout duration for the DAG of jobs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String dagTimeout;
+
+  /**
    * Output only. The delete cluster operation metadata.
    * The value may be {@code null}.
    */
@@ -159,6 +180,57 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
    */
   public WorkflowMetadata setCreateCluster(ClusterOperation createCluster) {
     this.createCluster = createCluster;
+    return this;
+  }
+
+  /**
+   * Output only. DAG end time, only set for workflows with dag_timeout when DAG ends.
+   * @return value or {@code null} for none
+   */
+  public String getDagEndTime() {
+    return dagEndTime;
+  }
+
+  /**
+   * Output only. DAG end time, only set for workflows with dag_timeout when DAG ends.
+   * @param dagEndTime dagEndTime or {@code null} for none
+   */
+  public WorkflowMetadata setDagEndTime(String dagEndTime) {
+    this.dagEndTime = dagEndTime;
+    return this;
+  }
+
+  /**
+   * Output only. DAG start time, only set for workflows with dag_timeout when DAG begins.
+   * @return value or {@code null} for none
+   */
+  public String getDagStartTime() {
+    return dagStartTime;
+  }
+
+  /**
+   * Output only. DAG start time, only set for workflows with dag_timeout when DAG begins.
+   * @param dagStartTime dagStartTime or {@code null} for none
+   */
+  public WorkflowMetadata setDagStartTime(String dagStartTime) {
+    this.dagStartTime = dagStartTime;
+    return this;
+  }
+
+  /**
+   * Output only. The timeout duration for the DAG of jobs.
+   * @return value or {@code null} for none
+   */
+  public String getDagTimeout() {
+    return dagTimeout;
+  }
+
+  /**
+   * Output only. The timeout duration for the DAG of jobs.
+   * @param dagTimeout dagTimeout or {@code null} for none
+   */
+  public WorkflowMetadata setDagTimeout(String dagTimeout) {
+    this.dagTimeout = dagTimeout;
     return this;
   }
 

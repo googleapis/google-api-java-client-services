@@ -2179,11 +2179,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Allows filtering by campaign properties. Supported syntax: * Filter expressions are made
          * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
          * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-         * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields:
-         * - `campaignId` - `displayName` - `entityStatus` Examples: * All `ENTITY_STATUS_ACTIVE` or
-         * `ENTITY_STATUS_PAUSED` campaigns under an advertiser:
-         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` The length
-         * of this field should be no more than 500 characters.
+         * of `{field} {operator} {value}`. * The operator used on `updateTime` must be `GREATER
+         * THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`. * The operator must be `EQUALS
+         * (=)`. * Supported fields: - `campaignId` - `displayName` - `entityStatus` - `updateTime`
+         * (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) Examples: * All
+         * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` campaigns under an advertiser:
+         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` * All
+         * campaigns with an update time less than or equal to `2020-11-04T18:54:47Z (format of ISO
+         * 8601)`: `updateTime<="2020-11-04T18:54:47Z"` * All campaigns with an update time greater
+         * than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+         * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
+         * characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -2191,10 +2197,15 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /** Allows filtering by campaign properties. Supported syntax: * Filter expressions are made up of one
        or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
        of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-       {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `campaignId` - `displayName` -
-       `entityStatus` Examples: * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` campaigns under an
-       advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` The
-       length of this field should be no more than 500 characters.
+       {value}`. * The operator used on `updateTime` must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN
+       OR EQUAL TO (<=)`. * The operator must be `EQUALS (=)`. * Supported fields: - `campaignId` -
+       `displayName` - `entityStatus` - `updateTime` (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ)
+       Examples: * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` campaigns under an advertiser:
+       `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` * All campaigns with
+       an update time less than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+       `updateTime<="2020-11-04T18:54:47Z"` * All campaigns with an update time greater than or equal to
+       `2020-11-04T18:54:47Z (format of ISO 8601)`: `updateTime>="2020-11-04T18:54:47Z"` The length of
+       this field should be no more than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -2204,11 +2215,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Allows filtering by campaign properties. Supported syntax: * Filter expressions are made
          * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
          * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-         * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields:
-         * - `campaignId` - `displayName` - `entityStatus` Examples: * All `ENTITY_STATUS_ACTIVE` or
-         * `ENTITY_STATUS_PAUSED` campaigns under an advertiser:
-         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` The length
-         * of this field should be no more than 500 characters.
+         * of `{field} {operator} {value}`. * The operator used on `updateTime` must be `GREATER
+         * THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`. * The operator must be `EQUALS
+         * (=)`. * Supported fields: - `campaignId` - `displayName` - `entityStatus` - `updateTime`
+         * (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) Examples: * All
+         * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` campaigns under an advertiser:
+         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` * All
+         * campaigns with an update time less than or equal to `2020-11-04T18:54:47Z (format of ISO
+         * 8601)`: `updateTime<="2020-11-04T18:54:47Z"` * All campaigns with an update time greater
+         * than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+         * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
+         * characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -2217,15 +2234,16 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
-         * `entityStatus` The default sorting order is ascending. To specify descending order for a
-         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
+         * `entityStatus` * `updateTime` The default sorting order is ascending. To specify
+         * descending order for a field, a suffix "desc" should be added to the field name. Example:
+         * `displayName desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Field by which to sort the list. Acceptable values are: * `displayName` (default) * `entityStatus`
-       The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-       should be added to the field name. Example: `displayName desc`.
+       * `updateTime` The default sorting order is ascending. To specify descending order for a field, a
+       suffix "desc" should be added to the field name. Example: `displayName desc`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -2233,8 +2251,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
-         * `entityStatus` The default sorting order is ascending. To specify descending order for a
-         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
+         * `entityStatus` * `updateTime` The default sorting order is ascending. To specify
+         * descending order for a field, a suffix "desc" should be added to the field name. Example:
+         * `displayName desc`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -5446,15 +5465,21 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * are made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
          * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
          * the form of `{field} {operator} {value}`. * The operator used on
-         * `budget.budget_segments.date_range.end_date` must be LESS THAN (<). * The operators used
-         * on all other fields must be `EQUALS (=)`. * Supported fields: - `campaignId` -
-         * `displayName` - `entityStatus` - `budget.budget_segments.date_range.end_date` (input as
-         * YYYY-MM-DD) Examples: * All insertion orders under a campaign: `campaignId="1234"` * All
-         * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` insertion orders under an advertiser:
-         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` * All
-         * insertion orders whose budget segments' dates end before March 28, 2019:
-         * `budget.budget_segments.date_range.end_date<"2019-03-28"` The length of this field should
-         * be no more than 500 characters.
+         * `budget.budget_segments.date_range.end_date` must be LESS THAN (<). * The operator used
+         * on `updateTime` must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`.
+         * * The operators used on all other fields must be `EQUALS (=)`. * Supported fields: -
+         * `campaignId` - `displayName` - `entityStatus` -
+         * `budget.budget_segments.date_range.end_date` (input as YYYY-MM-DD) - `updateTime` (input
+         * in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) Examples: * All insertion orders under a
+         * campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
+         * insertion orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
+         * entityStatus="ENTITY_STATUS_PAUSED")` * All insertion orders whose budget segments' dates
+         * end before March 28, 2019: `budget.budget_segments.date_range.end_date<"2019-03-28"` *
+         * All insertion orders with an update time less than or equal to `2020-11-04T18:54:47Z
+         * (format of ISO 8601)`: `updateTime<="2020-11-04T18:54:47Z"` * All insertion orders with
+         * an update time greater than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+         * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
+         * characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -5463,14 +5488,18 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
        sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
        {value}`. * The operator used on `budget.budget_segments.date_range.end_date` must be LESS THAN
-       (<). * The operators used on all other fields must be `EQUALS (=)`. * Supported fields: -
-       `campaignId` - `displayName` - `entityStatus` - `budget.budget_segments.date_range.end_date` (input
-       as YYYY-MM-DD) Examples: * All insertion orders under a campaign: `campaignId="1234"` * All
-       `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` insertion orders under an advertiser:
-       `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` * All insertion
-       orders whose budget segments' dates end before March 28, 2019:
-       `budget.budget_segments.date_range.end_date<"2019-03-28"` The length of this field should be no
-       more than 500 characters.
+       (<). * The operator used on `updateTime` must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR
+       EQUAL TO (<=)`. * The operators used on all other fields must be `EQUALS (=)`. * Supported fields:
+       - `campaignId` - `displayName` - `entityStatus` - `budget.budget_segments.date_range.end_date`
+       (input as YYYY-MM-DD) - `updateTime` (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) Examples:
+       * All insertion orders under a campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or
+       `ENTITY_STATUS_PAUSED` insertion orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE"
+       OR entityStatus="ENTITY_STATUS_PAUSED")` * All insertion orders whose budget segments' dates end
+       before March 28, 2019: `budget.budget_segments.date_range.end_date<"2019-03-28"` * All insertion
+       orders with an update time less than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+       `updateTime<="2020-11-04T18:54:47Z"` * All insertion orders with an update time greater than or
+       equal to `2020-11-04T18:54:47Z (format of ISO 8601)`: `updateTime>="2020-11-04T18:54:47Z"` The
+       length of this field should be no more than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -5481,15 +5510,21 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * are made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
          * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
          * the form of `{field} {operator} {value}`. * The operator used on
-         * `budget.budget_segments.date_range.end_date` must be LESS THAN (<). * The operators used
-         * on all other fields must be `EQUALS (=)`. * Supported fields: - `campaignId` -
-         * `displayName` - `entityStatus` - `budget.budget_segments.date_range.end_date` (input as
-         * YYYY-MM-DD) Examples: * All insertion orders under a campaign: `campaignId="1234"` * All
-         * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` insertion orders under an advertiser:
-         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` * All
-         * insertion orders whose budget segments' dates end before March 28, 2019:
-         * `budget.budget_segments.date_range.end_date<"2019-03-28"` The length of this field should
-         * be no more than 500 characters.
+         * `budget.budget_segments.date_range.end_date` must be LESS THAN (<). * The operator used
+         * on `updateTime` must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`.
+         * * The operators used on all other fields must be `EQUALS (=)`. * Supported fields: -
+         * `campaignId` - `displayName` - `entityStatus` -
+         * `budget.budget_segments.date_range.end_date` (input as YYYY-MM-DD) - `updateTime` (input
+         * in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) Examples: * All insertion orders under a
+         * campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
+         * insertion orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
+         * entityStatus="ENTITY_STATUS_PAUSED")` * All insertion orders whose budget segments' dates
+         * end before March 28, 2019: `budget.budget_segments.date_range.end_date<"2019-03-28"` *
+         * All insertion orders with an update time less than or equal to `2020-11-04T18:54:47Z
+         * (format of ISO 8601)`: `updateTime<="2020-11-04T18:54:47Z"` * All insertion orders with
+         * an update time greater than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+         * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
+         * characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -5498,15 +5533,16 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Field by which to sort the list. Acceptable values are: * "displayName" (default) *
-         * "entityStatus" The default sorting order is ascending. To specify descending order for a
-         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
+         * "entityStatus" * "updateTime" The default sorting order is ascending. To specify
+         * descending order for a field, a suffix "desc" should be added to the field name. Example:
+         * `displayName desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Field by which to sort the list. Acceptable values are: * "displayName" (default) * "entityStatus"
-       The default sorting order is ascending. To specify descending order for a field, a suffix "desc"
-       should be added to the field name. Example: `displayName desc`.
+       * "updateTime" The default sorting order is ascending. To specify descending order for a field, a
+       suffix "desc" should be added to the field name. Example: `displayName desc`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -5514,8 +5550,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Field by which to sort the list. Acceptable values are: * "displayName" (default) *
-         * "entityStatus" The default sorting order is ascending. To specify descending order for a
-         * field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
+         * "entityStatus" * "updateTime" The default sorting order is ascending. To specify
+         * descending order for a field, a suffix "desc" should be added to the field name. Example:
+         * `displayName desc`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -6735,18 +6772,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
          * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
          * of `{field} {operator} {value}`. * The operator used on `flight.dateRange.endDate` must
-         * be LESS THAN (<). * The operator used on `warningMessages` must be `HAS (:)`. * The
-         * operators used on all other fields must be `EQUALS (=)`. * Supported fields: -
-         * `campaignId` - `displayName` - `insertionOrderId` - `entityStatus` - `lineItemId` -
-         * `lineItemType` - `flight.dateRange.endDate` (input formatted as YYYY-MM-DD) -
-         * `warningMessages` - `flight.triggerId` Examples: * All line items under an insertion
+         * be LESS THAN (<). * The operator used on `updateTime` must be `GREATER THAN OR EQUAL TO
+         * (>=)` or `LESS THAN OR EQUAL TO (<=)`. * The operator used on `warningMessages` must be
+         * `HAS (:)`. * The operators used on all other fields must be `EQUALS (=)`. * Supported
+         * fields: - `campaignId` - `displayName` - `insertionOrderId` - `entityStatus` -
+         * `lineItemId` - `lineItemType` - `flight.dateRange.endDate` (input formatted as YYYY-MM-
+         * DD) - `warningMessages` - `flight.triggerId` - `updateTime` (input in ISO 8601 format, or
+         * YYYY-MM-DDTHH:MM:SSZ) * The operator can be `NO LESS THAN (>=)` or `NO GREATER THAN
+         * (<=)`. - `updateTime` (format of ISO 8601) Examples: * All line items under an insertion
          * order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
          * and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
          * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
          * lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` * All line items whose flight dates end
          * before March 28, 2019: `flight.dateRange.endDate<"2019-03-28"` * All line items that have
-         * `NO_VALID_CREATIVE` in `warningMessages`: `warningMessages:"NO_VALID_CREATIVE"` The
-         * length of this field should be no more than 500 characters.
+         * `NO_VALID_CREATIVE` in `warningMessages`: `warningMessages:"NO_VALID_CREATIVE"` * All
+         * line items with an update time less than or equal to `2020-11-04T18:54:47Z (format of ISO
+         * 8601)`: `updateTime<="2020-11-04T18:54:47Z"` * All line items with an update time greater
+         * than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+         * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
+         * characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -6755,17 +6799,23 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
        of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
        {value}`. * The operator used on `flight.dateRange.endDate` must be LESS THAN (<). * The operator
-       used on `warningMessages` must be `HAS (:)`. * The operators used on all other fields must be
-       `EQUALS (=)`. * Supported fields: - `campaignId` - `displayName` - `insertionOrderId` -
+       used on `updateTime` must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`. * The
+       operator used on `warningMessages` must be `HAS (:)`. * The operators used on all other fields must
+       be `EQUALS (=)`. * Supported fields: - `campaignId` - `displayName` - `insertionOrderId` -
        `entityStatus` - `lineItemId` - `lineItemType` - `flight.dateRange.endDate` (input formatted as
-       YYYY-MM-DD) - `warningMessages` - `flight.triggerId` Examples: * All line items under an insertion
-       order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and
+       YYYY-MM-DD) - `warningMessages` - `flight.triggerId` - `updateTime` (input in ISO 8601 format, or
+       YYYY-MM-DDTHH:MM:SSZ) * The operator can be `NO LESS THAN (>=)` or `NO GREATER THAN (<=)`. -
+       `updateTime` (format of ISO 8601) Examples: * All line items under an insertion order:
+       `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and
        `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
        `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
        lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` * All line items whose flight dates end before March
        28, 2019: `flight.dateRange.endDate<"2019-03-28"` * All line items that have `NO_VALID_CREATIVE` in
-       `warningMessages`: `warningMessages:"NO_VALID_CREATIVE"` The length of this field should be no more
-       than 500 characters.
+       `warningMessages`: `warningMessages:"NO_VALID_CREATIVE"` * All line items with an update time less
+       than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`: `updateTime<="2020-11-04T18:54:47Z"`
+       * All line items with an update time greater than or equal to `2020-11-04T18:54:47Z (format of ISO
+       8601)`: `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
+       characters.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -6776,18 +6826,25 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
          * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
          * of `{field} {operator} {value}`. * The operator used on `flight.dateRange.endDate` must
-         * be LESS THAN (<). * The operator used on `warningMessages` must be `HAS (:)`. * The
-         * operators used on all other fields must be `EQUALS (=)`. * Supported fields: -
-         * `campaignId` - `displayName` - `insertionOrderId` - `entityStatus` - `lineItemId` -
-         * `lineItemType` - `flight.dateRange.endDate` (input formatted as YYYY-MM-DD) -
-         * `warningMessages` - `flight.triggerId` Examples: * All line items under an insertion
+         * be LESS THAN (<). * The operator used on `updateTime` must be `GREATER THAN OR EQUAL TO
+         * (>=)` or `LESS THAN OR EQUAL TO (<=)`. * The operator used on `warningMessages` must be
+         * `HAS (:)`. * The operators used on all other fields must be `EQUALS (=)`. * Supported
+         * fields: - `campaignId` - `displayName` - `insertionOrderId` - `entityStatus` -
+         * `lineItemId` - `lineItemType` - `flight.dateRange.endDate` (input formatted as YYYY-MM-
+         * DD) - `warningMessages` - `flight.triggerId` - `updateTime` (input in ISO 8601 format, or
+         * YYYY-MM-DDTHH:MM:SSZ) * The operator can be `NO LESS THAN (>=)` or `NO GREATER THAN
+         * (<=)`. - `updateTime` (format of ISO 8601) Examples: * All line items under an insertion
          * order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
          * and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
          * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
          * lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` * All line items whose flight dates end
          * before March 28, 2019: `flight.dateRange.endDate<"2019-03-28"` * All line items that have
-         * `NO_VALID_CREATIVE` in `warningMessages`: `warningMessages:"NO_VALID_CREATIVE"` The
-         * length of this field should be no more than 500 characters.
+         * `NO_VALID_CREATIVE` in `warningMessages`: `warningMessages:"NO_VALID_CREATIVE"` * All
+         * line items with an update time less than or equal to `2020-11-04T18:54:47Z (format of ISO
+         * 8601)`: `updateTime<="2020-11-04T18:54:47Z"` * All line items with an update time greater
+         * than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+         * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
+         * characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -6796,16 +6853,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Field by which to sort the list. Acceptable values are: * "displayName" (default) *
-         * "entityStatus" * “flight.dateRange.endDate” The default sorting order is ascending. To
-         * specify descending order for a field, a suffix "desc" should be added to the field name.
-         * Example: `displayName desc`.
+         * "entityStatus" * “flight.dateRange.endDate” * "updateTime" The default sorting order is
+         * ascending. To specify descending order for a field, a suffix "desc" should be added to
+         * the field name. Example: `displayName desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Field by which to sort the list. Acceptable values are: * "displayName" (default) * "entityStatus"
-       * “flight.dateRange.endDate” The default sorting order is ascending. To specify descending order
-       for a field, a suffix "desc" should be added to the field name. Example: `displayName desc`.
+       * “flight.dateRange.endDate” * "updateTime" The default sorting order is ascending. To specify
+       descending order for a field, a suffix "desc" should be added to the field name. Example:
+       `displayName desc`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -6813,9 +6871,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Field by which to sort the list. Acceptable values are: * "displayName" (default) *
-         * "entityStatus" * “flight.dateRange.endDate” The default sorting order is ascending. To
-         * specify descending order for a field, a suffix "desc" should be added to the field name.
-         * Example: `displayName desc`.
+         * "entityStatus" * “flight.dateRange.endDate” * "updateTime" The default sorting order is
+         * ascending. To specify descending order for a field, a suffix "desc" should be added to
+         * the field name. Example: `displayName desc`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -12002,7 +12060,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param advertiserId Required. The ID of the advertiser.
-         * @param targetingType Required. Identifies the type of this assigned targeting option.
+         * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+         *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
          * @param content the {@link com.google.api.services.displayvideo.v1.model.AssignedTargetingOption}
          * @return the request
          */
@@ -12035,7 +12095,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param advertiserId Required. The ID of the advertiser.
-           * @param targetingType Required. Identifies the type of this assigned targeting option.
+           * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+         *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
            * @param content the {@link com.google.api.services.displayvideo.v1.model.AssignedTargetingOption}
            * @since 1.13
            */
@@ -12121,17 +12183,27 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             return this;
           }
 
-          /** Required. Identifies the type of this assigned targeting option. */
+          /**
+           * Required. Identifies the type of this assigned targeting option. Supported targeting
+           * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+           * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
 
-          /** Required. Identifies the type of this assigned targeting option.
+          /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+         `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
           }
 
-          /** Required. Identifies the type of this assigned targeting option. */
+          /**
+           * Required. Identifies the type of this assigned targeting option. Supported targeting
+           * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+           * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           */
           public Create setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
@@ -12156,7 +12228,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param advertiserId Required. The ID of the advertiser.
-         * @param targetingType Required. Identifies the type of this assigned targeting option.
+         * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+         *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
          * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
          * @return the request
          */
@@ -12191,7 +12265,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param advertiserId Required. The ID of the advertiser.
-           * @param targetingType Required. Identifies the type of this assigned targeting option.
+           * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+         *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
            * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
            * @since 1.13
            */
@@ -12283,17 +12359,27 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             return this;
           }
 
-          /** Required. Identifies the type of this assigned targeting option. */
+          /**
+           * Required. Identifies the type of this assigned targeting option. Supported targeting
+           * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+           * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
 
-          /** Required. Identifies the type of this assigned targeting option.
+          /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+         `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
           }
 
-          /** Required. Identifies the type of this assigned targeting option. */
+          /**
+           * Required. Identifies the type of this assigned targeting option. Supported targeting
+           * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+           * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           */
           public Delete setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
@@ -12339,7 +12425,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param advertiserId Required. The ID of the advertiser.
-         * @param targetingType Required. Identifies the type of this assigned targeting option.
+         * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+         *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
          * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this advertiser that identifies the assigned
          *        targeting option being requested.
          * @return the request
@@ -12374,7 +12462,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param advertiserId Required. The ID of the advertiser.
-           * @param targetingType Required. Identifies the type of this assigned targeting option.
+           * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+         *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
            * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this advertiser that identifies the assigned
          *        targeting option being requested.
            * @since 1.13
@@ -12477,17 +12567,27 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             return this;
           }
 
-          /** Required. Identifies the type of this assigned targeting option. */
+          /**
+           * Required. Identifies the type of this assigned targeting option. Supported targeting
+           * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+           * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
 
-          /** Required. Identifies the type of this assigned targeting option.
+          /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+         `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+         `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
           }
 
-          /** Required. Identifies the type of this assigned targeting option. */
+          /**
+           * Required. Identifies the type of this assigned targeting option. Supported targeting
+           * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+           * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           */
           public Get setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
@@ -12540,7 +12640,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param advertiserId Required. The ID of the advertiser.
-         * @param targetingType Required. Identifies the type of assigned targeting options to list.
+         * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+         *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
          * @return the request
          */
         public List list(java.lang.Long advertiserId, java.lang.String targetingType) throws java.io.IOException {
@@ -12570,7 +12672,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param advertiserId Required. The ID of the advertiser.
-           * @param targetingType Required. Identifies the type of assigned targeting options to list.
+           * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
+         *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+         *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
            * @since 1.13
            */
           protected List(java.lang.Long advertiserId, java.lang.String targetingType) {
@@ -12665,17 +12769,29 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             return this;
           }
 
-          /** Required. Identifies the type of assigned targeting options to list. */
+          /**
+           * Required. Identifies the type of assigned targeting options to list. Supported
+           * targeting types: * `TARGETING_TYPE_CHANNEL` *
+           * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+           * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
 
-          /** Required. Identifies the type of assigned targeting options to list.
+          /** Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
+         `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+         `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
           }
 
-          /** Required. Identifies the type of assigned targeting options to list. */
+          /**
+           * Required. Identifies the type of assigned targeting options to list. Supported
+           * targeting types: * `TARGETING_TYPE_CHANNEL` *
+           * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
+           * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           */
           public List setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
@@ -21367,6 +21483,146 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Searches for targeting options of a given type based on the given search terms.
+       *
+       * Create a request for the method "targetingOptions.search".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+       *
+       * @param targetingType Required. The type of targeting options to retrieve. Accepted values are: *
+       *        `TARGETING_TYPE_GEO_REGION`
+       * @param content the {@link com.google.api.services.displayvideo.v1.model.SearchTargetingOptionsRequest}
+       * @return the request
+       */
+      public Search search(java.lang.String targetingType, com.google.api.services.displayvideo.v1.model.SearchTargetingOptionsRequest content) throws java.io.IOException {
+        Search result = new Search(targetingType, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Search extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.SearchTargetingOptionsResponse> {
+
+        private static final String REST_PATH = "v1/targetingTypes/{+targetingType}/targetingOptions:search";
+
+        private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Searches for targeting options of a given type based on the given search terms.
+         *
+         * Create a request for the method "targetingOptions.search".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param targetingType Required. The type of targeting options to retrieve. Accepted values are: *
+       *        `TARGETING_TYPE_GEO_REGION`
+         * @param content the {@link com.google.api.services.displayvideo.v1.model.SearchTargetingOptionsRequest}
+         * @since 1.13
+         */
+        protected Search(java.lang.String targetingType, com.google.api.services.displayvideo.v1.model.SearchTargetingOptionsRequest content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v1.model.SearchTargetingOptionsResponse.class);
+          this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                "Parameter targetingType must conform to the pattern " +
+                "^[^/]+$");
+          }
+        }
+
+        @Override
+        public Search set$Xgafv(java.lang.String $Xgafv) {
+          return (Search) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Search setAccessToken(java.lang.String accessToken) {
+          return (Search) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Search setAlt(java.lang.String alt) {
+          return (Search) super.setAlt(alt);
+        }
+
+        @Override
+        public Search setCallback(java.lang.String callback) {
+          return (Search) super.setCallback(callback);
+        }
+
+        @Override
+        public Search setFields(java.lang.String fields) {
+          return (Search) super.setFields(fields);
+        }
+
+        @Override
+        public Search setKey(java.lang.String key) {
+          return (Search) super.setKey(key);
+        }
+
+        @Override
+        public Search setOauthToken(java.lang.String oauthToken) {
+          return (Search) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Search) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Search setQuotaUser(java.lang.String quotaUser) {
+          return (Search) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Search setUploadType(java.lang.String uploadType) {
+          return (Search) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Search setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Search) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The type of targeting options to retrieve. Accepted values are: *
+         * `TARGETING_TYPE_GEO_REGION`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String targetingType;
+
+        /** Required. The type of targeting options to retrieve. Accepted values are: *
+       `TARGETING_TYPE_GEO_REGION`
+         */
+        public java.lang.String getTargetingType() {
+          return targetingType;
+        }
+
+        /**
+         * Required. The type of targeting options to retrieve. Accepted values are: *
+         * `TARGETING_TYPE_GEO_REGION`
+         */
+        public Search setTargetingType(java.lang.String targetingType) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                "Parameter targetingType must conform to the pattern " +
+                "^[^/]+$");
+          }
+          this.targetingType = targetingType;
+          return this;
+        }
+
+        @Override
+        public Search set(String parameterName, Object value) {
+          return (Search) super.set(parameterName, value);
         }
       }
 

@@ -52,7 +52,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentPageAnchorPageRef extends
   private java.lang.String layoutType;
 
   /**
-   * Required. Index into the Document.pages element
+   * Required. Index into the Document.pages element, for example using Document.pages to locate the
+   * related page element.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -110,7 +111,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentPageAnchorPageRef extends
   }
 
   /**
-   * Required. Index into the Document.pages element
+   * Required. Index into the Document.pages element, for example using Document.pages to locate the
+   * related page element.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPage() {
@@ -118,7 +120,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentPageAnchorPageRef extends
   }
 
   /**
-   * Required. Index into the Document.pages element
+   * Required. Index into the Document.pages element, for example using Document.pages to locate the
+   * related page element.
    * @param page page or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1DocumentPageAnchorPageRef setPage(java.lang.Long page) {

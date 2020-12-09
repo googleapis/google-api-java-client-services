@@ -31,101 +31,26 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiUiv1beta3DeleteLabelerPoolOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The creation time of the operation.
+   * The basic metadata of the long running operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String createTime;
+  private GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata;
 
   /**
-   * Used only when Operation.done is false.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
-
-  /**
-   * A message providing more details about the current state of processing. For example, the error
-   * message if the operation is failed.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String stateMessage;
-
-  /**
-   * The last update time of the operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String updateTime;
-
-  /**
-   * The creation time of the operation.
+   * The basic metadata of the long running operation.
    * @return value or {@code null} for none
    */
-  public String getCreateTime() {
-    return createTime;
+  public GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata getCommonMetadata() {
+    return commonMetadata;
   }
 
   /**
-   * The creation time of the operation.
-   * @param createTime createTime or {@code null} for none
+   * The basic metadata of the long running operation.
+   * @param commonMetadata commonMetadata or {@code null} for none
    */
-  public GoogleCloudDocumentaiUiv1beta3DeleteLabelerPoolOperationMetadata setCreateTime(String createTime) {
-    this.createTime = createTime;
-    return this;
-  }
-
-  /**
-   * Used only when Operation.done is false.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
-
-  /**
-   * Used only when Operation.done is false.
-   * @param state state or {@code null} for none
-   */
-  public GoogleCloudDocumentaiUiv1beta3DeleteLabelerPoolOperationMetadata setState(java.lang.String state) {
-    this.state = state;
-    return this;
-  }
-
-  /**
-   * A message providing more details about the current state of processing. For example, the error
-   * message if the operation is failed.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStateMessage() {
-    return stateMessage;
-  }
-
-  /**
-   * A message providing more details about the current state of processing. For example, the error
-   * message if the operation is failed.
-   * @param stateMessage stateMessage or {@code null} for none
-   */
-  public GoogleCloudDocumentaiUiv1beta3DeleteLabelerPoolOperationMetadata setStateMessage(java.lang.String stateMessage) {
-    this.stateMessage = stateMessage;
-    return this;
-  }
-
-  /**
-   * The last update time of the operation.
-   * @return value or {@code null} for none
-   */
-  public String getUpdateTime() {
-    return updateTime;
-  }
-
-  /**
-   * The last update time of the operation.
-   * @param updateTime updateTime or {@code null} for none
-   */
-  public GoogleCloudDocumentaiUiv1beta3DeleteLabelerPoolOperationMetadata setUpdateTime(String updateTime) {
-    this.updateTime = updateTime;
+  public GoogleCloudDocumentaiUiv1beta3DeleteLabelerPoolOperationMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {
+    this.commonMetadata = commonMetadata;
     return this;
   }
 

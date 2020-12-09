@@ -31,32 +31,32 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Postal address. See also: https: //github.com/googleapis/googleapis/blob/ //
-   * master/google/type/postal_address.proto
+   * Postal address. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/postal_address.proto
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypePostalAddress addressValue;
 
   /**
-   * Date value. Includes year, month, day. See also: https:
-   * //github.com/googleapis/googleapis/blob/master/google/type/date.proto
+   * Date value. Includes year, month, day. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/date.proto
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate dateValue;
 
   /**
-   * DateTime value. Includes date, time, and timezone. See also: https:
-   * //github.com/googleapis/googleapis/blob/ // master/google/type/datetime.proto
+   * DateTime value. Includes date, time, and timezone. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/datetime.proto
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDateTime datetimeValue;
 
   /**
-   * Money value. See also: https: //github.com/googleapis/googleapis/blob/ //
-   * master/google/type/money.proto
+   * Money value. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/money.proto
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +74,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue ext
   private java.lang.String text;
 
   /**
-   * Postal address. See also: https: //github.com/googleapis/googleapis/blob/ //
-   * master/google/type/postal_address.proto
+   * Postal address. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/postal_address.proto
    * @return value or {@code null} for none
    */
   public GoogleTypePostalAddress getAddressValue() {
@@ -83,8 +83,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue ext
   }
 
   /**
-   * Postal address. See also: https: //github.com/googleapis/googleapis/blob/ //
-   * master/google/type/postal_address.proto
+   * Postal address. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/postal_address.proto
    * @param addressValue addressValue or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue setAddressValue(GoogleTypePostalAddress addressValue) {
@@ -93,8 +93,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue ext
   }
 
   /**
-   * Date value. Includes year, month, day. See also: https:
-   * //github.com/googleapis/googleapis/blob/master/google/type/date.proto
+   * Date value. Includes year, month, day. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/date.proto
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getDateValue() {
@@ -102,8 +102,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue ext
   }
 
   /**
-   * Date value. Includes year, month, day. See also: https:
-   * //github.com/googleapis/googleapis/blob/master/google/type/date.proto
+   * Date value. Includes year, month, day. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/date.proto
    * @param dateValue dateValue or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue setDateValue(GoogleTypeDate dateValue) {
@@ -112,8 +112,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue ext
   }
 
   /**
-   * DateTime value. Includes date, time, and timezone. See also: https:
-   * //github.com/googleapis/googleapis/blob/ // master/google/type/datetime.proto
+   * DateTime value. Includes date, time, and timezone. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/datetime.proto
    * @return value or {@code null} for none
    */
   public GoogleTypeDateTime getDatetimeValue() {
@@ -121,8 +121,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue ext
   }
 
   /**
-   * DateTime value. Includes date, time, and timezone. See also: https:
-   * //github.com/googleapis/googleapis/blob/ // master/google/type/datetime.proto
+   * DateTime value. Includes date, time, and timezone. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/datetime.proto
    * @param datetimeValue datetimeValue or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue setDatetimeValue(GoogleTypeDateTime datetimeValue) {
@@ -131,8 +131,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue ext
   }
 
   /**
-   * Money value. See also: https: //github.com/googleapis/googleapis/blob/ //
-   * master/google/type/money.proto
+   * Money value. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/money.proto
    * @return value or {@code null} for none
    */
   public GoogleTypeMoney getMoneyValue() {
@@ -140,8 +140,8 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue ext
   }
 
   /**
-   * Money value. See also: https: //github.com/googleapis/googleapis/blob/ //
-   * master/google/type/money.proto
+   * Money value. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/money.proto
    * @param moneyValue moneyValue or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue setMoneyValue(GoogleTypeMoney moneyValue) {

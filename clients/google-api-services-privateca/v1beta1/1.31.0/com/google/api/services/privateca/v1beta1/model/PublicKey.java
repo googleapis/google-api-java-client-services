@@ -42,7 +42,8 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
   private java.lang.String key;
 
   /**
-   * Required. The type of public key.
+   * Optional. The type of public key. If specified, it must match the public key used for the`key`
+   * field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +111,8 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of public key.
+   * Optional. The type of public key. If specified, it must match the public key used for the`key`
+   * field.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -118,7 +120,8 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of public key.
+   * Optional. The type of public key. If specified, it must match the public key used for the`key`
+   * field.
    * @param type type or {@code null} for none
    */
   public PublicKey setType(java.lang.String type) {

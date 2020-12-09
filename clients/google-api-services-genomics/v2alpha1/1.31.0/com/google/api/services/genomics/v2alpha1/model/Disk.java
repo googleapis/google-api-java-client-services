@@ -19,7 +19,7 @@ package com.google.api.services.genomics.v2alpha1.model;
 /**
  * Carries information about a disk that can be attached to a VM. See
  * https://cloud.google.com/compute/docs/disks/performance for more information about disk type,
- * size, and performance considerations.
+ * size, and performance considerations. Specify either `Volume` or `Disk`, but not both.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Genomics API. For a detailed explanation see:
@@ -33,7 +33,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * A user-supplied name for the disk. Used when mounting the disk into actions. The name must
-   * contain only upper and lowercase alphanumeric characters and hypens and cannot start with a
+   * contain only upper and lowercase alphanumeric characters and hyphens and cannot start with a
    * hyphen.
    * The value may be {@code null}.
    */
@@ -66,7 +66,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * A user-supplied name for the disk. Used when mounting the disk into actions. The name must
-   * contain only upper and lowercase alphanumeric characters and hypens and cannot start with a
+   * contain only upper and lowercase alphanumeric characters and hyphens and cannot start with a
    * hyphen.
    * @return value or {@code null} for none
    */
@@ -76,7 +76,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * A user-supplied name for the disk. Used when mounting the disk into actions. The name must
-   * contain only upper and lowercase alphanumeric characters and hypens and cannot start with a
+   * contain only upper and lowercase alphanumeric characters and hyphens and cannot start with a
    * hyphen.
    * @param name name or {@code null} for none
    */

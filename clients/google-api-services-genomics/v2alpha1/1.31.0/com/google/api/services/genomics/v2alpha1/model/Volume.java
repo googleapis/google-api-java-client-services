@@ -17,7 +17,8 @@
 package com.google.api.services.genomics.v2alpha1.model;
 
 /**
- * Carries information about storage that can be attached to a VM.
+ * Carries information about storage that can be attached to a VM. Specify either `Volume` or
+ * `Disk`, but not both.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Genomics API. For a detailed explanation see:

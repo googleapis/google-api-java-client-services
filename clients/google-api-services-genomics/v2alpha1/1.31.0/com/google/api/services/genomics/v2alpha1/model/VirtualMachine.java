@@ -76,7 +76,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   private java.lang.String cpuPlatform;
 
   /**
-   * The list of disks to create and attach to the VM.
+   * The list of disks to create and attach to the VM. Specify either the `volumes[]` field or the
+   * `disks[]` field, but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +164,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   private ServiceAccount serviceAccount;
 
   /**
-   * The list of disks and other storage to create or attach to the VM.
+   * The list of disks and other storage to create or attach to the VM. Specify either the
+   * `volumes[]` field or the `disks[]` field, but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,7 +264,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The list of disks to create and attach to the VM.
+   * The list of disks to create and attach to the VM. Specify either the `volumes[]` field or the
+   * `disks[]` field, but not both.
    * @return value or {@code null} for none
    */
   public java.util.List<Disk> getDisks() {
@@ -270,7 +273,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The list of disks to create and attach to the VM.
+   * The list of disks to create and attach to the VM. Specify either the `volumes[]` field or the
+   * `disks[]` field, but not both.
    * @param disks disks or {@code null} for none
    */
   public VirtualMachine setDisks(java.util.List<Disk> disks) {
@@ -451,7 +455,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The list of disks and other storage to create or attach to the VM.
+   * The list of disks and other storage to create or attach to the VM. Specify either the
+   * `volumes[]` field or the `disks[]` field, but not both.
    * @return value or {@code null} for none
    */
   public java.util.List<Volume> getVolumes() {
@@ -459,7 +464,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The list of disks and other storage to create or attach to the VM.
+   * The list of disks and other storage to create or attach to the VM. Specify either the
+   * `volumes[]` field or the `disks[]` field, but not both.
    * @param volumes volumes or {@code null} for none
    */
   public VirtualMachine setVolumes(java.util.List<Volume> volumes) {

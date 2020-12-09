@@ -71,6 +71,16 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private String lastAttemptTime;
 
   /**
+   * Immutable. This field is used to manage the legacy App Engine Cron jobs using the Cloud
+   * Scheduler API. If the field is set to true, the job will be considered a legacy job. Note that
+   * App Engine Cron jobs have fewer features than Cloud Scheduler jobs, e.g., are only limited to
+   * App Engine targets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean legacyAppEngineCron;
+
+  /**
    * Optionally caller-specified in CreateJob, after which it becomes output only. The job name. For
    * example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`. * `PROJECT_ID` can contain
    * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more
@@ -250,6 +260,29 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setLastAttemptTime(String lastAttemptTime) {
     this.lastAttemptTime = lastAttemptTime;
+    return this;
+  }
+
+  /**
+   * Immutable. This field is used to manage the legacy App Engine Cron jobs using the Cloud
+   * Scheduler API. If the field is set to true, the job will be considered a legacy job. Note that
+   * App Engine Cron jobs have fewer features than Cloud Scheduler jobs, e.g., are only limited to
+   * App Engine targets.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLegacyAppEngineCron() {
+    return legacyAppEngineCron;
+  }
+
+  /**
+   * Immutable. This field is used to manage the legacy App Engine Cron jobs using the Cloud
+   * Scheduler API. If the field is set to true, the job will be considered a legacy job. Note that
+   * App Engine Cron jobs have fewer features than Cloud Scheduler jobs, e.g., are only limited to
+   * App Engine targets.
+   * @param legacyAppEngineCron legacyAppEngineCron or {@code null} for none
+   */
+  public Job setLegacyAppEngineCron(java.lang.Boolean legacyAppEngineCron) {
+    this.legacyAppEngineCron = legacyAppEngineCron;
     return this;
   }
 

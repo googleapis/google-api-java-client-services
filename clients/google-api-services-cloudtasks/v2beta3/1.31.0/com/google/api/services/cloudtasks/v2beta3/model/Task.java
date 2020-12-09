@@ -118,6 +118,17 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Pull Message contained in a task in a PULL queue type. This payload type cannot be explicitly
+   * set through Cloud Tasks API. Its purpose, currently is to provide backward compatibility with
+   * App Engine Task Queue
+   * [pull](https://cloud.google.com/appengine/docs/standard/java/taskqueue/pull/) queues to provide
+   * a way to inspect contents of pull tasks through the CloudTasks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PullMessage pullMessage;
+
+  /**
    * Output only. The number of attempts which have received a response.
    * The value may be {@code null}.
    */
@@ -337,6 +348,31 @@ public final class Task extends com.google.api.client.json.GenericJson {
    */
   public Task setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Pull Message contained in a task in a PULL queue type. This payload type cannot be explicitly
+   * set through Cloud Tasks API. Its purpose, currently is to provide backward compatibility with
+   * App Engine Task Queue
+   * [pull](https://cloud.google.com/appengine/docs/standard/java/taskqueue/pull/) queues to provide
+   * a way to inspect contents of pull tasks through the CloudTasks.
+   * @return value or {@code null} for none
+   */
+  public PullMessage getPullMessage() {
+    return pullMessage;
+  }
+
+  /**
+   * Pull Message contained in a task in a PULL queue type. This payload type cannot be explicitly
+   * set through Cloud Tasks API. Its purpose, currently is to provide backward compatibility with
+   * App Engine Task Queue
+   * [pull](https://cloud.google.com/appengine/docs/standard/java/taskqueue/pull/) queues to provide
+   * a way to inspect contents of pull tasks through the CloudTasks.
+   * @param pullMessage pullMessage or {@code null} for none
+   */
+  public Task setPullMessage(PullMessage pullMessage) {
+    this.pullMessage = pullMessage;
     return this;
   }
 

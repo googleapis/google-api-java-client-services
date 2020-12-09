@@ -106,6 +106,14 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Output only. The realtime, informational statistics for a queue. In order to receive the
+   * statistics the caller should include this field in the FieldMask.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QueueStats stats;
+
+  /**
    * App Engine HTTP target. An App Engine queue is a queue that has an AppEngineHttpTarget.
    * @return value or {@code null} for none
    */
@@ -273,6 +281,25 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    */
   public Queue setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The realtime, informational statistics for a queue. In order to receive the
+   * statistics the caller should include this field in the FieldMask.
+   * @return value or {@code null} for none
+   */
+  public QueueStats getStats() {
+    return stats;
+  }
+
+  /**
+   * Output only. The realtime, informational statistics for a queue. In order to receive the
+   * statistics the caller should include this field in the FieldMask.
+   * @param stats stats or {@code null} for none
+   */
+  public Queue setStats(QueueStats stats) {
+    this.stats = stats;
     return this;
   }
 

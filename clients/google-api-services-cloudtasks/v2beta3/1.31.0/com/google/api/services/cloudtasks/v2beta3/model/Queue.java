@@ -113,6 +113,14 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Output only. The realtime, informational statistics for a queue. In order to receive the
+   * statistics the caller should include this field in the FieldMask.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QueueStats stats;
+
+  /**
    * Immutable. The type of a queue (push or pull). `Queue.type` is an immutable property of the
    * queue that is set at the queue creation time. When left unspecified, the default value of
    * `PUSH` is selected.
@@ -303,6 +311,25 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    */
   public Queue setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The realtime, informational statistics for a queue. In order to receive the
+   * statistics the caller should include this field in the FieldMask.
+   * @return value or {@code null} for none
+   */
+  public QueueStats getStats() {
+    return stats;
+  }
+
+  /**
+   * Output only. The realtime, informational statistics for a queue. In order to receive the
+   * statistics the caller should include this field in the FieldMask.
+   * @param stats stats or {@code null} for none
+   */
+  public Queue setStats(QueueStats stats) {
+    this.stats = stats;
     return this;
   }
 

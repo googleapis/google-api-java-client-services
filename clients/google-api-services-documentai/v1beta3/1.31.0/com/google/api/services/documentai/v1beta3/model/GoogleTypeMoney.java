@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleTypeMoney extends com.google.api.client.json.GenericJson {
 
   /**
-   * The 3-letter currency code defined in ISO 4217.
+   * The three-letter currency code defined in ISO 4217.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class GoogleTypeMoney extends com.google.api.client.json.GenericJso
   private java.lang.Long units;
 
   /**
-   * The 3-letter currency code defined in ISO 4217.
+   * The three-letter currency code defined in ISO 4217.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrencyCode() {
@@ -64,7 +64,7 @@ public final class GoogleTypeMoney extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The 3-letter currency code defined in ISO 4217.
+   * The three-letter currency code defined in ISO 4217.
    * @param currencyCode currencyCode or {@code null} for none
    */
   public GoogleTypeMoney setCurrencyCode(java.lang.String currencyCode) {

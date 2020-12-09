@@ -688,7 +688,9 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the documentai server.  After setting any optional
          * parameters, call the {@link BatchProcess#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The processor resource name.
+         * @param name Required. The resource name of Processor or ProcessorVersion. Format:
+         *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
+         *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
          * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchProcessRequest}
          * @return the request
          */
@@ -717,7 +719,9 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            * BatchProcess#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The processor resource name.
+           * @param name Required. The resource name of Processor or ProcessorVersion. Format:
+         *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
+         *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
            * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchProcessRequest}
            * @since 1.13
            */
@@ -786,17 +790,27 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             return (BatchProcess) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The processor resource name. */
+          /**
+           * Required. The resource name of Processor or ProcessorVersion. Format:
+           * projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/l
+           * ocations/{location}/processors/{processor}/processorVerions/{processorVersion}
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The processor resource name.
+          /** Required. The resource name of Processor or ProcessorVersion. Format:
+         projects/{project}/locations/{location}/processors/{processor}, or
+         projects/{project}/locations/{location}/processors/{processor}/processorVerions/{processorVersion}
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The processor resource name. */
+          /**
+           * Required. The resource name of Processor or ProcessorVersion. Format:
+           * projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/l
+           * ocations/{location}/processors/{processor}/processorVerions/{processorVersion}
+           */
           public BatchProcess setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -820,7 +834,10 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the documentai server.  After setting any optional
          * parameters, call the {@link Process#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The processor resource name.
+         * @param name Required. The resource name of the Processor or ProcessorVersion to use for processing. If a
+         *        Processor is specified, the server will use its default version. Format:
+         *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
+         *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
          * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ProcessRequest}
          * @return the request
          */
@@ -848,7 +865,10 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            * Process#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The processor resource name.
+           * @param name Required. The resource name of the Processor or ProcessorVersion to use for processing. If a
+         *        Processor is specified, the server will use its default version. Format:
+         *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
+         *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
            * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ProcessRequest}
            * @since 1.13
            */
@@ -917,17 +937,30 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             return (Process) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The processor resource name. */
+          /**
+           * Required. The resource name of the Processor or ProcessorVersion to use for processing.
+           * If a Processor is specified, the server will use its default version. Format:
+           * projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/l
+           * ocations/{location}/processors/{processor}/processorVerions/{processorVersion}
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The processor resource name.
+          /** Required. The resource name of the Processor or ProcessorVersion to use for processing. If a
+         Processor is specified, the server will use its default version. Format:
+         projects/{project}/locations/{location}/processors/{processor}, or
+         projects/{project}/locations/{location}/processors/{processor}/processorVerions/{processorVersion}
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The processor resource name. */
+          /**
+           * Required. The resource name of the Processor or ProcessorVersion to use for processing.
+           * If a Processor is specified, the server will use its default version. Format:
+           * projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/l
+           * ocations/{location}/processors/{processor}/processorVerions/{processorVersion}
+           */
           public Process setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1101,6 +1134,327 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public ReviewDocument set(String parameterName, Object value) {
               return (ReviewDocument) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the ProcessorVersions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Document documentai = new Document(...);}
+         *   {@code Document.ProcessorVersions.List request = documentai.processorVersions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ProcessorVersions processorVersions() {
+          return new ProcessorVersions();
+        }
+
+        /**
+         * The "processorVersions" collection of methods.
+         */
+        public class ProcessorVersions {
+
+          /**
+           * LRO endpoint to batch process many documents. The output is written to Cloud Storage as JSON in
+           * the [Document] format.
+           *
+           * Create a request for the method "processorVersions.batchProcess".
+           *
+           * This request holds the parameters needed by the documentai server.  After setting any optional
+           * parameters, call the {@link BatchProcess#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of Processor or ProcessorVersion. Format:
+           *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
+           *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
+           * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchProcessRequest}
+           * @return the request
+           */
+          public BatchProcess batchProcess(java.lang.String name, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchProcessRequest content) throws java.io.IOException {
+            BatchProcess result = new BatchProcess(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchProcess extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta3/{+name}:batchProcess";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+$");
+
+            /**
+             * LRO endpoint to batch process many documents. The output is written to Cloud Storage as JSON in
+             * the [Document] format.
+             *
+             * Create a request for the method "processorVersions.batchProcess".
+             *
+             * This request holds the parameters needed by the the documentai server.  After setting any
+             * optional parameters, call the {@link BatchProcess#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BatchProcess#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of Processor or ProcessorVersion. Format:
+           *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
+           *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
+             * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchProcessRequest}
+             * @since 1.13
+             */
+            protected BatchProcess(java.lang.String name, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchProcessRequest content) {
+              super(Document.this, "POST", REST_PATH, content, com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchProcess set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchProcess) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchProcess setAccessToken(java.lang.String accessToken) {
+              return (BatchProcess) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchProcess setAlt(java.lang.String alt) {
+              return (BatchProcess) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchProcess setCallback(java.lang.String callback) {
+              return (BatchProcess) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchProcess setFields(java.lang.String fields) {
+              return (BatchProcess) super.setFields(fields);
+            }
+
+            @Override
+            public BatchProcess setKey(java.lang.String key) {
+              return (BatchProcess) super.setKey(key);
+            }
+
+            @Override
+            public BatchProcess setOauthToken(java.lang.String oauthToken) {
+              return (BatchProcess) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchProcess setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchProcess) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchProcess setQuotaUser(java.lang.String quotaUser) {
+              return (BatchProcess) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchProcess setUploadType(java.lang.String uploadType) {
+              return (BatchProcess) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchProcess setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchProcess) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of Processor or ProcessorVersion. Format:
+             * projects/{project}/locations/{location}/processors/{processor}, or projects/{project}
+             * /locations/{location}/processors/{processor}/processorVerions/{processorVersion}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of Processor or ProcessorVersion. Format:
+           projects/{project}/locations/{location}/processors/{processor}, or
+           projects/{project}/locations/{location}/processors/{processor}/processorVerions/{processorVersion}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of Processor or ProcessorVersion. Format:
+             * projects/{project}/locations/{location}/processors/{processor}, or projects/{project}
+             * /locations/{location}/processors/{processor}/processorVerions/{processorVersion}
+             */
+            public BatchProcess setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public BatchProcess set(String parameterName, Object value) {
+              return (BatchProcess) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Processes a single document.
+           *
+           * Create a request for the method "processorVersions.process".
+           *
+           * This request holds the parameters needed by the documentai server.  After setting any optional
+           * parameters, call the {@link Process#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Processor or ProcessorVersion to use for processing. If a
+           *        Processor is specified, the server will use its default version. Format:
+           *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
+           *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
+           * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ProcessRequest}
+           * @return the request
+           */
+          public Process process(java.lang.String name, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ProcessRequest content) throws java.io.IOException {
+            Process result = new Process(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Process extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ProcessResponse> {
+
+            private static final String REST_PATH = "v1beta3/{+name}:process";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+$");
+
+            /**
+             * Processes a single document.
+             *
+             * Create a request for the method "processorVersions.process".
+             *
+             * This request holds the parameters needed by the the documentai server.  After setting any
+             * optional parameters, call the {@link Process#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Process#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Processor or ProcessorVersion to use for processing. If a
+           *        Processor is specified, the server will use its default version. Format:
+           *        projects/{project}/locations/{location}/processors/{processor}, or projects/{project}/loca
+           *        tions/{location}/processors/{processor}/processorVerions/{processorVersion}
+             * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ProcessRequest}
+             * @since 1.13
+             */
+            protected Process(java.lang.String name, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ProcessRequest content) {
+              super(Document.this, "POST", REST_PATH, content, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ProcessResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Process set$Xgafv(java.lang.String $Xgafv) {
+              return (Process) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Process setAccessToken(java.lang.String accessToken) {
+              return (Process) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Process setAlt(java.lang.String alt) {
+              return (Process) super.setAlt(alt);
+            }
+
+            @Override
+            public Process setCallback(java.lang.String callback) {
+              return (Process) super.setCallback(callback);
+            }
+
+            @Override
+            public Process setFields(java.lang.String fields) {
+              return (Process) super.setFields(fields);
+            }
+
+            @Override
+            public Process setKey(java.lang.String key) {
+              return (Process) super.setKey(key);
+            }
+
+            @Override
+            public Process setOauthToken(java.lang.String oauthToken) {
+              return (Process) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Process setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Process) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Process setQuotaUser(java.lang.String quotaUser) {
+              return (Process) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Process setUploadType(java.lang.String uploadType) {
+              return (Process) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Process setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Process) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Processor or ProcessorVersion to use for
+             * processing. If a Processor is specified, the server will use its default version.
+             * Format: projects/{project}/locations/{location}/processors/{processor}, or projects/{
+             * project}/locations/{location}/processors/{processor}/processorVerions/{processorVersi
+             * on}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Processor or ProcessorVersion to use for processing. If a
+           Processor is specified, the server will use its default version. Format:
+           projects/{project}/locations/{location}/processors/{processor}, or
+           projects/{project}/locations/{location}/processors/{processor}/processorVerions/{processorVersion}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Processor or ProcessorVersion to use for
+             * processing. If a Processor is specified, the server will use its default version.
+             * Format: projects/{project}/locations/{location}/processors/{processor}, or projects/{
+             * project}/locations/{location}/processors/{processor}/processorVerions/{processorVersi
+             * on}
+             */
+            public Process setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/processorVersions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Process set(String parameterName, Object value) {
+              return (Process) super.set(parameterName, value);
             }
           }
 

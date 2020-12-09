@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * The long running operation metadata for UpdateLabelerPool.
+ * The long running operation metadata for the undeploy processor version method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -28,7 +28,7 @@ package com.google.api.services.documentai.v1beta3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDocumentaiUiv1beta3UpdateLabelerPoolOperationMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDocumentaiUiv1beta3UndeployProcessorVersionMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * The basic metadata of the long running operation.
@@ -49,19 +49,19 @@ public final class GoogleCloudDocumentaiUiv1beta3UpdateLabelerPoolOperationMetad
    * The basic metadata of the long running operation.
    * @param commonMetadata commonMetadata or {@code null} for none
    */
-  public GoogleCloudDocumentaiUiv1beta3UpdateLabelerPoolOperationMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {
+  public GoogleCloudDocumentaiUiv1beta3UndeployProcessorVersionMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {
     this.commonMetadata = commonMetadata;
     return this;
   }
 
   @Override
-  public GoogleCloudDocumentaiUiv1beta3UpdateLabelerPoolOperationMetadata set(String fieldName, Object value) {
-    return (GoogleCloudDocumentaiUiv1beta3UpdateLabelerPoolOperationMetadata) super.set(fieldName, value);
+  public GoogleCloudDocumentaiUiv1beta3UndeployProcessorVersionMetadata set(String fieldName, Object value) {
+    return (GoogleCloudDocumentaiUiv1beta3UndeployProcessorVersionMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDocumentaiUiv1beta3UpdateLabelerPoolOperationMetadata clone() {
-    return (GoogleCloudDocumentaiUiv1beta3UpdateLabelerPoolOperationMetadata) super.clone();
+  public GoogleCloudDocumentaiUiv1beta3UndeployProcessorVersionMetadata clone() {
+    return (GoogleCloudDocumentaiUiv1beta3UndeployProcessorVersionMetadata) super.clone();
   }
 
 }

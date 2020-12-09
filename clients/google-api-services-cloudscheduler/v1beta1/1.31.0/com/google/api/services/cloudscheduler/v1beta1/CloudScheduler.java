@@ -782,6 +782,32 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
             return this;
           }
 
+          /**
+           * This field is used to manage the legacy App Engine Cron jobs using the Cloud Scheduler
+           * API. If the field is set to true, the job in the __cron queue with the corresponding
+           * name will be deleted instead.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean legacyAppEngineCron;
+
+          /** This field is used to manage the legacy App Engine Cron jobs using the Cloud Scheduler API. If the
+         field is set to true, the job in the __cron queue with the corresponding name will be deleted
+         instead.
+           */
+          public java.lang.Boolean getLegacyAppEngineCron() {
+            return legacyAppEngineCron;
+          }
+
+          /**
+           * This field is used to manage the legacy App Engine Cron jobs using the Cloud Scheduler
+           * API. If the field is set to true, the job in the __cron queue with the corresponding
+           * name will be deleted instead.
+           */
+          public Delete setLegacyAppEngineCron(java.lang.Boolean legacyAppEngineCron) {
+            this.legacyAppEngineCron = legacyAppEngineCron;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
@@ -1065,6 +1091,29 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
                   "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * This field is used to manage the legacy App Engine Cron jobs using the Cloud Scheduler
+           * API. If the field is set to true, the jobs in the __cron queue will be listed instead.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean legacyAppEngineCron;
+
+          /** This field is used to manage the legacy App Engine Cron jobs using the Cloud Scheduler API. If the
+         field is set to true, the jobs in the __cron queue will be listed instead.
+           */
+          public java.lang.Boolean getLegacyAppEngineCron() {
+            return legacyAppEngineCron;
+          }
+
+          /**
+           * This field is used to manage the legacy App Engine Cron jobs using the Cloud Scheduler
+           * API. If the field is set to true, the jobs in the __cron queue will be listed instead.
+           */
+          public List setLegacyAppEngineCron(java.lang.Boolean legacyAppEngineCron) {
+            this.legacyAppEngineCron = legacyAppEngineCron;
             return this;
           }
 

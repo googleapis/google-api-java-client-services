@@ -29,6 +29,36 @@ package com.google.api.services.cloudscheduler.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class RunJobRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * This field is used to manage the legacy App Engine Cron jobs using the Cloud Scheduler API. If
+   * the field is set to true, the job in the __cron queue with the corresponding name will be
+   * forced to run instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean legacyAppEngineCron;
+
+  /**
+   * This field is used to manage the legacy App Engine Cron jobs using the Cloud Scheduler API. If
+   * the field is set to true, the job in the __cron queue with the corresponding name will be
+   * forced to run instead.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLegacyAppEngineCron() {
+    return legacyAppEngineCron;
+  }
+
+  /**
+   * This field is used to manage the legacy App Engine Cron jobs using the Cloud Scheduler API. If
+   * the field is set to true, the job in the __cron queue with the corresponding name will be
+   * forced to run instead.
+   * @param legacyAppEngineCron legacyAppEngineCron or {@code null} for none
+   */
+  public RunJobRequest setLegacyAppEngineCron(java.lang.Boolean legacyAppEngineCron) {
+    this.legacyAppEngineCron = legacyAppEngineCron;
+    return this;
+  }
+
   @Override
   public RunJobRequest set(String fieldName, Object value) {
     return (RunJobRequest) super.set(fieldName, value);

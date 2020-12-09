@@ -32,7 +32,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set to control what and how to inspect.
+   * An inspection job scans a storage repository for InfoTypes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,14 +55,14 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
   private java.lang.String locationId;
 
   /**
-   * Set to choose what metric to calculate.
+   * A risk analysis job calculates re-identification risk metrics for a BigQuery table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2RiskAnalysisJobConfig riskJob;
 
   /**
-   * Set to control what and how to inspect.
+   * An inspection job scans a storage repository for InfoTypes.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectJobConfig getInspectJob() {
@@ -70,7 +70,7 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
   }
 
   /**
-   * Set to control what and how to inspect.
+   * An inspection job scans a storage repository for InfoTypes.
    * @param inspectJob inspectJob or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateDlpJobRequest setInspectJob(GooglePrivacyDlpV2InspectJobConfig inspectJob) {
@@ -117,7 +117,7 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
   }
 
   /**
-   * Set to choose what metric to calculate.
+   * A risk analysis job calculates re-identification risk metrics for a BigQuery table.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2RiskAnalysisJobConfig getRiskJob() {
@@ -125,7 +125,7 @@ public final class GooglePrivacyDlpV2CreateDlpJobRequest extends com.google.api.
   }
 
   /**
-   * Set to choose what metric to calculate.
+   * A risk analysis job calculates re-identification risk metrics for a BigQuery table.
    * @param riskJob riskJob or {@code null} for none
    */
   public GooglePrivacyDlpV2CreateDlpJobRequest setRiskJob(GooglePrivacyDlpV2RiskAnalysisJobConfig riskJob) {

@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetails extends com.google
   private GooglePrivacyDlpV2RequestedOptions requestedOptions;
 
   /**
-   * A summary of the outcome of this inspect job.
+   * A summary of the outcome of this inspection job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetails extends com.google
   }
 
   /**
-   * A summary of the outcome of this inspect job.
+   * A summary of the outcome of this inspection job.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2Result getResult() {
@@ -70,7 +70,7 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetails extends com.google
   }
 
   /**
-   * A summary of the outcome of this inspect job.
+   * A summary of the outcome of this inspection job.
    * @param result result or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectDataSourceDetails setResult(GooglePrivacyDlpV2Result result) {

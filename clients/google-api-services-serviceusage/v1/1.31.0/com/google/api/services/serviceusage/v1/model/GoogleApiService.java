@@ -74,7 +74,7 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   private Billing billing;
 
   /**
-   * This field is obsolete. Its value must be set to `3`.
+   * Deprecated. The service config compiler always sets this field to `3`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -335,7 +335,7 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * This field is obsolete. Its value must be set to `3`.
+   * Deprecated. The service config compiler always sets this field to `3`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getConfigVersion() {
@@ -343,7 +343,7 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * This field is obsolete. Its value must be set to `3`.
+   * Deprecated. The service config compiler always sets this field to `3`.
    * @param configVersion configVersion or {@code null} for none
    */
   public GoogleApiService setConfigVersion(java.lang.Long configVersion) {

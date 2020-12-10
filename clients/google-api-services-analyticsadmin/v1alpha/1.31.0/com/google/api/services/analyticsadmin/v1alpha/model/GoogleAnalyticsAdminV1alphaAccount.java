@@ -31,8 +31,8 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Country of business. Must be a non-deprecated code for a UN M.49 region. https:
-   * //unicode.org/cldr/charts/latest/supplem // ental/territory_containment_un_m_49.html
+   * Country of business. Must be a non-deprecated code for a UN M.49 region.
+   * https://unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,8 +75,8 @@ public final class GoogleAnalyticsAdminV1alphaAccount extends com.google.api.cli
   private String updateTime;
 
   /**
-   * Country of business. Must be a non-deprecated code for a UN M.49 region. https:
-   * //unicode.org/cldr/charts/latest/supplem // ental/territory_containment_un_m_49.html
+   * Country of business. Must be a non-deprecated code for a UN M.49 region.
+   * https://unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html
    * @return value or {@code null} for none
    */
   public java.lang.String getCountryCode() {
@@ -84,8 +84,8 @@ public final class GoogleAnalyticsAdminV1alphaAccount extends com.google.api.cli
   }
 
   /**
-   * Country of business. Must be a non-deprecated code for a UN M.49 region. https:
-   * //unicode.org/cldr/charts/latest/supplem // ental/territory_containment_un_m_49.html
+   * Country of business. Must be a non-deprecated code for a UN M.49 region.
+   * https://unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html
    * @param countryCode countryCode or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaAccount setCountryCode(java.lang.String countryCode) {

@@ -46,6 +46,13 @@ public final class SearchAnalyticsQueryRequest extends com.google.api.client.jso
   private java.lang.String aggregationType;
 
   /**
+   * The data state to be fetched, can be full or all, the latter including full and partial data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataState;
+
+  /**
    * [Optional] Zero or more filters to apply to the dimension grouping values; for example, 'query
    * contains \"buy\"' to see only data where the query string contains the substring \"buy\" (not
    * case-sensitive). You can filter by a dimension without grouping by it.
@@ -138,6 +145,23 @@ public final class SearchAnalyticsQueryRequest extends com.google.api.client.jso
    */
   public SearchAnalyticsQueryRequest setAggregationType(java.lang.String aggregationType) {
     this.aggregationType = aggregationType;
+    return this;
+  }
+
+  /**
+   * The data state to be fetched, can be full or all, the latter including full and partial data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataState() {
+    return dataState;
+  }
+
+  /**
+   * The data state to be fetched, can be full or all, the latter including full and partial data.
+   * @param dataState dataState or {@code null} for none
+   */
+  public SearchAnalyticsQueryRequest setDataState(java.lang.String dataState) {
+    this.dataState = dataState;
     return this;
   }
 

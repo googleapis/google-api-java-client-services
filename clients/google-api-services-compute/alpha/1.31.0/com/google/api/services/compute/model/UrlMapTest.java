@@ -45,12 +45,45 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * The expected output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters. For rules that forward requests to backends, the test passes only when
+   * expectedOutputUrl matches the request forwarded by load balancer to backends. For rules with
+   * urlRewrite, the test verifies that the forwarded request matches hostRewrite and
+   * pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s
+   * scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl
+   * matches the URL in the load balancer's redirect response. If urlRedirect specifies
+   * https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to https.
+   * If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not
+   * contain any query parameters. expectedOutputUrl is optional when service is specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String expectedOutputUrl;
+
+  /**
+   * For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the
+   * HTTP status code in load balancer's redirect response. expectedRedirectResponseCode cannot be
+   * set when service is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer expectedRedirectResponseCode;
+
+  /**
    * The expected URL that should be redirected to for the host and path being tested. [Deprecated]
    * This field is deprecated. Use expected_output_url instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String expectedUrlRedirect;
+
+  /**
+   * HTTP headers for this request. If headers contains a host header, then host must also match the
+   * header value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UrlMapTestHeader> headers;
 
   /**
    * Host portion of the URL. If headers contains a host header, then host must also match the
@@ -112,6 +145,62 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The expected output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters. For rules that forward requests to backends, the test passes only when
+   * expectedOutputUrl matches the request forwarded by load balancer to backends. For rules with
+   * urlRewrite, the test verifies that the forwarded request matches hostRewrite and
+   * pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s
+   * scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl
+   * matches the URL in the load balancer's redirect response. If urlRedirect specifies
+   * https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to https.
+   * If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not
+   * contain any query parameters. expectedOutputUrl is optional when service is specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExpectedOutputUrl() {
+    return expectedOutputUrl;
+  }
+
+  /**
+   * The expected output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters. For rules that forward requests to backends, the test passes only when
+   * expectedOutputUrl matches the request forwarded by load balancer to backends. For rules with
+   * urlRewrite, the test verifies that the forwarded request matches hostRewrite and
+   * pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s
+   * scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl
+   * matches the URL in the load balancer's redirect response. If urlRedirect specifies
+   * https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to https.
+   * If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not
+   * contain any query parameters. expectedOutputUrl is optional when service is specified.
+   * @param expectedOutputUrl expectedOutputUrl or {@code null} for none
+   */
+  public UrlMapTest setExpectedOutputUrl(java.lang.String expectedOutputUrl) {
+    this.expectedOutputUrl = expectedOutputUrl;
+    return this;
+  }
+
+  /**
+   * For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the
+   * HTTP status code in load balancer's redirect response. expectedRedirectResponseCode cannot be
+   * set when service is set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getExpectedRedirectResponseCode() {
+    return expectedRedirectResponseCode;
+  }
+
+  /**
+   * For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the
+   * HTTP status code in load balancer's redirect response. expectedRedirectResponseCode cannot be
+   * set when service is set.
+   * @param expectedRedirectResponseCode expectedRedirectResponseCode or {@code null} for none
+   */
+  public UrlMapTest setExpectedRedirectResponseCode(java.lang.Integer expectedRedirectResponseCode) {
+    this.expectedRedirectResponseCode = expectedRedirectResponseCode;
+    return this;
+  }
+
+  /**
    * The expected URL that should be redirected to for the host and path being tested. [Deprecated]
    * This field is deprecated. Use expected_output_url instead.
    * @return value or {@code null} for none
@@ -127,6 +216,25 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
    */
   public UrlMapTest setExpectedUrlRedirect(java.lang.String expectedUrlRedirect) {
     this.expectedUrlRedirect = expectedUrlRedirect;
+    return this;
+  }
+
+  /**
+   * HTTP headers for this request. If headers contains a host header, then host must also match the
+   * header value.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UrlMapTestHeader> getHeaders() {
+    return headers;
+  }
+
+  /**
+   * HTTP headers for this request. If headers contains a host header, then host must also match the
+   * header value.
+   * @param headers headers or {@code null} for none
+   */
+  public UrlMapTest setHeaders(java.util.List<UrlMapTestHeader> headers) {
+    this.headers = headers;
     return this;
   }
 

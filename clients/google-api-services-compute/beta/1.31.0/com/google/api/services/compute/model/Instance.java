@@ -33,6 +33,13 @@ package com.google.api.services.compute.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Controls for advanced machine-related behavior features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdvancedMachineFeatures advancedMachineFeatures;
+
+  /**
    * Allows this instance to send and receive packets with non-matching destination or source IPs.
    * This is required if you plan to use this instance to forward routes. For more information, see
    * Enabling IP Forwarding.
@@ -376,6 +383,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Controls for advanced machine-related behavior features.
+   * @return value or {@code null} for none
+   */
+  public AdvancedMachineFeatures getAdvancedMachineFeatures() {
+    return advancedMachineFeatures;
+  }
+
+  /**
+   * Controls for advanced machine-related behavior features.
+   * @param advancedMachineFeatures advancedMachineFeatures or {@code null} for none
+   */
+  public Instance setAdvancedMachineFeatures(AdvancedMachineFeatures advancedMachineFeatures) {
+    this.advancedMachineFeatures = advancedMachineFeatures;
+    return this;
+  }
 
   /**
    * Allows this instance to send and receive packets with non-matching destination or source IPs.

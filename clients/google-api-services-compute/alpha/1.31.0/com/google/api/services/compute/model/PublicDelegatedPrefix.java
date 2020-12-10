@@ -74,6 +74,13 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.String ipCidrRange;
 
   /**
+   * If true, the prefix will be live migrated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isLiveMigration;
+
+  /**
    * [Output Only] Type of the resource. Always compute#publicDelegatedPrefix for public delegated
    * prefixes.
    * The value may be {@code null}.
@@ -268,6 +275,23 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    */
   public PublicDelegatedPrefix setIpCidrRange(java.lang.String ipCidrRange) {
     this.ipCidrRange = ipCidrRange;
+    return this;
+  }
+
+  /**
+   * If true, the prefix will be live migrated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsLiveMigration() {
+    return isLiveMigration;
+  }
+
+  /**
+   * If true, the prefix will be live migrated.
+   * @param isLiveMigration isLiveMigration or {@code null} for none
+   */
+  public PublicDelegatedPrefix setIsLiveMigration(java.lang.Boolean isLiveMigration) {
+    this.isLiveMigration = isLiveMigration;
     return this;
   }
 

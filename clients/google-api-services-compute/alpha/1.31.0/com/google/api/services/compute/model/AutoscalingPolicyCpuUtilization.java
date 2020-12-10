@@ -42,14 +42,14 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
   private java.lang.String predictiveMethod;
 
   /**
-   * The target CPU utilization that the autoscaler should maintain. Must be a float value in the
-   * range (0, 1]. If not specified, the default is 0.6.
+   * The target CPU utilization that the autoscaler maintains. Must be a float value in the range
+   * (0, 1]. If not specified, the default is 0.6.
    *
-   * If the CPU level is below the target utilization, the autoscaler scales down the number of
+   * If the CPU level is below the target utilization, the autoscaler scales in the number of
    * instances until it reaches the minimum number of instances you specified or until the average
    * CPU of your instances reaches the target utilization.
    *
-   * If the average CPU is above the target utilization, the autoscaler scales up until it reaches
+   * If the average CPU is above the target utilization, the autoscaler scales out until it reaches
    * the maximum number of instances you specified or until the average utilization reaches the
    * target utilization.
    * The value may be {@code null}.
@@ -85,14 +85,14 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
   }
 
   /**
-   * The target CPU utilization that the autoscaler should maintain. Must be a float value in the
-   * range (0, 1]. If not specified, the default is 0.6.
+   * The target CPU utilization that the autoscaler maintains. Must be a float value in the range
+   * (0, 1]. If not specified, the default is 0.6.
    *
-   * If the CPU level is below the target utilization, the autoscaler scales down the number of
+   * If the CPU level is below the target utilization, the autoscaler scales in the number of
    * instances until it reaches the minimum number of instances you specified or until the average
    * CPU of your instances reaches the target utilization.
    *
-   * If the average CPU is above the target utilization, the autoscaler scales up until it reaches
+   * If the average CPU is above the target utilization, the autoscaler scales out until it reaches
    * the maximum number of instances you specified or until the average utilization reaches the
    * target utilization.
    * @return value or {@code null} for none
@@ -102,14 +102,14 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
   }
 
   /**
-   * The target CPU utilization that the autoscaler should maintain. Must be a float value in the
-   * range (0, 1]. If not specified, the default is 0.6.
+   * The target CPU utilization that the autoscaler maintains. Must be a float value in the range
+   * (0, 1]. If not specified, the default is 0.6.
    *
-   * If the CPU level is below the target utilization, the autoscaler scales down the number of
+   * If the CPU level is below the target utilization, the autoscaler scales in the number of
    * instances until it reaches the minimum number of instances you specified or until the average
    * CPU of your instances reaches the target utilization.
    *
-   * If the average CPU is above the target utilization, the autoscaler scales up until it reaches
+   * If the average CPU is above the target utilization, the autoscaler scales out until it reaches
    * the maximum number of instances you specified or until the average utilization reaches the
    * target utilization.
    * @param utilizationTarget utilizationTarget or {@code null} for none

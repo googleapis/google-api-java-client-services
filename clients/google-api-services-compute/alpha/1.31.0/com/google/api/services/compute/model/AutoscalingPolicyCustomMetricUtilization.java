@@ -48,10 +48,10 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
    *
    * If not specified, the type defaults to gce_instance.
    *
-   * You should provide a filter that is selective enough to pick just one TimeSeries for the
-   * autoscaled group or for each of the instances (if you are using gce_instance resource type). If
-   * multiple TimeSeries are returned upon the query execution, the autoscaler will sum their
-   * respective values to obtain its scaling value.
+   * Try to provide a filter that is selective enough to pick just one TimeSeries for the autoscaled
+   * group or for each of the instances (if you are using gce_instance resource type). If multiple
+   * TimeSeries are returned upon the query execution, the autoscaler will sum their respective
+   * values to obtain its scaling value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +70,8 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
   /**
    * If scaling is based on a per-group metric value that represents the total amount of work to be
    * done or resource usage, set this value to an amount assigned for a single instance of the
-   * scaled group. Autoscaler will keep the number of instances proportional to the value of this
-   * metric, the metric itself should not change value due to group resizing.
+   * scaled group. Autoscaler keeps the number of instances proportional to the value of this
+   * metric. The metric itself does not change value due to group resizing.
    *
    * A good metric to use with the target is for example
    * pubsub.googleapis.com/subscription/num_undelivered_messages or a custom metric exporting the
@@ -86,13 +86,13 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
   private java.lang.Double singleInstanceAssignment;
 
   /**
-   * The target value of the metric that autoscaler should maintain. This must be a positive value.
-   * A utilization metric scales number of virtual machines handling requests to increase or
-   * decrease proportionally to the metric.
+   * The target value of the metric that autoscaler maintains. This must be a positive value. A
+   * utilization metric scales number of virtual machines handling requests to increase or decrease
+   * proportionally to the metric.
    *
    * For example, a good metric to use as a utilization_target is
    * https://www.googleapis.com/compute/v1/instance/network/received_bytes_count. The autoscaler
-   * will work to keep this value constant for each of the instances.
+   * works to keep this value constant for each of the instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,10 +125,10 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
    *
    * If not specified, the type defaults to gce_instance.
    *
-   * You should provide a filter that is selective enough to pick just one TimeSeries for the
-   * autoscaled group or for each of the instances (if you are using gce_instance resource type). If
-   * multiple TimeSeries are returned upon the query execution, the autoscaler will sum their
-   * respective values to obtain its scaling value.
+   * Try to provide a filter that is selective enough to pick just one TimeSeries for the autoscaled
+   * group or for each of the instances (if you are using gce_instance resource type). If multiple
+   * TimeSeries are returned upon the query execution, the autoscaler will sum their respective
+   * values to obtain its scaling value.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -154,10 +154,10 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
    *
    * If not specified, the type defaults to gce_instance.
    *
-   * You should provide a filter that is selective enough to pick just one TimeSeries for the
-   * autoscaled group or for each of the instances (if you are using gce_instance resource type). If
-   * multiple TimeSeries are returned upon the query execution, the autoscaler will sum their
-   * respective values to obtain its scaling value.
+   * Try to provide a filter that is selective enough to pick just one TimeSeries for the autoscaled
+   * group or for each of the instances (if you are using gce_instance resource type). If multiple
+   * TimeSeries are returned upon the query execution, the autoscaler will sum their respective
+   * values to obtain its scaling value.
    * @param filter filter or {@code null} for none
    */
   public AutoscalingPolicyCustomMetricUtilization setFilter(java.lang.String filter) {
@@ -191,8 +191,8 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
   /**
    * If scaling is based on a per-group metric value that represents the total amount of work to be
    * done or resource usage, set this value to an amount assigned for a single instance of the
-   * scaled group. Autoscaler will keep the number of instances proportional to the value of this
-   * metric, the metric itself should not change value due to group resizing.
+   * scaled group. Autoscaler keeps the number of instances proportional to the value of this
+   * metric. The metric itself does not change value due to group resizing.
    *
    * A good metric to use with the target is for example
    * pubsub.googleapis.com/subscription/num_undelivered_messages or a custom metric exporting the
@@ -210,8 +210,8 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
   /**
    * If scaling is based on a per-group metric value that represents the total amount of work to be
    * done or resource usage, set this value to an amount assigned for a single instance of the
-   * scaled group. Autoscaler will keep the number of instances proportional to the value of this
-   * metric, the metric itself should not change value due to group resizing.
+   * scaled group. Autoscaler keeps the number of instances proportional to the value of this
+   * metric. The metric itself does not change value due to group resizing.
    *
    * A good metric to use with the target is for example
    * pubsub.googleapis.com/subscription/num_undelivered_messages or a custom metric exporting the
@@ -228,13 +228,13 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
   }
 
   /**
-   * The target value of the metric that autoscaler should maintain. This must be a positive value.
-   * A utilization metric scales number of virtual machines handling requests to increase or
-   * decrease proportionally to the metric.
+   * The target value of the metric that autoscaler maintains. This must be a positive value. A
+   * utilization metric scales number of virtual machines handling requests to increase or decrease
+   * proportionally to the metric.
    *
    * For example, a good metric to use as a utilization_target is
    * https://www.googleapis.com/compute/v1/instance/network/received_bytes_count. The autoscaler
-   * will work to keep this value constant for each of the instances.
+   * works to keep this value constant for each of the instances.
    * @return value or {@code null} for none
    */
   public java.lang.Double getUtilizationTarget() {
@@ -242,13 +242,13 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
   }
 
   /**
-   * The target value of the metric that autoscaler should maintain. This must be a positive value.
-   * A utilization metric scales number of virtual machines handling requests to increase or
-   * decrease proportionally to the metric.
+   * The target value of the metric that autoscaler maintains. This must be a positive value. A
+   * utilization metric scales number of virtual machines handling requests to increase or decrease
+   * proportionally to the metric.
    *
    * For example, a good metric to use as a utilization_target is
    * https://www.googleapis.com/compute/v1/instance/network/received_bytes_count. The autoscaler
-   * will work to keep this value constant for each of the instances.
+   * works to keep this value constant for each of the instances.
    * @param utilizationTarget utilizationTarget or {@code null} for none
    */
   public AutoscalingPolicyCustomMetricUtilization setUtilizationTarget(java.lang.Double utilizationTarget) {

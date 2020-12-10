@@ -95,9 +95,9 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
-   * Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from
-   * ON. This field is empty when autoscaler is not connected to the existing managed instance group
-   * or autoscaler did not generate its prediction.
+   * Autoscaler calculates the recommended MIG size even when the autoscaling policy mode is
+   * different from ON. This field is empty when autoscaler is not connected to an existing managed
+   * instance group or autoscaler did not generate its prediction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +154,8 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.util.List<AutoscalerStatusDetails> statusDetails;
 
   /**
-   * URL of the managed instance group that this autoscaler will scale.
+   * URL of the managed instance group that this autoscaler will scale. This field is required when
+   * creating an autoscaler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -290,9 +291,9 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
-   * Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from
-   * ON. This field is empty when autoscaler is not connected to the existing managed instance group
-   * or autoscaler did not generate its prediction.
+   * Autoscaler calculates the recommended MIG size even when the autoscaling policy mode is
+   * different from ON. This field is empty when autoscaler is not connected to an existing managed
+   * instance group or autoscaler did not generate its prediction.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRecommendedSize() {
@@ -301,9 +302,9 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
-   * Autoscaler calculates recommended MIG size even when autoscaling policy mode is different from
-   * ON. This field is empty when autoscaler is not connected to the existing managed instance group
-   * or autoscaler did not generate its prediction.
+   * Autoscaler calculates the recommended MIG size even when the autoscaling policy mode is
+   * different from ON. This field is empty when autoscaler is not connected to an existing managed
+   * instance group or autoscaler did not generate its prediction.
    * @param recommendedSize recommendedSize or {@code null} for none
    */
   public Autoscaler setRecommendedSize(java.lang.Integer recommendedSize) {
@@ -430,7 +431,8 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the managed instance group that this autoscaler will scale.
+   * URL of the managed instance group that this autoscaler will scale. This field is required when
+   * creating an autoscaler.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -438,7 +440,8 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the managed instance group that this autoscaler will scale.
+   * URL of the managed instance group that this autoscaler will scale. This field is required when
+   * creating an autoscaler.
    * @param target target or {@code null} for none
    */
   public Autoscaler setTarget(java.lang.String target) {

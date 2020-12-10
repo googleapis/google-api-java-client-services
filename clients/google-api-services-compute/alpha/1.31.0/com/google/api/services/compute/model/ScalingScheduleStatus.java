@@ -31,17 +31,17 @@ public final class ScalingScheduleStatus extends com.google.api.client.json.Gene
 
   /**
    * [Output Only] The last time the scaling schedule became active. Note: this is a timestamp when
-   * a schedule actually became active, not when it was planned to do so. The timestamp is an
-   * RFC3339 string in RFC3339 text format.
+   * a schedule actually became active, not when it was planned to do so. The timestamp is in
+   * RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastStartTime;
 
   /**
-   * [Output Only] The next time the scaling schedule will become active. Note: this is a timestamp
+   * [Output Only] The next time the scaling schedule is to become active. Note: this is a timestamp
    * when a schedule is planned to run, but the actual time might be slightly different. The
-   * timestamp is an RFC3339 string in RFC3339 text format.
+   * timestamp is in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +56,8 @@ public final class ScalingScheduleStatus extends com.google.api.client.json.Gene
 
   /**
    * [Output Only] The last time the scaling schedule became active. Note: this is a timestamp when
-   * a schedule actually became active, not when it was planned to do so. The timestamp is an
-   * RFC3339 string in RFC3339 text format.
+   * a schedule actually became active, not when it was planned to do so. The timestamp is in
+   * RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastStartTime() {
@@ -66,8 +66,8 @@ public final class ScalingScheduleStatus extends com.google.api.client.json.Gene
 
   /**
    * [Output Only] The last time the scaling schedule became active. Note: this is a timestamp when
-   * a schedule actually became active, not when it was planned to do so. The timestamp is an
-   * RFC3339 string in RFC3339 text format.
+   * a schedule actually became active, not when it was planned to do so. The timestamp is in
+   * RFC3339 text format.
    * @param lastStartTime lastStartTime or {@code null} for none
    */
   public ScalingScheduleStatus setLastStartTime(java.lang.String lastStartTime) {
@@ -76,9 +76,9 @@ public final class ScalingScheduleStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] The next time the scaling schedule will become active. Note: this is a timestamp
+   * [Output Only] The next time the scaling schedule is to become active. Note: this is a timestamp
    * when a schedule is planned to run, but the actual time might be slightly different. The
-   * timestamp is an RFC3339 string in RFC3339 text format.
+   * timestamp is in RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextStartTime() {
@@ -86,9 +86,9 @@ public final class ScalingScheduleStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] The next time the scaling schedule will become active. Note: this is a timestamp
+   * [Output Only] The next time the scaling schedule is to become active. Note: this is a timestamp
    * when a schedule is planned to run, but the actual time might be slightly different. The
-   * timestamp is an RFC3339 string in RFC3339 text format.
+   * timestamp is in RFC3339 text format.
    * @param nextStartTime nextStartTime or {@code null} for none
    */
   public ScalingScheduleStatus setNextStartTime(java.lang.String nextStartTime) {

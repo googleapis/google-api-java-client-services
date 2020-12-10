@@ -66,14 +66,15 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.lang.Long minCount;
 
   /**
-   * Instance name pattern. Name pattern includes a parameter to specify the auto-incrementing
-   * portion of the name, in a form of consecutive hash (#) chars, each of them corresponding to one
-   * digit of an instance name. For example: name_pattern = inst-####-prod will generate names
-   * starting with inst-0001-prod, inst-0002-prod, up to required count. If there exist instances
-   * matching the name pattern in the same project and zone, the initial instance number will be
-   * equal to the maximum existing instance number + 1 (e.g. if there exists an instance with name
-   * inst-0030-prod, then the generated names will start with inst-0031-prod). The name pattern
-   * placeholder #...# can contain up to 18 characters.
+   * The string pattern used for the names of the VMs. Either name_pattern or predefined_names must
+   * be set. The pattern should contain one consecutive sequence of placeholder hash characters (#)
+   * with each character corresponding to one digit of the generated instance name. Example:
+   * name_pattern of inst-#### will generate instance names like inst-0001, inst-0002, ... . If
+   * there already exist instance(s) whose names match the name pattern in the same project and
+   * zone, then the generated instance numbers will start after the biggest existing number. For
+   * example, if there exists an instance with name inst-0050, then instance names generated using
+   * the pattern inst-#### will be inst-0051, inst-0052, etc. The name pattern placeholder #...# can
+   * contain up to 18 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,14 +191,15 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * Instance name pattern. Name pattern includes a parameter to specify the auto-incrementing
-   * portion of the name, in a form of consecutive hash (#) chars, each of them corresponding to one
-   * digit of an instance name. For example: name_pattern = inst-####-prod will generate names
-   * starting with inst-0001-prod, inst-0002-prod, up to required count. If there exist instances
-   * matching the name pattern in the same project and zone, the initial instance number will be
-   * equal to the maximum existing instance number + 1 (e.g. if there exists an instance with name
-   * inst-0030-prod, then the generated names will start with inst-0031-prod). The name pattern
-   * placeholder #...# can contain up to 18 characters.
+   * The string pattern used for the names of the VMs. Either name_pattern or predefined_names must
+   * be set. The pattern should contain one consecutive sequence of placeholder hash characters (#)
+   * with each character corresponding to one digit of the generated instance name. Example:
+   * name_pattern of inst-#### will generate instance names like inst-0001, inst-0002, ... . If
+   * there already exist instance(s) whose names match the name pattern in the same project and
+   * zone, then the generated instance numbers will start after the biggest existing number. For
+   * example, if there exists an instance with name inst-0050, then instance names generated using
+   * the pattern inst-#### will be inst-0051, inst-0052, etc. The name pattern placeholder #...# can
+   * contain up to 18 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamePattern() {
@@ -205,14 +207,15 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * Instance name pattern. Name pattern includes a parameter to specify the auto-incrementing
-   * portion of the name, in a form of consecutive hash (#) chars, each of them corresponding to one
-   * digit of an instance name. For example: name_pattern = inst-####-prod will generate names
-   * starting with inst-0001-prod, inst-0002-prod, up to required count. If there exist instances
-   * matching the name pattern in the same project and zone, the initial instance number will be
-   * equal to the maximum existing instance number + 1 (e.g. if there exists an instance with name
-   * inst-0030-prod, then the generated names will start with inst-0031-prod). The name pattern
-   * placeholder #...# can contain up to 18 characters.
+   * The string pattern used for the names of the VMs. Either name_pattern or predefined_names must
+   * be set. The pattern should contain one consecutive sequence of placeholder hash characters (#)
+   * with each character corresponding to one digit of the generated instance name. Example:
+   * name_pattern of inst-#### will generate instance names like inst-0001, inst-0002, ... . If
+   * there already exist instance(s) whose names match the name pattern in the same project and
+   * zone, then the generated instance numbers will start after the biggest existing number. For
+   * example, if there exists an instance with name inst-0050, then instance names generated using
+   * the pattern inst-#### will be inst-0051, inst-0052, etc. The name pattern placeholder #...# can
+   * contain up to 18 characters.
    * @param namePattern namePattern or {@code null} for none
    */
   public BulkInsertInstanceResource setNamePattern(java.lang.String namePattern) {

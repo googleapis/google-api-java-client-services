@@ -65,6 +65,18 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   private java.lang.Integer port;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String weight;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String weightError;
+
+  /**
    * Metadata defined as annotations for network endpoint.
    * @return value or {@code null} for none
    */
@@ -146,6 +158,36 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
    */
   public HealthStatus setPort(java.lang.Integer port) {
     this.port = port;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWeight() {
+    return weight;
+  }
+
+  /**
+   * @param weight weight or {@code null} for none
+   */
+  public HealthStatus setWeight(java.lang.String weight) {
+    this.weight = weight;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWeightError() {
+    return weightError;
+  }
+
+  /**
+   * @param weightError weightError or {@code null} for none
+   */
+  public HealthStatus setWeightError(java.lang.String weightError) {
+    this.weightError = weightError;
     return this;
   }
 

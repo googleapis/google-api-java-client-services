@@ -48,7 +48,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * The destination range of outgoing packets that this route applies to. Only IPv4 is supported.
+   * The destination range of outgoing packets that this route applies to. Both IPv4 and IPv6 are
+   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -233,7 +234,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The destination range of outgoing packets that this route applies to. Only IPv4 is supported.
+   * The destination range of outgoing packets that this route applies to. Both IPv4 and IPv6 are
+   * supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestRange() {
@@ -241,7 +243,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The destination range of outgoing packets that this route applies to. Only IPv4 is supported.
+   * The destination range of outgoing packets that this route applies to. Both IPv4 and IPv6 are
+   * supported.
    * @param destRange destRange or {@code null} for none
    */
   public Route setDestRange(java.lang.String destRange) {

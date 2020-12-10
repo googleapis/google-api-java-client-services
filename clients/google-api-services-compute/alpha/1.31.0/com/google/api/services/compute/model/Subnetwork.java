@@ -307,11 +307,12 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String stackType;
 
   /**
-   * [Output Only] The state of the subnetwork, which can be one of READY or DRAINING. A subnetwork
-   * that is READY is ready to be used. The state of DRAINING is only applicable to subnetworks that
-   * have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load
-   * balancer are being drained. A subnetwork that is draining cannot be used or modified until it
-   * reaches a status of READY.
+   * [Output Only] The state of the subnetwork, which can be one of the following values: READY:
+   * Subnetwork is created and ready to use DRAINING: only applicable to subnetworks that have the
+   * purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load balancer
+   * are being drained. A subnetwork that is draining cannot be used or modified until it reaches a
+   * status of READY CREATING: Subnetwork is provisioning DELETING: Subnetwork is being deleted
+   * UPDATING: Subnetwork is being updated
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -989,11 +990,12 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The state of the subnetwork, which can be one of READY or DRAINING. A subnetwork
-   * that is READY is ready to be used. The state of DRAINING is only applicable to subnetworks that
-   * have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load
-   * balancer are being drained. A subnetwork that is draining cannot be used or modified until it
-   * reaches a status of READY.
+   * [Output Only] The state of the subnetwork, which can be one of the following values: READY:
+   * Subnetwork is created and ready to use DRAINING: only applicable to subnetworks that have the
+   * purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load balancer
+   * are being drained. A subnetwork that is draining cannot be used or modified until it reaches a
+   * status of READY CREATING: Subnetwork is provisioning DELETING: Subnetwork is being deleted
+   * UPDATING: Subnetwork is being updated
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -1001,11 +1003,12 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The state of the subnetwork, which can be one of READY or DRAINING. A subnetwork
-   * that is READY is ready to be used. The state of DRAINING is only applicable to subnetworks that
-   * have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load
-   * balancer are being drained. A subnetwork that is draining cannot be used or modified until it
-   * reaches a status of READY.
+   * [Output Only] The state of the subnetwork, which can be one of the following values: READY:
+   * Subnetwork is created and ready to use DRAINING: only applicable to subnetworks that have the
+   * purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load balancer
+   * are being drained. A subnetwork that is draining cannot be used or modified until it reaches a
+   * status of READY CREATING: Subnetwork is provisioning DELETING: Subnetwork is being deleted
+   * UPDATING: Subnetwork is being updated
    * @param state state or {@code null} for none
    */
   public Subnetwork setState(java.lang.String state) {

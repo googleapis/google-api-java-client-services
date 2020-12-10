@@ -30,12 +30,8 @@ package com.google.api.services.compute.model;
 public final class DistributionPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The shape to which the group converges either proactively or on resize events (depending on the
-   * value set in updatePolicy.instanceRedistributionType). The possible values are EVEN and ANY.
-   * For EVEN the group attempts to preserve a balanced number of instances across zones. For ANY
-   * the group creates new instances where resources are available to fulfill the request; as a
-   * result, instances may be distributed unevenly across zones in this mode. The default value is
-   * EVEN.
+   * The distribution shape to which the group converges either proactively or on resize events
+   * (depending on the value set in updatePolicy.instanceRedistributionType).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,12 +45,8 @@ public final class DistributionPolicy extends com.google.api.client.json.Generic
   private java.util.List<DistributionPolicyZoneConfiguration> zones;
 
   /**
-   * The shape to which the group converges either proactively or on resize events (depending on the
-   * value set in updatePolicy.instanceRedistributionType). The possible values are EVEN and ANY.
-   * For EVEN the group attempts to preserve a balanced number of instances across zones. For ANY
-   * the group creates new instances where resources are available to fulfill the request; as a
-   * result, instances may be distributed unevenly across zones in this mode. The default value is
-   * EVEN.
+   * The distribution shape to which the group converges either proactively or on resize events
+   * (depending on the value set in updatePolicy.instanceRedistributionType).
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetShape() {
@@ -62,12 +54,8 @@ public final class DistributionPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The shape to which the group converges either proactively or on resize events (depending on the
-   * value set in updatePolicy.instanceRedistributionType). The possible values are EVEN and ANY.
-   * For EVEN the group attempts to preserve a balanced number of instances across zones. For ANY
-   * the group creates new instances where resources are available to fulfill the request; as a
-   * result, instances may be distributed unevenly across zones in this mode. The default value is
-   * EVEN.
+   * The distribution shape to which the group converges either proactively or on resize events
+   * (depending on the value set in updatePolicy.instanceRedistributionType).
    * @param targetShape targetShape or {@code null} for none
    */
   public DistributionPolicy setTargetShape(java.lang.String targetShape) {

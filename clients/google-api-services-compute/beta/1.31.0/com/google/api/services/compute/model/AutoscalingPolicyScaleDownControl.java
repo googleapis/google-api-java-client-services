@@ -17,8 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Configuration that allows for slower scale down so that even if Autoscaler recommends an abrupt
- * scale down of a MIG, it will be throttled as specified by the parameters below.
+ * Configuration that allows for slower scale in so that even if Autoscaler recommends an abrupt
+ * scale in of a MIG, it will be throttled as specified by the parameters below.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -40,8 +40,8 @@ public final class AutoscalingPolicyScaleDownControl extends com.google.api.clie
   private FixedOrPercent maxScaledDownReplicas;
 
   /**
-   * How long back autoscaling should look when computing recommendations to include directives
-   * regarding slower scale down, as described above.
+   * How far back autoscaling looks when computing recommendations to include directives regarding
+   * slower scale in, as described above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class AutoscalingPolicyScaleDownControl extends com.google.api.clie
   }
 
   /**
-   * How long back autoscaling should look when computing recommendations to include directives
-   * regarding slower scale down, as described above.
+   * How far back autoscaling looks when computing recommendations to include directives regarding
+   * slower scale in, as described above.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeWindowSec() {
@@ -78,8 +78,8 @@ public final class AutoscalingPolicyScaleDownControl extends com.google.api.clie
   }
 
   /**
-   * How long back autoscaling should look when computing recommendations to include directives
-   * regarding slower scale down, as described above.
+   * How far back autoscaling looks when computing recommendations to include directives regarding
+   * slower scale in, as described above.
    * @param timeWindowSec timeWindowSec or {@code null} for none
    */
   public AutoscalingPolicyScaleDownControl setTimeWindowSec(java.lang.Integer timeWindowSec) {

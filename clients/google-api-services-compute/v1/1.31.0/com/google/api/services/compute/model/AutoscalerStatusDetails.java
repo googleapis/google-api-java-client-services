@@ -52,7 +52,7 @@ public final class AutoscalerStatusDetails extends com.google.api.client.json.Ge
    * instance group has not received any requests from the load balancer.  - MODE_OFF (WARNING):
    * Autoscaling is turned off. The number of instances in the group won't change automatically. The
    * autoscaling configuration is preserved.  - MODE_ONLY_UP (WARNING): Autoscaling is in the
-   * "Autoscale only up" mode. The autoscaler can add instances but not remove any.  -
+   * "Autoscale only out" mode. The autoscaler can add instances but not remove any.  -
    * MORE_THAN_ONE_BACKEND_SERVICE (ERROR): The instance group cannot be autoscaled because it has
    * more than one backend service attached to it.  - NOT_ENOUGH_QUOTA_AVAILABLE (ERROR): There is
    * insufficient quota for the necessary resources, such as CPU or number of instances.  -
@@ -102,7 +102,7 @@ public final class AutoscalerStatusDetails extends com.google.api.client.json.Ge
    * instance group has not received any requests from the load balancer.  - MODE_OFF (WARNING):
    * Autoscaling is turned off. The number of instances in the group won't change automatically. The
    * autoscaling configuration is preserved.  - MODE_ONLY_UP (WARNING): Autoscaling is in the
-   * "Autoscale only up" mode. The autoscaler can add instances but not remove any.  -
+   * "Autoscale only out" mode. The autoscaler can add instances but not remove any.  -
    * MORE_THAN_ONE_BACKEND_SERVICE (ERROR): The instance group cannot be autoscaled because it has
    * more than one backend service attached to it.  - NOT_ENOUGH_QUOTA_AVAILABLE (ERROR): There is
    * insufficient quota for the necessary resources, such as CPU or number of instances.  -
@@ -136,7 +136,7 @@ public final class AutoscalerStatusDetails extends com.google.api.client.json.Ge
    * instance group has not received any requests from the load balancer.  - MODE_OFF (WARNING):
    * Autoscaling is turned off. The number of instances in the group won't change automatically. The
    * autoscaling configuration is preserved.  - MODE_ONLY_UP (WARNING): Autoscaling is in the
-   * "Autoscale only up" mode. The autoscaler can add instances but not remove any.  -
+   * "Autoscale only out" mode. The autoscaler can add instances but not remove any.  -
    * MORE_THAN_ONE_BACKEND_SERVICE (ERROR): The instance group cannot be autoscaled because it has
    * more than one backend service attached to it.  - NOT_ENOUGH_QUOTA_AVAILABLE (ERROR): There is
    * insufficient quota for the necessary resources, such as CPU or number of instances.  -

@@ -30,9 +30,9 @@ package com.google.api.services.compute.model;
 public final class AutoscalingPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of seconds that the autoscaler should wait before it starts collecting information
-   * from a new instance. This prevents the autoscaler from collecting information when the instance
-   * is initializing, during which the collected usage would not be reliable. The default time
+   * The number of seconds that the autoscaler waits before it starts collecting information from a
+   * new instance. This prevents the autoscaler from collecting information when the instance is
+   * initializing, during which the collected usage would not be reliable. The default time
    * autoscaler waits is 60 seconds.
    *
    * Virtual machine initialization times might vary because of numerous factors. We recommend that
@@ -66,8 +66,8 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private AutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization;
 
   /**
-   * The maximum number of instances that the autoscaler can scale up to. This is required when
-   * creating or updating an autoscaler. The maximum number of replicas should not be lower than
+   * The maximum number of instances that the autoscaler can scale out to. This is required when
+   * creating or updating an autoscaler. The maximum number of replicas must not be lower than
    * minimal number of replicas.
    * The value may be {@code null}.
    */
@@ -75,9 +75,9 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private java.lang.Integer maxNumReplicas;
 
   /**
-   * The minimum number of replicas that the autoscaler can scale down to. This cannot be less than
-   * 0. If not provided, autoscaler will choose a default value depending on maximum number of
-   * instances allowed.
+   * The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0.
+   * If not provided, autoscaler chooses a default value depending on maximum number of instances
+   * allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,18 +103,18 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private AutoscalingPolicyScaleInControl scaleInControl;
 
   /**
-   * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and
-   * they can overlap. During overlapping periods the greatest min_required_replicas of all scaling
-   * schedules will be applied. Up to 128 scaling schedules are allowed.
+   * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler,
+   * and they can overlap. During overlapping periods the greatest min_required_replicas of all
+   * scaling schedules is applied. Up to 128 scaling schedules are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, AutoscalingPolicyScalingSchedule> scalingSchedules;
 
   /**
-   * The number of seconds that the autoscaler should wait before it starts collecting information
-   * from a new instance. This prevents the autoscaler from collecting information when the instance
-   * is initializing, during which the collected usage would not be reliable. The default time
+   * The number of seconds that the autoscaler waits before it starts collecting information from a
+   * new instance. This prevents the autoscaler from collecting information when the instance is
+   * initializing, during which the collected usage would not be reliable. The default time
    * autoscaler waits is 60 seconds.
    *
    * Virtual machine initialization times might vary because of numerous factors. We recommend that
@@ -127,9 +127,9 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The number of seconds that the autoscaler should wait before it starts collecting information
-   * from a new instance. This prevents the autoscaler from collecting information when the instance
-   * is initializing, during which the collected usage would not be reliable. The default time
+   * The number of seconds that the autoscaler waits before it starts collecting information from a
+   * new instance. This prevents the autoscaler from collecting information when the instance is
+   * initializing, during which the collected usage would not be reliable. The default time
    * autoscaler waits is 60 seconds.
    *
    * Virtual machine initialization times might vary because of numerous factors. We recommend that
@@ -196,8 +196,8 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The maximum number of instances that the autoscaler can scale up to. This is required when
-   * creating or updating an autoscaler. The maximum number of replicas should not be lower than
+   * The maximum number of instances that the autoscaler can scale out to. This is required when
+   * creating or updating an autoscaler. The maximum number of replicas must not be lower than
    * minimal number of replicas.
    * @return value or {@code null} for none
    */
@@ -206,8 +206,8 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The maximum number of instances that the autoscaler can scale up to. This is required when
-   * creating or updating an autoscaler. The maximum number of replicas should not be lower than
+   * The maximum number of instances that the autoscaler can scale out to. This is required when
+   * creating or updating an autoscaler. The maximum number of replicas must not be lower than
    * minimal number of replicas.
    * @param maxNumReplicas maxNumReplicas or {@code null} for none
    */
@@ -217,9 +217,9 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The minimum number of replicas that the autoscaler can scale down to. This cannot be less than
-   * 0. If not provided, autoscaler will choose a default value depending on maximum number of
-   * instances allowed.
+   * The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0.
+   * If not provided, autoscaler chooses a default value depending on maximum number of instances
+   * allowed.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinNumReplicas() {
@@ -227,9 +227,9 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The minimum number of replicas that the autoscaler can scale down to. This cannot be less than
-   * 0. If not provided, autoscaler will choose a default value depending on maximum number of
-   * instances allowed.
+   * The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0.
+   * If not provided, autoscaler chooses a default value depending on maximum number of instances
+   * allowed.
    * @param minNumReplicas minNumReplicas or {@code null} for none
    */
   public AutoscalingPolicy setMinNumReplicas(java.lang.Integer minNumReplicas) {
@@ -285,9 +285,9 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and
-   * they can overlap. During overlapping periods the greatest min_required_replicas of all scaling
-   * schedules will be applied. Up to 128 scaling schedules are allowed.
+   * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler,
+   * and they can overlap. During overlapping periods the greatest min_required_replicas of all
+   * scaling schedules is applied. Up to 128 scaling schedules are allowed.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, AutoscalingPolicyScalingSchedule> getScalingSchedules() {
@@ -295,9 +295,9 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and
-   * they can overlap. During overlapping periods the greatest min_required_replicas of all scaling
-   * schedules will be applied. Up to 128 scaling schedules are allowed.
+   * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler,
+   * and they can overlap. During overlapping periods the greatest min_required_replicas of all
+   * scaling schedules is applied. Up to 128 scaling schedules are allowed.
    * @param scalingSchedules scalingSchedules or {@code null} for none
    */
   public AutoscalingPolicy setScalingSchedules(java.util.Map<String, AutoscalingPolicyScalingSchedule> scalingSchedules) {

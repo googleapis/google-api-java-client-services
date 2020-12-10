@@ -38,6 +38,15 @@ public final class RegionInstanceGroupManagersDeleteInstancesRequest extends com
   private java.util.List<java.lang.String> instances;
 
   /**
+   * If false and the request contains references to instances that cannot be deleted (that is,
+   * instances that are not in the group or are already deleted), the request fails. Otherwise, such
+   * instances are ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipInapplicableInstances;
+
+  /**
    * The URLs of one or more instances to delete. This can be a full URL or a partial URL, such as
    * zones/[ZONE]/instances/[INSTANCE_NAME].
    * @return value or {@code null} for none
@@ -53,6 +62,27 @@ public final class RegionInstanceGroupManagersDeleteInstancesRequest extends com
    */
   public RegionInstanceGroupManagersDeleteInstancesRequest setInstances(java.util.List<java.lang.String> instances) {
     this.instances = instances;
+    return this;
+  }
+
+  /**
+   * If false and the request contains references to instances that cannot be deleted (that is,
+   * instances that are not in the group or are already deleted), the request fails. Otherwise, such
+   * instances are ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipInapplicableInstances() {
+    return skipInapplicableInstances;
+  }
+
+  /**
+   * If false and the request contains references to instances that cannot be deleted (that is,
+   * instances that are not in the group or are already deleted), the request fails. Otherwise, such
+   * instances are ignored.
+   * @param skipInapplicableInstances skipInapplicableInstances or {@code null} for none
+   */
+  public RegionInstanceGroupManagersDeleteInstancesRequest setSkipInapplicableInstances(java.lang.Boolean skipInapplicableInstances) {
+    this.skipInapplicableInstances = skipInapplicableInstances;
     return this;
   }
 

@@ -73,7 +73,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Cloud CDN configuration for this BackendService.
+   * Cloud CDN configuration for this BackendService. Not available for Internal TCP/UDP Load
+   * Balancing and Network Load Balancing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,8 +171,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.Boolean enableCDN;
 
   /**
-   * Applicable only to Failover for Internal TCP/UDP Load Balancing. Requires at least one backend
-   * instance group to be defined as a backup (failover) backend.
+   * Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing.
+   * Requires at least one backend instance group to be defined as a backup (failover) backend.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,7 +203,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> healthChecks;
 
   /**
-   * The configurations for Identity-Aware Proxy on this resource.
+   * The configurations for Identity-Aware Proxy on this resource. Not available for Internal
+   * TCP/UDP Load Balancing and Network Load Balancing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,11 +225,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String kind;
 
   /**
-   * Specifies the load balancer type. Choose EXTERNAL for load balancers that receive traffic from
-   * external clients. Choose INTERNAL for Internal TCP/UDP Load Balancing. Choose INTERNAL_MANAGED
-   * for Internal HTTP(S) Load Balancing. Choose INTERNAL_SELF_MANAGED for Traffic Director. A
-   * backend service created for one type of load balancing cannot be used with another. For more
-   * information, refer to Choosing a load balancer.
+   * Specifies the load balancer type. Choose EXTERNAL for external HTTP(S), SSL Proxy, TCP Proxy
+   * and Network Load Balancing. Choose  INTERNAL for Internal TCP/UDP Load Balancing. Choose
+   * INTERNAL_MANAGED for Internal HTTP(S) Load Balancing.  INTERNAL_SELF_MANAGED for Traffic
+   * Director. A backend service created for one type of load balancer cannot be used with another.
+   * For more information, refer to Choosing a load balancer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -282,7 +284,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * The URL of the network to which this backend service belongs. This field can only be spcified
+   * The URL of the network to which this backend service belongs. This field can only be specified
    * when the load balancing scheme is set to INTERNAL.
    * The value may be {@code null}.
    */
@@ -316,11 +318,13 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * A named port on a backend instance group representing the port for communication to the backend
-   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or
-   * INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on
-   * each backend instance group. This parameter has no meaning if the backends are NEGs.
+   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL (except Network Load
+   * Balancing), INTERNAL_MANAGED, or  INTERNAL_SELF_MANAGED and the backends are instance groups.
+   * The named port must be defined on each backend instance group. This parameter has no meaning if
+   * the backends are NEGs.
    *
-   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
+   * Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing require you
+   * omit port_name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -381,11 +385,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String selfLinkWithId;
 
   /**
-   * Type of session affinity to use. The default is NONE. Session affinity is not applicable if the
-   * --protocol is UDP.
+   * Type of session affinity to use. The default is NONE.
    *
-   * When the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or
-   * GENERATED_COOKIE. You can use GENERATED_COOKIE if the protocol is HTTP or HTTPS.
+   * When the loadBalancingScheme is EXTERNAL: * For Network Load Balancing, the possible values are
+   * NONE, CLIENT_IP, CLIENT_IP_PROTO, or CLIENT_IP_PORT_PROTO. * For all other load balancers that
+   * use loadBalancingScheme=EXTERNAL, the possible values are NONE, CLIENT_IP, or GENERATED_COOKIE.
+   * * You can use GENERATED_COOKIE if the protocol is HTTP, HTTP2, or HTTPS.
    *
    * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
    * or CLIENT_IP_PORT_PROTO.
@@ -465,7 +470,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Cloud CDN configuration for this BackendService.
+   * Cloud CDN configuration for this BackendService. Not available for Internal TCP/UDP Load
+   * Balancing and Network Load Balancing.
    * @return value or {@code null} for none
    */
   public BackendServiceCdnPolicy getCdnPolicy() {
@@ -473,7 +479,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Cloud CDN configuration for this BackendService.
+   * Cloud CDN configuration for this BackendService. Not available for Internal TCP/UDP Load
+   * Balancing and Network Load Balancing.
    * @param cdnPolicy cdnPolicy or {@code null} for none
    */
   public BackendService setCdnPolicy(BackendServiceCdnPolicy cdnPolicy) {
@@ -692,8 +699,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Applicable only to Failover for Internal TCP/UDP Load Balancing. Requires at least one backend
-   * instance group to be defined as a backup (failover) backend.
+   * Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing.
+   * Requires at least one backend instance group to be defined as a backup (failover) backend.
    * @return value or {@code null} for none
    */
   public BackendServiceFailoverPolicy getFailoverPolicy() {
@@ -701,8 +708,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Applicable only to Failover for Internal TCP/UDP Load Balancing. Requires at least one backend
-   * instance group to be defined as a backup (failover) backend.
+   * Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing.
+   * Requires at least one backend instance group to be defined as a backup (failover) backend.
    * @param failoverPolicy failoverPolicy or {@code null} for none
    */
   public BackendService setFailoverPolicy(BackendServiceFailoverPolicy failoverPolicy) {
@@ -803,7 +810,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The configurations for Identity-Aware Proxy on this resource.
+   * The configurations for Identity-Aware Proxy on this resource. Not available for Internal
+   * TCP/UDP Load Balancing and Network Load Balancing.
    * @return value or {@code null} for none
    */
   public BackendServiceIAP getIap() {
@@ -811,7 +819,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The configurations for Identity-Aware Proxy on this resource.
+   * The configurations for Identity-Aware Proxy on this resource. Not available for Internal
+   * TCP/UDP Load Balancing and Network Load Balancing.
    * @param iap iap or {@code null} for none
    */
   public BackendService setIap(BackendServiceIAP iap) {
@@ -854,11 +863,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies the load balancer type. Choose EXTERNAL for load balancers that receive traffic from
-   * external clients. Choose INTERNAL for Internal TCP/UDP Load Balancing. Choose INTERNAL_MANAGED
-   * for Internal HTTP(S) Load Balancing. Choose INTERNAL_SELF_MANAGED for Traffic Director. A
-   * backend service created for one type of load balancing cannot be used with another. For more
-   * information, refer to Choosing a load balancer.
+   * Specifies the load balancer type. Choose EXTERNAL for external HTTP(S), SSL Proxy, TCP Proxy
+   * and Network Load Balancing. Choose  INTERNAL for Internal TCP/UDP Load Balancing. Choose
+   * INTERNAL_MANAGED for Internal HTTP(S) Load Balancing.  INTERNAL_SELF_MANAGED for Traffic
+   * Director. A backend service created for one type of load balancer cannot be used with another.
+   * For more information, refer to Choosing a load balancer.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -866,11 +875,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies the load balancer type. Choose EXTERNAL for load balancers that receive traffic from
-   * external clients. Choose INTERNAL for Internal TCP/UDP Load Balancing. Choose INTERNAL_MANAGED
-   * for Internal HTTP(S) Load Balancing. Choose INTERNAL_SELF_MANAGED for Traffic Director. A
-   * backend service created for one type of load balancing cannot be used with another. For more
-   * information, refer to Choosing a load balancer.
+   * Specifies the load balancer type. Choose EXTERNAL for external HTTP(S), SSL Proxy, TCP Proxy
+   * and Network Load Balancing. Choose  INTERNAL for Internal TCP/UDP Load Balancing. Choose
+   * INTERNAL_MANAGED for Internal HTTP(S) Load Balancing.  INTERNAL_SELF_MANAGED for Traffic
+   * Director. A backend service created for one type of load balancer cannot be used with another.
+   * For more information, refer to Choosing a load balancer.
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public BackendService setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
@@ -984,7 +993,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The URL of the network to which this backend service belongs. This field can only be spcified
+   * The URL of the network to which this backend service belongs. This field can only be specified
    * when the load balancing scheme is set to INTERNAL.
    * @return value or {@code null} for none
    */
@@ -993,7 +1002,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The URL of the network to which this backend service belongs. This field can only be spcified
+   * The URL of the network to which this backend service belongs. This field can only be specified
    * when the load balancing scheme is set to INTERNAL.
    * @param network network or {@code null} for none
    */
@@ -1060,11 +1069,13 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * A named port on a backend instance group representing the port for communication to the backend
-   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or
-   * INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on
-   * each backend instance group. This parameter has no meaning if the backends are NEGs.
+   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL (except Network Load
+   * Balancing), INTERNAL_MANAGED, or  INTERNAL_SELF_MANAGED and the backends are instance groups.
+   * The named port must be defined on each backend instance group. This parameter has no meaning if
+   * the backends are NEGs.
    *
-   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
+   * Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing require you
+   * omit port_name.
    * @return value or {@code null} for none
    */
   public java.lang.String getPortName() {
@@ -1073,11 +1084,13 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * A named port on a backend instance group representing the port for communication to the backend
-   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL, INTERNAL_MANAGED, or
-   * INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on
-   * each backend instance group. This parameter has no meaning if the backends are NEGs.
+   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL (except Network Load
+   * Balancing), INTERNAL_MANAGED, or  INTERNAL_SELF_MANAGED and the backends are instance groups.
+   * The named port must be defined on each backend instance group. This parameter has no meaning if
+   * the backends are NEGs.
    *
-   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
+   * Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing require you
+   * omit port_name.
    * @param portName portName or {@code null} for none
    */
   public BackendService setPortName(java.lang.String portName) {
@@ -1212,11 +1225,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Type of session affinity to use. The default is NONE. Session affinity is not applicable if the
-   * --protocol is UDP.
+   * Type of session affinity to use. The default is NONE.
    *
-   * When the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or
-   * GENERATED_COOKIE. You can use GENERATED_COOKIE if the protocol is HTTP or HTTPS.
+   * When the loadBalancingScheme is EXTERNAL: * For Network Load Balancing, the possible values are
+   * NONE, CLIENT_IP, CLIENT_IP_PROTO, or CLIENT_IP_PORT_PROTO. * For all other load balancers that
+   * use loadBalancingScheme=EXTERNAL, the possible values are NONE, CLIENT_IP, or GENERATED_COOKIE.
+   * * You can use GENERATED_COOKIE if the protocol is HTTP, HTTP2, or HTTPS.
    *
    * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
    * or CLIENT_IP_PORT_PROTO.
@@ -1233,11 +1247,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Type of session affinity to use. The default is NONE. Session affinity is not applicable if the
-   * --protocol is UDP.
+   * Type of session affinity to use. The default is NONE.
    *
-   * When the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or
-   * GENERATED_COOKIE. You can use GENERATED_COOKIE if the protocol is HTTP or HTTPS.
+   * When the loadBalancingScheme is EXTERNAL: * For Network Load Balancing, the possible values are
+   * NONE, CLIENT_IP, CLIENT_IP_PROTO, or CLIENT_IP_PORT_PROTO. * For all other load balancers that
+   * use loadBalancingScheme=EXTERNAL, the possible values are NONE, CLIENT_IP, or GENERATED_COOKIE.
+   * * You can use GENERATED_COOKIE if the protocol is HTTP, HTTP2, or HTTPS.
    *
    * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
    * or CLIENT_IP_PORT_PROTO.

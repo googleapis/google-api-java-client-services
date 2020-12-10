@@ -31,7 +31,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
    * Cloud Run fully-managed service that receives the events. The service should be running in the
-   * same project of the trigger.
+   * same project as the trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
    * Cloud Run fully-managed service that receives the events. The service should be running in the
-   * same project of the trigger.
+   * same project as the trigger.
    * @return value or {@code null} for none
    */
   public CloudRunService getCloudRunService() {
@@ -48,7 +48,7 @@ public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
    * Cloud Run fully-managed service that receives the events. The service should be running in the
-   * same project of the trigger.
+   * same project as the trigger.
    * @param cloudRunService cloudRunService or {@code null} for none
    */
   public Destination setCloudRunService(CloudRunService cloudRunService) {

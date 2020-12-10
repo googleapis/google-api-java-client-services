@@ -1295,6 +1295,28 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /**
+           * Required. If set, validate the request and preview the review, but do not actually post
+           * it.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Required. If set, validate the request and preview the review, but do not actually post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Required. If set, validate the request and preview the review, but do not actually post
+           * it.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -1425,6 +1447,29 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
+           * If set to true, and the trigger is not found, the request will succeed but no action
+           * will be taken on the server.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** If set to true, and the trigger is not found, the request will succeed but no action will be taken
+         on the server.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * If set to true, and the trigger is not found, the request will succeed but no action
+           * will be taken on the server.
+           */
+          public Delete setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
            * If provided, the trigger will only be deleted if the etag matches the current etag on
            * the resource.
            */
@@ -1443,6 +1488,28 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
+            return this;
+          }
+
+          /**
+           * Required. If set, validate the request and preview the review, but do not actually post
+           * it.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Required. If set, validate the request and preview the review, but do not actually post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Required. If set, validate the request and preview the review, but do not actually post
+           * it.
+           */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
             return this;
           }
 
@@ -1993,8 +2060,8 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the eventarc server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the trigger. Must be unique within the location on the project.
-         *        Format: projects/{project}/locations/{location}/triggers/{trigger}
+         * @param name Required. The resource name of the trigger. Must be unique within the location on the project and
+         *        must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
          * @param content the {@link com.google.api.services.eventarc.v1beta1.model.Trigger}
          * @return the request
          */
@@ -2022,8 +2089,8 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the trigger. Must be unique within the location on the project.
-         *        Format: projects/{project}/locations/{location}/triggers/{trigger}
+           * @param name Required. The resource name of the trigger. Must be unique within the location on the project and
+         *        must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
            * @param content the {@link com.google.api.services.eventarc.v1beta1.model.Trigger}
            * @since 1.13
            */
@@ -2094,13 +2161,14 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The resource name of the trigger. Must be unique within the location on the
-           * project. Format: projects/{project}/locations/{location}/triggers/{trigger}
+           * project and must in `projects/{project}/locations/{location}/triggers/{trigger}`
+           * format.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the trigger. Must be unique within the location on the project.
-         Format: projects/{project}/locations/{location}/triggers/{trigger}
+          /** Required. The resource name of the trigger. Must be unique within the location on the project and
+         must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
            */
           public java.lang.String getName() {
             return name;
@@ -2108,7 +2176,8 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The resource name of the trigger. Must be unique within the location on the
-           * project. Format: projects/{project}/locations/{location}/triggers/{trigger}
+           * project and must in `projects/{project}/locations/{location}/triggers/{trigger}`
+           * format.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2117,6 +2186,29 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
                   "^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * If set to true, and the trigger is not found, a new trigger will be created. In this
+           * situation, `update_mask` is ignored.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** If set to true, and the trigger is not found, a new trigger will be created. In this situation,
+         `update_mask` is ignored.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * If set to true, and the trigger is not found, a new trigger will be created. In this
+           * situation, `update_mask` is ignored.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
             return this;
           }
 
@@ -2143,6 +2235,28 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Required. If set, validate the request and preview the review, but do not actually post
+           * it.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Required. If set, validate the request and preview the review, but do not actually post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Required. If set, validate the request and preview the review, but do not actually post
+           * it.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
             return this;
           }
 

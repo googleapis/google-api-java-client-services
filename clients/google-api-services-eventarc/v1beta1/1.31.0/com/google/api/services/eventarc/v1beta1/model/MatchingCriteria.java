@@ -30,25 +30,23 @@ package com.google.api.services.eventarc.v1beta1.model;
 public final class MatchingCriteria extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of a CloudEvents atrribute. Currently, only a subset of attributes can be
-   * specified. All triggers MUST provide a matching criteria for attribute 'type'. Event types
-   * specify what event type has attributes are allowed based on
+   * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes can be
+   * specified. All triggers MUST provide a matching criteria for the 'type' attribute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attribute;
 
   /**
-   * Required. The value for the attribute
+   * Required. The value for the attribute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Required. The name of a CloudEvents atrribute. Currently, only a subset of attributes can be
-   * specified. All triggers MUST provide a matching criteria for attribute 'type'. Event types
-   * specify what event type has attributes are allowed based on
+   * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes can be
+   * specified. All triggers MUST provide a matching criteria for the 'type' attribute.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttribute() {
@@ -56,9 +54,8 @@ public final class MatchingCriteria extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The name of a CloudEvents atrribute. Currently, only a subset of attributes can be
-   * specified. All triggers MUST provide a matching criteria for attribute 'type'. Event types
-   * specify what event type has attributes are allowed based on
+   * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes can be
+   * specified. All triggers MUST provide a matching criteria for the 'type' attribute.
    * @param attribute attribute or {@code null} for none
    */
   public MatchingCriteria setAttribute(java.lang.String attribute) {
@@ -67,7 +64,7 @@ public final class MatchingCriteria extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The value for the attribute
+   * Required. The value for the attribute.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -75,7 +72,7 @@ public final class MatchingCriteria extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The value for the attribute
+   * Required. The value for the attribute.
    * @param value value or {@code null} for none
    */
   public MatchingCriteria setValue(java.lang.String value) {

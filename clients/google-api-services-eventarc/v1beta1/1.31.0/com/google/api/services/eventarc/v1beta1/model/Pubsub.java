@@ -32,7 +32,7 @@ public final class Pubsub extends com.google.api.client.json.GenericJson {
   /**
    * The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for
    * the event delivery. The value must be in the form of
-   * `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}
+   * `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class Pubsub extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the
-   * event delivery. The value must be in the form of `projects/{PROJECT_ID}/topics/{TOPIC_NAME}
+   * event delivery. The value must be in the form of `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class Pubsub extends com.google.api.client.json.GenericJson {
   /**
    * The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for
    * the event delivery. The value must be in the form of
-   * `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}
+   * `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubscription() {
@@ -59,7 +59,7 @@ public final class Pubsub extends com.google.api.client.json.GenericJson {
   /**
    * The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for
    * the event delivery. The value must be in the form of
-   * `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}
+   * `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
    * @param subscription subscription or {@code null} for none
    */
   public Pubsub setSubscription(java.lang.String subscription) {
@@ -69,7 +69,7 @@ public final class Pubsub extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the
-   * event delivery. The value must be in the form of `projects/{PROJECT_ID}/topics/{TOPIC_NAME}
+   * event delivery. The value must be in the form of `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopic() {
@@ -78,7 +78,7 @@ public final class Pubsub extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the
-   * event delivery. The value must be in the form of `projects/{PROJECT_ID}/topics/{TOPIC_NAME}
+   * event delivery. The value must be in the form of `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`.
    * @param topic topic or {@code null} for none
    */
   public Pubsub setTopic(java.lang.String topic) {

@@ -31,7 +31,7 @@ package com.google.api.services.cloudkms.v1.model;
 public final class AsymmetricSignRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The digest of the data to sign. The digest must be produced with the same digest
+   * Optional. The digest of the data to sign. The digest must be produced with the same digest
    * algorithm as specified by the key version's algorithm.
    * The value may be {@code null}.
    */
@@ -55,7 +55,7 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
   private java.lang.Long digestCrc32c;
 
   /**
-   * Required. The digest of the data to sign. The digest must be produced with the same digest
+   * Optional. The digest of the data to sign. The digest must be produced with the same digest
    * algorithm as specified by the key version's algorithm.
    * @return value or {@code null} for none
    */
@@ -64,7 +64,7 @@ public final class AsymmetricSignRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The digest of the data to sign. The digest must be produced with the same digest
+   * Optional. The digest of the data to sign. The digest must be produced with the same digest
    * algorithm as specified by the key version's algorithm.
    * @param digest digest or {@code null} for none
    */

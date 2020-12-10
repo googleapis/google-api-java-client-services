@@ -30,18 +30,18 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class EvaluateUserConsentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource names of the consents to evaluate against. Consents must be in the current
-   * `consent_store` and belong to the current `user_id`. Consents can be either active or draft. If
-   * this field is empty, the default behavior is to use all active consents that belong to
-   * `user_id`. A maximum of 100 consents can be provided here.
+   * The Consents to evaluate the access request against. They must have the same `user_id` as the
+   * data to check access for, exist in the current `consent_store`, and can have a `state` of
+   * either `ACTIVE` or `DRAFT`. A maximum of 100 consents can be provided here. If unspecified, all
+   * `ACTIVE` unexpired consents in the current `consent_store` will be evaluated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConsentList consentList;
 
   /**
-   * Limit on the number of user data mappings to return in a single response. If zero the default
-   * page size of 100 is used.
+   * Limit on the number of user data mappings to return in a single response. If not specified, 100
+   * is used. May not be larger than 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,8 @@ public final class EvaluateUserConsentsRequest extends com.google.api.client.jso
   private java.util.Map<String, java.lang.String> resourceAttributes;
 
   /**
-   * The view for EvaluateUserConsentsResponse.
+   * The view for EvaluateUserConsentsResponse. If unspecified, defaults to `BASIC` and returns
+   * `consented` as `TRUE` or `FALSE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,10 +85,10 @@ public final class EvaluateUserConsentsRequest extends com.google.api.client.jso
   private java.lang.String userId;
 
   /**
-   * The resource names of the consents to evaluate against. Consents must be in the current
-   * `consent_store` and belong to the current `user_id`. Consents can be either active or draft. If
-   * this field is empty, the default behavior is to use all active consents that belong to
-   * `user_id`. A maximum of 100 consents can be provided here.
+   * The Consents to evaluate the access request against. They must have the same `user_id` as the
+   * data to check access for, exist in the current `consent_store`, and can have a `state` of
+   * either `ACTIVE` or `DRAFT`. A maximum of 100 consents can be provided here. If unspecified, all
+   * `ACTIVE` unexpired consents in the current `consent_store` will be evaluated.
    * @return value or {@code null} for none
    */
   public ConsentList getConsentList() {
@@ -95,10 +96,10 @@ public final class EvaluateUserConsentsRequest extends com.google.api.client.jso
   }
 
   /**
-   * The resource names of the consents to evaluate against. Consents must be in the current
-   * `consent_store` and belong to the current `user_id`. Consents can be either active or draft. If
-   * this field is empty, the default behavior is to use all active consents that belong to
-   * `user_id`. A maximum of 100 consents can be provided here.
+   * The Consents to evaluate the access request against. They must have the same `user_id` as the
+   * data to check access for, exist in the current `consent_store`, and can have a `state` of
+   * either `ACTIVE` or `DRAFT`. A maximum of 100 consents can be provided here. If unspecified, all
+   * `ACTIVE` unexpired consents in the current `consent_store` will be evaluated.
    * @param consentList consentList or {@code null} for none
    */
   public EvaluateUserConsentsRequest setConsentList(ConsentList consentList) {
@@ -107,8 +108,8 @@ public final class EvaluateUserConsentsRequest extends com.google.api.client.jso
   }
 
   /**
-   * Limit on the number of user data mappings to return in a single response. If zero the default
-   * page size of 100 is used.
+   * Limit on the number of user data mappings to return in a single response. If not specified, 100
+   * is used. May not be larger than 1000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -116,8 +117,8 @@ public final class EvaluateUserConsentsRequest extends com.google.api.client.jso
   }
 
   /**
-   * Limit on the number of user data mappings to return in a single response. If zero the default
-   * page size of 100 is used.
+   * Limit on the number of user data mappings to return in a single response. If not specified, 100
+   * is used. May not be larger than 1000.
    * @param pageSize pageSize or {@code null} for none
    */
   public EvaluateUserConsentsRequest setPageSize(java.lang.Integer pageSize) {
@@ -179,7 +180,8 @@ public final class EvaluateUserConsentsRequest extends com.google.api.client.jso
   }
 
   /**
-   * The view for EvaluateUserConsentsResponse.
+   * The view for EvaluateUserConsentsResponse. If unspecified, defaults to `BASIC` and returns
+   * `consented` as `TRUE` or `FALSE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseView() {
@@ -187,7 +189,8 @@ public final class EvaluateUserConsentsRequest extends com.google.api.client.jso
   }
 
   /**
-   * The view for EvaluateUserConsentsResponse.
+   * The view for EvaluateUserConsentsResponse. If unspecified, defaults to `BASIC` and returns
+   * `consented` as `TRUE` or `FALSE`.
    * @param responseView responseView or {@code null} for none
    */
   public EvaluateUserConsentsRequest setResponseView(java.lang.String responseView) {

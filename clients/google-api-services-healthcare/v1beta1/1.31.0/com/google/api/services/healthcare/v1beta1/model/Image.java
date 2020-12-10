@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * An image.
+ * Raw bytes representing consent artifact content.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,31 +30,33 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class Image extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. Points to a Cloud Storage URI containing the image. The URI must be in the
-   * following format: `gs://{bucket_id}/{object_id}`. The Cloud Healthcare API service account must
-   * have the `roles/storage.objectViewer` Cloud IAM role for this Cloud Storage location. The image
-   * at this URI is copied to a Cloud Storage location managed by the Cloud Healthcare API.
-   * Responses to image fetching requests return the image in raw_bytes.
+   * Input only. Points to a Cloud Storage URI containing the consent artifact content. The URI must
+   * be in the following format: `gs://{bucket_id}/{object_id}`. The Cloud Healthcare API service
+   * account must have the `roles/storage.objectViewer` Cloud IAM role for this Cloud Storage
+   * location. The consent artifact content at this URI is copied to a Cloud Storage location
+   * managed by the Cloud Healthcare API. Responses to fetching requests return the consent artifact
+   * content in raw_bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsUri;
 
   /**
-   * Image content represented as a stream of bytes. This field is populated when returned in
-   * GetConsentArtifact response, but not included in CreateConsentArtifact and ListConsentArtifact
-   * response.
+   * Consent artifact content represented as a stream of bytes. This field is populated when
+   * returned in GetConsentArtifact response, but not included in CreateConsentArtifact and
+   * ListConsentArtifact response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rawBytes;
 
   /**
-   * Input only. Points to a Cloud Storage URI containing the image. The URI must be in the
-   * following format: `gs://{bucket_id}/{object_id}`. The Cloud Healthcare API service account must
-   * have the `roles/storage.objectViewer` Cloud IAM role for this Cloud Storage location. The image
-   * at this URI is copied to a Cloud Storage location managed by the Cloud Healthcare API.
-   * Responses to image fetching requests return the image in raw_bytes.
+   * Input only. Points to a Cloud Storage URI containing the consent artifact content. The URI must
+   * be in the following format: `gs://{bucket_id}/{object_id}`. The Cloud Healthcare API service
+   * account must have the `roles/storage.objectViewer` Cloud IAM role for this Cloud Storage
+   * location. The consent artifact content at this URI is copied to a Cloud Storage location
+   * managed by the Cloud Healthcare API. Responses to fetching requests return the consent artifact
+   * content in raw_bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -62,11 +64,12 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Points to a Cloud Storage URI containing the image. The URI must be in the
-   * following format: `gs://{bucket_id}/{object_id}`. The Cloud Healthcare API service account must
-   * have the `roles/storage.objectViewer` Cloud IAM role for this Cloud Storage location. The image
-   * at this URI is copied to a Cloud Storage location managed by the Cloud Healthcare API.
-   * Responses to image fetching requests return the image in raw_bytes.
+   * Input only. Points to a Cloud Storage URI containing the consent artifact content. The URI must
+   * be in the following format: `gs://{bucket_id}/{object_id}`. The Cloud Healthcare API service
+   * account must have the `roles/storage.objectViewer` Cloud IAM role for this Cloud Storage
+   * location. The consent artifact content at this URI is copied to a Cloud Storage location
+   * managed by the Cloud Healthcare API. Responses to fetching requests return the consent artifact
+   * content in raw_bytes.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public Image setGcsUri(java.lang.String gcsUri) {
@@ -75,9 +78,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Image content represented as a stream of bytes. This field is populated when returned in
-   * GetConsentArtifact response, but not included in CreateConsentArtifact and ListConsentArtifact
-   * response.
+   * Consent artifact content represented as a stream of bytes. This field is populated when
+   * returned in GetConsentArtifact response, but not included in CreateConsentArtifact and
+   * ListConsentArtifact response.
    * @see #decodeRawBytes()
    * @return value or {@code null} for none
    */
@@ -86,9 +89,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Image content represented as a stream of bytes. This field is populated when returned in
-   * GetConsentArtifact response, but not included in CreateConsentArtifact and ListConsentArtifact
-   * response.
+   * Consent artifact content represented as a stream of bytes. This field is populated when
+   * returned in GetConsentArtifact response, but not included in CreateConsentArtifact and
+   * ListConsentArtifact response.
    * @see #getRawBytes()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -99,9 +102,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Image content represented as a stream of bytes. This field is populated when returned in
-   * GetConsentArtifact response, but not included in CreateConsentArtifact and ListConsentArtifact
-   * response.
+   * Consent artifact content represented as a stream of bytes. This field is populated when
+   * returned in GetConsentArtifact response, but not included in CreateConsentArtifact and
+   * ListConsentArtifact response.
    * @see #encodeRawBytes()
    * @param rawBytes rawBytes or {@code null} for none
    */
@@ -111,9 +114,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Image content represented as a stream of bytes. This field is populated when returned in
-   * GetConsentArtifact response, but not included in CreateConsentArtifact and ListConsentArtifact
-   * response.
+   * Consent artifact content represented as a stream of bytes. This field is populated when
+   * returned in GetConsentArtifact response, but not included in CreateConsentArtifact and
+   * ListConsentArtifact response.
    * @see #setRawBytes()
    *
    * <p>

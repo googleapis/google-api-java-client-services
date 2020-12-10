@@ -37,8 +37,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Required. Destinations specify where the events will be sent to. Exactly one destination is
-   * supported at this time.
+   * Required. Destination specifies where the events should be sent to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +53,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Required. The criteria by which events are filtered. Only events that match with this critera
-   * will be sent to the destinations.
+   * Required. The criteria by which events are filtered. Only events that match with this criteria
+   * will be sent to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +67,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the trigger. Must be unique within the location on the project.
-   * Format: projects/{project}/locations/{location}/triggers/{trigger}
+   * Required. The resource name of the trigger. Must be unique within the location on the project
+   * and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,8 +123,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Destinations specify where the events will be sent to. Exactly one destination is
-   * supported at this time.
+   * Required. Destination specifies where the events should be sent to.
    * @return value or {@code null} for none
    */
   public Destination getDestination() {
@@ -133,8 +131,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Destinations specify where the events will be sent to. Exactly one destination is
-   * supported at this time.
+   * Required. Destination specifies where the events should be sent to.
    * @param destination destination or {@code null} for none
    */
   public Trigger setDestination(Destination destination) {
@@ -164,8 +161,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The criteria by which events are filtered. Only events that match with this critera
-   * will be sent to the destinations.
+   * Required. The criteria by which events are filtered. Only events that match with this criteria
+   * will be sent to the destination.
    * @return value or {@code null} for none
    */
   public java.util.List<MatchingCriteria> getMatchingCriteria() {
@@ -173,8 +170,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The criteria by which events are filtered. Only events that match with this critera
-   * will be sent to the destinations.
+   * Required. The criteria by which events are filtered. Only events that match with this criteria
+   * will be sent to the destination.
    * @param matchingCriteria matchingCriteria or {@code null} for none
    */
   public Trigger setMatchingCriteria(java.util.List<MatchingCriteria> matchingCriteria) {
@@ -183,8 +180,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the trigger. Must be unique within the location on the project.
-   * Format: projects/{project}/locations/{location}/triggers/{trigger}
+   * Required. The resource name of the trigger. Must be unique within the location on the project
+   * and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -192,8 +189,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the trigger. Must be unique within the location on the project.
-   * Format: projects/{project}/locations/{location}/triggers/{trigger}
+   * Required. The resource name of the trigger. Must be unique within the location on the project
+   * and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
    * @param name name or {@code null} for none
    */
   public Trigger setName(java.lang.String name) {

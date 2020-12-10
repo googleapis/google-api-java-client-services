@@ -46,6 +46,19 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   private String expireTime;
 
   /**
+   * User-supplied key-value pairs used to organize consent resources. Metadata keys must: - be
+   * between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with a
+   * letter - consist of up to 63 characters including lowercase letters, numeric characters,
+   * underscores, and dashes Metadata values must be: - be between 1 and 63 characters long - have a
+   * UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters including lowercase
+   * letters, numeric characters, underscores, and dashes No more than 64 metadata entries can be
+   * associated with a given consent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> metadata;
+
+  /**
    * Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datase
    * ts/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`.
    * The value may be {@code null}.
@@ -133,6 +146,35 @@ public final class Consent extends com.google.api.client.json.GenericJson {
    */
   public Consent setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * User-supplied key-value pairs used to organize consent resources. Metadata keys must: - be
+   * between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with a
+   * letter - consist of up to 63 characters including lowercase letters, numeric characters,
+   * underscores, and dashes Metadata values must be: - be between 1 and 63 characters long - have a
+   * UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters including lowercase
+   * letters, numeric characters, underscores, and dashes No more than 64 metadata entries can be
+   * associated with a given consent.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * User-supplied key-value pairs used to organize consent resources. Metadata keys must: - be
+   * between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with a
+   * letter - consist of up to 63 characters including lowercase letters, numeric characters,
+   * underscores, and dashes Metadata values must be: - be between 1 and 63 characters long - have a
+   * UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters including lowercase
+   * letters, numeric characters, underscores, and dashes No more than 64 metadata entries can be
+   * associated with a given consent.
+   * @param metadata metadata or {@code null} for none
+   */
+  public Consent setMetadata(java.util.Map<String, java.lang.String> metadata) {
+    this.metadata = metadata;
     return this;
   }
 

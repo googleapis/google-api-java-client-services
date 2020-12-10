@@ -1448,21 +1448,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The maximum number of items to return. Capped to 100 if not specified. May not be
-           * larger than 1000.
+           * The maximum number of items to return. If not specified, 100 is used. May not be larger
+           * than 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of items to return. Capped to 100 if not specified. May not be larger than 1000.
+          /** The maximum number of items to return. If not specified, 100 is used. May not be larger than 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of items to return. Capped to 100 if not specified. May not be
-           * larger than 1000.
+           * The maximum number of items to return. If not specified, 100 is used. May not be larger
+           * than 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -3177,22 +3177,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Limit on the number of Annotation stores to return in a single response. If zero the
-             * default page size of 100 is used.
+             * Limit on the number of Annotation stores to return in a single response. If not
+             * specified, 100 is used. May not be larger than 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Limit on the number of Annotation stores to return in a single response. If zero the default page
-           size of 100 is used.
+            /** Limit on the number of Annotation stores to return in a single response. If not specified, 100 is
+           used. May not be larger than 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Limit on the number of Annotation stores to return in a single response. If zero the
-             * default page size of 100 is used.
+             * Limit on the number of Annotation stores to return in a single response. If not
+             * specified, 100 is used. May not be larger than 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -4277,22 +4277,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Limit on the number of Annotations to return in a single response. If zero the
-               * default page size of 100 is used.
+               * Limit on the number of Annotations to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Limit on the number of Annotations to return in a single response. If zero the default page size of
-             100 is used.
+              /** Limit on the number of Annotations to return in a single response. If not specified, 100 is used.
+             May not be larger than 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Limit on the number of Annotations to return in a single response. If zero the
-               * default page size of 100 is used.
+               * Limit on the number of Annotations to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -5574,22 +5574,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Limit on the number of Consent stores to return in a single response. If zero the
-             * default page size of 100 is used.
+             * Limit on the number of Consent stores to return in a single response. If not
+             * specified, 100 is used. May not be larger than 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Limit on the number of Consent stores to return in a single response. If zero the default page size
-           of 100 is used.
+            /** Limit on the number of Consent stores to return in a single response. If not specified, 100 is
+           used. May not be larger than 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Limit on the number of Consent stores to return in a single response. If zero the
-             * default page size of 100 is used.
+             * Limit on the number of Consent stores to return in a single response. If not
+             * specified, 100 is used. May not be larger than 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -6849,22 +6849,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Limit on the number of attribute definitions to return in a single response. If
-               * zero the default page size of 100 is used.
+               * Limit on the number of attribute definitions to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Limit on the number of attribute definitions to return in a single response. If zero the default
-             page size of 100 is used.
+              /** Limit on the number of attribute definitions to return in a single response. If not specified, 100
+             is used. May not be larger than 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Limit on the number of attribute definitions to return in a single response. If
-               * zero the default page size of 100 is used.
+               * Limit on the number of attribute definitions to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -7653,22 +7653,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Limit on the number of consent artifacts to return in a single response. If zero
-               * the default page size of 100 is used.
+               * Limit on the number of consent artifacts to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Limit on the number of consent artifacts to return in a single response. If zero the default page
-             size of 100 is used.
+              /** Limit on the number of consent artifacts to return in a single response. If not specified, 100 is
+             used. May not be larger than 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Limit on the number of consent artifacts to return in a single response. If zero
-               * the default page size of 100 is used.
+               * Limit on the number of consent artifacts to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -8603,14 +8603,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Restricts the consents returned to those matching a filter. Syntax:
                * https://cloud.google.com/appengine/docs/standard/python/search/query_strings The
                * fields available for filtering are: - user_id - consent_artifact - state -
-               * revision_create_time
+               * revision_create_time - metadata. For example, `Metadata("key")="value"` or
+               * `HasMetadata("key")`.
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** Restricts the consents returned to those matching a filter. Syntax:
              https://cloud.google.com/appengine/docs/standard/python/search/query_strings The fields available
-             for filtering are: - user_id - consent_artifact - state - revision_create_time
+             for filtering are: - user_id - consent_artifact - state - revision_create_time - metadata. For
+             example, `Metadata("key")="value"` or `HasMetadata("key")`.
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -8620,7 +8622,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Restricts the consents returned to those matching a filter. Syntax:
                * https://cloud.google.com/appengine/docs/standard/python/search/query_strings The
                * fields available for filtering are: - user_id - consent_artifact - state -
-               * revision_create_time
+               * revision_create_time - metadata. For example, `Metadata("key")="value"` or
+               * `HasMetadata("key")`.
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -8628,22 +8631,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Limit on the number of consents to return in a single response. If zero the default
-               * page size of 100 is used.
+               * Limit on the number of consents to return in a single response. If not specified,
+               * 100 is used. May not be larger than 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Limit on the number of consents to return in a single response. If zero the default page size of
-             100 is used.
+              /** Limit on the number of consents to return in a single response. If not specified, 100 is used. May
+             not be larger than 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Limit on the number of consents to return in a single response. If zero the default
-               * page size of 100 is used.
+               * Limit on the number of consents to return in a single response. If not specified,
+               * 100 is used. May not be larger than 1000.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -8834,22 +8837,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Limit on the number of revisions to return in a single response. If zero the
-               * default page size of 100 is used.
+               * Limit on the number of revisions to return in a single response. If not specified,
+               * 100 is used. May not be larger than 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Limit on the number of revisions to return in a single response. If zero the default page size of
-             100 is used.
+              /** Limit on the number of revisions to return in a single response. If not specified, 100 is used. May
+             not be larger than 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Limit on the number of revisions to return in a single response. If zero the
-               * default page size of 100 is used.
+               * Limit on the number of revisions to return in a single response. If not specified,
+               * 100 is used. May not be larger than 1000.
                */
               public ListRevisions setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -10074,22 +10077,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Limit on the number of user data mappings to return in a single response. If zero
-               * the default page size of 100 is used.
+               * Limit on the number of user data mappings to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Limit on the number of user data mappings to return in a single response. If zero the default page
-             size of 100 is used.
+              /** Limit on the number of user data mappings to return in a single response. If not specified, 100 is
+             used. May not be larger than 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Limit on the number of user data mappings to return in a single response. If zero
-               * the default page size of 100 is used.
+               * Limit on the number of user data mappings to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -11522,22 +11525,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Limit on the number of DICOM stores to return in a single response. If zero the
-             * default page size of 100 is used.
+             * Limit on the number of DICOM stores to return in a single response. If not specified,
+             * 100 is used. May not be larger than 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Limit on the number of DICOM stores to return in a single response. If zero the default page size
-           of 100 is used.
+            /** Limit on the number of DICOM stores to return in a single response. If not specified, 100 is used.
+           May not be larger than 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Limit on the number of DICOM stores to return in a single response. If zero the
-             * default page size of 100 is used.
+             * Limit on the number of DICOM stores to return in a single response. If not specified,
+             * 100 is used. May not be larger than 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -12839,11 +12842,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           public class Studies {
 
             /**
-             * DeleteStudyAsync deletes all instances within the given study using an operation. Delete requests
-             * are equivalent to the GET requests specified in the Retrieve transaction. The method returns an
-             * Operation which will be marked successful when the deletion is complete. Warning: Inserting
-             * instances into a study while a delete operation is running for that study could result in the new
-             * instances not appearing in search results until the deletion operation finishes.
+             * DeleteStudyAsync deletes all instances within the given study using a long running operation. The
+             * method returns an Operation which will be marked successful when the deletion is complete.
+             * Warning: If you insert instances into a study while a delete operation is running for that study,
+             * the instances you insert might not appear in search results until after the deletion operation
+             * finishes.
              *
              * Create a request for the method "studies.delete".
              *
@@ -12871,12 +12874,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^studies/[^/]+$");
 
               /**
-               * DeleteStudyAsync deletes all instances within the given study using an operation. Delete
-               * requests are equivalent to the GET requests specified in the Retrieve transaction. The method
-               * returns an Operation which will be marked successful when the deletion is complete. Warning:
-               * Inserting instances into a study while a delete operation is running for that study could
-               * result in the new instances not appearing in search results until the deletion operation
-               * finishes.
+               * DeleteStudyAsync deletes all instances within the given study using a long running operation.
+               * The method returns an Operation which will be marked successful when the deletion is complete.
+               * Warning: If you insert instances into a study while a delete operation is running for that
+               * study, the instances you insert might not appear in search results until after the deletion
+               * operation finishes.
                *
                * Create a request for the method "studies.delete".
                *
@@ -14030,12 +14032,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             public class Series {
 
               /**
-               * DeleteSeriesAsync deletes all instances within the given study and series using an operation.
-               * Delete requests are equivalent to the GET requests specified in the Retrieve transaction. The
-               * method returns an Operation which will be marked successful when the deletion is complete.
-               * Warning: Inserting instances into a series while a delete operation is running for that series
-               * could result in the new instances not appearing in search results until the deletion operation
-               * finishes.
+               * DeleteSeriesAsync deletes all instances within the given study and series using a long running
+               * operation. The method returns an Operation which will be marked successful when the deletion is
+               * complete. Warning: If you insert instances into a series while a delete operation is running for
+               * that series, the instances you insert might not appear in search results until after the deletion
+               * operation finishes.
                *
                * Create a request for the method "series.delete".
                *
@@ -14065,12 +14066,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     java.util.regex.Pattern.compile("^studies/[^/]+/series/[^/]+$");
 
                 /**
-                 * DeleteSeriesAsync deletes all instances within the given study and series using an operation.
-                 * Delete requests are equivalent to the GET requests specified in the Retrieve transaction. The
-                 * method returns an Operation which will be marked successful when the deletion is complete.
-                 * Warning: Inserting instances into a series while a delete operation is running for that series
-                 * could result in the new instances not appearing in search results until the deletion operation
-                 * finishes.
+                 * DeleteSeriesAsync deletes all instances within the given study and series using a long running
+                 * operation. The method returns an Operation which will be marked successful when the deletion is
+                 * complete. Warning: If you insert instances into a series while a delete operation is running
+                 * for that series, the instances you insert might not appear in search results until after the
+                 * deletion operation finishes.
                  *
                  * Create a request for the method "series.delete".
                  *
@@ -17418,22 +17418,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Limit on the number of FHIR stores to return in a single response. If zero the
-             * default page size of 100 is used.
+             * Limit on the number of FHIR stores to return in a single response. If not specified,
+             * 100 is used. May not be larger than 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Limit on the number of FHIR stores to return in a single response. If zero the default page size of
-           100 is used.
+            /** Limit on the number of FHIR stores to return in a single response. If not specified, 100 is used.
+           May not be larger than 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Limit on the number of FHIR stores to return in a single response. If zero the
-             * default page size of 100 is used.
+             * Limit on the number of FHIR stores to return in a single response. If not specified,
+             * 100 is used. May not be larger than 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -18767,17 +18767,23 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** Maximum number of resources in a page. Defaults to 100. */
+              /**
+               * Maximum number of resources in a page. If not specified, 100 is used. May not be
+               * larger than 1000.
+               */
               @com.google.api.client.util.Key("_count")
               private java.lang.Integer count;
 
-              /** Maximum number of resources in a page. Defaults to 100.
+              /** Maximum number of resources in a page. If not specified, 100 is used. May not be larger than 1000.
                */
               public java.lang.Integer getCount() {
                 return count;
               }
 
-              /** Maximum number of resources in a page. Defaults to 100. */
+              /**
+               * Maximum number of resources in a page. If not specified, 100 is used. May not be
+               * larger than 1000.
+               */
               public PatientEverything setCount(java.lang.Integer count) {
                 this.count = count;
                 return this;
@@ -20600,21 +20606,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The maximum number of search results on a page. Default value is 100. Maximum value
-               * is 1,000.
+               * The maximum number of search results on a page. If not specified, 100 is used. May
+               * not be larger than 1000.
                */
               @com.google.api.client.util.Key("_count")
               private java.lang.Integer count;
 
-              /** The maximum number of search results on a page. Default value is 100. Maximum value is 1,000.
+              /** The maximum number of search results on a page. If not specified, 100 is used. May not be larger
+             than 1000.
                */
               public java.lang.Integer getCount() {
                 return count;
               }
 
               /**
-               * The maximum number of search results on a page. Default value is 100. Maximum value
-               * is 1,000.
+               * The maximum number of search results on a page. If not specified, 100 is used. May
+               * not be larger than 1000.
                */
               public History setCount(java.lang.Integer count) {
                 this.count = count;
@@ -22635,22 +22642,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Limit on the number of HL7v2 stores to return in a single response. If zero the
-             * default page size of 100 is used.
+             * Limit on the number of HL7v2 stores to return in a single response. If not specified,
+             * 100 is used. May not be larger than 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Limit on the number of HL7v2 stores to return in a single response. If zero the default page size
-           of 100 is used.
+            /** Limit on the number of HL7v2 stores to return in a single response. If not specified, 100 is used.
+           May not be larger than 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Limit on the number of HL7v2 stores to return in a single response. If zero the
-             * default page size of 100 is used.
+             * Limit on the number of HL7v2 stores to return in a single response. If not specified,
+             * 100 is used. May not be larger than 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -23950,22 +23957,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Limit on the number of messages to return in a single response. If zero the default
-               * page size of 100 is used.
+               * Limit on the number of messages to return in a single response. If not specified,
+               * 100 is used. May not be larger than 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Limit on the number of messages to return in a single response. If zero the default page size of
-             100 is used.
+              /** Limit on the number of messages to return in a single response. If not specified, 100 is used. May
+             not be larger than 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * Limit on the number of messages to return in a single response. If zero the default
-               * page size of 100 is used.
+               * Limit on the number of messages to return in a single response. If not specified,
+               * 100 is used. May not be larger than 1000.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;

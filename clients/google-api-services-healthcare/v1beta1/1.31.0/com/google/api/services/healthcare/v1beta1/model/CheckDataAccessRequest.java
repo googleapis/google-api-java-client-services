@@ -33,7 +33,8 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   /**
    * The Consents to evaluate the access request against. They must have the same `user_id` as the
    * data to check access for, exist in the current `consent_store`, and can have a `state` of
-   * either `ACTIVE` or `DRAFT`. A maximum of 100 consents can be provided here.
+   * either `ACTIVE` or `DRAFT`. A maximum of 100 consents can be provided here. If unspecified, all
+   * `ACTIVE` unexpired consents in the current `consent_store` will be evaluated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +56,8 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   private java.util.Map<String, java.lang.String> requestAttributes;
 
   /**
-   * The view for CheckDataAccessResponse.
+   * The view for CheckDataAccessResponse. If unspecified, defaults to `BASIC` and returns
+   * `consented` as `TRUE` or `FALSE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +66,8 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   /**
    * The Consents to evaluate the access request against. They must have the same `user_id` as the
    * data to check access for, exist in the current `consent_store`, and can have a `state` of
-   * either `ACTIVE` or `DRAFT`. A maximum of 100 consents can be provided here.
+   * either `ACTIVE` or `DRAFT`. A maximum of 100 consents can be provided here. If unspecified, all
+   * `ACTIVE` unexpired consents in the current `consent_store` will be evaluated.
    * @return value or {@code null} for none
    */
   public ConsentList getConsentList() {
@@ -74,7 +77,8 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   /**
    * The Consents to evaluate the access request against. They must have the same `user_id` as the
    * data to check access for, exist in the current `consent_store`, and can have a `state` of
-   * either `ACTIVE` or `DRAFT`. A maximum of 100 consents can be provided here.
+   * either `ACTIVE` or `DRAFT`. A maximum of 100 consents can be provided here. If unspecified, all
+   * `ACTIVE` unexpired consents in the current `consent_store` will be evaluated.
    * @param consentList consentList or {@code null} for none
    */
   public CheckDataAccessRequest setConsentList(ConsentList consentList) {
@@ -119,7 +123,8 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The view for CheckDataAccessResponse.
+   * The view for CheckDataAccessResponse. If unspecified, defaults to `BASIC` and returns
+   * `consented` as `TRUE` or `FALSE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseView() {
@@ -127,7 +132,8 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The view for CheckDataAccessResponse.
+   * The view for CheckDataAccessResponse. If unspecified, defaults to `BASIC` and returns
+   * `consented` as `TRUE` or `FALSE`.
    * @param responseView responseView or {@code null} for none
    */
   public CheckDataAccessRequest setResponseView(java.lang.String responseView) {

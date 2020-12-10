@@ -69,11 +69,11 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   /**
    * User-provided name of the Organization security plicy. The name should be unique in the
    * organization in which the security policy is created. This should only be used when
-   * SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with RFC1035.
-   * Specifically, the name must be 1-63 characters long and match the regular expression
-   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
-   * all following characters must be a dash, lowercase letter, or digit, except the last character,
-   * which cannot be a dash.
+   * SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with
+   * https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and
+   * match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must
+   * be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
+   * except the last character, which cannot be a dash.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,11 +267,11 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   /**
    * User-provided name of the Organization security plicy. The name should be unique in the
    * organization in which the security policy is created. This should only be used when
-   * SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with RFC1035.
-   * Specifically, the name must be 1-63 characters long and match the regular expression
-   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
-   * all following characters must be a dash, lowercase letter, or digit, except the last character,
-   * which cannot be a dash.
+   * SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with
+   * https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and
+   * match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must
+   * be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
+   * except the last character, which cannot be a dash.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -281,11 +281,11 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   /**
    * User-provided name of the Organization security plicy. The name should be unique in the
    * organization in which the security policy is created. This should only be used when
-   * SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with RFC1035.
-   * Specifically, the name must be 1-63 characters long and match the regular expression
-   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
-   * all following characters must be a dash, lowercase letter, or digit, except the last character,
-   * which cannot be a dash.
+   * SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with
+   * https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and
+   * match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must
+   * be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
+   * except the last character, which cannot be a dash.
    * @param displayName displayName or {@code null} for none
    */
   public SecurityPolicy setDisplayName(java.lang.String displayName) {

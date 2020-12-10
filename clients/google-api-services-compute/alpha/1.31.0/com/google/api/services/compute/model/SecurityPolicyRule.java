@@ -89,7 +89,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   /**
    * An integer indicating the priority of a rule in the list. The priority must be a positive value
    * between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
-   * highest priority and 2147483647 is the lowest prority.
+   * highest priority and 2147483647 is the lowest priority.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -272,7 +272,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   /**
    * An integer indicating the priority of a rule in the list. The priority must be a positive value
    * between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
-   * highest priority and 2147483647 is the lowest prority.
+   * highest priority and 2147483647 is the lowest priority.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPriority() {
@@ -282,7 +282,7 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   /**
    * An integer indicating the priority of a rule in the list. The priority must be a positive value
    * between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
-   * highest priority and 2147483647 is the lowest prority.
+   * highest priority and 2147483647 is the lowest priority.
    * @param priority priority or {@code null} for none
    */
   public SecurityPolicyRule setPriority(java.lang.Integer priority) {

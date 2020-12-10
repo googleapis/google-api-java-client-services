@@ -30,6 +30,59 @@ package com.google.api.services.compute.model;
 public final class BackendBucketCdnPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies the cache setting for all responses from this backend. The possible values are:
+   *
+   * USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses
+   * without these headers will not be cached at Google's edge, and will require a full trip to the
+   * origin on every request, potentially impacting performance and increasing load on the origin
+   * server.
+   *
+   * FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache" directives
+   * in Cache-Control response headers. Warning: this may result in Cloud CDN caching private, per-
+   * user (user identifiable) content.
+   *
+   * CACHE_ALL_STATIC Automatically cache static content, including common image formats, media
+   * (video and audio), and web assets (JavaScript and CSS). Requests and responses that are marked
+   * as uncacheable, as well as dynamic content (including HTML), will not be cached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cacheMode;
+
+  /**
+   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN's
+   * edge caches. Leaving this empty will use the same cache TTL for both Cloud CDN and the client-
+   * facing response. The maximum allowed value is 86400s (1 day).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer clientTtl;
+
+  /**
+   * Specifies the default TTL for cached content served by this origin for responses that do not
+   * have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always
+   * revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but
+   * can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the
+   * TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that
+   * infrequently accessed objects may be evicted from the cache before the defined TTL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer defaultTtl;
+
+  /**
+   * Specifies the maximum allowed TTL for cached content served by this origin. Cache directives
+   * that attempt to set a max-age or s-maxage higher than this, or an Expires header more than
+   * maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of
+   * an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a
+   * TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting
+   * that infrequently accessed objects may be evicted from the cache before the defined TTL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxTtl;
+
+  /**
    * Maximum number of seconds the response to a signed URL request will be considered fresh. After
    * this time period, the response will be revalidated before being served. Defaults to 1hr
    * (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as
@@ -47,6 +100,124 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> signedUrlKeyNames;
+
+  /**
+   * Specifies the cache setting for all responses from this backend. The possible values are:
+   *
+   * USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses
+   * without these headers will not be cached at Google's edge, and will require a full trip to the
+   * origin on every request, potentially impacting performance and increasing load on the origin
+   * server.
+   *
+   * FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache" directives
+   * in Cache-Control response headers. Warning: this may result in Cloud CDN caching private, per-
+   * user (user identifiable) content.
+   *
+   * CACHE_ALL_STATIC Automatically cache static content, including common image formats, media
+   * (video and audio), and web assets (JavaScript and CSS). Requests and responses that are marked
+   * as uncacheable, as well as dynamic content (including HTML), will not be cached.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCacheMode() {
+    return cacheMode;
+  }
+
+  /**
+   * Specifies the cache setting for all responses from this backend. The possible values are:
+   *
+   * USE_ORIGIN_HEADERS Requires the origin to set valid caching headers to cache content. Responses
+   * without these headers will not be cached at Google's edge, and will require a full trip to the
+   * origin on every request, potentially impacting performance and increasing load on the origin
+   * server.
+   *
+   * FORCE_CACHE_ALL Cache all content, ignoring any "private", "no-store" or "no-cache" directives
+   * in Cache-Control response headers. Warning: this may result in Cloud CDN caching private, per-
+   * user (user identifiable) content.
+   *
+   * CACHE_ALL_STATIC Automatically cache static content, including common image formats, media
+   * (video and audio), and web assets (JavaScript and CSS). Requests and responses that are marked
+   * as uncacheable, as well as dynamic content (including HTML), will not be cached.
+   * @param cacheMode cacheMode or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setCacheMode(java.lang.String cacheMode) {
+    this.cacheMode = cacheMode;
+    return this;
+  }
+
+  /**
+   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN's
+   * edge caches. Leaving this empty will use the same cache TTL for both Cloud CDN and the client-
+   * facing response. The maximum allowed value is 86400s (1 day).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getClientTtl() {
+    return clientTtl;
+  }
+
+  /**
+   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN's
+   * edge caches. Leaving this empty will use the same cache TTL for both Cloud CDN and the client-
+   * facing response. The maximum allowed value is 86400s (1 day).
+   * @param clientTtl clientTtl or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setClientTtl(java.lang.Integer clientTtl) {
+    this.clientTtl = clientTtl;
+    return this;
+  }
+
+  /**
+   * Specifies the default TTL for cached content served by this origin for responses that do not
+   * have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always
+   * revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but
+   * can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the
+   * TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that
+   * infrequently accessed objects may be evicted from the cache before the defined TTL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDefaultTtl() {
+    return defaultTtl;
+  }
+
+  /**
+   * Specifies the default TTL for cached content served by this origin for responses that do not
+   * have an existing valid TTL (max-age or s-max-age). Setting a TTL of "0" means "always
+   * revalidate". The value of defaultTTL cannot be set to a value greater than that of maxTTL, but
+   * can be equal. When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the
+   * TTL set in all responses. The maximum allowed value is 31,622,400s (1 year), noting that
+   * infrequently accessed objects may be evicted from the cache before the defined TTL.
+   * @param defaultTtl defaultTtl or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setDefaultTtl(java.lang.Integer defaultTtl) {
+    this.defaultTtl = defaultTtl;
+    return this;
+  }
+
+  /**
+   * Specifies the maximum allowed TTL for cached content served by this origin. Cache directives
+   * that attempt to set a max-age or s-maxage higher than this, or an Expires header more than
+   * maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of
+   * an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a
+   * TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting
+   * that infrequently accessed objects may be evicted from the cache before the defined TTL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxTtl() {
+    return maxTtl;
+  }
+
+  /**
+   * Specifies the maximum allowed TTL for cached content served by this origin. Cache directives
+   * that attempt to set a max-age or s-maxage higher than this, or an Expires header more than
+   * maxTTL seconds in the future will be capped at the value of maxTTL, as if it were the value of
+   * an s-maxage Cache-Control directive. Headers sent to the client will not be modified. Setting a
+   * TTL of "0" means "always revalidate". The maximum allowed value is 31,622,400s (1 year), noting
+   * that infrequently accessed objects may be evicted from the cache before the defined TTL.
+   * @param maxTtl maxTtl or {@code null} for none
+   */
+  public BackendBucketCdnPolicy setMaxTtl(java.lang.Integer maxTtl) {
+    this.maxTtl = maxTtl;
+    return this;
+  }
 
   /**
    * Maximum number of seconds the response to a signed URL request will be considered fresh. After

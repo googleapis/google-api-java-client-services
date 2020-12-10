@@ -39,45 +39,45 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   private java.lang.String description;
 
   /**
-   * A boolean value that specifies if a scaling schedule can influence autoscaler recommendations.
-   * If set to true, then a scaling schedule has no effect. This field is optional and its value is
-   * false by default.
+   * A boolean value that specifies whether a scaling schedule can influence autoscaler
+   * recommendations. If set to true, then a scaling schedule has no effect. This field is optional,
+   * and its value is false by default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
 
   /**
-   * The duration of time intervals (in seconds) for which this scaling schedule will be running.
-   * The minimum allowed value is 300. This field is required.
+   * The duration of time intervals, in seconds, for which this scaling schedule is to run. The
+   * minimum allowed value is 300. This field is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer durationSec;
 
   /**
-   * Minimum number of VM instances that autoscaler will recommend in time intervals starting
-   * according to schedule. This field is required.
+   * The minimum number of VM instances that the autoscaler will recommend in time intervals
+   * starting according to schedule. This field is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minRequiredReplicas;
 
   /**
-   * The start timestamps of time intervals when this scaling schedule should provide a scaling
+   * The start timestamps of time intervals when this scaling schedule is to provide a scaling
    * signal. This field uses the extended cron format (with an optional year field). The expression
-   * may describe a single timestamp if the optional year is set, in which case a scaling schedule
-   * will run once. schedule is interpreted with respect to time_zone. This field is required. NOTE:
-   * these timestamps only describe when autoscaler will start providing the scaling signal. The VMs
-   * will need additional time to become serving.
+   * can describe a single timestamp if the optional year is set, in which case the scaling schedule
+   * runs once. The schedule is interpreted with respect to time_zone. This field is required. Note:
+   * These timestamps only describe when autoscaler starts providing the scaling signal. The VMs
+   * need additional time to become serving.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String schedule;
 
   /**
-   * The time zone to be used when interpreting the schedule. The value of this field must be a time
-   * zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database. This field will be
+   * The time zone to use when interpreting the schedule. The value of this field must be a time
+   * zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database. This field is
    * assigned a default value of ?UTC? if left empty.
    * The value may be {@code null}.
    */
@@ -102,9 +102,9 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   }
 
   /**
-   * A boolean value that specifies if a scaling schedule can influence autoscaler recommendations.
-   * If set to true, then a scaling schedule has no effect. This field is optional and its value is
-   * false by default.
+   * A boolean value that specifies whether a scaling schedule can influence autoscaler
+   * recommendations. If set to true, then a scaling schedule has no effect. This field is optional,
+   * and its value is false by default.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -112,9 +112,9 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   }
 
   /**
-   * A boolean value that specifies if a scaling schedule can influence autoscaler recommendations.
-   * If set to true, then a scaling schedule has no effect. This field is optional and its value is
-   * false by default.
+   * A boolean value that specifies whether a scaling schedule can influence autoscaler
+   * recommendations. If set to true, then a scaling schedule has no effect. This field is optional,
+   * and its value is false by default.
    * @param disabled disabled or {@code null} for none
    */
   public AutoscalingPolicyScalingSchedule setDisabled(java.lang.Boolean disabled) {
@@ -123,8 +123,8 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   }
 
   /**
-   * The duration of time intervals (in seconds) for which this scaling schedule will be running.
-   * The minimum allowed value is 300. This field is required.
+   * The duration of time intervals, in seconds, for which this scaling schedule is to run. The
+   * minimum allowed value is 300. This field is required.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDurationSec() {
@@ -132,8 +132,8 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   }
 
   /**
-   * The duration of time intervals (in seconds) for which this scaling schedule will be running.
-   * The minimum allowed value is 300. This field is required.
+   * The duration of time intervals, in seconds, for which this scaling schedule is to run. The
+   * minimum allowed value is 300. This field is required.
    * @param durationSec durationSec or {@code null} for none
    */
   public AutoscalingPolicyScalingSchedule setDurationSec(java.lang.Integer durationSec) {
@@ -142,8 +142,8 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   }
 
   /**
-   * Minimum number of VM instances that autoscaler will recommend in time intervals starting
-   * according to schedule. This field is required.
+   * The minimum number of VM instances that the autoscaler will recommend in time intervals
+   * starting according to schedule. This field is required.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinRequiredReplicas() {
@@ -151,8 +151,8 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   }
 
   /**
-   * Minimum number of VM instances that autoscaler will recommend in time intervals starting
-   * according to schedule. This field is required.
+   * The minimum number of VM instances that the autoscaler will recommend in time intervals
+   * starting according to schedule. This field is required.
    * @param minRequiredReplicas minRequiredReplicas or {@code null} for none
    */
   public AutoscalingPolicyScalingSchedule setMinRequiredReplicas(java.lang.Integer minRequiredReplicas) {
@@ -161,12 +161,12 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   }
 
   /**
-   * The start timestamps of time intervals when this scaling schedule should provide a scaling
+   * The start timestamps of time intervals when this scaling schedule is to provide a scaling
    * signal. This field uses the extended cron format (with an optional year field). The expression
-   * may describe a single timestamp if the optional year is set, in which case a scaling schedule
-   * will run once. schedule is interpreted with respect to time_zone. This field is required. NOTE:
-   * these timestamps only describe when autoscaler will start providing the scaling signal. The VMs
-   * will need additional time to become serving.
+   * can describe a single timestamp if the optional year is set, in which case the scaling schedule
+   * runs once. The schedule is interpreted with respect to time_zone. This field is required. Note:
+   * These timestamps only describe when autoscaler starts providing the scaling signal. The VMs
+   * need additional time to become serving.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchedule() {
@@ -174,12 +174,12 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   }
 
   /**
-   * The start timestamps of time intervals when this scaling schedule should provide a scaling
+   * The start timestamps of time intervals when this scaling schedule is to provide a scaling
    * signal. This field uses the extended cron format (with an optional year field). The expression
-   * may describe a single timestamp if the optional year is set, in which case a scaling schedule
-   * will run once. schedule is interpreted with respect to time_zone. This field is required. NOTE:
-   * these timestamps only describe when autoscaler will start providing the scaling signal. The VMs
-   * will need additional time to become serving.
+   * can describe a single timestamp if the optional year is set, in which case the scaling schedule
+   * runs once. The schedule is interpreted with respect to time_zone. This field is required. Note:
+   * These timestamps only describe when autoscaler starts providing the scaling signal. The VMs
+   * need additional time to become serving.
    * @param schedule schedule or {@code null} for none
    */
   public AutoscalingPolicyScalingSchedule setSchedule(java.lang.String schedule) {
@@ -188,8 +188,8 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   }
 
   /**
-   * The time zone to be used when interpreting the schedule. The value of this field must be a time
-   * zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database. This field will be
+   * The time zone to use when interpreting the schedule. The value of this field must be a time
+   * zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database. This field is
    * assigned a default value of ?UTC? if left empty.
    * @return value or {@code null} for none
    */
@@ -198,8 +198,8 @@ public final class AutoscalingPolicyScalingSchedule extends com.google.api.clien
   }
 
   /**
-   * The time zone to be used when interpreting the schedule. The value of this field must be a time
-   * zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database. This field will be
+   * The time zone to use when interpreting the schedule. The value of this field must be a time
+   * zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database. This field is
    * assigned a default value of ?UTC? if left empty.
    * @param timeZone timeZone or {@code null} for none
    */

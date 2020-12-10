@@ -40,8 +40,8 @@ public final class AutoscalingPolicyScaleInControl extends com.google.api.client
   private FixedOrPercent maxScaledInReplicas;
 
   /**
-   * How long back autoscaling should look when computing recommendations to include directives
-   * regarding slower scale in, as described above.
+   * How far back autoscaling looks when computing recommendations to include directives regarding
+   * slower scale in, as described above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class AutoscalingPolicyScaleInControl extends com.google.api.client
   }
 
   /**
-   * How long back autoscaling should look when computing recommendations to include directives
-   * regarding slower scale in, as described above.
+   * How far back autoscaling looks when computing recommendations to include directives regarding
+   * slower scale in, as described above.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeWindowSec() {
@@ -78,8 +78,8 @@ public final class AutoscalingPolicyScaleInControl extends com.google.api.client
   }
 
   /**
-   * How long back autoscaling should look when computing recommendations to include directives
-   * regarding slower scale in, as described above.
+   * How far back autoscaling looks when computing recommendations to include directives regarding
+   * slower scale in, as described above.
    * @param timeWindowSec timeWindowSec or {@code null} for none
    */
   public AutoscalingPolicyScaleInControl setTimeWindowSec(java.lang.Integer timeWindowSec) {

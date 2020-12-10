@@ -85,6 +85,12 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String maintenancePolicy;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeGroupMaintenanceWindow maintenanceWindow;
+
+  /**
    * The name of the resource, provided by the client when initially creating the resource. The
    * resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name
    * must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
@@ -275,6 +281,21 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
    */
   public NodeGroup setMaintenancePolicy(java.lang.String maintenancePolicy) {
     this.maintenancePolicy = maintenancePolicy;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public NodeGroupMaintenanceWindow getMaintenanceWindow() {
+    return maintenanceWindow;
+  }
+
+  /**
+   * @param maintenanceWindow maintenanceWindow or {@code null} for none
+   */
+  public NodeGroup setMaintenanceWindow(NodeGroupMaintenanceWindow maintenanceWindow) {
+    this.maintenanceWindow = maintenanceWindow;
     return this;
   }
 

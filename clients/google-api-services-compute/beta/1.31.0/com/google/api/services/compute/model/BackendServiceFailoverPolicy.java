@@ -17,12 +17,12 @@
 package com.google.api.services.compute.model;
 
 /**
- * Applicable only to Failover for Internal TCP/UDP Load Balancing. On failover or failback, this
- * field indicates whether connection draining will be honored. GCP has a fixed connection draining
- * timeout of 10 minutes. A setting of true terminates existing TCP connections to the active pool
- * during failover and failback, immediately draining traffic. A setting of false allows existing
- * TCP connections to persist, even on VMs no longer in the active pool, for up to the duration of
- * the connection draining timeout (10 minutes).
+ * Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing. On
+ * failover or failback, this field indicates whether connection draining will be honored. GCP has a
+ * fixed connection draining timeout of 10 minutes. A setting of true terminates existing TCP
+ * connections to the active pool during failover and failback, immediately draining traffic. A
+ * setting of false allows existing TCP connections to persist, even on VMs no longer in the active
+ * pool, for up to the duration of the connection draining timeout (10 minutes).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -44,22 +44,21 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   private java.lang.Boolean disableConnectionDrainOnFailover;
 
   /**
-   * Applicable only to Failover for Internal TCP/UDP Load Balancing. If set to true, connections to
-   * the load balancer are dropped when all primary and all backup backend VMs are unhealthy. If set
-   * to false, connections are distributed among all primary VMs when all primary and all backup
-   * backend VMs are unhealthy.
-   *
-   * The default is false.
+   * Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing, If
+   * set to true, connections to the load balancer are dropped when all primary and all backup
+   * backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs
+   * when all primary and all backup backend VMs are unhealthy. The default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dropTrafficIfUnhealthy;
 
   /**
-   * Applicable only to Failover for Internal TCP/UDP Load Balancing. The value of the field must be
-   * in the range [0, 1]. If the value is 0, the load balancer performs a failover when the number
-   * of healthy primary VMs equals zero. For all other values, the load balancer performs a failover
-   * when the total number of healthy primary VMs is less than this ratio.
+   * Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing. The
+   * value of the field must be in the range [0, 1]. If the value is 0, the load balancer performs a
+   * failover when the number of healthy primary VMs equals zero. For all other values, the load
+   * balancer performs a failover when the total number of healthy primary VMs is less than this
+   * ratio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,12 +86,10 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   }
 
   /**
-   * Applicable only to Failover for Internal TCP/UDP Load Balancing. If set to true, connections to
-   * the load balancer are dropped when all primary and all backup backend VMs are unhealthy. If set
-   * to false, connections are distributed among all primary VMs when all primary and all backup
-   * backend VMs are unhealthy.
-   *
-   * The default is false.
+   * Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing, If
+   * set to true, connections to the load balancer are dropped when all primary and all backup
+   * backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs
+   * when all primary and all backup backend VMs are unhealthy. The default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDropTrafficIfUnhealthy() {
@@ -100,12 +97,10 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   }
 
   /**
-   * Applicable only to Failover for Internal TCP/UDP Load Balancing. If set to true, connections to
-   * the load balancer are dropped when all primary and all backup backend VMs are unhealthy. If set
-   * to false, connections are distributed among all primary VMs when all primary and all backup
-   * backend VMs are unhealthy.
-   *
-   * The default is false.
+   * Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing, If
+   * set to true, connections to the load balancer are dropped when all primary and all backup
+   * backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs
+   * when all primary and all backup backend VMs are unhealthy. The default is false.
    * @param dropTrafficIfUnhealthy dropTrafficIfUnhealthy or {@code null} for none
    */
   public BackendServiceFailoverPolicy setDropTrafficIfUnhealthy(java.lang.Boolean dropTrafficIfUnhealthy) {
@@ -114,10 +109,11 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   }
 
   /**
-   * Applicable only to Failover for Internal TCP/UDP Load Balancing. The value of the field must be
-   * in the range [0, 1]. If the value is 0, the load balancer performs a failover when the number
-   * of healthy primary VMs equals zero. For all other values, the load balancer performs a failover
-   * when the total number of healthy primary VMs is less than this ratio.
+   * Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing. The
+   * value of the field must be in the range [0, 1]. If the value is 0, the load balancer performs a
+   * failover when the number of healthy primary VMs equals zero. For all other values, the load
+   * balancer performs a failover when the total number of healthy primary VMs is less than this
+   * ratio.
    * @return value or {@code null} for none
    */
   public java.lang.Float getFailoverRatio() {
@@ -125,10 +121,11 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   }
 
   /**
-   * Applicable only to Failover for Internal TCP/UDP Load Balancing. The value of the field must be
-   * in the range [0, 1]. If the value is 0, the load balancer performs a failover when the number
-   * of healthy primary VMs equals zero. For all other values, the load balancer performs a failover
-   * when the total number of healthy primary VMs is less than this ratio.
+   * Applicable only to Failover for Internal TCP/UDP Load Balancing and Network Load Balancing. The
+   * value of the field must be in the range [0, 1]. If the value is 0, the load balancer performs a
+   * failover when the number of healthy primary VMs equals zero. For all other values, the load
+   * balancer performs a failover when the total number of healthy primary VMs is less than this
+   * ratio.
    * @param failoverRatio failoverRatio or {@code null} for none
    */
   public BackendServiceFailoverPolicy setFailoverRatio(java.lang.Float failoverRatio) {

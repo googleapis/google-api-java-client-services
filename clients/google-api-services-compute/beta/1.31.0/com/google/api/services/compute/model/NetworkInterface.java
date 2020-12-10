@@ -113,6 +113,13 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String networkIP;
 
   /**
+   * The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nicType;
+
+  /**
    * The URL of the Subnetwork resource for this instance. If the network resource is in legacy
    * mode, do not specify this field. If the network is in auto subnet mode, specifying the
    * subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is
@@ -322,6 +329,23 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setNetworkIP(java.lang.String networkIP) {
     this.networkIP = networkIP;
+    return this;
+  }
+
+  /**
+   * The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNicType() {
+    return nicType;
+  }
+
+  /**
+   * The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+   * @param nicType nicType or {@code null} for none
+   */
+  public NetworkInterface setNicType(java.lang.String nicType) {
+    this.nicType = nicType;
     return this;
   }
 

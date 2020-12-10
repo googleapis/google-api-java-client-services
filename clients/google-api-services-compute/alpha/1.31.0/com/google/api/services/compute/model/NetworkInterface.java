@@ -91,6 +91,16 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
+   * Internet. This field is always inherited from its subnetwork.
+   *
+   * Valid only if stackType is IPV4_IPV6.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6AccessType;
+
+  /**
    * [Output Only] An IPv6 internal network address for this network interface.
    * The value may be {@code null}.
    */
@@ -304,6 +314,29 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setIpv6AccessConfigs(java.util.List<AccessConfig> ipv6AccessConfigs) {
     this.ipv6AccessConfigs = ipv6AccessConfigs;
+    return this;
+  }
+
+  /**
+   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
+   * Internet. This field is always inherited from its subnetwork.
+   *
+   * Valid only if stackType is IPV4_IPV6.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6AccessType() {
+    return ipv6AccessType;
+  }
+
+  /**
+   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
+   * Internet. This field is always inherited from its subnetwork.
+   *
+   * Valid only if stackType is IPV4_IPV6.
+   * @param ipv6AccessType ipv6AccessType or {@code null} for none
+   */
+  public NetworkInterface setIpv6AccessType(java.lang.String ipv6AccessType) {
+    this.ipv6AccessType = ipv6AccessType;
     return this;
   }
 

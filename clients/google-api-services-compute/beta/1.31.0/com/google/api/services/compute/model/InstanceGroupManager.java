@@ -152,16 +152,6 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.util.List<NamedPort> namedPorts;
 
   /**
-   * [Deprecated] This field is deprecated and will be removed. Prefer using the status field
-   * instead. Please contact cloud-updater-feedback@google.com to leave feedback if your workload
-   * relies on this field. [Output Only] The list of instance actions and the number of instances in
-   * this managed instance group that are pending for each of those actions.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private InstanceGroupManagerPendingActionsSummary pendingActions;
-
-  /**
    * [Output Only] The URL of the region where the managed instance group resides (for regional
    * resources).
    * The value may be {@code null}.
@@ -548,29 +538,6 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setNamedPorts(java.util.List<NamedPort> namedPorts) {
     this.namedPorts = namedPorts;
-    return this;
-  }
-
-  /**
-   * [Deprecated] This field is deprecated and will be removed. Prefer using the status field
-   * instead. Please contact cloud-updater-feedback@google.com to leave feedback if your workload
-   * relies on this field. [Output Only] The list of instance actions and the number of instances in
-   * this managed instance group that are pending for each of those actions.
-   * @return value or {@code null} for none
-   */
-  public InstanceGroupManagerPendingActionsSummary getPendingActions() {
-    return pendingActions;
-  }
-
-  /**
-   * [Deprecated] This field is deprecated and will be removed. Prefer using the status field
-   * instead. Please contact cloud-updater-feedback@google.com to leave feedback if your workload
-   * relies on this field. [Output Only] The list of instance actions and the number of instances in
-   * this managed instance group that are pending for each of those actions.
-   * @param pendingActions pendingActions or {@code null} for none
-   */
-  public InstanceGroupManager setPendingActions(InstanceGroupManagerPendingActionsSummary pendingActions) {
-    this.pendingActions = pendingActions;
     return this;
   }
 

@@ -65,6 +65,13 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
   private java.util.List<java.lang.String> containerCommand;
 
   /**
+   * Represents the configuration of disk options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1DiskConfig diskConfig;
+
+  /**
    * The Docker image to run on the replica. This image must be in Container Registry. Learn more
    * about [configuring custom containers](/ai-platform/training/docs/distributed-training-
    * containers).
@@ -162,6 +169,23 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
    */
   public GoogleCloudMlV1ReplicaConfig setContainerCommand(java.util.List<java.lang.String> containerCommand) {
     this.containerCommand = containerCommand;
+    return this;
+  }
+
+  /**
+   * Represents the configuration of disk options.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1DiskConfig getDiskConfig() {
+    return diskConfig;
+  }
+
+  /**
+   * Represents the configuration of disk options.
+   * @param diskConfig diskConfig or {@code null} for none
+   */
+  public GoogleCloudMlV1ReplicaConfig setDiskConfig(GoogleCloudMlV1DiskConfig diskConfig) {
+    this.diskConfig = diskConfig;
     return this;
   }
 

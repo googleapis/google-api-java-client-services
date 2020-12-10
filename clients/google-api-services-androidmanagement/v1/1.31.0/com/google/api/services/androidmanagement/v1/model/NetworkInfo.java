@@ -52,14 +52,6 @@ public final class NetworkInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String networkOperatorName;
 
   /**
-   * Provides telephony information associated with each SIM card on the device. Only supported on
-   * fully managed devices starting from Android API level 23 and above.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<TelephonyInfo> telephonyInfos;
-
-  /**
    * Wi-Fi MAC address of the device. For example, 7c:11:11:11:11:11.
    * The value may be {@code null}.
    */
@@ -114,25 +106,6 @@ public final class NetworkInfo extends com.google.api.client.json.GenericJson {
    */
   public NetworkInfo setNetworkOperatorName(java.lang.String networkOperatorName) {
     this.networkOperatorName = networkOperatorName;
-    return this;
-  }
-
-  /**
-   * Provides telephony information associated with each SIM card on the device. Only supported on
-   * fully managed devices starting from Android API level 23 and above.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<TelephonyInfo> getTelephonyInfos() {
-    return telephonyInfos;
-  }
-
-  /**
-   * Provides telephony information associated with each SIM card on the device. Only supported on
-   * fully managed devices starting from Android API level 23 and above.
-   * @param telephonyInfos telephonyInfos or {@code null} for none
-   */
-  public NetworkInfo setTelephonyInfos(java.util.List<TelephonyInfo> telephonyInfos) {
-    this.telephonyInfos = telephonyInfos;
     return this;
   }
 

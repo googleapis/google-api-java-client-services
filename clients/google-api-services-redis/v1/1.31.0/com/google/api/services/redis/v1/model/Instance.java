@@ -207,8 +207,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String tier;
 
   /**
-   * Optional. The In-transit encryption mode of Redis instance. If not provided, in-transit
-   * encryption is disabled for instance.
+   * Optional. The TLS mode of the Redis instance. If not provided, TLS is disabled for the
+   * instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -630,8 +630,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The In-transit encryption mode of Redis instance. If not provided, in-transit
-   * encryption is disabled for instance.
+   * Optional. The TLS mode of the Redis instance. If not provided, TLS is disabled for the
+   * instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getTransitEncryptionMode() {
@@ -639,8 +639,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The In-transit encryption mode of Redis instance. If not provided, in-transit
-   * encryption is disabled for instance.
+   * Optional. The TLS mode of the Redis instance. If not provided, TLS is disabled for the
+   * instance.
    * @param transitEncryptionMode transitEncryptionMode or {@code null} for none
    */
   public Instance setTransitEncryptionMode(java.lang.String transitEncryptionMode) {

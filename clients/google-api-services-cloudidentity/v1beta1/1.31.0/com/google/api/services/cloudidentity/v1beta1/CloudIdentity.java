@@ -297,7 +297,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Creates a device. Only company-owned device may be created.
+     * Creates a device. Only company-owned device may be created. **Note**: This method is available
+     * only to customers who have one of the following SKUs: Enterprise Standard, Enterprise Plus,
+     * Enterprise for Education, and Cloud Identity Premium
      *
      * Create a request for the method "devices.create".
      *
@@ -318,7 +320,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1beta1/devices";
 
       /**
-       * Creates a device. Only company-owned device may be created.
+       * Creates a device. Only company-owned device may be created. **Note**: This method is available
+       * only to customers who have one of the following SKUs: Enterprise Standard, Enterprise Plus,
+       * Enterprise for Education, and Cloud Identity Premium
        *
        * Create a request for the method "devices.create".
        *
@@ -2896,7 +2900,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Updates the client state for the device user
+         * Updates the client state for the device user **Note**: This method is available only to customers
+         * who have one of the following SKUs: Enterprise Standard, Enterprise Plus, Enterprise for
+         * Education, and Cloud Identity Premium
          *
          * Create a request for the method "clientStates.patch".
          *
@@ -2923,7 +2929,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^devices/[^/]+/deviceUsers/[^/]+/clientStates/[^/]+$");
 
           /**
-           * Updates the client state for the device user
+           * Updates the client state for the device user **Note**: This method is available only to
+           * customers who have one of the following SKUs: Enterprise Standard, Enterprise Plus, Enterprise
+           * for Education, and Cloud Identity Premium
            *
            * Create a request for the method "clientStates.patch".
            *

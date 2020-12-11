@@ -50,8 +50,8 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   private java.lang.Integer diskSizeGb;
 
   /**
-   * Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd') If unspecified, the
-   * default disk type is 'pd-standard'
+   * Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If
+   * unspecified, the default disk type is 'pd-standard'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,8 +157,8 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd') If unspecified, the
-   * default disk type is 'pd-standard'
+   * Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If
+   * unspecified, the default disk type is 'pd-standard'
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -166,8 +166,8 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd') If unspecified, the
-   * default disk type is 'pd-standard'
+   * Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If
+   * unspecified, the default disk type is 'pd-standard'
    * @param diskType diskType or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setDiskType(java.lang.String diskType) {

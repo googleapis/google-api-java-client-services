@@ -57,6 +57,14 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
+   * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access
+   * to or from Google Services (all access will be via IPv4)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String privateIpv6GoogleAccess;
+
+  /**
    * Output only. The relative name of the Google Compute Engine
    * [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected.
    * Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
@@ -123,6 +131,25 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access
+   * to or from Google Services (all access will be via IPv4)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrivateIpv6GoogleAccess() {
+    return privateIpv6GoogleAccess;
+  }
+
+  /**
+   * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access
+   * to or from Google Services (all access will be via IPv4)
+   * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
+   */
+  public NetworkConfig setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {
+    this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
     return this;
   }
 

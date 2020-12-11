@@ -207,6 +207,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private PrivateClusterConfig desiredPrivateClusterConfig;
 
   /**
+   * The desired state of IPv6 connectivity to Google Services.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String desiredPrivateIpv6GoogleAccess;
+
+  /**
    * The desired release channel configuration.
    * The value may be {@code null}.
    */
@@ -658,6 +665,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredPrivateClusterConfig(PrivateClusterConfig desiredPrivateClusterConfig) {
     this.desiredPrivateClusterConfig = desiredPrivateClusterConfig;
+    return this;
+  }
+
+  /**
+   * The desired state of IPv6 connectivity to Google Services.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDesiredPrivateIpv6GoogleAccess() {
+    return desiredPrivateIpv6GoogleAccess;
+  }
+
+  /**
+   * The desired state of IPv6 connectivity to Google Services.
+   * @param desiredPrivateIpv6GoogleAccess desiredPrivateIpv6GoogleAccess or {@code null} for none
+   */
+  public ClusterUpdate setDesiredPrivateIpv6GoogleAccess(java.lang.String desiredPrivateIpv6GoogleAccess) {
+    this.desiredPrivateIpv6GoogleAccess = desiredPrivateIpv6GoogleAccess;
     return this;
   }
 

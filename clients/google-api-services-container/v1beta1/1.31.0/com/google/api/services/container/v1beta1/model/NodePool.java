@@ -131,8 +131,8 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * [Output only] Additional information about the current status of this node pool instance, if
-   * available.
+   * [Output only] Deprecated. Use conditions instead. Additional information about the current
+   * status of this node pool instance, if available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -381,8 +381,8 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Additional information about the current status of this node pool instance, if
-   * available.
+   * [Output only] Deprecated. Use conditions instead. Additional information about the current
+   * status of this node pool instance, if available.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatusMessage() {
@@ -390,8 +390,8 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Additional information about the current status of this node pool instance, if
-   * available.
+   * [Output only] Deprecated. Use conditions instead. Additional information about the current
+   * status of this node pool instance, if available.
    * @param statusMessage statusMessage or {@code null} for none
    */
   public NodePool setStatusMessage(java.lang.String statusMessage) {

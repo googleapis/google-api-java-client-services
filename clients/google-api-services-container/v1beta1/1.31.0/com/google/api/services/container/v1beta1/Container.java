@@ -4860,7 +4860,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Sets the size for a specific node pool.
+           * SetNodePoolSizeRequest sets the size of a node pool. The new size will be used for all replicas,
+           * including future replicas created by modifying NodePool.locations.
            *
            * Create a request for the method "nodePools.setSize".
            *
@@ -4886,7 +4887,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
 
             /**
-             * Sets the size for a specific node pool.
+             * SetNodePoolSizeRequest sets the size of a node pool. The new size will be used for all
+             * replicas, including future replicas created by modifying NodePool.locations.
              *
              * Create a request for the method "nodePools.setSize".
              *
@@ -11053,7 +11055,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Sets the size for a specific node pool.
+           * SetNodePoolSizeRequest sets the size of a node pool. The new size will be used for all replicas,
+           * including future replicas created by modifying NodePool.locations.
            *
            * Create a request for the method "nodePools.setSize".
            *
@@ -11084,7 +11087,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             private static final String REST_PATH = "v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/setSize";
 
             /**
-             * Sets the size for a specific node pool.
+             * SetNodePoolSizeRequest sets the size of a node pool. The new size will be used for all
+             * replicas, including future replicas created by modifying NodePool.locations.
              *
              * Create a request for the method "nodePools.setSize".
              *

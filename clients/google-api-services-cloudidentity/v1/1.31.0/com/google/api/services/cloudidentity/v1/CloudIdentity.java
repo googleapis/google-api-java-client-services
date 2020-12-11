@@ -303,7 +303,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Creates a device. Only company-owned device may be created.
+     * Creates a device. Only company-owned device may be created. **Note**: This method is available
+     * only to customers who have one of the following SKUs: Enterprise Standard, Enterprise Plus,
+     * Enterprise for Education, and Cloud Identity Premium
      *
      * Create a request for the method "devices.create".
      *
@@ -324,7 +326,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/devices";
 
       /**
-       * Creates a device. Only company-owned device may be created.
+       * Creates a device. Only company-owned device may be created. **Note**: This method is available
+       * only to customers who have one of the following SKUs: Enterprise Standard, Enterprise Plus,
+       * Enterprise for Education, and Cloud Identity Premium
        *
        * Create a request for the method "devices.create".
        *
@@ -3197,7 +3201,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Updates the client state for the device user
+         * Updates the client state for the device user **Note**: This method is available only to customers
+         * who have one of the following SKUs: Enterprise Standard, Enterprise Plus, Enterprise for
+         * Education, and Cloud Identity Premium
          *
          * Create a request for the method "clientStates.patch".
          *
@@ -3232,7 +3238,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^devices/[^/]+/deviceUsers/[^/]+/clientStates/[^/]+$");
 
           /**
-           * Updates the client state for the device user
+           * Updates the client state for the device user **Note**: This method is available only to
+           * customers who have one of the following SKUs: Enterprise Standard, Enterprise Plus, Enterprise
+           * for Education, and Cloud Identity Premium
            *
            * Create a request for the method "clientStates.patch".
            *
@@ -4613,6 +4621,202 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
     public class Memberships {
 
       /**
+       * Check a potential member for membership in a group. **Note:** This feature is only available to
+       * Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud
+       * Identity Premium accounts. If the account of the member is not one of these, a 403
+       * (PERMISSION_DENIED) HTTP status code will be returned. A member has membership to a group as long
+       * as there is a single viewable transitive membership between the group and the member. The actor
+       * must have view permissions to at least one transitive membership between the member and group.
+       *
+       * Create a request for the method "memberships.checkTransitiveMembership".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link CheckTransitiveMembership#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to check the
+       *        transitive membership in. Format: `groups/{group_id}`, where `group_id` is the unique id
+       *        assigned to the Group to which the Membership belongs to.
+       * @return the request
+       */
+      public CheckTransitiveMembership checkTransitiveMembership(java.lang.String parent) throws java.io.IOException {
+        CheckTransitiveMembership result = new CheckTransitiveMembership(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class CheckTransitiveMembership extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.CheckTransitiveMembershipResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/memberships:checkTransitiveMembership";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^groups/[^/]+$");
+
+        /**
+         * Check a potential member for membership in a group. **Note:** This feature is only available to
+         * Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud
+         * Identity Premium accounts. If the account of the member is not one of these, a 403
+         * (PERMISSION_DENIED) HTTP status code will be returned. A member has membership to a group as
+         * long as there is a single viewable transitive membership between the group and the member. The
+         * actor must have view permissions to at least one transitive membership between the member and
+         * group.
+         *
+         * Create a request for the method "memberships.checkTransitiveMembership".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link CheckTransitiveMembership#execute()} method to invoke the
+         * remote operation. <p> {@link CheckTransitiveMembership#initialize(com.google.api.client.googlea
+         * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to check the
+       *        transitive membership in. Format: `groups/{group_id}`, where `group_id` is the unique id
+       *        assigned to the Group to which the Membership belongs to.
+         * @since 1.13
+         */
+        protected CheckTransitiveMembership(java.lang.String parent) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.CheckTransitiveMembershipResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^groups/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public CheckTransitiveMembership set$Xgafv(java.lang.String $Xgafv) {
+          return (CheckTransitiveMembership) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CheckTransitiveMembership setAccessToken(java.lang.String accessToken) {
+          return (CheckTransitiveMembership) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CheckTransitiveMembership setAlt(java.lang.String alt) {
+          return (CheckTransitiveMembership) super.setAlt(alt);
+        }
+
+        @Override
+        public CheckTransitiveMembership setCallback(java.lang.String callback) {
+          return (CheckTransitiveMembership) super.setCallback(callback);
+        }
+
+        @Override
+        public CheckTransitiveMembership setFields(java.lang.String fields) {
+          return (CheckTransitiveMembership) super.setFields(fields);
+        }
+
+        @Override
+        public CheckTransitiveMembership setKey(java.lang.String key) {
+          return (CheckTransitiveMembership) super.setKey(key);
+        }
+
+        @Override
+        public CheckTransitiveMembership setOauthToken(java.lang.String oauthToken) {
+          return (CheckTransitiveMembership) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CheckTransitiveMembership setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CheckTransitiveMembership) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CheckTransitiveMembership setQuotaUser(java.lang.String quotaUser) {
+          return (CheckTransitiveMembership) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CheckTransitiveMembership setUploadType(java.lang.String uploadType) {
+          return (CheckTransitiveMembership) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CheckTransitiveMembership setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CheckTransitiveMembership) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
+         * check the transitive membership in. Format: `groups/{group_id}`, where `group_id` is the
+         * unique id assigned to the Group to which the Membership belongs to.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the group to check the
+      [ transitive membership in. Format: `groups/{group_id}`, where `group_id` is the unique id assigned
+      [ to the Group to which the Membership belongs to.
+      [
+
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
+         * check the transitive membership in. Format: `groups/{group_id}`, where `group_id` is the
+         * unique id assigned to the Group to which the Membership belongs to.
+         */
+        public CheckTransitiveMembership setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^groups/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. A CEL expression that MUST include member specification. This is a `required`
+         * field. Certain groups are uniquely identified by both a 'member_key_id' and a
+         * 'member_key_namespace', which requires an additional query input: 'member_key_namespace'.
+         * Example query: `member_key_id == 'member_key_id_value'`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String query;
+
+        /** Required. A CEL expression that MUST include member specification. This is a `required` field.
+       Certain groups are uniquely identified by both a 'member_key_id' and a 'member_key_namespace',
+       which requires an additional query input: 'member_key_namespace'. Example query: `member_key_id ==
+       'member_key_id_value'`
+         */
+        public java.lang.String getQuery() {
+          return query;
+        }
+
+        /**
+         * Required. A CEL expression that MUST include member specification. This is a `required`
+         * field. Certain groups are uniquely identified by both a 'member_key_id' and a
+         * 'member_key_namespace', which requires an additional query input: 'member_key_namespace'.
+         * Example query: `member_key_id == 'member_key_id_value'`
+         */
+        public CheckTransitiveMembership setQuery(java.lang.String query) {
+          this.query = query;
+          return this;
+        }
+
+        @Override
+        public CheckTransitiveMembership set(String parameterName, Object value) {
+          return (CheckTransitiveMembership) super.set(parameterName, value);
+        }
+      }
+      /**
        * Creates a `Membership`.
        *
        * Create a request for the method "memberships.create".
@@ -5043,6 +5247,217 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get a membership graph of just a member or both a member and a group. **Note:** This feature is
+       * only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for
+       * Education; and Cloud Identity Premium accounts. If the account of the member is not one of these,
+       * a 403 (PERMISSION_DENIED) HTTP status code will be returned. Given a member, the response will
+       * contain all membership paths from the member. Given both a group and a member, the response will
+       * contain all membership paths between the group and the member.
+       *
+       * Create a request for the method "memberships.getMembershipGraph".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link GetMembershipGraph#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
+       *        search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the
+       *        unique ID assigned to the Group to which the Membership belongs to. group_id can be a
+       *        wildcard collection id "-". When a group_id is specified, the membership graph will be
+       *        constrained to paths between the member (defined in the query) and the parent. If a
+       *        wildcard collection is provided, all membership paths connected to the member will be
+       *        returned.
+       * @return the request
+       */
+      public GetMembershipGraph getMembershipGraph(java.lang.String parent) throws java.io.IOException {
+        GetMembershipGraph result = new GetMembershipGraph(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class GetMembershipGraph extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/memberships:getMembershipGraph";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^groups/[^/]+$");
+
+        /**
+         * Get a membership graph of just a member or both a member and a group. **Note:** This feature is
+         * only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for
+         * Education; and Cloud Identity Premium accounts. If the account of the member is not one of
+         * these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. Given a member, the
+         * response will contain all membership paths from the member. Given both a group and a member,
+         * the response will contain all membership paths between the group and the member.
+         *
+         * Create a request for the method "memberships.getMembershipGraph".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link GetMembershipGraph#execute()} method to invoke the remote
+         * operation. <p> {@link GetMembershipGraph#initialize(com.google.api.client.googleapis.services.A
+         * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param parent Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
+       *        search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the
+       *        unique ID assigned to the Group to which the Membership belongs to. group_id can be a
+       *        wildcard collection id "-". When a group_id is specified, the membership graph will be
+       *        constrained to paths between the member (defined in the query) and the parent. If a
+       *        wildcard collection is provided, all membership paths connected to the member will be
+       *        returned.
+         * @since 1.13
+         */
+        protected GetMembershipGraph(java.lang.String parent) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^groups/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetMembershipGraph set$Xgafv(java.lang.String $Xgafv) {
+          return (GetMembershipGraph) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetMembershipGraph setAccessToken(java.lang.String accessToken) {
+          return (GetMembershipGraph) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetMembershipGraph setAlt(java.lang.String alt) {
+          return (GetMembershipGraph) super.setAlt(alt);
+        }
+
+        @Override
+        public GetMembershipGraph setCallback(java.lang.String callback) {
+          return (GetMembershipGraph) super.setCallback(callback);
+        }
+
+        @Override
+        public GetMembershipGraph setFields(java.lang.String fields) {
+          return (GetMembershipGraph) super.setFields(fields);
+        }
+
+        @Override
+        public GetMembershipGraph setKey(java.lang.String key) {
+          return (GetMembershipGraph) super.setKey(key);
+        }
+
+        @Override
+        public GetMembershipGraph setOauthToken(java.lang.String oauthToken) {
+          return (GetMembershipGraph) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetMembershipGraph setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetMembershipGraph) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetMembershipGraph setQuotaUser(java.lang.String quotaUser) {
+          return (GetMembershipGraph) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetMembershipGraph setUploadType(java.lang.String uploadType) {
+          return (GetMembershipGraph) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetMembershipGraph setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetMembershipGraph) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * group to search transitive memberships in. Format: `groups/{group_id}`, where `group_id`
+         * is the unique ID assigned to the Group to which the Membership belongs to. group_id can
+         * be a wildcard collection id "-". When a group_id is specified, the membership graph will
+         * be constrained to paths between the member (defined in the query) and the parent. If a
+         * wildcard collection is provided, all membership paths connected to the member will be
+         * returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
+       search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the unique ID
+       assigned to the Group to which the Membership belongs to. group_id can be a wildcard collection id
+       "-". When a group_id is specified, the membership graph will be constrained to paths between the
+       member (defined in the query) and the parent. If a wildcard collection is provided, all membership
+       paths connected to the member will be returned.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * group to search transitive memberships in. Format: `groups/{group_id}`, where `group_id`
+         * is the unique ID assigned to the Group to which the Membership belongs to. group_id can
+         * be a wildcard collection id "-". When a group_id is specified, the membership graph will
+         * be constrained to paths between the member (defined in the query) and the parent. If a
+         * wildcard collection is provided, all membership paths connected to the member will be
+         * returned.
+         */
+        public GetMembershipGraph setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^groups/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. A CEL expression that MUST include member specification AND label(s). Certain
+         * groups are uniquely identified by both a 'member_key_id' and a 'member_key_namespace',
+         * which requires an additional query input: 'member_key_namespace'. Example query:
+         * `member_key_id == 'member_key_id_value' && in labels`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String query;
+
+        /** Required. A CEL expression that MUST include member specification AND label(s). Certain groups are
+       uniquely identified by both a 'member_key_id' and a 'member_key_namespace', which requires an
+       additional query input: 'member_key_namespace'. Example query: `member_key_id ==
+       'member_key_id_value' && in labels`
+         */
+        public java.lang.String getQuery() {
+          return query;
+        }
+
+        /**
+         * Required. A CEL expression that MUST include member specification AND label(s). Certain
+         * groups are uniquely identified by both a 'member_key_id' and a 'member_key_namespace',
+         * which requires an additional query input: 'member_key_namespace'. Example query:
+         * `member_key_id == 'member_key_id_value' && in labels`
+         */
+        public GetMembershipGraph setQuery(java.lang.String query) {
+          this.query = query;
+          return this;
+        }
+
+        @Override
+        public GetMembershipGraph set(String parameterName, Object value) {
+          return (GetMembershipGraph) super.set(parameterName, value);
         }
       }
       /**
@@ -5611,6 +6026,433 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         @Override
         public ModifyMembershipRoles set(String parameterName, Object value) {
           return (ModifyMembershipRoles) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Search transitive groups of a member. **Note:** This feature is only available to Google
+       * Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity
+       * Premium accounts. If the account of the member is not one of these, a 403 (PERMISSION_DENIED)
+       * HTTP status code will be returned. A transitive group is any group that has a direct or indirect
+       * membership to the member. Actor must have view permissions all transitive groups.
+       *
+       * Create a request for the method "memberships.searchTransitiveGroups".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link SearchTransitiveGroups#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
+       *        transitive memberships in. Format: `groups/{group_id}`, where `group_id` is always '-' as
+       *        this API will search across all groups for a given member.
+       * @return the request
+       */
+      public SearchTransitiveGroups searchTransitiveGroups(java.lang.String parent) throws java.io.IOException {
+        SearchTransitiveGroups result = new SearchTransitiveGroups(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class SearchTransitiveGroups extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.SearchTransitiveGroupsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/memberships:searchTransitiveGroups";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^groups/[^/]+$");
+
+        /**
+         * Search transitive groups of a member. **Note:** This feature is only available to Google
+         * Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud
+         * Identity Premium accounts. If the account of the member is not one of these, a 403
+         * (PERMISSION_DENIED) HTTP status code will be returned. A transitive group is any group that has
+         * a direct or indirect membership to the member. Actor must have view permissions all transitive
+         * groups.
+         *
+         * Create a request for the method "memberships.searchTransitiveGroups".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link SearchTransitiveGroups#execute()} method to invoke the
+         * remote operation. <p> {@link SearchTransitiveGroups#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
+       *        transitive memberships in. Format: `groups/{group_id}`, where `group_id` is always '-' as
+       *        this API will search across all groups for a given member.
+         * @since 1.13
+         */
+        protected SearchTransitiveGroups(java.lang.String parent) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.SearchTransitiveGroupsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^groups/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public SearchTransitiveGroups set$Xgafv(java.lang.String $Xgafv) {
+          return (SearchTransitiveGroups) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SearchTransitiveGroups setAccessToken(java.lang.String accessToken) {
+          return (SearchTransitiveGroups) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SearchTransitiveGroups setAlt(java.lang.String alt) {
+          return (SearchTransitiveGroups) super.setAlt(alt);
+        }
+
+        @Override
+        public SearchTransitiveGroups setCallback(java.lang.String callback) {
+          return (SearchTransitiveGroups) super.setCallback(callback);
+        }
+
+        @Override
+        public SearchTransitiveGroups setFields(java.lang.String fields) {
+          return (SearchTransitiveGroups) super.setFields(fields);
+        }
+
+        @Override
+        public SearchTransitiveGroups setKey(java.lang.String key) {
+          return (SearchTransitiveGroups) super.setKey(key);
+        }
+
+        @Override
+        public SearchTransitiveGroups setOauthToken(java.lang.String oauthToken) {
+          return (SearchTransitiveGroups) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SearchTransitiveGroups setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SearchTransitiveGroups) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SearchTransitiveGroups setQuotaUser(java.lang.String quotaUser) {
+          return (SearchTransitiveGroups) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SearchTransitiveGroups setUploadType(java.lang.String uploadType) {
+          return (SearchTransitiveGroups) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SearchTransitiveGroups setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SearchTransitiveGroups) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
+         * search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is always
+         * '-' as this API will search across all groups for a given member.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
+      [ transitive memberships in. Format: `groups/{group_id}`, where `group_id` is always '-' as this API
+      [ will search across all groups for a given member.
+      [
+
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
+         * search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is always
+         * '-' as this API will search across all groups for a given member.
+         */
+        public SearchTransitiveGroups setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^groups/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** The default page size is 200 (max 1000). */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The default page size is 200 (max 1000).
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The default page size is 200 (max 1000). */
+        public SearchTransitiveGroups setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The next_page_token value returned from a previous list request, if any. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The next_page_token value returned from a previous list request, if any.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The next_page_token value returned from a previous list request, if any. */
+        public SearchTransitiveGroups setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Required. A CEL expression that MUST include member specification AND label(s). This is a
+         * `required` field. Users can search on label attributes of groups. CONTAINS match ('in')
+         * is supported on labels. Certain groups are uniquely identified by both a 'member_key_id'
+         * and a 'member_key_namespace', which requires an additional query input:
+         * 'member_key_namespace'. Example query: `member_key_id == 'member_key_id_value' && in
+         * labels`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String query;
+
+        /** Required. A CEL expression that MUST include member specification AND label(s). This is a
+       `required` field. Users can search on label attributes of groups. CONTAINS match ('in') is
+       supported on labels. Certain groups are uniquely identified by both a 'member_key_id' and a
+       'member_key_namespace', which requires an additional query input: 'member_key_namespace'. Example
+       query: `member_key_id == 'member_key_id_value' && in labels`
+         */
+        public java.lang.String getQuery() {
+          return query;
+        }
+
+        /**
+         * Required. A CEL expression that MUST include member specification AND label(s). This is a
+         * `required` field. Users can search on label attributes of groups. CONTAINS match ('in')
+         * is supported on labels. Certain groups are uniquely identified by both a 'member_key_id'
+         * and a 'member_key_namespace', which requires an additional query input:
+         * 'member_key_namespace'. Example query: `member_key_id == 'member_key_id_value' && in
+         * labels`
+         */
+        public SearchTransitiveGroups setQuery(java.lang.String query) {
+          this.query = query;
+          return this;
+        }
+
+        @Override
+        public SearchTransitiveGroups set(String parameterName, Object value) {
+          return (SearchTransitiveGroups) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Search transitive memberships of a group. **Note:** This feature is only available to Google
+       * Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity
+       * Premium accounts. If the account of the group is not one of these, a 403 (PERMISSION_DENIED) HTTP
+       * status code will be returned. A transitive membership is any direct or indirect membership of a
+       * group. Actor must have view permissions to all transitive memberships.
+       *
+       * Create a request for the method "memberships.searchTransitiveMemberships".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link SearchTransitiveMemberships#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
+       *        transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the unique ID
+       *        assigned to the Group.
+       * @return the request
+       */
+      public SearchTransitiveMemberships searchTransitiveMemberships(java.lang.String parent) throws java.io.IOException {
+        SearchTransitiveMemberships result = new SearchTransitiveMemberships(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class SearchTransitiveMemberships extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.SearchTransitiveMembershipsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/memberships:searchTransitiveMemberships";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^groups/[^/]+$");
+
+        /**
+         * Search transitive memberships of a group. **Note:** This feature is only available to Google
+         * Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud
+         * Identity Premium accounts. If the account of the group is not one of these, a 403
+         * (PERMISSION_DENIED) HTTP status code will be returned. A transitive membership is any direct or
+         * indirect membership of a group. Actor must have view permissions to all transitive memberships.
+         *
+         * Create a request for the method "memberships.searchTransitiveMemberships".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link SearchTransitiveMemberships#execute()} method to invoke
+         * the remote operation. <p> {@link SearchTransitiveMemberships#initialize(com.google.api.client.g
+         * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
+       *        transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the unique ID
+       *        assigned to the Group.
+         * @since 1.13
+         */
+        protected SearchTransitiveMemberships(java.lang.String parent) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.SearchTransitiveMembershipsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^groups/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public SearchTransitiveMemberships set$Xgafv(java.lang.String $Xgafv) {
+          return (SearchTransitiveMemberships) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SearchTransitiveMemberships setAccessToken(java.lang.String accessToken) {
+          return (SearchTransitiveMemberships) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SearchTransitiveMemberships setAlt(java.lang.String alt) {
+          return (SearchTransitiveMemberships) super.setAlt(alt);
+        }
+
+        @Override
+        public SearchTransitiveMemberships setCallback(java.lang.String callback) {
+          return (SearchTransitiveMemberships) super.setCallback(callback);
+        }
+
+        @Override
+        public SearchTransitiveMemberships setFields(java.lang.String fields) {
+          return (SearchTransitiveMemberships) super.setFields(fields);
+        }
+
+        @Override
+        public SearchTransitiveMemberships setKey(java.lang.String key) {
+          return (SearchTransitiveMemberships) super.setKey(key);
+        }
+
+        @Override
+        public SearchTransitiveMemberships setOauthToken(java.lang.String oauthToken) {
+          return (SearchTransitiveMemberships) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SearchTransitiveMemberships setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SearchTransitiveMemberships) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SearchTransitiveMemberships setQuotaUser(java.lang.String quotaUser) {
+          return (SearchTransitiveMemberships) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SearchTransitiveMemberships setUploadType(java.lang.String uploadType) {
+          return (SearchTransitiveMemberships) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SearchTransitiveMemberships setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SearchTransitiveMemberships) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
+         * search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the
+         * unique ID assigned to the Group.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
+      [ transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the unique ID assigned
+      [ to the Group.
+      [
+
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
+         * search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the
+         * unique ID assigned to the Group.
+         */
+        public SearchTransitiveMemberships setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^groups/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** The default page size is 200 (max 1000). */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The default page size is 200 (max 1000).
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The default page size is 200 (max 1000). */
+        public SearchTransitiveMemberships setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The next_page_token value returned from a previous list request, if any. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The next_page_token value returned from a previous list request, if any.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The next_page_token value returned from a previous list request, if any. */
+        public SearchTransitiveMemberships setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public SearchTransitiveMemberships set(String parameterName, Object value) {
+          return (SearchTransitiveMemberships) super.set(parameterName, value);
         }
       }
 

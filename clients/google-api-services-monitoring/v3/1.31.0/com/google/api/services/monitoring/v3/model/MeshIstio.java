@@ -17,7 +17,8 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * Istio service scoped to an Istio mesh
+ * Istio service scoped to an Istio mesh. Anthos clusters running ASM < 1.6.8 will have their
+ * services ingested as this type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

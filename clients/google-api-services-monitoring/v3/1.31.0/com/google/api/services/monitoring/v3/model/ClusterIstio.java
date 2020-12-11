@@ -17,7 +17,8 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * Istio service scoped to a single Kubernetes cluster. Learn more at http://istio.io.
+ * Istio service scoped to a single Kubernetes cluster. Learn more at http://istio.io. Clusters
+ * running OSS Istio will have their services ingested as this type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

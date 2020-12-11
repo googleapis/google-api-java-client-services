@@ -891,29 +891,6 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean returnPartialSuccess;
-
-      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
-     value is false and the logic is the same as today.
-       */
-      public java.lang.Boolean getReturnPartialSuccess() {
-        return returnPartialSuccess;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
-        this.returnPartialSuccess = returnPartialSuccess;
-        return this;
-      }
-
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
@@ -2411,29 +2388,6 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean returnPartialSuccess;
-
-      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
-     value is false and the logic is the same as today.
-       */
-      public java.lang.Boolean getReturnPartialSuccess() {
-        return returnPartialSuccess;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
-        this.returnPartialSuccess = returnPartialSuccess;
         return this;
       }
 
@@ -4007,29 +3961,6 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean returnPartialSuccess;
-
-      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
-     value is false and the logic is the same as today.
-       */
-      public java.lang.Boolean getReturnPartialSuccess() {
-        return returnPartialSuccess;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
-        this.returnPartialSuccess = returnPartialSuccess;
-        return this;
-      }
-
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
@@ -4489,29 +4420,6 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean returnPartialSuccess;
-
-      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
-     value is false and the logic is the same as today.
-       */
-      public java.lang.Boolean getReturnPartialSuccess() {
-        return returnPartialSuccess;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
-        this.returnPartialSuccess = returnPartialSuccess;
         return this;
       }
 
@@ -5038,29 +4946,6 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean returnPartialSuccess;
-
-      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
-     value is false and the logic is the same as today.
-       */
-      public java.lang.Boolean getReturnPartialSuccess() {
-        return returnPartialSuccess;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
-        this.returnPartialSuccess = returnPartialSuccess;
         return this;
       }
 
@@ -6021,29 +5906,6 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean returnPartialSuccess;
-
-      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
-     value is false and the logic is the same as today.
-       */
-      public java.lang.Boolean getReturnPartialSuccess() {
-        return returnPartialSuccess;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
-        this.returnPartialSuccess = returnPartialSuccess;
-        return this;
-      }
-
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
@@ -6354,29 +6216,6 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        */
       public ListTypes setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean returnPartialSuccess;
-
-      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
-     value is false and the logic is the same as today.
-       */
-      public java.lang.Boolean getReturnPartialSuccess() {
-        return returnPartialSuccess;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      public ListTypes setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
-        this.returnPartialSuccess = returnPartialSuccess;
         return this;
       }
 
@@ -7178,29 +7017,6 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean returnPartialSuccess;
-
-      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
-     value is false and the logic is the same as today.
-       */
-      public java.lang.Boolean getReturnPartialSuccess() {
-        return returnPartialSuccess;
-      }
-
-      /**
-       * Opt-in for partial success behavior which provides partial results in case of failure. The
-       * default value is false and the logic is the same as today.
-       */
-      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
-        this.returnPartialSuccess = returnPartialSuccess;
         return this;
       }
 

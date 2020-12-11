@@ -63,6 +63,14 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Reserved for future use. This field is set only in responses from the server; it is ignored if
+   * it is set in any requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published
    * on this topic. The expected format is `projects/locations/keyRings/cryptoKeys`.
    * @return value or {@code null} for none
@@ -137,6 +145,25 @@ public final class Topic extends com.google.api.client.json.GenericJson {
    */
   public Topic setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Reserved for future use. This field is set only in responses from the server; it is ignored if
+   * it is set in any requests.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Reserved for future use. This field is set only in responses from the server; it is ignored if
+   * it is set in any requests.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Topic setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

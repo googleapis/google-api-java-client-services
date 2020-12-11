@@ -126,6 +126,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String vmIp;
 
   /**
+   * Output only. The liveness health check of this instance. Only applicable for instances in App
+   * Engine flexible environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vmLiveness;
+
+  /**
    * Output only. Name of the virtual machine where this instance lives. Only applicable for
    * instances in App Engine flexible environment.
    * The value may be {@code null}.
@@ -375,6 +383,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setVmIp(java.lang.String vmIp) {
     this.vmIp = vmIp;
+    return this;
+  }
+
+  /**
+   * Output only. The liveness health check of this instance. Only applicable for instances in App
+   * Engine flexible environment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVmLiveness() {
+    return vmLiveness;
+  }
+
+  /**
+   * Output only. The liveness health check of this instance. Only applicable for instances in App
+   * Engine flexible environment.
+   * @param vmLiveness vmLiveness or {@code null} for none
+   */
+  public Instance setVmLiveness(java.lang.String vmLiveness) {
+    this.vmLiveness = vmLiveness;
     return this;
   }
 

@@ -32,21 +32,22 @@ package com.google.api.services.analyticsdata.v1alpha.model;
 public final class CohortsRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * `endOffset` specifies the end date of the extended reporting date range for a cohort report.
-   * `endOffset` can be any positive integer but is commonly set to 5 to 10 so that reports contain
-   * data on the cohort for the next several granularity time periods. If `granularity` is `DAILY`,
-   * the `endDate` of the extended reporting date range is `endDate` of the cohort plus `endOffset`
-   * days. If `granularity` is `WEEKLY`, the `endDate` of the extended reporting date range is
-   * `endDate` of the cohort plus `endOffset * 7` days. If `granularity` is `MONTHLY`, the `endDate`
-   * of the extended reporting date range is `endDate` of the cohort plus `endOffset * 30` days.
+   * Required. `endOffset` specifies the end date of the extended reporting date range for a cohort
+   * report. `endOffset` can be any positive integer but is commonly set to 5 to 10 so that reports
+   * contain data on the cohort for the next several granularity time periods. If `granularity` is
+   * `DAILY`, the `endDate` of the extended reporting date range is `endDate` of the cohort plus
+   * `endOffset` days. If `granularity` is `WEEKLY`, the `endDate` of the extended reporting date
+   * range is `endDate` of the cohort plus `endOffset * 7` days. If `granularity` is `MONTHLY`, the
+   * `endDate` of the extended reporting date range is `endDate` of the cohort plus `endOffset * 30`
+   * days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer endOffset;
 
   /**
-   * The granularity used to interpret the `startOffset` and `endOffset` for the extended reporting
-   * date range for a cohort report.
+   * Required. The granularity used to interpret the `startOffset` and `endOffset` for the extended
+   * reporting date range for a cohort report.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,13 +67,14 @@ public final class CohortsRange extends com.google.api.client.json.GenericJson {
   private java.lang.Integer startOffset;
 
   /**
-   * `endOffset` specifies the end date of the extended reporting date range for a cohort report.
-   * `endOffset` can be any positive integer but is commonly set to 5 to 10 so that reports contain
-   * data on the cohort for the next several granularity time periods. If `granularity` is `DAILY`,
-   * the `endDate` of the extended reporting date range is `endDate` of the cohort plus `endOffset`
-   * days. If `granularity` is `WEEKLY`, the `endDate` of the extended reporting date range is
-   * `endDate` of the cohort plus `endOffset * 7` days. If `granularity` is `MONTHLY`, the `endDate`
-   * of the extended reporting date range is `endDate` of the cohort plus `endOffset * 30` days.
+   * Required. `endOffset` specifies the end date of the extended reporting date range for a cohort
+   * report. `endOffset` can be any positive integer but is commonly set to 5 to 10 so that reports
+   * contain data on the cohort for the next several granularity time periods. If `granularity` is
+   * `DAILY`, the `endDate` of the extended reporting date range is `endDate` of the cohort plus
+   * `endOffset` days. If `granularity` is `WEEKLY`, the `endDate` of the extended reporting date
+   * range is `endDate` of the cohort plus `endOffset * 7` days. If `granularity` is `MONTHLY`, the
+   * `endDate` of the extended reporting date range is `endDate` of the cohort plus `endOffset * 30`
+   * days.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEndOffset() {
@@ -80,13 +82,14 @@ public final class CohortsRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * `endOffset` specifies the end date of the extended reporting date range for a cohort report.
-   * `endOffset` can be any positive integer but is commonly set to 5 to 10 so that reports contain
-   * data on the cohort for the next several granularity time periods. If `granularity` is `DAILY`,
-   * the `endDate` of the extended reporting date range is `endDate` of the cohort plus `endOffset`
-   * days. If `granularity` is `WEEKLY`, the `endDate` of the extended reporting date range is
-   * `endDate` of the cohort plus `endOffset * 7` days. If `granularity` is `MONTHLY`, the `endDate`
-   * of the extended reporting date range is `endDate` of the cohort plus `endOffset * 30` days.
+   * Required. `endOffset` specifies the end date of the extended reporting date range for a cohort
+   * report. `endOffset` can be any positive integer but is commonly set to 5 to 10 so that reports
+   * contain data on the cohort for the next several granularity time periods. If `granularity` is
+   * `DAILY`, the `endDate` of the extended reporting date range is `endDate` of the cohort plus
+   * `endOffset` days. If `granularity` is `WEEKLY`, the `endDate` of the extended reporting date
+   * range is `endDate` of the cohort plus `endOffset * 7` days. If `granularity` is `MONTHLY`, the
+   * `endDate` of the extended reporting date range is `endDate` of the cohort plus `endOffset * 30`
+   * days.
    * @param endOffset endOffset or {@code null} for none
    */
   public CohortsRange setEndOffset(java.lang.Integer endOffset) {
@@ -95,8 +98,8 @@ public final class CohortsRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The granularity used to interpret the `startOffset` and `endOffset` for the extended reporting
-   * date range for a cohort report.
+   * Required. The granularity used to interpret the `startOffset` and `endOffset` for the extended
+   * reporting date range for a cohort report.
    * @return value or {@code null} for none
    */
   public java.lang.String getGranularity() {
@@ -104,8 +107,8 @@ public final class CohortsRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The granularity used to interpret the `startOffset` and `endOffset` for the extended reporting
-   * date range for a cohort report.
+   * Required. The granularity used to interpret the `startOffset` and `endOffset` for the extended
+   * reporting date range for a cohort report.
    * @param granularity granularity or {@code null} for none
    */
   public CohortsRange setGranularity(java.lang.String granularity) {

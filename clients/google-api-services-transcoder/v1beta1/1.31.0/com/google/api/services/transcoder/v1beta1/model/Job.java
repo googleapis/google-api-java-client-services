@@ -144,6 +144,14 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String templateId;
 
   /**
+   * Job time to live value in days, which will be effective after job completion. Job should be
+   * deleted automatically after the given TTL. Enter a value between 1 and 90. The default is 30.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer ttlAfterCompletionDays;
+
+  /**
    * The configuration for this job.
    * @return value or {@code null} for none
    */
@@ -398,6 +406,25 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setTemplateId(java.lang.String templateId) {
     this.templateId = templateId;
+    return this;
+  }
+
+  /**
+   * Job time to live value in days, which will be effective after job completion. Job should be
+   * deleted automatically after the given TTL. Enter a value between 1 and 90. The default is 30.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTtlAfterCompletionDays() {
+    return ttlAfterCompletionDays;
+  }
+
+  /**
+   * Job time to live value in days, which will be effective after job completion. Job should be
+   * deleted automatically after the given TTL. Enter a value between 1 and 90. The default is 30.
+   * @param ttlAfterCompletionDays ttlAfterCompletionDays or {@code null} for none
+   */
+  public Job setTtlAfterCompletionDays(java.lang.Integer ttlAfterCompletionDays) {
+    this.ttlAfterCompletionDays = ttlAfterCompletionDays;
     return this;
   }
 

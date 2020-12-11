@@ -17,7 +17,8 @@
 package com.google.api.services.transcoder.v1beta1.model;
 
 /**
- * Video cropping configuration.
+ * Video cropping configuration for the input video. The cropped input video is scaled to match the
+ * output resolution.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Transcoder API. For a detailed explanation see:

@@ -167,7 +167,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
       return result;
     }
 
-    public class Get extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.FindFullHashesResponse> {
+    public class Get extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindFullHashesResponse> {
 
       private static final String REST_PATH = "v4/encodedFullHashes/{encodedRequest}";
 
@@ -183,7 +183,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
        * @since 1.13
        */
       protected Get(java.lang.String encodedRequest) {
-        super(Safebrowsing.this, "GET", REST_PATH, null, com.google.api.services.safebrowsing.v4.model.FindFullHashesResponse.class);
+        super(Safebrowsing.this, "GET", REST_PATH, null, com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindFullHashesResponse.class);
         this.encodedRequest = com.google.api.client.util.Preconditions.checkNotNull(encodedRequest, "Required parameter encodedRequest must be specified.");
       }
 
@@ -350,7 +350,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
       return result;
     }
 
-    public class Get extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.FetchThreatListUpdatesResponse> {
+    public class Get extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse> {
 
       private static final String REST_PATH = "v4/encodedUpdates/{encodedRequest}";
 
@@ -366,7 +366,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
        * @since 1.13
        */
       protected Get(java.lang.String encodedRequest) {
-        super(Safebrowsing.this, "GET", REST_PATH, null, com.google.api.services.safebrowsing.v4.model.FetchThreatListUpdatesResponse.class);
+        super(Safebrowsing.this, "GET", REST_PATH, null, com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse.class);
         this.encodedRequest = com.google.api.client.util.Preconditions.checkNotNull(encodedRequest, "Required parameter encodedRequest must be specified.");
       }
 
@@ -523,16 +523,16 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the safebrowsing server.  After setting any optional
      * parameters, call the {@link Find#execute()} method to invoke the remote operation.
      *
-     * @param content the {@link com.google.api.services.safebrowsing.v4.model.FindFullHashesRequest}
+     * @param content the {@link com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindFullHashesRequest}
      * @return the request
      */
-    public Find find(com.google.api.services.safebrowsing.v4.model.FindFullHashesRequest content) throws java.io.IOException {
+    public Find find(com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindFullHashesRequest content) throws java.io.IOException {
       Find result = new Find(content);
       initialize(result);
       return result;
     }
 
-    public class Find extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.FindFullHashesResponse> {
+    public class Find extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindFullHashesResponse> {
 
       private static final String REST_PATH = "v4/fullHashes:find";
 
@@ -546,11 +546,11 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
        * {@link Find#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param content the {@link com.google.api.services.safebrowsing.v4.model.FindFullHashesRequest}
+       * @param content the {@link com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindFullHashesRequest}
        * @since 1.13
        */
-      protected Find(com.google.api.services.safebrowsing.v4.model.FindFullHashesRequest content) {
-        super(Safebrowsing.this, "POST", REST_PATH, content, com.google.api.services.safebrowsing.v4.model.FindFullHashesResponse.class);
+      protected Find(com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindFullHashesRequest content) {
+        super(Safebrowsing.this, "POST", REST_PATH, content, com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindFullHashesResponse.class);
       }
 
       @Override
@@ -645,16 +645,16 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the safebrowsing server.  After setting any optional
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
-     * @param content the {@link com.google.api.services.safebrowsing.v4.model.ThreatHit}
+     * @param content the {@link com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4ThreatHit}
      * @return the request
      */
-    public Create create(com.google.api.services.safebrowsing.v4.model.ThreatHit content) throws java.io.IOException {
+    public Create create(com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4ThreatHit content) throws java.io.IOException {
       Create result = new Create(content);
       initialize(result);
       return result;
     }
 
-    public class Create extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.Empty> {
+    public class Create extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.GoogleProtobufEmpty> {
 
       private static final String REST_PATH = "v4/threatHits";
 
@@ -670,11 +670,11 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
        * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param content the {@link com.google.api.services.safebrowsing.v4.model.ThreatHit}
+       * @param content the {@link com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4ThreatHit}
        * @since 1.13
        */
-      protected Create(com.google.api.services.safebrowsing.v4.model.ThreatHit content) {
-        super(Safebrowsing.this, "POST", REST_PATH, content, com.google.api.services.safebrowsing.v4.model.Empty.class);
+      protected Create(com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4ThreatHit content) {
+        super(Safebrowsing.this, "POST", REST_PATH, content, com.google.api.services.safebrowsing.v4.model.GoogleProtobufEmpty.class);
       }
 
       @Override
@@ -769,16 +769,16 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the safebrowsing server.  After setting any optional
      * parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
      *
-     * @param content the {@link com.google.api.services.safebrowsing.v4.model.FetchThreatListUpdatesRequest}
+     * @param content the {@link com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest}
      * @return the request
      */
-    public Fetch fetch(com.google.api.services.safebrowsing.v4.model.FetchThreatListUpdatesRequest content) throws java.io.IOException {
+    public Fetch fetch(com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest content) throws java.io.IOException {
       Fetch result = new Fetch(content);
       initialize(result);
       return result;
     }
 
-    public class Fetch extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.FetchThreatListUpdatesResponse> {
+    public class Fetch extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse> {
 
       private static final String REST_PATH = "v4/threatListUpdates:fetch";
 
@@ -794,11 +794,11 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
        * Fetch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param content the {@link com.google.api.services.safebrowsing.v4.model.FetchThreatListUpdatesRequest}
+       * @param content the {@link com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest}
        * @since 1.13
        */
-      protected Fetch(com.google.api.services.safebrowsing.v4.model.FetchThreatListUpdatesRequest content) {
-        super(Safebrowsing.this, "POST", REST_PATH, content, com.google.api.services.safebrowsing.v4.model.FetchThreatListUpdatesResponse.class);
+      protected Fetch(com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest content) {
+        super(Safebrowsing.this, "POST", REST_PATH, content, com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse.class);
       }
 
       @Override
@@ -900,7 +900,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
       return result;
     }
 
-    public class List extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.ListThreatListsResponse> {
+    public class List extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4ListThreatListsResponse> {
 
       private static final String REST_PATH = "v4/threatLists";
 
@@ -917,7 +917,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
        * @since 1.13
        */
       protected List() {
-        super(Safebrowsing.this, "GET", REST_PATH, null, com.google.api.services.safebrowsing.v4.model.ListThreatListsResponse.class);
+        super(Safebrowsing.this, "GET", REST_PATH, null, com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4ListThreatListsResponse.class);
       }
 
       @Override
@@ -1021,16 +1021,16 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the safebrowsing server.  After setting any optional
      * parameters, call the {@link Find#execute()} method to invoke the remote operation.
      *
-     * @param content the {@link com.google.api.services.safebrowsing.v4.model.FindThreatMatchesRequest}
+     * @param content the {@link com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindThreatMatchesRequest}
      * @return the request
      */
-    public Find find(com.google.api.services.safebrowsing.v4.model.FindThreatMatchesRequest content) throws java.io.IOException {
+    public Find find(com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindThreatMatchesRequest content) throws java.io.IOException {
       Find result = new Find(content);
       initialize(result);
       return result;
     }
 
-    public class Find extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.FindThreatMatchesResponse> {
+    public class Find extends SafebrowsingRequest<com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindThreatMatchesResponse> {
 
       private static final String REST_PATH = "v4/threatMatches:find";
 
@@ -1044,11 +1044,11 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
        * {@link Find#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param content the {@link com.google.api.services.safebrowsing.v4.model.FindThreatMatchesRequest}
+       * @param content the {@link com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindThreatMatchesRequest}
        * @since 1.13
        */
-      protected Find(com.google.api.services.safebrowsing.v4.model.FindThreatMatchesRequest content) {
-        super(Safebrowsing.this, "POST", REST_PATH, content, com.google.api.services.safebrowsing.v4.model.FindThreatMatchesResponse.class);
+      protected Find(com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindThreatMatchesRequest content) {
+        super(Safebrowsing.this, "POST", REST_PATH, content, com.google.api.services.safebrowsing.v4.model.GoogleSecuritySafebrowsingV4FindThreatMatchesResponse.class);
       }
 
       @Override

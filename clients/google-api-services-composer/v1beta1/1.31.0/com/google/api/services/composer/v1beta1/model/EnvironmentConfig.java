@@ -71,6 +71,19 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private java.lang.String gkeCluster;
 
   /**
+   * Optional. The maintenance window is the period when Cloud Composer components may undergo
+   * maintenance. It is defined so that maintenance is not executed during peak hours or critical
+   * time periods. The system will not be under maintenance for every occurrence of this window, but
+   * when maintenance is planned, it will be scheduled during the window. The maintenance window
+   * period must encompass at least 12 hours per week. This may be split into multiple chunks, each
+   * with a size of at least 4 hours. If this value is omitted, Cloud Composer components may be
+   * subject to maintenance at any time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaintenanceWindow maintenanceWindow;
+
+  /**
    * The configuration used for the Kubernetes Engine cluster.
    * The value may be {@code null}.
    */
@@ -207,6 +220,35 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setGkeCluster(java.lang.String gkeCluster) {
     this.gkeCluster = gkeCluster;
+    return this;
+  }
+
+  /**
+   * Optional. The maintenance window is the period when Cloud Composer components may undergo
+   * maintenance. It is defined so that maintenance is not executed during peak hours or critical
+   * time periods. The system will not be under maintenance for every occurrence of this window, but
+   * when maintenance is planned, it will be scheduled during the window. The maintenance window
+   * period must encompass at least 12 hours per week. This may be split into multiple chunks, each
+   * with a size of at least 4 hours. If this value is omitted, Cloud Composer components may be
+   * subject to maintenance at any time.
+   * @return value or {@code null} for none
+   */
+  public MaintenanceWindow getMaintenanceWindow() {
+    return maintenanceWindow;
+  }
+
+  /**
+   * Optional. The maintenance window is the period when Cloud Composer components may undergo
+   * maintenance. It is defined so that maintenance is not executed during peak hours or critical
+   * time periods. The system will not be under maintenance for every occurrence of this window, but
+   * when maintenance is planned, it will be scheduled during the window. The maintenance window
+   * period must encompass at least 12 hours per week. This may be split into multiple chunks, each
+   * with a size of at least 4 hours. If this value is omitted, Cloud Composer components may be
+   * subject to maintenance at any time.
+   * @param maintenanceWindow maintenanceWindow or {@code null} for none
+   */
+  public EnvironmentConfig setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
+    this.maintenanceWindow = maintenanceWindow;
     return this;
   }
 

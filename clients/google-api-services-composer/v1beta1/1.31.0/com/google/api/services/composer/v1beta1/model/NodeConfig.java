@@ -81,6 +81,19 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String machineType;
 
   /**
+   * Optional. The maximum number of pods per node in the Cloud Composer GKE cluster. The value must
+   * be between 8 and 110 and it can be set only if the environment is VPC-native. The default value
+   * is 32. Values of this field will be propagated both to the `default-pool` node pool of the
+   * newly created GKE cluster, and to the default "Maximum Pods per Node" value which is used for
+   * newly created node pools if their value is not explicitly set during node pool creation. For
+   * more information, see [Optimizing IP address allocation] (https://cloud.google.com/kubernetes-
+   * engine/docs/how-to/flexible-pod-cidr). Cannot be updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxPodsPerNode;
+
+  /**
    * Optional. The Compute Engine network to be used for machine communications, specified as a
    * [relative resource name](/apis/design/resource_names#relative_resource_name). For example:
    * "projects/{projectId}/global/networks/{networkId}". If unspecified, the default network in the
@@ -239,6 +252,35 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Optional. The maximum number of pods per node in the Cloud Composer GKE cluster. The value must
+   * be between 8 and 110 and it can be set only if the environment is VPC-native. The default value
+   * is 32. Values of this field will be propagated both to the `default-pool` node pool of the
+   * newly created GKE cluster, and to the default "Maximum Pods per Node" value which is used for
+   * newly created node pools if their value is not explicitly set during node pool creation. For
+   * more information, see [Optimizing IP address allocation] (https://cloud.google.com/kubernetes-
+   * engine/docs/how-to/flexible-pod-cidr). Cannot be updated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxPodsPerNode() {
+    return maxPodsPerNode;
+  }
+
+  /**
+   * Optional. The maximum number of pods per node in the Cloud Composer GKE cluster. The value must
+   * be between 8 and 110 and it can be set only if the environment is VPC-native. The default value
+   * is 32. Values of this field will be propagated both to the `default-pool` node pool of the
+   * newly created GKE cluster, and to the default "Maximum Pods per Node" value which is used for
+   * newly created node pools if their value is not explicitly set during node pool creation. For
+   * more information, see [Optimizing IP address allocation] (https://cloud.google.com/kubernetes-
+   * engine/docs/how-to/flexible-pod-cidr). Cannot be updated.
+   * @param maxPodsPerNode maxPodsPerNode or {@code null} for none
+   */
+  public NodeConfig setMaxPodsPerNode(java.lang.Integer maxPodsPerNode) {
+    this.maxPodsPerNode = maxPodsPerNode;
     return this;
   }
 

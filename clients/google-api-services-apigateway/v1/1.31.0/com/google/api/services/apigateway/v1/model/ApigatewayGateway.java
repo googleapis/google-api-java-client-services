@@ -14,10 +14,11 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.apigateway.v1beta.model;
+package com.google.api.services.apigateway.v1.model;
 
 /**
- * An API that can be served by one or more Gateways.
+ * A Gateway is an API-aware HTTP proxy. It performs API-Method and/or API-Consumer specific actions
+ * based on an API Config such as authentication, policy enforcement, and backend selection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the API Gateway API. For a detailed explanation see:
@@ -27,7 +28,15 @@ package com.google.api.services.apigateway.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ApigatewayApi extends com.google.api.client.json.GenericJson {
+public final class ApigatewayGateway extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Required. Resource name of the API Config for this Gateway. Format:
+   * projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiConfig;
 
   /**
    * Output only. Created time.
@@ -35,6 +44,14 @@ public final class ApigatewayApi extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Output only. The default API Gateway host name of the form
+   * `{gateway_id}-{hash}.{region_code}.gateway.dev`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultHostname;
 
   /**
    * Optional. Display name.
@@ -52,23 +69,15 @@ public final class ApigatewayApi extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-
-   * infrastructure/docs/glossary#managed). If not specified, a new Service will automatically be
-   * created in the same project as this API.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String managedService;
-
-  /**
-   * Output only. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
+   * Output only. Resource name of the Gateway. Format:
+   * projects/{project}/locations/{location}/gateways/{gateway}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. State of the API.
+   * Output only. The current state of the Gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,6 +91,25 @@ public final class ApigatewayApi extends com.google.api.client.json.GenericJson 
   private String updateTime;
 
   /**
+   * Required. Resource name of the API Config for this Gateway. Format:
+   * projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiConfig() {
+    return apiConfig;
+  }
+
+  /**
+   * Required. Resource name of the API Config for this Gateway. Format:
+   * projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
+   * @param apiConfig apiConfig or {@code null} for none
+   */
+  public ApigatewayGateway setApiConfig(java.lang.String apiConfig) {
+    this.apiConfig = apiConfig;
+    return this;
+  }
+
+  /**
    * Output only. Created time.
    * @return value or {@code null} for none
    */
@@ -93,8 +121,27 @@ public final class ApigatewayApi extends com.google.api.client.json.GenericJson 
    * Output only. Created time.
    * @param createTime createTime or {@code null} for none
    */
-  public ApigatewayApi setCreateTime(String createTime) {
+  public ApigatewayGateway setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The default API Gateway host name of the form
+   * `{gateway_id}-{hash}.{region_code}.gateway.dev`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultHostname() {
+    return defaultHostname;
+  }
+
+  /**
+   * Output only. The default API Gateway host name of the form
+   * `{gateway_id}-{hash}.{region_code}.gateway.dev`.
+   * @param defaultHostname defaultHostname or {@code null} for none
+   */
+  public ApigatewayGateway setDefaultHostname(java.lang.String defaultHostname) {
+    this.defaultHostname = defaultHostname;
     return this;
   }
 
@@ -110,7 +157,7 @@ public final class ApigatewayApi extends com.google.api.client.json.GenericJson 
    * Optional. Display name.
    * @param displayName displayName or {@code null} for none
    */
-  public ApigatewayApi setDisplayName(java.lang.String displayName) {
+  public ApigatewayGateway setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
     return this;
   }
@@ -129,34 +176,14 @@ public final class ApigatewayApi extends com.google.api.client.json.GenericJson 
    * labels for more details. https://cloud.google.com/compute/docs/labeling-resources
    * @param labels labels or {@code null} for none
    */
-  public ApigatewayApi setLabels(java.util.Map<String, java.lang.String> labels) {
+  public ApigatewayGateway setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
     return this;
   }
 
   /**
-   * Optional. Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-
-   * infrastructure/docs/glossary#managed). If not specified, a new Service will automatically be
-   * created in the same project as this API.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getManagedService() {
-    return managedService;
-  }
-
-  /**
-   * Optional. Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-
-   * infrastructure/docs/glossary#managed). If not specified, a new Service will automatically be
-   * created in the same project as this API.
-   * @param managedService managedService or {@code null} for none
-   */
-  public ApigatewayApi setManagedService(java.lang.String managedService) {
-    this.managedService = managedService;
-    return this;
-  }
-
-  /**
-   * Output only. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
+   * Output only. Resource name of the Gateway. Format:
+   * projects/{project}/locations/{location}/gateways/{gateway}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -164,16 +191,17 @@ public final class ApigatewayApi extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
+   * Output only. Resource name of the Gateway. Format:
+   * projects/{project}/locations/{location}/gateways/{gateway}
    * @param name name or {@code null} for none
    */
-  public ApigatewayApi setName(java.lang.String name) {
+  public ApigatewayGateway setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * Output only. State of the API.
+   * Output only. The current state of the Gateway.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -181,10 +209,10 @@ public final class ApigatewayApi extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. State of the API.
+   * Output only. The current state of the Gateway.
    * @param state state or {@code null} for none
    */
-  public ApigatewayApi setState(java.lang.String state) {
+  public ApigatewayGateway setState(java.lang.String state) {
     this.state = state;
     return this;
   }
@@ -201,19 +229,19 @@ public final class ApigatewayApi extends com.google.api.client.json.GenericJson 
    * Output only. Updated time.
    * @param updateTime updateTime or {@code null} for none
    */
-  public ApigatewayApi setUpdateTime(String updateTime) {
+  public ApigatewayGateway setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public ApigatewayApi set(String fieldName, Object value) {
-    return (ApigatewayApi) super.set(fieldName, value);
+  public ApigatewayGateway set(String fieldName, Object value) {
+    return (ApigatewayGateway) super.set(fieldName, value);
   }
 
   @Override
-  public ApigatewayApi clone() {
-    return (ApigatewayApi) super.clone();
+  public ApigatewayGateway clone() {
+    return (ApigatewayGateway) super.clone();
   }
 
 }

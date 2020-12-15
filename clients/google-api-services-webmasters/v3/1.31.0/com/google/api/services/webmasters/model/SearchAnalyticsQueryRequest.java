@@ -47,6 +47,15 @@ public final class SearchAnalyticsQueryRequest extends com.google.api.client.jso
   private java.lang.String aggregationType;
 
   /**
+   * [Optional] If "all" (case-insensitive), data will include fresh data. If "final" (case-
+   * insensitive) or if this parameter is omitted, the returned data will include only finalized
+   * data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataState;
+
+  /**
    * [Optional] Zero or more filters to apply to the dimension grouping values; for example, 'query
    * contains "buy"' to see only data where the query string contains the substring "buy" (not case-
    * sensitive). You can filter by a dimension without grouping by it.
@@ -143,6 +152,27 @@ public final class SearchAnalyticsQueryRequest extends com.google.api.client.jso
    */
   public SearchAnalyticsQueryRequest setAggregationType(java.lang.String aggregationType) {
     this.aggregationType = aggregationType;
+    return this;
+  }
+
+  /**
+   * [Optional] If "all" (case-insensitive), data will include fresh data. If "final" (case-
+   * insensitive) or if this parameter is omitted, the returned data will include only finalized
+   * data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataState() {
+    return dataState;
+  }
+
+  /**
+   * [Optional] If "all" (case-insensitive), data will include fresh data. If "final" (case-
+   * insensitive) or if this parameter is omitted, the returned data will include only finalized
+   * data.
+   * @param dataState dataState or {@code null} for none
+   */
+  public SearchAnalyticsQueryRequest setDataState(java.lang.String dataState) {
+    this.dataState = dataState;
     return this;
   }
 

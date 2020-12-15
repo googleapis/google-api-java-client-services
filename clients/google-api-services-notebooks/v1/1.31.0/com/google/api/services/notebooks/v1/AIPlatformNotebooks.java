@@ -4357,6 +4357,165 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
         }
 
       }
+      /**
+       * An accessor for creating requests from the Schedules collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AIPlatformNotebooks notebooks = new AIPlatformNotebooks(...);}
+       *   {@code AIPlatformNotebooks.Schedules.List request = notebooks.schedules().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Schedules schedules() {
+        return new Schedules();
+      }
+
+      /**
+       * The "schedules" collection of methods.
+       */
+      public class Schedules {
+
+        /**
+         * Triggers execution of an existing schedule.
+         *
+         * Create a request for the method "schedules.trigger".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Trigger#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `parent=projects/{project_id}/locations/{location}/schedules/{schedule_id}`
+         * @param content the {@link com.google.api.services.notebooks.v1.model.TriggerScheduleRequest}
+         * @return the request
+         */
+        public Trigger trigger(java.lang.String name, com.google.api.services.notebooks.v1.model.TriggerScheduleRequest content) throws java.io.IOException {
+          Trigger result = new Trigger(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Trigger extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:trigger";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schedules/[^/]+$");
+
+          /**
+           * Triggers execution of an existing schedule.
+           *
+           * Create a request for the method "schedules.trigger".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Trigger#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Trigger#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `parent=projects/{project_id}/locations/{location}/schedules/{schedule_id}`
+           * @param content the {@link com.google.api.services.notebooks.v1.model.TriggerScheduleRequest}
+           * @since 1.13
+           */
+          protected Trigger(java.lang.String name, com.google.api.services.notebooks.v1.model.TriggerScheduleRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/schedules/[^/]+$");
+            }
+          }
+
+          @Override
+          public Trigger set$Xgafv(java.lang.String $Xgafv) {
+            return (Trigger) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Trigger setAccessToken(java.lang.String accessToken) {
+            return (Trigger) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Trigger setAlt(java.lang.String alt) {
+            return (Trigger) super.setAlt(alt);
+          }
+
+          @Override
+          public Trigger setCallback(java.lang.String callback) {
+            return (Trigger) super.setCallback(callback);
+          }
+
+          @Override
+          public Trigger setFields(java.lang.String fields) {
+            return (Trigger) super.setFields(fields);
+          }
+
+          @Override
+          public Trigger setKey(java.lang.String key) {
+            return (Trigger) super.setKey(key);
+          }
+
+          @Override
+          public Trigger setOauthToken(java.lang.String oauthToken) {
+            return (Trigger) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Trigger setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Trigger) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Trigger setQuotaUser(java.lang.String quotaUser) {
+            return (Trigger) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Trigger setUploadType(java.lang.String uploadType) {
+            return (Trigger) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Trigger setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Trigger) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format:
+           * `parent=projects/{project_id}/locations/{location}/schedules/{schedule_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `parent=projects/{project_id}/locations/{location}/schedules/{schedule_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format:
+           * `parent=projects/{project_id}/locations/{location}/schedules/{schedule_id}`
+           */
+          public Trigger setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/schedules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Trigger set(String parameterName, Object value) {
+            return (Trigger) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

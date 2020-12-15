@@ -32,7 +32,7 @@ public class GoogleAnalyticsAdminScopes {
   /** View Google Analytics user permissions. */
   public static final String ANALYTICS_MANAGE_USERS_READONLY = "https://www.googleapis.com/auth/analytics.manage.users.readonly";
 
-  /** View your Google Analytics data. */
+  /** See and download your Google Analytics data. */
   public static final String ANALYTICS_READONLY = "https://www.googleapis.com/auth/analytics.readonly";
 
   /**

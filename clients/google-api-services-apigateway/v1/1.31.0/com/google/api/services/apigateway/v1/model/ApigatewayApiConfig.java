@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.apigateway.v1beta.model;
+package com.google.api.services.apigateway.v1.model;
 
 /**
  * An API Configuration is a combination of settings for both the Managed Service and Gateways
@@ -43,13 +43,6 @@ public final class ApigatewayApiConfig extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
-
-  /**
-   * Immutable. Gateway specific configuration.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ApigatewayGatewayConfig gatewayConfig;
 
   /**
    * Immutable. The Google Cloud IAM Service Account that Gateways serving this config should use to
@@ -158,23 +151,6 @@ public final class ApigatewayApiConfig extends com.google.api.client.json.Generi
    */
   public ApigatewayApiConfig setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
-    return this;
-  }
-
-  /**
-   * Immutable. Gateway specific configuration.
-   * @return value or {@code null} for none
-   */
-  public ApigatewayGatewayConfig getGatewayConfig() {
-    return gatewayConfig;
-  }
-
-  /**
-   * Immutable. Gateway specific configuration.
-   * @param gatewayConfig gatewayConfig or {@code null} for none
-   */
-  public ApigatewayApiConfig setGatewayConfig(ApigatewayGatewayConfig gatewayConfig) {
-    this.gatewayConfig = gatewayConfig;
     return this;
   }
 

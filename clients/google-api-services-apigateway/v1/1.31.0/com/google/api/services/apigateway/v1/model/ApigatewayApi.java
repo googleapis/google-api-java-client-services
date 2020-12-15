@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.apigateway.v1beta.model;
+package com.google.api.services.apigateway.v1.model;
 
 /**
  * An API that can be served by one or more Gateways.

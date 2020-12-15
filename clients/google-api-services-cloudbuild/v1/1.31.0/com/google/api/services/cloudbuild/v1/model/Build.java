@@ -150,7 +150,7 @@ public final class Build extends com.google.api.client.json.GenericJson {
   /**
    * IAM service account whose credentials will be used at build runtime. Must be of the format
    * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of
-   * the service account. This field is in alpha and is not publicly available.
+   * the service account. This field is in beta.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -495,7 +495,7 @@ public final class Build extends com.google.api.client.json.GenericJson {
   /**
    * IAM service account whose credentials will be used at build runtime. Must be of the format
    * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of
-   * the service account. This field is in alpha and is not publicly available.
+   * the service account. This field is in beta.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -505,7 +505,7 @@ public final class Build extends com.google.api.client.json.GenericJson {
   /**
    * IAM service account whose credentials will be used at build runtime. Must be of the format
    * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of
-   * the service account. This field is in alpha and is not publicly available.
+   * the service account. This field is in beta.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public Build setServiceAccount(java.lang.String serviceAccount) {

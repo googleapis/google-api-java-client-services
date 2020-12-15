@@ -64,12 +64,12 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
    * literals without quotes. * boolean literals `true` and `false` without quotes. The following
    * field and operator combinations are supported: * name: `=` * parent: `=`, `:` * resource_name:
    * `=`, `:` * state: `=`, `:` * category: `=`, `:` * external_uri: `=`, `:` * event_time: `=`,
-   * `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339 string.
-   * Examples: `event_time = "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` *
-   * security_marks.marks: `=`, `:` * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=` For example,
-   * `source_properties.size = 100` is a valid filter string. Use a partial match on the empty
-   * string to filter based on a property existing: `source_properties.my_property : ""` Use a
-   * negated partial match on the empty string to filter based on a property not existing:
+   * `>`, `<`, `>=`, `<=` * severity: `=`, `:` Usage: This should be milliseconds since epoch or an
+   * RFC3339 string. Examples: `event_time = "2019-06-10T16:07:18-07:00"` `event_time =
+   * 1560208038000` * security_marks.marks: `=`, `:` * source_properties: `=`, `:`, `>`, `<`, `>=`,
+   * `<=` For example, `source_properties.size = 100` is a valid filter string. Use a partial match
+   * on the empty string to filter based on a property existing: `source_properties.my_property :
+   * ""` Use a negated partial match on the empty string to filter based on a property not existing:
    * `-source_properties.my_property : ""`
    * The value may be {@code null}.
    */
@@ -80,7 +80,7 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
    * Required. Expression that defines what assets fields to use for grouping (including
    * `state_change`). The string value should follow SQL syntax: comma separated list of fields. For
    * example: "parent,resource_name". The following fields are supported: * resource_name * category
-   * * state * parent The following fields are supported when compare_duration is set: *
+   * * state * parent * severity The following fields are supported when compare_duration is set: *
    * state_change
    * The value may be {@code null}.
    */
@@ -172,12 +172,12 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
    * literals without quotes. * boolean literals `true` and `false` without quotes. The following
    * field and operator combinations are supported: * name: `=` * parent: `=`, `:` * resource_name:
    * `=`, `:` * state: `=`, `:` * category: `=`, `:` * external_uri: `=`, `:` * event_time: `=`,
-   * `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339 string.
-   * Examples: `event_time = "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` *
-   * security_marks.marks: `=`, `:` * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=` For example,
-   * `source_properties.size = 100` is a valid filter string. Use a partial match on the empty
-   * string to filter based on a property existing: `source_properties.my_property : ""` Use a
-   * negated partial match on the empty string to filter based on a property not existing:
+   * `>`, `<`, `>=`, `<=` * severity: `=`, `:` Usage: This should be milliseconds since epoch or an
+   * RFC3339 string. Examples: `event_time = "2019-06-10T16:07:18-07:00"` `event_time =
+   * 1560208038000` * security_marks.marks: `=`, `:` * source_properties: `=`, `:`, `>`, `<`, `>=`,
+   * `<=` For example, `source_properties.size = 100` is a valid filter string. Use a partial match
+   * on the empty string to filter based on a property existing: `source_properties.my_property :
+   * ""` Use a negated partial match on the empty string to filter based on a property not existing:
    * `-source_properties.my_property : ""`
    * @return value or {@code null} for none
    */
@@ -196,12 +196,12 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
    * literals without quotes. * boolean literals `true` and `false` without quotes. The following
    * field and operator combinations are supported: * name: `=` * parent: `=`, `:` * resource_name:
    * `=`, `:` * state: `=`, `:` * category: `=`, `:` * external_uri: `=`, `:` * event_time: `=`,
-   * `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339 string.
-   * Examples: `event_time = "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` *
-   * security_marks.marks: `=`, `:` * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=` For example,
-   * `source_properties.size = 100` is a valid filter string. Use a partial match on the empty
-   * string to filter based on a property existing: `source_properties.my_property : ""` Use a
-   * negated partial match on the empty string to filter based on a property not existing:
+   * `>`, `<`, `>=`, `<=` * severity: `=`, `:` Usage: This should be milliseconds since epoch or an
+   * RFC3339 string. Examples: `event_time = "2019-06-10T16:07:18-07:00"` `event_time =
+   * 1560208038000` * security_marks.marks: `=`, `:` * source_properties: `=`, `:`, `>`, `<`, `>=`,
+   * `<=` For example, `source_properties.size = 100` is a valid filter string. Use a partial match
+   * on the empty string to filter based on a property existing: `source_properties.my_property :
+   * ""` Use a negated partial match on the empty string to filter based on a property not existing:
    * `-source_properties.my_property : ""`
    * @param filter filter or {@code null} for none
    */
@@ -214,7 +214,7 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
    * Required. Expression that defines what assets fields to use for grouping (including
    * `state_change`). The string value should follow SQL syntax: comma separated list of fields. For
    * example: "parent,resource_name". The following fields are supported: * resource_name * category
-   * * state * parent The following fields are supported when compare_duration is set: *
+   * * state * parent * severity The following fields are supported when compare_duration is set: *
    * state_change
    * @return value or {@code null} for none
    */
@@ -226,7 +226,7 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
    * Required. Expression that defines what assets fields to use for grouping (including
    * `state_change`). The string value should follow SQL syntax: comma separated list of fields. For
    * example: "parent,resource_name". The following fields are supported: * resource_name * category
-   * * state * parent The following fields are supported when compare_duration is set: *
+   * * state * parent * severity The following fields are supported when compare_duration is set: *
    * state_change
    * @param groupBy groupBy or {@code null} for none
    */

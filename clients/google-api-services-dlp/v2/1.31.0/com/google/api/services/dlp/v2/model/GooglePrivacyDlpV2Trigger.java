@@ -31,9 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Trigger extends com.google.api.client.json.GenericJson {
 
   /**
-   * For use with hybrid jobs. Jobs must be manually created and finished. Early access feature is
-   * in a pre-release state and might change or have limited support. For more information, see
-   * https://cloud.google.com/products#product-launch-stages.
+   * For use with hybrid jobs. Jobs must be manually created and finished.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +45,7 @@ public final class GooglePrivacyDlpV2Trigger extends com.google.api.client.json.
   private GooglePrivacyDlpV2Schedule schedule;
 
   /**
-   * For use with hybrid jobs. Jobs must be manually created and finished. Early access feature is
-   * in a pre-release state and might change or have limited support. For more information, see
-   * https://cloud.google.com/products#product-launch-stages.
+   * For use with hybrid jobs. Jobs must be manually created and finished.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2Manual getManual() {
@@ -57,9 +53,7 @@ public final class GooglePrivacyDlpV2Trigger extends com.google.api.client.json.
   }
 
   /**
-   * For use with hybrid jobs. Jobs must be manually created and finished. Early access feature is
-   * in a pre-release state and might change or have limited support. For more information, see
-   * https://cloud.google.com/products#product-launch-stages.
+   * For use with hybrid jobs. Jobs must be manually created and finished.
    * @param manual manual or {@code null} for none
    */
   public GooglePrivacyDlpV2Trigger setManual(GooglePrivacyDlpV2Manual manual) {

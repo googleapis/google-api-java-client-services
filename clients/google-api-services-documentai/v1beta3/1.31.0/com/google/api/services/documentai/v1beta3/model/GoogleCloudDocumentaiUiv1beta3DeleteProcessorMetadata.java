@@ -38,35 +38,6 @@ public final class GoogleCloudDocumentaiUiv1beta3DeleteProcessorMetadata extends
   private GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata;
 
   /**
-   * The creation time of the operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String createTime;
-
-  /**
-   * The state of the current delete processor operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
-
-  /**
-   * A message providing more details about the current state of processing. For example, the error
-   * message if the operation is failed.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String stateMessage;
-
-  /**
-   * The last update time of the operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String updateTime;
-
-  /**
    * The basic metadata of the long running operation.
    * @return value or {@code null} for none
    */
@@ -80,76 +51,6 @@ public final class GoogleCloudDocumentaiUiv1beta3DeleteProcessorMetadata extends
    */
   public GoogleCloudDocumentaiUiv1beta3DeleteProcessorMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {
     this.commonMetadata = commonMetadata;
-    return this;
-  }
-
-  /**
-   * The creation time of the operation.
-   * @return value or {@code null} for none
-   */
-  public String getCreateTime() {
-    return createTime;
-  }
-
-  /**
-   * The creation time of the operation.
-   * @param createTime createTime or {@code null} for none
-   */
-  public GoogleCloudDocumentaiUiv1beta3DeleteProcessorMetadata setCreateTime(String createTime) {
-    this.createTime = createTime;
-    return this;
-  }
-
-  /**
-   * The state of the current delete processor operation.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
-
-  /**
-   * The state of the current delete processor operation.
-   * @param state state or {@code null} for none
-   */
-  public GoogleCloudDocumentaiUiv1beta3DeleteProcessorMetadata setState(java.lang.String state) {
-    this.state = state;
-    return this;
-  }
-
-  /**
-   * A message providing more details about the current state of processing. For example, the error
-   * message if the operation is failed.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStateMessage() {
-    return stateMessage;
-  }
-
-  /**
-   * A message providing more details about the current state of processing. For example, the error
-   * message if the operation is failed.
-   * @param stateMessage stateMessage or {@code null} for none
-   */
-  public GoogleCloudDocumentaiUiv1beta3DeleteProcessorMetadata setStateMessage(java.lang.String stateMessage) {
-    this.stateMessage = stateMessage;
-    return this;
-  }
-
-  /**
-   * The last update time of the operation.
-   * @return value or {@code null} for none
-   */
-  public String getUpdateTime() {
-    return updateTime;
-  }
-
-  /**
-   * The last update time of the operation.
-   * @param updateTime updateTime or {@code null} for none
-   */
-  public GoogleCloudDocumentaiUiv1beta3DeleteProcessorMetadata setUpdateTime(String updateTime) {
-    this.updateTime = updateTime;
     return this;
   }
 

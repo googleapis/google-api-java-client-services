@@ -31,74 +31,26 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiUiv1beta3CreateProcessorVersionMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The creation time of the operation.
+   * The basic metadata of the long running operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String createTime;
+  private GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata;
 
   /**
-   * The state of the current disable processor operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
-
-  /**
-   * The last update time of the operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String updateTime;
-
-  /**
-   * The creation time of the operation.
+   * The basic metadata of the long running operation.
    * @return value or {@code null} for none
    */
-  public String getCreateTime() {
-    return createTime;
+  public GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata getCommonMetadata() {
+    return commonMetadata;
   }
 
   /**
-   * The creation time of the operation.
-   * @param createTime createTime or {@code null} for none
+   * The basic metadata of the long running operation.
+   * @param commonMetadata commonMetadata or {@code null} for none
    */
-  public GoogleCloudDocumentaiUiv1beta3CreateProcessorVersionMetadata setCreateTime(String createTime) {
-    this.createTime = createTime;
-    return this;
-  }
-
-  /**
-   * The state of the current disable processor operation.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
-
-  /**
-   * The state of the current disable processor operation.
-   * @param state state or {@code null} for none
-   */
-  public GoogleCloudDocumentaiUiv1beta3CreateProcessorVersionMetadata setState(java.lang.String state) {
-    this.state = state;
-    return this;
-  }
-
-  /**
-   * The last update time of the operation.
-   * @return value or {@code null} for none
-   */
-  public String getUpdateTime() {
-    return updateTime;
-  }
-
-  /**
-   * The last update time of the operation.
-   * @param updateTime updateTime or {@code null} for none
-   */
-  public GoogleCloudDocumentaiUiv1beta3CreateProcessorVersionMetadata setUpdateTime(String updateTime) {
-    this.updateTime = updateTime;
+  public GoogleCloudDocumentaiUiv1beta3CreateProcessorVersionMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {
+    this.commonMetadata = commonMetadata;
     return this;
   }
 

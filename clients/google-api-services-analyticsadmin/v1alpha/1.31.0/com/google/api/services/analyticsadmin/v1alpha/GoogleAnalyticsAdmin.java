@@ -4787,6 +4787,58 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           return this;
         }
 
+        /**
+         * The maximum number of resources to return. The service may return fewer than this value,
+         * even if there are additional pages. If unspecified, at most 50 resources will be
+         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of resources to return. The service may return fewer than this value, even if
+       there are additional pages. If unspecified, at most 50 resources will be returned. The maximum
+       value is 200; (higher values will be coerced to the maximum)
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of resources to return. The service may return fewer than this value,
+         * even if there are additional pages. If unspecified, at most 50 resources will be
+         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListFirebaseLinks` call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to `ListProperties`
+         * must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListFirebaseLinks` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListProperties` must match the
+       call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListFirebaseLinks` call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to `ListProperties`
+         * must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);

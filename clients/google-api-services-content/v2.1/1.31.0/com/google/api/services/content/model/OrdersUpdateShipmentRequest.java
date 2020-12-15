@@ -70,6 +70,13 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
   private java.lang.String readyPickupDate;
 
   /**
+   * Delivery details of the shipment if scheduling is needed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OrdersCustomBatchRequestEntryUpdateShipmentScheduledDeliveryDetails scheduledDeliveryDetails;
+
+  /**
    * The ID of the shipment.
    * The value may be {@code null}.
    */
@@ -189,6 +196,23 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
    */
   public OrdersUpdateShipmentRequest setReadyPickupDate(java.lang.String readyPickupDate) {
     this.readyPickupDate = readyPickupDate;
+    return this;
+  }
+
+  /**
+   * Delivery details of the shipment if scheduling is needed.
+   * @return value or {@code null} for none
+   */
+  public OrdersCustomBatchRequestEntryUpdateShipmentScheduledDeliveryDetails getScheduledDeliveryDetails() {
+    return scheduledDeliveryDetails;
+  }
+
+  /**
+   * Delivery details of the shipment if scheduling is needed.
+   * @param scheduledDeliveryDetails scheduledDeliveryDetails or {@code null} for none
+   */
+  public OrdersUpdateShipmentRequest setScheduledDeliveryDetails(OrdersCustomBatchRequestEntryUpdateShipmentScheduledDeliveryDetails scheduledDeliveryDetails) {
+    this.scheduledDeliveryDetails = scheduledDeliveryDetails;
     return this;
   }
 

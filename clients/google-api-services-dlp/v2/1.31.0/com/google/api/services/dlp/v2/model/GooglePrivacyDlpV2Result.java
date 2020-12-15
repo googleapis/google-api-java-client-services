@@ -31,9 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Result extends com.google.api.client.json.GenericJson {
 
   /**
-   * Statistics related to the processing of hybrid inspect. Early access feature is in a pre-
-   * release state and might change or have limited support. For more information, see
-   * https://cloud.google.com/products#product-launch-stages.
+   * Statistics related to the processing of hybrid inspect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,9 +65,7 @@ public final class GooglePrivacyDlpV2Result extends com.google.api.client.json.G
   private java.lang.Long totalEstimatedBytes;
 
   /**
-   * Statistics related to the processing of hybrid inspect. Early access feature is in a pre-
-   * release state and might change or have limited support. For more information, see
-   * https://cloud.google.com/products#product-launch-stages.
+   * Statistics related to the processing of hybrid inspect.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2HybridInspectStatistics getHybridStats() {
@@ -77,9 +73,7 @@ public final class GooglePrivacyDlpV2Result extends com.google.api.client.json.G
   }
 
   /**
-   * Statistics related to the processing of hybrid inspect. Early access feature is in a pre-
-   * release state and might change or have limited support. For more information, see
-   * https://cloud.google.com/products#product-launch-stages.
+   * Statistics related to the processing of hybrid inspect.
    * @param hybridStats hybridStats or {@code null} for none
    */
   public GooglePrivacyDlpV2Result setHybridStats(GooglePrivacyDlpV2HybridInspectStatistics hybridStats) {

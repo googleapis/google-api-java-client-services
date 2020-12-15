@@ -1823,15 +1823,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
-           * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
-           * /docs/reference/google.protobuf#fieldmask
+           * For the `FieldMask` definition, see https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#fieldmask
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Required. Mask of fields to update. At least one path must be supplied in this field. For the
-         `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
-         /docs/reference/google.protobuf#fieldmask
+         `FieldMask` definition, see https://developers.google.com/protocol-
+         buffers/docs/reference/google.protobuf#fieldmask
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1839,8 +1839,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
-           * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
-           * /docs/reference/google.protobuf#fieldmask
+           * For the `FieldMask` definition, see https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#fieldmask
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -2021,15 +2021,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Optional. Mask of fields to update. At least one path must be supplied in this field.
-           * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
-           * /docs/reference/google.protobuf#fieldmask
+           * For the `FieldMask` definition, see https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#fieldmask
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Optional. Mask of fields to update. At least one path must be supplied in this field. For the
-         `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
-         /docs/reference/google.protobuf#fieldmask
+         `FieldMask` definition, see https://developers.google.com/protocol-
+         buffers/docs/reference/google.protobuf#fieldmask
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2037,8 +2037,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Optional. Mask of fields to update. At least one path must be supplied in this field.
-           * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
-           * /docs/reference/google.protobuf#fieldmask
+           * For the `FieldMask` definition, see https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#fieldmask
            */
           public PreviewRollout setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -2492,15 +2492,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
-           * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
-           * /docs/reference/google.protobuf#fieldmask
+           * For the `FieldMask` definition, see https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#fieldmask
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Required. Mask of fields to update. At least one path must be supplied in this field. For the
-         `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
-         /docs/reference/google.protobuf#fieldmask
+         `FieldMask` definition, see https://developers.google.com/protocol-
+         buffers/docs/reference/google.protobuf#fieldmask
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2508,8 +2508,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
-           * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
-           * /docs/reference/google.protobuf#fieldmask
+           * For the `FieldMask` definition, see https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#fieldmask
            */
           public UpdateRollout setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -4703,14 +4703,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The update mask applies to the resource. For the `FieldMask` definition, see
-           * https: //developers.google.com/protocol-buffers //
-           * /docs/reference/google.protobuf#fieldmask
+           * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. The update mask applies to the resource. For the `FieldMask` definition, see https:
-         //developers.google.com/protocol-buffers // /docs/reference/google.protobuf#fieldmask
+          /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
+         https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
            */
           public String getUpdateMask() {
             return updateMask;
@@ -4718,8 +4717,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The update mask applies to the resource. For the `FieldMask` definition, see
-           * https: //developers.google.com/protocol-buffers //
-           * /docs/reference/google.protobuf#fieldmask
+           * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -4889,14 +4887,13 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The update mask applies to the resource. For the `FieldMask` definition, see
-           * https: //developers.google.com/protocol-buffers //
-           * /docs/reference/google.protobuf#fieldmask
+           * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. The update mask applies to the resource. For the `FieldMask` definition, see https:
-         //developers.google.com/protocol-buffers // /docs/reference/google.protobuf#fieldmask
+          /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
+         https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
            */
           public String getUpdateMask() {
             return updateMask;
@@ -4904,8 +4901,7 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The update mask applies to the resource. For the `FieldMask` definition, see
-           * https: //developers.google.com/protocol-buffers //
-           * /docs/reference/google.protobuf#fieldmask
+           * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
            */
           public PreviewUpdate setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -5761,15 +5757,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Mask of fields to update. At least one path must be supplied in this field.
-             * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers
-             * // /docs/reference/google.protobuf#fieldmask
+             * For the `FieldMask` definition, see https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
             /** Required. Mask of fields to update. At least one path must be supplied in this field. For the
-           `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
-           /docs/reference/google.protobuf#fieldmask
+           `FieldMask` definition, see https://developers.google.com/protocol-
+           buffers/docs/reference/google.protobuf#fieldmask
              */
             public String getUpdateMask() {
               return updateMask;
@@ -5777,8 +5773,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Mask of fields to update. At least one path must be supplied in this field.
-             * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers
-             * // /docs/reference/google.protobuf#fieldmask
+             * For the `FieldMask` definition, see https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -6278,15 +6274,15 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Mask of fields to update. At least one path must be supplied in this field.
-             * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers
-             * // /docs/reference/google.protobuf#fieldmask
+             * For the `FieldMask` definition, see https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
             /** Required. Mask of fields to update. At least one path must be supplied in this field. For the
-           `FieldMask` definition, see https: //developers.google.com/protocol-buffers //
-           /docs/reference/google.protobuf#fieldmask
+           `FieldMask` definition, see https://developers.google.com/protocol-
+           buffers/docs/reference/google.protobuf#fieldmask
              */
             public String getUpdateMask() {
               return updateMask;
@@ -6294,8 +6290,8 @@ public class GameServices extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Mask of fields to update. At least one path must be supplied in this field.
-             * For the `FieldMask` definition, see https: //developers.google.com/protocol-buffers
-             * // /docs/reference/google.protobuf#fieldmask
+             * For the `FieldMask` definition, see https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
              */
             public PreviewUpdate setUpdateMask(String updateMask) {
               this.updateMask = updateMask;

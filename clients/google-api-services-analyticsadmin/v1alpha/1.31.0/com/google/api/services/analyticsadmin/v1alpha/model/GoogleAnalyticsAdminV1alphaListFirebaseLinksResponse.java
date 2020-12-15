@@ -44,6 +44,15 @@ public final class GoogleAnalyticsAdminV1alphaListFirebaseLinksResponse extends 
   }
 
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages. Currently, Google Analytics supports only one FirebaseLink per
+   * property, so this will never be populated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
    * List of FirebaseLinks. This will have at most one value.
    * @return value or {@code null} for none
    */
@@ -57,6 +66,27 @@ public final class GoogleAnalyticsAdminV1alphaListFirebaseLinksResponse extends 
    */
   public GoogleAnalyticsAdminV1alphaListFirebaseLinksResponse setFirebaseLinks(java.util.List<GoogleAnalyticsAdminV1alphaFirebaseLink> firebaseLinks) {
     this.firebaseLinks = firebaseLinks;
+    return this;
+  }
+
+  /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages. Currently, Google Analytics supports only one FirebaseLink per
+   * property, so this will never be populated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
+  }
+
+  /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages. Currently, Google Analytics supports only one FirebaseLink per
+   * property, so this will never be populated.
+   * @param nextPageToken nextPageToken or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaListFirebaseLinksResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 

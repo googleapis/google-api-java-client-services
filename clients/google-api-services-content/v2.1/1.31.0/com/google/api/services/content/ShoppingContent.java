@@ -14463,6 +14463,304 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
 
+    /**
+     * An accessor for creating requests from the Repricingreports collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ShoppingContent content = new ShoppingContent(...);}
+     *   {@code ShoppingContent.Repricingreports.List request = content.repricingreports().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Repricingreports repricingreports() {
+      return new Repricingreports();
+    }
+
+    /**
+     * The "repricingreports" collection of methods.
+     */
+    public class Repricingreports {
+
+      /**
+       * Lists the metrics report for a given Repricing product. Reports of the last 3 days may not be
+       * complete.
+       *
+       * Create a request for the method "repricingreports.list".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param merchantId Required. Id of the merchant who owns the Repricing rule.
+       * @param productId Required. Id of the Repricing product. Also known as the [REST_ID](https://developers.google.com
+       *        /shopping-content/reference/rest/v2.1/products#Product.FIELDS.id)
+       * @return the request
+       */
+      public List list(java.lang.Long merchantId, java.lang.String productId) throws java.io.IOException {
+        List result = new List(merchantId, productId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListRepricingProductReportsResponse> {
+
+        private static final String REST_PATH = "content/v2.1/{merchantId}/productstatuses/{productId}/repricingreports";
+
+        /**
+         * Lists the metrics report for a given Repricing product. Reports of the last 3 days may not be
+         * complete.
+         *
+         * Create a request for the method "repricingreports.list".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param merchantId Required. Id of the merchant who owns the Repricing rule.
+         * @param productId Required. Id of the Repricing product. Also known as the [REST_ID](https://developers.google.com
+       *        /shopping-content/reference/rest/v2.1/products#Product.FIELDS.id)
+         * @since 1.13
+         */
+        protected List(java.lang.Long merchantId, java.lang.String productId) {
+          super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ListRepricingProductReportsResponse.class);
+          this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+          this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Id of the merchant who owns the Repricing rule. */
+        @com.google.api.client.util.Key
+        private java.lang.Long merchantId;
+
+        /** Required. Id of the merchant who owns the Repricing rule.
+         */
+        public java.lang.Long getMerchantId() {
+          return merchantId;
+        }
+
+        /** Required. Id of the merchant who owns the Repricing rule. */
+        public List setMerchantId(java.lang.Long merchantId) {
+          this.merchantId = merchantId;
+          return this;
+        }
+
+        /**
+         * Required. Id of the Repricing product. Also known as the
+         * [REST_ID](https://developers.google.com/shopping-
+         * content/reference/rest/v2.1/products#Product.FIELDS.id)
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String productId;
+
+        /** Required. Id of the Repricing product. Also known as the [REST_ID](https://developers.google.com
+       /shopping-content/reference/rest/v2.1/products#Product.FIELDS.id)
+         */
+        public java.lang.String getProductId() {
+          return productId;
+        }
+
+        /**
+         * Required. Id of the Repricing product. Also known as the
+         * [REST_ID](https://developers.google.com/shopping-
+         * content/reference/rest/v2.1/products#Product.FIELDS.id)
+         */
+        public List setProductId(java.lang.String productId) {
+          this.productId = productId;
+          return this;
+        }
+
+        /**
+         * Gets Repricing reports on and before this date in the merchant's timezone. You can only
+         * retrieve data up to 3 days ago (default) or earlier. Format is YYYY-MM-DD.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String endDate;
+
+        /** Gets Repricing reports on and before this date in the merchant's timezone. You can only retrieve
+       data up to 3 days ago (default) or earlier. Format is YYYY-MM-DD.
+         */
+        public java.lang.String getEndDate() {
+          return endDate;
+        }
+
+        /**
+         * Gets Repricing reports on and before this date in the merchant's timezone. You can only
+         * retrieve data up to 3 days ago (default) or earlier. Format is YYYY-MM-DD.
+         */
+        public List setEndDate(java.lang.String endDate) {
+          this.endDate = endDate;
+          return this;
+        }
+
+        /**
+         * Maximum number of days of reports to return. There can be more than one rule report
+         * returned per day. For example, if 3 rule types got applied to the same product within a
+         * 24-hour period, then a page_size of 1 will return 3 rule reports. The page size defaults
+         * to 50 and values above 1000 are coerced to 1000. This service may return fewer days of
+         * reports than this value, for example, if the time between your start and end date is less
+         * than the page size.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of days of reports to return. There can be more than one rule report returned per
+       day. For example, if 3 rule types got applied to the same product within a 24-hour period, then a
+       page_size of 1 will return 3 rule reports. The page size defaults to 50 and values above 1000 are
+       coerced to 1000. This service may return fewer days of reports than this value, for example, if the
+       time between your start and end date is less than the page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of days of reports to return. There can be more than one rule report
+         * returned per day. For example, if 3 rule types got applied to the same product within a
+         * 24-hour period, then a page_size of 1 will return 3 rule reports. The page size defaults
+         * to 50 and values above 1000 are coerced to 1000. This service may return fewer days of
+         * reports than this value, for example, if the time between your start and end date is less
+         * than the page size.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Token (if provided) to retrieve the subsequent page. All other parameters must match the
+         * original call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Token (if provided) to retrieve the subsequent page. All other parameters must match the original
+       call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Token (if provided) to retrieve the subsequent page. All other parameters must match the
+         * original call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /** Id of the Repricing rule. If specified, only gets this rule's reports. */
+        @com.google.api.client.util.Key
+        private java.lang.String ruleId;
+
+        /** Id of the Repricing rule. If specified, only gets this rule's reports.
+         */
+        public java.lang.String getRuleId() {
+          return ruleId;
+        }
+
+        /** Id of the Repricing rule. If specified, only gets this rule's reports. */
+        public List setRuleId(java.lang.String ruleId) {
+          this.ruleId = ruleId;
+          return this;
+        }
+
+        /**
+         * Gets Repricing reports on and after this date in the merchant's timezone, up to one year
+         * ago. Do not use a start date later than 3 days ago (default). Format is YYYY-MM-DD.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String startDate;
+
+        /** Gets Repricing reports on and after this date in the merchant's timezone, up to one year ago. Do
+       not use a start date later than 3 days ago (default). Format is YYYY-MM-DD.
+         */
+        public java.lang.String getStartDate() {
+          return startDate;
+        }
+
+        /**
+         * Gets Repricing reports on and after this date in the merchant's timezone, up to one year
+         * ago. Do not use a start date later than 3 days ago (default). Format is YYYY-MM-DD.
+         */
+        public List setStartDate(java.lang.String startDate) {
+          this.startDate = startDate;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**
@@ -16550,6 +16848,272 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
 
+    /**
+     * An accessor for creating requests from the Repricingreports collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ShoppingContent content = new ShoppingContent(...);}
+     *   {@code ShoppingContent.Repricingreports.List request = content.repricingreports().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Repricingreports repricingreports() {
+      return new Repricingreports();
+    }
+
+    /**
+     * The "repricingreports" collection of methods.
+     */
+    public class Repricingreports {
+
+      /**
+       * Lists the metrics report for a given Repricing rule. Reports of the last 3 days may not be
+       * complete.
+       *
+       * Create a request for the method "repricingreports.list".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param merchantId Required. Id of the merchant who owns the Repricing rule.
+       * @param ruleId Required. Id of the Repricing rule.
+       * @return the request
+       */
+      public List list(java.lang.Long merchantId, java.lang.String ruleId) throws java.io.IOException {
+        List result = new List(merchantId, ruleId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListRepricingRuleReportsResponse> {
+
+        private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules/{ruleId}/repricingreports";
+
+        /**
+         * Lists the metrics report for a given Repricing rule. Reports of the last 3 days may not be
+         * complete.
+         *
+         * Create a request for the method "repricingreports.list".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param merchantId Required. Id of the merchant who owns the Repricing rule.
+         * @param ruleId Required. Id of the Repricing rule.
+         * @since 1.13
+         */
+        protected List(java.lang.Long merchantId, java.lang.String ruleId) {
+          super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ListRepricingRuleReportsResponse.class);
+          this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+          this.ruleId = com.google.api.client.util.Preconditions.checkNotNull(ruleId, "Required parameter ruleId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Id of the merchant who owns the Repricing rule. */
+        @com.google.api.client.util.Key
+        private java.lang.Long merchantId;
+
+        /** Required. Id of the merchant who owns the Repricing rule.
+         */
+        public java.lang.Long getMerchantId() {
+          return merchantId;
+        }
+
+        /** Required. Id of the merchant who owns the Repricing rule. */
+        public List setMerchantId(java.lang.Long merchantId) {
+          this.merchantId = merchantId;
+          return this;
+        }
+
+        /** Required. Id of the Repricing rule. */
+        @com.google.api.client.util.Key
+        private java.lang.String ruleId;
+
+        /** Required. Id of the Repricing rule.
+         */
+        public java.lang.String getRuleId() {
+          return ruleId;
+        }
+
+        /** Required. Id of the Repricing rule. */
+        public List setRuleId(java.lang.String ruleId) {
+          this.ruleId = ruleId;
+          return this;
+        }
+
+        /**
+         * Gets Repricing reports on and before this date in the merchant's timezone. You can only
+         * retrieve data up to 3 days ago (default) or earlier. Format: YYYY-MM-DD.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String endDate;
+
+        /** Gets Repricing reports on and before this date in the merchant's timezone. You can only retrieve
+       data up to 3 days ago (default) or earlier. Format: YYYY-MM-DD.
+         */
+        public java.lang.String getEndDate() {
+          return endDate;
+        }
+
+        /**
+         * Gets Repricing reports on and before this date in the merchant's timezone. You can only
+         * retrieve data up to 3 days ago (default) or earlier. Format: YYYY-MM-DD.
+         */
+        public List setEndDate(java.lang.String endDate) {
+          this.endDate = endDate;
+          return this;
+        }
+
+        /**
+         * Maximum number of daily reports to return. Each report includes data from a single
+         * 24-hour period. The page size defaults to 50 and values above 1000 are coerced to 1000.
+         * This service may return fewer days than this value, for example, if the time between your
+         * start and end date is less than page size.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of daily reports to return. Each report includes data from a single 24-hour period.
+       The page size defaults to 50 and values above 1000 are coerced to 1000. This service may return
+       fewer days than this value, for example, if the time between your start and end date is less than
+       page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of daily reports to return. Each report includes data from a single
+         * 24-hour period. The page size defaults to 50 and values above 1000 are coerced to 1000.
+         * This service may return fewer days than this value, for example, if the time between your
+         * start and end date is less than page size.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Token (if provided) to retrieve the subsequent page. All other parameters must match the
+         * original call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Token (if provided) to retrieve the subsequent page. All other parameters must match the original
+       call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Token (if provided) to retrieve the subsequent page. All other parameters must match the
+         * original call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Gets Repricing reports on and after this date in the merchant's timezone, up to one year
+         * ago. Do not use a start date later than 3 days ago (default). Format: YYYY-MM-DD.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String startDate;
+
+        /** Gets Repricing reports on and after this date in the merchant's timezone, up to one year ago. Do
+       not use a start date later than 3 days ago (default). Format: YYYY-MM-DD.
+         */
+        public java.lang.String getStartDate() {
+          return startDate;
+        }
+
+        /**
+         * Gets Repricing reports on and after this date in the merchant's timezone, up to one year
+         * ago. Do not use a start date later than 3 days ago (default). Format: YYYY-MM-DD.
+         */
+        public List setStartDate(java.lang.String startDate) {
+          this.startDate = startDate;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

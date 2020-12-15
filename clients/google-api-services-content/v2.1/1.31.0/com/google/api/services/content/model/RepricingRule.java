@@ -32,6 +32,13 @@ package com.google.api.services.content.model;
 public final class RepricingRule extends com.google.api.client.json.GenericJson {
 
   /**
+   * The rule definition for TYPE_COGS_BASED. Required when the rule type is TYPE_COGS_BASED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RepricingRuleCostOfGoodsSaleRule cogsBasedRule;
+
+  /**
    * Required. Immutable. CLDR country code (e.g. "US").
    * The value may be {@code null}.
    */
@@ -90,6 +97,13 @@ public final class RepricingRule extends com.google.api.client.json.GenericJson 
   private java.lang.String ruleId;
 
   /**
+   * The rule definition for TYPE_STATS_BASED. Required when the rule type is TYPE_STATS_BASED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RepricingRuleStatsBasedRule statsBasedRule;
+
+  /**
    * The title for the rule.
    * The value may be {@code null}.
    */
@@ -102,6 +116,23 @@ public final class RepricingRule extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The rule definition for TYPE_COGS_BASED. Required when the rule type is TYPE_COGS_BASED.
+   * @return value or {@code null} for none
+   */
+  public RepricingRuleCostOfGoodsSaleRule getCogsBasedRule() {
+    return cogsBasedRule;
+  }
+
+  /**
+   * The rule definition for TYPE_COGS_BASED. Required when the rule type is TYPE_COGS_BASED.
+   * @param cogsBasedRule cogsBasedRule or {@code null} for none
+   */
+  public RepricingRule setCogsBasedRule(RepricingRuleCostOfGoodsSaleRule cogsBasedRule) {
+    this.cogsBasedRule = cogsBasedRule;
+    return this;
+  }
 
   /**
    * Required. Immutable. CLDR country code (e.g. "US").
@@ -240,6 +271,23 @@ public final class RepricingRule extends com.google.api.client.json.GenericJson 
    */
   public RepricingRule setRuleId(java.lang.String ruleId) {
     this.ruleId = ruleId;
+    return this;
+  }
+
+  /**
+   * The rule definition for TYPE_STATS_BASED. Required when the rule type is TYPE_STATS_BASED.
+   * @return value or {@code null} for none
+   */
+  public RepricingRuleStatsBasedRule getStatsBasedRule() {
+    return statsBasedRule;
+  }
+
+  /**
+   * The rule definition for TYPE_STATS_BASED. Required when the rule type is TYPE_STATS_BASED.
+   * @param statsBasedRule statsBasedRule or {@code null} for none
+   */
+  public RepricingRule setStatsBasedRule(RepricingRuleStatsBasedRule statsBasedRule) {
+    this.statsBasedRule = statsBasedRule;
     return this;
   }
 

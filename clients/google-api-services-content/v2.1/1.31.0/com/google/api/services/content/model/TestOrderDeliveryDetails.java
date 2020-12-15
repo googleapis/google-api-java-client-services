@@ -38,6 +38,13 @@ public final class TestOrderDeliveryDetails extends com.google.api.client.json.G
   private TestOrderAddress address;
 
   /**
+   * Whether the order is scheduled delivery order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isScheduledDelivery;
+
+  /**
    * The phone number of the person receiving the delivery.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class TestOrderDeliveryDetails extends com.google.api.client.json.G
    */
   public TestOrderDeliveryDetails setAddress(TestOrderAddress address) {
     this.address = address;
+    return this;
+  }
+
+  /**
+   * Whether the order is scheduled delivery order.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsScheduledDelivery() {
+    return isScheduledDelivery;
+  }
+
+  /**
+   * Whether the order is scheduled delivery order.
+   * @param isScheduledDelivery isScheduledDelivery or {@code null} for none
+   */
+  public TestOrderDeliveryDetails setIsScheduledDelivery(java.lang.Boolean isScheduledDelivery) {
+    this.isScheduledDelivery = isScheduledDelivery;
     return this;
   }
 

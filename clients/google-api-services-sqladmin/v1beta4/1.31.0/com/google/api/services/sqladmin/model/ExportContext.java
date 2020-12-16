@@ -79,8 +79,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The path to the file in Google Cloud Storage where the export will be stored. The URI is in the
-   * form *gs: //bucketName/fileName*. If the file already exists, the requests // succeeds, but the
-   * operation fails. If *fileType* is // *SQL* and the filename ends with .gz, the contents are //
+   * form *gs://bucketName/fileName*. If the file already exists, the request succeeds, but the
+   * operation fails. If *fileType* is *SQL* and the filename ends with .gz, the contents are
    * compressed.
    * The value may be {@code null}.
    */
@@ -203,8 +203,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The path to the file in Google Cloud Storage where the export will be stored. The URI is in the
-   * form *gs: //bucketName/fileName*. If the file already exists, the requests // succeeds, but the
-   * operation fails. If *fileType* is // *SQL* and the filename ends with .gz, the contents are //
+   * form *gs://bucketName/fileName*. If the file already exists, the request succeeds, but the
+   * operation fails. If *fileType* is *SQL* and the filename ends with .gz, the contents are
    * compressed.
    * @return value or {@code null} for none
    */
@@ -214,8 +214,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The path to the file in Google Cloud Storage where the export will be stored. The URI is in the
-   * form *gs: //bucketName/fileName*. If the file already exists, the requests // succeeds, but the
-   * operation fails. If *fileType* is // *SQL* and the filename ends with .gz, the contents are //
+   * form *gs://bucketName/fileName*. If the file already exists, the request succeeds, but the
+   * operation fails. If *fileType* is *SQL* and the filename ends with .gz, the contents are
    * compressed.
    * @param uri uri or {@code null} for none
    */

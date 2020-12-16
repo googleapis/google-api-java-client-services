@@ -32,50 +32,50 @@ package com.google.api.services.container.model;
 public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The current version before the upgrade.
+   * The current version before the upgrade.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currentVersion;
 
   /**
-   * Required. The operation associated with this upgrade.
+   * The operation associated with this upgrade.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String operation;
 
   /**
-   * Required. The time when the operation was started.
+   * The time when the operation was started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String operationStartTime;
 
   /**
-   * Optional. Optional relative path to the resource. For example in node pool upgrades, the
-   * relative path of the node pool.
+   * Optional relative path to the resource. For example in node pool upgrades, the relative path of
+   * the node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resource;
 
   /**
-   * Required. The resource type that is upgrading.
+   * The resource type that is upgrading.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
 
   /**
-   * Required. The target version for the upgrade.
+   * The target version for the upgrade.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetVersion;
 
   /**
-   * Required. The current version before the upgrade.
+   * The current version before the upgrade.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentVersion() {
@@ -83,7 +83,7 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The current version before the upgrade.
+   * The current version before the upgrade.
    * @param currentVersion currentVersion or {@code null} for none
    */
   public UpgradeEvent setCurrentVersion(java.lang.String currentVersion) {
@@ -92,7 +92,7 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The operation associated with this upgrade.
+   * The operation associated with this upgrade.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperation() {
@@ -100,7 +100,7 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The operation associated with this upgrade.
+   * The operation associated with this upgrade.
    * @param operation operation or {@code null} for none
    */
   public UpgradeEvent setOperation(java.lang.String operation) {
@@ -109,7 +109,7 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The time when the operation was started.
+   * The time when the operation was started.
    * @return value or {@code null} for none
    */
   public String getOperationStartTime() {
@@ -117,7 +117,7 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The time when the operation was started.
+   * The time when the operation was started.
    * @param operationStartTime operationStartTime or {@code null} for none
    */
   public UpgradeEvent setOperationStartTime(String operationStartTime) {
@@ -126,8 +126,8 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Optional relative path to the resource. For example in node pool upgrades, the
-   * relative path of the node pool.
+   * Optional relative path to the resource. For example in node pool upgrades, the relative path of
+   * the node pool.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -135,8 +135,8 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Optional relative path to the resource. For example in node pool upgrades, the
-   * relative path of the node pool.
+   * Optional relative path to the resource. For example in node pool upgrades, the relative path of
+   * the node pool.
    * @param resource resource or {@code null} for none
    */
   public UpgradeEvent setResource(java.lang.String resource) {
@@ -145,7 +145,7 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource type that is upgrading.
+   * The resource type that is upgrading.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -153,7 +153,7 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource type that is upgrading.
+   * The resource type that is upgrading.
    * @param resourceType resourceType or {@code null} for none
    */
   public UpgradeEvent setResourceType(java.lang.String resourceType) {
@@ -162,7 +162,7 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The target version for the upgrade.
+   * The target version for the upgrade.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetVersion() {
@@ -170,7 +170,7 @@ public final class UpgradeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The target version for the upgrade.
+   * The target version for the upgrade.
    * @param targetVersion targetVersion or {@code null} for none
    */
   public UpgradeEvent setTargetVersion(java.lang.String targetVersion) {

@@ -6903,22 +6903,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Search string in the format given at
-       * http://support.google.com/a/bin/answer.py?answer=1408863#search
+       * Search string in the format given at https://developers.google.com/admin-sdk/directory/v1
+       * /search-operators
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Search string in the format given at
-     http://support.google.com/a/bin/answer.py?answer=1408863#search
+      /** Search string in the format given at https://developers.google.com/admin-sdk/directory/v1/search-
+     operators
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Search string in the format given at
-       * http://support.google.com/a/bin/answer.py?answer=1408863#search
+       * Search string in the format given at https://developers.google.com/admin-sdk/directory/v1
+       * /search-operators
        */
       public List setQuery(java.lang.String query) {
         this.query = query;

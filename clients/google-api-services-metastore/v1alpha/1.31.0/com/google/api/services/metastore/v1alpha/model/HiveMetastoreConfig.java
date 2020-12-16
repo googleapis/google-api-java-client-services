@@ -42,7 +42,9 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
 
   /**
    * Information used to configure the Hive metastore service as a service principal in a Kerberos
-   * realm.
+   * realm. To disable Kerberos, use the UpdateService method and specify this field's path
+   * ("hive_metastore_config.kerberos_config") in the request's update_mask while omitting this
+   * field from the request's service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +80,9 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
 
   /**
    * Information used to configure the Hive metastore service as a service principal in a Kerberos
-   * realm.
+   * realm. To disable Kerberos, use the UpdateService method and specify this field's path
+   * ("hive_metastore_config.kerberos_config") in the request's update_mask while omitting this
+   * field from the request's service.
    * @return value or {@code null} for none
    */
   public KerberosConfig getKerberosConfig() {
@@ -87,7 +91,9 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
 
   /**
    * Information used to configure the Hive metastore service as a service principal in a Kerberos
-   * realm.
+   * realm. To disable Kerberos, use the UpdateService method and specify this field's path
+   * ("hive_metastore_config.kerberos_config") in the request's update_mask while omitting this
+   * field from the request's service.
    * @param kerberosConfig kerberosConfig or {@code null} for none
    */
   public HiveMetastoreConfig setKerberosConfig(KerberosConfig kerberosConfig) {

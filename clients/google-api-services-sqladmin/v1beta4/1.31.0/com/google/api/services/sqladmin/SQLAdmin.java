@@ -5509,6 +5509,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /** Whether to skip the verification step (VESS). */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean skipVerification;
+
+        /** Whether to skip the verification step (VESS).
+         */
+        public java.lang.Boolean getSkipVerification() {
+          return skipVerification;
+        }
+
+        /** Whether to skip the verification step (VESS). */
+        public StartExternalSync setSkipVerification(java.lang.Boolean skipVerification) {
+          this.skipVerification = skipVerification;
+          return this;
+        }
+
         /** External sync mode. */
         @com.google.api.client.util.Key
         private java.lang.String syncMode;

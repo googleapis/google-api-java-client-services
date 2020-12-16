@@ -318,6 +318,172 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Messages) super.set(parameterName, value);
       }
     }
+    /**
+     * Legacy path for creating message. Calling these will result in a BadRequest response.
+     *
+     * Create a request for the method "dms.webhooks".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Webhooks#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+     * @param content the {@link com.google.api.services.chat.v1.model.Message}
+     * @return the request
+     */
+    public Webhooks webhooks(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) throws java.io.IOException {
+      Webhooks result = new Webhooks(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Webhooks extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Message> {
+
+      private static final String REST_PATH = "v1/{+parent}/webhooks";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^dms/[^/]+$");
+
+      /**
+       * Legacy path for creating message. Calling these will result in a BadRequest response.
+       *
+       * Create a request for the method "dms.webhooks".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Webhooks#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Webhooks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param content the {@link com.google.api.services.chat.v1.model.Message}
+       * @since 1.13
+       */
+      protected Webhooks(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) {
+        super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Message.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^dms/[^/]+$");
+        }
+      }
+
+      @Override
+      public Webhooks set$Xgafv(java.lang.String $Xgafv) {
+        return (Webhooks) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Webhooks setAccessToken(java.lang.String accessToken) {
+        return (Webhooks) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Webhooks setAlt(java.lang.String alt) {
+        return (Webhooks) super.setAlt(alt);
+      }
+
+      @Override
+      public Webhooks setCallback(java.lang.String callback) {
+        return (Webhooks) super.setCallback(callback);
+      }
+
+      @Override
+      public Webhooks setFields(java.lang.String fields) {
+        return (Webhooks) super.setFields(fields);
+      }
+
+      @Override
+      public Webhooks setKey(java.lang.String key) {
+        return (Webhooks) super.setKey(key);
+      }
+
+      @Override
+      public Webhooks setOauthToken(java.lang.String oauthToken) {
+        return (Webhooks) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Webhooks setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Webhooks) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Webhooks setQuotaUser(java.lang.String quotaUser) {
+        return (Webhooks) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Webhooks setUploadType(java.lang.String uploadType) {
+        return (Webhooks) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Webhooks setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Webhooks) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      public Webhooks setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^dms/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Opaque thread identifier string that can be specified to group messages into a single
+       * thread. If this is the first message with a given thread identifier, a new thread is
+       * created. Subsequent messages with the same thread identifier will be posted into the same
+       * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
+       * a thread (created earlier by them) to post further updates to it. Has no effect if thread
+       * field, corresponding to an existing thread, is set in message.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String threadKey;
+
+      /** Opaque thread identifier string that can be specified to group messages into a single thread. If
+     this is the first message with a given thread identifier, a new thread is created. Subsequent
+     messages with the same thread identifier will be posted into the same thread. This relieves bots
+     and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
+     to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
+     is set in message.
+       */
+      public java.lang.String getThreadKey() {
+        return threadKey;
+      }
+
+      /**
+       * Opaque thread identifier string that can be specified to group messages into a single
+       * thread. If this is the first message with a given thread identifier, a new thread is
+       * created. Subsequent messages with the same thread identifier will be posted into the same
+       * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
+       * a thread (created earlier by them) to post further updates to it. Has no effect if thread
+       * field, corresponding to an existing thread, is set in message.
+       */
+      public Webhooks setThreadKey(java.lang.String threadKey) {
+        this.threadKey = threadKey;
+        return this;
+      }
+
+      @Override
+      public Webhooks set(String parameterName, Object value) {
+        return (Webhooks) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the Conversations collection.
@@ -873,6 +1039,172 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Messages) super.set(parameterName, value);
       }
     }
+    /**
+     * Legacy path for creating message. Calling these will result in a BadRequest response.
+     *
+     * Create a request for the method "rooms.webhooks".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Webhooks#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+     * @param content the {@link com.google.api.services.chat.v1.model.Message}
+     * @return the request
+     */
+    public Webhooks webhooks(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) throws java.io.IOException {
+      Webhooks result = new Webhooks(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Webhooks extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Message> {
+
+      private static final String REST_PATH = "v1/{+parent}/webhooks";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^rooms/[^/]+$");
+
+      /**
+       * Legacy path for creating message. Calling these will result in a BadRequest response.
+       *
+       * Create a request for the method "rooms.webhooks".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Webhooks#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Webhooks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param content the {@link com.google.api.services.chat.v1.model.Message}
+       * @since 1.13
+       */
+      protected Webhooks(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) {
+        super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Message.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^rooms/[^/]+$");
+        }
+      }
+
+      @Override
+      public Webhooks set$Xgafv(java.lang.String $Xgafv) {
+        return (Webhooks) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Webhooks setAccessToken(java.lang.String accessToken) {
+        return (Webhooks) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Webhooks setAlt(java.lang.String alt) {
+        return (Webhooks) super.setAlt(alt);
+      }
+
+      @Override
+      public Webhooks setCallback(java.lang.String callback) {
+        return (Webhooks) super.setCallback(callback);
+      }
+
+      @Override
+      public Webhooks setFields(java.lang.String fields) {
+        return (Webhooks) super.setFields(fields);
+      }
+
+      @Override
+      public Webhooks setKey(java.lang.String key) {
+        return (Webhooks) super.setKey(key);
+      }
+
+      @Override
+      public Webhooks setOauthToken(java.lang.String oauthToken) {
+        return (Webhooks) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Webhooks setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Webhooks) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Webhooks setQuotaUser(java.lang.String quotaUser) {
+        return (Webhooks) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Webhooks setUploadType(java.lang.String uploadType) {
+        return (Webhooks) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Webhooks setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Webhooks) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      public Webhooks setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^rooms/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Opaque thread identifier string that can be specified to group messages into a single
+       * thread. If this is the first message with a given thread identifier, a new thread is
+       * created. Subsequent messages with the same thread identifier will be posted into the same
+       * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
+       * a thread (created earlier by them) to post further updates to it. Has no effect if thread
+       * field, corresponding to an existing thread, is set in message.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String threadKey;
+
+      /** Opaque thread identifier string that can be specified to group messages into a single thread. If
+     this is the first message with a given thread identifier, a new thread is created. Subsequent
+     messages with the same thread identifier will be posted into the same thread. This relieves bots
+     and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
+     to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
+     is set in message.
+       */
+      public java.lang.String getThreadKey() {
+        return threadKey;
+      }
+
+      /**
+       * Opaque thread identifier string that can be specified to group messages into a single
+       * thread. If this is the first message with a given thread identifier, a new thread is
+       * created. Subsequent messages with the same thread identifier will be posted into the same
+       * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
+       * a thread (created earlier by them) to post further updates to it. Has no effect if thread
+       * field, corresponding to an existing thread, is set in message.
+       */
+      public Webhooks setThreadKey(java.lang.String threadKey) {
+        this.threadKey = threadKey;
+        return this;
+      }
+
+      @Override
+      public Webhooks set(String parameterName, Object value) {
+        return (Webhooks) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the Conversations collection.
@@ -1369,6 +1701,172 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Legacy path for creating message. Calling these will result in a BadRequest response.
+     *
+     * Create a request for the method "spaces.webhooks".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Webhooks#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+     * @param content the {@link com.google.api.services.chat.v1.model.Message}
+     * @return the request
+     */
+    public Webhooks webhooks(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) throws java.io.IOException {
+      Webhooks result = new Webhooks(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Webhooks extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Message> {
+
+      private static final String REST_PATH = "v1/{+parent}/webhooks";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^spaces/[^/]+$");
+
+      /**
+       * Legacy path for creating message. Calling these will result in a BadRequest response.
+       *
+       * Create a request for the method "spaces.webhooks".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Webhooks#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Webhooks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       * @param content the {@link com.google.api.services.chat.v1.model.Message}
+       * @since 1.13
+       */
+      protected Webhooks(java.lang.String parent, com.google.api.services.chat.v1.model.Message content) {
+        super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Message.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^spaces/[^/]+$");
+        }
+      }
+
+      @Override
+      public Webhooks set$Xgafv(java.lang.String $Xgafv) {
+        return (Webhooks) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Webhooks setAccessToken(java.lang.String accessToken) {
+        return (Webhooks) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Webhooks setAlt(java.lang.String alt) {
+        return (Webhooks) super.setAlt(alt);
+      }
+
+      @Override
+      public Webhooks setCallback(java.lang.String callback) {
+        return (Webhooks) super.setCallback(callback);
+      }
+
+      @Override
+      public Webhooks setFields(java.lang.String fields) {
+        return (Webhooks) super.setFields(fields);
+      }
+
+      @Override
+      public Webhooks setKey(java.lang.String key) {
+        return (Webhooks) super.setKey(key);
+      }
+
+      @Override
+      public Webhooks setOauthToken(java.lang.String oauthToken) {
+        return (Webhooks) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Webhooks setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Webhooks) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Webhooks setQuotaUser(java.lang.String quotaUser) {
+        return (Webhooks) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Webhooks setUploadType(java.lang.String uploadType) {
+        return (Webhooks) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Webhooks setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Webhooks) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
+      public Webhooks setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^spaces/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Opaque thread identifier string that can be specified to group messages into a single
+       * thread. If this is the first message with a given thread identifier, a new thread is
+       * created. Subsequent messages with the same thread identifier will be posted into the same
+       * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
+       * a thread (created earlier by them) to post further updates to it. Has no effect if thread
+       * field, corresponding to an existing thread, is set in message.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String threadKey;
+
+      /** Opaque thread identifier string that can be specified to group messages into a single thread. If
+     this is the first message with a given thread identifier, a new thread is created. Subsequent
+     messages with the same thread identifier will be posted into the same thread. This relieves bots
+     and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
+     to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
+     is set in message.
+       */
+      public java.lang.String getThreadKey() {
+        return threadKey;
+      }
+
+      /**
+       * Opaque thread identifier string that can be specified to group messages into a single
+       * thread. If this is the first message with a given thread identifier, a new thread is
+       * created. Subsequent messages with the same thread identifier will be posted into the same
+       * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID of
+       * a thread (created earlier by them) to post further updates to it. Has no effect if thread
+       * field, corresponding to an existing thread, is set in message.
+       */
+      public Webhooks setThreadKey(java.lang.String threadKey) {
+        this.threadKey = threadKey;
+        return this;
+      }
+
+      @Override
+      public Webhooks set(String parameterName, Object value) {
+        return (Webhooks) super.set(parameterName, value);
       }
     }
 

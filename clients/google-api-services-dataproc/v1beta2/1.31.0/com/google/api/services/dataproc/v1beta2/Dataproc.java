@@ -5663,6 +5663,210 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
+         * Inject encrypted credentials into all of the VMs in a cluster.The target cluster must be a
+         * personal auth cluster assigned to the user who is issuing the RPC.
+         *
+         * Create a request for the method "clusters.injectCredentials".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link InjectCredentials#execute()} method to invoke the remote operation.
+         *
+         * @param project Required. The ID of the Google Cloud Platform project the cluster belongs to, of the form projects/.
+         * @param region Required. The region containing the cluster, of the form regions/.
+         * @param cluster Required. The cluster, in the form clusters/.
+         * @param content the {@link com.google.api.services.dataproc.v1beta2.model.InjectCredentialsRequest}
+         * @return the request
+         */
+        public InjectCredentials injectCredentials(java.lang.String project, java.lang.String region, java.lang.String cluster, com.google.api.services.dataproc.v1beta2.model.InjectCredentialsRequest content) throws java.io.IOException {
+          InjectCredentials result = new InjectCredentials(project, region, cluster, content);
+          initialize(result);
+          return result;
+        }
+
+        public class InjectCredentials extends DataprocRequest<com.google.api.services.dataproc.v1beta2.model.Operation> {
+
+          private static final String REST_PATH = "v1beta2/{+project}/{+region}/{+cluster}:injectCredentials";
+
+          private final java.util.regex.Pattern PROJECT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+          private final java.util.regex.Pattern REGION_PATTERN =
+              java.util.regex.Pattern.compile("^regions/[^/]+$");
+
+          private final java.util.regex.Pattern CLUSTER_PATTERN =
+              java.util.regex.Pattern.compile("^clusters/[^/]+$");
+
+          /**
+           * Inject encrypted credentials into all of the VMs in a cluster.The target cluster must be a
+           * personal auth cluster assigned to the user who is issuing the RPC.
+           *
+           * Create a request for the method "clusters.injectCredentials".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link InjectCredentials#execute()} method to invoke the remote
+           * operation. <p> {@link InjectCredentials#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param project Required. The ID of the Google Cloud Platform project the cluster belongs to, of the form projects/.
+           * @param region Required. The region containing the cluster, of the form regions/.
+           * @param cluster Required. The cluster, in the form clusters/.
+           * @param content the {@link com.google.api.services.dataproc.v1beta2.model.InjectCredentialsRequest}
+           * @since 1.13
+           */
+          protected InjectCredentials(java.lang.String project, java.lang.String region, java.lang.String cluster, com.google.api.services.dataproc.v1beta2.model.InjectCredentialsRequest content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.v1beta2.model.Operation.class);
+            this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+                  "Parameter project must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^regions/[^/]+$");
+            }
+            this.cluster = com.google.api.client.util.Preconditions.checkNotNull(cluster, "Required parameter cluster must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CLUSTER_PATTERN.matcher(cluster).matches(),
+                  "Parameter cluster must conform to the pattern " +
+                  "^clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public InjectCredentials set$Xgafv(java.lang.String $Xgafv) {
+            return (InjectCredentials) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public InjectCredentials setAccessToken(java.lang.String accessToken) {
+            return (InjectCredentials) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public InjectCredentials setAlt(java.lang.String alt) {
+            return (InjectCredentials) super.setAlt(alt);
+          }
+
+          @Override
+          public InjectCredentials setCallback(java.lang.String callback) {
+            return (InjectCredentials) super.setCallback(callback);
+          }
+
+          @Override
+          public InjectCredentials setFields(java.lang.String fields) {
+            return (InjectCredentials) super.setFields(fields);
+          }
+
+          @Override
+          public InjectCredentials setKey(java.lang.String key) {
+            return (InjectCredentials) super.setKey(key);
+          }
+
+          @Override
+          public InjectCredentials setOauthToken(java.lang.String oauthToken) {
+            return (InjectCredentials) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public InjectCredentials setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (InjectCredentials) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public InjectCredentials setQuotaUser(java.lang.String quotaUser) {
+            return (InjectCredentials) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public InjectCredentials setUploadType(java.lang.String uploadType) {
+            return (InjectCredentials) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public InjectCredentials setUploadProtocol(java.lang.String uploadProtocol) {
+            return (InjectCredentials) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The ID of the Google Cloud Platform project the cluster belongs to, of the
+           * form projects/.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String project;
+
+          /** Required. The ID of the Google Cloud Platform project the cluster belongs to, of the form
+         projects/.
+           */
+          public java.lang.String getProject() {
+            return project;
+          }
+
+          /**
+           * Required. The ID of the Google Cloud Platform project the cluster belongs to, of the
+           * form projects/.
+           */
+          public InjectCredentials setProject(java.lang.String project) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+                  "Parameter project must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.project = project;
+            return this;
+          }
+
+          /** Required. The region containing the cluster, of the form regions/. */
+          @com.google.api.client.util.Key
+          private java.lang.String region;
+
+          /** Required. The region containing the cluster, of the form regions/.
+           */
+          public java.lang.String getRegion() {
+            return region;
+          }
+
+          /** Required. The region containing the cluster, of the form regions/. */
+          public InjectCredentials setRegion(java.lang.String region) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+                  "Parameter region must conform to the pattern " +
+                  "^regions/[^/]+$");
+            }
+            this.region = region;
+            return this;
+          }
+
+          /** Required. The cluster, in the form clusters/. */
+          @com.google.api.client.util.Key
+          private java.lang.String cluster;
+
+          /** Required. The cluster, in the form clusters/.
+           */
+          public java.lang.String getCluster() {
+            return cluster;
+          }
+
+          /** Required. The cluster, in the form clusters/. */
+          public InjectCredentials setCluster(java.lang.String cluster) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CLUSTER_PATTERN.matcher(cluster).matches(),
+                  "Parameter cluster must conform to the pattern " +
+                  "^clusters/[^/]+$");
+            }
+            this.cluster = cluster;
+            return this;
+          }
+
+          @Override
+          public InjectCredentials set(String parameterName, Object value) {
+            return (InjectCredentials) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists all regions/{region}/clusters in a project alphabetically.
          *
          * Create a request for the method "clusters.list".

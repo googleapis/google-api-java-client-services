@@ -40,7 +40,7 @@ public final class JobScheduling extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Maximum number of times in total a driver may be restarted as a result of driver
-   * exiting with non-zero code before job is reported failed. Maximum value is 240
+   * exiting with non-zero code before job is reported failed. Maximum value is 240.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class JobScheduling extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Maximum number of times in total a driver may be restarted as a result of driver
-   * exiting with non-zero code before job is reported failed. Maximum value is 240
+   * exiting with non-zero code before job is reported failed. Maximum value is 240.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxFailuresTotal() {
@@ -78,7 +78,7 @@ public final class JobScheduling extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Maximum number of times in total a driver may be restarted as a result of driver
-   * exiting with non-zero code before job is reported failed. Maximum value is 240
+   * exiting with non-zero code before job is reported failed. Maximum value is 240.
    * @param maxFailuresTotal maxFailuresTotal or {@code null} for none
    */
   public JobScheduling setMaxFailuresTotal(java.lang.Integer maxFailuresTotal) {

@@ -17,7 +17,12 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Project specific details about the content of a YouTube Video.
+ * DEPRECATED. b/157517979: This part was never populated after it was added. However, it sees non-
+ * zero traffic because there is generated client code in the wild that refers to it [1]. We keep
+ * this field and do NOT remove it because otherwise V3 would return an error when this part gets
+ * requested [2]. [1] https://developers.google.com/resources/api-libraries/documentation/youtube/v3
+ * /csharp/latest/classGoogle_1_1Apis_1_1YouTube_1_1v3_1_1Data_1_1VideoProjectDetails.html [2]
+ * http://google3/video/youtube/src/python/servers/data_api/common.py?l=1565-1569=344141677
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -28,30 +33,6 @@ package com.google.api.services.youtube.model;
  */
 @SuppressWarnings("javadoc")
 public final class VideoProjectDetails extends com.google.api.client.json.GenericJson {
-
-  /**
-   * A list of project tags associated with the video during the upload.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> tags;
-
-  /**
-   * A list of project tags associated with the video during the upload.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getTags() {
-    return tags;
-  }
-
-  /**
-   * A list of project tags associated with the video during the upload.
-   * @param tags tags or {@code null} for none
-   */
-  public VideoProjectDetails setTags(java.util.List<java.lang.String> tags) {
-    this.tags = tags;
-    return this;
-  }
 
   @Override
   public VideoProjectDetails set(String fieldName, Object value) {

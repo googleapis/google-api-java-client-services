@@ -50,6 +50,14 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   private java.lang.String bucketName;
 
   /**
+   * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'.
+   * This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String path;
+
+  /**
    * Required. Input only. AWS access key used to sign the API requests to the AWS S3 bucket.
    * Permissions on the bucket must be granted to the access ID of the AWS access key. For
    * information on our data retention policy for user credentials, see [User credentials](data-
@@ -90,6 +98,25 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
    */
   public AwsS3Data setBucketName(java.lang.String bucketName) {
     this.bucketName = bucketName;
+    return this;
+  }
+
+  /**
+   * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'.
+   * This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPath() {
+    return path;
+  }
+
+  /**
+   * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'.
+   * This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+   * @param path path or {@code null} for none
+   */
+  public AwsS3Data setPath(java.lang.String path) {
+    this.path = path;
     return this;
   }
 

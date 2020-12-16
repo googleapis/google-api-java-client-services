@@ -51,6 +51,14 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
   private java.lang.String container;
 
   /**
+   * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'.
+   * This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String path;
+
+  /**
    * Required. The name of the Azure Storage account.
    * The value may be {@code null}.
    */
@@ -92,6 +100,25 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
    */
   public AzureBlobStorageData setContainer(java.lang.String container) {
     this.container = container;
+    return this;
+  }
+
+  /**
+   * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'.
+   * This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPath() {
+    return path;
+  }
+
+  /**
+   * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'.
+   * This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+   * @param path path or {@code null} for none
+   */
+  public AzureBlobStorageData setPath(java.lang.String path) {
+    this.path = path;
     return this;
   }
 

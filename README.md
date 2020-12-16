@@ -21,7 +21,7 @@ packages on [Maven Central][maven-search].
 | --- | -------- |
 | AI Platform Training & Prediction API | [v1](clients/google-api-services-ml/v1) |
 | API Discovery Service | [v1](clients/google-api-services-discovery/v1) |
-| API Gateway API | [v1beta](clients/google-api-services-apigateway/v1beta) |
+| API Gateway API | [v1](clients/google-api-services-apigateway/v1), [v1beta](clients/google-api-services-apigateway/v1beta) |
 | Abusive Experience Report API | [v1](clients/google-api-services-abusiveexperiencereport/v1) |
 | Accelerated Mobile Pages (AMP) URL API | [v1](clients/google-api-services-acceleratedmobilepageurl/v1) |
 | Access Approval API | [v1](clients/google-api-services-accessapproval/v1) |
@@ -40,7 +40,7 @@ packages on [Maven Central][maven-search].
 | App Engine Admin API | [v1](clients/google-api-services-appengine/v1), [v1alpha](clients/google-api-services-appengine/v1alpha), [v1beta](clients/google-api-services-appengine/v1beta), [v1beta4](clients/google-api-services-appengine/v1beta4), [v1beta5](clients/google-api-services-appengine/v1beta5) |
 | Apps Script API | [v1](clients/google-api-services-script/v1) |
 | Area120 Tables API | [v1alpha1](clients/google-api-services-area120tables/v1alpha1) |
-| Artifact Registry API | [v1beta1](clients/google-api-services-artifactregistry/v1beta1), [v1beta2](clients/google-api-services-artifactregistry/v1beta2) |
+| Artifact Registry API | [v1](clients/google-api-services-artifactregistry/v1), [v1beta1](clients/google-api-services-artifactregistry/v1beta1), [v1beta2](clients/google-api-services-artifactregistry/v1beta2) |
 | Assured Workloads API | [v1](clients/google-api-services-assuredworkloads/v1) |
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
 | BigQuery Connection API | [v1beta1](clients/google-api-services-bigqueryconnection/v1beta1) |

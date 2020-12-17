@@ -41,6 +41,13 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResult extends com.
   private java.lang.String linkedResource;
 
   /**
+   * Last-modified timestamp of the entry from the managing system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String modifyTime;
+
+  /**
    * The relative resource name of the resource in URL format. Examples: *
    * `projects/{project_id}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}`
    * * `projects/{project_id}/tagTemplates/{tag_template_id}`
@@ -84,6 +91,23 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResult extends com.
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogResult setLinkedResource(java.lang.String linkedResource) {
     this.linkedResource = linkedResource;
+    return this;
+  }
+
+  /**
+   * Last-modified timestamp of the entry from the managing system.
+   * @return value or {@code null} for none
+   */
+  public String getModifyTime() {
+    return modifyTime;
+  }
+
+  /**
+   * Last-modified timestamp of the entry from the managing system.
+   * @param modifyTime modifyTime or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1SearchCatalogResult setModifyTime(String modifyTime) {
+    this.modifyTime = modifyTime;
     return this;
   }
 

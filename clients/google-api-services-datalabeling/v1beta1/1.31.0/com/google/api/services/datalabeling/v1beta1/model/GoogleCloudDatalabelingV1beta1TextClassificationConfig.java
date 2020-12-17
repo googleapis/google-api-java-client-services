@@ -45,7 +45,8 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfig extend
   private java.lang.String annotationSpecSet;
 
   /**
-   * Optional. Configs for sentiment selection.
+   * Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling
+   * side as it is incompatible with uCAIP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +89,8 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfig extend
   }
 
   /**
-   * Optional. Configs for sentiment selection.
+   * Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling
+   * side as it is incompatible with uCAIP.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatalabelingV1beta1SentimentConfig getSentimentConfig() {
@@ -96,7 +98,8 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfig extend
   }
 
   /**
-   * Optional. Configs for sentiment selection.
+   * Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling
+   * side as it is incompatible with uCAIP.
    * @param sentimentConfig sentimentConfig or {@code null} for none
    */
   public GoogleCloudDatalabelingV1beta1TextClassificationConfig setSentimentConfig(GoogleCloudDatalabelingV1beta1SentimentConfig sentimentConfig) {

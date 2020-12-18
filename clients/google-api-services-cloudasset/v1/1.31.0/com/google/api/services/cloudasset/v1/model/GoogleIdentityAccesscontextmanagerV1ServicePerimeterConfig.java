@@ -44,6 +44,36 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
   private java.util.List<java.lang.String> accessLevels;
 
   /**
+   * List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies,
+   * each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be
+   * empty for a perimeter bridge.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleIdentityAccesscontextmanagerV1EgressPolicy> egressPolicies;
+
+  static {
+    // hack to force ProGuard to consider GoogleIdentityAccesscontextmanagerV1EgressPolicy used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleIdentityAccesscontextmanagerV1EgressPolicy.class);
+  }
+
+  /**
+   * List of IngressPolicies to apply to the perimeter. A perimeter may have multiple
+   * IngressPolicies, each of which is evaluated separately. Access is granted if any Ingress Policy
+   * grants it. Must be empty for a perimeter bridge.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleIdentityAccesscontextmanagerV1IngressPolicy> ingressPolicies;
+
+  static {
+    // hack to force ProGuard to consider GoogleIdentityAccesscontextmanagerV1IngressPolicy used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleIdentityAccesscontextmanagerV1IngressPolicy.class);
+  }
+
+  /**
    * A list of Google Cloud resources that are inside of the service perimeter. Currently only
    * projects are allowed. Format: `projects/{project_number}`
    * The value may be {@code null}.
@@ -93,6 +123,48 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig ex
    */
   public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig setAccessLevels(java.util.List<java.lang.String> accessLevels) {
     this.accessLevels = accessLevels;
+    return this;
+  }
+
+  /**
+   * List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies,
+   * each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be
+   * empty for a perimeter bridge.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleIdentityAccesscontextmanagerV1EgressPolicy> getEgressPolicies() {
+    return egressPolicies;
+  }
+
+  /**
+   * List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies,
+   * each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be
+   * empty for a perimeter bridge.
+   * @param egressPolicies egressPolicies or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig setEgressPolicies(java.util.List<GoogleIdentityAccesscontextmanagerV1EgressPolicy> egressPolicies) {
+    this.egressPolicies = egressPolicies;
+    return this;
+  }
+
+  /**
+   * List of IngressPolicies to apply to the perimeter. A perimeter may have multiple
+   * IngressPolicies, each of which is evaluated separately. Access is granted if any Ingress Policy
+   * grants it. Must be empty for a perimeter bridge.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleIdentityAccesscontextmanagerV1IngressPolicy> getIngressPolicies() {
+    return ingressPolicies;
+  }
+
+  /**
+   * List of IngressPolicies to apply to the perimeter. A perimeter may have multiple
+   * IngressPolicies, each of which is evaluated separately. Access is granted if any Ingress Policy
+   * grants it. Must be empty for a perimeter bridge.
+   * @param ingressPolicies ingressPolicies or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig setIngressPolicies(java.util.List<GoogleIdentityAccesscontextmanagerV1IngressPolicy> ingressPolicies) {
+    this.ingressPolicies = ingressPolicies;
     return this;
   }
 

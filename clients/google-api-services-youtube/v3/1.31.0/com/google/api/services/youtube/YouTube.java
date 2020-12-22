@@ -14589,7 +14589,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.String hl;
 
       /**
-     [ default: en_US]
+     [ default: en-US]
      [
 
        */

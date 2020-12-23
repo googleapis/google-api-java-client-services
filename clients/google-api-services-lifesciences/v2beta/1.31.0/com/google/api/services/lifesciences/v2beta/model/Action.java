@@ -41,6 +41,13 @@ public final class Action extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean alwaysRun;
 
   /**
+   * Prevents the container from accessing the external network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean blockExternalNetwork;
+
+  /**
    * If specified, overrides the `CMD` specified in the container. If the container also has an
    * `ENTRYPOINT` the values are used as entrypoint arguments. Otherwise, they are used as a command
    * and arguments to run inside the container.
@@ -231,6 +238,23 @@ public final class Action extends com.google.api.client.json.GenericJson {
    */
   public Action setAlwaysRun(java.lang.Boolean alwaysRun) {
     this.alwaysRun = alwaysRun;
+    return this;
+  }
+
+  /**
+   * Prevents the container from accessing the external network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBlockExternalNetwork() {
+    return blockExternalNetwork;
+  }
+
+  /**
+   * Prevents the container from accessing the external network.
+   * @param blockExternalNetwork blockExternalNetwork or {@code null} for none
+   */
+  public Action setBlockExternalNetwork(java.lang.Boolean blockExternalNetwork) {
+    this.blockExternalNetwork = blockExternalNetwork;
     return this;
   }
 

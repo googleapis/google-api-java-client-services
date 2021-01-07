@@ -132,7 +132,6 @@ packages on [Maven Central][maven-search].
 | Firebase Realtime Database Management API | [v1beta](clients/google-api-services-firebasedatabase/v1beta) |
 | Firebase Rules API | [v1](clients/google-api-services-firebaserules/v1) |
 | Fitness API | [v1](clients/google-api-services-fitness/v1) |
-| G Suite Alert Center API | [v1beta1](clients/google-api-services-alertcenter/v1beta1) |
 | G Suite Vault API | [v1](clients/google-api-services-vault/v1) |
 | Game Services API | [v1](clients/google-api-services-gameservices/v1), [v1beta](clients/google-api-services-gameservices/v1beta) |
 | Genomics API | [v1](clients/google-api-services-genomics/v1), [v1alpha2](clients/google-api-services-genomics/v1alpha2), [v2alpha1](clients/google-api-services-genomics/v2alpha1) |
@@ -159,6 +158,7 @@ packages on [Maven Central][maven-search].
 | Google Sheets API | [v4](clients/google-api-services-sheets/v4) |
 | Google Site Verification API | [v1](clients/google-api-services-siteVerification/v1) |
 | Google Slides API | [v1](clients/google-api-services-slides/v1) |
+| Google Workspace Alert Center API | [v1beta1](clients/google-api-services-alertcenter/v1beta1) |
 | Google Workspace Reseller API | [v1](clients/google-api-services-reseller/v1) |
 | Groups Migration API | [v1](clients/google-api-services-groupsmigration/v1) |
 | Groups Settings API | [v1](clients/google-api-services-groupssettings/v1) |

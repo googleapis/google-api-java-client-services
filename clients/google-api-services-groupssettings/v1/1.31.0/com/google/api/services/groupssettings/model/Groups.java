@@ -344,7 +344,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   /**
    * Permission to contact owner of the group via web UI. Possible values are: -
    * ALL_IN_DOMAIN_CAN_CONTACT  - ALL_MANAGERS_CAN_CONTACT  - ALL_MEMBERS_CAN_CONTACT  -
-   * ANYONE_CAN_CONTACT
+   * ANYONE_CAN_CONTACT  - ALL_OWNERS_CAN_CONTACT
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1330,7 +1330,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   /**
    * Permission to contact owner of the group via web UI. Possible values are: -
    * ALL_IN_DOMAIN_CAN_CONTACT  - ALL_MANAGERS_CAN_CONTACT  - ALL_MEMBERS_CAN_CONTACT  -
-   * ANYONE_CAN_CONTACT
+   * ANYONE_CAN_CONTACT  - ALL_OWNERS_CAN_CONTACT
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanContactOwner() {
@@ -1340,7 +1340,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   /**
    * Permission to contact owner of the group via web UI. Possible values are: -
    * ALL_IN_DOMAIN_CAN_CONTACT  - ALL_MANAGERS_CAN_CONTACT  - ALL_MEMBERS_CAN_CONTACT  -
-   * ANYONE_CAN_CONTACT
+   * ANYONE_CAN_CONTACT  - ALL_OWNERS_CAN_CONTACT
    * @param whoCanContactOwner whoCanContactOwner or {@code null} for none
    */
   public Groups setWhoCanContactOwner(java.lang.String whoCanContactOwner) {

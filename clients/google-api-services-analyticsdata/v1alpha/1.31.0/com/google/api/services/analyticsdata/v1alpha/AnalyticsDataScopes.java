@@ -26,7 +26,7 @@ public class AnalyticsDataScopes {
   /** View and manage your Google Analytics data. */
   public static final String ANALYTICS = "https://www.googleapis.com/auth/analytics";
 
-  /** View your Google Analytics data. */
+  /** See and download your Google Analytics data. */
   public static final String ANALYTICS_READONLY = "https://www.googleapis.com/auth/analytics.readonly";
 
   /**

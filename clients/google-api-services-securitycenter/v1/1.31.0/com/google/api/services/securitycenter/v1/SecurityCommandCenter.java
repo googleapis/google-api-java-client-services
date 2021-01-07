@@ -25,7 +25,7 @@ package com.google.api.services.securitycenter.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://console.cloud.google.com/apis/api/securitycenter.googleapis.com/overview" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/security-command-center" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

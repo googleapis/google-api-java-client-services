@@ -20,8 +20,8 @@ package com.google.api.services.alertcenter.v1beta1.model;
  * A request to perform batch delete on alerts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the G Suite Alert Center API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Workspace Alert Center API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -38,8 +38,8 @@ public final class BatchDeleteAlertsRequest extends com.google.api.client.json.G
   private java.util.List<java.lang.String> alertId;
 
   /**
-   * Optional. The unique identifier of the G Suite organization account of the customer the alerts
-   * are associated with.
+   * Optional. The unique identifier of the Google Workspace organization account of the customer
+   * the alerts are associated with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class BatchDeleteAlertsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The unique identifier of the G Suite organization account of the customer the alerts
-   * are associated with.
+   * Optional. The unique identifier of the Google Workspace organization account of the customer
+   * the alerts are associated with.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerId() {
@@ -72,8 +72,8 @@ public final class BatchDeleteAlertsRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The unique identifier of the G Suite organization account of the customer the alerts
-   * are associated with.
+   * Optional. The unique identifier of the Google Workspace organization account of the customer
+   * the alerts are associated with.
    * @param customerId customerId or {@code null} for none
    */
   public BatchDeleteAlertsRequest setCustomerId(java.lang.String customerId) {

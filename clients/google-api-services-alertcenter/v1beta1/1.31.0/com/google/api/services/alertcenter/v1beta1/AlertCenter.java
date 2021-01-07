@@ -48,7 +48,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.0 of the G Suite Alert Center API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.31.0 of the Google Workspace Alert Center API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -468,22 +468,22 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the G Suite organization account of the customer the
-       * alert is associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace organization account of the
+       * customer the alert is associated with. Inferred from the caller identity if not provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the G Suite organization account of the customer the alert is
-     associated with. Inferred from the caller identity if not provided.
+      /** Optional. The unique identifier of the Google Workspace organization account of the customer the
+     alert is associated with. Inferred from the caller identity if not provided.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the G Suite organization account of the customer the
-       * alert is associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace organization account of the
+       * customer the alert is associated with. Inferred from the caller identity if not provided.
        */
       public Delete setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -616,22 +616,22 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the G Suite organization account of the customer the
-       * alert is associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace organization account of the
+       * customer the alert is associated with. Inferred from the caller identity if not provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the G Suite organization account of the customer the alert is
-     associated with. Inferred from the caller identity if not provided.
+      /** Optional. The unique identifier of the Google Workspace organization account of the customer the
+     alert is associated with. Inferred from the caller identity if not provided.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the G Suite organization account of the customer the
-       * alert is associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace organization account of the
+       * customer the alert is associated with. Inferred from the caller identity if not provided.
        */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -767,22 +767,24 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the G Suite organization account of the customer the
-       * alert metadata is associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace organization account of the
+       * customer the alert metadata is associated with. Inferred from the caller identity if not
+       * provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the G Suite organization account of the customer the alert
-     metadata is associated with. Inferred from the caller identity if not provided.
+      /** Optional. The unique identifier of the Google Workspace organization account of the customer the
+     alert metadata is associated with. Inferred from the caller identity if not provided.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the G Suite organization account of the customer the
-       * alert metadata is associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace organization account of the
+       * customer the alert metadata is associated with. Inferred from the caller identity if not
+       * provided.
        */
       public GetMetadata setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -896,22 +898,22 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the G Suite organization account of the customer the
-       * alerts are associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace organization account of the
+       * customer the alerts are associated with. Inferred from the caller identity if not provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the G Suite organization account of the customer the alerts are
-     associated with. Inferred from the caller identity if not provided.
+      /** Optional. The unique identifier of the Google Workspace organization account of the customer the
+     alerts are associated with. Inferred from the caller identity if not provided.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the G Suite organization account of the customer the
-       * alerts are associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace organization account of the
+       * customer the alerts are associated with. Inferred from the caller identity if not provided.
        */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1290,22 +1292,22 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Optional. The unique identifier of the G Suite organization account of the customer the
-         * alert is associated with. Inferred from the caller identity if not provided.
+         * Optional. The unique identifier of the Google Workspace organization account of the
+         * customer the alert is associated with. Inferred from the caller identity if not provided.
          */
         @com.google.api.client.util.Key
         private java.lang.String customerId;
 
-        /** Optional. The unique identifier of the G Suite organization account of the customer the alert is
-       associated with. Inferred from the caller identity if not provided.
+        /** Optional. The unique identifier of the Google Workspace organization account of the customer the
+       alert is associated with. Inferred from the caller identity if not provided.
          */
         public java.lang.String getCustomerId() {
           return customerId;
         }
 
         /**
-         * Optional. The unique identifier of the G Suite organization account of the customer the
-         * alert is associated with. Inferred from the caller identity if not provided.
+         * Optional. The unique identifier of the Google Workspace organization account of the
+         * customer the alert is associated with. Inferred from the caller identity if not provided.
          */
         public Create setCustomerId(java.lang.String customerId) {
           this.customerId = customerId;
@@ -1444,22 +1446,24 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Optional. The unique identifier of the G Suite organization account of the customer the
-         * alert feedback are associated with. Inferred from the caller identity if not provided.
+         * Optional. The unique identifier of the Google Workspace organization account of the
+         * customer the alert feedback are associated with. Inferred from the caller identity if not
+         * provided.
          */
         @com.google.api.client.util.Key
         private java.lang.String customerId;
 
-        /** Optional. The unique identifier of the G Suite organization account of the customer the alert
-       feedback are associated with. Inferred from the caller identity if not provided.
+        /** Optional. The unique identifier of the Google Workspace organization account of the customer the
+       alert feedback are associated with. Inferred from the caller identity if not provided.
          */
         public java.lang.String getCustomerId() {
           return customerId;
         }
 
         /**
-         * Optional. The unique identifier of the G Suite organization account of the customer the
-         * alert feedback are associated with. Inferred from the caller identity if not provided.
+         * Optional. The unique identifier of the Google Workspace organization account of the
+         * customer the alert feedback are associated with. Inferred from the caller identity if not
+         * provided.
          */
         public List setCustomerId(java.lang.String customerId) {
           this.customerId = customerId;
@@ -1624,22 +1628,24 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the G Suite organization account of the customer the
-       * alert settings are associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace organization account of the
+       * customer the alert settings are associated with. Inferred from the caller identity if not
+       * provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the G Suite organization account of the customer the alert
-     settings are associated with. Inferred from the caller identity if not provided.
+      /** Optional. The unique identifier of the Google Workspace organization account of the customer the
+     alert settings are associated with. Inferred from the caller identity if not provided.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the G Suite organization account of the customer the
-       * alert settings are associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace organization account of the
+       * customer the alert settings are associated with. Inferred from the caller identity if not
+       * provided.
        */
       public GetSettings setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1746,22 +1752,24 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the G Suite organization account of the customer the
-       * alert settings are associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace organization account of the
+       * customer the alert settings are associated with. Inferred from the caller identity if not
+       * provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the G Suite organization account of the customer the alert
-     settings are associated with. Inferred from the caller identity if not provided.
+      /** Optional. The unique identifier of the Google Workspace organization account of the customer the
+     alert settings are associated with. Inferred from the caller identity if not provided.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the G Suite organization account of the customer the
-       * alert settings are associated with. Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the Google Workspace organization account of the
+       * customer the alert settings are associated with. Inferred from the caller identity if not
+       * provided.
        */
       public UpdateSettings setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;

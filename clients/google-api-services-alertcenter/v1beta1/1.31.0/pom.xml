@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-alertcenter</artifactId>
-  <version>v1beta1-rev20201202-1.31.0</version>
-  <name>G Suite Alert Center API v1beta1-rev20201202-1.31.0</name>
+  <version>v1beta1-rev20201231-1.31.0</version>
+  <name>Google Workspace Alert Center API v1beta1-rev20201231-1.31.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>G Suite Alert Center API ${project.version}</doctitle>
-          <windowtitle>G Suite Alert Center API ${project.version}</windowtitle>
+          <doctitle>Google Workspace Alert Center API ${project.version}</doctitle>
+          <windowtitle>Google Workspace Alert Center API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.38.0/</link>

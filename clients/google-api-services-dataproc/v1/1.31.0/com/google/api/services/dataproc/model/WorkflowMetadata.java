@@ -65,7 +65,8 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   private String dagStartTime;
 
   /**
-   * Output only. The timeout duration for the DAG of jobs.
+   * Output only. The timeout duration for the DAG of jobs, expressed in seconds (see JSON
+   * representation of duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,7 +219,8 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The timeout duration for the DAG of jobs.
+   * Output only. The timeout duration for the DAG of jobs, expressed in seconds (see JSON
+   * representation of duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * @return value or {@code null} for none
    */
   public String getDagTimeout() {
@@ -226,7 +228,8 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The timeout duration for the DAG of jobs.
+   * Output only. The timeout duration for the DAG of jobs, expressed in seconds (see JSON
+   * representation of duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).
    * @param dagTimeout dagTimeout or {@code null} for none
    */
   public WorkflowMetadata setDagTimeout(String dagTimeout) {

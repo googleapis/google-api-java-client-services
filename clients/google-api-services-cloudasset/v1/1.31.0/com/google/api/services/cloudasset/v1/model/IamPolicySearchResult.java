@@ -30,16 +30,16 @@ package com.google.api.services.cloudasset.v1.model;
 public final class IamPolicySearchResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Explanation about the IAM policy search result. It contains additional information to explain
-   * why the search result matches the query.
+   * Optional. Explanation about the IAM policy search result. It contains additional information to
+   * explain why the search result matches the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Explanation explanation;
 
   /**
-   * The IAM policy directly set on the given resource. Note that the original IAM policy can
-   * contain multiple bindings. This only contains the bindings that match the given query. For
+   * Required. The IAM policy directly set on the given resource. Note that the original IAM policy
+   * can contain multiple bindings. This only contains the bindings that match the given query. For
    * queries that don't contain a constrain on policies (e.g., an empty query), this contains all
    * the bindings. To search against the `policy` bindings: * use a field query: - query by the
    * policy contained members. Example: `policy:amy@gmail.com` - query by the policy contained
@@ -51,7 +51,7 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   private Policy policy;
 
   /**
-   * The project that the associated GCP resource belongs to, in the form of
+   * Optional. The project that the associated GCP resource belongs to, in the form of
    * projects/{PROJECT_NUMBER}. If an IAM policy is set on a resource (like VM instance, Cloud
    * Storage bucket), the project field will indicate the project that contains the resource. If an
    * IAM policy is set on a folder or orgnization, the project field will be empty. To search
@@ -62,7 +62,7 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   private java.lang.String project;
 
   /**
-   * The full resource name of the resource associated with this IAM policy. Example:
+   * Required. The full resource name of the resource associated with this IAM policy. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
    * name-format) for more information. To search against the `resource`: * use a field query.
@@ -73,8 +73,8 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   private java.lang.String resource;
 
   /**
-   * Explanation about the IAM policy search result. It contains additional information to explain
-   * why the search result matches the query.
+   * Optional. Explanation about the IAM policy search result. It contains additional information to
+   * explain why the search result matches the query.
    * @return value or {@code null} for none
    */
   public Explanation getExplanation() {
@@ -82,8 +82,8 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * Explanation about the IAM policy search result. It contains additional information to explain
-   * why the search result matches the query.
+   * Optional. Explanation about the IAM policy search result. It contains additional information to
+   * explain why the search result matches the query.
    * @param explanation explanation or {@code null} for none
    */
   public IamPolicySearchResult setExplanation(Explanation explanation) {
@@ -92,8 +92,8 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * The IAM policy directly set on the given resource. Note that the original IAM policy can
-   * contain multiple bindings. This only contains the bindings that match the given query. For
+   * Required. The IAM policy directly set on the given resource. Note that the original IAM policy
+   * can contain multiple bindings. This only contains the bindings that match the given query. For
    * queries that don't contain a constrain on policies (e.g., an empty query), this contains all
    * the bindings. To search against the `policy` bindings: * use a field query: - query by the
    * policy contained members. Example: `policy:amy@gmail.com` - query by the policy contained
@@ -106,8 +106,8 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * The IAM policy directly set on the given resource. Note that the original IAM policy can
-   * contain multiple bindings. This only contains the bindings that match the given query. For
+   * Required. The IAM policy directly set on the given resource. Note that the original IAM policy
+   * can contain multiple bindings. This only contains the bindings that match the given query. For
    * queries that don't contain a constrain on policies (e.g., an empty query), this contains all
    * the bindings. To search against the `policy` bindings: * use a field query: - query by the
    * policy contained members. Example: `policy:amy@gmail.com` - query by the policy contained
@@ -121,7 +121,7 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * The project that the associated GCP resource belongs to, in the form of
+   * Optional. The project that the associated GCP resource belongs to, in the form of
    * projects/{PROJECT_NUMBER}. If an IAM policy is set on a resource (like VM instance, Cloud
    * Storage bucket), the project field will indicate the project that contains the resource. If an
    * IAM policy is set on a folder or orgnization, the project field will be empty. To search
@@ -133,7 +133,7 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * The project that the associated GCP resource belongs to, in the form of
+   * Optional. The project that the associated GCP resource belongs to, in the form of
    * projects/{PROJECT_NUMBER}. If an IAM policy is set on a resource (like VM instance, Cloud
    * Storage bucket), the project field will indicate the project that contains the resource. If an
    * IAM policy is set on a folder or orgnization, the project field will be empty. To search
@@ -146,7 +146,7 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * The full resource name of the resource associated with this IAM policy. Example:
+   * Required. The full resource name of the resource associated with this IAM policy. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
    * name-format) for more information. To search against the `resource`: * use a field query.
@@ -158,7 +158,7 @@ public final class IamPolicySearchResult extends com.google.api.client.json.Gene
   }
 
   /**
-   * The full resource name of the resource associated with this IAM policy. Example:
+   * Required. The full resource name of the resource associated with this IAM policy. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
    * name-format) for more information. To search against the `resource`: * use a field query.
